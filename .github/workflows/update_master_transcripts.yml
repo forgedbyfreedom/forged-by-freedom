@@ -49,5 +49,21 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          echo "🔼
+          echo "🔼 Sending updated master transcripts to OpenAI..."
+          python - <<'PYCODE'
+import os, glob, openai
+
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    print("❌ No OpenAI API key found. Skipping upload.")
+    raise SystemExit(0)
+
+openai.api_key = api_key
+
+for path in glob.glob("**/master_transcript*.txt", recursive=True):
+    print(f"📤 Uploading {path} ...")
+    with open(path, "rb") as f:
+        resp = openai.files.create(file=f, purpose="assistants")
+        print(f"✅ Uploaded {path} → id={resp.id}")
+PYCODE
 
