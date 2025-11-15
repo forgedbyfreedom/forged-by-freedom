@@ -48,6 +48,75 @@ jobs:
         if: success()
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          echo "🔼 Sending updated master transcripts to OpenAI..."
+          echo "import os, glob, openai
+
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    print('❌ No OpenAI API key found. Skipping upload.')
+    raise SystemExit(0)
+
+openai.api_key = api_key
+
+for path in glob.glob('**/master_transcript*.txt', recursive=True):
+    print(f'📤 Uploading {path} ...')
+    with open(path, 'rb') as f:
+        resp = openai.files.create(file=f, purpose='assistants')
+        print(f'✅ Uploaded {path} → id={{resp.id}}')
+" > upload_script.py
+          python upload_script.py
+name: Auto Build and Commit Master Transcripts
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || echo "No requirements file, continuing"
+          pip install requests beautifulsoup4 openai || true
+
+      - name: Run master transcript builder
+        run: |
+          echo "🔧 Running master transcript builder..."
+          python build_master_transcripts.py || python auto_rebuild_all_v2.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Auto-update master transcripts $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
+
+      - name: Upload master transcripts to Custom GPT
+        if: success()
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           echo "🔼 Sending updated master transcripts to OpenAI..."
           python -c "
