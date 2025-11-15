@@ -1,0 +1,14 @@
+name: Minimal Parser Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print confirmation
+        run: echo "YAML syntax works and GitHub Actions can see this file."
