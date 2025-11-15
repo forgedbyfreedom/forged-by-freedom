@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print confirmation
-        run: echo "✅ YAML syntax works and GitHub Actions can see this file."
+        run: echo "YAML syntax works and GitHub Actions can see this file."
