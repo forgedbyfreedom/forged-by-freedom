@@ -45,3 +45,4 @@ jobs:
           git add -A
           git commit -m "Auto-update master transcripts $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push
+# Reindex trigger Sat Nov 15 17:57:48 EST 2025
