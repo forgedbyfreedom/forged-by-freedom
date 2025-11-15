@@ -1,0 +1,33 @@
+name: Update Manifest
+
+on:
+  push:
+    paths:
+      - 'snapshot_*.json'
+      - 'master_transcript*.txt'
+      - '*.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate manifest
+        run: |
+          python3 update_manifest.py
+
+      - name: Commit and push manifest
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add manifest.json
+          git commit -m "Auto-update manifest ($(date))" || echo "No changes to commit"
+          git push
+
+
