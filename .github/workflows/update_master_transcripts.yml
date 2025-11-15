@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print message
-        run: echo "✅ YAML parser works."
+        run: echo "YAML parser works."
