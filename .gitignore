@@ -1,9 +1,0 @@
-__pycache__/
-*.log
-*.tmp
-*.mp3
-*.wav
-*.json
-audio_tmp/
-downloads/
-
