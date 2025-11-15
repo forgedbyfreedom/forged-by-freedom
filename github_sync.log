@@ -255,3 +255,74 @@
 🔹 Processing channel: @bodybuildingcom
 [2025-11-15 20:30:08] ❌ Error processing @bodybuildingcom: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
 [2025-11-15 20:30:08] === ✅ All channels processed successfully ===
+[2025-11-15 21:13:13] === 🚀 Auto Rebuild Started (23 channels) ===
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @ChrisBumstead
+[2025-11-15 21:13:13] ❌ Error processing @ChrisBumstead: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @RyanHumiston
+[2025-11-15 21:13:13] ❌ Error processing @RyanHumiston: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @anabolicbodybuilding
+[2025-11-15 21:13:13] ❌ Error processing @anabolicbodybuilding: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @ThinkBIGBodybuilding
+[2025-11-15 21:13:13] ❌ Error processing @ThinkBIGBodybuilding: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @MulliganBrothers
+[2025-11-15 21:13:13] ❌ Error processing @MulliganBrothers: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @RenaissancePeriodization
+[2025-11-15 21:13:13] ❌ Error processing @RenaissancePeriodization: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @HighLifeWorkout
+[2025-11-15 21:13:13] ❌ Error processing @HighLifeWorkout: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @sam_sulek
+[2025-11-15 21:13:13] ❌ Error processing @sam_sulek: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @theconditioncoaches
+[2025-11-15 21:13:13] ❌ Error processing @theconditioncoaches: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @JeffNippard
+[2025-11-15 21:13:13] ❌ Error processing @JeffNippard: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @FoundMyFitness
+[2025-11-15 21:13:13] ❌ Error processing @FoundMyFitness: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @NicksStrengthandPower
+[2025-11-15 21:13:13] ❌ Error processing @NicksStrengthandPower: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @hanyrambod_FST7
+[2025-11-15 21:13:13] ❌ Error processing @hanyrambod_FST7: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @realtattered
+[2025-11-15 21:13:13] ❌ Error processing @realtattered: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @rxmuscle
+[2025-11-15 21:13:13] ❌ Error processing @rxmuscle: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @BarbellMedicine
+[2025-11-15 21:13:13] ❌ Error processing @BarbellMedicine: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @ISSAPersonalTrainer
+[2025-11-15 21:13:13] ❌ Error processing @ISSAPersonalTrainer: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @anabolicuniversity
+[2025-11-15 21:13:13] ❌ Error processing @anabolicuniversity: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @PeterAttiaMD
+[2025-11-15 21:13:13] ❌ Error processing @PeterAttiaMD: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @eliteftsofficial
+[2025-11-15 21:13:13] ❌ Error processing @eliteftsofficial: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @DrGabrielleLyon
+[2025-11-15 21:13:13] ❌ Error processing @DrGabrielleLyon: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @NasmOrgPersonalTrainer
+[2025-11-15 21:13:13] ❌ Error processing @NasmOrgPersonalTrainer: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] 
+🔹 Processing channel: @bodybuildingcom
+[2025-11-15 21:13:13] ❌ Error processing @bodybuildingcom: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
+[2025-11-15 21:13:13] === ✅ All channels processed successfully ===
