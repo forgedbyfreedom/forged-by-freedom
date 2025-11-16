@@ -1,3 +1,43 @@
+name: Auto Build and Commit Master Transcripts
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧭 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r requirements.txt || echo "No requirements file, continuing"
+          pip install requests beautifulsoup4 openai || true
+
+      - name: 🔧 Run master transcript builder
+        working-directory: .
+        run: |
+          echo "🔧 Running master transcript builder..."
+          python build_master_transcripts.py
+
+      - name: 🧠 Commit and push updates
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add . || true
+          git commit -m "Auto-update master transcripts $(date -u +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git pull --rebase origin main || true
+          git push origin main || echo "No changes to push"
 name: Auto Update Master Transcripts
 
 on:
