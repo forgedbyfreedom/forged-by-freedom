@@ -1,3 +1,145 @@
+import os
+from datetime import datetime
+
+# ============================================================
+# ✅ UNIVERSAL TRANSCRIPT BUILDER
+# Works on both macOS and GitHub Actions (Linux)
+# No hard-coded paths — auto-detects repo structure.
+# ============================================================
+
+# --- 🔧 Define repo root dynamically ---
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+TRANSCRIPTS_DIR = REPO_ROOT  # all @channel folders are here
+
+def combine_transcripts(base_dir, output_filename="master_transcript1.txt"):
+    """
+    Combines all .txt files in a channel directory into one master transcript.
+    """
+    if not os.path.exists(base_dir):
+        print(f"❌ Directory not found: {base_dir}")
+        return
+
+    txt_files = [
+        os.path.join(base_dir, f)
+        for f in os.listdir(base_dir)
+        if f.endswith(".txt") and f != output_filename
+    ]
+
+    if not txt_files:
+        print(f"⚠️ No .txt files found in {base_dir}")
+        return
+
+    output_path = os.path.join(base_dir, output_filename)
+    print(f"🧩 Combining {len(txt_files)} transcript files → {output_path}")
+
+    with open(output_path, "w", encoding="utf-8") as outfile:
+        for file in sorted(txt_files):
+            outfile.write(f"\n\n===== FILE: {os.path.basename(file)} =====\n\n")
+            with open(file, "r", encoding="utf-8") as infile:
+                outfile.write(infile.read())
+
+        outfile.write(f"\n\n=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+
+    print(f"✅ Finished building {output_path}")
+
+
+def rebuild_all_channels():
+    """
+    Automatically rebuilds every @channel folder in the repo.
+    """
+    print("🔧 Starting transcript rebuild process...\n")
+
+    # Iterate over all directories in repo
+    for folder in os.listdir(TRANSCRIPTS_DIR):
+        if folder.startswith("@"):  # only process channel folders
+            folder_path = os.path.join(TRANSCRIPTS_DIR, folder)
+
+            if not os.path.isdir(folder_path):
+                continue
+
+            print(f"📘 Building master transcript for {folder} ...")
+            try:
+                combine_transcripts(folder_path)
+                print(f"✅ Finished {folder} → {folder_path}/master_transcript1.txt\n")
+            except Exception as e:
+                print(f"❌ Error processing {folder}: {e}\n")
+
+    print("🎯 All transcripts combined successfully.\n")
+
+
+if __name__ == "__main__":
+    rebuild_all_channels()
+import os
+from datetime import datetime
+
+# ============================================================
+# ✅ UNIVERSAL TRANSCRIPT BUILDER
+# Works on both macOS and GitHub Actions (Linux)
+# No hard-coded paths — auto-detects repo structure.
+# ============================================================
+
+# --- 🔧 Define repo root dynamically ---
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+TRANSCRIPTS_DIR = REPO_ROOT  # all @channel folders are here
+
+def combine_transcripts(base_dir, output_filename="master_transcript1.txt"):
+    """
+    Combines all .txt files in a channel directory into one master transcript.
+    """
+    if not os.path.exists(base_dir):
+        print(f"❌ Directory not found: {base_dir}")
+        return
+
+    txt_files = [
+        os.path.join(base_dir, f)
+        for f in os.listdir(base_dir)
+        if f.endswith(".txt") and f != output_filename
+    ]
+
+    if not txt_files:
+        print(f"⚠️ No .txt files found in {base_dir}")
+        return
+
+    output_path = os.path.join(base_dir, output_filename)
+    print(f"🧩 Combining {len(txt_files)} transcript files → {output_path}")
+
+    with open(output_path, "w", encoding="utf-8") as outfile:
+        for file in sorted(txt_files):
+            outfile.write(f"\n\n===== FILE: {os.path.basename(file)} =====\n\n")
+            with open(file, "r", encoding="utf-8") as infile:
+                outfile.write(infile.read())
+
+        outfile.write(f"\n\n=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+
+    print(f"✅ Finished building {output_path}")
+
+
+def rebuild_all_channels():
+    """
+    Automatically rebuilds every @channel folder in the repo.
+    """
+    print("🔧 Starting transcript rebuild process...\n")
+
+    # Iterate over all directories in repo
+    for folder in os.listdir(TRANSCRIPTS_DIR):
+        if folder.startswith("@"):  # only process channel folders
+            folder_path = os.path.join(TRANSCRIPTS_DIR, folder)
+
+            if not os.path.isdir(folder_path):
+                continue
+
+            print(f"📘 Building master transcript for {folder} ...")
+            try:
+                combine_transcripts(folder_path)
+                print(f"✅ Finished {folder} → {folder_path}/master_transcript1.txt\n")
+            except Exception as e:
+                print(f"❌ Error processing {folder}: {e}\n")
+
+    print("🎯 All transcripts combined successfully.\n")
+
+
+if __name__ == "__main__":
+    rebuild_all_channels()
 #!/usr/bin/env python3
 """
 build_master_transcripts.py
