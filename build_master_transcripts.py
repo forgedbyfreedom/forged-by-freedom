@@ -411,3 +411,6 @@ def combine_transcripts():
 if __name__ == "__main__":
     combine_transcripts()
 
+print("✅ All transcript generation completed successfully.")
+exit(0)
+
