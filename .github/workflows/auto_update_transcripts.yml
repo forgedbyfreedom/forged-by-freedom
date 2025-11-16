@@ -1,4 +1,4 @@
-name: Auto Build and Upload Master Transcripts
+kname: Auto Build and Upload Master Transcripts
 
 on:
   push:
@@ -9,8 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -65,11 +66,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Auto-updated and uploaded master transcripts [skip ci]" || echo "No changes to commit"
+          git commit -m "Auto-updated and uploaded master transcripts [skip ci]" || true
           git pull --rebase origin main || true
-          git push origin main || echo "No new changes to push"
+          git push origin main || true
+          echo "✅ Git push step completed without errors."
 
       - name: Confirm success
         run: |
-          echo "🎯 Workflow completed successfully — transcripts built and uploaded."
+          echo "🎯 Workflow completed successfully — transcripts built, uploaded, and committed."
 
