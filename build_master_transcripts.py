@@ -1,5 +1,132 @@
 #!/usr/bin/env python3
 """
+build_master_transcripts.py
+--------------------------------
+Rebuilds master transcript files for all channels inside the repo.
+
+✅ Automatically detects all @channel directories
+✅ Works both locally and in GitHub Actions
+✅ Skips master_transcript*.txt files
+✅ Logs missing folders instead of crashing
+"""
+
+import os
+from datetime import datetime
+
+# Use the current working directory (safe for GitHub Actions)
+REPO_ROOT = os.getcwd()
+
+def combine_transcripts():
+    print(f"🔧 Running in {REPO_ROOT}")
+
+    # Find all directories starting with '@'
+    channel_dirs = [
+        d for d in os.listdir(REPO_ROOT)
+        if d.startswith("@") and os.path.isdir(os.path.join(REPO_ROOT, d))
+    ]
+
+    if not channel_dirs:
+        print("⚠️ No @channel directories found — nothing to build.")
+        return
+
+    for channel in channel_dirs:
+        channel_path = os.path.join(REPO_ROOT, channel)
+        print(f"📂 Processing channel: {channel}")
+
+        # Find all text transcripts (skip master files)
+        txt_files = [
+            f for f in os.listdir(channel_path)
+            if f.endswith(".txt") and not f.startswith("master_transcript")
+        ]
+
+        if not txt_files:
+            print(f"⚠️ No transcript files found in {channel}, skipping.")
+            continue
+
+        output_path = os.path.join(channel_path, "master_transcript1.txt")
+
+        with open(output_path, "w", encoding="utf-8") as outfile:
+            for txt_file in sorted(txt_files):
+                file_path = os.path.join(channel_path, txt_file)
+                try:
+                    with open(file_path, "r", encoding="utf-8") as infile:
+                        outfile.write(f"### {txt_file}\n")
+                        outfile.write(infile.read())
+                        outfile.write("\n\n")
+                except Exception as e:
+                    print(f"❌ Error reading {file_path}: {e}")
+
+            outfile.write(f"\n=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+
+        print(f"✅ Built {output_path}")
+
+if __name__ == "__main__":
+    combine_transcripts()#!/usr/bin/env python3
+"""
+build_master_transcripts.py
+--------------------------------
+Rebuilds master transcript files for all channels inside the repo.
+
+✅ Automatically detects all @channel directories
+✅ Works both locally and in GitHub Actions
+✅ Skips master_transcript*.txt files
+✅ Logs missing folders instead of crashing
+"""
+
+import os
+from datetime import datetime
+
+# Use the current working directory (safe for GitHub Actions)
+REPO_ROOT = os.getcwd()
+
+def combine_transcripts():
+    print(f"🔧 Running in {REPO_ROOT}")
+
+    # Find all directories starting with '@'
+    channel_dirs = [
+        d for d in os.listdir(REPO_ROOT)
+        if d.startswith("@") and os.path.isdir(os.path.join(REPO_ROOT, d))
+    ]
+
+    if not channel_dirs:
+        print("⚠️ No @channel directories found — nothing to build.")
+        return
+
+    for channel in channel_dirs:
+        channel_path = os.path.join(REPO_ROOT, channel)
+        print(f"📂 Processing channel: {channel}")
+
+        # Find all text transcripts (skip master files)
+        txt_files = [
+            f for f in os.listdir(channel_path)
+            if f.endswith(".txt") and not f.startswith("master_transcript")
+        ]
+
+        if not txt_files:
+            print(f"⚠️ No transcript files found in {channel}, skipping.")
+            continue
+
+        output_path = os.path.join(channel_path, "master_transcript1.txt")
+
+        with open(output_path, "w", encoding="utf-8") as outfile:
+            for txt_file in sorted(txt_files):
+                file_path = os.path.join(channel_path, txt_file)
+                try:
+                    with open(file_path, "r", encoding="utf-8") as infile:
+                        outfile.write(f"### {txt_file}\n")
+                        outfile.write(infile.read())
+                        outfile.write("\n\n")
+                except Exception as e:
+                    print(f"❌ Error reading {file_path}: {e}")
+
+            outfile.write(f"\n=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+
+        print(f"✅ Built {output_path}")
+
+if __name__ == "__main__":
+    combine_transcripts()
+#!/usr/bin/env python3
+"""
 ForgedByFreedom Transcript Builder
 ---------------------------------
 Combines individual transcript text files from each @Channel folder
