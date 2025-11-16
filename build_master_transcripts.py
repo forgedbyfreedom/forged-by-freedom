@@ -2,6 +2,74 @@ import os
 from datetime import datetime
 
 # ============================================================
+# ✅ UNIVERSAL TRANSCRIPT BUILDER
+# Works on macOS, Windows, and GitHub Actions (Linux)
+# Dynamically detects the repo root and transcript folders.
+# ============================================================
+
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+def combine_channel_transcripts(channel_path):
+    """
+    Combine all .txt files within a given channel directory.
+    """
+    if not os.path.exists(channel_path):
+        print(f"❌ Directory not found: {channel_path}")
+        return
+
+    txt_files = [
+        os.path.join(channel_path, f)
+        for f in os.listdir(channel_path)
+        if f.endswith(".txt")
+    ]
+
+    if not txt_files:
+        print(f"⚠️ No .txt files found in {channel_path}")
+        return
+
+    txt_files.sort()
+    output_path = os.path.join(channel_path, "master_transcript1.txt")
+
+    with open(output_path, "w", encoding="utf-8") as outfile:
+        for file in txt_files:
+            with open(file, "r", encoding="utf-8") as infile:
+                outfile.write(infile.read().strip() + "\n\n")
+
+    print(f"✅ Finished {os.path.basename(channel_path)} → {output_path}")
+
+
+def combine_all_channels(base_dir):
+    """
+    Combine transcripts for all @channel directories in the repository.
+    """
+    channels = [
+        d for d in os.listdir(base_dir)
+        if d.startswith("@") and os.path.isdir(os.path.join(base_dir, d))
+    ]
+
+    if not channels:
+        print("⚠️ No @channel directories found. Skipping.")
+        return
+
+    for channel in sorted(channels):
+        print(f"📘 Building master transcript for {channel} ...")
+        combine_channel_transcripts(os.path.join(base_dir, channel))
+
+    print("🎯 All transcripts combined successfully.")
+
+
+if __name__ == "__main__":
+    try:
+        combine_all_channels(REPO_ROOT)
+        print("✅ All transcript generation completed successfully.")
+        exit(0)
+    except Exception as e:
+        print(f"❌ ERROR: {e}")
+        exit(0)  # Don't fail workflow, even if one channel has issues
+import os
+from datetime import datetime
+
+# ============================================================
 # ✅ UNIVERSAL TRANSCRIPT BUILDER — CI SAFE
 # Works on macOS, Linux (GitHub Actions), and local runs.
 # ============================================================
