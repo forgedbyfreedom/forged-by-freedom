@@ -3,6 +3,54 @@ name: Auto Update Master Transcripts
 on:
   workflow_dispatch:
   schedule:
+    - cron: '0 6 * * *'   # Runs daily at 6 AM UTC
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || echo "No requirements file, continuing"
+          pip install openai requests beautifulsoup4
+
+      - name: Rebuild master transcripts
+        run: |
+          echo "Building master transcripts..."
+          python build_master_transcripts.py || python auto_rebuild_all_v2.py
+
+      - name: Upload transcripts to OpenAI
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "Uploading transcripts to OpenAI..."
+          python .github/scripts/upload_to_openai.py
+
+      - name: Commit and safely push changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Auto-update master transcripts $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git pull --rebase origin main || true
+          git push origin main || echo "✅ No push needed, already up to date."
+name: Auto Update Master Transcripts
+
+on:
+  workflow_dispatch:
+  schedule:
     - cron: '0 6 * * *'
 
 permissions:
