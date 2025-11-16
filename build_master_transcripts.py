@@ -2,6 +2,48 @@ import os
 from datetime import datetime
 
 # ============================================================
+# ✅ UNIVERSAL TRANSCRIPT BUILDER — CI SAFE
+# Works on macOS, Linux (GitHub Actions), and local runs.
+# ============================================================
+
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+CHANNEL_PREFIX = "@"
+
+def combine_transcripts(base_dir, output_filename="master_transcript1.txt"):
+    """Combine all .txt files in a channel directory."""
+    if not os.path.exists(base_dir):
+        print(f"❌ Directory not found: {base_dir}")
+        return
+
+    txt_files = [f for f in os.listdir(base_dir) if f.endswith(".txt")]
+    if not txt_files:
+        print(f"⚠️ No .txt files found in {base_dir}")
+        return
+
+    output_path = os.path.join(base_dir, output_filename)
+    with open(output_path, "w") as outfile:
+        for fname in sorted(txt_files):
+            fpath = os.path.join(base_dir, fname)
+            with open(fpath, "r") as infile:
+                outfile.write(infile.read())
+                outfile.write("\n\n")
+        outfile.write(f"\n=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+    print(f"✅ Built {output_path}")
+
+def main():
+    for folder in os.listdir(REPO_ROOT):
+        if folder.startswith(CHANNEL_PREFIX):
+            base_dir = os.path.join(REPO_ROOT, folder)
+            combine_transcripts(base_dir)
+
+if __name__ == "__main__":
+    print("🔧 Starting transcript rebuild process...")
+    main()
+    print("🎯 All transcripts combined successfully.")
+import os
+from datetime import datetime
+
+# ============================================================
 # ✅ UNIVERSAL TRANSCRIPT BUILDER
 # Works on both macOS and GitHub Actions (Linux)
 # No hard-coded paths — auto-detects repo structure.
