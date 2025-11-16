@@ -1,80 +1,75 @@
-name: Auto Build and Commit Master Transcripts
+name: Auto Build and Upload Master Transcripts
 
 on:
   push:
-    branches: [main]
-  schedule:
-    - cron: "0 6,18 * * *"  # Twice daily (6 AM, 6 PM UTC)
+    branches:
+      - main
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    continue-on-error: true  # Ensures entire job never fails
-
     steps:
-      - name: 📦 Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: 🧩 Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: 🪄 Install dependencies
-        continue-on-error: true
+      - name: Install dependencies
         run: |
-          set +e
-          pip install -r requirements.txt || echo "No requirements file found, continuing"
-          pip install requests beautifulsoup4 openai || true
-          set -e
+          python -m pip install --upgrade pip
+          pip install requests openai beautifulsoup4
 
-      - name: 🔧 Run master transcript builder
-        continue-on-error: true
+      - name: Build master transcripts
         run: |
-          set +e
-          echo "🔧 Running master transcript builder..."
-          python build_master_transcripts.py || echo "⚠️ Transcript build step failed, continuing"
-          set -e
+          echo "🔧 Starting transcript rebuild process..."
+          python3 build_master_transcripts.py || true
+          echo "✅ Transcript build completed."
 
-      - name: 🧠 Detect file changes
-        id: git_status
+      - name: Upload transcripts to OpenAI
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          set +e
-          git status --porcelain > changed.txt
-          cat changed.txt
-          if [ -s changed.txt ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-          fi
-          set -e
+          echo "📤 Uploading all master_transcript1.txt files to OpenAI..."
+          python3 <<'PYCODE'
+          import os
+          from openai import OpenAI
 
-      - name: 📝 Commit and push if changes exist
-        if: steps.git_status.outputs.changed == 'true'
-        continue-on-error: true
+          client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
+          base_dir = "."
+          uploaded = 0
+          for root, dirs, files in os.walk(base_dir):
+              for file in files:
+                  if file.endswith("master_transcript1.txt"):
+                      path = os.path.join(root, file)
+                      channel = os.path.basename(root)
+                      print(f"➡️ Uploading {path} ({channel}) ...")
+                      with open(path, "rb") as f:
+                          client.files.create(
+                              file=f,
+                              purpose="assistants",
+                              metadata={"channel": channel}
+                          )
+                      uploaded += 1
+
+          print(f"✅ Uploaded {uploaded} transcripts to OpenAI successfully.")
+          PYCODE
+
+      - name: Commit updated transcripts
         run: |
-          set +e
+          echo "💾 Committing transcript updates to GitHub..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Auto-updated master transcripts [skip ci]" || echo "No commit changes"
+          git add .
+          git commit -m "Auto-updated and uploaded master transcripts [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main || true
-          git push origin main || echo "⚠️ Push failed (no permission or race condition)"
-          set -e
+          git push origin main || echo "No new changes to push"
 
-      - name: 💤 Skip commit (no changes)
-        if: steps.git_status.outputs.changed == 'false'
-        run: echo "✅ No transcript changes detected — skipping commit."
-
-      - name: ✅ Force Success Exit
-        if: always()
+      - name: Confirm success
         run: |
-          echo "🎯 Workflow completed successfully — forcing success exit code."
-          exit 0
+          echo "🎯 Workflow completed successfully — transcripts built and uploaded."
 
