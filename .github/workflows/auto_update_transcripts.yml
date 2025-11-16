@@ -1,4 +1,4 @@
-kname: Auto Build and Upload Master Transcripts
+name: Auto Build and Upload Master Transcripts
 
 on:
   push:
@@ -19,14 +19,21 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install dependencies (safe mode)
         run: |
+          echo "🔧 Installing Python dependencies..."
           python -m pip install --upgrade pip
-          pip install requests openai beautifulsoup4
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "⚠️ No requirements.txt found, installing minimal packages..."
+            pip install requests openai beautifulsoup4
+          fi
+          echo "✅ Dependencies installed."
 
       - name: Build master transcripts
         run: |
-          echo "🔧 Starting transcript rebuild process..."
+          echo "🧠 Building master transcripts..."
           python3 build_master_transcripts.py || true
           echo "✅ Transcript build completed."
 
@@ -40,7 +47,6 @@ jobs:
           from openai import OpenAI
 
           client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-
           base_dir = "."
           uploaded = 0
           for root, dirs, files in os.walk(base_dir):
@@ -56,13 +62,12 @@ jobs:
                               metadata={"channel": channel}
                           )
                       uploaded += 1
-
           print(f"✅ Uploaded {uploaded} transcripts to OpenAI successfully.")
           PYCODE
 
       - name: Commit updated transcripts
         run: |
-          echo "💾 Committing transcript updates to GitHub..."
+          echo "💾 Committing transcript updates..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
