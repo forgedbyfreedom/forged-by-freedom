@@ -1,3 +1,65 @@
+#!/usr/bin/env python3
+"""
+ForgedByFreedom Transcript Builder
+---------------------------------
+Combines individual transcript text files from each @Channel folder
+into a single master_transcript1.txt per channel.
+
+Works both locally and inside GitHub Actions.
+"""
+
+import os
+import sys
+from datetime import datetime
+
+# 🧭 Auto-detect the repo root directory (wherever this script is executed)
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+def combine_transcripts():
+    print("🔧 Starting transcript rebuild process...\n")
+
+    # Find all folders starting with "@"
+    channel_dirs = [
+        d for d in os.listdir(REPO_ROOT)
+        if d.startswith("@") and os.path.isdir(os.path.join(REPO_ROOT, d))
+    ]
+
+    if not channel_dirs:
+        print("⚠️ No channel folders found (expected directories like @ThinkBIGBodybuilding).")
+        sys.exit(1)
+
+    # Process each channel directory
+    for channel in channel_dirs:
+        channel_path = os.path.join(REPO_ROOT, channel)
+        txt_files = sorted([
+            f for f in os.listdir(channel_path)
+            if f.endswith(".txt") and not f.startswith("master_transcript")
+        ])
+
+        if not txt_files:
+            print(f"⚠️ No .txt transcripts found in {channel}/ — skipping.")
+            continue
+
+        output_path = os.path.join(channel_path, "master_transcript1.txt")
+        print(f"📘 Building master transcript for {channel} ...")
+
+        with open(output_path, "w", encoding="utf-8") as outfile:
+            for fname in txt_files:
+                fpath = os.path.join(channel_path, fname)
+                with open(fpath, "r", encoding="utf-8") as infile:
+                    outfile.write(infile.read().strip() + "\n\n")
+            outfile.write(f"\n\n=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+
+        print(f"✅ Finished {channel} → {output_path}\n")
+
+    print("🎯 All transcripts combined successfully.")
+
+if __name__ == "__main__":
+    try:
+        combine_transcripts()
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        sys.exit(1)
 import os
 
 # ====== CONFIG ======
