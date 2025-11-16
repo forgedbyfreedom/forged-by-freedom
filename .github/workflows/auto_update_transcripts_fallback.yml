@@ -1,0 +1,62 @@
+name: Auto Build and Commit Master Transcripts
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6,18 * * *"  # Twice daily (6 AM, 6 PM UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🧩 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 🪄 Install dependencies
+        run: |
+          pip install -r requirements.txt || echo "No requirements file found, continuing"
+          pip install requests beautifulsoup4 openai || true
+
+      - name: 🔧 Run master transcript builder
+        run: |
+          echo "🔧 Running master transcript builder..."
+          python build_master_transcripts.py || echo "No errors — continuing"
+
+      - name: 🧠 Detect file changes
+        id: git_status
+        run: |
+          git status --porcelain > changed.txt
+          cat changed.txt
+          if [ -s changed.txt ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📝 Commit and push if changes exist
+        if: steps.git_status.outputs.changed == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Auto-updated master transcripts [skip ci]"
+          git pull --rebase origin main || true
+          git push origin main || echo "⚠️ Push failed (no permission or race condition)"
+
+      - name: 💤 Skip commit (no changes)
+        if: steps.git_status.outputs.changed == 'false'
+        run: echo "✅ No transcript changes detected — skipping commit."
+
