@@ -326,3 +326,5 @@
 🔹 Processing channel: @bodybuildingcom
 [2025-11-15 21:13:13] ❌ Error processing @bodybuildingcom: Command '['python3', '/home/runner/work/thinkbig-transcripts/thinkbig-transcripts/build_master_transcripts.py']' returned non-zero exit status 1.
 [2025-11-15 21:13:13] === ✅ All channels processed successfully ===
+/bin/sh: /Users/weero/thinkbig_podcast/.venv/bin/python: No such file or directory
+/bin/sh: /Users/weero/thinkbig_podcast/.venv/bin/python: No such file or directory
