@@ -1,28 +1,23 @@
-      - name: Upload master transcripts to OpenAI
-        shell: bash
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          echo "📤 Uploading transcripts to OpenAI..."
-          python3 - <<'PYCODE'
-          import os
-          from openai import OpenAI
+name: Auto Build and Upload Master Transcripts
 
-          client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-          uploaded = 0
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * *"  # Runs daily at 09:00 UTC
 
-          for root, _, files in os.walk("."):
-              for file in files:
-                  if file.endswith("master_transcript1.txt"):
-                      path = os.path.join(root, file)
-                      print(f"➡️ Uploading {path} ...")
-                      with open(path, "rb") as f:
-                          client.files.create(
-                              file=f,
-                              purpose="assistants"
-                          )
-                      uploaded += 1
+permissions:
+  contents: write
 
-          print(f"✅ Uploaded {uploaded} transcript(s) successfully.")
-          PYCODE
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        use
