@@ -1,55 +1,28 @@
-name: Auto Build and Upload Master Transcripts
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-  schedule:
-    - cron: '0 9 * * *'  # runs daily at 9:00 UTC
-
-permissions:
-  contents: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          echo "🔧 Installing dependencies..."
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            pip install requests openai beautifulsoup4
-          fi
-          echo "✅ Dependencies ready."
-
-      - name: Build all master transcripts
-        run: |
-          echo "📘 Starting transcript builder..."
-          python3 build_master_transcripts.py || true
-          echo "✅ All transcripts processed."
-
       - name: Upload master transcripts to OpenAI
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
         run: |
           echo "📤 Uploading transcripts to OpenAI..."
-          python3 <<'PYCODE'
+          python3 - <<'PYCODE'
           import os
           from openai import OpenAI
 
           client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
           uploaded = 0
-          for root,
+
+          for root, _, files in os.walk("."):
+              for file in files:
+                  if file.endswith("master_transcript1.txt"):
+                      path = os.path.join(root, file)
+                      print(f"➡️ Uploading {path} ...")
+                      with open(path, "rb") as f:
+                          client.files.create(
+                              file=f,
+                              purpose="assistants",
+                              metadata={"source": os.path.basename(root)}
+                          )
+                      uploaded += 1
+
+          print(f"✅ Uploaded {uploaded} transcript(s) successfully.")
+          PYCODE
