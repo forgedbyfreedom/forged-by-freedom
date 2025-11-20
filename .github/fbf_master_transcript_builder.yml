@@ -1,4 +1,4 @@
-name: Build, Upload, and Sync Transcripts to Dashboard
+name: Full Transcript Build + Sync + Assistant Update
 
 on:
   workflow_dispatch:
@@ -12,6 +12,8 @@ env:
   GH_USER: forgedbyfreedom
   GH_PAT: ${{ secrets.FBF_PAT }}
   DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ASSISTANT_ID: asst_YOUR_ASSISTANT_ID_HERE  # 👈 Replace this with your real assistant ID
 
 jobs:
   build:
@@ -32,57 +34,55 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests openai beautifulsoup4 tqdm
 
-      - name: Build master transcripts
+      - name: Build and upload transcripts to OpenAI
         run: |
-          echo "📘 Starting transcript builder..."
+          echo "📘 Building and uploading transcripts..."
           python3 <<'PYCODE'
-          import os, json
+          import os, json, time
           from pathlib import Path
           from openai import OpenAI
-          import time
 
-          ROOT = Path(".")
           client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+          root = Path(".")
           file_index = []
 
-          for folder in ROOT.iterdir():
+          for folder in root.iterdir():
               if folder.is_dir() and folder.name.startswith("@"):
-                  out_path = folder / "master_transcript1.txt"
-                  with open(out_path, "w") as outfile:
-                      for txt_file in folder.rglob("*.txt"):
-                          with open(txt_file, "r", errors="ignore") as infile:
+                  out_file = folder / "master_transcript1.txt"
+                  with open(out_file, "w", encoding="utf-8") as outfile:
+                      for txt in folder.rglob("*.txt"):
+                          with open(txt, "r", encoding="utf-8", errors="ignore") as infile:
                               outfile.write(infile.read().strip() + "\n\n")
-                  print(f"✅ Finished {folder.name} → {out_path}")
+                  print(f"✅ Combined transcript for {folder.name}")
 
-                  # Upload to OpenAI
-                  with open(out_path, "rb") as f:
+                  with open(out_file, "rb") as f:
                       uploaded = client.files.create(file=f, purpose="assistants")
                       file_index.append({
                           "channel": folder.name,
-                          "filename": out_path.name,
+                          "filename": out_file.name,
                           "file_id": uploaded.id,
-                          "size": os.path.getsize(out_path),
+                          "size_bytes": os.path.getsize(out_file),
                           "uploaded_at": time.strftime("%Y-%m-%d %H:%M:%S")
                       })
-          
-          with open("file_index.json", "w") as f:
+
+          with open("file_index.json", "w", encoding="utf-8") as f:
               json.dump(file_index, f, indent=2)
 
-          print("🎯 All transcripts processed & uploaded.")
+          print("🎯 Uploaded all transcripts and created file_index.json")
           PYCODE
 
-      - name: Commit and push updated transcripts to thinkbig-transcripts
+      - name: Commit updated transcripts locally
         run: |
-          echo "💾 Committing updates..."
+          echo "💾 Committing updates to thinkbig-transcripts..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add . || true
-          git commit -m "Auto update transcripts and index [skip ci]" || echo "ℹ️ No changes."
+          git commit -m "Auto update transcripts + file index [skip ci]" || echo "ℹ️ No changes."
           git push origin main || true
 
-      - name: Sync master transcripts + index to dashboard repo
+      - name: Sync transcripts to dashboard repo
         run: |
-          echo "🚀 Syncing with dashboard repository..."
+          echo "🚀 Syncing transcripts and index to dashboard repo..."
           git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
           mkdir -p /tmp/dashboard/transcripts
           cp */master_transcript1.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
@@ -92,5 +92,30 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add transcripts/
-          git commit -m "Sync master transcripts + file index from thinkbig-transcripts [skip ci]" || echo "ℹ️ No changes."
+          git commit -m "Sync master transcripts + index from thinkbig-transcripts [skip ci]" || echo "ℹ️ No changes."
           git push origin main || true
+
+      - name: Update OpenAI Assistant
+        run: |
+          echo "🤖 Updating OpenAI Assistant with new files..."
+          python3 <<'PYCODE'
+          import os, json
+          from openai import OpenAI
+
+          api_key = os.getenv("OPENAI_API_KEY")
+          asst_id = os.getenv("ASSISTANT_ID")
+          if not api_key or not asst_id:
+              print("⚠️ Missing OPENAI_API_KEY or ASSISTANT_ID — skipping assistant update.")
+              raise SystemExit(0)
+
+          client = OpenAI(api_key=api_key)
+
+          with open("file_index.json", "r") as f:
+              file_index = json.load(f)
+
+          file_ids = [entry["file_id"] for entry in file_index]
+
+          print(f"🔗 Linking {len(file_ids)} files to assistant {asst_id}...")
+          client.beta.assistants.update(asst_id, file_ids=file_ids)
+          print("✅ Assistant successfully updated with latest transcripts.")
+          PYCODE
