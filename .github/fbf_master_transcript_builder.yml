@@ -1,67 +1,96 @@
-name: Build and Upload Master Transcripts (Dual Repo)
+name: Build, Upload, and Sync Transcripts to Dashboard
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *" # every 6 hours
+    - cron: "0 */6 * * *"  # every 6 hours
 
 permissions:
   contents: write
 
+env:
+  GH_USER: forgedbyfreedom
+  GH_PAT: ${{ secrets.FBF_PAT }}
+  DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GH_USER: forgedbyfreedom
-      GH_REPO: thinkbig-transcripts
-      GH_PAT: ${{ secrets.FBF_PAT }}
 
     steps:
-      - name: 🧩 Checkout main repo
+      - name: Checkout thinkbig-transcripts repo
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          token: ${{ secrets.FBF_PAT }}
+          python-version: "3.11"
 
-      - name: 🔍 Debug — Check Token
+      - name: Install dependencies
         run: |
-          if [ -z "$GH_PAT" ]; then
-            echo "❌ TOKEN MISSING — Check 'FBF_PAT' in Settings → Secrets → Actions"
-            exit 1
-          fi
-          echo "✅ Token loaded successfully (hidden)."
+          echo "🔧 Installing dependencies..."
+          python -m pip install --upgrade pip
+          pip install requests openai beautifulsoup4 tqdm
 
-      - name: 📦 Clone thinkbig-transcripts with PAT
+      - name: Build master transcripts
         run: |
-          echo "📦 Cloning thinkbig-transcripts..."
-          git clone https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/${GH_REPO}.git /tmp/${GH_REPO} || {
-            echo "❌ Clone failed — check permissions or repo name."
-            exit 1
-          }
-          echo "✅ Clone successful — showing sample files:"
-          ls -l /tmp/${GH_REPO} | head
+          echo "📘 Starting transcript builder..."
+          python3 <<'PYCODE'
+          import os, json
+          from pathlib import Path
+          from openai import OpenAI
+          import time
 
-      - name: 🧠 Combine transcript files
-        run: |
-          mkdir -p transcripts
-          find /tmp/${GH_REPO} -type f -name "*.txt" -print0 | xargs -0 cat > transcripts/master_transcript.txt || true
-          echo "✅ Combined transcripts into transcripts/master_transcript.txt"
-          wc -l transcripts/master_transcript.txt || echo "⚠️ No transcript data found."
+          ROOT = Path(".")
+          client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+          file_index = []
 
-      - name: 🗂️ Commit and push updates
+          for folder in ROOT.iterdir():
+              if folder.is_dir() and folder.name.startswith("@"):
+                  out_path = folder / "master_transcript1.txt"
+                  with open(out_path, "w") as outfile:
+                      for txt_file in folder.rglob("*.txt"):
+                          with open(txt_file, "r", errors="ignore") as infile:
+                              outfile.write(infile.read().strip() + "\n\n")
+                  print(f"✅ Finished {folder.name} → {out_path}")
+
+                  # Upload to OpenAI
+                  with open(out_path, "rb") as f:
+                      uploaded = client.files.create(file=f, purpose="assistants")
+                      file_index.append({
+                          "channel": folder.name,
+                          "filename": out_path.name,
+                          "file_id": uploaded.id,
+                          "size": os.path.getsize(out_path),
+                          "uploaded_at": time.strftime("%Y-%m-%d %H:%M:%S")
+                      })
+          
+          with open("file_index.json", "w") as f:
+              json.dump(file_index, f, indent=2)
+
+          print("🎯 All transcripts processed & uploaded.")
+          PYCODE
+
+      - name: Commit and push updated transcripts to thinkbig-transcripts
         run: |
+          echo "💾 Committing updates..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -s transcripts/master_transcript.txt ]; then
-            git add transcripts/master_transcript.txt
-            git commit -m "Auto rebuild transcripts [skip ci]" || echo "No changes to commit."
-            git push origin main
-            echo "✅ Master transcript pushed to main."
-          else
-            echo "⚠️ No transcript file to push."
-          fi
+          git add . || true
+          git commit -m "Auto update transcripts and index [skip ci]" || echo "ℹ️ No changes."
+          git push origin main || true
 
-      - name: 📤 Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: master_transcript
-          path: transcripts/master_transcript.txt
+      - name: Sync master transcripts + index to dashboard repo
+        run: |
+          echo "🚀 Syncing with dashboard repository..."
+          git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
+          mkdir -p /tmp/dashboard/transcripts
+          cp */master_transcript1.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
+          cp file_index.json /tmp/dashboard/transcripts/
+
+          cd /tmp/dashboard
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add transcripts/
+          git commit -m "Sync master transcripts + file index from thinkbig-transcripts [skip ci]" || echo "ℹ️ No changes."
+          git push origin main || true
