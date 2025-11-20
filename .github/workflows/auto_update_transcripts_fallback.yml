@@ -1,62 +1,48 @@
-name: Auto Build and Commit Master Transcripts
+name: FBF Transcript Index Builder & Deduplicator
 
 on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: "0 6,18 * * *"  # Twice daily (6 AM, 6 PM UTC)
   workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"  # runs every 12 hours
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  build-index:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📦 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: 🧩 Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: 🪄 Install dependencies
+      - name: Install dependencies
         run: |
-          pip install -r requirements.txt || echo "No requirements file found, continuing"
-          pip install requests beautifulsoup4 openai || true
+          python -m pip install --upgrade pip
+          pip install openai requests
 
-      - name: 🔧 Run master transcript builder
+      - name: Run deduplication and index builder
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.FBF_PAT }}
         run: |
-          echo "🔧 Running master transcript builder..."
-          python build_master_transcripts.py || echo "No errors — continuing"
+          python3 scripts/build_index.py
 
-      - name: 🧠 Detect file changes
-        id: git_status
+      - name: Push updated index to dashboard repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.FBF_PAT }}
         run: |
-          git status --porcelain > changed.txt
-          cat changed.txt
-          if [ -s changed.txt ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: 📝 Commit and push if changes exist
-        if: steps.git_status.outputs.changed == 'true'
-        run: |
+          git clone https://github.com/forgedbyfreedom/forged-by-freedom-st.git /tmp/dashboard
+          mkdir -p /tmp/dashboard/transcripts
+          cp file_index.json /tmp/dashboard/transcripts/file_index.json
+          cd /tmp/dashboard
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Auto-updated master transcripts [skip ci]"
-          git pull --rebase origin main || true
-          git push origin main || echo "⚠️ Push failed (no permission or race condition)"
-
-      - name: 💤 Skip commit (no changes)
-        if: steps.git_status.outputs.changed == 'false'
-        run: echo "✅ No transcript changes detected — skipping commit."
-
+          git add transcripts/file_index.json
+          git commit -m "Update transcript index [skip ci]" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.FBF_PAT }}@github.com/forgedbyfreedom/forged-by-freedom-st.git main
