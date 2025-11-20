@@ -1,4 +1,4 @@
-name: Full Transcript Build + Sync + Assistant Update
+name: Full Transcript Build + Sync + Assistant Update + Cleanup
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ env:
   GH_PAT: ${{ secrets.FBF_PAT }}
   DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  ASSISTANT_ID: asst_YOUR_ASSISTANT_ID_HERE  # 👈 Replace this with your real assistant ID
+  ASSISTANT_ID: asst_YOUR_ASSISTANT_ID_HERE  # 👈 Replace with your real Assistant ID
 
 jobs:
   build:
@@ -76,9 +76,13 @@ jobs:
           echo "💾 Committing updates to thinkbig-transcripts..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add . || true
-          git commit -m "Auto update transcripts + file index [skip ci]" || echo "ℹ️ No changes."
-          git push origin main || true
+          git add -A
+          if git diff --cached --quiet; then
+            echo "ℹ️ No changes to commit. Skipping push."
+          else
+            git commit -m "Auto update transcripts + file index [skip ci]"
+            git push origin main
+          fi
 
       - name: Sync transcripts to dashboard repo
         run: |
@@ -92,12 +96,16 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add transcripts/
-          git commit -m "Sync master transcripts + index from thinkbig-transcripts [skip ci]" || echo "ℹ️ No changes."
-          git push origin main || true
+          if git diff --cached --quiet; then
+            echo "ℹ️ No new transcript changes to push to dashboard."
+          else
+            git commit -m "Sync master transcripts + index from thinkbig-transcripts [skip ci]"
+            git push origin main
+          fi
 
-      - name: Update OpenAI Assistant
+      - name: Update and clean OpenAI Assistant
         run: |
-          echo "🤖 Updating OpenAI Assistant with new files..."
+          echo "🤖 Updating Assistant and cleaning old files..."
           python3 <<'PYCODE'
           import os, json
           from openai import OpenAI
@@ -110,12 +118,28 @@ jobs:
 
           client = OpenAI(api_key=api_key)
 
+          # Load new uploads
           with open("file_index.json", "r") as f:
               file_index = json.load(f)
 
-          file_ids = [entry["file_id"] for entry in file_index]
+          new_file_ids = [f["file_id"] for f in file_index]
+          print(f"🔗 Linking {len(new_file_ids)} files to assistant {asst_id}...")
+          client.beta.assistants.update(asst_id, file_ids=new_file_ids)
+          print("✅ Assistant successfully updated.")
 
-          print(f"🔗 Linking {len(file_ids)} files to assistant {asst_id}...")
-          client.beta.assistants.update(asst_id, file_ids=file_ids)
-          print("✅ Assistant successfully updated with latest transcripts.")
+          # Cleanup older files with the same base name
+          print("🧹 Checking for old transcript files to remove...")
+          all_files = client.files.list().data
+          keep_files = set(new_file_ids)
+          deleted_count = 0
+
+          for f in all_files:
+              if f.id not in keep_files and f.filename == "master_transcript1.txt":
+                  try:
+                      client.files.delete(f.id)
+                      deleted_count += 1
+                  except Exception as e:
+                      print(f"⚠️ Could not delete {f.id}: {e}")
+
+          print(f"🧽 Cleanup complete. Removed {deleted_count} outdated files.")
           PYCODE
