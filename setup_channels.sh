@@ -1,26 +1,27 @@
-#!/bin/bash
-# setup_channels.sh — create all channel folders for transcript organization
+name: Run Channel Setup Script
 
-channels=(
-@BarbellMedicine @ChrisBumstead @DrGabrielleLyon @FoundMyFitness @HighLifeWorkout
-@ISSAPersonalTrainer @JeffNippard @MulliganBrothers @NasmOrgPersonalTrainer
-@NicksStrengthandPower @PeterAttiaMD @RenaissancePeriodization @RyanHumiston
-@ThinkBIGBodybuilding @anabolicbodybuilding @anabolicuniversity @bodybuildingcom
-@eliteftsofficial @hanyrambod_FST7 @realtattered @rxmuscle @sam_sulek
-@theconditioncoaches @AndrewHuberman @HubermanLabClips @LayneNorton @EricHelms
-@AlanAragon @ScienceforSport @BenGreenfieldFitness @MorePlatesMoreDates
-@vigoroussteve @LeoAndLongevity @ThomasDeLauer @GregDoucette @TonyHuge
-@DerekMPMD @JayCampbell @KennyKO @WestsideBarbell @JuggernautTrainingSystems
-@KabukiStrength @MattWenning @MarkBell @SquatUniversity @HybridPerformanceMethod
-@OmarIsuf @JockoPodcast @AndyFrisella @TimKennedy @BrianShawStrength
-@MattBrownMMA @LexFridman @DavidGoggins @NickBareFitness @TacticalHypertrophy
-@HardToKillFitness @ModernDaySniper @FouadAbiadMedia @FlexLewis @DennisJamesTV
-@DorianYates @KingKamali @GuyCisternino @BenChowBodybuilding @JAYCUTLER @KaiGreene @BranchWarren
-)
+on:
+  workflow_dispatch:  # lets you trigger manually from GitHub Actions tab
 
-for c in "${channels[@]}"; do
-  mkdir -p "$c"
-  echo "This folder holds transcript text files for $c." > "$c/README.txt"
-done
+permissions:
+  contents: write
 
-echo "✅ Created ${#channels[@]} channel folders successfully."
+jobs:
+  create-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run channel setup script
+        run: |
+          chmod +x setup_channels.sh
+          ./setup_channels.sh
+
+      - name: Commit and push new folders
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Auto-create all channel folders [skip ci]" || echo "No changes to commit"
+          git push origin main
