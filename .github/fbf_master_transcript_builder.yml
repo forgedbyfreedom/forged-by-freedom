@@ -1,0 +1,67 @@
+name: Build and Upload Master Transcripts (Dual Repo)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GH_USER: forgedbyfreedom
+      GH_REPO: thinkbig-transcripts
+      GH_PAT: ${{ secrets.FBF_PAT }}
+
+    steps:
+      - name: 🧩 Checkout main repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FBF_PAT }}
+
+      - name: 🔍 Debug — Check Token
+        run: |
+          if [ -z "$GH_PAT" ]; then
+            echo "❌ TOKEN MISSING — Check 'FBF_PAT' in Settings → Secrets → Actions"
+            exit 1
+          fi
+          echo "✅ Token loaded successfully (hidden)."
+
+      - name: 📦 Clone thinkbig-transcripts with PAT
+        run: |
+          echo "📦 Cloning thinkbig-transcripts..."
+          git clone https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/${GH_REPO}.git /tmp/${GH_REPO} || {
+            echo "❌ Clone failed — check permissions or repo name."
+            exit 1
+          }
+          echo "✅ Clone successful — showing sample files:"
+          ls -l /tmp/${GH_REPO} | head
+
+      - name: 🧠 Combine transcript files
+        run: |
+          mkdir -p transcripts
+          find /tmp/${GH_REPO} -type f -name "*.txt" -print0 | xargs -0 cat > transcripts/master_transcript.txt || true
+          echo "✅ Combined transcripts into transcripts/master_transcript.txt"
+          wc -l transcripts/master_transcript.txt || echo "⚠️ No transcript data found."
+
+      - name: 🗂️ Commit and push updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -s transcripts/master_transcript.txt ]; then
+            git add transcripts/master_transcript.txt
+            git commit -m "Auto rebuild transcripts [skip ci]" || echo "No changes to commit."
+            git push origin main
+            echo "✅ Master transcript pushed to main."
+          else
+            echo "⚠️ No transcript file to push."
+          fi
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: master_transcript
+          path: transcripts/master_transcript.txt
