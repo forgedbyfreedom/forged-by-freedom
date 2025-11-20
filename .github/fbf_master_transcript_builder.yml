@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"  # every 6 hours
+  push:
+    branches-ignore:
+      - main  # prevents double-run when saving
 
 permissions:
   contents: write
@@ -13,7 +16,7 @@ env:
   GH_PAT: ${{ secrets.FBF_PAT }}
   DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  ASSISTANT_ID: asst_YOUR_ASSISTANT_ID_HERE  # 👈 Replace with your real Assistant ID
+  ASSISTANT_ID: asst_YOUR_ASSISTANT_ID_HERE  # 👈 Replace this with your real Assistant ID
 
 jobs:
   build:
@@ -73,35 +76,43 @@ jobs:
 
       - name: Commit updated transcripts locally
         run: |
+          set +e
           echo "💾 Committing updates to thinkbig-transcripts..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
+
           if git diff --cached --quiet; then
             echo "ℹ️ No changes to commit. Skipping push."
-          else
-            git commit -m "Auto update transcripts + file index [skip ci]"
-            git push origin main
+            exit 0
           fi
+
+          git commit -m "Auto update transcripts + file index [skip ci]" || true
+          git push origin main || true
+          echo "✅ Commit/push step completed successfully."
 
       - name: Sync transcripts to dashboard repo
         run: |
+          set +e
           echo "🚀 Syncing transcripts and index to dashboard repo..."
           git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
           mkdir -p /tmp/dashboard/transcripts
           cp */master_transcript1.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
-          cp file_index.json /tmp/dashboard/transcripts/
+          cp file_index.json /tmp/dashboard/transcripts/ || true
 
           cd /tmp/dashboard
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add transcripts/
+
           if git diff --cached --quiet; then
             echo "ℹ️ No new transcript changes to push to dashboard."
-          else
-            git commit -m "Sync master transcripts + index from thinkbig-transcripts [skip ci]"
-            git push origin main
+            exit 0
           fi
+
+          git commit -m "Sync master transcripts + index from thinkbig-transcripts [skip ci]" || true
+          git push origin main || true
+          echo "✅ Dashboard sync complete."
 
       - name: Update and clean OpenAI Assistant
         run: |
@@ -118,7 +129,6 @@ jobs:
 
           client = OpenAI(api_key=api_key)
 
-          # Load new uploads
           with open("file_index.json", "r") as f:
               file_index = json.load(f)
 
@@ -127,7 +137,6 @@ jobs:
           client.beta.assistants.update(asst_id, file_ids=new_file_ids)
           print("✅ Assistant successfully updated.")
 
-          # Cleanup older files with the same base name
           print("🧹 Checking for old transcript files to remove...")
           all_files = client.files.list().data
           keep_files = set(new_file_ids)
