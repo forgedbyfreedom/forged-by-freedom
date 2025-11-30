@@ -348,3 +348,7 @@
 [2025-11-30 15:44:25] 
 🔹 Processing channel: @ChrisBumstead
 [2025-11-30 15:44:25] ✅ Rebuilt master transcript for @ChrisBumstead in 0.3s
+[2025-11-30 15:44:25] ❌ Error processing @ChrisBumstead: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:25] 
+🔹 Processing channel: @PeterAttiaMD
+[2025-11-30 15:44:25] ✅ Rebuilt master transcript for @PeterAttiaMD in 0.2s
