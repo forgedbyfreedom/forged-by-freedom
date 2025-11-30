@@ -364,3 +364,7 @@
 [2025-11-30 15:44:26] 
 🔹 Processing channel: @HighLifeWorkout
 [2025-11-30 15:44:26] ✅ Rebuilt master transcript for @HighLifeWorkout in 0.2s
+[2025-11-30 15:44:27] ❌ Error processing @HighLifeWorkout: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:27] 
+🔹 Processing channel: @sam_sulek
+[2025-11-30 15:44:27] ✅ Rebuilt master transcript for @sam_sulek in 0.3s
