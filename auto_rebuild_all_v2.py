@@ -32,7 +32,10 @@ for ch in CHANNELS:
     start = time.time()
     log(f"\n🔹 Processing channel: {ch}")
     try:
-        subprocess.run(["python3", os.path.join(TRANSCRIPTS, "build_master_transcripts.py")], check=True)
+        import os
+repo_root = os.path.dirname(os.path.abspath(__file__))
+build_script = os.path.join(repo_root, "build_master_transcripts.py")
+subprocess.run(["python", build_script])
         runtime = round(time.time() - start, 1)
         log(f"✅ Rebuilt master transcript for {ch} in {runtime}s")
 
