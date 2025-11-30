@@ -1,5 +1,13 @@
+HEAD
 transcripts/*
 *.mp4
 *.webm
 *.mov
 *.mp3
+*.mp4
+*.webm
+*.mp4
+*.webm
+*.mov
+*.zip
+thinkbig/main

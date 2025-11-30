@@ -1,0 +1,85 @@
+name: Auto Build and Upload Master Transcripts
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * *"  # Runs daily at 09:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          echo "🔧 Installing dependencies..."
+          python -m pip install --upgrade pip
+          pip install requests openai beautifulsoup4
+          echo "✅ Dependencies ready."
+
+      - name: Build all master transcripts
+        run: |
+          echo "📘 Starting transcript builder..."
+          python3 build_master_transcripts.py || true
+          echo "✅ All transcripts processed."
+
+      - name: Upload master transcripts to OpenAI
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "📤 Uploading transcripts to OpenAI..."
+          python3 - <<'PYCODE'
+          import os
+          from openai import OpenAI
+
+          client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+          uploaded = 0
+
+          for root, _, files in os.walk("."):
+              for file in files:
+                  if file.endswith("master_transcript1.txt"):
+                      path = os.path.join(root, file)
+                      print(f"➡️ Uploading {path} ...")
+                      with open(path, "rb") as f:
+                          client.files.create(
+                              file=f,
+                              purpose="assistants"
+                          )
+                      uploaded += 1
+
+          print(f"✅ Uploaded {uploaded} transcript(s) successfully.")
+          PYCODE
+
+      - name: Commit changes (if any)
+        run: |
+          echo "💾 Checking for new commits..."
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "ℹ️ No changes detected, skipping commit."
+          else
+            git commit -m "Auto-updated master transcripts [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main || true
+          fi
+          echo "✅ Commit phase completed."
+
+      - name: Confirm success
+        run: |
+          echo "🎯 Workflow completed successfully."
+          exit 0

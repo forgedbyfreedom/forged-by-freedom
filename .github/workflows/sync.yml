@@ -1,0 +1,29 @@
+name: Sync OpenAI Transcripts to Wix
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # Run nightly at 3 AM UTC
+  workflow_dispatch:       # Allow manual trigger in GitHub
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install openai requests python-dotenv
+
+      - name: Run sync script
+        env:
+          OPENAI_API_KEY: ${{ secrets.NEW_OPEN_AI }}
+          ORG_ID: ${{ secrets.ORG_ID }}
+          ZAPIER_WEBHOOK: ${{ secrets.ZAPIER_WEBHOOK }}
+        run: python sync_openai_to_wix.py
