@@ -3,7 +3,7 @@
 
 CHANNEL_DIR="$(cd "$(dirname "$0")" && pwd)"
 CHANNEL_NAME="$(basename "$CHANNEL_DIR")"
-REPO_DIR="/Users/weero/thinkbig_podcast/transcripts"
+REPO_DIR="/Users/weero/forged-by-freedom/transcripts"
 LOG_FILE="$CHANNEL_DIR/github_sync.log"
 
 cd "$REPO_DIR" || exit 1
@@ -31,7 +31,7 @@ fi
 
 CHANNEL_DIR="$(cd "$(dirname "$0")" && pwd)"
 CHANNEL_NAME="$(basename "$CHANNEL_DIR")"
-REPO_DIR="/Users/weero/thinkbig_podcast/transcripts"
+REPO_DIR="/Users/weero/forged-by-freedom/transcripts"
 LOG_FILE="$CHANNEL_DIR/github_sync.log"
 
 cd "$REPO_DIR" || exit 1
