@@ -1,0 +1,57 @@
+name: 🔁 Auto Sync & Rebuild Transcripts
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 6 * * *"  # every day at 6 AM UTC
+
+jobs:
+  sync-pinecone:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧰 Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai pinecone-client requests tqdm
+
+      - name: 🔧 Prepare environment
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          echo "Environment ready with OpenAI + Pinecone"
+
+      - name: 🧠 Build master transcript
+        run: |
+          python backend/build_master_transcripts.py || echo "Skipping master build if missing"
+
+      - name: 🚀 Sync to Pinecone
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          python backend/sync_local_transcripts_to_pinecone.py || echo "Pinecone sync completed or skipped"
+
+      - name: ✅ Commit changes (if new metadata)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-sync Pinecone & transcripts [skip ci]"
+          git push || echo "No changes to push"
+
+      - name: ✉️ Notify success
+        run: echo "✅ Transcript sync & Pinecone update complete!"

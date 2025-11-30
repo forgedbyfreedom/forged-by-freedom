@@ -1,9 +1,3 @@
-#!/bin/bash
-mkdir -p large_media_split
-for f in *.mp4 *.webm; do
-  [ -f "$f" ] || continue
-  base=$(basename "$f" | sed 's/ /_/g')
-  split -b 95m "$f" "large_media_split/${base}_part_"
-done
-echo "✅ Split complete. Use 'cat <file>_part_* > original' to rebuild."
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:334d61e4cf2178d129f277b35f5d6a61a7fbc4833decfbbd1ddc24a10d2a20df
+size 265
