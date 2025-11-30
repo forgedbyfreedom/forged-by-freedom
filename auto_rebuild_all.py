@@ -17,7 +17,10 @@ for channel in os.listdir(BASE_DIR):
     # Run master transcript builder
     build_script = os.path.join(BASE_DIR, "build_master_transcripts.py")
     try:
-        subprocess.run(["python", build_script], cwd=channel_path, check=True)
+        import os
+repo_root = os.path.dirname(os.path.abspath(__file__))
+build_script = os.path.join(repo_root, "build_master_transcripts.py")
+subprocess.run(["python", build_script])
         print(f"✅ Rebuilt master transcript for {channel}")
     except subprocess.CalledProcessError:
         print(f"⚠️ Skipped {channel} — build script failed.")
