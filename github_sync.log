@@ -336,3 +336,7 @@
 [2025-11-30 15:44:23] 
 🔹 Processing channel: @bodybuildingcom
 [2025-11-30 15:44:24] ✅ Rebuilt master transcript for @bodybuildingcom in 0.4s
+[2025-11-30 15:44:24] ❌ Error processing @bodybuildingcom: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:24] 
+🔹 Processing channel: @theconditioncoaches
+[2025-11-30 15:44:24] ✅ Rebuilt master transcript for @theconditioncoaches in 0.3s
