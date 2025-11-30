@@ -5,14 +5,25 @@ import os
 import requests
 import hashlib
 from tqdm import tqdm
+from dotenv import load_dotenv
 from openai import OpenAI
 from pinecone import Pinecone, ServerlessSpec
+from pathlib import Path
 
 # -----------------------------
-# 🔑 API Keys
+# 🌍 Load Environment Variables
 # -----------------------------
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "sk-your-openai-key")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "pcsk-your-pinecone-key")
+load_dotenv(dotenv_path=Path.cwd() / ".env")
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_INDEX = os.getenv("PINECONE_INDEX", "forged-transcripts")
+PINECONE_REGION = os.getenv("PINECONE_ENVIRONMENT", "us-east-1")
+
+if not OPENAI_API_KEY:
+    raise ValueError("❌ Missing OPENAI_API_KEY in your .env file.")
+if not PINECONE_API_KEY:
+    raise ValueError("❌ Missing PINECONE_API_KEY in your .env file.")
 
 # -----------------------------
 # ⚙️ Initialize Clients
@@ -20,40 +31,41 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "pcsk-your-pinecone-key")
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
-INDEX_NAME = "forged-transcripts"
-
-# Create the index if it doesn’t exist
-if INDEX_NAME not in [i["name"] for i in pc.list_indexes().indexes]:
-    print(f"🪶 Creating Pinecone index: {INDEX_NAME} ...")
+# Create or connect to index
+existing_indexes = [i["name"] for i in pc.list_indexes()]
+if PINECONE_INDEX not in existing_indexes:
+    print(f"🪶 Creating Pinecone index: {PINECONE_INDEX} ...")
     pc.create_index(
-        name=INDEX_NAME,
-        dimension=3072,
+        name=PINECONE_INDEX,
+        dimension=3072,  # text-embedding-3-large has 3072 dims
         metric="cosine",
-        spec=ServerlessSpec(cloud="aws", region="us-east-1")
+        spec=ServerlessSpec(cloud="aws", region=PINECONE_REGION)
     )
-index = pc.Index(INDEX_NAME)
-print(f"✅ Using Pinecone index: {INDEX_NAME}")
+index = pc.Index(PINECONE_INDEX)
+print(f"✅ Using Pinecone index: {PINECONE_INDEX}")
 
 # -----------------------------
 # 📂 Gather All Transcript Sources
 # -----------------------------
-LOCAL_FOLDER = "/Users/weero/forged-by-freedom/transcripts"
+LOCAL_FOLDER = Path(__file__).resolve().parent / "transcripts"
 REMOTE_FILE_URLS = [
-    "https://platform.openai.com/storage/files/file-JanULGgnLMqaG5M2U8Rvt3"  # your remote file
+    # Add any remote transcript files here (OpenAI or cloud links)
 ]
 
 def load_local_files():
+    """Load .txt transcript files from the local transcripts/ folder."""
     files = []
-    if os.path.exists(LOCAL_FOLDER):
-        for f in os.listdir(LOCAL_FOLDER):
-            if f.endswith(".txt"):
-                path = os.path.join(LOCAL_FOLDER, f)
-                with open(path, "r", encoding="utf-8", errors="ignore") as fp:
-                    text = fp.read()
-                files.append({"id": f, "text": text})
+    if LOCAL_FOLDER.exists():
+        for f in LOCAL_FOLDER.iterdir():
+            if f.suffix == ".txt":
+                with open(f, "r", encoding="utf-8", errors="ignore") as fp:
+                    text = fp.read().strip()
+                if text:
+                    files.append({"id": f.name, "text": text})
     return files
 
 def download_remote_files():
+    """Download transcript text files from URLs (optional)."""
     files = []
     for url in REMOTE_FILE_URLS:
         print(f"🌐 Downloading remote file: {url}")
@@ -69,7 +81,7 @@ def download_remote_files():
             print(f"⚠️ Error downloading {url}: {e}")
     return files
 
-# Load local and remote transcripts
+# Load all transcripts
 local_files = load_local_files()
 remote_files = download_remote_files()
 all_files = local_files + remote_files
@@ -96,11 +108,14 @@ for file in tqdm(deduped_files, desc="Uploading transcripts"):
 
     for j, chunk in enumerate(chunks):
         chunk_id = f"{file['id']}-{j}"
+
+        # Generate embedding
         emb = openai_client.embeddings.create(
             model="text-embedding-3-large",
             input=chunk
         ).data[0].embedding
 
+        # Upload to Pinecone
         index.upsert([
             {
                 "id": chunk_id,
