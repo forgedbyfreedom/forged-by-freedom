@@ -408,3 +408,7 @@
 [2025-11-30 15:44:31] 
 🔹 Processing channel: @DrGabrielleLyon
 [2025-11-30 15:44:31] ✅ Rebuilt master transcript for @DrGabrielleLyon in 0.3s
+[2025-11-30 15:44:31] ❌ Error processing @DrGabrielleLyon: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:31] 
+🔹 Processing channel: @anabolicbodybuilding
+[2025-11-30 15:44:31] ✅ Rebuilt master transcript for @anabolicbodybuilding in 0.3s
