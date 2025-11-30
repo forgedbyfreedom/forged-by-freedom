@@ -412,3 +412,7 @@
 [2025-11-30 15:44:31] 
 🔹 Processing channel: @anabolicbodybuilding
 [2025-11-30 15:44:31] ✅ Rebuilt master transcript for @anabolicbodybuilding in 0.3s
+[2025-11-30 15:44:32] ❌ Error processing @anabolicbodybuilding: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:32] 
+🔹 Processing channel: @JeffNippard
+[2025-11-30 15:44:32] ✅ Rebuilt master transcript for @JeffNippard in 0.3s
