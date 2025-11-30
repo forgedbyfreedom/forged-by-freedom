@@ -356,3 +356,7 @@
 [2025-11-30 15:44:25] 
 🔹 Processing channel: @eliteftsofficial
 [2025-11-30 15:44:26] ✅ Rebuilt master transcript for @eliteftsofficial in 0.3s
+[2025-11-30 15:44:26] ❌ Error processing @eliteftsofficial: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:26] 
+🔹 Processing channel: @hanyrambod_FST7
+[2025-11-30 15:44:26] ✅ Rebuilt master transcript for @hanyrambod_FST7 in 0.2s
