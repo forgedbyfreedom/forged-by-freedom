@@ -396,3 +396,7 @@
 [2025-11-30 15:44:30] 
 🔹 Processing channel: @ISSAPersonalTrainer
 [2025-11-30 15:44:30] ✅ Rebuilt master transcript for @ISSAPersonalTrainer in 0.3s
+[2025-11-30 15:44:30] ❌ Error processing @ISSAPersonalTrainer: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:30] 
+🔹 Processing channel: @NicksStrengthandPower
+[2025-11-30 15:44:30] ✅ Rebuilt master transcript for @NicksStrengthandPower in 0.3s
