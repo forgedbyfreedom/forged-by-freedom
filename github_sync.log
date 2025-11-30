@@ -332,3 +332,7 @@
 [2025-11-30 15:44:19] 
 🔹 Processing channel: @FoundMyFitness
 [2025-11-30 15:44:20] ✅ Rebuilt master transcript for @FoundMyFitness in 0.8s
+[2025-11-30 15:44:23] ❌ Error processing @FoundMyFitness: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:23] 
+🔹 Processing channel: @bodybuildingcom
+[2025-11-30 15:44:24] ✅ Rebuilt master transcript for @bodybuildingcom in 0.4s
