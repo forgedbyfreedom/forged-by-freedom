@@ -384,3 +384,7 @@
 [2025-11-30 15:44:28] 
 🔹 Processing channel: @rxmuscle
 [2025-11-30 15:44:29] ✅ Rebuilt master transcript for @rxmuscle in 0.3s
+[2025-11-30 15:44:29] ❌ Error processing @rxmuscle: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:29] 
+🔹 Processing channel: @ThinkBIGBodybuilding
+[2025-11-30 15:44:29] ✅ Rebuilt master transcript for @ThinkBIGBodybuilding in 0.2s
