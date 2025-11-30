@@ -340,3 +340,7 @@
 [2025-11-30 15:44:24] 
 🔹 Processing channel: @theconditioncoaches
 [2025-11-30 15:44:24] ✅ Rebuilt master transcript for @theconditioncoaches in 0.3s
+[2025-11-30 15:44:24] ❌ Error processing @theconditioncoaches: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:24] 
+🔹 Processing channel: @RenaissancePeriodization
+[2025-11-30 15:44:24] ✅ Rebuilt master transcript for @RenaissancePeriodization in 0.3s
