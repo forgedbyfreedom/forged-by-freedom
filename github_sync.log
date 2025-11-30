@@ -344,3 +344,7 @@
 [2025-11-30 15:44:24] 
 🔹 Processing channel: @RenaissancePeriodization
 [2025-11-30 15:44:24] ✅ Rebuilt master transcript for @RenaissancePeriodization in 0.3s
+[2025-11-30 15:44:25] ❌ Error processing @RenaissancePeriodization: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:25] 
+🔹 Processing channel: @ChrisBumstead
+[2025-11-30 15:44:25] ✅ Rebuilt master transcript for @ChrisBumstead in 0.3s
