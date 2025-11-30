@@ -1,13 +1,25 @@
-HEAD
-transcripts/*
-*.mp4
-*.webm
-*.mov
-*.mp3
-*.mp4
-*.webm
-*.mp4
-*.webm
-*.mov
-*.zip
-thinkbig/main
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+
+# Virtual environments
+.venv/
+.venv311/
+env/
+venv/
+
+# Node
+node_modules/
+.wix/
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# macOS junk
+.DS_Store

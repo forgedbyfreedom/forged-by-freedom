@@ -1,45 +1,55 @@
 #!/usr/bin/env python3
-import os, time
-from tqdm import tqdm
+import os, tiktoken
 from openai import OpenAI
-import pinecone
+from pinecone import Pinecone
 
-# === Setup ===
-client = OpenAI()
-pinecone.init(api_key=os.getenv("PINECONE_API_KEY"), environment="us-east1-gcp")
-index_name = "forged-freedom-ai"
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+index = pc.Index("forged-freedom-ai")
 
-# Create index if needed
-if index_name not in pinecone.list_indexes().names():
-    pinecone.create_index(name=index_name, dimension=1536, metric="cosine")
+ENC = tiktoken.get_encoding("cl100k_base")
 
-index = pinecone.Index(index_name)
+ROOT = "split_transcripts"
 
-# === Ingest all transcripts ===
-base_dir = os.getcwd()
-docs = []
+def chunk_text(text, max_tokens=1500, overlap=100):
+    words = text.split()
+    chunks = []
+    start = 0
+    while start < len(words):
+        chunk = " ".join(words[start:start+max_tokens])
+        chunks.append(chunk)
+        start += max_tokens - overlap
+    return chunks
 
-for root, dirs, files in os.walk(base_dir):
-    for file in files:
-        if file.startswith("master_transcript") and file.endswith(".txt"):
-            path = os.path.join(root, file)
-            with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                text = f.read()
-                if len(text.strip()) > 0:
-                    docs.append((path, text))
+print("📚 Indexing split transcripts...\n")
 
-print(f"📚 Found {len(docs)} transcripts")
+for ch in os.listdir(ROOT):
+    ch_path = os.path.join(ROOT, ch)
+    if not os.path.isdir(ch_path): continue
 
-# === Embed and upload ===
-for path, text in tqdm(docs):
-    chunks = [text[i:i+2000] for i in range(0, len(text), 2000)]
-    for i, chunk in enumerate(chunks):
-        emb = client.embeddings.create(input=chunk, model="text-embedding-3-small").data[0].embedding
-        index.upsert(vectors=[{
-            "id": f"{path}-{i}",
-            "values": emb,
-            "metadata": {"source": path, "text": chunk}
-        }])
-        time.sleep(0.1)
+    for file in os.listdir(ch_path):
+        if not file.endswith(".txt"): continue
+        fpath = os.path.join(ch_path, file)
+        episode_name = os.path.splitext(file)[0]
+        with open(fpath, "r") as f:
+            text = f.read()
 
-print("✅ Indexing complete — ready for search.")
+        chunks = chunk_text(text)
+        print(f"🧩 {ch}/{file} → {len(chunks)} chunks")
+
+        vectors = []
+        for i, chunk in enumerate(chunks):
+            emb = client.embeddings.create(input=chunk, model="text-embedding-3-large").data[0].embedding
+            vectors.append({
+                "id": f"{ch}_{episode_name}_{i}",
+                "values": emb,
+                "metadata": {
+                    "channel": ch,
+                    "show": ch.replace("@", ""),
+                    "episode": episode_name,
+                    "text": chunk
+                }
+            })
+        index.upsert(vectors=vectors)
+
+print("✅ All split episodes indexed successfully.")
