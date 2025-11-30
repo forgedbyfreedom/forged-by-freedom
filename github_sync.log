@@ -372,3 +372,7 @@
 [2025-11-30 15:44:27] 
 🔹 Processing channel: @BarbellMedicine
 [2025-11-30 15:44:27] ✅ Rebuilt master transcript for @BarbellMedicine in 0.3s
+[2025-11-30 15:44:27] ❌ Error processing @BarbellMedicine: Command '['git', '-C', '/Users/weero/forged-by-freedom', 'push']' returned non-zero exit status 128.
+[2025-11-30 15:44:27] 
+🔹 Processing channel: @RyanHumiston
+[2025-11-30 15:44:28] ✅ Rebuilt master transcript for @RyanHumiston in 0.2s
