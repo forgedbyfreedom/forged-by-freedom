@@ -1,0 +1,180 @@
+name: Full Transcript Build + Deduplication + Sync + Assistant + Pinecone Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"  # every 6 hours
+  push:
+    branches-ignore:
+      - main  # prevent double-trigger on save
+
+permissions:
+  contents: write
+
+env:
+  GH_USER: forgedbyfreedom
+  GH_PAT: ${{ secrets.FBF_PAT }}
+  DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ASSISTANT_ID: asst_ikPDfaqp3xR7PmhPpst9QuXI
+  PINECONE_API_KEY: ${{ secrets.FBF_PINECONE_SYNC }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout thinkbig-transcripts repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          echo "🔧 Installing dependencies..."
+          python -m pip install --upgrade pip
+          pip install openai pinecone tqdm requests
+
+      - name: Build and upload transcripts (deduped)
+        run: |
+          echo "📘 Building and uploading deduped transcripts..."
+          python3 <<'PYCODE'
+          import os, json, time
+          from pathlib import Path
+          from openai import OpenAI
+
+          client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+          root = Path(".")
+          file_index = []
+
+          def dedupe_text(text):
+              seen = set()
+              cleaned = []
+              for line in text.splitlines():
+                  norm = line.strip().lower()
+                  if norm and norm not in seen:
+                      seen.add(norm)
+                      cleaned.append(line.strip())
+              return "\n".join(cleaned)
+
+          for folder in root.iterdir():
+              if folder.is_dir() and folder.name.startswith("@"):
+                  txt_files = list(folder.rglob("*.txt"))
+                  if not txt_files:
+                      continue
+
+                  combined = "\n".join(open(f, "r", encoding="utf-8", errors="ignore").read() for f in txt_files)
+                  deduped = dedupe_text(combined)
+                  out_file = folder / "master_transcript1.txt"
+
+                  with open(out_file, "w", encoding="utf-8") as f:
+                      f.write(deduped)
+                  print(f"✅ Deduped transcript for {folder.name}")
+
+                  # Upload to OpenAI
+                  with open(out_file, "rb") as f:
+                      uploaded = client.files.create(file=f, purpose="assistants")
+                      file_index.append({
+                          "channel": folder.name,
+                          "filename": out_file.name,
+                          "file_id": uploaded.id,
+                          "size_bytes": os.path.getsize(out_file),
+                          "uploaded_at": time.strftime("%Y-%m-%d %H:%M:%S")
+                      })
+
+          with open("file_index.json", "w", encoding="utf-8") as f:
+              json.dump(file_index, f, indent=2)
+          print("🎯 Uploaded all deduped transcripts and created file_index.json")
+          PYCODE
+
+      - name: Commit updated transcripts
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "ℹ️ No new changes detected."
+            exit 0
+          fi
+          git commit -m "Auto update deduped transcripts + file index [skip ci]" || true
+          git push origin main || true
+
+      - name: Sync transcripts to dashboard repo
+        run: |
+          echo "🚀 Syncing transcripts and file index to dashboard repo..."
+          git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
+          mkdir -p /tmp/dashboard/transcripts
+          cp */master_transcript1.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
+          cp file_index.json /tmp/dashboard/transcripts/ || true
+
+          cd /tmp/dashboard
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add transcripts/
+          if git diff --cached --quiet; then
+            echo "ℹ️ No dashboard updates needed."
+            exit 0
+          fi
+          git commit -m "Sync deduped transcripts + index [skip ci]" || true
+          git push origin main || true
+
+      - name: Update and clean OpenAI Assistant
+        run: |
+          echo "🤖 Updating Assistant and cleaning old files..."
+          python3 <<'PYCODE'
+          import os, json
+          from openai import OpenAI
+
+          key = os.getenv("OPENAI_API_KEY")
+          asst_id = os.getenv("ASSISTANT_ID")
+          client = OpenAI(api_key=key)
+          with open("file_index.json") as f:
+              file_index = json.load(f)
+          new_file_ids = [f["file_id"] for f in file_index]
+
+          print(f"🔗 Linking {len(new_file_ids)} files to assistant {asst_id}...")
+          client.beta.assistants.update(asst_id, file_ids=new_file_ids)
+          print("✅ Assistant successfully updated.")
+          PYCODE
+
+      - name: Sync deduped transcripts to Pinecone
+        run: |
+          echo "📦 Syncing transcripts to Pinecone..."
+          python3 <<'PYCODE'
+          import os
+          from pathlib import Path
+          from tqdm import tqdm
+          from openai import OpenAI
+          from pinecone import Pinecone, ServerlessSpec
+
+          openai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+          pinecone = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+
+          index_name = "forged-transcripts"
+          existing_indexes = [i["name"] for i in pinecone.list_indexes()]
+          if index_name not in existing_indexes:
+              print(f"🪶 Creating Pinecone index: {index_name}")
+              pinecone.create_index(name=index_name, dimension=1536, metric="cosine",
+                                    spec=ServerlessSpec(cloud="aws", region="us-east-1"))
+          index = pinecone.Index(index_name)
+
+          folder = Path(".")
+          for file in tqdm(folder.rglob("master_transcript1.txt")):
+              with open(file, "r", encoding="utf-8", errors="ignore") as f:
+                  text = f.read()
+              if not text.strip():
+                  continue
+
+              chunks = [text[i:i+4000] for i in range(0, len(text), 4000)]
+              for idx, chunk in enumerate(chunks):
+                  emb = openai.embeddings.create(model="text-embedding-3-small", input=chunk).data[0].embedding
+                  index.upsert(vectors=[{
+                      "id": f"{file.stem}_{idx}",
+                      "values": emb,
+                      "metadata": {"source": file.name, "channel": file.parent.name}
+                  }])
+          print("✅ All transcripts synced to Pinecone successfully.")
+          PYCODE
