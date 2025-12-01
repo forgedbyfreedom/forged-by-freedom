@@ -1,55 +1,83 @@
-#!/usr/bin/env python3
-import os, tiktoken
+import os
+import tiktoken
 from openai import OpenAI
-from pinecone import Pinecone
+from pinecone import Pinecone, ServerlessSpec
+from dotenv import load_dotenv
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-index = pc.Index("forged-freedom-ai")
+# === Load Environment Variables ===
+load_dotenv()
 
-ENC = tiktoken.get_encoding("cl100k_base")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 
-ROOT = "split_transcripts"
+client = OpenAI(api_key=OPENAI_API_KEY)
+pc = Pinecone(api_key=PINECONE_API_KEY)
 
-def chunk_text(text, max_tokens=1500, overlap=100):
-    words = text.split()
-    chunks = []
-    start = 0
-    while start < len(words):
-        chunk = " ".join(words[start:start+max_tokens])
-        chunks.append(chunk)
-        start += max_tokens - overlap
-    return chunks
+INDEX_NAME = "forged-freedom-ai"
 
-print("📚 Indexing split transcripts...\n")
+# === Ensure Pinecone Index Exists ===
+if INDEX_NAME not in pc.list_indexes().names():
+    print(f"🪶 Creating Pinecone index: {INDEX_NAME}")
+    pc.create_index(
+        name=INDEX_NAME,
+        dimension=1536,
+        metric="cosine",
+        spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+    )
 
-for ch in os.listdir(ROOT):
-    ch_path = os.path.join(ROOT, ch)
-    if not os.path.isdir(ch_path): continue
+index = pc.Index(INDEX_NAME)
 
-    for file in os.listdir(ch_path):
-        if not file.endswith(".txt"): continue
-        fpath = os.path.join(ch_path, file)
-        episode_name = os.path.splitext(file)[0]
-        with open(fpath, "r") as f:
+# === Utility ===
+def chunk_text(text, max_tokens=4000):
+    """Split large transcripts into smaller chunks for embedding."""
+    enc = tiktoken.get_encoding("cl100k_base")
+    tokens = enc.encode(text)
+    for i in range(0, len(tokens), max_tokens):
+        yield enc.decode(tokens[i:i + max_tokens])
+
+# === Process Each Transcript File ===
+root_dir = os.getcwd()
+transcript_files = []
+for root, _, files in os.walk(root_dir):
+    for file in files:
+        if file.endswith(".txt"):
+            transcript_files.append(os.path.join(root, file))
+
+print(f"📚 Found {len(transcript_files)} transcript files to index...")
+
+for file_path in transcript_files:
+    try:
+        with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             text = f.read()
 
-        chunks = chunk_text(text)
-        print(f"🧩 {ch}/{file} → {len(chunks)} chunks")
+        if not text.strip():
+            continue
+
+        print(f"🧩 Chunking {file_path}...")
+        chunks = list(chunk_text(text, max_tokens=3500))
+        print(f"➡️  Created {len(chunks)} chunks from {file_path}")
 
         vectors = []
         for i, chunk in enumerate(chunks):
-            emb = client.embeddings.create(input=chunk, model="text-embedding-3-large").data[0].embedding
+            embedding = client.embeddings.create(
+                model="text-embedding-3-large",
+                input=chunk
+            ).data[0].embedding
             vectors.append({
-                "id": f"{ch}_{episode_name}_{i}",
-                "values": emb,
+                "id": f"{os.path.basename(file_path)}_{i}",
+                "values": embedding,
                 "metadata": {
-                    "channel": ch,
-                    "show": ch.replace("@", ""),
-                    "episode": episode_name,
-                    "text": chunk
+                    "source": file_path,
+                    "chunk_index": i,
+                    "text": chunk[:2000]  # preview text
                 }
             })
-        index.upsert(vectors=vectors)
 
-print("✅ All split episodes indexed successfully.")
+        print(f"⬆️  Uploading {len(vectors)} vectors to Pinecone...")
+        index.upsert(vectors)
+        print(f"✅ Indexed {file_path} successfully!")
+
+    except Exception as e:
+        print(f"❌ Error indexing {file_path}: {e}")
+
+print("🎯 All transcript indexing complete.")
