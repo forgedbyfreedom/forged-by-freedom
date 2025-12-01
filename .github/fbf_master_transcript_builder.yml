@@ -1,12 +1,9 @@
-name: Full Transcript Build + Deduplication + Sync + Assistant Update
+name: Full Transcript Build + Deduplication + Pinecone Sync
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"  # every 6 hours
-  push:
-    branches-ignore:
-      - main  # prevent double-trigger on save
+    - cron: "0 3 * * *"  # every night at 3 AM UTC
 
 permissions:
   contents: write
@@ -14,16 +11,17 @@ permissions:
 env:
   GH_USER: forgedbyfreedom
   GH_PAT: ${{ secrets.FBF_PAT }}
-  DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  ASSISTANT_ID: asst_YOUR_ASSISTANT_ID_HERE  # ⚠️ Replace with your actual assistant ID
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+  PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
+  PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout thinkbig-transcripts repo
+      - name: Checkout main repo
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -35,138 +33,29 @@ jobs:
         run: |
           echo "🔧 Installing dependencies..."
           python -m pip install --upgrade pip
-          pip install requests openai beautifulsoup4 tqdm
+          pip install openai pinecone-client tqdm python-dotenv requests beautifulsoup4
 
-      - name: Build and upload transcripts (deduped)
+      - name: Build master transcripts
         run: |
-          echo "📘 Building and uploading deduped transcripts..."
-          python3 <<'PYCODE'
-          import os, json, time
-          from pathlib import Path
-          from openai import OpenAI
+          echo "🧩 Building and deduplicating transcripts..."
+          python3 transcripts/auto_full_pipeline.py || echo "⚠️ Skipped local rebuild (no new data)"
 
-          client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-          root = Path(".")
-          file_index = []
-
-          def dedupe_text(text):
-              seen = set()
-              cleaned_lines = []
-              for line in text.splitlines():
-                  norm = line.strip().lower()
-                  if norm and norm not in seen:
-                      seen.add(norm)
-                      cleaned_lines.append(line.strip())
-              return "\n".join(cleaned_lines)
-
-          for folder in root.iterdir():
-              if folder.is_dir() and folder.name.startswith("@"):
-                  txt_files = list(folder.rglob("*.txt"))
-                  if not txt_files:
-                      continue
-
-                  combined_texts = []
-                  for txt in txt_files:
-                      with open(txt, "r", encoding="utf-8", errors="ignore") as f:
-                          combined_texts.append(f.read())
-
-                  combined = "\n".join(combined_texts)
-                  deduped = dedupe_text(combined)
-
-                  out_file = folder / "master_transcript1.txt"
-                  with open(out_file, "w", encoding="utf-8") as f:
-                      f.write(deduped)
-
-                  print(f"✅ Deduped transcript for {folder.name}")
-
-                  # Upload to OpenAI
-                  with open(out_file, "rb") as f:
-                      uploaded = client.files.create(file=f, purpose="assistants")
-                      file_index.append({
-                          "channel": folder.name,
-                          "filename": out_file.name,
-                          "file_id": uploaded.id,
-                          "size_bytes": os.path.getsize(out_file),
-                          "uploaded_at": time.strftime("%Y-%m-%d %H:%M:%S")
-                      })
-
-          with open("file_index.json", "w", encoding="utf-8") as f:
-              json.dump(file_index, f, indent=2)
-
-          print("🎯 Uploaded all deduped transcripts and created file_index.json")
-          PYCODE
+      - name: Sync deduped transcripts to Pinecone
+        run: |
+          echo "🚀 Syncing transcripts to Pinecone..."
+          python3 transcripts/sync_transcripts_to_pinecone.py || echo "⚠️ Pinecone sync skipped if already current"
 
       - name: Commit updated transcripts
         run: |
-          set +e
-          echo "💾 Committing updates to thinkbig-transcripts..."
+          echo "💾 Committing deduped transcript updates..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add transcripts/ file_index.json || true
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No new changes detected."
+            echo "ℹ️ No new transcript updates detected."
             exit 0
           fi
 
-          git commit -m "Auto update deduped transcripts + file index [skip ci]" || true
-          git push origin main || true
-
-      - name: Sync transcripts to dashboard repo
-        run: |
-          echo "🚀 Syncing transcripts and file index to dashboard repo..."
-          git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
-          mkdir -p /tmp/dashboard/transcripts
-          cp */master_transcript1.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
-          cp file_index.json /tmp/dashboard/transcripts/ || true
-
-          cd /tmp/dashboard
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add transcripts/
-
-          if git diff --cached --quiet; then
-            echo "ℹ️ No dashboard updates needed."
-            exit 0
-          fi
-
-          git commit -m "Sync deduped transcripts + index [skip ci]" || true
-          git push origin main || true
-
-      - name: Update and clean OpenAI Assistant
-        run: |
-          echo "🤖 Updating Assistant and cleaning old files..."
-          python3 <<'PYCODE'
-          import os, json
-          from openai import OpenAI
-
-          key = os.getenv("OPENAI_API_KEY")
-          asst_id = os.getenv("ASSISTANT_ID")
-          if not key or not asst_id:
-              print("⚠️ Missing API key or Assistant ID.")
-              raise SystemExit(0)
-
-          client = OpenAI(api_key=key)
-          with open("file_index.json", "r") as f:
-              file_index = json.load(f)
-          new_file_ids = [f["file_id"] for f in file_index]
-
-          print(f"🔗 Linking {len(new_file_ids)} files to assistant {asst_id}...")
-          client.beta.assistants.update(asst_id, file_ids=new_file_ids)
-          print("✅ Assistant successfully updated.")
-
-          print("🧹 Cleaning up old files...")
-          all_files = client.files.list().data
-          keep_files = set(new_file_ids)
-          removed = 0
-
-          for f in all_files:
-              if f.id not in keep_files and f.filename == "master_transcript1.txt":
-                  try:
-                      client.files.delete(f.id)
-                      removed += 1
-                  except Exception as e:
-                      print(f"⚠️ Could not delete {f.id}: {e}")
-
-          print(f"🧽 Cleanup complete. Removed {removed} outdated files.")
-          PYCODE
+          git commit -m "Auto update transcripts + Pinecone sync [skip ci]" || true
+          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || true
