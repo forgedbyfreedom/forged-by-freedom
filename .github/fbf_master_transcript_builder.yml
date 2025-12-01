@@ -1,9 +1,9 @@
-name: Full Transcript Build + Deduplication + Pinecone Sync
+name: Full Transcript Build + Deduplication + Sync + Assistant Update
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # every night at 3 AM UTC
+    - cron: "0 3 * * *"  # 🕒 Every night at 3 AM UTC
 
 permissions:
   contents: write
@@ -11,51 +11,134 @@ permissions:
 env:
   GH_USER: forgedbyfreedom
   GH_PAT: ${{ secrets.FBF_PAT }}
+  DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-st
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ASSISTANT_ID: ${{ secrets.OPENAI_ASSISTANT_ID }}
   PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-  PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
-  PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
+  PINECONE_INDEX: forgedbyfreedom-index
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main repo
+      - name: 🧭 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: |
-          echo "🔧 Installing dependencies..."
           python -m pip install --upgrade pip
-          pip install openai pinecone-client tqdm python-dotenv requests beautifulsoup4
+          pip install openai pinecone tqdm requests python-dotenv beautifulsoup4
 
-      - name: Build master transcripts
+      - name: 🧠 Build deduped master transcripts
         run: |
-          echo "🧩 Building and deduplicating transcripts..."
-          python3 transcripts/auto_full_pipeline.py || echo "⚠️ Skipped local rebuild (no new data)"
+          python transcripts/build_master_transcripts.py || echo "⚠️ Skipping master build if missing"
 
-      - name: Sync deduped transcripts to Pinecone
+      - name: 🔗 Sync deduped transcripts to Pinecone
         run: |
-          echo "🚀 Syncing transcripts to Pinecone..."
-          python3 transcripts/sync_transcripts_to_pinecone.py || echo "⚠️ Pinecone sync skipped if already current"
+          python transcripts/sync_local_transcripts_to_pinecone.py || echo "⚠️ Pinecone sync completed or skipped"
 
-      - name: Commit updated transcripts
+      - name: 💾 Commit transcript updates
         run: |
-          echo "💾 Committing deduped transcript updates..."
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add transcripts/ file_index.json || true
+          git add -A
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No new transcript updates detected."
+            echo "ℹ️ No new transcript changes detected."
             exit 0
           fi
 
-          git commit -m "Auto update transcripts + Pinecone sync [skip ci]" || true
+          git commit -m "Auto update deduped transcripts + file index [skip ci]" || true
           git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || true
+
+      - name: 🚀 Sync transcripts + index to dashboard repo
+        run: |
+          echo "📤 Syncing to dashboard repo..."
+          git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
+          mkdir -p /tmp/dashboard/transcripts
+          cp transcripts/*/master_transcript*.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
+          cp transcripts/file_index.json /tmp/dashboard/transcripts/ || true
+
+          cd /tmp/dashboard
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add transcripts/
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ No dashboard updates detected."
+            exit 0
+          fi
+
+          git commit -m "Sync deduped transcripts + index [skip ci]" || true
+          git push https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git main || true
+
+      - name: 🧹 Update OpenAI Assistant and clean old files
+        run: |
+          python3 <<'PYCODE'
+          import os, json
+          from openai import OpenAI
+
+          key = os.getenv("OPENAI_API_KEY")
+          asst_id = os.getenv("ASSISTANT_ID")
+          if not key or not asst_id:
+              print("⚠️ Missing OpenAI credentials or Assistant ID.")
+              raise SystemExit(0)
+
+          client = OpenAI(api_key=key)
+          if not os.path.exists("transcripts/file_index.json"):
+              print("⚠️ file_index.json not found — skipping assistant update.")
+              raise SystemExit(0)
+
+          with open("transcripts/file_index.json", "r") as f:
+              file_index = json.load(f)
+
+          new_file_ids = [f["file_id"] for f in file_index if "file_id" in f]
+          print(f"🔗 Linking {len(new_file_ids)} files to assistant {asst_id}...")
+          client.beta.assistants.update(asst_id, file_ids=new_file_ids)
+          print("✅ Assistant successfully updated.")
+
+          all_files = client.files.list().data
+          keep = set(new_file_ids)
+          removed = 0
+          for f in all_files:
+              if f.id not in keep and f.filename.endswith("master_transcript1.txt"):
+                  try:
+                      client.files.delete(f.id)
+                      removed += 1
+                  except Exception as e:
+                      print(f"⚠️ Could not delete {f.id}: {e}")
+          print(f"🧽 Cleanup complete. Removed {removed} old files.")
+          PYCODE
+
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: 📧 Send nightly status email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "📘 ForgedByFreedom AI Sync — ${{ job.status }}"
+          to: bryan@forgedbyfreedom.org
+          from: "Coach Bryan AI <${{ secrets.SMTP_USERNAME }}>"
+          body: |
+            Hey Coach Bryan,
+
+            The nightly transcript sync and assistant update has **${{ job.status }}**.
+
+            Repository: ${{ github.repository }}
+            Workflow run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            — ForgedByFreedom Automation System 🤖
