@@ -131,7 +131,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "📘 ForgedByFreedom AI Sync — ${{ job.status }}"
-          to: bryan@forgedbyfreedom.org
+          to: forgedbyfreedom@gmail.com
           from: "Coach Bryan AI <${{ secrets.SMTP_USERNAME }}>"
           body: |
             Hey Coach Bryan,
