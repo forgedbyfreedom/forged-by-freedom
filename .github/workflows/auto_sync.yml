@@ -1,57 +1,57 @@
 name: 🔁 Auto Sync & Rebuild Transcripts
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
   schedule:
     - cron: "0 6 * * *"  # every day at 6 AM UTC
+
+permissions:
+  contents: write
+
+env:
+  GH_USER: forgedbyfreedom
+  GH_PAT: ${{ secrets.FBF_PAT }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+  PINECONE_INDEX_NAME: forged-freedom-ai
 
 jobs:
   sync-pinecone:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧰 Checkout repo
-        uses: actions/checkout@v3
+      - name: 🧭 Checkout repo
+        uses: actions/checkout@v4
 
       - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.11"
 
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai pinecone-client requests tqdm
+          pip install openai pinecone-client tqdm requests python-dotenv
 
-      - name: 🔧 Prepare environment
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+      - name: 🔄 Pull latest OpenAI files (full rebuild)
         run: |
-          echo "Environment ready with OpenAI + Pinecone"
+          python transcripts/fetch_openai_files.py || echo "⚠️ Skipping fetch if not available"
 
       - name: 🧠 Build master transcript
         run: |
-          python backend/build_master_transcripts.py || echo "Skipping master build if missing"
+          python transcripts/build_master_transcripts.py || echo "⚠️ Skipping master build if missing"
 
       - name: 🚀 Sync to Pinecone
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
-          python backend/sync_local_transcripts_to_pinecone.py || echo "Pinecone sync completed or skipped"
+          python transcripts/sync_local_transcripts_to_pinecone.py || echo "⚠️ Pinecone sync completed or skipped"
 
-      - name: ✅ Commit changes (if new metadata)
+      - name: 💾 Commit transcript index updates
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
+          git add transcripts/file_index.json || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-sync Pinecone & transcripts [skip ci]"
-          git push || echo "No changes to push"
+          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || echo "✅ No changes to push"
 
-      - name: ✉️ Notify success
-        run: echo "✅ Transcript sync & Pinecone update complete!"
+      - name: ✅ Done
+        run: echo "✅ Full rebuild and Pinecone sync complete!"
