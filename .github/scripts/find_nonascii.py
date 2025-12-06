@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import unicodedata, re, hashlib, subprocess, pathlib, sys
 
 def sanitize(name, index=None, max_len=200):
