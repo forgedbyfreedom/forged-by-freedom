@@ -1,0 +1,33 @@
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Debug — show repo root and find script
+        run: |
+          echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+          pwd
+          ls -la
+          echo "Searching for find_nonascii.py"
+          find . -maxdepth 6 -type f -name 'find_nonascii.py' || true
+
+      - name: Run find_nonascii.py
+        run: |
+          SCRIPT="${GITHUB_WORKSPACE}/scripts/find_nonascii.py"
+          if [ -f "$SCRIPT" ]; then
+            echo "Running $SCRIPT"
+            python3 "$SCRIPT"
+          else
+            echo "Script not found at $SCRIPT"
+            echo "Listing scripts/ directory if present:"
+            ls -la "${GITHUB_WORKSPACE}/scripts" || true
+            exit 2
+          fi
