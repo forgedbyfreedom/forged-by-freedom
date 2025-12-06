@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show repo info p
+      - name: Show repo info
         run: |
           echo "Repository: $GITHUB_REPOSITORY"
           echo "Ref: $GITHUB_REF"
@@ -19,7 +19,6 @@ jobs:
       - name: List git-tracked files with non-ASCII characters
         run: |
           echo "=== Git-tracked files containing non-ASCII characters (if any) ==="
-          # List files and show only those with non-ASCII characters
           git ls-files -z | tr '\0' '\n' | awk 'BEGIN{FS="\n"}{ if ($0 ~ /[^[:ascii:]]/) print $0 }' || true
           echo ""
 
@@ -28,11 +27,12 @@ jobs:
           echo "=== Generating sanitized ids for all git-tracked files (sample mapping) ==="
           python3 - <<'PY'
 import unicodedata, re, hashlib, subprocess, pathlib, sys
-def sanitize(name: str, index: int | None = None, max_len: int = 200) -> str:
+
+def sanitize(name, index=None, max_len=200):
     normalized = unicodedata.normalize("NFKD", name)
     ascii_bytes = normalized.encode("ascii", "ignore")
     ascii_name = ascii_bytes.decode("ascii")
-    ascii_name = re.sub(r"[^A-Za-z0-9\\._-]+", "-", ascii_name).strip("-")
+    ascii_name = re.sub(r"[^A-Za-z0-9._-]+", "-", ascii_name).strip("-")
     if not ascii_name:
         ascii_name = hashlib.sha1(name.encode("utf-8", "surrogatepass")).hexdigest()[:12]
     suffix = f"-{index}" if index is not None else ""
@@ -60,7 +60,7 @@ for f in files:
 if bad_sanitized:
     print()
     print("Found sanitized IDs that still contain non-ASCII characters (unexpected):")
-    for f,s in bad_sanitized:
+    for f, s in bad_sanitized:
         print(f"  {f} -> {s}")
     sys.exit(1)
 else:
