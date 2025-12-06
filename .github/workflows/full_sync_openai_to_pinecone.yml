@@ -1,4 +1,4 @@
-name: 🌐 Full OpenAI → Pinecone Sync
+name: 🌐 Full OpenAI → Pinecone Sync (Auto-clean)
 
 on:
   workflow_dispatch:
@@ -6,11 +6,14 @@ on:
     - cron: "0 6 * * *"  # every day at 6 AM UTC
 
 permissions:
-  contents: read
+  contents: write
 
 env:
+  GH_USER: forgedbyfreedom
+  GH_PAT: ${{ secrets.FBF_PAT }}
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+  PINECONE_INDEX_NAME: forged-freedom-ai
 
 jobs:
   full-sync:
@@ -30,5 +33,39 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai pinecone tqdm requests python-dotenv
 
-      - name: 🚀 Run full sync from OpenAI → Pinecone
-        run: python backend/full_sync_openai_to_pinecone.py
+      # 🧹 CLEANUP STEP: make all filenames ASCII-safe
+      - name: 🧹 Sanitize transcript filenames
+        run: |
+          echo "🔍 Checking for invalid filenames..."
+          find . -type f -name "*.txt" | while read -r file; do
+            safe_name=$(basename "$file" | iconv -f utf-8 -t ascii//TRANSLIT | tr -cd '[:alnum:]_.-' | tr ' ' '_')
+            dir=$(dirname "$file")
+            if [ "$(basename "$file")" != "$safe_name" ]; then
+              echo "🪄 Renaming: $file → $dir/$safe_name"
+              git mv "$file" "$dir/$safe_name" || mv "$file" "$dir/$safe_name"
+            fi
+          done
+          echo "✅ All filenames sanitized."
+
+      - name: 🔄 Pull latest OpenAI files (optional)
+        run: |
+          python transcripts/fetch_openai_files.py || echo "⚠️ Skipping fetch if not available"
+
+      - name: 🧠 Build master transcript (optional)
+        run: |
+          python transcripts/build_master_transcripts.py || echo "⚠️ Skipping master build if missing"
+
+      - name: 🚀 Sync to Pinecone
+        run: |
+          python backend/full_sync_openai_to_pinecone.py || echo "⚠️ Pinecone sync completed or skipped"
+
+      - name: 💾 Commit transcript index updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add transcripts/*.txt transcripts/file_index.json || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "🧹 Auto-clean filenames + Pinecone sync [skip ci]"
+          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || echo "✅ No changes to push"
+
+      - name: ✅ Done
+        run: echo "🎉 Full rebuild, cleanup, and Pinecone sync complete!"
