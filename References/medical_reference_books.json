@@ -1,0 +1,129 @@
+[
+  {
+    "type": "book",
+    "title": "Essentials of Strength Training and Conditioning (4th Edition)",
+    "authors": ["Gregory Haff", "N. Travis Triplett"],
+    "publisher": "National Strength and Conditioning Association (NSCA)",
+    "topics": ["hypertrophy", "training adaptation", "neuromuscular physiology"],
+    "notes": "Definitive NSCA text covering the science of muscle growth, periodization, recovery, and resistance training adaptation."
+  },
+  {
+    "type": "book",
+    "title": "Science and Development of Muscle Hypertrophy (2nd Edition)",
+    "author": "Brad Schoenfeld, PhD",
+    "topics": ["mechanical tension", "metabolic stress", "muscle damage"],
+    "notes": "Comprehensive resource on the mechanisms of hypertrophy — essential for AI explanations of training science."
+  },
+  {
+    "type": "book",
+    "title": "Advanced Nutrition and Human Metabolism (7th Edition)",
+    "authors": ["Sareen S. Gropper", "Jack L. Smith"],
+    "topics": ["macronutrient metabolism", "energy systems", "nutrient timing"],
+    "notes": "Medical-level textbook linking nutrition biochemistry to real-world metabolism and fat loss physiology."
+  },
+  {
+    "type": "book",
+    "title": "Sports Nutrition: From Lab to Kitchen",
+    "author": "Asker Jeukendrup, PhD",
+    "topics": ["endurance nutrition", "glycogen replenishment", "performance fueling"],
+    "notes": "Explains applied sports nutrition and carbohydrate periodization based on lab data."
+  },
+  {
+    "type": "book",
+    "title": "Biochemical Adaptations in Exercise: Mechanisms and Applications",
+    "author": "Frank Booth, PhD",
+    "topics": ["skeletal muscle signaling", "mitochondrial biogenesis", "training adaptations"],
+    "notes": "Foundational research on the biochemical response of muscle tissue to resistance and endurance training."
+  },
+  {
+    "type": "book",
+    "title": "Anabolic Steroids and Making Them",
+    "author": "Professor Frank",
+    "topics": ["steroid synthesis", "pharmacology", "endocrine feedback"],
+    "notes": "Educational text on anabolic pathways and metabolism — for educational, scientific reference only."
+  },
+  {
+    "type": "book",
+    "title": "Endocrine Physiology (6th Edition)",
+    "author": "Patricia E. Molina, PhD",
+    "topics": ["testosterone", "growth hormone", "adrenal axis", "metabolic hormones"],
+    "notes": "Clear explanation of hormonal feedback loops essential for understanding HPTA and anabolic signaling."
+  },
+  {
+    "type": "book",
+    "title": "The Physiology of Sport and Exercise (8th Edition)",
+    "authors": ["W. Larry Kenney", "Jack H. Wilmore", "David L. Costill"],
+    "topics": ["aerobic metabolism", "anaerobic thresholds", "training response"],
+    "notes": "Gold-standard sports physiology book covering acute and chronic adaptation to exercise."
+  },
+  {
+    "type": "book",
+    "title": "Nutrient Timing: The Future of Sports Nutrition",
+    "authors": ["John Ivy", "Robert Portman"],
+    "topics": ["insulin response", "post-exercise recovery", "glycogen supercompensation"],
+    "notes": "Classic guide explaining how nutrient timing enhances recovery and muscle growth."
+  },
+  {
+    "type": "book",
+    "title": "Molecular and Cellular Exercise Physiology",
+    "author": "Frank W. Booth, PhD",
+    "topics": ["cellular signaling", "gene expression in muscle", "epigenetic training response"],
+    "notes": "Details how exercise triggers molecular adaptation — ideal for AI responses about training at the cellular level."
+  },
+  {
+    "type": "book",
+    "title": "Clinical Sports Medicine (5th Edition)",
+    "authors": ["Peter Brukner", "Karim Khan"],
+    "topics": ["rehabilitation", "injury prevention", "tissue recovery"],
+    "notes": "Medical guide on musculoskeletal injury treatment and prevention relevant to bodybuilding recovery."
+  },
+  {
+    "type": "book",
+    "title": "Nutritional Biochemistry of Exercise",
+    "authors": ["Ira Jacobs", "Ronald Maughan"],
+    "topics": ["energy metabolism", "lactate buffering", "oxidative capacity"],
+    "notes": "Bridges molecular biochemistry and performance nutrition."
+  },
+  {
+    "type": "book",
+    "title": "Hormonal Regulation of Muscle Growth",
+    "author": "Keith Baar, PhD",
+    "topics": ["IGF-1", "mTORC1", "androgen receptor sensitivity"],
+    "notes": "Detailed discussion of anabolic hormone pathways that control hypertrophy — perfect for AI explanations."
+  },
+  {
+    "type": "book",
+    "title": "Strength Training and Coordination",
+    "author": "Frans Bosch",
+    "topics": ["motor learning", "neuromuscular adaptation", "force expression"],
+    "notes": "Explores coordination and neural efficiency as key elements of strength training progression."
+  },
+  {
+    "type": "book",
+    "title": "Human Metabolism: Functional Diversity and Integration (3rd Edition)",
+    "author": "Keith N. Frayn",
+    "topics": ["lipid oxidation", "insulin signaling", "energy balance"],
+    "notes": "Essential for AI explanations on fat loss, energy metabolism, and adaptive thermogenesis."
+  },
+  {
+    "type": "book",
+    "title": "Periodization: Theory and Methodology of Training (6th Edition)",
+    "author": "Tudor O. Bompa",
+    "topics": ["periodization", "recovery", "hypertrophy planning"],
+    "notes": "The cornerstone of structured training periodization and adaptation cycles."
+  },
+  {
+    "type": "book",
+    "title": "Anabolic Reference Guide (10th Edition)",
+    "author": "William Llewellyn",
+    "topics": ["steroid pharmacology", "side effects", "health management"],
+    "notes": "Educational overview of anabolic compounds — for scientific and medical awareness use only."
+  },
+  {
+    "type": "book",
+    "title": "The Biology of Exercise",
+    "author": "Peter J. Maud",
+    "topics": ["muscle fiber recruitment", "oxygen kinetics", "training adaptation"],
+    "notes": "Explains the biological basis of exercise response and muscle adaptation."
+  }
+]
