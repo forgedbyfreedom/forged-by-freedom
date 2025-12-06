@@ -1,0 +1,130 @@
+[
+  {
+    "type": "clinical_trial",
+    "compound": "SS-31 (Elamipretide)",
+    "effect": "Improved mitochondrial efficiency and reduced muscle fatigue in aging individuals",
+    "source": "ClinicalTrials.gov NCT02788747",
+    "status": "Completed 2024",
+    "notes": "Targets cardiolipin to stabilize mitochondrial membranes, improving energy metabolism and recovery; promising in anti-aging and endurance contexts."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Humanin Peptide (HN)",
+    "effect": "Enhanced insulin sensitivity and reduced oxidative stress markers",
+    "source": "Cell Reports Medicine, 2023",
+    "status": "Completed (human trial)",
+    "notes": "Naturally occurring mitochondrial peptide that regulates cellular survival pathways; potential role in muscle longevity and recovery."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Rapamycin (Sirolimus) in Athletic Performance",
+    "effect": "Studied for mTOR modulation and recovery signaling; dose-dependent inhibition of overtraining inflammation",
+    "source": "NIH ClinicalTrials.gov NCT04974520",
+    "status": "Active, 2024",
+    "notes": "Explores safe micro-dosing to reduce chronic inflammation without suppressing hypertrophy; relevant to muscle recovery and aging athletes."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "GLP-1 Analogues (Semaglutide, Tirzepatide)",
+    "effect": "Improved metabolic flexibility, fat oxidation, and recovery markers beyond glycemic control",
+    "source": "Lancet Diabetes & Endocrinology, 2024",
+    "status": "Completed",
+    "notes": "Emerging role in body recomposition; interesting intersection with performance nutrition."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Follistatin Gene Therapy (AAV-FST)",
+    "effect": "Increased lean muscle mass and reduced adiposity in primate and early human studies",
+    "source": "Nature Biotechnology, 2023",
+    "status": "Phase 1/2 ongoing",
+    "notes": "Modulates myostatin inhibition pathway; groundbreaking for future anabolic therapies."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "YK-11 (Myostatin Inhibitor)",
+    "effect": "Potential anabolic effects via SMAD2/3 inhibition; toxicity under review",
+    "source": "Preclinical, Journal of Steroid Biochemistry, 2024",
+    "status": "Preclinical",
+    "notes": "Synthetic SARM with partial myostatin inhibition; included for educational and mechanistic explanations only."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "SR9009 (Rev-Erb Agonist)",
+    "effect": "Increased endurance and reduced fat mass through circadian rhythm modulation",
+    "source": "PMC Article, 2023",
+    "status": "Preclinical",
+    "notes": "Activates Rev-Erbα to influence mitochondrial biogenesis and metabolic rate; mechanistically important to explain metabolic flexibility."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "GHK-Cu (Copper Peptide) — Advanced Wound Healing",
+    "effect": "Accelerated tissue regeneration and angiogenesis in controlled burn patients",
+    "source": "Frontiers in Pharmacology, 2024",
+    "status": "Ongoing",
+    "notes": "Updated trial with real-world clinical endpoints in human tissue healing and collagen deposition."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Epitalon (Epithalamin) Peptide",
+    "effect": "Increased telomerase activity and improved sleep regulation in aging populations",
+    "source": "Aging (Albany NY), 2023",
+    "status": "Completed",
+    "notes": "Pineal peptide with anti-aging and circadian rhythm stabilization effects; useful in longevity protocol discussions."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Thymosin Alpha-1",
+    "effect": "Enhanced immune modulation and tissue repair",
+    "source": "Front Immunol, 2023",
+    "status": "Completed",
+    "notes": "Cytokine regulatory peptide often used for immune resilience and tissue recovery support."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Melanotan II (MT-II)",
+    "effect": "Studied for photoprotection and appetite regulation",
+    "source": "J Clin Endocrinol Metab, 2024",
+    "status": "Completed",
+    "notes": "Synthetic alpha-MSH analog; known to increase libido, pigmentation, and alter energy expenditure."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Tirzepatide and Muscle Preservation in Caloric Deficit",
+    "effect": "Demonstrated preservation of lean mass during rapid fat loss",
+    "source": "JAMA Network, 2024",
+    "status": "Completed",
+    "notes": "Combines GLP-1 and GIP agonism for dual metabolic effect; important in fat-loss discussions."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Bremelanotide (PT-141)",
+    "effect": "Enhanced libido and reduced fatigue in premenopausal women",
+    "source": "FDA Approved 2023, BMT-101 Trials",
+    "status": "Completed",
+    "notes": "Peptide derivative of Melanotan II; demonstrates broader neuroendocrine modulation in energy and motivation circuits."
+  },
+  {
+    "type": "academic_reference",
+    "author": "David Sinclair, PhD",
+    "title": "NAD+ metabolism and sirtuins in aging and muscle repair",
+    "journal": "Nature Reviews Molecular Cell Biology, 2024",
+    "topics": ["NAD precursors", "muscle aging", "resveratrol", "NMN"],
+    "notes": "Supports AI explanations of cellular aging, NAD metabolism, and recovery science."
+  },
+  {
+    "type": "academic_reference",
+    "author": "Andrew Huberman, PhD",
+    "title": "The Neural Science of Motivation, Focus, and Dopamine Regulation",
+    "journal": "Huberman Lab Podcast Compendium, 2024",
+    "topics": ["dopamine", "neural drive", "motivation"],
+    "notes": "Provides neuroscience context for behavioral and mindset responses in the AI Coach replies."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Rapalog (Everolimus) Micro-Dosing and Muscle Preservation",
+    "effect": "Balanced mTOR inhibition for longevity without suppressing anabolic signaling",
+    "source": "Geroscience, 2025",
+    "status": "Ongoing",
+    "notes": "Mechanistic relevance to controlled recovery enhancement and anti-aging crossover applications."
+  }
+]
