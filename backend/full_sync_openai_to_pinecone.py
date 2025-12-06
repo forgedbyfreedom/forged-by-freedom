@@ -1,5 +1,52 @@
+import os
+import glob
 import re
 import unicodedata
+from tqdm import tqdm
+from openai import OpenAI
+from pinecone import Pinecone, ServerlessSpec
+
+# === Initialize environment ===
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
+
+if not OPENAI_API_KEY or not PINECONE_API_KEY:
+    raise ValueError("❌ Missing required API keys in environment variables.")
+
+# === Clients ===
+client = OpenAI(api_key=OPENAI_API_KEY)
+pc = Pinecone(api_key=PINECONE_API_KEY)
+
+# Ensure index exists
+if PINECONE_INDEX_NAME not in [idx["name"] for idx in pc.list_indexes()]:
+    print(f"🪄 Creating Pinecone index: {PINECONE_INDEX_NAME}")
+    pc.create_index(
+        name=PINECONE_INDEX_NAME,
+        dimension=3072,
+        metric="cosine",
+        spec=ServerlessSpec(cloud="aws", region="us-east-1")
+    )
+
+index = pc.Index(PINECONE_INDEX_NAME)
+print(f"✅ Using index: {PINECONE_INDEX_NAME}")
+
+# === Helpers ===
+def chunk_text(text, max_tokens=8000):
+    """Split long text safely for embedding model."""
+    words = text.split()
+    chunks = []
+    current = []
+    count = 0
+    for word in words:
+        count += len(word.split())
+        current.append(word)
+        if count > max_tokens:
+            chunks.append(" ".join(current))
+            current, count = [], 0
+    if current:
+        chunks.append(" ".join(current))
+    return chunks
 
 def sanitize_id(text: str) -> str:
     """Convert filename to safe ASCII ID for Pinecone."""
