@@ -3,7 +3,7 @@ name: 🔁 Auto Sync & Push All Transcripts to Pinecone (Direct Upload)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"  # every day at 6 AM UTC
+    - cron: "0 6 * * *"  # Every day at 6 AM UTC
 
 permissions:
   contents: write
@@ -62,10 +62,10 @@ jobs:
               for root, _, files in os.walk(folder):
                   for f in files:
                       if f.endswith((".txt", ".json")):
-                          path = os.path.join(root, f)
-                          all_files.append(path)
+                          all_files.append(os.path.join(root, f))
 
-          print(f"📄 Found {len(all_files)} transcript files. Uploading...")
+          total_words = 0
+          print(f"📄 Found {len(all_files)} transcript files. Uploading to Pinecone...")
 
           for path in tqdm(all_files):
               try:
@@ -73,6 +73,7 @@ jobs:
                       text = fp.read().strip()
                   if not text:
                       continue
+                  total_words += len(text.split())
                   emb = openai.embeddings.create(
                       input=text[:5000], model="text-embedding-3-small"
                   ).data[0].embedding
@@ -80,7 +81,9 @@ jobs:
               except Exception as e:
                   print(f"⚠️ Skipping {path}: {e}")
 
-          print("✅ Direct Pinecone sync complete! All transcripts are now indexed.")
+          print(f"\n✅ Pinecone sync complete!")
+          print(f"📊 Uploaded {len(all_files)} files")
+          print(f"📝 Total words processed: {total_words:,}")
           PYCODE
 
       - name: ✅ Done
