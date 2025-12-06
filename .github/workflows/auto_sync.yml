@@ -1,4 +1,4 @@
-name: 🔁 Auto Sync & Rebuild Transcripts
+name: 🔁 Auto Sync & Rebuild Transcripts (with ThinkBig)
 
 on:
   workflow_dispatch:
@@ -20,8 +20,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧭 Checkout repo
+      - name: 🧭 Checkout main repo
         uses: actions/checkout@v4
+
+      - name: 🧩 Clone ThinkBig transcripts
+        run: |
+          echo "📥 Cloning ThinkBig transcripts..."
+          git clone https://${GH_USER}:${GH_PAT}@github.com/forgedbyfreedom/thinkbig-transcripts.git /tmp/thinkbig
+          mkdir -p transcripts/thinkbig
+          cp -r /tmp/thinkbig/* transcripts/thinkbig/ || true
+          echo "✅ ThinkBig transcripts merged locally."
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
@@ -33,11 +41,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai pinecone-client tqdm requests python-dotenv
 
-      - name: 🔄 Pull latest OpenAI files (full rebuild)
+      - name: 🔄 Pull latest OpenAI files (optional)
         run: |
           python transcripts/fetch_openai_files.py || echo "⚠️ Skipping fetch if not available"
 
-      - name: 🧠 Build master transcript
+      - name: 🧠 Build master transcript (merge + dedupe all sources)
         run: |
           python transcripts/build_master_transcripts.py || echo "⚠️ Skipping master build if missing"
 
@@ -54,4 +62,4 @@ jobs:
           git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || echo "✅ No changes to push"
 
       - name: ✅ Done
-        run: echo "✅ Full rebuild and Pinecone sync complete!"
+        run: echo "✅ Full rebuild (with ThinkBig) + Pinecone sync complete!"
