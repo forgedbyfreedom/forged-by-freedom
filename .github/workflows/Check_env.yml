@@ -1,0 +1,16 @@
+name: 🔍 Check Env Vars
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧭 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🧪 Print environment variables
+        run: |
+          echo "OPENAI_API_KEY starts with:" ${OPENAI_API_KEY:0:10}
+          echo "PINECONE_API_KEY starts with:" ${PINECONE_API_KEY:0:10}
