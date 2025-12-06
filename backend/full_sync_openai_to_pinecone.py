@@ -6,68 +6,94 @@ from tqdm import tqdm
 from openai import OpenAI
 from pinecone import Pinecone, ServerlessSpec
 
-# === ENV VARIABLES ===
+# === Environment ===
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 
-# === Clients ===
+if not OPENAI_API_KEY or not PINECONE_API_KEY:
+    raise ValueError("❌ Missing environment variables for OpenAI or Pinecone")
+
 client = OpenAI(api_key=OPENAI_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
+
+INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
+index = None
+
+# === Ensure Pinecone index exists ===
+if INDEX_NAME not in [i["name"] for i in pc.list_indexes()]:
+    print(f"⚙️ Creating Pinecone index: {INDEX_NAME}")
+    pc.create_index(
+        name=INDEX_NAME,
+        dimension=3072,
+        metric="cosine",
+        spec=ServerlessSpec(cloud="aws", region="us-east-1")
+    )
+
 index = pc.Index(INDEX_NAME)
 
-# === Sanitize helper ===
-def sanitize_id(text: str) -> str:
-    text = unicodedata.normalize("NFKD", text)
-    text = text.encode("ascii", "ignore").decode("ascii")
-    text = re.sub(r"[^a-zA-Z0-9_.-]", "_", text)
-    return text
-
-def chunk_text(text: str, max_len=7000):
-    words, chunks, chunk = text.split(), [], []
-    for w in words:
-        if len(" ".join(chunk + [w])) > max_len:
-            chunks.append(" ".join(chunk))
-            chunk = [w]
+# === Utility: Chunk text safely ===
+def chunk_text(text, max_chars=6000):
+    paragraphs = text.split("\n")
+    chunks, current = [], ""
+    for para in paragraphs:
+        if len(current) + len(para) + 1 > max_chars:
+            chunks.append(current.strip())
+            current = para
         else:
-            chunk.append(w)
-    if chunk: chunks.append(" ".join(chunk))
+            current += "\n" + para
+    if current.strip():
+        chunks.append(current.strip())
     return chunks
 
-# === Step 1: Cleanup filenames ===
-for path in glob.glob("**/*.txt", recursive=True):
-    folder, filename = os.path.split(path)
-    safe = sanitize_id(filename)
-    if safe != filename:
-        os.rename(path, os.path.join(folder, safe))
-        print(f"🧹 Renamed: {filename} → {safe}")
+# === Utility: Skip files with non-ASCII names ===
+def is_ascii_safe(filename: str) -> bool:
+    try:
+        filename.encode("ascii")
+        return True
+    except UnicodeEncodeError:
+        return False
 
-# === Step 2: Upload transcripts ===
+# === Start sync ===
 transcripts = sorted(glob.glob("transcripts/*.txt"))
 print(f"📚 Found {len(transcripts)} transcript files to sync")
 
 for path in tqdm(transcripts, desc="Uploading transcripts"):
     filename = os.path.basename(path)
-    safe_id = sanitize_id(filename)
+
+    # Skip bad filenames
+    if not is_ascii_safe(filename):
+        print(f"⚠️ Skipping file with non-ASCII name: {filename}")
+        continue
 
     with open(path, "r", encoding="utf-8") as f:
         text = f.read().strip()
+    if not text:
+        print(f"⚠️ Skipping empty file: {filename}")
+        continue
 
-    chunks, vectors = chunk_text(text), []
+    chunks = chunk_text(text)
+    vectors = []
 
     for i, chunk in enumerate(chunks):
         try:
-            emb = client.embeddings.create(model="text-embedding-3-large", input=chunk)
+            emb = client.embeddings.create(
+                model="text-embedding-3-large",
+                input=chunk
+            )
+            vector = emb.data[0].embedding
             vectors.append({
-                "id": f"{safe_id}-{i}",
-                "values": emb.data[0].embedding,
-                "metadata": {"source": safe_id, "chunk": i}
+                "id": f"{re.sub(r'[^a-zA-Z0-9_.-]', '_', filename)}-{i}",
+                "values": vector,
+                "metadata": {"source": filename, "chunk": i}
             })
         except Exception as e:
-            print(f"⚠️ Skipping {filename} chunk {i}: {e}")
+            print(f"⚠️ Error embedding chunk {i} in {filename}: {e}")
 
     if vectors:
-        index.upsert(vectors=vectors)
-        print(f"✅ Uploaded {len(vectors)} chunks from {filename}")
+        try:
+            index.upsert(vectors=vectors)
+            print(f"✅ Uploaded {len(vectors)} chunks from {filename}")
+        except Exception as e:
+            print(f"❌ Failed to upsert {filename}: {e}")
 
-print("🎉 Full sync completed successfully!")
+print("🎉 Sync complete — all valid transcripts uploaded to Pinecone!")
