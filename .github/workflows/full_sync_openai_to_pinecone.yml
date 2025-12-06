@@ -2,19 +2,22 @@ name: 🌐 Full OpenAI → Pinecone Sync (Safe + Clean)
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "transcripts/**"
-      - "backend/**"
+  schedule:
+    - cron: "0 6 * * *" # every day at 6 AM UTC
+
+permissions:
+  contents: read
+
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
 
 jobs:
-  sync:
+  full-sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧾 Checkout repository
+      - name: 🧭 Checkout repo
         uses: actions/checkout@v4
 
       - name: 🐍 Set up Python
@@ -25,20 +28,13 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai==2.9.0 pinecone==8.0.0 tqdm python-dotenv requests
+          pip install openai pinecone tqdm requests python-dotenv
 
-      - name: 🧹 Sanitize local filenames
+      - name: 🧹 Sanitize filenames before syncing
         run: python backend/sanitize_filenames.py
 
-      - name: 🧼 Clean Pinecone invalid IDs
-        env:
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
-        run: python backend/clean_nonascii_pinecone_ids.py
+      - name: 🧪 Verify Pinecone SDK version
+        run: python -c "import pinecone; print('✅ Pinecone version:', pinecone.__version__)"
 
-      - name: 🚀 Full sync to Pinecone
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+      - name: 🚀 Run full sync from OpenAI → Pinecone
         run: python backend/full_sync_openai_to_pinecone.py
