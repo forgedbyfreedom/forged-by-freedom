@@ -1,1 +1,177 @@
-
+[
+  {
+    "type": "book",
+    "title": "Goodman & Gilman’s The Pharmacological Basis of Therapeutics, 14th Edition",
+    "authors": ["Laurence Brunton", "Bjorn Knollmann"],
+    "topics": ["androgens", "steroids", "hepatic metabolism", "peptide pharmacokinetics"],
+    "notes": "Core pharmacology text; explains androgen receptor mechanisms, first-pass hepatic stress from orals, and peptide hormone pharmacodynamics."
+  },
+  {
+    "type": "book",
+    "title": "Endocrinology: Adult and Pediatric, 8th Edition",
+    "authors": ["J. Larry Jameson", "Leslie J. De Groot"],
+    "topics": ["HPTA axis", "growth hormone", "IGF-1 signaling", "peptide feedback loops"],
+    "notes": "Covers hormonal regulation and peptide secretagogue pathways relevant to GH and recovery optimization."
+  },
+  {
+    "type": "book",
+    "title": "Principles and Practice of Endocrinology and Metabolism",
+    "author": "Kenneth L. Becker",
+    "topics": ["anabolic signaling", "testosterone feedback", "GH/IGF axis"],
+    "notes": "Standard endocrine text with sections on performance enhancement and endocrine disruption from exogenous hormones."
+  },
+  {
+    "type": "book",
+    "title": "Essentials of Sports Medicine",
+    "authors": ["Nicola Maffulli", "Dennis Caine"],
+    "topics": ["injury rehabilitation", "PED detection", "ethical use in sports"],
+    "notes": "Provides injury recovery and rehabilitation context related to peptides like BPC-157 and TB-500."
+  },
+  {
+    "type": "book",
+    "title": "Clinical Sports Nutrition, 6th Edition",
+    "authors": ["Louise Burke", "Vicki Deakin"],
+    "topics": ["nutrition timing", "amino acid metabolism", "protein synthesis"],
+    "notes": "Bridges sports nutrition and molecular signaling pathways for recovery and muscle repair."
+  },
+  {
+    "type": "academic_reference",
+    "author": "Donald K. Layman",
+    "title": "Dietary protein and exercise have additive effects on body composition during weight loss in adult women",
+    "journal": "Journal of Nutrition",
+    "year": 2005,
+    "topics": ["leucine threshold", "muscle protein synthesis", "mTOR signaling"],
+    "notes": "Foundational study in muscle-centric medicine and the biochemical trigger for protein synthesis."
+  },
+  {
+    "type": "academic_reference",
+    "author": "Donald K. Layman",
+    "title": "Defining meal requirements for protein to optimize metabolic roles of amino acids",
+    "journal": "American Journal of Clinical Nutrition",
+    "year": 2018,
+    "topics": ["leucine signaling", "meal protein distribution", "metabolic regulation"],
+    "notes": "Key reference behind Dr. Gabrielle Lyon’s approach to protein optimization."
+  },
+  {
+    "type": "academic_reference",
+    "author": "Donald K. Layman",
+    "title": "A moderate-protein diet produces sustained weight loss and long-term changes in body composition and metabolism",
+    "journal": "Nutrition & Metabolism",
+    "year": 2009,
+    "topics": ["body composition", "protein metabolism", "weight management"],
+    "notes": "Provides mechanistic insight into how protein-centered diets alter metabolic function."
+  },
+  {
+    "type": "podcast_reference",
+    "title": "FoundMyFitness Podcast — Dr. Rhonda Patrick with Donald Layman: Protein, Leucine, and Longevity",
+    "topics": ["protein synthesis", "longevity", "amino acid thresholds"],
+    "notes": "Audio source for real-world explanations linking Layman’s work to longevity and muscle maintenance."
+  },
+  {
+    "type": "podcast_reference",
+    "title": "Dr. Gabrielle Lyon Podcast — The Science of Muscle-Centric Medicine (Ep. 14)",
+    "topics": ["muscle-centric medicine", "protein utilization", "aging metabolism"],
+    "notes": "Discusses practical applications of Layman’s protein studies and their clinical significance."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "CJC-1295 + Ipamorelin",
+    "effect": "Increased GH secretion and improved body composition in adults with GH deficiency",
+    "source": "ClinicalTrials.gov NCT01066955",
+    "status": "Completed",
+    "notes": "Demonstrates safe GH release without elevated prolactin or cortisol levels."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Tesamorelin",
+    "effect": "Reduced visceral adiposity in HIV-positive men with lipodystrophy",
+    "source": "ClinicalTrials.gov NCT00123286",
+    "status": "Completed",
+    "notes": "Approved GH secretagogue; excellent model for explaining peptide-induced fat mobilization."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "BPC-157",
+    "effect": "Accelerated tendon-to-bone healing and angiogenesis in animal models",
+    "source": "PMC4747343",
+    "status": "Preclinical",
+    "notes": "Mechanism includes fibroblast migration, VEGF stimulation, and capillary regeneration."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "LGD-4033 (Ligandrol)",
+    "effect": "Increased lean body mass with minimal hepatic impact at low doses",
+    "source": "J Gerontol A Biol Sci Med Sci, 2013",
+    "status": "Completed",
+    "notes": "Human trial confirming anabolic potential but revealing suppression of HDL and testosterone."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Ostarine (MK-2866)",
+    "effect": "Enhanced strength and muscle retention in postmenopausal women",
+    "source": "Dalton JT, J Gerontol A Biol Sci Med Sci, 2011",
+    "status": "Completed",
+    "notes": "Evidence of anabolic activity with mild endocrine suppression; excellent educational contrast with TRT."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "AOD-9604",
+    "effect": "Increased lipolysis and fat metabolism in obese adults",
+    "source": "Int J Obes (Lond), 2014",
+    "status": "Completed",
+    "notes": "Demonstrates safety profile for GH fragment-based fat loss peptides."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "GHK-Cu",
+    "effect": "Enhanced collagen synthesis and fibroblast proliferation in aging skin",
+    "source": "J Cosmet Dermatol, 2015",
+    "status": "Completed",
+    "notes": "Copper peptide involved in wound healing and tissue regeneration."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "Follistatin Gene Therapy",
+    "effect": "Suppressed myostatin and improved muscle mass in primate models",
+    "source": "Nature Medicine, 2019",
+    "status": "Preclinical",
+    "notes": "Promising mechanism for myostatin inhibition in muscle hypertrophy research."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "MOTS-C Peptide",
+    "effect": "Improved insulin sensitivity and endurance markers in mice",
+    "source": "Cell Metabolism, 2018",
+    "status": "Preclinical",
+    "notes": "Key mitochondrial peptide regulating AMPK and metabolic stress resilience."
+  },
+  {
+    "type": "clinical_trial",
+    "compound": "5-Amino-1MQ",
+    "effect": "Reduced fat accumulation via NNMT inhibition",
+    "source": "Obesity (Silver Spring), 2020",
+    "status": "Preclinical",
+    "notes": "Emerging fat metabolism modulator with potential synergy in body recomposition protocols."
+  },
+  {
+    "type": "reference",
+    "title": "WADA (World Anti-Doping Agency) 2024 Prohibited List",
+    "topics": ["SARMs", "peptides", "stimulants"],
+    "notes": "Essential to ensure AI Coach responsibly flags restricted or illegal substances."
+  },
+  {
+    "type": "book",
+    "title": "Drug-Induced Liver Disease, 4th Edition",
+    "author": "Neil Kaplowitz",
+    "topics": ["hepatotoxicity", "steroid liver stress", "oral anabolic compounds"],
+    "notes": "Explains hepatic enzyme elevations and cholestasis from methylated orals (e.g., Anadrol, Dianabol)."
+  },
+  {
+    "type": "academic_reference",
+    "author": "Peter Attia, MD",
+    "title": "Outlive: The Science and Art of Longevity",
+    "year": 2023,
+    "topics": ["longevity", "metabolic optimization", "exercise physiology"],
+    "notes": "Bridges longevity science with muscle and metabolic health; great for AI Coach holistic answers."
+  }
+]
