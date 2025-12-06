@@ -1,4 +1,4 @@
-name: 🌐 Full OpenAI → Pinecone Sync (Safe + Clean)
+name: 🔁 Full Sync — AI Coach Data to Pinecone
 
 on:
   workflow_dispatch:
@@ -11,10 +11,12 @@ permissions:
 env:
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+  PINECONE_INDEX: ai-coach-knowledge
 
 jobs:
   full-sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
       - name: 🧭 Checkout repo
@@ -28,13 +30,31 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai pinecone tqdm requests python-dotenv
-
-      - name: 🧹 Sanitize filenames before syncing
-        run: python backend/sanitize_filenames.py
+          pip install openai pinecone python-dotenv tqdm requests
 
       - name: 🧪 Verify Pinecone SDK version
-        run: python -c "import pinecone; print('✅ Pinecone version:', pinecone.__version__)"
+        run: |
+          python -c "import pinecone; print('✅ Pinecone version:', pinecone.__version__)"
+          python -c "import openai; print('✅ OpenAI version:', openai.__version__)"
 
-      - name: 🚀 Run full sync from OpenAI → Pinecone
-        run: python backend/full_sync_openai_to_pinecone.py
+      - name: 🧹 Sanitize filenames before syncing
+        run: |
+          if [ -f backend/sanitize_filenames.py ]; then
+            python backend/sanitize_filenames.py
+          else
+            echo "⚠️ sanitize_filenames.py not found, skipping..."
+          fi
+
+      - name: 🚀 Run unified ingestion sync (AI Coach data → Pinecone)
+        run: |
+          if [ -f sync_gpt_ingest.py ]; then
+            python sync_gpt_ingest.py
+          elif [ -f backend/full_sync_openai_to_pinecone.py ]; then
+            python backend/full_sync_openai_to_pinecone.py
+          else
+            echo "❌ No ingestion script found. Please add sync_gpt_ingest.py to repo root."
+            exit 1
+          fi
+
+      - name: ✅ Summary
+        run: echo "🎯 Full Pinecone sync complete — all transcripts and references indexed."
