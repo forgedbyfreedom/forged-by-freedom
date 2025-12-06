@@ -1,60 +1,74 @@
+"""
+🌐 Full OpenAI → Pinecone Sync (chunk-safe version)
+--------------------------------------------------
+Automatically syncs all transcript files in /transcripts
+to your Pinecone vector index, splitting large files
+to stay within OpenAI model limits.
+"""
+
 import os
 import glob
+from tqdm import tqdm
 import openai
 import pinecone
-from tqdm import tqdm
 
-# Load environment variables
+# === Environment variables ===
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 
 if not OPENAI_API_KEY or not PINECONE_API_KEY:
     raise RuntimeError("❌ Missing required environment variables (OpenAI or Pinecone key).")
 
+# === OpenAI & Pinecone init ===
 openai.api_key = OPENAI_API_KEY
-
-print("✅ Correct Pinecone SDK already installed")
-
 pinecone.init(api_key=PINECONE_API_KEY)
-index_name = "forged-freedom-ai"
 
-# Create index if needed
-if index_name not in pinecone.list_indexes().names():
-    pinecone.create_index(index_name, dimension=3072)
-index = pinecone.Index(index_name)
+INDEX_NAME = "forged-freedom-ai"
 
-# Find all transcript files
+# Create index if it doesn’t exist
+existing_indexes = [i.name for i in pinecone.list_indexes()]
+if INDEX_NAME not in existing_indexes:
+    print(f"🪶 Creating Pinecone index: {INDEX_NAME}")
+    pinecone.create_index(INDEX_NAME, dimension=3072)
+
+index = pinecone.Index(INDEX_NAME)
+
+# === File discovery ===
 transcript_files = sorted(glob.glob("transcripts/*.txt"))
 print(f"📚 Found {len(transcript_files)} transcript files to sync")
 
-def chunk_text(text, max_chars=12000):
-    """Split long text into smaller chunks."""
-    return [text[i:i+max_chars] for i in range(0, len(text), max_chars)]
+# === Helper: Split long text into safe chunks ===
+def chunk_text(text: str, max_chars: int = 12000):
+    """Split text into OpenAI-safe chunks."""
+    return [text[i:i + max_chars] for i in range(0, len(text), max_chars)]
 
+# === Main upload loop ===
 for filepath in tqdm(transcript_files, desc="Uploading transcripts"):
     filename = os.path.basename(filepath)
     with open(filepath, "r", encoding="utf-8") as f:
         text = f.read().strip()
 
     chunks = chunk_text(text)
-    all_vectors = []
+    vectors = []
 
-    for idx, chunk in enumerate(chunks):
+    for i, chunk in enumerate(chunks):
         try:
-            embedding = openai.embeddings.create(
-                input=chunk,
-                model="text-embedding-3-large"
-            ).data[0].embedding
-            all_vectors.append({
-                "id": f"{filename}-{idx}",
+            # Create embeddings safely
+            response = openai.embeddings.create(
+                model="text-embedding-3-large",
+                input=chunk
+            )
+            embedding = response.data[0].embedding
+            vectors.append({
+                "id": f"{filename}-{i}",
                 "values": embedding,
-                "metadata": {"source": filename, "chunk": idx}
+                "metadata": {"source": filename, "chunk": i}
             })
         except Exception as e:
-            print(f"⚠️ Skipped chunk {idx} from {filename}: {e}")
+            print(f"⚠️ Skipping chunk {i} from {filename}: {e}")
 
-    if all_vectors:
-        index.upsert(vectors=all_vectors)
-        print(f"✅ Uploaded {len(all_vectors)} chunks from {filename}")
+    if vectors:
+        index.upsert(vectors=vectors)
+        print(f"✅ Uploaded {len(vectors)} chunks from {filename}")
 
 print("🎉 All transcripts uploaded successfully to Pinecone!")
