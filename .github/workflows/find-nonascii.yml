@@ -2,7 +2,7 @@ name: Find non-ASCII filenames
 on:
   workflow_dispatch: {}
 
-jobs: 
+jobs:
   find-non-ascii:
     runs-on: ubuntu-latest
     steps:
