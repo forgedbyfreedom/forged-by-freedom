@@ -11,23 +11,22 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Debug — show repo root and find script
+      - name: Debug workspace and find script
         run: |
           echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
           pwd
-          ls -la
-          echo "Searching for find_nonascii.py"
-          find . -maxdepth 6 -type f -name 'find_nonascii.py' || true
-
-      - name: Run find_nonascii.py
-        run: |
-          SCRIPT="${GITHUB_WORKSPACE}/scripts/find_nonascii.py"
-          if [ -f "$SCRIPT" ]; then
+          ls -la "$GITHUB_WORKSPACE"
+          echo "Searching for find_nonascii.py under the workspace..."
+          SCRIPT=$(find "$GITHUB_WORKSPACE" -type f -name 'find_nonascii.py' -print -quit || true)
+          if [ -n "$SCRIPT" ]; then
+            echo "Found script at: $SCRIPT"
             echo "Running $SCRIPT"
             python3 "$SCRIPT"
           else
-            echo "Script not found at $SCRIPT"
-            echo "Listing scripts/ directory if present:"
-            ls -la "${GITHUB_WORKSPACE}/scripts" || true
+            echo "Script not found under $GITHUB_WORKSPACE"
+            echo "Listing top-level directories:"
+            ls -la "$GITHUB_WORKSPACE" || true
+            echo "Attempting to list any 'scripts' directories under workspace:"
+            find "$GITHUB_WORKSPACE" -maxdepth 3 -type d -name 'scripts' -exec ls -la {} \; || true
             exit 2
           fi
