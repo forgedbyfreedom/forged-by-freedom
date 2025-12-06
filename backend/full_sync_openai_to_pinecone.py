@@ -1,62 +1,71 @@
-#!/usr/bin/env python3
 """
-Full OpenAI → Pinecone sync (self-healing version).
-This version ensures the correct Pinecone SDK is installed even if GitHub Actions preloads `pinecone-client`.
+🌐 Full OpenAI → Pinecone Sync (chunk-safe version)
+--------------------------------------------------
+Automatically syncs all transcript files in /transcripts
+to your Pinecone vector index, splitting large files
+to stay within OpenAI model limits.
 """
 
-import os, subprocess, sys, importlib, time, json
-from pathlib import Path
+import os
+import glob
 from tqdm import tqdm
-
-# 🧹 Step 1. Force-install correct Pinecone SDK
-def ensure_pinecone():
-    try:
-        import pinecone
-        # verify this is the correct SDK
-        if hasattr(pinecone, "Pinecone"):
-            print("✅ Correct Pinecone SDK already installed")
-            return
-        else:
-            raise ImportError("Wrong pinecone package")
-    except Exception:
-        print("⚙️ Installing latest official Pinecone SDK ...")
-        subprocess.run(
-            [sys.executable, "-m", "pip", "uninstall", "-y", "pinecone-client"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        subprocess.run(
-            [sys.executable, "-m", "pip", "install", "--no-cache-dir", "--upgrade", "pinecone"],
-            check=True,
-        )
-        importlib.invalidate_caches()
-        print("✅ Pinecone SDK fixed")
-
-ensure_pinecone()
-
-# 🧠 Step 2. Import correct SDKs
-from pinecone import Pinecone, ServerlessSpec
 from openai import OpenAI
+import pinecone
 
-# 🧩 Step 3. Environment
-INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+# === Environment variables ===
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 
+if not OPENAI_API_KEY or not PINECONE_API_KEY:
+    raise RuntimeError("❌ Missing required environment variables (OpenAI or Pinecone key).")
+
+# === Clients ===
 client = OpenAI(api_key=OPENAI_API_KEY)
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(INDEX_NAME)
+pinecone.init(api_key=PINECONE_API_KEY)
 
-# 🧠 Step 4. Load transcripts
-transcripts_dir = Path("transcripts")
-files = list(transcripts_dir.glob("*.txt"))
-print(f"📚 Found {len(files)} transcript files to sync")
+INDEX_NAME = "forged-freedom-ai"
 
-# 🧩 Step 5. Upload each transcript
-for file_path in tqdm(files, desc="Uploading transcripts"):
-    text = file_path.read_text(errors="ignore")
-    metadata = {"filename": file_path.name}
-    vector = client.embeddings.create(input=text, model="text-embedding-3-large").data[0].embedding
-    index.upsert(vectors=[{"id": file_path.stem, "values": vector, "metadata": metadata}])
+# Create index if missing
+if INDEX_NAME not in [i.name for i in pinecone.list_indexes()]:
+    print(f"🪶 Creating Pinecone index: {INDEX_NAME}")
+    pinecone.create_index(INDEX_NAME, dimension=3072)
 
-print("✅ Pinecone sync complete!")
+index = pinecone.Index(INDEX_NAME)
+
+# === Helper: Safe chunking ===
+def chunk_text(text: str, max_chars: int = 10000):
+    """Split text safely within OpenAI token limits."""
+    return [text[i:i + max_chars] for i in range(0, len(text), max_chars)]
+
+# === Sync transcripts ===
+transcripts = sorted(glob.glob("transcripts/*.txt"))
+print(f"📚 Found {len(transcripts)} transcript files to sync")
+
+for path in tqdm(transcripts, desc="Uploading transcripts"):
+    filename = os.path.basename(path)
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read().strip()
+
+    chunks = chunk_text(text)
+    vectors = []
+
+    for i, chunk in enumerate(chunks):
+        try:
+            resp = client.embeddings.create(
+                model="text-embedding-3-large",
+                input=chunk
+            )
+            embedding = resp.data[0].embedding
+            vectors.append({
+                "id": f"{filename}-{i}",
+                "values": embedding,
+                "metadata": {"source": filename, "chunk": i}
+            })
+        except Exception as e:
+            print(f"⚠️ Skipping chunk {i} from {filename}: {e}")
+
+    if vectors:
+        index.upsert(vectors=vectors)
+        print(f"✅ Uploaded {len(vectors)} chunks from {filename}")
+
+print("🎉 All transcripts uploaded successfully to Pinecone!")
