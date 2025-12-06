@@ -1,0 +1,29 @@
+name: 🔍 Inspect Pinecone + OpenAI Contents
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+      PINECONE_INDEX_NAME: forged-freedom-ai
+
+    steps:
+      - name: 🧭 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai pinecone tqdm requests
+
+      - name: 🔍 Run inspection
+        run: python backend/inspect_pinecone_contents.py
