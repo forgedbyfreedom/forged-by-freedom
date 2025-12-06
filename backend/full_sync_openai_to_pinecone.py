@@ -10,7 +10,7 @@ import os
 import glob
 from tqdm import tqdm
 from openai import OpenAI
-import pinecone
+from pinecone import Pinecone, ServerlessSpec
 
 # === Environment variables ===
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -21,20 +21,25 @@ if not OPENAI_API_KEY or not PINECONE_API_KEY:
 
 # === Clients ===
 client = OpenAI(api_key=OPENAI_API_KEY)
-pinecone.init(api_key=PINECONE_API_KEY)
+pc = Pinecone(api_key=PINECONE_API_KEY)
 
 INDEX_NAME = "forged-freedom-ai"
 
-# Create index if missing
-if INDEX_NAME not in [i.name for i in pinecone.list_indexes()]:
+# === Create index if missing ===
+if INDEX_NAME not in [i.name for i in pc.list_indexes()]:
     print(f"🪶 Creating Pinecone index: {INDEX_NAME}")
-    pinecone.create_index(INDEX_NAME, dimension=3072)
+    pc.create_index(
+        name=INDEX_NAME,
+        dimension=3072,
+        metric="cosine",
+        spec=ServerlessSpec(cloud="aws", region="us-east-1")
+    )
 
-index = pinecone.Index(INDEX_NAME)
+index = pc.Index(INDEX_NAME)
 
 # === Helper: Safe chunking ===
-def chunk_text(text: str, max_chars: int = 10000):
-    """Split text safely within OpenAI token limits."""
+def chunk_text(text: str, max_chars: int = 8000):
+    """Split text safely below model token limit."""
     return [text[i:i + max_chars] for i in range(0, len(text), max_chars)]
 
 # === Sync transcripts ===
