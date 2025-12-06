@@ -1,7 +1,7 @@
 name: 🌐 Full OpenAI → Pinecone Sync
 
 on:
-  workflow_dispatch:  # allows you to trigger manually
+  workflow_dispatch:
   schedule:
     - cron: "0 5 * * *"  # runs every day at 5 AM UTC
 
@@ -21,6 +21,11 @@ jobs:
     steps:
       - name: 🧭 Checkout repository
         uses: actions/checkout@v4
+
+      - name: 🧹 Clean previous installs (ensure no pinecone-client remains)
+        run: |
+          pip uninstall -y pinecone-client || true
+          pip uninstall -y pinecone || true
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
