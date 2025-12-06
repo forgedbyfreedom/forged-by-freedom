@@ -1,147 +1,37 @@
-"""
-full_sync_openai_to_pinecone.py
----------------------------------------------------------
-Performs a full synchronization between OpenAI file storage
-and your Pinecone vector database.
-Auto-fixes old Pinecone SDK issues and runs cleanly in CI.
----------------------------------------------------------
-"""
+name: 🌐 Full OpenAI → Pinecone Sync
 
-import os
-import sys
-import time
-import json
-import importlib
-import subprocess
-from pathlib import Path
-from tqdm import tqdm
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"  # every day at 6 AM UTC
 
-# ==========================================================
-# 🧩 AUTO-FIX OLD PINECONE INSTALLATIONS
-# ==========================================================
-def ensure_pinecone_sdk():
-    try:
-        import pinecone
-        if not hasattr(pinecone, "Pinecone"):
-            raise ImportError("Old pinecone-client detected.")
-        return pinecone
-    except Exception:
-        print("⚠️  Detected old or missing Pinecone client. Replacing with new SDK...")
-        subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "pinecone-client", "pinecone"])
-        subprocess.run([sys.executable, "-m", "pip", "install", "--no-cache-dir", "pinecone"])
-        importlib.invalidate_caches()
-        import pinecone
-        return pinecone
+permissions:
+  contents: read
 
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
 
-pinecone = ensure_pinecone_sdk()
+jobs:
+  full-sync:
+    runs-on: ubuntu-latest
 
-# ==========================================================
-# 🔐 ENVIRONMENT VARIABLES
-# ==========================================================
-from dotenv import load_dotenv
+    steps:
+      - name: 🧭 Checkout repo
+        uses: actions/checkout@v4
 
-load_dotenv()
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai pinecone tqdm requests python-dotenv
 
-if not PINECONE_API_KEY or not OPENAI_API_KEY:
-    raise EnvironmentError("❌ Missing required environment variables: PINECONE_API_KEY or OPENAI_API_KEY.")
+      - name: 🧪 Verify Pinecone SDK version
+        run: python -c "import pinecone; print('✅ Pinecone version:', pinecone.__version__)"
 
-# ==========================================================
-# 🔗 IMPORT LIBRARIES
-# ==========================================================
-from openai import OpenAI
-
-# Connect clients
-client = OpenAI(api_key=OPENAI_API_KEY)
-pc = pinecone.Pinecone(api_key=PINECONE_API_KEY)
-
-# Define index configuration
-INDEX_NAME = "forged-by-freedom"
-namespace = "openai-files"
-
-# ==========================================================
-# 🧱 ENSURE INDEX EXISTS
-# ==========================================================
-existing_indexes = [idx["name"] for idx in pc.list_indexes()]
-if INDEX_NAME not in existing_indexes:
-    print(f"🪶 Creating Pinecone index: {INDEX_NAME}")
-    pc.create_index(
-        name=INDEX_NAME,
-        dimension=1536,  # for text-embedding-3-small / large
-        metric="cosine",
-        spec=pinecone.ServerlessSpec(cloud="aws", region="us-east-1")
-    )
-
-index = pc.Index(INDEX_NAME)
-
-# ==========================================================
-# 🗂 FETCH OPENAI FILES
-# ==========================================================
-print("📂 Retrieving OpenAI files...")
-files = client.files.list()
-files_data = [f for f in files.data if f.purpose == "fine-tune" or f.purpose == "assistants"]
-
-if not files_data:
-    print("⚠️ No OpenAI files found for sync.")
-    sys.exit(0)
-
-print(f"✅ Found {len(files_data)} OpenAI files to sync.")
-
-# ==========================================================
-# 🧠 LOAD AND EMBED FILES
-# ==========================================================
-def get_embedding(text: str):
-    """Helper to generate embeddings using OpenAI."""
-    try:
-        emb = client.embeddings.create(model="text-embedding-3-small", input=text)
-        return emb.data[0].embedding
-    except Exception as e:
-        print(f"⚠️ Embedding error: {e}")
-        return None
-
-
-uploaded_count = 0
-skipped = 0
-
-for f in tqdm(files_data, desc="🔁 Syncing to Pinecone"):
-    try:
-        file_content = client.files.retrieve_content(f.id)
-        text = file_content.decode("utf-8") if isinstance(file_content, bytes) else str(file_content)
-
-        # Chunk large files
-        chunks = [text[i:i + 2000] for i in range(0, len(text), 2000)]
-
-        vectors = []
-        for i, chunk in enumerate(chunks):
-            emb = get_embedding(chunk)
-            if emb:
-                vectors.append({
-                    "id": f"{f.id}_{i}",
-                    "values": emb,
-                    "metadata": {"filename": f.filename, "chunk": i}
-                })
-
-        if vectors:
-            index.upsert(vectors=vectors, namespace=namespace)
-            uploaded_count += 1
-        else:
-            skipped += 1
-
-    except Exception as e:
-        print(f"⚠️ Failed to sync {f.filename}: {e}")
-        skipped += 1
-        continue
-
-# ==========================================================
-# 📊 FINAL SUMMARY
-# ==========================================================
-stats = index.describe_index_stats()
-vector_count = stats["total_vector_count"]
-
-print("\n🎯 SYNC COMPLETE")
-print(f"✅ Uploaded files: {uploaded_count}")
-print(f"⚠️ Skipped files: {skipped}")
-print(f"📊 Total vectors in index '{INDEX_NAME}': {vector_count}\n")
+      - name: 🚀 Run full sync from OpenAI → Pinecone
+        run: python backend/full_sync_openai_to_pinecone.py
