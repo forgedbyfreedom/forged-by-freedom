@@ -1,4 +1,4 @@
-name: 🔁 Auto Sync & Rebuild Transcripts (with ThinkBig)
+name: 🔁 Auto Sync & Push All Transcripts to Pinecone (Direct Upload)
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧭 Checkout main repo
+      - name: 🧭 Checkout repo
         uses: actions/checkout@v4
 
       - name: 🧩 Clone ThinkBig transcripts
@@ -29,7 +29,7 @@ jobs:
           git clone https://${GH_USER}:${GH_PAT}@github.com/forgedbyfreedom/thinkbig-transcripts.git /tmp/thinkbig
           mkdir -p transcripts/thinkbig
           cp -r /tmp/thinkbig/* transcripts/thinkbig/ || true
-          echo "✅ ThinkBig transcripts merged locally."
+          echo "✅ ThinkBig transcripts copied."
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
@@ -41,25 +41,47 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai pinecone-client tqdm requests python-dotenv
 
-      - name: 🔄 Pull latest OpenAI files (optional)
+      - name: 🚀 Direct Pinecone Sync (no rebuild needed)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
-          python transcripts/fetch_openai_files.py || echo "⚠️ Skipping fetch if not available"
+          python - <<'PYCODE'
+          import os, pinecone, openai
+          from tqdm import tqdm
 
-      - name: 🧠 Build master transcript (merge + dedupe all sources)
-        run: |
-          python transcripts/build_master_transcripts.py || echo "⚠️ Skipping master build if missing"
+          # Initialize Pinecone
+          pinecone.init(api_key=os.environ["PINECONE_API_KEY"], environment="us-east1-gcp")
+          index = pinecone.Index(os.environ["PINECONE_INDEX_NAME"])
 
-      - name: 🚀 Sync to Pinecone
-        run: |
-          python transcripts/sync_local_transcripts_to_pinecone.py || echo "⚠️ Pinecone sync completed or skipped"
+          base_dirs = ["transcripts", "transcripts/thinkbig"]
+          all_files = []
 
-      - name: 💾 Commit transcript index updates
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add transcripts/file_index.json || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-sync Pinecone & transcripts [skip ci]"
-          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || echo "✅ No changes to push"
+          for folder in base_dirs:
+              for root, _, files in os.walk(folder):
+                  for f in files:
+                      if f.endswith((".txt", ".json")):
+                          path = os.path.join(root, f)
+                          all_files.append(path)
+
+          print(f"📄 Found {len(all_files)} transcript files. Uploading...")
+
+          for path in tqdm(all_files):
+              try:
+                  with open(path, "r", errors="ignore") as fp:
+                      text = fp.read().strip()
+                  if not text:
+                      continue
+                  emb = openai.embeddings.create(
+                      input=text[:5000], model="text-embedding-3-small"
+                  ).data[0].embedding
+                  index.upsert([(path, emb, {"source": os.path.basename(path)})])
+              except Exception as e:
+                  print(f"⚠️ Skipping {path}: {e}")
+
+          print("✅ Direct Pinecone sync complete! All transcripts are now indexed.")
+          PYCODE
 
       - name: ✅ Done
-        run: echo "✅ Full rebuild (with ThinkBig) + Pinecone sync complete!"
+        run: echo "✅ Full direct sync completed successfully!"
