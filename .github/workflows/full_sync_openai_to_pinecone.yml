@@ -1,73 +1,37 @@
-🌐 Full OpenAI → Pinecone Sync (chunk-safe version)
---------------------------------------------------
-Automatically syncs all transcript files in /transcripts
-to your Pinecone vector index, splitting large files
-to stay within OpenAI model limits.
-"""
+name: 🌐 Full OpenAI → Pinecone Sync
 
-import os
-import glob
-from tqdm import tqdm
-import openai
-import pinecone
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"  # every day at 6 AM UTC
 
-# === Environment variables ===
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+permissions:
+  contents: read
 
-if not OPENAI_API_KEY or not PINECONE_API_KEY:
-    raise RuntimeError("❌ Missing required environment variables (OpenAI or Pinecone key).")
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
 
-# === OpenAI & Pinecone init ===
-openai.api_key = OPENAI_API_KEY
-pinecone.init(api_key=PINECONE_API_KEY)
+jobs:
+  full-sync:
+    runs-on: ubuntu-latest
 
-INDEX_NAME = "forged-freedom-ai"
+    steps:
+      - name: 🧭 Checkout repo
+        uses: actions/checkout@v4
 
-# Create index if it doesn’t exist
-existing_indexes = [i.name for i in pinecone.list_indexes()]
-if INDEX_NAME not in existing_indexes:
-    print(f"🪶 Creating Pinecone index: {INDEX_NAME}")
-    pinecone.create_index(INDEX_NAME, dimension=3072)
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-index = pinecone.Index(INDEX_NAME)
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai pinecone tqdm requests python-dotenv
 
-# === File discovery ===
-transcript_files = sorted(glob.glob("transcripts/*.txt"))
-print(f"📚 Found {len(transcript_files)} transcript files to sync")
+      - name: 🧪 Verify Pinecone SDK version
+        run: python -c "import pinecone; print('✅ Pinecone version:', pinecone.__version__)"
 
-# === Helper: Split long text into safe chunks ===
-def chunk_text(text: str, max_chars: int = 12000):
-    """Split text into OpenAI-safe chunks."""
-    return [text[i:i + max_chars] for i in range(0, len(text), max_chars)]
-
-# === Main upload loop ===
-for filepath in tqdm(transcript_files, desc="Uploading transcripts"):
-    filename = os.path.basename(filepath)
-    with open(filepath, "r", encoding="utf-8") as f:
-        text = f.read().strip()
-
-    chunks = chunk_text(text)
-    vectors = []
-
-    for i, chunk in enumerate(chunks):
-        try:
-            # Create embeddings safely
-            response = openai.embeddings.create(
-                model="text-embedding-3-large",
-                input=chunk
-            )
-            embedding = response.data[0].embedding
-            vectors.append({
-                "id": f"{filename}-{i}",
-                "values": embedding,
-                "metadata": {"source": filename, "chunk": i}
-            })
-        except Exception as e:
-            print(f"⚠️ Skipping chunk {i} from {filename}: {e}")
-
-    if vectors:
-        index.upsert(vectors=vectors)
-        print(f"✅ Uploaded {len(vectors)} chunks from {filename}")
-
-print("🎉 All transcripts uploaded successfully to Pinecone!")
+      - name: 🚀 Run full sync from OpenAI → Pinecone
+        run: python backend/full_sync_openai_to_pinecone.py
