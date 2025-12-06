@@ -51,7 +51,6 @@ jobs:
           import os, pinecone, openai
           from tqdm import tqdm
 
-          # Initialize Pinecone
           pinecone.init(api_key=os.environ["PINECONE_API_KEY"], environment="us-east1-gcp")
           index = pinecone.Index(os.environ["PINECONE_INDEX_NAME"])
 
