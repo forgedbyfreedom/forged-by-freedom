@@ -1,0 +1,24 @@
+name: Sanitize Vector ID Check
+on:
+  push:
+    branches:
+      - 'sanitize-pinecone-ids'
+  pull_request:
+    branches:
+      - '**'
+jobs:
+  sanitize-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install deps (if any)
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run sanitize check (scan git-tracked files)
+        run: |
+          python3 scripts/check_vector_ids.py --dir signup
