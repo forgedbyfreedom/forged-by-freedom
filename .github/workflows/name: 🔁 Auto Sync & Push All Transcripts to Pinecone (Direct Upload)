@@ -87,3 +87,34 @@ jobs:
 
       - name: ✅ Done
         run: echo "✅ Full direct sync completed successfully!"
+      - name: 📈 Show Pinecone Totals
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          python - <<'PYCODE'
+          import os
+          import pinecone
+
+          print("\n🔍 Checking Pinecone index stats...\n")
+
+          try:
+              pinecone.init(api_key=os.environ["PINECONE_API_KEY"], environment="us-east1-gcp")
+              index = pinecone.Index(os.environ["PINECONE_INDEX_NAME"])
+              stats = index.describe_index_stats()
+
+              total_vectors = stats.get("total_vector_count", 0)
+              namespaces = list(stats.get("namespaces", {}).keys())
+              dim = stats.get("dimension", "unknown")
+
+              print("📊 Pinecone Index Totals")
+              print(f"🧠 Index: {os.environ['PINECONE_INDEX_NAME']}")
+              print(f"📦 Namespaces: {namespaces if namespaces else ['default']}")
+              print(f"🔢 Total vectors: {total_vectors:,}")
+              print(f"📏 Embedding dimension: {dim}")
+              print(f"💾 Approx. size: {total_vectors * int(dim) * 4 / 1e6 if dim != 'unknown' else 'N/A'} MB")
+
+              print("\n✅ Pinecone totals check complete!\n")
+          except Exception as e:
+              print(f"⚠️ Error checking Pinecone stats: {e}")
+          PYCODE
