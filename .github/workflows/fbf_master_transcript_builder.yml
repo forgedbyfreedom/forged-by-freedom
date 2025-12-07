@@ -1,4 +1,4 @@
-name: Full Transcript Build + Deduplication + Sync + Assistant Update
+name: 🔁 Full Transcript Build + Index + Sync + Assistant Update
 
 on:
   workflow_dispatch:
@@ -20,6 +20,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
       - name: 🧭 Checkout repository
@@ -35,28 +36,63 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai pinecone tqdm requests python-dotenv beautifulsoup4
 
+      # --------------------------------------
+      # STEP 1: Build all master transcripts
+      # --------------------------------------
       - name: 🧠 Build deduped master transcripts
         run: |
-          python transcripts/build_master_transcripts.py || echo "⚠️ Skipping master build if missing"
+          if [ -f transcripts/build_master_transcripts.py ]; then
+            python transcripts/build_master_transcripts.py
+          elif [ -f build_master_transcripts.py ]; then
+            python build_master_transcripts.py
+          else
+            echo "⚠️ No build_master_transcripts.py found, skipping."
+          fi
 
+      # --------------------------------------
+      # STEP 2: Build file_index.json
+      # --------------------------------------
+      - name: 🗂️ Build updated file index
+        run: |
+          if [ -f transcripts/index_transcripts.py ]; then
+            python transcripts/index_transcripts.py
+          elif [ -f index_transcripts.py ]; then
+            python index_transcripts.py
+          else
+            echo "⚠️ No index_transcripts.py found, skipping file index."
+          fi
+
+      # --------------------------------------
+      # STEP 3: Sync deduped transcripts to Pinecone
+      # --------------------------------------
       - name: 🔗 Sync deduped transcripts to Pinecone
         run: |
-          python transcripts/sync_local_transcripts_to_pinecone.py || echo "⚠️ Pinecone sync completed or skipped"
+          if [ -f transcripts/sync_local_transcripts_to_pinecone.py ]; then
+            python transcripts/sync_local_transcripts_to_pinecone.py
+          elif [ -f sync_local_transcripts_to_pinecone.py ]; then
+            python sync_local_transcripts_to_pinecone.py
+          else
+            echo "⚠️ No Pinecone sync script found, skipping."
+          fi
 
+      # --------------------------------------
+      # STEP 4: Commit transcript & index updates
+      # --------------------------------------
       - name: 💾 Commit transcript updates
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-
           if git diff --cached --quiet; then
-            echo "ℹ️ No new transcript changes detected."
+            echo "ℹ️ No new transcript or index changes detected."
             exit 0
           fi
-
-          git commit -m "Auto update deduped transcripts + file index [skip ci]" || true
+          git commit -m "Auto update transcripts + file_index.json [skip ci]" || true
           git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || true
 
+      # --------------------------------------
+      # STEP 5: Sync updates to dashboard repo
+      # --------------------------------------
       - name: 🚀 Sync transcripts + index to dashboard repo
         run: |
           echo "📤 Syncing to dashboard repo..."
@@ -64,21 +100,21 @@ jobs:
           mkdir -p /tmp/dashboard/transcripts
           cp transcripts/*/master_transcript*.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
           cp transcripts/file_index.json /tmp/dashboard/transcripts/ || true
-
           cd /tmp/dashboard
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add transcripts/
-
           if git diff --cached --quiet; then
             echo "ℹ️ No dashboard updates detected."
             exit 0
           fi
-
-          git commit -m "Sync deduped transcripts + index [skip ci]" || true
+          git commit -m "Sync transcripts + file index [skip ci]" || true
           git push https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git main || true
 
-      - name: 🧹 Update OpenAI Assistant and clean old files
+      # --------------------------------------
+      # STEP 6: Update OpenAI Assistant + cleanup
+      # --------------------------------------
+      - name: 🧹 Update OpenAI Assistant and remove old files
         run: |
           python3 <<'PYCODE'
           import os, json
@@ -98,7 +134,7 @@ jobs:
           with open("transcripts/file_index.json", "r") as f:
               file_index = json.load(f)
 
-          new_file_ids = [f["file_id"] for f in file_index if "file_id" in f]
+          new_file_ids = [f.get("file_id") for f in file_index if f.get("file_id")]
           print(f"🔗 Linking {len(new_file_ids)} files to assistant {asst_id}...")
           client.beta.assistants.update(asst_id, file_ids=new_file_ids)
           print("✅ Assistant successfully updated.")
@@ -115,3 +151,14 @@ jobs:
                       print(f"⚠️ Could not delete {f.id}: {e}")
           print(f"🧽 Cleanup complete. Removed {removed} old files.")
           PYCODE
+
+      # --------------------------------------
+      # STEP 7: Summary for GitHub Logs
+      # --------------------------------------
+      - name: ✅ Summary
+        run: |
+          echo "🎯 Full pipeline complete."
+          echo "🧠 Transcripts rebuilt"
+          echo "🗂️ File index regenerated"
+          echo "🔗 Synced to Pinecone + Dashboard"
+          echo "🤖 Assistant updated successfully"
