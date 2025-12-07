@@ -1,87 +1,82 @@
 #!/usr/bin/env python3
 """
-build_master_transcripts.py
---------------------------------
-✅ Rebuilds master_transcript*.txt for all @channel folders
-✅ Creates a file_index.json summary for Pinecone ingestion
-✅ Works locally and inside GitHub Actions
+build_file_index.py
+------------------------------------------------------------
+Builds a clean, deduplicated JSON index of all transcript files.
+
+✅ Automatically scans /transcripts/ and all @channel folders
+✅ Deduplicates using MD5 hashes
+✅ Counts token estimates for each transcript
+✅ Always writes file_index.json into /transcripts/
+✅ Works both locally and inside GitHub Actions
 """
 
 import os
 import json
+import hashlib
 from datetime import datetime
 
-REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
-FILE_INDEX_PATH = os.path.join(REPO_ROOT, "file_index.json")
+# --- 🧭 Define consistent paths ---
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+TRANSCRIPTS_DIR = os.path.join(SCRIPT_DIR, "../../../transcripts")
+OUTPUT_FILE = os.path.join(TRANSCRIPTS_DIR, "file_index.json")
 
+index = []
+hash_set = set()
 
-def combine_transcripts(channel_path):
-    """
-    Combine all .txt files (except master_transcript*) in a given channel directory.
-    """
-    txt_files = [
-        f for f in os.listdir(channel_path)
-        if f.endswith(".txt") and not f.startswith("master_transcript")
-    ]
-    if not txt_files:
-        print(f"⚠️ No .txt transcripts found in {channel_path}, skipping.")
-        return None
+print("🧹 Scanning for transcripts in:", TRANSCRIPTS_DIR)
 
-    output_path = os.path.join(channel_path, "master_transcript1.txt")
-    with open(output_path, "w", encoding="utf-8") as outfile:
-        for fname in sorted(txt_files):
-            fpath = os.path.join(channel_path, fname)
-            with open(fpath, "r", encoding="utf-8", errors="ignore") as infile:
-                outfile.write(f"### {fname}\n")
-                outfile.write(infile.read().strip() + "\n\n")
-        outfile.write(f"=== Rebuilt on {datetime.utcnow().isoformat()}Z ===\n")
+if not os.path.exists(TRANSCRIPTS_DIR):
+    print(f"❌ Transcripts directory not found: {TRANSCRIPTS_DIR}")
+    exit(1)
 
-    print(f"✅ Built {output_path}")
-    return output_path
+# --- 🔍 Recursively walk through transcript folders ---
+for root, dirs, files in os.walk(TRANSCRIPTS_DIR):
+    for file in files:
+        if file.endswith(".txt"):
+            path = os.path.join(root, file)
 
+            # Skip generated master transcripts
+            if "master_transcript" in file.lower():
+                continue
 
-def build_file_index(channels_data):
-    """
-    Build file_index.json — a summary of all transcripts.
-    """
-    index_data = []
-    for ch, path in channels_data.items():
-        if path:
-            index_data.append({
-                "channel": ch,
-                "file": os.path.basename(path),
-                "path": path.replace(REPO_ROOT + "/", ""),
-                "timestamp": datetime.utcnow().isoformat() + "Z"
+            try:
+                with open(path, "rb") as f:
+                    data = f.read()
+                file_hash = hashlib.md5(data).hexdigest()
+            except Exception as e:
+                print(f"⚠️ Could not read file {path}: {e}")
+                continue
+
+            # Skip duplicates
+            if file_hash in hash_set:
+                print(f"⚠️ Duplicate detected — skipping: {path}")
+                continue
+
+            hash_set.add(file_hash)
+
+            # Estimate token count
+            text = data.decode(errors="ignore")
+            tokens = len(text.split())
+
+            channel = os.path.basename(os.path.dirname(path))
+
+            index.append({
+                "channel": channel,
+                "filename": file,
+                "relative_path": os.path.relpath(path, TRANSCRIPTS_DIR),
+                "tokens": tokens,
+                "hash": file_hash,
+                "last_updated": datetime.utcnow().isoformat() + "Z"
             })
 
-    with open(FILE_INDEX_PATH, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, indent=2)
+# --- 💾 Write to file_index.json ---
+index.sort(key=lambda x: (x["channel"], x["filename"]))
 
-    print(f"📚 file_index.json written with {len(index_data)} entries.")
+os.makedirs(TRANSCRIPTS_DIR, exist_ok=True)
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(index, f, indent=2)
 
-
-def rebuild_all_channels():
-    """
-    Automatically rebuild all @channel transcript folders.
-    """
-    channels_data = {}
-    print("🔧 Starting transcript rebuild process...\n")
-
-    for folder in sorted(os.listdir(REPO_ROOT)):
-        if folder.startswith("@"):
-            folder_path = os.path.join(REPO_ROOT, folder)
-            if os.path.isdir(folder_path):
-                print(f"📘 Processing {folder}...")
-                path = combine_transcripts(folder_path)
-                channels_data[folder] = path
-
-    if channels_data:
-        build_file_index(channels_data)
-    else:
-        print("⚠️ No channel folders found.")
-
-    print("\n🎯 Transcript rebuild complete.")
-
-
-if __name__ == "__main__":
-    rebuild_all_channels()
+print(f"\n✅ Indexed {len(index)} unique transcript files.")
+print(f"💾 file_index.json written to: {OUTPUT_FILE}")
+print("🎯 Index build complete.\n")
