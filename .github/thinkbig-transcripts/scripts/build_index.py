@@ -20,7 +20,7 @@ for root, dirs, files in os.walk(ROOT_DIR):
                 continue
 
             hash_set.add(file_hash)
-            tokens = len(data.decode(errors="ignore").split())
+            tokens = len(data.decode(errors="ignore").
             channel = os.path.basename(os.path.dirname(path))
 
             index.append({
