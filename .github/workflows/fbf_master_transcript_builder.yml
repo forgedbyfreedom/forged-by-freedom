@@ -115,30 +115,3 @@ jobs:
                       print(f"⚠️ Could not delete {f.id}: {e}")
           print(f"🧽 Cleanup complete. Removed {removed} old files.")
           PYCODE
-
-  notify:
-    needs: build
-    runs-on: ubuntu-latest
-    if: always()
-
-    steps:
-      - name: 📧 Send nightly status email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "📘 ForgedByFreedom AI Sync — ${{ job.status }}"
-          to: forgedbyfreedom@gmail.com
-          from: "Coach Bryan AI <${{ secrets.SMTP_USERNAME }}>"
-          body: |
-            Hey Coach Bryan,
-
-            The nightly transcript sync and assistant update has **${{ job.status }}**.
-
-            Repository: ${{ github.repository }}
-            Workflow run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
-            — ForgedByFreedom Automation System 🤖
