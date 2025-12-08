@@ -81,7 +81,7 @@ jobs:
           git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
           mkdir -p /tmp/dashboard/transcripts
           cp transcripts/*/master_transcript*.txt /tmp/dashboard/transcripts/ 2>/dev/null || true
-          cp transcripts/file_index.json /tmp/dashboard/transcripts/ || true
+          cp transcripts/file_index.json transcripts/stats.json /tmp/dashboard/transcripts/ || true
           cd /tmp/dashboard
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
