@@ -35,3 +35,20 @@ print(f"Total words: {total_words:,}\n")
 print("=== Breakdown by Channel ===")
 for ch, stats in sorted(channel_stats.items(), key=lambda x: x[1]["words"], reverse=True):
     print(f"{ch:<30} | {stats['files']} files | {stats['words']:,} words")
+import json
+from analyze_transcripts import channel_stats, total_files, total_words
+
+stats = {
+    "summary": {
+        "channels": len(channel_stats),
+        "episodes": total_files,
+        "total_words": total_words
+    },
+    "channels": [
+        {"name": ch, "episodes": stats["files"], "words": stats["words"]}
+        for ch, stats in channel_stats.items()
+    ]
+}
+
+with open("stats.json", "w", encoding="utf-8") as f:
+    json.dump(stats, f, indent=2)
