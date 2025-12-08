@@ -33,7 +33,7 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install openai pinecone-client python-dotenv tqdm requests
+          pip install openai pinecone python-dotenv tqdm requests
 
       # --------------------------------------
       # STEP 4: Rebuild transcripts + index
