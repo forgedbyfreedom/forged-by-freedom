@@ -33,7 +33,7 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install pinecone-client openai tiktoken numpy
+          pip install pinecone openai tiktoken numpy
 
       # --------------------------------------
       # 4️⃣ Rebuild master transcripts
@@ -41,7 +41,7 @@ jobs:
       - name: 🏗️ Rebuild master transcripts
         run: |
           echo "🏗️ Rebuilding all master transcripts..."
-          python3 build_master_transcripts.py
+          python3 scripts/build_master_transcripts.py
           echo "✅ Transcript rebuild completed."
 
       # --------------------------------------
@@ -53,7 +53,7 @@ jobs:
           PINECONE_INDEX: "forgedbyfreedom"
         run: |
           echo "📊 Running analyze_full_stats.py ..."
-          python3 analyze_full_stats.py
+          python3 scripts/analyze_full_stats.py
           echo "✅ Stats generated."
 
       # --------------------------------------
