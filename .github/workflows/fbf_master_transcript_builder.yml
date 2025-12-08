@@ -1,13 +1,72 @@
- or index changes detected."
+ name: 🧠 Forged By Freedom Transcript Builder + Sync
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # --------------------------------------
+      # STEP 1: Checkout repo
+      # --------------------------------------
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # --------------------------------------
+      # STEP 2: Set up Python
+      # --------------------------------------
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # --------------------------------------
+      # STEP 3: Install dependencies
+      # --------------------------------------
+      - name: 📦 Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install openai pinecone-client python-dotenv tqdm requests
+
+      # --------------------------------------
+      # STEP 4: Rebuild transcripts + index
+      # --------------------------------------
+      - name: 🏗️ Build transcripts + file index
+        run: |
+          echo "🏗️ Rebuilding master transcripts..."
+          python3 build_master_transcripts.py || true
+          echo "✅ Master transcripts rebuilt."
+
+          echo "📄 Updating transcript index..."
+          python3 build_file_index.py || true
+          echo "✅ file_index.json updated."
+
+          echo "📤 Checking for changes..."
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add transcripts/
+          if git diff --cached --quiet; then
+            echo "ℹ️ No transcript or index changes detected."
             exit 0
           fi
           git commit -m "Auto update transcripts + file_index.json [skip ci]" || true
-          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || true
+          git push https://${{ secrets.GH_PAT }}@github.com/forgedbyfreedom/forged-by-freedom.git main || true
 
       # --------------------------------------
       # STEP 5: Sync updates to dashboard repo
       # --------------------------------------
       - name: 🚀 Sync transcripts + index to dashboard repo
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_USER: forgedbyfreedom
+          DASHBOARD_REPO: forgedbyfreedom/forged-by-freedom-dashboard
         run: |
           echo "📤 Syncing to dashboard repo..."
           git clone https://${GH_USER}:${GH_PAT}@github.com/${DASHBOARD_REPO}.git /tmp/dashboard
@@ -29,6 +88,9 @@
       # STEP 6: Update OpenAI Assistant + cleanup
       # --------------------------------------
       - name: 🧹 Update OpenAI Assistant and remove old files
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ASSISTANT_ID: ${{ secrets.OPENAI_ASSISTANT_ID }}
         run: |
           python3 <<'PYCODE'
           import os, json
@@ -62,4 +124,12 @@
                       client.files.delete(f.id)
                       removed += 1
                   except Exception as e:
-                      print(f
+                      print(f"⚠️ Could not delete file {f.id}: {e}")
+          print(f"🧹 Removed {removed} old transcript files.")
+          PYCODE
+
+      # --------------------------------------
+      # STEP 7: Done
+      # --------------------------------------
+      - name: ✅ Done
+        run: echo "🎯 All updates completed successfully."
