@@ -60,6 +60,15 @@ jobs:
           git push https://${{ secrets.GH_PAT }}@github.com/forgedbyfreedom/forged-by-freedom.git main || true
 
       # --------------------------------------
+      # STEP 4.5: Analyze transcript stats
+      # --------------------------------------
+      - name: 📊 Analyze transcript totals
+        run: |
+          echo "📊 Running analyze_full_stats.py ..."
+          python3 scripts/analyze_full_stats.py
+
+
+      # --------------------------------------
       # STEP 5: Sync updates to dashboard repo
       # --------------------------------------
       - name: 🚀 Sync transcripts + index to dashboard repo
