@@ -14,7 +14,7 @@ from datetime import datetime
 
 # Optional: import Pinecone client if available
 try:
-    from pinecone import Pinecone
+    from pinecone import Pinecone, ServerlessSpec
 except ImportError:
     Pinecone = None
 
