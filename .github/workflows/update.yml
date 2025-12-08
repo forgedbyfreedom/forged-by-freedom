@@ -41,7 +41,7 @@ jobs:
       - name: 🏗️ Rebuild master transcripts
         run: |
           echo "🏗️ Rebuilding all master transcripts..."
-          python3 scripts/build_master_transcripts.py
+          python3 build_master_transcripts.py
           echo "✅ Transcript rebuild completed."
 
       # --------------------------------------
