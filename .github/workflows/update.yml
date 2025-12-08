@@ -1,0 +1,82 @@
+name: 🔁 Auto Update Transcripts + Stats
+
+on:
+  workflow_dispatch:    # manual trigger in GitHub
+  push:
+    branches:
+      - main            # auto-run on push to main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # --------------------------------------
+      # 1️⃣ Checkout repository
+      # --------------------------------------
+      - name: 🧾 Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # --------------------------------------
+      # 2️⃣ Set up Python environment
+      # --------------------------------------
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # --------------------------------------
+      # 3️⃣ Install dependencies
+      # --------------------------------------
+      - name: 📦 Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pinecone-client openai tiktoken numpy
+
+      # --------------------------------------
+      # 4️⃣ Rebuild master transcripts
+      # --------------------------------------
+      - name: 🏗️ Rebuild master transcripts
+        run: |
+          echo "🏗️ Rebuilding all master transcripts..."
+          python3 build_master_transcripts.py
+          echo "✅ Transcript rebuild completed."
+
+      # --------------------------------------
+      # 5️⃣ Generate stats.json summary
+      # --------------------------------------
+      - name: 📈 Generate site stats (text + Pinecone)
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX: "forgedbyfreedom"
+        run: |
+          echo "📊 Running analyze_full_stats.py ..."
+          python3 analyze_full_stats.py
+          echo "✅ Stats generated."
+
+      # --------------------------------------
+      # 6️⃣ Commit & push changes back to repo
+      # --------------------------------------
+      - name: 🚀 Commit and push updates
+        env:
+          GH_USER: forgedbyfreedom
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          echo "📤 Adding and committing changes..."
+          git add -A
+          git commit -m "Auto update transcripts + stats.json [skip ci]" || echo "ℹ️ No changes to commit."
+
+          echo "📤 Pushing to main..."
+          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/thinkbig-transcripts.git main || echo "✅ Push skipped if up to date."
+
+      # --------------------------------------
+      # 7️⃣ Display summary
+      # --------------------------------------
+      - name: ✅ Done
+        run: |
+          echo "🎯 All transcripts and stats updated successfully."
