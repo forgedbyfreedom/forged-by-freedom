@@ -1,4 +1,4 @@
- name: 🧠 Forged By Freedom Transcript Builder + Sync
+name: 🧠 Forged By Freedom Transcript Builder + Sync
 
 on:
   workflow_dispatch:
