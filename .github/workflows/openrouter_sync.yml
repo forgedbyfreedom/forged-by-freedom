@@ -1,0 +1,44 @@
+name: 🧠 OpenRouter + Pinecone Sync
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install openai pinecone-client flask python-dotenv tqdm requests
+
+      - name: 📡 Verify environment
+        run: |
+          echo "✅ Using model: $OPENROUTER_MODEL"
+          echo "✅ Using Pinecone Index: $PINECONE_INDEX_NAME"
+          echo "✅ OpenRouter Base URL: $OPENROUTER_BASE_URL"
+        env:
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+          OPENROUTER_BASE_URL: ${{ secrets.OPENROUTER_BASE_URL }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+
+      - name: 🔍 Test app import
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_BASE_URL: ${{ secrets.OPENROUTER_BASE_URL }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          python3 -c "from app import app; print('✅ Flask app loaded successfully')"
