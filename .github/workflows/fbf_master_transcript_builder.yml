@@ -68,6 +68,19 @@ jobs:
           python3 scripts/analyze_full_stats.py
 
       # --------------------------------------
+      # STEP 5: Upload transcripts to Pinecone
+      # --------------------------------------
+      - name: 📡 Upload transcripts to Pinecone
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: "forged-freedom-ai"
+        run: |
+          echo "📡 Uploading transcript chunks to Pinecone..."
+          python3 scripts/pinecone_index_upload.py
+          echo "✅ Pinecone index updated."
+
+      # --------------------------------------
       # STEP 6: Update OpenAI Assistant + cleanup
       # --------------------------------------
       - name: 🧹 Update OpenAI Assistant and remove old files
