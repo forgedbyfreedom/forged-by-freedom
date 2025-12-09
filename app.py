@@ -6,6 +6,7 @@ from flask import Flask, request, render_template_string, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
 from openai import OpenAI
+import os
 from pinecone import Pinecone
 from datetime import datetime
 
@@ -19,6 +20,8 @@ OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/ap
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
 
 if not PINECONE_API_KEY:
     raise ValueError("❌ Missing Pinecone API key.")
@@ -42,7 +45,10 @@ def get_ai_client():
     else:
         raise ValueError("❌ No AI API key found.")
     
-client = get_ai_client()
+client = OpenAI(
+    base_url=OPENROUTER_BASE_URL,
+    api_key=OPENROUTER_API_KEY
+)
 
 # ============================================================
 # 🧾 Load Podcast Stats (if available)
