@@ -42,3 +42,25 @@ jobs:
           PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
           python3 -c "from app import app; print('✅ Flask app loaded successfully')"
+          
+      - name: 🔌 Test OpenRouter & Pinecone connectivity
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          python3 - <<'PYCODE'
+          from openai import OpenAI
+          from pinecone import Pinecone
+
+          print("🔍 Testing OpenRouter + Pinecone connections...")
+
+          client = OpenAI(api_key="${{ secrets.OPENROUTER_API_KEY }}", base_url="https://openrouter.ai/api/v1")
+          pc = Pinecone(api_key="${{ secrets.PINECONE_API_KEY }}")
+          index = pc.Index("${{ secrets.PINECONE_INDEX_NAME }}")
+
+          emb = client.embeddings.create(model="text-embedding-3-small", input="connection test").data[0].embedding
+          print("✅ Embedding test successful — length:", len(emb))
+
+          print("✅ Pinecone index connection:", index.describe_index_stats())
+          PYCODE
