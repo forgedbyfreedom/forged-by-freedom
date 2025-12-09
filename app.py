@@ -1,57 +1,58 @@
 #!/usr/bin/env python3
+"""
+Forged By Freedom Search Engine
+────────────────────────────────────────
+Full unfiltered AI search interface using:
+ - OpenRouter for LLMs
+ - Pinecone for vector retrieval
+ - Flask for UI/API
+"""
+
 import os
 import json
-import requests
+from datetime import datetime
 from flask import Flask, request, render_template_string, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
 from openai import OpenAI
-import os
 from pinecone import Pinecone
-from datetime import datetime
 
 # ============================================================
-# 🔐 Load Environment Variables
+# 🔐 Environment Setup
 # ============================================================
 load_dotenv()
 
+# --- API Keys and Base URLs ---
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 
+# --- Model Config ---
+MODEL_NAME = os.getenv("OPENROUTER_MODEL", "nousresearch/hermes-2-pro")
+EMBED_MODEL = "text-embedding-3-small"
+
+if not OPENROUTER_API_KEY:
+    raise ValueError("❌ Missing OPENROUTER_API_KEY in .env or GitHub secrets.")
 if not PINECONE_API_KEY:
-    raise ValueError("❌ Missing Pinecone API key.")
+    raise ValueError("❌ Missing PINECONE_API_KEY.")
 
-print(f"✅ Environment loaded — Index: {PINECONE_INDEX}")
+print(f"✅ Environment loaded — Pinecone Index: {PINECONE_INDEX_NAME}")
+print(f"🧩 Using model: {MODEL_NAME}")
 
 # ============================================================
 # 🧠 Initialize Clients
 # ============================================================
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(PINECONE_INDEX)
-
-def get_ai_client():
-    """Select OpenRouter (preferred) or fall back to OpenAI."""
-    if OPENROUTER_API_KEY:
-        print("🧩 Using OpenRouter unfiltered AI.")
-        return OpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
-    elif OPENAI_API_KEY:
-        print("🧩 Falling back to OpenAI.")
-        return OpenAI(api_key=OPENAI_API_KEY)
-    else:
-        raise ValueError("❌ No AI API key found.")
-    
 client = OpenAI(
     base_url=OPENROUTER_BASE_URL,
     api_key=OPENROUTER_API_KEY
 )
 
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(PINECONE_INDEX_NAME)
+
 # ============================================================
-# 🧾 Load Podcast Stats (if available)
+# 🧾 Load Podcast Stats
 # ============================================================
 try:
     with open("transcripts_summary.json", "r") as f:
@@ -60,7 +61,7 @@ except Exception:
     PODCAST_STATS = [{"channel": "⚙️ Loading...", "episodes": 0, "words": 0}]
 
 # ============================================================
-# 🎨 HTML Template (keeps your layout)
+# 🎨 Frontend (HTML Template)
 # ============================================================
 HTML_TEMPLATE = """
 <!DOCTYPE html>
@@ -86,9 +87,7 @@ HTML_TEMPLATE = """
       <input type="text" id="query" placeholder="Search training, peptides, nutrition, mindset..." required>
       <button type="submit">Search</button>
     </form>
-
     <div id="results"></div>
-
     <footer>
       ForgedByFreedom.org • Strength • Discipline • Freedom<br>
       <small>Last updated: {{ timestamp }}</small>
@@ -160,25 +159,34 @@ def api_search():
         return jsonify({"error": "Missing query"}), 400
 
     try:
-        emb = client.embeddings.create(model="text-embedding-3-small", input=query).data[0].embedding
-        res = index.query(vector=emb, top_k=5, include_metadata=True)
-        context = "\n\n".join([m["metadata"].get("text", "")[:1500] for m in res["matches"]])
-        sources = [m["metadata"].get("source", "Unknown") for m in res["matches"]]
+        # Create query embedding
+        emb = client.embeddings.create(model=EMBED_MODEL, input=query).data[0].embedding
 
+        # Query Pinecone index
+        res = index.query(vector=emb, top_k=5, include_metadata=True)
+        matches = res.get("matches", [])
+        context = "\n\n".join([m["metadata"].get("text", "")[:1500] for m in matches])
+        sources = [m["metadata"].get("source", "Unknown") for m in matches]
+
+        # Generate answer via OpenRouter model
         chat = client.chat.completions.create(
-            model="nousresearch/hermes-2-pro",
+            model=MODEL_NAME,
             messages=[
-                {"role": "system", "content": "You are a research assistant specializing in bodybuilding, biohacking, and human performance."},
-                {"role": "user", "content": f"Query: {query}\n\nContext:\n{context}"}
-            ]
+                {"role": "system", "content": "You are an unfiltered research assistant specializing in bodybuilding, performance enhancement, and biohacking. Always be factual and evidence-based."},
+                {"role": "user", "content": f"Question: {query}\n\nContext:\n{context}"}
+            ],
+            temperature=0.7,
         )
+
         response = chat.choices[0].message.content
         return jsonify({"response": response, "sources": sources})
+
     except Exception as e:
+        print(f"❌ Search error: {e}")
         return jsonify({"error": str(e)}), 500
 
 # ============================================================
-# 🚀 Run App
+# 🚀 Run the App
 # ============================================================
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5051)
