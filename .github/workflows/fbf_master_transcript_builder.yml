@@ -12,7 +12,7 @@ jobs:
 
     steps:
       # --------------------------------------
-      # STEP 1: Checkout repo
+      # STEP 1: Checkout Repo
       # --------------------------------------
       - name: 🧾 Checkout repository
         uses: actions/checkout@v4
@@ -28,15 +28,15 @@ jobs:
           python-version: '3.11'
 
       # --------------------------------------
-      # STEP 3: Install dependencies
+      # STEP 3: Install Dependencies
       # --------------------------------------
       - name: 📦 Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install openai pinecone python-dotenv tqdm requests
+          pip install openai==1.59.6 pinecone-client==3.2.2 python-dotenv tqdm requests
 
       # --------------------------------------
-      # STEP 4: Rebuild transcripts + index
+      # STEP 4: Build transcripts + JSONs
       # --------------------------------------
       - name: 🏗️ Build transcripts + file index
         run: |
@@ -44,88 +44,43 @@ jobs:
           python3 build_master_transcripts.py || true
           echo "✅ Master transcripts rebuilt."
 
-          echo "📄 Updating transcript index..."
-          python3 build_file_index.py || true
-          echo "✅ file_index.json updated."
+          echo "📄 Generating transcript indexes..."
+          python3 scripts/build_file_index.py || true
+          echo "✅ file_index.json generated."
 
-          echo "📤 Checking for changes..."
+          echo "📊 Running smart Pinecone sync..."
+          python3 scripts/smart_pinecone_sync.py || true
+          echo "✅ Pinecone sync complete."
+
+      # --------------------------------------
+      # STEP 5: Update Assistant
+      # --------------------------------------
+      - name: 🤖 Update OpenAI Assistant
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_ASSISTANT_ID: ${{ secrets.OPENAI_ASSISTANT_ID }}
+        run: |
+          python3 scripts/update_openai_assistant.py || echo "Skipping assistant update."
+
+      # --------------------------------------
+      # STEP 6: Commit and Push Changes
+      # --------------------------------------
+      - name: 💾 Commit transcript updates
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add transcripts/
+          git add transcripts/*.json || true
           if git diff --cached --quiet; then
-            echo "ℹ️ No transcript or index changes detected."
+            echo "ℹ️ No changes detected."
             exit 0
           fi
-          git commit -m "Auto update transcripts + file_index.json [skip ci]" || true
-          git push https://${{ secrets.GH_PAT }}@github.com/forgedbyfreedom/forged-by-freedom.git main || true
-
-      # --------------------------------------
-      # STEP 4.5: Analyze transcript stats
-      # --------------------------------------
-      - name: 📊 Analyze transcript totals
-        run: |
-          echo "📊 Running analyze_full_stats.py ..."
-          python3 scripts/analyze_full_stats.py
-
-      # --------------------------------------
-      # STEP 5: Upload transcripts to Pinecone
-      # --------------------------------------
-      - name: 📡 Upload transcripts to Pinecone
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX_NAME: "forged-freedom-ai"
-        run: |
-          echo "📡 Uploading transcript chunks to Pinecone..."
-          python3 scripts/pinecone_index_upload.py
-          echo "✅ Pinecone index updated."
-
-      # --------------------------------------
-      # STEP 6: Update OpenAI Assistant + cleanup
-      # --------------------------------------
-      - name: 🧹 Update OpenAI Assistant and remove old files
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ASSISTANT_ID: ${{ secrets.OPENAI_ASSISTANT_ID }}
-        run: |
-          python3 <<'PYCODE'
-          import os, json
-          from openai import OpenAI
-
-          key = os.getenv("OPENAI_API_KEY")
-          asst_id = os.getenv("ASSISTANT_ID")
-          if not key or not asst_id:
-              print("⚠️ Missing OpenAI credentials or Assistant ID.")
-              raise SystemExit(0)
-
-          client = OpenAI(api_key=key)
-          if not os.path.exists("transcripts/file_index.json"):
-              print("⚠️ file_index.json not found — skipping assistant update.")
-              raise SystemExit(0)
-
-          with open("transcripts/file_index.json", "r") as f:
-              file_index = json.load(f)
-
-          new_file_ids = [f.get("file_id") for f in file_index if f.get("file_id")]
-          print(f"🔗 Linking {len(new_file_ids)} files to assistant {asst_id}...")
-          client.beta.assistants.update(asst_id, file_ids=new_file_ids)
-          print("✅ Assistant successfully updated.")
-
-          all_files = client.files.list().data
-          keep = set(new_file_ids)
-          removed = 0
-          for f in all_files:
-              if f.id not in keep and f.filename.endswith("master_transcript1.txt"):
-                  try:
-                      client.files.delete(f.id)
-                      removed += 1
-                  except Exception as e:
-                      print(f"⚠️ Could not delete file {f.id}: {e}")
-          print(f"🧹 Removed {removed} old transcript files.")
-          PYCODE
+          git commit -m "Auto update transcripts + Pinecone sync [skip ci]" || true
+          git push https://${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main || true
 
       # --------------------------------------
       # STEP 7: Done
       # --------------------------------------
       - name: ✅ Done
-        run: echo "🎯 All updates completed successfully."
+        run: echo "🎯 All updates completed successfully!"
