@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""
 build_master_transcripts.py
 ──────────────────────────────
 Combines all channel transcript .txt files into master transcripts.
