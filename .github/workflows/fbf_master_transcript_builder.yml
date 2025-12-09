@@ -12,7 +12,7 @@ jobs:
 
     steps:
       # --------------------------------------
-      # STEP 1: Checkout Repo
+      # STEP 1: Checkout repo
       # --------------------------------------
       - name: 🧾 Checkout repository
         uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
           python-version: '3.11'
 
       # --------------------------------------
-      # STEP 3: Install Dependencies
+      # STEP 3: Install dependencies
       # --------------------------------------
       - name: 📦 Install dependencies
         run: |
@@ -36,7 +36,7 @@ jobs:
           pip install openai==1.59.6 pinecone-client==3.2.2 python-dotenv tqdm requests
 
       # --------------------------------------
-      # STEP 4: Build transcripts + JSONs
+      # STEP 4: Build transcripts + index
       # --------------------------------------
       - name: 🏗️ Build transcripts + file index
         run: |
@@ -44,43 +44,63 @@ jobs:
           python3 build_master_transcripts.py || true
           echo "✅ Master transcripts rebuilt."
 
-          echo "📄 Generating transcript indexes..."
-          python3 scripts/build_file_index.py || true
-          echo "✅ file_index.json generated."
-
-          echo "📊 Running smart Pinecone sync..."
-          python3 scripts/smart_pinecone_sync.py || true
-          echo "✅ Pinecone sync complete."
+          echo "📄 Updating transcript index..."
+          python3 scripts/build_index.py || true
+          echo "✅ file_index.json updated."
 
       # --------------------------------------
-      # STEP 5: Update Assistant
+      # STEP 5: Analyze transcript totals
+      # --------------------------------------
+      - name: 📊 Analyze transcript totals
+        run: |
+          echo "📊 Running analyze_full_stats.py ..."
+          python3 scripts/analyze_full_stats.py || true
+
+      # --------------------------------------
+      # STEP 6: Upload transcripts to Pinecone
+      # --------------------------------------
+      - name: 📡 Upload transcripts to Pinecone
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: "forged-freedom-ai"
+        run: |
+          echo "📡 Uploading transcript chunks to Pinecone..."
+          python3 scripts/smart_pinecone_sync.py || true
+          echo "✅ Pinecone index updated."
+
+      # --------------------------------------
+      # STEP 7: Update OpenAI Assistant
       # --------------------------------------
       - name: 🤖 Update OpenAI Assistant
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_ASSISTANT_ID: ${{ secrets.OPENAI_ASSISTANT_ID }}
         run: |
-          python3 scripts/update_openai_assistant.py || echo "Skipping assistant update."
+          echo "🤖 Updating OpenAI Assistant..."
+          python3 scripts/update_openai_assistant.py || true
+          echo "✅ Assistant update complete."
 
       # --------------------------------------
-      # STEP 6: Commit and Push Changes
+      # STEP 8: Commit & Push transcript updates
       # --------------------------------------
       - name: 💾 Commit transcript updates
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
+          echo "📤 Checking for new transcript or index updates..."
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add transcripts/*.json || true
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes detected."
+            echo "ℹ️ No transcript or index changes detected."
             exit 0
           fi
           git commit -m "Auto update transcripts + Pinecone sync [skip ci]" || true
           git push https://${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main || true
 
       # --------------------------------------
-      # STEP 7: Done
+      # STEP 9: Done
       # --------------------------------------
       - name: ✅ Done
-        run: echo "🎯 All updates completed successfully!"
+        run: echo "🎯 All updates completed successfully."
