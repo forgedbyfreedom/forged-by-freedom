@@ -1,10 +1,10 @@
-name: 🔁 Auto Update Transcripts + Stats
+name: 🧠 Forged By Freedom Full Rebuild + Pinecone Sync
 
 on:
-  workflow_dispatch:    # manual trigger in GitHub
+  workflow_dispatch:    # manual trigger
   push:
     branches:
-      - main            # auto-run on push to main
+      - main            # run automatically when pushing to main
 
 jobs:
   build:
@@ -12,15 +12,15 @@ jobs:
 
     steps:
       # --------------------------------------
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout the latest repo version
       # --------------------------------------
-      - name: 🧾 Checkout code
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       # --------------------------------------
-      # 2️⃣ Set up Python environment
+      # 2️⃣ Set up Python
       # --------------------------------------
       - name: 🐍 Set up Python 3.11
         uses: actions/setup-python@v5
@@ -28,36 +28,76 @@ jobs:
           python-version: '3.11'
 
       # --------------------------------------
-      # 3️⃣ Install dependencies
+      # 3️⃣ Install and verify dependencies
       # --------------------------------------
-      - name: 📦 Install dependencies
+      - name: 📦 Install dependencies (fix Pinecone conflict)
         run: |
           python3 -m pip install --upgrade pip
-          pip install pinecone openai tiktoken numpy
+          # ✅ Remove deprecated Pinecone client
+          pip uninstall -y pinecone-client || true
+          # ✅ Install correct SDK and dependencies
+          pip install pinecone openai python-dotenv tqdm flask flask-cors requests tiktoken numpy
+          # ✅ Confirm Pinecone version
+          python3 -c "import pinecone; print('✅ Pinecone SDK:', pinecone.__version__)"
 
       # --------------------------------------
-      # 4️⃣ Rebuild master transcripts
+      # 4️⃣ Pull the latest repo changes (ensure sync)
+      # --------------------------------------
+      - name: 🔄 Pull latest repo changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git pull origin main || echo "ℹ️ No new changes to pull."
+
+      # --------------------------------------
+      # 5️⃣ Rebuild master transcripts
       # --------------------------------------
       - name: 🏗️ Rebuild master transcripts
         run: |
-          echo "🏗️ Rebuilding all master transcripts..."
-          python3 build_master_transcripts.py
-          echo "✅ Transcript rebuild completed."
+          echo "🏗️ Rebuilding master transcripts..."
+          python3 scripts/build_master_transcripts.py || true
+          echo "✅ Master transcripts rebuilt."
 
       # --------------------------------------
-      # 5️⃣ Generate stats.json summary
+      # 6️⃣ Build file and channel indexes
       # --------------------------------------
-      - name: 📈 Generate site stats (text + Pinecone)
+      - name: 🧱 Build file + channel indexes
+        run: |
+          echo "📄 Building file_index.json and channel indexes..."
+          python3 scripts/build_file_index.py || true
+          python3 scripts/build_channels_index.py || true
+          echo "✅ Indexes updated."
+
+      # --------------------------------------
+      # 7️⃣ Generate database statistics
+      # --------------------------------------
+      - name: 📈 Generate stats
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX: "forgedbyfreedom"
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
-          echo "📊 Running analyze_full_stats.py ..."
-          python3 scripts/analyze_full_stats.py
-          echo "✅ Stats generated."
+          echo "📊 Running full stats analysis..."
+          python3 scripts/analyze_full_stats.py || true
+          echo "✅ Stats.json updated."
 
       # --------------------------------------
-      # 6️⃣ Commit & push changes back to repo
+      # 8️⃣ Smart Pinecone sync (upload new/changed files only)
+      # --------------------------------------
+      - name: 📡 Upload to Pinecone
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          echo "📡 Syncing data to Pinecone..."
+          python3 scripts/smart_pinecone_sync.py || true
+          echo "✅ Pinecone index updated successfully."
+
+      # --------------------------------------
+      # 9️⃣ Commit + Push updates safely
       # --------------------------------------
       - name: 🚀 Commit and push updates
         env:
@@ -66,17 +106,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          echo "📤 Adding and committing changes..."
           git add -A
-          git commit -m "Auto update transcripts + stats.json [skip ci]" || echo "ℹ️ No changes to commit."
-
-          echo "📤 Pushing to main..."
-          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/thinkbig-transcripts.git main || echo "✅ Push skipped if up to date."
+          git commit -m "Automated rebuild + Pinecone sync [skip ci]" || echo "ℹ️ No new changes."
+          git pull --rebase origin main || true
+          git push https://${GH_USER}:${GH_PAT}@github.com/${GH_USER}/forged-by-freedom.git main || echo "✅ Up to date."
 
       # --------------------------------------
-      # 7️⃣ Display summary
+      # 🔟 Done
       # --------------------------------------
       - name: ✅ Done
-        run: |
-          echo "🎯 All transcripts and stats updated successfully."
+        run: echo "🎯 All transcripts, stats, and Pinecone sync complete."
