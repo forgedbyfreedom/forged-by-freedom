@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Forged by Freedom — AI Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1c1c1c;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    header p {
+      margin: 5px 0 0;
+      color: #888;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    #query {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background: #111;
+      color: #eee;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #008cff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover { background: #0070d0; }
+    #result {
+      margin-top: 30px;
+      white-space: pre-wrap;
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Forged by Freedom Search</h1>
+    <p id="stats">Loading database stats...</p>
+  </header>
+
+  <main>
+    <textarea id="query" rows="4" placeholder="Ask the AI about bodybuilding, peptides, recovery..."></textarea>
+    <button onclick="search()">Search</button>
+    <div id="result"></div>
+  </main>
+
+  <script>
+    async function loadStats() {
+      try {
+        const res = await fetch('/transcripts/stats.json');
+        if (!res.ok) throw new Error('No stats file found');
+        const stats = await res.json();
+        document.getElementById('stats').innerText =
+          `📊 ${stats.total_channels} channels | ${stats.total_episodes} episodes | ${stats.total_words.toLocaleString()} words | Updated ${new Date(stats.last_updated).toLocaleString()}`;
+      } catch {
+        document.getElementById('stats').innerText = '⚠️ Stats not available yet.';
+      }
+    }
+
+    async function search() {
+      const query = document.getElementById('query').value.trim();
+      if (!query) return alert('Enter a query first.');
+
+      document.getElementById('result').innerText = '🔍 Searching...';
+
+      try {
+        const res = await fetch('/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query })
+        });
+
+        const data = await res.json();
+        if (data.error) {
+          document.getElementById('result').innerText = `❌ Error: ${data.error}`;
+          return;
+        }
+
+        document.getElementById('result').innerText =
+          `🧠 ${data.response}\n\n📂 Sources:\n${data.sources?.join('\n') || 'N/A'}`;
+      } catch (err) {
+        document.getElementById('result').innerText = `⚠️ ${err.message}`;
+      }
+    }
+
+    loadStats();
+  </script>
+</body>
+</html>
