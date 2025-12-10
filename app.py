@@ -156,6 +156,10 @@ def health():
     """Simple health check."""
     return jsonify({"status": "healthy", "timestamp": datetime.utcnow().isoformat() + "Z"})
 
+@app.route("/ui")
+def ui():
+    """Serve the visual search interface."""
+    return render_template("search.html")
 
 # ============================================================
 # 🚀 Entry Point
