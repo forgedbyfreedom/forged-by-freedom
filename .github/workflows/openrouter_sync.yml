@@ -21,7 +21,6 @@ jobs:
       - name: 📦 Full Clean Install of Dependencies
         run: |
           echo "🧹 Cleaning environment..."
-          # Remove any cached or preinstalled Pinecone packages
           pip uninstall -y pinecone pinecone-client || true
           pip cache purge || true
 
@@ -70,6 +69,5 @@ jobs:
 
           emb = client.embeddings.create(model="text-embedding-3-small", input="connection test").data[0].embedding
           print("✅ Embedding test successful — length:", len(emb))
-
           print("✅ Pinecone index connection:", index.describe_index_stats())
           PYCODE
