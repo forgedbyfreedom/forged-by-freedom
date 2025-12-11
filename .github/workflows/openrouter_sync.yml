@@ -18,9 +18,20 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 📦 Install dependencies
+      - name: 📦 Full Clean Install of Dependencies
         run: |
-          python3 -m pip install --upgrade pip
+    echo "🧹 Cleaning environment..."
+    # Remove any cached or preinstalled Pinecone packages
+    pip uninstall -y pinecone pinecone-client || true
+    pip cache purge || true
+
+    echo "📦 Installing clean dependencies..."
+    python3 -m pip install --upgrade pip
+    pip install --no-cache-dir pinecone openai python-dotenv tqdm flask flask-cors requests tiktoken numpy
+
+    echo "✅ Verifying Pinecone SDK version..."
+    python3 -c "import pinecone; print('✅ Pinecone SDK version:', pinecone.__version__)"
+
           pip install openai pinecone-client flask flask-cors python-dotenv tqdm requests
 
       - name: 📡 Verify environment
