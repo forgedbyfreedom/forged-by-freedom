@@ -30,7 +30,10 @@ jobs:
       # --------------------------------------
       # 3️⃣ Install and verify dependencies
       # --------------------------------------
-      - name: 📦 Install dependencies (fix Pinecone conflict)
+      - name: 🧹 Clear pip cache
+        run: pip cache purge || true
+        
+      - name: 📦 Install dependencies
         run: |
           python3 -m pip install --upgrade pip
           # ✅ Remove deprecated Pinecone client
