@@ -73,7 +73,7 @@ for path in updated_files:
     channel = os.path.basename(os.path.dirname(path))
     summary.setdefault(channel, {"episodes": 0, "words": 0})
     try:
-        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        with open(path, "r", encoding="utf-8", errors="ignore") as f: 
             summary[channel]["episodes"] += 1
             summary[channel]["words"] += len(f.read().split())
     except Exception:
