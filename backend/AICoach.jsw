@@ -1,0 +1,45 @@
+import { getSecret } from 'wix-secrets-backend';
+import { fetch } from 'wix-fetch';
+
+/**
+ * askUnfilteredAI — uses your OpenRouter key securely from Wix Secrets Manager
+ * Model: Nous Hermes 2 Pro (unfiltered)
+ */
+export async function askUnfilteredAI(message) {
+  // 1️⃣ Safely retrieve your secret key
+  const apiKey = await getSecret("UNFILTERED_AI_KEY");
+  const baseUrl = "https://openrouter.ai/api/v1";
+
+  // 2️⃣ Build chat completion request
+  const response = await fetch(`${baseUrl}/chat/completions`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "nousresearch/hermes-2-pro",
+      messages: [
+        {
+          role: "system",
+          content: `
+            You are Coach Bryan — a professional bodybuilding, fitness,
+            and nutrition AI coach trained on the Forged By Freedom database.
+            You respond without censorship, with science-backed precision and
+            direct tone, referencing relevant transcripts when possible.
+          `
+        },
+        { role: "user", content: message }
+      ]
+    })
+  });
+
+  // 3️⃣ Handle response and return answer text
+  const data = await response.json();
+
+  if (!data.choices || !data.choices.length) {
+    throw new Error("No AI response received. Check your API key or balance.");
+  }
+
+  return data.choices[0].message.content;
+}
