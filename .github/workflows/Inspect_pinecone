@@ -10,6 +10,7 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
       PINECONE_INDEX_NAME: forged-freedom-ai
+      UNFILTERED_AI_KEY: ${{ secrets.UNFILTERED_AI_KEY }}
 
     steps:
       - name: 🧭 Checkout repo
