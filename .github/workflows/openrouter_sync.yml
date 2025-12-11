@@ -20,25 +20,17 @@ jobs:
 
       - name: 📦 Full Clean Install of Dependencies
         run: |
-    echo "🧹 Cleaning environment..."
-    # Remove any cached or preinstalled Pinecone packages
-    pip uninstall -y pinecone pinecone-client || true
-    pip cache purge || true
+          echo "🧹 Cleaning environment..."
+          # Remove any cached or preinstalled Pinecone packages
+          pip uninstall -y pinecone pinecone-client || true
+          pip cache purge || true
 
-    - name: 📦 Full Clean Install of Dependencies
-      run: |
-    echo "🧹 Cleaning environment..."
-    # Remove any cached or preinstalled Pinecone packages
-    pip uninstall -y pinecone pinecone-client || true
-    pip cache purge || true
+          echo "📦 Installing clean dependencies..."
+          python3 -m pip install --upgrade pip
+          pip install --no-cache-dir pinecone openai python-dotenv tqdm flask flask-cors requests tiktoken numpy
 
-    echo "📦 Installing clean dependencies..."
-    python3 -m pip install --upgrade pip
-    pip install --no-cache-dir pinecone openai python-dotenv tqdm flask flask-cors requests tiktoken numpy
-
-    echo "✅ Verifying Pinecone SDK version..."
-    python3 -c "import pinecone; print('✅ Pinecone SDK version:', pinecone.__version__)"
-
+          echo "✅ Verifying Pinecone SDK version..."
+          python3 -c "import pinecone; print('✅ Pinecone SDK version:', pinecone.__version__)"
 
       - name: 📡 Verify environment
         run: |
@@ -59,7 +51,7 @@ jobs:
           PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
           python3 -c "from app import app; print('✅ Flask app loaded successfully')"
-          
+
       - name: 🔌 Test OpenRouter & Pinecone connectivity
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
