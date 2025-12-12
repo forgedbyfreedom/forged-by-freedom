@@ -1,0 +1,64 @@
+name: 🧠 Build Master Transcripts & Indexes
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "transcripts/**"
+      - "scripts/build_*.py"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -------------------------------
+      # Checkout
+      # -------------------------------
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # -------------------------------
+      # Python
+      # -------------------------------
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # -------------------------------
+      # Dependencies
+      # -------------------------------
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip uninstall -y pinecone-client || true
+          pip install python-dotenv tqdm numpy
+
+      # -------------------------------
+      # Build artifacts
+      # -------------------------------
+      - name: 🏗️ Build master transcripts
+        run: python scripts/build_master_transcripts.py
+
+      - name: 🧱 Build file index
+        run: python scripts/build_file_index.py
+
+      - name: 🧱 Build channel index
+        run: python scripts/build_channels_index.py
+
+      # -------------------------------
+      # Commit artifacts
+      # -------------------------------
+      - name: 🚀 Commit rebuilt artifacts
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add master_transcripts indexes *.json || true
+          git commit -m "Rebuild transcripts & indexes [skip ci]" || exit 0
+          git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
