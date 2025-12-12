@@ -1,1 +1,42 @@
+name: 🧱 Build Master Transcripts
 
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+      PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+
+    steps:
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip uninstall -y pinecone-client || true
+          pip install pinecone openai tqdm python-dotenv requests
+
+      - name: 🏗️ Build Master Transcripts
+        run: |
+          python3 scripts/build_master_transcripts.py
+
+      - name: ✅ Commit updated master transcripts
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add transcripts/
+          git commit -m "🧱 Auto-built master transcripts" || echo "No changes to commit"
+          git push
