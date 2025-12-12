@@ -36,10 +36,19 @@ jobs:
         run: |
           python3 scripts/build_master_transcripts.py
 
-      - name: ✅ Commit updated master transcripts
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add transcripts/
-          git commit -m "🧱 Auto-built master transcripts" || echo "No changes to commit"
-          git push
+      - name: 🚀 Commit & push results (with sync)
+
+run: |
+    git config --global user.name "github-actions"
+    git config --global user.email "actions@github.com"
+
+    # Always fetch the latest main before pushing
+    git fetch origin main
+    git checkout main
+    git pull origin main --rebase
+
+    git add transcripts/
+    git commit -m "🧱 Auto-built master transcripts" || echo "No changes to commit"
+
+    # Force push is safe here because we rebased
+    git push origin main
