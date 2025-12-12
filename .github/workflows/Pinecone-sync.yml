@@ -1,0 +1,56 @@
+name: 📡 Pinecone Smart Sync
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "master_transcripts/**"
+      - "indexes/**"
+      - "scripts/smart_pinecone_sync.py"
+
+jobs:
+  pinecone-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -------------------------------
+      # Checkout
+      # -------------------------------
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+
+      # -------------------------------
+      # Python
+      # -------------------------------
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # -------------------------------
+      # Dependencies
+      # -------------------------------
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip uninstall -y pinecone-client || true
+          pip install pinecone openai python-dotenv tqdm tiktoken numpy
+
+      - name: 🔎 Verify Pinecone SDK
+        run: |
+          python - <<EOF
+          import pinecone
+          print("Using Pinecone SDK:", pinecone.__version__)
+          EOF
+
+      # -------------------------------
+      # Sync
+      # -------------------------------
+      - name: 📡 Smart Pinecone sync
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          python scripts/smart_pinecone_sync.py
