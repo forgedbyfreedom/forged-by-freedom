@@ -54,3 +54,11 @@ jobs:
           git add stats.json || true
           git commit -m "Update Pinecone stats [skip ci]" || exit 0
           git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
+
+      - name: ▶️ Trigger Pinecone Sync Workflow
+        uses: peter-evans/workflow-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          workflow: "Pinecone-sync.yml"
+          ref: main
