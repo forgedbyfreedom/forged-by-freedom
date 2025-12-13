@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: forgedbyfreedom-api
+    env: python
+    plan: free
+    autoDeploy: true
+    region: oregon
+    branch: main
+    buildCommand: |
+      pip install --upgrade pip
+      pip install flask flask-cors openai pinecone
+    startCommand: python3 scripts/pinecone_query_api.py
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: PINECONE_INDEX_NAME
+        value: forged-freedom-ai
+      - key: WIX_API_KEY
+        sync: false
