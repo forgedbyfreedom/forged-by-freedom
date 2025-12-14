@@ -1,3 +1,5 @@
+name: 📊 Update Site Stats
+
 on:
   workflow_dispatch:
   push:
@@ -30,7 +32,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           echo "Testing connections..."
-          python3 - <<'PYCODE'
+          python3 - <<'EOF'
 import os
 from openai import OpenAI
 import pinecone
@@ -38,7 +40,7 @@ import pinecone
 client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"))
 pc = pinecone.Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 print("✅ OpenRouter & Pinecone connected successfully.")
-PYCODE
+EOF
 
       - name: 📡 Upload embeddings to Pinecone
         env:
