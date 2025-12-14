@@ -32,15 +32,15 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           echo "Testing connections..."
-          python3 - <<'EOF'
+          python3 -c """
 import os
 from openai import OpenAI
 import pinecone
 
-client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"))
-pc = pinecone.Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-print("✅ OpenRouter & Pinecone connected successfully.")
-EOF
+client = OpenAI(api_key=os.getenv('OPENROUTER_API_KEY'))
+pc = pinecone.Pinecone(api_key=os.getenv('PINECONE_API_KEY'))
+print('✅ OpenRouter & Pinecone connected successfully.')
+"""
 
       - name: 📡 Upload embeddings to Pinecone
         env:
