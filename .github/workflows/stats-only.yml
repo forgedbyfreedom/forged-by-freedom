@@ -1,4 +1,4 @@
-name: "Update Site Stats"
+name: Update Site Stats
 
 on:
   workflow_dispatch:
@@ -11,6 +11,7 @@ on:
 jobs:
   update-stats:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,12 +30,11 @@ jobs:
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: |
-          echo "Testing Pinecone & OpenRouter connections..."
-          python3 -c "import os; from openai import OpenAI; import pinecone; \
-client = OpenAI(api_key=os.getenv('OPENROUTER_API_KEY')); \
-pc = pinecone.Pinecone(api_key=os.getenv('PINECONE_API_KEY')); \
-print('✅ Connections successful')"
+        run: >
+          python3 -c "import os; from openai import OpenAI; import pinecone;
+          client = OpenAI(api_key=os.getenv('OPENROUTER_API_KEY'));
+          pc = pinecone.Pinecone(api_key=os.getenv('PINECONE_API_KEY'));
+          print('Connections successful')"
 
       - name: Upload embeddings to Pinecone
         env:
@@ -43,4 +43,4 @@ print('✅ Connections successful')"
         run: python3 scripts/sync_pinecone.py
 
       - name: Confirm completion
-        run: echo "✅ Pinecone sync completed successfully."
+        run: echo "Pinecone sync completed successfully."
