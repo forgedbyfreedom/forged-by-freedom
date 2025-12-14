@@ -30,14 +30,10 @@ jobs:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          python3 - <<EOF
-import os
-from openai import OpenAI
-import pinecone
-client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"))
-pc = pinecone.Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-print("✅ Connections successful")
-EOF
+          python3 -c "import os; from openai import OpenAI; import pinecone; \
+client = OpenAI(api_key=os.getenv('OPENROUTER_API_KEY')); \
+pc = pinecone.Pinecone(api_key=os.getenv('PINECONE_API_KEY')); \
+print('✅ Connections successful')"
 
       - name: Upload embeddings to Pinecone
         env:
