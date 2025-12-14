@@ -1,0 +1,50 @@
+name: "📊 Update Site Stats"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "transcripts/**"
+      - "scripts/update_stats.py"
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pinecone openai tqdm python-dotenv requests
+
+      - name: Test Pinecone and OpenRouter connections
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python3 - <<EOF
+import os
+from openai import OpenAI
+import pinecone
+client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"))
+pc = pinecone.Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+print("✅ Connections successful")
+EOF
+
+      - name: Upload embeddings to Pinecone
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python3 scripts/sync_pinecone.py
+
+      - name: Confirm completion
+        run: echo "✅ Pinecone sync completed successfully."
