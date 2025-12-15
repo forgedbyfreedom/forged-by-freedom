@@ -22,12 +22,9 @@ from datetime import datetime
 # ============================================================
 # 🧩 Load environment
 # ============================================================
+from dotenv import load_dotenv
 load_dotenv()
-print("✅  Loaded environment — Index:", os.getenv("PINECONE_INDEX_NAME", "not set"))
 
-# ============================================================
-# 🔐 Environment variables
-# ============================================================
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 
