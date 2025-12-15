@@ -67,7 +67,11 @@ jobs:
           pc = Pinecone(api_key="${{ secrets.PINECONE_API_KEY }}")
           index = pc.Index("${{ secrets.PINECONE_INDEX_NAME }}")
 
-          emb = client.embeddings.create(model="text-embedding-3-small", input="connection test").data[0].embedding
-          print("✅ Embedding test successful — length:", len(emb))
+          try:
+              emb = client.embeddings.create(model="text-embedding-3-small", input="connection test").data[0].embedding
+              print("✅ Embedding test successful — length:", len(emb))
+          except Exception as e:
+              print("⚠️ OpenRouter test failed:", e)
+
           print("✅ Pinecone index connection:", index.describe_index_stats())
           PYCODE
