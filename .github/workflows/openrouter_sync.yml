@@ -41,7 +41,7 @@ jobs:
           PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
           PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
 
-      - name: ✅ Verify Pinecone Connection
+            - name: ✅ Verify Pinecone Connection
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
@@ -50,14 +50,17 @@ jobs:
           import os
           from pinecone import Pinecone
 
-          api_key = os.getenv("PINECONE_API_KEY")
+          api_key = (os.getenv("PINECONE_API_KEY") or "").strip()
           env = os.getenv("PINECONE_ENVIRONMENT", "gcp-starter")
 
           print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
+          if not api_key:
+              raise ValueError("❌ Missing Pinecone API key — check GitHub Secrets")
+
           try:
               pc = Pinecone(api_key=api_key, environment=env)
               indexes = [i["name"] for i in pc.list_indexes()]
-              print("✅ Connection OK — Indexes:", indexes)
+              print("✅ Pinecone connection successful. Indexes:", indexes)
           except Exception as e:
               print("❌ Pinecone connection failed:", e)
               raise
