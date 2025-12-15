@@ -44,9 +44,22 @@ if not OPENROUTER_API_KEY:
 # ============================================================
 # 🔌 Initialize Pinecone
 # ============================================================
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(PINECONE_INDEX_NAME)
-print(f"✅ Connected to Pinecone index: {PINECONE_INDEX_NAME}")
+from pinecone import Pinecone
+
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT", "gcp-starter")
+PINECONE_PROJECT = os.getenv("PINECONE_PROJECT", "default")
+
+if not PINECONE_API_KEY:
+    raise ValueError("❌ Missing Pinecone API key (PINECONE_API_KEY). Check .env or GitHub secrets.")
+
+print(f"✅  Loaded environment — Index: {PINECONE_INDEX_NAME} | Env: {PINECONE_ENVIRONMENT} | Project: {PINECONE_PROJECT}")
+
+try:
+    pc = Pinecone(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
+    index = pc.Index(PINECONE_INDEX_NAME)
+except Exception as e:
+    raise RuntimeError(f"❌ Pinecone connection failed: {e}")
 
 # ============================================================
 # ⚙️ Flask app
