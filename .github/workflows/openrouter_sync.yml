@@ -3,123 +3,100 @@ name: 🧠 OpenRouter + Pinecone Sync
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
-  schedule:
-    # Run every day at midnight UTC
-    - cron: "0 0 * * *"
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
-    env:
-      # === OpenRouter ===
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      OPENROUTER_BASE_URL: ${{ secrets.OPENROUTER_BASE_URL }}
-      OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
-      OPENROUTER_EMBED_MODEL: ${{ secrets.OPENROUTER_EMBED_MODEL }}
-
-      # === Pinecone ===
-      PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-      PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
-      PINECONE_PROJECT: ${{ secrets.PINECONE_PROJECT }}
-      PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
-
-      # === Flask / App settings ===
-      PORT: 5051
 
     steps:
-      # -------------------------------
-      # 🧩 Step 1: Checkout the repo
-      # -------------------------------
-      - name: Checkout repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
 
-      # -------------------------------
-      # 🐍 Step 2: Setup Python
-      # -------------------------------
-      - name: Setup Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: '3.11'
 
-      # -------------------------------
-      # 📦 Step 3: Install dependencies
-      # -------------------------------
-      - name: Install dependencies
+      - name: 📦 Install Clean Dependencies
         run: |
+          echo "🧹 Cleaning environment..."
+          pip uninstall -y pinecone pinecone-client || true
+          pip cache purge || true
+
+          echo "📦 Installing updated dependencies..."
           python3 -m pip install --upgrade pip
-          pip install openai pinecone-client flask flask-cors python-dotenv tqdm requests
+          pip install --no-cache-dir pinecone openai python-dotenv tqdm flask flask-cors requests numpy
 
-      # -------------------------------
-      # 🧠 Step 4: Verify environment
-      # -------------------------------
-      - name: Verify environment variables
+          echo "✅ SDK Versions:"
+          python3 -c "import pinecone, openai; print('Pinecone:', pinecone.__version__, '| OpenAI:', openai.__version__)"
+
+      - name: 📡 Verify Environment Variables
         run: |
-          echo "🔍 Checking environment setup..."
-          echo "OPENROUTER_MODEL: ${OPENROUTER_MODEL}"
-          echo "PINECONE_INDEX_NAME: ${PINECONE_INDEX_NAME}"
-          echo "PINECONE_ENVIRONMENT: ${PINECONE_ENVIRONMENT}"
-          echo "PINECONE_PROJECT: ${PINECONE_PROJECT}"
-          echo "✅ Environment variables appear loaded."
+          echo "✅ OPENROUTER_MODEL: $OPENROUTER_MODEL"
+          echo "✅ PINECONE_INDEX_NAME: $PINECONE_INDEX_NAME"
+          echo "✅ PINECONE_ENVIRONMENT: $PINECONE_ENVIRONMENT"
+        env:
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+          PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
 
-      # -------------------------------
-      # 🌐 Step 5: Verify Pinecone connection
-      # -------------------------------
-      - name: ✅ Verify Pinecone connection
+      - name: ✅ Verify Pinecone Connection
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
         run: |
           python3 - <<'PYCODE'
-          from pinecone import Pinecone
           import os
+          from pinecone import Pinecone
+
           api_key = os.getenv("PINECONE_API_KEY")
           env = os.getenv("PINECONE_ENVIRONMENT", "gcp-starter")
-          print(f"🔑 Using Pinecone key prefix: {api_key[:10]}..., environment: {env}")
+
+          print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
           try:
               pc = Pinecone(api_key=api_key, environment=env)
               indexes = [i["name"] for i in pc.list_indexes()]
-              print("✅ Pinecone connection OK. Found indexes:", indexes)
+              print("✅ Connection OK — Indexes:", indexes)
           except Exception as e:
               print("❌ Pinecone connection failed:", e)
               raise
           PYCODE
 
-      # -------------------------------
-      # 💬 Step 6: Verify OpenRouter connection
-      # -------------------------------
-      - name: ✅ Verify OpenRouter connection
+      - name: 🔌 Test OpenRouter + Pinecone Integration
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_BASE_URL: ${{ secrets.OPENROUTER_BASE_URL }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
           python3 - <<'PYCODE'
-          import os, requests
-          api_key = os.getenv("OPENROUTER_API_KEY")
+          import os
+          from openai import OpenAI
+          from pinecone import Pinecone
+
+          print("🔍 Testing OpenRouter + Pinecone integration...")
+
+          openrouter_key = os.getenv("OPENROUTER_API_KEY")
           base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
-          print(f"🔑 Testing OpenRouter connection... Using prefix: {api_key[:10]}...")
-          headers = {"Authorization": f"Bearer {api_key}"}
+          pinecone_key = os.getenv("PINECONE_API_KEY")
+          pinecone_env = os.getenv("PINECONE_ENVIRONMENT", "gcp-starter")
+          index_name = os.getenv("PINECONE_INDEX_NAME")
+
           try:
-              response = requests.get(f"{base_url}/models", headers=headers, timeout=10)
-              if response.status_code == 200:
-                  print("✅ OpenRouter connection OK. Models available:", len(response.json().get("data", [])))
-              else:
-                  print("❌ OpenRouter connection failed:", response.status_code, response.text)
+              client = OpenAI(api_key=openrouter_key, base_url=base_url)
+              emb = client.embeddings.create(model="text-embedding-3-small", input="connectivity test").data[0].embedding
+              print("✅ OpenRouter test OK — Embedding length:", len(emb))
           except Exception as e:
-              print("❌ OpenRouter error:", e)
+              print("⚠️ OpenRouter test failed:", e)
+
+          try:
+              pc = Pinecone(api_key=pinecone_key, environment=pinecone_env)
+              index = pc.Index(index_name)
+              stats = index.describe_index_stats()
+              print("✅ Pinecone index connected — Stats:", stats)
+          except Exception as e:
+              print("❌ Pinecone index connection failed:", e)
               raise
           PYCODE
-
-      # -------------------------------
-      # 🔄 Step 7: Run sync script
-      # -------------------------------
-      - name: Run OpenRouter → Pinecone Sync
-        run: |
-          echo "🚀 Starting sync process..."
-          python3 scripts/smart_pinecone_sync.py || echo "⚠️ Sync script completed with warnings."
-
-      # -------------------------------
-      # ✅ Step 8: Finish
-      # -------------------------------
-      - name: Complete
-        run: echo "🎉 Workflow completed successfully!"
