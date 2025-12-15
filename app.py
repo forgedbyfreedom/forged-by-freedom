@@ -1,14 +1,33 @@
 #!/usr/bin/env python3
-from flask import Flask, request, jsonify, render_template
+"""
+app.py — Forged by Freedom Search + AI Engine
+──────────────────────────────────────────────
+Connects:
+    🧠 Pinecone vector database
+    🤖 OpenRouter (Nous Hermes 2 Pro or other model)
+    🌐 Flask API server
+
+Endpoints:
+    ✅ /api/search — AI semantic search + response
+    ✅ /health — Health check
+"""
+
+from flask import Flask, request, jsonify
 from pinecone import Pinecone
-import requests, os
-from datetime import datetime
 from dotenv import load_dotenv
+import requests
+import os
+from datetime import datetime
 
-# Load environment variables early
+# ============================================================
+# 🧩 Load environment
+# ============================================================
 load_dotenv()
+print("✅  Loaded environment — Index:", os.getenv("PINECONE_INDEX_NAME", "not set"))
 
-# === Config ===
+# ============================================================
+# 🔐 Environment variables
+# ============================================================
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 
@@ -18,25 +37,20 @@ OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nousresearch/hermes-2-pro")
 EMBED_MODEL = os.getenv("OPENROUTER_EMBED_MODEL", "text-embedding-3-large")
 
 if not PINECONE_API_KEY:
-    raise ValueError("❌ Missing Pinecone API key (PINECONE_API_KEY) — check .env or GitHub secrets.")
+    raise ValueError("❌ Missing Pinecone API key (PINECONE_API_KEY). Check .env file.")
 if not OPENROUTER_API_KEY:
-    raise ValueError("❌ Missing OpenRouter API key (OPENROUTER_API_KEY) — check .env or GitHub secrets.")
+    raise ValueError("❌ Missing OpenRouter API key (OPENROUTER_API_KEY). Check .env file.")
 
-print(f"✅  Loaded environment — Index: {PINECONE_INDEX_NAME}")
+# ============================================================
+# 🔌 Initialize Pinecone
+# ============================================================
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(PINECONE_INDEX_NAME)
+print(f"✅ Connected to Pinecone index: {PINECONE_INDEX_NAME}")
 
-# === Initialize Pinecone ===
-try:
-    pc = Pinecone(api_key=PINECONE_API_KEY)
-    index_names = [i["name"] for i in pc.list_indexes()]
-    print(f"🧠 Found Pinecone indexes: {index_names}")
-    if PINECONE_INDEX_NAME not in index_names:
-        raise ValueError(f"❌ Index '{PINECONE_INDEX_NAME}' not found. Available: {index_names}")
-    index = pc.Index(PINECONE_INDEX_NAME)
-    print(f"✅ Connected to Pinecone index: {PINECONE_INDEX_NAME}")
-except Exception as e:
-    raise RuntimeError(f"🚨 Pinecone connection failed: {e}")
-
-# === Flask App ===
+# ============================================================
+# ⚙️ Flask app
+# ============================================================
 app = Flask(__name__)
 
 @app.route("/api/search", methods=["POST"])
