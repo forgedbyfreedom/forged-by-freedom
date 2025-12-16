@@ -14,7 +14,7 @@ from pinecone import Pinecone
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # <-- ensure this is called before using env vars
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
 
 api_key = os.getenv("PINECONE_API_KEY", "").strip()
 environment = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws").strip()
