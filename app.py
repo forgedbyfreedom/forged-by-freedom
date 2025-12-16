@@ -2,73 +2,73 @@
 """
 app.py — Forged by Freedom AI Coach Search API
 ──────────────────────────────────────────────
-Connects:
-    🧠 Pinecone vector database
+Integrates:
+    🧠 Pinecone vector database (v8+ SDK)
     🤖 OpenRouter (Nous Hermes 2 Pro or other model)
     🌐 Flask API for Wix AI Coach Page
 """
 
+import os
+import requests
+from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pinecone import Pinecone
 from dotenv import load_dotenv
-import os
 
+# ============================================================
+# 🔐 Load Environment Variables
+# ============================================================
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
 
-api_key = os.getenv("PINECONE_API_KEY", "").strip()
-environment = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws").strip()
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "").strip()
+PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws").strip()
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai").strip()
 
-print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {environment}")
-
-pc = Pinecone(api_key=api_key, environment=environment)
-
-# ============================================================
-# 🔐 Environment variables
-# ============================================================
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
-PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
-
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
-OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nousresearch/hermes-2-pro")
-EMBED_MODEL = os.getenv("OPENROUTER_EMBED_MODEL", "text-embedding-3-small")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
+OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").strip()
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nousresearch/hermes-2-pro").strip()
+EMBED_MODEL = os.getenv("OPENROUTER_EMBED_MODEL", "text-embedding-3-small").strip()
 
 if not PINECONE_API_KEY or not OPENROUTER_API_KEY:
     raise ValueError("❌ Missing required API keys. Check your .env or GitHub Secrets.")
 
+print(f"🔑 Using Pinecone key prefix: {PINECONE_API_KEY[:10]}... | Env: {PINECONE_ENVIRONMENT}")
+
 # ============================================================
-# 🔌 Initialize Pinecone
+# 🔌 Initialize Pinecone Connection
 # ============================================================
 try:
     pc = Pinecone(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
+    indexes = [idx["name"] for idx in pc.list_indexes()]
+    if PINECONE_INDEX_NAME not in indexes:
+        raise ValueError(f"❌ Index '{PINECONE_INDEX_NAME}' not found in {indexes}")
     index = pc.Index(PINECONE_INDEX_NAME)
     print(f"✅ Connected to Pinecone index: {PINECONE_INDEX_NAME}")
 except Exception as e:
     raise RuntimeError(f"❌ Pinecone connection failed: {e}")
 
 # ============================================================
-# ⚙️ Flask App Configuration
+# ⚙️ Flask App Setup
 # ============================================================
 app = Flask(__name__)
-CORS(app)  # enable requests from Wix front-end
+CORS(app)
 
 # ============================================================
 # 🧠 Semantic Search + AI Endpoint
 # ============================================================
 @app.route("/search", methods=["POST"])
 def search():
-    """Search the Pinecone index and return AI contextual response."""
+    """Perform semantic search via OpenRouter + Pinecone."""
     try:
-        data = request.get_json() or {}
-        query = data.get("query", "").strip()
+        data = request.get_json(force=True)
+        query = (data.get("query") or "").strip()
         top_k = int(data.get("top_k", 5))
 
         if not query:
             return jsonify({"error": "Missing query text"}), 400
 
-        # === 1️⃣ Create embedding from OpenRouter ===
+        # === 1️⃣ Get embeddings from OpenRouter ===
         embed_resp = requests.post(
             f"{OPENROUTER_BASE_URL}/embeddings",
             headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}"},
@@ -81,11 +81,10 @@ def search():
         # === 2️⃣ Query Pinecone ===
         results = index.query(vector=query_vector, top_k=top_k, include_metadata=True)
         matches = results.get("matches", [])
-
         if not matches:
-            return jsonify({"response": "No matches found."}), 200
+            return jsonify({"response": "No relevant matches found."}), 200
 
-        # === 3️⃣ Build context from matched docs ===
+        # === 3️⃣ Compile context from matches ===
         context = "\n\n".join([
             m["metadata"].get("text", "")[:1500]
             for m in matches if "metadata" in m
@@ -105,9 +104,9 @@ def search():
                     {
                         "role": "system",
                         "content": (
-                            "You are a high-performance bodybuilding AI coach. "
-                            "Answer based on real Forged by Freedom transcripts, "
-                            "using concise, factual, and motivational tone."
+                            "You are a high-performance bodybuilding AI coach trained "
+                            "on Forged by Freedom transcripts. Respond with precision, "
+                            "science, and motivation."
                         ),
                     },
                     {"role": "user", "content": f"Question: {query}\n\nContext:\n{context}"}
@@ -118,7 +117,6 @@ def search():
         ai_resp.raise_for_status()
         answer = ai_resp.json()["choices"][0]["message"]["content"]
 
-        # === 5️⃣ Return formatted response ===
         return jsonify({
             "query": query,
             "response": answer,
@@ -130,7 +128,7 @@ def search():
         return jsonify({"error": str(e)}), 500
 
 # ============================================================
-# 🌐 Health + Info Endpoints
+# 🌐 Health Check
 # ============================================================
 @app.route("/")
 def home():
