@@ -21,7 +21,7 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install openai pinecone-client flask flask-cors python-dotenv tqdm requests
+          pip install openai pinecone flask flask-cors python-dotenv tqdm requests
 
       - name: 📡 Verify environment
         run: |
