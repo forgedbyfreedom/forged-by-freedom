@@ -16,10 +16,10 @@ for dist in pkg_resources.working_set:
     if "pinecone" in dist.key:
         print(f"📦 {dist.key}=={dist.version}  →  {dist.location}")
 
-print("\n🔍 Checking if 'pinecone-client' is installed...\n")
-subprocess.run([sys.executable, "-m", "pip", "show", "pinecone-client"])
-
 print("\n🔍 Checking if 'pinecone' (new SDK) is installed...\n")
 subprocess.run([sys.executable, "-m", "pip", "show", "pinecone"])
+
+print("\n🔍 Checking for any legacy installs ('pinecone-client')...\n")
+subprocess.run([sys.executable, "-m", "pip", "show", "pinecone-client"])
 
 print("\n✅ Debug complete.\n")
