@@ -21,12 +21,11 @@ jobs:
       - name: 📦 Install Clean Dependencies
         run: |
           echo "🧹 Cleaning environment..."
-          pip uninstall -y pinecone pinecone-client pinecone-plugin-inference pinecone-plugin-assistant || true
+          pip uninstall -y pinecone pinecone-client pinecone-plugin-* || true
           pip cache purge || true
-          rm -rf ~/.cache/pip || true
-          rm -rf ~/.local/lib/python*/site-packages/pinecone* || true
+          rm -rf ~/.cache/pip ~/.local/lib/python*/site-packages/pinecone* || true
 
-          echo "📦 Installing clean latest dependencies..."
+          echo "📦 Installing clean dependencies..."
           python3 -m pip install --upgrade pip
           pip install --no-cache-dir pinecone openai python-dotenv tqdm flask flask-cors requests numpy
 
