@@ -51,7 +51,7 @@ jobs:
           from pinecone import Pinecone
 
           api_key = (os.getenv("PINECONE_API_KEY") or "").strip()
-          env = os.getenv("PINECONE_ENVIRONMENT", "gcp-starter")
+          env = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
 
           print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
           if not api_key:
@@ -60,7 +60,7 @@ jobs:
           try:
               pc = Pinecone(api_key=api_key, environment=env)
               indexes = [i["name"] for i in pc.list_indexes()]
-              print("✅ Pinecone connection successful. Indexes:", indexes)
+              print("✅ Pinecone connection successful — Indexes:", indexes)
           except Exception as e:
               print("❌ Pinecone connection failed:", e)
               raise
@@ -84,7 +84,7 @@ jobs:
           openrouter_key = os.getenv("OPENROUTER_API_KEY")
           base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
           pinecone_key = os.getenv("PINECONE_API_KEY")
-          pinecone_env = os.getenv("PINECONE_ENVIRONMENT", "gcp-starter")
+          pinecone_env = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
           index_name = os.getenv("PINECONE_INDEX_NAME")
 
           try:
