@@ -12,15 +12,16 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pinecone import Pinecone
 from dotenv import load_dotenv
-import requests
 import os
-from datetime import datetime
 
-# ============================================================
-# 🧩 Load environment
-# ============================================================
-load_dotenv()
-print("✅ Loaded environment — Index:", os.getenv("PINECONE_INDEX_NAME", "not set"))
+load_dotenv()  # <-- ensure this is called before using env vars
+
+api_key = os.getenv("PINECONE_API_KEY", "").strip()
+environment = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws").strip()
+
+print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {environment}")
+
+pc = Pinecone(api_key=api_key, environment=environment)
 
 # ============================================================
 # 🔐 Environment variables
