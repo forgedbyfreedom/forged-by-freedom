@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 # ============================================================
 # 🔐 Load Environment Variables
 # ============================================================
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
+load_dotenv(dotenv_path=".env")
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "").strip()
 PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws").strip()
