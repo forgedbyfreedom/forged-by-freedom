@@ -74,8 +74,7 @@ else:
     pinecone_enabled = True
 
 if pinecone_enabled and pinecone is None:
-    print("Pinecone client library is not importable; install `pinecone-client` or similar to enable upserts.")
-    pinecone_enabled = False
+    print("Pinecone library not found; install `pinecone` (new SDK) to enable upserts.")
 
 if pinecone_enabled:
     try:
