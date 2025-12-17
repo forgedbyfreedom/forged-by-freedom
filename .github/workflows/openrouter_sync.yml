@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,9 +16,9 @@ jobs:
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: 📦 Install Clean Dependencies
+      - name: 📦 Clean + Install Dependencies
         run: |
           echo "🧹 Cleaning environment..."
           pip uninstall -y pinecone pinecone-client pinecone-plugin-* || true
@@ -51,10 +51,11 @@ jobs:
           import os
           from pinecone import Pinecone
 
-          api_key = (os.getenv("PINECONE_API_KEY") or "").strip()
+          api_key = os.getenv("PINECONE_API_KEY", "").strip()
           env = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
 
           print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
+
           if not api_key:
               raise ValueError("❌ Missing Pinecone API key — check GitHub Secrets")
 
@@ -90,7 +91,10 @@ jobs:
 
           try:
               client = OpenAI(api_key=openrouter_key, base_url=base_url)
-              emb = client.embeddings.create(model="text-embedding-3-small", input="connectivity test").data[0].embedding
+              emb = client.embeddings.create(
+                  model="text-embedding-3-small",
+                  input="connectivity test"
+              ).data[0].embedding
               print("✅ OpenRouter test OK — Embedding length:", len(emb))
           except Exception as e:
               print("⚠️ OpenRouter test failed:", e)
