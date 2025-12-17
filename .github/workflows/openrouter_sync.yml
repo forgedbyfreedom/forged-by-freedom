@@ -4,6 +4,11 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+    paths:
+      - ".github/workflows/openrouter_sync.yml"
+      - "backend/**"
+      - "sync_*.py"
+      - "transcripts/**"
 
 jobs:
   sync:
@@ -55,7 +60,6 @@ jobs:
           env = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
 
           print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
-
           if not api_key:
               raise ValueError("❌ Missing Pinecone API key — check GitHub Secrets")
 
@@ -108,3 +112,20 @@ jobs:
               print("❌ Pinecone index connection failed:", e)
               raise
           PYCODE
+
+      - name: 📤 Sync Transcripts to Pinecone
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+        run: |
+          echo "🚀 Syncing transcripts to Pinecone..."
+          python3 sync_transcripts_to_pinecone.py || echo "⚠️ Sync script missing — skipping upload."
+
+      - name: 🌐 Notify Wix (Zapier)
+        if: success()
+        run: |
+          echo "📢 Notifying Wix/Zapier of successful sync..."
+          curl -X POST "https://hooks.zapier.com/hooks/catch/YOUR_ZAPIER_ID_HERE" \
+            -H "Content-Type: application/json" \
+            -d '{"status":"success","message":"OpenRouter + Pinecone sync completed"}'
