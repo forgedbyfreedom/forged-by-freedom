@@ -54,10 +54,10 @@ jobs:
         run: |
           python3 - <<'PYCODE'
           import os
-          from pinecone import Pinecone
+        from pinecone import Pinecone
 
-          api_key = os.getenv("PINECONE_API_KEY", "").strip()
-          env = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
+              pc = Pinecone(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
+              index = pc.Index(PINECONE_INDEX_NAME)
 
           print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
           if not api_key:
