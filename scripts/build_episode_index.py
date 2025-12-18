@@ -1,63 +1,108 @@
 #!/usr/bin/env python3
+
 import os
 import csv
+import re
 from glob import glob
 
+# --------------------------------------------------
+# Paths
+# --------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
 TRANSCRIPTS_DIR = os.path.join(ROOT, "transcripts")
 OUTPUT_CSV = os.path.join(ROOT, "episode_index.csv")
 
-if not os.path.isdir(TRANSCRIPTS_DIR):
-    raise RuntimeError(f"Missing transcripts directory: {TRANSCRIPTS_DIR}")
+# --------------------------------------------------
+# Regex patterns for episode number detection
+# (text first, then title fallback)
+# --------------------------------------------------
+EPISODE_PATTERNS = [
+    r"(?:episode|ep\.?)\s*(\d{1,5})",
+    r"#\s*(\d{1,5})",
+    r"\b(\d{1,5})\b"
+]
 
-rows = []
-episode_id = 1
-
-# Walk all transcript text files recursively
-txt_files = glob(os.path.join(TRANSCRIPTS_DIR, "**", "*.txt"), recursive=True)
-
-for path in txt_files:
-    rel_path = os.path.relpath(path, TRANSCRIPTS_DIR)
-    parts = rel_path.split(os.sep)
-
-    # Channel = top-level folder
-    channel = parts[0] if len(parts) > 1 else "unknown"
-
-    with open(path, "r", encoding="utf-8", errors="ignore") as f:
-        text = f.read().strip()
-
+# --------------------------------------------------
+# Helpers
+# --------------------------------------------------
+def extract_episode_number(text: str):
     if not text:
-        continue
+        return ""
 
-    rows.append({
-        "episode_id": episode_id,
-        "channel": channel,
-        "episode_title": os.path.splitext(os.path.basename(path))[0],
-        "source_file": rel_path,
-        "word_count": len(text.split())
-    })
+    text_lower = text.lower()
+    for pattern in EPISODE_PATTERNS:
+        match = re.search(pattern, text_lower)
+        if match:
+            return match.group(1)
+    return ""
 
-    episode_id += 1
+def safe_read(path):
+    try:
+        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+            return f.read()
+    except Exception:
+        return ""
 
-# HARD FAIL if nothing indexed
-if not rows:
-    raise RuntimeError("No transcript episodes found — episode_index.csv not generated")
+# --------------------------------------------------
+# Build index
+# --------------------------------------------------
+rows = []
+episode_counter = 1
 
-# Write CSV
-with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(
-        f,
-        fieldnames=[
-            "episode_id",
-            "channel",
-            "episode_title",
-            "source_file",
-            "word_count",
-        ],
-    )
+channel_dirs = [
+    os.path.join(TRANSCRIPTS_DIR, d)
+    for d in os.listdir(TRANSCRIPTS_DIR)
+    if os.path.isdir(os.path.join(TRANSCRIPTS_DIR, d))
+]
+
+for channel_path in sorted(channel_dirs):
+    channel = os.path.basename(channel_path)
+
+    transcript_files = sorted(glob(os.path.join(channel_path, "*.txt")))
+
+    for file_path in transcript_files:
+        filename = os.path.basename(file_path)
+        title = os.path.splitext(filename)[0]
+
+        transcript_text = safe_read(file_path)
+
+        # Prefer episode number from transcript body
+        episode_number = extract_episode_number(transcript_text)
+
+        # Fallback to title if not found
+        if not episode_number:
+            episode_number = extract_episode_number(title)
+
+        word_count = len(transcript_text.split()) if transcript_text else 0
+
+        rows.append({
+            "episode_id": episode_counter,              # stable numeric ID for Wix
+            "episode_number": episode_number,           # real podcast number (if found)
+            "episode_title": title,
+            "channel": channel,
+            "source_file": filename,
+            "word_count": word_count
+        })
+
+        episode_counter += 1
+
+# --------------------------------------------------
+# Write CSV (Wix-safe)
+# --------------------------------------------------
+with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as csvfile:
+    fieldnames = [
+        "episode_id",
+        "episode_number",
+        "episode_title",
+        "channel",
+        "source_file",
+        "word_count"
+    ]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(rows)
 
-print(f"✅ Episode index written: {OUTPUT_CSV}")
-print(f"📊 Episodes indexed: {len(rows)}")
+print("=== 📄 Episode Index Built ===")
+print(f"Episodes indexed: {len(rows)}")
+print(f"Saved to: {OUTPUT_CSV}")
