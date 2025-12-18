@@ -58,6 +58,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add master_transcripts indexes *.json || true
-          git commit -m "Rebuild transcripts & indexes [skip ci]" || exit 0
+
+          git add \
+            master_transcripts \
+            indexes \
+            transcripts/channels_summary.json \
+            transcripts/transcripts_summary.json \
+            stats.json \
+            *.json || true
+
+          git diff --cached --quiet || git commit -m "Auto-update transcripts & indexes"
           git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
+
