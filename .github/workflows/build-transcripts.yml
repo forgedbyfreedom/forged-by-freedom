@@ -43,14 +43,14 @@ jobs:
       - name: 🏗️ Build master transcripts
         run: python scripts/build_master_transcripts.py
 
-      - name: 🧱 Build file index
+      - name: 🧱 Build file index (authoritative stats)
         run: python scripts/build_file_index.py
 
-      - name: 🧱 Build channel index
+      - name: 🧱 Build channel index (diagnostic only)
         run: python scripts/build_channels_index.py
 
       # -------------------------------
-      # Commit artifacts
+      # Commit authoritative artifacts only
       # -------------------------------
       - name: 🚀 Commit rebuilt artifacts
         env:
@@ -59,14 +59,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage all generated transcript artifacts
-          git add transcripts/*.json transcripts/**/channels_summary.json || true
+          # Persist ONLY authoritative outputs
+          git add \
+            transcripts/transcripts_summary.json \
+            stats.json \
+            indexes || true
 
-          git diff --cached --quiet || git commit -m "Auto-update transcript channel summaries"
+          git diff --cached --quiet || git commit -m "Auto-update transcript indexes"
           git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
-
-      - name: 🔍 Debug transcripts output
-        run: |
-          echo "Contents of transcripts/:"
-          ls -la transcripts
- 
