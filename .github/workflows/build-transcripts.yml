@@ -59,14 +59,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add \
-            master_transcripts \
-            indexes \
-            transcripts/channels_summary.json \
-            transcripts/transcripts_summary.json \
-            stats.json \
-            *.json || true
+          # Stage all generated transcript artifacts
+          git add transcripts/*.json transcripts/**/channels_summary.json || true
 
-          git diff --cached --quiet || git commit -m "Auto-update transcripts & indexes"
+          git diff --cached --quiet || git commit -m "Auto-update transcript channel summaries"
           git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
 
+      - name: 🔍 Debug transcripts output
+        run: |
+          echo "Contents of transcripts/:"
+          ls -la transcripts
+ 
