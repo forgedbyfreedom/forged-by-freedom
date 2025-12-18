@@ -35,7 +35,6 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install python-dotenv tqdm numpy
 
       # -------------------------------
       # Build artifacts
@@ -46,24 +45,27 @@ jobs:
       - name: 🧱 Build file index
         run: python scripts/build_file_index.py
 
-      - name: 🔍 Build episode index (Wix search)
+      - name: 🔍 Build episode index (SEARCH SOURCE OF TRUTH)
         run: python scripts/build_episode_index.py
 
       # -------------------------------
-      # Commit authoritative artifacts
+      # Verify search artifact exists
       # -------------------------------
-      - name: 🚀 Commit rebuilt artifacts
+      - name: ✅ Verify episode_index.csv
+        run: |
+          test -f episode_index.csv
+          echo "episode_index.csv exists ✔"
+
+      # -------------------------------
+      # Commit search index
+      # -------------------------------
+      - name: 🚀 Commit episode index
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add \
-            episode_index.csv \
-            transcripts/transcripts_summary.json \
-            stats.json \
-            indexes || true
-
-          git diff --cached --quiet || git commit -m "Auto-update transcript indexes & episode search"
+          git add episode_index.csv
+          git diff --cached --quiet || git commit -m "Auto-update episode search index"
           git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
