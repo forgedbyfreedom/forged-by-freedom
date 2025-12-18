@@ -1,85 +1,68 @@
 #!/usr/bin/env python3
 import os
-import json
+import csv
 from glob import glob
 
-# --------------------------------------------------
+# -------------------------------
 # Paths
-# --------------------------------------------------
+# -------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
 TRANSCRIPTS_DIR = os.path.join(ROOT, "transcripts")
-OUTPUT_PATH = os.path.join(ROOT, "transcripts_summary.json")
+OUTPUT_CSV = os.path.join(ROOT, "episode_index.csv")
 
-# --------------------------------------------------
-# Safety checks
-# --------------------------------------------------
 if not os.path.isdir(TRANSCRIPTS_DIR):
-    raise RuntimeError(f"Transcripts directory not found: {TRANSCRIPTS_DIR}")
+    raise RuntimeError(f"Missing transcripts directory: {TRANSCRIPTS_DIR}")
 
-# --------------------------------------------------
-# Auto-detect channel folders
-# --------------------------------------------------
-channel_folders = [
-    os.path.join(TRANSCRIPTS_DIR, d)
-    for d in os.listdir(TRANSCRIPTS_DIR)
-    if os.path.isdir(os.path.join(TRANSCRIPTS_DIR, d))
-]
+# -------------------------------
+# Build index
+# -------------------------------
+rows = []
+episode_id = 1
 
-# --------------------------------------------------
-# Indexing
-# --------------------------------------------------
-total_channels = len(channel_folders)
-total_files = 0
-total_words = 0
-stats = []
-
-for folder in sorted(channel_folders):
-    txt_files = glob(os.path.join(folder, "*.txt"))
-
-    episode_count = len(txt_files)
-    word_count = 0
-
-    for fpath in txt_files:
-        try:
-            with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
-                word_count += len(f.read().split())
-        except Exception:
-            # Skip unreadable files but continue indexing
+for root, dirs, files in os.walk(TRANSCRIPTS_DIR):
+    for fname in files:
+        if not fname.lower().endswith(".txt"):
             continue
 
-    stats.append({
-        "channel": os.path.basename(folder),
-        "episodes": episode_count,
-        "words": word_count
-    })
+        fpath = os.path.join(root, fname)
+        rel_path = os.path.relpath(fpath, TRANSCRIPTS_DIR)
 
-    total_files += episode_count
-    total_words += word_count
+        channel = rel_path.split(os.sep)[0]
 
-# --------------------------------------------------
-# Output structure
-# --------------------------------------------------
-summary = {
-    "summary": {
-        "channels": total_channels,
-        "episodes": total_files,
-        "total_words": total_words
-    },
-    "channels": stats
-}
+        try:
+            with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
+                word_count = len(f.read().split())
+        except Exception:
+            word_count = 0
 
-# --------------------------------------------------
-# Write output
-# --------------------------------------------------
-with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-    json.dump(summary, f, indent=2)
+        rows.append({
+            "episode_id": episode_id,
+            "channel": channel,
+            "episode_title": os.path.splitext(fname)[0],
+            "source_path": rel_path,
+            "word_count": word_count
+        })
 
-# --------------------------------------------------
-# Console output (GitHub Actions friendly)
-# --------------------------------------------------
-print("=== 📊 Forged By Freedom Transcript Summary ===")
-print(f"Channels detected: {total_channels}")
-print(f"Episodes counted: {total_files}")
-print(f"Total words: {total_words:,}")
-print(f"✅ Saved summary to {OUTPUT_PATH}")
+        episode_id += 1
+
+# -------------------------------
+# Write CSV
+# -------------------------------
+with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
+    writer = csv.DictWriter(
+        f,
+        fieldnames=[
+            "episode_id",
+            "channel",
+            "episode_title",
+            "source_path",
+            "word_count"
+        ]
+    )
+    writer.writeheader()
+    writer.writerows(rows)
+
+print("=== 🔍 Episode Index Built ===")
+print(f"Episodes indexed: {len(rows)}")
+print(f"CSV written to: {OUTPUT_CSV}")
