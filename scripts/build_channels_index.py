@@ -70,7 +70,7 @@ summary = {
 with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
     json.dump(summary, f, indent=2)
 
-print("=== 📊 Channel Summary ===")
+print("=== 📊 Per-Channel Transcript Summary ===")
 print(f"Channels: {total_channels}")
 print(f"Episodes: {total_files}")
 print(f"Words: {total_words:,}")
