@@ -51,13 +51,15 @@ jobs:
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
           python3 - <<'PYCODE'
           import os
-        from pinecone import Pinecone
+          from pinecone import Pinecone
 
-              pc = Pinecone(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
-              index = pc.Index(PINECONE_INDEX_NAME)
+          api_key = os.getenv("PINECONE_API_KEY")
+          env = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws")
+          index_name = os.getenv("PINECONE_INDEX_NAME")
 
           print(f"🔑 Using Pinecone key prefix: {api_key[:10]}... | Env: {env}")
           if not api_key:
@@ -67,6 +69,11 @@ jobs:
               pc = Pinecone(api_key=api_key, environment=env)
               indexes = [i["name"] for i in pc.list_indexes()]
               print("✅ Pinecone connection successful — Indexes:", indexes)
+
+              if index_name in [i["name"] for i in indexes]:
+                  print(f"✅ Index '{index_name}' exists.")
+              else:
+                  print(f"⚠️ Index '{index_name}' not found.")
           except Exception as e:
               print("❌ Pinecone connection failed:", e)
               raise
