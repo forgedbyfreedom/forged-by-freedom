@@ -43,14 +43,14 @@ jobs:
       - name: 🏗️ Build master transcripts
         run: python scripts/build_master_transcripts.py
 
-      - name: 🧱 Build file index (authoritative stats)
+      - name: 🧱 Build file index
         run: python scripts/build_file_index.py
 
-      - name: 🧱 Build channel index (diagnostic only)
-        run: python scripts/build_channels_index.py
+      - name: 🔍 Build episode index (Wix search)
+        run: python scripts/build_episode_index.py
 
       # -------------------------------
-      # Commit authoritative artifacts only
+      # Commit authoritative artifacts
       # -------------------------------
       - name: 🚀 Commit rebuilt artifacts
         env:
@@ -59,11 +59,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Persist ONLY authoritative outputs
           git add \
+            episode_index.csv \
             transcripts/transcripts_summary.json \
             stats.json \
             indexes || true
 
-          git diff --cached --quiet || git commit -m "Auto-update transcript indexes"
+          git diff --cached --quiet || git commit -m "Auto-update transcript indexes & episode search"
           git push https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/forged-by-freedom.git main
