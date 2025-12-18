@@ -23,3 +23,7 @@ node_modules/
 
 # macOS junk
 .DS_Store
+
+# Allow committed channel summary
+!transcripts/channels_summary.json
+
