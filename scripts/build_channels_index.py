@@ -6,18 +6,11 @@ from glob import glob
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(BASE_DIR, "..")
 TRANSCRIPTS_DIR = os.path.join(ROOT, "transcripts")
-CHANNEL_LIST_PATH = os.path.join(BASE_DIR, "channel_list.json")
-OUTPUT_PATH = os.path.join(ROOT, "transcripts_summary.json")
-
-with open(CHANNEL_LIST_PATH, "r", encoding="utf-8") as f:
-    channels_data = json.load(f)
-
-channel_folders = []
-for group in channels_data:
-    for ch in group["channels"]:
-        folder = os.path.join(TRANSCRIPTS_DIR, ch)
-        channel_folders.append(folder)
-        os.makedirs(folder, exist_ok=True)
+channel_folders = [
+    os.path.join(TRANSCRIPTS_DIR, d)
+    for d in os.listdir(TRANSCRIPTS_DIR)
+    if os.path.isdir(os.path.join(TRANSCRIPTS_DIR, d))
+]
 
 total_channels = len(channel_folders)
 total_files = 0
