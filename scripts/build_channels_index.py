@@ -9,7 +9,7 @@ from glob import glob
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
 TRANSCRIPTS_DIR = os.path.join(ROOT, "transcripts")
-OUTPUT_PATH = os.path.join(ROOT, "transcripts_summary.json")
+OUTPUT_PATH = os.path.join(TRANSCRIPTS_DIR, "channels_summary.json")
 
 # --------------------------------------------------
 # Safety check
