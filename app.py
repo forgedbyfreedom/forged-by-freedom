@@ -8,7 +8,7 @@ from flask_cors import CORS
 from pinecone import Pinecone
 
 # ============================================================
-# 🔐 ENVIRONMENT VARIABLES (REQUIRED)
+# 🔐 Environment
 # ============================================================
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
@@ -19,49 +19,56 @@ OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-3-large")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATS_PATH = os.path.join(BASE_DIR, "..", "stats.json")
+STATS_PATH = os.path.join(BASE_DIR, "transcripts", "stats.json")
+SUMMARY_PATH = os.path.join(BASE_DIR, "transcripts", "transcripts_summary.json")
 
 # ============================================================
-# 🚀 FLASK APP
+# 🚀 App Setup
 # ============================================================
 app = Flask(__name__)
 
-# 🔥 CORS — THIS IS WHAT FIXES YOUR BLOCKING ISSUE
-CORS(
-    app,
-    resources={r"/*": {"origins": "*"}},
-    supports_credentials=False
-)
+# 🔥 CORS FIX FOR WIX
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ============================================================
-# 🧠 PINECONE (NEW SDK)
+# 🧠 Pinecone Init (NEW SDK)
 # ============================================================
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX_NAME)
 
 # ============================================================
-# 📊 STATS ENDPOINT (FOR HEADER)
+# 📊 STATS ENDPOINT (NEW)
 # ============================================================
-@app.route("/stats.json", methods=["GET"])
+@app.route("/stats", methods=["GET"])
 def stats():
-    """
-    Serves stats.json for the glowing header on the site.
-    """
     try:
-        if not os.path.exists(STATS_PATH):
-            return jsonify({"error": "stats.json not found"}), 404
-
         with open(STATS_PATH, "r", encoding="utf-8") as f:
-            data = json.load(f)
+            stats_data = json.load(f)
 
-        return jsonify(data)
+        with open(SUMMARY_PATH, "r", encoding="utf-8") as f:
+            channels = json.load(f)
+
+        return jsonify({
+            "summary": {
+                "channels": stats_data["total_channels"],
+                "episodes": stats_data["total_episodes"],
+                "total_words": stats_data["total_words"],
+                "last_updated": stats_data["last_updated"]
+            },
+            "channels": [
+                {
+                    "name": ch,
+                    "episodes": channels[ch]["episodes"]
+                }
+                for ch in channels
+            ]
+        })
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
 # ============================================================
-# 🔍 AI SEARCH ENDPOINT
+# 🔍 SEARCH ENDPOINT
 # ============================================================
 @app.route("/search", methods=["POST", "OPTIONS"])
 def search():
@@ -73,23 +80,20 @@ def search():
         if not query:
             return jsonify({"error": "Missing query text"}), 400
 
-        # 1️⃣ EMBED QUERY
+        # 1️⃣ Embed query
         embed_resp = requests.post(
             f"{OPENROUTER_BASE_URL}/embeddings",
             headers={
                 "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                 "Content-Type": "application/json",
             },
-            json={
-                "model": EMBED_MODEL,
-                "input": query,
-            },
+            json={"model": EMBED_MODEL, "input": query},
             timeout=30,
         )
         embed_resp.raise_for_status()
         query_vector = embed_resp.json()["data"][0]["embedding"]
 
-        # 2️⃣ QUERY PINECONE
+        # 2️⃣ Pinecone query
         results = index.query(
             vector=query_vector,
             top_k=top_k,
@@ -104,7 +108,7 @@ def search():
                 "sources": [],
             })
 
-        # 3️⃣ BUILD CONTEXT
+        # 3️⃣ Build context
         context_chunks = []
         sources = []
 
@@ -112,14 +116,13 @@ def search():
             meta = m.get("metadata", {})
             text = meta.get("text", "")
             source = meta.get("source", "Unknown")
-
             if text:
                 context_chunks.append(text[:1200])
             sources.append(source)
 
         context = "\n\n".join(context_chunks)
 
-        # 4️⃣ AI COMPLETION
+        # 4️⃣ AI completion
         ai_resp = requests.post(
             f"{OPENROUTER_BASE_URL}/chat/completions",
             headers={
@@ -158,9 +161,8 @@ def search():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
 # ============================================================
-# 🌐 ROOT + HEALTH
+# 🌐 HEALTH / ROOT
 # ============================================================
 @app.route("/")
 def home():
@@ -172,17 +174,12 @@ def home():
         "time": datetime.utcnow().isoformat() + "Z",
     })
 
-
 @app.route("/health")
 def health():
-    return jsonify({
-        "status": "healthy",
-        "time": datetime.utcnow().isoformat() + "Z",
-    })
-
+    return jsonify({"status": "healthy"})
 
 # ============================================================
-# 🏁 ENTRYPOINT
+# 🏁 Entry
 # ============================================================
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5051))
