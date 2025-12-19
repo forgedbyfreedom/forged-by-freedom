@@ -7,7 +7,7 @@ from flask_cors import CORS
 from pinecone import Pinecone
 
 # ============================================================
-# 🔐 Environment
+# 🔐 ENV
 # ============================================================
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
@@ -18,123 +18,114 @@ OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-3-large")
 
 # ============================================================
-# 🚀 App Setup
+# 🚀 APP
 # ============================================================
 app = Flask(__name__)
 
-# 🔥 THIS IS THE CRITICAL FIX
+# 🔥 HARD CORS (THIS IS THE KEY)
 CORS(
     app,
     resources={r"/*": {"origins": "*"}},
-    supports_credentials=False
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "OPTIONS"]
 )
 
 # ============================================================
-# 🧠 Pinecone Init (NEW SDK)
+# 🧠 PINECONE
 # ============================================================
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX_NAME)
 
 # ============================================================
-# 🔍 SEARCH ENDPOINT
+# 🔍 SEARCH
 # ============================================================
 @app.route("/search", methods=["POST", "OPTIONS"])
 def search():
-    try:
-        data = request.get_json(force=True)
-        query = (data.get("query") or "").strip()
-        top_k = int(data.get("top_k", 5))
+    if request.method == "OPTIONS":
+        return jsonify({"ok": True})
 
-        if not query:
-            return jsonify({"error": "Missing query text"}), 400
+    data = request.get_json(force=True)
+    query = (data.get("query") or "").strip()
+    top_k = int(data.get("top_k", 5))
 
-        # 1️⃣ Embed query
-        embed_resp = requests.post(
-            f"{OPENROUTER_BASE_URL}/embeddings",
-            headers={
-                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": EMBED_MODEL,
-                "input": query,
-            },
-            timeout=30,
-        )
-        embed_resp.raise_for_status()
-        query_vector = embed_resp.json()["data"][0]["embedding"]
+    if not query:
+        return jsonify({"error": "Missing query"}), 400
 
-        # 2️⃣ Pinecone query
-        results = index.query(
-            vector=query_vector,
-            top_k=top_k,
-            include_metadata=True,
-        )
+    # 1️⃣ Embed query
+    embed = requests.post(
+        f"{OPENROUTER_BASE_URL}/embeddings",
+        headers={
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={"model": EMBED_MODEL, "input": query},
+        timeout=30,
+    )
+    embed.raise_for_status()
+    vector = embed.json()["data"][0]["embedding"]
 
-        matches = results.get("matches", [])
-        if not matches:
-            return jsonify({
-                "query": query,
-                "response": "No relevant results found.",
-                "sources": [],
-            })
+    # 2️⃣ Pinecone search
+    results = index.query(
+        vector=vector,
+        top_k=top_k,
+        include_metadata=True
+    )
 
-        # 3️⃣ Build context
-        context_chunks = []
-        sources = []
-
-        for m in matches:
-            meta = m.get("metadata", {})
-            text = meta.get("text", "")
-            source = meta.get("source", "Unknown")
-
-            if text:
-                context_chunks.append(text[:1200])
-            sources.append(source)
-
-        context = "\n\n".join(context_chunks)
-
-        # 4️⃣ AI completion
-        ai_resp = requests.post(
-            f"{OPENROUTER_BASE_URL}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": OPENROUTER_MODEL,
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": (
-                            "You are a high-performance bodybuilding AI coach trained "
-                            "on Forged by Freedom transcripts. Give concise, science-based, "
-                            "and motivational answers."
-                        ),
-                    },
-                    {
-                        "role": "user",
-                        "content": f"Question: {query}\n\nContext:\n{context}",
-                    },
-                ],
-            },
-            timeout=60,
-        )
-        ai_resp.raise_for_status()
-        answer = ai_resp.json()["choices"][0]["message"]["content"]
-
+    matches = results.get("matches", [])
+    if not matches:
         return jsonify({
             "query": query,
-            "response": answer,
-            "sources": sources,
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "response": "No relevant results found.",
+            "sources": []
         })
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    context = []
+    sources = []
+
+    for m in matches:
+        meta = m.get("metadata", {})
+        if meta.get("text"):
+            context.append(meta["text"][:1200])
+        sources.append(meta.get("source", "Unknown"))
+
+    # 3️⃣ AI answer
+    ai = requests.post(
+        f"{OPENROUTER_BASE_URL}/chat/completions",
+        headers={
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": OPENROUTER_MODEL,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a no-nonsense bodybuilding AI coach. "
+                        "Use Forged by Freedom transcripts. Be concise, direct, and useful."
+                    ),
+                },
+                {
+                    "role": "user",
+                    "content": f"Question: {query}\n\nContext:\n{chr(10).join(context)}",
+                },
+            ],
+        },
+        timeout=60,
+    )
+    ai.raise_for_status()
+
+    answer = ai.json()["choices"][0]["message"]["content"]
+
+    return jsonify({
+        "query": query,
+        "response": answer,
+        "sources": sources,
+        "time": datetime.utcnow().isoformat() + "Z",
+    })
 
 # ============================================================
-# 🌐 HEALTH / ROOT
+# 🌐 HEALTH
 # ============================================================
 @app.route("/")
 def home():
@@ -143,18 +134,14 @@ def home():
         "message": "✅ Forged by Freedom ST3 AI Search Engine is online",
         "index": PINECONE_INDEX_NAME,
         "model": OPENROUTER_MODEL,
-        "time": datetime.utcnow().isoformat() + "Z",
     })
 
 @app.route("/health")
 def health():
-    return jsonify({
-        "status": "healthy",
-        "time": datetime.utcnow().isoformat() + "Z",
-    })
+    return jsonify({"status": "healthy"})
 
 # ============================================================
-# 🏁 Entry
+# 🏁 ENTRY
 # ============================================================
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5051))
