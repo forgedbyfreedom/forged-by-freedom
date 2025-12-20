@@ -15,12 +15,23 @@ from flask_cors import CORS
 from pinecone import Pinecone
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env", override=True)
+load_dotenv(override=True)
 
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "").strip()
-PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT", "us-east-1-aws").strip()
+PINECONE_API_KEY = (
+    os.getenv("Pinecone-API-Key")
+    or os.getenv("PINECONE_API_KEY")
+    or ""
+).strip()
+
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai").strip()
 
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "nousresearch/hermes-2-pro"
+EMBED_MODEL = "text-embedding-3-large"
+
+if not PINECONE_API_KEY:
+    raise RuntimeError("❌ Pinecone API key not found (check env vars)")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
 OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").strip()
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nousresearch/hermes-2-pro").strip()
