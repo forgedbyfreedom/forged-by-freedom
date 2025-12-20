@@ -6,3 +6,5 @@ python-dotenv>=1.0.1
 tqdm>=4.65.0
 requests>=2.32.0
 numpy>=1.26.0
+gunicorn
+requests
