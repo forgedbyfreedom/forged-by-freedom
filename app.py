@@ -28,15 +28,6 @@ if not PINECONE_API_KEY or not OPENROUTER_API_KEY:
 
 # ------------------ PINECONE ------------------
 pc = Pinecone(api_key=PINECONE_API_KEY)
-available = [i["name"] for i in pc.list_indexes()]
-
-if PINECONE_INDEX_NAME not in available:
-    raise RuntimeError(
-        f"Index '{PINECONE_INDEX_NAME}' not found. Available: {available}"
-    )
-
-index = pc.Index(PINECONE_INDEX_NAME)
-
 # ------------------ APP ------------------
 app = Flask(__name__)
 CORS(app)
