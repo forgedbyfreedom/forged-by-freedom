@@ -1,20 +1,20 @@
 import os
 from pathlib import Path
-from pinecone import Pinecone
 from dotenv import load_dotenv
+from pinecone import Pinecone
 
-# FORCE load .env
-env_path = Path(__file__).resolve().parents[1] / ".env"
-load_dotenv(env_path)
+load_dotenv(Path(".env"))
 
 api_key = os.getenv("PINECONE_API_KEY")
-print("API KEY LOADED:", bool(api_key))
+index_name = os.getenv("PINECONE_INDEX_NAME")
 
-if not api_key:
-    raise RuntimeError("PINECONE_API_KEY is missing")
+print("API key loaded:", bool(api_key))
+print("Index name:", index_name)
 
 pc = Pinecone(api_key=api_key)
 
-# This call will FAIL if auth is wrong
 indexes = pc.list_indexes()
-print("Pinecone indexes:", indexes)
+print("Indexes:", [i["name"] for i in indexes])
+
+assert index_name in [i["name"] for i in indexes], "Index name not found!"
+print("✅ Pinecone auth + index OK")
