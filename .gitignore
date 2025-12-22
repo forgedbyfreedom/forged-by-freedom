@@ -1,29 +1,28 @@
+# Environment variables
+.env
+.env.*
+*.env
+
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.log
-*.sqlite3
-
-# Virtual environments
 .venv/
-.venv311/
-env/
 venv/
 
-# Node
-node_modules/
-.wix/
-.vscode/
+# Logs
+*.log
 
-# Environment files
-.env
-.env.*
-
-# macOS junk
+# OS junk
 .DS_Store
 
-# Allow committed channel summary
-!transcripts/channels_summary.json
+# Large media / transcripts
+*.mp4
+*.mov
+*.wav
+*.zip
+
+# Git LFS leftovers
+.git/lfs
 
