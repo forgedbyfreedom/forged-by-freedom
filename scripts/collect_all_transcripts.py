@@ -4,7 +4,6 @@ Collect ALL transcripts across repo into transcripts_all/
 Authoritative source for stats, search, and Pinecone
 """
 
-import os
 import shutil
 from pathlib import Path
 
@@ -13,34 +12,37 @@ DEST = ROOT / "transcripts_all"
 DEST.mkdir(exist_ok=True)
 
 EXCLUDE_DIRS = {
-    ".git", ".venv", "node_modules", "large_media_backup",
-    "large_media_split", "__pycache__"
+    ".git",
+    ".venv",
+    "node_modules",
+    "__pycache__",
+    "large_media_backup",
+    "large_media_split",
+    "dist",
+    "backend"
 }
 
-def is_excluded(path: Path):
-    return any(p in EXCLUDE_DIRS for p in path.parts)
+def is_excluded(path: Path) -> bool:
+    return any(part in EXCLUDE_DIRS for part in path.parts)
 
 copied = 0
 seen = set()
 
-for path in ROOT.rglob("*.txt"):
-    if is_excluded(path):
+for txt in ROOT.rglob("*.txt"):
+    if is_excluded(txt):
         continue
 
-    # channel name = parent folder or @channel
-    channel = path.parent.name.replace("@", "").strip()
-    filename = path.name
-
+    channel = txt.parent.name.replace("@", "").strip()
     target_dir = DEST / channel
     target_dir.mkdir(exist_ok=True)
 
-    target = target_dir / filename
+    target = target_dir / txt.name
+    key = (channel, txt.name)
 
-    key = (channel, filename)
-    if key in seen:
+    if key in seen or target.exists():
         continue
 
-    shutil.copy2(path, target)
+    shutil.copy2(txt, target)
     seen.add(key)
     copied += 1
 
