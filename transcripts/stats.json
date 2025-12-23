@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f2998ca9bd5c3efecfb69695728d19914ffc7afcdb29e59de8d2bc3591d44652
-size 127
+{
+  "total_channels": 26,
+  "total_episodes": 4231,
+  "total_words": 28302420,
+  "last_updated": "2025-12-23T10:40:25.922575"
+}
