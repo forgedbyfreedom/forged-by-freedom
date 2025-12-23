@@ -1,15 +1,22 @@
-import os, json, requests
+#!/usr/bin/env python3
+
+import os
+import requests
 from pathlib import Path
 from pinecone import Pinecone
 from dotenv import load_dotenv
 
-load_dotenv()
-
-ROOT = Path(__file__).resolve().parents[1]
-TRANSCRIPTS = ROOT / "transcripts_all"
+# ---------------- ENV ----------------
+load_dotenv(
+    dotenv_path=Path(__file__).resolve().parents[1] / ".env",
+    override=True
+)
 
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(os.getenv("PINECONE_INDEX_NAME"))
+
+ROOT = Path(__file__).resolve().parents[1]
+TRANSCRIPTS = ROOT / "transcripts_all"
 
 def embed(text):
     r = requests.post(
@@ -18,29 +25,30 @@ def embed(text):
         json={"model": "text-embedding-3-large", "input": text},
         timeout=30
     )
+    r.raise_for_status()
     return r.json()["data"][0]["embedding"]
 
 batch = []
 
-for channel_dir in TRANSCRIPTS.iterdir():
-    if not channel_dir.is_dir():
+for ch in TRANSCRIPTS.iterdir():
+    if not ch.is_dir():
         continue
 
-    for txt in channel_dir.glob("*.txt"):
+    for txt in ch.glob("*.txt"):
         text = txt.read_text(errors="ignore")
-        if len(text) < 200:
+        if len(text) < 300:
             continue
 
-        vec = embed(text[:8000])
+        vec = embed(text[:6000])
 
         batch.append({
-            "id": f"{channel_dir.name}-{txt.stem}",
+            "id": f"{ch.name}:{txt.stem}",
             "values": vec,
             "metadata": {
-                "channel": channel_dir.name,
+                "channel": ch.name,
                 "episode": txt.stem,
-                "text": text[:2000],
-                "source": f"{channel_dir.name} / {txt.name}"
+                "text": text[:1500],
+                "source": f"{ch.name}/{txt.name}"
             }
         })
 
