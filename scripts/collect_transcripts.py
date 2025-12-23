@@ -1,40 +1,43 @@
 #!/usr/bin/env python3
 """
-Collect ALL transcript .txt files into transcripts_all/
-This is the single authoritative aggregation step.
+Collect ALL transcripts across repo into transcripts_all/
+Authoritative source for stats, search, and Pinecone
 """
 
-import shutil
 from pathlib import Path
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "transcripts_all"
 DEST.mkdir(exist_ok=True)
 
 EXCLUDE_DIRS = {
-    ".git", ".venv", "node_modules", "__pycache__", 
-    "large_media_backup", "large_media_split"
+    ".git", ".venv", "node_modules",
+    "large_media_backup", "large_media_split",
+    "__pycache__"
 }
 
 def is_excluded(path: Path) -> bool:
-    return any(part in EXCLUDE_DIRS for part in path.parts)
+    return any(p in EXCLUDE_DIRS for p in path.parts)
 
 copied = 0
 seen = set()
 
-for txt in ROOT.rglob("*.txt"):
-    if is_excluded(txt):
+for path in ROOT.rglob("*.txt"):
+    if is_excluded(path):
         continue
 
-    channel = txt.parent.name.replace("@", "").strip()
+    channel = path.parent.name.replace("@", "").strip()
+    filename = path.name
+
     target_dir = DEST / channel
     target_dir.mkdir(exist_ok=True)
 
-    key = (channel, txt.name)
+    key = (channel, filename)
     if key in seen:
         continue
 
-    shutil.copy2(txt, target_dir / txt.name)
+    shutil.copy2(path, target_dir / filename)
     seen.add(key)
     copied += 1
 
