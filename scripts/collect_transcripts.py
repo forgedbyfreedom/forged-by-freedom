@@ -1,34 +1,48 @@
-import os
+#!/usr/bin/env python3
+"""
+Collect ALL transcripts across repo into transcripts_all/
+Authoritative source for stats, search, and Pinecone
+"""
+
 import shutil
+from pathlib import Path
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DEST = os.path.join(ROOT, "transcripts_all")
+ROOT = Path(__file__).resolve().parents[1]
+DEST = ROOT / "transcripts_all"
+DEST.mkdir(parents=True, exist_ok=True)
 
-os.makedirs(DEST, exist_ok=True)
+EXCLUDE_DIRS = {
+    ".git", ".venv", "node_modules", "__pycache__",
+    "backend", "dist", "build",
+    "large_media_backup", "large_media_split",
+}
 
-FOUND = 0
+def is_excluded(path: Path) -> bool:
+    return any(part in EXCLUDE_DIRS for part in path.parts)
 
-for root, dirs, files in os.walk(ROOT):
-    # skip junk
-    if any(skip in root for skip in [
-        ".git", "node_modules", ".venv", "backend", "dist", "__pycache__"
-    ]):
+copied = 0
+seen = set()
+
+for path in ROOT.rglob("*.txt"):
+    if is_excluded(path):
         continue
 
-    for f in files:
-        if f.lower().endswith(".txt"):
-            src = os.path.join(root, f)
+    channel = path.parent.name.replace("@", "").strip() or "unknown"
+    filename = path.name
 
-            # channel name = parent folder
-            channel = os.path.basename(os.path.dirname(src))
-            channel_dir = os.path.join(DEST, channel)
+    target_dir = DEST / channel
+    target_dir.mkdir(parents=True, exist_ok=True)
 
-            os.makedirs(channel_dir, exist_ok=True)
+    target = target_dir / filename
+    key = (channel, filename)
 
-            dst = os.path.join(channel_dir, f)
+    if key in seen:
+        continue
 
-            if not os.path.exists(dst):
-                shutil.copy2(src, dst)
-                FOUND += 1
+    if not target.exists():
+        shutil.copy2(path, target)
+        copied += 1
 
-print(f"✅ Collected {FOUND} transcripts into transcripts_all/")
+    seen.add(key)
+
+print(f"✅ Collected {copied} transcripts into {DEST}")
