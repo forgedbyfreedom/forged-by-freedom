@@ -16,11 +16,14 @@ import tiktoken
 from openai import OpenAI
 from pinecone import Pinecone, ServerlessSpec
 from dotenv import load_dotenv
+from pathlib import Path
+import os
 
-# ============================================================
-# 🔐 Load Environment
-# ============================================================
-load_dotenv()
+ENV_PATH = Path(__file__).resolve().parents[1] / ".env"
+load_dotenv(dotenv_path=ENV_PATH, override=True)
+
+# Optional sanity check (safe)
+assert os.getenv("PINECONE_API_KEY"), "Missing PINECONE_API_KEY"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
