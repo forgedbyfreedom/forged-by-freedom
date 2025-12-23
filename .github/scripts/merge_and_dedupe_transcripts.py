@@ -2,12 +2,11 @@
 """
 merge_and_dedupe_transcripts.py
 --------------------------------
-One-time master script to merge all transcript data from:
-- Local GitHub repos (thinkbig-transcripts, fbf-data, forged-by-freedom)
-- OpenAI File Storage (uploaded transcripts)
-- Existing Pinecone index (if present)
+One-time master script to merge local transcripts, dedupe, embed, and upsert to Pinecone.
 
-Deduplicates across all sources, embeds using OpenAI, and updates Pinecone index.
+NOTE:
+- Uses OpenRouter embeddings (via OpenAI SDK base_url OR direct HTTP)
+- Uses Pinecone SDK (Pinecone class), NOT pinecone.init()
 """
 
 import os
@@ -15,144 +14,125 @@ import json
 import hashlib
 import time
 from pathlib import Path
+
 from tqdm import tqdm
-from openai import OpenAI
-import pinecone
-
-# === Load environment variables ===
 from dotenv import load_dotenv
-load_dotenv()
+from pinecone import Pinecone
+from openai import OpenAI
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX = os.getenv("PINECONE_INDEX", "forged-freedom-ai")
 
-if not OPENAI_API_KEY or not PINECONE_API_KEY:
-    raise SystemExit("❌ Missing API keys — check your .env file.")
+# ---- ENV (explicit path) ----
+ROOT = Path(__file__).resolve().parents[2]  # .github/scripts -> repo root
+load_dotenv(dotenv_path=ROOT / ".env", override=True)
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+OPENROUTER_API_KEY = (os.getenv("OPENROUTER_API_KEY") or "").strip()
+OPENROUTER_BASE_URL = (os.getenv("OPENROUTER_BASE_URL") or "https://openrouter.ai/api/v1").strip()
+EMBED_MODEL = (os.getenv("OPENROUTER_EMBED_MODEL") or "text-embedding-3-large").strip()
 
-# === Initialize Pinecone ===
-pinecone.init(api_key=PINECONE_API_KEY, environment="us-east1-gcp")
-if PINECONE_INDEX not in pinecone.list_indexes().names():
-    pinecone.create_index(name=PINECONE_INDEX, dimension=3072, metric="cosine")
+PINECONE_API_KEY = (os.getenv("PINECONE_API_KEY") or "").strip()
+INDEX_NAME = (os.getenv("PINECONE_INDEX_NAME") or "forged-freedom-ai").strip()
 
-index = pinecone.Index(PINECONE_INDEX)
+if not OPENROUTER_API_KEY or not PINECONE_API_KEY:
+    raise SystemExit("❌ Missing OPENROUTER_API_KEY or PINECONE_API_KEY")
 
-# === Helper functions ===
+or_client = OpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(INDEX_NAME)
+
 
 def clean_text(text: str) -> str:
-    """Remove noise, timestamps, and repeated whitespace."""
     import re
     text = re.sub(r"\[[0-9:]+\]", "", text)
     text = re.sub(r"\s+", " ", text)
-    text = re.sub(r"(?i)transcript|episode|podcast", "", text)
     return text.strip()
 
-def chunk_text(text: str, size: int = 400):
-    """Chunk text into ~400 word sections for embedding."""
+
+def chunk_text(text: str, size_words: int = 400):
     words = text.split()
-    for i in range(0, len(words), size):
-        yield " ".join(words[i:i+size])
+    for i in range(0, len(words), size_words):
+        yield " ".join(words[i:i+size_words])
 
-def file_hash(content: str) -> str:
-    return hashlib.sha1(content.encode("utf-8")).hexdigest()
 
-# === Phase 1: Gather files from local repos ===
+def sha1(s: str) -> str:
+    return hashlib.sha1(s.encode("utf-8", "surrogatepass")).hexdigest()
 
+
+def embed(chunk: str):
+    resp = or_client.embeddings.create(model=EMBED_MODEL, input=chunk)
+    return resp.data[0].embedding
+
+
+# ---- gather files ----
 root_dirs = [
-    Path("transcripts"),
-    Path("thinkbig-transcripts"),
-    Path("fbf-data")
+    ROOT / "transcripts_all",
+    ROOT / "transcripts",
+    ROOT / "split_transcripts",
 ]
 
-print("\n📁 Scanning local transcript repositories...")
-local_texts = {}
+print("\n📁 Scanning transcript directories...")
+unique_texts = {}
 
-for root in root_dirs:
-    if not root.exists():
+for base in root_dirs:
+    if not base.exists():
         continue
-    for txt in root.rglob("*.txt"):
+    for txt in base.rglob("*.txt"):
         try:
-            content = open(txt, "r", encoding="utf-8", errors="ignore").read()
-            cleaned = clean_text(content)
-            h = file_hash(cleaned)
-            local_texts[h] = {"path": str(txt), "text": cleaned}
+            raw = txt.read_text(encoding="utf-8", errors="ignore")
+            cleaned = clean_text(raw)
+            if len(cleaned) < 200:
+                continue
+            h = sha1(cleaned)
+            if h not in unique_texts:
+                unique_texts[h] = {"path": str(txt.relative_to(ROOT)), "text": cleaned}
         except Exception as e:
             print(f"⚠️ Error reading {txt}: {e}")
 
-print(f"✅ Found {len(local_texts)} unique text files locally.")
+print(f"✅ Found {len(unique_texts)} unique transcript files")
 
-# === Phase 2: Include OpenAI Storage Files ===
-
-print("\n☁️ Checking OpenAI file storage...")
-try:
-    openai_files = client.files.list().data
-    print(f"✅ Found {len(openai_files)} files in OpenAI storage.")
-except Exception as e:
-    print(f"⚠️ Error listing OpenAI files: {e}")
-    openai_files = []
-
-# === Phase 3: Pull existing Pinecone metadata ===
-
-print("\n🔍 Checking Pinecone index...")
-try:
-    stats = index.describe_index_stats()
-    total_vectors = stats["total_vector_count"]
-    print(f"✅ Pinecone contains {total_vectors} total vectors.")
-except Exception as e:
-    print(f"⚠️ Unable to retrieve Pinecone stats: {e}")
-
-# === Phase 4: Deduplicate + Embed new text ===
-
-print("\n🧠 Embedding and uploading new text chunks to Pinecone...")
-existing_hashes = set(local_texts.keys())
+# ---- embed + upsert ----
+print("\n🧠 Embedding and uploading chunks to Pinecone...")
 batch = []
-batch_size = 50
+BATCH_SIZE = 50
 upserts = 0
 
-for h, entry in tqdm(local_texts.items()):
-    text = entry["text"]
-    chunks = list(chunk_text(text))
+for h, entry in tqdm(unique_texts.items(), desc="Upserting"):
+    chunks = list(chunk_text(entry["text"]))
     for i, chunk in enumerate(chunks):
-        chunk_id = f"{h}-{i}"
+        vec_id = f"{h}-{i}"
         try:
-            embedding = client.embeddings.create(
-                input=chunk,
-                model="text-embedding-3-large"
-            ).data[0].embedding
+            emb = embed(chunk)
+            batch.append({
+                "id": vec_id,
+                "values": emb,
+                "metadata": {
+                    "source": entry["path"],
+                    "hash": h,
+                    "chunk": i,
+                    "text": chunk[:2000],
+                }
+            })
 
-            batch.append((chunk_id, embedding, {"source": entry["path"]}))
-
-            if len(batch) >= batch_size:
+            if len(batch) >= BATCH_SIZE:
                 index.upsert(vectors=batch)
                 upserts += len(batch)
                 batch.clear()
 
         except Exception as e:
-            print(f"⚠️ Failed to embed {entry['path']}: {e}")
+            print(f"⚠️ Failed to embed/upsert {entry['path']}: {e}")
 
-# Final upsert
 if batch:
     index.upsert(vectors=batch)
     upserts += len(batch)
 
-print(f"\n✅ Uploaded {upserts} new vectors to Pinecone.")
-
-# === Phase 5: Write manifest file ===
+print(f"\n✅ Uploaded {upserts} vectors to Pinecone")
 
 manifest = {
     "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-    "total_files": len(local_texts),
-    "total_vectors": upserts,
-    "sources": list({Path(p['path']).parent.name for p in local_texts.values()})
+    "unique_files": len(unique_texts),
+    "vectors_upserted": upserts,
 }
 
-with open("file_index.json", "w", encoding="utf-8") as f:
-    json.dump(manifest, f, indent=2)
-
-print("\n📦 Manifest written to file_index.json")
-print(json.dumps(manifest, indent=2))
-
-print("\n🎯 Merge and deduplication complete!")
-print("All transcript data is now unified in Pinecone.")
+out = ROOT / "file_index.json"
+out.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+print(f"📦 Manifest written: {out}")
+print("🎯 Merge + dedupe complete.")
