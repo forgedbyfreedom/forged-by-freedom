@@ -2,76 +2,54 @@
 import os
 import json
 from glob import glob
+from pathlib import Path
+from dotenv import load_dotenv
 
-# --------------------------------------------------
-# Paths
-# --------------------------------------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
-TRANSCRIPTS_DIR = os.path.join(ROOT, "transcripts")
-OUTPUT_PATH = os.path.join(TRANSCRIPTS_DIR, "channels_summary.json")
+# ---------------- ENV ----------------
+ENV_PATH = Path(__file__).resolve().parents[1] / ".env"
+load_dotenv(dotenv_path=ENV_PATH, override=True)
 
-# --------------------------------------------------
-# Safety check
-# --------------------------------------------------
-if not os.path.isdir(TRANSCRIPTS_DIR):
+# ---------------- PATHS ----------------
+ROOT = Path(__file__).resolve().parents[1]
+TRANSCRIPTS_DIR = ROOT / "transcripts"
+OUTPUT_PATH = TRANSCRIPTS_DIR / "channels_summary.json"
+
+if not TRANSCRIPTS_DIR.is_dir():
     raise RuntimeError(f"Missing transcripts directory: {TRANSCRIPTS_DIR}")
 
-# --------------------------------------------------
-# Auto-detect channel folders
-# --------------------------------------------------
-channel_folders = [
-    os.path.join(TRANSCRIPTS_DIR, d)
-    for d in os.listdir(TRANSCRIPTS_DIR)
-    if os.path.isdir(os.path.join(TRANSCRIPTS_DIR, d))
-]
-
-# --------------------------------------------------
-# Indexing
-# --------------------------------------------------
-total_channels = len(channel_folders)
-total_files = 0
-total_words = 0
+# ---------------- INDEX ----------------
 channels = []
+total_words = 0
+total_files = 0
 
-for folder in sorted(channel_folders):
-    txt_files = glob(os.path.join(folder, "*.txt"))
-    episode_count = len(txt_files)
-    word_count = 0
+for folder in sorted(p for p in TRANSCRIPTS_DIR.iterdir() if p.is_dir()):
+    txt_files = list(folder.glob("*.txt"))
+    words = 0
 
-    for fpath in txt_files:
+    for f in txt_files:
         try:
-            with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
-                word_count += len(f.read().split())
+            words += len(f.read_text(errors="ignore").split())
         except Exception:
             continue
 
     channels.append({
-        "channel": os.path.basename(folder),
-        "episodes": episode_count,
-        "words": word_count
+        "channel": folder.name,
+        "episodes": len(txt_files),
+        "words": words
     })
 
-    total_files += episode_count
-    total_words += word_count
+    total_files += len(txt_files)
+    total_words += words
 
-# --------------------------------------------------
-# Output
-# --------------------------------------------------
 summary = {
     "summary": {
-        "channels": total_channels,
+        "channels": len(channels),
         "episodes": total_files,
         "total_words": total_words
     },
     "channels": channels
 }
 
-with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-    json.dump(summary, f, indent=2)
+OUTPUT_PATH.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-print("=== 📊 Per-Channel Transcript Summary ===")
-print(f"Channels: {total_channels}")
-print(f"Episodes: {total_files}")
-print(f"Words: {total_words:,}")
-print(f"✅ Saved to {OUTPUT_PATH}")
+print("✅ Channel summary written:", OUTPUT_PATH)
