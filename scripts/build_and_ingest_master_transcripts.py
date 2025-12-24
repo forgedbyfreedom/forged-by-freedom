@@ -7,22 +7,30 @@ import requests
 from pinecone import Pinecone
 from dotenv import load_dotenv
 
-# ---------------- ENV ----------------
-ENV_PATH = Path(__file__).resolve().parents[1] / ".env"
-load_dotenv(dotenv_path=ENV_PATH, override=True)
+
+# --------------------------------------------------
+# ENV (CORRECT)
+# --------------------------------------------------
+load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env", override=True)
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 assert PINECONE_API_KEY, "Missing PINECONE_API_KEY"
 assert OPENROUTER_API_KEY, "Missing OPENROUTER_API_KEY"
 
-# ---------------- PATHS ----------------
+
+# --------------------------------------------------
+# PATHS
+# --------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
 TRANSCRIPTS = ROOT / "transcripts_all"
 
-# ---------------- HELPERS ----------------
+
+# --------------------------------------------------
+# HELPERS
+# --------------------------------------------------
 def chunk_text(text, size=1200, overlap=200):
     chunks = []
     start = 0
@@ -31,15 +39,22 @@ def chunk_text(text, size=1200, overlap=200):
         start += size - overlap
     return chunks
 
-# ---------------- INIT ----------------
+
+# --------------------------------------------------
+# CLIENTS
+# --------------------------------------------------
 pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(PINECONE_INDEX)
+index = pc.Index(PINECONE_INDEX_NAME)
+
 
 files = list(TRANSCRIPTS.rglob("*.txt"))
-print(f"📄 Found {len(files)} transcripts")
+print(f"📄 Found {len(files)} transcript files")
 
-# ---------------- INGEST ----------------
-for file in tqdm(files):
+
+# --------------------------------------------------
+# INGEST
+# --------------------------------------------------
+for file in tqdm(files, desc="Uploading"):
     try:
         text = file.read_text(errors="ignore")
         if len(text) < 500:
@@ -49,16 +64,19 @@ for file in tqdm(files):
         title = file.stem
 
         for i, chunk in enumerate(chunk_text(text)):
-            emb = requests.post(
+            resp = requests.post(
                 "https://openrouter.ai/api/v1/embeddings",
                 headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}"},
                 json={"model": "text-embedding-3-large", "input": chunk},
                 timeout=30
-            ).json()["data"][0]["embedding"]
+            )
+            resp.raise_for_status()
+
+            embedding = resp.json()["data"][0]["embedding"]
 
             index.upsert([{
-                "id": f"{channel}-{title}-{i}",
-                "values": emb,
+                "id": str(uuid.uuid4()),
+                "values": embedding,
                 "metadata": {
                     "channel": channel,
                     "title": title,
@@ -66,8 +84,8 @@ for file in tqdm(files):
                     "text": chunk
                 }
             }])
+
     except Exception as e:
         print(f"⚠️ Failed {file}: {e}")
 
 print("✅ MASTER INGEST COMPLETE")
-
