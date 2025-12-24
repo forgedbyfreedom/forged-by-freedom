@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """
 Forged By Freedom AI Coach API
---------------------------------
-• Pinecone SDK v3+
-• OpenRouter via OpenAI SDK
-• Explicit .env loading (local)
-• Safe startup on Render
+- Pinecone v3/v4+ compatible (Pinecone class)
+- OpenRouter via OpenAI SDK base_url
+- Works locally (.env) and on Render (env vars)
 """
 
 import os
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -22,18 +20,26 @@ from pinecone import Pinecone
 from openai import OpenAI
 
 
-# ============================================================
-# 🔐 ENV LOADING (EXPLICIT — DO NOT CHANGE)
-# ============================================================
-REPO_ROOT = Path(__file__).resolve().parent
-DOTENV_PATH = REPO_ROOT / ".env"
+# ------------------ ENV ------------------
+def load_env():
+    """
+    Load .env ONLY if present. On Render, env vars are injected so this is harmless.
+    Explicit path prevents dotenv issues in newer Python.
+    """
+    repo_root = Path(__file__).resolve().parent
+    env_path = repo_root / ".env"
+    if env_path.exists():
+        load_dotenv(dotenv_path=env_path, override=True)
 
-# Local dev → loads .env
-# Render → no .env present, env vars already injected
-load_dotenv(dotenv_path=DOTENV_PATH, override=True)
+load_env()
 
+# Support both var names (you have both in different places historically)
 PINECONE_API_KEY = (os.getenv("PINECONE_API_KEY") or "").strip()
-PINECONE_INDEX_NAME = (os.getenv("PINECONE_INDEX_NAME") or "forged-freedom-ai").strip()
+PINECONE_INDEX_NAME = (os.getenv("PINECONE_INDEX_NAME") or os.getenv("PINECONE_INDEX_NAME") or os.getenv("PINECONE_INDEX") or "forged-freedom-ai").strip()
+PINECONE_INDEX_NAME = (os.getenv("PINECONE_INDEX_NAME") or os.getenv("PINECONE_INDEX_NAME") or os.getenv("PINECONE_INDEX") or "forged-freedom-ai").strip()
+
+# If you’ve standardized on PINECONE_INDEX_NAME, keep it:
+PINECONE_INDEX_NAME = (os.getenv("PINECONE_INDEX_NAME") or os.getenv("PINECONE_INDEX_NAME") or "forged-freedom-ai").strip()
 
 OPENROUTER_API_KEY = (os.getenv("OPENROUTER_API_KEY") or "").strip()
 OPENROUTER_BASE_URL = (os.getenv("OPENROUTER_BASE_URL") or "https://openrouter.ai/api/v1").strip()
@@ -42,117 +48,101 @@ OPENROUTER_MODEL = (os.getenv("OPENROUTER_MODEL") or "nousresearch/hermes-3-llam
 OPENROUTER_EMBED_MODEL = (os.getenv("OPENROUTER_EMBED_MODEL") or "text-embedding-3-large").strip()
 
 PORT = int(os.getenv("PORT", "5051"))
+
+# where your scripts write stats
 STATS_PATH = os.getenv("STATS_PATH", "transcripts/stats.json")
 
 
-# ============================================================
-# 🧠 HELPERS
-# ============================================================
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def have_required_env() -> bool:
-    return bool(PINECONE_API_KEY and OPENROUTER_API_KEY)
+def require_env(name: str, value: str):
+    if not value:
+        raise RuntimeError(f"Missing {name}. Set it in Render env vars or local .env")
 
 
-def build_clients():
-    """
-    Lazy-build clients so the app can boot even if Pinecone is down.
-    Returns: (pinecone_index, openrouter_client, error)
-    """
-    if not have_required_env():
-        missing = []
-        if not PINECONE_API_KEY:
-            missing.append("PINECONE_API_KEY")
-        if not OPENROUTER_API_KEY:
-            missing.append("OPENROUTER_API_KEY")
-        return None, None, f"Missing env vars: {', '.join(missing)}"
-
-    try:
-        pc = Pinecone(api_key=PINECONE_API_KEY)
-        index = pc.Index(PINECONE_INDEX_NAME)
-    except Exception as e:
-        return None, None, f"Pinecone init failed: {e}"
-
-    try:
-        or_client = OpenAI(
-            api_key=OPENROUTER_API_KEY,
-            base_url=OPENROUTER_BASE_URL
-        )
-    except Exception as e:
-        return index, None, f"OpenRouter init failed: {e}"
-
-    return index, or_client, None
+require_env("PINECONE_API_KEY", PINECONE_API_KEY)
+require_env("OPENROUTER_API_KEY", OPENROUTER_API_KEY)
 
 
-def embed_query(or_client: OpenAI, text: str) -> List[float]:
-    resp = or_client.embeddings.create(
-        model=OPENROUTER_EMBED_MODEL,
-        input=text
-    )
-    return resp.data[0].embedding
+# ------------------ CLIENTS ------------------
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(PINECONE_INDEX_NAME)
+
+or_client = OpenAI(api_key=OPENROUTER_API_KEY, base_url=OPENROUTER_BASE_URL)
 
 
-def chat_answer(or_client: OpenAI, question: str, context: str) -> str:
-    resp = or_client.chat.completions.create(
-        model=OPENROUTER_MODEL,
-        temperature=0.4,
-        messages=[
-            {"role": "system", "content": "You are the Forged By Freedom AI Coach."},
-            {
-                "role": "user",
-                "content": f"Question:\n{question}\n\nContext (quotes allowed):\n{context}",
-            },
-        ],
-    )
-    return resp.choices[0].message.content
-
-
-# ============================================================
-# 🚀 FLASK APP
-# ============================================================
+# ------------------ APP ------------------
 app = Flask(__name__)
 CORS(app)
 
 
 @app.get("/")
 def root():
-    return jsonify({
-        "status": "ok",
-        "service": "forged-by-freedom-ai",
-        "index": PINECONE_INDEX_NAME,
-        "model": OPENROUTER_MODEL,
-        "embed_model": OPENROUTER_EMBED_MODEL,
-        "time": now_iso(),
-    })
+    return jsonify(
+        {
+            "status": "ok",
+            "service": "forged-by-freedom-ai",
+            "index": PINECONE_INDEX_NAME,
+            "model": OPENROUTER_MODEL,
+            "embed_model": OPENROUTER_EMBED_MODEL,
+            "time": now_iso(),
+        }
+    )
 
 
 @app.get("/health")
 def health():
-    index, or_client, err = build_clients()
-    return jsonify({
-        "status": "ok" if err is None else "degraded",
-        "env_ok": have_required_env(),
-        "pinecone_index": PINECONE_INDEX_NAME,
-        "openrouter_base": OPENROUTER_BASE_URL,
-        "error": err,
-        "time": now_iso(),
-    })
+    return jsonify({"status": "ok", "time": now_iso()})
 
 
 @app.get("/stats")
 def stats():
     if not os.path.exists(STATS_PATH):
-        return jsonify({
-            "total_channels": 0,
-            "total_episodes": 0,
-            "total_words": 0,
-            "last_updated": None,
-        })
+        return jsonify(
+            {
+                "summary": {"channels": 0, "episodes": 0, "total_words": 0},
+                "channels": [],
+                "last_updated": None,
+            }
+        )
 
     with open(STATS_PATH, "r", encoding="utf-8") as f:
-        return jsonify(json.load(f))
+        data = json.load(f)
+    return jsonify(data)
+
+
+def embed_query(text: str) -> List[float]:
+    resp = or_client.embeddings.create(model=OPENROUTER_EMBED_MODEL, input=text)
+    return resp.data[0].embedding
+
+
+def chat_answer(user_query: str, context: str) -> str:
+    resp = or_client.chat.completions.create(
+        model=OPENROUTER_MODEL,
+        messages=[
+            {"role": "system", "content": "You are the Forged By Freedom AI Coach."},
+            {
+                "role": "user",
+                "content": f"Question:\n{user_query}\n\nUse this context:\n{context}",
+            },
+        ],
+        temperature=0.4,
+    )
+    return resp.choices[0].message.content
+
+
+@app.get("/search")
+def search_help():
+    # Prevent 405 confusion in browsers/Wix preview tools.
+    return jsonify(
+        {
+            "ok": True,
+            "message": "Use POST /search with JSON: { 'query': '...', 'top_k': 5 }",
+            "example_curl": "curl -X POST /search -H 'Content-Type: application/json' -d '{\"query\":\"test\",\"top_k\":5}'",
+        }
+    ), 200
 
 
 @app.post("/search")
@@ -164,54 +154,43 @@ def search():
     if not query:
         return jsonify({"error": "Missing query"}), 400
 
-    index, or_client, err = build_clients()
-    if err or not index or not or_client:
-        return jsonify({"error": "Service unavailable", "details": err}), 503
-
     try:
-        qvec = embed_query(or_client, query)
-        res = index.query(
-            vector=qvec,
-            top_k=top_k,
-            include_metadata=True
+        qvec = embed_query(query)
+        res = index.query(vector=qvec, top_k=top_k, include_metadata=True)
+
+        chunks: List[str] = []
+        sources: List[str] = []
+
+        for m in (res.get("matches") or []):
+            md = m.get("metadata") or {}
+            txt = md.get("text") or ""
+            if txt:
+                chunks.append(txt[:1800])
+            sources.append(md.get("source") or md.get("filename") or md.get("title") or "Unknown")
+
+        context = "\n\n---\n\n".join(chunks) if chunks else ""
+        answer = chat_answer(query, context) if context else "No matching transcript context was found in the index."
+
+        return jsonify(
+            {
+                "query": query,
+                "response": answer,
+                "sources": sources,
+                "timestamp": now_iso(),
+                "top_k": top_k,
+            }
         )
-
-        chunks = []
-        sources = []
-
-        for m in res.get("matches", []):
-            md = m.get("metadata", {})
-            text = md.get("text")
-            if text:
-                chunks.append(text[:1800])
-            sources.append(
-                md.get("source")
-                or md.get("filename")
-                or md.get("episode")
-                or "Unknown"
-            )
-
-        context = "\n\n---\n\n".join(chunks)
-        answer = (
-            chat_answer(or_client, query, context)
-            if context
-            else "No matching transcript context was found."
-        )
-
-        return jsonify({
-            "query": query,
-            "response": answer,
-            "sources": sources,
-            "top_k": top_k,
-            "timestamp": now_iso(),
-        })
-
     except Exception as e:
-        return jsonify({"error": "Search failed", "details": str(e)}), 500
+        msg = str(e)
+        if "Unauthorized" in msg or "Invalid API Key" in msg:
+            return jsonify(
+                {
+                    "error": "Pinecone auth failed",
+                    "details": "PINECONE_API_KEY is invalid for this Pinecone project OR the wrong key is deployed on Render.",
+                }
+            ), 401
+        return jsonify({"error": "Search failed", "details": msg}), 500
 
 
-# ============================================================
-# 🧯 ENTRYPOINT
-# ============================================================
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=PORT)
