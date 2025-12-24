@@ -30,4 +30,3 @@ export async function get_stats() {
       body: { error: err.message }
     });
   }
-}
