@@ -1,14 +1,17 @@
-# scripts/pinecone_client.py
-
+from pathlib import Path
+from dotenv import load_dotenv
 import os
-import pinecone
+from pinecone import Pinecone
 
-def get_pinecone_index():
-    api_key = os.getenv("PINECONE_API_KEY")
-    index_name = os.getenv("PINECONE_INDEX_NAME")
+ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(dotenv_path=ROOT / ".env", override=True)
 
-    if not api_key or not index_name:
-        raise RuntimeError("PINECONE_API_KEY or PINECONE_INDEX_NAME not set")
+def get_index():
+    key = os.getenv("PINECONE_API_KEY")
+    name = os.getenv("PINECONE_INDEX_NAME")
 
-    pc = pinecone.Pinecone(api_key=api_key)
-    return pc.Index(index_name)
+    if not key or not name:
+        raise RuntimeError("Missing Pinecone configuration")
+
+    pc = Pinecone(api_key=key)
+    return pc.Index(name)
