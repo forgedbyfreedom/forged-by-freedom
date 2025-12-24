@@ -1,55 +1,91 @@
 #!/usr/bin/env python3
 import os
-import json
-from glob import glob
+import uuid
 from pathlib import Path
+from tqdm import tqdm
+import requests
+from pinecone import Pinecone
 from dotenv import load_dotenv
 
-# ---------------- ENV ----------------
-ENV_PATH = Path(__file__).resolve().parents[1] / ".env"
-load_dotenv(dotenv_path=ENV_PATH, override=True)
 
-# ---------------- PATHS ----------------
+# --------------------------------------------------
+# ENV (CORRECT)
+# --------------------------------------------------
+load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env", override=True)
+
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+assert PINECONE_API_KEY, "Missing PINECONE_API_KEY"
+assert OPENROUTER_API_KEY, "Missing OPENROUTER_API_KEY"
+
+
+# --------------------------------------------------
+# PATHS
+# --------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
-TRANSCRIPTS_DIR = ROOT / "transcripts"
-OUTPUT_PATH = TRANSCRIPTS_DIR / "channels_summary.json"
+TRANSCRIPTS = ROOT / "transcripts_all"
 
-if not TRANSCRIPTS_DIR.is_dir():
-    raise RuntimeError(f"Missing transcripts directory: {TRANSCRIPTS_DIR}")
 
-# ---------------- INDEX ----------------
-channels = []
-total_words = 0
-total_files = 0
+# --------------------------------------------------
+# HELPERS
+# --------------------------------------------------
+def chunk_text(text, size=1200, overlap=200):
+    chunks = []
+    start = 0
+    while start < len(text):
+        chunks.append(text[start:start + size])
+        start += size - overlap
+    return chunks
 
-for folder in sorted(p for p in TRANSCRIPTS_DIR.iterdir() if p.is_dir()):
-    txt_files = list(folder.glob("*.txt"))
-    words = 0
 
-    for f in txt_files:
-        try:
-            words += len(f.read_text(errors="ignore").split())
-        except Exception:
+# --------------------------------------------------
+# CLIENTS
+# --------------------------------------------------
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(PINECONE_INDEX_NAME)
+
+
+files = list(TRANSCRIPTS.rglob("*.txt"))
+print(f"📄 Found {len(files)} transcript files")
+
+
+# --------------------------------------------------
+# INGEST
+# --------------------------------------------------
+for file in tqdm(files, desc="Uploading"):
+    try:
+        text = file.read_text(errors="ignore")
+        if len(text) < 500:
             continue
 
-    channels.append({
-        "channel": folder.name,
-        "episodes": len(txt_files),
-        "words": words
-    })
+        channel = file.parent.name
+        title = file.stem
 
-    total_files += len(txt_files)
-    total_words += words
+        for i, chunk in enumerate(chunk_text(text)):
+            resp = requests.post(
+                "https://openrouter.ai/api/v1/embeddings",
+                headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}"},
+                json={"model": "text-embedding-3-large", "input": chunk},
+                timeout=30
+            )
+            resp.raise_for_status()
 
-summary = {
-    "summary": {
-        "channels": len(channels),
-        "episodes": total_files,
-        "total_words": total_words
-    },
-    "channels": channels
-}
+            embedding = resp.json()["data"][0]["embedding"]
 
-OUTPUT_PATH.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+            index.upsert([{
+                "id": str(uuid.uuid4()),
+                "values": embedding,
+                "metadata": {
+                    "channel": channel,
+                    "title": title,
+                    "chunk": i,
+                    "text": chunk
+                }
+            }])
 
-print("✅ Channel summary written:", OUTPUT_PATH)
+    except Exception as e:
+        print(f"⚠️ Failed {file}: {e}")
+
+print("✅ MASTER INGEST COMPLETE")
