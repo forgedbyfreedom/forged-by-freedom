@@ -1,43 +1,48 @@
-# --- Secrets ---
+# =====================
+# ENVIRONMENT / SECRETS
+# =====================
 .env
 .env.*
 *.key
 *.pem
 
-# --- Python ---
+# =====================
+# PYTHON
+# =====================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .venv/
 venv/
-.envrc
 
-# --- Node ---
+# =====================
+# NODE
+# =====================
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# --- OS ---
-.DS_Store
-Thumbs.db
-
-# --- Large media (NEVER in git) ---
+# =====================
+# MEDIA FILES (NEVER COMMIT)
+# =====================
 *.mp4
 *.mov
-*.mkv
 *.avi
+*.mkv
 *.wav
 *.mp3
-*.flac
 
-# split/partial media
+# Media splits / shards
 large_media_split/
 transcripts/large_media_split/
-large_media_backup/
 
-# --- Generated stats (optional: keep if you want committed) ---
-# If you want these committed, comment these 2 lines out:
-# transcripts/stats.json
-# transcripts/transcripts_summary.json
+# =====================
+# TRANSCRIPT RAW MEDIA
+# =====================
+transcripts/**/*.mp4
+transcripts/**/*.mov
+
+# =====================
+# LOGS / TEMP
+# =====================
+*.log
+.DS_Store
