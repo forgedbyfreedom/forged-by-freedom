@@ -22,21 +22,38 @@ index = pc.Index("forged-freedom-ai")
 def home():
     return jsonify({"status": "ok", "message": "Forged by Freedom API live"})
 
-@app.route("/query", methods=["POST"])
+app.route("/query", methods=["POST"])
 def query_pinecone():
     data = request.json
     query = data.get("query", "")
     if not query:
         return jsonify({"error": "Missing query"}), 400
 
+    # Debugging logs
+    print(f"Received query: {query}")
+
     # Embed query via OpenAI
-    embed = openai.embeddings.create(
-        model="text-embedding-3-large",
-        input=query
-    ).data[0].embedding
+    try:
+        print("Calling OpenAI API...")
+        embed = openai.Embedding.create(
+            model="text-embedding-3-large",
+            input=query
+        )["data"][0]["embedding"]
+        print(f"Generated embedding: {embed[:10]}...")  # Print first 10 dimensions
+    except Exception as e:
+        print(f"Error in OpenAI embedding creation: {e}")
+        return jsonify({"error": "Failed to generate embedding", "details": str(e)}), 500
 
     # Search Pinecone
-    res = index.query(vector=embed, top_k=5, include_metadata=True)
+    try:
+        print("Querying Pinecone...")
+        res = index.query(vector=embed, top_k=5, include_metadata=True)
+        print(f"Pinecone response: {res}")
+    except Exception as e:
+        print(f"Error in Pinecone query: {e}")
+        return jsonify({"error": "Failed to query Pinecone", "details": str(e)}), 500
+
+    # If no errors occur
     return jsonify(res.to_dict())
 
 if __name__ == "__main__":
