@@ -10,8 +10,27 @@ import os
 from pinecone import Pinecone, ServerlessSpec
 
 # Initialize Flask app
-app = Flask(__name__)
-CORS(app)
+@app.route("/query", methods=["POST"])
+def query_pinecone():
+    data = request.json
+    query = data.get("query", "")
+    if not query:
+        return jsonify({"error": "Missing query"}), 400
+
+    print(f"Received query: {query}")
+
+    # Generate an embedding (replace this placeholder with actual OpenAI embedding logic)
+    embed = [0.0] * 3072  # Placeholder for the correct dimension
+
+    # Query Pinecone
+    try:
+        res = index.query(vector=embed, top_k=5, include_metadata=True)
+    except Exception as e:
+        print(f"Error querying Pinecone: {e}")
+        return jsonify({"error": f"Pinecone query failed: {str(e)}"}), 500
+
+    return jsonify(res.to_dict())
+
 
 # Load API keys from environment variables
 openai_api_key = os.getenv("OPENROUTER_API_KEY")
