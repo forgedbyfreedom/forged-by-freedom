@@ -15,14 +15,26 @@ CORS(app)
 openai.api_key = os.getenv("OPENROUTER_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
 
-pc = pinecone.Pinecone(api_key=pinecone_api_key)
-index = pc.Index("forged-freedom-ai")
+# Validate environment variables
+if not openai.api_key:
+    raise ValueError("Missing OpenAI API key: Ensure 'OPENROUTER_API_KEY' is set in your environment.")
+if not pinecone_api_key:
+    raise ValueError("Missing Pinecone API key: Ensure 'PINECONE_API_KEY' is set in your environment.")
+
+# Initialize Pinecone
+try:
+    pinecone.init(api_key=pinecone_api_key, environment="us-east-1")  # Adjust the environment if needed
+    index = pinecone.Index("forged-freedom-ai")
+    print(index.describe_index_stats())  # Optional: Confirm index statistics
+except Exception as e:
+    raise ValueError(f"Pinecone initialization failed: {e}")
 
 @app.route("/")
 def home():
     return jsonify({"status": "ok", "message": "Forged by Freedom API live"})
 
-app.route("/query", methods=["POST"])
+# Fix the decorator for the /query route
+@app.route("/query", methods=["POST"])
 def query_pinecone():
     data = request.json
     query = data.get("query", "")
@@ -35,11 +47,12 @@ def query_pinecone():
     # Embed query via OpenAI
     try:
         print("Calling OpenAI API...")
-        embed = openai.Embedding.create(
+        response = openai.Embedding.create(
             model="text-embedding-3-large",
             input=query
-        )["data"][0]["embedding"]
-        print(f"Generated embedding: {embed[:10]}...")  # Print first 10 dimensions
+        )
+        embed = response["data"][0]["embedding"]
+        print(f"Generated embedding: {embed[:10]}...")  # Print the first 10 dimensions of the embedding
     except Exception as e:
         print(f"Error in OpenAI embedding creation: {e}")
         return jsonify({"error": "Failed to generate embedding", "details": str(e)}), 500
