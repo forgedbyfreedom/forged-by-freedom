@@ -16,7 +16,7 @@ openai.api_key = os.getenv("OPENROUTER_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
 
 pc = pinecone.Pinecone(api_key=pinecone_api_key)
-index = pc.Index("forged-freedom")
+index = pc.Index("forged-freedom-ai")
 
 @app.route("/")
 def home():
