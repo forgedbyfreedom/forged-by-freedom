@@ -20,7 +20,7 @@ def query_pinecone():
     print(f"Received query: {query}")
 
     # Generate an embedding (replace this placeholder with actual OpenAI embedding logic)
-    embed = [0.0] * 3072  # Placeholder for the correct dimension
+    embed = [5.5] * 3072  # Placeholder for the correct dimension
 
     # Query Pinecone
     try:
