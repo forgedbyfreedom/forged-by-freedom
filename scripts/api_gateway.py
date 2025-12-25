@@ -6,34 +6,50 @@ Wix → API → OpenAI + Pinecone bridge
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import os, openai, pinecone
+import os
+from pinecone import Pinecone, ServerlessSpec
 
+# Initialize Flask app
 app = Flask(__name__)
 CORS(app)
 
 # Load API keys from environment
-openai.api_key = os.getenv("OPENROUTER_API_KEY")
+openai_api_key = os.getenv("OPENROUTER_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
+pinecone_index_name = "forged-freedom-ai"
 
-# Validate environment variables
-if not openai.api_key:
-    raise ValueError("Missing OpenAI API key: Ensure 'OPENROUTER_API_KEY' is set in your environment.")
+# Validate API keys
+if not openai_api_key:
+    raise ValueError("Missing OpenAI API key. Ensure 'OPENROUTER_API_KEY' is set.")
 if not pinecone_api_key:
-    raise ValueError("Missing Pinecone API key: Ensure 'PINECONE_API_KEY' is set in your environment.")
+    raise ValueError("Missing Pinecone API key. Ensure 'PINECONE_API_KEY' is set.")
 
-# Initialize Pinecone
+# Initialize Pinecone Client
+print("Initializing Pinecone...")
 try:
-    pinecone.init(api_key=pinecone_api_key, environment="us-east-1")  # Adjust the environment if needed
-    index = pinecone.Index("forged-freedom-ai")
-    print(index.describe_index_stats())  # Optional: Confirm index statistics
+    pc = Pinecone(api_key=pinecone_api_key)
+    # Ensure the index exists
+    if pinecone_index_name not in pc.list_indexes().names():
+        # Adjust these specifications as needed
+        pc.create_index(
+            name=pinecone_index_name,
+            dimension=1536,  # Adjust the dimension for your use case
+            metric="cosine",  # Or 'euclidean', depending on your needs
+            spec=ServerlessSpec(
+                cloud="aws",
+                region="us-east-1",
+            )
+        )
+    index = pc.Index(pinecone_index_name)
 except Exception as e:
-    raise ValueError(f"Pinecone initialization failed: {e}")
+    raise ValueError(f"Failed to initialize Pinecone: {e}")
 
+# Test route
 @app.route("/")
 def home():
     return jsonify({"status": "ok", "message": "Forged by Freedom API live"})
 
-# Fix the decorator for the /query route
+# Query route
 @app.route("/query", methods=["POST"])
 def query_pinecone():
     data = request.json
@@ -41,32 +57,19 @@ def query_pinecone():
     if not query:
         return jsonify({"error": "Missing query"}), 400
 
-    # Debugging logs
     print(f"Received query: {query}")
 
-    # Embed query via OpenAI
-    try:
-        print("Calling OpenAI API...")
-        response = openai.Embedding.create(
-            model="text-embedding-3-large",
-            input=query
-        )
-        embed = response["data"][0]["embedding"]
-        print(f"Generated embedding: {embed[:10]}...")  # Print the first 10 dimensions of the embedding
-    except Exception as e:
-        print(f"Error in OpenAI embedding creation: {e}")
-        return jsonify({"error": "Failed to generate embedding", "details": str(e)}), 500
+    # Embed query via OpenAI (Placeholder comment, you'll add the OpenAI logic here)
+    embed = [0.0] * 1536  # Replace this with your actual OpenAI embedding logic
 
     # Search Pinecone
     try:
-        print("Querying Pinecone...")
         res = index.query(vector=embed, top_k=5, include_metadata=True)
-        print(f"Pinecone response: {res}")
     except Exception as e:
-        print(f"Error in Pinecone query: {e}")
-        return jsonify({"error": "Failed to query Pinecone", "details": str(e)}), 500
+        print(f"Error querying Pinecone: {e}")
+        return jsonify({"error": f"Pinecone query failed: {str(e)}"}), 500
 
-    # If no errors occur
+    # Return results
     return jsonify(res.to_dict())
 
 if __name__ == "__main__":
