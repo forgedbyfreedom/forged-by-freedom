@@ -1,9 +1,0 @@
-[submodule "fbf-data"]
-	path = fbf-data
-	url = https://github.com/forgedbyfreedom/fbf-data.git
-[submodule "forged-by-freedom-st1"]
-	path = forged-by-freedom-st1
-	url = https://github.com/forgedbyfreedom/forged-by-freedom-st1.git
-[submodule "forged-by-freedom-st3"]
-	path = forged-by-freedom-st3
-	url = https://github.com/forgedbyfreedom/forged-by-freedom-st3.git
