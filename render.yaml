@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: forged-by-freedom-api
+    rootDir: api
+    runtime: node
+    repo: https://github.com/forgedbyfreedom/forged-by-freedom
+    branch: main
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: X_AUTH_KEY
+        value: FREEDOM_2025
