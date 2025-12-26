@@ -48,6 +48,11 @@ ${technicalBlock}
 - Track biofeedback: sleep, digestion, pumps, mood, HR, BP, and performance.
 - Adjust one variable at a time: dose, timing, or volume — never everything at once.
 
+const coachBlock = `
+=== COACH BRYAN — FORGED BY FREEDOM ===
+No excuses. Discipline over everything!
+
+— Coach Bryan, Forged by Freedom Strength & Nutrition`;
 🔹 COACH BRYAN (FORGED BY FREEDOM)
 ${coachBlock}
   `.trim();
