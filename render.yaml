@@ -12,3 +12,4 @@ services:
     envVars:
       - key: X_AUTH_KEY
         value: FREEDOM_2025
+
