@@ -1,62 +1,80 @@
-// src/index.js
+// ================================
+// FORGED BY FREEDOM - AI COACH API
+// ================================
+
 import express from "express";
 import cors from "cors";
-import helmet from "helmet";
-import dotenv from "dotenv";
-import { formatAnswer } from "./fbfAnswer.js";
+import fetch from "node-fetch";
 
-dotenv.config();
 const app = express();
-app.use(express.json());
 app.use(cors());
-app.use(helmet());
+app.use(express.json());
 
-const AUTH_KEY = process.env.X_AUTH_KEY || "FREEDOM_2025";
+// -------- ENVIRONMENT VARIABLES (Render Dashboard → Environment) --------
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const MODEL = process.env.FBF_MODEL || "gpt-4o-mini";
+const PORT = process.env.PORT || 3000;
 
-// security check middleware
-app.use((req, res, next) => {
-  const key = req.headers["x-auth-key"];
-  if (!key || key !== AUTH_KEY) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-  next();
+// ------------------- BASIC CHECK ENDPOINTS -------------------
+app.get("/", (req, res) => {
+  res.send("🔥 Forged By Freedom API Online");
 });
 
-// ------- HEALTH ENDPOINT -------
 app.get("/health", (req, res) => {
   res.json({
     status: "ok",
-    service: "ForgedByFreedom API",
-    timestamp: new Date().toISOString(),
+    model: MODEL,
+    time: new Date().toISOString(),
   });
 });
 
-// ------- QUERY ENDPOINT -------
+// ------------------- MAIN QUERY ROUTE -------------------
 app.post("/query", async (req, res) => {
-  const { query } = req.body;
+  try {
+    const { query } = req.body;
+    if (!query) return res.status(400).json({ error: "Missing query parameter" });
 
-  // TEMPORARY MOCK ANSWER until DB + podcast engine is active
-  const mock = formatAnswer({
-    question: query,
-    podcastQuotes: [
+    console.log("⚡ Incoming Query:", query);
+
+    const openaiRes = await fetch(
+      "https://api.openai.com/v1/chat/completions",
       {
-        quote: "Muscle is earned by progressive overload and recovery tracking.",
-        show: "Think Big Bodybuilding Podcast",
-        episode: "Overtraining Truth",
-        speaker: "Scott Stevenson"
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: MODEL,
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are Coach Bryan, a disciplined bodybuilding and powerlifting coach. Answer directly, no filler.",
+            },
+            { role: "user", content: query },
+          ],
+          max_tokens: 500,
+        }),
       }
-    ],
-    medical:
-      "Training response is dictated by endocrine balance (testosterone/cortisol), nervous system fatigue, and nutrient partitioning (insulin + GH/IGF-1 axis).",
-    coach: "No excuses. Discipline over everything."
-  });
+    );
 
-  res.json(mock);
+    const data = await openaiRes.json();
+
+    console.log("🔷 OpenAI Raw Response:", data);
+
+    const answer =
+      data?.choices?.[0]?.message?.content ||
+      "No response generated.";
+
+    return res.json({ answer });
+  } catch (err) {
+    console.error("🔥 ERROR in /query:", err);
+    res.status(500).json({ error: err.message });
+  }
 });
 
-// ------- START SERVER -------
-const PORT = process.env.PORT || 3000;
+// ------------------- START SERVER -------------------
 app.listen(PORT, () => {
-  console.log(`🔥 ForgedByFreedom API live on port ${PORT}`);
+  console.log(`🔥 Forged By Freedom API running on port ${PORT}`);
 });
-
