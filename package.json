@@ -1,24 +1,16 @@
 {
-  "name": "forgedbyfreedom-api",
+  "name": "forged-by-freedom-api",
   "version": "1.0.0",
-  "description": "Backend API for ForgedByFreedom",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "start": "node src/index.js"
   },
-  "keywords": [
-    "api",
-    "express",
-    "forgedbyfreedom"
-  ],
-  "author": "Forged by Freedom",
-  "license": "ISC",
   "dependencies": {
+    "express": "^4.19.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.0",
-    "express": "^4.21.0"
+    "node-fetch": "^3.3.2"
   }
 }
+
 
