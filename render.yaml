@@ -12,4 +12,7 @@ services:
     envVars:
       - key: X_AUTH_KEY
         value: FREEDOM_2025
-
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: FBF_MODEL
+        value: "nousresearch/hermes-3-llama-3.1-70b"
