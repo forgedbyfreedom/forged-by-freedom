@@ -1,13 +1,14 @@
 {
-  "name": "forged-by-freedom-api",
+  "name": "forgedbyfreedom-api",
   "version": "1.0.0",
+  "description": "Forged By Freedom AI Coach API (OpenRouter backend)",
   "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node api/src/index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
-    "express": "^4.19.2",
     "cors": "^2.8.5",
-    "node-fetch": "^3.3.2"
+    "express": "^4.21.2"
   }
 }
