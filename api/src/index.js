@@ -1,104 +1,91 @@
 import express from "express";
 import cors from "cors";
+import bodyParser from "body-parser";
 import fetch from "node-fetch";
+import { Pinecone } from "@pinecone-database/pinecone";
 
 const app = express();
-const PORT = process.env.PORT || 5051;
-
-const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;  // stored in Render > Environment
-const MODEL = process.env.FBF_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
-
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
-// ------------------ HOME TEST ENDPOINT ------------------
+/* ======= OPENROUTER BACKEND HANDLER ======= */
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";   // already set externally
+const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
+
+/* ======= PINECONE CONNECTION ======= */
+const pc = new Pinecone({
+  apiKey: "pcsk_5RYEo4_JMYmyYhGpexzx5qMuKFM1HowVRZg7g4oMhgmiWoGz7URVJJS7wHDA8CLsr5JH1J"
+});
+
+const pineconeIndex = pc.Index("forged-freedom-ai");
+
+/* ======= HEALTH CHECK ======= */
 app.get("/", (req, res) => {
   res.json({
     status: "ok",
     service: "Forged By Freedom API",
-    backend: "OpenRouter",
-    model: MODEL,
+    backend: "Pinecone + OpenRouter",
     time: new Date().toISOString()
   });
 });
 
-// ------------------ QUERY ENDPOINT ----------------------
-app.post("/query", async (req, res) => {
+/* ======= /stats ENDPOINT ======= */
+app.get("/stats", async (req, res) => {
   try {
-    const { question } = req.body;
-    if (!question) return res.json({ answer: "No question provided." });
+    const stats = await pineconeIndex.describeIndexStats();
 
-    const system_prompt = `
-You respond as COACH BRYAN – Conservative, pro-military, pro-law enforcement.
-You ALWAYS answer using this structure:
+    const namespaces = stats?.namespaces || {};
+    const channelCount = Object.keys(namespaces).length || 0;
+    const vectorCount = stats?.total_vector_count || 0;
 
-🦅 FORGED BY FREEDOM — TACTICAL RESPONSE
+    // Estimation (later replaced with metadata true word count)
+    const estWords = Math.floor(vectorCount * 180);
 
-🔥 DIRECT ANSWER
-Give the fast first answer.
+    res.json({
+      ok: true,
+      channels: channelCount,
+      vectors: vectorCount,
+      estimatedWords: estWords
+    });
+  } catch (err) {
+    console.error("Pinecone stats error:", err);
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
 
-🎙 VERIFIED PODCAST SOURCE QUOTES (minimum 3)
-You **must pull**:
-– Think Big Bodybuilding (Scott Stevenson, John Meadows)
-– Muscle-Centric Podcast (Gabrielle Lyon)
-– Smashwerx peptides (Dr. Trevor Bachmeyer)
-– Drugs n Stuff – Enhanced bodybuilding
-Provide:
-• Speaker name
-• Podcast title
-• Episode number if known
-• DIRECT quote — minimum 2 sentences
-• What the quote means (1 sentence)
+/* ======= /query ENDPOINT ======= */
+app.post("/query", async (req, res) => {
+  const { question } = req.body;
+  if (!question) return res.json({ answer: "Empty question." });
 
-🧬 SCIENCE — ADVANCED EXPLANATION
-Use medical physiology:
-– nitrogen balance
-– mTOR
-– androgen receptor binding
-– GH/IGF-1 protein turnover
-– dose ranges
-– calculation formulas
-
-📌 CALCULATION EXAMPLE
-Show math in grams, lbs, mg, IU, etc.
-
-🪖 COACH BRYAN — COMMAND
-End with a motivational line in character.
-`;
-
+  try {
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${OPENROUTER_KEY}`,
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
         model: MODEL,
-        messages: [
-          { role: "system", content: system_prompt },
-          { role: "user", content: question }
-        ],
-        max_tokens: 1500,
-        temperature: 0.6
+        messages: [{ role: "user", content: question }]
       })
     });
 
     const data = await response.json();
-    console.log("🔷 RAW MODEL OUTPUT:", JSON.stringify(data, null, 2));
-
-    const content =
+    const answer =
       data?.choices?.[0]?.message?.content ||
-      "⚠️ Model returned no valid output.";
+      data?.response ||
+      "No response from model.";
 
-    return res.json({ answer: content });
-
+    return res.json({ answer });
   } catch (err) {
-    console.error("❌ ERROR:", err);
-    res.status(500).json({ error: "Server Error" });
+    console.error("Query error:", err);
+    res.status(500).json({ answer: "Server Error." });
   }
 });
 
-// ------------------ START SERVER ------------------------
+/* ======= START SERVER ======= */
+const PORT = process.env.PORT || 5051;
 app.listen(PORT, () => {
   console.log(`🔥 Forged By Freedom API running on port ${PORT}`);
 });
