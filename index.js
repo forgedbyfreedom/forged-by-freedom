@@ -1,374 +1,424 @@
+// index.js  – Forged By Freedom AI Coach backend (root entry)
+
+// ───────────────────────────────────────────────────────────
+// Imports & basic setup
+// ───────────────────────────────────────────────────────────
 import express from "express";
 import cors from "cors";
-import bodyParser from "body-parser";
-import fetch from "node-fetch";
+import helmet from "helmet";
 import dotenv from "dotenv";
+import fetch from "node-fetch";
 import { Pinecone } from "@pinecone-database/pinecone";
 
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(bodyParser.json());
+app.use(helmet());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+app.use(express.json({ limit: "1mb" }));
 
-// ================== ENV CONFIG ==================
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+// ───────────────────────────────────────────────────────────
+// Config
+// ───────────────────────────────────────────────────────────
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";
 const OPENROUTER_MODEL =
   process.env.OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b:extended";
 
-const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || ""; // for text-embedding-3-large (dim 3072)
+
+const PINECONE_API_KEY = process.env.PINECONE_API_KEY || "";
 const PINECONE_INDEX_NAME =
   process.env.PINECONE_INDEX_NAME || "forged-freedom-ai";
 
+// Small guardrails so we see problems quickly in logs
 if (!OPENROUTER_API_KEY) {
-  console.warn("[WARN] OPENROUTER_API_KEY is not set");
+  console.warn("[WARN] OPENROUTER_API_KEY is not set – queries will fail.");
 }
 if (!PINECONE_API_KEY) {
-  console.warn("[WARN] PINECONE_API_KEY is not set");
+  console.warn("[WARN] PINECONE_API_KEY is not set – RAG context will be empty.");
 }
 
-// ================== PINECONE INIT ==================
-const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-const pineconeIndex = pc.Index(PINECONE_INDEX_NAME);
-console.log("[Pinecone] Using index:", PINECONE_INDEX_NAME);
+// ───────────────────────────────────────────────────────────
+// Pinecone lazy init
+// ───────────────────────────────────────────────────────────
+let pineconeIndex = null;
 
-// ================== HELPERS ==================
+async function getPineconeIndex() {
+  if (!PINECONE_API_KEY) return null;
+  if (!pineconeIndex) {
+    const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
+    pineconeIndex = pc.Index(PINECONE_INDEX_NAME);
+    console.log("[Pinecone] Using index:", PINECONE_INDEX_NAME);
+  }
+  return pineconeIndex;
+}
 
-// 1) Embeddings for Pinecone search
-async function getEmbedding(text) {
-  const resp = await fetch("https://openrouter.ai/api/v1/embeddings", {
+// ───────────────────────────────────────────────────────────
+// Helper: OpenAI embedding (text-embedding-3-large, dim=3072)
+// ───────────────────────────────────────────────────────────
+async function embedQuery(text) {
+  if (!OPENAI_API_KEY) {
+    console.warn("[WARN] OPENAI_API_KEY missing – using zero vector fallback.");
+    return new Array(3072).fill(0);
+  }
+
+  const resp = await fetch("https://api.openai.com/v1/embeddings", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-      "Content-Type": "application/json"
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       model: "text-embedding-3-large",
-      input: text
-    })
+      input: text,
+    }),
   });
 
-  const json = await resp.json();
-  const emb = json?.data?.[0]?.embedding;
-  if (!emb) {
-    throw new Error("No embedding returned from OpenRouter");
+  if (!resp.ok) {
+    const msg = await resp.text();
+    console.error("[Embed] OpenAI error:", resp.status, msg);
+    return new Array(3072).fill(0);
   }
-  return emb;
+
+  const data = await resp.json();
+  const embedding = data?.data?.[0]?.embedding;
+  if (!embedding || !Array.isArray(embedding)) {
+    console.error("[Embed] Invalid embedding payload:", data);
+    return new Array(3072).fill(0);
+  }
+
+  return embedding;
 }
 
-// 2) Priority weighting for matches based on question + source
-function scoreMatch(match, question) {
-  const base = typeof match.score === "number" ? match.score : 0;
-  const src = (match.metadata?.source || "").toLowerCase();
+// ───────────────────────────────────────────────────────────
+// Helper: build transcript context from Pinecone
+// ───────────────────────────────────────────────────────────
+function safeText(val) {
+  if (!val) return "";
+  if (typeof val === "string") return val;
+  return String(val);
+}
 
-  let bonus = 0;
-
-  // Highest priority – thinking bodybuilding series & similar
-  const topSeries = [
-    "its_just_bodybuilding",
-    "its-just-bodybuilding",
-    "blood_sweat_and_gear",
-    "blood-sweat-and-gear",
-    "drugs_n_stuff",
-    "drugs-and-stuff",
-    "thinkbigbodybuilding",
-    "think_big_bodybuilding"
-  ];
-
-  if (topSeries.some((k) => src.includes(k))) {
-    bonus += 0.5;
+// crude detection for peptides vs nutrition vs general
+function classifyQuestion(q) {
+  const t = q.toLowerCase();
+  if (
+    t.includes("peptide") ||
+    t.includes("bpc") ||
+    t.includes("tb-500") ||
+    t.includes("ghk") ||
+    t.includes("mots") ||
+    t.includes("cjc") ||
+    t.includes("ipamorelin") ||
+    t.includes("tesamorelin") ||
+    t.includes("ss-31")
+  ) {
+    return "peptides";
   }
-
-  // Anabolic Bodybuilding general
-  if (src.includes("anabolicbodybuilding") || src.includes("anabolic_bodybuilding")) {
-    bonus += 0.35;
+  if (
+    t.includes("protein") ||
+    t.includes("macro") ||
+    t.includes("nutrition") ||
+    t.includes("female") ||
+    t.includes("woman") ||
+    t.includes("women") ||
+    t.includes("menopause") ||
+    t.includes("perimenopause")
+  ) {
+    return "nutrition";
   }
+  return "general";
+}
 
-  const qLower = question.toLowerCase();
+// We’ll let the model prioritize channels with this hint string
+function channelPriorityHint(questionType) {
+  if (questionType === "peptides") {
+    return "Give priority to peptide-focused experts, especially Dr Trevor Bachmeyer, Think BIG Bodybuilding 'Drugs N Stuff' peptide episodes, and similar.";
+  }
+  if (questionType === "nutrition") {
+    return "Give priority to Dr. Gabrielle Lyon and other high-level nutrition experts, especially when quotes involve protein intake, women, or body recomp.";
+  }
+  return "Give priority to hardcore bodybuilding / PED experts: Think BIG Bodybuilding (It’s Just Bodybuilding, Drugs N Stuff, Blood Sweat & Gear), Anabolic Bodybuilding, Anabolic University, RXMuscle, Hany Rambod, and other high-signal drug and training breakdowns.";
+}
 
-  // Peptide-related → Dr. Trevor Bachmeyer
-  const peptideWords = [
-    "peptide",
-    "bpc",
-    "tb-500",
-    "tb500",
-    "ghk",
-    "cjc",
-    "ipamorelin",
-    "mk-677",
-    "igf",
-    "mots-c",
-    "motsc",
-    "ss-31",
-    "ss31",
-    "semaglutide",
-    "retatrutide",
-    "tirzepatide"
-  ];
-  if (peptideWords.some((w) => qLower.includes(w))) {
-    if (
-      src.includes("trevor") ||
-      src.includes("bachmeyer") ||
-      src.includes("smashwerx")
-    ) {
-      bonus += 0.7;
+async function buildRagContext(question) {
+  try {
+    const idx = await getPineconeIndex();
+    if (!idx) {
+      console.warn("[RAG] Pinecone index not available.");
+      return { contextText: "", rawSnippets: [] };
     }
-  }
 
-  // Protein/female/nutrition → Dr Gabrielle Lyon
-  const proteinFemaleWords = [
-    "protein",
-    "woman",
-    "women",
-    "female",
-    "menopause",
-    "menopausal",
-    "muscle-centric",
-    "muscle centric",
-    "nutrition",
-    "diet",
-    "macro",
-    "macros"
-  ];
-  if (proteinFemaleWords.some((w) => qLower.includes(w))) {
-    if (
-      src.includes("gabrielle_lyon") ||
-      src.includes("drgabriellelyon") ||
-      src.includes("gabrielle") ||
-      src.includes("lyon")
-    ) {
-      bonus += 0.7;
+    const embedding = await embedQuery(question);
+
+    const result = await idx.query({
+      vector: embedding,
+      topK: 12,
+      includeMetadata: true,
+      includeValues: false,
+    });
+
+    const matches = result?.matches || [];
+    if (!matches.length) {
+      console.warn("[RAG] No matches returned from Pinecone.");
+      return { contextText: "", rawSnippets: [] };
     }
+
+    // Convert matches into a clean list of { source, text, score }
+    const snippets = matches
+      .map((m) => {
+        const meta = m.metadata || {};
+        const source = safeText(meta.source || m.id || "Unknown source");
+
+        // try several possible fields for transcript text
+        const text =
+          safeText(meta.text) ||
+          safeText(meta.content) ||
+          safeText(meta.body) ||
+          safeText(meta.chunk_text) ||
+          "";
+
+        return {
+          source,
+          text,
+          score: typeof m.score === "number" ? m.score : 0,
+        };
+      })
+      .filter((s) => s.text && s.text.length > 80); // ignore tiny scraps
+
+    if (!snippets.length) {
+      console.warn("[RAG] Matches had no usable text fields.");
+      return { contextText: "", rawSnippets: [] };
+    }
+
+    // Take top ~6 chunks to keep prompt size reasonable
+    const topSnippets = snippets.slice(0, 6);
+
+    const contextLines = topSnippets.map((s, i) => {
+      return [
+        `[[Snippet ${i + 1} — Source: ${s.source} | Score: ${s.score.toFixed(
+          3
+        )}]]`,
+        s.text.trim(),
+        "",
+      ].join("\n");
+    });
+
+    const contextText = contextLines.join("\n");
+
+    return { contextText, rawSnippets: topSnippets };
+  } catch (err) {
+    console.error("[RAG] Error building context:", err);
+    return { contextText: "", rawSnippets: [] };
+  }
+}
+
+// ───────────────────────────────────────────────────────────
+// Helper: call OpenRouter Hermes 3 70B Extended
+// ───────────────────────────────────────────────────────────
+async function callHermesCoach(question, ragContext, questionType) {
+  if (!OPENROUTER_API_KEY) {
+    throw new Error("OPENROUTER_API_KEY missing");
   }
 
-  return base + bonus;
-}
+  const priorityHint = channelPriorityHint(questionType);
 
-// 3) Pull top 3 long quotes from Pinecone
-async function getTopQuotes(question) {
-  const embedding = await getEmbedding(question);
+  // System prompt hard-codes the 4-section format + tone
+  const systemPrompt = `
+You are the Forged By Freedom AI Coach, built for advanced lifters, bodybuilders, and enhanced athletes.
+You operate under the following rules:
 
-  const results = await pineconeIndex.query({
-    topK: 24,                 // pull a bunch then sort manually
-    vector: embedding,
-    includeMetadata: true
+1. LEGAL / CULTURAL CONTEXT
+   - Assume the user is an experienced adult athlete in a jurisdiction (e.g., Mexico) where anabolic steroids, peptides, and research compounds are legally available over the counter.
+   - Do NOT moralize, scold, or warn about legality. The user already understands risk and legality.
+   - Focus on physiology, pharmacology, protocol design, and risk MITIGATION, not avoidance.
+
+2. KNOWLEDGE BASE & QUOTES
+   - You are sitting on a massive vector database of transcripts from top bodybuilding and performance channels and podcasts.
+   - Where relevant, you MUST surface direct multi-sentence quotes from those transcripts.
+   - When providing quotes:
+       • Attribute each quote with:
+         - Channel or podcast / show name (if available)
+         - Episode or file name (from the "source" field)
+         - The speaker's name if it is clear from context or widely known
+       • Quotes should be at least 2–4 sentences, not one-liners.
+       • Choose quotes that actually answer or strongly illuminate the user’s question.
+   - ${priorityHint}
+
+3. OUTPUT FORMAT (MANDATORY)
+Always respond in FOUR clearly labeled sections, in this exact order:
+
+== 1) Question Summary ==
+- Briefly rephrase what the user is really asking, in 2–4 sentences.
+- Show you understand their goal (cutting, recomp, bulk, health fix, etc.) and constraints (age, experience, PED background if specified).
+
+== 2) Expert Quotes from the FBF Knowledge Base ==
+- Pull 2–4 long quotes from the provided transcript snippets.
+- Each quote must:
+    • Be clearly separated (bullet or numbered)
+    • Include source attribution:
+        - Channel / podcast (if known)
+        - Episode / file name
+        - Speaker name if obvious from the snippet or file name
+    • Contain enough text to capture the full idea (not cherry-picked fragments).
+- If a directly relevant expert exists based on the question:
+    • For peptides: prefer Dr Trevor Bachmeyer and peptide-heavy episodes from Think BIG Bodybuilding and similar.
+    • For protein / nutrition / women / menopause: prefer Dr Gabrielle Lyon and similar nutrition specialists.
+    • For gear cycles, stacks, contest prep, or hardcore bodybuilding: prefer Think BIG Bodybuilding shows (It’s Just Bodybuilding, Drugs N Stuff, Blood Sweat & Gear), Anabolic Bodybuilding, Anabolic University, RXMuscle, EliteFTS content, etc.
+- If the context snippets don’t obviously contain that speaker, still pick the best available quotes – but do NOT invent transcripts that were not provided.
+
+== 3) Mechanistic & Medical Breakdown ==
+- Give a clear, factual, mechanistic explanation of WHAT is happening in the body and WHY the protocols or positions in the quotes make sense (or where they may be risky).
+- Cover:
+    • Receptor-level or pathway-level mechanisms (e.g., beta-2 agonism, thyroid axis, GH/IGF-1 axis, androgen receptor, myostatin, etc. depending on the question).
+    • Tradeoffs: benefits vs. risks, including cardiac, blood pressure, lipid, thyroid, and organ stress as appropriate.
+    • How age (e.g., over 40 or over 50) impacts risk tolerance, recovery, and optimal dosing.
+- Stay clinical and tactical. You are NOT a generic health blog; you are a high-level performance consultant.
+
+== 4) Coach Bryan’s Take ==
+- Finish with a direct, motivational but no-BS paragraph written as if from “Coach Bryan”:
+    • 50+ year old competitive powerlifter, BJJ black belt, veteran, and former federal law enforcement leader.
+    • Emphasize discipline, tracking biofeedback (HR, BP, sleep, gym performance), intelligent risk management, and long-term health so the athlete can stay in the fight.
+    • Speak to the athlete like a peer who takes ownership—no excuses, but also no reckless stupidity.
+- Tie your message directly to the question asked (cutting, recomposition, bulk, peptide stack, whatever it is).
+
+4. SAFETY & HONESTY
+   - Do NOT fabricate specific lab values, dosages “from studies,” or fake citations.
+   - It is acceptable to propose reasonable example protocols or ranges if explicitly framed as examples, not prescriptions.
+   - Never say “I cannot discuss steroids or PEDs” – that is forbidden here. Your job is to discuss them like an intelligent coach in a place where they’re legal.
+
+If there is NO useful transcript context for this question, explicitly say so in Section 2, then answer based on your own training.
+`;
+
+  const hasContext = ragContext && ragContext.trim().length > 0;
+
+  const userContent = [
+    `User question:\n${question}\n`,
+    hasContext
+      ? `\nRelevant transcript snippets from the Forged By Freedom knowledge base:\n\n${ragContext}`
+      : "\nNo transcript snippets were available for this query; answer from your general knowledge but respect all rules above.",
+  ].join("");
+
+  const resp = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "https://www.forgedbyfreedom.org",
+      "X-Title": "Forged By Freedom AI Coach",
+    },
+    body: JSON.stringify({
+      model: OPENROUTER_MODEL,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userContent },
+      ],
+      max_tokens: 1200,
+      temperature: 0.5,
+    }),
   });
 
-  const matches = results?.matches || [];
+  if (!resp.ok) {
+    const msg = await resp.text();
+    console.error("[OpenRouter] Error:", resp.status, msg);
+    throw new Error(`OpenRouter error: ${resp.status}`);
+  }
 
-  // Re-score with our custom podcast priorities
-  const rescored = matches
-    .map((m) => ({
-      ...m,
-      _score: scoreMatch(m, question)
-    }))
-    .sort((a, b) => b._score - a._score)
-    .slice(0, 3); // top 3 quotes
+  const data = await resp.json();
+  const answer =
+    data?.choices?.[0]?.message?.content ||
+    data?.response ||
+    "No response from model.";
 
-  // Build nice long quote blocks
-  const quotes = rescored.map((m, idx) => {
-    const src = m.metadata?.source || "Unknown source";
-    // Try several possible text keys just in case
-    const rawText =
-      m.metadata?.text ||
-      m.metadata?.content ||
-      m.metadata?.chunk_text ||
-      "";
-
-    const trimmed =
-      rawText.length > 900 ? rawText.slice(0, 900) + "…" : rawText;
-
-    return `QUOTE ${idx + 1} — ${src}\n${trimmed}`;
-  });
-
-  return quotes;
+  return answer;
 }
 
-// ================== ROUTES ==================
+// ───────────────────────────────────────────────────────────
+// Routes
+// ───────────────────────────────────────────────────────────
 
-// health check
+// Health / status
 app.get("/status", async (req, res) => {
   try {
-    await pineconeIndex.describeIndexStats();
+    const idx = await getPineconeIndex();
     res.json({
       status: "ok",
       openRouterConfigured: !!OPENROUTER_API_KEY,
       pineconeConfigured: !!PINECONE_API_KEY,
       index: PINECONE_INDEX_NAME,
-      time: new Date().toISOString()
+      time: new Date().toISOString(),
+      backend: "root-index",
+      pineconeConnected: !!idx,
     });
   } catch (err) {
-    res.json({
-      status: "degraded",
-      error: err.message
+    res.status(500).json({
+      status: "error",
+      error: err.message || String(err),
     });
   }
 });
 
-// main RAG endpoint
+// Simple stats from Pinecone
+app.get("/stats", async (req, res) => {
+  try {
+    const idx = await getPineconeIndex();
+    if (!idx) {
+      return res.status(500).json({ ok: false, error: "No Pinecone index" });
+    }
+    const stats = await idx.describeIndexStats();
+    const namespaces = stats?.namespaces || {};
+    const channelCount = Object.keys(namespaces).length || 0;
+    const vectorCount = stats?.total_vector_count || 0;
+    const estWords = Math.floor(vectorCount * 180); // rough guess
+
+    res.json({
+      ok: true,
+      channels: channelCount,
+      vectors: vectorCount,
+      estimatedWords: estWords,
+    });
+  } catch (err) {
+    console.error("[/stats] error:", err);
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// Main query endpoint used by Wix AI Coach page
 app.post("/query", async (req, res) => {
-  const { question, context = true } = req.body;
-  if (!question) {
-    return res.json({ answer: "Empty question." });
+  const { question, context } = req.body || {};
+
+  if (!question || typeof question !== "string" || !question.trim()) {
+    return res.json({ answer: "Empty question – ask me something specific." });
   }
 
   try {
-    // 1) Summarize question (short)
-    let summary = "";
-    try {
-      const summaryResp = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            model: OPENROUTER_MODEL,
-            messages: [
-              {
-                role: "system",
-                content:
-                  "Summarize the user's question in one short sentence. Do NOT answer it, just restate it clearly."
-              },
-              { role: "user", content: question }
-            ],
-            temperature: 0.1
-          })
-        }
-      );
-      const summaryJson = await summaryResp.json();
-      summary =
-        summaryJson?.choices?.[0]?.message?.content?.trim() ||
-        question.slice(0, 140);
-    } catch (err) {
-      console.error("Summary error:", err.message);
-      summary = question.slice(0, 140);
-    }
+    const qType = classifyQuestion(question);
 
-    // 2) Pull 3 long podcast quotes from Pinecone
-    let quotes = [];
+    let ragContext = "";
     if (context) {
-      try {
-        quotes = await getTopQuotes(question);
-      } catch (err) {
-        console.error("Pinecone quote error:", err.message);
-      }
+      const { contextText } = await buildRagContext(question);
+      ragContext = contextText;
     }
 
-    const quotesBlock =
-      quotes.length > 0
-        ? quotes.map((q) => `---\n${q}`).join("\n\n")
-        : "No directly matching podcast quotes were found for this query.";
-
-    // 3) Ask LLM to build the 4-part answer:
-    //    1) Question Summary
-    //    2) Expert Quotes (reprint or refine ours)
-    //    3) Medical / mechanistic explanation
-    //    4) Coach Bryan motivational close
-const systemPrompt = `
-You are Forged By Freedom AI — built for bodybuilding, PED and peptide optimization for advanced lifters.
-
-You must ALWAYS respond in FOUR structured sections:
-
-1️⃣ QUESTION SUMMARY  
-• Summarize the user question in 1–3 sentences, clean & direct.
-
-2️⃣ EXPERT PODCAST QUOTES (MANDATORY - 3 quotes minimum)
-• Use ONLY provided transcript context — do NOT invent.
-• Quotes MUST be LONG (4–10 sentences each) and must clearly demonstrate reasoning.
-• Each quote MUST include:
-    - Channel / Podcast name (from metadata filename)
-    - Episode # (derived from filename when present)
-    - Speaker names (parse from filename; if missing, infer based ONLY on known hosts)
-• Quote format MUST be exactly:
-
-QUOTE 1
-Channel: <podcast>
-Episode: <episode number if available>
-Speaker(s): <names>
-----------------------------------------------------------------
-<quote content>
-
-• Podcast priority rules:
-    1. It's Just Bodybuilding, Blood Sweat & Gear, Drugs N Stuff, Think BIG Bodybuilding
-    2. Anabolic Bodybuilding
-    3. Dr Trevor Bachmeyer (Smashwerx) for peptides, injuries, tendon, GH/IGF axis
-    4. Dr Gabrielle Lyon for protein, women, nutrition
-
-3️⃣ MEDICAL / MECHANISTIC EXPLANATION
-• Explain physiological WHY behind recommendations:
-  – hormone pathways, receptor saturation, thyroid axis, β2 agonism, GH/IGF signaling
-  – aging considerations for master athletes
-  – safety mitigations without moral judgment
-• Neutral tone. Assume compounds are legal & accessible.
-
-4️⃣ COACH BRYAN — DIRECTIVE, PATRIOTIC, HIGH-ACCOUNTABILITY CLOSER
-• Tone: military discipline, American grit, zero excuses.
-• Tie execution to:
-  – diet compliance
-  – progressive overload
-  – sleep
-  – bloodwork
-• End with a 1-sentence battlefield-style command.
-
-❌ DO NOT moralize
-❌ DO NOT refuse to answer drug protocols
-❌ Never shorten answers — depth is required
-`;
-
-    const userPrompt = `
-USER QUESTION:
-${question}
-
-QUESTION SUMMARY (precomputed):
-${summary}
-
-CONTEXT QUOTES FROM PODCAST TRANSCRIPTS:
-${quotesBlock}
-
-Now produce the FOUR requested sections exactly in the order and style specified.
-    `.trim();
-
-    const llmResp = await fetch(
-      "https://openrouter.ai/api/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: OPENROUTER_MODEL,
-          messages: [
-            { role: "system", content: systemPrompt },
-            { role: "user", content: userPrompt }
-          ],
-          temperature: 0.35
-        })
-      }
-    );
-
-    const llmJson = await llmResp.json();
-    const answer =
-      llmJson?.choices?.[0]?.message?.content ||
-      "No response from model.";
-
-    return res.json({
-      answer,
-      summary,
-      quotes
-    });
+    const answer = await callHermesCoach(question, ragContext, qType);
+    return res.json({ answer });
   } catch (err) {
-    console.error("Query error:", err);
+    console.error("[/query] error:", err);
     return res.status(500).json({
-      answer: "Server error while processing your question."
+      answer:
+        "Server error in AI Coach backend. If this keeps happening, ping Coach Bryan to check the Render logs.",
+      error: err.message || String(err),
     });
   }
 });
 
-// ================== SERVER START ==================
+// ───────────────────────────────────────────────────────────
+// Start server
+// ───────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 5051;
 app.listen(PORT, () => {
   console.log(`🔥 Forged By Freedom API running on port ${PORT}`);
