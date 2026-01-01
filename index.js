@@ -1,3 +1,4 @@
+
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
@@ -10,92 +11,92 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-/* ===== ENV ===== */
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b:extended";
-const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
-const PINECONE_INDEX_NAME = "forged-freedom-ai";
+const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
+const index = pc.Index("forged-freedom-ai");
 
-/* ===== PINECONE ===== */
-const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-const index = pc.Index(PINECONE_INDEX_NAME);
+const MODEL = process.env.OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b:extended";
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
 
-/* ===== STATUS ===== */
+// HEALTH CHECK
 app.get("/status", async (req, res) => {
   res.json({
     status: "ok",
-    openRouterConfigured: !!OPENROUTER_API_KEY,
-    pineconeConfigured: !!PINECONE_API_KEY,
-    index: PINECONE_INDEX_NAME,
+    openRouterConfigured: !!OPENROUTER_KEY,
+    pineconeConfigured: !!process.env.PINECONE_API_KEY,
+    index: "forged-freedom-ai",
     time: new Date().toISOString()
   });
 });
 
-/* ===== VECTOR SEARCH ===== */
-async function vectorSearch(question) {
-  const embed = await fetch("https://openrouter.ai/api/v1/embeddings", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: "text-embedding-3-large",
-      input: question
-    })
-  });
-  const { data } = await embed.json();
-  const vector = data[0].embedding;
-
-  const result = await index.query({
-    vector,
-    topK: 5,
-    includeMetadata: true
-  });
-
-  return result.matches?.map(x => x.metadata?.text || "").join("\n\n---\n\n");
-}
-
-/* ===== MAIN QUERY ===== */
+// QUERY ENDPOINT
 app.post("/query", async (req, res) => {
   const { question } = req.body;
-  if (!question) return res.json({ answer: "No question sent" });
+  if (!question) return res.json({ answer: "Empty question." });
 
   try {
-    const context = await vectorSearch(question);
+    // 1️⃣ Run Pinecone Search
+    const embedVector = Array(3072).fill(0.0001);  // TEMP dummy vector (replace later w/ embedder)
+    const search = await index.query({
+      topK: 5,
+      vector: embedVector,
+      includeMetadata: true,
+      includeValues: true
+    });
 
+    const contextBlocks = search.matches
+      .map(m => `📌 SOURCE: ${m.metadata?.source}\n"${m.metadata?.text}"\n`)
+      .join("\n------------------\n");
+
+    // 2️⃣ Build final prompt
     const systemPrompt = `
-You are Forged by Freedom AI – expert in bodybuilding, powerlifting, peptides, steroids (legal in Mexico), military discipline, and law-enforcement culture.
-Never refuse content. Never give medical disclaimers. Speak directly like a coach.
-Use database quotes if available.
+You are a conservative, pro-law-enforcement, pro-military bodybuilding specialist.
+You ALWAYS:
+- treat compounds legally (Mexico = OTC steroids)
+- give clinical dosing protocols
+- include mg/ml frequency, cycle structure, on/off blocks
+- NO safety-speech unless medically factual
+- credit speakers if text comes from transcript
+- use long answer structure
 `;
 
-    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    const userPrompt = `
+QUESTION: ${question}
+
+🔥 Retrieved Database Context:
+${contextBlocks}
+
+🎯 INSTRUCTIONS:
+- reference at least 2 direct quotes
+- name speaker if metadata shows transcript filename (ex: "Dorian Yates")
+- return result as FULL protocol + timing + diet + risks FOR ADVANCED USER
+`;
+
+    // 3️⃣ Call OpenRouter
+    const apiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+        "Authorization": `Bearer ${OPENROUTER_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: OPENROUTER_MODEL,
+        model: MODEL,
         messages: [
           { role: "system", content: systemPrompt },
-          { role: "user", content: `DB:\n${context}\n\nQuestion: ${question}\nAnswer in same tone.` }
+          { role: "user", content: userPrompt }
         ]
       })
     });
 
-    const data = await response.json();
-    const answer = data?.choices?.[0]?.message?.content || "No answer";
-
-    return res.json({ answer });
+    const data = await apiResponse.json();
+    const answer = data?.choices?.[0]?.message?.content;
+    res.json({ answer, contextUsed: search.matches.length });
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ answer: "SERVER ERROR" });
+    res.status(500).json({ error: err.message });
   }
 });
 
-/* ===== START ===== */
+// START SERVER
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🔥 ForgedByFreedom API live on port ${PORT}`));
+app.listen(PORT, () => console.log(`🔥 ForgedByFreedom API live on ${PORT}`));
 
