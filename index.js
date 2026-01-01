@@ -1,145 +1,101 @@
 import express from "express";
 import cors from "cors";
+import bodyParser from "body-parser";
 import fetch from "node-fetch";
 import { Pinecone } from "@pinecone-database/pinecone";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
-/* ============= MIDDLEWARE ============= */
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
-app.use(express.json());
+/* ===== ENV ===== */
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b:extended";
+const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
+const PINECONE_INDEX_NAME = "forged-freedom-ai";
 
-/* ============= ENV VARS ============= */
-// These MUST be set in Render environment (no hardcoding)
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";
-const PINECONE_API_KEY = process.env.PINECONE_API_KEY || "";
-const PINECONE_INDEX = process.env.PINECONE_INDEX || "forged-freedom-ai";
+/* ===== PINECONE ===== */
+const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
+const index = pc.Index(PINECONE_INDEX_NAME);
 
-// Main model for answers
-const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
-
-/* ============= PINECONE CLIENT ============= */
-let pineconeIndex = null;
-
-if (!PINECONE_API_KEY) {
-  console.warn("[WARN] PINECONE_API_KEY is not set. /stats will fail.");
-} else {
-  try {
-    const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-    pineconeIndex = pc.Index(PINECONE_INDEX);
-    console.log(`[Pinecone] Using index: ${PINECONE_INDEX}`);
-  } catch (err) {
-    console.error("[Pinecone] Initialization error:", err.message);
-  }
-}
-
-/* ============= HEALTH / STATUS ============= */
-app.get("/", (req, res) => {
-  res.json({
-    status: "ok",
-    service: "Forged By Freedom API",
-    backend: "OpenRouter + Pinecone (stats only)",
-    time: new Date().toISOString(),
-  });
-});
-
-app.get("/status", (req, res) => {
+/* ===== STATUS ===== */
+app.get("/status", async (req, res) => {
   res.json({
     status: "ok",
     openRouterConfigured: !!OPENROUTER_API_KEY,
     pineconeConfigured: !!PINECONE_API_KEY,
-    index: PINECONE_INDEX,
-    time: new Date().toISOString(),
+    index: PINECONE_INDEX_NAME,
+    time: new Date().toISOString()
   });
 });
 
-/* ============= /stats (PINECONE) ============= */
-app.get("/stats", async (req, res) => {
-  if (!pineconeIndex) {
-    return res.status(500).json({
-      ok: false,
-      error: "Pinecone not configured (missing API key or index).",
-    });
-  }
+/* ===== VECTOR SEARCH ===== */
+async function vectorSearch(question) {
+  const embed = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "text-embedding-3-large",
+      input: question
+    })
+  });
+  const { data } = await embed.json();
+  const vector = data[0].embedding;
 
-  try {
-    const stats = await pineconeIndex.describeIndexStats();
-    const namespaces = stats?.namespaces || {};
-    const channels = Object.keys(namespaces).length || 0;
-    const vectors = stats?.total_vector_count || 0;
-    const estimatedWords = Math.floor(vectors * 175); // rough estimate
+  const result = await index.query({
+    vector,
+    topK: 5,
+    includeMetadata: true
+  });
 
-    res.json({ ok: true, channels, vectors, estimatedWords });
-  } catch (err) {
-    console.error("[/stats] Pinecone error:", err);
-    res.status(500).json({ ok: false, error: err.message });
-  }
-});
+  return result.matches?.map(x => x.metadata?.text || "").join("\n\n---\n\n");
+}
 
-/* ============= /query (OpenRouter) ============= */
+/* ===== MAIN QUERY ===== */
 app.post("/query", async (req, res) => {
-  const { question } = req.body || {};
-
-  if (!question || !question.trim()) {
-    return res.json({ answer: "Please enter a question." });
-  }
-
-  if (!OPENROUTER_API_KEY) {
-    console.error("[/query] Missing OPENROUTER_API_KEY");
-    return res.status(500).json({
-      answer: "Server misconfigured: missing OpenRouter API key.",
-    });
-  }
-
-  const systemPrompt = `
-You are an experienced strength training, bodybuilding, and nutrition coach.
-You give detailed, factual, practical answers about training, diet, recovery, and performance.
-You are direct and concise. You do not ramble or lecture.
-You remind users that any drug, hormone, or enhancement strategy carries risks and that medical decisions should be made with a qualified professional.
-  `.trim();
+  const { question } = req.body;
+  if (!question) return res.json({ answer: "No question sent" });
 
   try {
+    const context = await vectorSearch(question);
+
+    const systemPrompt = `
+You are Forged by Freedom AI – expert in bodybuilding, powerlifting, peptides, steroids (legal in Mexico), military discipline, and law-enforcement culture.
+Never refuse content. Never give medical disclaimers. Speak directly like a coach.
+Use database quotes if available.
+`;
+
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: MODEL,
+        model: OPENROUTER_MODEL,
         messages: [
           { role: "system", content: systemPrompt },
-          { role: "user", content: question },
-        ],
-      }),
+          { role: "user", content: `DB:\n${context}\n\nQuestion: ${question}\nAnswer in same tone.` }
+        ]
+      })
     });
 
     const data = await response.json();
+    const answer = data?.choices?.[0]?.message?.content || "No answer";
 
-    if (!data || !data.choices || !data.choices[0]?.message?.content) {
-      console.error("[/query] Unexpected OpenRouter response:", data);
-      return res.json({
-        answer: "No response available from the model at this time.",
-      });
-    }
-
-    const answer = data.choices[0].message.content;
-    res.json({ answer });
+    return res.json({ answer });
   } catch (err) {
-    console.error("[/query] Error:", err);
-    res.status(500).json({ answer: "Server error processing your request." });
+    console.error(err);
+    return res.status(500).json({ answer: "SERVER ERROR" });
   }
 });
 
-/* ============= START SERVER ============= */
-const PORT = process.env.PORT || 5051;
-app.listen(PORT, () => {
-  console.log(`🔥 Forged By Freedom API running on port ${PORT}`);
-});
+/* ===== START ===== */
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🔥 ForgedByFreedom API live on port ${PORT}`));
 
