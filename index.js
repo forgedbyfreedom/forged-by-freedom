@@ -13,7 +13,7 @@ const {
 } = process.env;
 
 // DEFAULT MODEL SAFETY
-const MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b:extended";
+const MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
 
 // ========== PINECONE ==========
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
