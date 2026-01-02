@@ -68,9 +68,20 @@ const context = contextChunks.join("\n\n");
       model: "gpt-4o-mini",
       messages: [
         {
-          role: "system",
-          content: "Answer ONLY using the provided context. Do not guess."
-        },
+  role: "system",
+  content: `
+You are the Forged By Freedom AI Coach.
+
+You MUST answer using ONLY the provided context.
+If the context does not contain the answer, you must say:
+"No relevant information was found in the knowledge base."
+
+Do NOT use prior knowledge.
+Do NOT guess.
+Do NOT generalize.
+`
+}
+
         {
           role: "user",
           content: `Context:\n${context}\n\nQuestion:\n${question}`
