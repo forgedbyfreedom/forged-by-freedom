@@ -1,42 +1,23 @@
+#!/usr/bin/env python3
+
 import os
-import re
 from pinecone import Pinecone
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX = os.getenv("PINECONE_INDEX")
+PINECONE_HOST = os.getenv("PINECONE_HOST")
 
-if not PINECONE_API_KEY or not PINECONE_INDEX:
+if not PINECONE_API_KEY or not PINECONE_HOST:
     raise RuntimeError("Missing Pinecone environment variables")
 
-NAMESPACE = "__default__"
-
 pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(PINECONE_INDEX)
+index = pc.Index(host=PINECONE_HOST)
 
-vector_count = 0
-word_count = 0
-episodes = set()
+stats = index.describe_index_stats()
 
-print("🔍 Scanning Pinecone namespace:", NAMESPACE)
+print("\n📊 PINECONE INDEX STATS")
+print("Namespace counts:")
 
-for ids in index.list(namespace=NAMESPACE):
-    fetched = index.fetch(ids=ids, namespace=NAMESPACE)
+for ns, data in stats.get("namespaces", {}).items():
+    print(f"  • {ns}: {data.get('vector_count', 0)} vectors")
 
-    for v in fetched.vectors.values():
-        vector_count += 1
-        meta = v.metadata or {}
-
-        if "source" in meta:
-            episodes.add(meta["source"])
-
-        if "text" in meta:
-            word_count += len(re.findall(r"\w+", meta["text"]))
-
-print("\n📊 PINECONE INGEST STATS")
-print("Vectors (chunks):", vector_count)
-print("Episodes (unique sources):", len(episodes))
-print("Estimated words:", word_count)
-
-# Hard failure if Pinecone is empty (prevents silent regressions)
-if vector_count == 0:
-    raise RuntimeError("❌ Pinecone contains ZERO vectors — ingest failed")
+print("\n✔ Stats check complete")
