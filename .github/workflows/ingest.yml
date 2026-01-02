@@ -9,33 +9,31 @@ jobs:
   ingest:
     runs-on: ubuntu-latest
 
-    - name: 📊 Pinecone post-ingest verification
-    run: |
-    python ingest/pinecone_stats.py
-
     steps:
-      - name: Checkout forged-by-freedom
+      - name: 🧩 Checkout repo
         uses: actions/checkout@v4
 
-      - name: Clone transcript source
-        env:
-          GH_PAT: ${{ secrets.FBF_PAT }}
-        run: |
-          git clone https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/thinkbig-transcripts.git ingest/channels
-
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: 📦 Install dependencies (clean)
         run: |
-          pip install openai pinecone
+          pip uninstall -y pinecone-client || true
+          pip uninstall -y pinecone || true
+          pip install --no-cache-dir openai pinecone
 
-      - name: Run ingest
+      - name: 🚀 Run Pinecone ingest
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
         run: |
           python ingest/ingest_to_pinecone.py
+
+      - name: 📊 Pinecone post-ingest verification
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
+        run: |
+          python ingest/pinecone_stats.py
