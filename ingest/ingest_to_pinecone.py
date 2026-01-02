@@ -1,27 +1,23 @@
 #!/usr/bin/env python3
+
 import os
 import glob
 import hashlib
 from pinecone import Pinecone
 from openai import OpenAI
 
-# ---- ENV ----
+# ENV
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_HOST = os.getenv("PINECONE_HOST")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-if not PINECONE_API_KEY or not PINECONE_HOST:
-    raise RuntimeError("Missing PINECONE_API_KEY or PINECONE_HOST")
+if not all([PINECONE_API_KEY, PINECONE_HOST, OPENAI_API_KEY]):
+    raise RuntimeError("Missing required environment variables")
 
-if not OPENAI_API_KEY:
-    raise RuntimeError("Missing OPENAI_API_KEY")
-
-# ---- CONFIG ----
 TRANSCRIPT_ROOT = "ingest/channels"
 CHUNK_SIZE = 1200
 NAMESPACE = "__default__"
 
-# ---- CLIENTS ----
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(host=PINECONE_HOST)
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -37,12 +33,11 @@ def embed(texts):
     )
     return [d.embedding for d in res.data]
 
-def stable_id(channel, text):
-    h = hashlib.sha256(text.encode("utf-8")).hexdigest()
+def stable_id(channel, content):
+    h = hashlib.sha256(content.encode("utf-8")).hexdigest()
     return f"{channel}|{h}"
 
 def ingest():
-    total_vectors = 0
     print("🔥 Starting Pinecone ingest")
 
     channel_dirs = sorted(glob.glob(f"{TRANSCRIPT_ROOT}/@*"))
@@ -50,23 +45,20 @@ def ingest():
         print("⚠️ No channel directories found")
         return
 
+    total_vectors = 0
+
     for channel_dir in channel_dirs:
         channel = os.path.basename(channel_dir)
         print(f"\n📘 Channel: {channel}")
 
-        txt_files = sorted(glob.glob(f"{channel_dir}/*.txt"))
-        if not txt_files:
-            print("   ⚠️ No transcript files")
-            continue
-
-        for path in txt_files:
+        for path in sorted(glob.glob(f"{channel_dir}/*.txt")):
             with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                text = f.read().strip()
-
-            if not text:
-                continue
+                text = f.read()
 
             chunks = list(chunk_text(text))
+            if not chunks:
+                continue
+
             embeddings = embed(chunks)
 
             vectors = []
@@ -82,7 +74,6 @@ def ingest():
 
             index.upsert(vectors=vectors, namespace=NAMESPACE)
             total_vectors += len(vectors)
-
             print(f"   ✔ {os.path.basename(path)} → {len(vectors)} vectors")
 
     print(f"\n✅ Ingest complete — total vectors upserted: {total_vectors}")
