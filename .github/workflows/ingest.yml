@@ -3,11 +3,16 @@ name: GitHub → Pinecone Ingest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 */6 * * *"
 
 jobs:
   ingest:
     runs-on: ubuntu-latest
+
+    env:
+      PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+      PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
       - name: 🧩 Checkout repo
@@ -25,17 +30,9 @@ jobs:
           pip install --no-cache-dir openai pinecone
 
       - name: 🚀 Run Pinecone ingest
-        env:
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python ingest/ingest_to_pinecone.py
 
       - name: 📊 Pinecone post-ingest verification
-        env:
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python ingest/pinecone_stats.py
