@@ -48,9 +48,15 @@ export async function queryPinecone(question) {
   }
 
   // 3️⃣ Build grounded answer
-  const context = results.matches
-    .map(m => m.metadata?.text || "")
-    .join("\n\n");
+  const contextChunks = results.matches
+  .map(m => m.metadata?.text)
+  .filter(Boolean);
+
+if (contextChunks.length === 0) {
+  return "No relevant information found in the Forged By Freedom knowledge base.";
+}
+
+const context = contextChunks.join("\n\n");
 
   const completion = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "post",
