@@ -29,13 +29,14 @@ jobs:
           pip uninstall -y pinecone || true
           pip install --no-cache-dir openai pinecone
 
-      - name: 🔍 Verify env injection
+      - name: 🔍 Verify environment
         run: |
           python - <<EOF
           import os
-          print("OPENAI_API_KEY:", bool(os.getenv("OPENAI_API_KEY")))
-          print("PINECONE_API_KEY:", bool(os.getenv("PINECONE_API_KEY")))
-          print("PINECONE_HOST:", bool(os.getenv("PINECONE_HOST")))
+          assert os.getenv("OPENAI_API_KEY"), "Missing OPENAI_API_KEY"
+          assert os.getenv("PINECONE_API_KEY"), "Missing PINECONE_API_KEY"
+          assert os.getenv("PINECONE_HOST"), "Missing PINECONE_HOST"
+          print("✅ All required environment variables present")
           EOF
 
       - name: 🚀 Run Pinecone ingest

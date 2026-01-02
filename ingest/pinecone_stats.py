@@ -5,15 +5,17 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_HOST = os.getenv("PINECONE_HOST")
 
 if not PINECONE_API_KEY or not PINECONE_HOST:
-    print("⚠ Pinecone stats skipped — missing env vars")
-    exit(0)
+    raise RuntimeError("Missing Pinecone environment variables")
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(host=PINECONE_HOST)
 
 stats = index.describe_index_stats()
 
-print("\n📊 Pinecone Index Stats")
-print("Namespaces:", stats.get("namespaces", {}))
-print("Total vectors:", stats.get("total_vector_count", "unknown"))
+print("\n📊 PINECONE INDEX STATS")
+print("Namespace counts:")
+for ns, data in stats.get("namespaces", {}).items():
+    print(f"  {ns}: {data.get('vector_count', 0)} vectors")
+
+print("\nTotal vectors:", stats.get("total_vector_count", 0))
 

@@ -8,6 +8,7 @@ from openai import OpenAI
 
 TRANSCRIPT_ROOT = "ingest/channels"
 CHUNK_SIZE = 1200
+NAMESPACE = "__default__"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -18,7 +19,7 @@ if not OPENAI_API_KEY:
 if not PINECONE_API_KEY:
     raise RuntimeError("Missing PINECONE_API_KEY")
 if not PINECONE_HOST:
-    raise RuntimeError("Missing PINECONE_HOST (serverless Pinecone)")
+    raise RuntimeError("Missing PINECONE_HOST (required for serverless Pinecone)")
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(host=PINECONE_HOST)
@@ -28,9 +29,16 @@ def chunk_text(text):
     for i in range(0, len(text), CHUNK_SIZE):
         yield text[i:i + CHUNK_SIZE]
 
+def embed(chunks):
+    res = client.embeddings.create(
+        model="text-embedding-3-large",
+        input=chunks
+    )
+    return [r.embedding for r in res.data]
+
 def stable_id(channel, content):
     h = hashlib.sha256(content.encode("utf-8")).hexdigest()
-    return f"{channel}|{h}"
+    return f"{channel}:{h}"
 
 def ingest():
     total_vectors = 0
@@ -48,26 +56,20 @@ def ingest():
                 continue
 
             chunks = list(chunk_text(text))
-            if not chunks:
-                continue
-
-            embeddings = client.embeddings.create(
-                model="text-embedding-3-large",
-                input=chunks
-            ).data
+            embeddings = embed(chunks)
 
             vectors = []
             for chunk, emb in zip(chunks, embeddings):
                 vectors.append({
                     "id": stable_id(channel, chunk),
-                    "values": emb.embedding,
+                    "values": emb,
                     "metadata": {
                         "channel": channel,
                         "source": os.path.basename(path)
                     }
                 })
 
-            index.upsert(vectors=vectors, namespace="__default__")
+            index.upsert(vectors=vectors, namespace=NAMESPACE)
             total_vectors += len(vectors)
             print(f"   ✔ {os.path.basename(path)} → {len(vectors)} vectors")
 
