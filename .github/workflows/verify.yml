@@ -1,0 +1,55 @@
+name: ✅ Verify Transcript Files
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "transcripts/**"
+      - "src/transcripts/**"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🔍 Verify transcript integrity
+        run: |
+          python3 - <<'PYCODE'
+          import os, chardet
+
+          base_dirs = ["transcripts", "src/transcripts"]
+          bad_files = []
+
+          for base in base_dirs:
+              if not os.path.exists(base):
+                  continue
+              for root, _, files in os.walk(base):
+                  for f in files:
+                      if not f.endswith(".txt"):
+                          continue
+                      path = os.path.join(root, f)
+                      with open(path, "rb") as file:
+                          raw = file.read()
+                          enc = chardet.detect(raw)["encoding"]
+                          if enc is None or "utf" not in enc.lower():
+                              bad_files.append((path, enc))
+          if bad_files:
+              print("❌ Non-UTF8 or unreadable files found:")
+              for path, enc in bad_files:
+                  print(f" - {path} (detected {enc})")
+              raise SystemExit(1)
+          print("✅ All transcript files verified clean and UTF-8 encoded.")
+          PYCODE

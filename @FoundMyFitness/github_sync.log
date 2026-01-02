@@ -1,0 +1,119 @@
+From https://github.com/forgedbyfreedom/thinkbig-transcripts
+ * branch            main       -> FETCH_HEAD
+   ce86754..7bae4b7  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	.github/workflows/auto_update_transcripts.yml
+	github_sync.log
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+	@BarbellMedicine/master_transcript1.txt
+	@ChrisBumstead/master_transcript1.txt
+	@DrGabrielleLyon/master_transcript1.txt
+	@FoundMyFitness/master_transcript1.txt
+	@HighLifeWorkout/master_transcript1.txt
+	@ISSAPersonalTrainer/master_transcript1.txt
+	@JeffNippard/master_transcript1.txt
+	@MulliganBrothers/master_transcript1.txt
+	@NasmOrgPersonalTrainer/master_transcript1.txt
+	@NicksStrengthandPower/master_transcript1.txt
+	@PeterAttiaMD/master_transcript1.txt
+	@RenaissancePeriodization/master_transcript1.txt
+	@RyanHumiston/master_transcript1.txt
+	@anabolicbodybuilding/master_transcript1.txt
+	@anabolicuniversity/master_transcript1.txt
+	@bodybuildingcom/master_transcript1.txt
+	@eliteftsofficial/master_transcript1.txt
+	@hanyrambod_FST7/master_transcript1.txt
+	@realtattered/master_transcript1.txt
+	@rxmuscle/master_transcript1.txt
+	@sam_sulek/master_transcript1.txt
+	@theconditioncoaches/master_transcript1.txt
+Please move or remove them before you merge.
+Aborting
+Updating ce86754..7bae4b7
+[main 6dcd750] Auto update for @FoundMyFitness: 2025-11-30 15:15:09
+ 2 files changed, 130 insertions(+)
+ create mode 100644 @FoundMyFitness/github_sync.log
+ create mode 100644 @FoundMyFitness/master_transcript1.txt
+🔍 Checking for files larger than 95 MB...
+✅ No oversized files found.
+To https://github.com/forgedbyfreedom/thinkbig-transcripts.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/forgedbyfreedom/thinkbig-transcripts.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+✅ @FoundMyFitness synced to GitHub at Sun Nov 30 15:15:12 EST 2025
+From https://github.com/forgedbyfreedom/thinkbig-transcripts
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+[main 0877b06] Auto update for @FoundMyFitness: 2025-11-30 15:15:13
+ 1 file changed, 29 insertions(+)
+🔍 Checking for files larger than 95 MB...
+✅ No oversized files found.
+To https://github.com/forgedbyfreedom/thinkbig-transcripts.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/forgedbyfreedom/thinkbig-transcripts.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+✅ @FoundMyFitness synced to GitHub at Sun Nov 30 15:15:16 EST 2025
+From https://github.com/forgedbyfreedom/thinkbig-transcripts
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+[main ed822b4] Auto update for @FoundMyFitness: 2025-11-30 15:21:58
+ 1 file changed, 27 insertions(+)
+🔍 Checking for files larger than 95 MB...
+✅ No oversized files found.
+To https://github.com/forgedbyfreedom/thinkbig-transcripts.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/forgedbyfreedom/thinkbig-transcripts.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+✅ @FoundMyFitness synced to GitHub at Sun Nov 30 15:22:02 EST 2025
+From https://github.com/forgedbyfreedom/thinkbig-transcripts
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+[main b76b145] Auto update for @FoundMyFitness: 2025-11-30 15:22:02
+ 1 file changed, 27 insertions(+)
+🔍 Checking for files larger than 95 MB...
