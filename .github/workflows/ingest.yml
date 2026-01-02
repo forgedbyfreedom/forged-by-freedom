@@ -26,7 +26,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install openai pinecone-client
+          pip install openai pinecone
 
       - name: Run ingest
         env:
