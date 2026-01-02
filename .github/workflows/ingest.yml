@@ -1,4 +1,4 @@
-name: Auto-Rebuild & Send to Wix
+name: GitHub → Pinecone Ingest
 
 on:
   workflow_dispatch:
@@ -6,44 +6,32 @@ on:
     - cron: "0 */6 * * *"   # every 6 hours
 
 jobs:
-  rebuild-ingest:
+  ingest:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
+      - name: Checkout forged-by-freedom
+        uses: actions/checkout@v4
 
-    - name: Clone transcript source (thinkbig-transcripts)
-      env:
-        GH_PAT: ${{ secrets.FBF_PAT }}
-      run: |
-        git clone https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/thinkbig-transcripts.git ./ingest/channels
+      - name: Clone transcript source
+        env:
+          GH_PAT: ${{ secrets.FBF_PAT }}
+        run: |
+          git clone https://forgedbyfreedom:${GH_PAT}@github.com/forgedbyfreedom/thinkbig-transcripts.git ingest/channels
 
-    - name: Install Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-    - name: Rebuild master transcripts
-      run: |
-        python ingest/rebuild_master.py
+      - name: Install deps
+        run: |
+          pip install openai pinecone-client
 
-    - name: Upload artifact (optional)
-      uses: actions/upload-artifact@v4
-      with:
-        name: transcripts
-        path: output/
-
-    - name: Send to Wix ingest endpoint
-      env:
-        WIX_INGEST_URL: ${{ secrets.WIX_INGEST_URL }}
-        WIX_INGEST_SECRET: ${{ secrets.WIX_INGEST_SECRET }}
-      run: |
-        for f in output/*; do
-          CHANNEL=$(basename "$f" | cut -d'_' -f1)
-          echo "🚚 Sending $f for channel $CHANNEL"
-          curl -X POST "$WIX_INGEST_URL?channel=$CHANNEL" \
-            -H "Content-Type: text/plain" \
-            -H "x-fbf-secret: $WIX_INGEST_SECRET" \
-            --data-binary @"$f"
-        done
+      - name: Run ingest
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
+        run: |
+          python ingest/ingest_to_pinecone.py
