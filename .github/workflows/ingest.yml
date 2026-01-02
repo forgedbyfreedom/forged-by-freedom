@@ -26,14 +26,17 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           pip uninstall -y pinecone-client || true
+          pip uninstall -y pinecone || true
           pip install --no-cache-dir openai pinecone
 
-      - name: 🔍 Verify secrets
+      - name: 🔍 Verify env injection
         run: |
-          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
-          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
-          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
-          echo "✅ Secrets present"
+          python - <<EOF
+          import os
+          print("OPENAI_API_KEY:", bool(os.getenv("OPENAI_API_KEY")))
+          print("PINECONE_API_KEY:", bool(os.getenv("PINECONE_API_KEY")))
+          print("PINECONE_HOST:", bool(os.getenv("PINECONE_HOST")))
+          EOF
 
       - name: 🚀 Run Pinecone ingest
         run: |

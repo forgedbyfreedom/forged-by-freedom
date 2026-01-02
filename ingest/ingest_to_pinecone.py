@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
+
 import os
 import glob
 import hashlib
 from pinecone import Pinecone
 from openai import OpenAI
+
+TRANSCRIPT_ROOT = "ingest/channels"
+CHUNK_SIZE = 1200
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -14,27 +18,23 @@ if not OPENAI_API_KEY:
 if not PINECONE_API_KEY:
     raise RuntimeError("Missing PINECONE_API_KEY")
 if not PINECONE_HOST:
-    raise RuntimeError("Missing PINECONE_HOST (required for serverless Pinecone)")
-
-TRANSCRIPT_ROOT = "ingest/channels"
-CHUNK_SIZE = 1200
+    raise RuntimeError("Missing PINECONE_HOST (serverless Pinecone)")
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(host=PINECONE_HOST)
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-def chunk_text(text, size=CHUNK_SIZE):
-    for i in range(0, len(text), size):
-        yield text[i:i + size]
+def chunk_text(text):
+    for i in range(0, len(text), CHUNK_SIZE):
+        yield text[i:i + CHUNK_SIZE]
 
 def stable_id(channel, content):
     h = hashlib.sha256(content.encode("utf-8")).hexdigest()
-    return f"{channel}-{h}"
+    return f"{channel}|{h}"
 
 def ingest():
-    print("🔥 Starting Pinecone ingest")
-
     total_vectors = 0
+    print("🔥 Starting Pinecone ingest")
 
     for channel_dir in sorted(glob.glob(f"{TRANSCRIPT_ROOT}/@*")):
         channel = os.path.basename(channel_dir)
@@ -48,6 +48,9 @@ def ingest():
                 continue
 
             chunks = list(chunk_text(text))
+            if not chunks:
+                continue
+
             embeddings = client.embeddings.create(
                 model="text-embedding-3-large",
                 input=chunks
@@ -64,9 +67,8 @@ def ingest():
                     }
                 })
 
-            index.upsert(vectors=vectors)
+            index.upsert(vectors=vectors, namespace="__default__")
             total_vectors += len(vectors)
-
             print(f"   ✔ {os.path.basename(path)} → {len(vectors)} vectors")
 
     print(f"\n✅ Ingest complete — total vectors upserted: {total_vectors}")
