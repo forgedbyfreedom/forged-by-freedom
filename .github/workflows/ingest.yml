@@ -1,33 +1,36 @@
-name: GitHub → Pinecone Ingest
+#!/usr/bin/env python3
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 */6 * * *"
+import os
+import glob
+import hashlib
+from pinecone import Pinecone
+from openai import OpenAI
 
-jobs:
-  ingest:
-    runs-on: ubuntu-latest
+# =========================
+# REQUIRED ENV VARS
+# =========================
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_HOST = os.getenv("PINECONE_HOST")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-    env:
-      PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-      PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+if not PINECONE_API_KEY:
+    raise RuntimeError("Missing PINECONE_API_KEY")
 
-    steps:
-      - uses: actions/checkout@v4
+if not PINECONE_HOST:
+    raise RuntimeError("Missing PINECONE_HOST")
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+if not OPENAI_API_KEY:
+    raise RuntimeError("Missing OPENAI_API_KEY")
 
-      - name: Install dependencies
-        run: |
-          pip uninstall -y pinecone-client || true
-          pip uninstall -y pinecone || true
-          pip install --no-cache-dir openai pinecone
+# =========================
+# CONFIG
+# =========================
+TRANSCRIPT_ROOT = "ingest/channels"   # <-- THIS MUST EXIST
+CHUNK_SIZE = 1200
+NAMESPACE = "__default__"
 
-      - name: Run Pinecone ingest
-        run: |
-          python ingest/ingest_to_pinecone.py
-
+# =========================
+# CLIENTS
+# =========================
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(host=PINECONE_HOST)
