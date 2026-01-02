@@ -1,0 +1,78 @@
+import { getSecret } from 'wix-secrets-backend';
+import { fetch } from 'wix-fetch';
+
+export async function queryPinecone(question) {
+  const PINECONE_API_KEY = await getSecret("PINECONE_API_KEY");
+  const PINECONE_INDEX = await getSecret("PINECONE_INDEX");
+  const PINECONE_ENV = await getSecret("PINECONE_ENV");
+  const OPENAI_API_KEY = await getSecret("OPENAI_API_KEY");
+
+  // 1️⃣ Embed the question
+  const embedRes = await fetch("https://api.openai.com/v1/embeddings", {
+    method: "post",
+    headers: {
+      "Authorization": `Bearer ${OPENAI_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "text-embedding-3-large",
+      input: question
+    })
+  });
+
+  const embedData = await embedRes.json();
+  const vector = embedData.data[0].embedding;
+
+  // 2️⃣ Query Pinecone (__default__)
+  const queryRes = await fetch(
+    `https://${PINECONE_INDEX}.svc.${PINECONE_ENV}.pinecone.io/query`,
+    {
+      method: "post",
+      headers: {
+        "Api-Key": PINECONE_API_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        vector,
+        topK: 10,
+        includeMetadata: true,
+        namespace: "__default__"
+      })
+    }
+  );
+
+  const results = await queryRes.json();
+
+  if (!results.matches || results.matches.length === 0) {
+    return "No relevant data found.";
+  }
+
+  // 3️⃣ Build grounded answer
+  const context = results.matches
+    .map(m => m.metadata?.text || "")
+    .join("\n\n");
+
+  const completion = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "post",
+    headers: {
+      "Authorization": `Bearer ${OPENAI_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: "Answer ONLY using the provided context. Do not guess."
+        },
+        {
+          role: "user",
+          content: `Context:\n${context}\n\nQuestion:\n${question}`
+        }
+      ]
+    })
+  });
+
+  const answer = await completion.json();
+  return answer.choices[0].message.content;
+}
