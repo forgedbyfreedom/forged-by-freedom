@@ -23,11 +23,20 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: 📦 Install dependencies (clean)
+      - name: 📦 Install dependencies
         run: |
           pip uninstall -y pinecone-client || true
           pip uninstall -y pinecone || true
           pip install --no-cache-dir openai pinecone
+
+      - name: 🔍 Verify OPENAI_API_KEY is visible
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "❌ OPENAI_API_KEY IS EMPTY"
+            exit 1
+          else
+            echo "✅ OPENAI_API_KEY IS PRESENT"
+          fi
 
       - name: 🚀 Run Pinecone ingest
         run: |
@@ -36,3 +45,4 @@ jobs:
       - name: 📊 Pinecone post-ingest verification
         run: |
           python ingest/pinecone_stats.py
+
