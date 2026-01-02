@@ -27,13 +27,15 @@ jobs:
       - name: 🚀 Run Pinecone ingest
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
+          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python ingest/ingest_to_pinecone.py
 
       - name: 📊 Pinecone post-ingest verification
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX: ${{ secrets.PINECONE_INDEX }}
+          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python ingest/pinecone_stats.py
