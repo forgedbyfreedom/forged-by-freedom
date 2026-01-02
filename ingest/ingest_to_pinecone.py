@@ -67,7 +67,7 @@ def ingest():
                     }
                 })
 
-            index.upsert(vectors=vectors, namespace="forged")
+            index.upsert(vectors=vectors, namespace="__default__")
             print(f"   ✔ {os.path.basename(path)} → {len(vectors)} vectors")
 
     print("\n✅ Ingest complete")
