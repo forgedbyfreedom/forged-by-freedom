@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
       PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
       - name: 🧩 Checkout repo
@@ -26,13 +26,20 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           pip uninstall -y pinecone-client || true
-          pip uninstall -y pinecone || true
           pip install --no-cache-dir openai pinecone
+
+      - name: 🔍 Verify secrets
+        run: |
+          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
+          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
+          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
+          echo "✅ Secrets present"
 
       - name: 🚀 Run Pinecone ingest
         run: |
           python ingest/ingest_to_pinecone.py
 
-      - name: 📊 Pinecone post-ingest verification
+      - name: 📊 Pinecone stats
         run: |
           python ingest/pinecone_stats.py
+
