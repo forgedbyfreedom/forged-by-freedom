@@ -9,6 +9,10 @@ jobs:
   ingest:
     runs-on: ubuntu-latest
 
+    - name: 📊 Pinecone post-ingest verification
+    run: |
+    python ingest/pinecone_stats.py
+
     steps:
       - name: Checkout forged-by-freedom
         uses: actions/checkout@v4
