@@ -15,23 +15,31 @@ jobs:
       PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: 🧩 Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: 📦 Install dependencies
         run: |
           pip uninstall -y pinecone-client || true
-          pip uninstall -y pinecone || true
           pip install --no-cache-dir openai pinecone
 
-      - name: Run ingest
+      - name: 🔍 Verify secrets
+        run: |
+          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
+          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
+          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
+          echo "✅ All required secrets present"
+
+      - name: 🚀 Run ingest
         run: |
           python ingest/ingest_to_pinecone.py
 
-      - name: Pinecone stats
+      - name: 📊 Verify Pinecone stats
         run: |
           python ingest/pinecone_stats.py
 

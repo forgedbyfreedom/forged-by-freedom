@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import os
 import glob
 import hashlib
@@ -7,22 +6,20 @@ from pinecone import Pinecone
 from openai import OpenAI
 
 # ---- ENV ----
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_HOST = os.getenv("PINECONE_HOST")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+if not PINECONE_API_KEY or not PINECONE_HOST:
+    raise RuntimeError("Missing PINECONE_API_KEY or PINECONE_HOST")
 
 if not OPENAI_API_KEY:
     raise RuntimeError("Missing OPENAI_API_KEY")
-if not PINECONE_API_KEY:
-    raise RuntimeError("Missing PINECONE_API_KEY")
-if not PINECONE_HOST:
-    raise RuntimeError("Missing PINECONE_HOST (required for serverless Pinecone)")
 
 # ---- CONFIG ----
 TRANSCRIPT_ROOT = "ingest/channels"
 CHUNK_SIZE = 1200
 NAMESPACE = "__default__"
-EMBED_MODEL = "text-embedding-3-large"
 
 # ---- CLIENTS ----
 pc = Pinecone(api_key=PINECONE_API_KEY)
@@ -33,26 +30,36 @@ def chunk_text(text):
     for i in range(0, len(text), CHUNK_SIZE):
         yield text[i:i + CHUNK_SIZE]
 
-def stable_id(channel, content):
-    h = hashlib.sha256(content.encode("utf-8")).hexdigest()
-    return f"{channel}|{h}"
-
 def embed(texts):
     res = client.embeddings.create(
-        model=EMBED_MODEL,
+        model="text-embedding-3-large",
         input=texts
     )
     return [d.embedding for d in res.data]
+
+def stable_id(channel, text):
+    h = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    return f"{channel}|{h}"
 
 def ingest():
     total_vectors = 0
     print("🔥 Starting Pinecone ingest")
 
-    for channel_dir in sorted(glob.glob(f"{TRANSCRIPT_ROOT}/@*")):
+    channel_dirs = sorted(glob.glob(f"{TRANSCRIPT_ROOT}/@*"))
+    if not channel_dirs:
+        print("⚠️ No channel directories found")
+        return
+
+    for channel_dir in channel_dirs:
         channel = os.path.basename(channel_dir)
         print(f"\n📘 Channel: {channel}")
 
-        for path in sorted(glob.glob(f"{channel_dir}/*.txt")):
+        txt_files = sorted(glob.glob(f"{channel_dir}/*.txt"))
+        if not txt_files:
+            print("   ⚠️ No transcript files")
+            continue
+
+        for path in txt_files:
             with open(path, "r", encoding="utf-8", errors="ignore") as f:
                 text = f.read().strip()
 
@@ -73,10 +80,10 @@ def ingest():
                     }
                 })
 
-            if vectors:
-                index.upsert(vectors=vectors, namespace=NAMESPACE)
-                total_vectors += len(vectors)
-                print(f"   ✔ {os.path.basename(path)} → {len(vectors)} vectors")
+            index.upsert(vectors=vectors, namespace=NAMESPACE)
+            total_vectors += len(vectors)
+
+            print(f"   ✔ {os.path.basename(path)} → {len(vectors)} vectors")
 
     print(f"\n✅ Ingest complete — total vectors upserted: {total_vectors}")
 

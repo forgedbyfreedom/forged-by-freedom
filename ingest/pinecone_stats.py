@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import os
 from pinecone import Pinecone
 
@@ -15,6 +14,8 @@ index = pc.Index(host=PINECONE_HOST)
 stats = index.describe_index_stats()
 
 print("\n📊 Pinecone Index Stats")
-print(f"Namespaces: {stats.get('namespaces', {})}")
-print(f"Total Vector Count: {stats.get('total_vector_count', 0)}")
+print(f"Namespaces: {list(stats.namespaces.keys())}")
+
+ns = stats.namespaces.get("__default__", {})
+print(f"Vector count (__default__): {ns.get('vector_count', 0)}")
 
