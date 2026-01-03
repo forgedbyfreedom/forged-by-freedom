@@ -2,3 +2,4 @@ ingest/channels/**/large_media_split/**
 ingest/channels/**/*.mp4*
 
 .venv/
+.venv/
