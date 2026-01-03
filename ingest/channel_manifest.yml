@@ -66,3 +66,41 @@ channels:
   "@theconditioncoaches":
     category: sports_psychology
     priority: 2
+
+  "@RenaissancePeriodization":
+    category: sports_nutrition
+    priority: 1
+
+  "@RyanHumiston":
+    category: bodybuilding
+    priority: 2
+
+  "@rxmuscle":
+    category: bodybuilding
+    priority: 1
+
+  "@sam_sulek":
+    category: bodybuilding
+    priority: 1
+
+  "@bodybuildingcom":
+    category: bodybuilding
+    priority: 2
+
+  "@eliteftsofficial":
+    category: bodybuilding
+    priority: 2
+
+  "@hanyrambod_FST7":
+    category: bodybuilding
+    priority: 1
+
+  "@realtattered":
+    category: bodybuilding
+    priority: 2
+
+  "@theconditioncoaches":
+    category: sports_psychology
+    priority: 2
+
+ (Populate channel manifest with existing transcript channels)
