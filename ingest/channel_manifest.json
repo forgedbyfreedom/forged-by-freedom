@@ -1,0 +1,85 @@
+{
+  "categories": {
+    "thinkbig_priority": {
+      "weight": 1.0,
+      "description": "Core bodybuilding, PEDs, culture, real-world application",
+      "channels": {
+        "@ThinkBIGBodybuilding": 1.0,
+        "@anabolicbodybuilding": 0.9,
+        "@rxmuscle": 0.8,
+        "@sam_sulek": 0.7
+      }
+    },
+
+    "anabolic_bodybuilding": {
+      "weight": 0.95,
+      "description": "Steroids, GH, insulin, advanced enhancement protocols",
+      "channels": {
+        "@anabolicuniversity": 1.0,
+        "@bodybuildingcom": 0.7,
+        "@eliteftsofficial": 0.6,
+        "@hanyrambod_FST7": 0.9
+      }
+    },
+
+    "peptides": {
+      "weight": 0.9,
+      "description": "Peptides, GH secretagogues, GLPs, experimental compounds",
+      "channels": {
+        "@DrTrevorBachmeyer": 1.0,
+        "@PeterAttiaMD": 0.8,
+        "@FoundMyFitness": 0.7
+      }
+    },
+
+    "medical_primary": {
+      "weight": 0.85,
+      "description": "Clinical medicine, labs, longevity, metabolic health",
+      "channels": {
+        "@DrGabrielleLyon": 1.0,
+        "@PeterAttiaMD": 0.9
+      }
+    },
+
+    "sports_nutrition": {
+      "weight": 0.8,
+      "description": "Nutrition for hypertrophy, performance, recovery",
+      "channels": {
+        "@RenaissancePeriodization": 1.0,
+        "@JeffNippard": 0.8,
+        "@NasmOrgPersonalTrainer": 0.6
+      }
+    },
+
+    "sports_psychology": {
+      "weight": 0.75,
+      "description": "Mindset, discipline, performance psychology",
+      "channels": {
+        "@MulliganBrothers": 1.0,
+        "@theconditioncoaches": 0.7
+      }
+    },
+
+    "biohacking": {
+      "weight": 0.7,
+      "description": "Optimization, recovery, sleep, wearables",
+      "channels": {
+        "@FoundMyFitness": 1.0,
+        "@RyanHumiston": 0.6
+      }
+    },
+
+    "anti_doping_wada": {
+      "weight": 0.65,
+      "description": "WADA testing, detection science, anti-doping",
+      "channels": {}
+    },
+
+    "pharmacology_toxicology": {
+      "weight": 0.65,
+      "description": "Liver, lipids, CV risk, drug metabolism",
+      "channels": {}
+    }
+  }
+}
+
