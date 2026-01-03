@@ -27,11 +27,11 @@ jobs:
           python-version: "3.11"
 
       # 3️⃣ Clean dependency install
-      - name: 📦 Install dependencies
+      - name: 📦 Install dependencies (clean)
         run: |
-          pip uninstall -y pinecone-client || true
-          pip uninstall -y pinecone || true
-          pip install --no-cache-dir openai pinecone
+         pip uninstall -y pinecone-client || true
+         pip uninstall -y pinecone || true
+         pip install --no-cache-dir openai pinecone pyyaml
 
       # 4️⃣ HARD FAIL if secrets are missing (safety net)
       - name: 🔍 Verify required secrets
