@@ -3,43 +3,51 @@ name: GitHub → Pinecone Ingest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */6 * * *"   # every 6 hours
 
 jobs:
   ingest:
     runs-on: ubuntu-latest
 
+    # 🔑 Job-level environment variables (inherited by ALL steps)
     env:
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
       PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
-      - name: 🧩 Checkout repo
+      # 1️⃣ Checkout repo
+      - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Python setup
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
+      # 3️⃣ Clean dependency install
       - name: 📦 Install dependencies
         run: |
           pip uninstall -y pinecone-client || true
+          pip uninstall -y pinecone || true
           pip install --no-cache-dir openai pinecone
 
-      - name: 🔍 Verify secrets
+      # 4️⃣ HARD FAIL if secrets are missing (safety net)
+      - name: 🔍 Verify required secrets
         run: |
           [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
           [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
           [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
           echo "✅ All required secrets present"
 
-      - name: 🚀 Run ingest
+      # 5️⃣ Run transcript → Pinecone ingest
+      - name: 🚀 Run Pinecone ingest
         run: |
           python ingest/ingest_to_pinecone.py
 
-      - name: 📊 Verify Pinecone stats
+      # 6️⃣ Post-ingest verification / stats
+      - name: 📊 Pinecone post-ingest verification
         run: |
           python ingest/pinecone_stats.py
 

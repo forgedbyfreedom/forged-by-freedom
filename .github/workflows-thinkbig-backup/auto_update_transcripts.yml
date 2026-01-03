@@ -1,0 +1,42 @@
+name: 🪶 Auto Update Transcripts
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "transcripts/**"
+      - "src/transcripts/**"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🧹 Clean temp and cache
+        run: |
+          rm -rf __pycache__ || true
+          rm -rf .pytest_cache || true
+
+      - name: 🧠 Check for transcript updates
+        run: |
+          echo "Scanning for modified transcript files..."
+          git status --short transcripts || true
+
+      - name: 📤 Auto-commit updated transcripts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add transcripts || true
+          git diff --cached --quiet && echo "✅ No changes to commit." || (
+            git commit -m "🪶 Auto-update transcripts [skip ci]"
+            git push
+          )
