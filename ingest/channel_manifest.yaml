@@ -1,80 +1,60 @@
-version: 1.0
+version: 1
+default_namespace: "__default__"
 
 categories:
-
   thinkbig_priority:
-    priority: 1.0
-    description: >
-      Core Forged By Freedom knowledge base. Hardcore bodybuilding,
-      pharmacology, steroids, GH, insulin, peptides, real-world use.
+    weight: 1.0
     channels:
       - "@ThinkBIGBodybuilding"
+      - "@rxmuscle"
       - "@anabolicbodybuilding"
       - "@anabolicuniversity"
-      - "@rxmuscle"
 
-  anabolic_bodybuilding:
-    priority: 0.95
-    description: >
-      Competitive bodybuilding training, gear usage, hypertrophy,
-      contest prep, posing, cycles.
+  anabolic_bodybuilding_priority:
+    weight: 0.95
     channels:
-      - "@sam_sulek"
       - "@hanyrambod_FST7"
-      - "@eliteftsofficial"
+      - "@sam_sulek"
+      - "@realtattered"
       - "@bodybuildingcom"
+      - "@eliteftsofficial"
 
   peptides:
-    priority: 0.9
-    description: >
-      Peptides, GH, insulin, GLPs, recovery compounds, experimental protocols.
+    weight: 0.9
     channels:
-      - "@ThinkBIGBodybuilding"
-      - "@anabolicuniversity"
+      - "@FoundMyFitness"
+      - "@PeterAttiaMD"
+      - "@DrGabrielleLyon"
 
   medical_primary:
-    priority: 0.85
-    description: >
-      Clinically grounded medical discussions relevant to performance,
-      longevity, hormones, metabolic health.
+    weight: 0.85
     channels:
+      - "@BarbellMedicine"
       - "@DrGabrielleLyon"
       - "@PeterAttiaMD"
-      - "@FoundMyFitness"
-      - "@BarbellMedicine"
+
+  sports_psych:
+    weight: 0.75
+    channels:
+      - "@MulliganBrothers"
+      - "@theconditioncoaches"
 
   sports_nutrition:
-    priority: 0.8
-    description: >
-      Nutrition for hypertrophy, fat loss, metabolic health, athlete performance.
+    weight: 0.8
     channels:
       - "@RenaissancePeriodization"
       - "@JeffNippard"
       - "@ISSAPersonalTrainer"
       - "@NasmOrgPersonalTrainer"
 
-  sports_psychology:
-    priority: 0.75
-    description: >
-      Mindset, discipline, identity, competitive psychology.
-    channels:
-      - "@MulliganBrothers"
-      - "@RyanHumiston"
-
   biohacking:
-    priority: 0.7
-    description: >
-      Recovery tech, supplements, protocols, experimental optimization.
+    weight: 0.7
     channels:
-      - "@PeterAttiaMD"
       - "@FoundMyFitness"
+      - "@PeterAttiaMD"
 
-  general_bodybuilding:
-    priority: 0.6
-    description: >
-      General training, lifestyle, entry-level bodybuilding content.
-    channels:
-      - "@NicksStrengthandPower"
-      - "@HighLifeWorkout"
-      - "@realtattered"
-      - "@theconditioncoaches"
+future_categories:
+  anti_doping_wada:
+    planned: true
+  pharmacology_toxicology:
+    planned: true
