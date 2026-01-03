@@ -1,4 +1,4 @@
-nname: GitHub → Pinecone Ingest (Stable)
+name: GitHub → Pinecone Ingest (Stable)
 
 on:
   workflow_dispatch:
