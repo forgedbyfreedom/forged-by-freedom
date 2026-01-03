@@ -1,16 +1,5 @@
 name: GitHub → Pinecone Ingest (Stable)
 
-- 🧪 DEBUG – Show requirements file
-  run: |
-    echo "PWD:"
-    pwd
-    echo
-    echo "TREE:"
-    ls -R ingest | head -n 50
-    echo
-    echo "CONTENTS OF ingest/requirements.txt:"
-    cat ingest/requirements.txt || echo "FILE NOT FOUND"
-
 on:
   workflow_dispatch:
   schedule:
@@ -25,18 +14,34 @@ jobs:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Set up Python (SINGLE runtime)
+      # 2️⃣ DEBUG — Show requirements file and tree
+      - name: 🧪 DEBUG – Show requirements file
+        run: |
+          echo "PWD:"
+          pwd
+          echo
+          echo "TREE (ingest/):"
+          ls -R ingest | head -n 50
+          echo
+          echo "CONTENTS OF ingest/requirements.txt:"
+          if [ -f ingest/requirements.txt ]; then
+            nl -ba ingest/requirements.txt
+          else
+            echo "❌ ingest/requirements.txt NOT FOUND"
+          fi
+
+      # 3️⃣ Set up Python (single runtime)
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3️⃣ Upgrade pip (important)
+      # 4️⃣ Upgrade pip
       - name: ⬆️ Upgrade pip
         run: |
           python -m pip install --upgrade pip
 
-      # 4️⃣ Install ALL dependencies explicitly (NO ambiguity)
+      # 5️⃣ Install dependencies explicitly (no -r)
       - name: 📦 Install dependencies
         run: |
           python -m pip install --no-cache-dir \
@@ -44,16 +49,16 @@ jobs:
             pinecone \
             PyYAML
 
-      # 5️⃣ Hard verify PyYAML BEFORE ingest (this is the key fix)
+      # 6️⃣ Verify PyYAML (hard stop if broken)
       - name: 🔍 Verify PyYAML installation
         run: |
-          python - <<EOF
+          python - <<'EOF'
           import yaml
           print("✅ PyYAML loaded successfully")
           print("PyYAML version:", yaml.__version__)
           EOF
 
-      # 6️⃣ Verify secrets are present
+      # 7️⃣ Verify secrets
       - name: 🔐 Verify required secrets
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -65,7 +70,7 @@ jobs:
           [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
           echo "✅ All required secrets present"
 
-      # 7️⃣ Run Pinecone ingest
+      # 8️⃣ Run Pinecone ingest
       - name: 🚀 Run Pinecone ingest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -74,7 +79,7 @@ jobs:
         run: |
           python ingest/ingest_to_pinecone.py
 
-      # 8️⃣ Post-ingest stats (optional but recommended)
+      # 9️⃣ Post-ingest stats
       - name: 📊 Pinecone post-ingest verification
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
