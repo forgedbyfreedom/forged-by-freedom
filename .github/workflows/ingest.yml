@@ -1,5 +1,16 @@
 name: GitHub → Pinecone Ingest (Stable)
 
+- name: 🧪 DEBUG – Show requirements file
+  run: |
+    echo "PWD:"
+    pwd
+    echo
+    echo "TREE:"
+    ls -R ingest | head -n 50
+    echo
+    echo "CONTENTS OF ingest/requirements.txt:"
+    cat ingest/requirements.txt || echo "FILE NOT FOUND"
+
 on:
   workflow_dispatch:
   schedule:
