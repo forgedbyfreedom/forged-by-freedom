@@ -1,4 +1,3 @@
-thinkbig-transcripts/requirements.txt
 openai
 pinecone
 PyYAML

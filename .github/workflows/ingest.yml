@@ -23,16 +23,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: 📦 Install dependencies
+      - name: 📦 Install dependencies (single environment)
         run: |
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ingest/requirements.txt
 
-      - name: 🔍 Verify PyYAML install
+      - name: 🔍 Verify PyYAML
         run: |
           python - <<EOF
           import yaml
-          print("✅ PyYAML import successful")
+          print("PyYAML OK:", yaml.__version__)
           EOF
 
       - name: 🚀 Run Pinecone ingest
