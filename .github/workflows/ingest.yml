@@ -3,7 +3,7 @@ name: GitHub → Pinecone Ingest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 */6 * * *"
 
 jobs:
   ingest:
@@ -23,22 +23,23 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: 📦 Install dependencies
+      - name: 📦 Install ingest dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --no-cache-dir -r ingest/requirements.txt
+          python -m pip install --no-cache-dir -r ingest/requirements.txt
 
-      - name: 🔐 Verify secrets
+      - name: 🔍 Verify PyYAML install
         run: |
-          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
-          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
-          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
-          echo "✅ All required secrets present"
+          python - <<EOF
+          import yaml
+          print("✅ PyYAML import successful")
+          EOF
 
       - name: 🚀 Run Pinecone ingest
         run: |
           python ingest/ingest_to_pinecone.py
 
-      - name: 📊 Pinecone post-ingest verification
+      - name: 📊 Pinecone stats
         run: |
           python ingest/pinecone_stats.py
+
