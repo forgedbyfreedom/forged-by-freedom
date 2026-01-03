@@ -46,7 +46,7 @@ jobs:
         run: |
           python -m pip install --no-cache-dir \
             openai \
-            pinecone-client \
+            pinecone\
             PyYAML
 
       # 6️⃣ HARD VERIFY PyYAML (this was failing before)
