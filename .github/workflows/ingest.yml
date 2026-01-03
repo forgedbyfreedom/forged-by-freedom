@@ -1,6 +1,6 @@
 name: GitHub → Pinecone Ingest (Stable)
 
-- name: 🧪 DEBUG – Show requirements file
+- 🧪 DEBUG – Show requirements file
   run: |
     echo "PWD:"
     pwd
