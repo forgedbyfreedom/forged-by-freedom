@@ -1,106 +1,60 @@
-channels:
-  "@ThinkBIGBodybuilding":
-    category: bodybuilding
-    priority: 1
+version: 1
+default_namespace: "__default__"
 
-  "@anabolicbodybuilding":
-    category: bodybuilding
-    priority: 1
+categories:
+  thinkbig_priority:
+    weight: 1.0
+    channels:
+      - "@ThinkBIGBodybuilding"
+      - "@rxmuscle"
+      - "@anabolicbodybuilding"
+      - "@anabolicuniversity"
 
-  "@anabolicuniversity":
-    category: bodybuilding
-    priority: 1
+  anabolic_bodybuilding_priority:
+    weight: 0.95
+    channels:
+      - "@hanyrambod_FST7"
+      - "@sam_sulek"
+      - "@realtattered"
+      - "@bodybuildingcom"
+      - "@eliteftsofficial"
 
-  "@BarbellMedicine":
-    category: medical
-    priority: 2
+  peptides:
+    weight: 0.9
+    channels:
+      - "@FoundMyFitness"
+      - "@PeterAttiaMD"
+      - "@DrGabrielleLyon"
 
-  "@DrGabrielleLyon":
-    category: medical
-    priority: 1
+  medical_primary:
+    weight: 0.85
+    channels:
+      - "@BarbellMedicine"
+      - "@DrGabrielleLyon"
+      - "@PeterAttiaMD"
 
-  "@PeterAttiaMD":
-    category: medical
-    priority: 2
+  sports_psych:
+    weight: 0.75
+    channels:
+      - "@MulliganBrothers"
+      - "@theconditioncoaches"
 
-  "@FoundMyFitness":
-    category: medical
-    priority: 2
+  sports_nutrition:
+    weight: 0.8
+    channels:
+      - "@RenaissancePeriodization"
+      - "@JeffNippard"
+      - "@ISSAPersonalTrainer"
+      - "@NasmOrgPersonalTrainer"
 
-  "@JeffNippard":
-    category: sports_nutrition
-    priority: 2
+  biohacking:
+    weight: 0.7
+    channels:
+      - "@FoundMyFitness"
+      - "@PeterAttiaMD"
 
-  "@RenaissancePeriodization":
-    category: sports_nutrition
-    priority: 1
-
-  "@RyanHumiston":
-    category: bodybuilding
-    priority: 2
-
-  "@rxmuscle":
-    category: bodybuilding
-    priority: 1
-
-  "@sam_sulek":
-    category: bodybuilding
-    priority: 1
-
-  "@bodybuildingcom":
-    category: bodybuilding
-    priority: 2
-
-  "@eliteftsofficial":
-    category: bodybuilding
-    priority: 2
-
-  "@hanyrambod_FST7":
-    category: bodybuilding
-    priority: 1
-
-  "@realtattered":
-    category: bodybuilding
-    priority: 2
-
-  "@theconditioncoaches":
-    category: sports_psychology
-    priority: 2
-
-  "@RenaissancePeriodization":
-    category: sports_nutrition
-    priority: 1
-
-  "@RyanHumiston":
-    category: bodybuilding
-    priority: 2
-
-  "@rxmuscle":
-    category: bodybuilding
-    priority: 1
-
-  "@sam_sulek":
-    category: bodybuilding
-    priority: 1
-
-  "@bodybuildingcom":
-    category: bodybuilding
-    priority: 2
-
-  "@eliteftsofficial":
-    category: bodybuilding
-    priority: 2
-
-  "@hanyrambod_FST7":
-    category: bodybuilding
-    priority: 1
-
-  "@realtattered":
-    category: bodybuilding
-    priority: 2
-
-  "@theconditioncoaches":
-    category: sports_psychology
-    priority: 2
-
- (Populate channel manifest with existing transcript channels)
+future_categories:
+  anti_doping_wada:
+    planned: true
+  pharmacology_toxicology:
+    planned: true
