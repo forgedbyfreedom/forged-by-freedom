@@ -1,51 +1,40 @@
-#!/usr/bin/env python3
-
 import os
-import sys
 import time
-import uuid
+import hashlib
 from pathlib import Path
-from typing import List, Dict
+from typing import List
 
-import requests
-from pinecone import Pinecone
+from openai import OpenAI
+from pinecone import Pinecone, ServerlessSpec
 
 # ==============================
 # CONFIG
 # ==============================
 
-BASE_DIR = Path(__file__).resolve().parent
-CHANNELS_DIR = BASE_DIR / "channels"
+EMBED_MODEL = "text-embedding-3-large"
+EMBED_DIM = 3072
 
-MAX_CHARS = 1200           # smaller = safer
-BATCH_SIZE = 25            # Pinecone safe
-RETRY_LIMIT = 5
-RETRY_SLEEP = 4            # seconds
+CHUNK_SIZE = 800          # tokens-ish (safe)
+CHUNK_OVERLAP = 100
+BATCH_SIZE = 40           # keeps Pinecone < 2MB
+EMBED_DELAY = 0.8         # seconds between OpenAI calls
 
-OPENROUTER_URL = os.getenv(
-    "OPENROUTER_BASE_URL",
-    "https://openrouter.ai/api/v1/embeddings"
-)
-
-EMBED_MODEL = os.getenv(
-    "OPENROUTER_EMBED_MODEL",
-    "text-embedding-3-large"
-)
+CHANNELS_DIR = Path("ingest/channels")
+NAMESPACE = "thinkbig"
 
 # ==============================
 # ENV CHECK
 # ==============================
 
-REQUIRED = [
-    "OPENROUTER_API_KEY",
+REQUIRED_ENVS = [
+    "OPENAI_API_KEY",
     "PINECONE_API_KEY",
     "PINECONE_INDEX_NAME",
 ]
 
-for var in REQUIRED:
-    if not os.getenv(var):
-        print(f"❌ Missing env var: {var}")
-        sys.exit(1)
+for env in REQUIRED_ENVS:
+    if not os.getenv(env):
+        raise RuntimeError(f"❌ Missing env var: {env}")
 
 print("✅ Environment variables verified")
 
@@ -53,121 +42,93 @@ print("✅ Environment variables verified")
 # CLIENTS
 # ==============================
 
+openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(os.getenv("PINECONE_INDEX_NAME"))
-
-HEADERS = {
-    "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
-    "Content-Type": "application/json",
-    "User-Agent": "forged-by-freedom-ingest/1.0",
-}
 
 # ==============================
 # HELPERS
 # ==============================
 
 def chunk_text(text: str) -> List[str]:
-    return [
-        text[i:i + MAX_CHARS]
-        for i in range(0, len(text), MAX_CHARS)
-    ]
+    words = text.split()
+    chunks = []
+    i = 0
+    while i < len(words):
+        chunk = words[i:i + CHUNK_SIZE]
+        chunks.append(" ".join(chunk))
+        i += CHUNK_SIZE - CHUNK_OVERLAP
+    return chunks
 
 
-def embed_texts(texts: List[str]) -> List[List[float]]:
-    payload = {
-        "model": EMBED_MODEL,
-        "input": texts,
-    }
-
-    for attempt in range(1, RETRY_LIMIT + 1):
-        try:
-            r = requests.post(
-                OPENROUTER_URL,
-                headers=HEADERS,
-                json=payload,
-                timeout=60,
-            )
-
-            if r.status_code != 200:
-                print(f"⚠️ OpenRouter HTTP {r.status_code}")
-                print(r.text[:500])
-                raise RuntimeError("Non-200 response")
-
-            try:
-                data = r.json()
-            except Exception:
-                print("⚠️ OpenRouter returned non-JSON:")
-                print(r.text[:500])
-                raise
-
-            return [item["embedding"] for item in data["data"]]
-
-        except Exception as e:
-            print(f"🔁 Embed retry {attempt}/{RETRY_LIMIT}: {e}")
-            time.sleep(RETRY_SLEEP * attempt)
-
-    raise RuntimeError("❌ Embedding failed after retries")
+def embed_batch(texts: List[str]) -> List[List[float]]:
+    response = openai_client.embeddings.create(
+        model=EMBED_MODEL,
+        input=texts,
+    )
+    return [d.embedding for d in response.data]
 
 
-def upsert_safe(vectors: List[Dict]):
-    for i in range(0, len(vectors), BATCH_SIZE):
-        batch = vectors[i:i + BATCH_SIZE]
-        index.upsert(vectors=batch)
-        print(f"   ✅ Upserted {i + len(batch)} / {len(vectors)}")
-        time.sleep(0.3)
+def file_id(path: Path) -> str:
+    return hashlib.md5(str(path).encode()).hexdigest()
+
 
 # ==============================
-# MAIN
+# MAIN INGEST
 # ==============================
 
 def run():
-    files = list(CHANNELS_DIR.rglob("*.txt"))
+    print("🚀 STARTING OPENAI → PINECONE INGEST")
+    print(f"📂 Scanning transcripts in: {CHANNELS_DIR.resolve()}")
+
+    files = sorted(CHANNELS_DIR.rglob("*.txt"))
     print(f"📄 Found {len(files)} transcript files")
 
-    buffer = []
+    total_vectors = 0
 
-    for file in files:
+    for file_path in files:
         try:
-            text = file.read_text(encoding="utf-8", errors="ignore")
+            text = file_path.read_text(errors="ignore").strip()
+            if not text:
+                continue
+
+            chunks = chunk_text(text)
+            print(f"➡️ {file_path.name}: {len(chunks)} chunks")
+
+            for i in range(0, len(chunks), BATCH_SIZE):
+                batch = chunks[i:i + BATCH_SIZE]
+
+                embeddings = embed_batch(batch)
+
+                vectors = []
+                for j, emb in enumerate(embeddings):
+                    vectors.append({
+                        "id": f"{file_id(file_path)}_{i+j}",
+                        "values": emb,
+                        "metadata": {
+                            "source": str(file_path),
+                            "chunk": i + j
+                        }
+                    })
+
+                index.upsert(vectors=vectors, namespace=NAMESPACE)
+                total_vectors += len(vectors)
+
+                print(f"   ✅ Upserted {len(vectors)} vectors (total: {total_vectors})")
+
+                time.sleep(EMBED_DELAY)
+
+        except KeyboardInterrupt:
+            print("🛑 Interrupted by user — safe to resume later")
+            return
         except Exception as e:
-            print(f"⚠️ Skipped unreadable file: {file} ({e})")
+            print(f"⚠️ Error processing {file_path.name}: {e}")
             continue
-
-        chunks = chunk_text(text)
-        print(f"➡️ {file.name}: {len(chunks)} chunks")
-
-        try:
-            embeddings = embed_texts(chunks)
-        except Exception as e:
-            print(f"❌ Failed embeddings for {file.name}: {e}")
-            continue
-
-        for chunk, embedding in zip(chunks, embeddings):
-            buffer.append({
-                "id": str(uuid.uuid4()),
-                "values": embedding,
-                "metadata": {
-                    "source": str(file),
-                    "filename": file.name,
-                    "text": chunk[:700],
-                },
-            })
-
-        if len(buffer) >= BATCH_SIZE:
-            print(f"⬆️ Upserting batch ({len(buffer)})")
-            upsert_safe(buffer)
-            buffer.clear()
-
-    if buffer:
-        print(f"⬆️ Final upsert ({len(buffer)})")
-        upsert_safe(buffer)
 
     print("🎉 INGEST COMPLETE")
+    print(f"📊 Total vectors ingested: {total_vectors}")
 
-# ==============================
-# ENTRY
-# ==============================
 
 if __name__ == "__main__":
-    print("🚀 STARTING OPENROUTER → PINECONE INGEST")
     run()
