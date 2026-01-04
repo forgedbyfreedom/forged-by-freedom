@@ -2,11 +2,24 @@
 
 import os
 import hashlib
+import time
 from pathlib import Path
 import yaml
 
 from pinecone import Pinecone
 from openai import OpenAI
+
+# =========================
+# CONFIG
+# =========================
+
+CHUNK_SIZE = 1200
+CHUNK_OVERLAP = 200
+BATCH_SIZE = 32
+SLEEP_BETWEEN_BATCHES = 0.3
+
+EMBED_MODEL = "openai/text-embedding-3-large"
+NAMESPACE = "__default__"
 
 # =========================
 # PATHS
@@ -16,20 +29,35 @@ BASE_DIR = Path(__file__).resolve().parent
 CHANNELS_DIR = BASE_DIR / "channels"
 MANIFEST_PATH = BASE_DIR / "channel_manifest.yml"
 
-CHUNK_SIZE = 1200
-EMBED_MODEL = "text-embedding-3-large"
-NAMESPACE = "__default__"
-
 # =========================
-# ENV
+# ENV VALIDATION
 # =========================
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_HOST = os.getenv("PINECONE_HOST")
 
-if not all([OPENAI_API_KEY, PINECONE_API_KEY, PINECONE_HOST]):
-    raise RuntimeError("❌ Missing required environment variables")
+if not OPENROUTER_API_KEY:
+    raise RuntimeError("❌ OPENROUTER_API_KEY not set")
+
+if not PINECONE_API_KEY or not PINECONE_HOST:
+    raise RuntimeError("❌ Pinecone env vars missing")
+
+# =========================
+# CLIENTS
+# =========================
+
+client = OpenAI(
+    api_key=OPENROUTER_API_KEY,
+    base_url="https://openrouter.ai/api/v1"
+)
+
+assert client.base_url.startswith(
+    "https://openrouter.ai"
+), "❌ OpenRouter NOT in use — aborting"
+
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(host=PINECONE_HOST)
 
 # =========================
 # DEBUG
@@ -40,14 +68,8 @@ print("• BASE_DIR:", BASE_DIR)
 print("• CHANNELS_DIR exists:", CHANNELS_DIR.exists())
 print("• Manifest exists:", MANIFEST_PATH.exists())
 print("• Total .txt files:", len(list(CHANNELS_DIR.rglob("*.txt"))))
-
-# =========================
-# CLIENTS
-# =========================
-
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(host=PINECONE_HOST)
-client = OpenAI(api_key=OPENAI_API_KEY)
+print("• Embedding model:", EMBED_MODEL)
+print("• Using OpenRouter:", client.base_url)
 
 # =========================
 # HELPERS
@@ -64,7 +86,7 @@ def load_manifest():
     return categories
 
 
-def chunk_text(text, size=1200, overlap=200):
+def chunk_text(text, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     start = 0
     while start < len(text):
         yield text[start:start + size]
@@ -72,11 +94,20 @@ def chunk_text(text, size=1200, overlap=200):
 
 
 def embed(texts):
-    response = client.embeddings.create(
-        model=EMBED_MODEL,
-        input=texts
-    )
-    return [item.embedding for item in response.data]
+    embeddings = []
+
+    for i in range(0, len(texts), BATCH_SIZE):
+        batch = texts[i:i + BATCH_SIZE]
+
+        response = client.embeddings.create(
+            model=EMBED_MODEL,
+            input=batch
+        )
+
+        embeddings.extend([item.embedding for item in response.data])
+        time.sleep(SLEEP_BETWEEN_BATCHES)
+
+    return embeddings
 
 
 def vector_id(category, channel, filename, chunk, idx):
