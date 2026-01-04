@@ -3,6 +3,7 @@
 import os
 import hashlib
 import time
+import re
 from pathlib import Path
 import yaml
 
@@ -18,7 +19,7 @@ CHUNK_OVERLAP = 200
 BATCH_SIZE = 32
 SLEEP_BETWEEN_BATCHES = 0.3
 
-# IMPORTANT: OpenRouter-routed model
+# OpenRouter-routed OpenAI embedding model
 EMBED_MODEL = "openai/text-embedding-3-large"
 NAMESPACE = "__default__"
 
@@ -111,9 +112,20 @@ def embed(texts):
     return embeddings
 
 
+def ascii_safe(text: str) -> str:
+    """
+    Convert text to ASCII-safe form for Pinecone vector IDs.
+    """
+    text = text.lower()
+    text = re.sub(r"[^a-z0-9]+", "_", text)
+    return text.strip("_")
+
+
 def vector_id(category, channel, filename, chunk, idx):
+    base = f"{category}_{channel}_{filename}_{idx}"
+    safe_base = ascii_safe(base)
     h = hashlib.sha256(chunk.encode("utf-8")).hexdigest()[:16]
-    return f"{category}|{channel}|{filename}|{idx}|{h}"
+    return f"{safe_base}_{h}"
 
 # =========================
 # INGEST
@@ -152,7 +164,13 @@ def ingest():
                 vectors = []
                 for idx, (chunk, emb) in enumerate(zip(chunks, embeddings)):
                     vectors.append({
-                        "id": vector_id(category_name, channel, txt.name, chunk, idx),
+                        "id": vector_id(
+                            category_name,
+                            channel,
+                            txt.name,
+                            chunk,
+                            idx
+                        ),
                         "values": emb,
                         "metadata": {
                             "category": category_name,
