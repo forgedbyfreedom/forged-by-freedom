@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-ONE-TIME INGEST SCRIPT
-• Reads all .txt transcripts
-• Embeds via OpenRouter
-• Upserts to Pinecone (SDK v6+ compatible)
-• Safe batching to avoid 2MB limit
-"""
 
 import os
 import sys
@@ -24,8 +17,10 @@ from pinecone import Pinecone
 BASE_DIR = Path(__file__).resolve().parent
 CHANNELS_DIR = BASE_DIR / "channels"
 
-BATCH_SIZE = 40          # conservative for 2MB limit
-MAX_CHARS = 1500
+MAX_CHARS = 1200           # smaller = safer
+BATCH_SIZE = 25            # Pinecone safe
+RETRY_LIMIT = 5
+RETRY_SLEEP = 4            # seconds
 
 OPENROUTER_URL = os.getenv(
     "OPENROUTER_BASE_URL",
@@ -38,7 +33,7 @@ EMBED_MODEL = os.getenv(
 )
 
 # ==============================
-# ENV VALIDATION
+# ENV CHECK
 # ==============================
 
 REQUIRED = [
@@ -55,7 +50,7 @@ for var in REQUIRED:
 print("✅ Environment variables verified")
 
 # ==============================
-# INIT CLIENTS (NEW SDK)
+# CLIENTS
 # ==============================
 
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
@@ -64,16 +59,17 @@ index = pc.Index(os.getenv("PINECONE_INDEX_NAME"))
 HEADERS = {
     "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
     "Content-Type": "application/json",
+    "User-Agent": "forged-by-freedom-ingest/1.0",
 }
 
 # ==============================
 # HELPERS
 # ==============================
 
-def chunk_text(text: str, max_chars: int = MAX_CHARS) -> List[str]:
+def chunk_text(text: str) -> List[str]:
     return [
-        text[i:i + max_chars]
-        for i in range(0, len(text), max_chars)
+        text[i:i + MAX_CHARS]
+        for i in range(0, len(text), MAX_CHARS)
     ]
 
 
@@ -83,16 +79,34 @@ def embed_texts(texts: List[str]) -> List[List[float]]:
         "input": texts,
     }
 
-    r = requests.post(
-        OPENROUTER_URL,
-        headers=HEADERS,
-        json=payload,
-        timeout=60
-    )
-    r.raise_for_status()
-    data = r.json()
+    for attempt in range(1, RETRY_LIMIT + 1):
+        try:
+            r = requests.post(
+                OPENROUTER_URL,
+                headers=HEADERS,
+                json=payload,
+                timeout=60,
+            )
 
-    return [item["embedding"] for item in data["data"]]
+            if r.status_code != 200:
+                print(f"⚠️ OpenRouter HTTP {r.status_code}")
+                print(r.text[:500])
+                raise RuntimeError("Non-200 response")
+
+            try:
+                data = r.json()
+            except Exception:
+                print("⚠️ OpenRouter returned non-JSON:")
+                print(r.text[:500])
+                raise
+
+            return [item["embedding"] for item in data["data"]]
+
+        except Exception as e:
+            print(f"🔁 Embed retry {attempt}/{RETRY_LIMIT}: {e}")
+            time.sleep(RETRY_SLEEP * attempt)
+
+    raise RuntimeError("❌ Embedding failed after retries")
 
 
 def upsert_safe(vectors: List[Dict]):
@@ -100,16 +114,13 @@ def upsert_safe(vectors: List[Dict]):
         batch = vectors[i:i + BATCH_SIZE]
         index.upsert(vectors=batch)
         print(f"   ✅ Upserted {i + len(batch)} / {len(vectors)}")
-        time.sleep(0.25)
-
+        time.sleep(0.3)
 
 # ==============================
 # MAIN
 # ==============================
 
 def run():
-    print(f"📂 Scanning transcripts in: {CHANNELS_DIR}")
-
     files = list(CHANNELS_DIR.rglob("*.txt"))
     print(f"📄 Found {len(files)} transcript files")
 
@@ -125,7 +136,11 @@ def run():
         chunks = chunk_text(text)
         print(f"➡️ {file.name}: {len(chunks)} chunks")
 
-        embeddings = embed_texts(chunks)
+        try:
+            embeddings = embed_texts(chunks)
+        except Exception as e:
+            print(f"❌ Failed embeddings for {file.name}: {e}")
+            continue
 
         for chunk, embedding in zip(chunks, embeddings):
             buffer.append({
@@ -134,7 +149,7 @@ def run():
                 "metadata": {
                     "source": str(file),
                     "filename": file.name,
-                    "text": chunk[:800],
+                    "text": chunk[:700],
                 },
             })
 
@@ -148,7 +163,6 @@ def run():
         upsert_safe(buffer)
 
     print("🎉 INGEST COMPLETE")
-
 
 # ==============================
 # ENTRY
