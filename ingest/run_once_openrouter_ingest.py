@@ -18,6 +18,7 @@ CHUNK_OVERLAP = 200
 BATCH_SIZE = 32
 SLEEP_BETWEEN_BATCHES = 0.3
 
+# IMPORTANT: OpenRouter-routed model
 EMBED_MODEL = "openai/text-embedding-3-large"
 NAMESPACE = "__default__"
 
@@ -30,7 +31,7 @@ CHANNELS_DIR = BASE_DIR / "channels"
 MANIFEST_PATH = BASE_DIR / "channel_manifest.yml"
 
 # =========================
-# ENV VALIDATION
+# ENV
 # =========================
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
@@ -41,7 +42,7 @@ if not OPENROUTER_API_KEY:
     raise RuntimeError("❌ OPENROUTER_API_KEY not set")
 
 if not PINECONE_API_KEY or not PINECONE_HOST:
-    raise RuntimeError("❌ Pinecone env vars missing")
+    raise RuntimeError("❌ Pinecone environment variables missing")
 
 # =========================
 # CLIENTS
@@ -49,12 +50,12 @@ if not PINECONE_API_KEY or not PINECONE_HOST:
 
 client = OpenAI(
     api_key=OPENROUTER_API_KEY,
-    base_url="https://openrouter.ai/api/v1"
+    base_url="https://openrouter.ai/api/v1",
+    default_headers={
+        "HTTP-Referer": "https://forged-by-freedom.local",
+        "X-Title": "ForgedByFreedom Ingest"
+    }
 )
-
-assert client.base_url.startswith(
-    "https://openrouter.ai"
-), "❌ OpenRouter NOT in use — aborting"
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(host=PINECONE_HOST)
@@ -68,8 +69,8 @@ print("• BASE_DIR:", BASE_DIR)
 print("• CHANNELS_DIR exists:", CHANNELS_DIR.exists())
 print("• Manifest exists:", MANIFEST_PATH.exists())
 print("• Total .txt files:", len(list(CHANNELS_DIR.rglob("*.txt"))))
+print("• Using base_url:", client.base_url)
 print("• Embedding model:", EMBED_MODEL)
-print("• Using OpenRouter:", client.base_url)
 
 # =========================
 # HELPERS
