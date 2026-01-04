@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-One-time ingest script:
-• Reads ALL .txt transcripts
+ONE-TIME INGEST SCRIPT
+• Reads all .txt transcripts
 • Embeds via OpenRouter
-• Upserts to Pinecone in SAFE batches (<= 2MB)
+• Upserts to Pinecone (SDK v6+ compatible)
+• Safe batching to avoid 2MB limit
 """
 
 import os
@@ -13,8 +14,8 @@ import uuid
 from pathlib import Path
 from typing import List, Dict
 
-import pinecone
 import requests
+from pinecone import Pinecone
 
 # ==============================
 # CONFIG
@@ -23,33 +24,42 @@ import requests
 BASE_DIR = Path(__file__).resolve().parent
 CHANNELS_DIR = BASE_DIR / "channels"
 
-BATCH_SIZE = 50                 # SAFE Pinecone batch size
-EMBED_MODEL = os.getenv("OPENROUTER_EMBED_MODEL", "text-embedding-3-large")
-OPENROUTER_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1/embeddings")
+BATCH_SIZE = 40          # conservative for 2MB limit
+MAX_CHARS = 1500
+
+OPENROUTER_URL = os.getenv(
+    "OPENROUTER_BASE_URL",
+    "https://openrouter.ai/api/v1/embeddings"
+)
+
+EMBED_MODEL = os.getenv(
+    "OPENROUTER_EMBED_MODEL",
+    "text-embedding-3-large"
+)
 
 # ==============================
 # ENV VALIDATION
 # ==============================
 
-REQUIRED_ENVS = [
+REQUIRED = [
     "OPENROUTER_API_KEY",
     "PINECONE_API_KEY",
     "PINECONE_INDEX_NAME",
 ]
 
-for env in REQUIRED_ENVS:
-    if not os.getenv(env):
-        print(f"❌ Missing env var: {env}")
+for var in REQUIRED:
+    if not os.getenv(var):
+        print(f"❌ Missing env var: {var}")
         sys.exit(1)
 
 print("✅ Environment variables verified")
 
 # ==============================
-# INIT CLIENTS
+# INIT CLIENTS (NEW SDK)
 # ==============================
 
-pinecone.init(api_key=os.getenv("PINECONE_API_KEY"))
-index = pinecone.Index(os.getenv("PINECONE_INDEX_NAME"))
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+index = pc.Index(os.getenv("PINECONE_INDEX_NAME"))
 
 HEADERS = {
     "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
@@ -60,89 +70,84 @@ HEADERS = {
 # HELPERS
 # ==============================
 
+def chunk_text(text: str, max_chars: int = MAX_CHARS) -> List[str]:
+    return [
+        text[i:i + max_chars]
+        for i in range(0, len(text), max_chars)
+    ]
+
+
 def embed_texts(texts: List[str]) -> List[List[float]]:
-    """Call OpenRouter embedding API"""
     payload = {
         "model": EMBED_MODEL,
         "input": texts,
     }
 
-    r = requests.post(OPENROUTER_URL, headers=HEADERS, json=payload, timeout=60)
+    r = requests.post(
+        OPENROUTER_URL,
+        headers=HEADERS,
+        json=payload,
+        timeout=60
+    )
     r.raise_for_status()
     data = r.json()
 
-    return [d["embedding"] for d in data["data"]]
+    return [item["embedding"] for item in data["data"]]
 
 
-def chunk_text(text: str, max_chars: int = 1500) -> List[str]:
-    """Split long transcript into manageable chunks"""
-    chunks = []
-    start = 0
-    while start < len(text):
-        chunks.append(text[start:start + max_chars])
-        start += max_chars
-    return chunks
+def upsert_safe(vectors: List[Dict]):
+    for i in range(0, len(vectors), BATCH_SIZE):
+        batch = vectors[i:i + BATCH_SIZE]
+        index.upsert(vectors=batch)
+        print(f"   ✅ Upserted {i + len(batch)} / {len(vectors)}")
+        time.sleep(0.25)
 
 
 # ==============================
-# MAIN INGEST
+# MAIN
 # ==============================
 
 def run():
     print(f"📂 Scanning transcripts in: {CHANNELS_DIR}")
 
-    txt_files = list(CHANNELS_DIR.rglob("*.txt"))
-    print(f"📄 Found {len(txt_files)} transcript files")
+    files = list(CHANNELS_DIR.rglob("*.txt"))
+    print(f"📄 Found {len(files)} transcript files")
 
-    vectors = []
+    buffer = []
 
-    for file_path in txt_files:
+    for file in files:
         try:
-            text = file_path.read_text(encoding="utf-8", errors="ignore")
+            text = file.read_text(encoding="utf-8", errors="ignore")
         except Exception as e:
-            print(f"⚠️ Skipping unreadable file: {file_path} ({e})")
+            print(f"⚠️ Skipped unreadable file: {file} ({e})")
             continue
 
         chunks = chunk_text(text)
-
-        print(f"➡️ {file_path.name}: {len(chunks)} chunks")
+        print(f"➡️ {file.name}: {len(chunks)} chunks")
 
         embeddings = embed_texts(chunks)
 
         for chunk, embedding in zip(chunks, embeddings):
-            vectors.append({
+            buffer.append({
                 "id": str(uuid.uuid4()),
                 "values": embedding,
                 "metadata": {
-                    "source": str(file_path),
-                    "filename": file_path.name,
-                    "text": chunk[:1000],   # keep metadata small
+                    "source": str(file),
+                    "filename": file.name,
+                    "text": chunk[:800],
                 },
             })
 
-        # ------------------------------
-        # SAFE UPSERT IN BATCHES
-        # ------------------------------
-        if len(vectors) >= BATCH_SIZE:
-            flush_vectors(vectors)
-            vectors.clear()
+        if len(buffer) >= BATCH_SIZE:
+            print(f"⬆️ Upserting batch ({len(buffer)})")
+            upsert_safe(buffer)
+            buffer.clear()
 
-    # Final flush
-    if vectors:
-        flush_vectors(vectors)
+    if buffer:
+        print(f"⬆️ Final upsert ({len(buffer)})")
+        upsert_safe(buffer)
 
     print("🎉 INGEST COMPLETE")
-
-
-def flush_vectors(vectors: List[Dict]):
-    total = len(vectors)
-    print(f"⬆️ Upserting {total} vectors to Pinecone")
-
-    for i in range(0, total, BATCH_SIZE):
-        batch = vectors[i:i + BATCH_SIZE]
-        index.upsert(vectors=batch)
-        print(f"   ✅ Upserted {min(i + BATCH_SIZE, total)}/{total}")
-        time.sleep(0.2)  # light throttle
 
 
 # ==============================
@@ -150,5 +155,5 @@ def flush_vectors(vectors: List[Dict]):
 # ==============================
 
 if __name__ == "__main__":
-    print("🚀 STARTING ONE-TIME OPENROUTER → PINECONE INGEST")
+    print("🚀 STARTING OPENROUTER → PINECONE INGEST")
     run()
