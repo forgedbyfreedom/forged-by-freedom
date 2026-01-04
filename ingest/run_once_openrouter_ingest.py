@@ -1,134 +1,144 @@
+#!/usr/bin/env python3
+
 import os
-import time
 import hashlib
 from pathlib import Path
-from typing import List
+import yaml
 
+from pinecone import Pinecone
 from openai import OpenAI
-from pinecone import Pinecone, ServerlessSpec
 
-# ==============================
-# CONFIG
-# ==============================
+# =========================
+# PATHS
+# =========================
 
+BASE_DIR = Path(__file__).resolve().parent
+CHANNELS_DIR = BASE_DIR / "channels"
+MANIFEST_PATH = BASE_DIR / "channel_manifest.yml"
+
+CHUNK_SIZE = 1200
 EMBED_MODEL = "text-embedding-3-large"
-EMBED_DIM = 3072
+NAMESPACE = "__default__"
 
-CHUNK_SIZE = 800          # tokens-ish (safe)
-CHUNK_OVERLAP = 100
-BATCH_SIZE = 40           # keeps Pinecone < 2MB
-EMBED_DELAY = 0.8         # seconds between OpenAI calls
+# =========================
+# ENV
+# =========================
 
-CHANNELS_DIR = Path("ingest/channels")
-NAMESPACE = "thinkbig"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_HOST = os.getenv("PINECONE_HOST")
 
-# ==============================
-# ENV CHECK
-# ==============================
+if not all([OPENAI_API_KEY, PINECONE_API_KEY, PINECONE_HOST]):
+    raise RuntimeError("❌ Missing required environment variables")
 
-REQUIRED_ENVS = [
-    "OPENAI_API_KEY",
-    "PINECONE_API_KEY",
-    "PINECONE_INDEX_NAME",
-]
+# =========================
+# DEBUG
+# =========================
 
-for env in REQUIRED_ENVS:
-    if not os.getenv(env):
-        raise RuntimeError(f"❌ Missing env var: {env}")
+print("🔍 INGEST STARTUP DEBUG")
+print("• BASE_DIR:", BASE_DIR)
+print("• CHANNELS_DIR exists:", CHANNELS_DIR.exists())
+print("• Manifest exists:", MANIFEST_PATH.exists())
+print("• Total .txt files:", len(list(CHANNELS_DIR.rglob("*.txt"))))
 
-print("✅ Environment variables verified")
-
-# ==============================
+# =========================
 # CLIENTS
-# ==============================
+# =========================
 
-openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(host=PINECONE_HOST)
+client = OpenAI(api_key=OPENAI_API_KEY)
 
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-index = pc.Index(os.getenv("PINECONE_INDEX_NAME"))
-
-# ==============================
+# =========================
 # HELPERS
-# ==============================
+# =========================
 
-def chunk_text(text: str) -> List[str]:
-    words = text.split()
-    chunks = []
-    i = 0
-    while i < len(words):
-        chunk = words[i:i + CHUNK_SIZE]
-        chunks.append(" ".join(chunk))
-        i += CHUNK_SIZE - CHUNK_OVERLAP
-    return chunks
+def load_manifest():
+    with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+        manifest = yaml.safe_load(f)
+
+    categories = manifest.get("categories")
+    if not isinstance(categories, dict):
+        raise RuntimeError("❌ categories must be a dict")
+
+    return categories
 
 
-def embed_batch(texts: List[str]) -> List[List[float]]:
-    response = openai_client.embeddings.create(
+def chunk_text(text, size=1200, overlap=200):
+    start = 0
+    while start < len(text):
+        yield text[start:start + size]
+        start += size - overlap
+
+
+def embed(texts):
+    response = client.embeddings.create(
         model=EMBED_MODEL,
-        input=texts,
+        input=texts
     )
-    return [d.embedding for d in response.data]
+    return [item.embedding for item in response.data]
 
 
-def file_id(path: Path) -> str:
-    return hashlib.md5(str(path).encode()).hexdigest()
+def vector_id(category, channel, filename, chunk, idx):
+    h = hashlib.sha256(chunk.encode("utf-8")).hexdigest()[:16]
+    return f"{category}|{channel}|{filename}|{idx}|{h}"
 
+# =========================
+# INGEST
+# =========================
 
-# ==============================
-# MAIN INGEST
-# ==============================
-
-def run():
-    print("🚀 STARTING OPENAI → PINECONE INGEST")
-    print(f"📂 Scanning transcripts in: {CHANNELS_DIR.resolve()}")
-
-    files = sorted(CHANNELS_DIR.rglob("*.txt"))
-    print(f"📄 Found {len(files)} transcript files")
-
+def ingest():
+    categories = load_manifest()
     total_vectors = 0
 
-    for file_path in files:
-        try:
-            text = file_path.read_text(errors="ignore").strip()
-            if not text:
+    print("🚀 BEGIN INGEST")
+
+    for category_name, category in categories.items():
+        priority = category.get("priority", 1)
+        channels = category.get("channels", [])
+
+        print(f"\n📂 CATEGORY: {category_name} (priority {priority})")
+
+        for channel in channels:
+            channel_path = CHANNELS_DIR / channel
+
+            if not channel_path.exists():
+                print(f"⚠️ Missing channel folder: {channel}")
                 continue
 
-            chunks = chunk_text(text)
-            print(f"➡️ {file_path.name}: {len(chunks)} chunks")
+            txt_files = list(channel_path.rglob("*.txt"))
+            print(f"   ├─ {channel}: {len(txt_files)} files")
 
-            for i in range(0, len(chunks), BATCH_SIZE):
-                batch = chunks[i:i + BATCH_SIZE]
+            for txt in txt_files:
+                text = txt.read_text(encoding="utf-8", errors="ignore").strip()
+                if not text:
+                    continue
 
-                embeddings = embed_batch(batch)
+                chunks = list(chunk_text(text))
+                embeddings = embed(chunks)
 
                 vectors = []
-                for j, emb in enumerate(embeddings):
+                for idx, (chunk, emb) in enumerate(zip(chunks, embeddings)):
                     vectors.append({
-                        "id": f"{file_id(file_path)}_{i+j}",
+                        "id": vector_id(category_name, channel, txt.name, chunk, idx),
                         "values": emb,
                         "metadata": {
-                            "source": str(file_path),
-                            "chunk": i + j
+                            "category": category_name,
+                            "priority": priority,
+                            "channel": channel,
+                            "source": txt.name
                         }
                     })
 
-                index.upsert(vectors=vectors, namespace=NAMESPACE)
-                total_vectors += len(vectors)
+                if vectors:
+                    index.upsert(vectors=vectors, namespace=NAMESPACE)
+                    total_vectors += len(vectors)
 
-                print(f"   ✅ Upserted {len(vectors)} vectors (total: {total_vectors})")
+    print(f"\n✅ INGEST COMPLETE — total vectors: {total_vectors}")
 
-                time.sleep(EMBED_DELAY)
-
-        except KeyboardInterrupt:
-            print("🛑 Interrupted by user — safe to resume later")
-            return
-        except Exception as e:
-            print(f"⚠️ Error processing {file_path.name}: {e}")
-            continue
-
-    print("🎉 INGEST COMPLETE")
-    print(f"📊 Total vectors ingested: {total_vectors}")
-
+# =========================
+# ENTRY
+# =========================
 
 if __name__ == "__main__":
-    run()
+    ingest()
