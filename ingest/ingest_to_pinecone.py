@@ -1,158 +1,142 @@
 #!/usr/bin/env python3
-"""
-Forged By Freedom — GitHub → Pinecone Ingest (Manifest + Category Weight)
------------------------------------------------------------------------
-• Reads per-channel transcripts from ingest/channels/@Channel/*.txt
-• Uses ingest/channel_manifest.yml to decide which channels to ingest + metadata
-• Chunks text
-• Creates embeddings
-• Upserts to Pinecone (__default__)
-• Serverless-safe: host-only
-"""
 
-import os, glob, hashlib
+import os
+import hashlib
+from pathlib import Path
 import yaml
+
 from pinecone import Pinecone
 from openai import OpenAI
 
-# --- Required env vars ---
+# =========================
+# PATHS
+# =========================
+
+BASE_DIR = Path(__file__).resolve().parent
+CHANNELS_DIR = BASE_DIR / "channels"
+MANIFEST_PATH = BASE_DIR / "channel_manifest.yml"
+
+CHUNK_SIZE = 1200
+EMBED_MODEL = "text-embedding-3-large"
+NAMESPACE = "__default__"
+
+# =========================
+# ENV
+# =========================
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_HOST    = os.getenv("PINECONE_HOST")  # host-only for serverless
-OPENAI_API_KEY   = os.getenv("OPENAI_API_KEY")
+PINECONE_HOST = os.getenv("PINECONE_HOST")
 
-if not PINECONE_API_KEY: raise RuntimeError("Missing PINECONE_API_KEY")
-if not PINECONE_HOST:    raise RuntimeError("Missing PINECONE_HOST (required for serverless Pinecone)")
-if not OPENAI_API_KEY:   raise RuntimeError("Missing OPENAI_API_KEY")
+if not all([OPENAI_API_KEY, PINECONE_API_KEY, PINECONE_HOST]):
+    raise RuntimeError("❌ Missing required environment variables")
 
-# IMPORTANT: strip whitespace/newlines from host (prevents the \n bug)
-PINECONE_HOST = PINECONE_HOST.strip()
+# =========================
+# DEBUG
+# =========================
 
-# --- Config ---
-TRANSCRIPT_ROOT = "ingest/channels"
-MANIFEST_PATH   = "ingest/channel_manifest.yml"
-CHUNK_SIZE      = 1200
-NAMESPACE       = "__default__"
-EMBED_MODEL     = "text-embedding-3-large"
+print("🔍 INGEST STARTUP DEBUG")
+print("• BASE_DIR:", BASE_DIR)
+print("• CHANNELS_DIR exists:", CHANNELS_DIR.exists())
+print("• Manifest exists:", MANIFEST_PATH.exists())
+print("• Total .txt files:", len(list(CHANNELS_DIR.rglob("*.txt"))))
+
+# =========================
+# CLIENTS
+# =========================
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(host=PINECONE_HOST)
 client = OpenAI(api_key=OPENAI_API_KEY)
 
+# =========================
+# HELPERS
+# =========================
+
 def load_manifest():
-    if not os.path.exists(MANIFEST_PATH):
-        raise RuntimeError(f"Missing {MANIFEST_PATH}. Create it first.")
-    with open(MANIFEST_PATH, "r") as f:
-        m = yaml.safe_load(f) or {}
-    channels = m.get("channels", [])
-    # normalize into dict by channel name
-    out = {}
-    for c in channels:
-        name = c.get("channel")
-        if not name: 
-            continue
-        out[name] = {
-            "enabled": bool(c.get("enabled", True)),
-            "category": c.get("category", "unclassified"),
-            "priority": int(c.get("priority", 50)),
-        }
-    return out
+    with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+        manifest = yaml.safe_load(f)
 
-def chunk_text(text, size):
-    for i in range(0, len(text), size):
-        yield text[i:i+size]
+    categories = manifest.get("categories")
+    if not isinstance(categories, dict):
+        raise RuntimeError("❌ categories must be a dict")
 
-def embed_texts(texts):
-    res = client.embeddings.create(model=EMBED_MODEL, input=texts)
+    return categories
+
+
+def chunk_text(text):
+    for i in range(0, len(text), CHUNK_SIZE):
+        yield text[i:i + CHUNK_SIZE]
+
+
+def embed(texts):
+    res = client.embeddings.create(
+        model=EMBED_MODEL,
+        input=texts
+    )
     return [d.embedding for d in res.data]
 
-def stable_id(channel, source, chunk):
-    h = hashlib.sha256(chunk.encode("utf-8")).hexdigest()
-    return f"{channel}|{source}|{h}"
 
-def infer_series_and_title(filename: str):
-    """
-    Helps with ThinkBig sub-series visibility.
-    If your filenames contain series tokens, we preserve them.
-    Example: "Blood_Sweat_Gear_Ep123.txt" -> series="Blood Sweat Gear"
-    """
-    base = os.path.splitext(filename)[0]
-    # crude heuristics: treat prefix before first "__" as series if present
-    if "__" in base:
-        series, title = base.split("__", 1)
-        return series.replace("_", " ").strip(), title.replace("_", " ").strip()
-    return "", base.replace("_", " ").strip()
+def vector_id(category, channel, filename, chunk):
+    h = hashlib.sha256(chunk.encode("utf-8")).hexdigest()
+    return f"{category}|{channel}|{filename}|{h}"
+
+# =========================
+# INGEST
+# =========================
 
 def ingest():
-    manifest = load_manifest()
-
-    # find channel dirs on disk
-    channel_dirs = sorted([d for d in glob.glob(f"{TRANSCRIPT_ROOT}/@*") if os.path.isdir(d)])
-    if not channel_dirs:
-        print("⚠️ No channel directories found under ingest/channels/@*")
-        return 0
-
+    categories = load_manifest()
     total_vectors = 0
-    print("🔥 Starting Pinecone ingest\n")
 
-    for channel_dir in channel_dirs:
-        channel = os.path.basename(channel_dir)
+    print("🚀 BEGIN INGEST")
 
-        cfg = manifest.get(channel)
-        if not cfg:
-            print(f"⏭️  {channel} not in manifest (skipping)")
-            continue
-        if not cfg["enabled"]:
-            print(f"⏭️  {channel} disabled in manifest (skipping)")
-            continue
+    for category_name, category in categories.items():
+        priority = category.get("priority", 1)
+        channels = category.get("channels", [])
 
-        category = cfg["category"]
-        priority = cfg["priority"]
+        print(f"\n📂 CATEGORY: {category_name} (priority {priority})")
 
-        print(f"📘 Channel: {channel}  | category={category} priority={priority}")
+        for channel in channels:
+            channel_path = CHANNELS_DIR / channel
 
-        txt_paths = sorted(glob.glob(f"{channel_dir}/*.txt"))
-        if not txt_paths:
-            print("   ⚠ No .txt files found")
-            continue
-
-        for path in txt_paths:
-            source = os.path.basename(path)
-
-            with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                text = (f.read() or "").strip()
-
-            if not text:
-                print(f"   ⚠ {source} empty (skipped)")
+            if not channel_path.exists():
+                print(f"⚠️ Missing channel folder: {channel}")
                 continue
 
-            series, title = infer_series_and_title(source)
+            txt_files = list(channel_path.rglob("*.txt"))
+            print(f"   ├─ {channel}: {len(txt_files)} files")
 
-            chunks = list(chunk_text(text, CHUNK_SIZE))
-            embeddings = embed_texts(chunks)
+            for txt in txt_files:
+                text = txt.read_text(encoding="utf-8", errors="ignore").strip()
+                if not text:
+                    continue
 
-            vectors = []
-            for chunk, emb in zip(chunks, embeddings):
-                vid = stable_id(channel, source, chunk)
-                vectors.append({
-                    "id": vid,
-                    "values": emb,
-                    "metadata": {
-                        "channel": channel,
-                        "category": category,
-                        "priority": priority,
-                        "source": source,
-                        "series": series,
-                        "title": title,
-                        "text": chunk
-                    }
-                })
+                chunks = list(chunk_text(text))
+                embeddings = embed(chunks)
 
-            index.upsert(vectors=vectors, namespace=NAMESPACE)
-            total_vectors += len(vectors)
-            print(f"   ✔ {source} → {len(vectors)} vectors")
+                vectors = []
+                for chunk, emb in zip(chunks, embeddings):
+                    vectors.append({
+                        "id": vector_id(category_name, channel, txt.name, chunk),
+                        "values": emb,
+                        "metadata": {
+                            "category": category_name,
+                            "priority": priority,
+                            "channel": channel,
+                            "source": txt.name
+                        }
+                    })
 
-    print(f"\n✅ Ingest complete — total vectors upserted: {total_vectors}")
-    return total_vectors
+                if vectors:
+                    index.upsert(vectors=vectors, namespace=NAMESPACE)
+                    total_vectors += len(vectors)
+
+    print(f"\n✅ INGEST COMPLETE — total vectors: {total_vectors}")
+
+# =========================
+# ENTRY
+# =========================
 
 if __name__ == "__main__":
     ingest()
