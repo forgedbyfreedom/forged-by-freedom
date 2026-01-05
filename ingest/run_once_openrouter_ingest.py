@@ -9,7 +9,6 @@ import yaml
 
 from pinecone import Pinecone
 from openai import OpenAI
-from openai.error import APIError, RateLimitError
 
 # =========================
 # CONFIG
@@ -113,9 +112,9 @@ def embed_batch(batch):
 
             return [item.embedding for item in response.data]
 
-        except (ValueError, APIError, RateLimitError) as e:
+        except Exception as e:
             wait = attempt * 1.5
-            print(f"⚠️ Embed retry {attempt}/{EMBED_MAX_RETRIES} after error: {e}")
+            print(f"⚠️ Embed retry {attempt}/{EMBED_MAX_RETRIES}: {e}")
             time.sleep(wait)
 
     print("❌ Failed embedding batch after retries — skipping batch")
