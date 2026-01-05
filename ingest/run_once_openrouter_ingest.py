@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 import os
+import re
 import hashlib
 import time
-import re
 from pathlib import Path
 import yaml
 
@@ -16,10 +16,13 @@ from openai import OpenAI
 
 CHUNK_SIZE = 1200
 CHUNK_OVERLAP = 200
-BATCH_SIZE = 32
-SLEEP_BETWEEN_BATCHES = 0.3
 
-# OpenRouter-routed OpenAI embedding model
+EMBED_BATCH_SIZE = 32
+EMBED_SLEEP = 0.3
+
+UPSERT_BATCH_SIZE = 100  # 🔴 CRITICAL FIX
+UPSERT_SLEEP = 0.1
+
 EMBED_MODEL = "openai/text-embedding-3-large"
 NAMESPACE = "__default__"
 
@@ -88,18 +91,18 @@ def load_manifest():
     return categories
 
 
-def chunk_text(text, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
+def chunk_text(text):
     start = 0
     while start < len(text):
-        yield text[start:start + size]
-        start += size - overlap
+        yield text[start:start + CHUNK_SIZE]
+        start += CHUNK_SIZE - CHUNK_OVERLAP
 
 
 def embed(texts):
     embeddings = []
 
-    for i in range(0, len(texts), BATCH_SIZE):
-        batch = texts[i:i + BATCH_SIZE]
+    for i in range(0, len(texts), EMBED_BATCH_SIZE):
+        batch = texts[i:i + EMBED_BATCH_SIZE]
 
         response = client.embeddings.create(
             model=EMBED_MODEL,
@@ -107,15 +110,12 @@ def embed(texts):
         )
 
         embeddings.extend([item.embedding for item in response.data])
-        time.sleep(SLEEP_BETWEEN_BATCHES)
+        time.sleep(EMBED_SLEEP)
 
     return embeddings
 
 
 def ascii_safe(text: str) -> str:
-    """
-    Convert text to ASCII-safe form for Pinecone vector IDs.
-    """
     text = text.lower()
     text = re.sub(r"[^a-z0-9]+", "_", text)
     return text.strip("_")
@@ -123,9 +123,14 @@ def ascii_safe(text: str) -> str:
 
 def vector_id(category, channel, filename, chunk, idx):
     base = f"{category}_{channel}_{filename}_{idx}"
-    safe_base = ascii_safe(base)
+    safe = ascii_safe(base)
     h = hashlib.sha256(chunk.encode("utf-8")).hexdigest()[:16]
-    return f"{safe_base}_{h}"
+    return f"{safe}_{h}"
+
+
+def batched(iterable, size):
+    for i in range(0, len(iterable), size):
+        yield iterable[i:i + size]
 
 # =========================
 # INGEST
@@ -164,13 +169,7 @@ def ingest():
                 vectors = []
                 for idx, (chunk, emb) in enumerate(zip(chunks, embeddings)):
                     vectors.append({
-                        "id": vector_id(
-                            category_name,
-                            channel,
-                            txt.name,
-                            chunk,
-                            idx
-                        ),
+                        "id": vector_id(category_name, channel, txt.name, chunk, idx),
                         "values": emb,
                         "metadata": {
                             "category": category_name,
@@ -180,9 +179,11 @@ def ingest():
                         }
                     })
 
-                if vectors:
-                    index.upsert(vectors=vectors, namespace=NAMESPACE)
-                    total_vectors += len(vectors)
+                # 🔴 FIX: BATCH PINECONE UPSERTS
+                for batch in batched(vectors, UPSERT_BATCH_SIZE):
+                    index.upsert(vectors=batch, namespace=NAMESPACE)
+                    total_vectors += len(batch)
+                    time.sleep(UPSERT_SLEEP)
 
     print(f"\n✅ INGEST COMPLETE — total vectors: {total_vectors}")
 
