@@ -9,6 +9,7 @@ import yaml
 
 from pinecone import Pinecone
 from openai import OpenAI
+from openai.error import APIError, RateLimitError
 
 # =========================
 # CONFIG
@@ -19,8 +20,9 @@ CHUNK_OVERLAP = 200
 
 EMBED_BATCH_SIZE = 32
 EMBED_SLEEP = 0.3
+EMBED_MAX_RETRIES = 5
 
-UPSERT_BATCH_SIZE = 100  # 🔴 CRITICAL FIX
+UPSERT_BATCH_SIZE = 100
 UPSERT_SLEEP = 0.1
 
 EMBED_MODEL = "openai/text-embedding-3-large"
@@ -98,18 +100,40 @@ def chunk_text(text):
         start += CHUNK_SIZE - CHUNK_OVERLAP
 
 
+def embed_batch(batch):
+    for attempt in range(1, EMBED_MAX_RETRIES + 1):
+        try:
+            response = client.embeddings.create(
+                model=EMBED_MODEL,
+                input=batch
+            )
+
+            if not response.data:
+                raise ValueError("Empty embedding response")
+
+            return [item.embedding for item in response.data]
+
+        except (ValueError, APIError, RateLimitError) as e:
+            wait = attempt * 1.5
+            print(f"⚠️ Embed retry {attempt}/{EMBED_MAX_RETRIES} after error: {e}")
+            time.sleep(wait)
+
+    print("❌ Failed embedding batch after retries — skipping batch")
+    return []
+
+
 def embed(texts):
     embeddings = []
 
     for i in range(0, len(texts), EMBED_BATCH_SIZE):
         batch = texts[i:i + EMBED_BATCH_SIZE]
+        batch_embeddings = embed_batch(batch)
 
-        response = client.embeddings.create(
-            model=EMBED_MODEL,
-            input=batch
-        )
+        if len(batch_embeddings) != len(batch):
+            print("⚠️ Batch size mismatch — skipping this batch")
+            continue
 
-        embeddings.extend([item.embedding for item in response.data])
+        embeddings.extend(batch_embeddings)
         time.sleep(EMBED_SLEEP)
 
     return embeddings
@@ -128,9 +152,9 @@ def vector_id(category, channel, filename, chunk, idx):
     return f"{safe}_{h}"
 
 
-def batched(iterable, size):
-    for i in range(0, len(iterable), size):
-        yield iterable[i:i + size]
+def batched(items, size):
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
 
 # =========================
 # INGEST
@@ -166,6 +190,10 @@ def ingest():
                 chunks = list(chunk_text(text))
                 embeddings = embed(chunks)
 
+                if not embeddings:
+                    print(f"⚠️ No embeddings for file {txt.name} — skipping")
+                    continue
+
                 vectors = []
                 for idx, (chunk, emb) in enumerate(zip(chunks, embeddings)):
                     vectors.append({
@@ -179,7 +207,6 @@ def ingest():
                         }
                     })
 
-                # 🔴 FIX: BATCH PINECONE UPSERTS
                 for batch in batched(vectors, UPSERT_BATCH_SIZE):
                     index.upsert(vectors=batch, namespace=NAMESPACE)
                     total_vectors += len(batch)
