@@ -1,40 +1,6 @@
-import { queryPinecone } from 'backend/queryPinecone';
-
-$w.onReady(function () {
-  // Optional: clear output on load
-  $w("#searchOutput").text = "";
-});
-
-export async function searchButton_click(event) {
-  try {
-    const question = $w("#searchInput").value;
-
-    // Basic guard
-    if (!question || question.trim().length < 3) {
-      $w("#searchOutput").text = "Please enter a valid question.";
-      return;
-    }
-
-    // UI feedback
-    $w("#searchButton").disable();
-    $w("#searchOutput").text = "Searching knowledge base…";
-
-    // Call backend
-    const res = await queryPinecone(question);
-
-    // Defensive render (prevents crashes)
-    if (res && res.success && res.answer) {
-      $w("#searchOutput").text = res.answer;
-    } else {
-      $w("#searchOutput").text =
-        "No relevant information was found in the knowledge base.";
-    }
-
-  } catch (err) {
-    console.error("AI Coach error:", err);
-    $w("#searchOutput").text =
-      "A server error occurred. Please try again.";
-  } finally {
-    $w("#searchButton").enable();
-  }
+export async function queryPinecone(question) {
+  return {
+    success: true,
+    answer: `Backend reached successfully. You asked: "${question}"`
+  };
 }
