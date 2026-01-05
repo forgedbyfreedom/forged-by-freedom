@@ -1,134 +1,40 @@
-import { getSecret } from 'wix-secrets-backend';
-import { fetch } from 'wix-fetch';
+import { queryPinecone } from 'backend/queryPinecone';
 
-export async function queryPinecone(question) {
-  const PINECONE_API_KEY = await getSecret("PINECONE_API_KEY");
-  const PINECONE_INDEX = await getSecret("PINECONE_INDEX");
-  const PINECONE_ENV = await getSecret("PINECONE_ENV");
-  const OPENAI_API_KEY = await getSecret("OPENAI_API_KEY");
+$w.onReady(function () {
+  // Optional: clear output on load
+  $w("#searchOutput").text = "";
+});
 
-  // 1️⃣ Embed the question
-  const embedRes = await fetch("https://api.openai.com/v1/embeddings", {
-    method: "post",
-    headers: {
-      "Authorization": `Bearer ${OPENAI_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: "text-embedding-3-large",
-      input: question
-    })
-  });
+export async function searchButton_click(event) {
+  try {
+    const question = $w("#searchInput").value;
 
-  const embedData = await embedRes.json();
-  const vector = embedData.data[0].embedding;
-
-  // 2️⃣ Query Pinecone (__default__)
-  const queryRes = await fetch(
-    `https://${PINECONE_INDEX}.svc.${PINECONE_ENV}.pinecone.io/query`,
-    {
-      method: "post",
-      headers: {
-        "Api-Key": PINECONE_API_KEY,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        vector,
-        topK: 10,
-        includeMetadata: true,
-        namespace: "__default__"
-      })
+    // Basic guard
+    if (!question || question.trim().length < 3) {
+      $w("#searchOutput").text = "Please enter a valid question.";
+      return;
     }
-  );
 
-  const results = await queryRes.json();
+    // UI feedback
+    $w("#searchButton").disable();
+    $w("#searchOutput").text = "Searching knowledge base…";
 
-  if (!results.matches || results.matches.length === 0) {
-    return "No relevant information was found in the knowledge base.";
-  }
+    // Call backend
+    const res = await queryPinecone(question);
 
-  // 3️⃣ Build context (quotes source of truth)
-  const contextChunks = results.matches
-    .map(m => m.metadata?.text)
-    .filter(Boolean);
-
-  if (contextChunks.length === 0 || contextChunks.join("").length < 300) {
-    return "No relevant information was found in the knowledge base.";
-  }
-
-  const context = contextChunks.join("\n\n");
-
-  // 4️⃣ Enforced, structured completion
-  const completionRes = await fetch(
-    "https://api.openai.com/v1/chat/completions",
-    {
-      method: "post",
-      headers: {
-        "Authorization": `Bearer ${OPENAI_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: `
-You are the Forged By Freedom AI Coach, built exclusively from a private fitness, nutrition, health, and performance knowledge base.
-
-You MUST follow the instructions and output structure below EXACTLY.
-
-────────────────────────────────
-SOURCE PRIORITY RULE (CRITICAL)
-────────────────────────────────
-When selecting quotes from the provided context, you MUST prioritize content in this order IF applicable:
-
-1. ThinkBig series of shows (Think BIG Bodybuilding, Think BIG Podcast, Blood Sweat and Gear, Drugs n Stuff, Think BIG Coaching)
-2. Anabolic Bodybuilding
-3. Dr. Gabrielle Lyon
-4. Dr. Bachmeyer
-
-If fewer than three strong quotes exist from these sources, you may supplement with other sources ONLY to reach depth.
-
-Do NOT mention prioritization in the output.
-
-────────────────────────────────
-REQUIRED OUTPUT STRUCTURE
-────────────────────────────────
-1. Paraphrased Question
-2. Three long, verbatim direct quotes with sources
-3. Lengthy technical / medical explanation using ONLY the quoted context
-4. Motivational closing quote from Coach Bryan
-
-STRICT RULES:
-- Use ONLY provided context
-- Do NOT paraphrase quotes
-- Do NOT guess or generalize
-- Do NOT answer without quotes
-- If requirements cannot be met, respond ONLY with:
-  "No relevant information was found in the knowledge base."
-`
-          },
-          {
-            role: "user",
-            content: `
-Context:
-${context}
-
-Question:
-${question}
-
-Required Output Order:
-1. Paraphrased question
-2. Three detailed direct quotes with sources (prioritized)
-3. Technical/medical explanation based only on the above
-4. Motivational closing quote from Coach Bryan
-`
-          }
-        ]
-      })
+    // Defensive render (prevents crashes)
+    if (res && res.success && res.answer) {
+      $w("#searchOutput").text = res.answer;
+    } else {
+      $w("#searchOutput").text =
+        "No relevant information was found in the knowledge base.";
     }
-  );
 
-  const completion = await completionRes.json();
-  return completion.choices[0].message.content;
+  } catch (err) {
+    console.error("AI Coach error:", err);
+    $w("#searchOutput").text =
+      "A server error occurred. Please try again.";
+  } finally {
+    $w("#searchButton").enable();
+  }
 }
