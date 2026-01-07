@@ -1,221 +1,111 @@
-#!/usr/bin/env python3
-
 import os
-import re
-import hashlib
 import time
+import hashlib
 from pathlib import Path
-import yaml
 
-from pinecone import Pinecone
+import pinecone
 from openai import OpenAI
 
 # =========================
 # CONFIG
 # =========================
+EMBED_MODEL = "text-embedding-3-large"
+INDEX_NAME = "forged-by-freedom"
+NAMESPACE = "fbf"
+BATCH_SIZE = 64
+MAX_CHARS = 6000  # safe chunk size
 
-CHUNK_SIZE = 1200
-CHUNK_OVERLAP = 200
-
-EMBED_BATCH_SIZE = 32
-EMBED_SLEEP = 0.3
-EMBED_MAX_RETRIES = 5
-
-UPSERT_BATCH_SIZE = 100
-UPSERT_SLEEP = 0.1
-
-EMBED_MODEL = "openai/text-embedding-3-large"
-NAMESPACE = "__default__"
-
-# =========================
-# PATHS
-# =========================
-
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).parent
 CHANNELS_DIR = BASE_DIR / "channels"
-MANIFEST_PATH = BASE_DIR / "channel_manifest.yml"
-
-# =========================
-# ENV
-# =========================
-
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_HOST = os.getenv("PINECONE_HOST")
-
-if not OPENROUTER_API_KEY:
-    raise RuntimeError("❌ OPENROUTER_API_KEY not set")
-
-if not PINECONE_API_KEY or not PINECONE_HOST:
-    raise RuntimeError("❌ Pinecone environment variables missing")
 
 # =========================
 # CLIENTS
 # =========================
+openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-client = OpenAI(
-    api_key=OPENROUTER_API_KEY,
-    base_url="https://openrouter.ai/api/v1",
-    default_headers={
-        "HTTP-Referer": "https://forged-by-freedom.local",
-        "X-Title": "ForgedByFreedom Ingest"
-    }
+pinecone.init(
+    api_key=os.getenv("PINECONE_API_KEY"),
+    environment=os.getenv("PINECONE_ENV"),
 )
-
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(host=PINECONE_HOST)
-
-# =========================
-# DEBUG
-# =========================
-
-print("🔍 INGEST STARTUP DEBUG")
-print("• BASE_DIR:", BASE_DIR)
-print("• CHANNELS_DIR exists:", CHANNELS_DIR.exists())
-print("• Manifest exists:", MANIFEST_PATH.exists())
-print("• Total .txt files:", len(list(CHANNELS_DIR.rglob("*.txt"))))
-print("• Using base_url:", client.base_url)
-print("• Embedding model:", EMBED_MODEL)
+index = pinecone.Index(INDEX_NAME)
 
 # =========================
 # HELPERS
 # =========================
+def stable_id(path: Path, chunk_index: int) -> str:
+    h = hashlib.sha1(f"{path}:{chunk_index}".encode()).hexdigest()
+    return h
 
-def load_manifest():
-    with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
-        manifest = yaml.safe_load(f)
-
-    categories = manifest.get("categories")
-    if not isinstance(categories, dict):
-        raise RuntimeError("❌ categories must be a dict")
-
-    return categories
-
-
-def chunk_text(text):
+def chunk_text(text: str):
+    chunks = []
     start = 0
     while start < len(text):
-        yield text[start:start + CHUNK_SIZE]
-        start += CHUNK_SIZE - CHUNK_OVERLAP
+        chunks.append(text[start:start + MAX_CHARS])
+        start += MAX_CHARS
+    return chunks
 
+def embed_texts(texts):
+    response = openai_client.embeddings.create(
+        model=EMBED_MODEL,
+        input=texts
+    )
+    return [d.embedding for d in response.data]
 
-def embed_batch(batch):
-    for attempt in range(1, EMBED_MAX_RETRIES + 1):
-        try:
-            response = client.embeddings.create(
-                model=EMBED_MODEL,
-                input=batch
-            )
-
-            if not response.data:
-                raise ValueError("Empty embedding response")
-
-            return [item.embedding for item in response.data]
-
-        except Exception as e:
-            wait = attempt * 1.5
-            print(f"⚠️ Embed retry {attempt}/{EMBED_MAX_RETRIES}: {e}")
-            time.sleep(wait)
-
-    print("❌ Failed embedding batch after retries — skipping batch")
-    return []
-
-
-def embed(texts):
-    embeddings = []
-
-    for i in range(0, len(texts), EMBED_BATCH_SIZE):
-        batch = texts[i:i + EMBED_BATCH_SIZE]
-        batch_embeddings = embed_batch(batch)
-
-        if len(batch_embeddings) != len(batch):
-            print("⚠️ Batch size mismatch — skipping this batch")
-            continue
-
-        embeddings.extend(batch_embeddings)
-        time.sleep(EMBED_SLEEP)
-
-    return embeddings
-
-
-def ascii_safe(text: str) -> str:
-    text = text.lower()
-    text = re.sub(r"[^a-z0-9]+", "_", text)
-    return text.strip("_")
-
-
-def vector_id(category, channel, filename, chunk, idx):
-    base = f"{category}_{channel}_{filename}_{idx}"
-    safe = ascii_safe(base)
-    h = hashlib.sha256(chunk.encode("utf-8")).hexdigest()[:16]
-    return f"{safe}_{h}"
-
-
-def batched(items, size):
-    for i in range(0, len(items), size):
-        yield items[i:i + size]
+def already_exists(vector_ids):
+    stats = index.fetch(ids=vector_ids, namespace=NAMESPACE)
+    return set(stats.vectors.keys())
 
 # =========================
 # INGEST
 # =========================
-
 def ingest():
-    categories = load_manifest()
-    total_vectors = 0
+    print("🚀 STARTING SAFE INGEST (OpenAI embeddings)")
+    files = list(CHANNELS_DIR.rglob("*.txt"))
 
-    print("🚀 BEGIN INGEST")
+    for file in files:
+        text = file.read_text(errors="ignore")
+        chunks = chunk_text(text)
 
-    for category_name, category in categories.items():
-        priority = category.get("priority", 1)
-        channels = category.get("channels", [])
+        ids = [stable_id(file, i) for i in range(len(chunks))]
+        existing = already_exists(ids)
 
-        print(f"\n📂 CATEGORY: {category_name} (priority {priority})")
+        pending = []
+        pending_ids = []
 
-        for channel in channels:
-            channel_path = CHANNELS_DIR / channel
-
-            if not channel_path.exists():
-                print(f"⚠️ Missing channel folder: {channel}")
+        for i, chunk in enumerate(chunks):
+            vid = ids[i]
+            if vid in existing:
                 continue
+            pending.append(chunk)
+            pending_ids.append(vid)
 
-            txt_files = list(channel_path.rglob("*.txt"))
-            print(f"   ├─ {channel}: {len(txt_files)} files")
+        if not pending:
+            continue
 
-            for txt in txt_files:
-                text = txt.read_text(encoding="utf-8", errors="ignore").strip()
-                if not text:
-                    continue
+        print(f"📄 {file.name}: embedding {len(pending)} new chunks")
 
-                chunks = list(chunk_text(text))
-                embeddings = embed(chunks)
+        for i in range(0, len(pending), BATCH_SIZE):
+            batch_texts = pending[i:i + BATCH_SIZE]
+            batch_ids = pending_ids[i:i + BATCH_SIZE]
 
-                if not embeddings:
-                    print(f"⚠️ No embeddings for file {txt.name} — skipping")
-                    continue
+            embeddings = embed_texts(batch_texts)
 
-                vectors = []
-                for idx, (chunk, emb) in enumerate(zip(chunks, embeddings)):
-                    vectors.append({
-                        "id": vector_id(category_name, channel, txt.name, chunk, idx),
-                        "values": emb,
-                        "metadata": {
-                            "category": category_name,
-                            "priority": priority,
-                            "channel": channel,
-                            "source": txt.name
-                        }
-                    })
+            vectors = [
+                {
+                    "id": batch_ids[j],
+                    "values": embeddings[j],
+                    "metadata": {
+                        "source": str(file),
+                        "chunk": j
+                    }
+                }
+                for j in range(len(batch_texts))
+            ]
 
-                for batch in batched(vectors, UPSERT_BATCH_SIZE):
-                    index.upsert(vectors=batch, namespace=NAMESPACE)
-                    total_vectors += len(batch)
-                    time.sleep(UPSERT_SLEEP)
+            index.upsert(vectors=vectors, namespace=NAMESPACE)
+            time.sleep(0.2)  # gentle rate limit
 
-    print(f"\n✅ INGEST COMPLETE — total vectors: {total_vectors}")
-
-# =========================
-# ENTRY
-# =========================
+    print("✅ INGEST COMPLETE")
 
 if __name__ == "__main__":
     ingest()
