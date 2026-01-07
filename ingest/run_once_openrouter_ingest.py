@@ -10,7 +10,7 @@ from openai import OpenAI
 # CONFIG
 # =========================
 EMBED_MODEL = "text-embedding-3-large"
-INDEX_NAME = "forged-by-freedom"
+INDEX_NAME = "forged-freedom-ai"
 NAMESPACE = "fbf"
 BATCH_SIZE = 64
 MAX_CHARS = 6000  # safe chunk size
