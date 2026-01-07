@@ -1,6 +1,25 @@
-export async function queryPinecone(question) {
-  return {
-    success: true,
-    answer: `Backend reached successfully. You asked: "${question}"`
-  };
+import { fetch } from 'wix-fetch';
+import { getSecret } from 'wix-secrets-backend';
+
+export async function queryPinecone() {}
+  const apiKey = await getSecret("PINECONE_API_KEY");
+
+  const response = await fetch(
+    "https://forged-freedom-ai-yniiyt3.svc.aped-4627-b74a.pinecone.io/query",
+    {
+      method: "POST",
+      headers: {
+        "Api-Key": apiKey,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        vector: queryEmbedding,
+        topK: 5,
+        includeMetadata: true,
+        namespace: "default"
+      })
+    }
+  );
+
+  return response.json();
 }
