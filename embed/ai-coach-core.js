@@ -1,66 +1,41 @@
-(function () {
-  // Ensure the global configuration `window.FBF_AI` is set
-  if (!window.FBF_AI || !window.FBF_AI.api) {
-    console.error("FBF_AI configuration is missing! Please set window.FBF_AI.api.");
-    return;
-  }
+import { queryPinecone } from 'backend/aiQuery';
 
-  const apiURL = window.FBF_AI.api;
+$w.onReady(() => {
+  console.log("🔥 AI Coach ready");
 
-  function createSearchUI() {
-    // Create and inject the search form
-    const container = document.createElement("div");
-    container.style = "margin: 50px auto; text-align: center; font-family: Arial;";
+  $w("#searchButton").onClick(async () => {
+    const query = $w("#searchInput").value;
+    console.log("➡️ Frontend sending:", query);
 
-    const input = document.createElement("input");
-    input.type = "text";
-    input.placeholder = "Enter your query...";
-    input.style = "padding: 10px; width: 300px; font-size: 16px;";
+    if (!query) {
+      $w("#searchOutput").text = "Enter a question.";
+      return;
+    }
 
-    const button = document.createElement("button");
-    button.innerText = "Search";
-    button.style = "padding: 10px 20px; margin-left: 10px;";
-    button.onclick = () => {
-      const query = input.value;
-      if (!query) {
-        alert("Please enter a query!");
+    $w("#searchOutput").text = "Thinking…";
+
+    try {
+      const result = await queryPinecone(query);
+      console.log("⬅️ Frontend received:", result);
+
+      if (!result) {
+        $w("#searchOutput").text = "No response from backend.";
         return;
       }
-      sendQuery(query);
-    };
 
-    container.appendChild(input);
-    container.appendChild(button);
+      if (!result.ok) {
+        $w("#searchOutput").text = "Backend error: " + result.error;
+        return;
+      }
 
-    const resultsDiv = document.createElement("div");
-    resultsDiv.id = "results";
-    container.appendChild(resultsDiv);
+      $w("#searchOutput").text =
+        typeof result.raw === "string"
+          ? result.raw.slice(0, 2000)
+          : JSON.stringify(result.raw, null, 2);
 
-    document.body.appendChild(container);
-  }
-
-  function sendQuery(query) {
-    const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "<p>Searching...</p>";
-
-    fetch(apiURL + "/query", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ query }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        resultsDiv.innerHTML =
-          "<h3>Results:</h3><pre>" + JSON.stringify(data, null, 2) + "</pre>";
-      })
-      .catch((err) => {
-        console.error("Error:", err);
-        resultsDiv.innerHTML = "<p>Failed to fetch results.</p>";
-      });
-  }
-
-  // Initialize the UI
-  createSearchUI();
-})();
+    } catch (err) {
+      console.error("❌ Frontend error:", err);
+      $w("#searchOutput").text = "Frontend exception.";
+    }
+  });
+});
