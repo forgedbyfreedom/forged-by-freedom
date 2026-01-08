@@ -1,48 +1,31 @@
 import { fetch } from 'wix-fetch';
 
-const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
-const PINECONE_INDEX = "forged-freedom-ai";
-const PINECONE_HOST = "https://forged-freedom-ai-yniiyt3.svc.aped-4627-b74a.pinecone.io";
+export async function queryPinecone(query) {
+  console.log("🧠 Backend received query:", query);
 
-const NAMESPACES = [
-  "thinkbig_priority",
-  "anabolic_bodybuilding_priority",
-  "peptides",
-  "uncategorized"
-];
+  try {
+    const response = await fetch(
+      "https://YOUR-API-ENDPOINT/query",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+      }
+    );
 
-export async function queryKnowledge(embedding, topK = 5) {
-  let allMatches = [];
+    const text = await response.text();
+    console.log("📦 Raw backend response:", text);
 
-  for (const namespace of NAMESPACES) {
-    const res = await fetch(`${PINECONE_HOST}/query`, {
-      method: "POST",
-      headers: {
-        "Api-Key": PINECONE_API_KEY,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        vector: embedding,
-        topK,
-        namespace,
-        includeMetadata: true
-      })
-    });
+    return {
+      ok: true,
+      raw: text
+    };
 
-    if (!res.ok) continue;
-
-    const json = await res.json();
-    if (json?.matches?.length) {
-      allMatches.push(...json.matches);
-    }
+  } catch (err) {
+    console.error("❌ Backend error:", err);
+    return {
+      ok: false,
+      error: err.message
+    };
   }
-
-  // Sort by similarity score
-  allMatches.sort((a, b) => b.score - a.score);
-
-  // Return top results safely
-  return allMatches.slice(0, topK).map(m => ({
-    text: m.metadata?.source || "",
-    score: m.score
-  }));
 }
