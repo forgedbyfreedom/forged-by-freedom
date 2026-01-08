@@ -1,31 +1,11 @@
-import { fetch } from 'wix-fetch';
+// backend/aiQuery.jsw
 
 export async function queryPinecone(query) {
-  console.log("🧠 Backend received query:", query);
+  console.log("🧠 Backend function called");
+  console.log("Query:", query);
 
-  try {
-    const response = await fetch(
-      "https://YOUR-API-ENDPOINT/query",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query })
-      }
-    );
-
-    const text = await response.text();
-    console.log("📦 Raw backend response:", text);
-
-    return {
-      ok: true,
-      raw: text
-    };
-
-  } catch (err) {
-    console.error("❌ Backend error:", err);
-    return {
-      ok: false,
-      error: err.message
-    };
-  }
+  // TEMP: hard response to verify Wix wiring
+  return {
+    answer: `Backend received your question: "${query}"`
+  };
 }
