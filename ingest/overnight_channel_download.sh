@@ -1,65 +1,64 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-CHANNELS_DIR="$(cd "$(dirname "$0")/channels" && pwd)"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CHANNELS_DIR="$BASE_DIR/channels"
 
-echo "🌙 Overnight TXT Transcript Download"
+echo "=============================================="
+echo "🌙 Overnight Channel TXT Downloader"
 echo "📂 Channels dir: $CHANNELS_DIR"
-echo "📄 Output: .txt subtitles"
-echo "⏰ Started: $(date)"
-echo "----------------------------------------"
+echo "=============================================="
 
-# Process each folder under ingest/channels
-for GROUP in "$CHANNELS_DIR"/*; do
-  [ -d "$GROUP" ] || continue
+if [ ! -d "$CHANNELS_DIR" ]; then
+  echo "❌ channels directory not found"
+  exit 1
+fi
 
-  # If this is a "group folder" (e.g., thinkbig_tier0), process nested channel folders too
-  # If it directly contains channel.url, treat it as a channel folder itself
-  if [ -f "$GROUP/channel.url" ]; then
-    CHANNEL_FOLDERS=("$GROUP")
-  else
-    CHANNEL_FOLDERS=("$GROUP"/*)
+TOTAL_DOWNLOADED=0
+
+for CHANNEL_PATH in "$CHANNELS_DIR"/*; do
+  [ -d "$CHANNEL_PATH" ] || continue
+
+  CHANNEL_NAME="$(basename "$CHANNEL_PATH")"
+
+  # Expect a channel.url file
+  URL_FILE="$CHANNEL_PATH/channel.url"
+  if [ ! -f "$URL_FILE" ]; then
+    continue
   fi
 
-  for CH in "${CHANNEL_FOLDERS[@]}"; do
-    [ -d "$CH" ] || continue
-    [ -f "$CH/channel.url" ] || continue
+  CHANNEL_URL="$(cat "$URL_FILE")"
 
-    NAME="$(basename "$CH")"
-    URL="$(cat "$CH/channel.url" | tr -d '\r' | head -n 1)"
+  echo ""
+  echo "▶️  Channel: $CHANNEL_NAME"
+  echo "🔗 URL: $CHANNEL_URL"
 
-    if [ -z "$URL" ]; then
-      echo "⚠️  Skipping $NAME (empty channel.url)"
-      continue
-    fi
+  yt-dlp \
+    --write-auto-sub \
+    --write-sub \
+    --sub-lang en \
+    --sub-format vtt \
+    --skip-download \
+    --sleep-interval 3 \
+    --max-sleep-interval 10 \
+    -o "$CHANNEL_PATH/%(title)s [%(id)s].%(ext)s" \
+    "$CHANNEL_URL"
 
-    echo ""
-    echo "▶️  Channel: $NAME"
-    echo "    URL: $URL"
-
-    yt-dlp \
-      --skip-download \
-      --write-auto-sub \
-      --sub-lang en \
-      --sub-format vtt \
-      --convert-subs txt \
-      --no-overwrites \
-      --continue \
-      --ignore-errors \
-      --sleep-interval 2 \
-      --max-sleep-interval 6 \
-      --retries 10 \
-      --fragment-retries 10 \
-      --socket-timeout 20 \
-      --progress \
-      --newline \
-      --progress-template "download:%(progress.downloaded_entries)s/%(progress.total_entries)s episodes" \
-      -o "$CH/%(title)s [%(id)s].%(ext)s" \
-      "$URL"
-
-  done
 done
 
 echo ""
-echo "✅ Overnight TXT download complete"
-echo "⏰ Finished: $(date)"
+echo "🔄 Converting subtitles to TXT..."
+
+find "$CHANNELS_DIR" -name "*.vtt" -type f | while read -r vtt; do
+  txt="${vtt%.vtt}.txt"
+  sed 's/<[^>]*>//g' "$vtt" > "$txt"
+  rm "$vtt"
+  ((TOTAL_DOWNLOADED+=1))
+done
+
+find "$CHANNELS_DIR" -name "*.srt" -delete
+
+echo ""
+echo "✅ Overnight download complete"
+echo "📄 TXT files created this run: $TOTAL_DOWNLOADED"
+echo "=============================================="
