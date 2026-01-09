@@ -8,51 +8,56 @@ echo "=============================================="
 echo "🌙 Overnight Channel TXT Downloader"
 echo "📂 Channels dir: $CHANNELS_DIR"
 echo "=============================================="
-
-if [ ! -d "$CHANNELS_DIR" ]; then
-  echo "❌ channels directory not found"
-  exit 1
-fi
+echo ""
 
 TOTAL_TXT=0
+TOTAL_VTT=0
+TOTAL_CHANNELS=0
 
-for CHANNEL_PATH in "$CHANNELS_DIR"/*; do
-  [ -d "$CHANNEL_PATH" ] || continue
+# ----------------------------
+# DOWNLOAD SUBTITLES PER CHANNEL
+# ----------------------------
+echo "📥 Downloading subtitles..."
+echo ""
 
-  URL_FILE="$CHANNEL_PATH/channel.url"
-  [ -f "$URL_FILE" ] || continue
-
-  CHANNEL_NAME="$(basename "$CHANNEL_PATH")"
+find "$CHANNELS_DIR" -name "channel.url" | while read -r URL_FILE; do
+  CHANNEL_DIR="$(dirname "$URL_FILE")"
   CHANNEL_URL="$(cat "$URL_FILE")"
 
-  echo ""
-  echo "▶️  $CHANNEL_NAME"
+  ((TOTAL_CHANNELS+=1))
+
+  echo "▶ Channel: $CHANNEL_URL"
+  echo "📁 Output: $CHANNEL_DIR"
 
   yt-dlp \
     --write-auto-sub \
-    --write-sub \
     --sub-lang en \
-    --sub-format vtt \
     --skip-download \
-    --sleep-interval 3 \
-    --max-sleep-interval 10 \
-    -o "$CHANNEL_PATH/%(title)s [%(id)s].%(ext)s" \
+    --no-overwrites \
+    -o "$CHANNEL_DIR/%(title)s [%(id)s].%(ext)s" \
     "$CHANNEL_URL"
+
+  echo ""
 done
 
-echo ""
+# ----------------------------
+# CONVERT VTT → TXT
+# ----------------------------
 echo "🔄 Converting subtitles to TXT..."
+echo ""
 
-find "$CHANNELS_DIR" -name "*.vtt" -type f | while read -r vtt; do
+find "$CHANNELS_DIR" -name "*.vtt" | while read -r vtt; do
   txt="${vtt%.vtt}.txt"
   sed 's/<[^>]*>//g' "$vtt" > "$txt"
   rm "$vtt"
   ((TOTAL_TXT+=1))
 done
 
+# Cleanup stray formats
 find "$CHANNELS_DIR" -name "*.srt" -delete
 
 echo ""
 echo "✅ Overnight run complete"
+echo "📺 Channels processed: $TOTAL_CHANNELS"
 echo "📄 TXT files created: $TOTAL_TXT"
 echo "=============================================="
