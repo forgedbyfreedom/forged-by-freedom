@@ -1,17 +1,16 @@
 import os
 import sys
 import time
+import json
 import hashlib
 from pathlib import Path
+from collections import defaultdict
 
 import tiktoken
 from openai import OpenAI
 from pinecone import Pinecone
 
-# ===============================
-# CONFIG
-# ===============================
-
+# ---------------- CONFIG ----------------
 BASE_DIR = Path(__file__).parent
 CHANNELS_DIR = BASE_DIR / "channels"
 
@@ -19,152 +18,103 @@ INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 EMBED_MODEL = "text-embedding-3-large"
 
 CHUNK_TOKENS = 3000
-EMBED_BATCH_SIZE = 16
+EMBED_BATCH = 16
+SLEEP_BETWEEN_BATCHES = 0.3
 
-MAX_FILE_TOKENS = 2_000_000  # skip insane files safely
+# ----------------------------------------
 
-# ===============================
-# SAFETY CHECKS
-# ===============================
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-
-if not OPENAI_API_KEY:
+if not os.getenv("OPENAI_API_KEY"):
     raise RuntimeError("❌ OPENAI_API_KEY not set")
-if not PINECONE_API_KEY:
+
+if not os.getenv("PINECONE_API_KEY"):
     raise RuntimeError("❌ PINECONE_API_KEY not set")
 
-# ===============================
-# CLIENTS
-# ===============================
-
-openai_client = OpenAI(api_key=OPENAI_API_KEY)
-pc = Pinecone(api_key=PINECONE_API_KEY)
+client = OpenAI()
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(INDEX_NAME)
 
 tokenizer = tiktoken.get_encoding("cl100k_base")
 
-# ===============================
-# GLOBAL METRICS
-# ===============================
-
-TOTAL_EPISODES = 0
-TOTAL_WORDS = 0
-
-INGESTED_EPISODES = 0
-INGESTED_WORDS = 0
-INGESTED_VECTORS = 0
-
-START_TIME = time.time()
-
-# ===============================
-# HELPERS
-# ===============================
-
-def count_words(text: str) -> int:
-    return len(text.split())
-
 def count_tokens(text: str) -> int:
     return len(tokenizer.encode(text))
 
-def chunk_text(text: str, max_tokens: int):
+def chunk_text(text: str):
     tokens = tokenizer.encode(text)
-    for i in range(0, len(tokens), max_tokens):
-        yield tokenizer.decode(tokens[i:i + max_tokens])
+    for i in range(0, len(tokens), CHUNK_TOKENS):
+        yield tokenizer.decode(tokens[i:i + CHUNK_TOKENS])
 
-def file_hash(path: Path) -> str:
-    return hashlib.sha256(str(path).encode()).hexdigest()
+def file_hash(path: Path):
+    h = hashlib.sha1()
+    with open(path, "rb") as f:
+        h.update(f.read())
+    return h.hexdigest()
 
-def print_progress():
-    elapsed = time.time() - START_TIME
-    remaining = TOTAL_EPISODES - INGESTED_EPISODES
-
-    eta = int((elapsed / INGESTED_EPISODES) * remaining) if INGESTED_EPISODES else 0
-
-    print(
-        f"📈 Progress: "
-        f"{INGESTED_EPISODES}/{TOTAL_EPISODES} episodes | "
-        f"{INGESTED_WORDS/1_000_000:.2f}M words | "
-        f"{INGESTED_VECTORS:,} vectors | "
-        f"ETA {eta//60}m {eta%60}s"
+def embed_batch(texts):
+    res = client.embeddings.create(
+        model=EMBED_MODEL,
+        input=texts
     )
+    return [d.embedding for d in res.data]
 
-# ===============================
-# PRE-SCAN
-# ===============================
+def ingest():
+    print("\n🔍 INGEST STARTUP DEBUG")
+    print(f"• CHANNELS_DIR exists: {CHANNELS_DIR.exists()}")
+    print(f"• Pinecone index: {INDEX_NAME}")
+    print(f"• Embedding model: {EMBED_MODEL}")
+    print(f"• Chunk tokens: {CHUNK_TOKENS} | Embed batch: {EMBED_BATCH}")
 
-print("🔍 INGEST STARTUP DEBUG")
-print(f"• BASE_DIR: {BASE_DIR}")
-print(f"• CHANNELS_DIR exists: {CHANNELS_DIR.exists()}")
-print(f"• Pinecone index: {INDEX_NAME}")
-print(f"• Embedding model: {EMBED_MODEL}")
+    txt_files = list(CHANNELS_DIR.rglob("*.txt"))
+    total_files = len(txt_files)
 
-for root, _, files in os.walk(CHANNELS_DIR):
-    for f in files:
-        if f.endswith(".txt"):
-            TOTAL_EPISODES += 1
-            with open(Path(root) / f, "r", errors="ignore") as fh:
-                TOTAL_WORDS += count_words(fh.read())
+    print(f"• Total episodes (.txt): {total_files}")
+    print("🚀 BEGIN INGEST\n")
 
-print(f"• Total episodes: {TOTAL_EPISODES}")
-print(f"• Total words: {TOTAL_WORDS:,}")
-print("🚀 BEGIN INGEST\n")
+    episode_count = 0
+    word_count = 0
 
-# ===============================
-# INGEST
-# ===============================
+    for txt in txt_files:
+        try:
+            text = txt.read_text(errors="ignore")
+            words = len(text.split())
+            chunks = list(chunk_text(text))
 
-for root, _, files in os.walk(CHANNELS_DIR):
-    namespace = Path(root).name
+            vectors = []
+            for i in range(0, len(chunks), EMBED_BATCH):
+                batch = chunks[i:i + EMBED_BATCH]
+                embeds = embed_batch(batch)
 
-    txt_files = [f for f in files if f.endswith(".txt")]
-    if not txt_files:
-        continue
+                for chunk_text_, emb in zip(batch, embeds):
+                    vec_id = hashlib.sha1(chunk_text_.encode()).hexdigest()
+                    vectors.append({
+                        "id": vec_id,
+                        "values": emb,
+                        "metadata": {
+                            "file": txt.name,
+                            "path": str(txt),
+                            "words": words
+                        }
+                    })
 
-    print(f"📂 CATEGORY: {namespace} (namespace: {namespace})")
+                index.upsert(vectors=vectors)
+                vectors.clear()
+                time.sleep(SLEEP_BETWEEN_BATCHES)
 
-    for filename in txt_files:
-        path = Path(root) / filename
+            episode_count += 1
+            word_count += words
 
-        with open(path, "r", errors="ignore") as fh:
-            text = fh.read()
+            print(f"✅ Ingested: {txt.name} | words: {words}")
 
-        token_count = count_tokens(text)
-        if token_count > MAX_FILE_TOKENS:
-            print(f"⚠️ Skipped huge file (> {MAX_FILE_TOKENS} tokens): {filename}")
-            continue
-
-        chunks = list(chunk_text(text, CHUNK_TOKENS))
-        words = count_words(text)
-
-        # Embed in batches
-        vectors = []
-        for i in range(0, len(chunks), EMBED_BATCH_SIZE):
-            batch = chunks[i:i + EMBED_BATCH_SIZE]
-            res = openai_client.embeddings.create(
-                model=EMBED_MODEL,
-                input=batch
+            print(
+                f"📊 Progress: {episode_count}/{total_files} episodes | "
+                f"{word_count:,} total words"
             )
 
-            for j, emb in enumerate(res.data):
-                vector_id = f"{file_hash(path)}_{i+j}"
-                vectors.append({
-                    "id": vector_id,
-                    "values": emb.embedding,
-                    "metadata": {
-                        "file": filename,
-                        "namespace": namespace
-                    }
-                })
+        except Exception as e:
+            print(f"❌ Failed: {txt.name} — {e}")
 
-        index.upsert(vectors=vectors, namespace=namespace)
+    print("\n✅ INGEST COMPLETE")
+    print(f"📚 Episodes ingested: {episode_count}")
+    print(f"📝 Total words: {word_count:,}")
 
-        INGESTED_EPISODES += 1
-        INGESTED_WORDS += words
-        INGESTED_VECTORS += len(vectors)
-
-        print(f"✅ Ingested: {filename} ({len(vectors)} vectors)")
-        print_progress()
-
-print("\n✅ INGEST COMPLETE")
+if __name__ == "__main__":
+    ingest()
