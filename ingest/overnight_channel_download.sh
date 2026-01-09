@@ -10,7 +10,7 @@ set -euo pipefail
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 CHANNELS_DIR="$BASE_DIR/channels"
 
-# Virtualenv yt-dlp (REQUIRED)
+# Virtualenv yt-dlp (explicit path)
 VENV_YTDLP="$BASE_DIR/../venv/bin/yt-dlp"
 
 # Safety checks
@@ -37,7 +37,7 @@ TOTAL_TXT=0
 TOTAL_EPISODES=0
 
 ############################################
-# 🔄 Loop through channel.url files
+# 📥 Download auto-subs per channel
 ############################################
 
 find "$CHANNELS_DIR" -type f -name "channel.url" | while read -r URL_FILE; do
@@ -48,21 +48,18 @@ find "$CHANNELS_DIR" -type f -name "channel.url" | while read -r URL_FILE; do
   echo "📁 Output: $CHANNEL_DIR"
   echo "----------------------------------------------"
 
-  # Download auto-subs only (quiet + stable)
   "$VENV_YTDLP" \
-    --no-impersonate \
     --write-auto-sub \
     --sub-lang en \
     --skip-download \
     --no-progress \
-    --no-warnings \
     --output "$CHANNEL_DIR/%(title)s [%(id)s].%(ext)s" \
     "$CHANNEL_URL"
 
 done
 
 ############################################
-# 🔁 Convert VTT → TXT
+# 🔄 Convert VTT → TXT
 ############################################
 
 echo ""
@@ -71,7 +68,6 @@ echo "🔄 Converting subtitles to TXT..."
 find "$CHANNELS_DIR" -name "*.vtt" | while read -r vtt; do
   txt="${vtt%.vtt}.txt"
 
-  # Strip timestamps + HTML tags
   sed -E '
     /^[0-9]{2}:/d;
     /^[[:space:]]*$/d;
@@ -79,12 +75,11 @@ find "$CHANNELS_DIR" -name "*.vtt" | while read -r vtt; do
   ' "$vtt" > "$txt"
 
   rm "$vtt"
-
   ((TOTAL_TXT+=1))
 done
 
 ############################################
-# 🧹 Cleanup stray subtitle formats
+# 🧹 Cleanup
 ############################################
 
 find "$CHANNELS_DIR" -name "*.srt" -delete
