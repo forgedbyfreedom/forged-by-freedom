@@ -14,24 +14,19 @@ if [ ! -d "$CHANNELS_DIR" ]; then
   exit 1
 fi
 
-TOTAL_DOWNLOADED=0
+TOTAL_TXT=0
 
 for CHANNEL_PATH in "$CHANNELS_DIR"/*; do
   [ -d "$CHANNEL_PATH" ] || continue
 
-  CHANNEL_NAME="$(basename "$CHANNEL_PATH")"
-
-  # Expect a channel.url file
   URL_FILE="$CHANNEL_PATH/channel.url"
-  if [ ! -f "$URL_FILE" ]; then
-    continue
-  fi
+  [ -f "$URL_FILE" ] || continue
 
+  CHANNEL_NAME="$(basename "$CHANNEL_PATH")"
   CHANNEL_URL="$(cat "$URL_FILE")"
 
   echo ""
-  echo "▶️  Channel: $CHANNEL_NAME"
-  echo "🔗 URL: $CHANNEL_URL"
+  echo "▶️  $CHANNEL_NAME"
 
   yt-dlp \
     --write-auto-sub \
@@ -43,7 +38,6 @@ for CHANNEL_PATH in "$CHANNELS_DIR"/*; do
     --max-sleep-interval 10 \
     -o "$CHANNEL_PATH/%(title)s [%(id)s].%(ext)s" \
     "$CHANNEL_URL"
-
 done
 
 echo ""
@@ -53,12 +47,12 @@ find "$CHANNELS_DIR" -name "*.vtt" -type f | while read -r vtt; do
   txt="${vtt%.vtt}.txt"
   sed 's/<[^>]*>//g' "$vtt" > "$txt"
   rm "$vtt"
-  ((TOTAL_DOWNLOADED+=1))
+  ((TOTAL_TXT+=1))
 done
 
 find "$CHANNELS_DIR" -name "*.srt" -delete
 
 echo ""
-echo "✅ Overnight download complete"
-echo "📄 TXT files created this run: $TOTAL_DOWNLOADED"
+echo "✅ Overnight run complete"
+echo "📄 TXT files created: $TOTAL_TXT"
 echo "=============================================="
