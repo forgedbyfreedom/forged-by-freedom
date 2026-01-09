@@ -1,67 +1,74 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
+
+############################################
+# 🌙 Overnight Channel TXT Downloader
+############################################
+
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CHANNELS_DIR="$BASE_DIR/channels"
+VENV_YTDLP="$BASE_DIR/../venv/bin/yt-dlp"
+
+PINECONE_INDEX="forged-freedom-ai"
 
 echo "=============================================="
 echo "🌙 Overnight Channel TXT Downloader"
-echo "📂 Channels dir: $(pwd)/channels"
-echo "🎯 Pinecone target (later ingest): forged-freedom-ai"
+echo "📂 Channels dir: $CHANNELS_DIR"
+echo "🎯 Pinecone target (later ingest): $PINECONE_INDEX"
 echo "=============================================="
 echo ""
 
-BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
-CHANNELS_DIR="$BASE_DIR/channels"
-
-TOTAL_EPISODES=0
-TOTAL_TXT=0
-
-# Safety check
-if ! command -v yt-dlp >/dev/null 2>&1; then
-  echo "❌ yt-dlp not found in PATH"
+# --- Hard check yt-dlp ---
+if [[ ! -x "$VENV_YTDLP" ]]; then
+  echo "❌ yt-dlp not found at:"
+  echo "   $VENV_YTDLP"
+  echo ""
+  echo "Fix with:"
+  echo "  source venv/bin/activate"
+  echo "  pip install -U yt-dlp"
   exit 1
 fi
 
-# Find every channel.url file
-find "$CHANNELS_DIR" -name "channel.url" | while read CHANNEL_FILE; do
-  CHANNEL_URL="$(cat "$CHANNEL_FILE")"
-  CHANNEL_DIR="$(dirname "$CHANNEL_FILE")"
+TOTAL_TXT=0
+TOTAL_EPISODES=0
+
+# --- Find all channel.url files ---
+find "$CHANNELS_DIR" -type f -name "channel.url" | while read -r URLFILE; do
+  CHANNEL_URL=$(cat "$URLFILE")
+  CHANNEL_DIR=$(dirname "$URLFILE")
 
   echo "▶ Channel: $CHANNEL_URL"
   echo "📁 Output: $CHANNEL_DIR"
   echo "----------------------------------------------"
 
-  yt-dlp \
+  "$VENV_YTDLP" \
+    --quiet \
     --write-auto-sub \
     --sub-lang en \
     --skip-download \
-    --ignore-errors \
-    --no-warnings \
-    --restrict-filenames \
-    -o "$CHANNEL_DIR/%(title)s [%(id)s].%(ext)s" \
+    --output "$CHANNEL_DIR/%(title)s [%(id)s].%(ext)s" \
     "$CHANNEL_URL"
 
-  # Convert VTT → TXT
-  for vtt in "$CHANNEL_DIR"/*.vtt; do
-    [ -e "$vtt" ] || continue
-    txt="${vtt%.vtt}.txt"
-    sed 's/<[^>]*>//g' "$vtt" > "$txt"
-    rm "$vtt"
-    TOTAL_TXT=$((TOTAL_TXT + 1))
-  done
-
-  # Count episodes
-  EP_COUNT=$(ls "$CHANNEL_DIR"/*.txt 2>/dev/null | wc -l | tr -d ' ')
-  TOTAL_EPISODES=$((TOTAL_EPISODES + EP_COUNT))
-
-  echo "✅ Episodes so far: $TOTAL_EPISODES"
-  echo ""
 done
 
-# Cleanup any leftover subtitle formats
-find "$CHANNELS_DIR" -name "*.srt" -delete
-find "$CHANNELS_DIR" -name "*.ass" -delete
+echo ""
+echo "🔄 Converting subtitles to TXT..."
 
-echo "=============================================="
+# --- Convert .vtt → .txt ---
+find "$CHANNELS_DIR" -name "*.vtt" | while read -r vtt; do
+  txt="${vtt%.vtt}.txt"
+  sed 's/<[^>]*>//g' "$vtt" > "$txt"
+  rm "$vtt"
+  ((TOTAL_TXT+=1))
+done
+
+# --- Cleanup ---
+find "$CHANNELS_DIR" -name "*.srt" -delete
+
+TOTAL_EPISODES=$(find "$CHANNELS_DIR" -name "*.txt" | wc -l | tr -d ' ')
+
+echo ""
 echo "✅ Overnight run complete"
 echo "📺 Episodes collected: $TOTAL_EPISODES"
-echo "📄 TXT files created: $TOTAL_TXT"
+echo "📄 TXT files created this run: $TOTAL_TXT"
 echo "=============================================="
