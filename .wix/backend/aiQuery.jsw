@@ -1,11 +1,125 @@
 // backend/aiQuery.jsw
+import { fetch } from 'wix-fetch';
+import wixSecretsBackend from 'wix-secrets-backend';
 
-export async function queryPinecone(query) {
-  console.log("🧠 Backend function called");
-  console.log("Query:", query);
+const PROVIDER = 'RENDER'; // 'RENDER' or 'OPENAI'
 
-  // TEMP: hard response to verify Wix wiring
-  return {
-    answer: `Backend received your question: "${query}"`
-  };
+// ---- Safety limits (critical for Wix stability) ----
+const MAX_QUESTION_CHARS = 1200;
+const MAX_ANSWER_CHARS = 6000;
+const TIMEOUT_MS = 45000;
+
+// Timeout wrapper
+function fetchWithTimeout(url, options = {}, timeoutMs = TIMEOUT_MS) {
+  return Promise.race([
+    fetch(url, options),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error(`Request timed out after ${timeoutMs}ms`)), timeoutMs)
+    )
+  ]);
+}
+
+function sanitizeQuestion(q) {
+  const s = String(q || '').trim();
+  if (!s) throw new Error('Please enter a question.');
+  if (s.length > MAX_QUESTION_CHARS) {
+    throw new Error(`Question too long (${s.length} chars). Please shorten it.`);
+  }
+  return s;
+}
+
+function clampAnswer(text) {
+  const s = String(text || '');
+  if (s.length <= MAX_ANSWER_CHARS) return s;
+  return s.slice(0, MAX_ANSWER_CHARS) + '\n\n[Response trimmed]';
+}
+
+/* =========================
+   OPTION A — RENDER BACKEND
+   ========================= */
+async function askViaRender(question) {
+  const url = await wixSecretsBackend.getSecret('RENDER_AI_URL');
+
+  let apiKey = '';
+  try {
+    apiKey = await wixSecretsBackend.getSecret('RENDER_AI_KEY');
+  } catch (_) {}
+
+  const res = await fetchWithTimeout(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(apiKey ? { Authorization: `Bearer ${apiKey}` } : {})
+    },
+    body: JSON.stringify({ question })
+  });
+
+  const text = await res.text();
+  if (!res.ok) {
+    throw new Error(`AI service error (${res.status}): ${text.slice(0, 300)}`);
+  }
+
+  try {
+    const json = JSON.parse(text);
+    return clampAnswer(json.answer ?? json.response ?? text);
+  } catch {
+    return clampAnswer(text);
+  }
+}
+
+/* =========================
+   OPTION B — OPENAI DIRECT
+   ========================= */
+async function askViaOpenAI(question) {
+  const apiKey = await wixSecretsBackend.getSecret('OPENAI_API_KEY');
+  let model = 'gpt-4o-mini';
+  try {
+    model = await wixSecretsBackend.getSecret('OPENAI_MODEL');
+  } catch (_) {}
+
+  const res = await fetchWithTimeout(
+    'https://api.openai.com/v1/chat/completions',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model,
+        stream: false, // CRITICAL — avoids keepalive / beacon failure
+        max_tokens: 700,
+        temperature: 0.4,
+        messages: [
+          {
+            role: 'system',
+            content:
+              'You are Coach Bryan. Answer fitness and nutrition questions clearly, practically, and concisely.'
+          },
+          { role: 'user', content: question }
+        ]
+      })
+    }
+  );
+
+  const json = await res.json().catch(() => null);
+  if (!res.ok) {
+    const msg = json?.error?.message || JSON.stringify(json).slice(0, 300);
+    throw new Error(`OpenAI error (${res.status}): ${msg}`);
+  }
+
+  return clampAnswer(json?.choices?.[0]?.message?.content ?? '');
+}
+
+/* =========================
+   PUBLIC BACKEND FUNCTION
+   ========================= */
+export async function askCoach(rawQuestion) {
+  const question = sanitizeQuestion(rawQuestion);
+
+  if (PROVIDER === 'OPENAI') {
+    return await askViaOpenAI(question);
+  }
+
+  return await askViaRender(question);
 }
