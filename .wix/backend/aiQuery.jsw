@@ -1,59 +1,52 @@
 import { fetch } from 'wix-fetch';
 import { getSecret } from 'wix-secrets-backend';
 
-/* ================================
-   CONFIG
-================================ */
-const PINECONE_INDEX = "forged-freedom-ai";
-const PINECONE_TOP_K = 12;
-const MIN_LONG_QUOTE_LENGTH = 300;
-const OPENROUTER_TIMEOUT_MS = 20000;
+/* ===========================
+   HARD CONFIG
+=========================== */
+const TOP_K = 12;
+const MIN_LONG_QUOTE_CHARS = 300;
+const MAX_EXECUTION_MS = 20000;
 
-/* ================================
-   MAIN ENTRY
-================================ */
+/* ===========================
+   ENTRY POINT
+=========================== */
 export async function askCoach(payload) {
-  const userQuestion = payload.question?.trim();
-  if (!userQuestion) {
+  const question = payload?.question?.trim();
+  if (!question) {
     throw new Error("NO_QUESTION_PROVIDED");
   }
 
-  /* 1️⃣ Embed question via OpenRouter */
-  const embedding = await embedWithOpenRouter(userQuestion);
+  const embedding = await embedQuestion(question);
+  const pineconeMatches = await queryPinecone(embedding);
 
-  /* 2️⃣ Query Pinecone FIRST */
-  const pineconeResults = await queryPinecone(embedding);
+  const evidence = extractEvidence(pineconeMatches);
 
-  /* 3️⃣ Extract usable quotes */
-  const approvedQuotes = selectApprovedQuotes(pineconeResults);
-
-  if (approvedQuotes.length === 0) {
+  if (!evidence.length) {
     throw new Error("INSUFFICIENT_DB_EVIDENCE");
   }
 
-  /* 4️⃣ Build strict prompt */
-  const prompt = buildCoachPrompt(userQuestion, approvedQuotes);
-
-  /* 5️⃣ Generate final answer (OpenRouter) */
-  const answer = await generateAnswer(prompt);
+  const prompt = buildStrictPrompt(question, evidence);
+  const answer = await runOpenRouter(prompt);
 
   return {
     success: true,
-    quotes_used: approvedQuotes.length,
+    evidenceCount: evidence.length,
     answer
   };
 }
 
-/* ================================
+/* ===========================
    OPENROUTER EMBEDDING
-================================ */
-async function embedWithOpenRouter(text) {
-  const apiKey = await getSecret("OPENROUTER_API_KEY");
+=========================== */
+async function embedQuestion(text) {
+  const key = await getSecret("OPENROUTER_API_KEY");
+  const base = process.env.OPENROUTER_BASE_URL;
 
-  const res = await fetch(`${process.env.OPENROUTER_BASE_URL}/embeddings`, {
+  const res = await fetch(`${base}/embeddings`, {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${apiKey}`,
+      "Authorization": `Bearer ${key}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
@@ -66,44 +59,42 @@ async function embedWithOpenRouter(text) {
   return json.data[0].embedding;
 }
 
-/* ================================
-   PINECONE QUERY
-================================ */
+/* ===========================
+   PINECONE QUERY (FIXED)
+=========================== */
 async function queryPinecone(vector) {
   const apiKey = await getSecret("PINECONE_API_KEY");
+  const host = process.env.PINECONE_HOST;
 
-  const res = await fetch(
-    `https://${process.env.PINECONE_INDEX_NAME}.svc.us-east-1.pinecone.io/query`,
-    {
-      method: "POST",
-      headers: {
-        "Api-Key": apiKey,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        vector,
-        topK: PINECONE_TOP_K,
-        includeMetadata: true
-      })
-    }
-  );
+  const res = await fetch(`https://${host}/query`, {
+    method: "POST",
+    headers: {
+      "Api-Key": apiKey,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      vector,
+      topK: TOP_K,
+      includeMetadata: true
+    })
+  });
 
   const json = await res.json();
   return json.matches || [];
 }
 
-/* ================================
-   QUOTE SELECTION LOGIC
-================================ */
-function selectApprovedQuotes(matches) {
-  const quotes = matches
+/* ===========================
+   EVIDENCE EXTRACTION
+=========================== */
+function extractEvidence(matches) {
+  const valid = matches
     .map(m => m.metadata)
     .filter(m => m?.text && m.text.length > 50);
 
-  const longQuotes = quotes.filter(q => q.text.length >= MIN_LONG_QUOTE_LENGTH);
+  const longQuotes = valid.filter(v => v.text.length >= MIN_LONG_QUOTE_CHARS);
 
-  if (quotes.length >= 3) {
-    return quotes.slice(0, 3);
+  if (valid.length >= 3) {
+    return valid.slice(0, 3);
   }
 
   if (longQuotes.length >= 1) {
@@ -113,11 +104,11 @@ function selectApprovedQuotes(matches) {
   return [];
 }
 
-/* ================================
-   PROMPT BUILDER (STRICT)
-================================ */
-function buildCoachPrompt(question, quotes) {
-  let quoteBlock = quotes.map((q, i) => `
+/* ===========================
+   STRICT PROMPT BUILDER
+=========================== */
+function buildStrictPrompt(question, quotes) {
+  const formattedQuotes = quotes.map((q, i) => `
 QUOTE ${i + 1}:
 "${q.text}"
 
@@ -125,43 +116,44 @@ QUOTE ${i + 1}:
 `).join("\n");
 
   return `
-SYSTEM RULES (NON-NEGOTIABLE):
+SYSTEM — NON-NEGOTIABLE RULES:
 
-1. Paraphrase the user question first
-2. Present database evidence ONLY from quotes provided
-3. Cite podcast, episode, and speaker academically
-4. Explain the physiology / medical reasoning in technical detail
-5. Close with a motivational quote from Coach Bryan
-6. DO NOT introduce outside knowledge
+• You are Coach Bryan’s AI research engine
+• You MUST paraphrase the question
+• You MUST answer ONLY using provided database quotes
+• You MUST explain the medical / physiological "why"
+• You MUST close with a motivational quote from Coach Bryan
+• DO NOT introduce outside knowledge
 
 USER QUESTION:
 ${question}
 
 DATABASE EVIDENCE:
-${quoteBlock}
+${formattedQuotes}
 `;
 }
 
-/* ================================
+/* ===========================
    OPENROUTER COMPLETION
-================================ */
-async function generateAnswer(prompt) {
-  const apiKey = await getSecret("OPENROUTER_API_KEY");
+=========================== */
+async function runOpenRouter(prompt) {
+  const key = await getSecret("OPENROUTER_API_KEY");
+  const base = process.env.OPENROUTER_BASE_URL;
 
   const controller = new AbortController();
-  setTimeout(() => controller.abort(), OPENROUTER_TIMEOUT_MS);
+  setTimeout(() => controller.abort(), MAX_EXECUTION_MS);
 
-  const res = await fetch(`${process.env.OPENROUTER_BASE_URL}/chat/completions`, {
+  const res = await fetch(`${base}/chat/completions`, {
     method: "POST",
     signal: controller.signal,
     headers: {
-      "Authorization": `Bearer ${apiKey}`,
+      "Authorization": `Bearer ${key}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
       model: process.env.OPENROUTER_MODEL,
       messages: [{ role: "user", content: prompt }],
-      temperature: 0.2
+      temperature: 0.15
     })
   });
 
