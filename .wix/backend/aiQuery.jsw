@@ -2,195 +2,298 @@
 import { fetch } from 'wix-fetch';
 import { getSecret } from 'wix-secrets-backend';
 
-/* ===============================
-   CONFIG
-================================ */
+/**
+ * REQUIRED WIX SECRETS:
+ * - OPENROUTER_API_KEY
+ * - OPENROUTER_BASE_URL           (ex: https://openrouter.ai/api/v1)
+ * - OPENROUTER_MODEL              (ex: nousresearch/hermes-3-llama-3.1-70b)
+ * - OPENROUTER_EMBED_MODEL        (ex: text-embedding-3-large)
+ * - PINECONE_API_KEY
+ * - PINECONE_HOST                 (ex: https://forged-freedom-ai-xxxx.svc....pinecone.io)
+ *
+ * Optional (not required by this file):
+ * - PINECONE_INDEX_NAME
+ */
 
-const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-70b";
+const TOPK = 6;                    // keep small to avoid Wix timeout
+const QUOTE_CHARS = 1400;          // hard cap quote size
+const EMBED_TIMEOUT_MS = 2500;
+const PINECONE_TIMEOUT_MS = 2500;
+const LLM_TIMEOUT_MS = 4500;       // Wix execution window is tight
 
-const PINECONE_INDEX = "forged-freedom-ai";
-const PINECONE_NAMESPACE = "forged-freedom-ai";
+// namespaces to try in priority order (fast stop once we have 3 quotes)
+const NAMESPACE_PRIORITY = [
+  "thinkbig_tier0",
+  "thinkbig_priority",
+  "anabolic_bodybuilding_priority",
+  "peptides_tier1",
+  "glp1_metabolic",
+  "retatrutide",
+  "biohacking",
+  "sports_nutrition",
+  "medical_primary",
+  "uncategorized",
+  "default" // and the implicit default (no namespace) will be tried last
+];
 
-const MAX_PINECONE_MATCHES = 6;
-const MAX_QUOTE_CHARS = 1200;
-const OPENROUTER_TIMEOUT_MS = 3500;
-
-/* ===============================
-   PUBLIC ENTRY POINT
-================================ */
-
-export async function askCoach(payload) {
-  const startTime = Date.now();
-
-  if (!payload || !payload.question) {
-    return error("INVALID_INPUT", "No question provided.");
-  }
-
-  const question = payload.question.trim();
-
-  try {
-    // 1️⃣ EMBED QUESTION
-    const embedding = await embedQuestion(question);
-
-    // 2️⃣ QUERY PINECONE (PRIMARY SOURCE OF TRUTH)
-    const matches = await queryPinecone(embedding);
-
-    if (!matches.length) {
-      return error(
-        "NO_DB_MATCH",
-        "No relevant material found in the Forged by Freedom database."
-      );
-    }
-
-    // 3️⃣ BUILD CURATED CONTEXT (HARD CAPPED)
-    const context = buildContext(matches);
-
-    // 4️⃣ CALL OPENROUTER (SYNTHESIS ONLY)
-    const answer = await callOpenRouter(question, context);
-
-    return {
-      status: "OK",
-      elapsedMs: Date.now() - startTime,
-      answer
-    };
-
-  } catch (err) {
-    return error("EXECUTION_ERROR", err.message || "Unknown failure");
-  }
+function abortableFetch(url, options, timeoutMs) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  return fetch(url, { ...options, signal: controller.signal })
+    .finally(() => clearTimeout(id));
 }
 
-/* ===============================
-   EMBEDDING
-================================ */
-
-async function embedQuestion(question) {
+async function embedWithOpenRouter(text) {
   const apiKey = await getSecret("OPENROUTER_API_KEY");
+  const baseUrl = await getSecret("OPENROUTER_BASE_URL");
+  const embedModel = await getSecret("OPENROUTER_EMBED_MODEL");
 
-  const res = await fetch(`${OPENROUTER_URL.replace("/chat/completions", "")}/embeddings`, {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json"
+  const res = await abortableFetch(
+    `${baseUrl}/embeddings`,
+    {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: embedModel,
+        input: text
+      })
     },
-    body: JSON.stringify({
-      model: "text-embedding-3-large",
-      input: question
-    })
-  });
+    EMBED_TIMEOUT_MS
+  );
 
-  const data = await res.json();
-
-  if (!data.data || !data.data[0]) {
-    throw new Error("Embedding failed");
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(`Embedding failed: ${t}`);
   }
 
-  return data.data[0].embedding;
+  const json = await res.json();
+  const emb = json?.data?.[0]?.embedding;
+  if (!emb) throw new Error("Embedding failed: no embedding returned");
+  return emb;
 }
 
-/* ===============================
-   PINECONE QUERY
-================================ */
-
-async function queryPinecone(embedding) {
+async function pineconeQuery(vector, namespaceMaybe) {
   const pineconeKey = await getSecret("PINECONE_API_KEY");
   const pineconeHost = await getSecret("PINECONE_HOST");
 
-  const res = await fetch(`${pineconeHost}/query`, {
-    method: "POST",
-    headers: {
-      "Api-Key": pineconeKey,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      vector: embedding,
-      topK: MAX_PINECONE_MATCHES,
-      includeMetadata: true,
-      namespace: PINECONE_NAMESPACE
-    })
-  });
+  const body = {
+    vector,
+    topK: TOPK,
+    includeMetadata: true
+  };
 
-  const data = await res.json();
-
-  return (data.matches || []).filter(m => m.metadata && m.metadata.text);
-}
-
-/* ===============================
-   CONTEXT BUILDER
-================================ */
-
-function buildContext(matches) {
-  return matches.slice(0, 3).map((m, i) => {
-    return `
-SOURCE ${i + 1}
-Podcast: ${m.metadata.podcast || "Unknown"}
-Episode: ${m.metadata.episode || "Unknown"}
-Speaker: ${m.metadata.speaker || "Unknown"}
-
-"${m.metadata.text.slice(0, MAX_QUOTE_CHARS)}"
-`;
-  }).join("\n\n");
-}
-
-/* ===============================
-   OPENROUTER (FINAL SYNTHESIS)
-================================ */
-
-async function callOpenRouter(question, context) {
-  const apiKey = await getSecret("OPENROUTER_API_KEY");
-
-  const controller = new AbortController();
-  setTimeout(() => controller.abort(), OPENROUTER_TIMEOUT_MS);
-
-  const prompt = `
-You are Coach Bryan's AI assistant.
-
-RESPONSE RULES (MANDATORY):
-1. Paraphrase the user's question.
-2. Present EXACTLY THREE LONG QUOTES from the provided database context.
-3. Academically cite each quote (podcast, episode, speaker).
-4. Provide a detailed medical/scientific explanation justifying the answer.
-5. End with a motivational quote attributed to Coach Bryan.
-6. DO NOT use outside knowledge. USE ONLY THE PROVIDED CONTEXT.
-
-DATABASE CONTEXT:
-${context}
-
-USER QUESTION:
-${question}
-`;
-
-  const res = await fetch(OPENROUTER_URL, {
-    method: "POST",
-    signal: controller.signal,
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: OPENROUTER_MODEL,
-      temperature: 0.2,
-      messages: [{ role: "user", content: prompt }]
-    })
-  });
-
-  const data = await res.json();
-
-  if (!data.choices || !data.choices[0]) {
-    throw new Error("OpenRouter failed");
+  // Only include namespace if provided (Pinecone treats missing namespace as default)
+  if (namespaceMaybe && namespaceMaybe.length) {
+    body.namespace = namespaceMaybe;
   }
 
-  return data.choices[0].message.content;
+  const res = await abortableFetch(
+    `${pineconeHost}/query`,
+    {
+      method: "POST",
+      headers: {
+        "Api-Key": pineconeKey,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    },
+    PINECONE_TIMEOUT_MS
+  );
+
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(`Pinecone query failed: ${t}`);
+  }
+
+  const json = await res.json();
+  return json?.matches || [];
 }
 
-/* ===============================
-   ERROR FORMAT
-================================ */
+function normalizeMatchToQuote(match) {
+  const md = match?.metadata || {};
+  // Your ingests vary; handle common fields safely
+  const text = (md.text || md.chunk_text || md.content || "").toString();
+  if (!text) return null;
 
-function error(code, message) {
   return {
-    status: "ERROR",
-    code,
-    message
+    quote: text.slice(0, QUOTE_CHARS),
+    podcast: md.podcast || md.channel || md.uploader || "Unknown",
+    episode: md.episode || md.source || md.title || "Unknown",
+    speaker: md.speaker || md.host || "Unknown",
+    namespace: md.namespace || "unknown"
   };
+}
+
+function buildProtocolPrompt(userQuestion, quotes) {
+  // quotes: array of 3
+  const q1 = quotes[0];
+  const q2 = quotes[1];
+  const q3 = quotes[2];
+
+  return `
+YOU ARE "ASK COACH BRYAN".
+
+YOU MUST FOLLOW THIS FORMAT EXACTLY — NO EXTRA SECTIONS.
+
+1) PARAPHRASE THE USER’S QUESTION (one paragraph)
+
+2) DATABASE EVIDENCE (EXACTLY 3 LONG VERBATIM QUOTES)
+Quote 1:
+"""${q1.quote}"""
+Citation: ${q1.podcast}. Episode: ${q1.episode}. Speaker: ${q1.speaker}.
+
+Quote 2:
+"""${q2.quote}"""
+Citation: ${q2.podcast}. Episode: ${q2.episode}. Speaker: ${q2.speaker}.
+
+Quote 3:
+"""${q3.quote}"""
+Citation: ${q3.podcast}. Episode: ${q3.episode}. Speaker: ${q3.speaker}.
+
+3) MEDICAL / MECHANISTIC EXPLANATION (extremely technical, graduate-level)
+- endocrinology, pharmacokinetics/dynamics when relevant
+- hepatic metabolism, lipids, blood pressure, receptor dynamics, signaling pathways
+- explain WHY behind the advice
+
+4) COACH BRYAN QUOTE (one short motivational line, attributed to Coach Bryan)
+
+RULES:
+- Do NOT mention policies
+- Do NOT disclaim
+- Do NOT refuse
+- Do NOT invent sources
+- Use ONLY the database evidence above
+
+USER QUESTION:
+${userQuestion}
+`.trim();
+}
+
+async function callOpenRouterLLM(prompt) {
+  const apiKey = await getSecret("OPENROUTER_API_KEY");
+  const baseUrl = await getSecret("OPENROUTER_BASE_URL");
+  const model = await getSecret("OPENROUTER_MODEL");
+
+  const res = await abortableFetch(
+    `${baseUrl}/chat/completions`,
+    {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://www.forgedbyfreedom.org",
+        "X-Title": "Ask Coach Bryan"
+      },
+      body: JSON.stringify({
+        model,
+        temperature: 0.2,
+        max_tokens: 1800,
+        messages: [
+          { role: "system", content: "You are an elite strength coach and applied physiology expert. Follow the required output format exactly." },
+          { role: "user", content: prompt }
+        ]
+      })
+    },
+    LLM_TIMEOUT_MS
+  );
+
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(`OpenRouter completion failed: ${t}`);
+  }
+
+  const json = await res.json();
+  const text = json?.choices?.[0]?.message?.content;
+  if (!text) throw new Error("OpenRouter completion failed: no content");
+  return text;
+}
+
+/**
+ * Public web method called by your AI-Coach page:
+ * backend/aiQuery.jsw/askCoach.ajax
+ *
+ * Expected payload: { question: string, debug?: boolean }
+ */
+export async function askCoach(payload) {
+  const start = Date.now();
+  const debug = !!payload?.debug;
+
+  try {
+    const question = (payload?.question || "").toString().trim();
+    if (!question || question.length < 4) {
+      return { status: "ERROR", code: "INVALID_INPUT", message: "Question is required." };
+    }
+
+    // 1) Embed
+    const embedding = await embedWithOpenRouter(question);
+
+    // 2) Query Pinecone across namespaces until we have enough evidence
+    const tried = [];
+    const quotes = [];
+
+    for (const ns of NAMESPACE_PRIORITY) {
+      tried.push(ns);
+      let matches = [];
+      try {
+        matches = await pineconeQuery(embedding, ns);
+      } catch (e) {
+        // ignore one namespace failure and continue
+        continue;
+      }
+
+      for (const m of matches) {
+        const q = normalizeMatchToQuote(m);
+        if (q && q.quote && q.quote.length > 50) {
+          quotes.push(q);
+        }
+        if (quotes.length >= 3) break;
+      }
+      if (quotes.length >= 3) break;
+    }
+
+    // Last attempt: implicit default namespace (no namespace param)
+    if (quotes.length < 3) {
+      tried.push("[default]");
+      const matches = await pineconeQuery(embedding, null);
+      for (const m of matches) {
+        const q = normalizeMatchToQuote(m);
+        if (q && q.quote && q.quote.length > 50) {
+          quotes.push(q);
+        }
+        if (quotes.length >= 3) break;
+      }
+    }
+
+    if (quotes.length < 3) {
+      return {
+        status: "ERROR",
+        code: "INSUFFICIENT_DB_EVIDENCE",
+        message: "Not enough relevant database evidence found to answer in protocol format.",
+        ...(debug ? { triedNamespaces: tried, elapsedMs: Date.now() - start } : {})
+      };
+    }
+
+    // 3) Build forced-protocol prompt from the 3 quotes
+    const protocolPrompt = buildProtocolPrompt(question, quotes.slice(0, 3));
+
+    // 4) LLM synthesis (OpenRouter)
+    const answer = await callOpenRouterLLM(protocolPrompt);
+
+    return {
+      status: "OK",
+      answer,
+      ...(debug ? { elapsedMs: Date.now() - start, triedNamespaces: tried } : {})
+    };
+
+  } catch (e) {
+    return {
+      status: "ERROR",
+      code: "EXECUTION_ERROR",
+      message: e.message || String(e),
+      ...(debug ? { elapsedMs: Date.now() - start } : {})
+    };
+  }
 }
