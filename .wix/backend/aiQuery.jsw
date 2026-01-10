@@ -1,112 +1,196 @@
+// backend/aiQuery.jsw
 import { fetch } from 'wix-fetch';
-import { Pinecone } from '@pinecone-database/pinecone';
+import { getSecret } from 'wix-secrets-backend';
 
-/* ===========================
+/* ===============================
    CONFIG
-=========================== */
+================================ */
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-70b";
-const EMBED_MODEL = "text-embedding-3-large";
+
 const PINECONE_INDEX = "forged-freedom-ai";
+const PINECONE_NAMESPACE = "forged-freedom-ai";
 
-/* ===========================
-   HELPERS
-=========================== */
+const MAX_PINECONE_MATCHES = 6;
+const MAX_QUOTE_CHARS = 1200;
+const OPENROUTER_TIMEOUT_MS = 3500;
 
-async function embedWithOpenRouter(text) {
-  const res = await fetch(`${OPENROUTER_BASE_URL}/embeddings`, {
+/* ===============================
+   PUBLIC ENTRY POINT
+================================ */
+
+export async function askCoach(payload) {
+  const startTime = Date.now();
+
+  if (!payload || !payload.question) {
+    return error("INVALID_INPUT", "No question provided.");
+  }
+
+  const question = payload.question.trim();
+
+  try {
+    // 1️⃣ EMBED QUESTION
+    const embedding = await embedQuestion(question);
+
+    // 2️⃣ QUERY PINECONE (PRIMARY SOURCE OF TRUTH)
+    const matches = await queryPinecone(embedding);
+
+    if (!matches.length) {
+      return error(
+        "NO_DB_MATCH",
+        "No relevant material found in the Forged by Freedom database."
+      );
+    }
+
+    // 3️⃣ BUILD CURATED CONTEXT (HARD CAPPED)
+    const context = buildContext(matches);
+
+    // 4️⃣ CALL OPENROUTER (SYNTHESIS ONLY)
+    const answer = await callOpenRouter(question, context);
+
+    return {
+      status: "OK",
+      elapsedMs: Date.now() - startTime,
+      answer
+    };
+
+  } catch (err) {
+    return error("EXECUTION_ERROR", err.message || "Unknown failure");
+  }
+}
+
+/* ===============================
+   EMBEDDING
+================================ */
+
+async function embedQuestion(question) {
+  const apiKey = await getSecret("OPENROUTER_API_KEY");
+
+  const res = await fetch(`${OPENROUTER_URL.replace("/chat/completions", "")}/embeddings`, {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+      "Authorization": `Bearer ${apiKey}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: EMBED_MODEL,
-      input: text
+      model: "text-embedding-3-large",
+      input: question
     })
   });
 
-  const json = await res.json();
-  return json.data[0].embedding;
+  const data = await res.json();
+
+  if (!data.data || !data.data[0]) {
+    throw new Error("Embedding failed");
+  }
+
+  return data.data[0].embedding;
 }
 
-/* ===========================
-   MAIN ENTRY POINT
-=========================== */
+/* ===============================
+   PINECONE QUERY
+================================ */
 
-export async function askCoach(userQuestion) {
+async function queryPinecone(embedding) {
+  const pineconeKey = await getSecret("PINECONE_API_KEY");
+  const pineconeHost = await getSecret("PINECONE_HOST");
 
-  if (!userQuestion || userQuestion.length < 5) {
-    return { error: "Invalid question." };
-  }
-
-  /* 1️⃣ EMBED QUESTION */
-  const embedding = await embedWithOpenRouter(userQuestion);
-
-  /* 2️⃣ QUERY PINECONE */
-  const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
-  const index = pc.index(PINECONE_INDEX);
-
-  const queryResponse = await index.query({
-    vector: embedding,
-    topK: 12,
-    includeMetadata: true
-  });
-
-  /* 3️⃣ HARD FAIL IF NO DATABASE EVIDENCE */
-  if (!queryResponse.matches || queryResponse.matches.length < 3) {
-    return {
-      error: "Insufficient database evidence to answer this question."
-    };
-  }
-
-  /* 4️⃣ BUILD DATABASE CONTEXT */
-  const contextBlock = queryResponse.matches.map(m => `
-PODCAST: ${m.metadata.podcast || "Unknown"}
-EPISODE: ${m.metadata.episode || "Unknown"}
-SPEAKER: ${m.metadata.speaker || "Unknown"}
-
-"${m.metadata.text}"
-`).join("\n\n");
-
-  /* 5️⃣ SYSTEM PROMPT — YOUR RULES */
-  const systemPrompt = `
-You are Coach Bryan AI.
-
-You may ONLY answer using the database excerpts below.
-You MUST quote them verbatim.
-
-RESPONSE FORMAT (MANDATORY):
-
-1. Paraphrase the question
-2. Provide EXACTLY 3 long direct quotes from the database
-3. Cite podcast name, episode title, and speaker for each quote
-4. Provide an extremely technical medical explanation explaining WHY
-5. End with a motivational quote from Coach Bryan
-
-DATABASE EXCERPTS:
-${contextBlock}
-`;
-
-  /* 6️⃣ CALL OPENROUTER LAST */
-  const completion = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
+  const res = await fetch(`${pineconeHost}/query`, {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+      "Api-Key": pineconeKey,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      vector: embedding,
+      topK: MAX_PINECONE_MATCHES,
+      includeMetadata: true,
+      namespace: PINECONE_NAMESPACE
+    })
+  });
+
+  const data = await res.json();
+
+  return (data.matches || []).filter(m => m.metadata && m.metadata.text);
+}
+
+/* ===============================
+   CONTEXT BUILDER
+================================ */
+
+function buildContext(matches) {
+  return matches.slice(0, 3).map((m, i) => {
+    return `
+SOURCE ${i + 1}
+Podcast: ${m.metadata.podcast || "Unknown"}
+Episode: ${m.metadata.episode || "Unknown"}
+Speaker: ${m.metadata.speaker || "Unknown"}
+
+"${m.metadata.text.slice(0, MAX_QUOTE_CHARS)}"
+`;
+  }).join("\n\n");
+}
+
+/* ===============================
+   OPENROUTER (FINAL SYNTHESIS)
+================================ */
+
+async function callOpenRouter(question, context) {
+  const apiKey = await getSecret("OPENROUTER_API_KEY");
+
+  const controller = new AbortController();
+  setTimeout(() => controller.abort(), OPENROUTER_TIMEOUT_MS);
+
+  const prompt = `
+You are Coach Bryan's AI assistant.
+
+RESPONSE RULES (MANDATORY):
+1. Paraphrase the user's question.
+2. Present EXACTLY THREE LONG QUOTES from the provided database context.
+3. Academically cite each quote (podcast, episode, speaker).
+4. Provide a detailed medical/scientific explanation justifying the answer.
+5. End with a motivational quote attributed to Coach Bryan.
+6. DO NOT use outside knowledge. USE ONLY THE PROVIDED CONTEXT.
+
+DATABASE CONTEXT:
+${context}
+
+USER QUESTION:
+${question}
+`;
+
+  const res = await fetch(OPENROUTER_URL, {
+    method: "POST",
+    signal: controller.signal,
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
       model: OPENROUTER_MODEL,
-      temperature: 0.15,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userQuestion }
-      ]
+      temperature: 0.2,
+      messages: [{ role: "user", content: prompt }]
     })
   });
 
-  const responseJson = await completion.json();
-  return { answer: responseJson.choices[0].message.content };
+  const data = await res.json();
+
+  if (!data.choices || !data.choices[0]) {
+    throw new Error("OpenRouter failed");
+  }
+
+  return data.choices[0].message.content;
+}
+
+/* ===============================
+   ERROR FORMAT
+================================ */
+
+function error(code, message) {
+  return {
+    status: "ERROR",
+    code,
+    message
+  };
 }
