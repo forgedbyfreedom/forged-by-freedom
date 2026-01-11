@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import fetch from "node-fetch";
 
-/* ===============================
-   ENV
-================================ */
+const app = express();
+app.use(cors());
+app.use(express.json());
 
 const {
   OPENROUTER_API_KEY,
@@ -15,19 +15,10 @@ const {
 
 const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
 
-/* ===============================
-   APP
-================================ */
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-/* ===============================
+/* =======================
    HEALTH CHECK
-================================ */
-
-app.get("/status", async (_req, res) => {
+======================= */
+app.get("/status", async (req, res) => {
   res.json({
     status: "ok",
     backend: "forged-by-freedom-api",
@@ -38,10 +29,9 @@ app.get("/status", async (_req, res) => {
   });
 });
 
-/* ===============================
-   ASK (MAIN ENDPOINT)
-================================ */
-
+/* =======================
+   MAIN ASK ENDPOINT
+======================= */
 app.post("/ask", async (req, res) => {
   try {
     const question = req.body?.question;
@@ -49,27 +39,27 @@ app.post("/ask", async (req, res) => {
       return res.status(400).json({ error: "No question provided" });
     }
 
-    // 1️⃣ Embed
-    const embRes = await fetch(
-      "https://openrouter.ai/api/v1/embeddings",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "text-embedding-3-large",
-          input: question
-        })
-      }
-    );
+    /* ---------- EMBEDDING ---------- */
+    const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "text-embedding-3-large",
+        input: question
+      })
+    });
 
-    const embJson = await embRes.json();
-    const vector = embJson?.data?.[0]?.embedding;
-    if (!vector) throw new Error("Embedding failed");
+    const emb = await embRes.json();
+    if (!emb?.data?.[0]?.embedding) {
+      throw new Error("Embedding failed");
+    }
 
-    // 2️⃣ Pinecone
+    const vector = emb.data[0].embedding;
+
+    /* ---------- PINECONE ---------- */
     const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
@@ -83,16 +73,17 @@ app.post("/ask", async (req, res) => {
       })
     });
 
-    const pcJson = await pcRes.json();
-    const matches = pcJson?.matches || [];
+    const pc = await pcRes.json();
+    const matches = pc.matches || [];
 
     if (!matches.length) {
       return res.json({
         answer:
-          "No relevant material was found in the Forged by Freedom database."
+          "No relevant material found in the Forged by Freedom database."
       });
     }
 
+    /* ---------- CONTEXT ---------- */
     const context = matches
       .slice(0, 3)
       .map((m, i) => {
@@ -102,19 +93,19 @@ app.post("/ask", async (req, res) => {
           md.chunk ||
           md.content ||
           md.transcript ||
-          md.body ||
           "";
+
         return `SOURCE ${i + 1}\n${text.slice(0, 1200)}`;
       })
       .join("\n\n");
 
-    // 3️⃣ LLM
+    /* ---------- LLM ---------- */
     const llmRes = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -124,7 +115,7 @@ app.post("/ask", async (req, res) => {
             {
               role: "user",
               content:
-                "Use ONLY the context below.\n\n" +
+                "Use ONLY this database context.\n\n" +
                 context +
                 "\n\nQuestion:\n" +
                 question
@@ -134,14 +125,16 @@ app.post("/ask", async (req, res) => {
       }
     );
 
-    const llmJson = await llmRes.json();
-    const answer = llmJson?.choices?.[0]?.message?.content;
-    if (!answer) throw new Error("LLM returned no answer");
+    const llm = await llmRes.json();
+    const answer = llm?.choices?.[0]?.message?.content;
+
+    if (!answer) {
+      throw new Error("LLM returned empty response");
+    }
 
     res.json({ answer });
 
   } catch (err) {
-    console.error("[ASK ERROR]", err);
     res.status(500).json({
       error: "AI backend failure",
       details: err.message
@@ -149,14 +142,10 @@ app.post("/ask", async (req, res) => {
   }
 });
 
-/* ===============================
-   START
-================================ */
-
+/* =======================
+   START SERVER
+======================= */
 const SERVER_PORT = PORT || 5051;
 app.listen(SERVER_PORT, () => {
-  console.log(
-    `[FBF API] running on port ${SERVER_PORT} using ${MODEL}`
-  );
+  console.log(`[FBF API] running on port ${SERVER_PORT} using ${MODEL}`);
 });
-
