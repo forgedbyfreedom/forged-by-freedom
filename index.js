@@ -1,100 +1,168 @@
 import express from "express";
 import cors from "cors";
-import bodyParser from "body-parser";
 import fetch from "node-fetch";
-import { Pinecone } from "@pinecone-database/pinecone";
 
-// ========== ENV LOADING ==========
+/* ===============================
+   ENV
+================================ */
+
 const {
   OPENROUTER_API_KEY,
-  OPENROUTER_MODEL,
   PINECONE_API_KEY,
+  PINECONE_HOST,
   PORT
 } = process.env;
 
-// DEFAULT MODEL SAFETY
-const MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
 
-// ========== PINECONE ==========
-const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-const pineconeIndex = pc.Index("forged-freedom-ai");
+/* ===============================
+   APP
+================================ */
 
-// ========== EXPRESS ==========
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-// ===== HEALTH =====
-app.get("/status", async (req, res) => {
-  try {
-    await pineconeIndex.describeIndexStats();
-    res.json({
-      status: "ok",
-      openRouterConfigured: !!OPENROUTER_API_KEY,
-      pineconeConfigured: !!PINECONE_API_KEY,
-      model: MODEL,
-      index: "forged-freedom-ai",
-      backend: "root-index",
-      pineconeConnected: true,
-      time: new Date().toISOString()
-    });
-  } catch (err) {
-    res.json({
-      status: "error",
-      pineconeConnected: false,
-      model: MODEL,
-      error: err.message
-    });
-  }
+/* ===============================
+   HEALTH CHECK
+================================ */
+
+app.get("/status", async (_req, res) => {
+  res.json({
+    status: "ok",
+    backend: "forged-by-freedom-api",
+    openRouterConfigured: !!OPENROUTER_API_KEY,
+    pineconeConfigured: !!PINECONE_API_KEY,
+    model: MODEL,
+    time: new Date().toISOString()
+  });
 });
 
-// ===== QUERY =====
-app.post("/query", async (req, res) => {
-  const { question } = req.body;
-  if (!question) return res.json({ answer: "No question provided" });
+/* ===============================
+   ASK (MAIN ENDPOINT)
+================================ */
 
+app.post("/ask", async (req, res) => {
   try {
-    // LLM call
-    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    const question = req.body?.question;
+    if (!question) {
+      return res.status(400).json({ error: "No question provided" });
+    }
+
+    /* ---------- 1️⃣ EMBED ---------- */
+    const embRes = await fetch(
+      "https://openrouter.ai/api/v1/embeddings",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: "text-embedding-3-large",
+          input: question
+        })
+      }
+    );
+
+    const embJson = await embRes.json();
+    const vector = embJson?.data?.[0]?.embedding;
+
+    if (!vector) {
+      throw new Error("Embedding failed");
+    }
+
+    /* ---------- 2️⃣ PINECONE ---------- */
+    const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-        "HTTP-Referer": "https://www.forgedbyfreedom.org",
-        "X-Title": "FBF AI Coach",
+        "Api-Key": PINECONE_API_KEY,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: MODEL,
-        messages: [
-          { role: "user", content: question }
-        ]
+        vector,
+        topK: 6,
+        includeMetadata: true
       })
     });
 
-    const data = await response.json();
+    const pcJson = await pcRes.json();
+    const matches = pcJson?.matches || [];
 
-    if (!data?.choices) {
+    if (!matches.length) {
       return res.json({
-        answer: "Server error — OpenRouter returned null response",
-        error: JSON.stringify(data)
+        answer:
+          "No relevant material was found in the Forged by Freedom database."
       });
     }
 
-    const answer = data.choices[0].message.content;
+    const context = matches
+      .slice(0, 3)
+      .map((m, i) => {
+        const md = m.metadata || {};
+        const text =
+          md.text ||
+          md.chunk ||
+          md.content ||
+          md.transcript ||
+          md.body ||
+          "";
+
+        return `SOURCE ${i + 1}\n${text.slice(0, 1200)}`;
+      })
+      .join("\n\n");
+
+    /* ---------- 3️⃣ LLM ---------- */
+    const llmRes = await fetch(
+      "https://openrouter.ai/api/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: MODEL,
+          temperature: 0.2,
+          messages: [
+            {
+              role: "user",
+              content:
+                "Use ONLY the context below.\n\n" +
+                context +
+                "\n\nQuestion:\n" +
+                question
+            }
+          ]
+        })
+      }
+    );
+
+    const llmJson = await llmRes.json();
+    const answer = llmJson?.choices?.[0]?.message?.content;
+
+    if (!answer) {
+      throw new Error("LLM returned no answer");
+    }
+
     res.json({ answer });
 
   } catch (err) {
-    res.json({
-      answer: "Server error in AI Coach backend. If this keeps happening, ping Coach Bryan.",
-      error: err.message
+    console.error("[ASK ERROR]", err);
+    res.status(500).json({
+      error: "AI backend failure",
+      details: err.message
     });
   }
 });
 
-// ===== START =====
+/* ===============================
+   START
+================================ */
+
 const SERVER_PORT = PORT || 5051;
 app.listen(SERVER_PORT, () => {
-  console.log(`[FBF] running on :${SERVER_PORT} using model ${MODEL}`);
+  console.log(
+    `[FBF API] running on port ${SERVER_PORT} using ${MODEL}`
+  );
 });
-
-//force rebuild Thu Jan  1 18:31:05 EST 2026
