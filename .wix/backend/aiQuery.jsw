@@ -1,9 +1,12 @@
 // backend/aiQuery.jsw
 import { fetch } from "wix-fetch";
 
+/**
+ * Public API called from the AI Coach page
+ */
 export async function askCoach(payload) {
   try {
-    if (!payload || !payload.question) {
+    if (!payload || typeof payload.question !== "string") {
       return {
         status: "ERROR",
         message: "No question provided"
@@ -25,11 +28,10 @@ export async function askCoach(payload) {
 
     const data = await response.json();
 
-    // 🔒 If Render returned an error, pass it through
-    if (data.error) {
+    if (!response.ok || data.error) {
       return {
         status: "ERROR",
-        message: data.details || data.error
+        message: data.details || data.error || "AI backend error"
       };
     }
 
