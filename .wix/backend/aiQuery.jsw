@@ -1,27 +1,24 @@
 // backend/aiQuery.jsw
-
 import { fetch } from 'wix-fetch';
 import { getSecret } from 'wix-secrets-backend';
 
 /* ===============================
-   CONFIG
+   CONFIG (WIX-SAFE)
 ================================ */
 
 const OPENROUTER_BASE = "https://openrouter.ai/api/v1";
-const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-70b";
+const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-8b"; // REQUIRED for Wix
+const OPENROUTER_TIMEOUT_MS = 12000;
 
-const PINECONE_NAMESPACE = "";
 const MAX_PINECONE_MATCHES = 6;
-const MAX_QUOTE_CHARS = 1200;
-const OPENROUTER_TIMEOUT_MS = 20000;
+const MAX_QUOTE_CHARS = 1000;
+const PINECONE_NAMESPACE = "";
 
 /* ===============================
-   PUBLIC ENTRY POINT
+   PUBLIC METHOD
 ================================ */
 
 export async function askCoach(payload) {
-  const start = Date.now();
-
   try {
     if (!payload || !payload.question) {
       return error("INVALID_INPUT", "No question provided.");
@@ -32,214 +29,49 @@ export async function askCoach(payload) {
       return error("INVALID_INPUT", "Empty question.");
     }
 
-    const embedding = await embedQuestion(question);
+    const embedding = await embed(question);
     const matches = await queryPinecone(embedding);
 
-    if (!matches || matches.length === 0) {
-      return error("NO_DB_MATCH", "No relevant material found in the database.");
+    if (!matches.length) {
+      return error("NO_DB_MATCH", "No relevant material found.");
     }
 
     const context = buildContext(matches);
-
     if (!context || context.length < 200) {
-      return error(
-        "INSUFFICIENT_CONTEXT",
-        "Database entries exist but no usable text was found."
-      );
+      return error("INSUFFICIENT_CONTEXT", "Usable text not found.");
     }
 
-    const answer = await callOpenRouter(question, context);
+    const answer = await runLLM(question, context);
 
     return {
       status: "OK",
-      elapsedMs: Date.now() - start,
-      answer: answer
+      answer
     };
 
   } catch (err) {
-    console.error("askCoach ERROR:", err);
-    return error(
-      "EXECUTION_ERROR",
-      err && err.message ? err.message : "Unknown backend failure"
-    );
+    console.error("AI ERROR:", err);
+    return error("EXECUTION_ERROR", err.message || "Backend failure");
   }
 }
 
 /* ===============================
-   EMBEDDING
+   EMBEDDINGS
 ================================ */
 
-async function embedQuestion(question) {
-  const apiKey = await getSecret("OPENROUTER_API_KEY");
-  if (!apiKey) {
-    throw new Error("Missing OPENROUTER_API_KEY");
-  }
+async function embed(text) {
+  const key = await getSecret("OPENROUTER_API_KEY");
+  if (!key) throw new Error("Missing OPENROUTER_API_KEY");
 
   const res = await fetch(OPENROUTER_BASE + "/embeddings", {
     method: "POST",
     headers: {
-      "Authorization": "Bearer " + apiKey,
+      "Authorization": "Bearer " + key,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
       model: "text-embedding-3-large",
-      input: question
+      input: text
     })
   });
 
-  const data = await res.json();
-
-  if (!data || !data.data || !data.data[0] || !data.data[0].embedding) {
-    throw new Error("Embedding failed");
-  }
-
-  return data.data[0].embedding;
-}
-
-/* ===============================
-   PINECONE QUERY
-================================ */
-
-async function queryPinecone(embedding) {
-  const pineconeKey = await getSecret("PINECONE_API_KEY");
-  const pineconeHost = await getSecret("PINECONE_HOST");
-
-  if (!pineconeKey) {
-    throw new Error("Missing PINECONE_API_KEY");
-  }
-  if (!pineconeHost) {
-    throw new Error("Missing PINECONE_HOST");
-  }
-
-  const res = await fetch(pineconeHost + "/query", {
-    method: "POST",
-    headers: {
-      "Api-Key": pineconeKey,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      vector: embedding,
-      topK: MAX_PINECONE_MATCHES,
-      includeMetadata: true,
-      namespace: PINECONE_NAMESPACE
-    })
-  });
-
-  const data = await res.json();
-
-  if (!data || !data.matches) {
-    throw new Error("Pinecone query failed");
-  }
-
-  return data.matches;
-}
-
-/* ===============================
-   CONTEXT BUILDER
-================================ */
-
-function buildContext(matches) {
-  var parts = [];
-
-  for (var i = 0; i < matches.length && parts.length < 3; i++) {
-    var m = matches[i];
-    if (!m || !m.metadata) {
-      continue;
-    }
-
-    var md = m.metadata;
-
-    var text =
-      md.text ||
-      md.chunk ||
-      md.content ||
-      md.transcript ||
-      md.body ||
-      "";
-
-    if (!text) {
-      continue;
-    }
-
-    var block =
-      "SOURCE " + (parts.length + 1) + "\n" +
-      "Podcast: " + (md.podcast || "Unknown") + "\n" +
-      "Episode: " + (md.episode || "Unknown") + "\n" +
-      "Speaker: " + (md.speaker || "Unknown") + "\n\n" +
-      "\"" + text.slice(0, MAX_QUOTE_CHARS) + "\"";
-
-    parts.push(block);
-  }
-
-  return parts.join("\n\n");
-}
-
-/* ===============================
-   OPENROUTER COMPLETION
-================================ */
-
-async function callOpenRouter(question, context) {
-  const apiKey = await getSecret("OPENROUTER_API_KEY");
-  if (!apiKey) {
-    throw new Error("Missing OPENROUTER_API_KEY");
-  }
-
-  const controller = new AbortController();
-  const timeout = setTimeout(function () {
-    controller.abort();
-  }, OPENROUTER_TIMEOUT_MS);
-
-  var prompt =
-    "RESPONSE RULES (MANDATORY):\n" +
-    "1) Paraphrase the user's question.\n" +
-    "2) Present EXACTLY THREE LONG QUOTES from the provided database context.\n" +
-    "3) Cite each quote (podcast, episode, speaker).\n" +
-    "4) Explain the medical/scientific WHY.\n" +
-    "5) End with a motivational quote attributed to Coach Bryan.\n" +
-    "6) Use ONLY the provided database context.\n\n" +
-    "DATABASE CONTEXT:\n" +
-    context + "\n\n" +
-    "USER QUESTION:\n" +
-    question;
-
-  try {
-    const res = await fetch(OPENROUTER_BASE + "/chat/completions", {
-      method: "POST",
-      signal: controller.signal,
-      headers: {
-        "Authorization": "Bearer " + apiKey,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: OPENROUTER_MODEL,
-        temperature: 0.2,
-        messages: [{ role: "user", content: prompt }]
-      })
-    });
-
-    const data = await res.json();
-
-    if (!data || !data.choices || !data.choices[0] ||
-        !data.choices[0].message ||
-        !data.choices[0].message.content) {
-      throw new Error("OpenRouter failed");
-    }
-
-    return data.choices[0].message.content;
-
-  } finally {
-    clearTimeout(timeout);
-  }
-}
-
-/* ===============================
-   ERROR FORMAT
-================================ */
-
-function error(code, message) {
-  return {
-    status: "ERROR",
-    code: code,
-    message: message
-  };
-}
+  const data = awai
