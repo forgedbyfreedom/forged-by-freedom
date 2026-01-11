@@ -1,77 +1,31 @@
 // backend/aiQuery.jsw
-import { fetch } from 'wix-fetch';
-import { getSecret } from 'wix-secrets-backend';
-
-/* ===============================
-   CONFIG (WIX-SAFE)
-================================ */
-
-const OPENROUTER_BASE = "https://openrouter.ai/api/v1";
-const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-8b"; // REQUIRED for Wix
-const OPENROUTER_TIMEOUT_MS = 12000;
-
-const MAX_PINECONE_MATCHES = 6;
-const MAX_QUOTE_CHARS = 1000;
-const PINECONE_NAMESPACE = "";
-
-/* ===============================
-   PUBLIC METHOD
-================================ */
+import { fetch } from "wix-fetch";
 
 export async function askCoach(payload) {
-  try {
-    if (!payload || !payload.question) {
-      return error("INVALID_INPUT", "No question provided.");
-    }
-
-    const question = payload.question.trim();
-    if (!question) {
-      return error("INVALID_INPUT", "Empty question.");
-    }
-
-    const embedding = await embed(question);
-    const matches = await queryPinecone(embedding);
-
-    if (!matches.length) {
-      return error("NO_DB_MATCH", "No relevant material found.");
-    }
-
-    const context = buildContext(matches);
-    if (!context || context.length < 200) {
-      return error("INSUFFICIENT_CONTEXT", "Usable text not found.");
-    }
-
-    const answer = await runLLM(question, context);
-
+  if (!payload || !payload.question) {
     return {
-      status: "OK",
-      answer
+      status: "ERROR",
+      message: "No question provided"
     };
-
-  } catch (err) {
-    console.error("AI ERROR:", err);
-    return error("EXECUTION_ERROR", err.message || "Backend failure");
   }
+
+  const res = await fetch(
+    "https://forged-by-freedom-api-nm4f.onrender.com/ask",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        question: payload.question
+      })
+    }
+  );
+
+  const data = await res.json();
+
+  return {
+    status: "OK",
+    answer: data.answer || "No answer returned"
+  };
 }
-
-/* ===============================
-   EMBEDDINGS
-================================ */
-
-async function embed(text) {
-  const key = await getSecret("OPENROUTER_API_KEY");
-  if (!key) throw new Error("Missing OPENROUTER_API_KEY");
-
-  const res = await fetch(OPENROUTER_BASE + "/embeddings", {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + key,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: "text-embedding-3-large",
-      input: text
-    })
-  });
-
-  const data = awai
