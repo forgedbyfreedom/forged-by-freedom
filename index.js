@@ -49,7 +49,7 @@ app.post("/ask", async (req, res) => {
       return res.status(400).json({ error: "No question provided" });
     }
 
-    /* ---------- 1️⃣ EMBED ---------- */
+    // 1️⃣ Embed
     const embRes = await fetch(
       "https://openrouter.ai/api/v1/embeddings",
       {
@@ -67,12 +67,9 @@ app.post("/ask", async (req, res) => {
 
     const embJson = await embRes.json();
     const vector = embJson?.data?.[0]?.embedding;
+    if (!vector) throw new Error("Embedding failed");
 
-    if (!vector) {
-      throw new Error("Embedding failed");
-    }
-
-    /* ---------- 2️⃣ PINECONE ---------- */
+    // 2️⃣ Pinecone
     const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
@@ -107,12 +104,11 @@ app.post("/ask", async (req, res) => {
           md.transcript ||
           md.body ||
           "";
-
         return `SOURCE ${i + 1}\n${text.slice(0, 1200)}`;
       })
       .join("\n\n");
 
-    /* ---------- 3️⃣ LLM ---------- */
+    // 3️⃣ LLM
     const llmRes = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
@@ -140,10 +136,7 @@ app.post("/ask", async (req, res) => {
 
     const llmJson = await llmRes.json();
     const answer = llmJson?.choices?.[0]?.message?.content;
-
-    if (!answer) {
-      throw new Error("LLM returned no answer");
-    }
+    if (!answer) throw new Error("LLM returned no answer");
 
     res.json({ answer });
 
@@ -166,3 +159,4 @@ app.listen(SERVER_PORT, () => {
     `[FBF API] running on port ${SERVER_PORT} using ${MODEL}`
   );
 });
+
