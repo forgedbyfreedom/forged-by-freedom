@@ -1,23 +1,29 @@
 cat > download_medical_sources.sh << 'EOF'
 #!/usr/bin/env bash
+set -euo pipefail
 
 SOURCE_FILE="sources_medical.txt"
 LOG_FILE="downloads/logs/medical_$(date +%Y%m%d_%H%M).log"
 
-# Hardening against YouTube rate limits
 SLEEP_MIN=15
 SLEEP_MAX=45
 
-while IFS="|" read -r category name url; do
-    [[ -z "$url" ]] && continue
+echo "Starting medical downloads..." | tee -a "$LOG_FILE"
 
-    echo "=== Downloading: $name ===" | tee -a "$LOG_FILE"
+while IFS="|" read -r category name url; do
+    [[ -z "${url:-}" ]] && continue
+
+    echo "-----------------------------------" | tee -a "$LOG_FILE"
+    echo "Downloading channel: $name" | tee -a "$LOG_FILE"
+    echo "URL: $url" | tee -a "$LOG_FILE"
+
+    mkdir -p "downloads/audio/$name"
 
     yt-dlp \
       --ignore-errors \
       --no-abort-on-error \
-      --sleep-interval $SLEEP_MIN \
-      --max-sleep-interval $SLEEP_MAX \
+      --sleep-interval "$SLEEP_MIN" \
+      --max-sleep-interval "$SLEEP_MAX" \
       --concurrent-fragments 1 \
       --limit-rate 2M \
       --write-auto-sub \
@@ -25,11 +31,10 @@ while IFS="|" read -r category name url; do
       --sub-format vtt \
       --extract-audio \
       --audio-format wav \
-      --audio-quality 0 \
-      -o "downloads/audio/${name}/%(upload_date)s_%(title)s.%(ext)s" \
+      -o "downloads/audio/$name/%(upload_date)s_%(title)s.%(ext)s" \
       "$url" >> "$LOG_FILE" 2>&1
 
 done < "$SOURCE_FILE"
 
-echo "=== COMPLETE ===" | tee -a "$LOG_FILE"
+echo "All downloads completed." | tee -a "$LOG_FILE"
 EOF
