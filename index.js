@@ -24,7 +24,7 @@ if (!PINECONE_HOST_RAW) {
 /* 🔒 sanitize once */
 const PINECONE_HOST = PINECONE_HOST_RAW.trim().replace(/\/$/, "");
 
-const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
+const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
 
 /* =======================
    HEALTH CHECK
