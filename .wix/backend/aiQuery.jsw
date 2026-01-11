@@ -1,3 +1,5 @@
+// backend/aiQuery.jsw
+
 import { fetch } from 'wix-fetch';
 import { getSecret } from 'wix-secrets-backend';
 
@@ -8,7 +10,70 @@ import { getSecret } from 'wix-secrets-backend';
 const OPENROUTER_BASE = "https://openrouter.ai/api/v1";
 const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-70b";
 
-const PINECONE_NAMESPACE = "";   // keep empty unless you re-ingest
+const PINECONE_NAMESPACE = ""; // leave empty unless you re-ingest
 const MAX_PINECONE_MATCHES = 6;
-const MAX_QUOTE_CHARS = 1200;    // ✅ ADD THIS
+const MAX_QUOTE_CHARS = 1200;
 
+// IMPORTANT: 70B models + Pinecone require time
+const OPENROUTER_TIMEOUT_MS = 20000;
+
+/* ===============================
+   PUBLIC ENTRY POINT
+================================ */
+
+export async function askCoach(payload) {
+  const start = Date.now();
+
+  try {
+    if (!payload?.question?.trim()) {
+      return error("INVALID_INPUT", "No question provided.");
+    }
+
+    const question = payload.question.trim();
+
+    // 1️⃣ Embed question
+    const embedding = await embedQuestion(question);
+
+    // 2️⃣ Query Pinecone
+    const matches = await queryPinecone(embedding);
+
+    if (!matches.length) {
+      return error(
+        "NO_DB_MATCH",
+        "No relevant material found in the database."
+      );
+    }
+
+    // 3️⃣ Build usable context
+    const context = buildContext(matches);
+
+    if (!context || context.length < 200) {
+      return error(
+        "INSUFFICIENT_CONTEXT",
+        "Database entries exist but no usable text was found."
+      );
+    }
+
+    // 4️⃣ Call OpenRouter
+    const answer = await callOpenRouter(question, context);
+
+    return {
+      status: "OK",
+      elapsedMs: Date.now() - start,
+      answer
+    };
+
+  } catch (err) {
+    console.error("askCoach ERROR:", err);
+    return error(
+      "EXECUTION_ERROR",
+      err?.message || "Unknown backend failure"
+    );
+  }
+}
+
+/* ===============================
+   EMBEDDING
+================================ */
+
+async function e
