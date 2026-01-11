@@ -1,25 +1,20 @@
-async function queryPinecone(embedding) {
-  const pineconeKey = await getSecret("PINECONE_API_KEY");
-  const pineconeHost = await getSecret("PINECONE_HOST");
+function buildContext(matches) {
+  return matches.slice(0, 3).map((m, i) => {
+    const text =
+      m.metadata.text ||
+      m.metadata.chunk ||
+      m.metadata.content ||
+      m.metadata.transcript ||
+      m.metadata.body ||
+      "";
 
-  const res = await fetch(`${pineconeHost}/query`, {
-    method: "POST",
-    headers: {
-      "Api-Key": pineconeKey,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      vector: embedding,
-      topK: 5,
-      includeMetadata: true,
-      namespace: ""   // keep empty for now
-    })
-  });
+    return `
+SOURCE ${i + 1}
+Podcast: ${m.metadata.podcast || "Unknown"}
+Episode: ${m.metadata.episode || "Unknown"}
+Speaker: ${m.metadata.speaker || "Unknown"}
 
-  const data = await res.json();
-
-  // 🔍 TEMP DEBUG — DO NOT FILTER YET
-  console.log("PINECONE RAW MATCHES:", JSON.stringify(data.matches?.[0], null, 2));
-
-  return data.matches || [];
+"${text.slice(0, MAX_QUOTE_CHARS)}"
+`;
+  }).join("\n\n");
 }
