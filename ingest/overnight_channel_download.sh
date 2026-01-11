@@ -1,60 +1,41 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 set -e
 
-BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
-CHANNELS_DIR="$BASE_DIR/channels"
+CHANNELS_DIR="$(pwd)/channels"
+LOG_DIR="$(pwd)/logs"
+LOG_FILE="$LOG_DIR/overnight_$(date +%Y%m%d_%H%M%S).log"
 
-echo "=============================================="
-echo "🌙 Overnight Channel TXT Downloader"
-echo "📂 Channels dir: $CHANNELS_DIR"
-echo "🎯 Pinecone target (later ingest): forged-freedom-ai"
-echo "=============================================="
-echo ""
+mkdir -p "$LOG_DIR"
 
-# Hard-path yt-dlp (venv-safe)
-YTDLP="$(which yt-dlp)"
+echo "==============================================" | tee -a "$LOG_FILE"
+echo "🌙 Overnight Channel TXT Downloader (SAFE MODE)" | tee -a "$LOG_FILE"
+echo "📂 Channels dir: $CHANNELS_DIR" | tee -a "$LOG_FILE"
+echo "🕒 Sleep: 6–10s between videos (anti-rate-limit)" | tee -a "$LOG_FILE"
+echo "==============================================" | tee -a "$LOG_FILE"
 
-if [ ! -x "$YTDLP" ]; then
-  echo "❌ yt-dlp not found"
-  exit 1
-fi
-
-TOTAL_TXT=0
-
-# Loop through every channel.url
 find "$CHANNELS_DIR" -name "channel.url" | while read -r CHANNEL_FILE; do
-  CHANNEL_URL=$(cat "$CHANNEL_FILE")
-  OUT_DIR=$(dirname "$CHANNEL_FILE")
+    CHANNEL_URL=$(head -n 1 "$CHANNEL_FILE")
+    OUTPUT_DIR=$(dirname "$CHANNEL_FILE")
 
-  echo "▶ Channel: $CHANNEL_URL"
-  echo "📁 Output: $OUT_DIR"
-  echo "----------------------------------------------"
+    echo "" | tee -a "$LOG_FILE"
+    echo "▶ Channel: $CHANNEL_URL" | tee -a "$LOG_FILE"
+    echo "📁 Output: $OUTPUT_DIR" | tee -a "$LOG_FILE"
+    echo "----------------------------------------------" | tee -a "$LOG_FILE"
 
-  "$YTDLP" \
-    --write-auto-sub \
-    --sub-lang en \
-    --skip-download \
-    --no-playlist-reverse \
-    --ignore-errors \
-    -o "$OUT_DIR/%(title)s [%(id)s].%(ext)s" \
-    "$CHANNEL_URL"
+    yt-dlp \
+        --skip-download \
+        --write-subs \
+        --write-auto-subs \
+        --sub-lang en \
+        --sub-format vtt \
+        --output "$OUTPUT_DIR/%(title)s [%(id)s].%(ext)s" \
+        --ignore-errors \
+        --sleep-interval 6 \
+        --max-sleep-interval 10 \
+        "$CHANNEL_URL" >> "$LOG_FILE" 2>&1
 
-  # Convert VTT → TXT
-  for vtt in "$OUT_DIR"/*.vtt; do
-    [ -e "$vtt" ] || continue
-    txt="${vtt%.vtt}.txt"
-    sed 's/<[^>]*>//g' "$vtt" > "$txt"
-    rm "$vtt"
-    ((TOTAL_TXT++))
-  done
-
-  echo ""
 done
 
-# Cleanup
-find "$CHANNELS_DIR" -name "*.srt" -delete
-
-echo ""
-echo "✅ Overnight run complete"
-echo "📄 TXT files created: $TOTAL_TXT"
-echo "=============================================="
+echo "" | tee -a "$LOG_FILE"
+echo "✅ Overnight ingest completed safely." | tee -a "$LOG_FILE"
