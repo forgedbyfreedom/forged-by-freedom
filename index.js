@@ -2,48 +2,28 @@ import express from "express";
 import cors from "cors";
 import fetch from "node-fetch";
 
-/* =======================
-   APP SETUP
-======================= */
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* =======================
-   ENV VARS (SANITIZED)
-======================= */
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const PINECONE_API_KEY   = process.env.PINECONE_API_KEY;
-const RAW_PINECONE_HOST  = process.env.PINECONE_HOST || "";
-const PORT               = process.env.PORT || 5051;
+const {
+  OPENROUTER_API_KEY,
+  PINECONE_API_KEY,
+  PINECONE_HOST,
+  PORT
+} = process.env;
 
-if (!OPENROUTER_API_KEY) throw new Error("OPENROUTER_API_KEY not set");
-if (!PINECONE_API_KEY)   throw new Error("PINECONE_API_KEY not set");
-if (!RAW_PINECONE_HOST)  throw new Error("PINECONE_HOST not set");
-
-/* 🔒 HARD SANITIZATION (prevents double protocol forever) */
-const PINECONE_HOST = RAW_PINECONE_HOST
-  .trim()
-  .replace(/^https?:\/\//, "")
-  .replace(/\/$/, "");
-
-const PINECONE_QUERY_URL = `https://${PINECONE_HOST}/query`;
-
-/* =======================
-   MODEL CONFIG
-======================= */
-const MODEL = "nousresearch/hermes-3-llama-3.1-8b"; // Wix-safe latency
+const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
 
 /* =======================
    HEALTH CHECK
 ======================= */
-app.get("/status", async (req, res) => {
+app.get("/status", (req, res) => {
   res.json({
     status: "ok",
     backend: "forged-by-freedom-api",
-    openRouterConfigured: true,
-    pineconeConfigured: true,
-    pineconeQueryUrl: PINECONE_QUERY_URL,
+    openRouterConfigured: !!OPENROUTER_API_KEY,
+    pineconeConfigured: !!PINECONE_API_KEY,
     model: MODEL,
     time: new Date().toISOString()
   });
@@ -59,30 +39,25 @@ app.post("/ask", async (req, res) => {
       return res.status(400).json({ error: "No question provided" });
     }
 
-    /* ---------- 1️⃣ EMBEDDING ---------- */
-    const embRes = await fetch(
-      "https://openrouter.ai/api/v1/embeddings",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "text-embedding-3-large",
-          input: question
-        })
-      }
-    );
+    /* ---------- EMBEDDING ---------- */
+    const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "text-embedding-3-large",
+        input: question
+      })
+    });
 
     const emb = await embRes.json();
     const vector = emb?.data?.[0]?.embedding;
     if (!vector) throw new Error("Embedding failed");
 
-    /* ---------- 2️⃣ PINECONE QUERY ---------- */
-    console.log("FINAL PINECONE QUERY URL:", PINECONE_QUERY_URL);
-
-    const pcRes = await fetch(PINECONE_QUERY_URL, {
+    /* ---------- PINECONE ---------- */
+    const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
         "Api-Key": PINECONE_API_KEY,
@@ -96,40 +71,51 @@ app.post("/ask", async (req, res) => {
     });
 
     const pc = await pcRes.json();
-    const matches = pc?.matches || [];
+    const matches = pc.matches || [];
 
     if (!matches.length) {
       return res.json({
         answer:
-          "The Forged by Freedom database does not contain sufficient cited material to answer this question."
+          "No relevant material was found in the Forged by Freedom knowledge base."
       });
     }
 
-    /* ---------- 3️⃣ CONTEXT (HARD-STRUCTURED SOURCES) ---------- */
-    const context = matches
-      .slice(0, 3)
-      .map((m, i) => {
-        const md = m.metadata || {};
-        const text =
-          md.text ||
-          md.chunk ||
-          md.content ||
-          md.transcript ||
-          "";
-
-        return `
+    /* ---------- CONTEXT ---------- */
+    const context = matches.slice(0, 4).map((m, i) => {
+      const md = m.metadata || {};
+      return `
 SOURCE ${i + 1}
-Podcast: ${md.podcast || "Unknown Podcast"}
-Episode: ${md.episode || md.title || "Unknown Episode"}
-Speaker: ${md.speaker || "Unknown Speaker"}
+Podcast: ${md.podcast || "Unknown"}
+Episode: ${md.episode || "Unknown"}
+Speaker: ${md.speaker || "Unknown"}
 
-VERBATIM QUOTE:
-"${text.slice(0, 1200)}"
-`;
-      })
-      .join("\n\n");
+${(md.text || md.chunk || "").slice(0, 1400)}
+      `.trim();
+    }).join("\n\n");
 
-    /* ---------- 4️⃣ LLM COMPLETION (STRICT) ---------- */
+    /* ---------- LLM ---------- */
+    const prompt = `
+You are Coach Bryan’s AI assistant.
+
+RULES (follow exactly):
+- Use ONLY the provided sources.
+- If a direct quote exists, include it in quotation marks.
+- If no exact quote exists, paraphrase and clearly label it as a paraphrase.
+- Always list sources with podcast name, episode, and speaker.
+- NEVER fabricate quotes.
+- If evidence is insufficient, say so explicitly.
+
+FORMAT:
+Answer first.
+Then a section titled "Sources" listing each source.
+
+DATABASE CONTEXT:
+${context}
+
+QUESTION:
+${question}
+`.trim();
+
     const llmRes = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
@@ -141,47 +127,25 @@ VERBATIM QUOTE:
         body: JSON.stringify({
           model: MODEL,
           temperature: 0.2,
-          messages: [
-            {
-              role: "user",
-              content: `
-You are Coach Bryan’s AI assistant.
-
-STRICT RULES (MANDATORY):
-1. You MUST answer using ONLY the database context below.
-2. You MUST include at least THREE direct quotes.
-3. Each quote MUST list:
-   - Podcast name
-   - Episode
-   - Speaker
-4. Quotes MUST be verbatim.
-5. After the quotes, explain the physiological or medical reasoning.
-6. Do NOT introduce outside knowledge.
-7. If proper citations are not possible, state that clearly.
-8. Answers without named sources are INVALID.
-
-DATABASE CONTEXT:
-${context}
-
-USER QUESTION:
-${question}
-`
-            }
-          ]
+          messages: [{ role: "user", content: prompt }]
         })
       }
     );
 
     const llm = await llmRes.json();
-    const answer = llm?.choices?.[0]?.message?.content;
+    const answer = llm?.choices?.[0]?.message?.content?.trim();
 
-    if (!answer) throw new Error("LLM returned empty response");
+    if (!answer) {
+      return res.json({
+        answer:
+          "The database does not contain sufficient quoted material to answer this question with proper attribution."
+      });
+    }
 
-    return res.json({ answer });
+    res.json({ answer });
 
   } catch (err) {
-    console.error("AI backend error:", err);
-    return res.status(500).json({
+    res.status(500).json({
       error: "AI backend failure",
       details: err.message
     });
@@ -191,6 +155,7 @@ ${question}
 /* =======================
    START SERVER
 ======================= */
-app.listen(PORT, () => {
-  console.log(`[FBF API] running on port ${PORT} using ${MODEL}`);
+const SERVER_PORT = PORT || 5051;
+app.listen(SERVER_PORT, () => {
+  console.log(`[FBF API] running on port ${SERVER_PORT} using ${MODEL}`);
 });
