@@ -1,4 +1,4 @@
-cat << 'EOF' > download_medical_sources.sh
+cat > download_medical_sources.sh << 'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 
