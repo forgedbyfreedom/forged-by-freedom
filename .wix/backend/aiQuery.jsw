@@ -1,20 +1,14 @@
-function buildContext(matches) {
-  return matches.slice(0, 3).map((m, i) => {
-    const text =
-      m.metadata.text ||
-      m.metadata.chunk ||
-      m.metadata.content ||
-      m.metadata.transcript ||
-      m.metadata.body ||
-      "";
+import { fetch } from 'wix-fetch';
+import { getSecret } from 'wix-secrets-backend';
 
-    return `
-SOURCE ${i + 1}
-Podcast: ${m.metadata.podcast || "Unknown"}
-Episode: ${m.metadata.episode || "Unknown"}
-Speaker: ${m.metadata.speaker || "Unknown"}
+/* ===============================
+   CONFIG
+================================ */
 
-"${text.slice(0, MAX_QUOTE_CHARS)}"
-`;
-  }).join("\n\n");
-}
+const OPENROUTER_BASE = "https://openrouter.ai/api/v1";
+const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-70b";
+
+const PINECONE_NAMESPACE = "";   // keep empty unless you re-ingest
+const MAX_PINECONE_MATCHES = 6;
+const MAX_QUOTE_CHARS = 1200;    // ✅ ADD THIS
+
