@@ -1,28 +1,18 @@
 // backend/aiQuery.jsw
 import { fetch } from "wix-fetch";
 
-/**
- * Public API called from the AI Coach page
- */
 export async function askCoach(payload) {
   try {
     if (!payload || typeof payload.question !== "string") {
-      return {
-        status: "ERROR",
-        message: "No question provided"
-      };
+      return { status: "ERROR", message: "No question provided" };
     }
 
     const response = await fetch(
       "https://forged-by-freedom-api-nm4f.onrender.com/ask",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          question: payload.question
-        })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: payload.question })
       }
     );
 
@@ -31,19 +21,13 @@ export async function askCoach(payload) {
     if (!response.ok || data.error) {
       return {
         status: "ERROR",
-        message: data.details || data.error || "AI backend error"
+        message: data.details || data.error || `Backend error (${response.status})`
       };
     }
 
-    return {
-      status: "OK",
-      answer: data.answer
-    };
+    return { status: "OK", answer: data.answer };
 
   } catch (err) {
-    return {
-      status: "ERROR",
-      message: err.message || "Backend call failed"
-    };
+    return { status: "ERROR", message: err.message || "Backend call failed" };
   }
 }
