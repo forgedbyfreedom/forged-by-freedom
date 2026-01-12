@@ -18,7 +18,7 @@ if (!OPENROUTER_API_KEY) throw new Error("OPENROUTER_API_KEY not set");
 if (!PINECONE_API_KEY) throw new Error("PINECONE_API_KEY not set");
 if (!RAW_PINECONE_HOST) throw new Error("PINECONE_HOST not set");
 
-// Prevent https://https:// and trailing slash issues forever.
+/* Prevent https://https:// forever */
 const PINECONE_HOST = RAW_PINECONE_HOST
   .trim()
   .replace(/^https?:\/\//, "")
@@ -29,19 +29,20 @@ const PINECONE_QUERY_URL = `https://${PINECONE_HOST}/query`;
 /* =======================
    PERFORMANCE TUNING
 ======================= */
-// Use a fast model so Wix never 504s.
-// Keep retrieval the source of truth.
+// ✅ FAST MODEL to stay under Wix timeouts
 const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
 
-// Keep context tight to reduce token/latency.
-const TOP_K = 4;              // we only use top 3 anyway
-const MAX_CHARS_PER_QUOTE = 900;
-const MAX_SOURCES_USED = 3;
+// ✅ Reduce work
+const TOP_K = 4;                 // fewer matches
+const MAX_SOURCES_USED = 3;       // only show 1–3 sources
+const MAX_CHARS_PER_QUOTE = 700;  // shorter context => faster LLM
 
-// Hard timeouts so Render returns before Wix kills it.
-const EMBED_TIMEOUT_MS = 4500;
-const PINECONE_TIMEOUT_MS = 4500;
-const LLM_TIMEOUT_MS = 6500;
+// ✅ Hard time budgets
+const EMBED_TIMEOUT_MS = 3500;
+const PINECONE_TIMEOUT_MS = 3500;
+const LLM_TIMEOUT_MS = 4500;
+
+// Total should stay ~ under 10s worst case; typically 2–5s warm
 
 /* =======================
    HELPERS
@@ -52,11 +53,21 @@ function withTimeout(ms) {
   return { controller, t };
 }
 
-function safeMeta(md, keyCandidates) {
-  for (const k of keyCandidates) {
-    if (md && typeof md[k] === "string" && md[k].trim()) return md[k].trim();
-  }
-  return "";
+function pickText(md) {
+  if (!md) return "";
+  return (
+    (typeof md.text === "string" && md.text) ||
+    (typeof md.chunk === "string" && md.chunk) ||
+    (typeof md.content === "string" && md.content) ||
+    (typeof md.transcript === "string" && md.transcript) ||
+    (typeof md.body === "string" && md.body) ||
+    ""
+  ).trim();
+}
+
+function safeField(md, key, fallback) {
+  const v = md && typeof md[key] === "string" ? md[key].trim() : "";
+  return v || fallback;
 }
 
 function buildSources(matches) {
@@ -64,24 +75,13 @@ function buildSources(matches) {
 
   for (let i = 0; i < matches.length && sources.length < MAX_SOURCES_USED; i++) {
     const md = matches[i]?.metadata || {};
-
-    const podcast = safeMeta(md, ["podcast", "show", "channel"]);
-    const episode = safeMeta(md, ["episode", "title", "video_title", "name"]);
-    const speaker = safeMeta(md, ["speaker", "author", "host"]);
-
-    const text =
-      safeMeta(md, ["text"]) ||
-      safeMeta(md, ["chunk"]) ||
-      safeMeta(md, ["content"]) ||
-      safeMeta(md, ["transcript"]) ||
-      safeMeta(md, ["body"]);
-
+    const text = pickText(md);
     if (!text) continue;
 
     sources.push({
-      podcast: podcast || "Unknown Podcast",
-      episode: episode || "Unknown Episode",
-      speaker: speaker || "Unknown Speaker",
+      podcast: safeField(md, "podcast", "Unknown Podcast"),
+      episode: safeField(md, "episode", md.title ? String(md.title) : "Unknown Episode"),
+      speaker: safeField(md, "speaker", "Unknown Speaker"),
       quote: text.slice(0, MAX_CHARS_PER_QUOTE)
     });
   }
@@ -89,20 +89,20 @@ function buildSources(matches) {
   return sources;
 }
 
-function formatContext(sources) {
-  return sources
-    .map((s, i) => {
-      return [
-        `SOURCE ${i + 1}`,
-        `Podcast: ${s.podcast}`,
-        `Episode: ${s.episode}`,
-        `Speaker: ${s.speaker}`,
-        ``,
-        `VERBATIM QUOTE:`,
-        `"${s.quote}"`
-      ].join("\n");
-    })
-    .join("\n\n");
+function renderAnswerFallback(question, sources) {
+  const lines = [];
+  lines.push("Not enough database evidence to produce a fully supported answer with quotes.");
+  lines.push("");
+  lines.push("Sources:");
+  sources.forEach((s) => {
+    lines.push(`- Podcast: ${s.podcast}`);
+    lines.push(`  Episode: ${s.episode}`);
+    lines.push(`  Speaker: ${s.speaker}`);
+    lines.push(`  Quote: "${s.quote}"`);
+  });
+  lines.push("");
+  lines.push("Try asking a more specific question (symptom, dosage range, timing, or mechanism).");
+  return lines.join("\n");
 }
 
 /* =======================
@@ -126,10 +126,9 @@ app.post("/ask", async (req, res) => {
     const question = (req.body?.question || "").trim();
     if (!question) return res.status(400).json({ error: "No question provided" });
 
-    /* ---------- 1) EMBED ---------- */
-    const { controller: embCtl, t: embT } = withTimeout(EMBED_TIMEOUT_MS);
+    /* ---------- 1) EMBEDD ---------- */
     let vector;
-
+    const { controller: embCtl, t: embT } = withTimeout(EMBED_TIMEOUT_MS);
     try {
       const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
         method: "POST",
@@ -143,7 +142,6 @@ app.post("/ask", async (req, res) => {
           input: question
         })
       });
-
       const emb = await embRes.json();
       vector = emb?.data?.[0]?.embedding;
       if (!vector) throw new Error("Embedding failed");
@@ -152,9 +150,8 @@ app.post("/ask", async (req, res) => {
     }
 
     /* ---------- 2) PINECONE ---------- */
-    const { controller: pcCtl, t: pcT } = withTimeout(PINECONE_TIMEOUT_MS);
     let matches = [];
-
+    const { controller: pcCtl, t: pcT } = withTimeout(PINECONE_TIMEOUT_MS);
     try {
       const pcRes = await fetch(PINECONE_QUERY_URL, {
         method: "POST",
@@ -176,41 +173,52 @@ app.post("/ask", async (req, res) => {
       clearTimeout(pcT);
     }
 
+    // ✅ Short-circuit if Pinecone returns nothing usable
     const sources = buildSources(matches);
-
     if (sources.length < 1) {
       return res.json({
         answer:
-          "The database did not return usable, attributable source text for this question. Please ask a more specific question or ingest more transcripts with metadata (podcast/episode/speaker)."
+          "No relevant quoted material found in the Forged by Freedom database for this question. Ask more specifically or ingest more transcripts with metadata (podcast/episode/speaker)."
       });
     }
 
-    const context = formatContext(sources);
+    const context = sources
+      .map((s, i) => {
+        return [
+          `SOURCE ${i + 1}`,
+          `Podcast: ${s.podcast}`,
+          `Episode: ${s.episode}`,
+          `Speaker: ${s.speaker}`,
+          ``,
+          `VERBATIM QUOTE:`,
+          `"${s.quote}"`
+        ].join("\n");
+      })
+      .join("\n\n");
 
     /* ---------- 3) LLM ---------- */
     const { controller: llmCtl, t: llmT } = withTimeout(LLM_TIMEOUT_MS);
-    let answerText = "";
 
     const prompt = `
 You are Coach Bryan’s AI assistant.
 
 MANDATORY RULES:
 - Use ONLY the database context below.
-- Provide EXACTLY THREE source blocks if possible (if fewer are available, use what is available).
-- For each source block, include:
-  Podcast, Episode, Speaker, and at least one VERBATIM QUOTE.
-- Do NOT invent quotes or metadata.
-- If a direct verbatim quote is insufficient for a claim, state: "Not enough quoted evidence in the database."
-- After source blocks, write a short explanation derived from the quotes only.
+- You MUST include 1–3 sources (depending on what is provided).
+- For EACH source, include Podcast, Episode, Speaker, and at least one VERBATIM QUOTE from the context.
+- NEVER fabricate quotes or source fields.
+- If the database context is insufficient to support a claim, write: "Not enough quoted evidence in the database."
 
 OUTPUT FORMAT (required):
-1) Answer (2–6 sentences)
-2) Sources (list 1–3 items):
-   - Podcast:
-   - Episode:
-   - Speaker:
-   - Quote: "..."
-3) Explanation (bullet points)
+Answer (2–6 sentences)
+
+Sources:
+- Podcast:
+  Episode:
+  Speaker:
+  Quote: "..."
+
+Explanation (bullets, derived ONLY from the quoted sources)
 
 DATABASE CONTEXT:
 ${context}
@@ -219,6 +227,7 @@ QUESTION:
 ${question}
 `.trim();
 
+    let answerText = "";
     try {
       const llmRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
@@ -240,31 +249,18 @@ ${question}
       clearTimeout(llmT);
     }
 
+    // ✅ Never return empty; fallback includes exact quotes + attribution
     if (!answerText) {
-      // Never return empty; return the structured sources as fallback
-      const fallback = [
-        "Not enough quoted evidence in the database to generate a complete answer.",
-        "",
-        "Sources:",
-        ...sources.map((s, i) => {
-          return [
-            `- Podcast: ${s.podcast}`,
-            `  Episode: ${s.episode}`,
-            `  Speaker: ${s.speaker}`,
-            `  Quote: "${s.quote}"`
-          ].join("\n");
-        })
-      ].join("\n");
-      return res.json({ answer: fallback });
+      return res.json({ answer: renderAnswerFallback(question, sources) });
     }
 
     return res.json({ answer: answerText });
 
   } catch (err) {
-    // If we got aborted by timeout, still respond quickly so Wix doesn’t 504.
-    const msg = err?.name === "AbortError"
-      ? "AI request exceeded time budget. Please try again with a more specific question."
-      : (err?.message || "Unknown error");
+    const msg =
+      err?.name === "AbortError"
+        ? "AI request exceeded time budget. Try a more specific question."
+        : (err?.message || "Unknown error");
 
     return res.status(500).json({
       error: "AI backend failure",
@@ -279,4 +275,3 @@ ${question}
 app.listen(PORT, () => {
   console.log(`[FBF API] running on port ${PORT} using ${MODEL}`);
 });
-
