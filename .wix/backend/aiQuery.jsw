@@ -1,44 +1,64 @@
-// backend/aiQuery.jsw
 import { fetch } from "wix-fetch";
 
+/**
+ * Thin proxy to Render API
+ * MUST always return
+ */
 export async function askCoach(payload) {
   try {
-    if (!payload || typeof payload.question !== "string") {
-      return { status: "ERROR", message: "No question provided" };
-    }
-
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 8500);
-
-    let resp;
-    try {
-      resp = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/ask", {
-        method: "POST",
-        signal: controller.signal,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: payload.question })
-      });
-    } finally {
-      clearTimeout(timeoutId);
-    }
-
-    const data = await resp.json();
-
-    if (!resp.ok || data.error) {
+    if (!payload || !payload.question) {
       return {
         status: "ERROR",
-        message: data.details || data.error || `Backend error (${resp.status})`
+        message: "No question provided"
       };
     }
 
-    return { status: "OK", answer: data.answer };
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+
+    const res = await fetch(
+      "https://forged-by-freedom-api-nm4f.onrender.com/ask",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          question: payload.question
+        }),
+        signal: controller.signal
+      }
+    );
+
+    clearTimeout(timeout);
+
+    if (!res.ok) {
+      return {
+        status: "ERROR",
+        message: `Render API error (${res.status})`
+      };
+    }
+
+    const data = await res.json();
+
+    if (!data || !data.answer) {
+      return {
+        status: "ERROR",
+        message: "Empty response from AI backend"
+      };
+    }
+
+    return {
+      status: "OK",
+      answer: data.answer
+    };
 
   } catch (err) {
-    const msg =
-      err?.name === "AbortError"
-        ? "Request took too long. Try a more specific question."
-        : (err.message || "Backend call failed");
-
-    return { status: "ERROR", message: msg };
+    return {
+      status: "ERROR",
+      message: err.name === "AbortError"
+        ? "AI request timed out"
+        : err.message
+    };
   }
 }
