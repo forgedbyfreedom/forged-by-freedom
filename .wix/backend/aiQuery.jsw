@@ -7,27 +7,38 @@ export async function askCoach(payload) {
       return { status: "ERROR", message: "No question provided" };
     }
 
-    const response = await fetch(
-      "https://forged-by-freedom-api-nm4f.onrender.com/ask",
-      {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8500);
+
+    let resp;
+    try {
+      resp = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/ask", {
         method: "POST",
+        signal: controller.signal,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: payload.question })
-      }
-    );
+      });
+    } finally {
+      clearTimeout(timeoutId);
+    }
 
-    const data = await response.json();
+    const data = await resp.json();
 
-    if (!response.ok || data.error) {
+    if (!resp.ok || data.error) {
       return {
         status: "ERROR",
-        message: data.details || data.error || `Backend error (${response.status})`
+        message: data.details || data.error || `Backend error (${resp.status})`
       };
     }
 
     return { status: "OK", answer: data.answer };
 
   } catch (err) {
-    return { status: "ERROR", message: err.message || "Backend call failed" };
+    const msg =
+      err?.name === "AbortError"
+        ? "Request took too long. Try a more specific question."
+        : (err.message || "Backend call failed");
+
+    return { status: "ERROR", message: msg };
   }
 }
