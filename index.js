@@ -7,113 +7,29 @@ app.use(cors());
 app.use(express.json());
 
 /* =======================
-   ENV + SANITIZATION
+   ENVIRONMENT
 ======================= */
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
-const RAW_PINECONE_HOST = process.env.PINECONE_HOST || "";
-const PORT = process.env.PORT || 5051;
+const {
+  OPENROUTER_API_KEY,
+  PINECONE_API_KEY,
+  PINECONE_HOST,
+  PORT
+} = process.env;
 
-if (!OPENROUTER_API_KEY) throw new Error("OPENROUTER_API_KEY not set");
-if (!PINECONE_API_KEY) throw new Error("PINECONE_API_KEY not set");
-if (!RAW_PINECONE_HOST) throw new Error("PINECONE_HOST not set");
-
-/* Prevent https://https:// forever */
-const PINECONE_HOST = RAW_PINECONE_HOST
-  .trim()
-  .replace(/^https?:\/\//, "")
-  .replace(/\/$/, "");
-
-const PINECONE_QUERY_URL = `https://${PINECONE_HOST}/query`;
-
-/* =======================
-   PERFORMANCE TUNING
-======================= */
-// ✅ FAST MODEL to stay under Wix timeouts
 const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
-
-// ✅ Reduce work
-const TOP_K = 4;                 // fewer matches
-const MAX_SOURCES_USED = 3;       // only show 1–3 sources
-const MAX_CHARS_PER_QUOTE = 700;  // shorter context => faster LLM
-
-// ✅ Hard time budgets
-const EMBED_TIMEOUT_MS = 3500;
-const PINECONE_TIMEOUT_MS = 3500;
-const LLM_TIMEOUT_MS = 4500;
-
-// Total should stay ~ under 10s worst case; typically 2–5s warm
-
-/* =======================
-   HELPERS
-======================= */
-function withTimeout(ms) {
-  const controller = new AbortController();
-  const t = setTimeout(() => controller.abort(), ms);
-  return { controller, t };
-}
-
-function pickText(md) {
-  if (!md) return "";
-  return (
-    (typeof md.text === "string" && md.text) ||
-    (typeof md.chunk === "string" && md.chunk) ||
-    (typeof md.content === "string" && md.content) ||
-    (typeof md.transcript === "string" && md.transcript) ||
-    (typeof md.body === "string" && md.body) ||
-    ""
-  ).trim();
-}
-
-function safeField(md, key, fallback) {
-  const v = md && typeof md[key] === "string" ? md[key].trim() : "";
-  return v || fallback;
-}
-
-function buildSources(matches) {
-  const sources = [];
-
-  for (let i = 0; i < matches.length && sources.length < MAX_SOURCES_USED; i++) {
-    const md = matches[i]?.metadata || {};
-    const text = pickText(md);
-    if (!text) continue;
-
-    sources.push({
-      podcast: safeField(md, "podcast", "Unknown Podcast"),
-      episode: safeField(md, "episode", md.title ? String(md.title) : "Unknown Episode"),
-      speaker: safeField(md, "speaker", "Unknown Speaker"),
-      quote: text.slice(0, MAX_CHARS_PER_QUOTE)
-    });
-  }
-
-  return sources;
-}
-
-function renderAnswerFallback(question, sources) {
-  const lines = [];
-  lines.push("Not enough database evidence to produce a fully supported answer with quotes.");
-  lines.push("");
-  lines.push("Sources:");
-  sources.forEach((s) => {
-    lines.push(`- Podcast: ${s.podcast}`);
-    lines.push(`  Episode: ${s.episode}`);
-    lines.push(`  Speaker: ${s.speaker}`);
-    lines.push(`  Quote: "${s.quote}"`);
-  });
-  lines.push("");
-  lines.push("Try asking a more specific question (symptom, dosage range, timing, or mechanism).");
-  return lines.join("\n");
-}
+const MAX_QUOTES = 3;
+const MAX_QUOTE_CHARS = 700;
+const TOP_K = 4;
 
 /* =======================
    HEALTH CHECK
 ======================= */
-app.get("/status", (_req, res) => {
+app.get("/status", async (req, res) => {
   res.json({
     status: "ok",
     backend: "forged-by-freedom-api",
     model: MODEL,
-    pineconeQueryUrl: PINECONE_QUERY_URL,
+    pineconeQueryUrl: `${PINECONE_HOST}/query`,
     time: new Date().toISOString()
   });
 });
@@ -123,102 +39,104 @@ app.get("/status", (_req, res) => {
 ======================= */
 app.post("/ask", async (req, res) => {
   try {
-    const question = (req.body?.question || "").trim();
-    if (!question) return res.status(400).json({ error: "No question provided" });
-
-    /* ---------- 1) EMBEDD ---------- */
-    let vector;
-    const { controller: embCtl, t: embT } = withTimeout(EMBED_TIMEOUT_MS);
-    try {
-      const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
-        method: "POST",
-        signal: embCtl.signal,
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "text-embedding-3-large",
-          input: question
-        })
-      });
-      const emb = await embRes.json();
-      vector = emb?.data?.[0]?.embedding;
-      if (!vector) throw new Error("Embedding failed");
-    } finally {
-      clearTimeout(embT);
+    const question = req.body?.question?.trim();
+    if (!question) {
+      return res.status(400).json({ error: "No question provided" });
     }
 
-    /* ---------- 2) PINECONE ---------- */
-    let matches = [];
-    const { controller: pcCtl, t: pcT } = withTimeout(PINECONE_TIMEOUT_MS);
-    try {
-      const pcRes = await fetch(PINECONE_QUERY_URL, {
-        method: "POST",
-        signal: pcCtl.signal,
-        headers: {
-          "Api-Key": PINECONE_API_KEY,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          vector,
-          topK: TOP_K,
-          includeMetadata: true
-        })
-      });
+    /* ---------- EMBEDDING ---------- */
+    const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "text-embedding-3-large",
+        input: question
+      })
+    });
 
-      const pc = await pcRes.json();
-      matches = pc?.matches || [];
-    } finally {
-      clearTimeout(pcT);
+    const emb = await embRes.json();
+    const vector = emb?.data?.[0]?.embedding;
+    if (!vector) {
+      throw new Error("Embedding failed");
     }
 
-    // ✅ Short-circuit if Pinecone returns nothing usable
-    const sources = buildSources(matches);
-    if (sources.length < 1) {
+    /* ---------- PINECONE QUERY ---------- */
+    const pcRes = await fetch(`${PINECONE_HOST}/query`, {
+      method: "POST",
+      headers: {
+        "Api-Key": PINECONE_API_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        vector,
+        topK: TOP_K,
+        includeMetadata: true
+      })
+    });
+
+    const pc = await pcRes.json();
+    const matches = (pc.matches || []).slice(0, MAX_QUOTES);
+
+    if (!matches.length) {
       return res.json({
         answer:
-          "No relevant quoted material found in the Forged by Freedom database for this question. Ask more specifically or ingest more transcripts with metadata (podcast/episode/speaker)."
+          "Not enough quoted evidence in the database to answer this question."
       });
     }
 
-    const context = sources
-      .map((s, i) => {
-        return [
-          `SOURCE ${i + 1}`,
-          `Podcast: ${s.podcast}`,
-          `Episode: ${s.episode}`,
-          `Speaker: ${s.speaker}`,
-          ``,
-          `VERBATIM QUOTE:`,
-          `"${s.quote}"`
-        ].join("\n");
+    /* ---------- CONTEXT BUILDER ---------- */
+    const context = matches
+      .map((m, i) => {
+        const md = m.metadata || {};
+        const text =
+          md.text ||
+          md.chunk ||
+          md.content ||
+          md.transcript ||
+          "";
+
+        return `
+SOURCE ${i + 1}
+Podcast: ${md.podcast || "Unknown"}
+Episode: ${md.episode || "Unknown"}
+Speaker: ${md.speaker || "Unknown"}
+
+"${text.slice(0, MAX_QUOTE_CHARS)}"
+`.trim();
       })
       .join("\n\n");
 
-    /* ---------- 3) LLM ---------- */
-    const { controller: llmCtl, t: llmT } = withTimeout(LLM_TIMEOUT_MS);
-
+    /* ---------- PROMPT (LOCKED FORMAT) ---------- */
     const prompt = `
 You are Coach Bryan’s AI assistant.
 
-MANDATORY RULES:
-- Use ONLY the database context below.
-- You MUST include 1–3 sources (depending on what is provided).
-- For EACH source, include Podcast, Episode, Speaker, and at least one VERBATIM QUOTE from the context.
-- NEVER fabricate quotes or source fields.
-- If the database context is insufficient to support a claim, write: "Not enough quoted evidence in the database."
+CRITICAL RULES (NO EXCEPTIONS):
+- You may ONLY use the database context provided below.
+- You MUST quote directly from the context using quotation marks.
+- Every quote MUST be attributed with Podcast, Episode, and Speaker.
+- DO NOT summarize or paraphrase quoted material.
+- If the context does not clearly support an answer, you MUST say:
+  "Not enough quoted evidence in the database to answer this question."
 
-OUTPUT FORMAT (required):
-Answer (2–6 sentences)
+RESPONSE FORMAT (REQUIRED):
+
+Answer:
+(2–5 sentences derived ONLY from quoted material)
 
 Sources:
-- Podcast:
-  Episode:
-  Speaker:
-  Quote: "..."
+- Podcast: <podcast name>
+  Episode: <episode name or number>
+  Speaker: <speaker name>
+  Quote: "<verbatim quote>"
 
-Explanation (bullets, derived ONLY from the quoted sources)
+(Repeat the source block for each source used. Use 1–3 sources only.)
+
+Explanation:
+- Bullet points explaining WHY the quotes answer the question.
+- Explanations must be derived ONLY from the quoted text.
 
 DATABASE CONTEXT:
 ${context}
@@ -227,13 +145,13 @@ QUESTION:
 ${question}
 `.trim();
 
-    let answerText = "";
-    try {
-      const llmRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    /* ---------- LLM CALL ---------- */
+    const llmRes = await fetch(
+      "https://openrouter.ai/api/v1/chat/completions",
+      {
         method: "POST",
-        signal: llmCtl.signal,
         headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -241,30 +159,25 @@ ${question}
           temperature: 0.15,
           messages: [{ role: "user", content: prompt }]
         })
+      }
+    );
+
+    const llm = await llmRes.json();
+    const answer = llm?.choices?.[0]?.message?.content;
+
+    if (!answer || !answer.trim()) {
+      return res.json({
+        answer:
+          "Not enough quoted evidence in the database to answer this question."
       });
-
-      const llm = await llmRes.json();
-      answerText = (llm?.choices?.[0]?.message?.content || "").trim();
-    } finally {
-      clearTimeout(llmT);
     }
 
-    // ✅ Never return empty; fallback includes exact quotes + attribution
-    if (!answerText) {
-      return res.json({ answer: renderAnswerFallback(question, sources) });
-    }
-
-    return res.json({ answer: answerText });
+    res.json({ answer });
 
   } catch (err) {
-    const msg =
-      err?.name === "AbortError"
-        ? "AI request exceeded time budget. Try a more specific question."
-        : (err?.message || "Unknown error");
-
-    return res.status(500).json({
+    res.status(500).json({
       error: "AI backend failure",
-      details: msg
+      details: err.message
     });
   }
 });
@@ -272,6 +185,7 @@ ${question}
 /* =======================
    START SERVER
 ======================= */
-app.listen(PORT, () => {
-  console.log(`[FBF API] running on port ${PORT} using ${MODEL}`);
+const SERVER_PORT = PORT || 5051;
+app.listen(SERVER_PORT, () => {
+  console.log(`[FBF API] running on port ${SERVER_PORT} using ${MODEL}`);
 });
