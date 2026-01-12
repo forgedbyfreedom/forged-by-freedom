@@ -6,23 +6,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* =======================
-   ENVIRONMENT
-======================= */
 const {
   OPENROUTER_API_KEY,
   PINECONE_API_KEY,
   PINECONE_HOST,
-  PORT
+  MODEL = "nousresearch/hermes-3-llama-3.1-8b",
+  PORT = 5051
 } = process.env;
 
-const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
-const MAX_QUOTES = 3;
-const MAX_QUOTE_CHARS = 700;
-const TOP_K = 4;
-
 /* =======================
-   HEALTH CHECK
+   HEALTH
 ======================= */
 app.get("/status", async (req, res) => {
   res.json({
@@ -35,7 +28,7 @@ app.get("/status", async (req, res) => {
 });
 
 /* =======================
-   MAIN ASK ENDPOINT
+   ASK
 ======================= */
 app.post("/ask", async (req, res) => {
   try {
@@ -48,7 +41,7 @@ app.post("/ask", async (req, res) => {
     const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -59,11 +52,9 @@ app.post("/ask", async (req, res) => {
 
     const emb = await embRes.json();
     const vector = emb?.data?.[0]?.embedding;
-    if (!vector) {
-      throw new Error("Embedding failed");
-    }
+    if (!vector) throw new Error("Embedding failed");
 
-    /* ---------- PINECONE QUERY ---------- */
+    /* ---------- PINECONE ---------- */
     const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
@@ -72,92 +63,67 @@ app.post("/ask", async (req, res) => {
       },
       body: JSON.stringify({
         vector,
-        topK: TOP_K,
+        topK: 6,
         includeMetadata: true
       })
     });
 
     const pc = await pcRes.json();
-    const matches = (pc.matches || []).slice(0, MAX_QUOTES);
-
+    const matches = pc?.matches || [];
     if (!matches.length) {
       return res.json({
-        answer:
-          "Not enough quoted evidence in the database to answer this question."
+        answer: "No relevant material found in the database."
       });
     }
 
-    /* ---------- CONTEXT BUILDER ---------- */
-    const context = matches
-      .map((m, i) => {
-        const md = m.metadata || {};
-        const text =
-          md.text ||
-          md.chunk ||
-          md.content ||
-          md.transcript ||
-          "";
+    /* ---------- CONTEXT (NAMED SOURCES) ---------- */
+    const context = matches.slice(0, 3).map((m, i) => {
+      const md = m.metadata || {};
+      const quote =
+        md.text ||
+        md.chunk ||
+        md.content ||
+        md.transcript ||
+        "";
 
-        return `
+      return `
 SOURCE ${i + 1}
 Podcast: ${md.podcast || "Unknown"}
 Episode: ${md.episode || "Unknown"}
 Speaker: ${md.speaker || "Unknown"}
 
-"${text.slice(0, MAX_QUOTE_CHARS)}"
-`.trim();
-      })
-      .join("\n\n");
+"${quote.slice(0, 900)}"
+`;
+    }).join("\n");
 
-    /* ---------- PROMPT (LOCKED FORMAT) ---------- */
-    const prompt = `
-You are Coach Bryan’s AI assistant.
-
-CRITICAL RULES (NO EXCEPTIONS):
-- You may ONLY use the database context provided below.
-- You MUST quote directly from the context using quotation marks.
-- Every quote MUST be attributed with Podcast, Episode, and Speaker.
-- DO NOT summarize or paraphrase quoted material.
-- If the context does not clearly support an answer, you MUST say:
-  "Not enough quoted evidence in the database to answer this question."
-
-RESPONSE FORMAT (REQUIRED):
-
-Answer:
-(2–5 sentences derived ONLY from quoted material)
-
-Sources:
-- Podcast: <podcast name>
-  Episode: <episode name or number>
-  Speaker: <speaker name>
-  Quote: "<verbatim quote>"
-
-(Repeat the source block for each source used. Use 1–3 sources only.)
-
-Explanation:
-- Bullet points explaining WHY the quotes answer the question.
-- Explanations must be derived ONLY from the quoted text.
-
-DATABASE CONTEXT:
-${context}
-
-QUESTION:
-${question}
-`.trim();
-
-    /* ---------- LLM CALL ---------- */
+    /* ---------- LLM ---------- */
     const llmRes = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
           model: MODEL,
-          temperature: 0.15,
-          messages: [{ role: "user", content: prompt }]
+          temperature: 0.2,
+          messages: [
+            {
+              role: "user",
+              content: `
+Answer the question using ONLY the sources below.
+Name each source explicitly.
+Quote directly where relevant.
+
+SOURCES:
+${context}
+
+QUESTION:
+${question}
+`
+            }
+          ]
         })
       }
     );
@@ -165,11 +131,8 @@ ${question}
     const llm = await llmRes.json();
     const answer = llm?.choices?.[0]?.message?.content;
 
-    if (!answer || !answer.trim()) {
-      return res.json({
-        answer:
-          "Not enough quoted evidence in the database to answer this question."
-      });
+    if (!answer) {
+      throw new Error("LLM returned empty response");
     }
 
     res.json({ answer });
@@ -183,9 +146,8 @@ ${question}
 });
 
 /* =======================
-   START SERVER
+   START
 ======================= */
-const SERVER_PORT = PORT || 5051;
-app.listen(SERVER_PORT, () => {
-  console.log(`[FBF API] running on port ${SERVER_PORT} using ${MODEL}`);
+app.listen(PORT, () => {
+  console.log(`[FBF API] running on port ${PORT} using ${MODEL}`);
 });
