@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SOURCE_FILE="sources_medical.txt"
+SOURCE_FILE="ingest/sources_medical.txt"
 LOG_DIR="downloads/logs"
 AUDIO_DIR="downloads/audio"
 SUB_DIR="downloads/subs"
