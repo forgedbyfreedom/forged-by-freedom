@@ -1,120 +1,113 @@
+#!/usr/bin/env python3
+"""
+🔥 Forged By Freedom — Quote-Level Pinecone Ingest
+-------------------------------------------------
+• Embeds sentence-aligned quote chunks
+• Enforces podcast / speaker / episode attribution
+• Uses OpenRouter embeddings
+• Safe for large corpora (40M+ words)
+"""
+
 import os
-import sys
-import time
+import uuid
 import json
-import hashlib
+import time
 from pathlib import Path
-from collections import defaultdict
-
-import tiktoken
-from openai import OpenAI
 from pinecone import Pinecone
+import requests
 
-# ---------------- CONFIG ----------------
-BASE_DIR = Path(__file__).parent
-CHANNELS_DIR = BASE_DIR / "channels"
+# =====================
+# ENVIRONMENT
+# =====================
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_HOST = os.getenv("PINECONE_HOST")
+INDEX_NAME = "forged-freedom-ai"
 
-INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 EMBED_MODEL = "text-embedding-3-large"
+MAX_CHUNK_TOKENS = 500
+SLEEP_SECONDS = 0.4
 
-CHUNK_TOKENS = 3000
-EMBED_BATCH = 16
-SLEEP_BETWEEN_BATCHES = 0.3
+assert OPENROUTER_API_KEY
+assert PINECONE_API_KEY
+assert PINECONE_HOST
 
-# ----------------------------------------
-
-if not os.getenv("OPENAI_API_KEY"):
-    raise RuntimeError("❌ OPENAI_API_KEY not set")
-
-if not os.getenv("PINECONE_API_KEY"):
-    raise RuntimeError("❌ PINECONE_API_KEY not set")
-
-client = OpenAI()
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+# =====================
+# INITIALIZE
+# =====================
+pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(INDEX_NAME)
 
-tokenizer = tiktoken.get_encoding("cl100k_base")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+TRANSCRIPTS_DIR = REPO_ROOT / "transcripts"
 
-def count_tokens(text: str) -> int:
-    return len(tokenizer.encode(text))
-
-def chunk_text(text: str):
-    tokens = tokenizer.encode(text)
-    for i in range(0, len(tokens), CHUNK_TOKENS):
-        yield tokenizer.decode(tokens[i:i + CHUNK_TOKENS])
-
-def file_hash(path: Path):
-    h = hashlib.sha1()
-    with open(path, "rb") as f:
-        h.update(f.read())
-    return h.hexdigest()
-
-def embed_batch(texts):
-    res = client.embeddings.create(
-        model=EMBED_MODEL,
-        input=texts
+# =====================
+# HELPERS
+# =====================
+def embed(text: str):
+    res = requests.post(
+        "https://openrouter.ai/api/v1/embeddings",
+        headers={
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": EMBED_MODEL,
+            "input": text
+        },
+        timeout=30
     )
-    return [d.embedding for d in res.data]
+    res.raise_for_status()
+    return res.json()["data"][0]["embedding"]
 
-def ingest():
-    print("\n🔍 INGEST STARTUP DEBUG")
-    print(f"• CHANNELS_DIR exists: {CHANNELS_DIR.exists()}")
-    print(f"• Pinecone index: {INDEX_NAME}")
-    print(f"• Embedding model: {EMBED_MODEL}")
-    print(f"• Chunk tokens: {CHUNK_TOKENS} | Embed batch: {EMBED_BATCH}")
+def sentence_chunks(text):
+    sentences = text.replace("\n", " ").split(". ")
+    chunk = ""
+    for s in sentences:
+        if len(chunk) + len(s) < MAX_CHUNK_TOKENS * 4:
+            chunk += s.strip() + ". "
+        else:
+            yield chunk.strip()
+            chunk = s.strip() + ". "
+    if chunk:
+        yield chunk.strip()
 
-    txt_files = list(CHANNELS_DIR.rglob("*.txt"))
-    total_files = len(txt_files)
+# =====================
+# INGEST
+# =====================
+total_chunks = 0
 
-    print(f"• Total episodes (.txt): {total_files}")
-    print("🚀 BEGIN INGEST\n")
+for channel_dir in TRANSCRIPTS_DIR.iterdir():
+    if not channel_dir.is_dir():
+        continue
 
-    episode_count = 0
-    word_count = 0
+    podcast = channel_dir.name.replace("@", "")
 
-    for txt in txt_files:
-        try:
-            text = txt.read_text(errors="ignore")
-            words = len(text.split())
-            chunks = list(chunk_text(text))
+    for transcript_file in channel_dir.glob("master_transcript*.txt"):
+        with open(transcript_file, "r", encoding="utf-8", errors="ignore") as f:
+            text = f.read()
 
-            vectors = []
-            for i in range(0, len(chunks), EMBED_BATCH):
-                batch = chunks[i:i + EMBED_BATCH]
-                embeds = embed_batch(batch)
+        episode = transcript_file.name
+        for chunk in sentence_chunks(text):
+            if len(chunk) < 200:
+                continue
 
-                for chunk_text_, emb in zip(batch, embeds):
-                    vec_id = hashlib.sha1(chunk_text_.encode()).hexdigest()
-                    vectors.append({
-                        "id": vec_id,
-                        "values": emb,
-                        "metadata": {
-                            "file": txt.name,
-                            "path": str(txt),
-                            "words": words
-                        }
-                    })
+            vec = embed(chunk)
 
-                index.upsert(vectors=vectors)
-                vectors.clear()
-                time.sleep(SLEEP_BETWEEN_BATCHES)
+            index.upsert([{
+                "id": str(uuid.uuid4()),
+                "values": vec,
+                "metadata": {
+                    "podcast": podcast,
+                    "speaker": podcast,
+                    "episode": episode,
+                    "quote": chunk
+                }
+            }])
 
-            episode_count += 1
-            word_count += words
+            total_chunks += 1
+            time.sleep(SLEEP_SECONDS)
 
-            print(f"✅ Ingested: {txt.name} | words: {words}")
+        print(f"✅ Embedded {episode}")
 
-            print(
-                f"📊 Progress: {episode_count}/{total_files} episodes | "
-                f"{word_count:,} total words"
-            )
-
-        except Exception as e:
-            print(f"❌ Failed: {txt.name} — {e}")
-
-    print("\n✅ INGEST COMPLETE")
-    print(f"📚 Episodes ingested: {episode_count}")
-    print(f"📝 Total words: {word_count:,}")
-
-if __name__ == "__main__":
-    ingest()
+print(f"\n🔥 Pinecone re-embed complete | chunks: {total_chunks}")
