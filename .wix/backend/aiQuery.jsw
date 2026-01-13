@@ -1,26 +1,46 @@
 import { fetch } from "wix-fetch";
 
+/**
+ * Ultra-thin proxy to Render API
+ * MUST return within Wix timeout
+ */
 export async function askCoach(payload) {
-  if (!payload?.question) {
-    return { status: "ERROR", message: "No question provided" };
-  }
-
   try {
+    if (!payload || !payload.question) {
+      return {
+        status: "ERROR",
+        message: "No question provided"
+      };
+    }
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+
     const res = await fetch(
       "https://forged-by-freedom-api-nm4f.onrender.com/ask",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: payload.question })
+        body: JSON.stringify({ question: payload.question }),
+        signal: controller.signal
       }
     );
 
-    const data = await res.json();
+    clearTimeout(timeout);
 
-    if (!res.ok || data.error) {
+    if (!res.ok) {
       return {
         status: "ERROR",
-        message: data.details || data.error || "AI backend error"
+        message: `Render API error (${res.status})`
+      };
+    }
+
+    const data = await res.json();
+
+    if (!data || !data.answer) {
+      return {
+        status: "ERROR",
+        message: "Empty response from AI backend"
       };
     }
 
@@ -32,7 +52,10 @@ export async function askCoach(payload) {
   } catch (err) {
     return {
       status: "ERROR",
-      message: "AI request failed"
+      message:
+        err.name === "AbortError"
+          ? "AI request timed out"
+          : err.message
     };
   }
 }
