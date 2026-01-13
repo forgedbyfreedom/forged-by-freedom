@@ -1,61 +1,47 @@
 import { fetch } from "wix-fetch";
 
 /**
- * Ultra-thin proxy to Render API
- * MUST return within Wix timeout
+ * Thin proxy to Render API
+ * Abort early so Wix never throws a 504
  */
 export async function askCoach(payload) {
   try {
-    if (!payload || !payload.question) {
-      return {
-        status: "ERROR",
-        message: "No question provided"
-      };
+    if (!payload || typeof payload.question !== "string") {
+      return { status: "ERROR", message: "No question provided" };
     }
 
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 8000);
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
 
-    const res = await fetch(
-      "https://forged-by-freedom-api-nm4f.onrender.com/ask",
-      {
+    let res;
+    try {
+      res = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: payload.question }),
+        body: JSON.stringify({ question: payload.question.trim() }),
         signal: controller.signal
-      }
-    );
-
-    clearTimeout(timeout);
-
-    if (!res.ok) {
-      return {
-        status: "ERROR",
-        message: `Render API error (${res.status})`
-      };
+      });
+    } finally {
+      clearTimeout(timeoutId);
     }
 
     const data = await res.json();
 
-    if (!data || !data.answer) {
+    if (!res.ok || data.error) {
       return {
         status: "ERROR",
-        message: "Empty response from AI backend"
+        message: data.details || data.error || `Render API error (${res.status})`
       };
     }
 
-    return {
-      status: "OK",
-      answer: data.answer
-    };
+    return { status: "OK", answer: data.answer };
 
   } catch (err) {
     return {
       status: "ERROR",
-      message:
-        err.name === "AbortError"
-          ? "AI request timed out"
-          : err.message
+      message: err.name === "AbortError"
+        ? "AI request timed out (try again)"
+        : (err.message || "Backend call failed")
     };
   }
 }
