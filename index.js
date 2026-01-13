@@ -6,17 +6,24 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// =======================
+// ENVIRONMENT VARIABLES
+// =======================
 const {
   OPENROUTER_API_KEY,
   PINECONE_API_KEY,
   PINECONE_HOST,
-  MODEL = "nousresearch/hermes-3-llama-3.1-8b",
-  PORT = 5051
+  PORT
 } = process.env;
 
-/* =======================
-   HEALTH
-======================= */
+// =======================
+// MODEL (STABLE)
+// =======================
+const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
+
+// =======================
+// HEALTH CHECK
+// =======================
 app.get("/status", async (req, res) => {
   res.json({
     status: "ok",
@@ -27,21 +34,23 @@ app.get("/status", async (req, res) => {
   });
 });
 
-/* =======================
-   ASK
-======================= */
+// =======================
+// MAIN ASK ENDPOINT
+// =======================
 app.post("/ask", async (req, res) => {
   try {
-    const question = req.body?.question?.trim();
+    const question = req.body?.question;
     if (!question) {
       return res.status(400).json({ error: "No question provided" });
     }
 
-    /* ---------- EMBEDDING ---------- */
+    // =======================
+    // 1️⃣ EMBEDDING
+    // =======================
     const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -52,9 +61,13 @@ app.post("/ask", async (req, res) => {
 
     const emb = await embRes.json();
     const vector = emb?.data?.[0]?.embedding;
-    if (!vector) throw new Error("Embedding failed");
+    if (!vector) {
+      throw new Error("Embedding failed");
+    }
 
-    /* ---------- PINECONE ---------- */
+    // =======================
+    // 2️⃣ PINECONE QUERY
+    // =======================
     const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
@@ -63,78 +76,93 @@ app.post("/ask", async (req, res) => {
       },
       body: JSON.stringify({
         vector,
-        topK: 6,
+        topK: 8,
         includeMetadata: true
       })
     });
 
     const pc = await pcRes.json();
     const matches = pc?.matches || [];
+
     if (!matches.length) {
       return res.json({
-        answer: "No relevant material found in the database."
+        answer: "Not enough quoted evidence in the database to answer this question."
       });
     }
 
-    /* ---------- CONTEXT (NAMED SOURCES) ---------- */
-    const context = matches.slice(0, 3).map((m, i) => {
-      const md = m.metadata || {};
-      const quote =
+    // =======================
+    // 3️⃣ BUILD SAFE CONTEXT
+    // =======================
+    const MAX_CONTEXT_CHARS = 6000;
+    let used = 0;
+    const contextBlocks = [];
+
+    for (let i = 0; i < matches.length; i++) {
+      const md = matches[i].metadata || {};
+      const text =
         md.text ||
         md.chunk ||
         md.content ||
         md.transcript ||
         "";
 
-      return `
-SOURCE ${i + 1}
-Podcast: ${md.podcast || "Unknown"}
-Episode: ${md.episode || "Unknown"}
-Speaker: ${md.speaker || "Unknown"}
+      if (!text) continue;
 
-"${quote.slice(0, 900)}"
-`;
-    }).join("\n");
+      const remaining = MAX_CONTEXT_CHARS - used;
+      if (remaining <= 0) break;
 
-    /* ---------- LLM ---------- */
-    const llmRes = await fetch(
-      "https://openrouter.ai/api/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: MODEL,
-          temperature: 0.2,
-          messages: [
-            {
-              role: "user",
-              content: `
-Answer the question using ONLY the sources below.
-Name each source explicitly.
-Quote directly where relevant.
+      const slice = text.slice(0, remaining);
 
-SOURCES:
-${context}
+      contextBlocks.push(
+        `SOURCE ${contextBlocks.length + 1}
+Podcast: ${md.podcast || "Unknown Podcast"}
+Episode: ${md.episode || "Unknown Episode"}
+Speaker: ${md.speaker || "Unknown Speaker"}
 
-QUESTION:
-${question}
-`
-            }
-          ]
-        })
-      }
-    );
+"${slice}"`
+      );
 
-    const llm = await llmRes.json();
-    const answer = llm?.choices?.[0]?.message?.content;
-
-    if (!answer) {
-      throw new Error("LLM returned empty response");
+      used += slice.length;
     }
 
+    const context = contextBlocks.join("\n\n");
+
+    // =======================
+    // 4️⃣ LLM CALL
+    // =======================
+    const llmRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        temperature: 0.2,
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are a bodybuilding and performance research assistant. " +
+              "Answer ONLY using the quoted sources provided. " +
+              "Cite claims directly with quotes."
+          },
+          {
+            role: "user",
+            content:
+              `Context:\n${context}\n\nQuestion:\n${question}`
+          }
+        ]
+      })
+    });
+
+    const llm = await llmRes.json();
+
+    if (!llm?.choices || llm.choices.length === 0) {
+      throw new Error("LLM returned empty choices (prompt too large or rejected)");
+    }
+
+    const answer = llm.choices[0].message.content;
     res.json({ answer });
 
   } catch (err) {
@@ -145,9 +173,10 @@ ${question}
   }
 });
 
-/* =======================
-   START
-======================= */
-app.listen(PORT, () => {
-  console.log(`[FBF API] running on port ${PORT} using ${MODEL}`);
+// =======================
+// START SERVER
+// =======================
+const SERVER_PORT = PORT || 5051;
+app.listen(SERVER_PORT, () => {
+  console.log(`[FBF API] running on port ${SERVER_PORT} using ${MODEL}`);
 });
