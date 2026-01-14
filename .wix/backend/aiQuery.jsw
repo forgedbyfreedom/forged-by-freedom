@@ -2,7 +2,7 @@ import { fetch } from "wix-fetch";
 
 /**
  * Thin proxy to Render API
- * Abort early so Wix never throws a 504
+ * Abort early so Wix never 504s
  */
 export async function askCoach(payload) {
   try {
