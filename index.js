@@ -13,136 +13,176 @@ const {
   PORT
 } = process.env;
 
-// Use fast model for stability (Wix-safe). You can upgrade later.
+// Stable & fast enough for UI (you can switch to 70B later if you want)
 const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
 
-// Retrieval tuning
-const TOP_K = 20;                 // higher recall
-const MAX_SOURCES = 3;            // show 1–3 sources
-const PER_SOURCE_LIMIT = 900;     // per quote cap
-const MAX_CONTEXT_CHARS = 4500;   // total cap (prevents empty choices)
-const MAX_TOKENS = 700;           // completion cap (prevents empty choices)
+// Retrieval
+const TOP_K_DEFAULT = 40;          // broad recall
+const TOP_K_WOMEN_NS = 40;         // broad recall in women namespace
+const MAX_SOURCES = 3;
+const PER_SOURCE_LIMIT = 900;      // per quote cap
+const MAX_CONTEXT_CHARS = 4500;    // total cap
+const MAX_TOKENS = 800;
 
-/* =======================
-   HELPERS
-======================= */
-function expandQuery(q) {
-  const s = (q || "").toLowerCase();
-  if (s.includes("female") || s.includes("women") || s.includes("woman")) {
-    return `${q}. Focus terms: women female virilization androgenic side effects trenbolone`;
+// Namespaces
+const NS_DEFAULT = "";             // default namespace
+const NS_WOMEN = "women_steroids"; // new namespace we will populate
+
+function expandQuery(question) {
+  const q = (question || "").toLowerCase();
+  if (q.includes("female") || q.includes("women") || q.includes("woman")) {
+    return `${question}. Focus terms: women female virilization androgenic voice deepening clitoral enlargement irreversible side effects trenbolone.`;
   }
-  return q;
+  return question;
 }
 
 function pickText(md) {
   if (!md) return "";
-  return (
-    md.text ||
-    md.quote ||
-    md.chunk ||
-    md.content ||
-    md.transcript ||
-    md.body ||
-    ""
-  ).trim();
-}
-
-function pickEpisode(md) {
-  if (!md) return "Unknown Episode";
-  return (md.episode || md.title || md.video_title || md.file || "Unknown Episode").toString().trim();
+  return (md.text || md.quote || md.chunk || md.content || md.transcript || md.body || "").toString().trim();
 }
 
 function pickPodcast(md) {
   if (!md) return "Unknown Podcast";
-  return (md.podcast || md.show || md.channel || md.source || "Unknown Podcast").toString().trim();
+  return (md.podcast || md.show || md.channel || md.source || md.channel_name || "Unknown Podcast").toString().trim();
+}
+
+function pickEpisode(md) {
+  if (!md) return "Unknown Episode";
+  return (md.episode || md.title || md.video_title || md.file || md.episode_id || "Unknown Episode").toString().trim();
 }
 
 function pickSpeaker(md) {
   if (!md) return "Unknown Speaker";
-  return (md.speaker || md.host || md.author || md.show || "Unknown Speaker").toString().trim();
+  return (md.speaker || md.host || md.author || md.presenter || md.show || "Unknown Speaker").toString().trim();
 }
 
-/* =======================
-   HEALTH CHECK
-======================= */
+// Keyword reranker for female-related questions without relying on metadata filters
+function keywordScore(text, question) {
+  const t = (text || "").toLowerCase();
+  const q = (question || "").toLowerCase();
+
+  let score = 0;
+
+  // Always reward direct mention of key terms
+  const needles = ["tren", "trenbolone", "viril", "virilization", "women", "female", "woman", "voice", "clit", "androgen", "masculin", "irreversible"];
+  for (const n of needles) {
+    if (t.includes(n)) score += 2;
+  }
+
+  // If question is female-focused, weight female-specific terms harder
+  if (q.includes("female") || q.includes("women") || q.includes("woman")) {
+    const femaleNeedles = ["viril", "virilization", "androgen", "masculin", "voice", "clit", "irreversible"];
+    for (const n of femaleNeedles) {
+      if (t.includes(n)) score += 3;
+    }
+  }
+
+  return score;
+}
+
+async function embed(text) {
+  const r = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "text-embedding-3-large",
+      input: text
+    })
+  });
+  const j = await r.json();
+  return j?.data?.[0]?.embedding;
+}
+
+async function pineconeQuery(vector, topK, namespace) {
+  const r = await fetch(`${PINECONE_HOST}/query`, {
+    method: "POST",
+    headers: {
+      "Api-Key": PINECONE_API_KEY,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      vector,
+      topK,
+      includeMetadata: true,
+      namespace
+    })
+  });
+  return r.json();
+}
+
 app.get("/status", (_req, res) => {
   res.json({
     status: "ok",
     backend: "forged-by-freedom-api",
     model: MODEL,
     pineconeQueryUrl: `${PINECONE_HOST}/query`,
+    namespaces: [NS_DEFAULT || "(default)", NS_WOMEN],
     time: new Date().toISOString()
   });
 });
 
-/* =======================
-   ASK (OPTION A)
-======================= */
 app.post("/ask", async (req, res) => {
   try {
     const question = (req.body?.question || "").trim();
     if (!question) return res.status(400).json({ error: "No question provided" });
 
     const expanded = expandQuery(question);
-
-    // 1) EMBEDD
-    const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "text-embedding-3-large",
-        input: expanded
-      })
-    });
-
-    const emb = await embRes.json();
-    const vector = emb?.data?.[0]?.embedding;
+    const vector = await embed(expanded);
     if (!vector) throw new Error("Embedding failed");
 
-    // 2) PINECONE QUERY
-    const pcRes = await fetch(`${PINECONE_HOST}/query`, {
-      method: "POST",
-      headers: {
-        "Api-Key": PINECONE_API_KEY,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        vector,
-        topK: TOP_K,
-        includeMetadata: true
+    // Query BOTH namespaces
+    const [pcDefault, pcWomen] = await Promise.all([
+      pineconeQuery(vector, TOP_K_DEFAULT, NS_DEFAULT),
+      pineconeQuery(vector, TOP_K_WOMEN_NS, NS_WOMEN)
+    ]);
+
+    const matchesDefault = (pcDefault?.matches || []);
+    const matchesWomen = (pcWomen?.matches || []);
+
+    // Merge, then rerank locally by keyword evidence strength
+    const merged = [...matchesWomen, ...matchesDefault]
+      .filter(m => m?.metadata && pickText(m.metadata).length >= 200)
+      .map(m => {
+        const md = m.metadata || {};
+        const txt = pickText(md);
+        return {
+          score: (m.score || 0) + keywordScore(txt, question) * 0.01, // small boost
+          md,
+          txt
+        };
       })
-    });
+      .sort((a, b) => b.score - a.score);
 
-    const pc = await pcRes.json();
-    const matches = pc?.matches || [];
+    if (merged.length === 0) {
+      return res.json({
+        answer: "No usable quoted transcript material was retrieved for this question."
+      });
+    }
 
-    // 3) BUILD SOURCES + CONTEXT (ALWAYS SHOW SOURCES IF FOUND)
+    // Build context with hard caps
     let used = 0;
-    const sourceBlocks = [];
-    const sourcesForDisplay = [];
+    const sources = [];
+    const blocks = [];
 
-    for (let i = 0; i < matches.length && sourceBlocks.length < MAX_SOURCES; i++) {
-      const md = matches[i]?.metadata || {};
-      const raw = pickText(md);
-      if (!raw) continue;
-
+    for (let i = 0; i < merged.length && blocks.length < MAX_SOURCES; i++) {
+      const md = merged[i].md;
+      const raw = merged[i].txt;
       const remaining = MAX_CONTEXT_CHARS - used;
       if (remaining <= 0) break;
 
-      const sliceLen = Math.min(PER_SOURCE_LIMIT, remaining);
-      const quote = raw.slice(0, sliceLen);
+      const quote = raw.slice(0, Math.min(PER_SOURCE_LIMIT, remaining));
 
       const podcast = pickPodcast(md);
       const episode = pickEpisode(md);
       const speaker = pickSpeaker(md);
 
-      sourcesForDisplay.push({ podcast, episode, speaker, quote });
+      sources.push({ podcast, episode, speaker, quote });
 
-      sourceBlocks.push(
-        `SOURCE ${sourceBlocks.length + 1}
+      blocks.push(
+`SOURCE ${blocks.length + 1}
 Podcast: ${podcast}
 Episode: ${episode}
 Speaker: ${speaker}
@@ -153,16 +193,9 @@ Speaker: ${speaker}
       used += quote.length;
     }
 
-    if (sourceBlocks.length === 0) {
-      return res.json({
-        answer:
-          "No usable quoted transcript material was retrieved for this question. Try a more specific query (compound + effect + audience)."
-      });
-    }
+    const context = blocks.join("\n\n");
 
-    const context = sourceBlocks.join("\n\n");
-
-    // 4) LLM (OPTION A: Multi-source synthesis, quote-required)
+    // Option A prompt: always show sources, synthesize across sources, quote-required claims
     const prompt = `
 You are Coach Bryan’s evidence-based assistant.
 
@@ -175,7 +208,7 @@ RULES (MANDATORY):
 OUTPUT FORMAT (REQUIRED):
 
 Answer:
-- 2–5 sentences (quote-supported). If insufficient, state what is missing.
+- 2–6 sentences. If insufficient, state what is missing.
 
 Sources:
 - Podcast:
@@ -216,41 +249,34 @@ ${question}
     });
 
     const llm = await llmRes.json();
-
-    // Guard against empty choices
     const answer = (llm?.choices?.[0]?.message?.content || "").trim();
 
+    // Fallback: show sources even if model returns empty
     if (!answer) {
-      // Fallback: show sources even if the model refused
       const fallback = [
         "Answer:",
         "Insufficient quoted evidence in the database to answer this question directly.",
         "",
-        "Sources:"
-      ];
+        "Sources:",
+        ...sources.flatMap(s => [
+          `- Podcast: ${s.podcast}`,
+          `  Episode: ${s.episode}`,
+          `  Speaker: ${s.speaker}`,
+          `  Quote: "${s.quote}"`
+        ]),
+        "",
+        "What to ask next:",
+        "- women trenbolone virilization voice deepening",
+        "- female tren side effects irreversible"
+      ].join("\n");
 
-      sourcesForDisplay.forEach((s) => {
-        fallback.push(`- Podcast: ${s.podcast}`);
-        fallback.push(`  Episode: ${s.episode}`);
-        fallback.push(`  Speaker: ${s.speaker}`);
-        fallback.push(`  Quote: "${s.quote}"`);
-      });
-
-      fallback.push("");
-      fallback.push("What to ask next:");
-      fallback.push("- Ask about a specific side effect (e.g., 'trenbolone insomnia women virilization')");
-      fallback.push("- Ask for 'women + tren + virilization' directly");
-
-      return res.json({ answer: fallback.join("\n") });
+      return res.json({ answer: fallback });
     }
 
     return res.json({ answer });
 
   } catch (err) {
-    return res.status(500).json({
-      error: "AI backend failure",
-      details: err.message
-    });
+    return res.status(500).json({ error: "AI backend failure", details: err.message });
   }
 });
 
