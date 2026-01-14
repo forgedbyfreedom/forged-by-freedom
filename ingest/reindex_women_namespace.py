@@ -135,4 +135,7 @@ def main():
 
             print(f"✅ {file.name}: +{len(vectors)} female vectors")
 
-    print(f"\n🔥 DONE — upserted {upserted} vectors to '{NAMESPACE
+    print(f"\n🔥 DONE — upserted {upserted} vectors to '{NAMESPACE}'")
+
+
+if __name__ == "__
