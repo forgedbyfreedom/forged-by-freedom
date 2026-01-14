@@ -13,14 +13,59 @@ const {
   PORT
 } = process.env;
 
-const MODEL = "nousresearch/hermes-3-llama-3.1-70b";
-const MAX_CONTEXT_CHARS = 1100;
-const MIN_SOURCES_REQUIRED = 2;
+// Use fast model for stability (Wix-safe). You can upgrade later.
+const MODEL = "nousresearch/hermes-3-llama-3.1-8b";
+
+// Retrieval tuning
+const TOP_K = 20;                 // higher recall
+const MAX_SOURCES = 3;            // show 1–3 sources
+const PER_SOURCE_LIMIT = 900;     // per quote cap
+const MAX_CONTEXT_CHARS = 4500;   // total cap (prevents empty choices)
+const MAX_TOKENS = 700;           // completion cap (prevents empty choices)
+
+/* =======================
+   HELPERS
+======================= */
+function expandQuery(q) {
+  const s = (q || "").toLowerCase();
+  if (s.includes("female") || s.includes("women") || s.includes("woman")) {
+    return `${q}. Focus terms: women female virilization androgenic side effects trenbolone`;
+  }
+  return q;
+}
+
+function pickText(md) {
+  if (!md) return "";
+  return (
+    md.text ||
+    md.quote ||
+    md.chunk ||
+    md.content ||
+    md.transcript ||
+    md.body ||
+    ""
+  ).trim();
+}
+
+function pickEpisode(md) {
+  if (!md) return "Unknown Episode";
+  return (md.episode || md.title || md.video_title || md.file || "Unknown Episode").toString().trim();
+}
+
+function pickPodcast(md) {
+  if (!md) return "Unknown Podcast";
+  return (md.podcast || md.show || md.channel || md.source || "Unknown Podcast").toString().trim();
+}
+
+function pickSpeaker(md) {
+  if (!md) return "Unknown Speaker";
+  return (md.speaker || md.host || md.author || md.show || "Unknown Speaker").toString().trim();
+}
 
 /* =======================
    HEALTH CHECK
 ======================= */
-app.get("/status", (req, res) => {
+app.get("/status", (_req, res) => {
   res.json({
     status: "ok",
     backend: "forged-by-freedom-api",
@@ -31,16 +76,16 @@ app.get("/status", (req, res) => {
 });
 
 /* =======================
-   ASK ENDPOINT (OPTION A)
+   ASK (OPTION A)
 ======================= */
 app.post("/ask", async (req, res) => {
   try {
-    const question = req.body?.question;
-    if (!question) {
-      return res.status(400).json({ error: "No question provided" });
-    }
+    const question = (req.body?.question || "").trim();
+    if (!question) return res.status(400).json({ error: "No question provided" });
 
-    /* ---------- EMBEDDING ---------- */
+    const expanded = expandQuery(question);
+
+    // 1) EMBEDD
     const embRes = await fetch("https://openrouter.ai/api/v1/embeddings", {
       method: "POST",
       headers: {
@@ -49,7 +94,7 @@ app.post("/ask", async (req, res) => {
       },
       body: JSON.stringify({
         model: "text-embedding-3-large",
-        input: question
+        input: expanded
       })
     });
 
@@ -57,7 +102,7 @@ app.post("/ask", async (req, res) => {
     const vector = emb?.data?.[0]?.embedding;
     if (!vector) throw new Error("Embedding failed");
 
-    /* ---------- PINECONE QUERY ---------- */
+    // 2) PINECONE QUERY
     const pcRes = await fetch(`${PINECONE_HOST}/query`, {
       method: "POST",
       headers: {
@@ -66,89 +111,149 @@ app.post("/ask", async (req, res) => {
       },
       body: JSON.stringify({
         vector,
-        topK: 12,
+        topK: TOP_K,
         includeMetadata: true
       })
     });
 
     const pc = await pcRes.json();
-    const matches = (pc.matches || []).filter(m => m.metadata?.text);
+    const matches = pc?.matches || [];
 
-    if (matches.length < MIN_SOURCES_REQUIRED) {
+    // 3) BUILD SOURCES + CONTEXT (ALWAYS SHOW SOURCES IF FOUND)
+    let used = 0;
+    const sourceBlocks = [];
+    const sourcesForDisplay = [];
+
+    for (let i = 0; i < matches.length && sourceBlocks.length < MAX_SOURCES; i++) {
+      const md = matches[i]?.metadata || {};
+      const raw = pickText(md);
+      if (!raw) continue;
+
+      const remaining = MAX_CONTEXT_CHARS - used;
+      if (remaining <= 0) break;
+
+      const sliceLen = Math.min(PER_SOURCE_LIMIT, remaining);
+      const quote = raw.slice(0, sliceLen);
+
+      const podcast = pickPodcast(md);
+      const episode = pickEpisode(md);
+      const speaker = pickSpeaker(md);
+
+      sourcesForDisplay.push({ podcast, episode, speaker, quote });
+
+      sourceBlocks.push(
+        `SOURCE ${sourceBlocks.length + 1}
+Podcast: ${podcast}
+Episode: ${episode}
+Speaker: ${speaker}
+
+"${quote}"`
+      );
+
+      used += quote.length;
+    }
+
+    if (sourceBlocks.length === 0) {
       return res.json({
         answer:
-          "Insufficient quoted material in the database to responsibly answer this question."
+          "No usable quoted transcript material was retrieved for this question. Try a more specific query (compound + effect + audience)."
       });
     }
 
-    /* ---------- BUILD MULTI-SOURCE CONTEXT ---------- */
-    const contextBlocks = matches.slice(0, 6).map((m, i) => {
-      const md = m.metadata;
-      return `
-SOURCE ${i + 1}
-Podcast: ${md.podcast || "Unknown"}
-Episode: ${md.episode || "Unknown"}
-Speaker: ${md.speaker || "Unknown"}
+    const context = sourceBlocks.join("\n\n");
 
-"${md.text.slice(0, MAX_CONTEXT_CHARS)}"
-`;
-    }).join("\n\n");
+    // 4) LLM (OPTION A: Multi-source synthesis, quote-required)
+    const prompt = `
+You are Coach Bryan’s evidence-based assistant.
 
-    /* ---------- LLM CALL ---------- */
-    const llmRes = await fetch(
-      "https://openrouter.ai/api/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: MODEL,
-          temperature: 0.2,
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are an evidence-based expert. You may synthesize conclusions ONLY by explicitly connecting multiple quoted sources. Every factual claim MUST be supported by at least one quote. If quotes are insufficient, say so clearly."
-            },
-            {
-              role: "user",
-              content:
-                "Use the following sources to answer the question.\n\n" +
-                contextBlocks +
-                "\n\nQuestion:\n" +
-                question
-            }
-          ]
-        })
-      }
-    );
+RULES (MANDATORY):
+- Use ONLY the SOURCES below.
+- You MAY synthesize across sources, but every factual claim MUST be supported by at least one quoted source.
+- NEVER invent quotes or metadata.
+- If the sources do not directly answer the question, say that clearly — but STILL show the best relevant quotes you have.
+
+OUTPUT FORMAT (REQUIRED):
+
+Answer:
+- 2–5 sentences (quote-supported). If insufficient, state what is missing.
+
+Sources:
+- Podcast:
+  Episode:
+  Speaker:
+  Quote: "..."
+
+(Include 1–3 sources; quotes must be verbatim from the context.)
+
+Explanation:
+- Bullet points:
+  • what the quotes establish
+  • what they do not establish
+  • how you connected sources (if you synthesized)
+
+What to ask next:
+- 1–2 refined follow-up questions
+
+SOURCES:
+${context}
+
+QUESTION:
+${question}
+`.trim();
+
+    const llmRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        temperature: 0.2,
+        max_tokens: MAX_TOKENS,
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
 
     const llm = await llmRes.json();
-    const answer = llm?.choices?.[0]?.message?.content;
+
+    // Guard against empty choices
+    const answer = (llm?.choices?.[0]?.message?.content || "").trim();
 
     if (!answer) {
-      return res.json({
-        answer:
-          "Relevant material was found, but the sources do not sufficiently support a clear conclusion."
+      // Fallback: show sources even if the model refused
+      const fallback = [
+        "Answer:",
+        "Insufficient quoted evidence in the database to answer this question directly.",
+        "",
+        "Sources:"
+      ];
+
+      sourcesForDisplay.forEach((s) => {
+        fallback.push(`- Podcast: ${s.podcast}`);
+        fallback.push(`  Episode: ${s.episode}`);
+        fallback.push(`  Speaker: ${s.speaker}`);
+        fallback.push(`  Quote: "${s.quote}"`);
       });
+
+      fallback.push("");
+      fallback.push("What to ask next:");
+      fallback.push("- Ask about a specific side effect (e.g., 'trenbolone insomnia women virilization')");
+      fallback.push("- Ask for 'women + tren + virilization' directly");
+
+      return res.json({ answer: fallback.join("\n") });
     }
 
-    res.json({ answer });
+    return res.json({ answer });
 
   } catch (err) {
-    res.status(500).json({
+    return res.status(500).json({
       error: "AI backend failure",
       details: err.message
     });
   }
 });
 
-/* =======================
-   START SERVER
-======================= */
-const SERVER_PORT = PORT || 5051;
-app.listen(SERVER_PORT, () => {
-  console.log(`[FBF API] running on port ${SERVER_PORT}`);
+app.listen(PORT || 5051, () => {
+  console.log(`[FBF API] running on port ${PORT || 5051} using ${MODEL}`);
 });
