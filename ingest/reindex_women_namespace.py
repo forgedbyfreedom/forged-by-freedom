@@ -1,128 +1,138 @@
 #!/usr/bin/env python3
-import os, re, uuid, time
+"""
+🔥 Reindex Female-Specific Steroid Content
+------------------------------------------
+• Re-embeds EXISTING transcripts
+• Targets female / virilization content
+• Writes to Pinecone namespace: women_steroids
+• Safe against OpenRouter failures
+"""
+
+import os
+import time
+import json
+import requests
 from pathlib import Path
 from pinecone import Pinecone
-import requests
 
+# =======================
+# ENV
+# =======================
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-INDEX_NAME = "forged-freedom-ai"
-NAMESPACE = "women_steroids"
+PINECONE_HOST = os.getenv("PINECONE_HOST")
 
 assert OPENROUTER_API_KEY, "OPENROUTER_API_KEY missing"
 assert PINECONE_API_KEY, "PINECONE_API_KEY missing"
+assert PINECONE_HOST, "PINECONE_HOST missing"
 
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(INDEX_NAME)
-
-REPO_ROOT = Path(__file__).resolve().parents[1]
-TRANSCRIPTS_ROOT = REPO_ROOT / "transcripts"
-
+INDEX_NAME = "forged-freedom-ai"
+NAMESPACE = "women_steroids"
 EMBED_MODEL = "text-embedding-3-large"
-BATCH = 32
-SLEEP = 0.2
 
-FEMALE_TERMS = re.compile(r"\b(women|woman|female|viril|virilization|androgen|masculin|voice|clit|irreversible)\b", re.I)
+TRANSCRIPTS_DIR = Path("transcripts")
 
-FILE_MARKER = re.compile(r"^=== FILE: (.+?) ===$", re.M)
+# =======================
+# KEYWORDS
+# =======================
+FEMALE_KEYWORDS = [
+    "women", "female", "viril", "voice", "clit",
+    "mascul", "androgen", "irreversible",
+    "fertility", "menstrual", "hair growth",
+    "tren", "trenbolone", "anavar", "primobolan"
+]
 
-def embed_batch(texts):
-  r = requests.post(
-    "https://openrouter.ai/api/v1/embeddings",
-    headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}", "Content-Type": "application/json"},
-    json={"model": EMBED_MODEL, "input": texts},
-    timeout=60
-  )
-  r.raise_for_status()
-  data = r.json()["data"]
-  return [d["embedding"] for d in data]
+# =======================
+# HELPERS
+# =======================
+def chunk_text(text, max_chars=900):
+    chunks, buf = [], ""
+    for line in text.splitlines():
+        if len(buf) + len(line) > max_chars:
+            chunks.append(buf.strip())
+            buf = ""
+        buf += line + " "
+    if buf.strip():
+        chunks.append(buf.strip())
+    return chunks
 
-def chunk_sentences(text, max_chars=900):
-  # simple sentence-ish chunking
-  parts = re.split(r"(?<=[\.\?\!])\s+", text.strip())
-  buf = ""
-  for p in parts:
-    if len(buf) + len(p) + 1 <= max_chars:
-      buf += (" " if buf else "") + p
-    else:
-      if len(buf) >= 200:
-        yield buf
-      buf = p
-  if len(buf) >= 200:
-    yield buf
 
-def extract_episode_blocks(master_text):
-  # Split by === FILE: name === markers. If none, treat entire text as one episode.
-  markers = list(FILE_MARKER.finditer(master_text))
-  if not markers:
-    yield ("Unknown Episode", master_text)
-    return
+def embed_batch(texts, retries=3):
+    for attempt in range(retries):
+        r = requests.post(
+            "https://openrouter.ai/api/v1/embeddings",
+            headers={
+                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": EMBED_MODEL,
+                "input": texts
+            },
+            timeout=60
+        )
 
-  for i, m in enumerate(markers):
-    ep = m.group(1).strip()
-    start = m.end()
-    end = markers[i+1].start() if i+1 < len(markers) else len(master_text)
-    yield (ep, master_text[start:end].strip())
-
-def main():
-  upserted = 0
-
-  for channel_dir in TRANSCRIPTS_ROOT.iterdir():
-    if not channel_dir.is_dir():
-      continue
-
-    podcast = channel_dir.name.replace("@", "")
-
-    for master_file in sorted(channel_dir.glob("master_transcript*.txt")):
-      text = master_file.read_text(encoding="utf-8", errors="ignore")
-
-      for episode, ep_text in extract_episode_blocks(text):
-        # Filter to female-related chunks only for this namespace
-        chunks = []
-        meta = []
-
-        for chunk in chunk_sentences(ep_text, max_chars=900):
-          if not FEMALE_TERMS.search(chunk):
+        try:
+            payload = r.json()
+        except Exception:
+            print("❌ Invalid JSON from OpenRouter")
+            time.sleep(2)
             continue
-          chunks.append(chunk)
-          meta.append({
-            "podcast": podcast,
-            "episode": episode,
-            "speaker": podcast,  # best available unless you have speaker extraction
-            "text": chunk,
-            "tags": ["female"]
-          })
 
-          if len(chunks) >= BATCH:
-            vecs = embed_batch(chunks)
+        if "data" in payload:
+            return [d["embedding"] for d in payload["data"]]
+
+        print("⚠️ OpenRouter error:", payload)
+        time.sleep(2)
+
+    return []
+
+
+# =======================
+# MAIN
+# =======================
+def main():
+    print("🔥 Reindexing women-focused steroid content…")
+
+    pc = Pinecone(api_key=PINECONE_API_KEY)
+    index = pc.Index(INDEX_NAME)
+
+    upserted = 0
+
+    for channel_dir in TRANSCRIPTS_DIR.iterdir():
+        if not channel_dir.is_dir():
+            continue
+
+        for file in channel_dir.glob("*.txt"):
+            text = file.read_text(errors="ignore").lower()
+
+            if not any(k in text for k in FEMALE_KEYWORDS):
+                continue
+
+            chunks = chunk_text(text)
+            embeddings = embed_batch(chunks)
+
+            if not embeddings:
+                print(f"⛔ Skipped {file.name} (embedding failure)")
+                continue
+
             vectors = []
-            for v, mdata in zip(vecs, meta):
-              vectors.append({
-                "id": str(uuid.uuid4()),
-                "values": v,
-                "metadata": mdata
-              })
+            for i, emb in enumerate(embeddings):
+                vectors.append({
+                    "id": f"{file.stem}_{i}",
+                    "values": emb,
+                    "metadata": {
+                        "source": file.name,
+                        "channel": channel_dir.name,
+                        "audience": "female",
+                        "topic": "steroids",
+                        "text": chunks[i][:1000]
+                    }
+                })
+
             index.upsert(vectors=vectors, namespace=NAMESPACE)
             upserted += len(vectors)
-            chunks, meta = [], []
-            time.sleep(SLEEP)
 
-        if chunks:
-          vecs = embed_batch(chunks)
-          vectors = []
-          for v, mdata in zip(vecs, meta):
-            vectors.append({
-              "id": str(uuid.uuid4()),
-              "values": v,
-              "metadata": mdata
-            })
-          index.upsert(vectors=vectors, namespace=NAMESPACE)
-          upserted += len(vectors)
-          time.sleep(SLEEP)
+            print(f"✅ {file.name}: +{len(vectors)} female vectors")
 
-      print(f"✅ Reindexed women namespace for: {podcast}")
-
-  print(f"\n🔥 Done. Upserted {upserted} female-focused quote chunks into namespace '{NAMESPACE}'.\n")
-
-if __name__ == "__main__":
-  main()
+    print(f"\n🔥 DONE — upserted {upserted} vectors to '{NAMESPACE
