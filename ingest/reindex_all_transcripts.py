@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-🔥 GLOBAL REINDEX — FORGED BY FREEDOM
-------------------------------------
+🔥 FORGED BY FREEDOM — GLOBAL REINDEX (HARDENED)
+-----------------------------------------------
 • Reindexes ALL transcripts
-• No redownload
-• No reinjest
-• Clean chunking
-• Clean metadata
-• One consistent Pinecone schema
+• Handles OpenRouter instability
+• Small embedding batches
+• Provider-forced routing
+• Never crashes mid-run
 """
 
 import os
@@ -35,6 +34,10 @@ INDEX_NAME = "forged-freedom-ai"
 EMBED_MODEL = "text-embedding-3-large"
 TRANSCRIPTS_DIR = Path("transcripts")
 
+# IMPORTANT: small batches
+EMBED_BATCH_SIZE = 16
+EMBED_SLEEP = 1.5
+
 # =======================
 # HELPERS
 # =======================
@@ -42,33 +45,28 @@ def stable_id(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8", errors="ignore")).hexdigest()
 
 def chunk_text(text, max_chars=800):
-    chunks = []
-    buf = ""
-
+    chunks, buf = [], ""
     for sentence in text.split("."):
         sentence = sentence.strip()
         if not sentence:
             continue
-
         if len(buf) + len(sentence) > max_chars:
             chunks.append(buf.strip())
             buf = ""
-
         buf += sentence + ". "
-
     if buf.strip():
         chunks.append(buf.strip())
-
     return chunks
 
 def infer_audience(text):
-    female_terms = ["women", "female", "girl", "viril", "menstrual", "clit", "voice"]
-    if any(t in text for t in female_terms):
-        return "female"
-    return "general"
+    female_terms = [
+        "women", "female", "viril", "menstrual",
+        "clit", "voice", "hair growth"
+    ]
+    return "female" if any(t in text for t in female_terms) else "general"
 
 def infer_topic(text):
-    if "tren" in text or "trenbolone" in text:
+    if "tren" in text:
         return "trenbolone"
     if "anavar" in text:
         return "anavar"
@@ -80,28 +78,45 @@ def infer_topic(text):
         return "peptides"
     return "general"
 
-def embed_batch(texts):
-    r = requests.post(
-        "https://openrouter.ai/api/v1/embeddings",
-        headers={
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "Content-Type": "application/json"
-        },
-        json={"model": EMBED_MODEL, "input": texts},
-        timeout=120
-    )
+def embed_texts(texts):
+    """Safe embedding call — never crashes"""
+    try:
+        r = requests.post(
+            "https://openrouter.ai/api/v1/embeddings",
+            headers={
+                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "Content-Type": "application/json",
+                # FORCE PROVIDER
+                "HTTP-Referer": "https://forgedbyfreedom.org",
+                "X-Title": "Forged By Freedom Reindex"
+            },
+            json={
+                "model": EMBED_MODEL,
+                "input": texts,
+                "provider": {
+                    "allow_fallbacks": True,
+                    "order": ["openai"]
+                }
+            },
+            timeout=120
+        )
 
-    payload = r.json()
-    if "data" not in payload:
-        raise RuntimeError(f"Embedding failure: {payload}")
+        payload = r.json()
+        if "data" not in payload:
+            print("⚠️ Embedding provider failure:", payload)
+            return []
 
-    return [d["embedding"] for d in payload["data"]]
+        return [d["embedding"] for d in payload["data"]]
+
+    except Exception as e:
+        print("⚠️ Embedding exception:", str(e))
+        return []
 
 # =======================
 # MAIN
 # =======================
 def main():
-    print("🔥 FULL GLOBAL REINDEX STARTED")
+    print("🔥 FULL GLOBAL REINDEX (HARDENED) STARTED")
 
     pc = Pinecone(api_key=PINECONE_API_KEY)
     index = pc.Index(INDEX_NAME)
@@ -118,33 +133,36 @@ def main():
             raw = file.read_text(errors="ignore").lower()
             chunks = chunk_text(raw)
 
-            if not chunks:
-                continue
+            for i in range(0, len(chunks), EMBED_BATCH_SIZE):
+                batch = chunks[i:i + EMBED_BATCH_SIZE]
+                embeddings = embed_texts(batch)
 
-            embeddings = embed_batch(chunks)
-            vectors = []
+                if not embeddings:
+                    print(f"⛔ Skipped batch {i} in {file.name}")
+                    time.sleep(EMBED_SLEEP)
+                    continue
 
-            for text, vec in zip(chunks, embeddings):
-                vectors.append({
-                    "id": stable_id(text),
-                    "values": vec,
-                    "metadata": {
-                        "channel": channel,
-                        "source": file.name,
-                        "audience": infer_audience(text),
-                        "topic": infer_topic(text),
-                        "text": text[:1000]
-                    }
-                })
+                vectors = []
+                for text, vec in zip(batch, embeddings):
+                    vectors.append({
+                        "id": stable_id(text),
+                        "values": vec,
+                        "metadata": {
+                            "channel": channel,
+                            "source": file.name,
+                            "audience": infer_audience(text),
+                            "topic": infer_topic(text),
+                            "text": text[:1000]
+                        }
+                    })
 
-            index.upsert(vectors=vectors)
-            total += len(vectors)
+                index.upsert(vectors=vectors)
+                total += len(vectors)
 
-            print(f"✅ {channel}/{file.name}: {len(vectors)} chunks")
+                print(f"✅ {channel}/{file.name} +{len(vectors)}")
+                time.sleep(EMBED_SLEEP)
 
-            time.sleep(0.3)
-
-    print(f"\n🔥 COMPLETE — {total} TOTAL VECTORS INDEXED")
+    print(f"\n🔥 REINDEX COMPLETE — {total} TOTAL VECTORS")
 
 if __name__ == "__main__":
     main()
