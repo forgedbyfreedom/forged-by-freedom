@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """
-Ask Coach Bryan – Intent-Anchored Quote Retrieval Engine
+Ask Coach Bryan – Intent-Anchored Quote Retrieval (FINAL)
 
-Key principles:
-- Quote-only (verbatim spoken transcript text)
-- Attribution required
-- Retrieval bound to QUESTION INTENT, not semantic proximity
-- No compound favoritism, no paraphrasing, no hallucination
+Design rules:
+• Verbatim transcript quotes only
+• Attribution required
+• No paraphrasing
+• No compound favoritism
+• Question intent must be satisfied by the FINAL ANSWER SET,
+  not necessarily by every individual quote
 """
 
 from __future__ import annotations
 import os, sys, json, re, hashlib
-import requests
 from typing import List, Dict, Any
+import requests
 from pinecone import Pinecone
 
 # ==========================
@@ -21,18 +23,18 @@ from pinecone import Pinecone
 
 INDEX_NAME = "forged-freedom-ai"
 TOP_K_PER_NAMESPACE = 40
-FINAL_QUOTES = 3
+MAX_QUOTES = 3
 
 NAMESPACES = [
     "thinkbig_priority",
     "anabolic_bodybuilding_priority",
     "default",
     "transcripts",
-    ""   # legacy namespace (CRITICAL)
+    ""  # legacy namespace (critical)
 ]
 
 # ==========================
-# UTILS
+# UTILITIES
 # ==========================
 
 def normalize(text: str) -> str:
@@ -41,15 +43,15 @@ def normalize(text: str) -> str:
 def hash_text(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8")).hexdigest()
 
-def first(metadata: Dict[str, Any], keys: List[str]) -> str:
+def first(md: Dict[str, Any], keys: List[str]) -> str:
     for k in keys:
-        v = metadata.get(k)
+        v = md.get(k)
         if v:
             return str(v).strip()
     return ""
 
 # ==========================
-# EMBEDDING (OpenRouter)
+# EMBEDDING
 # ==========================
 
 def embed_query(query: str) -> List[float]:
@@ -69,12 +71,11 @@ def embed_query(query: str) -> List[float]:
     return resp.json()["data"][0]["embedding"]
 
 # ==========================
-# INTENT ANCHOR EXTRACTION
+# INTENT EXTRACTION
 # ==========================
 
-def extract_required_anchors(question: str) -> Dict[str, List[str]]:
+def extract_anchors(question: str) -> Dict[str, List[str]]:
     q = normalize(question)
-
     anchors = {}
 
     if "tren" in q:
@@ -83,35 +84,35 @@ def extract_required_anchors(question: str) -> Dict[str, List[str]]:
     if any(w in q for w in ["woman", "women", "female"]):
         anchors["population"] = ["woman", "women", "female"]
 
-    if any(w in q for w in ["risk", "viril", "masculin", "side effect", "irreversible"]):
+    if any(w in q for w in ["risk", "viril", "side", "irreversible"]):
         anchors["risk"] = [
             "viril", "masculin", "androgen",
-            "voice", "clitoral", "facial hair",
-            "irreversible", "permanent"
+            "voice", "deepening", "facial hair",
+            "clitoral", "permanent", "irreversible"
         ]
 
     return anchors
 
-def satisfies_intent(text: str, anchors: Dict[str, List[str]]) -> bool:
+def anchor_hits(text: str, anchors: Dict[str, List[str]]) -> Dict[str, bool]:
     blob = normalize(text)
-    for terms in anchors.values():
-        if not any(t in blob for t in terms):
-            return False
-    return True
+    return {
+        group: any(term in blob for term in terms)
+        for group, terms in anchors.items()
+    }
 
 # ==========================
 # RETRIEVAL
 # ==========================
 
-def retrieve(question: str) -> List[Dict[str, Any]]:
-    anchors = extract_required_anchors(question)
+def retrieve_candidates(question: str) -> List[Dict[str, Any]]:
+    anchors = extract_anchors(question)
     vector = embed_query(question)
 
     pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
     idx = pc.Index(INDEX_NAME)
 
     seen = set()
-    results = []
+    candidates = []
 
     for ns in NAMESPACES:
         res = idx.query(
@@ -127,26 +128,50 @@ def retrieve(question: str) -> List[Dict[str, Any]]:
             if not text:
                 continue
 
-            text_norm = normalize(text)
-            if not satisfies_intent(text_norm, anchors):
+            hits = anchor_hits(text, anchors)
+
+            # Quote must satisfy AT LEAST ONE anchor
+            if not any(hits.values()):
                 continue
 
-            h = hash_text(text_norm)
+            norm = normalize(text)
+            h = hash_text(norm)
             if h in seen:
                 continue
             seen.add(h)
 
-            results.append({
+            candidates.append({
                 "text": text.strip(),
                 "score": m.get("score", 0),
+                "hits": hits,
                 "podcast": first(md, ["podcast", "show", "channel"]),
                 "episode": first(md, ["episode", "title"]),
                 "speaker": first(md, ["speaker", "host", "guest"]),
                 "source": first(md, ["source", "file", "path"])
             })
 
-    results.sort(key=lambda x: x["score"], reverse=True)
-    return results[:FINAL_QUOTES]
+    candidates.sort(key=lambda x: x["score"], reverse=True)
+    return candidates
+
+# ==========================
+# FINAL SELECTION (FULL INTENT COVERAGE)
+# ==========================
+
+def select_quotes(candidates: List[Dict[str, Any]],
+                  anchors: Dict[str, List[str]]) -> List[Dict[str, Any]]:
+    selected = []
+    covered = {k: False for k in anchors}
+
+    for c in candidates:
+        selected.append(c)
+        for k, v in c["hits"].items():
+            if v:
+                covered[k] = True
+
+        if all(covered.values()) or len(selected) >= MAX_QUOTES:
+            break
+
+    return selected
 
 # ==========================
 # OUTPUT
@@ -180,7 +205,10 @@ def main():
     if not question:
         raise RuntimeError("No question provided")
 
-    quotes = retrieve(question)
+    anchors = extract_anchors(question)
+    candidates = retrieve_candidates(question)
+    quotes = select_quotes(candidates, anchors)
+
     print(format_answer(quotes))
 
 if __name__ == "__main__":
