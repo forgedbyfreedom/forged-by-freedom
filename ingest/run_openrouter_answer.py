@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-Ask Coach Bryan – Intent-Anchored Quote Retrieval (Coverage-Aware)
+Ask Coach Bryan – Intent-Anchored Quote Retrieval (MANDATORY + COVERAGE)
 
-Fixes:
-- Embed query before Pinecone search
-- Query multiple namespaces (including legacy "")
-- Intent anchors are matched with regex/token boundaries (prevents "Trenoball" => "tren" false hits)
-- Candidate quotes can match PARTS of intent
-- Final selection is COVERAGE-AWARE (greedy set cover): picks quotes that add missing anchors first
-- Quote-only output with attribution fields (best-effort; metadata mapping can be tuned later)
+Rules:
+• Verbatim transcript quotes only
+• Attribution required
+• If a compound is explicitly named in the question, it is MANDATORY per quote
+• Population / risk anchors may be satisfied across the final answer set
+• No semantic drift, no compound favoritism, no paraphrasing
 """
 
 from __future__ import annotations
@@ -23,12 +22,12 @@ from typing import List, Dict, Any, Tuple
 import requests
 from pinecone import Pinecone
 
-# ==========================
+# ==========================================================
 # CONFIG
-# ==========================
+# ==========================================================
 
 INDEX_NAME = os.getenv("PINECONE_INDEX", "forged-freedom-ai")
-TOP_K_PER_NAMESPACE = int(os.getenv("FBF_TOPK_PER_NAMESPACE", "60"))
+TOP_K_PER_NAMESPACE = int(os.getenv("FBF_TOPK_PER_NAMESPACE", "80"))
 MAX_QUOTES = int(os.getenv("FBF_FINAL_QUOTES", "3"))
 
 NAMESPACES = [
@@ -36,19 +35,22 @@ NAMESPACES = [
     "anabolic_bodybuilding_priority",
     "default",
     "transcripts",
-    ""  # legacy namespace (critical)
+    ""  # legacy namespace
 ]
 
 OPENROUTER_EMBED_MODEL = os.getenv("OPENROUTER_EMBED_MODEL", "text-embedding-3-large")
 OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").rstrip("/")
 
 
-# ==========================
-# UTILITIES
-# ==========================
+# ==========================================================
+# UTILS
+# ==========================================================
 
 def normalize_ws(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
+
+def normalize(text: str) -> str:
+    return normalize_ws(text.lower())
 
 def hash_text(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8", errors="ignore")).hexdigest()
@@ -65,154 +67,135 @@ def first(md: Dict[str, Any], keys: List[str]) -> str:
 
 def compile_patterns(terms: List[str]) -> List[re.Pattern]:
     """
-    Compile robust patterns. We treat terms as fragments and enforce word-ish boundaries.
-    Example: "tren" should match "tren " or "tren." but NOT "trenoball".
+    Compile regex patterns.
+    - 'viril*' => prefix match
+    - exact tokens are word-boundary protected
     """
-    patterns: List[re.Pattern] = []
+    pats: List[re.Pattern] = []
     for t in terms:
         t = t.strip().lower()
         if not t:
             continue
 
-        # If term looks like a stem (viril, masculin), allow prefix matching at word boundary.
         if t.endswith("*"):
             stem = re.escape(t[:-1])
-            patterns.append(re.compile(rf"\b{stem}\w*\b", re.IGNORECASE))
-            continue
-
-        # Default: exact word-ish match
-        # \b doesn't work perfectly with hyphens; allow hyphen/space separation.
-        esc = re.escape(t)
-        patterns.append(re.compile(rf"(?<!\w){esc}(?!\w)", re.IGNORECASE))
-    return patterns
+            pats.append(re.compile(rf"\b{stem}\w*\b", re.IGNORECASE))
+        else:
+            esc = re.escape(t)
+            pats.append(re.compile(rf"(?<!\w){esc}(?!\w)", re.IGNORECASE))
+    return pats
 
 
-# ==========================
-# EMBEDDING (OpenRouter)
-# ==========================
+# ==========================================================
+# EMBEDDING
+# ==========================================================
 
 def embed_query(query: str) -> List[float]:
-    api_key = os.environ["OPENROUTER_API_KEY"]
-    url = f"{OPENROUTER_BASE_URL}/embeddings"
-
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    }
-
-    # Optional OpenRouter headers if you use them
-    referer = os.getenv("OPENROUTER_SITE_URL") or os.getenv("OPENROUTER_HTTP_REFERER") or os.getenv("HTTP_REFERER")
-    title = os.getenv("OPENROUTER_APP_NAME") or os.getenv("OPENROUTER_X_TITLE")
-    if referer:
-        headers["HTTP-Referer"] = referer
-    if title:
-        headers["X-Title"] = title
-
     resp = requests.post(
-        url,
-        headers=headers,
-        json={"model": OPENROUTER_EMBED_MODEL, "input": query},
-        timeout=45,
+        f"{OPENROUTER_BASE_URL}/embeddings",
+        headers={
+            "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": OPENROUTER_EMBED_MODEL,
+            "input": query
+        },
+        timeout=45
     )
     resp.raise_for_status()
-    data = resp.json()
-    emb = data["data"][0]["embedding"]
-    if not isinstance(emb, list) or not emb:
-        raise RuntimeError("OpenRouter embeddings returned empty embedding")
+    emb = resp.json()["data"][0]["embedding"]
+    if not emb:
+        raise RuntimeError("Empty embedding returned")
     return emb
 
 
-# ==========================
-# INTENT ANCHORS (Question-driven)
-# ==========================
+# ==========================================================
+# INTENT ANCHORS
+# ==========================================================
 
-def extract_anchors(question: str) -> Dict[str, List[str]]:
+def extract_anchors(question: str) -> Dict[str, Dict[str, Any]]:
     """
-    Anchors are derived from the question.
-    We use 'stem*' for prefix/stem matching (compiled via compile_patterns).
+    Returns anchor config:
+    {
+      "compound": {"terms": [...], "required": True},
+      "population": {"terms": [...], "required": False},
+      "risk": {"terms": [...], "required": False}
+    }
     """
     q = question.lower()
+    anchors: Dict[str, Dict[str, Any]] = {}
 
-    anchors: Dict[str, List[str]] = {}
-
-    # Compound
+    # Mandatory compound anchor
     if "tren" in q:
-        # Require trenbolone OR standalone tren token.
-        anchors["compound"] = ["trenbolone", "tren"]
+        anchors["compound"] = {
+            "terms": ["trenbolone", "tren"],
+            "required": True
+        }
 
-    # Population
-    if any(w in q for w in ["woman", "women", "female", "girls"]):
-        anchors["population"] = ["woman", "women", "female", "girl", "girls"]
+    # Population (coverage)
+    if any(w in q for w in ["woman", "women", "female", "girl", "girls"]):
+        anchors["population"] = {
+            "terms": ["woman", "women", "female", "girl", "girls"],
+            "required": False
+        }
 
-    # Risk / virilization
-    if any(w in q for w in ["viril", "virilization", "mascul", "androgen", "risk", "irreversible", "permanent"]):
-        anchors["risk"] = [
-            "viril*",          # viril, virilization
-            "mascul*",         # masculinize, masculinity
-            "androgen*",       # androgenic, androgenicity
-            "voice",           # voice deepening
-            "clitoral", "clit",
-            "facial hair", "beard",
-            "irreversible", "permanent",
-        ]
+    # Risk / virilization (coverage)
+    if any(w in q for w in ["viril", "mascul", "androgen", "risk", "irreversible", "permanent"]):
+        anchors["risk"] = {
+            "terms": [
+                "viril*",
+                "mascul*",
+                "androgen*",
+                "voice",
+                "clitoral", "clit",
+                "facial hair", "beard",
+                "irreversible", "permanent"
+            ],
+            "required": False
+        }
 
     return anchors
 
 
-def build_anchor_matchers(anchors: Dict[str, List[str]]) -> Dict[str, List[re.Pattern]]:
-    return {k: compile_patterns(v) for k, v in anchors.items()}
+def build_matchers(anchors: Dict[str, Dict[str, Any]]) -> Dict[str, List[re.Pattern]]:
+    return {
+        k: compile_patterns(v["terms"])
+        for k, v in anchors.items()
+    }
 
 
-def anchor_hits(text: str,
-                matchers: Dict[str, List[re.Pattern]]) -> Dict[str, bool]:
-    """
-    Returns which anchor groups are satisfied by this text.
-    """
+def anchor_hits(text: str, matchers: Dict[str, List[re.Pattern]]) -> Dict[str, bool]:
     blob = text.lower()
-    hits: Dict[str, bool] = {}
-    for group, pats in matchers.items():
-        hits[group] = any(p.search(blob) for p in pats)
-    return hits
+    return {
+        k: any(p.search(blob) for p in pats)
+        for k, pats in matchers.items()
+    }
 
 
-def reject_false_tren_hits(text: str, hits: Dict[str, bool]) -> bool:
+def reject_false_tren(text: str) -> bool:
     """
-    Prevent common false positives where 'tren' is contained inside other compound names.
-    Example: 'Trenoball' (Turinabol) shouldn't count as trenbolone.
+    Prevent Turinabol / Trenoball false positives.
     """
-    if not hits.get("compound"):
-        return False
-
-    blob = text.lower()
-
-    # If it contains "trenoball" or "treno-bol" etc, treat as NOT trenbolone.
-    if re.search(r"\btreno-?ball\b", blob) or re.search(r"\btrenoball\b", blob):
+    t = text.lower()
+    if re.search(r"\btrenoball\b", t):
         return True
-
-    # Turinabol / T-bol segments sometimes include "Trenoball" transcription errors.
-    if re.search(r"\bt-?bol\b", blob) or re.search(r"\bturinabol\b", blob):
-        # Only reject if NO explicit trenbolone mention
-        if not re.search(r"\btrenbolone\b", blob):
+    if re.search(r"\bt-?bol\b", t) or re.search(r"\bturinabol\b", t):
+        if not re.search(r"\btrenbolone\b", t):
             return True
-
     return False
 
 
-# ==========================
+# ==========================================================
 # RETRIEVAL
-# ==========================
+# ==========================================================
 
-def pinecone_index():
-    pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
-    return pc.Index(INDEX_NAME)
-
-
-def retrieve_candidates(question: str) -> Tuple[List[Dict[str, Any]], Dict[str, List[str]]]:
+def retrieve_candidates(question: str) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, Any]]]:
     anchors = extract_anchors(question)
-    matchers = build_anchor_matchers(anchors)
-
+    matchers = build_matchers(anchors)
     vector = embed_query(question)
-    idx = pinecone_index()
+
+    idx = Pinecone(api_key=os.environ["PINECONE_API_KEY"]).Index(INDEX_NAME)
 
     seen = set()
     candidates: List[Dict[str, Any]] = []
@@ -232,29 +215,35 @@ def retrieve_candidates(question: str) -> Tuple[List[Dict[str, Any]], Dict[str, 
                 continue
 
             text = normalize_ws(text)
-            text_norm = text.lower()
-
-            # Dedupe by text hash
-            h = hash_text(text_norm)
+            norm = text.lower()
+            h = hash_text(norm)
             if h in seen:
                 continue
             seen.add(h)
 
             hits = anchor_hits(text, matchers)
 
-            # Must satisfy at least ONE anchor group
+            # Enforce REQUIRED anchors per quote
+            reject = False
+            for k, cfg in anchors.items():
+                if cfg["required"] and not hits.get(k):
+                    reject = True
+                    break
+            if reject:
+                continue
+
+            # Must hit at least one anchor
             if anchors and not any(hits.values()):
                 continue
 
-            # Reject common "tren" false positives (T-bol/Trenoball)
-            if reject_false_tren_hits(text, hits):
+            # Reject false tren matches
+            if "compound" in anchors and reject_false_tren(text):
                 continue
 
             candidates.append({
                 "text": text,
                 "score": float(m.get("score") or 0.0),
                 "hits": hits,
-                "namespace": ns,
                 "podcast": first(md, ["podcast", "show", "channel", "series"]),
                 "episode": first(md, ["episode", "title", "episode_title", "video_title", "name"]),
                 "speaker": first(md, ["speaker", "host", "guest", "author"]),
@@ -262,49 +251,36 @@ def retrieve_candidates(question: str) -> Tuple[List[Dict[str, Any]], Dict[str, 
                 "source": first(md, ["source", "file", "path", "url"]),
             })
 
-    # Keep broad pool; selection will handle coverage/quality
     candidates.sort(key=lambda x: x["score"], reverse=True)
     return candidates, anchors
 
 
-# ==========================
+# ==========================================================
 # SELECTION (Coverage-aware)
-# ==========================
+# ==========================================================
 
 def select_quotes(candidates: List[Dict[str, Any]],
-                  anchors: Dict[str, List[str]],
-                  max_quotes: int) -> List[Dict[str, Any]]:
-    """
-    Greedy set cover:
-    - Prefer quotes that add NEW uncovered anchors
-    - Tie-break by vector score
-    """
+                  anchors: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+
     if not candidates:
         return []
 
-    if not anchors:
-        # No anchors detected; just return top N
-        return candidates[:max_quotes]
-
-    covered = {k: False for k in anchors.keys()}
+    covered = {k: False for k, v in anchors.items() if not v["required"]}
     selected: List[Dict[str, Any]] = []
     remaining = candidates[:]
 
-    def coverage_gain(c: Dict[str, Any]) -> int:
-        gain = 0
-        for k in covered:
-            if not covered[k] and c["hits"].get(k):
-                gain += 1
-        return gain
+    def gain(c: Dict[str, Any]) -> int:
+        return sum(
+            1 for k in covered
+            if not covered[k] and c["hits"].get(k)
+        )
 
-    while remaining and len(selected) < max_quotes:
-        # Pick candidate with best (gain, score)
+    while remaining and len(selected) < MAX_QUOTES:
         best_i = -1
         best_key = (-1, -1.0)
 
         for i, c in enumerate(remaining):
-            gain = coverage_gain(c)
-            key = (gain, c["score"])
+            key = (gain(c), c["score"])
             if key > best_key:
                 best_key = key
                 best_i = i
@@ -315,36 +291,22 @@ def select_quotes(candidates: List[Dict[str, Any]],
         chosen = remaining.pop(best_i)
         selected.append(chosen)
 
-        # update coverage
         for k in covered:
             if chosen["hits"].get(k):
                 covered[k] = True
 
-        # If full intent covered, we can stop early
         if all(covered.values()):
             break
-
-    # If we still have room and want to fill to max_quotes, append best-scoring leftovers
-    if len(selected) < max_quotes and remaining:
-        selected_ids = {hash_text(s["text"].lower()) for s in selected}
-        for c in remaining:
-            if len(selected) >= max_quotes:
-                break
-            if hash_text(c["text"].lower()) in selected_ids:
-                continue
-            selected.append(c)
 
     return selected
 
 
-# ==========================
+# ==========================================================
 # OUTPUT
-# ==========================
+# ==========================================================
 
 def format_answer(quotes: List[Dict[str, Any]]) -> str:
-    lines: List[str] = []
-    lines.append("Answer:")
-
+    lines = ["Answer:"]
     for i, q in enumerate(quotes, 1):
         lines.append(
             f'{i}) "{q["text"]}" — {q["speaker"] or "Unknown Speaker"}, {q["podcast"] or "Unknown Podcast"}'
@@ -364,9 +326,9 @@ def format_answer(quotes: List[Dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
-# ==========================
+# ==========================================================
 # MAIN
-# ==========================
+# ==========================================================
 
 def main():
     question = " ".join(sys.argv[1:]).strip()
@@ -374,8 +336,7 @@ def main():
         raise RuntimeError("No question provided")
 
     candidates, anchors = retrieve_candidates(question)
-    quotes = select_quotes(candidates, anchors, MAX_QUOTES)
-
+    quotes = select_quotes(candidates, anchors)
     print(format_answer(quotes))
 
 if __name__ == "__main__":
