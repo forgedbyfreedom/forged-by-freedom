@@ -24,18 +24,16 @@ app.use(bodyParser.json());
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pc.Index("forged-freedom-ai");
 
-// ================= RATE LIMITER =================
+// ================= RATE LIMIT =================
 const askLimiter = rateLimit({
-  windowMs: 60 * 1000,          // 1 minute window
-  max: 10,                      // 10 requests per IP per minute
+  windowMs: 60 * 1000,
+  max: 10,
   standardHeaders: true,
-  legacyHeaders: false,
-  handler: (req, res) => {
-    res.status(429).json({
-      answer: "Too many requests. Please wait a moment and try again."
-    });
-  }
+  legacyHeaders: false
 });
+
+// ================= SINGLE-FLIGHT LOCK =================
+const activeRequests = new Set();
 
 // ================= HEALTH =================
 app.get("/status", async (req, res) => {
@@ -59,8 +57,19 @@ app.get("/status", async (req, res) => {
 
 // ================= ASK =================
 app.post("/ask", askLimiter, async (req, res) => {
+  const ip = req.ip;
+
+  if (activeRequests.has(ip)) {
+    return res.status(429).json({
+      answer: "Please wait — your previous question is still processing."
+    });
+  }
+
+  activeRequests.add(ip);
+
   const { question } = req.body;
   if (!question) {
+    activeRequests.delete(ip);
     return res.status(400).json({ answer: "No question provided." });
   }
 
@@ -84,22 +93,18 @@ app.post("/ask", askLimiter, async (req, res) => {
 
     console.log("[OpenRouter]", {
       status: orResponse.status,
-      remaining: orResponse.headers.get("x-ratelimit-remaining"),
-      reset: orResponse.headers.get("x-ratelimit-reset")
+      remaining: orResponse.headers.get("x-ratelimit-remaining")
     });
 
     const payload = await orResponse.json();
 
     if (
-      !payload ||
-      !Array.isArray(payload.choices) ||
-      payload.choices.length === 0 ||
+      !payload?.choices ||
       !payload.choices[0]?.message?.content
     ) {
       console.error("[Invalid OpenRouter Payload]", payload);
       return res.status(502).json({
-        answer: "AI provider returned an invalid response.",
-        debug: payload
+        answer: "AI provider returned an invalid response."
       });
     }
 
@@ -110,9 +115,10 @@ app.post("/ask", askLimiter, async (req, res) => {
   } catch (err) {
     console.error("[Ask Error]", err);
     return res.status(500).json({
-      answer: "Server error while querying Ask Coach Bryan.",
-      error: err.message
+      answer: "Server error while querying Ask Coach Bryan."
     });
+  } finally {
+    activeRequests.delete(ip);
   }
 });
 
