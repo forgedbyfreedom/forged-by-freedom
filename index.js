@@ -72,41 +72,45 @@ async function embed(text) {
 async function searchPinecone(vector) {
   const r = await index.query({
     vector,
-    topK: 30,
+    topK: 40,
     includeMetadata: true
   });
   return r.matches || [];
 }
 
-function hasAny(text, terms) {
+/* =========================
+   TERM SCORING (NO FILTERING)
+========================= */
+function countHits(text, terms) {
   const t = text.toLowerCase();
-  return terms.some(k => t.includes(k));
+  let hits = 0;
+
+  for (const term of terms) {
+    const re = new RegExp(`\\b${term}\\b`, "i");
+    if (re.test(t)) hits++;
+  }
+
+  return hits;
 }
 
 /* =========================
-   ASK (QUOTE-ONLY)
+   ASK (QUOTE-ONLY, UNRESTRICTED)
 ========================= */
 app.post("/ask", async (req, res) => {
   const { question } = req.body;
-  if (!question) {
+
+  if (!question || !question.trim()) {
     return res.json({
       answer: "No question provided.",
       sources: []
     });
   }
 
-  const q = question.toLowerCase();
-  const needsTren = q.includes("tren");
-  const needsWomen =
-    q.includes("woman") ||
-    q.includes("women") ||
-    q.includes("female");
-
   try {
-    /* ---- EMBED ---- */
+    /* ---- EMBED QUESTION ---- */
     const vector = await embed(question);
 
-    /* ---- RETRIEVE ---- */
+    /* ---- VECTOR SEARCH ---- */
     const matches = await searchPinecone(vector);
 
     if (!matches.length) {
@@ -117,28 +121,49 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    /* ---- HARD FILTER ---- */
-    const filtered = matches.filter(m => {
-      const text = (m.metadata?.text || "").toLowerCase();
+    /* ---- DYNAMIC TERM EXTRACTION ---- */
+    const q = question.toLowerCase();
 
-      if (
-        needsTren &&
-        !hasAny(text, ["tren", "trenbolone", "19-nor"])
-      ) {
-        return false;
-      }
+    const entityTerms = [];
+    const qualifierTerms = [];
 
-      if (
-        needsWomen &&
-        !hasAny(text, ["woman", "women", "female", "viril"])
-      ) {
-        return false;
-      }
+    // Broad entity hints (NOT REQUIRED to match)
+    if (q.includes("tren")) entityTerms.push("tren", "trenbolone", "19-nor");
+    if (q.includes("eq")) entityTerms.push("eq", "boldenone");
+    if (q.includes("test")) entityTerms.push("testosterone");
+    if (q.includes("glp")) entityTerms.push("glp", "gip", "retatrutide", "semaglutide");
+    if (q.includes("gh")) entityTerms.push("growth hormone", "somatropin");
 
-      return true;
-    });
+    // Contextual qualifiers (optional)
+    if (q.includes("woman") || q.includes("female"))
+      qualifierTerms.push("woman", "women", "female", "viril");
 
-    if (!filtered.length) {
+    if (q.includes("lipid") || q.includes("cholesterol"))
+      qualifierTerms.push("ldl", "hdl", "apob", "cholesterol");
+
+    /* ---- RE-RANK (NO EXCLUSION) ---- */
+    const reranked = matches
+      .map(m => {
+        const text = m.metadata?.text || "";
+        const pineconeScore = m.score || 0;
+        const entityHits = countHits(text, entityTerms);
+        const qualifierHits = countHits(text, qualifierTerms);
+
+        const finalScore =
+          pineconeScore * 0.6 +
+          entityHits * 0.25 +
+          qualifierHits * 0.15;
+
+        return {
+          ...m,
+          finalScore
+        };
+      })
+      .sort((a, b) => b.finalScore - a.finalScore);
+
+    const strong = reranked.filter(r => r.finalScore > 0.55);
+
+    if (!strong.length) {
       return res.json({
         answer:
           "Insufficient quoted evidence in the database to answer this question directly.",
@@ -147,7 +172,7 @@ app.post("/ask", async (req, res) => {
     }
 
     /* ---- FORMAT QUOTES ---- */
-    const quotes = filtered.slice(0, 8).map((m, i) => {
+    const quotes = strong.slice(0, 8).map((m, i) => {
       const md = m.metadata || {};
       return {
         number: i + 1,
@@ -158,7 +183,6 @@ app.post("/ask", async (req, res) => {
       };
     });
 
-    /* ---- RETURN DIRECTLY (NO LLM SUMMARIZATION) ---- */
     const answerText = quotes
       .map(
         q =>
@@ -171,6 +195,7 @@ app.post("/ask", async (req, res) => {
       sources: quotes
     });
   } catch (err) {
+    console.error(err);
     res.json({
       answer: "Server error while querying Ask Coach Bryan.",
       error: err.message
@@ -184,6 +209,6 @@ app.post("/ask", async (req, res) => {
 const SERVER_PORT = PORT || 5051;
 app.listen(SERVER_PORT, () => {
   console.log(
-    `[FBF] Ask Coach Bryan running on :${SERVER_PORT} (QUOTE-ONLY MODE)`
+    `[FBF] Ask Coach Bryan running on :${SERVER_PORT} (QUOTE-ONLY, UNRESTRICTED)`
   );
 });
