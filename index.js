@@ -14,7 +14,8 @@ const {
   PORT
 } = process.env;
 
-const CHAT_MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+const CHAT_MODEL =
+  OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
 const EMBED_MODEL = "text-embedding-3-large";
 
 /* =========================
@@ -62,64 +63,74 @@ async function embed(text) {
   });
 
   const j = await r.json();
-  if (!j?.data?.[0]?.embedding) throw new Error("Embedding failed");
+  if (!j?.data?.[0]?.embedding) {
+    throw new Error("Embedding failed");
+  }
   return j.data[0].embedding;
 }
 
-async function pineconeSearch(vector) {
+async function searchPinecone(vector) {
   const r = await index.query({
     vector,
-    topK: 20,
+    topK: 30,
     includeMetadata: true
   });
   return r.matches || [];
 }
 
-function containsAny(text, terms) {
+function hasAny(text, terms) {
   const t = text.toLowerCase();
   return terms.some(k => t.includes(k));
 }
 
 /* =========================
-   ASK
+   ASK (QUOTE-ONLY)
 ========================= */
 app.post("/ask", async (req, res) => {
   const { question } = req.body;
   if (!question) {
-    return res.json({ answer: "No question provided.", sources: [] });
+    return res.json({
+      answer: "No question provided.",
+      sources: []
+    });
   }
 
   const q = question.toLowerCase();
-
-  const requiresTren = q.includes("tren");
-  const requiresWomen =
-    q.includes("woman") || q.includes("women") || q.includes("female");
+  const needsTren = q.includes("tren");
+  const needsWomen =
+    q.includes("woman") ||
+    q.includes("women") ||
+    q.includes("female");
 
   try {
-    /* ---- 1. Embed ---- */
+    /* ---- EMBED ---- */
     const vector = await embed(question);
 
-    /* ---- 2. Retrieve ---- */
-    const matches = await pineconeSearch(vector);
+    /* ---- RETRIEVE ---- */
+    const matches = await searchPinecone(vector);
 
     if (!matches.length) {
       return res.json({
-        answer: "Insufficient quoted evidence in the database to answer this question directly.",
+        answer:
+          "Insufficient quoted evidence in the database to answer this question directly.",
         sources: []
       });
     }
 
-    /* ---- 3. HARD RELEVANCE FILTER ---- */
+    /* ---- HARD FILTER ---- */
     const filtered = matches.filter(m => {
       const text = (m.metadata?.text || "").toLowerCase();
 
-      if (requiresTren && !containsAny(text, ["tren", "trenbolone", "19-nor"])) {
+      if (
+        needsTren &&
+        !hasAny(text, ["tren", "trenbolone", "19-nor"])
+      ) {
         return false;
       }
 
       if (
-        requiresWomen &&
-        !containsAny(text, ["woman", "women", "female", "viril"])
+        needsWomen &&
+        !hasAny(text, ["woman", "women", "female", "viril"])
       ) {
         return false;
       }
@@ -135,50 +146,29 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    /* ---- 4. Context ---- */
-    const context = filtered
-      .slice(0, 6)
-      .map((m, i) => {
-        const md = m.metadata || {};
-        return `[${i + 1}]
-Podcast: ${md.podcast || "Unknown Podcast"}
-Episode: ${md.episode || "Unknown Episode"}
-Speaker: ${md.speaker || "Unknown Speaker"}
-Quote: "${md.text || ""}"`;
-      })
-      .join("\n\n");
-
-    /* ---- 5. LLM ---- */
-    const llm = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://www.forgedbyfreedom.org",
-        "X-Title": "Ask Coach Bryan"
-      },
-      body: JSON.stringify({
-        model: CHAT_MODEL,
-        messages: [
-          {
-            role: "system",
-            content:
-              "Answer ONLY using the provided transcript excerpts. Do not speculate."
-          },
-          {
-            role: "user",
-            content: `QUESTION:\n${question}\n\nTRANSCRIPTS:\n${context}`
-          }
-        ]
-      })
+    /* ---- FORMAT QUOTES ---- */
+    const quotes = filtered.slice(0, 8).map((m, i) => {
+      const md = m.metadata || {};
+      return {
+        number: i + 1,
+        podcast: md.podcast || "Unknown Podcast",
+        episode: md.episode || "Unknown Episode",
+        speaker: md.speaker || "Unknown Speaker",
+        quote: md.text || ""
+      };
     });
 
-    const j = await llm.json();
-    const answer = j?.choices?.[0]?.message?.content;
+    /* ---- RETURN DIRECTLY (NO LLM SUMMARIZATION) ---- */
+    const answerText = quotes
+      .map(
+        q =>
+          `${q.number}) "${q.quote}" — ${q.speaker}, ${q.podcast}`
+      )
+      .join("\n\n");
 
     res.json({
-      answer: answer || "No answer generated.",
-      sources: filtered.map(m => m.metadata || {})
+      answer: answerText,
+      sources: quotes
     });
   } catch (err) {
     res.json({
@@ -193,5 +183,7 @@ Quote: "${md.text || ""}"`;
 ========================= */
 const SERVER_PORT = PORT || 5051;
 app.listen(SERVER_PORT, () => {
-  console.log(`[FBF] Ask Coach Bryan running on :${SERVER_PORT}`);
+  console.log(
+    `[FBF] Ask Coach Bryan running on :${SERVER_PORT} (QUOTE-ONLY MODE)`
+  );
 });
