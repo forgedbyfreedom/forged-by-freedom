@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import fetch from "node-fetch";
 import { Pinecone } from "@pinecone-database/pinecone";
 
-/* ================== ENV ================== */
+// ================= ENV =================
 const {
   OPENROUTER_API_KEY,
   OPENROUTER_MODEL,
@@ -12,126 +12,131 @@ const {
   PORT
 } = process.env;
 
-const MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+if (!OPENROUTER_API_KEY || !PINECONE_API_KEY) {
+  console.error("❌ Missing required environment variables");
+  process.exit(1);
+}
+
+const CHAT_MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
 const EMBED_MODEL = "text-embedding-3-large";
 
-/* ================== PINECONE ================== */
+// ================= PINECONE =================
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pc.Index("forged-freedom-ai");
 
-/* ================== APP ================== */
+// Namespaces to search (order matters)
+const SEARCH_NAMESPACES = [
+  "thinkbig_priority",
+  "anabolic_bodybuilding_priority",
+  "women_steroids",
+  "",
+  "transcripts",
+  "default"
+];
+
+// ================= EXPRESS =================
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-/* ================== HEALTH ================== */
+// ================= UTIL =================
+async function embedQuery(text) {
+  const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: EMBED_MODEL,
+      input: text
+    })
+  });
+
+  const json = await res.json();
+  const vector = json?.data?.[0]?.embedding;
+
+  if (!vector || !Array.isArray(vector)) {
+    throw new Error("Embedding failed — no usable vector returned.");
+  }
+
+  return vector;
+}
+
+function scoreMatch(text, question) {
+  const q = question.toLowerCase();
+  const t = text.toLowerCase();
+  let score = 0;
+
+  if (q.includes("tren") && t.includes("tren")) score += 5;
+  if (q.includes("women") && (t.includes("woman") || t.includes("female"))) score += 4;
+  if (q.includes("viril") && t.match(/viril|voice|clitor|facial hair|irreversible/)) score += 5;
+
+  // Penalize unrelated compounds
+  if (t.includes("anavar") || t.includes("oxandrolone")) score -= 5;
+  if (t.includes("tbol") || t.includes("turinabol")) score -= 5;
+
+  return score;
+}
+
+// ================= HEALTH =================
 app.get("/status", async (req, res) => {
   try {
     const stats = await index.describeIndexStats();
     res.json({
       status: "ok",
-      model: MODEL,
+      model: CHAT_MODEL,
       embedModel: EMBED_MODEL,
       index: "forged-freedom-ai",
       namespaces: Object.keys(stats.namespaces || {}),
       time: new Date().toISOString()
     });
   } catch (err) {
-    res.json({ status: "error", error: err.message });
+    res.status(500).json({ status: "error", error: err.message });
   }
 });
 
-/* ================== HELPERS ================== */
-function scoreQuote(text, question) {
-  const q = question.toLowerCase();
-  const t = text.toLowerCase();
-  let score = 0;
-
-  if (q.includes("tren") && t.includes("tren")) score += 5;
-  if ((q.includes("women") || q.includes("female")) &&
-      (t.includes("women") || t.includes("female"))) score += 5;
-
-  if (
-    q.includes("viril") &&
-    (t.includes("viril") ||
-     t.includes("voice") ||
-     t.includes("clitoral") ||
-     t.includes("irreversible"))
-  ) score += 5;
-
-  return score;
-}
-
-/* ================== ASK ================== */
+// ================= ASK =================
 app.post("/ask", async (req, res) => {
   const { question } = req.body;
-  if (!question) {
-    return res.json({ answer: "No question provided." });
-  }
+  if (!question) return res.json({ answer: "No question provided." });
 
   try {
-    /* ---------- EMBED QUESTION ---------- */
-    const embedResp = await fetch("https://openrouter.ai/api/v1/embeddings", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: EMBED_MODEL,
-        input: question
-      })
-    });
+    const vector = await embedQuery(question);
 
-    const embedData = await embedResp.json();
-    const vector =
-      embedData?.data?.[0]?.embedding ||
-      embedData?.data?.[0]?.vector;
+    let allMatches = [];
 
-    if (!vector) {
-      return res.json({
-        answer: "Embedding failed — no usable vector returned.",
-        debug: embedData
-      });
-    }
+    for (const ns of SEARCH_NAMESPACES) {
+      const results = await index
+        .namespace(ns)
+        .query({
+          vector,
+          topK: 8,
+          includeMetadata: true
+        });
 
-    /* ---------- QUERY MULTIPLE NAMESPACES ---------- */
-    const namespaces = [
-      "thinkbig_priority",
-      "anabolic_bodybuilding_priority",
-      "default",
-      "transcripts",
-      "" // legacy unnamed namespace
-    ];
-
-    let matches = [];
-
-    for (const ns of namespaces) {
-      const result = await index.query({
-        vector,
-        topK: 10,
-        includeMetadata: true,
-        namespace: ns
-      });
-      if (result?.matches?.length) {
-        matches.push(...result.matches);
+      if (results?.matches) {
+        allMatches.push(...results.matches);
       }
     }
 
-    if (!matches.length) {
-      return res.json({
-        answer: "Insufficient quoted evidence in the database to answer this question directly.",
-        sources: []
-      });
-    }
+    // Deduplicate by ID
+    const unique = Object.values(
+      allMatches.reduce((acc, m) => {
+        acc[m.id] = m;
+        return acc;
+      }, {})
+    );
 
-    /* ---------- SCORE + FILTER ---------- */
-    const scored = matches
+    // Score + filter
+    const scored = unique
       .map(m => ({
-        score: scoreQuote(m.metadata?.text || "", question),
-        meta: m.metadata
+        ...m,
+        scoreBoost: scoreMatch(m.metadata?.text || "", question)
       }))
-      .filter(x => x.score > 0);
+      .filter(m => m.scoreBoost > 0)
+      .sort((a, b) => b.scoreBoost - a.scoreBoost)
+      .slice(0, 3);
 
     if (!scored.length) {
       return res.json({
@@ -140,38 +145,31 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    scored.sort((a, b) => b.score - a.score);
-    const top = scored.slice(0, 3);
+    const answer = scored
+      .map((m, i) => {
+        const md = m.metadata || {};
+        return `${i + 1}) "${md.text}" — ${md.speaker || "Unknown Speaker"}, ${md.podcast || "Unknown Podcast"}`;
+      })
+      .join("\n\n");
 
-    /* ---------- FORMAT RESPONSE ---------- */
-    const quotes = top.map((x, i) => {
-      const m = x.meta;
-      return `${i + 1}) "${m.text}"
-— ${m.speaker || "Unknown Speaker"}, ${m.podcast || "Unknown Podcast"}`;
-    });
-
-    const sources = top.map(x => ({
-      podcast: x.meta.podcast || "Unknown Podcast",
-      episode: x.meta.episode || "Unknown Episode",
-      speaker: x.meta.speaker || "Unknown Speaker",
-      source: x.meta.source || "Unknown Source",
-      quote: x.meta.text
+    const sources = scored.map(m => ({
+      podcast: m.metadata?.podcast || "Unknown Podcast",
+      episode: m.metadata?.episode || "Unknown Episode",
+      speaker: m.metadata?.speaker || "Unknown Speaker",
+      quote: m.metadata?.text
     }));
 
-    res.json({
-      answer: quotes.join("\n\n"),
-      sources
-    });
+    res.json({ answer, sources });
 
   } catch (err) {
-    res.json({
+    res.status(500).json({
       answer: "Server error while querying Ask Coach Bryan.",
       error: err.message
     });
   }
 });
 
-/* ================== START ================== */
+// ================= START =================
 const SERVER_PORT = PORT || 5051;
 app.listen(SERVER_PORT, () => {
   console.log(`[FBF] Ask Coach Bryan running on :${SERVER_PORT}`);
