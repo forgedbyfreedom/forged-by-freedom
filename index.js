@@ -6,10 +6,10 @@ import { Pinecone } from "@pinecone-database/pinecone";
 
 /* ================= ENV ================= */
 const {
-  OPENROUTER_API_KEY,
   OPENAI_API_KEY,
-  PINECONE_API_KEY,
+  OPENROUTER_API_KEY,
   OPENROUTER_MODEL,
+  PINECONE_API_KEY,
   PORT
 } = process.env;
 
@@ -19,14 +19,14 @@ const EMBED_MODEL = "text-embedding-3-large";
 
 /* ================= PINECONE ================= */
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-const index = pc.Index("forged-freedom-ai");
+const baseIndex = pc.Index("forged-freedom-ai");
 
 /* ================= EXPRESS ================= */
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-/* ================= UTIL ================= */
+/* ================= EMBED ================= */
 async function embed(text) {
   const r = await fetch("https://api.openai.com/v1/embeddings", {
     method: "POST",
@@ -47,21 +47,22 @@ async function embed(text) {
   return j.data[0].embedding;
 }
 
+/* ================= SCORING ================= */
 function score(text, question) {
   const t = text.toLowerCase();
   const q = question.toLowerCase();
 
   let s = 0;
-  if (q.includes("tren") && t.includes("tren")) s += 5;
-  if (q.includes("women") && /(women|female)/.test(t)) s += 2;
-  if (/(viril|mascul|androgen|voice|clitor|irreversible)/.test(t)) s += 2;
+  if (q.includes("tren") && t.includes("tren")) s += 10;
+  if (/(woman|women|female)/.test(t)) s += 3;
+  if (/(viril|mascul|androgen|voice|clitor|irreversible)/.test(t)) s += 3;
 
   return s;
 }
 
 /* ================= STATUS ================= */
 app.get("/status", async (_req, res) => {
-  const stats = await index.describeIndexStats();
+  const stats = await baseIndex.describeIndexStats();
   res.json({
     status: "ok",
     model: CHAT_MODEL,
@@ -94,16 +95,16 @@ app.post("/ask", async (req, res) => {
     let matches = [];
 
     for (const ns of namespaces) {
-      const r = await index.query({
+      const idx = ns ? baseIndex.namespace(ns) : baseIndex;
+      const r = await idx.query({
         vector,
         topK: 15,
-        includeMetadata: true,
-        namespace: ns || undefined
+        includeMetadata: true
       });
       if (r?.matches) matches.push(...r.matches);
     }
 
-    /* ==== DEDUPE ==== */
+    /* ===== DEDUPE ===== */
     const seen = new Set();
     matches = matches.filter(m => {
       const key = m.id || m.metadata?.text;
@@ -112,7 +113,7 @@ app.post("/ask", async (req, res) => {
       return true;
     });
 
-    /* ==== HARD COMPOUND GATE ==== */
+    /* ===== HARD COMPOUND GATE ===== */
     const qLower = question.toLowerCase();
     if (qLower.includes("tren")) {
       matches = matches.filter(m =>
@@ -128,8 +129,8 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    /* ==== SCORE ==== */
-    const scored = matches
+    /* ===== SCORE + SELECT ===== */
+    const top = matches
       .map(m => ({
         ...m,
         relevance: score(m.metadata?.text || "", question)
@@ -137,14 +138,14 @@ app.post("/ask", async (req, res) => {
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, 3);
 
-    const answer = scored
+    const answer = top
       .map(
         (m, i) =>
-          `${i + 1}) "${m.metadata.text}" — ${m.metadata.speaker || "Unknown"}, ${m.metadata.podcast || "Unknown Podcast"}`
+          `${i + 1}) "${m.metadata.text}" — ${m.metadata.speaker || "Unknown Speaker"}, ${m.metadata.podcast || "Unknown Podcast"}`
       )
       .join("\n\n");
 
-    const sources = scored.map(m => ({
+    const sources = top.map(m => ({
       podcast: m.metadata.podcast || "Unknown Podcast",
       episode: m.metadata.episode || "Unknown Episode",
       speaker: m.metadata.speaker || "Unknown Speaker",
