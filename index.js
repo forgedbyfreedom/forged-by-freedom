@@ -4,47 +4,34 @@ import bodyParser from "body-parser";
 import fetch from "node-fetch";
 import { Pinecone } from "@pinecone-database/pinecone";
 
-// ================= ENV =================
+/* ================= ENV ================= */
 const {
   OPENROUTER_API_KEY,
-  OPENROUTER_MODEL,
+  OPENAI_API_KEY,
   PINECONE_API_KEY,
+  OPENROUTER_MODEL,
   PORT
 } = process.env;
 
-if (!OPENROUTER_API_KEY || !PINECONE_API_KEY) {
-  console.error("❌ Missing required environment variables");
-  process.exit(1);
-}
-
-const CHAT_MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+const CHAT_MODEL =
+  OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
 const EMBED_MODEL = "text-embedding-3-large";
 
-// ================= PINECONE =================
+/* ================= PINECONE ================= */
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pc.Index("forged-freedom-ai");
 
-// Namespaces to search (order matters)
-const SEARCH_NAMESPACES = [
-  "thinkbig_priority",
-  "anabolic_bodybuilding_priority",
-  "women_steroids",
-  "",
-  "transcripts",
-  "default"
-];
-
-// ================= EXPRESS =================
+/* ================= EXPRESS ================= */
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// ================= UTIL =================
-async function embedQuery(text) {
-  const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
+/* ================= UTIL ================= */
+async function embed(text) {
+  const r = await fetch("https://api.openai.com/v1/embeddings", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
@@ -53,124 +40,129 @@ async function embedQuery(text) {
     })
   });
 
-  const json = await res.json();
-  const vector = json?.data?.[0]?.embedding;
-
-  if (!vector || !Array.isArray(vector)) {
-    throw new Error("Embedding failed — no usable vector returned.");
+  const j = await r.json();
+  if (!j?.data?.[0]?.embedding) {
+    throw new Error("Embedding failed");
   }
-
-  return vector;
+  return j.data[0].embedding;
 }
 
-function scoreMatch(text, question) {
-  const q = question.toLowerCase();
+function score(text, question) {
   const t = text.toLowerCase();
-  let score = 0;
+  const q = question.toLowerCase();
 
-  if (q.includes("tren") && t.includes("tren")) score += 5;
-  if (q.includes("women") && (t.includes("woman") || t.includes("female"))) score += 4;
-  if (q.includes("viril") && t.match(/viril|voice|clitor|facial hair|irreversible/)) score += 5;
+  let s = 0;
+  if (q.includes("tren") && t.includes("tren")) s += 5;
+  if (q.includes("women") && /(women|female)/.test(t)) s += 2;
+  if (/(viril|mascul|androgen|voice|clitor|irreversible)/.test(t)) s += 2;
 
-  // Penalize unrelated compounds
-  if (t.includes("anavar") || t.includes("oxandrolone")) score -= 5;
-  if (t.includes("tbol") || t.includes("turinabol")) score -= 5;
-
-  return score;
+  return s;
 }
 
-// ================= HEALTH =================
-app.get("/status", async (req, res) => {
-  try {
-    const stats = await index.describeIndexStats();
-    res.json({
-      status: "ok",
-      model: CHAT_MODEL,
-      embedModel: EMBED_MODEL,
-      index: "forged-freedom-ai",
-      namespaces: Object.keys(stats.namespaces || {}),
-      time: new Date().toISOString()
-    });
-  } catch (err) {
-    res.status(500).json({ status: "error", error: err.message });
-  }
+/* ================= STATUS ================= */
+app.get("/status", async (_req, res) => {
+  const stats = await index.describeIndexStats();
+  res.json({
+    status: "ok",
+    model: CHAT_MODEL,
+    embedModel: EMBED_MODEL,
+    index: "forged-freedom-ai",
+    namespaces: Object.keys(stats.namespaces || {}),
+    time: new Date().toISOString()
+  });
 });
 
-// ================= ASK =================
+/* ================= ASK ================= */
 app.post("/ask", async (req, res) => {
   const { question } = req.body;
-  if (!question) return res.json({ answer: "No question provided." });
+  if (!question) {
+    return res.json({ answer: "No question provided." });
+  }
 
   try {
-    const vector = await embedQuery(question);
+    const vector = await embed(question);
 
-    let allMatches = [];
+    const namespaces = [
+      "",
+      "default",
+      "transcripts",
+      "thinkbig_priority",
+      "anabolic_bodybuilding_priority",
+      "women_steroids"
+    ];
 
-    for (const ns of SEARCH_NAMESPACES) {
-      const results = await index
-        .namespace(ns)
-        .query({
-          vector,
-          topK: 8,
-          includeMetadata: true
-        });
+    let matches = [];
 
-      if (results?.matches) {
-        allMatches.push(...results.matches);
-      }
+    for (const ns of namespaces) {
+      const r = await index.query({
+        vector,
+        topK: 15,
+        includeMetadata: true,
+        namespace: ns || undefined
+      });
+      if (r?.matches) matches.push(...r.matches);
     }
 
-    // Deduplicate by ID
-    const unique = Object.values(
-      allMatches.reduce((acc, m) => {
-        acc[m.id] = m;
-        return acc;
-      }, {})
-    );
+    /* ==== DEDUPE ==== */
+    const seen = new Set();
+    matches = matches.filter(m => {
+      const key = m.id || m.metadata?.text;
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
 
-    // Score + filter
-    const scored = unique
-      .map(m => ({
-        ...m,
-        scoreBoost: scoreMatch(m.metadata?.text || "", question)
-      }))
-      .filter(m => m.scoreBoost > 0)
-      .sort((a, b) => b.scoreBoost - a.scoreBoost)
-      .slice(0, 3);
+    /* ==== HARD COMPOUND GATE ==== */
+    const qLower = question.toLowerCase();
+    if (qLower.includes("tren")) {
+      matches = matches.filter(m =>
+        (m.metadata?.text || "").toLowerCase().includes("tren")
+      );
+    }
 
-    if (!scored.length) {
+    if (matches.length === 0) {
       return res.json({
-        answer: "Insufficient quoted evidence in the database to answer this question directly.",
+        answer:
+          "Insufficient quoted evidence in the database to answer this question directly.",
         sources: []
       });
     }
 
+    /* ==== SCORE ==== */
+    const scored = matches
+      .map(m => ({
+        ...m,
+        relevance: score(m.metadata?.text || "", question)
+      }))
+      .sort((a, b) => b.relevance - a.relevance)
+      .slice(0, 3);
+
     const answer = scored
-      .map((m, i) => {
-        const md = m.metadata || {};
-        return `${i + 1}) "${md.text}" — ${md.speaker || "Unknown Speaker"}, ${md.podcast || "Unknown Podcast"}`;
-      })
+      .map(
+        (m, i) =>
+          `${i + 1}) "${m.metadata.text}" — ${m.metadata.speaker || "Unknown"}, ${m.metadata.podcast || "Unknown Podcast"}`
+      )
       .join("\n\n");
 
     const sources = scored.map(m => ({
-      podcast: m.metadata?.podcast || "Unknown Podcast",
-      episode: m.metadata?.episode || "Unknown Episode",
-      speaker: m.metadata?.speaker || "Unknown Speaker",
-      quote: m.metadata?.text
+      podcast: m.metadata.podcast || "Unknown Podcast",
+      episode: m.metadata.episode || "Unknown Episode",
+      speaker: m.metadata.speaker || "Unknown Speaker",
+      quote: m.metadata.text
     }));
 
     res.json({ answer, sources });
 
   } catch (err) {
-    res.status(500).json({
+    res.json({
       answer: "Server error while querying Ask Coach Bryan.",
       error: err.message
     });
   }
 });
 
-// ================= START =================
-const SERVER_PORT = PORT || 5051;
-app.listen(SERVER_PORT, () => {
-  console.log(`[FBF] Ask Coach Bryan running on :${SERVER_PORT}`);
+/* ================= START ================= */
+const serverPort = PORT || 5051;
+app.listen(serverPort, () => {
+  console.log(`[FBF] Ask Coach Bryan running on :${serverPort}`);
 });
