@@ -7,15 +7,14 @@ import { Pinecone } from "@pinecone-database/pinecone";
 /* ================= ENV ================= */
 const {
   OPENAI_API_KEY,
-  OPENROUTER_API_KEY,
-  OPENROUTER_MODEL,
   PINECONE_API_KEY,
+  OPENROUTER_MODEL,
   PORT
 } = process.env;
 
+const EMBED_MODEL = "text-embedding-3-large";
 const CHAT_MODEL =
   OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
-const EMBED_MODEL = "text-embedding-3-large";
 
 /* ================= PINECONE ================= */
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
@@ -48,13 +47,12 @@ async function embed(text) {
 }
 
 /* ================= SCORING ================= */
-function score(text, question) {
+function score(text) {
   const t = text.toLowerCase();
-  const q = question.toLowerCase();
-
   let s = 0;
-  if (q.includes("tren") && t.includes("tren")) s += 10;
-  if (/(woman|women|female)/.test(t)) s += 3;
+
+  if (/\btren(bolone)?\b/.test(t)) s += 10;
+  if (/\b(woman|women|female)\b/.test(t)) s += 3;
   if (/(viril|mascul|androgen|voice|clitor|irreversible)/.test(t)) s += 3;
 
   return s;
@@ -115,9 +113,11 @@ app.post("/ask", async (req, res) => {
 
     /* ===== HARD COMPOUND GATE ===== */
     const qLower = question.toLowerCase();
-    if (qLower.includes("tren")) {
+    if (/\btren(bolone)?\b/.test(qLower)) {
       matches = matches.filter(m =>
-        (m.metadata?.text || "").toLowerCase().includes("tren")
+        /\btren(bolone)?\b/.test(
+          (m.metadata?.text || "").toLowerCase()
+        )
       );
     }
 
@@ -133,7 +133,7 @@ app.post("/ask", async (req, res) => {
     const top = matches
       .map(m => ({
         ...m,
-        relevance: score(m.metadata?.text || "", question)
+        relevance: score(m.metadata?.text || "")
       }))
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, 3);
