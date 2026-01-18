@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import fetch from "node-fetch";
+import rateLimit from "express-rate-limit";
 import { Pinecone } from "@pinecone-database/pinecone";
 
 // ================= ENV =================
@@ -22,6 +23,19 @@ app.use(bodyParser.json());
 
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pc.Index("forged-freedom-ai");
+
+// ================= RATE LIMITER =================
+const askLimiter = rateLimit({
+  windowMs: 60 * 1000,          // 1 minute window
+  max: 10,                      // 10 requests per IP per minute
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: (req, res) => {
+    res.status(429).json({
+      answer: "Too many requests. Please wait a moment and try again."
+    });
+  }
+});
 
 // ================= HEALTH =================
 app.get("/status", async (req, res) => {
@@ -44,14 +58,13 @@ app.get("/status", async (req, res) => {
 });
 
 // ================= ASK =================
-app.post("/ask", async (req, res) => {
+app.post("/ask", askLimiter, async (req, res) => {
   const { question } = req.body;
   if (!question) {
     return res.status(400).json({ answer: "No question provided." });
   }
 
   try {
-    // ---------- OPENROUTER CALL ----------
     const orResponse = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
@@ -69,7 +82,6 @@ app.post("/ask", async (req, res) => {
       }
     );
 
-    // ---------- LOG STATUS ----------
     console.log("[OpenRouter]", {
       status: orResponse.status,
       remaining: orResponse.headers.get("x-ratelimit-remaining"),
@@ -78,14 +90,13 @@ app.post("/ask", async (req, res) => {
 
     const payload = await orResponse.json();
 
-    // ---------- HARD VALIDATION ----------
     if (
       !payload ||
       !Array.isArray(payload.choices) ||
       payload.choices.length === 0 ||
       !payload.choices[0]?.message?.content
     ) {
-      console.error("[OpenRouter Invalid Payload]", payload);
+      console.error("[Invalid OpenRouter Payload]", payload);
       return res.status(502).json({
         answer: "AI provider returned an invalid response.",
         debug: payload
