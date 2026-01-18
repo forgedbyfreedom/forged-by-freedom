@@ -4,84 +4,77 @@ import bodyParser from "body-parser";
 import fetch from "node-fetch";
 import { Pinecone } from "@pinecone-database/pinecone";
 
-/* =========================
-   ENV
-========================= */
+/* ================== ENV ================== */
 const {
   OPENROUTER_API_KEY,
+  OPENROUTER_MODEL,
   PINECONE_API_KEY,
   PORT
 } = process.env;
 
-if (!OPENROUTER_API_KEY || !PINECONE_API_KEY) {
-  console.error("❌ Missing OPENROUTER_API_KEY or PINECONE_API_KEY");
-  process.exit(1);
-}
+const MODEL = OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+const EMBED_MODEL = "text-embedding-3-large";
 
-const INDEX_NAME = "forged-freedom-ai";
-const EMBED_MODEL = "openai/text-embedding-3-large";
-
-/* =========================
-   PINECONE
-========================= */
+/* ================== PINECONE ================== */
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-const index = pc.Index(INDEX_NAME);
+const index = pc.Index("forged-freedom-ai");
 
-/* =========================
-   EXPRESS
-========================= */
+/* ================== APP ================== */
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-/* =========================
-   HEALTH
-========================= */
+/* ================== HEALTH ================== */
 app.get("/status", async (req, res) => {
   try {
     const stats = await index.describeIndexStats();
     res.json({
       status: "ok",
-      index: INDEX_NAME,
+      model: MODEL,
+      embedModel: EMBED_MODEL,
+      index: "forged-freedom-ai",
       namespaces: Object.keys(stats.namespaces || {}),
       time: new Date().toISOString()
     });
   } catch (err) {
-    res.status(500).json({
-      status: "error",
-      error: err.message
-    });
+    res.json({ status: "error", error: err.message });
   }
 });
 
-/* =========================
-   HELPERS
-========================= */
-const normalize = (t = "") => t.toLowerCase();
+/* ================== HELPERS ================== */
+function scoreQuote(text, question) {
+  const q = question.toLowerCase();
+  const t = text.toLowerCase();
+  let score = 0;
 
-const containsAllAnchors = (text, anchors) => {
-  const t = normalize(text);
-  return anchors.every(a => t.includes(a));
-};
+  if (q.includes("tren") && t.includes("tren")) score += 5;
+  if ((q.includes("women") || q.includes("female")) &&
+      (t.includes("women") || t.includes("female"))) score += 5;
 
-/* =========================
-   ASK COACH BRYAN
-========================= */
+  if (
+    q.includes("viril") &&
+    (t.includes("viril") ||
+     t.includes("voice") ||
+     t.includes("clitoral") ||
+     t.includes("irreversible"))
+  ) score += 5;
+
+  return score;
+}
+
+/* ================== ASK ================== */
 app.post("/ask", async (req, res) => {
   const { question } = req.body;
-
   if (!question) {
-    return res.json({ answer: "No question provided.", sources: [] });
+    return res.json({ answer: "No question provided." });
   }
 
   try {
-    /* ---------- 1. EMBED QUERY ---------- */
+    /* ---------- EMBED QUESTION ---------- */
     const embedResp = await fetch("https://openrouter.ai/api/v1/embeddings", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-        "HTTP-Referer": "https://www.forgedbyfreedom.org",
-        "X-Title": "Ask Coach Bryan",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -91,118 +84,94 @@ app.post("/ask", async (req, res) => {
     });
 
     const embedData = await embedResp.json();
+    const vector =
+      embedData?.data?.[0]?.embedding ||
+      embedData?.data?.[0]?.vector;
 
-    if (!embedData?.data?.length) {
+    if (!vector) {
       return res.json({
-        answer: "Embedding failed — no vector returned.",
+        answer: "Embedding failed — no usable vector returned.",
         debug: embedData
       });
     }
 
-    const queryVector = embedData.data[0].embedding;
-
-    /* ---------- 2. BUILD REQUIRED RELEVANCE ANCHORS ---------- */
-    const q = normalize(question);
-    const requiredAnchors = [];
-
-    if (q.includes("tren")) requiredAnchors.push("tren");
-
-    if (q.includes("woman") || q.includes("women") || q.includes("female")) {
-      requiredAnchors.push("women");
-    }
-
-    if (
-      q.includes("viril") ||
-      q.includes("mascul") ||
-      q.includes("androgen") ||
-      q.includes("voice") ||
-      q.includes("clitor")
-    ) {
-      requiredAnchors.push("viril");
-    }
-
-    /* ---------- 3. QUERY MULTIPLE NAMESPACES ---------- */
+    /* ---------- QUERY MULTIPLE NAMESPACES ---------- */
     const namespaces = [
-      "",
-      "default",
-      "transcripts",
       "thinkbig_priority",
       "anabolic_bodybuilding_priority",
-      "women_steroids"
+      "default",
+      "transcripts",
+      "" // legacy unnamed namespace
     ];
 
-    let allMatches = [];
+    let matches = [];
 
     for (const ns of namespaces) {
       const result = await index.query({
-        vector: queryVector,
-        topK: 15,
+        vector,
+        topK: 10,
         includeMetadata: true,
-        namespace: ns || undefined
+        namespace: ns
       });
-
       if (result?.matches?.length) {
-        allMatches.push(...result.matches);
+        matches.push(...result.matches);
       }
     }
 
-    /* ---------- 4. HARD FILTER BY RELEVANCE ---------- */
-    const relevant = allMatches.filter(m => {
-      const text = m.metadata?.text || "";
-      return containsAllAnchors(text, requiredAnchors);
-    });
-
-    if (!relevant.length) {
+    if (!matches.length) {
       return res.json({
-        answer:
-          "No verbatim transcript quotes directly addressing this question were found.",
+        answer: "Insufficient quoted evidence in the database to answer this question directly.",
         sources: []
       });
     }
 
-    /* ---------- 5. DEDUPE + SELECT TOP QUOTES ---------- */
-    const seen = new Set();
-    const selected = [];
+    /* ---------- SCORE + FILTER ---------- */
+    const scored = matches
+      .map(m => ({
+        score: scoreQuote(m.metadata?.text || "", question),
+        meta: m.metadata
+      }))
+      .filter(x => x.score > 0);
 
-    for (const m of relevant) {
-      const text = m.metadata.text;
-      if (!seen.has(text)) {
-        seen.add(text);
-        selected.push(m);
-      }
-      if (selected.length === 3) break;
+    if (!scored.length) {
+      return res.json({
+        answer: "Insufficient quoted evidence in the database to answer this question directly.",
+        sources: []
+      });
     }
 
-    /* ---------- 6. FORMAT RESPONSE ---------- */
-    const formatted = selected.map((m, i) => ({
-      id: i + 1,
-      quote: m.metadata.text,
-      speaker: m.metadata.speaker || "Unknown Speaker",
-      podcast: m.metadata.podcast || "Unknown Podcast",
-      source: m.metadata.source || "Transcript"
+    scored.sort((a, b) => b.score - a.score);
+    const top = scored.slice(0, 3);
+
+    /* ---------- FORMAT RESPONSE ---------- */
+    const quotes = top.map((x, i) => {
+      const m = x.meta;
+      return `${i + 1}) "${m.text}"
+— ${m.speaker || "Unknown Speaker"}, ${m.podcast || "Unknown Podcast"}`;
+    });
+
+    const sources = top.map(x => ({
+      podcast: x.meta.podcast || "Unknown Podcast",
+      episode: x.meta.episode || "Unknown Episode",
+      speaker: x.meta.speaker || "Unknown Speaker",
+      source: x.meta.source || "Unknown Source",
+      quote: x.meta.text
     }));
 
     res.json({
-      answer: formatted
-        .map(
-          q =>
-            `${q.id}) "${q.quote}" — ${q.speaker}, ${q.podcast}`
-        )
-        .join("\n\n"),
-      sources: formatted
+      answer: quotes.join("\n\n"),
+      sources
     });
 
   } catch (err) {
-    res.status(500).json({
+    res.json({
       answer: "Server error while querying Ask Coach Bryan.",
       error: err.message
     });
   }
 });
 
-/* =========================
-   START
-========================= */
+/* ================== START ================== */
 const SERVER_PORT = PORT || 5051;
 app.listen(SERVER_PORT, () => {
   console.log(`[FBF] Ask Coach Bryan running on :${SERVER_PORT}`);
