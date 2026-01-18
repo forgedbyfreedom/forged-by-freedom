@@ -78,13 +78,24 @@ async function searchPinecone(vector) {
   return r.matches || [];
 }
 
+function extractText(md = {}) {
+  return (
+    md.text ||
+    md.chunk ||
+    md.content ||
+    md.transcript ||
+    md.body ||
+    ""
+  );
+}
+
 /* =========================
-   ASK — QUOTE-ONLY, UNRESTRICTED
+   ASK (QUOTE-ONLY, UNRESTRICTED)
 ========================= */
 app.post("/ask", async (req, res) => {
   const { question } = req.body;
 
-  if (!question || typeof question !== "string") {
+  if (!question) {
     return res.json({
       answer: "No question provided.",
       sources: []
@@ -92,10 +103,7 @@ app.post("/ask", async (req, res) => {
   }
 
   try {
-    /* ---- EMBED ---- */
     const vector = await embed(question);
-
-    /* ---- RETRIEVE ---- */
     const matches = await searchPinecone(vector);
 
     if (!matches.length) {
@@ -106,21 +114,33 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    /* ---- FORMAT QUOTES (NO FILTERING) ---- */
-    const quotes = matches.slice(0, 8).map((m, i) => {
-      const md = m.metadata || {};
-      return {
-        number: i + 1,
-        source: md.source || "Unknown Source",
-        channel: md.channel || "Unknown Channel",
-        text: md.text || ""
-      };
-    });
+    const quotes = matches
+      .map(m => {
+        const md = m.metadata || {};
+        const text = extractText(md).trim();
+        if (!text) return null;
+
+        return {
+          channel: md.channel || "unknown",
+          source: md.source || "unknown",
+          text
+        };
+      })
+      .filter(Boolean)
+      .slice(0, 8);
+
+    if (!quotes.length) {
+      return res.json({
+        answer:
+          "Relevant sources were found, but no usable transcript text was available.",
+        sources: []
+      });
+    }
 
     const answerText = quotes
       .map(
-        q =>
-          `${q.number}) "${q.text}" — ${q.channel}`
+        (q, i) =>
+          `${i + 1}) "${q.text}" — ${q.channel}`
       )
       .join("\n\n");
 
@@ -130,11 +150,9 @@ app.post("/ask", async (req, res) => {
     });
 
   } catch (err) {
-    console.error("[ASK ERROR]", err);
     res.json({
       answer: "Server error while querying Ask Coach Bryan.",
-      error: err.message,
-      sources: []
+      error: err.message
     });
   }
 });
