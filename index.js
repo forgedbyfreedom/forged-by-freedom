@@ -34,25 +34,21 @@ app.use(bodyParser.json());
    STATUS
 ========================= */
 app.get("/status", async (_req, res) => {
-  try {
-    const stats = await index.describeIndexStats();
-    res.json({
-      status: "ok",
-      model: CHAT_MODEL,
-      embedModel: EMBED_MODEL,
-      index: "forged-freedom-ai",
-      namespaces: Object.keys(stats.namespaces || {}),
-      time: new Date().toISOString()
-    });
-  } catch (err) {
-    res.json({ status: "error", error: err.message });
-  }
+  const stats = await index.describeIndexStats();
+  res.json({
+    status: "ok",
+    model: CHAT_MODEL,
+    embedModel: EMBED_MODEL,
+    index: "forged-freedom-ai",
+    namespaces: Object.keys(stats.namespaces || {}),
+    time: new Date().toISOString()
+  });
 });
 
 /* =========================
    HELPERS
 ========================= */
-async function embedQuery(text) {
+async function embed(text) {
   const r = await fetch("https://openrouter.ai/api/v1/embeddings", {
     method: "POST",
     headers: {
@@ -66,20 +62,22 @@ async function embedQuery(text) {
   });
 
   const j = await r.json();
-  if (!j?.data?.[0]?.embedding) {
-    throw new Error("Embedding failed");
-  }
+  if (!j?.data?.[0]?.embedding) throw new Error("Embedding failed");
   return j.data[0].embedding;
 }
 
-async function queryPinecone(vector) {
-  const results = await index.query({
+async function pineconeSearch(vector) {
+  const r = await index.query({
     vector,
-    topK: 12,
+    topK: 20,
     includeMetadata: true
   });
+  return r.matches || [];
+}
 
-  return results.matches || [];
+function containsAny(text, terms) {
+  const t = text.toLowerCase();
+  return terms.some(k => t.includes(k));
 }
 
 /* =========================
@@ -91,12 +89,18 @@ app.post("/ask", async (req, res) => {
     return res.json({ answer: "No question provided.", sources: [] });
   }
 
-  try {
-    /* ---- 1. Embed question ---- */
-    const vector = await embedQuery(question);
+  const q = question.toLowerCase();
 
-    /* ---- 2. Query Pinecone ---- */
-    const matches = await queryPinecone(vector);
+  const requiresTren = q.includes("tren");
+  const requiresWomen =
+    q.includes("woman") || q.includes("women") || q.includes("female");
+
+  try {
+    /* ---- 1. Embed ---- */
+    const vector = await embed(question);
+
+    /* ---- 2. Retrieve ---- */
+    const matches = await pineconeSearch(vector);
 
     if (!matches.length) {
       return res.json({
@@ -105,8 +109,35 @@ app.post("/ask", async (req, res) => {
       });
     }
 
-    /* ---- 3. Build context ---- */
-    const context = matches
+    /* ---- 3. HARD RELEVANCE FILTER ---- */
+    const filtered = matches.filter(m => {
+      const text = (m.metadata?.text || "").toLowerCase();
+
+      if (requiresTren && !containsAny(text, ["tren", "trenbolone", "19-nor"])) {
+        return false;
+      }
+
+      if (
+        requiresWomen &&
+        !containsAny(text, ["woman", "women", "female", "viril"])
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+
+    if (!filtered.length) {
+      return res.json({
+        answer:
+          "Insufficient quoted evidence in the database to answer this question directly.",
+        sources: []
+      });
+    }
+
+    /* ---- 4. Context ---- */
+    const context = filtered
+      .slice(0, 6)
       .map((m, i) => {
         const md = m.metadata || {};
         return `[${i + 1}]
@@ -117,7 +148,7 @@ Quote: "${md.text || ""}"`;
       })
       .join("\n\n");
 
-    /* ---- 4. Ask LLM with context ---- */
+    /* ---- 5. LLM ---- */
     const llm = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -132,7 +163,7 @@ Quote: "${md.text || ""}"`;
           {
             role: "system",
             content:
-              "Answer using the provided transcript excerpts. Cite quotes directly when relevant."
+              "Answer ONLY using the provided transcript excerpts. Do not speculate."
           },
           {
             role: "user",
@@ -142,12 +173,12 @@ Quote: "${md.text || ""}"`;
       })
     });
 
-    const llmJson = await llm.json();
-    const answer = llmJson?.choices?.[0]?.message?.content;
+    const j = await llm.json();
+    const answer = j?.choices?.[0]?.message?.content;
 
     res.json({
       answer: answer || "No answer generated.",
-      sources: matches.map(m => m.metadata || {})
+      sources: filtered.map(m => m.metadata || {})
     });
   } catch (err) {
     res.json({
