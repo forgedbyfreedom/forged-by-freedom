@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import fetch from "node-fetch";
-import rateLimit from "express-rate-limit";
 import { Pinecone } from "@pinecone-database/pinecone";
 
 // ================= ENV =================
@@ -24,13 +23,11 @@ app.use(bodyParser.json());
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pc.Index("forged-freedom-ai");
 
-// ================= RATE LIMIT =================
-const askLimiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: 10,
-  standardHeaders: true,
-  legacyHeaders: false
-});
+// ================= SIMPLE RATE LIMIT =================
+// max 10 requests per IP per minute
+const RATE_LIMIT_WINDOW = 60_000;
+const RATE_LIMIT_MAX = 10;
+const rateBuckets = new Map();
 
 // ================= SINGLE-FLIGHT LOCK =================
 const activeRequests = new Set();
@@ -56,9 +53,24 @@ app.get("/status", async (req, res) => {
 });
 
 // ================= ASK =================
-app.post("/ask", askLimiter, async (req, res) => {
+app.post("/ask", async (req, res) => {
   const ip = req.ip;
 
+  // ----- RATE LIMIT -----
+  const now = Date.now();
+  const bucket = rateBuckets.get(ip) || [];
+  const fresh = bucket.filter(ts => now - ts < RATE_LIMIT_WINDOW);
+
+  if (fresh.length >= RATE_LIMIT_MAX) {
+    return res.status(429).json({
+      answer: "Too many requests. Please wait a moment and try again."
+    });
+  }
+
+  fresh.push(now);
+  rateBuckets.set(ip, fresh);
+
+  // ----- SINGLE FLIGHT -----
   if (activeRequests.has(ip)) {
     return res.status(429).json({
       answer: "Please wait — your previous question is still processing."
@@ -67,14 +79,14 @@ app.post("/ask", askLimiter, async (req, res) => {
 
   activeRequests.add(ip);
 
-  const { question } = req.body;
-  if (!question) {
-    activeRequests.delete(ip);
-    return res.status(400).json({ answer: "No question provided." });
-  }
-
   try {
-    const orResponse = await fetch(
+    const { question } = req.body;
+    if (!question) {
+      return res.status(400).json({ answer: "No question provided." });
+    }
+
+    // ----- OPENROUTER CALL -----
+    const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
@@ -92,24 +104,21 @@ app.post("/ask", askLimiter, async (req, res) => {
     );
 
     console.log("[OpenRouter]", {
-      status: orResponse.status,
-      remaining: orResponse.headers.get("x-ratelimit-remaining")
+      status: response.status,
+      remaining: response.headers.get("x-ratelimit-remaining")
     });
 
-    const payload = await orResponse.json();
+    const data = await response.json();
 
-    if (
-      !payload?.choices ||
-      !payload.choices[0]?.message?.content
-    ) {
-      console.error("[Invalid OpenRouter Payload]", payload);
+    if (!data?.choices?.[0]?.message?.content) {
+      console.error("[Invalid OpenRouter Payload]", data);
       return res.status(502).json({
         answer: "AI provider returned an invalid response."
       });
     }
 
     return res.json({
-      answer: payload.choices[0].message.content
+      answer: data.choices[0].message.content
     });
 
   } catch (err) {
