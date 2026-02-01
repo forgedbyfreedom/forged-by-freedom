@@ -152,9 +152,15 @@ RESPONSE FORMAT:
 1. Paraphrase the question first to confirm understanding
 2. Answer using ONLY the evidence provided
 3. Be direct - no hedging or generic disclaimers
-4. Reference which expert the information comes from
+4. ALWAYS credit sources fully: speaker name + podcast/channel + episode title
+   - Example: "According to Dr. Mike Israetel on Renaissance Periodization..."
 5. End with a brief, actionable takeaway
-6. Close with a motivational quote from Coach Bryan that directly relates to the topic
+6. Close with a motivational quote from Coach Bryan
+
+SOURCE ATTRIBUTION:
+- Always name the speaker AND the podcast/channel
+- Include episode title when available
+- This builds credibility and lets users find original content
 
 IMPORTANT:
 - Never say "consult a doctor" generically
@@ -174,12 +180,21 @@ async function synthesize(question, quotes) {
   const key = await getSecret("OPENROUTER_API_KEY");
 
   const evidence = quotes
-    .map((q, i) => `[${i + 1}] ${q.speaker !== "unknown" ? q.speaker : q.channel}: "${q.text}"`)
+    .map((q, i) => {
+      const speaker = q.speaker !== "unknown" ? q.speaker : null;
+      const channel = q.channel !== "unknown" ? q.channel : null;
+      const title = q.title !== "unknown" ? q.title : null;
+
+      let attribution = speaker && channel ? `${speaker} on ${channel}` : (speaker || channel || "Unknown");
+      if (title) attribution += ` — "${title}"`;
+
+      return `[${i + 1}] ${attribution}:\n"${q.text}"`;
+    })
     .join("\n\n");
 
   const userPrompt = `Question: ${question}
 
-EVIDENCE:
+EVIDENCE (cite sources by speaker, channel, and episode):
 ${evidence}
 
 Remember: Paraphrase the question first, then answer using ONLY the evidence above.`;

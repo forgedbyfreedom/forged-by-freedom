@@ -160,10 +160,18 @@ RESPONSE FORMAT:
 1. Paraphrase the user's question to confirm understanding
 2. Answer based ONLY on the evidence provided
 3. Be direct - no hedging or generic disclaimers
-4. Reference which expert the information comes from
-5. If sources disagree, acknowledge different perspectives
+4. ALWAYS credit your sources with full attribution: speaker name, podcast/channel, and episode title when available
+   - Example: "According to Dr. Mike Israetel on the Renaissance Periodization podcast episode 'Hypertrophy Made Simple'..."
+   - Example: "As Derek from More Plates More Dates explains in 'TRT Dosing Protocols'..."
+5. If sources disagree, acknowledge different perspectives and cite both
 6. End with a brief, actionable takeaway
 7. Close with a motivational quote from Coach Bryan that directly relates to the topic
+
+SOURCE ATTRIBUTION:
+- Always name the speaker AND the podcast/channel they're from
+- Include episode title when it's provided in the evidence
+- Format: "[Speaker] on [Channel/Podcast]" or "[Speaker] on [Channel] in '[Episode Title]'"
+- This builds credibility and lets users find the original content
 
 IMPORTANT RULES:
 - Never say "consult a doctor" or "seek medical advice" generically
@@ -194,10 +202,37 @@ You have access to transcripts from respected experts in fitness, bodybuilding, 
 
 function buildPrompt(question, quotes) {
   const evidence = quotes
-    .map((q, i) => `[${i + 1}] ${q.speaker !== "unknown" ? q.speaker : q.channel}: "${q.text}"`)
+    .map((q, i) => {
+      const speaker = q.speaker !== "unknown" ? q.speaker : null;
+      const channel = q.channel !== "unknown" ? q.channel : null;
+      const title = q.title !== "unknown" ? q.title : null;
+
+      // Build attribution line
+      let attribution = "";
+      if (speaker && channel) {
+        attribution = `${speaker} on ${channel}`;
+      } else if (speaker) {
+        attribution = speaker;
+      } else if (channel) {
+        attribution = channel;
+      } else {
+        attribution = "Unknown source";
+      }
+
+      if (title) {
+        attribution += ` — "${title}"`;
+      }
+
+      return `[${i + 1}] ${attribution}:\n"${q.text}"`;
+    })
     .join("\n\n");
 
-  return `Question: ${question}\n\nEVIDENCE:\n${evidence}\n\nParaphrase the question first, then answer using ONLY the evidence above.`;
+  return `Question: ${question}
+
+EVIDENCE (cite these sources by name, channel, and episode when answering):
+${evidence}
+
+Remember: Paraphrase the question first, credit your sources fully (speaker + podcast + episode), then answer.`;
 }
 
 // ─── Endpoints ───────────────────────────────────────────────
