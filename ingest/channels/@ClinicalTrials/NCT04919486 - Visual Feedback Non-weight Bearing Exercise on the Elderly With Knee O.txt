@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04919486
+Title: Visual Feedback Non-weight Bearing Exercise on the Elderly With Knee Osteoarthritis.
+Official Title: Investigating the Impacts of Visual Feedback Non-weight Bearing Exercise on Muscle Strength and Physical Fitness of Lower Limbs in Elderly People With Knee Osteoarthritis in the Community.
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Degenerative knee arthritis is the most common chronic arthritis disease. Once the elderly suffer from this disease, it will accelerate the loss of body function and autonomy. strength performances and maintain are the most important functional performances of lower extremities, especially in walking and balance in daily activities for elderly people with osteoarthritis(OA) of the knee. However, combining the exercise and visual feedback may promote the muscle strength and functional performances of lower limbs, facilitating the muscle strength, motor and boady functional performances for elderly adults after OA knee. Therefore, the purpose of this proposal is to investigate the changes in muscle strength and physical fitness of lower limbs in older adults following OA knee after visual feedback non-weight bearing exercise intervention.
+
+DETAILED DESCRIPTION:
+Backgroud:In clinical observation, aging leads to a gradual degeneration of the neuromuscular system, decreasing the muscle strength and functional performances of lower extremities. Muscle strength performances and maintain are the most important functional performances of lower extremities, especially in walking and balance in daily activities for elderly people with osteoarthritis(OA) of the knee. However, non-weight bearing exercise combing visual feedback may promote functional performances of lower limbs, facilitating the muscle strength for elderly people with OA knee.
+
+Purpose: Therefore, the purpose of this proposal is to promote muscle strength and physical fitness after visual feedback non-weight bearing exercise intervention.
+
+Method:After recruiting 40 elderly people with degenerative knee arthritis, they were randomly assigned to the experimental group and the control group .The experimental group conducted visual feedback under the guidance of Labview software, and used rowing machine equipment for resistance exercise training.The training time of the two groups is 12 weeks, twice a week, 30 minutes each time, a total of 24 times.Before and after exercise training , both groups used the Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC) to understand their self-response of knee(pain、stiffness functional)；used MicroFets3 to measure hip and knee muscle strength；Elder Functional Fitness chose Chair stand test、Functional reach test、10m-Walking time are used to understand the body function.
+
+Stastistical analysis:Data were analyzed with SPSS18.0. Paired Sample t-test and Independent-Sample T Test were used to determine the between-groupand within-group differences on all outcome measures. The statistical significance level was set at a (p\<0.05).
+
+PRIMARY OUTCOMES:
+  - Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC)
+
+INTERVENTIONS:
+  - BEHAVIORAL: visual feedback with non-weight bearing exercise
+  - BEHAVIORAL: elastic band exercise
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04919486

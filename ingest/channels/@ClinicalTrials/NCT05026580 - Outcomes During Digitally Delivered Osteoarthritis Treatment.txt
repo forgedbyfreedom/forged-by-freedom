@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05026580
+Title: Outcomes During Digitally Delivered Osteoarthritis Treatment
+Official Title: Long-term Changes in Health Outcomes During Digitally Delivered Exercise and Education Treatment for Hip and Knee Osteoarthritis
+Status: WITHDRAWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 0
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Objectives: To examine changes in health-related quality of life (HRQL), pain and function among patients with knee or hip osteoarthritis (OA) participating in digitally delivered exercise and education treatment for up to 12 or 24 month.
+
+Design: An observational longitudinal and repeated cross-sectional cohort study.
+
+Investigators will include participants who have participated in the digitally delivered exercise and education treatment program Joint Academy® for 3, 6 , 9 , 12 and if enough patients also for 24 month. Investigators will analyze both cross-sectional samples at each time point and a longitudinal sample that have participated for at least 12 month, with at least one follow-up in between.
+
+Outcomes: Investigators will analyze HRQL with EQ-5D-5L, pain with Numeric Rating Scale (NRS) 0-10 (best to worst) and function with 30-sec chair stand test (CST) at baseline and at 3, 6, 9,12 and if possible 24 months during the treatment. Main outcome will be change in level in EQ-5D-5L dimensions. We will also analyze minimally clinical important changes (improved or not) and mean changes in EQ-5D-5L index score, pain and 30-sec chair stand test (CST). Logistic regression models and linear mixed models will be used for analysis. Analyses will be performed for repeated cross-sectional samples and a longitudinal sample.
+
+DETAILED DESCRIPTION:
+International treatment guidelines recommend exercise, education and weight control (if needed) as first-line treatment for knee and hip osteoarthritis (OA). Still, evidence suggest that less than 50% of OA patients have participated in first-line treatment before getting joint replacement.
+
+Several observational and randomised controlled trials (RCTs) show that exercise therapy is effective in reducing pain, improving physical function and health-related quality of life (HRQL) at clinically important levels in the short-term.
+
+Quality of life is rated lower by people with OA compared to norm populations and measures of well-being are increasingly used as outcomes in health interventions. Face-to-face first-line OA treatment following the Better Care for persons with OsteoArthritis (BOA) or Good Life with osteoArthritis in Denmark (GLA:D) initiatives seem to have small but clinically significant effects on HRQL immediate after intervention, at six month and with maintained improvements at one year for knee but not hip OA.
+
+The digitally delivered first-line OA treatment program Joint Academy® (JA) was developed in Sweden in 2016 in an attempt to improve implementation and adherence to guidelines. The program is based on evidence from BOA. Initial observational studies show that both patients with hip and knee OA had clinically important improvements in pain and function at six weeks with sustained improvements up to 48 weeks of treatment. Further, HRQL dimensions mobility and pain/discomfort significantly improved after six weeks, while others did not (self-care, usual activities, and anxiety/depression. However, the long-term change in HRQL during digitally delivered first-line OA treatment is not known.
+
+Therefore, the aim is to identify changes in HRQL, pain and function, during up to12 months of digitally delivered first-line treatment. A second aim was to examine if changes differs between hip/knee and women/men.
+
+Outcomes Outcomes were collected at start and at standardized time points during the treatment. They were chosen based on the International Consortium for Health Outcomes Measurement Standard Set for Hip \& Knee Osteoarthritis (ICHOM), self-entered using the digital program interface and stored in the JA database.
+
+HRQL was evaluated every third month using the EuroQol-5 dimensions five level index questionnaire (EQ-5D-5L), which is a generic quality of life measurement tool. The questionnaire covers five dimensions of health: mobility, self-care, usual activities, pain or discomfort, and anxiety or depression. The levels of severity range from no problems (1) to extreme problems/unable to (5) and are recorded for each of the five dimensions. The raw scores are also converted to a single EQ-5D index value using a scoring algorithm (British tariff was used) ranging from -0.594 (worst perceived health state) to 1.00 (best perceived health state). A change of ≥0.03 in the index was considered as minimally clinical important change (MC
+
+PRIMARY OUTCOMES:
+  - Health-related quality of life with the EuroQol-5 dimensions five level index questionnaire (EQ-5D-5L)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Joint Academy exercise and education smart phone application
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05026580

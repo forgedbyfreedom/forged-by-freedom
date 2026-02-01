@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07373158
+Title: Inspiratory Muscle Activation and Post-Exercise Recovery in Professional Football Players
+Official Title: Acute Modulation of Post-Exercise Recovery Through Inspiratory Muscle Activation in Professional Male Football Players: A Randomized Clinical Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: caffeine exercise
+
+SUMMARY:
+Respiratory muscles play a fundamental role in sports performance. Fatigue of these muscles induces changes in maximal inspiratory pressure and autonomic nervous system activity, thereby compromising the athlete's recovery process. The primary aim of this study is to evaluate the specific effects of different inspiratory muscle activation modalities on post-exercise recovery in professional male football players. The study seeks to determine which of the three modalities-bilateral phrenic nerve electrical stimulation, a threshold loading device protocol, or inactivity-provides greater benefits for recovery. The effectiveness of these interventions will be assessed using two key outcome variables: maximal inspiratory pressure (MIP) and heart rate variability (HRV).
+
+This study is designed as a randomized clinical trial (RCT) in which participants will be allocated into three intervention groups: a bilateral phrenic nerve electrical stimulation group (EG1), in which involuntary diaphragmatic contractions will be induced using an electrotherapy device with current applied to the phrenic nerves; a threshold device group (EG2), in which participants will perform breathing against submaximal inspiratory loads equivalent to 40% of their MIP; and a control group (CG), which will remain seated for a period equivalent to the duration of the other interventions. Group allocation will be ensured through randomization using Microsoft Excel.
+
+Regarding statistical analysis, data normality will be assessed using the Shapiro-Wilk test. Comparisons of quantitative variables will be performed using Student's t test when normality assumptions are met, or the Mann-Whitney U test otherwise. A p value \< 0.05 will be considered statistically significant.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Hear rate variability
+
+INTERVENTIONS:
+  - DEVICE: Inspiratory muscle activation via phrenic nerve modulation
+  - DEVICE: Inspiratory muscle activation via threshold device
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07373158

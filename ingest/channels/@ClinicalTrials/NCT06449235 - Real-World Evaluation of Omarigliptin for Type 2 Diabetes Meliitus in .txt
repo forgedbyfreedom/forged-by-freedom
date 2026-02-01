@@ -1,0 +1,90 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06449235
+Title: Real-World Evaluation of Omarigliptin for Type 2 Diabetes Meliitus in Bangladesh
+Official Title: Efficacy and Safety of Omarigliptin, A Weekly Dipeptidyl Peptidase-4 Inhibitor for Type 2 Diabetes Management: Real-World Evaluation in Bangladesh
+Status: NOT_YET_RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 938
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The study titled "Efficacy and Safety of Omarigliptin, A Weekly Dipeptidyl Peptidase-4 Inhibitor for Type 2 Diabetes Management: Real-World Evaluation in Bangladesh" aims to assess the real-world effectiveness and safety of omarigliptin in managing newly diagnosed type 2 diabetes mellitus (T2DM) patients. Conducted at BIRDEM General Hospital, this 12-month observational study involves 938 patients aged 18 years or older, newly diagnosed with T2DM, with no prior use of antidiabetic medications.
+
+T2DM is a growing global health concern, necessitating effective treatment strategies. Omarigliptin, a once-weekly DPP-4 inhibitor, has shown promising results in clinical trials worldwide. However, its real-world efficacy and safety in diverse populations like Bangladesh remain under-explored. This study aims to fill this gap by evaluating omarigliptin in a typical clinical setting in Bangladesh, potentially providing valuable insights for healthcare providers.
+
+Study Objectives: To assess the real-world efficacy and safety of omarigliptin in managing newly diagnosed T2DM. Specific objectives include evaluating glycemic control (HbA1C levels), safety regarding adverse events, and other outcomes such as changes in fasting plasma glucose, electrolyte levels, liver enzymes, creatinine, and lipid profile.
+
+Methodology: Conducted in the Department of Endocrinology at BIRDEM General Hospital over 12 months, the study population includes newly diagnosed T2DM patients divided into two groups: those receiving omarigliptin and those receiving other antidiabetic agents. Sample size calculation determined 469 patients per group, accounting for a 15% dropout rate.
+
+Inclusion Criteria:
+
+* Newly diagnosed T2DM (according to ADA guidelines) aged ≥ 18 years
+* HbA1C levels between ≥7.0% and ≤10.0%
+* Stable doses of antidiabetic drugs for at least 4 weeks
+
+Exclusion Criteria:
+
+* Prescribed insulin for diabetes management
+* Significant weight loss, hypersensitivity to antidiabetic drugs, type 1 diabetes, ketoacidosis, active liver disease, significant cardiovascular disease, malignancy, hematological disorders, pregnancy, and severe renal impairment, among others.
+
+Study Variables: Data will be collected on demographic variables (age, gender, socio-economic status, BMI), laboratory variables (HbA1C, fasting blood glucose, lipid profile, creatinine, electrolytes, ALT, and postprandial glucose), and adverse events (respiratory infections, headaches, gastrointestinal issues, joint pain).
+
+Study Procedure: Patients will receive personalized antidiabetic treatment with or without omarigliptin, alongside standard dietary and exercise recommendations. Follow-up assessments will occur at 14 days, 3 months, and 6 months post-enrollment. Data will be collected through interviews, physical exams, and laboratory tests, recorded in case record forms (CRFs).
+
+Adverse Event Monitoring: Adverse events (AEs) and serious adverse events (SAEs) will be monitored throughout the study. Participants will be instructed to record any side effects in a treatment diary and contact the study team as needed. AEs include any unfavorable medical occurrences, while SAEs involve life-threatening conditions, hospitalization, or significant disability.
+
+Data Analysis: Data will be analyzed using SPSS Version 23. Descriptive analyses will investigate participant characteristics, with statistical significance set at p \< 0.05. Parametric variables will be assessed using Student's t-test, and Spearman's correlation will be used for correlations. Regression analyses will also be performed.
+
+Ethical Considerations: The study will adhere to the Declaration of Helsinki and other ethical guidelines. Approval will be sought from the Institutional Review Board (IRB) of BIRDEM. Written informed consent will be obtained from all participants before enrollment.
+
+DETAILED DESCRIPTION:
+IIntroduction Type 2 diabetes mellitus (T2DM) is a chronic metabolic disorder characterized by insulin resistance and impaired insulin secretion, leading to elevated blood glucose levels. Associated with significant morbidity and mortality, T2DM complications include cardiovascular disease, nephropathy, retinopathy, and neuropathy. With its increasing global prevalence, especially in developing countries like Bangladesh, T2DM poses substantial public health challenges.
+
+Management of T2DM requires a combination of lifestyle modifications and pharmacotherapy to achieve and maintain glycemic control. Dipeptidyl peptidase-4 (DPP-4) inhibitors, a class of oral antidiabetic agents, enhance the incretin system, thereby increasing insulin secretion and decreasing glucagon release in a glucose-dependent manner. Omarigliptin, a novel, once-weekly DPP-4 inhibitor, has demonstrated efficacy and safety in clinical trials, but its real-world effectiveness and safety profile, particularly in diverse populations, remain underexplored.
+
+Study Objectives The primary objective of this study is to evaluate the real-world efficacy and safety of omarigliptin in managing newly diagnosed T2DM patients in Bangladesh. Specific objectives include assessing glycemic control (measured by HbA1c levels), monitoring adverse events, analyzing changes in fasting plasma glucose (FPG), postprandial glucose (PPG), and other laboratory parameters, and comparing outcomes with other antidiabetic agents.
+
+Methodology
+
+Study Design:
+
+This is an observational, real-world study conducted over 12 months at the Department of Endocrinology, BIRDEM General Hospital, Dhaka, Bangladesh. The study includes newly diagnosed T2DM patients aged 18 years or older. Participants are divided into two groups: those receiving omarigliptin and those receiving other antidiabetic agents.
+
+Study Population:
+
+Participants will be newly diagnosed T2DM patients attending BIRDEM General Hospital. They will be managed with either omarigliptin or other antidiabetic agents, with personalized treatment regimens decided by the attending physician based on clinical conditions.
+
+Data Collection:
+
+Data will be collected through patient interviews, physical examinations, and laboratory tests. All data will be recorded in standardized case record forms (CRFs). Follow-up assessments will occur at 14 days, 3 months, and 6 months post-enrollment.
+
+Study Variables:
+
+Demographic and laboratory variables will be recorded, including age, gender, socio-economic status, BMI, HbA1c, fasting blood glucose, postprandial glucose, lipid profile, serum creatinine, electrolytes, and liver enzymes. Adverse events will also be tracked and categorized.
+
+Study Procedure:
+
+Participants will receive personalized antidiabetic treatment, including lifestyle modifications and dietary recommendations. The treatment regimen, including the use of omarigliptin, will be determined by the attending physician.
+
+Follow-Up Assessments:
+
+Follow-up assessmen
+
+PRIMARY OUTCOMES:
+  - Glycemic Control as Measured by HbA1c Levels
+
+INTERVENTIONS:
+  - DRUG: Omarigliptin
+  - DRUG: Sulphonylureas
+  - DRUG: Metformin
+  - DRUG: Other DPP4-i
+  - DRUG: Thiazolidinediones
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06449235

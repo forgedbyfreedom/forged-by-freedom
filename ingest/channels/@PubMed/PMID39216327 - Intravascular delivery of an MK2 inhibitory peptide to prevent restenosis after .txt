@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39216327
+Title: Intravascular delivery of an MK2 inhibitory peptide to prevent restenosis after angioplasty.
+Authors: Tierney, Francisco, Yu, Ma, Cheung-Flynn
+Journal: Biomaterials
+Year: 2024
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Peripheral artery disease is commonly treated with balloon angioplasty, a procedure involving minimally invasive, transluminal insertion of a catheter to the site of stenosis, where a balloon is inflated to open the blockage, restoring blood flow. However, peripheral angioplasty has a high rate of restenosis, limiting long-term patency. Therefore, angioplasty is sometimes paired with delivery of cytotoxic drugs like paclitaxel to reduce neointimal tissue formation. We pursue intravascular drug delivery strategies that target the underlying cause of restenosis - intimal hyperplasia resulting from stress-induced vascular smooth muscle cell switching from the healthy contractile into a pathological synthetic phenotype. We have established MAPKAP kinase 2 (MK2) as a driver of this phenotype switch and seek to establish convective and contact transfer (coated balloon) methods for MK2 inhibitory peptide delivery to sites of angioplasty. Using a flow loop bioreactor, we showed MK2 inhibition in ex vivo arteries suppresses smooth muscle cell phenotype switching while preserving vessel contractility. A rat carotid artery balloon injury model demonstrated inhibition of intimal hyperplasia following MK2i coated balloon treatment in vivo. These studies establish both convective and drug coated balloon strategies as promising approaches for intravascular delivery of MK2 inhibitory formulations to improve efficacy of balloon angioplasty.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39216327/

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05350176
+Title: Probiotic Supplementation in Sport Performance and Gut Damage
+Official Title: Effects of Probiotic Supplementation on Sport Performance and Gut Damage in CrossFit
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: athletic performance
+
+SUMMARY:
+This study will be performed with the aim to evaluate the effects of probiotic supplementation on sport performance and gut damage. Participants will be divided into two groups, placebo and experimental group. With the purpose to assess the effects of probiotics on the gut damage, a strenuous exercise session will be performed, and then blood samples will be taken to observe the variation of the selected intestinal damage marker. 24 hours after this strenuous session, performance tests will be performed. After the 4 weeks of supplementation, the same procedure will be followed to evaluate the effect of probiotics.
+
+DETAILED DESCRIPTION:
+One week before the initiation of the study participants will be required to avoid consuming drugs, alcohol, cigarettes, probiotics, and any other food or liquid which could modify gut microbiota composition. For the baseline values, height, weight and sports performance test, of the participants will be collected. The same day, a strenuous exercise session will be performed in order to observe the variation of the intestinal damage marker (blood sample extraction just after finishing the strenous exercise session). 24 hours after that session sport performance tests will be conducted. Participants will then be randomly divided into two groups, one of which will take one probiotic capsule per day containing 10 billion colony-forming units (CFU) of Lactobacillus plantarum, and the other group will take one placebo capsule per day consisting of dextrose. The supplementation period will last 4 weeks.
+
+After the supplementation period, the same process will be followed, with the same strenuous exercise session and immediate blood sampling to determine the effects of probiotics on the intestinal damage caused by exercise. 24 hours later, performance tests will be conducted to assess the effects of probiotics on sport performance.
+
+PRIMARY OUTCOMES:
+  - Intestinal-fatty acid-binding protein
+  - Counter movement jump test
+  - Running Based Anaerobic Sprint Test
+  - YO YO Intermittent Recovery Level test 1
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05350176

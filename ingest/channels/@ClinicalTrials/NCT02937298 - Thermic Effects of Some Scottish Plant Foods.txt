@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02937298
+Title: Thermic Effects of Some Scottish Plant Foods
+Official Title: The Thermic Effect of Some Plant Foods Native to Scotland: A Pilot Study.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 7
+Topic: caffeine exercise
+
+SUMMARY:
+Weight gain occurs because of imbalances in energy balance favouring energy intake. Whilst over 50% of a person's energy requirement goes towards the maintenance of physiological functions, around 40% is used for physical activity. In addition to this, around 10-15% of energy is spent on what is termed as Diet Induced Thermogenesis (DIT). Diet Induced Thermogenesis is the increase in energy expenditure following a meal, and represents the energy utilised for the digestion and metabolism of food. Some nutrients such as proteins require more energy to digest and therefore produce a greater DIT than others. In addition to this, some food components are able to independently stimulate calorie burning. For example caffeine, chilli, ginger and green tea have been shown to induce calorie burning through DIT. Therefore the inclusion of such foods in the diet could increase energy expenditure and thereby help in weight control.
+
+The objective of this study is to determine the DIT effects of some plant foods that are native to Scotland (blackberries, blueberries, red raspberries, wild garlic and sea buckthorn). These foods have been shown to contain compounds that stimulate DIT. If found to be effective, these foods could then be used to develop dietary strategies for weight control in Scotland.
+
+DETAILED DESCRIPTION:
+Obesity prevalence is increasing around the world and the United Kingdom is no exception. Latest statistics show that approximately 25% of the UK population is obese and is predicted to rise to 70% by 2020 if present trends continue. Obesity is particularly widespread in Scotland where approximately 62% of the population are of a BMI over 25kg/m2. Curtailing obesity rates is a public health priority as excess weight is also the greatest predictor of other co-morbidities such as cardiovascular disease, cancer and diabetes, and hence collectively exerts a significant toll on the health and economic burden of the country.
+
+Weight gain occurs primarily due to an imbalance in energy balance status where energy intake outweighs expenditure. Energy expenditure (EE) in adults consists of three components: basal metabolism (50-70% of EE), physical activity (30-40% of EE) and diet induced thermogenesis (DIT). The latter is described as the thermic effect of food and is the increase in EE above Basal Metabolic Rate after a meal, and usually ranges between 3-10% of total EE (depending on the composition of the meal). Whilst cornerstone approaches to weight control have focused on strategies to reduce energy intake and increase physical activity, the still escalating obesity levels show that this approach is ineffective in the long term possibly due to poor long-term compliance to dietary regimes and adequate physical activity. Thus it is being increasingly recognised that the most sustainable long-term strategy for reducing obesity is making small diet and lifestyle changes that would positively influence energy regulatory mechanisms targeted at preventing a positive energy balance. It is also now recognised that genetic predispositions to a slow mechanism characterised by a slow metabolic rate and capacity for fat oxidation also determines an individual's propensity to weight gain. Furthermore, studies have shown that weight loss and reduced food intake result in an attenuation of EE possibly due to the loss of lean mass and improved metabolic efficiency. The regular consumption of high DIT foods which could increase EE and fat oxidation whilst circumventing these energy sparing mechanisms may have significant potential in long-term weight control. Indeed studies demonstrating pronounced obesity in mice whose DIT mechanism were inactivated indicates the important role thermogenesis plays in weight control
+
+Food components such as chilli (capsaicin), ginger, mustard, pepper, caffeine, green tea (flavanols) and medium-chain triglycerides have been demonstrated as increasing DIT. The thermogenic effects of these compounds have been shown to be mainly via the sympathetic nervous system. Pharmacological agents such as ephedrine and salicylate as well as food constituents such as methylxanthines (theophylline and caffeine) and caffeine have been shown to possess sympathomimetic properties and induce fat oxidation and thermogenesis in effector cells by stimulating
+
+PRIMARY OUTCOMES:
+  - Diet Induced Thermogenesis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Control Meal
+  - DIETARY_SUPPLEMENT: Berry Treatment
+  - DIETARY_SUPPLEMENT: Sea Buckthorn Treatment
+  - DIETARY_SUPPLEMENT: Wild Garlic Treatment
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02937298

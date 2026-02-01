@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39348266
+Title: Sirtuin 3 reinforces acylcarnitine metabolism and maintains thermogenesis in brown adipose tissue of aging mice.
+Authors: Zhang, Wang, Sun, Xue, Wang
+Journal: Aging cell
+Year: 2024
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Acylcarnitine (ACar) is a novel fuel source for activating thermogenesis in brown adipose tissue (BAT). However, whether ACar metabolism underlies BAT thermogenesis decline with aging remain unclear. Here, the L-carnitine-treated young and aging mice were used to investigate the effects of activation of ACar metabolism on BAT thermogenesis during aging. We showed that long term L-carnitine feeding, which results in an elevation in circulating ACar levels, failed to improve cold sensitivity of aging mice, which still displayed impaired thermogenesis and ACar metabolism in interscapular BAT (iBAT). The RNA-sequencing was used to identify the key regulator for the response of aging mice to LCar induced activation of ACar metabolism in BAT, and we identified Sirt3 as a key regulator for the response of aging mice to L-carnitine induced activation of ACar metabolism in iBAT. Then the adipose-specific Sirt3 knockout (Sirt3 AKO) mice were used to investigate the role of Sirt3 in ACar metabolism and thermogenesis of BAT and explore the underlying mechanism, and the results showed that Sirt3 AKO mice displayed defective ACar metabolism and thermogenesis in iBAT. Mechanically, Sirt3 regulated ACar metabolism via HIF1&#x3b1;-PPAR&#x3b1; signaling pathway to promote iBAT thermogenesis, and knockdown or inhibition of HIF1&#x3b1; ameliorated impaired ACar metabolism and thermogenesis of iBAT in the absence of Sirt3. Collectively, we propose that Sirt3 regulated ACar metabolism is critical in maintaining thermogenesis in BAT of aging mice, which can promote the development of anti-aging intervention strategy.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39348266/

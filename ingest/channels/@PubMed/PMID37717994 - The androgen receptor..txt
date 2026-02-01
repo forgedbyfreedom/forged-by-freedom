@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37717994
+Title: The androgen receptor.
+Authors: Van-Duyne, Blair, Sprenger, Moiseenkova-Bell, Plymate
+Journal: Vitamins and hormones
+Year: 2023
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+The Androgen Receptor (AR) is a ligand (androgen) activated transcription factor and a member of the nuclear receptor (NR) superfamily. It is required for male sex hormone function. AR-FL (full-length) has the domain structure of NRs, an N-terminal domain (NTD) required for transactivation, a DNA-binding domain (DBD), a nuclear localization signal (NLS) and a ligand-binding domain (LBD). Paradoxes exist in that endogenous ligands testosterone (T) and 5&#x3b1;-dihydrotestosterone (DHT) have differential effects on male sexual development while binding to the same receptor and transcriptional specificity is achieved even though the androgen response elements (AREs) are identical to those seen for the progesterone, glucocorticoid and mineralocorticoid receptors. A high resolution 3-dimensional structure of AR-FL by either cryo-EM or X-ray crystallography has remained elusive largely due to the intrinsic disorder of the NTD. AR function is regulated by post-translational modification leading to a large number of proteoforms. The interaction of these proteoforms in multiprotein complexes with co-activators and co-repressors driven by interdomain coupling mediates the AR transcriptional output. The AR is a drug target for selective androgen receptor modulators (SARMS) that either have anabolic or androgenic effects. Protstate cancer is treated with androgen deprivation therapy or by the use of AR antagonists that bind to the LBD. Drug resistance occurs due to adaptive AR upregulation and the appearance of splice variants that lack the LBD and become constitutively active. Bipolar T treatment and NTD-antagonists could surmount these resistance mechanisms, respectively. These recent advances in AR signaling are described.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37717994/

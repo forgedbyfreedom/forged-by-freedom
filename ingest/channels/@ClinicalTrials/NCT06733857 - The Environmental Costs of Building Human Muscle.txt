@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06733857
+Title: The Environmental Costs of Building Human Muscle
+Official Title: The Environmental Costs of Building Human Muscle - a Comparison of Greenhouse Gas Emissions, Water Use and Land Use Between Plant-Based and Omnivorous Diets Following Sports Nutrition Protein Recommendations for Muscle Mass Accrual
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: sports nutrition
+
+SUMMARY:
+Among the general population, it has been established that plant-based diets confer significant environmental benefits (greenhouse gas emissions, land use, and water use) compared to omnivorous diets.
+
+However, sports nutrition recommendations for supporting resistance exercise-induced gains in muscle mass and strength differ substantially from population-level recommendations, especially for protein intake. Therefore the difference in environmental impact between omnivorous and plant-based diets for adults following such recommendations is as yet unknown.
+
+A prior analysis found that a high-protein, non-animal-derived diet can support resistance training-induced gains in muscle mass and strength to the same extent as a protein-matched omnivorous diet. These findings align with previous research showing that, in the context of a high-protein diet, the source of protein - whether animal or plant-based - does not affect the rate of resistance exercise-induced gains in muscle mass and strength.
+
+The present study therefore plans to retrospectively analyze the diet records from previously published research to determine the difference in environmental impact between the high protein animal-free and omnivorous diets.
+
+The findings could highlight the unique difference in environmental impacts between those following high protein plant-based and omnivorous diets.
+
+DETAILED DESCRIPTION:
+The development of skeletal muscle mass is associated with improved athletic performance and cardiometabolic health. Resistance exercise training (RET) and dietary protein ingestion are two key anabolic stimuli that, when repeated consistently over time, promote the accrual of skeletal muscle mass. High protein diets, considerably above the United States RDA of 0.8g·kg bm-1·d-1, are therefore often recommended to support RET adaptations, with meta-analyses highlighting protein intakes of \~1.6g·kg bm-1·d-1 for optimal stimulation of skeletal muscle hypertrophy and strength gains. The Academy of Nutrition and Dietetics suggest that intakes beyond this may be optimal under certain circumstances such as short periods of intensified training or when significantly reducing energy intake.
+
+It has been demonstrated that, in the context of a high-protein diet as a whole, both animal and plant-based protein sources lead to similar RET-induced gains in muscle size and strength. However, the difference in environmental impacts of plant and animal-based protein sources has been shown to be substantial. Both the direct processes related to livestock management (for example, methane production by ruminants) and indirect processes through the inefficiency of using crops for animal feed rather than directly for human consumption contribute to substantially higher environmental impacts for animal-based foods relative to plant-based foods.
+
+Such differences have been highlighted by modeling the environmental impact of replacing population-level food intake with plant-based diets. For instance, a systematic review of 34 studies using environmental life cycle assessments found that, compared to omnivorous diets that followed the same dietary guidelines and caloric content, plant-based diets achieved median reductions of 59% for land use, 45% for water use, and 50% for GHG emissions. Other research has found that high income countries shifting towards a plant-based diet would reduce their annual agricultural production emissions by 61%.
+
+However, established sports nutrition recommendations for protein intake to support RET-induced muscular adaptations differ from general population-level intakes. Therefore the difference in environmental impact between omnivorous and plant-based diets for adults following such recommendations is as yet unknown.
+
+The present study therefore aims to compare the environmental impacts of RET-induced gains in lean mass through consumption of a high protein omnivorous diet with a protein-matched plant-based diet. A previously published study assessed the effects of dietary protein source during a 10-week high volume resistance training program, and found a high protein (\~2.0g·kg bm-1·d-1), exclusively plant-based diet and a protein-matched mixed diet led to similar increases in lean mass and strength accrual.
+
+During this study, each participant was required to record dietary intake for a minimum of three days a week, allowing for detail
+
+PRIMARY OUTCOMES:
+  - Diet-related greenhouse gas emissions - CO2 equivalents
+  - Diet-related land use - hectares
+  - Diet-related water use - cubic meters
+
+INTERVENTIONS:
+  - BEHAVIORAL: VEG2
+  - BEHAVIORAL: OMNI2
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06733857

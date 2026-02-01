@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 30800256
+Title: Integrated System for Monitoring Muscular States during Elbow Flexor Resistance Training in Bedridden Patients.
+Authors: Xu, Jiang, Jeong, Morita, Xu
+Journal: Journal of healthcare engineering
+Year: 2020
+Topic: tendon adaptation resistance training
+
+ABSTRACT:
+To improve or maintain the physical function of bedridden patients, appropriate and effective exercises are required during the patient's bed rest. Resistance training (RT) is an effective exercise for improving the physical function of bedridden patients, and the improvement of the physical function is caused by mechanical stimuli associated with RT. Currently, the measured mechanical stimuli are external variables which represent the synthetic effect of multiple muscles and body movements. Important features of stimuli experienced by muscles are of crucial importance in explaining muscular strength and power adaptation. This study describes an integrated system for assessing muscular states during elbow flexor resistance training in bedridden patients, and some experiments were carried out to test and evaluate this system. The integrated system incorporates an elbow joint angle estimation model (EJAEM), a musculoskeletal model (MSM), and a muscle-tendon model. The EJAEM enables real-time interaction between patient and MSM. The MSM is a three-dimensional model of the upper extremity, including major muscles that make up the elbow flexor and extensor, and was built based on public data. One set of concentric and eccentric contraction was performed by a healthy subject, and the results of the calculations were analyzed to show important features of mechanical stimuli experienced by muscles during the training. The integrated system provides a considerable method to monitor the body-level and muscle-level mechanical stimuli during elbow flexor resistance training in bedridden patients.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/30800256/

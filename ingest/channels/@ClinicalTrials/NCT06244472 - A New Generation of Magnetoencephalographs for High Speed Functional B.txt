@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06244472
+Title: A New Generation of Magnetoencephalographs for High Speed Functional Brain Imaging
+Official Title: Towards a New Generation of Magnetoencephalographs: Evaluation of the FYNA Research (Mag4Health 48 Sensors MEG's Name) System (Full-head Magnetoencephalographs System With Optically Pumped Magnetometers)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: sleep athletes
+
+SUMMARY:
+The goal is to perform a first evaluation of the capabilities of a new generation of non-invasive magnetoencephalography whole head device using optically pumped magnetometers using Helium 4 as the sensitive element (OPM He4) to record brain magnetic activities. The investigators will record 1) healthy subjects stimulated with visual, auditory, somesthesic and motor stimuli and 2) athletes who suffered a mild concussion. The main hypothesis is that the OPM magnetoencephalographs (MEG) system will be able to detect brain activity. The secondary hypothesis is that the data recorded with the OPM MEG system will allow to reconstruct maps of the brain activity. To test the main hypothesis, they will compare the signal to noise ratio of brain activities between a classical MEG system and the new OPM He4 MEG. The secondary hypothesis will be tested through a comparison of the maps of brain activity obtained thanks to the data recorded with a classical MEG system and the new OPM He4 MEG.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Signal to Noise Ratio comparison between classical MEG and FYNA Research for the visual stimulations
+  - Signal to Noise Ratio comparison between classical MEG and FYNA Research for the auditory stimulations
+  - Signal to Noise Ratio comparison between classical MEG and FYNA Research for the somesthesia stimulations
+  - Signal to Noise Ratio comparison between classical MEG and FYNA Research for the motor stimulations
+  - Signal to Noise Ratio comparison between classical MEG and FYNA Research for the rest activity
+
+INTERVENTIONS:
+  - DEVICE: Experiment 1: visual and auditory attention task
+  - DEVICE: Experiment 2: language production and rest tasks
+  - DEVICE: Experiment 3: visuo-motor task
+  - DEVICE: Experiment 4: brain activity at rest
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06244472

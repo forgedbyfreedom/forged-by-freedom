@@ -1,0 +1,96 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07283237
+Title: Enhancing Medial Knee Pain Rehabilitation : A Clinical Trial On The Effectiveness Of Blood Flow Restriction In Combination With Targeted Exercises For Adult With Varus Deformity
+Official Title: Enhancing Medial Knee Pain Rehabilitation : A Clinical Trial On The Effectiveness Of Blood Flow Restriction In Combination With Targeted Exercises For Adult With Varus Deformity
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Background:
+
+Medial knee pain is common in active adults with varus deformity and limits daily and sports activities. Standard physiotherapy improves symptoms but often fails to achieve optimal muscle adaptation due to pain-limited loading. High Tibial Osteotomy (HTO) is indicated when the hip-knee-ankle (HKA) angle \<177° (≥3° varus), particularly with symptomatic medial OA and preserved lateral compartment. Mild, moderate, and severe varus alignments correspond to 3°-5°, 6°-8°, and ≥9°, respectively. Blood Flow Restriction (BFR) training enables strength and hypertrophy gains at low intensities by partially restricting venous flow, reducing joint stress while promoting muscle activation. Evidence supports BFR use in knee OA for improving pain, strength, and quality of life, but its effect in varus-related medial knee pain remains unclear. This trial examines whether combining BFR with targeted strengthening offers superior outcomes to conventional exercise.
+
+Aim:
+
+To investigate the effectiveness of BFR combined with targeted exercises in adults with varus deformity and medial knee pain.
+
+Methods:
+
+A randomized controlled trial will be conducted in an outpatient setting. Eighty active adults (30-55 yrs, BMI 18-25) with medial knee pain and mild-moderate varus deformity (2° \< HKA ≤ 10°) will be enrolled. Inclusion requires Kellgren-Lawrence grade 1-3 OA; exclusions include BMI \> 25, prior knee surgery, DVT, vascular disease, pregnancy, or neurological/musculoskeletal disorders affecting lower limbs. Sample size (n = 30; adjusted to 80 for attrition) was calculated via G\*Power (f = 0.35, α = 0.05, power = 0.80). Participants will be randomized into:
+
+* Control group: Specific exercise program for hip adductors, abductors, internal rotators, and knee extensors.
+* BFR group: Same protocol performed with BFR using Smart Tools Plus (LLC, USA) cuff at 40-80% limb occlusion pressure (LOP). Cuffs remain inflated during sets and deflated between them (1-min rest). Adverse events (pain, numbness, discoloration) will be monitored.
+
+Assessment timeline: baseline, 6 weeks, 3 months, and 6 months. Outcomes include:
+
+* Primary: Oxford Knee Score (OKS).
+* Secondary: LEFS, NPRS, SF-36, MMT (hip flexors, adductors, internal rotators), radiographic measures (HKA, MLDFA, MPTA), and recurrence rate within 1 year.
+
+Muscle strength will be measured using a VALD handheld dynamometer. Radiographs will be interpreted by a blinded radiologist; functional and pain scales by a blinded assessor.
+
+Randomization and blinding:
+
+Participants will be alternately allocated (1:1). The assessor will remain blinded to group assignment (single-blind design).
+
+Statistical analysis:
+
+Quantitative variables will be expressed as mean ± SD and qualitative data as frequencies. Repeated-measures ANOVA and appropriate comparative tests will assess between- and within-group differences. Significance set at p \< 0.05.
+
+Expected outcome:
+
+It is hypothesized that combining BFR with targeted exercises will yield greater improvements in pain, function, and muscle strength than conventional exercise alone, offering a promising conservative option for active adults with varus-related medial knee pain.
+
+DETAILED DESCRIPTION:
+Background:
+
+Medial knee pain, frequently observed in active adults with varus deformity, is a common musculoskeletal issue that impairs daily function and participation in sports (1). Standard conservative treatments, such as physiotherapy and strengthening exercises, can reduce pain and improve function, but often fail to achieve optimal muscle adaptation due to pain-limited force production (6). Common Surgical Thresholds for Varus Alignment: High Tibial Osteotomy (HTO) - most common for medial compartment OA with varus: HKA \< 177° (i.e., \>3° varus), Clinical indication often begins at 5°-6° of varus (HKA \~175° or less) with pain and medial OA, Absolute indications: Symptomatic medial knee OA, HKA angle ≤ 174° (≥6° varus), Age \<60 (ideally), active patients and Preserved lateral compartment (1). Another reference states that a moderately active individual with joint stability, between 40-65 years of age, with isolated joint line pain, body mass index \<30, mal-alignment \<15°, metaphyseal varus, good range of motion, high-demand patient, non-smoker, and with some degree of pain endurance capacity are the indications for HTO (2). According to (3) an Isolated high tibial osteotomy was done based on mFTA, varus alignment was categorized as "mild" (3°-5°), "moderate" (6°-8°), or "severe" (≥ 9°) Blood Flow Restriction (BFR) training has emerged as an innovative adjunct, enabling significant gains in muscle strength and hypertrophy at lower exercise loads by partially restricting venous blood flow during exercise (4). This technique is particularly beneficial for individuals who cannot tolerate high-resistance training, as it minimizes joint stress while promoting muscle growth and improved function . Recent evidence indicates that BFR-enhanced exercise regimens can lead to greater improvements in pain reduction, muscle strength, and quality of life compared to traditional exercise alone in populations with knee osteoarthritis (3). However, the application of BFR training specifically for medial knee pain associated with varus deformity in active adults remains underexplored. This study seeks to address this gap by comparing the efficacy of BFR-enhanced exercises versus standard exercise protocols in this population, potentially offering a more effective rehabilitation strategy.
+
+\-
+
+Aim:
+
+To investigate the effectiveness of BFR in combination with targeted exercises for active adults with varus deformity and medial knee pain.
+
+\-
+
+2.4.1- Type of the study:
+
+Randomized controlled trial
+
+2.4.2- Study Setting:
+
+Outpatient
+
+\-
+
+2.4.3- Study subjects:
+
+1. Inclusion criteria:
+
+   ■ Age: 30-55 years old
+
+   ■ BMI: 18-25
+
+   ■ Presence of medial knee pain
+   * Mild to moderate Varus deformity confirmed via X-Ray Long Film (2°\<HKA≤10°) (4)(4)(5)
+   * Kellgren and Lawrence system for classification of osteoarthritis (6):
+
+   grade 1 (doubtful): doubtful joint space narrowing and possible osteophytic lipping grade 2 (minimal): definite osteophytes and po
+
+PRIMARY OUTCOMES:
+  - Oxford Knee Score (OKS)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Targeted Exercise Program
+  - DEVICE: Blood Flow Restriction (BFR) Training with Targeted Exercise Program
+
+ELIGIBILITY:
+Age: 30 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07283237

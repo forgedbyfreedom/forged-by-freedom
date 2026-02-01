@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 20300012
+Title: Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis.
+Authors: Krieger
+Journal: Journal of strength and conditioning research
+Year: 2010
+Topic: resistance training muscle hypertrophy
+
+ABSTRACT:
+Previous meta-analyses have compared the effects of single to multiple sets on strength, but analyses on muscle hypertrophy are lacking. The purpose of this study was to use multilevel meta-regression to compare the effects of single and multiple sets per exercise on muscle hypertrophy. The analysis comprised 55 effect sizes (ESs), nested within 19 treatment groups and 8 studies. Multiple sets were associated with a larger ES than a single set (difference = 0.10 +/- 0.04; confidence interval [CI]: 0.02, 0.19; p = 0.016). In a dose-response model, there was a trend for 2-3 sets per exercise to be associated with a greater ES than 1 set (difference = 0.09 +/- 0.05; CI: -0.02, 0.20; p = 0.09), and a trend for 4-6 sets per exercise to be associated with a greater ES than 1 set (difference = 0.20 +/- 0.11; CI: -0.04, 0.43; p = 0.096). Both of these trends were significant when considering permutation test p values (p &lt; 0.01). There was no significant difference between 2-3 sets per exercise and 4-6 sets per exercise (difference = 0.10 +/- 0.10; CI: -0.09, 0.30; p = 0.29). There was a tendency for increasing ESs for an increasing number of sets (0.24 for 1 set, 0.34 for 2-3 sets, and 0.44 for 4-6 sets). Sensitivity analysis revealed no highly influential studies that affected the magnitude of the observed differences, but one study did slightly influence the level of significance and CI width. No evidence of publication bias was observed. In conclusion, multiple sets are associated with 40% greater hypertrophy-related ESs than 1 set, in both trained and untrained subjects.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/20300012/

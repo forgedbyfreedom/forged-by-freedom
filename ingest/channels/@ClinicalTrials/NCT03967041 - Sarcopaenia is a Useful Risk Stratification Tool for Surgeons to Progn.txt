@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03967041
+Title: Sarcopaenia is a Useful Risk Stratification Tool for Surgeons to Prognosticate Splenic Abscess Patients
+Official Title: Sarcopaenia is a Useful Risk Stratification Tool for Surgeons to Prognosticate Splenic Abscess Patients- A Retrospective Case Control Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 99
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopaenia is associated with poor prognoses of in-hospital mortality in splenic abscess patients. Investigators recommend its use by surgeons in the ED to rapidly risk stratify and identify patients requiring urgent and aggressive intervention, to maximise patient outcomes and survival chances.
+
+DETAILED DESCRIPTION:
+Splenic abscess is a life-threatening surgical emergency which requires early diagnosis and intervention to maximise patient outcomes. This can be achieved through accurate risk stratification in the emergency department (ED). Sarcopaenia refers to an age-related loss of skeletal muscle mass and strength with major physiologic and clinical ramifications. This study evaluates sarcopaenia as a radiological risk stratification tool to predict in-hospital mortality of splenic abscess patients.
+
+99 adult patients at four training and research hospitals who had undergone abdominal contrast CT scans in the ED with the final diagnosis of splenic abscess from January 2005 to December 2015 were recruited. Evaluation for sarcopaenia was performed via calculating psoas cross-sectional area at level of L3 and normalising for height. Univariate analyses were used to evaluate the differences between survivors and non-survivors, with subsequent logistic regression analysis to assess odds ratio of sarcopaenia with respect to in-hospital mortality. A receiver operating characteristic (ROC) curve was plotted to determine predictability of sarcopaenia, with its corresponding sensitivity, specificity, and accuracy rate calculated.
+
+PRIMARY OUTCOMES:
+  - Mortality
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: radiological defined sarcopenia
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03967041

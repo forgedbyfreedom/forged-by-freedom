@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07041996
+Title: Sarcopenia Screening Application for Sarcopenia
+Official Title: Mobile Phone-Based Sarcopenia Screening Application for Early Detection of Sarcopenia
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 10
+Topic: sarcopenia intervention
+
+SUMMARY:
+Patients aged over 60 years completed the SARC-F questionnaire in the mobile application to assess the risk of sarcopenia.
+
+DETAILED DESCRIPTION:
+Patients aged over 60 years completed the SARC-F questionnaire in the mobile application to assess the risk of sarcopenia. The aim of this study was to develop a mobile application for self-screening of sarcopenia in the elderly specifically in Indonesia using the SARC-F questionnaire. This application is expected to improve accessibility, cost-effectiveness, and ease of health education, enabling early detection and rapid intervention to reduce the disease burden of sarcopenia.
+
+PRIMARY OUTCOMES:
+  - Sarcopenia status in mobile phone applications
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Mobile-based SARC-F screening application
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07041996

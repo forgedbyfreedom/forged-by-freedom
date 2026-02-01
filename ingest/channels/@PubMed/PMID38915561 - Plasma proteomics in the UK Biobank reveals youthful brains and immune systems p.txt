@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38915561
+Title: Plasma proteomics in the UK Biobank reveals youthful brains and immune systems promote healthspan and longevity.
+Authors: Oh, Le Guen, Rappoport, Urey, Rutledge
+Journal: bioRxiv : the preprint server for biology
+Year: 2025
+Topic: healthspan physical activity
+
+ABSTRACT:
+Organ-derived plasma protein signatures derived from aptamer protein arrays track organ-specific aging, disease, and mortality in humans, but the robustness and clinical utility of these models and their biological underpinnings remain unknown. Here, we estimate biological age of 11 organs from 44,526 individuals in the UK Biobank using an antibody-based proteomics platform to model disease and mortality risk. Organ age estimates are associated with future onset of heart failure (heart age HR=1.83), chronic obstructive pulmonary disease (lung age HR=1.39), type II diabetes (kidney age HR=1.58), and Alzheimer's disease (brain age HR=1.81) and sensitive to lifestyle factors such as smoking and exercise, hormone replacement therapy, or supplements. Remarkably, the accrual of aged organs progressively increases mortality risk while a youthful brain and immune system are uniquely associated with disease-free longevity. These findings support the use of plasma proteins for monitoring organ health and the efficacy of drugs targeting organ aging disease.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38915561/

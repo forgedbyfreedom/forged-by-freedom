@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01734538
+Title: Effect of 12 wk of Omega-3 FA Supplementation on Metabolic and Physical Health Parameters in Older Adults
+Official Title: Effects of 12 Weeks of Omega-3 Fatty Acid Supplementation on Metabolic and Physical Health Parameters in Older Adults
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: omega 3 exercise
+
+SUMMARY:
+The biological membranes that surround a cell and its organelles are important to the overall function of the cell. Fatty acids are the main structural components of a membrane, and the presence of certain fatty acids can alter a membrane's characteristics, which subsequently alters its function. Two fatty acids that are of particular interest to researchers are eicosapentanoic acid (EPA) and docosahexanoic acid (DHA). These omega-3 fatty acids have unique unsaturated structures, and their incorporation into biological membranes appears to elicit potent physiological effects. The body is unable to intrinsically synthesize these important fatty acids, so they must be obtained from the diet or through supplementation.
+
+EPA and DHA supplementation has been reported to provide numerous positive health benefits, including decreased blood pressure and an improved blood lipid profile. Recent research in our laboratory has demonstrated in young men that resting metabolic rate was increased following a 12 week period of omega fatty acid supplementation of 3 g/day. Fat utilization was also increased and carbohydrate use was decreased both at rest and during a 1 hr moderate exercise challenge. These findings have positive implications for people who are interested in losing weight, but it not known whether these effects occur in older adults. With age, body composition changes (increase in fat mass and decrease in lean mass) occur which may negatively affect general health, particularly normal physical functioning and quality of living of the older adult. The potential role of omega 3 fatty acids to increase fat oxidation and increase resting metabolic rate may be a therapy for decreasing fat mass in the older adult. Research has suggested that omega 3 fatty acids may elicit an additional therapeutic role by reducing joint pain.
+
+Another aspect of aging is a loss in lean body mass, which is associated with an attenuation of skeletal muscle protein synthesis in response to nutritional stimuli (amino acids and insulin). The weakened anabolic response is considered to be partly due to defects in the anabolic signaling cascade in the muscle. Research in older adults has reported an increase in muscle protein signaling with EPA and DHA supplementation in response to a nutritional challenge. However it is unknown whether the increase in protein signaling results in an eventual increase in lean body mass. The physical functioning of older adults is not only influenced by body composition changes, but also age-related neuronal changes that affect the velocity of axonal conduction and influence the ability of the muscle to generate torque and the rate at which the torque is developed. Muscular strength and functional capacity increases have been reported with chronic resistance exercise in a cohort of older women supplemented with EPA and DHA. However, the effect of EPA and DHA intake on physical strength in older adults with previously low EPA and DHA consumption, independent of exercise, is currently unknown.
+
+Therefore, the purpose of this study is to determine the effects of 12 weeks of omega-3 supplementation at 3 g/day on metabolic and physical health parameters in community-dwelling older adults. We hypothesize that EPA and DHA supplementation will result in 1) a decrease in resting heart rate and blood pressure; 2) a more healthy blood profile; 3) an increase in resting metabolic rate; 4) a greater reliance on fat oxidation for energy both at rest and during exercise; and 5) a decrease in fat mass; and 6) an increase in lean mass, strength and physical function.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in resting heart rate from baseline
+  - Change in resting blood pressure from baseline
+  - Change in fasted blood triglyceride concentration from baseline
+  - Change in fasted blood cholesterol from baseline
+  - Change in blood c-reactive protein concentration from baseline
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 Complete
+  - DIETARY_SUPPLEMENT: Placebo capsule
+
+ELIGIBILITY:
+Age: 60 Years to 74 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01734538

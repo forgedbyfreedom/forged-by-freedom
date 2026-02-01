@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05719844
+Title: Interest of an Attentional Evaluation by a Computerized Battery in the Management of Concussion in Young Rugby Players
+Official Title: Interest of an Attentional Evaluation by a Computerized Battery in the Management of Concussion in Young Rugby Players
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: sleep athletes
+
+SUMMARY:
+The goal of this study is to test the ability of a computerized neuropsychological battery to identify attentional disorders resulting from a concussion occurring during the practice of rugby. Thirty young people with a concussion (11-25 years old) will take several neuropsychological tests. Researchers will compare their results with those of young athletes without concussion to see the effect of concussion.
+
+DETAILED DESCRIPTION:
+The objective is to carry out a complete neuropsychological assessment, detailing the attentional and executive aspects using the TAP computerized battery. In addition, various paper-and-pencil tests, standardized in French, more commonly used in the context of neuropsychological data related to concussions in athletes, will also be administered. These assess processing speed, short-term memory and auditory-verbal working memory capacity, episodic memory and selective attention. This preliminary study would make it possible to shed light on the links that may exist between performance in the various tests proposed and the characteristics inherent in the symptomatology of concussion. Furthermore, it seems relevant to compare the results of computerized tests with other paper-and-pencil tests but also with the performance of individuals who have no history of concussion with the practice of a non-contact sport.
+
+The results of this study would make it possible in practice to have a neuropsychological assessment more specific to cerebral concussion, with a potentially reduced consultation time due to the use of more sensitive tools, and therefore, an earlier rehabilitative intervention.
+
+PRIMARY OUTCOMES:
+  - Alertness time
+  - Alertness error
+  - Divided Attention time
+  - Divided Attention error
+  - Go/No-go time
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Neuropsychological tests
+
+ELIGIBILITY:
+Age: 11 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05719844

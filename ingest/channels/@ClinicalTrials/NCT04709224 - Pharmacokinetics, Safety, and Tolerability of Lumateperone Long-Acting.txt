@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04709224
+Title: Pharmacokinetics, Safety, and Tolerability of Lumateperone Long-Acting Injectable in Patients With Schizophrenia
+Official Title: An Open-label Study to Determine the Pharmacokinetics, Safety and Tolerability of Single Ascending Doses of a Subcutaneous Injection of Lumateperone Long-Acting Injectable (LAI) Formulation in Patients With Schizophrenia
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 37
+Topic: creatine supplementation
+
+SUMMARY:
+This is an open-label study to determine the pharmacokinetics, safety and tolerability of single ascending doses of lumateperone long-acting injectable formulation in patients with schizophrenia. Patients will be enrolled in one of up to four cohorts. All patients will receive oral lumateperone for 5 days, followed by a 5-day washout of oral lumateperone, then followed by a single dose of lumateperone LAI.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Pharmacokinetics: Maximum observed plasma concentration (Cmax) of lumateperone and metabolites
+  - Pharmacokinetics: Time of maximum observed plasma concentration (Tmax) of lumateperone and metabolites
+  - Pharmacokinetics: Area under the plasma concentration-time curve from time zero to the last measurable concentration (AUC0-t) of lumateperone and metabolites
+  - Pharmacokinetics: Area under the plasma concentration-time curve from time zero extrapolated to infinity (AUC0-inf) of lumateperone and metabolites
+  - Pharmacokinetics: Terminal elimination half-life (T1/2) of lumateperone and metabolites
+
+INTERVENTIONS:
+  - DRUG: Lumateperone Long-Acting Injectable
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04709224

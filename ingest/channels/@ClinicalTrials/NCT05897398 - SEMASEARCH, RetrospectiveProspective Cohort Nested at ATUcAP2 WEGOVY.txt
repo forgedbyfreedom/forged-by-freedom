@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05897398
+Title: SEMASEARCH, Retrospective/Prospective Cohort Nested at ATUc/AP2 WEGOVY®
+Official Title: SEMASEARCH, Retrospective/Prospective Cohort Nested at ATUc/AP2 WEGOVY®
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1100
+Topic: fat loss muscle
+
+SUMMARY:
+The aim of the SEMASEARCH project is therefore to constitute a retrospective cohort, from the available data on patients already included in the ATUc/AP2, and prospective, on new patients who will initiate treatment according to the AP2 PUT, of 15 Specialized Obesity Centers in order to describe the effect of WEGOVY® treatment in this population. Thanks to a high phenotyping, subpopulations of interest will be identified to know the specifics of the effect of the treatment in these subgroups of interest. Secondary analyses will aim to look for clinical or biological biomarkers of success in the weight response to WEGOVY® in the entire prospective cohort, but also in specific subpopulations.
+
+In summary, the analysis of the entire SEMASEARCH cohort and sub-populations of interest will be based on a complete clinical phenotyping of patients (included in retrospective and prospective studies), completed by ad hoc questionnaires and associated with biological markers (prospective) partly collected within the framework of the WEGOVY® AP (glycaemia, hepatic assessment, lipid assessment ) and partly from a biobank to test specific hypotheses (predictive role of leptin sensitivity, insulin sensitivity level, plasma level of endocannabinoids, etc.).
+
+In addition, approaches using artificial intelligence (AI), notably machine learning, will make it possible to determine the variables or combination of variables that are most predictive of the weight response to treatment with WEGOVY® in the largest population. Indeed, individual weight loss in response to weight loss strategies is highly variable, whether purely related to lifestyle changes or pharmacological. Well-known factors associated with the ability to lose weight include adherence to lifestyle change, gender, age and specific medications. However, after controlling for these factors, differences in weight loss appear to persist in response to different interventions including pharmacological ones. Adaptation to energy deficit involves complex feedback mechanisms, and inter-individual differences are likely to arise from a range of poorly defined factors. Thus, a better understanding of the factors involved in inter-individual variability in response to WEGOVY® will help guide more personalised approaches to the management of these patients. AI techniques will be used to determine which combination of clinical or biological variables are most predictive of weight response.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Weight trends in patients included in the SEMASEARCH cohort at initiation and 12 months of treatment with WEGOVY®.
+
+INTERVENTIONS:
+  - OTHER: Data collection
+  - OTHER: Blood sampling
+  - OTHER: Questionnaires
+
+ELIGIBILITY:
+Age: 18 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05897398

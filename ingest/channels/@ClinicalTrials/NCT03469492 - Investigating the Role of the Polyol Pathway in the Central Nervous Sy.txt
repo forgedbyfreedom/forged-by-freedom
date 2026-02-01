@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03469492
+Title: Investigating the Role of the Polyol Pathway in the Central Nervous System Production of Fructose
+Official Title: Investigating the Role of the Polyol Pathway in the Central Nervous System Production of Fructose: an Intervention Study
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 8
+Topic: exercise intervention diabetes
+
+SUMMARY:
+To investigate whether longer-term improvement of glycemic control in poorly controlled diabetes patients with a 12-week intensified insulin treatment regimen will lead to decreased polyol pathway activity.
+
+DETAILED DESCRIPTION:
+Polyol pathway activity will decrease in diabetic individuals who undergo intensification of their insulin treatment regimens as reflected by lower baseline brain intracellular fructose levels and higher intracellular glutathione levels. Furthermore, following longer-term improved glycemic control, patients may also have down-regulation of the pathway as reflected by decreased production of intracellular fructose in response to hyperglycemic clamp.
+
+PRIMARY OUTCOMES:
+  - Change in HbA1c Levels
+
+INTERVENTIONS:
+  - DRUG: Insulin
+  - BEHAVIORAL: exercise
+  - DIETARY_SUPPLEMENT: Dietary counseling
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03469492

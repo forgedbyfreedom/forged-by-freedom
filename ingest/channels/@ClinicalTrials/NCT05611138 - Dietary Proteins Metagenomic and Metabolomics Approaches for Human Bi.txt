@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05611138
+Title: Dietary Proteins: Metagenomic and Metabolomics Approaches for Human Biomarkers Identification
+Official Title: Växtbaserade Proteiners påverkan på tarmhälsa Hos människa
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 59
+Topic: exercise muscle mass
+
+SUMMARY:
+This project aims to create a methodological framework, including the discovery and validation of novel biomarker panels to decipher the impact of plant-based protein intake on health biomarkers. Moreover, the possibility of predicting biomarkers production will be tested by a colonic in vitro fermentation study using study participants' faecal samples.
+
+DETAILED DESCRIPTION:
+This study consists of a double-blind, randomised, 3-arm parallel trial, consisting of 2-wk baseline measurements, 4-wk intervention period (with weekly sample collection), and 2-wk after-intervention follow-up, with healthy subjects in each arm consuming different protein sources (from plant- or animal-based sources). Subjects that are eligible to take part in this study will be blinded and randomly allocated to consume an isolated pea protein (arm 1), animal protein (arm 2) or more complex protein pea protein powder (arm 3). The isolated plant and animal protein will be used to evaluate the specific effects of the proteins from the different sources. The more complex protein pea protein powder will be used as a more complex food matrix, containing other food components than protein, to assess how other pea components may impact the specific protein effects. Regardless of the differences in their structure, all supplement powders will be adjusted to provide the same amount of protein. The protein calculation will be done exclusively for each participant, based on their body weight (kg). They will consume up to 2 g of protein per body weight per day. Subjects will be asked to maintain their usual diet and their food intake will be accompanied during the intervention.
+
+Participants' compliance will be followed by their food diaries and by clinical markers for protein intake and will collect blood, faeces and 24 h urine samples. A subset of the participants (max. 15 per arm) for visits 2 and 6 will be invited to participate in a postprandial challenge. After the fastening blood sample collection, they will receive the daily protein portion as breakfast. For those, 9 blood sample time points will be taken, being at 0, 15, 30, 60, 90, 120, 150, 180, and 480 min. After the 180 min measurement, they will receive a standard meal as lunch (e.g., pasta with tomato sauce).
+
+PRIMARY OUTCOMES:
+  - Changes in the faecal metabolites using targeted and untargeted metabolomics during the intervention
+  - Changes in the plasma metabolites using targete and untargeted metabolomics during the intervention
+  - Profile/composition of the gut microbiota during the intervention
+  - Routinely analysed markers for protein intake/compliance during the intervention - urine
+  - Routinely analysed markers for protein intake/compliance during the intervention - blood
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protein supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05611138

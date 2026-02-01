@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35210595
+Title: Tirzepatide cardiovascular event risk assessment: a pre-specified meta-analysis.
+Authors: Sattar, McGuire, Pavo, Weerakkody, Nishiyama
+Journal: Nature medicine
+Year: 2022
+Topic: tirzepatide obesity
+
+ABSTRACT:
+Tirzepatide is a novel, once weekly, dual GIP/GLP-1 receptor agonist and is under development for the treatment of type 2 diabetes (T2D) and obesity. Its association with cardiovascular outcomes requires evaluation. This pre-specified cardiovascular meta-analysis included all seven randomized controlled trials with a duration of at least 26 weeks from the tirzepatide T2D clinical development program, SURPASS. The pre-specified primary objective of this meta-analysis was the comparison of the time to first occurrence of confirmed four-component major adverse cardiovascular events (MACE-4; cardiovascular death, myocardial infarction, stroke and hospitalized unstable angina) between pooled tirzepatide groups and control groups. A stratified Cox proportional hazards model, with treatment as a fixed effect and trial-level cardiovascular risk as the stratification factor, was used for the estimation of hazard ratios (HRs) and confidence intervals (CIs) comparing tirzepatide to control. Data from 4,887 participants treated with tirzepatide and 2,328 control participants were analyzed. Overall, 142 participants, 109 from the trial with high cardiovascular risk and 33 from the six trials with lower cardiovascular risk, had at least one MACE-4 event. The HRs comparing tirzepatide versus controls were 0.80 (95% CI, 0.57-1.11) for MACE-4; 0.90 (95% CI, 0.50-1.61) for cardiovascular death; and 0.80 (95% CI, 0.51-1.25) for all-cause death. No evidence of effect modifications was observed for any subgroups, although the evidence was stronger for participants with high cardiovascular risk. Tirzepatide did not increase the risk of major cardiovascular events in participants with T2D versus controls.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35210595/

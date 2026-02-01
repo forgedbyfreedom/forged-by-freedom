@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04024436
+Title: A Study of TAS-120 in Patients With Metastatic Breast Cancer
+Official Title: A Phase 2 Study of TAS-120 in Metastatic Breast Cancers Harboring Fibroblast Growth Factor Receptor (FGFR) Amplifications
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: growth hormone treatment
+
+SUMMARY:
+The purpose of the trial is to evaluate a patient's response to a Fibroblast Growth Factor Receptor (FGFR) inhibitor, futibatinib (TAS-120), used either alone or in combination with the hormonal therapy, fulvestrant. This study will be conducted in patients with metastatic breast cancer who have specific Fibroblast Growth Factor Receptor gene abnormalities and who have previously received conventional therapies to treat their breast cancer, or who are not able to tolerate certain cancer therapies. This study will also evaluate the safety of taking futibatinib, or futibatinib and fulvestrant, by learning about the potential side effects.
+
+DETAILED DESCRIPTION:
+This is a Phase 2, open-label, non-randomized, multicenter study designed to evaluate the efficacy and safety of futibatinib (TAS-120) and futibatinib + fulvestrant in up to 168 adult patients with locally advanced/metastatic breast cancer harboring FGFR gene amplifications. Patients will be enrolled to 1 of 4 treatment cohorts based on diagnosis and FGFR gene amplification status, and will receive either single agent futibatinib in Cohorts 1-3 or futibatinib plus fulvestrant in Cohort 4, as follows:
+
+* Cohort 1 - HR+ HER2- Measurable Disease w/ FGFR2 Amplification
+* Cohort 2 - TNBC Measurable Disease w/ FGFR2 Amplification
+* Cohort 3 - HR+ HER2- or TNBC Non-Measurable Disease w/ FGFR2 Amplification
+* Cohort 4 - HR+ HER2- Measurable Disease w/ FGFR1 Amplification
+
+PRIMARY OUTCOMES:
+  - Objective Response Rate (ORR) - Cohorts 1, 2
+  - Clinical Benefit Rate (CBR) - Cohort 3
+  - 6-month Progression-free Survival (PFS) Rate - Cohort 4
+
+INTERVENTIONS:
+  - DRUG: Futibatinib
+  - DRUG: Futibatinib plus Fulvestrant
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04024436

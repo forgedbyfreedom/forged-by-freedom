@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02985580
+Title: Effects of Blueberry Juice Consumption on Cognitive Function in Healthy Older People
+Official Title: Effects of Blueberry Juice Consumption on Brain Activation and Perfusion in Healthy Older People
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: protein supplementation
+
+SUMMARY:
+Blueberries are rich in flavonoids that possess antioxidant and anti-inflammatory properties, which in rodent models are neuro-protective. The risk of developing dementia is reduced in people habitually consuming high flavonoid intakes, but data from human intervention studies is sparse. We therefore investigated whether 12 weeks of blueberry concentrate supplementation improved cognitive function in healthy elderly via increased brain activation and perfusion.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Brain perfusion
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Blueberry
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02985580

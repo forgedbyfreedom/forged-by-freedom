@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07104188
+Title: Effects of Energy Drink on Repeated Sprint Performance and Cognitive Function in Athletes
+Official Title: Effects of Energy Drink on Repeated Sprint Performance and Cognitive Function in Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: caffeine exercise
+
+SUMMARY:
+Energy drinks are often used by athletes before competitions to enhance their performance. Recent research has pointed out that the performance effects of select ingredients have been studied individually but not in combination with caffeine. Therefore, this study is designed to investigate the effects of caffeine, anserine, and elderberry on cognitive function and repeated sprint performance of athletes during a high-intensity exercise protocol.
+
+A double-blind, randomized crossover design will be employed. Three types of supplements will be tested: placebo, caffeine (220 mg), and an energy drink containing 220 mg caffeine, 288 mg anserine, 400 mg elderberry, and 660 mg of a vitamin-mineral mixture. Twelve college athletes will be recruited to complete repeated sprint tests on a cycle ergometer until exhaustion and to undertake a series of cognitive tasks during exercise.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Repeated Sprint Performance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: A non-active placebo supplement.
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Energy Drink
+
+ELIGIBILITY:
+Age:  to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07104188

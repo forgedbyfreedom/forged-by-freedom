@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32571939
+Title: A combined activation mechanism for the glucagon receptor.
+Authors: Mattedi, Acosta-Guti&#xe9;rrez, Clark, Gervasio
+Journal: Proceedings of the National Academy of Sciences of the United States of America
+Year: 2020
+Topic: glucagon receptor agonist
+
+ABSTRACT:
+We report on a combined activation mechanism for a class B G-protein-coupled receptor (GPCR), the glucagon receptor. By computing the conformational free-energy landscape associated with the activation of the receptor-agonist complex and comparing it with that obtained with the ternary complex (receptor-agonist-G protein) we show that the agonist stabilizes the receptor in a preactivated complex, which is then fully activated upon binding of the G protein. The proposed mechanism contrasts with the generally assumed GPCR activation mechanism, which proceeds through an opening of the intracellular region allosterically elicited by the binding of the agonist. The mechanism found here is consistent with electron cryo-microscopy structural data and might be general for class B GPCRs. It also helps us to understand the mode of action of the numerous allosteric antagonists of this important drug target.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32571939/

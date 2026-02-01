@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41003604
+Title: Computational Analysis of Neuromuscular Adaptations to Strength and Plyometric Training: An Integrated Modeling Study.
+Authors: M&#x103;nescu
+Journal: Sports (Basel, Switzerland)
+Year: 2025
+Topic: neuromuscular adaptations strength
+
+ABSTRACT:
+Understanding neuromuscular adaptations resulting from specific training modalities is crucial for optimizing athletic performance and injury prevention. This in silico proof-of-concept study aimed to computationally model and predict neuromuscular adaptations induced by strength and plyometric training, integrating musculoskeletal simulations and machine learning techniques. A validated musculoskeletal model (OpenSim 4.4; 23 DOF, 92 musculotendon actuators) was scaled to a representative athlete (180 cm, 75 kg). Plyometric (vertical jumps, horizontal broad jumps, drop jumps) and strength exercises (back squat, deadlift, leg press) were simulated to evaluate biomechanical responses, including ground reaction forces, muscle activations, joint kinetics, and rate of force development (RFD). Predictive analyses employed artificial neural networks and random forest regression models trained on extracted biomechanical data. The results show plyometric tasks with GRF 22.1-30.2 N&#xb7;kg-1 and RFD 3200-3600 N&#xb7;s-1, 10-12% higher activation synchrony, and 7-12% lower moment variability. Strength tasks produced moments of 3.2-3.8 N&#xb7;m&#xb7;kg-1; combined strength + plyometric training reached 3.7-4.2 N&#xb7;m&#xb7;kg-1, 10-16% above strength only. Machine learning predictions revealed superior neuromuscular gains through combined training, especially pairing back squats with high-intensity drop jumps (50 cm). This integrated computational approach demonstrates significant practical potential, enabling precise optimization of training interventions and injury risk reduction in athletic populations.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41003604/

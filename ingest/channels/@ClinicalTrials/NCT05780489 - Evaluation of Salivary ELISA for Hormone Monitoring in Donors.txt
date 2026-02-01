@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05780489
+Title: Evaluation of Salivary ELISA for Hormone Monitoring in Donors
+Official Title: Evaluation of Salivary ELISA for Hormone Monitoring in Donors
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: growth hormone treatment
+
+SUMMARY:
+In donors or patients undergoing assisted reproduction treatments (ART) it is necessary to closely control ovarian stimulation to monitor the number and size of developing follicles.
+
+Oestradiol (E2) and progesterone (P4) are products of steroidogenesis. Their concentrations increase with the diameter of the growing follicle. In order to assess treatment response and support clinical decisions, accurate and reliable methods to measure E2 and P4 are essential. Measurement of both hormones, as well as monitoring of follicle growth through ultrasound measurements, is an important part of ovarian stimulation, requiring patients or donors to undergo multiple blood draws. It is often a physically and emotionally painful process, and the most convenient solution is the measurement of hormones concentrations in other biological fluids, such as saliva. Salivary diagnostic tests are a less invasive, inexpensive, and stress-free alternative.
+
+The current study pretends to evaluate the correlation between salivary ELISA assays and serum determination of progesterone and oestradiol concentrations in oocyte donors, and, also, evaluate the feasibility of doing saliva E2 and P4 determinations in the IVIRMA clinic labs.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - E2 and P4 on Day 1
+  - E2 and P4 on Day 8
+  - E2 and P4 on Triggering day
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Determination of progesterone and oestradiol
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05780489

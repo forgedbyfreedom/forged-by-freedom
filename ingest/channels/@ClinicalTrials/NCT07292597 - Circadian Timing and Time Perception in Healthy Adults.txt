@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07292597
+Title: Circadian Timing and Time Perception in Healthy Adults
+Official Title: How Do Individual Differences in Circadian Rhythms Influence Time Perception?
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 128
+Topic: caffeine exercise
+
+SUMMARY:
+This study examines how a person's natural daily rhythm ("chronotype") affects the way time is experienced and judged. Healthy Danish-speaking adults (23-45 years) who are clearly morning-type or evening-type will complete two lab sessions in a crossover design: one at their preferred time of day (e.g., morning for morning-types) and one at the opposite time (misaligned). In each session, participants do brief computerized tasks that measure time estimation/production, vigilance (psychomotor vigilance task), decision-making, and responses to social information, plus simple color-vision tasks. Short questionnaires about sleepiness, mood, fatigue, and the subjective "passage of time" are collected before, during, and after testing. A subset will wear a wrist actigraphy device for one week beforehand to characterize sleep-wake patterns.
+
+Testing is conducted under standardized lab conditions with scheduled breaks. The main goal is to determine whether time judgments and vigilance are less accurate during the misaligned session and whether decision-making and social responses also vary with circadian timing. Risks are minimal and mainly relate to temporary tiredness when tested at a non-preferred time; participants may stop at any time. Participation is voluntary. Data are pseudonymized and handled under GDPR. Participants receive DKK 300 after completing both sessions (pro-rated if they withdraw early). Results will be published regardless of outcome, and de-identified data/code will be shared after publication.This study examines how a person's natural daily rhythm ("chronotype") affects the way time is experienced and judged. Healthy Danish-speaking adults (23-45 years) who are clearly morning-type or evening-type will complete two lab sessions in a crossover design: one at their preferred time of day (e.g., morning for morning-types) and one at the opposite time (misaligned). In each session, participants do brief computerized tasks that measure time estimation/production, vigilance (psychomotor vigilance task), decision-making, and responses to social information, plus simple color-vision tasks. Short questionnaires about sleepiness, mood, fatigue, and the subjective "passage of time" are collected before, during, and after testing. A subset will wear a wrist actigraphy device for one week beforehand to characterize sleep-wake patterns.
+
+Testing is conducted under standardized lab conditions with scheduled breaks. The main goal is to determine whether time judgments and vigilance are less accurate during the misaligned session and whether decision-making and social responses also vary with circadian timing. Risks are minimal and mainly relate to temporary tiredness when tested at a non-preferred time; participants may stop at any time. Participation is voluntary. Data are pseudonymized and handled under GDPR. Participants receive DKK 300 after completing both sessions (pro-rated if they withdraw early). Results will be published regardless of outcome, and de-identified data/code will be shared after publication.
+
+DETAILED DESCRIPTION:
+Background/Rationale. Circadian rhythms vary across individuals (chronotypes) and can be misaligned with social schedules. Both circadian timing and time perception influence cognition and behavior, yet within-person effects of circadian alignment on temporal judgments and related functions are not well characterized.
+
+Objectives/Hypotheses. Primary: test whether circadian misalignment (testing at a non-preferred time) increases time-estimation/production bias and reduces vigilance versus aligned testing. Secondary: assess effects on temporal variability, duration discrimination, decision-making strategies, social conformity, and simple color-perception measures (white-point/unique-hue).
+
+Design. Randomized, two-condition crossover trial with within-subject comparison of circadian-congruent vs incongruent sessions (order counterbalanced). Sessions occur on the same day (morning and evening) with a substantial break; no visible clocks; caffeine/exercise restrictions prior to testing. A subset (n≈60) completes 7-day actigraphy and sleep diary.
+
+Participants. Healthy adults, 23-45 years, Danish-speaking, clear morning or evening chronotype (MEQ/MCTQ). Key exclusions: shift work, recent trans-meridian travel, sleep/neurologic/psychiatric disorders, medications affecting sleep/cognition, intermediate chronotype.
+
+Intervention. Behavioral manipulation of testing time relative to chronotype (congruent vs incongruent) in a crossover design.
+
+Outcomes.
+
+Primary: (1) Time-estimation/production bias across 10-60 s targets; (2) Psychomotor vigilance task (lapses, RT).
+
+Secondary: Time-estimation variability (CV), duration discrimination threshold, passage-of-time ratings, KSS sleepiness, mood/fatigue scales, information-conformity effect, decision-making metrics, color-perception indices (white-point/unique-hue).
+
+Outcome time frame: per session; within-subject contrast (incongruent-congruent).
+
+Sample size/Analysis. Target N≈128. Within-subject models test condition effects, with chronotype and session order as factors; missing data handled with mixed-effects models. Alpha=0.05 (two-sided).
+
+Data management/Sharing. Pseudonymized data stored per AU policy/GDPR. De-identified datasets and analysis code will be shared in an open repository within 12 months of primary publication.
+
+Risk/Benefit. Minimal risk (temporary tiredness). Potential benefits include improved understanding of circadian influences on cognition with implications for scheduling and performance.
+
+PRIMARY OUTCOMES:
+  - Time estimation bias
+
+INTERVENTIONS:
+  - BEHAVIORAL: Session timing relative to chronotype
+
+ELIGIBILITY:
+Age: 23 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07292597

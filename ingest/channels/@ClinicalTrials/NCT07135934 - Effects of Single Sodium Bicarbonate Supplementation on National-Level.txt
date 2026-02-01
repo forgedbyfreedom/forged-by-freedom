@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07135934
+Title: Effects of Single Sodium Bicarbonate Supplementation on National-Level Finswimming Performance
+Official Title: Evaluation of the Effects of Single Sodium Bicarbonate Supplementation on Finswimming Performance of National Level Finswimmers: A Randomized, Double-Blind, Placebo-Controlled Crossover Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: athletic performance
+
+SUMMARY:
+This randomized, double-blind, placebo-controlled crossover trial will investigate the acute effects of sodium bicarbonate supplementation on performance, stroke biomechanics, and selected physiological and perceptual responses during a simulated 200-meter Bi-Fins race in elite finswimmers.
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled, crossover study will examine the effects of sodium bicarbonate (NaHCO₃) supplementation on simulated finswimming performance and associated biomechanical, physiological, and perceptual responses in national-level finswimmers. Twenty participants, all active members of the Czech junior or senior national team, will complete three test sessions separated by a 48-hour recovery period without training sessions.
+
+The first session will serve as a control with no intervention, while the second and third will involve ingestion of either sodium bicarbonate (NaHCO₃; 300 mg·kg-¹) or placebo (food-grade starch), administered in a randomized, counterbalanced order. The capsules will be indistinguishable in appearance, weight, and texture. Allocation concealment will be ensured: only a designated medical professional overseeing the health and safety of the participants will have access to the randomization codes. Neither the participants nor the investigators will be aware of the supplement condition during testing.
+
+All sessions will be conducted under standardized conditions in a 25-meter indoor swimming pool (Aplikační centrum BALUO, Palacký University Olomouc) and will include a standardized warm-up followed by a 200-meter Bi-Fins time trial.
+
+Blood samples for acid-base balance assessment will be collected at four time points: baseline (10 minutes before warm-up), 10 minutes after warm-up, 5 minutes before race start, and 3 minutes post-exercise. From these samples, variability in acid-base balance will be assessed, specifically using actual base excess (ABE; mmol/L), blood hydrogen ion concentration (pH; unitless), and bicarbonate concentration (HCO₃-; mmol/L). Blood lactate concentration (mmol/L) will be measured at two time points only: baseline (10 minutes before warm-up) and 3 minutes post-exercise.
+
+Subjective perceptual responses will include:
+
+1. rate of perceived exertion (RPE) using the Borg Category Ratio 1-10 scale, assessed immediately after the race, where higher scores indicate greater exertion;
+2. gastrointestinal discomfort using the Borg Category Ratio 1-10 scale, assessed approximately 5 minutes before the race to avoid performance bias, where higher scores indicate worse discomfort; and
+3. delayed-onset muscle soreness (DOMS) using a 10-centimeter visual analog scale (VAS; 0 cm = no soreness, 10 cm = extreme soreness) for both upper and lower limbs, where higher scores indicate greater soreness.
+
+Stroke mechanics - stroke rate (SR; cycles/min) and stroke length (SL; meters/cycle) - will be analyzed from video recordings of the 200-meter trials.
+
+The study will follow the Consolidated Standards of Reporting Trials (CONSORT) guidelines for crossover trials and has been approved by the Ethics Committee of the Faculty of Physical Culture, Palacký University Olomouc (Ref. No. 2/2024).
+
+Statistical analysis will include repeated-measures analysis of variance (ANOVA) to compare conditions an
+
+PRIMARY OUTCOMES:
+  - Stroke rate (SR; cycles/min)
+  - Total race time (seconds)
+  - Stroke length (SL; meters/cycle)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Sodium Bicarbonate (NaHCO3)
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 15 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07135934

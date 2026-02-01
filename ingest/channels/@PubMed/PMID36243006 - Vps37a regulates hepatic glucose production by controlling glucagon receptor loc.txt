@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36243006
+Title: Vps37a regulates hepatic glucose production by controlling glucagon receptor localization to endosomes.
+Authors: Sekar, Motzler, Kwon, Novikoff, J&#xfc;lg
+Journal: Cell metabolism
+Year: 2022
+Topic: glucagon receptor agonist
+
+ABSTRACT:
+During mammalian energy homeostasis, the glucagon receptor (Gcgr) plays a key role in regulating both glucose and lipid metabolisms. However, the mechanisms by which these distinct signaling arms are differentially regulated remain poorly understood. Using a Cy5-glucagon agonist, we show that the endosomal protein Vps37a uncouples glucose production from lipid usage downstream of Gcgr signaling by altering intracellular receptor localization. Hepatocyte-specific knockdown of Vps37a causes an accumulation of Gcgr in endosomes, resulting in overactivation of the cAMP/PKA/p-Creb signaling pathway to gluconeogenesis without affecting &#x3b2;-oxidation. Shifting the receptor back to the plasma membrane rescues the differential signaling and highlights the importance of the spatiotemporal localization of Gcgr for its metabolic effects. Importantly, since Vps37a knockdown in animals fed with a high-fat diet leads to hyperglycemia, although its overexpression reduces blood glucose levels, these data reveal a contribution of endosomal signaling to metabolic diseases that could be exploited for treatments of type 2 diabetes.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36243006/

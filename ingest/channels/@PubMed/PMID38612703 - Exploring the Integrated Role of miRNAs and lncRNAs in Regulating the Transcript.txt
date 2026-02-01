@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38612703
+Title: Exploring the Integrated Role of miRNAs and lncRNAs in Regulating the Transcriptional Response to Amino Acids and Insulin-like Growth Factor 1 in Gilthead Sea Bream (Sparus aurata) Myoblasts.
+Authors: Garc&#xed;a-P&#xe9;rez, Duran, Dal-Pai-Silva, Garcia de la Serrana
+Journal: International journal of molecular sciences
+Year: 2024
+Topic: insulin like growth factor muscle
+
+ABSTRACT:
+In this study, gilthead sea bream (Sparus aurata) fast muscle myoblasts were stimulated with two pro-growth treatments, amino acids (AA) and insulin-like growth factor 1 (Igf-1), to analyze the transcriptional response of mRNAs, microRNAs (miRNAs) and long non-coding RNAs (lncRNAs) and to explore their possible regulatory network using bioinformatic approaches. AA had a higher impact on transcription (1795 mRNAs changed) compared to Igf-1 (385 mRNAs changed). Both treatments stimulated the transcription of mRNAs related to muscle differentiation (GO:0042692) and sarcomere (GO:0030017), while AA strongly stimulated DNA replication and cell division (GO:0007049). Both pro-growth treatments altered the transcription of over 100 miRNAs, including muscle-specific miRNAs (myomiRs), such as miR-133a/b, miR-206, miR-499, miR-1, and miR-27a. Among 111 detected lncRNAs (&gt;1 FPKM), only 30 were significantly changed by AA and 11 by Igf-1. Eight lncRNAs exhibited strong negative correlations with several mRNAs, suggesting a possible regulation, while 30 lncRNAs showed strong correlations and interactions with several miRNAs, suggesting a role as sponges. This work is the first step in the identification of the ncRNAs network controlling muscle development and growth in gilthead sea bream, pointing out potential regulatory mechanisms in response to pro-growth signals.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38612703/

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06865261
+Title: Effects of L-ARGinine and Liposomal Vitamin C Supplementation On Physical Performance
+Official Title: Effects of L-arginine and Liposomal Vitamin C Supplementation on Physical Performance and Endothelial Function in Elderly With Sarcopenia
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: sarcopenia intervention
+
+SUMMARY:
+In older age, reduced mobility is associated with an increased risk of reduced quality of life, disability, institutionalisation, and death, as well as increased healthcare expenditures. Sarcopenia is a condition characterised by a reduction in muscle mass and strength and/or function. It is associated with several adverse outcomes, such as falls, increased risk of infection, disability, institutionalisation, and death. Currently, no pharmacological treatments are available to combat sarcopenia. The management of sarcopenia relies on the adoption of an active lifestyle, comprising resistance exercise, which may be supported by an adequate intake of protein with the diet. Recently, treatment with L-arginine and liposomal vitamin C has been shown to significantly reduce fatigue, and improve physical performance and endothelial reactivity in adult patients with Long COVID. Long COVID may be considered a model of accelerated ageing, as it recapitulates several age-associated biological processes, including chronic inflammation, oxidative stress, endothelial dysfunction and malnutrition.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - 6MWT
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Bioarginina C
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 70 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06865261

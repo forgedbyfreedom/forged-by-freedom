@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02762968
+Title: The Effects of Probiotic and HMB Supplementation on Immune and Digestive Function in Special Operations Soldiers
+Official Title: The Effects of 8-weeks of Probiotic and HMB Supplementation on Immune and Digestive Function in Special Operations Soldiers
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: HMB supplementation
+
+SUMMARY:
+The study will determine whether acute ingestion of a probiotic combined with beta-hydroxy-beta-methylbutyrate (HMB) can enhance immune and digestive function in soldiers during 8-weeks of advanced infantry training.
+
+DETAILED DESCRIPTION:
+Up to sixty soldiers from an elite infantry unit will perform a parallel design investigation. Soldiers will be randomly assigned to one of four groups. Group 1 will consume the probiotic plus HMB, group 2 will consume HMB only, group 3 will consume only the probiotic, and group 4 will consume only placebo. All four groups will be garrisoned together, eat the same meals, and perform the same activity. All groups will be tested before as well as after an 8-week advanced infantry training program. During each testing session resting blood samples will be obtained to assess cytokine, inflammatory, and muscle damage markers. Additionally, questionnaires will be used to determine digestive health. Anthropometric, performance, and muscle volume measures will also be assessed prior to and immediately following the supplementation and training protocol.
+
+PRIMARY OUTCOMES:
+  - Maintenance of Immune function
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: HMB
+  - DIETARY_SUPPLEMENT: BC30
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02762968

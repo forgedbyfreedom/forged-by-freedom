@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39933917
+Title: Screening of homing and tissue-penetrating peptides by microdialysis and in vivo phage display.
+Authors: Pemmari, Prince, Wiss, K&#xf5;iv, May
+Journal: Life science alliance
+Year: 2025
+Topic: peptide therapy recovery
+
+ABSTRACT:
+In vivo phage display is a method used for identification of organ- or disease-specific vascular homing peptides for targeted delivery of pharmaceutics. It is agnostic as to the nature and identity of the target molecules. The current in vivo biopanning lacks inbuilt mechanisms to select for peptides capable of vascular homing that would also be capable of tissue penetration to reach therapeutically relevant cells in the tissue parenchyma. Here, we combined in vivo phage display with microdialysis-based parenchymal recovery and high-throughput sequencing to select for peptides that, besides vascular homing, facilitate extravasation and tissue penetration. We first demonstrated in skin wounds that the method can selectively separate known homing peptides from those with additional tissue-penetrating ability. Screening of a na&#xef;ve peptide library identifies peptides that home and extravasate to extravascular granulation tissue in vascularized and diabetic wounds and cross blood-retina barrier in retinopathy. Our work suggests that in vivo phage display combined with microdialysis can be used for the discovery of vascular homing peptides capable of extravasation and tissue penetration.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39933917/

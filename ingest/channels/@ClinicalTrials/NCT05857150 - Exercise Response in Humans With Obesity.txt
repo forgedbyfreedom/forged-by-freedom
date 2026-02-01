@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05857150
+Title: Exercise Response in Humans With Obesity
+Official Title: Exercise Response in Humans With Obesity
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 120
+Topic: exercise intervention obesity
+
+SUMMARY:
+This study is being done to understand how chronic inflammation affects muscle function and responses to exercise.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in muscle protein synthesis
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Treadmill Test
+  - DIAGNOSTIC_TEST: Strength Test
+  - DIAGNOSTIC_TEST: Dual-Energy X-Ray Absorptiometry
+  - PROCEDURE: Muscle Biopsy
+  - PROCEDURE: Fat Biopsy
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05857150

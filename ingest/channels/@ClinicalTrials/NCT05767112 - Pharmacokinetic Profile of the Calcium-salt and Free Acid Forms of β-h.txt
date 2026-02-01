@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05767112
+Title: Pharmacokinetic Profile of the Calcium-salt and Free Acid Forms of β-hydroxy-β-methylbutyrate in Humans
+Official Title: Pharmacokinetic Profile of the Calcium-salt and Free Acid Forms of β-hydroxy-β-methylbutyrate in Humans
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: HMB supplementation
+
+SUMMARY:
+HMB supplementation has been shown to have potential to optimize resistance training responses, which may have important implications for sport, exercise, and health. However, HMB literature shows uncertainties as to which is the superior pharmaceutical form of supplemental HMB (i.e., the calcium salt or the free acid form) in terms of pharmacokinetic profile and bioavailability when consumed by humans. This research project investigated the bioavailability and pharmacokinetics of two different forms of supplemental HMB, namely HMB calcium-salt (HMB-Ca) and HMB Free Acid (HMB-FA). Further, HMB-Ca was provided both diluted in water and encapsulated in gelatine capsules. This pharmacokinetics study adopted a crossover design, open-label design in which male and female participants visited the laboratory on 3 different occasions to receive one the 3 treatments: 1g of HMB; the equivalent of 1g of HMB-Ca in water; the equivalent of 1g of HMB-Ca in gelatine capsules. Venous blood samples were collected before and multiple time points after treatment ingestion, for a period of 12 hours in total. A pre-ingestion midstream urine sample was collected as well as a 24-h post-ingestion total urine sample. All plasma and urine samples were analysed for their HMB concentrations via LC/MS. Time to peak, maximum concentration, area under the curve, half-life time and slope of the incremental phase were calculated to examine the pharmacokinetic profile of HMB and compare the 3 different pharmaceutical forms.
+
+DETAILED DESCRIPTION:
+This study aimed to investigate whether the different pharmaceutical forms of HMB show distinct bioavailability and pharmacokinetic profile in humans. A counterbalanced crossover open-label study was conducted. 20 male and female participants were recruited, of which 18 met the inclusion criteria and 16 enrolled in the study. All participants visited the laboratory on 3 different occasions, 5-7 days apart to receive one of the following treatments: 1) 1 g of HMB-FA, or 2) HMB-Ca (equivalent of 1 g of HMB) in capsules, or 3) HMB-Ca (equivalent of 1 g of HMB) dissolved in water. The order of treatments was counterbalanced to control for carryover and order effects using a 3-by-6 (treatment-by-participant) Latin square table (www.statpages.info/latinsq.html). To randomly allocate participants to treatment sequences, participants were recruited in blocks of 6, each containing 3 males and 3 females so that sexes were counterbalanced too. The allocation sequence within each block was defined using a random sequence generator (www.random.org). Blood samples were collected before HBM ingestion and 15, 30, 45, 60, 90, 120, 180, 240, 360 and 720 minutes after HMB ingestion. Urine samples were collected before HMB ingestion (midstream sample) and 24 hours post ingestion (24h total urine). A standardised breakfast was provided to all participants 1h before treatment ingestion. A standardised snack was given to all participants 4 hours after treatment ingestion, and a standardised meal was given 6 hours after treatment ingestion. Water ingestion was standardised in the first 360 minutes after ingestion. In the last 6 hours of the protocol, the participants were dismissed from the lab and returned for the 720 post-ingestion blood collection. They consumed food and water ad-libitum. HMB concentrations were determined in urine and plasma samples by LC/MS using tandem electrospray ionization (ESI). The following pharmacokinetic parameters were calculated: Time to peak, maximum concentration, area under the curve, half-life time and slope of the incremental phase. Plasma and urine HMB concentrations were compared between treatments across time with a 2-factor mixed models analysis. Fixed factors were treatment and time, and participants were the random factor. All pairwise comparisons were adjusted with the Tukey-Kraemer correction. AUC, relative bioavailability, Cmax and Tmax were compared between treatments with repeated measures one-way ANOVA with post-hoc tests adjusted for multiple comparisons using the Bonferroni correction.
+
+PRIMARY OUTCOMES:
+  - Plasma HMB concentration
+
+INTERVENTIONS:
+  - OTHER: Supplement administation
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05767112

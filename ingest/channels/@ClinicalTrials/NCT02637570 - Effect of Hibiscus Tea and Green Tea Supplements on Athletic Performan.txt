@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02637570
+Title: Effect of Hibiscus Tea and Green Tea Supplements on Athletic Performance, Blood Pressure, Muscle Damage Indices and Oxidative Stress
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: athletic performance
+
+SUMMARY:
+This study evaluated effect of Hibiscus tea and green tea supplements on athletic performance, blood pressure, muscle damage indices and oxidative stress in male athletes 18-35 years old and cardiovascular disease prevention approach.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - athletic performance assess by heart rate in step test (Harvard test).
+  - blood pressure
+  - serum's malondialdehyde
+  - serum's lactate dehydrogenase
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Hibiscus tea
+  - DIETARY_SUPPLEMENT: green tea
+  - DIETARY_SUPPLEMENT: placebo (dextrose)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02637570

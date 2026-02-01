@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41595663
+Title: Chronic Resistance Exercise Combined with Nutrient Timing Enhances Skeletal Muscle Mass and Strength While Modulating Small Extracellular Vesicle miRNA Profiles.
+Authors: Csala, &#xc1;d&#xe1;m, Horv&#xe1;th-Szalai, Sebesi, Garai
+Journal: Biomedicines
+Year: 2026
+Topic: nutrient timing exercise
+
+ABSTRACT:
+Background: The anabolic window hypothesis suggests a limited post-exercise period for optimal nutrient uptake and utilization. Prior research indicates that miRNAs in extracellular vesicles (EVs) may regulate post-exercise adaptation by influencing protein synthesis. This study aimed to examine the effects of resistance exercise (RE) on physiological parameters and the expression and function of miRNAs transported in EVs. Methods: Twenty resistance-trained male participants (22 &#xb1; 2 years) completed a five-week RE program designed for hypertrophy. They consumed maltodextrin and whey protein based on assigned nutrient timing: immediately post-exercise (AE), three hours post-exercise (AE3), or no intake (CTRL). Body composition and knee extensor strength were assessed. Small EVs were isolated and then validated via three methods. Nanoparticle tracking analysis determined EV concentration and size, followed by pooled miRNA profiling and signaling pathway analysis. Results: Skeletal muscle mass significantly increased in AE (p = 0.001, g = 2) and AE3 (p = 0.028, g = 1), and it was higher in AE compared to CTRL (p = 0.013, &#x3b7;2 = 0.41), while knee extensor strength improved only in AE (p = 0.032, g = 0.9). Body fat percentage significantly decreased in all groups, AE (p = 0.005, g = 1.5), AE3 (p = 0.024, g = 1), and CTRL (p = 0.005, g = 1.7). Vesicle concentration significantly increased in the AE group (p = 0.043, r = 0.7), while it decreased in the CTRL group (p = 0.046, r = 0.8). Distinct miRNA expression profiles emerged post-intervention: 20 miRNAs were upregulated in AE, while 13 in AE3 and 15 in CTRL were downregulated. Conclusions: Nutrient timing influences training adaptation but is not more critical than total macronutrient intake. Changes in EV-transported miRNAs may regulate anabolic processes via the PI3K-AKT-mTOR and FoxO pathways through PTEN regulation.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41595663/

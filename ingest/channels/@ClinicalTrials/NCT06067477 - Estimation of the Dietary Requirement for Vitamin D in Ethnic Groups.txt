@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06067477
+Title: Estimation of the Dietary Requirement for Vitamin D in Ethnic Groups
+Official Title: Estimation of the Dietary Requirement for Vitamin D in Ethnic Groups: a Double-blind, Randomised, Dose-response Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: vitamin D muscle
+
+SUMMARY:
+The aim of this study is to perform a double-blind, randomised, dose-response trial of vitamin D3 supplementation in United Kingdom (UK)-dwelling adults of white European, South Asian, and black African/Caribbean ethnicity to investigate the distribution of dietary intakes needed to maintain adequate vitamin D status in winter, as indicated by serum 25(OH)D concentrations at ranges of \>25 to 50 nmol/L. In addition, this study will investigate the effect of vitamin D3 supplementation on immune health, muscular strength, and overall health.
+
+DETAILED DESCRIPTION:
+The aim of this study is to perform a double-blind, randomised, dose-response trial of vitamin D3 supplementation in United Kingdom (UK)-dwelling adults of white European, South Asian, and black African/Caribbean ethnicity to investigate the distribution of dietary intakes needed to maintain adequate vitamin D status in winter, as indicated by serum 25(OH)D concentrations at ranges of \>25 to 50 nmol/L. In addition, this study will investigate the effect of vitamin D3 supplementation on immune health, muscular strength, and overall health. Recruited participants will be randomised to take 400, 1000, or 2000 IU for 12 weeks. Fasting blood samples collected at baseline and 12 weeks will measure biochemical markers of vitamin D status (serum 25(OH)D, calcium, parathyroid hormone, albumin), lipid profile, ferritin, micronutrient status, and immune and inflammatory biomarkers. Muscular strength will be measured using sit-to-stand and grip strength tests. Questionnaires, food diaries, and dosimeters will be used to gather data on lifestyle, physical activity, dietary intake, and sun exposure.
+
+PRIMARY OUTCOMES:
+  - Concentration of serum 25(OH)D (nmol/L)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D Supplement
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06067477

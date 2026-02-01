@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05457738
+Title: Home-based Exercice Therapy for Patients With Intermittent Claudication Using a New Smartphone Application
+Official Title: Home-based Exercice Therapy for Patients With Intermittent Claudication Using a New Smartphone Application : a Monocentric Randomized Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 52
+Topic: recovery exercise
+
+SUMMARY:
+The main characteristic of PAD is to limit physical activity by the appearance of claudication of the lower limbs which limits the walking distance, or the maximum distance traveled by the patient before the pain forces to stop. In daily practice, the walking distance is rarely measured at the time of treatment.
+
+Walking rehabilitation is the first-line treatment for these patients (class 1 recommendation from the AHA 2005 and the ESC 2017 with level A evidence). According to the recommendation, a walking session must last at least 30 minutes at the rate of 3 sessions per week for a minimum of 6 months.
+
+Walking rehabilitation should be systematically offered to all claudicating patients, whether operated on or not. It is often sufficient for mild claudication with a walking distance of more than 500 meters. Surgery should be reserved for patients in whom rehabilitation has failed and in whom the claudication is severe (walking distance less than 500 meters). Surgical intervention should not replace rehabilitation, but should be complementary.
+
+Supervised rehabilitation in specialized centers is rarely offered because it is not easily available and involves additional expenses and constraints for the patient (transport, fewer work periods for active patients, etc.). In the absence of specialized center, simple advice is most often given to the patient, who then only has to rely on his personal motivation: this is the so-called "go home and walk".
+
+Therefore, access to well-conducted rehabilitation is a fundamental element of the management of patients with intermittent claudication, which is currently lacking. In the age of digital health, it is necessary to develop innovative tools allowing self-rehabilitation of the patient in addition with remote monitoring by the doctor.
+
+Recent studies have validated and highlighted the interest of using GPS technology for the evaluation of walking activity in claudicants. To date, there are 2 published examples of smartphone applications developed specifically for exercise rehabilitation. The main shortcomings of the solutions proposed in these publications are:
+
+* The need to buy a specific GPS box
+* Discomfort for the patient to carry the box either in a backpack or over the shoulder
+* The lack of means for the patient to indicate the precise moment when the pain appears
+* And consequently the absence of clinical analysis centered on the symptom "walk induced pain" Consumer smartphone applications for GPS activity tracking are not intended for medical use and do not indicate when pain occurs.
+
+In this study, the University Hospital of REIMS will establish a scientific collaboration with the company VascInnove® for the use of a smartphone application, called E-REVA® which offers:
+
+* an assessment of walking activity and claudication parameters (appearance of pain, walking distance, recovery time after pain, total distance travelled, walking speed, etc.)
+* help with self-rehabilitation
+* quality of life and walking questionnaires
+
+The main innovation is the presence of a button allowing the patient to indicate when the pain appears. The patient will be able to have access via the smartphone application to his statistics and the evolution of his performance over time. The prescribing practitioner will have access, via a secure website, to the statistics of his patient, to whom he will be able to give personalized advice during follow-up consultations.
+
+The aim of this study is to carry out a single-centre prospective randomized stratified study (depending on whether or not patient has been revascularized) in patients with intermittent claudication who will or will not use the rehabilitation assistance smartphone application, seen in consultation for vascular surgery and vascular medicine at the University Hospital of Reims.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - maximal walking distance on treadmill test
+  - maximal walking distance on treadmill test
+
+INTERVENTIONS:
+  - OTHER: E-REVA® app
+  - OTHER: No E-REVA® app
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05457738

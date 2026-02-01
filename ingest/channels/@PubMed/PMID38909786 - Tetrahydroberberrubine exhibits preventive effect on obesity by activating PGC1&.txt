@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38909786
+Title: Tetrahydroberberrubine exhibits preventive effect on obesity by activating PGC1&#x3b1;-mediated thermogenesis in white and brown adipose tissue.
+Authors: Tang, Shi, Chen, Sun, Wang
+Journal: Biochemical pharmacology
+Year: 2024
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+The escalating prevalence of obesity presents formidable challenges, necessitating the development of effective therapeutic strategies. In this study, we aimed to elucidate the preventive effects on obesity of tetrahydroberberrubine (THBru), a derivative of berberine (BBR) and to unravel its underlying mechanism. Using an obese mouse model induced by a high-fat diet (HFD), THBru was found to markedly ameliorate obesity, as evidenced by reduced body weight, decreased Lee's index, diminished fat mass in epididymal white adipose tissue (WAT) and brown adipose tissue (BAT), alongside improved dyslipidemia. Notably, at the same dose, THBru exhibited superior efficacy compared to BBR. RNA-sequencing and gene set enrichment analysis indicated THBru activated thermogenesis, which was further confirmed in WAT, BAT, and 3T3-L1 cells. Bioinformatics analysis of RNA-sequencing data revealed the candidate gene Pgc1&#x3b1;, a key regulator involved in thermogenesis. Moreover, THBru was demonstrated to elevate the expression of PGC1&#x3b1; by stabilizing its mRNA in WAT, BAT and 3T3-L1 cells. Furthermore, PGC1&#x3b1; knockdown blocked the pro-thermogenic and anti-obesity action of THBru both in vivo and in vitro. This study unravels the preventive effects of THBru on obesity through the activation of PGC1&#x3b1;-mediated thermogenesis, thereby delineating its potential therapeutic implications for obesity and associated disorders.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38909786/

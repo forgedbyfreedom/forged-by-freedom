@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02930148
+Title: Personalised Guidance Service for Lifestyle Management and Obesity Prevention in Teen-agers Pilot Study
+Official Title: Personalised Guidance Service for Lifestyle Management and Obesity Prevention in Teen-agers: A Multicenter Quasi-experimental Pilot Study
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 525
+Topic: exercise intervention obesity
+
+SUMMARY:
+the aims of the present study is to test the PEGASO system in real life conditions in Lombardy (Italy), England and Scotland (UK) and Catalonia (Spain), as well as to assess changes in teen-agers' awareness and lifestyles after the use of PEGASO system. Specifically, the investigators aim to:
+
+1. To test the usability of PEGASO platform
+2. To pilot approaches to testing the effectiveness of the system to:
+
+   1. Evaluate the increase of knowledge/awareness about healthy habits
+   2. Assess behavioural change in lifestyle, and specifically on target behaviours In particular, the pilot study will help to assess likely recruitment and retention in a controlled trial, to test the acceptability and utility of assessment procedures, to obtain estimates of effect size and variability to power a future substantive study
+
+DETAILED DESCRIPTION:
+A multi-centre quasi experimental controlled pilot study will be undertaken to evaluate a 6 months ICT based intervention, the PEGASO System, to promote healthy habits among adolescents. The study will include adolescents from four sites: England (UK), Scotland (UK), Lombardy (Italy) and Catalonia (Spain). Participants in he intervention group will test the PEGASO ecosystem from October 2016 to March 2017 while those in the comparative group will not have access to the PEGASO ecosystem. The sample selection will be carried out in two stages: in the first phase, schools with medium-low socioeconomic level will be selected by convenience sampling; in the second phase classes will be selected for participation in each school in agreement with schools principals/ head teachers. A total of 525 adolescents from participating high schools will be asked to participate in the study as intervention or comparative group, in a 2:1 ratio. Consequently, approximately, 350 participants of the four pilot sites will be testing the PEGASO platform, whilst 175 will be the comparative group. Decisions about appropriate sample sizes were underpinned by a range of considerations, including the study's aims, operational constraints, the accuracy of the survey estimates and costs.
+
+The PEGASO system is based on the comprehensive Behavior Change Wheel (BCW) framework and in particular by the Capability-Opportunity-Motivation-Behavior (COM-B) system. This provided the theoretical grounding for the content and implementation approach of the behavior change interventions embedded within the components of the PEGASO system. The innovative key component of the PEGASO system is the behavior recognition system which allows detection and evaluation of participants' real-time behavior (collected through other components of the PEGASO system). While the target behaviors allow focusing the intervention on a specific task for each participant, the link between behavior change theory (Behavior Change wheel) and the target behaviors is ensured via the COM-B questionnaire. Participants will have the opportunity to choose one target behavior at the time. When selecting a novel target behavior, participants will be asked to complete the COM-B questionnaire. The answers for each question subset will guide which component of the COM-B behavior system adopt to target the content of the behavior change intervention. For instance, the messaging framework in the PEGASO Companion App will select messages that are associated with participants' preferences expressed in the COM-B questionnaire. This will provide an intervention that is personalized to the different needs of the individual intervention participant.
+
+To analyze the effectiveness of the platform in modifying knowledge/awareness and behaviors the investigators will compare intervention and control groups by utilizing an intention-to-treat (ITT) approach, thus inferring the effect independently from drop-outs and non-adherence.
+
+The pa
+
+PRIMARY OUTCOMES:
+  - Change in dietary habits
+  - Change in physical activity
+  - Change in sedentary behaviour
+  - Change in sleeping habits
+  - Change in lifestyles knowledge questionnaire
+
+INTERVENTIONS:
+  - OTHER: PEGASO System (ICT based system/mHealth solution)
+
+ELIGIBILITY:
+Age: 13 Years to 16 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02930148

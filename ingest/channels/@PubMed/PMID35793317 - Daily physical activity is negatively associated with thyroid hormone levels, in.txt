@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35793317
+Title: Daily physical activity is negatively associated with thyroid hormone levels, inflammation, and immune system markers among men and women in the NHANES dataset.
+Authors: Klasson, Sadhir, Pontzer
+Journal: PloS one
+Year: 2022
+Topic: thyroid hormone metabolism exercise
+
+ABSTRACT:
+The acute effects of exercise on metabolic energy expenditure and inflammation are well studied, but the long-term effects of regular daily physical activity on metabolic and endocrine effects are less clear. Further, prior studies investigating the impact of daily physical activity in large cohorts have generally relied on self-reported activity. Here, we used the U.S. National Health and Nutrition Examination Survey (NHANES) to investigate the relationship between daily physical activity and both thyroid and immune activity. Daily physical activity was assessed through accelerometry or accelerometry-validated survey responses. Thyroid activity was assessed from circulating levels of thyroid stimulating hormone (TSH) and thyroxine (T4). Immune function was assessed from circulating cytokines (C-reactive protein [CRP], immunoglobulin E [IgE], fibrinogen) and blood cell counts. In general linear models including body mass index, age, gender, activity and TSH as factors, active adults had a lower levels of T4 and reduced slope of the TSH:T4 relationship. Similarly, greater physical activity was associated with lower CRP and fibrinogen levels (but not IgE) and lower white blood cell, basophil, monocyte, neutrophil, and eosinophil (but not lymphocyte) counts. Daily physical activity was also associated with lower prevalence of clinically elevated CRP, WBC, and lymphocytes in a dose-response manner. These results underscore the long-term impact of daily physical activity on both systemic metabolic activity (thyroid) and on specific physiological tasks (immune). The regulatory effects of physical activity on other bodily systems are clinically relevant and should be incorporated into public health strategies promoting exercise.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35793317/

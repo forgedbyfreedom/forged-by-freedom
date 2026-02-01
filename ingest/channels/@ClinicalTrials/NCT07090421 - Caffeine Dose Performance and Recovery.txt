@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07090421
+Title: Caffeine Dose: Performance and Recovery
+Official Title: Varying Doses of Evening Caffeine Ingestion Have Different Effects on Rowing Ergometer Performance, Sleep Quality and Wakefulness Scores
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 13
+Topic: caffeine exercise
+
+SUMMARY:
+The goal of this clinical trial is to learn how different doses of caffeine taken in the evening affect rowing performance, sleep quality, and daytime alertness in trained male university rowers. The main questions it aims to answer are:
+
+Does a low, moderate, or high caffeine dose improve rowing performance? How do these doses affect sleep and recovery after evening exercise? Participants completed four rowing tests after consuming either a placebo, low (3 mg/kg), moderate (6 mg/kg), or high (9 mg/kg) dose of caffeine. Researchers measured rowing time, power, heart rate, sleep quality, and daytime sleepiness.
+
+The study found that moderate and high caffeine doses improved rowing performance the most. However, these same doses made it harder for participants to sleep well and feel alert the next day. Headaches and stomach issues were also more common with the high dose. The low dose gave smaller performance gains but caused fewer side effects.
+
+This study shows that evening caffeine can boost performance but may hurt recovery and sleep. Athletes and coaches should weigh these trade-offs when using caffeine for late-day training or competition.
+
+DETAILED DESCRIPTION:
+This double-blind, randomized crossover study examined the dose-dependent effects of evening caffeine ingestion on rowing performance, sleep quality, and daytime alertness in trained male university rowers. The rationale stems from increasing use of caffeine as a performance-enhancing supplement in evening training or competition settings, despite its known adverse effects on sleep and recovery. Thirteen participants completed four experimental trials (placebo, 3 mg/kg, 6 mg/kg, 9 mg/kg caffeine), each separated by a washout period, during which they performed a 2000-meter rowing time trial and were assessed for sleep quality and daytime sleepiness using validated scales. The study also recorded physiological responses and adverse events across conditions. By evaluating multiple doses, the design allowed for assessment of both efficacy and tolerability thresholds, supporting dose-optimization strategies. This study aims to inform practical guidelines for athletes and coaches balancing acute ergogenic benefits with potential recovery trade-offs when caffeine is used late in the day.
+
+PRIMARY OUTCOMES:
+  - Change in 2000-meter Rowing Ergometer Completion Time (seconds) Following Varying Doses of Evening Caffeine Ingestion
+  - Subjective Sleep Quality Score (5-point Likert Scale)
+  - Mean Power Output (Watts) During 2000-meter Rowing Ergometer Trial
+  - Daytime Sleepiness Score (Epworth Sleepiness Scale)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cellulose Powder
+  - DIETARY_SUPPLEMENT: Caffeine 3 mg/kg Oral Powder
+  - DIETARY_SUPPLEMENT: Caffeine 6 mg/kg Oral Powder
+  - DIETARY_SUPPLEMENT: Caffeine 9 mg/kg Oral Powder
+
+ELIGIBILITY:
+Age: 20 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07090421

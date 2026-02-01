@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06998654
+Title: Feasibility of a Digital Intervention for Patients Frequently Admitted to Psychiatric Acute Wards
+Official Title: Feasibility of a Digital Intervention for Patients Frequently Admitted to Psychiatric Acute Wards: the MULI App Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: physical activity intervention
+
+SUMMARY:
+This qualitative feasibility study investigates a digital health app designed for patients who are frequently admitted to the psychiatric acute ward, to facilitate crisis support outside of office hours to avoid unnecessary readmissions, as well as self-harm. As this is a novel app to be implemented in an already existing service, key uncertainties regarding the intervention content and its delivery needs to be addressed before potentially conducting a full-scale trial, or, alternatively, to inform further intervention refinement. Such uncertainties are appropriate to explore in a feasibility study according to the Medical Research Council (MRC) framework for the development and evaluation of complex interventions.
+
+There is a need to investigate whether the app is acceptable and useful to the patients using it, and to the healthcare providers who respond to it. There is also a need to know whether the healthcare providers responding to the app find the task manageable. The context in which the staff are to deliver the intervention, i.e. the in-bed ward, may be subject to different barriers, such as a staff shortage due to sick leave and heavy workload in the ward. Such barriers are essential to identify ahead of possible future trials in other contexts.
+
+DETAILED DESCRIPTION:
+The present study is a part of the larger Revolving Door Project, a collaborative service innovation project between a university hospital and two municipalities in Norway. The revolving door project aims to create a more sustainable service to prevent unnecessary hospital readmissions, reducing the strain repeated rehospitalisations can produce and also reducing financial costs. By collecting valuable insights from key stakeholders, critical points in the healthcare services have been identified and outlined in the "emergency loop". This loop illustrates how the current service solution can worsen the revolving door problem by failing to offer timely and adequate help and ultimately risking an escalation of the patient's difficulties. To address these issues, a new healthcare service has been developed to meet the needs of the stakeholders. The service is aimed at individuals who are repeatedly readmitted and discharged from the psychiatric acute ward, who have emotionally unstable traits (not necessarily diagnosis specific), where previously attempted measures have proven insufficient and where there is an insecurity in the help apparatus as to how to help the patient.
+
+The Muli-service The muli-app is a part of a new service, called The Muli-service. This service comprises a collaborative multidisciplinary team (Muli-team), with representatives from municipal mental health services, local psychiatric hospital, psychiatric acute ward, and police. This team coordinates admissions and collaborates with individuals to improve communication and cooperation between services and patients. As such, the Muli-service isn't a new treatment but an intervention meant to complement and enhance existing treatment and mental health provision.
+
+The collaborative part of the service is already established. In addition, the revolving door project has developed the Muli-app, which is the focus of the present feasibility study. A Person-Based Approach has been used to guide the development the app, where stakeholders have been consulted iteratively. The app was created based on stakeholders reported needs, to provide them with an alternative means to seek help outside of office hours, which is a typical time for emergency hospital admissions. The goal is to provide timely and adequate help and thus prevent further escalation of the situation. This aligns with recommendations in the European Psychiatric Association (EPA) guidance on the quality of mental health services.
+
+The Muli-app At the point of download, the app consists of a few predefined sets of emotion regulation exercises and contact information for emergency services. Tailored content (i.e crisis plan and crisis measures) will be written in collaboration between patient and therapist/Muli-contact. Possible crisis measures for each individual patient will be discussed and agreed upon in the Muli-team in advance, ensuring that these measures are in fact feasible. The patient will be presented with the opt
+
+PRIMARY OUTCOMES:
+  - Acceptability of the digital mental health intervention for patients
+  - Acceptability of the digital mental health intervention for healthcare providers
+  - Perceived usefulness of the digital mental health intervention for patients
+  - Perceived usefulness of the intervention for healthcare providers
+
+INTERVENTIONS:
+  - BEHAVIORAL: Muli-app
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06998654

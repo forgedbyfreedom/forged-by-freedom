@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06380179
+Title: Photomedicine Project 14: PBMT for Performance Enhancement in SOF
+Official Title: Assessing the Impact of Post-Exercise Photobiomodulation Application on Performance, Recovery, and Behavioral State in Trained Special Operator Population
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 116
+Topic: high intensity interval training
+
+SUMMARY:
+Special Operations Forces (SOF) train continually to maintain peak performance. Thus, they are nearly always in a state of recovery, and in need of noninvasive therapies to address the taxing workload. Photobiomodulation therapy (PBMT) is a noninvasive treatment where a low-level laser is applied to the body to enhance healing, recovery, and performance. Army Tactical Human Optimization Rapid Rehabilitation and Reconditioning (THOR3) provides a consistent avenue for implementation of PBMT as a modality. Studies in athletes have shown performance and recovery benefits with pre-and post-workout focal application of PBMT. While there is less evidence on the potential cognitive/behavioral effects of a systematic application of PBMT, self-reported fatigue has also been found to be significantly lower in groups with focal PBMT application as compared to placebo. Further, PBMT research in healthy military tactical athletes is limited. PBMT may be a promising tool for enhancing physical performance by accelerating musculoskeletal and psychological recovery in the SOF population. The investigators aim to study the physiologic and behavioral effects of PBMT application post-exercise on performance in SOF Operators.
+
+The Intent: The investigators propose to conduct a single-blinded randomized-control trial with sham control to investigate the effectiveness of providing PBMT post physical training in a SOF population.
+
+The specific aims of this study are to:
+
+1. Analyze and describe the physiologic effects, if any, of PBMT application post-exercise in Special Forces Operators undergoing coach-led training.
+2. Analyze and describe the behavioral effects, if any, of PBMT application post-exercise in Special Forces Operators undergoing coach-led training.
+3. Evaluate the overall clinical utility of focal PBMT subsequent to physical training in a US Army SOF, tactical athlete population.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Countermovement Jump (CMJ) initial baseline: deceleration/concentric impulse
+  - Countermovement Jump (CMJ) initial baseline: peak force production
+  - Countermovement Jump (CMJ) initial baseline: rate of force production
+  - Countermovement Jump (CMJ) initial baseline: unilateral performance comparison
+  - Countermovement Jump (CMJ) week 1 follow-up: deceleration/concentric impulse
+
+INTERVENTIONS:
+  - DEVICE: THOR3 training + Photobiomodulation Therapy (PBMT)
+  - DEVICE: THOR3 training + sham PBMT
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06380179

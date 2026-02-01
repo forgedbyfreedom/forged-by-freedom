@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05516212
+Title: Caffeine Kinetics and CrossFit®-Specific Performance
+Official Title: The Effect of Caffeine and Paraxantine Kinetics on Exercise Performance and Psychophysical State in Athletes After Ingestion of Mono- or Multi-ingredient Caffeine-containing Supplements
+Status: RECRUITING
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: caffeine exercise
+
+SUMMARY:
+The study aims at assessing the relation between caffeine (CAF) and paraxanthine (PAX) kinetics after acute ingestion of caffeine (3 mg/kg body mass) in the form or mono- or multi-ingredient preparations and CrossFit®-specific performance or selected indicators of psychophysiological state. Blood indicators of muscle damage/recovery, acid-base balance and electrolytes levels will be evaluated. The impact of genetic variations in the polymorphisms rs5751876 in ADORA2A gene and rs762551 in CYP1A2 on CAF/PAX kinetics will be considered.
+
+DETAILED DESCRIPTION:
+The main aim of the project is to assess blood and saliva kinetics of CAF and PAX after acute ingestion of caffeine (3 mg/kg body mass) in the form of mono-ingredient preparation (CAFMONO) or two different multi-ingredient pre-workout supplements (CAFMIPS\_1 CAFMIPS\_2) compared to Placebo (PLA). The impact of CAF/PAX kinetics on CrossFit®-specific performance (as measured via the Fight Gone Bad test \<FGB\>) and selected psychophysiological indicators such as reaction time, postural stability, the level of focus, alertness, fatigue and feeling of 'energy', as well as the rate of perceived exertion (RPE) will be evaluated. Additionally, blood indicators of muscle damage/regeneration (haematological evaluation; activity of: creatine kinase \<CK\>, lactate dehydrogenase \<LDH\>, aspartate aminotransferase \<AspAT\> and alanine aminotransferase \<AlAT\>; levels of creatinine \<Cre\> and mioglobin), acid-base balance (pH, levels of: bicarbonate, , lactate \<La\>, anion gap; base excess, H+) and concentrations of electrolytes (Ca2+, Na+, K+, Cl-) will be evaluated. Saliva and blood parameters will be assessed before the test preparations ingestion (-10minINT), after ingestion (+15, +30, +45, +60 minINT) and after FGB (+3, +10 minFGB). The indicators of psychophysiological state will be evaluated at -10minINT, +30, +60 minINT, +10minFGB.
+
+The study is a double-blind, randomized, placebo-controlled, cross-over trial. The study consists of preliminary meeting with research team (familiarization with study protocol) and five study visits (T0 - T4), of which T0 is a BLANK visit with no supplementation and supplementation visits (T1 - T4). The testing days will be separated with 7-days wash-out. Investigators aimed to recruit 25 male CrossFit®-trained participants. Random allocation of participants to supplementation order (PLA, CAFMONO, CAFMIPS\_1 CAFMIPS\_2) will be done using a random sequence generator, with participants being equalised by fat-free mass and number of repetitions in FGB test (established at BLANK visit).
+
+At the preliminary (familiarization) visit the written informed consent for participation in the study protocol will obtained from all participants. After that, anthropometric measurements and familiarization with exercise test procedures (Fight Gone Bad test) will be performed. The biological samples for evaluation of polymorphisms rs5751876 in ADORA2A gene and rs762551 in CYP1A2 will be obtained. At the BLANK visit (T0) no supplementation will be provided. However, the remaining study procedures (anthropometric measurements, blood and saliva collection, FGB and psychophysiological evaluation) will be performed. After the completion of T0 visit, the participants will be randomly assigned to the order of supplementation.
+
+Each of T1-T4 visits will start with body mass and body composition evaluation (electric bioimpedance method). Then the baseline (resting) blood and saliva samples, as well as psychophysiological evaluation will be don
+
+PRIMARY OUTCOMES:
+  - The effect of acute ingestion of the same dose of caffeine (3 mg/kg BM) in form of 3 different preparations on discipline-specific performance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: CAFMONO supplementation
+  - DIETARY_SUPPLEMENT: CAFMIPS_1 supplementation
+  - DIETARY_SUPPLEMENT: CAFMIPS_2 supplementation
+  - DIETARY_SUPPLEMENT: Placebo treatment
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05516212

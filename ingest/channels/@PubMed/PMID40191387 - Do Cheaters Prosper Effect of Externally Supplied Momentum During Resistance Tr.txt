@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40191387
+Title: Do Cheaters Prosper? Effect of Externally Supplied Momentum During Resistance Training on Measures of Upper Body Muscle Hypertrophy.
+Authors: Augustin, Pi&#xf1;ero, Enes, Mohan, Sapuppo
+Journal: International journal of exercise science
+Year: 2025
+Topic: training volume muscle growth
+
+ABSTRACT:
+Exercise technique, defined as the controlled execution of bodily movements to ensure an exercise effectively targets specific muscle groups while minimizing the risk of injury, is a resistance training (RT) variable frequently highlighted as critical to successful RT program outcomes, with proper technique suggested to play a role in maximizing muscle development. This study examined the effects of externally applied momentum on RT-induced muscular adaptations in the upper extremities. Thirty young adults were recruited to participate in a within-participant design, with one limb randomly allocated to perform biceps curls and triceps pushdowns using strict form (STRICT) and the other using external momentum (CHEAT). Participants completed four sets of each exercise with 8-12 repetitions until momentary muscular failure, twice a week for eight weeks. We obtained pre-post proximal and distal measures of muscle thickness for the elbow flexors and extensors, and assessed circumference changes in the upper arms. Data were analyzed in a Bayesian framework including both univariate and multivariate mixed effect models with random effects. Differences between conditions were estimated as average treatment effects, with inferences based on posterior distributions and Bayes Factors (BFs). Results showed similar between-conditions increases for all muscle thickness sites as well as circumference measures, generating consistent support for the null hypothesis (BF = 0.06 to 0.61). Volume load was markedly greater for CHEAT compared to STRICT across each week of the intervention. In conclusion, the use of external momentum during single-joint RT of the upper extremities neither helped nor hindered hypertrophy of the target muscles.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40191387/

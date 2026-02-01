@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06102460
+Title: Pre-sleep Macros on Sleep Quality and Recovery
+Official Title: The Effect of Pre-sleep Milk-derived Protein to Support Sleep Quality and Recovery in Elite Female Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: sleep athletes
+
+SUMMARY:
+The goal of this clinical trial is to assess the effect of eating before bed (2 hours after dinner, 30mins before bed) and the effects this has on sleep and recovery measures in elite female athletes.
+
+Participants will be randomized to 4 possible groups in a double-blind randomized cross over design. Each group will ingest 40 grams of one of the following nutrients as a liquid shake for 3 consecutive nights:
+
+1. Casein Protein
+2. a-lactalbumin Protein
+3. Carbohydrate
+4. Placebo
+
+There will be at least 1 week washout period between each intervention.
+
+Sleep and recovery outcome measures will be obtained through a WHOOP 4.0 wearable healthy tracking device. Subjective sleep and recovery will be obtained through subjective questionnaires. Food will be logged by participants on intervention days. Blood glucose will be measured using continuous glucose monitors.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Sleep
+  - Recovery
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Casein protein
+  - DIETARY_SUPPLEMENT: a-lactalbumin protein
+  - DIETARY_SUPPLEMENT: Carbohydrate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06102460

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06371651
+Title: Creatine and GAA for Brain Oxygenation
+Official Title: Enhancing Brain Oxygenation: Effects of Short-Term Co-Administration of Creatine and Guanidinoacetic Acid at Rest and During Stress
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: sports nutrition
+
+SUMMARY:
+The main aim of this randomized controlled trial is to evaluate cerebral blood oxygenation after 7-day administration of a creatine-guanidinoacetic acid (GAA) mixture in healthy adults before, during, and after a series of cognitive tests.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Brain oxygen saturation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06371651

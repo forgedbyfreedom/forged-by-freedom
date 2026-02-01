@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06994793
+Title: Validity and Reliability of Gait and Jump Parameters Measured by the iSen Device in Healthy Adults
+Official Title: Investigation of the Validity and Reliability of Gait and Jumping Parameters Measured With iSen Device in Healthy Adults
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 60
+Topic: athletic performance
+
+SUMMARY:
+This study aims to evaluate the validity and reliability of gait and jumping parameters measured with the iSen device in healthy adults. Gait analysis is a valuable tool for assessing general health, cognitive performance, quality of life, and mortality. It is commonly used by clinicians to assess functional limitations resulting from neurological or orthopedic conditions and to guide treatment plans. Traditional gait assessments primarily focus on walking speed, but additional parameters such as step length, step time, and gait symmetry are crucial for a comprehensive analysis.
+
+The study will also assess vertical jump performance, which is a surrogate measure of explosive lower limb strength and is commonly used in sports performance and injury prediction. The iSen device, a wearable and affordable sensor, will be compared to the validated BTS G-Walk system to evaluate the accuracy and consistency of its measurements. Participants aged 18-35 with no history of musculoskeletal, neurological, or systemic conditions will be included.
+
+The study will be conducted at Gazi University and Kırıkkale University, where participants will undergo assessments of gait and jump performance using both iSen and BTS G-Walk devices. A test-retest reliability protocol will be employed with a seven-day interval between measurements. The results will provide evidence on the suitability of the iSen device for reliable and valid gait and jump measurements in clinical settings
+
+DETAILED DESCRIPTION:
+This study seeks to evaluate the validity and reliability of gait and jumping parameters measured with the iSen device in healthy adults. Gait analysis is an important tool in clinical settings as it provides valuable information about an individual's general health, cognitive performance, quality of life, and mortality risk. It is particularly useful for identifying functional limitations resulting from neurological or orthopedic conditions. Clinicians often rely on gait analysis to customize treatment plans, monitor individual progress, and assess the therapeutic benefits of interventions. Additionally, gait analysis can help identify underlying abnormalities and disorders that contribute to reduced functionality, thus aiding clinical decision-making.
+
+Traditionally, clinical gait assessments focus on walking speed, typically measured using timed walking tests such as the 10-meter walk test or the 6-minute walk test. However, these assessments often fall short of providing a comprehensive evaluation, as they do not account for other important gait parameters such as step length, step time, or gait symmetry. Spatio-temporal gait parameters, such as walking speed, step time, step length, and step width, are essential for evaluating changes that may predict fall risk. Moreover, they are important for understanding motor function in a variety of populations.
+
+Currently, laboratory-based equipment such as 3D motion capture systems and force plates are considered the gold standard for gait analysis due to their precision. However, these systems are often costly, require large spaces, and demand significant time for setup and analysis. As a result, they are not always accessible in clinical environments. In recent years, wearable accelerometers have gained popularity as an alternative for gait analysis. These devices offer several advantages, including low cost, portability, ease of use, and the ability to perform assessments in real-world settings, such as walking corridors. Notably, accelerometer-based gait analysis can be completed in a short period, typically within 10 minutes, making it an efficient option for clinical practice.
+
+In addition to gait analysis, vertical jump performance is also a key parameter for assessing lower extremity strength and explosive power. Jumping performance can provide insights into athletic ability, physical fitness, and injury risk. Vertical jump height, in particular, is widely used by physiotherapists, trainers, and health professionals to assess strength, neuromuscular fatigue, and explosive power. Several methods are used to measure jump height, including contact mats, force plates, and accelerometers. However, force plates, considered the gold standard, are not portable and require specialized expertise to operate. As a result, wearable sensors like the iSen device have emerged as a practical and cost-effective alternative for jump performance analysis.
+
+The iSen device is a wearable, wireless sensor that offe
+
+PRIMARY OUTCOMES:
+  - Gait Speed
+  - Cadence
+  - Step Length
+  - Stance Phase Duration
+  - Step Time
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06994793

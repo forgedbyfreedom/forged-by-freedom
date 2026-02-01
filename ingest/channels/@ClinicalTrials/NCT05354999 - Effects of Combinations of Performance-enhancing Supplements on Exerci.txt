@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05354999
+Title: Effects of Combinations of Performance-enhancing Supplements on Exercise Performance
+Official Title: Effects of Different Combinations of Performance-enhancing Supplements on High Intensity Exercise Performance
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: caffeine exercise
+
+SUMMARY:
+The purpose of the study is to investigate the effect of combinations of creatine monohydrate, sodium bicarbonate and caffeine on exercise performance and fatigability.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Work performed (kJ/Watt)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Sodium bicarbonate and caffeine
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05354999

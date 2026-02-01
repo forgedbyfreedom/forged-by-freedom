@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07297511
+Title: Application of Multiple Vertical Jump Tests in Return-to-Play Assessment for Anterior Cruciate Ligament Reconstruction Athletes
+Official Title: The Application of Vertical Jump Performance in Return-to-Play Assessment for Anterior Cruciate Ligament Reconstruction Athletes
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 36
+Topic: athletic performance
+
+SUMMARY:
+Anterior cruciate ligament (ACL) injury is a common sports-related injury, particularly in sports that require extensive jumping and cutting movements. Although anterior cruciate ligament reconstruction (ACLR) surgery can restore knee stability, many athletes still face the risk of re-injury after returning to competition.Current return-to-play assessment relies primarily on single-plane horizontal hop tests and symmetry indices (LSI ≥ 90%); however, an increasing body of research suggests that these tests may not comprehensively reflect functional deficits in the vertical plane, repeated hopping, or high-intensity sport-specific activities.This study hypothesizes that incorporating multiple vertical jump tests-including single-leg vertical jumps and 10-second repeated vertical jumps-combined with advanced force plate analytics (such as Reactive Strength Index \[RSI\] and Time to Stabilization \[TTS\])-can more sensitively reveal residual neuromuscular control deficits following surgery. This approach would provide evidence-based guidance for return-to-play decision-making, thereby improving athletes' long-term athletic performance and safety.
+
+DETAILED DESCRIPTION:
+This cross-sectional study compares biomechanical performance between ACLR athletes (\>6 months post-op) and healthy controls to evaluate whether vertical jump protocols reveal greater limb asymmetries compared to traditional horizontal hop tests. Following a 5-minute stationary bicycle warm-up and familiarization trials, participants perform four unilateral tasks on both limbs: Single-Legged Hop for Distance (SHD), Crossover Hop for Distance (CHD), Single-Legged Vertical Countermovement Jump (SLVJ), and 10-Second Repeated Single-Legged Vertical Jump (SLVJs). All tasks are performed with hands on hips to minimize compensatory motion. Three successful trials are recorded per limb per task with 3-minute rest intervals between sets. Trials are discarded if participants land on the contralateral limb, lose balance, or fail to land on the force plate. Vertical ground reaction forces are collected using a dual-force plate system (Hawkin Dynamics, 3rd Generation) at 1000 Hz. Data processing calculates Limb Symmetry Index (LSI), Modified Reactive Strength Index (RSI) from SLVJs as Jump Height divided by Movement Time, Time to Stabilization (TTS) defined as the duration for vGRF to stabilize within ±5% of body weight, and eccentric/concentric impulse.
+
+PRIMARY OUTCOMES:
+  - Limb asymmetry index,LSI
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07297511

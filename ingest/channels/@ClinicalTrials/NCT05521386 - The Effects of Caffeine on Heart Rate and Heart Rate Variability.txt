@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05521386
+Title: The Effects of Caffeine on Heart Rate and Heart Rate Variability
+Official Title: The Effects of Caffeine Supplementation on Heart Rate and Heart Rate Variability at Rest and During Submaximal Exercise
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: caffeine exercise
+
+SUMMARY:
+In previous research we have shown that an acute caffeine dose of 5 mg/kg body mass reduces heart rate at rest and during low intensity exercise, with the effect dissipating as exercise intensity increases. If, as suspected, the effect at rest and at low intensities is due to an effect of caffeine on parasympathetic activity, this is likely to be reflected in an increase in heart rate variability (the beat-to-beat fluctuation in heart rate). The aim of this study is therefore to investigate the effect of caffeine on heart rate and heart rate variability at rest and during submaximal exercise.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Heart rate variability
+
+INTERVENTIONS:
+  - DRUG: Caffeine
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05521386

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 33463549
+Title: Circulating markers of NADH-reductive stress correlate with mitochondrial disease severity.
+Authors: Sharma, Reinstadler, Engelstad, Skinner, Stackowitz
+Journal: The Journal of clinical investigation
+Year: 2021
+Topic: beta alanine exercise performance
+
+ABSTRACT:
+Mitochondrial disorders represent a large collection of rare syndromes that are difficult to manage both because we do not fully understand biochemical pathogenesis and because we currently lack facile markers of severity. The m.3243A&gt;G variant is the most common heteroplasmic mitochondrial DNA mutation and underlies a spectrum of diseases, notably mitochondrial encephalomyopathy lactic acidosis and stroke-like episodes (MELAS). To identify robust circulating markers of m.3243A&gt;G disease, we first performed discovery proteomics, targeted metabolomics, and untargeted metabolomics on plasma from a deeply phenotyped cohort (102 patients, 32 controls). In a validation phase, we measured concentrations of prioritized metabolites in an independent cohort using distinct methods. We validated 20 analytes (1 protein, 19 metabolites) that distinguish patients with MELAS from controls. The collection includes classic (lactate, alanine) and more recently identified (GDF-15, &#x3b1;-hydroxybutyrate) mitochondrial markers. By mining untargeted mass-spectra we uncovered 3 less well-studied metabolite families: N-lactoyl-amino acids, &#x3b2;-hydroxy acylcarnitines, and &#x3b2;-hydroxy fatty acids. Many of these 20 analytes correlate strongly with established measures of severity, including Karnofsky status, and mechanistically, nearly all markers are attributable to an elevated NADH/NAD+ ratio, or NADH-reductive stress. Our work defines a panel of organelle function tests related to NADH-reductive stress that should enable classification and monitoring of mitochondrial disease.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/33463549/

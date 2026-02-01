@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01252355
+Title: Efficacy and Safety of Teriflunomide in Patients With Relapsing Multiple Sclerosis and Treated With Interferon-beta
+Official Title: A Multi-center Double-blind Parallel-group Placebo-controlled Study of the Efficacy and Safety of Teriflunomide in Patients With Relapsing Multiple Sclerosis Who Are Treated With Interferon-beta
+Status: TERMINATED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 534
+Topic: beta alanine
+
+SUMMARY:
+The primary objective was to demonstrate the effect of teriflunomide, in comparison to placebo, on frequency of Multiple Sclerosis (MS) relapses in patients with relapsing forms of MS who are treated with Interferon-beta (IFN-beta).
+
+The secondary objectives were:
+
+* Assess the effect of teriflunomide, in comparison to placebo, when added to IFN-beta on:
+
+  * Disease activity as measured by brain Magnetic Resonance Imaging (MRI)
+  * Disability progression
+  * Burden of disease and disease progression as measured by brain MRI
+* Evaluate the safety and tolerability of teriflunomide when added to IFN-beta therapy
+* Assess the pharmacokinetics of teriflunomide in use in addition to baseline IFN-beta therapy
+* Assess associations between variations in genes and clinical outcomes (safety and efficacy)
+* Assess other measures of efficacy of teriflunomide such as fatigue and health-related quality of life
+* Assess measures of health economics (hospitalization due to relapse, including the length of stay and any admission to intensive care unit)
+
+DETAILED DESCRIPTION:
+The study period per patient was expected to be between 56 and 160 weeks depending on when the patient was randomized and this included the following:
+
+* a screening period up to 4 weeks,
+* a treatment period expected to be between 48 and 152 weeks,
+* 4-week post rapid elimination follow-up period.
+
+Patients were to continue on treatment until a fixed common end date which was approximately 48 weeks after randomization of the last patient.
+
+For those patients who completed the treatment period, a long term extension study of approximately 1 year (including teriflunomide alone) was initially planned to be proposed.
+
+PRIMARY OUTCOMES:
+  - Annualized Relapse Rate (ARR) (Poisson Regression Estimates)
+
+INTERVENTIONS:
+  - DRUG: Teriflunomide
+  - DRUG: Placebo (for teriflunomide)
+  - DRUG: Interferon-beta (IFN-beta)
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01252355

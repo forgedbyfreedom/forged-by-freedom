@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01012141
+Title: Docetaxel With a Phytochemical in Treating Patients With Hormone Independent Metastatic Prostate Cancer
+Official Title: Pilot Phase II Study of Docetaxel in Combination With a Dietary Phytonutrient in First Line Treatment of Hormone Independent Metastatic Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE : Drugs used in chemotherapy, such as docetaxel, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Dietary supplements, such as phytochemicals, may stop or delay the development of prostate cancer.
+
+DETAILED DESCRIPTION:
+The purpose of this study is to assess the pathological response rate in metastatic prostate cancer patients treated by : Docetaxel with a phytochemical
+
+PRIMARY OUTCOMES:
+  - Response rate as assessed by clinical, biological and paraclinical examination
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: phytochemical
+  - DRUG: Docetaxel
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01012141

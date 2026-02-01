@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05925569
+Title: Electronic Alert to Improve Testing For Primary Aldosteronism in Patients With Hypertension
+Official Title: Electronic Alert-Based Computerized Decision Support to Improve Testing For Primary Aldosteronism in Patients With Hypertension: ALERT-PA
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12501
+Topic: physical activity intervention
+
+SUMMARY:
+Primary aldosteronism (PA) is common but rarely recognized cause of hypertension that carries excess cardiovascular and renal risk and has approved targeted treatments. Despite current clinical guidelines that recommend screening in a defined set of high-risk populations, less than 5% of eligible patients are ever screened for PA. This study aims to evaluate the impact of a computer decision support Best Practice Advisory (BPA) alert on rates of screening for PA in guideline-eligible patients, referral to specialist PA care, and treatment with mineralocorticoid receptor antagonists.
+
+DETAILED DESCRIPTION:
+The study protocol is a single-center Quality Improvement initiative performed as a cluster-randomized controlled trial designed to evaluate the impact of an EPIC electronic health record Best Practice Advisory (BPA) alert on rates of screening for PA in guideline-eligible patients. 1600 patients meeting inclusion/exclusion criteria for Primary Aldosteronism (PA) screening will comprise the study population, with randomization of alert/no alert occurring at the level of their treating clinician (Attending Physician, Nurse Practitioner, or Physician Assistant) to minimize spillover/contamination effects of the BPA onto other patients treated by the same clinician. Treating clinicians within primary care and relevant specialties including endocrinology, nephrology, and cardiology will be randomized 1:1 to receive or not receive a BPA prompting screening for PA with laboratory testing of plasma aldosterone, plasma renin activity, and a basic metabolic panel, as well as an order for an e-consult to provide guidance on interpretation of results, for eligible patients. Outcomes will be ascertained by electronic health record review at 6 months.
+
+PRIMARY OUTCOMES:
+  - Frequency of PA testing orders by provider
+
+INTERVENTIONS:
+  - OTHER: Best Practice Advisory Computerized Alert
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05925569

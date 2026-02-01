@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35389803
+Title: Tuning T cell receptor sensitivity through catch bond engineering.
+Authors: Zhao, Kolawole, Chan, Feng, Yang
+Journal: Science (New York, N.Y.)
+Year: 2022
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Adoptive cell therapy using engineered T cell receptors (TCRs) is a promising approach for targeting cancer antigens, but tumor-reactive TCRs are often weakly responsive to their target ligands, peptide-major histocompatibility complexes (pMHCs). Affinity-matured TCRs can enhance the efficacy of TCR-T cell therapy but can also cross-react with off-target antigens, resulting in organ immunopathology. We developed an alternative strategy to isolate TCR mutants that exhibited high activation signals coupled with low-affinity pMHC binding through the acquisition of catch bonds. Engineered analogs of a tumor antigen MAGE-A3-specific TCR maintained physiological affinities while exhibiting enhanced target killing potency and undetectable cross-reactivity, compared with a high-affinity clinically tested TCR that exhibited lethal cross-reactivity with a cardiac antigen. Catch bond engineering is a biophysically based strategy to tune high-sensitivity TCRs for T cell therapy with reduced potential for adverse cross-reactivity.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35389803/

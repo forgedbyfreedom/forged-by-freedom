@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02276755
+Title: Vitamin D Supplementation in TB Prevention
+Official Title: Vitamin D in TB Prevention in School Age Children
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 8851
+Topic: vitamin D muscle
+
+SUMMARY:
+The goal of this clinical trial is to determine whether vitamin D supplementation reduces risk of acquiring latent tuberculosis infection (LTBI) in school age children in Mongolia. The investigators hypothesize that (1) vitamin D supplementation will reduce risk of acquisition of LTBI, (2) vitamin D supplementation will safely reduce risk of developing active TB and improve other secondary efficacy outcomes, and (3) children with the lowest vitamin D status at baseline will gain most from the intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Acquisition of latent tuberculosis infection
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cholecalciferol (vitamin D3)
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 6 Years to 13 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02276755

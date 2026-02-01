@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06467578
+Title: RMR Monitoring Feasibility and Acceptability
+Official Title: Feasibility and Acceptability of 6-week Repeated Measures of Resting Metabolic Rate Using a Portable Indirect Calorimeter
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: weight loss exercise
+
+SUMMARY:
+Obesity is a leading risk factor for chronic diseases such as type 2 diabetes, cancer, and cardiovascular disease. Generic weight management programs that target dietary intake and physical activity have been shown to be ineffective in maintaining weight loss beyond a 6-month period. Personalizing weight management programs produces more weight loss than generic programs, possibly through improved self-efficacy (confidence in one's ability to control weight through behavior). One way to personalize diet goals for individuals is by resting metabolic rate (RMR; 'metabolism'). This study will explore adherence and satisfaction of 6-weeks repeated at-home measures of metabolism using a portable device in healthy adults with and without obesity. Relationships among adherence and satisfaction outcomes to health behavior variables will be explored using dietary recalls, exercise monitors and questionnaires. Investigators will conduct a 6-week, one-arm feasibility study in order to address these questions. Twenty men and women ages 19-65 will be recruited (up to n=25 participants), among which 10 participants will have a body mass index (BMI) of ≥30kg/m2 (classified as having obesity), and the remaining 10 participants will have a body mass index (BMI) of \< 29.9kg/m2 (classified as not having obesity). The baseline study visit will evaluate participant's anthropometric measures, RMR using the ParvoMedics TrueOne 2400 and Breezing indirect calorimeters, psychological and behavioural related parameters. An activPAL device will be provided to measure participant physical activity. Completion of a 3-day diet record following the baseline study visit, in which participants keep a record of all food and beverages consumed over 2 weekdays and 1 weekend, is required. Participants will be asked to use the Breezing device from home to measure their RMR one time/week on the same day of the week (± one day) and at the same time each morning for six consecutive weeks following the baseline visit. A weekly Qualtrics survey will be sent to participants to monitor adherence. A follow-up visit after the six weeks will assess participant's body composition using a Dual X-ray Absorptiometry (DEXA), in addition to completion of a user satisfaction interview with a study team member for descriptive analysis. The measures taken at the baseline study visit will be repeated at the follow-up visit.
+
+DETAILED DESCRIPTION:
+Study visits:
+
+Participants will be asked to refrain from food and calorie- or caffeine-containing beverages for at least 12 hours, alcohol for at least 24 hours, and vigorous-intensity exercise for at least 48 hours before each study visit.
+
+Baseline study visit (\~3-3.5 hours):
+
+Prior to the baseline study visit, participants will meet with a member of the study team to review the consent form to establish participation status. Participants will be required to confirm their body weight using a digital scale. Participants will then be randomized using online software (http://www.randomization.com) in a 1:1 fashion for the order of RMR measurement device (i.e., starting with Breezing than Parvo or vice versa). RMR will be measured with the Parvo for 15-20 minutes after a period of 25-30 minutes of quiet rest. RMR will be measured with the Breezing for 6-10 minutes using the Breezing mobile application. In addition, participants will be provided a series of validated and standard questionnaires to assess psychological and behavioural related parameters during this visit. Finally, participants will be asked to create an account for the Breezing mobile application, will be provided with a activPAL activity monitoring device, and will be instructed as to how to complete the 3-day diet record.
+
+Follow-up study visit (\~3-3.5 hours, 6-8 weeks post baseline visit):
+
+Repeat measures will be taken for body weight, RMR (using both devices), and behavioural questionnaires. In addition, Dual X-ray absorptiometry (DEXA; Hologic Model A) will measure participant's fat-mass, fat-free mass, body fat percentage and bone mineral density. Body composition variables will be expressed in absolute terms and controlling for height (e.g., FM index: FM \[kg\]/height \[m2\]); FFM will also be expressed in relation to FM (FM:FFM). Study team members will then conduct 5-10-minute user satisfaction interviews, where participants will be asked to comment on a few open-ended statements. The interviews will be descriptively examined and will not be analyzed in-depth or used to create themes.
+
+Repeated RMR assessment (\~20-30 minutes/week, for six consecutive weeks post baseline study visit):
+
+Participants will be instructed to use Breezing one time/week on the same day of the week (± one day) and at the same time each morning for six consecutive weeks. Participants will be asked to use Breezing after a night of their typical sleep quality and quantity, immediately after waking while lying down and in a fasted state. Participants will send weekly Breezing measurements to study team via email. Breezing RMR results will be recorded in secure OneDrive, separate from personal identifying data and the email and pdf will be deleted. If the participants Breezing RMR values are outside of an error range of 15% lesser or greater than baseline values for two consecutive weeks a study team member will email the participant to check if the RMR measurement protocol is being adhered to and po
+
+PRIMARY OUTCOMES:
+  - Adherence
+  - RMR (portable indirect calorimeter - BreezingTM)
+  - Satisfaction & feedback (feasibility)
+
+INTERVENTIONS:
+  - DEVICE: Breezing Portable Indirect Calorimeter
+
+ELIGIBILITY:
+Age: 19 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06467578

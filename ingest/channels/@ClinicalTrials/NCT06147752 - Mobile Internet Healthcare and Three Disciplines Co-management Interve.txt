@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06147752
+Title: Mobile Internet Healthcare and Three Disciplines Co-management Intervention for Overweight/Obese Prediabetic Patients
+Official Title: Department of Endocrinology and Diabetes, Xiamen Diabetes Institute, Fujian Province Key Laboratory of Translational Research for Diabetes, The First Affiliated Hospital of Xiamen University, School of Medicine, Xiamen, China
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: exercise intervention obesity
+
+SUMMARY:
+Diabetes mellitus is a chronic metabolic disease associated with a high rate of disability and mortality. Prediabetes is the intermediate stage from normal blood glucose to diabetes. Reversal of prediabetes can help reduce the incidence of related complications and reduce premature mortality. Therefore, the early treatment of prediabetes is crucial, detection and effective management of this large population in time is the key to prevent diabetes.
+
+Overweight/obesity is one of the key risk factors leading to prediabetes and diabetes. In order to delay the progression of prediabetes and prevent related complications, weight loss is a key strategy to reverse prediabetes in overweight/obese patients. Lifestyle intervention is the first-line treatment for weight loss and is the most suitable intervention method. Although weight loss has been shown to have many metabolic benefits, it is a great challenge in the real world due to the long-term and complex of weight management.
+
+In order to further optimize the weight loss treatment of prediabetic patients, the study apply the mobile internet intelligent healthcare big data technology, 100 overweight/obese prediabetic patients who met the enrollment conditions were randomly divided into control group and intervention group by 1:1, with 50 patients in each group. The control group was treated according to the traditional diagnosis and treatment mode, and the diagnosis and treatment plan was formulated by the endocrinologist, and the diet education was conducted by the dietitian, and the individualized diet plan was formulated. Given a calorie-restricted diet, it is recommended to reduce daily energy intake by 500kcal on the basis of requirement. At least 150 minutes of moderate-intensity exercise per week is recommended. After the visit, the patient underwent follow-up self-weight monitoring and diet management outside the hospital. The intervention group was managed by co-management of three disciplines (endocrinologists, dietitians and weight managers). The three disciplines team tracked and assessed the patients' daily diet and weight changes, and gave guidance. The duration of intervention was 6 months.
+
+To explore the impact of the new model of mobile internet healthcare and "three disciplines co-management" on overweight/obese prediabetic patients, and whether it can improve the weight, glycemic and lipid metabolism and insulin resistance, and compare the reversal rate of prediabetes in the two groups.
+
+DETAILED DESCRIPTION:
+Sample size estimation The sample size was calculated based on the primary clinical endpoint and previous relevant clinical studies, which met 90% detection efficacy, with an a-value of 0.05 on both sides and a follow-up rate of more than 80%. 100 overweight/obese prediabetic patients were enrolled in the Department of Endocrinology and Diabetes The First Affiliated Hospital of Xiamen University.
+
+Recruitment:
+
+The researcher informs the patient about the study; If patients agree to participate in the study, they will need to sign an informed consent form with their doctor. The study doctor will ask and record the medical history, do physical examination, such as measuring height, weight, waist circumference, blood pressure, laboratory tests, finally determine the enrollment conditions and complete the randomized grouping. A total of 140 participants were recruited, 100 participants were finally enrolled and randomly divided into control group and intervention group according to 1:1.
+
+Management mode:
+
+Informed consent was signed at the first admission, and the researcher and patients were fully communicated, so that patients could realize the importance of out-of-hospital lifestyle management in reversing prediabetes. Dietitians provide detailed one-to-one guidance to each patient, using food models, pictures and other tools to guide, including food diary recording , food intake estimation, food exchange serving, nutrition label reading. Weight managers guide patients to proficiently use mobile healthcare apps, increase their attention to online communication, increase the frequency of use of online platforms for out-of-hospital care, real-time upload diet, exercise and weight monitoring indicators, respond to patient consultation in time so as to improve interaction and compliance with patients. To give full play to the effect of service management, researchers will also remind and urge patients to use apps through telephone, wechat and other ways to improve compliance.
+
+Quality control:
+
+1. Unified training of investigators, including program implementation, questionnaire survey, etc., to ensure unified methods in the investigation process.
+2. All researcher have undergone unified training, including diagnostic standards, evaluation guidance, record norms, etc.
+3. Epidata was used to build the database, and all data were entered in parallel by two people, with automatic and manual double verification.
+
+PRIMARY OUTCOMES:
+  - Change of weight
+  - Reversal rate of prediabetes
+  - Change of homeostasis model assessment-insulin resistance（HOMA-IR）
+
+INTERVENTIONS:
+  - BEHAVIORAL: mobile internet healthcare and "co-management of three disciplines"
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06147752

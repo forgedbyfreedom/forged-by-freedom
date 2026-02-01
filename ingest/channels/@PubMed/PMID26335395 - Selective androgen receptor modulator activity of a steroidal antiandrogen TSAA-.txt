@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 26335395
+Title: Selective androgen receptor modulator activity of a steroidal antiandrogen TSAA-291 and its cofactor recruitment profile.
+Authors: Hikichi, Yamaoka, Kusaka, Hara
+Journal: European journal of pharmacology
+Year: 2016
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Selective androgen receptor modulators (SARMs) specifically bind to the androgen receptor and exert agonistic or antagonistic effects on target organs. In this study, we investigated the SARM activity of TSAA-291, previously known as a steroidal antiandrogen, in mice because TSAA-291 was found to possess partial androgen receptor agonist activity in reporter assays. In addition, to clarify the mechanism underlying its tissue selectivity, we performed comprehensive cofactor recruitment analysis of androgen receptor using TSAA-291 and dihydrotestosterone (DHT), an endogenous androgen. The androgen receptor agonistic activity of TSAA-291 was more obvious in reporter assays using skeletal muscle cells than in those using prostate cells. In castrated mice, TSAA-291 increased the weight of the levator ani muscle without increasing the weight of the prostate and seminal vesicle. Comprehensive cofactor recruitment analysis via mammalian two-hybrid methods revealed that among a total of 112 cofactors, 12 cofactors including the protein inhibitor of activated STAT 1 (PIAS1) were differently recruited to androgen receptor in the presence of TSAA-291 and DHT. Prostate displayed higher PIAS1 expression than skeletal muscle. Forced expression of the PIAS1 augmented the transcriptional activity of the androgen receptor, and silencing of PIAS1 by siRNAs suppressed the secretion of prostate-specific antigen, an androgen responsive marker. Our results demonstrate that TSAA-291 has SARM activity and suggest that TSAA-291 may induce different conformational changes of the androgen receptor and recruitment profiles of cofactors such as PIAS1, compared with DHT, to exert tissue-specific activity.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/26335395/

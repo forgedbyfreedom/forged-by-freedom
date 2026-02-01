@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05145452
+Title: N-3 Polyunsaturated Fatty Acids to Prevent and Treat Diabetic Neuropathy
+Official Title: N-3 Polyunsaturated Fatty Acids to Prevent and Treat Diabetic Neuropathy
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: omega 3 exercise
+
+SUMMARY:
+Sensorimotor neuropathy (SMN) and cardiovascular autonomic neuropathy (CAN) are the most common complications of type 2 diabetes (T2D). SMN affects \~30% of people with T2D and CAN \~20%. SMN causes pain, impairs and limits physical activity, and increases the risk for physical disability, complications (such as foot ulcerations), and premature mortality. Moreover, both motor and sensory nerve function are important regulators of muscle function; impaired myofiber innervation causes myofiber loss, muscle fat infiltration, and increases the risk of age-associated sarcopenia and falls. CAN often goes unrecognized because it presents with non-specific symptoms, such as resting tachycardia and fixed heart rate, exercise intolerance, and orthostatic hypotension. However, CAN is a serious problem because it increases the risk for cardiovascular events and mortality several-fold. Both SMN and CAN have long been considered a consequence of T2D, but it is now becoming clear that they precede the diagnosis of T2D and are already detectable in people with prediabetes, especially those with impaired glucose tolerance. Treatments for both SMN and CAN focus on symptom management because there are no effective therapeutics that target the underlying neuropathy. The results from studies conducted in animal models suggest fish oil-derived n-3 polyunsaturated fatty acids (n-3 PUFA) may have therapeutic effects for people with SMN and CAN. The purpose of this proposal is to conduct a randomized controlled trial to test the hypothesis that dietary supplementation with fish oil-derived n-3 PUFA improves sensorimotor and cardiovascular autonomic functions in people with impaired glucose tolerance. Forty 55-80 year old men and women with impaired glucose tolerance (plasma glucose 2 h after a 75 g glucose challenge ≥140 mg/dl) and evidence of SMN (assessed as epidermal nerve fiber density) will be randomized to either receive fish oil-derived n-3 PUFA (4.2 g per day; n=20) or placebo (n=20) for six months. Sensorimotor and cardiovascular autonomic function will be evaluated after three and 6 months of the interventions.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Sensorimotor function
+  - Cardiovascular autonomic function
+  - Muscle endurance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fish-oil derived n-3 polyunsaturated fatty acids
+
+ELIGIBILITY:
+Age: 55 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05145452

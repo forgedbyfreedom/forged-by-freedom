@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00298155
+Title: Maximal Suppression of the Androgen Axis in Clinically Localized Prostate Cancer
+Official Title: Maximal Suppression of the Androgen Axis in Clinically Localized Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: testosterone replacement
+
+SUMMARY:
+Prostate cancer (CaP) is the most commonly diagnosed cancer among males in the U.S. and the second leading cause of cancer-related mortality. More than 230,000 men will be diagnosed with prostate cancer in the USA this year and more than 30,000 will die of this disease.
+
+Androgen deprivation, the elimination of testosterone and its active metabolites, remains the single most effective intervention available for the treatment of advanced prostate carcinoma. This is usually achieved by surgical removal of the testes (orchiectomy), by suppressing production of testosterone (LHRH agonists) and/or by blocking the androgens at receptor sites (antiandrogens). Unfortunately, androgen suppression does not cure the disease. Most patients progress within 0-5 years, and all patients ultimately progress if the cancer is not eliminated during initial therapy (usually prostatectomy or radiation).
+
+Hormone suppression treatment eliminates the detectable levels of testosterone in the blood. However, the testosterone levels in tissue remain high enough to stimulate androgen receptors. Overexpression of androgen receptors is present in all cell lines which demonstrate "androgen independence," i.e., are resistant to androgen-suppressive therapy.
+
+Approximately 95% of testosterone is supplied by the testes, with the remaining 5% supplied by the adrenal glands. The presumption that standard androgen deprivation achieves the optimal level of androgen suppression for patients is based on the levels of androgen which result from orchiectomy. However, because adrenal androgen levels are unaffected by standard modes of androgen deprivation, 5% of the body's testosterone remains despite hormone therapy.
+
+The hypothesis of this study is that more effective suppression of the androgen axis through elimination of adrenal androgens and more effective suppression of testosterone metabolites will lower intraprostatic androgen levels, minimizing activation of the androgen receptor and augmenting natural cell death (apoptosis). The investigators propose to test this hypothesis by administering neoadjuvant (pre-surgery) androgen deprivation therapy of different types before prostatectomy for patients with clinically localized prostate cancer. The investigators will assay serum and intraprostatic androgen levels, while assessing relative levels of apoptosis of normal and malignant tissue.
+
+DETAILED DESCRIPTION:
+Androgen deprivation has been the principal means of controlling advanced prostate cancer, but does not cure the disease and all patients ultimately progress if the tumor is not eliminated with definitive local therapy. It has been demonstrated that despite androgen deprivation with LHRH agonists or orchiectomy, prostate tissue and prostate cancer maintain levels of androgens which are more than adequate to stimulate the androgen receptor. These levels of androgen may continue to stimulate the receptor and allow both survival of tumor cells and induction of resistance by overexpression of the receptor. The presumption that standard androgen deprivation achieves the optimal level of androgen suppression for patients is based on the levels of androgen achieved with castration, which achieves relatively short term control of cancer in the majority of patients. The hypothesis of this study is that more effective suppression of the androgen axis through elimination of adrenal androgens and more effective suppression of conversion to dihydrotestosterone will lower intraprostatic androgen levels, minimizing activation of the androgen receptor and augmenting apoptosis. We propose to test this hypothesis in a prospective, randomized trial, administering neoadjuvant androgen deprivation therapy of different types prior to radical prostatectomy for patients with clinically localized prostate cancer for 3 months.
+
+Plan of therapy
+
+Patients with clinically localized (cT1-T2) prostate cancer, at intermediate-high risk for relapse who are candidates for radical prostatectomy will be treated with one of three regimens:
+
+* Goserelin with dutasteride
+* Goserelin with bicalutamide and dutasteride
+* Goserelin with bicalutamide and dutasteride and ketoconazole
+
+Patients will undergo radical prostatectomy 3 months after initiation of treatment.
+
+Preoperative and intraoperative biopsies of the prostate gland will be utilized for analysis of prostatic hormones, gene expression and apoptosis.
+
+PRIMARY OUTCOMES:
+  - Prostate Tissue DHT
+
+INTERVENTIONS:
+  - DRUG: goserelin with dutasteride
+  - DRUG: goserelin with bicalutamide and dutasteride
+  - DRUG: goserelin with bicalutamide and dutasteride and ketoconazole
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00298155

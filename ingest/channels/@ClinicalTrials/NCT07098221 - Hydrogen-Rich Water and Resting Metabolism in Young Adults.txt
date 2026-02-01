@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07098221
+Title: Hydrogen-Rich Water and Resting Metabolism in Young Adults
+Official Title: Effects of Hydrogen-Rich Water on Resting Metabolism in Healthy Young Adults: A Randomized, Double-Blind, Placebo-Controlled Crossover Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: caffeine exercise
+
+SUMMARY:
+The H2REST trial is a randomized, double-blind, placebo-controlled crossover study investigating the acute effects of a single dose of hydrogen-rich water (HRW) on resting metabolism in healthy young adults. Participants complete two testing sessions-receiving either HRW or placebo in a randomized order-followed by standardized metabolic testing. Primary outcomes include resting energy expenditure, respiratory exchange ratio, and substrate utilization measured via indirect calorimetry. The study aims to assess whether acute HRW intake can modulate metabolic rate and fuel preference at rest, and to explore inter-individual variability in response.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Resting Energy Expenditure (REE)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Molecular Hydrogen
+  - DIETARY_SUPPLEMENT: Placebo Comparator
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07098221

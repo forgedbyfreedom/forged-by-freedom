@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39025877
+Title: Inhalable cardiac targeting peptide modified nanomedicine prevents pressure overload heart failure in male mice.
+Authors: Weng, Zou, Tian, Xie, Liu
+Journal: Nature communications
+Year: 2024
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Heart failure causes considerable morbidity and mortality worldwide. Clinically applied drugs for the treatment of heart failure are still severely limited by poor delivery efficiency to the heart and off-target consumption. Inspired by the high heart delivery efficiency of inhaled drugs, we present an inhalable cardiac-targeting peptide (CTP)-modified calcium phosphate (CaP) nanoparticle for the delivery of TP-10, a selective inhibitor of PDE10A. The CTP modification significantly promotes cardiomyocyte and fibroblast targeting during the pathological state of heart failure in male mice. TP-10 is subsequently released from TP-10@CaP-CTP and effectively attenuates cardiac remodelling and improved cardiac function. In view of these results, a low dosage (2.5&#x2009;mg/kg/2 days) of inhaled medication exerted good therapeutic effects without causing severe lung injury after long-term treatment. In addition, the mechanism underlying the amelioration of heart failure is investigated, and the results reveal that the therapeutic effects of this system on cardiomyocytes and cardiac fibroblasts are mainly mediated through the cAMP/AMPK and cGMP/PKG signalling pathways. By demonstrating the targeting capacity of CTP and verifying the biosafety of inhalable CaP nanoparticles in the lung, this work provides a perspective for exploring myocardium-targeted therapy and presents a promising clinical strategy for the long-term management of heart failure.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39025877/

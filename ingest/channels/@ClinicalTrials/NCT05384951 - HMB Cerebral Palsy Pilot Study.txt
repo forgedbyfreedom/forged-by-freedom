@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05384951
+Title: HMB Cerebral Palsy Pilot Study
+Official Title: β-hydroxy-β-methylbutyrate (HMB) Pilot Feasibility and Efficacy Study in Cerebral Palsy (CP)
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 7
+Topic: HMB supplementation
+
+SUMMARY:
+This is a pilot study of β-hydroxy-β-methylbutyrate (HMB) + Vitamin D3 supplementation in adolescents with cerebral palsy. The primary objective is to quantify safety, compliance, and acceptability of daily combined HMB + Vitamin D3 supplementation for 12 weeks in adolescents with CP. The secondary objective is to quantify changes in lower extremity muscle mass, strength, and functional mobility after daily combined HMB + Vitamin D3 supplementation for 12 weeks.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Difference in the incidence of Treatment-Emergent Adverse Events with supplementation as assessed by renal (kidney) function - specific gravity
+  - Difference in the incidence of Treatment-Emergent Adverse Events with supplementation as assessed by renal (kidney) function - pH
+  - Difference in the incidence of Treatment-Emergent Adverse Events with supplementation as assessed by renal (kidney) function - microscopy
+  - Difference in the incidence of Treatment-Emergent Adverse Events with supplementation as assessed by renal (kidney) function - BUN
+  - Difference in the incidence of Treatment-Emergent Adverse Events with supplementation as assessed by renal (kidney) function - creatinine
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: HMB + Vitamin D3
+
+ELIGIBILITY:
+Age: 13 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05384951

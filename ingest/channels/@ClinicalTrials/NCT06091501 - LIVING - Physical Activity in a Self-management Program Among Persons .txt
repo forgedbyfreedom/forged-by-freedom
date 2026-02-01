@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06091501
+Title: LIVING - Physical Activity in a Self-management Program Among Persons With Type 2 Diabetes
+Official Title: LIVING - Physical Activity in a Self-management Program Among Persons With Type 2 Diabetes
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 288
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this pragmatic clinical trial is to evaluate two municipality-based interventions, Lev Livet (one without physical activity and one with) against no intervention in people with type 2 diabetes. The main questions it aims to answer are: • What is the additive effect of HiiT on accelerometer-measured physical activity? • Which factors that facilitate or limit the implementation of Lev Livet? • What are the health-economic implications of the intervention? Participants will participate in a disease management program with and without physical activity added. Researchers will compare with no intervention to see if Lev Livet improves diabetes self-management.
+
+DETAILED DESCRIPTION:
+Trial design The LIVING project is designed as a parallel-group, 2-arm pragmatic RCT. The trial sites are to deliver either sub study 1: Lev Livet versus a five month waiting list or sub study 2: Lev Livet + HIIT versus a five month waiting list. At the clarifying interview with a health professional in the municipality, the participants will be randomly allocated to either Lev Livet (+HIIT) or a waiting list (control group). Within each sub study, the participants will be randomly allocated (2:1) to intervention or a control group.
+
+Participants All people living with T2D being referred from their general practitioner or a hospital to the municipality can be included in the project.
+
+Intervention Lev Livet is a group-based program where the aim for the participant is to acquire skills to master their daily life with T2D. The program consists of 9 sessions with a duration of two and a half to three hours for each session. In the first four sessions coping skills are taught across different chronic diseases. In this part of the program citizens suffering from different chronic diseases can participate. Participants living with T2D then move on to four diabetes-specific sessions, followed by a ninth follow up session. The eight first sessions are held consecutively over eight weeks. The ninth session is held three weeks after the eighth session.
+
+During the 8 weeks, a supervised HIIT-protocol comprising blocks of 5 x 1 min high-intensity intervals interrupted by 1 min active recovery will be added. Between each blocks, a 4 min brake will be planned where the participant can shift from an upper body exercise to a lower body exercise or vice versa. The HIIT intervention will progress continuously, from two weekly exercise sessions with two exercise blocks (22 minutes of exercise) in the first two weeks, to two weekly exercise sessions with four exercise blocks in the last four weeks of the intervention. The exercise intensity will be monitored using the Borg 15 scale. The intensity of exercise will be set to Borg 14-16 corresponding to 77-93% of maximal heart rate. In addition to the two exercise therapy sessions, the participants will be instructed to independently complete an exercise session equivalent to the exercise therapy session for that week.
+
+Statistical analyses The primary analyses of both the primary and secondary outcomes will be based on the mean difference between individual changes from baseline to 3 months when comparing the Lev Livet intervention and control group.
+
+Analysis will be done according to the intention-to-treat principle, meaning that all participants allocated to an active treatment group will be analysed as a member of that group regardless of their compliance with the intervention. Missing data will be imputed in the primary analysis using a multiple imputation procedure29.
+
+The analysis will be performed using a mixed model with repeated measures. Specifically, time as a categorical covariate, randomisation status, 
+
+PRIMARY OUTCOMES:
+  - The between group differences for change in Perceived competence in Diabetes (PCS-5)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Lev Livet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06091501

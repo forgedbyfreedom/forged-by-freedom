@@ -32,6 +32,13 @@ if [ -f "$SCRIPT_DIR/../.env" ]; then
     export $(grep -v '^#' "$SCRIPT_DIR/../.env" | xargs)
 fi
 
+# Add common paths for yt-dlp
+export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin"
+
+# Use python module as fallback
+YT_DLP="yt-dlp"
+command -v yt-dlp >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
+
 # ─── Node 1: YouTube Download ─────────────────────────────────
 download_transcripts() {
     header "NODE 1: YOUTUBE TRANSCRIPT DOWNLOAD"
@@ -42,7 +49,7 @@ download_transcripts() {
     log "Channels: $CHANNELS_DIR"
     log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos, ${SLEEP_BETWEEN}s between channels"
 
-    for url_file in $(find "$CHANNELS_DIR" -name "channel.url" | shuf); do
+    for url_file in $(find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$0}' | sort -n | cut -f2-); do
         local channel_url=$(head -n 1 "$url_file")
         local output_dir=$(dirname "$url_file")
         local channel_name=$(basename "$output_dir")
@@ -53,10 +60,12 @@ download_transcripts() {
 
         local retry=0 done=false
         while [ $retry -lt $MAX_RETRIES ] && [ "$done" = false ]; do
-            if yt-dlp \
+            if $YT_DLP \
                 --skip-download \
                 --write-subs --write-auto-subs \
-                --sub-lang en --sub-format vtt --convert-subs txt \
+                --sub-lang en \
+                --sub-format "best" \
+                --convert-subs srt \
                 --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
                 --ignore-errors --no-warnings \
                 --sleep-interval $SLEEP_MIN --max-sleep-interval $SLEEP_MAX \

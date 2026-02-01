@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06946017
+Title: Effect of a Fermented Dairy Protein With Prebiotic Fiber on GI Complaints
+Official Title: Effect of a Fermented Whey and Fiber Supplement on Digestive Comfort of Recreational Athletes With and Without GI Complaints
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: sleep athletes
+
+SUMMARY:
+A positive impact of a fermented dairy protein with prebiotic fiber supplement on self-reported GI complaints and wellbeing has been suggested (Wardenaar et al. 2024). The following project aims to further investigate the impact of this supplements in athletes with and without GI complaints in two separate data collections.
+
+Part I of the data collection aims to investigate the impact of this supplement vs. a placebo on carbohydrate malabsorption (as a potential cause for GI distress) in athletes that normally don't identify as having GI complaints (randomized double-blind cross over study design covering a total of 9 weeks, including a 3-week washout period).
+
+Part II of the data collection aims to confirm the earlier found results in the previous study (Wardenaar et al. 2024) in a group athletes self-reporting GI complaints that will be randomized into an intervention group or a placebo group (randomized double-blind parallel study design covering a total of 3 weeks).
+
+DETAILED DESCRIPTION:
+A substantial number of athletes suffer from gastro-intestinal (GI) problems, which may impair performance and/or subsequent recovery. Regardless of the prevalence of GI complaints, gut barrier integrity is impaired with high-intensity training. Emerging studies show a positive correlation between the gut microbiome and GI problems and general health and wellbeing.
+
+This project will perform two well-controlled studies:
+
+Part I will be looking into the impact of a 3-week supplementation of fermented dairy protein with prebiotic fiber supplement vs. 3-week supplementation of a control supplement on carbohydrate malabsorption (by means of a lactose tolerance test), Bifidobacterium, GI complaints, general well-being and overall gut microbiota in people screened for not reporting substantial GI complaints while being lactose non-persistent (LNP) and/or being responsive to a lactose tolerance test.
+
+Part II investigates the impact of a 3-week supplementation of a fermented dairy protein with prebiotic fiber supplement vs. a control supplement on GI complaints, Bifidobacterium, general well-being, overall gut microbiota, immune markers, gut redox status, and short chain fatty acids in feces in people screened for reporting substantial GI complaints.
+
+Both study parts include multiple standardized exercise tests before and after each supplementation period (Part I: 4 exercise testing days, Part II: 2 exercise testing days). The participants will come in fasted (after not eating starting 10 pm the night before) and they will perform a 60-minute hiking protocol in a warm environment. After the first-time participants will copy their personal exercise protocol during the following session(s). The exercise exists of hiking on a treadmill in a warm environment (30-35°C), while reaching an exercise intensity of 70% of the subject's VO2 max. Which is an intensity in which the subject has an elevated breathing frequency but is still able to talk.
+
+SCREENING After being eligible on paper (based on the results of an online screening questionnaire) people are invited to sign informed consent via REDCap, a secure, web-based application designed for building and managing online surveys and databases for research studies.
+
+For Part I an addition screening step is included to determine eligibility, including a buccal swab to determine lactose non-persistence (to identify the CC gene), as well as a lactose tolerance test (administration of a dose of 25g of lactose mixed into 250mL, with hydrogen breath measurements at 30-, 60- and 90-minutes after lactose consumption). For Part II no additional screening will be performed.
+
+FAMILIARIZATION VISIT Before performing any exercise, body height and weight, as well as waist and hip circumference will be taken by a research team member, and some additional questions will be asked about exercise and diet habits. After this the participant will perform a maximal exercise test, that will be used to determine the exercise intensit
+
+PRIMARY OUTCOMES:
+  - Part I: Hydrogen in breath
+  - Part II: Gastrointestinal Symptoms Rating Scores
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fermented dairy protein with prebiotic fiber supplement
+  - DIETARY_SUPPLEMENT: Control placebo
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06946017

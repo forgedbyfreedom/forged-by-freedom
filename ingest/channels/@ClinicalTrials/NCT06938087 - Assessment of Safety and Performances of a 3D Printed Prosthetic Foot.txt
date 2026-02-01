@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06938087
+Title: Assessment of Safety and Performances of a 3D Printed Prosthetic Foot: A Pilot Study
+Official Title: Pilot Study to Assess Safety and Performances of a Energy Storing and Return (ESAR) Prosthetic Foot Made in Additive Manufacturing
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: low back pain exercise
+
+SUMMARY:
+A dynamic energy storage and return foot prosthesis is a type of prosthesis designed to mimic and restore the functionality and natural movement of the limb that has been amputated. This type of prosthesis is designed to allow patients to perform daily activities, even very dynamic ones, with greater ease and efficiency. The distinguishing feature of a dynamic energy storage and return prosthesis is the presence of a system that accumulates mechanical energy during the support phase on the ground and returns it during the push phase, increasing the amount of push itself. In foot prostheses, it is common to use carbon fiber blades or springs that deform during the support of the foot and then restore themselves, returning elastic energy during the subsequent push. This helps reduce the effort required to walk and allows for more fluid and natural movements. Additive Manufacturing (AM) technology is ideal for highly customized and high-value production. Orthoses/prostheses are particularly suited to exploit the potential of this technology. However, the lack of functional materials that meet different design needs, such as structure and comfort of the devices, has limited the use of AM mainly in orthoses. AM is promising for orthoses due to its customization capability and reduced production costs compared to traditional solutions. In particular, it has been shown how continuous filament carbon printing can lead to the creation of prostheses that have dynamic and energy return characteristics similar to or even superior to commercial ones. The present pilot clinical investigation aims to provide indications regarding the safety and performance of the 3D printed prosthesis - named PROFIL - in a real-world scenario. The state of the art has not yet defined the performance and safety of 3D printed prostheses with thermoplastic materials and continuous carbon fiber. Since greater comfort and the possibility of performing physical activity more easily with the use of these devices is expected, it is considered of interest for clinical practice to evaluate these prostheses. The primary objective of the study is therefore to evaluate the safety and performance of the device during walking on flat surfaces and more demanding tasks. The secondary objectives aims at evaluate usability and deformation of the 3D printed prosthesis under different loading conditions (slow and fast walking, ascending and descending ramps or steps) by mean of fiber-glass sensors integrated in the prosthesis foot.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of adverse events occurred during use of the Intervention prosthesis foot
+  - Change from Comparator of joints kinematics measured with Inertial Measurements Units (IMUs) placed on subject lower leg, upper arms and trunk
+  - Change from Comparator of joints kinematics and dymamics measured with an optoelectronic system
+  - Change from Comparator of gait quality wihile ascending ramps with Hill Assessment Index (HAI)
+  - Change from Comparator of gait quality while ascending stairs with Stair Ascending Index (SAI)
+
+INTERVENTIONS:
+  - DEVICE: 3D printed prosthesis foot
+  - DEVICE: Current prosthesis foot
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06938087

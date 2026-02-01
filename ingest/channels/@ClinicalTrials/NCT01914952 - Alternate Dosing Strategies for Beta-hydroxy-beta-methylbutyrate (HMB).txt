@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01914952
+Title: Alternate Dosing Strategies for Beta-hydroxy-beta-methylbutyrate (HMB) Supplementation: Effect on Plasma HMB Responses
+Official Title: Alternate Dosing Strategies for Beta-hydroxy-beta-methylbutyrate (HMB) Supplementation: Effect on Plasma HMB Responses
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: HMB supplementation
+
+SUMMARY:
+The purpose of this study is to examine the rise in plasma Beta-hydroxy-beta-methylbutyrate (HMB) after the dietary supplement has been administered in different forms. Prior studies have indicated that form of administration affects bioavailability of the HMB supplement. Therefore the current study will examine the bioavailability of a single dose of HMB given as:
+
+* 1.0g CaHMB in gelatin capsule
+* 0.8 g HMB free acid in a gelcap
+* 0.8 g HMB free acid in water
+* 1.0 g CaHMB in water
+* 0.8 g HMB free acid
+
+The randomized study will be a crossover design and each study subject will undergo the experimental protocol for each of the supplementation forms. Because of the different administration forms, the study will be an open label study. Briefly, the fasted participants will report to the laboratory in the morning. After an initial blood sample is taken, the dose of HMB will be administered. Blood will then be samples at 2, 5, 10, 15, 25, 35, 45, 60, 90, 120, 180, 360, 720, and 1440 min post administration. A 24 h complete urine collection will also be performed. Participants will be given a light sack lunch 4 h after administration of the dosage and will remain at the laboratory through the 360 min sampling. Participants will then be allowed to leave the laboratory and return for the 720 min sampling after which the participants can eat an normal evening meal. Participants will return to the laboratory fasted the next morning for the final sample. A minimum 48 h washout period will be required before the next dosage form is administered and the process repeated.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma HMB Level
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: CaHMB capsule
+  - DIETARY_SUPPLEMENT: HMB free acid gelcap
+  - DIETARY_SUPPLEMENT: HMB free acid mixed in water
+  - DIETARY_SUPPLEMENT: CaHMB in water
+  - DIETARY_SUPPLEMENT: HMB free acid
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01914952

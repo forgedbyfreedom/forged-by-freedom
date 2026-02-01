@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07371052
+Title: Olive Leaf Extract in Handball Players
+Official Title: Effects of Short-Term Olive Leaf Extract Supplementation in Elite Male Handball Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: sleep athletes
+
+SUMMARY:
+Olive leaf extract (OLE) is a natural supplement rich in phenolic compounds, especially oleuropein, which has antioxidant properties that may support recovery after physical exercise. While OLE has been studied for various health-related effects, its potential impact on exercise recovery and performance in elite athletes remains unclear.
+
+This randomized, double-blind, placebo-controlled study was designed to evaluate the effects of four weeks of OLE supplementation on physical performance, sleep quality, and post-exercise muscle soreness in elite male handball players aged 18 to 25 years. Participants were randomly assigned to receive either a daily OLE supplement (500 mg, standardized to 25% oleuropein) or a placebo for four weeks. Physical performance, sleep quality, and muscle soreness were assessed at baseline, during the intervention, and at the end of the study period. Muscle soreness was additionally evaluated at 12 and 24 hours following exercise sessions.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle Soreness
+  - Squat jump height
+  - Peak anaerobic power
+  - Countermovement jump height
+  - Mean anaerobic power
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Olive leaf extract
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07371052

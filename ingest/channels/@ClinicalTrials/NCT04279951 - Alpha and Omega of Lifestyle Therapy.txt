@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04279951
+Title: Alpha and Omega of Lifestyle Therapy
+Official Title: Alpha and Omega of Lifestyle Therapy - Resistance Training and Ingestion of n-3 Polyunsaturated Fatty Acids to Improve Health and Muscle Functions in Individuals With Obesity and Healthy Controls
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: omega 3 exercise
+
+SUMMARY:
+The study aims to investigate the effects of double-blinded, randomized placebo-controlled n3-fatty acid supplementation (1000 mg day-1) and 13 weeks of resistance training on muscle function/biology and systemic health in individuals with obesity (BMI\>30) and lean individuals (BMI\<30)
+
+DETAILED DESCRIPTION:
+Lifestyle therapy is important for treating lifestyle-related morbidities such as obesity. Such therapy often includes exercise and nutrition, and leads to improved health, functionality and quality of life. Unfortunately, obesity leads to adverse changes in the physiological milieu, including inflammation and altered nutritional status such as reduced omega-3:omega-6 ratios. Indeed, inadequate omega 3 levels are common even among lean individuals. This may negatively affect the outcome of lifestyle therapy with exercise, particularly those involving resistance training, contributing to the large heterogeneity seen in training responses. In accordance with this, many individuals (including both lean and obese subjects) fail to improve muscle biology/functions and health, including failure to increase muscle mass and strength, failure to improve glucose handling and inflammatory status. This makes general lifestyle therapy recommendations ineffective. Here, we investigate effects of double-blinded, randomized placebo-controlled n3-fatty acid supplementation (1000 mg day-1) and 13 weeks of low- and high-load resistance training on muscle growth/function/biology and health in individuals with obesity (BMI\>30, n=60) and lean controls (BMI\<30, n=60). Each participant will perform two different training protocols, one on each leg. The supplement period will commence 7 weeks prior to the onset of the strength training intervention to ensure adequate omega-3 biology at the onset of training. Analyses include assessment of the separate and combined effects of n3-supplementation and obesity on training responses to resistance training, measured as muscle mass, muscle strength/functionality, muscle biological traits, and systemic health variables such as hormone/inflammation/glucose biology, adipose tissue biology/mass, gut microbiome and health-related quality of life. The project will provide important insight into the feasibility of resistance training and n-3 fatty acid supplementation for treating individuals with obesity, paving the way for personalized lifestyle therapy.
+
+The study has two defined main outcome measures, targeting the combined effects of omega-3 and strength training on i) muscle thickness of the thigh (measured using ultrasound; this main outcome measure targets the effects of the intervention on muscle growth), and ii) glucose tolerance (measured using an oral glucose test; this main outcome measure targets the effects of the intervention on improvements in health).
+
+In our analytical approach, we will use a mixed model-approach to assess the main effects of the intervention, mainly defined as changes from before to after the resistance training intervention. Importantly, for health variables such as glucose tolerance, analyses will be performed by accounting for individual variation at baseline, as any beneficial effect can be expected to be higher/present only in individuals with a pathological/diseased starting point. Notably, 
+
+PRIMARY OUTCOMES:
+  - Muscle thickness, ultrasound
+  - Glucose tolerance
+
+INTERVENTIONS:
+  - OTHER: Resistance exercise
+  - DIETARY_SUPPLEMENT: Omega-3
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 30 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04279951

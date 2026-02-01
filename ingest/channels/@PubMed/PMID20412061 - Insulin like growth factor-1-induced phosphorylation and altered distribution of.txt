@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 20412061
+Title: Insulin like growth factor-1-induced phosphorylation and altered distribution of tuberous sclerosis complex (TSC)1/TSC2 in C2C12 myotubes.
+Authors: Miyazaki, McCarthy, Esser
+Journal: The FEBS journal
+Year: 2010
+Topic: insulin like growth factor muscle
+
+ABSTRACT:
+Insulin like growth factor-1 (IGF-1) is established as an anabolic factor that can induce skeletal muscle growth by activating the phosphoinositide 3-kinase/Akt/mammalian target of rapamycin (mTOR) pathway. Although this signaling pathway has been the subject of much study, the molecular mechanisms linking IGF-1 binding to mTOR activation remain poorly defined in muscle. The present study aimed to test the hypothesis that IGF-1 activation of mTOR in C2C12 myotubes requires a phosphorylation-dependent, altered distribution of the tuberous sclerosis complex (TSC)1/TSC2 complex from the membrane to the cytosol. We found that IGF-1 treatment does not affect complex formation between TSC1 and TSC2, but rather IGF-1 induces an altered distribution of the TSC1/TSC2 complex in C2C12 myotubes. In response to IGF-1 treatment, there was a relative redistribution of the TSC1/TSC2 complex, composed of TSC1 and phosphorylated TSC2, from the membrane to the cytosol. IGF-1-stimulated TSC1/TSC2 phosphorylation and redistribution were completely prevented by the phosphoinositide 3-kinase inhibitor wortmannin, but were not with the downstream mTOR inhibitor, rapamycin. When a nonphosphorylatable form of TSC2 (S939A) was overexpressed, phosphorylation-dependent binding of the scaffold protein 14-3-3 to TSC2 was diminished and no redistribution of the TSC1/TSC2 complex was observed after IGF-1 stimulation. These results indicate that TSC2 phosphorylation in response to IGF-1 treatment is necessary for the altered distribution of the TSC1/TSC2 complex to the cytosol. We suggest that this translocation is likely critical for mTOR activation by dissociating the interaction between the GTPase activating protein activity of the TSC1/TSC2 complex and its downstream target, Ras homolog enriched in brain.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/20412061/

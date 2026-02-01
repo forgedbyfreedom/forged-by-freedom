@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06545721
+Title: Weight Cycling on Hyperandrogenemia and Insulin Resistance in Polycystic Ovary Syndrome
+Official Title: The Effect and Mechanism Of Weight Cycling on Hyperandrogenemia And Insulin Resistance in Polycystic Ovary Syndrome
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 425
+Topic: omega 3 exercise
+
+SUMMARY:
+This study prospectively includes PCOS patients with normal weight and overweight/obesity, closely follows up and intensively manages them, and observes the level and distribution of weight reduction achieved by patients after lifestyle intervention (high-protein diet for weight loss). Additionally, it aims to provide reference for setting weight loss targets for future PCOS patients by comparing the differences in clinical improvement among patients achieving different degrees of weight reduction (\<2% \[equivalent to no weight loss\], 2-5%, 5-10%, ≥10%) at different time points (3 months, 6 months) following dietary intervention. Furthermore, this study will compare the differences in reproductive and metabolic marker improvements between baseline PCOS patients experiencing weight rebound, those who successfully lost weight, and those who experienced weight rebound. This will help explore the impact of weight cycling on PCOS-related manifestations. Finally, at a genetic level, the study will analyze potential mechanisms underlying different outcome indicators by comparing differences in metagenomics, transcriptomics, and metabolomics among patient groups.
+
+Ancillary/Nested Sub-study (12-week Precision Nutrition Trial):
+
+Within the WHIP cohort, we will conduct a nested, prospective interventional sub-study to evaluate the efficacy of an insulin-resistance-phenotype-guided precision dietary prescription versus a standard guideline-based energy-restricted diet. Eligible participants are women with PCOS and insulin resistance enrolled in the cohort. The sub-study lasts 12 weeks with assessments at baseline and week 12. Primary endpoints include change in HOMA-IR and change in the core11 metabolic risk composite. Secondary endpoints include changes in gonadotropins (FSH, LH), sex steroid hormones (e.g., estradiol, progesterone), and patient-reported symptom scores.
+
+DETAILED DESCRIPTION:
+This study is a single-center, prospective cohort study that enrolled PCOS patients after screening. The patients were categorized into two groups based on their BMI: a normal weight group (18.5 kg/m2 ≤ BMI \< 24 kg/m2) with a sample size of 45 and an overweight/obese group (BMI ≥ 24 kg/m2) with a sample size of 380, totaling 425 cases.
+
+For the normal weight PCOS patients, interventions included control of total energy intake, adjustment of dietary structure, exercise, and behavioral intervention to prevent weight gain over a follow-up period of three months. If weight gain occurred during the follow-up period, these patients were transferred to the overweight/obese group for intensified intervention.
+
+The overweight/obese PCOS patients received intensive intervention in accordance with high-protein diet adaptation criteria. This involved high-protein diets combined with exercise and behavioral intervention for weight reduction. After three months of follow-up, if they achieved their weight-loss goal, they transitioned to a low-energy diet and exercise intervention program to maintain their weight. If the goal was not met after three months, they continued with the high-protein weight-loss program.
+
+The study compared differences in improvement in indicators such as insulin resistance (IR), blood androgen levels, inflammatory factors among different degrees of weight loss (\<2%, 2% ≤weight loss \<5%, 5%≤weight loss\<10%, ≥10%), analyzing potential mechanisms.
+
+For individuals experiencing weight cycling, differences in IR levels before and after rebounding from body mass were compared alongside changes in androgen levels and other metabolic indicators. This aimed to explore the impact of body mass cycling on clinical indicators while analyzing potential causes.
+
+Ancillary/Nested Sub-study (12-week Precision Nutrition Trial):
+
+A subset of cohort participants meeting criteria for PCOS with insulin resistance will enter a 12-week dietary intervention sub-study. Participants will be allocated in a 1:1 ratio to: (1) a phenotype-guided precision dietary prescription tailored to the individual's insulin-resistance metabolic subtype; or (2) a standard low-energy diet based on current Chinese clinical guidelines for overweight/obesity medical nutrition therapy. Both groups receive standardized lifestyle counseling and follow-up. Study visits occur at baseline and week 12. This nested sub-study is designed to test whether subtype-matched dietary prescriptions yield greater improvements in insulin resistance and metabolic risk than a uniform guideline diet, while remaining integrated within the parent WHIP cohort.
+
+PRIMARY OUTCOMES:
+  - Weight loss rate
+  - Levels of insulin resistance
+
+INTERVENTIONS:
+  - OTHER: Adjusting dietary structure + exercise + behavioral intervention
+  - BEHAVIORAL: Precision dietary prescription
+  - BEHAVIORAL: Standard guideline-based low-energy diet
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06545721

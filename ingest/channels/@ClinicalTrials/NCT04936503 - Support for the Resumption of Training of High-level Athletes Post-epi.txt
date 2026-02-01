@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04936503
+Title: Support for the Resumption of Training of High-level Athletes Post-epidemic COVID-19
+Official Title: Support for the Resumption of Training of High-level Athletes Post-epidemic COVID-19
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 984
+Topic: recovery exercise
+
+SUMMARY:
+As of March 2020, COVID-19 has become a global pandemic, halting athletic competition worldwide.
+
+Reports from China show a high prevalence of cardiac involvement in patients with severe SARS-CoV-2 infection. These cardiac forms were found to be closely associated with adverse outcomes. The use of Magnetic resonance Imaging (MRI) had allowed to show that cardiac dysfunction could be mediated by myocardial inflammation (i.e. myocarditis). The direct implication of the virus was demonstrated with Severe Acute Respiratory Syndrome (SARS)-CoV-2 being detected on myocardial biopsies in a patient with severe heart failure.
+
+The experience with other viruses causing acute myocarditis shows that there is a high rate of undetected injuries. Indeed, although severe heart failure can be present at the acute stage, acute viral myocarditis is most commonly pauci or asymptomatic, but still leaving occult myocardial scars visible on MRI, and exposing to higher risks of ventricular arrhythmia and sudden cardiac death over the long term.
+
+Although athletes are younger and have fewer comorbidities than the general population and therefore are at lower risk for severe disease or death, there is a critical and urgent need to assess the prevalence of occult scars in the population of high-level athletes returning to training after the SARS-CoV-2 pandemia.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Presence of rhythmic risk markers bye the questionnaire
+  - Evaluation by resting ECG of rhythmic risk marker : repolarization disorders
+  - Evaluation by resting ECG of rhythmic risk marker : inverted T waves
+  - Evaluation by resting ECG of rhythmic risk marker : ST segment abnormalities
+  - Evaluation by resting ECG of rhythmic risk marker : QRS fragmentation
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Resting electrocardiogram
+  - DIAGNOSTIC_TEST: Stress test
+  - DIAGNOSTIC_TEST: Cardiac echocardiography
+  - DIAGNOSTIC_TEST: Cardiac rhythm monitoring
+  - OTHER: Questionnaire
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04936503

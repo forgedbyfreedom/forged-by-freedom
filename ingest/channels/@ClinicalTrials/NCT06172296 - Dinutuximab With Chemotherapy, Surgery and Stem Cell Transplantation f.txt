@@ -1,0 +1,65 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06172296
+Title: Dinutuximab With Chemotherapy, Surgery and Stem Cell Transplantation for the Treatment of Children With Newly Diagnosed High Risk Neuroblastoma
+Official Title: A Phase 3 Study of Dinutuximab Added to Intensive Multimodal Therapy for Children With Newly Diagnosed High-Risk Neuroblastoma
+Status: RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 478
+Topic: beta alanine
+
+SUMMARY:
+This phase III trial tests how well the addition of dinutuximab to Induction chemotherapy along with standard of care surgical resection of the primary tumor, radiation, stem cell transplantation, and immunotherapy works for treating children with newly diagnosed high-risk neuroblastoma. Dinutuximab is a monoclonal antibody that binds to a molecule called GD2, which is found on the surface of neuroblastoma cells, but is not present on many healthy or normal cells in the body. When dinutuximab binds to the neuroblastoma cells, it helps signal the immune system to kill the tumor cells. This helps the cells of the immune system kill the cancer cells, this is a type of immunotherapy. When chemotherapy and immunotherapy are given together, during the same treatment cycle, it is called chemoimmunotherapy. This clinical trial randomly assigns patients to receive either standard chemotherapy and surgery or chemoimmunotherapy (chemotherapy plus dinutuximab) and surgery during Induction therapy. Chemotherapy drugs administered during Induction include, cyclophosphamide, topotecan, cisplatin, etoposide, vincristine, and doxorubicin. These drugs work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing or by stopping them from spreading. Upon completion of 5 cycles of Induction therapy, a disease evaluation is completed to determine how well the treatment worked. If the tumor responds to therapy, patients receive a tandem transplantation with stem cell rescue. If the tumor has little improvement or worsens, patients receive chemoimmunotherapy on Extended Induction. During Extended Induction, dinutuximab is given with irinotecan, temozolomide. Patients with a good response to therapy move on to Consolidation therapy, when very high doses of chemotherapy are given at two separate points to kill any remaining cancer cells. Following, transplant, radiation therapy is given to the site where the cancer originated (primary site) and to any other areas that are still active at the end of Induction. The final stage of therapy is Post-Consolidation. During Post-Consolidation, dinutuximab is given with isotretinoin, with the goal of maintaining the response achieved with the previous therapy. Adding dinutuximab to Induction chemotherapy along with standard of care surgical resection of the primary tumor, radiation, stem cell transplantation, and immunotherapy may be better at treating children with newly diagnosed high-risk neuroblastoma.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To determine if the event-free survival (EFS) of patients with newly diagnosed high-risk neuroblastoma assigned to early chemoimmunotherapy during Induction differs from that of patients who are not assigned to treatment that includes early chemoimmunotherapy.
+
+SECONDARY OBJECTIVES:
+
+I. To determine if early chemoimmunotherapy during Induction therapy improves end of Induction (EOI) response rates and overall survival (OS) for patients with newly diagnosed high-risk neuroblastoma.
+
+II. To determine response rates, EFS, and OS following an Extended Induction regimen with chemoimmunotherapy in patients with progressive disease or a poor response to Induction therapy.
+
+III. To compare the toxicities experienced by patients treated with chemoimmunotherapy during Induction versus those experienced by patients treated with standard Induction and to describe toxicities experienced during Extended Induction.
+
+IV. To determine GD2 expression on tumor tissue and tumor cells in bone marrow and assess for associations with response and outcome.
+
+EXPLORATORY OBJECTIVES:
+
+I. To describe the association between tumor and host factors and outcomes in patients receiving protocol therapy.
+
+II. To evaluate circulating biomarkers and markers of minimal residual disease at baseline and during therapy, and assess for associations with response and outcome.
+
+III. To compare patterns of failure between patients treated with and without dinutuximab during induction.
+
+IV. To determine the effect of telomere maintenance mechanisms on end of Induction response rates, EFS, and OS.
+
+V. To explore the impact of high-risk neuroblastoma (HRNBL) and its therapy, including the addition of dinutuximab to Induction chemotherapy, on functional and quality of life outcomes in patients with HRNBL, as measured by caregiver (parent/legal guardian) and patient questionnaires.
+
+VI. To describe the adequacy of diagnostic biopsy specimens, including those obtained by percutaneous core needle biopsy.
+
+VII. To explore the associations between family-reported adverse social determinants of health and both clinical outcomes and biology.
+
+VIII. To develop and validate deep learning predictors of Induction response based on diagnostic MIBG scans. (Imaging Objective) IX. To compare institutional versus central determination of overall response, individual response components (primary tumor, soft tissue and bone metastatic disease, and bone marrow metastatic disease), and poor end of induction response (PEIR) and good end of induction response (GEIR) determination. (Imaging Objective) X. To describe late toxicities (including impaired organ function, neuropsychiatric toxicity, and incidence of secondary malignancy) in patients treated with dinutuximab during Induction or Extended Induction to late toxicities in patients who have not received dinutuximab during these phases of therapy.
+
+XI. To evaluate whether reduced dose radiotherapy to the primary site clinical target volume
+
+PRIMARY OUTCOMES:
+  - Event free survival (EFS)
+
+INTERVENTIONS:
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Bone Marrow Aspiration
+  - PROCEDURE: Bone Marrow Biopsy
+  - DRUG: Carboplatin
+  - DRUG: Cisplatin
+
+ELIGIBILITY:
+Age:  to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06172296

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04967144
+Title: Carpal Tunnel Syndrome, Right/Left Judgement
+Official Title: Right/Left Judgement in Carpal Tunnel Syndrome
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 200
+Topic: high intensity interval training
+
+SUMMARY:
+The discrimination of the right/left side of the body is related to the integrity of the motor and somatosensory areas at the cortical and subcortical levels. Although some studies have shown that there may be an effect on the right/left representation at the cortical and subcortical levels in cases that cause severe neuropathy and neuropathic pain, this effect has not been proven in milder neuropathies. In this study, the effect on right/left side discrimination will be investigated even in cases with carpal tunnel syndrome. Additionally, the investigators aimed to assess the relationship between right/left discrimination and symptom severity.
+
+DETAILED DESCRIPTION:
+The left/right discrimination is a motor imagery task that involves viewing images of a body part and determining whether each image belongs to the left or right side of the body or if it rotates towards it. Some studies have shown that there may be an effect on the right/left representation at the cortical and subcortical levels in cases that cause severe neuropathy and neuropathic pain, this effect has not been proven in milder neuropathies, such as carpal tunnel syndrome. In this study, the relationship between right/left decision accuracy will be compared with control subjects. The investigators will assess the relationship between right/left judgment and symptom severity, two-point discrimination, and handgrip force.
+
+The hypothesis of the study are:
+
+1. The right/left discrimination accuracy is less than the control subjects.
+2. Right/left discrimination is in relationship with symptom severity, two-point discrimination, and handgrip force.
+
+PRIMARY OUTCOMES:
+  - Left/right judgement Task
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Nerve conduction study
+  - DIAGNOSTIC_TEST: Montreal Cognitive Assessment Test
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04967144

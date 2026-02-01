@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05472753
+Title: Dietary Supplement on the Intestinal Microbiota in Patients with Colon Cancer
+Official Title: Effect of a Dietary Supplement with Antioxidant and Anti-inflammatory Properties on the Intestinal Microbiota in Patients with Colon Cancer. Randomized, Placebo-controlled Clinical Trial. TERATROPHO Study.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: vitamin D muscle
+
+SUMMARY:
+Effect of a dietary supplement with antioxidant and anti-inflamatory properties on the intestinal microbiota in patients with colon cancer. Ramdonized placebo controlled clinical trial. Teratrophic study
+
+DETAILED DESCRIPTION:
+Introduction:
+
+The alteration in the microbiota plays a fundamental role in the promotion and progression of colon cancer due to various pathways such as inflammation and oxidative stress. The use of substances with anti-inflammatory and antioxidant effect could be useful for the treatment of this disease.
+
+Methodology:
+
+Prospective randomized clinical trial, with three parallel groups and double blind. Patients with stage II or III colon neoplasia who are going to receive post-surgical chemotherapy will be included. Patients will be randomized to one of the following groups: group 1 (25 patients): product with hydroxytyrosol extract; group 2 (25 patients): product with curcumin and selenium extract. Group 3 (25 patients): placebo. Before starting chemotherapy, stool and blood samples will be taken, and gastrointestinal symptoms, quality of life, symptoms of anxiety-depression and evaluation of nutritional status will be assessed. When starting chemotherapy, they will start with a daily intake of the assigned dietary supplement. At 3 months ± 2 weeks after starting chemotherapy (at least 2 weeks must have passed since the last chemotherapy of the fourth cycle), the same assessment will be made as in the initial visit, in addition to recording adherence to the intervention dietary supplement and new health problems that have appeared since the previous visit.
+
+PRIMARY OUTCOMES:
+  - Change in the alpha diversity index (Shannon)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Experimental Treatment, DCOOP Product, Hydroxytyrosol extract
+  - DIETARY_SUPPLEMENT: Experimental Treatment,Indukern product, Curcumin and selenium extract
+  - OTHER: Control Treatment
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05472753

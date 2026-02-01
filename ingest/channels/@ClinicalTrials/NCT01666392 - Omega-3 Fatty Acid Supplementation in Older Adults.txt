@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01666392
+Title: Omega-3 Fatty Acid Supplementation in Older Adults
+Official Title: The Impact of Omega-3 Fatty Acid Supplementation on Markers of Inflammation and Lean Body Mass in Older Adults
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: omega 3 exercise
+
+SUMMARY:
+The purpose of this study to determine whether Fish oil (Omega-3 Fatty Acid) supplementation has an impact on inflammation and lean body mass in older adults. The investigators expect that Fish oil supplementation will reduce inflammation and prevent the loss of lean mass compared to placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - C-Reactive protein
+  - IL6
+  - TNFα
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 fatty acid
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01666392

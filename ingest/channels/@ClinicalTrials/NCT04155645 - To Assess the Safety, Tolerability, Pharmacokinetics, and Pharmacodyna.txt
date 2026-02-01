@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04155645
+Title: To Assess the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of AZD8233 After Multiple Dose Administration in Subjects With Dyslipidemia
+Official Title: A Phase I Randomized, Single-blind, Placebo-controlled Study to Assess the Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of AZD8233 Following Multiple Ascending Subcutaneous Dose Administration in Subjects With Dyslipidemia With or Without Type 2 Diabetes
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: creatine supplementation
+
+SUMMARY:
+This is a Phase I study to assess the safety, tolerability and pharmacokinetics (PK), and pharmacodynamics (PD) of AZD8233, following subcutaneous (SC) administration of multiple ascending doses (MAD) of AZD8233 in subjects with confirmed dyslipidemia with or without type 2 diabetes.
+
+DETAILED DESCRIPTION:
+This study is a Phase 1, randomized, single-blind, placebo-controlled, multiple dose group design in up to 33 male or female subjects with dyslipidemia with or without Type 2 diabetes and performed at multiple study centers. The planned number of cohorts is 3 but up to 5 cohorts may be included if the Safety Review Committee (SRC) considers it necessary. The 3 multiple dose levels of SC AZD8233 planned are:
+
+* Cohort 1: Dose 1 (starting dose).
+* Cohort 2: Dose 2 (provisional dose).
+* Cohort 3: Dose 3 (provisional dose). Within each of these cohorts, 8 subjects will be randomized to receive AZD8233 and 3 subjects randomized to receive placebo. Cohorts 2 and 3 may be run in parallel if Cohort 3 is a lower dose. If Cohort 3 is a higher dose, the cohorts will be run sequentially. At any time, the dose levels may be adapted by the SRC based on emerging data. The expected duration of each patient in this study is up to 28 weeks with a maximum of 17 visits. Screening will be completed between Days -28 and -1. Each subject will receive single doses of AZD8233 or placebo on Days 1, 8, 29, and 57. The treatment period will consist of 58 days (up to Visit 9), followed by a follow-up period (up to Visit 17).
+
+Following review of data, the SRC may decide to adjust the following for subsequent cohorts:
+
+* The timing and amount of the loading dose.
+* The length of the stay at the study site, the timing and number of assessments and/or samples.
+* As decided by the SRC, blood and urine samples collected in the study may be used to address any of the other pre-specified study objectives.
+* Each subject will be followed up for 16 weeks post last dose.
+
+PRIMARY OUTCOMES:
+  - Number of subjects with adverse events (AEs) due to AZD8233 SC multiple ascending dose treatment.
+  - Vital sign: Systolic blood pressure (SBP)
+  - Vital sign: Pulse rate
+  - Vital sign: Oral body temperature
+  - Number of patients with abnormal findings in resting 12-lead Electrocardiogram (ECG) and digital ECG (dECG).
+
+INTERVENTIONS:
+  - DRUG: AZD8233 subcutaneous injection
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04155645

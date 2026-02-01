@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06132100
+Title: Using Digitalized Incentive Spirometers to Assist Postoperative Rehabilitation of Abdominal Surgery Patients
+Official Title: Using Wireless Transformation of Portable Three-ball Incentive Spirometers to Assist the Record of Postoperative Rehabilitation and Pulmonary Function Change in Patients Undergoing Abdominal Surgery
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: recovery exercise
+
+SUMMARY:
+The purpose of this clinical trial is to use a digital recording device integrated with an incentive spirometer to record a patient's deep breathing lung training following abdominal surgery. Through this digital recording, it will be possible to effectively assess the daily frequency, duration, depth of deep breaths, and the volume of inhalation performed by the patient during their breathing exercises. This will transform the previously difficult-to-describe deep breathing training into a digital record, allowing healthcare professionals to quickly evaluate the patient's condition. Patients can also monitor their own respiratory function changes, leading to positive health promotion benefits, accelerating their postoperative recovery, and simultaneously reducing healthcare costs and improving medical quality.
+
+DETAILED DESCRIPTION:
+After thoracoabdominal and neurosurgery procedures, an incentive spirometer is commonly employed for deep breathing exercises to prevent or improve potential postoperative pulmonary atelectasis, increase lung capacity, promote the clearance of respiratory secretions, and maintain chest mobility to reduce postoperative complications related to lung collapse. This medical device and the respiratory training process are essential components of Enhanced Recovery After Surgery (ERAS) protocols, which integrate postoperative care processes to enhance recovery, reduce hospitalization times, and minimize postoperative complications. Currently, clinical guidelines typically recommend patients to perform 200-600 deep inhalations per day after surgery. Despite the simplicity and effectiveness of using an incentive spirometer for deep breathing exercises, the observation of patients' usage, recording of the number and duration of exercises, and tracking of their deep inhalation volumes have become crucial tasks for respiratory therapists, nurses, and physicians in the postoperative setting, consuming significant time and resources.
+
+Generally, using an incentive spirometer requires patients to perform 200-600 deep breaths a day. According to a 2018 medical literature estimate in the United States, approximately 9.7 million surgical procedures annually involve the use of incentive spirometers, with human resource costs for assisting patients in their use and assessing the effectiveness of their pulmonary rehabilitation reaching approximately one billion US dollars.
+
+PRIMARY OUTCOMES:
+  - Apnea/Hyponea Index
+  - Pulse oximetry change
+
+INTERVENTIONS:
+  - DEVICE: digitalized incentive spirometry
+  - DEVICE: traditional incentive spirometry
+
+ELIGIBILITY:
+Age: 20 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06132100

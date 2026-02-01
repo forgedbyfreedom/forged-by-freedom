@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07262203
+Title: Effect of Diabetic Foot Exercises on Peripheral Vascular Status in Type 2 Diabetes Mellitus Patients
+Official Title: Effectiveness of Diabetic Foot Exercises on Peripheral Vascular Status Among Patients With Type 2 Diabetes Mellitus: A Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This randomized controlled trial aims to evaluate the effectiveness of diabetic foot exercises on peripheral vascular status among patients with type 2 diabetes mellitus. Peripheral artery disease is a common complication of diabetes and contributes to reduced mobility and increased risk of ulcers, ischemia, and amputation. Early identification and non-pharmacological interventions such as structured lower extremity exercises may help improve peripheral circulation.
+
+In this study, 44 adults with type 2 diabetes mellitus who met the inclusion criteria were randomly assigned to either an intervention group receiving diabetic foot exercises or a control group performing regular physical activity of similar frequency and duration. The exercise protocol used in the intervention group was adapted from the Joslin Diabetes Center and included balance, strengthening, and ankle-foot mobility exercises. The intervention lasted for 3 months.
+
+Peripheral vascular status was assessed using the ankle-brachial index (ABI) measured with a Doppler device at baseline and after 3 months. The study found that participants in the intervention group demonstrated a significant improvement in ABI values compared with the control group, indicating enhanced lower-limb blood flow.
+
+This trial provides evidence that diabetic foot exercises are a simple, low-cost, and feasible intervention to improve peripheral vascular circulation in patients with type 2 diabetes mellitus, particularly in settings with limited resources.
+
+DETAILED DESCRIPTION:
+This randomized controlled trial was conducted to determine the effectiveness of diabetic foot exercises in improving peripheral vascular status among patients with type 2 diabetes mellitus (T2DM). Diabetes mellitus is a chronic metabolic disorder associated with multiple vascular complications, including peripheral artery disease (PAD). PAD in diabetic patients is frequently asymptomatic during the early stages, yet it substantially increases the risk of ischemia, ulceration, and lower-limb amputation. Regular physical activity and targeted exercises have been shown to improve circulation and functional capacity. However, evidence regarding the effects of specific diabetic foot exercise programs on peripheral vascular status remains limited in Indonesia.
+
+A total of 44 participants with T2DM were recruited from PERSADIA at Dr. Moewardi Hospital, Central Java, Indonesia. Participants were randomly assigned to either the treatment group (n = 22) or control group (n = 22) using a card-shuffle randomization method. Inclusion criteria included age above 50 years and a diagnosis of T2DM for at least 5 years. Exclusion criteria included inability to walk independently, lower extremity pain, severe arthritis, neurological or cardiovascular disorders, limited physical activity, or cognitive impairment. All participants provided written informed consent before enrollment.
+
+The intervention consisted of a structured diabetic foot exercise program adapted from the Joslin Diabetes Center, involving quadriceps strengthening, balance exercises, ankle and foot mobility movements, and kicking exercises. Participants in the intervention group were instructed to perform the exercises daily for approximately 30 minutes over a period of 3 months, with monitoring to ensure safety. The control group participated in regular physical activity of similar duration and frequency but without the targeted diabetic foot exercise components.
+
+Peripheral vascular status was assessed through the ankle-brachial index (ABI), using a Doppler device (ES-1000SPM, Hadeco, Japan). ABI measurements were taken at baseline and after 3 months of intervention, following standard procedures, including supine positioning and an initial rest period of five minutes. ABI categories followed established clinical thresholds: normal (0.90-1.30), mild impairment (0.70-0.89), moderate impairment (0.40-0.69), and severe impairment (\<0.40).
+
+Data analysis was performed using SPSS, employing paired t-tests for within-group comparisons and independent t-tests for between-group differences. The results demonstrated a significant improvement in ABI values in the intervention group (from 0.90 ± 0.05 to 0.96 ± 0.06), compared to minimal changes in the control group (from 0.90 ± 0.04 to 0.91 ± 0.05). These findings suggest that diabetic foot exercises can effectively enhance peripheral vascular function.
+
+This study highlights that diabetic foot exercises offer a practical, low-cost, and accessible method fo
+
+PRIMARY OUTCOMES:
+  - Change in Ankle-Brachial Index (ABI)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Diabetic Foot Exercise Program
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07262203

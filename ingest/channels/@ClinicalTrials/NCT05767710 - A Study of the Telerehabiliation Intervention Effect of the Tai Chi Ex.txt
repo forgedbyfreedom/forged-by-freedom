@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05767710
+Title: A Study of the Telerehabiliation Intervention Effect of the Tai Chi Exercise on Elderly With Sarcopenia
+Official Title: An Alternative Remote Rehabilitation Strategy for the Improvement of Sarcopenia in the Elderly: Tai Chi as an Exercise Form
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 225
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia is an age-related disease characterized by a progressive decrease in skeletal muscle content and loss of muscle function. Tai Chi exercises have been shown to improve skeletal muscle mass in elderly people suffering from sarcopenia. However, offline interventions are a very labor- and financial-intensive approach. Therefore, researchers designed an artificial intelligence-assisted program and Tai Chi exercise format to investigate whether a remote rehabilitation approach could replace face-to-face interventions
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Using quantitative CT to investigate the change of skeletal muscle area in sarcopenic elderly.
+  - Using a Jamar hydraulic hand dynamometer to investigate change of handgrip in sarcopenic elderly.
+  - Using a bioelectrical impedance body composition analyzer with a multifrequency device to investigate the change of relative skeletal muscle mass index in sarcopenic elderly.
+
+INTERVENTIONS:
+  - BEHAVIORAL: AI telerehabilitation - Tai Chi
+  - BEHAVIORAL: general telerehabilitation - Tai Chi
+  - BEHAVIORAL: traditional rehabilitation - Tai Chi
+  - BEHAVIORAL: AI telerehabilitation - Yi Jin Jing
+  - BEHAVIORAL: general telerehabilitation - Yi Jin Jing
+
+ELIGIBILITY:
+Age: 60 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05767710

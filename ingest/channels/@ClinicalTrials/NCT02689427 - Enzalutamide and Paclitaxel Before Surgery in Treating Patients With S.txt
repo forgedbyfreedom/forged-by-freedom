@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02689427
+Title: Enzalutamide and Paclitaxel Before Surgery in Treating Patients With Stage I-III Androgen Receptor-Positive Triple-Negative Breast Cancer
+Official Title: A Phase IIB Study of Neoadjuvant ZT Regimen (Enzalutamide Therapy in Combination With Weekly Paclitaxel) for Androgen Receptor (AR)-Positive Triple-Negative Breast Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase IIB trial studies how well enzalutamide and paclitaxel before surgery works in treating patients with stage I-III androgen receptor-positive triple-negative breast cancer. Androgens can cause the growth of triple-negative breast cancer. Anti-hormone therapy, such as enzalutamide, prevent androgen from binding to the androgen receptor, thereby decreasing cell growth and causing tumor cell death. Drugs used in chemotherapy, such as paclitaxel, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving enzalutamide and paclitaxel before surgery may make the tumor smaller and reduce the amount of normal tissue that needs to be removed. This treatment study is part of the MD Anderson Moonshot initiative.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To evaluate the pathologic complete response (pCR) and residual cancer burden-index (RCB-I) rates of patients with triple-negative breast cancer (TNBC) who were non-responders to initial anthracycline and cyclophosphamide chemotherapy and who were treated with enzalutamide in combination with weekly paclitaxel in the neoadjuvant setting.
+
+SECONDARY OBJECTIVES:
+
+I. To estimate progression free survival (PFS) distribution of androgen receptor (AR)-positive TNBC patients who were nonresponders to initial anthracycline and cyclophosphamide chemotherapy, treated with enzalutamide in combination with weekly paclitaxel in the neoadjuvant setting.
+
+II. To determine the safety of administering enzalutamide in combination with weekly paclitaxel in the neoadjuvant setting.
+
+EXPLORATORY OBJECTIVES:
+
+I. To investigate the association between biomarkers in the peripheral blood and tumor tissue with safety and efficacy for TNBC patients who were treated with enzalutamide and treatment in combination with weekly paclitaxel in the neoadjuvant setting.
+
+II. To investigate the correlation between circulating tumor cells (CTC) characteristics and/or gene profiles and treatment response of enzalutamide and taxane.
+
+OUTLINE:
+
+Patients receive enzalutamide orally (PO) daily on days 1-7 and paclitaxel intravenously (IV) over 2 hours on day 1. Treatments repeat every 7 days for up to 12 cycles in the absence of disease progression or unacceptable toxicity.
+
+SURGERY: After 12 cycles of therapy, patients undergo surgical resection of primary tumor with or without lymph node biopsy or complete axillary dissection.
+
+After completion of study treatment, patients are followed up within 30 days after surgery.
+
+PRIMARY OUTCOMES:
+  - RCB Status
+  - Incidence of Residual Cancer Burden-index
+
+INTERVENTIONS:
+  - PROCEDURE: Axillary Lymph Node Dissection
+  - DRUG: Enzalutamide
+  - OTHER: Laboratory Biomarker Analysis
+  - PROCEDURE: Lymph Node Biopsy
+  - DRUG: Paclitaxel
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02689427

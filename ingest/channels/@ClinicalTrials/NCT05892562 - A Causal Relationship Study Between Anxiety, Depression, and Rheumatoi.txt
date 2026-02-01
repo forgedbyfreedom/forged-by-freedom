@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05892562
+Title: A Causal Relationship Study Between Anxiety, Depression, and Rheumatoid Arthritis
+Official Title: A Causal Relationship Study Between Anxiety, Depression, and Rheumatoid Arthritis
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 500
+Topic: sleep athletes
+
+SUMMARY:
+Rheumatoid arthritis (RA) is a systemic chronic inflammatory disease, and depression and anxiety are among the most common comorbidities in RA patients, with a high prevalence rate. Epidemiological studies have found that joint deformities, severe pain, positive serum RF titers, as well as comorbidities such as hypertension, insomnia, pain, and fatigue are significantly associated with depression and anxiety in RA patients.
+
+Currently, clinical studies have found that the relief of depression or anxiety is one of the expected treatment goals for RA patients. Due to the unclear pathogenic factors of depression or anxiety in RA patients, there is a lack of effective clinical treatment options. Therefore, this study will use a "causal inference model" to identify possible "mediating variables" that may lead to the comorbidity of RA and emotional disorders through clinical investigation, aiming to improve the precision of treatment for physicians.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Patient Health Questionnaire-9 (PHQ-9)
+  - Generalized Anxiety Disorder-7 (GAD-7)
+
+INTERVENTIONS:
+  - OTHER: No intervention
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05892562

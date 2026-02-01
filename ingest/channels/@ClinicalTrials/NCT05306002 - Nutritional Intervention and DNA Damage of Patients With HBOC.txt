@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05306002
+Title: Nutritional Intervention and DNA Damage of Patients With HBOC
+Official Title: Effects of a Nutritional Intervention in DNA Damage of Patients With Hereditary Breast and Ovarian Cancer Syndrome
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: vitamin D muscle
+
+SUMMARY:
+Breast and Ovarian Cancer Syndrome (HBOC) is characterized by mutations in tumor suppressor genes such as BRCA1 and BRCA2, which increase the carrier's risk of developing breast and ovarian cancer, especially before 40. In this pathology the DNA damage is increased because there is a state of chronic inflammation, plus the antineoplastic treatments and changes in body composition result in oxidative stress. The inductions of epigenetic changes by a nutritional intervention with an specific distribution of macronutrients, micronutrients and polyphenols, not only ensures an optimal nutritional status, but also shows a decrease in oxidative stress, and therefore in DNA damage. The aim of this study is to assess if the DNA damage in patients with HBOC decreases after the nutritional intervention.
+
+DETAILED DESCRIPTION:
+Breast and Ovarian Cancer Syndrome (HBOC) is a genetic disease characterized by mutations in tumor suppressor genes such as BRCA1 and BRCA2, elevation of Reactive Oxygen Species (ROS), inflammation and DNA damage; all this as a result of the pathology itself. Antineoplastic treatments and changes in body composition such as malnutrition, cachexia and obesity lead to an increase of the inflammatory state. The induction of epigenetic changes by a nutritional intervention suggests that an hypo caloric diet, complex carbohydrates, polyunsaturated fatty acids, some amino acids, and some vitamins, minerals and polyphenols as well, can reduce DNA damage because of the interaction between mechanisms related with DNA stability and reparation, cellular replication, induction of apoptosis, and antioxidant systems. Previous studies report that using polyphenols supplements can reduce de DNA damage, but when the administration is only through food there's no benefit at all. So the aim of this study is to assess if the use of different micronutrients and polyphenols in conjoint can make synergism and reduce de DNA damage without the need of supplements.
+
+PRIMARY OUTCOMES:
+  - DNA damage change
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Antioxidant therapy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05306002

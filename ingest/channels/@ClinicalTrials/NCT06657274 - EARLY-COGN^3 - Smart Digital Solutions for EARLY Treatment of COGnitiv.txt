@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06657274
+Title: EARLY-COGN^3 - Smart Digital Solutions for EARLY Treatment of COGnitive Disability: a Neuropsychological, Neurophysiological and Neurobiological Perspective in Chronic Neurological Diseases - PNRR-MCNT2-2023-12377069
+Official Title: EARLY-COGN^3 - Smart Digital Solutions for EARLY Treatment of COGnitive Disability: a Neuropsychological, Neurophysiological and Neurobiological Perspective in Chronic Neurological Diseases - PNRR-MCNT2-2023-12377069
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: high intensity interval training
+
+SUMMARY:
+The increase in life expectancy in recent decades has led to a large number of people living into old age and an increased risk of developing Chronic Neurological Diseases (CNDs) such as neurodegenerative diseases. A higher cumulative risk of dementia has been largely demonstrated in Mild Cognitive Impairment (MCI) and Subjective Cognitive Complaints (SCCs) subjects and in Parkinson's Disease (PD) patients, as compared to the general population. These disorders result in an impairment of the individual's abilities to perform daily tasks. As their disease progresses, patients become dependent on medical services and on family support. Given the limited effectiveness of pharmacological treatments, non-pharmacological interventions to prevent and treat cognitive deficits and the associated difficulties with activities of daily living in neurodegenerative disease patients have gained attention in recent years and, among these, cognitive training offers a potential approach for dementia prevention and improvement of cognitive function. A critical aspect of cognitive training programs is that the most promising interventions have involved intensive in-person sessions that are unlikely to be cost-effective or feasible for large-scale implementation. Within the framework of non-pharmacological interventions, the use of technology to assist the person at risk and/or with mild dementia at home and to extend rehabilitation services in the treatment of dementia has gradually gained importance. Telerehabilitation technologies allow to provide services remotely in patients' homes, allowing access to health care to patients living in rural settings or with mobility difficulties. In addition, the telerehabilitation modality offers the advantage of providing rehabilitation within the natural environment of the patient's home, making the treatment more realistic and possibly more generalizable to the person's daily life. The present project proposes to test a home-based asynchronous cognitive telerehabilitation program aimed at enhancing the continuum of care for MCI, SCCs and PD, using technology. The proposed study is a single blind randomized controlled trial (RCT) involving subjects with CNDs randomly assigned to one out of two intervention groups: i) the tele@cognitive group, who will receive at-home cognitive telerehabilitation (tele@cognitive treatment); ii) the Active Control Group (ACG), who will receive at-home unstructured cognitive stimulation. The aim of the project will be threefold: \[1\] to test the short-term and long-term efficacy of tele@cognitive protocol as compared to an unstructured cognitive at-home rehabilitation in the treatment of a cohort of patients with CNDs; \[2\] to explore the changes induced by tele@cognitive intervention on biomolecular and neurophysiological markers; \[3\] to explore potential cognitive, neurobiological and neurophysiological predictors of response to tele@cognitive treatment.
+
+DETAILED DESCRIPTION:
+60 subjects with MCI, SCC, PD will be recruited from IRCCS Istituto Centro San Giovanni di Dio, Fatebenefratelli, Brescia, Fondazione Don Carlo Gnocchi - ONLUS, Milan and IRCCS Centro Neurolesi Bonino Pulejo, Messina.
+
+Patients will include both male and female subjects affected by CND: PD (Hoehn \& Yahr\<3), MCI (with CDR scale≤0.5, MMSE ≥24) and SCC (Subjective Cognitive Complaints).
+
+All patients will undergo treatment sessions of 45 minutes, 3 days a week for 5 weeks:
+
+* 30 subjects will be assigned to the tele@cognitive group that will receive home-based cognitive telerehabilitation activities with an innovative digital solution for remote rehabilitation of cognitive difficulties according to the digital therapy delivery model;
+* 30 subjects will be assigned to the Active Control Group (ACG) that will receive home-based unstructured cognitive stimulation.
+
+The two groups will be matched for sex, age, education and performance in the MoCA test.
+
+All study participants will be administered a multidimensional assessment by an experienced neuropsychologist at baseline (T0), at post-treatment assessment (T1, 5 weeks from T0) and at 3-month follow-up (T2). In addition, participation in the research involves blood sampling and application of Transcranial Magnetic Stimulation (TMS) before (T0) and after (T1) treatment.
+
+PRIMARY OUTCOMES:
+  - Change in global cognition as assessed by Montreal Cognitive Assessment (MoCA)
+  - Change in long-term episodic verbal memory as assessed by Free and Cued Selective Reminding Test (FCSRT)
+
+INTERVENTIONS:
+  - DEVICE: RICORDO-DTx
+  - BEHAVIORAL: Home-based unstructured cognitive stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06657274

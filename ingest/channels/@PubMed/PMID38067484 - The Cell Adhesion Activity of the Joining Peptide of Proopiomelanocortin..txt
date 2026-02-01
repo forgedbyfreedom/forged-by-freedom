@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38067484
+Title: The Cell Adhesion Activity of the Joining Peptide of Proopiomelanocortin.
+Authors: Hiroshima, Sakata, Konogami, Shimamoto, Hidaka
+Journal: Molecules (Basel, Switzerland)
+Year: 2023
+Topic: peptide hormones performance
+
+ABSTRACT:
+Proopiomelanocortin (POMC) is a precursor protein of several peptide hormones, such as ACTH and &#x3b2;-endorphin. Almost all of the peptide hormones in POMC have been drastically investigated in terms of their biological activities. However, the biological activity of the joining peptide region (JP) in POMC is unknown. Therefore, to explore the biological activity of JP, sequence analyses of mammalian POMC were performed. We found an -Arg-Gly-Asp- (RGD) motif in several mammalian species, such as porcine, suggesting that JP has cell adhesion activity. To validate this hypothesis, the cell adhesion activities of the synthetic porcine JP peptides were examined using 293T cells. Cell adhesions were observed in a concentration-dependent manner of the JP peptides. In addition, the JP peptide competitively inhibited cell adhesion to the POMC-coated plates. Moreover, the cell adhesion activity of the joining peptide was inhibited by the addition of EDTA, indicating that the JP peptide mediates the cell adhesion activity via a receptor protein, integrin. Interestingly, a human JP peptide, which possesses an -Arg-Ser-Asp- (RSD) sequence in place of the RGD sequence, exhibited a higher ability in the cell adhesion activity than that of the porcine JP peptide, suggesting that the cell adhesion activity of the joining peptide is developed during the molecular evolution of POMC. In conclusion, our results reveal that the joining peptide in POMC plays an important role during cell adhesion and provide useful information related to signal transduction of nerve peptide hormones derived from POMC.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38067484/

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36669474
+Title: Light modulates glucose metabolism by a retina-hypothalamus-brown adipose tissue axis.
+Authors: Meng, Shen, Li, Ouyang, Hu
+Journal: Cell
+Year: 2023
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Public health studies indicate that artificial light is a high-risk factor for metabolic disorders. However, the neural mechanism underlying metabolic modulation by light remains elusive. Here, we found that light can acutely decrease glucose tolerance (GT) in mice by activation of intrinsically photosensitive retinal ganglion cells (ipRGCs) innervating the hypothalamic supraoptic nucleus (SON). Vasopressin neurons in the SON project to the paraventricular nucleus, then to the GABAergic neurons in the solitary tract nucleus, and eventually to brown adipose tissue (BAT). Light activation of this neural circuit directly blocks adaptive thermogenesis in BAT, thereby decreasing GT. In humans, light also modulates GT at the temperature where BAT is active. Thus, our work unveils a retina-SON-BAT axis that mediates the effect of light on glucose metabolism, which may explain the connection between artificial light and metabolic dysregulation, suggesting a potential prevention and treatment strategy for managing glucose metabolic disorders.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36669474/

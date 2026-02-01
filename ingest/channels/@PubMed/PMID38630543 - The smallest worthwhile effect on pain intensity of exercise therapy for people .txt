@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38630543
+Title: The smallest worthwhile effect on pain intensity of exercise therapy for people with chronic low back pain: a discrete choice experiment study.
+Authors: Hansford, Jones, Cashin, Ostelo, Chiarotto
+Journal: The Journal of orthopaedic and sports physical therapy
+Year: 2024
+Topic: low back pain exercise therapy
+
+ABSTRACT:
+OBJECTIVE: To identify the smallest worthwhile effect (SWE) of exercise therapy for people with non-specific chronic low back pain (CLBP). DESIGN: Discrete choice experiment. METHODS: The SWE was estimated as the lowest reduction in pain that participants would consider exercising worthwhile, compared to not exercising i.e., effects due to natural history and other components (e.g., regression to the mean). We recruited English-speaking adults in Australia with non-specific CLBP to our online survey via email obtained from a registry of previous participants and advertisements on social media. We used discrete choice experiment to estimate the SWE of exercise compared to no exercise for pain intensity. We analysed the discrete choice experiment using a mixed logit model, and mitigated hypothetical bias through certainty calibration, with sensitivity analyses performed with different certainty calibration thresholds. RESULTS: Two-hundred and thirteen participants completed the survey. The mean age (&#xb1;SD) was 50.7&#xb1;16.5, median (IQR) pain duration 10 years (5-20), and mean pain intensity (&#xb1;SD) was 5.8&#xb1;2.3 on a 0-10 numerical rating scale. For people with CLBP the SWE of exercise was a between-group reduction in pain of 20%, compared to no exercise. In the sensitivity analyses, the SWE varied with different levels of certainty calibration; from 0% without certainty calibration to 60% with more extreme certainty calibration. CONCLUSION: This patient-informed threshold of clinical importance could guide the interpretation of findings from randomised trials and meta-analyses of exercise therapy compared to no exercise.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38630543/

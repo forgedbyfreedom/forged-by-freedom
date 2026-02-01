@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06520085
+Title: Optimizing Recovery After Reverse Shoulder Arthroplasty With a Personalized Mobile Health Application
+Official Title: Optimizing Recovery After Reverse Shoulder Arthroplasty With a Personalized Mobile Health Application
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 170
+Topic: recovery exercise
+
+SUMMARY:
+Background: Mobile health (mHealth) - the use of medical applications in healthcare settings - include tools that can support self-management after surgery and thereby contribute to early postoperative recovery. Providing patients with timely and interactive information through mHealth is hypothesized to positively influence recovery after reverse shoulder arthroplasty (RSA).
+
+Aim: The aim of this study is to determine the effectiveness of interactive and personalized information and rehabilitation protocol with a mobile application compared to generic information and generic rehabilitation protocol (standard care) on postoperative recovery in patients undergoing primary RSA.
+
+Methods and analysis: A multicentre randomised controlled trial will be conducted in two Dutch hospitals. In total 170 patients undergoing elective, primary RSA will be included. Participants will be randomly allocated to one of the two groups on a 1:1 ratio. The intervention group will receive interactive postoperative information on a daily basis. The control group will receive standard care. The primary outcome is defined as functional recovery measured using the Oxford Shoulder Score (OSS) at 6 weeks. Secondary outcomes are: pain, physical functioning, quality of life, length of stay, complications, treatment satisfaction and app use. The between group difference will be analysed using linear mixed-effects regression.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Postoperative shoulder functioning
+
+INTERVENTIONS:
+  - OTHER: interactive mHealth application for patients undergoing RSA
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06520085

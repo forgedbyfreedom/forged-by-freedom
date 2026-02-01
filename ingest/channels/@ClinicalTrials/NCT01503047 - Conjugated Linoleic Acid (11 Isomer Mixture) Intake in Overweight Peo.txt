@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01503047
+Title: Conjugated Linoleic Acid (1:1 Isomer Mixture) Intake in Overweight People
+Official Title: Randomized, Double-Blind, Placebo-Controlled Study to Evaluate the Efficacy and Safety of Tonalin(R)Intake in Overweight People
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: body composition exercise
+
+SUMMARY:
+The aim of the study was to examine the effects and safety of 3 g of a 1:1 mix of c9-t11 and t10-c12 (Tonalin®) on weight control and body composition in healthy overweight individuals who maintained their normal dietary and exercise patterns.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - body composition(DXA)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Tonalin®
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 30 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01503047

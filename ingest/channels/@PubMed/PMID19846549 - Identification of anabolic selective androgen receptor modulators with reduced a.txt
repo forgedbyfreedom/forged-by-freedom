@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 19846549
+Title: Identification of anabolic selective androgen receptor modulators with reduced activities in reproductive tissues and sebaceous glands.
+Authors: Schmidt, Harada, Kimmel, Bai, Chen
+Journal: The Journal of biological chemistry
+Year: 2010
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Androgen replacement therapy is a promising strategy for the treatment of frailty; however, androgens pose risks for unwanted effects including virilization and hypertrophy of reproductive organs. Selective Androgen Receptor Modulators (SARMs) retain the anabolic properties of androgens in bone and muscle while having reduced effects in other tissues. We describe two structurally similar 4-aza-steroidal androgen receptor (AR) ligands, Cl-4AS-1, a full agonist, and TFM-4AS-1, which is a SARM. TFM-4AS-1 is a potent AR ligand (IC(50), 38 nm) that partially activates an AR-dependent MMTV promoter (55% of maximal response) while antagonizing the N-terminal/C-terminal interaction within AR that is required for full receptor activation. Microarray analyses of MDA-MB-453 cells show that whereas Cl-4AS-1 behaves like 5alpha-dihydrotestosterone (DHT), TFM-4AS-1 acts as a gene-selective agonist, inducing some genes as effectively as DHT and others to a lesser extent or not at all. This gene-selective agonism manifests as tissue-selectivity: in ovariectomized rats, Cl-4AS-1 mimics DHT while TFM-4AS-1 promotes the accrual of bone and muscle mass while having reduced effects on reproductive organs and sebaceous glands. Moreover, TFM-4AS-1 does not promote prostate growth and antagonizes DHT in seminal vesicles. To confirm that the biochemical properties of TFM-4AS-1 confer tissue selectivity, we identified a structurally unrelated compound, FTBU-1, with partial agonist activity coupled with antagonism of the N-terminal/C-terminal interaction and found that it also behaves as a SARM. TFM-4AS-1 and FTBU-1 represent two new classes of SARMs and will allow for comparative studies aimed at understanding the biophysical and physiological basis of tissue-selective effects of nuclear receptor ligands.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/19846549/

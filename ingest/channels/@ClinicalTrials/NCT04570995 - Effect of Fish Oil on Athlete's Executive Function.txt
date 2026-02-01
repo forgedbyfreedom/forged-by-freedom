@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04570995
+Title: Effect of Fish Oil on Athlete's Executive Function
+Official Title: Effect of Docosahexaenoic Acid (DHA) and Eicosapentaenoic Acid (EPA) on Brain Executive Function in Student Athletes
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: sleep athletes
+
+SUMMARY:
+The goal of this study is to determine the impact of long chain omega-3 PUFA (Polyunsaturated fatty acids) supplementation on executive function in collegiate athletes in a randomized, double-blind, placebo-controlled trial
+
+DETAILED DESCRIPTION:
+The main objective of this study is to determine the effect of daily oral intake of a fish oil capsule enriched in eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA) on brain EF (Executive Function) and blood-based biomarkers among male collegiate baseball student athletes over the course of an academic school year
+
+PRIMARY OUTCOMES:
+  - Barkley Deficits in Executive Functioning Scale (BDEFS)
+  - Stroop Test
+  - Stroop Test
+  - Trail Making Test
+  - Trail Making Test
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fish Oil
+  - DIETARY_SUPPLEMENT: Safflower Oil
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04570995

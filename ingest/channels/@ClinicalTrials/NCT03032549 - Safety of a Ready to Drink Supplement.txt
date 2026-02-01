@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03032549
+Title: Safety of a Ready to Drink Supplement
+Official Title: Short-Term Safety and Dose Effects of a Ready to Drink Pre-Workout Supplement
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: beta alanine
+
+SUMMARY:
+This study will examine a Ready to Drink (RTD) supplement.
+
+DETAILED DESCRIPTION:
+This study will examine the short-term (7 days) characteristics of ingesting a Ready to Drink (RTD) supplement immediately prior to exercise on the blood, heart rate, blood pressure and self-reported side effects.
+
+PRIMARY OUTCOMES:
+  - The effects of ingesting an RTD immediately prior to exercise on the blood
+  - The effects of ingesting an RTD immediately prior to exercise on heart rate
+  - The effects of ingesting an RTD immediately prior to exercise on blood pressure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: RTD
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03032549

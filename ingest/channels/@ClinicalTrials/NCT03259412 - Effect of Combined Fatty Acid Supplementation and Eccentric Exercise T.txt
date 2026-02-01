@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03259412
+Title: Effect of Combined Fatty Acid Supplementation and Eccentric Exercise Training on Exercise Performance
+Official Title: Effect of Combined Fatty Acid Supplementation and Eccentric Exercise Training on Exercise Performance, Inflammation, Gene Expression and Epigenetic Signatures
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: omega 3 exercise
+
+SUMMARY:
+The aim of the study is to determine whether fish oil (specifically omega-3 long chain polyunsaturated fatty acids \[EPA-DHA\]) supplementation can enhance eccentric resistance exercise performance when combined with a resistance exercise training study. The investigators aim to establish the potential mechanisms that might mediate performance changes at a cellular level.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Strength
+  - Leg power
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fish Oil
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03259412

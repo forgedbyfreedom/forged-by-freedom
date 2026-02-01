@@ -1,0 +1,88 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07098130
+Title: Comparative Study of Two Ultrasound-guided Percutaneous Neuromodulation Protocols on Maximal Handgrip Strength.
+Official Title: Comparative Study of Two Ultrasound-guided Percutaneous Neuromodulation Protocols on Maximal Handgrip Strength: a Randomized Clinical Trial.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 86
+Topic: athletic performance
+
+SUMMARY:
+Purpose of the Study:
+
+This study aims to compare the effects of two different ultrasound-guided percutaneous neuromodulation (PNM) protocols targeting the median nerve on maximal handgrip strength in healthy individuals. The study seeks to enhance scientific understanding of the clinical applications of PNM in improving neuromuscular performance and functional capacity.
+
+Benefits of the Study:
+
+Contribute to the evidence base supporting the use of PNM in physiotherapy and rehabilitation.
+
+Inform future therapeutic protocols aiming to optimize muscle strength and functional recovery.
+
+Provide participants with access to a professional evaluation of physical performance and exposure to advanced rehabilitative techniques in a safe and monitored environment.
+
+Interventions:
+
+Participants will undergo a single session of ultrasound-guided PNM to the median nerve using one of two protocols:
+
+Protocol 1 (100 Hz): 5 cycles of 5 seconds stimulation (350 µs pulse width), followed by 55 seconds rest.
+
+Protocol 2 (10 Hz): 10 cycles of 10 seconds stimulation (250 µs pulse width), followed by 10 seconds rest.
+
+In both protocols, stimulation intensity will be set to the maximum tolerable level that elicits a strong but non-painful muscular contraction. Total treatment duration will be approximately 10 minutes.
+
+Measurements:
+
+Primary Outcome: Maximal handgrip strength measured using a digital dynamometer before and after the intervention.
+
+Secondary Outcomes: Perceived pain during the intervention, assessed with the Numerical Pain Rating Scale (0-10). Sociodemographic data (age, sex, weight, height, BMI).
+
+Conclusion:
+
+This clinical trial will provide valuable insights into the comparative effectiveness of two PNM protocols for improving muscular performance. By identifying the most effective parameters for PNM application, this research may help optimize rehabilitation strategies and contribute to enhancing patients' functional outcomes in clinical and athletic settings.
+
+DETAILED DESCRIPTION:
+Study Design:
+
+This is a randomized, controlled, double-blinded clinical trial. Both the evaluator and the participants will be blinded to group allocation. A total of 86 volunteers (aged 18-40 years) will be randomly assigned to one of two intervention groups.
+
+Eligibility Criteria:
+
+Inclusion:
+
+Healthy adults aged 18-40 years No musculoskeletal, neurological, or upper limb conditions Informed consent provided
+
+Exclusion:
+
+Recent physical activity (within 48 hours) Electrotherapy contraindications (e.g., pregnancy, epilepsy, needle phobia) Pain or functional limitations at the time of assessment
+
+Blinding Procedures:
+
+Participants will be unaware of the specific stimulation frequency applied. Since both protocols involve similar sensations and durations, distinguishing between them is unlikely. Evaluations will be performed by a separate physiotherapist who is not informed of the group assignments.
+
+Sample Size Justification:
+
+Based on prior research, a sample size of 43 participants per group (86 in total) is needed to detect statistically significant differences between groups with 80% power and a 5% significance level. Calculations are based on previously reported standard deviations and an expected moderate effect size.
+
+Data Handling and Confidentiality:
+
+All participant data will be pseudonymized using unique identification codes. Only the principal investigator will have access to the code-key linking participants' identities. Data will be stored securely, and all procedures will comply with current data protection regulations.
+
+Potential Risks and Safety Measures:
+
+As an invasive physiotherapy technique, PNM may involve minimal risks such as mild discomfort from the needle insertion, transient pain during electrical stimulation, or minor hematoma formation. However, all interventions will be performed by trained professionals following strict aseptic protocols, using sterile gloves, probe covers, and appropriate skin disinfection procedures. The technique has been previously validated in both healthy and clinical populations, further supporting its safety.
+
+PRIMARY OUTCOMES:
+  - Maximum Handgrip Strength
+
+INTERVENTIONS:
+  - OTHER: US-guided PNM 100 Hz
+  - OTHER: US-guided PNM 10 Hz
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07098130

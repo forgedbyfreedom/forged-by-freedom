@@ -1,0 +1,53 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07253103
+Title: Effects of a Resistance Physical Exercise Program in Multiple Myeloma Patients
+Official Title: "Effects of a Resistance Physical Exercise Program in Multiple Myeloma Patients: A Randomized Controlled Trial Study Protocol".
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: aerobic exercise
+
+SUMMARY:
+The goal of this clinical trial is to learn if physical exercise improves quality of life, frailty and mental health in patients with multiple myeloma. It will also learn about the safety and adherence of the program. The main questions it aims to answer are:
+
+Does physical exercise improves quality of life in patients with multiple myeloma? Does physical exercise improves frailty and mental health in patients with multiple myeloma? Researchers will compare supervised physical exercise and home-based unsupervised physical exercise.
+
+Participants will:
+
+Participate in one of the exercise programs, supervised or home-based, for 12 weeks. They will be completely evaluated before and after the intervention.
+
+DETAILED DESCRIPTION:
+Participants will be patients diagnosed with multiple myeloma (MM) who are undergoing active treatment and who will be recruited from the Haematology Department of Salamanca University Hospital.
+
+Intervention The physical exercise programme has been specifically designed for people diagnosed with MM undergoing active treatment. To ensure methodological quality and reproducibility of the intervention, the recommendations of the Consensus on Exercise Reporting Template (CERT) \[X\] will be followed, a detailed description of which is included in the supplementary material (Table S2).
+
+The programme will focus primarily on resistance training, supplemented by daily aerobic activities, and will last for a total of twelve weeks. The sample will be randomly assigned to two groups: an intervention group (IG) and a control group (CG), as described below.
+
+1. Intervention group The IG will participate in a supervised resistance training programme, with two sessions per week, 12 weeks, supplemented by a home-based physical activity promotion programme to be carried out four times per week. All supervised sessions will be led by a physiotherapist at a health centre.
+2. Control group The CG will only perform the home-based physical activity promotion program 4 days/week.
+
+The randomisation process for this clinical trial will be carried out using Microsoft Excel 2020, which will generate a list of random numbers for the allocation of participants. Each participant will be assigned a unique number from this list: those with odd numbers will be assigned to the experimental group, and those with even numbers to the control group. This procedure ensures a random and balanced distribution between the groups, minimising possible biases and increasing the validity of the study results. Randomisation will be carried out by a member of staff from the Haematology Department of the University Hospital of Salamanca who will not be involved in the research.
+
+Given the study design, it will not be possible to blind participants or assessors to the intervention. However, in order to preserve the objectivity of the results, the statistical analysis will be performed by an independent statistician who is not involved in the study and is unaware of the allocation of participants to the different groups.
+
+For descriptive analysis, data normality will be asessed using the Kolmogorov-Smirnov and Shapiro-Wilk tests (the latter applicable in samples with n \< 30). Variables with a normal distribution will be described using mean, standard deviation and range, while those that do not follow a normal distribution will be represented using median and interquartile range. Qualitative variables will be expressed in absolute frequencies and percentages.
+
+In quantitative analysis, Pearson's correlation coefficient will be used to verify the validity of the assessment procedures used in the study, and Cronbach's alpha will be used to determine their internal reliability.
+
+For comparisons 
+
+PRIMARY OUTCOMES:
+  - Health related quality of life
+
+INTERVENTIONS:
+  - OTHER: Supervised physical exercise
+  - OTHER: Home-based physical exercise program
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07253103

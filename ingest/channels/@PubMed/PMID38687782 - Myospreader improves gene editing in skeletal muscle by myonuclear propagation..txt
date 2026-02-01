@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38687782
+Title: Myospreader improves gene editing in skeletal muscle by myonuclear propagation.
+Authors: Poukalov, Valero, Muscato, Adams, Chun
+Journal: Proceedings of the National Academy of Sciences of the United States of America
+Year: 2024
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Successful CRISPR/Cas9-based gene editing in skeletal muscle is dependent on efficient propagation of Cas9 to all myonuclei in the myofiber. However, nuclear-targeted gene therapy cargos are strongly restricted to their myonuclear domain of origin. By screening nuclear localization signals and nuclear export signals, we identify "Myospreader," a combination of short peptide sequences that promotes myonuclear propagation. Appending Myospreader to Cas9 enhances protein stability and myonuclear propagation in myoblasts and myofibers. AAV-delivered Myospreader dCas9 better inhibits transcription of toxic RNA in a myotonic dystrophy mouse model. Furthermore, Myospreader Cas9 achieves higher rates of gene editing in CRISPR reporter and Duchenne muscular dystrophy mouse models. Myospreader reveals design principles relevant to all nuclear-targeted gene therapies and highlights the importance of the spatial dimension in therapeutic development.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38687782/

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03986307
+Title: The Effect of Omega-3 Supplementation on Muscle Functioning, Inflammation and Muscle Signaling
+Official Title: The Effect of Omega-3 Supplementation on Muscle Functioning, Inflammation and Muscle Signaling in Elderly
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: omega 3 exercise
+
+SUMMARY:
+Elderly are supplemented with either Omega-3 (3 x 1.1g per day) or placebo (corn oil) during 14 weeks. The last 12 weeks, supplementation is combined with resistance exercise training (3x per week) focusing on upper leg strength. In the present project, the investigators study whether differences in muscle strength and/or muscle mass between conditions can be explained by omega-3-induced effects on systemic or muscle inflammatory signaling, or differences in muscle molecular signaling.
+
+DETAILED DESCRIPTION:
+Elderly are supplemented with either Omega-3 (3 x 1.1g per day) or placebo (corn oil) during 14 weeks. The last 12 weeks, supplementation is combined with resistance exercise training (3x per week) focusing on upper leg strength. In the present project, the investigators study whether differences in muscle strength and/or muscle mass between conditions can be explained by omega-3-induced effects on systemic or muscle inflammatory signaling, or differences in muscle molecular signaling.
+
+PRIMARY OUTCOMES:
+  - Isometric muscle strength
+  - Systemic inflammatory signaling
+  - Muscle strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 polyunsaturated fatty acid supplementation
+  - OTHER: Resistance exercise
+  - DIETARY_SUPPLEMENT: Placebo - appearance-matched oil supplementation
+
+ELIGIBILITY:
+Age: 65 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03986307

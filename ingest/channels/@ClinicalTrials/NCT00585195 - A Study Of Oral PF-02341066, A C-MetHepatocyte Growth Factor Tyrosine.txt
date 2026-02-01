@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00585195
+Title: A Study Of Oral PF-02341066, A C-Met/Hepatocyte Growth Factor Tyrosine Kinase Inhibitor, In Patients With Advanced Cancer
+Official Title: PHASE 1 SAFETY, PHARMACOKINETIC AND PHARMACODYNAMIC STUDY OF PF-02341066, A MET/HGFR SELECTIVE TYROSINE KINASE INHIBITOR, ADMINISTERED ORALLY TO PATIENTS WITH ADVANCED CANCER
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 596
+Topic: growth hormone treatment
+
+SUMMARY:
+PF-02341066 may work in cancer by blocking the cell growth, migration and invasion of tumor cells. PF-02341066 is a new class of drugs called c-Met/Hepatocyte growth factor receptor tyrosine kinase inhibitors. This compound is also an inhibitor of the anaplastic lymphoma kinase (called ALK) tyrosine kinase and ROS receptor tyrosine kinases. This research study is the first time PF-02341066 will be given to people. PF-02341066 is taken by mouth daily.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Dose-Escalation Cohort: Maximum Tolerated Dose (MTD) of Crizotinib
+  - Dose-Escalation Cohort: Recommended Phase 2 Dose (RP2D) of Crizotinib
+  - Dose-Escalation and Recommended Phase 2 Dose (RP2D) Cohort: Area Under the Curve From Time Zero to Extrapolated Infinite Time (AUCinf) of Crizotinib on Day -7
+  - Dose-Escalation and Recommended Phase 2 Dose (RP2D) Cohort: Area Under the Curve From Time Zero to End of Dosing Interval (AUCtau) of Crizotinib on Day -7
+  - Dose-Escalation and Recommended Phase 2 Dose (RP2D) Cohort: Area Under the Curve From Time Zero to End of Dosing Interval (AUCtau) of Crizotinib on Cycle 1 Day 1
+
+INTERVENTIONS:
+  - DRUG: PF-02341066
+  - DRUG: Rifampin
+  - DRUG: Itraconazole
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00585195

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05833477
+Title: Tracing Changed Production of Red Blood Cells
+Official Title: Tracing Changed Production of Red Blood Cells
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: sports nutrition
+
+SUMMARY:
+In competitive sport, it is illegal to manipulate erythropoiesis. Manipulated erythropoiesis can indirectly be identified by atypical fluctuations in key haematological variables. However, this method also has limitations and as it is known that some athletes still manipulate erythropoiesis it is necessary to develop new and more sensitive detection methods.
+
+The primary purpose of the study is to examine the importance of altered erythropoiesis for surface and intracellular erythrocyte proteins, the number of immature reticulocytes, and for the haematological characteristics of the erythrocyte, such as volume, haemoglobin concentration and concentration of glycosylated haemoglobin, to assess whether these can be used to identify changed erythropoiesis. Furthermore, the aim is to examine whether these parameters are affected by freezer storage of erythrocytes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Changes in CD71 expression
+  - Changes in CD35 expression
+  - Changes in CD47 expression
+  - Changes in CD55 expression
+  - Changes in CD59 expression
+
+INTERVENTIONS:
+  - DRUG: Recombinant human erythropoietin
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05833477

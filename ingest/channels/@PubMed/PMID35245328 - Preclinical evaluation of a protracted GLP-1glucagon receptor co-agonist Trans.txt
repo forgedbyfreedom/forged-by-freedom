@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35245328
+Title: Preclinical evaluation of a protracted GLP-1/glucagon receptor co-agonist: Translational difficulties and pitfalls.
+Authors: Simonsen, Lau, Kruse, Guo, McGuire
+Journal: PloS one
+Year: 2022
+Topic: glucagon receptor agonist
+
+ABSTRACT:
+During recent years combining GLP-1 and glucagon receptor agonism with the purpose of achieving superior weight loss and metabolic control compared to GLP-1 alone has received much attention. The superior efficacy has been shown by several in preclinical models but has been difficult to reproduce in humans. In this paper, we present the pre-clinical evaluation of NN1177, a long-acting GLP-1/glucagon receptor co-agonist previously tested in clinical trials. To further investigate the contribution from the respective receptors, two other co-agonists (NN1151, NN1359) with different GLP-1-to-glucagon receptor ratios were evaluated in parallel. In the process of characterizing NN1177, species differences and pitfalls in traditional pre-clinical evaluation methods were identified, highlighting the translational challenges in predicting the optimal receptor balance in humans. In diet-induced obese (DIO) mice, NN1177 induced a dose-dependent body weight loss, primarily due to loss of fat mass, and improvement in glucose tolerance. In DIO rats, NN1177 induced a comparable total body weight reduction, which was in contrast mainly caused by loss of lean mass, and glucose tolerance was impaired. Furthermore, despite long half-lives of the three co-agonists, glucose control during steady state was seen to depend on compound exposure at time of evaluation. When evaluated at higher compound exposure, glucose tolerance was similarly improved for all three co-agonists, independent of receptor balance. However, at lower compound exposure, glucose tolerance was gradually impaired with higher glucagon receptor preference. In addition, glucose tolerance was found to depend on study duration where the effect of glucagon on glucose control became more evident with time. To conclude, the pharmacodynamic effects at a given GLP-1-to-glucagon ratio differs between species, depends on compound exposure and study length, complicating the identification of an optimally balanced clinical candidate. The present findings could partly explain the low number of clinical successes for this dual agonism.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35245328/

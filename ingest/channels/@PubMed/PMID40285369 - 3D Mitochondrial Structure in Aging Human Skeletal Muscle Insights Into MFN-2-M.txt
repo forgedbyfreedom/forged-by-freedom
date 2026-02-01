@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40285369
+Title: 3D Mitochondrial Structure in Aging Human Skeletal Muscle: Insights Into MFN-2-Mediated Changes.
+Authors: Scudese, Marshall, Vue, Exil, Rodriguez
+Journal: Aging cell
+Year: 2025
+Topic: mitochondrial function exercise aging
+
+ABSTRACT:
+Age-related skeletal muscle atrophy, known as sarcopenia, is characterized by loss of muscle mass, strength, endurance, and oxidative capacity. Although exercise has been shown to mitigate sarcopenia, the underlying governing mechanisms are poorly understood. Mitochondrial dysfunction is implicated in aging and sarcopenia; however, few studies explore how mitochondrial structure contributes to this dysfunction. In this study, we sought to understand how aging impacts mitochondrial three-dimensional (3D) structure and its regulators in skeletal muscle. We hypothesized that aging leads to remodeling of mitochondrial 3D architecture permissive to dysfunction and is ameliorated by exercise. Using serial block-face scanning electron microscopy (SBF-SEM) and Amira software, mitochondrial 3D reconstructions from patient biopsies were generated and analyzed. Across five human cohorts, we correlate differences in magnetic resonance imaging, mitochondria 3D structure, exercise parameters, and plasma immune markers between young (under 50&#x2009;years) and old (over 50&#x2009;years) individuals. We found that mitochondria are less spherical and more complex, indicating age-related declines in contact site capacity. Additionally, aged samples showed a larger volume phenotype in both female and male humans, indicating potential mitochondrial swelling. Concomitantly, muscle area, exercise capacity, and mitochondrial dynamic proteins showed age-related losses. Exercise stimulation restored mitofusin 2 (MFN2), one such of these mitochondrial dynamic proteins, which we show is required for the integrity of mitochondrial structure. Furthermore, we show that this pathway is evolutionarily conserved, as Marf, the MFN2 ortholog in Drosophila, knockdown alters mitochondrial morphology and leads to the downregulation of genes regulating mitochondrial processes. Our results define age-related structural changes in mitochondria and further suggest that exercise may mitigate age-related structural decline through modulation of mitofusin 2.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40285369/

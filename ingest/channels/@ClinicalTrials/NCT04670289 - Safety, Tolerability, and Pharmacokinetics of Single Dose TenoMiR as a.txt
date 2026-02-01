@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04670289
+Title: Safety, Tolerability, and Pharmacokinetics of Single Dose TenoMiR as a Treatment for Tennis Elbow
+Official Title: A Phase 1, Single-Centre, Randomised, Double-Blind, Placebo-Controlled Study Evaluating the Safety, Tolerability and Pharmacokinetics of Single Ascending Doses of TenoMiR Injections in Subjects With Lateral Epicondylitis
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: tendon injury
+
+SUMMARY:
+This study is testing a drug called TenoMiR that is being developed for the treatment of tennis elbow (lateral epicondylitis). The study drug is a new compound that works by improving the quality of the collagen which helps repair damage to the elbow. The study drug is being developed in the hope of providing a more reliable treatment than those currently available and can be given at the time of first diagnosis, so that recovery can begin as soon as possible.
+
+DETAILED DESCRIPTION:
+TenoMiR a chemically synthesised mimic of microRNA-29a (miR29a) which has improved stability, activity and cellular uptake while being non-immunogenic, has been created to restore miR29a levels back to pre-injury levels.
+
+TenoMiR is unique in directly targeting the key changes in collagen production associated with tendinopathy. Unlike other therapies, TenoMiR has a well-defined mode-of-action that is supported by a wealth of scientific data. Moreover, treatment with TenoMiR does not require invasive biopsies and can be delivered at the point of initial diagnosis initiating recovery at the very earliest time.
+
+PRIMARY OUTCOMES:
+  - Incidence of Treatment-Emergent Adverse Events (AEs) as assessed by comparison of clinical laboratory abnormalities between TenoMiR versus placebo.
+  - Incidence of Treatment-Emergent Adverse Events (AEs) as assessed by comparison of changes in vital signs between TenoMiR versus placebo.
+  - Incidence of Treatment-Emergent Adverse Events (AEs) as assessed by comparison of changes in 12 lead ECG parameters between TenoMiR versus placebo.
+  - Incidence of Treatment-Emergent Adverse Events (AEs) as assessed by comparison of physical examination between TenoMiR versus placebo.
+  - Incidence of Treatment-Emergent Adverse Events (AEs) as assessed by comparison of skin score assessment between TenoMiR versus placebo.
+
+INTERVENTIONS:
+  - DRUG: TenoMiR (Low Dose)
+  - DRUG: TenoMiR (Medium Dose)
+  - DRUG: TenoMiR (High Dose)
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04670289

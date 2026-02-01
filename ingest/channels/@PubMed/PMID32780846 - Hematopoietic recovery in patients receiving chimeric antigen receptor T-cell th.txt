@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32780846
+Title: Hematopoietic recovery in patients receiving chimeric antigen receptor T-cell therapy for hematologic malignancies.
+Authors: Jain, Knezevic, Pennisi, Chen, Ruiz
+Journal: Blood advances
+Year: 2021
+Topic: peptide therapy recovery
+
+ABSTRACT:
+Factors contributing to hematopoietic recovery following chimeric antigen receptor (CAR) T-cell therapy have not been well studied. In an analysis of 83 patients with hematologic malignancies treated with CAR T-cell therapy, we describe patterns of hematopoietic recovery and evaluate potentially associated factors. We included patients who received axicabtagene ciloleucel (n = 30) or tisagenlecleucel (n = 10) for B-cell lymphoma, CD19-28z CAR T therapy for B-cell acute lymphoblastic leukemia (NCT01044069; n = 37), or B-cell maturation antigen targeting CAR T cells for multiple myeloma (NCT03070327; n = 6). Patients treated with CAR T cells who had not progressed, died, or received additional chemotherapy had "recovered" (per definition in Materials and methods section) hemoglobin, platelet, neutrophil, and white blood cell counts at rates of 61%, 51%, 33%, and 28% at month 1 postinfusion and 93%, 90%, 80%, and 59% at month 3 postinfusion, respectively. Univariate analysis showed that increasing grade of immune effector cell-associated neurological syndrome (ICANS), baseline cytopenias, CAR construct, and higher peak C-reactive protein or ferritin levels were statistically significantly associated with a lower likelihood of complete count recovery at 1 month; a similar trend was seen for cytokine release syndrome (CRS). After adjustment for baseline cytopenia and CAR construct, grade &#x2265;3 CRS or ICANS remained significantly associated with the absence of complete count recovery at 1 month. Higher levels of vascular endothelial growth factor and macrophage-derived chemokines, although not statistically significant, were seen patients without complete count recovery at 1 month. This remains to be studied further in larger prospective studies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32780846/

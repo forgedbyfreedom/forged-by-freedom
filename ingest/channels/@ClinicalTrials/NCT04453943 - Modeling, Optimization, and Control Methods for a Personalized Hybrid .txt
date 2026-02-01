@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04453943
+Title: Modeling, Optimization, and Control Methods for a Personalized Hybrid Walking Exoskeleton
+Official Title: Modeling, Optimization, and Control Methods for a Personalized Hybrid Walking Exoskeleton
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: muscle rehabilitation
+
+SUMMARY:
+The central objective of this study is to validate new algorithms that coordinate between functional electrical stimulation (FES) and the exoskeleton during sitting-to-standing, walking, and standing-to-sitting movements. The secondary objective is to optimize the algorithms as well as assess their ability to reduce FES-induced muscle fatigue by using ultrasound imaging as a sensing modality. This study will include persons with no disabilities and persons with Spinal Cord Injury (SCI). A research set-up comprising of a lower-limb exoskeleton and FES system will be used to achieve sitting-to-standing, walking, and standing-to-sitting movements. Ultrasound Imaging probes may be used to record muscle activity of the stimulated muscles. The signals derived from ultrasound will be used to optimize FES in order to reduce muscle fatigue as well as assess muscle fatigue.
+
+DETAILED DESCRIPTION:
+Research activities involve use of computer-controlled functional electrical stimulation (FES) and electric motor-driven orthosis (powered exoskeleton) to generate functional lower-limb movements for; i.e., standing and walking. The computer-controlled algorithms will get feedback from sensors such as optical encoders, load cells, force sensitive resistors, and inertial measurement units that are or will be inbuilt in the orthosis or these feedback algorithms will be combined with precomputed optimized algorithms based on the estimated musculoskeletal model of a participant. Multiple computer algorithms will be designed to coordinate FES with electric motors and other components of the walking device to reproduce or restore standing and walking movements. The study involves validation of computer algorithms to estimate and control the walking and sitting/standing movements. The Rifton E-Pacer motorized walker, arm crutches, parallel bars, or a conventional walker may be used in order to assist donning and doffing of the exoskeleton system, standing, and walking for all subjects, at any time during experimentation, for as long as is deemed necessary by the experimental goals. Using the E-Pacer or a walker should improve experiment safety and reduce the subject's overall physical exertion because it reduces load on the subject's body. Sitting/Standing and/or walking movements will be elicited by the hybrid walking platform that combines a powered exoskeleton and an FES system. The powered exoskeleton can provide joint actuation at the hip and knee joints of a participant. The FES system can stimulate the quadriceps, hamstrings muscle, glutes, and ankle muscles. The electrodes for stimulation are placed on the skin at locations that provide an optimal limb movement. The algorithms are designed such that the stimulation of different muscles are coordinated to achieve walking and/or sitting/standing. A precedent experiment will be performed on a Group B participant before it is tested on Group A. Unlike the paraplegic participants (Group A), if the device should fail or act unexpectedly the persons without disability (Group B) will be able to intervene . Therefore, testing the device on persons without disability first will allow us to further assess and address any risks before testing on individuals with SCI, who are incapable of intervening with the device. All the sessions for Group A participants will be performed in the supervision of a physical therapist. The therapist will also assist the Group A participants in transferring them from their wheelchairs to a cushioned table for seating if required or to the exoskeleton. Group A participant will also be supported by a body-unweighing system to prevent falling during standing and walking. Before each experiment involving electrical stimulation, a participant's heart rate and blood pressure will be recorded. Therapists will also assist the participants in transferring them from their wheelchairs t
+
+PRIMARY OUTCOMES:
+  - Controls Algorithm Performance - Limb Angle Errors
+  - Muscle fatigue Index to Measure FES-Induced Muscle Fatigue
+
+INTERVENTIONS:
+  - DEVICE: Exoskeleton Walking - with or without FES
+  - DEVICE: Exoskeleton Sitting to Standing - with or without FES
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04453943

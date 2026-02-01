@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04270643
+Title: Trial of High-Dose Vitamin D in the Treatment of Complicated Severe Acute Malnutrition
+Official Title: Trial of High-Dose Vitamin D in the Treatment of Complicated Severe Acute Malnutrition
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 259
+Topic: protein supplementation
+
+SUMMARY:
+This double-blind randomized placebo-controlled controlled trial will test the hypothesis that administration of high-dose oral vitamin D supplementation to children in Lahore, Pakistan, who are recovering from complicated severe acute malnutrition will safely accelerate weight gain (primary outcome) and enhance neurodevelopment, muscle mass accumulation, resolution of systemic inflammation and antimicrobial immune function (secondary outcomes).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean weight-for-height/length z-score
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D3
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 6 Months to 5 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04270643

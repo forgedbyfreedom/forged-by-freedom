@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39710208
+Title: Peptide amphiphiles alleviate myocardial endoplasmic reticulum stress to enhance cardiomyocyte-macrophage communication and promote macrophage M2 polarization.
+Authors: Guo, Chen, Liu, Chen, Liu
+Journal: Journal of controlled release : official journal of the Controlled Release Society
+Year: 2025
+Topic: peptide therapy recovery
+
+ABSTRACT:
+Myocardial ischemia-reperfusion (I/R) injury represents a significant clinical challenge with limited therapeutic options. Single-cell RNA sequencing and bioinformatics analyses have revealed complex cellular interactions within cardiac tissue, highlighting the crucial role of cardiomyocytes in intercellular communication. During I/R injury, cardiomyocytes experience severe endoplasmic reticulum (ER) stress, leading to detrimental intercellular communication that affects surrounding cells, particularly promoting the transformation of macrophages toward a pro-inflammatory phenotype. This amplifies the inflammatory cascade and exacerbates tissue damage. Targeting injured cardiomyocytes and inhibiting their ER stress presents a promising therapeutic strategy to restore beneficial intercellular communication and maintain myocardial homeostasis, thereby reducing I/R injury. However, the lack of an effective ER stress inhibitor specifically targeting damaged cardiomyocytes constitutes a major barrier to translating mechanistic understanding into therapeutic implementation. Peptide amphiphiles (PA), with their unique amphiphilicity and bioactive functions, constitute ideal candidates for targeted drug delivery. In this study, we developed a cascade-responsive drug delivery system, CT-PA@Sal, which selectively targets damaged cardiomyocytes and controls the release of the ER stress inhibitor Salubrinal. CT-PA@Sal demonstrates superior targeting efficiency and enhanced drug bioavailability, enabling responsive release within injured cardiomyocytes. In vitro and in vivo experiments further show that CT-PA@Sal improves cardiomyocyte-macrophage communication, reduces cardiomyocyte apoptosis, and promotes anti-inflammatory M2 macrophage polarization. These effects preserve cardiac function and enhance tissue recovery following I/R injury. We envision that this investigation offers a prospective framework for developing targeted drugs to treat myocardial I/R injury.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39710208/

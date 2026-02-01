@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05630339
+Title: Magnesium and Vitamin D Combination for Post-COVID Syndrome
+Official Title: Efficacy and Security of the Magnesium and Vitamin D Combination as Adjuvant Treatment of Post-COVID Syndrome. A Randomised Double-blind Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: vitamin D muscle
+
+SUMMARY:
+The goal of this double-blind randomized controlled clinical trial is to determine the efficacy of the administration of magnesium chloride + vitamin D as an adjuvant in the treatment of post-Coronavirus Disease (COVID) syndrome.
+
+The participants will be integrated: a) Intervention group that will receive 1 g of magnesium chloride (equivalent to 300 mg of elemental magnesium) + 4000 IU of vitamin D once a day, for four months. b) Control group that will receive inert placebo for four months.
+
+The outcome variable will be the improvement of the post-COVID syndrome. At the beginning and end of the study, blood samples will be taken to determine serum levels of vitamin D, total magnesium, ionic magnesium, calcium, fasting glucose and lipid profile.
+
+The evaluation of the efficacy and safety of the proposed intervention will be carried out by establishing the differences between the intervention and control groups.
+
+DETAILED DESCRIPTION:
+More than 50 signs and symptoms have been described that characterize the post-COVID syndrome, among them the early presence of fatigue, shortness of breath, cough, joint and chest pain. Later, the signs and symptoms that may occur are muscle pain, headache, tachycardia, loss of smell or taste, memory and concentration problems, difficulty falling asleep, skin rashes and hair loss.
+
+Vitamin D is a fat-soluble vitamin whose best-known function is calcium and phosphate homeostasis, but it is also involved in multiple processes, including the regulation of the immune response. In vitro, vitamin D decreases viral replication, which is linked to its ability to stimulate innate immunity, increases the synthesis of cathelicidin and defensins, peptides that favor the preservation of the mucosa and enhance its protective effect against infection. In vivo, vitamin D decreases the expression of the cellular co-receptor dipeptidyl peptidase (DPP)-4/cluster of differentiation antigen 26 (CD26), which interacts with protein S, which decreases the penetration of the virus into the cell, contributes to the regulation of immunity, regulating excessive immune response, which is associated with an adverse prognosis, and interacts with the nuclear factor-kappa B (NF-kB) pathway, decreases the intensity of the Th1 response and the synthesis of proinflammatory cytokines, and increases the synthesis of anti-inflammatory cytokines.
+
+Magnesium, through its calcium channel blocking effect, decreases the inflammatory response produced by the NF-kB cascade, reduces the production of tumor necrosis factor alpha (TNF-α) and interleukin 6 (IL-6) by monocytes and the expression of cytokines and inflammatory proteins. It influences both cell-mediated and humoral adaptive immunity, since it participates in the activation of leukocytes, the binding of antigens to macrophages, apoptotic regulation, and it reduces the production of superoxide anions.
+
+The pathophysiology of the post-COVID syndrome is not precisely known, although it has been established that it is a disorder with inflammatory components, endothelial damage, and thromboembolism.
+
+In this context, magnesium deficiency is associated with the development of the pro-inflammatory and pro-thrombotic response that generates a favorable microenvironment for the development of inflammation, endothelial damage and thromboembolism, components linked to the post-COVID syndrome. On the other hand, it has been described that patients with post-COVID present with vitamin D deficiency, a deficiency that contributes to the development of fatigue, anemia and chronic inflammation. In addition, there is interaction between magnesium and vitamin D, in such a way that the deficiency of the first contributes to the decrease in the synthesis of 25-hydroxy vitamin D and 1,25-hydroxy vitamin D and the number and activity of vitamin D receptors.
+
+Therefore, it is plausible to assume that both magnesium and vitamin D play an important role in t
+
+PRIMARY OUTCOMES:
+  - Change from Baseline Post-COVID syndrome symptoms at 4 months
+  - Change from Baseline Post-COVID Functional Status at 4 months
+  - Change from Baseline Serum vitamin D levels at 4 months
+  - Change from Baseline Serum Magnesium levels at 4 months
+  - Change from Baseline Mental State levels at 4 months
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Magnesium chloride
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Inert placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05630339

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05513547
+Title: Beneficial Effects of Daytime Light Exposure and Physical Activity on the Human Circadian Clock and Sleep
+Official Title: Beneficial Effects of Daytime Light Exposure and Physical Activity on the Human Circadian Clock and Sleep
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: caffeine exercise
+
+SUMMARY:
+This study is to examine the circadian phase-shifting effects of daylight and physical activity (primary endpoint: shift in dim-light melatonin onset (DLMO)) as well as their effects on sleep the ensuing night and analyzes how different spectral characteristics of daylight and physical activity affect the biological clock and sleep.
+
+There are two types of interventions in a within-between study plan: - Within participants: light conditions will be varied during daytime in three 7-hour light exposure protocols (usual office lighting, natural daylight, natural daylight with "blue"-light filtering glasses). - Between participants: physical activity levels (rest vs. 4 hours of moderate activity, i.e., hiking) will be varied. Eligible volunteers are invited to partake in the three-week study schedule, including three experimental visits and in-between ambulatory sleep-wake and light exposure tracking. On study intake, participants are randomly assigned to either the 'hike' or 'rest' activity subgroup. The 'resting subgroup' will be allowed to study, read, etc. during the experimental conditions, whereas the 'hiking subgroup' will have 4 hours of scheduled moderate physical activity during each LE condition starting 3 hours after waking up.
+
+Following the screening procedure and an adaptation night to screen for sleep disorders, eligible participants will be matched with a 'partner'. One will be assigned to the rest (A), the other to the hiking (B) subgroup. LE protocols within each subgroup are identical and participants from each pair will undergo all light conditions on the same day to minimize variability due to e.g., weather conditions.
+
+DETAILED DESCRIPTION:
+While phylogenetically, life on earth has developed under the cyclic changes of sunlight and darkness, human life in modern societies is usually characterized by a markedly different light environment: spending most of the waking day indoors in relatively low light levels, whereas exposing ourselves to relatively high levels of artificial light in the evening. This decrease in day-night contrast has detrimental effects on the human circadian system and sleep. The pathways that mediate these effects have functionally been mapped using evening or nocturnal light exposure (LE). It has been shown that light with increased short-wavelength proportions suppresses melatonin, delays the biological clock, and impairs sleep. These consequences are thought to be mainly mediated by the effects of short-wavelength light on intrinsically photosensitive retinal ganglion cells (ipRGCs), which express melanopsin that has its peak spectral sensitivity at around 480nm. Little is known about the contributions of the other retinal photoreceptors, particularly the cones, which encode colour and brightness under daylight viewing conditions. Thus, the precise contributions of melanopic and photopic illuminance remain to be established. Besides the negative effects of evening artificial LE, exposure to higher levels of daylight is associated with beneficial consequences for sleep and circadian rhythms. However, also in this respect, the precise photopic and melanopic contributions remain to be established. Beyond this, daylight exposure is often confounded with physical activity, which can act as a zeitgeber itself. Specifically, physical activity in the morning and the afternoon has been shown to acutely phase-advance the biological clock and positively affect sleep. The possible contributions of an interaction with LE remain to be established. This study aims at delineating the effects of (i) photopic and melanopic illuminance during daytime LE and (ii) physical activity on the biological clock and sleep. The spectral characteristics of daytime LE will be varied in a within-subject manner in three 7-hour LE protocols. Physical activity will be varied between subjects in two subgroups (i.e., 'hike' and 'rest'). This study investigates the relative importance of daytime and its precise spectral characteristics as well as physical activity for healthy circadian rhythms and sleep.
+
+PRIMARY OUTCOMES:
+  - Difference in salivary DLMO (in minutes, phase advance) between the first and the second night (Shift in dim-light melatonin onset (DLMO))
+
+INTERVENTIONS:
+  - OTHER: LE protocol 1: exposure to artificial light
+  - OTHER: LE protocol 2: natural daylight
+  - OTHER: LE protocol 3: natural daylight with reduced short-wavelength proportions
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05513547

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06172543
+Title: The Effects of Nutritional Supplementation on Occupational Performance in Firefighters
+Official Title: The Effects of Protein and Carbohydrate Supplementation, With and Without Creatine, on Occupational Performance in Firefighters
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study was to assess the usefulness of protein and carbohydrate supplementation, with and without creatine, on occupational performance in firefighters. Research has examined the effects of adding creatine to whey protein and carbohydrates on training adaptations in resistance-trained individuals with mixed finding.
+
+Furthermore, the ergogenic benefit of protein and carbohydrate supplementation, with or without creatine, in firefighters is largely unknown. Therefore, the primary aim of the current study was to examine the effects of protein and carbohydrate supplementation, with or without creatine, on occupational performance in firefighters.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Time to completion
+  - Time Trial
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine Monohydrate
+  - DIETARY_SUPPLEMENT: Control
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06172543

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36807778
+Title: Protein kinase D1 (Prkd1) deletion in brown adipose tissue leads to altered myogenic gene expression after cold exposure, while thermogenesis remains intact.
+Authors: Crowder, Shrestha, Cartailler, Collins
+Journal: Physiological reports
+Year: 2023
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Brown adipose tissue (BAT) has in recent times been rediscovered in adult humans, and together with work from preclinical models, has shown to have the potential of providing a variety of positive metabolic benefits. These include lower plasma glucose, improved insulin sensitivity, and reduced susceptibility to obesity and its comorbidities. As such, its continued study could offer insights to therapeutically modulate this tissue to improve metabolic health. It has been reported that adipose-specific deletion of the gene for protein kinase D1 (Prkd1) in mice enhances mitochondrial respiration and improves whole-body glucose homeostasis. We sought to determine whether these effects were mediated specifically through brown adipocytes using a Prkd1 brown adipose tissue (BAT) Ucp1-Cre-specific knockout mouse model, Prkd1BKO . We unexpectedly observed that upon both cold exposure and &#x3b2;3 -AR agonist administration, Prkd1 loss in BAT did not alter canonical thermogenic gene expression or adipocyte morphology. We took an unbiased approach to assess whether other signaling pathways were affected. RNA from cold-exposed mice was subjected to RNA-Seq analysis. These studies revealed that myogenic gene expression is altered in Prkd1BKO BAT after both acute and extended cold exposure. Given that brown adipocytes and skeletal myocytes share a common precursor cell lineage expressing myogenic factor 5 (Myf5), these data suggest that loss of Prkd1 in BAT may alter the biology of mature brown adipocytes and preadipocytes in this depot. The data presented herein clarify the role of Prkd1 in BAT thermogenesis and present new avenues for the further study of Prkd1 function in BAT.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36807778/

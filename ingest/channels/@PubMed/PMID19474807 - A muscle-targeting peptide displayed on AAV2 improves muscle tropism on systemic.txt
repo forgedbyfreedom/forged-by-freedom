@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 19474807
+Title: A muscle-targeting peptide displayed on AAV2 improves muscle tropism on systemic delivery.
+Authors: Yu, Yuan, Cao, Wang, Qiao
+Journal: Gene therapy
+Year: 2011
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Adeno-associated virus (AAV) has become a leading gene transfer vector for striated muscles. However, the AAV vectors also exhibit broad tropisms after systemic delivery. In an attempt to improve muscle tropism, we inserted a 7-amino-acid (ASSLNIA) muscle-targeting peptide (MTP) in the capsids of AAV2 at residue 587 or 588, generating AAV(587)MTP and AAV(588)MTP. In vitro studies showed that both viruses diminished their infectivity on non-muscle cell lines as well as on un-differentiated myoblasts; however, preserved or enhanced their infectivity on differentiated myotubes. AAV(587)MTP, but not AAV(588)MTP, also abolished its heparin-binding capacity and infected myotubes in a heparin-independent manner. Furthermore, in vivo studies by intravenous vector administration in mice showed that AAV(587)MTP enhanced its tropism to various muscles and particularly to the heart (24.3-fold of unmodified AAV2), whereas reduced its tropism to the non-muscle tissues such as the liver, lungs, spleen and so on. This alteration of tissue tropism is not simply because of the loss of heparin-binding, as a mutant AAV2 (AAVHBSMut) containing heparin-binding site mutations lost infectivity on both non-muscle and muscle cells. Furthermore, free MTP peptide, but not the scrambled control peptide, competitively inhibited AAV(587)MTP infection on myotubes. These results suggest that AAV2 could be re-targeted to the striated muscles by a MTP inserted after residue 587 of the capsids. This proof of principle study showed first evidence of peptide-directed muscle targeting on systemic administration of AAV vectors.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/19474807/

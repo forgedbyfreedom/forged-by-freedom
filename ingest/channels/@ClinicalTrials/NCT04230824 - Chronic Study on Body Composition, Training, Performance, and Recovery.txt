@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04230824
+Title: Chronic Study on Body Composition, Training, Performance, and Recovery
+Official Title: A Randomized, Double-blind, Placebo Controlled, Single-center Study to Determine the Effects of Pre-workout and Recovery Formulations on Soreness, Performance, Tolerance and Safety Outcomes in Healthy Adults Undergoing Training Program
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 69
+Topic: caffeine exercise
+
+SUMMARY:
+The chronic phase of the study will evaluate the effects of pre-exercise and post-exercise ingestion of a multi-ingredient supplement on adaptations to a 6-week exercise program consisting of both resistance training and high intensity aerobic exercise, using a randomized, double-blind, placebo-controlled design. Participants will complete an enrollment/familiarization visit, a baseline testing session, followed by a 6-week supervised exercise intervention, and post-testing session identical to baseline testing. Participants will be randomized during the baseline session to groups receiving either 1) Active Treatment (pre-post supplementation), 2) placebo (noncaloric beverage), or 3) control, not participating in exercise or consuming a treatment. During the supervised 6-week resistance training program, participants will complete a moderate-intensity warm-up, a full-body resistance training workout (2 x per week) and an interval training session (1 x per week). Thirty-minutes prior to each training session, and within 15 minutes post-exercise, participants will consume their randomly assigned treatment beverage. Body composition, blood markers of muscle damage/recovery, strength, and performance tests will be measured before (baseline) and after training (Post) to evaluate the effects of supplementation. All data collection will be conducted by the Principal Investigator and Research Assistants. All subjects will report to the Applied Physiology Laboratory and Human Performance Center in Fetzer Hall for all testing and training sessions, which will span approximately 8 weeks.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Pre-workout plus and Protein recovery plus
+  - OTHER: Placebo
+  - OTHER: 6-week resistance training program
+
+ELIGIBILITY:
+Age: 25 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04230824

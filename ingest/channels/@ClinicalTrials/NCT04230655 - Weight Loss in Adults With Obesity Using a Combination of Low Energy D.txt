@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04230655
+Title: Weight Loss in Adults With Obesity Using a Combination of Low Energy Diet, Group Treatment and Intragastric Balloon
+Official Title: The Effects of a Low Energy Diet Versus Low Energy Diet and Intragastric Balloon in Adults With Obesity, All in Combination With Group Treatment: a Randomized, Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: fat loss muscle
+
+SUMMARY:
+In Sweden, approximately 1.3 million adults have obesity. Obesity decreases quality of life (QoL) and increases the risk of diseases such as type 2-diabetes, non-alcoholic fatty liver disease (NAFLD), cancer and cardiovascular diseases. Consequently, weight loss improves QoL and decreases the risk for obesity-related comorbidities.
+
+A treatment combination using a low energy diet (LED) and group treatment based on cognitive behavioral therapy (CBT), leads to 18 percent weight loss after 6 months. Six months treatment with an intragastric balloon (IGB) leads to 13 percent weight loss. However, both treatments are usually followed by weight regain. Combining these treatments has not been studied before but could lead to better weight maintenance.
+
+The hypothesis is that treatment of adults with obesity, with LED, CBT and IGB, leads to greater weight loss after 1 year compared to treatment with LED and CBT only.
+
+The study is a randomized, controlled clinical trial, with a 2-year follow-up. One hundred and ten adults, age 30-65 years, with a BMI of 30-45 kg/m\^2 will be included. All participants will receive 6 months of LED, followed by randomization to either 6 months with IGB or a control group without IGB. All participants receive CBT-based group treatment during 12 months and followed up after 2 years.
+
+If the treatment combination of LED, CBT and IGB leads to significant weight loss and improved weight maintenance, increased QoL and reductions of comorbidities and costs of health care are expected. Effects of treatment on eating behavior, NAFLD, physical activity, psychological parameters, the gut microbiota, gut permeability and metabolomics will be assessed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Weight loss in percent of total body weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Low energy diet using meal replacements
+  - BEHAVIORAL: CBT-based group treatment
+  - DEVICE: Intragastric balloon
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04230655

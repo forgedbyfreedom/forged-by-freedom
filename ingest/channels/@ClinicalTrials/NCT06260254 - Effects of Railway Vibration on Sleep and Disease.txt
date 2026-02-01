@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06260254
+Title: Effects of Railway Vibration on Sleep and Disease
+Official Title: Effects of Railway Vibration on Sleep and Disease
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: creatine supplementation
+
+SUMMARY:
+This study will investigate the biological mechanisms linking sleep disruption by vibration and noise, and the development of cardiometabolic disease. In a laboratory sleep study, the investigators will play railway vibration of different levels during the night. The investigators will also measure objective sleep quality and quantity, cognitive performance across multiple domains, self-reported sleep and wellbeing outcomes, and blood samples. Blood samples will be analyzed to identify metabolic changes and indicators of diabetes risk in different nights. Identifying biomarkers that are impacted by sleep fragmentation will establish the currently unclear pathways by which railway vibration exposure at night can lead to the development of diseases in the long term, especially metabolic disorders including diabetes.
+
+DETAILED DESCRIPTION:
+The experimental sleep study has the overarching goal of deepening understanding of sleep disruption by railway vibration and noise and changes in cardiometabolic and cognitive function. To this end, the study will address the following study aim:
+
+Aim 1: Determine the biological and neurobehavioral consequences of sleep disruption by railway vibration. The investigators will measure the sleep of healthy volunteers, and each morning will obtain blood samples for metabolomics metabolic function analysis and administer a neurocognitive test battery. The investigators will compare effects on sleep, metabolomics, metabolic function and cognitive function between quiet nights and nights with railway traffic vibration and noise. Dose-response relationships will be determined by comparing nights with different levels of vibration.
+
+This study will take place in the sound environment laboratory (SEL) at the University of Gothenburg Department of Occupational and Environmental Medicine. The SEL is a high fidelity research laboratory equipped to simulate a typical apartment, including three individually light-, sound- and vibration-isolated private bedrooms. Ceiling mounted speakers in each room and electrodynamic transducers mounted to the underside of each bed allow the investigators to create a realistic acoustic environment by transmitting sound and vibration exposures from the control room to each bedroom individually. The investigators have shown previously that results from this lab with high ecological validity are comparable with results from the field.
+
+This study has a prospective within-subjects cross-over design. Participants (total N=24) will each spend five consecutive nights in the SEL, with a sleep opportunity between 23:00-07:00. Daytime sleep will be prohibited, confirmed with measures of daytime activity via wrist actigraphy monitors worn continuously throughout the study. Three subjects will take part concurrently, in separate bedrooms. The first night is a habituation period to the study protocol and for familiarization with the test procedures. The second night will be a quiet condition without noise or vibration, to determine normal baseline sleep, cardiometabolic profile, and cognitive performance. Study nights 3-5 are the vibration nights and will be randomly assigned across participants using a Latin square design to avoid first-order carryover effects. In these vibration nights, vibration and noise from railway freight will be played into the bedrooms to determine the effects of vibration and noise on sleep, cardiometabolic function and cognitive performance. Thirty six trains will occur each night, randomly distributed across the 8-hour sleep period.
+
+For railway vibration the investigators will use synthesized signals based on measured data, used in previous laboratory studies. It is necessary to use synthesized vibration, rather than recorded signals, so that the investigators can accurately adjust the acoustical character of
+
+PRIMARY OUTCOMES:
+  - Fasting insulin resistance in the morning immediately after the Control night
+  - Fasting insulin resistance in the morning immediately after the low vibration night
+  - Fasting insulin resistance in the morning immediately after the intermediate vibration night
+  - Fasting insulin resistance in the morning immediately after the high vibration night
+  - Total sleep time during the Control night
+
+INTERVENTIONS:
+  - RADIATION: Railway noise
+  - RADIATION: Low level railway vibration
+  - RADIATION: Intermediate level railway vibration
+  - RADIATION: High level railway vibration
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06260254

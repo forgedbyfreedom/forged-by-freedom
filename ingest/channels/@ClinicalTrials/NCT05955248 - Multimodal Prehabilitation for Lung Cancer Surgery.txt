@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05955248
+Title: Multimodal Prehabilitation for Lung Cancer Surgery
+Official Title: A Novel Multimodal Intervention for Surgical Prehabilitation of Patients With Lung Cancer: the MMP-LUNG Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 168
+Topic: resistance training
+
+SUMMARY:
+The main objective of this randomized controlled trial (RCT) is to investigate whether a multimodal prehabilitation intervention combining a mixed-nutrient supplement with structured exercise training (MM) or the supplement alone (NUT), against a placebo (CTRL), leads to improvement in functional capacity and postoperative outcomes in surgical patients with lung cancer, at nutritional risk. This will be tested in a single centre RCT of 3 parallel arms, double-blinded for the supplement. Female and male participants (n=168, \>=45 y) will be randomized to a 10-week intervention spanning 4 weeks pre-surgery and 6 weeks post-hospital discharge. The primary outcome is functional capacity as measured by the 6-minute walk test. Secondary outcomes include muscle mass, quality and strength, quality of life, length of hospital stay, and postoperative complications.
+
+DETAILED DESCRIPTION:
+RATIONALE: The preoperative period is an opportune time to actively engage and empower patients in improving their functional, nutritional and mental status in anticipation of the surgical stress. Considering that lung cancer patients often present with poor nutritional status and physical function prior to surgery, providing a nutritional supplement to increase protein, leucine, vitamin D and omega-3 fatty acid FA intake with a structured exercise program and relaxation techniques should improve muscle mass, strength and physical performance.
+
+MAIN OBJECTIVE: to test the effect of a multimodal RCT prehabilitation intervention (MM) combining a mixed-nutrient supplement with structured exercise training or the supplement alone (NUT) against a placebo (CTRL), on functional pre- and postoperative outcomes in surgical patients with lung cancer at nutritional risk.
+
+STUDY DESIGN: 10-week randomized controlled trial of 3 parallel arms, double-blinded for supplement: control (CTRL), multi-nutrient supplement (NUT) and multimodal intervention (MM). After baseline assessment, patients will be randomized to either group in a 1:1:1 CTRL:NUT:MM ratio using a computer-generated randomization scheme by permuted block sizes, with stratification by sex and functional capacity (\< or \> 450 m on the 6-minute walk test (6MWT). Consecutive adult patients = or \> 45 years scheduled for elective video-assisted thoracic surgery or open thoracotomy surgery of non-small cell lung cancer (NSCLC) stages I, II or IIIa and a Patient-Generated Subjective Global Assessment (PG-SGA) score = or \> 3, will be approached following their first appointment with their surgeon at the McGill University Health Centre (MUHC)-Montreal General Hospital.
+
+INTERVENTION: The NUT arm will ingest a multi-nutrient supplement consisting of whey protein + leucine + viatmin D, and fish oil. The CTRL participants will receive placebo supplements with the same physical aspect, flavor and packaging as the active supplement.The MM arm will receive the NUT intervention in addition to performing structured exercise and relaxation techniques for 4 weeks prior to surgery and 6 weeks after hospital discharge.
+
+OUTCOMES: Primary: physical capacity measured by the 6MWT; Secondary: physical function, muscle strength, total skeletal muscle mass, leg muscle volume and density, body composition, quality of life, length of stay and post-operative complications; Other: dietary intake, physical activity, exercise tolerance, pulmonary function, clinical markers.
+
+STATISTICAL ANALYSIS: Intention-to-treat analysis will be performed in the primary analyses. For preoperative data, analysis of covariance (ANCOVA) will compare between-group differences at 4-week preoperative time, conditioned for baseline data, including predefined covariates in the model (age, sex, BMI). The hypothesis of full recovery from the intervention at 6 weeks postoperative (i.e. 6MWT returning back to or exceeding baseline) will be tested by log
+
+PRIMARY OUTCOMES:
+  - Change in preoperative functional walking capacity
+  - Postoperative functional walking capacity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Mixed-nutriend supplement (NUT)
+  - OTHER: Multimodal Prehabilitation (MM)
+  - DIETARY_SUPPLEMENT: Placebo Control (CTRL)
+
+ELIGIBILITY:
+Age: 45 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05955248

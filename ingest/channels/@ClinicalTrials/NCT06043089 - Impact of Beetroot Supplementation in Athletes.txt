@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06043089
+Title: Impact of Beetroot Supplementation in Athletes
+Official Title: Impact of Beetroot Supplementation on Sports Performance, Prooxidant-antioxidant Balance and Sleep in Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: sleep athletes
+
+SUMMARY:
+Several previous studies observed a positive effect of beetroot supplementation on sports performance in athletes, mainly in endurance performance. However, less attention has been paid to its effects on short-duration performance, especially in youth athletes. Moreover, only a few previous investigations performed biochemical analyses, including pro-oxidant balance assessments. It is especially important because chronic nitrate intake might directly cause the production of reactive nitrogen species and reactive oxygen species in other subcellular compartments, leading to more oxidative stress. Additionally, no previous study verified the impact of beetroot intake on sleep.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Performance test
+  - Changes in nitrates
+  - Changes in nitrites
+  - Changes in prooxidant status
+  - Changes in antioxidant status
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beetroot juice supplementation or placebo
+
+ELIGIBILITY:
+Age: 14 Years to 23 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06043089

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40285575
+Title: LncRNA-MEG3 Regulates Muscle Mass and Metabolic Homeostasis by Facilitating SUZ12 Liquid-Liquid Phase Separation.
+Authors: Yao, Yan, Huang, Wang, Li
+Journal: Advanced science (Weinheim, Baden-Wurttemberg, Germany)
+Year: 2025
+Topic: fat loss preservation muscle mass
+
+ABSTRACT:
+Skeletal muscle plays a crucial role in maintaining motor function and metabolic homeostasis, with its loss or atrophy leading to significant health consequences. Long non-coding RNAs (lncRNAs) have emerged as key regulators in muscle biology; however, their precise roles in muscle function and pathology remain to be fully elucidated. This study demonstrates that lncRNA maternally expressed gene 3 (MEG3)&#xa0;is preferentially expressed in slow-twitch muscle fibers and dynamically regulated during muscle development, aging, and in the context of Duchenne muscular dystrophy (DMD). Using both loss- and gain-of-function mice models, this study shows that lncRNA-MEG3 is critical for preserving muscle mass and function. Its depletion leads to muscle atrophy, mitochondrial dysfunction, and impaired regenerative capacity, while overexpression enhances muscle mass, increases oxidative muscle fiber content, and improves endurance. Notably, lncRNA-MEG3 overexpression in MDX mice significantly alleviates muscle wasting and adipose tissue infiltration. Mechanistically, this study uncovers a novel interaction between lncRNA-MEG3 and the polycomb repressive complex 2 (PRC2), where lncRNA-MEG3 binds to SUZ12 polycomb repressive complex 2 subunit (Suz12), stabilizes PRC2, facilitates SUZ12 liquid-liquid phase separation (LLPS), and regulates the epigenetic modulation of four and a half lim domains 3 (Fhl3) and ring finger protein 128 (Rnf128). These findings not only highlight the crucial role of lncRNA-MEG3 in muscle homeostasis but also provide new insights into lncRNA-based therapeutic strategies for muscle-related diseases.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40285575/

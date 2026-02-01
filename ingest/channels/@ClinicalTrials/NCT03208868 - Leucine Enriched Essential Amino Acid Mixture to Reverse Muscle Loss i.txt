@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03208868
+Title: Leucine Enriched Essential Amino Acid Mixture to Reverse Muscle Loss in Cirrhosis
+Official Title: Leucine Enriched Essential Amino Acid Mixture to Reverse Muscle Loss in Cirrhosis
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: sarcopenia intervention
+
+SUMMARY:
+Loss of skeletal muscle mass or sarcopenia is the most common and potentially reversible complication in cirrhosis that increases morbidity and mortality before, during and after liver transplantation. No proven treatments exist for the prevention or reversal of sarcopenia in cirrhosis, primarily because the mechanisms responsible for this are unknown. Based on compelling preliminary studies and those of the co investigator, investigators hypothesize that the mechanism of reduced skeletal muscle mass in cirrhosis is due to a myostatin mediated impaired mTOR (mechanistic target of rapamycin) signaling resulting in reduced protein synthesis and increased autophagy. Investigators further postulate that leucine, a direct stimulant of mTOR, will reverse the impaired mTOR phosphorylation in the skeletal muscle of cirrhotics. The consequent increase in protein synthesis reduced autophagy will result in an increase in skeletal muscle mass. Investigators will test these hypotheses by quantifying the response to acute and long term (3 month) administration of leucine enriched essential amino acid (EAA/LEU) compared with an isonitrogenous isocaloric non-essential balanced amino acid mixture (does not stimulate protein synthesis) in cirrhotic patients. Fractional protein synthesis rate (FSR) in skeletal muscle, responses of the molecular regulatory pathways of skeletal muscle protein synthesis, and autophagy flux will be quantified in the acute and long term protocols. Tracer studies using L-\[D5\]-phenylalanine (Phe) as a primed constant infusion (prime 2µmol.kg-1.hr-1; constant 0.05 µmol.kg-1.hr-1) with and L \[ring-D2\] tyrosine, forearm plethysmography, and sequential skeletal muscle biopsies (total of 3 per study subject) will be used to quantify these outcomes. Anthropometric, clinical and body composition measures will be additional outcome measures for the long term intervention. Expression of regulatory signaling proteins, myostatin, IGF-1 (insulin like growth factor) , phospho-Akt, phospho-AMPK (activated protein kinase), phospho-mTOR and phospho-p70s6k will be quantified by Western immunoblots. Autophagy flux will be measured by quantifying expression of the autophagosome proteins.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Compare Fractional Synthesis Rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Leucine enriched essential amino acid (EEA/LEU)
+  - DIETARY_SUPPLEMENT: Balanced amino acid supplement (BAA)
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03208868

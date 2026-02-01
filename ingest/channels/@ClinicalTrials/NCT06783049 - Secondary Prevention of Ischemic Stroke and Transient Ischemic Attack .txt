@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06783049
+Title: Secondary Prevention of Ischemic Stroke and Transient Ischemic Attack With an Intelligent Management System
+Official Title: Secondary Prevention of Ischemic Stroke and Transient Ischemic Attack With an Intelligent System
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 4490
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The purpose of this study is to develop a digital health-based intelligent management system for the secondary prevention of ischemic stroke and to evaluate its effectiveness through a multicenter randomized controlled trial, assessing its health economic value.
+
+Participants will receive usual care after discharge (control group) or be managed with a WeChat-based intelligent management system after discharge (intervention group).
+
+At one year, all patients will undergo face-to-face follow-up to assess clinical events, medication adherence, and the achievement of target risk factor levels.
+
+DETAILED DESCRIPTION:
+Before discharge, patients receive standard education on the secondary prevention of ischemic stroke from their physician, covering topics such as secondary prevention medications, risk factor management, lifestyle modifications, and rehabilitation. Additionally, the "Intelligent Management System," a WeChat-based applet, is activated for each patient. The system records basic patient information and integrates with mobile IoT devices, such as blood pressure monitors and glucose meters, allowing for self-monitoring of risk factors post-discharge. Based on international guidelines, high-level evidence, and the expertise of stroke specialists, a comprehensive clinical decision-making tree is established. This serves as the foundation for an AI feedback system that provides intelligent feedback on risk factor control and predicts recurrence risk. The patient interface includes educational content on ischemic stroke, risk factor management, lifestyle adjustments, and follow-up schedules post-discharge.
+
+The system also features a physician interface, which enables attending doctors to offer online consultations, schedule face-to-face follow-up appointments, and manage patients long-term. Each patient is assigned to an "Online Stroke Care Team," which includes a "Health Management Officer" responsible for facilitating communication between the patient and the physician and providing basic health guidance. Additionally, an "Online Doctor" is available to answer stroke-related medical questions.
+
+The Health Management Officer monitors patients' health data and arranges online or in-person consultations for those with poor adherence or suboptimal target achievement. Patient management is guided by the theory of health empowerment, creating an integrated online and offline ischemic stroke management intervention model.
+
+PRIMARY OUTCOMES:
+  - Vascular events and all-causes death
+  - Risk factor control rate
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cerebrovascular Disease Secondary Prevention Smart Management System
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06783049

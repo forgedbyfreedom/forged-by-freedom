@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39062842
+Title: The Role of Branched Chain Ketoacid Dehydrogenase Kinase (BCKDK) in Skeletal Muscle Biology and Pathogenesis.
+Authors: Fernicola, Vyavahare, Gupta, Kalwaghe, Kosmac
+Journal: International journal of molecular sciences
+Year: 2024
+Topic: branched chain amino acids muscle
+
+ABSTRACT:
+Muscle wasting can be caused by nutrition deficiency and inefficient metabolism of amino acids, including Branched Chain Amino Acids (BCAAs). Branched Chain Amino Acids are a major contributor to the metabolic needs of healthy muscle and account for over a tenth of lean muscle mass. Branched chain alpha-ketoacid dehydrogenase (BCKD) is the rate limiting enzyme of BCAA metabolism. Inhibition of BCKD is achieved through a reversible phosphorylation event by Branched Chain a-ketoacid dehydrogenase kinase (BCKDK). Our study set out to determine the importance of BCKDK in the maintenance of skeletal muscle. We used the Gene Expression Omnibus Database to understand the role of BCKDK in skeletal muscle pathogenesis, including aging, muscular disease, and interrupted muscle metabolism. We found BCKDK expression levels were consistently decreased in pathologic conditions. These results were most consistent when exploring muscular disease followed by aging. Based on our findings, we hypothesize that decreased BCKDK expression alters BCAA catabolism and impacts loss of normal muscle integrity and function. Further research could offer valuable insights into potential therapeutic strategies for addressing muscle-related disorders.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39062842/

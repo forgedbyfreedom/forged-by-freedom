@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05220657
+Title: Exploring the Relationship Between the Gut Microbiome, Physical Fitness Levels and Metabolic Responses to Exercise
+Official Title: Exploring the Relationship Between the Gut Microbiome Based Metagenomic Signature, Physical Fitness Levels and Metabolic Responses to Exercise: a Pilot Study on 50 Healthy Male Volunteers
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: athletic performance
+
+SUMMARY:
+Gut microbiota are all microorganisms including bacteria and microscopic eukaryotes that live in the digestive tracts of humans or mammals. During the last decade, some authors highlighted that a link exists between gut microbiota and sport performance. In this project, we hypothesize that gut microbiota is able to adapt to the energy needs of the body, really higher in top-level athletes or considerably lower in inactive individuals. In this context, this clinical study aims to characterize the bacterial metagenome of gut microbiota from populations located in a continuum from sedentary people to top-level athletes with high (i.e. soccer players), even very high energy needs (i.e. cyclists). The finality of this project is thus to determine if it exists some bacterial profile allowing to characterize, even to predict, the energy metabolism of an athlete and so the probability to be performant in competition.
+
+DETAILED DESCRIPTION:
+Gut microbiota are all microorganisms including bacteria, archaea and microscopic eukaryotes that live in the digestive tracts of humans or mammals. All these microorganisms live in homeostasis in the gastrointestinal tract and provide a variety of benefits to the host immune system and energy metabolism in a state called eubiosis. On contrary, a state of dysbiosis occurs when the diversity of commensal bacteria is reduced especially in some chronic diseases including obesity, cancer or gastrointestinal diseases. During the last decade, substantial studies highlighted that a link exists between gut microbiota composition and sport performance. Research team especially identified a direct link between gut microbiota and skeletal muscle, a key organ in sport performance (Nay et al. 2019). Using rodent models, They observed that 1) the endurance performance was reduced in mice for which the gut microbiome had been experimentally destructed (Nay et al. 2019), and 2) the reduction of endurance performance was due to lower muscle glycogen levels, a key energy substrate for muscle endurance.
+
+Complementary researches have been conducted in humans to characterize the impact of physical activity on gut microbiota composition and function. A study conducted in large American cohort of 1500 individuals have thus highlighted that the gut microbiota diversity was much more important in individuals performing regular physical activity (3-5 times/week or more) compared to physically inactive people. The few studies conducted in top-level athletes are in accordance with these results. Indeed, it has been demonstrated that international Irish rugby players exhibited a clear higher microbial diversity than inactive and sedentary populations associated to higher production of short-chain fatty acids (SCFA), some key energy substrates produced by commensal bacteria (Clarke et al. 2014; Barton et al. 2018). Conversely, when people are completely physically deconditioned such as astronauts under microgravity or bedridden patients, a clear modification of gut microbiota composition occurs in the gastrointestinal tract (Voorhies and al. 2019). Such differences between top-level athletes, inactive or extremely inactive individuals cannot be only explained to lifestyle, especially diet. Indeed, longitudinal studies have clearly showed that a several weeks training period can increase the gut microbial diversity in humans suggesting an increased capacity of gut microbiota to extract energy from food, especially from dietary fibers (Allen et al. 2018). All together, these data support that the gut microbiota could adapt to the energy needs of the body, really higher in top-level athletes or considerably lower in extremely inactive individuals (e.g. astronauts or bedridden patients). These data also suggest that gut microbiota could punctually inform of the body's metabolic state of an individual.
+
+In this context, this clinical study aims to characterize the bacterial metag
+
+PRIMARY OUTCOMES:
+  - Gut microbiota composition
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Maximal incremental exercise test
+  - DIAGNOSTIC_TEST: Submaximal exercise test
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05220657

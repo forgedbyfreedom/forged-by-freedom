@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01260688
+Title: Cediranib Maleate With or Without Dasatinib in Patients With HRPC-Resistant to Treatment With Docetaxel
+Official Title: A Phase 2 Randomized Study of Cediranib (AZD2171) Alone Compared With the Combination of Cediranib (AZD2171) Plus BMS-354825 (Dasatinib, Sprycel) in Docetaxel Resistant, Castration Resistant Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: growth hormone treatment
+
+SUMMARY:
+This randomized phase II trial is studying the side effects and how well giving cediranib maleate together with or without dasatinib works in treating patients with hormone-resistant prostate cancer resistant to treatment with docetaxel. Cediranib maleate and dasatinib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth or by blocking blood flow to the tumor. It is not yet known whether giving cediranib maleate together with dasatinib or alone is an effective treatment for prostate cancer.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To determine the progression-free survival of patients with docetaxel-resistant and castration-resistant prostate cancer treated with cediranib maleate with versus without dasatinib.
+
+SECONDARY OBJECTIVES:
+
+I. To confirm the safety and tolerability of cediranib maleate with versus without dasatinib in these patients.
+
+II. To calculate objective response rates of cediranib maleate with versus without dasatinib, according to Response Evaluation Criteria in Solid Tumors (RECIST) criteria, in patients with measurable disease at baseline.
+
+III. To perform symptom assessment using the FACT-P questionnaire and the Present Pain Intensity (PPI) scale from the McGill-Melzack questionnaire.
+
+IV. To explore bone resorption markers (e.g., c-telopeptide and bone alkaline phosphatase), and to correlate these biomarkers with clinical outcome.
+
+OUTLINE: This is a multicenter study. Patients are stratified according to the presence of soft tissue (visceral or nodal) vs bone-only disease. Patients are randomized to 1 of 2 treatment arms.
+
+ARM I: Patients receive oral cediranib maleate once daily and oral dasatinib once daily on days 1-28. Courses repeat every 28 days in the absence of disease progression or unacceptable toxicity.
+
+ARM II: Patients receive cediranib maleate as in arm I. Courses repeat every 28 days in the absence of disease progression or unacceptable toxicity.
+
+After completion of study, patients are followed up for 4 weeks.
+
+PRIMARY OUTCOMES:
+  - 12-week Progression-free Survival as Per the Prostate Cancer Clinical Trials Working Group (PCWG2)
+
+INTERVENTIONS:
+  - DRUG: cediranib maleate
+  - DRUG: dasatinib
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01260688

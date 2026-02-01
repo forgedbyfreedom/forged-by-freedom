@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38914124
+Title: Effects of semaglutide with and without concomitant SGLT2 inhibitor use in participants with type 2 diabetes and chronic kidney disease in the FLOW trial.
+Authors: Mann, Rossing, Bakris, Belmar, Bosch-Traberg
+Journal: Nature medicine
+Year: 2024
+Topic: semaglutide cardiovascular
+
+ABSTRACT:
+People with type 2 diabetes and chronic kidney disease have a high risk for kidney failure and cardiovascular (CV) complications. Glucagon-like peptide-1 receptor agonists and sodium-glucose cotransporter-2 inhibitors (SGLT2i) independently reduce CV and kidney events. The effect of combining both is unclear. FLOW trial participants with type 2 diabetes and chronic kidney disease were stratified by baseline SGLT2i use (N&#x2009;=&#x2009;550) or no use (N&#x2009;=&#x2009;2,983) and randomized to semaglutide/placebo. The primary outcome was a composite of kidney failure, &#x2265;50% estimated glomerular filtration rate reduction, kidney death or CV death. The risk of the primary outcome was 24% lower in all participants treated with semaglutide versus placebo (95% confidence interval: 34%, 12%). The primary outcome occurred in 41/277 (semaglutide) versus 38/273 (placebo) participants on SGLT2i at baseline (hazard ratio 1.07; 95% confidence interval: 0.69, 1.67; P&#x2009;=&#x2009;0.755) and in 290/1,490 versus 372/1,493 participants not taking SGLT2i at baseline (hazard ratio 0.73; 0.63, 0.85; P&#x2009;&lt;&#x2009;0.001; P interaction 0.109). Three confirmatory secondary outcomes were predefined. Treatment differences favoring semaglutide for total estimated glomerular filtration rate slope (ml min-1/1.73&#x2009;m2/year) were 0.75 (-0.01, 1.5) in the SGLT2i subgroup and 1.25 (0.91, 1.58) in the non-SGLT2i subgroup, P interaction 0.237. Semaglutide benefits on major CV events and all-cause death were similar regardless of SGLT2i use (P interaction 0.741 and 0.901, respectively). The benefits of semaglutide in reducing kidney outcomes were consistent in participants with/without baseline SGLT2i use; power was limited to detect smaller but clinically relevant effects. ClinicalTrials.gov identifier: NCT03819153 .
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38914124/

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 34609707
+Title: Wide size dispersion and use of body composition and maturation improves the reliability of allometric exponent estimates.
+Authors: Gonz&#xe1;lez-Sales, Holford, Bonnefois, Desrochers
+Journal: Journal of pharmacokinetics and pharmacodynamics
+Year: 2022
+Topic: body composition assessment methods
+
+ABSTRACT:
+To evaluate study designs and the influence of dispersion of body size, body composition and maturation of clearance or reliable estimation of allometric exponents. Non-linear mixed effects modeling and parametric bootstrap were employed to assess how the study sample size, number of observations per subject, between subject variability (BSV) and dispersion of size distribution affected estimation bias and uncertainty of allometric exponents. The role of covariate model misspecification was investigated using a large data set ranging from neonates to adults. A decrease in study sample size, number of observations per subject, an increase in BSV and a decrease in dispersion of size distribution, increased the uncertainty of allometric exponent estimates. Studies conducted only in adults with drugs exhibiting normal (30%) BSV in clearance may need to include at least 1000 subjects to be able to distinguish between allometric exponents of 2/3 and 1. Nevertheless, studies including both children and adults can distinguish these exponents with only 100 subjects. A marked bias of 45% (95%CI 41-49%) in the estimate of the allometric exponent of clearance was obtained when maturation and body composition were ignored in infants. A wide dispersion of body size (e.g. infants, children and adults) is required to reliably estimate allometric exponents. Ignoring differences in body composition and maturation of clearance may bias the exponent for clearance. Therefore, pharmacometricians should avoid estimating allometric exponent parameters without suitable designs and covariate models. Instead, they are encouraged to rely on the well-developed theory and evidence that clearance and volume parameters in humans scale with theory-based exponents.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/34609707/

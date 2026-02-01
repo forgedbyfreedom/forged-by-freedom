@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03895892
+Title: Exogenous Ketone Supplementation and Exercise Performance
+Official Title: The Effect of Exogenous Ketone Supplementation on 20 km Time Trial and Wingate Performance in Recreationally Active Individuals
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: caffeine exercise
+
+SUMMARY:
+20 healthy recreationally active men and woman aged 18-35 will participate in the study. There will be three treatments involved: Caffeinated ketone supplements, non-caffeinated ketone supplement and water-placebo. Participants will complete the protocol three times and the treatment order will be systematically rotated to avoid any order effect. The three main trials will be separated by at least 1 week. After providing the corresponding treatment, participants will be given 30 minutes and after, they will perform a standardized 10-minute warm-up, followed by the 20 km time trial and a 30-second all-out Wingate test.
+
+DETAILED DESCRIPTION:
+Some researchers support that a state of ketosis, reached through the use of ketogenic diet, has the potential to improve athletic. To attain such state, individuals must restrict carbohydrate intake to a maximum of 50g/ day or 10% while keeping protein intake moderate. One of the biggest challenges to achieve and maintain ketosis is complying with the diet due to its restrictive nature. Consequently, manufacturers have developed supplements that can induce a state of ketosis acutely (\~1 hour). Unfortunately, there is very little evidence supporting the use of these supplements to enhance athletic performance. Hyperketonemia (blood ketone concentration \> 0.2 Mm) seems to elevate the rate of utilization of ketone bodies. These changes in substrate utilization may allow athletes to preserve, something that would be advantageous for exercise performance. Ketone salts have been shown to elevate the concentration of ketones in blood and as such they may allow the body benefit from the apparent sparing of carbohydrates. Manufacturers now provide ketones salts combined with other ingredients such as caffeine. However it is unknown whether or not the addition of these ingredients has any positive or negative effect on athletic performance. Caffeine alone has been shown to improve athletic performance in several studies. Therefore, the purpose of this study is to compare the effectiveness of a caffeine free ketone salt supplement vs a caffeinated ketone salt supplement and their effects on a 20km time trial and a 30 second all-out Wingate test.
+
+PRIMARY OUTCOMES:
+  - 20 km time trial
+  - Wingate test
+
+INTERVENTIONS:
+  - BEHAVIORAL: 20 km time trial
+  - BEHAVIORAL: Wingate test
+  - DIETARY_SUPPLEMENT: Ketone/Caffeine
+  - DIETARY_SUPPLEMENT: Ketone
+  - DIETARY_SUPPLEMENT: Water Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03895892

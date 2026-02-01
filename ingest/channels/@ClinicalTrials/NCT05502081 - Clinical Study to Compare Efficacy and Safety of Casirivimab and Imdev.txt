@@ -1,0 +1,83 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05502081
+Title: Clinical Study to Compare Efficacy and Safety of Casirivimab and Imdevimab Combination, Remdesivir and Favipravir in Hospitalized COVID-19 Patients
+Official Title: Clinical Study to Evaluate the Possible Efficacy and Safety of Antibodies Combination (Casirivimab and Imdevimab) Versus Standard Antiviral Therapy (Remdesivir and Favipravir) as Antiviral Agent Against Corona Virus 2 Infection in Hospitalized COVID-19 Patients
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 265
+Topic: creatine supplementation
+
+SUMMARY:
+Introduction:
+
+Corona Virus induced disease - 2019 (COVID-19) pandemic stimulates research works to find a solution to this crisis from starting 2020 year up to now. With ending of 2021 year, various advances in pharmacotherapy against COVID-19 have emerged.
+
+Regarding antiviral therapy, Casirivimab and imdevimab antibody combination is a type of new immunotherapy against COVID-19. Standard antiviral therapy against COVID-19 includes Remdesivir and Favipravir.
+
+Aim of Study:
+
+1. To compare the efficacy of antibodies cocktail (casirivimab and imdevimab), Remdesivir and Favipravir in reducing 28-day mortality in hospitalized patients with moderate, severe or critical COVID19
+2. To compare safety of antibodies cocktail (casirivimab and imdevimab), Remdesivir and Favipravir by monitoring hypersensitivity and infusion related reactions or other significant adverse effects
+
+Patients and Population:
+
+265 COVID-19 Polymerase Chain Reaction (PCR) confirmed patients with indication for antiviral therapy is included in this study and will be divided into 3 groups (1:2:2):
+
+1. Group A: REGN3048-3051(Antibodies cocktail (casirivimab and imdevimab))
+2. group B: Remdesivir
+3. group C: Favipravir
+
+Methods:
+
+Study design is single blind non-Randomized Controlled Trial (non-RCT). The drugs of the study are owned by Mansoura University Hospital (MUH), and prescribed by chest diseases lectures of faculty of medicine-Mansoura University. The duration of study is about 6 months after ethical approval.
+
+DETAILED DESCRIPTION:
+I. INTRODUCTION
+
+1.1. COVID-19 overview and classification
+
+COVID-19 is an infectious viral disease caused by sever acute respiratory syndrome-corona virus 2 (SARS CoV-2) that has affected large number of people all over the world with high mortality rate. COVID-19 infection has been classified as:
+
+1. Mild Illness: Individuals who have any of the various signs and symptoms of COVID-19 (e.g., fever, cough, sore throat, malaise, headache, muscle pain, nausea, vomiting, diarrhea, loss of taste and smell) but who do not have shortness of breath, dyspnea, or abnormal chest imaging.
+2. Moderate Illness: Individuals who show evidence of lower respiratory disease during clinical assessment or imaging and who have an oxygen saturation (SpO2) ≥94% on room air at sea level.
+3. Severe Illness: Individuals who have Saturation pressure of oxygen (SpO2) \<94% on room air at sea level, a ratio of arterial partial pressure of oxygen to fraction of inspired oxygen (PaO2/FiO2) \<300 mm Hg, respiratory frequency \>30 breaths/min, or lung infiltrates \>50%.
+4. Critical Illness: Individuals who have respiratory failure, septic shock, and/or multiple organ dysfunctions.
+
+Covid-19 pandemic stimulates research works to find a solution to this crisis from starting 2020 year up to now. With ending of 2021 year, various advances in pharmacotherapy against COVID-19 have emerged.
+
+1.2. Standard and controversial antivirals used in treatment of COVID-19 (Remdesivir and Favipravir)
+
+Regarding antiviral drugs used in treatment of COVID-19, Remdesivir is a standard antiviral against COVID-19 and has been approved by Food and drug administration (FDA) for treatment of mild, moderate, sever and critical hospitalized COVID-19 patients. Other drugs have shown controversial antiviral activity include: favipravir, ivermectin, nitazoxanide, hydroxychloroquine, ribavirin. Favipravir became a standard antiviral which has been used for treatment of mild and moderate COVID-19 outpatients.
+
+1.3. Advances in immunotherapy for treatment of COVID-19
+
+Recently with the end of 2020, immunotherapy to target virus antigen has developed. Figure 1 shows two types of immunotherapy include active and passive immunotherapy. Active immunotherapy is to enhance body to produce antibodies against virus as by vaccination. Passive immunotherapy involves direct administration of prepared antibodies acting specifically against virus or administration of product containing antibodies like plasma.
+
+There are three targets for these antibodies to work as antiviral including:
+
+1. antibodies that prevent the virus attachment and entry
+2. antibodies that inhibit the virus replication and transcription
+3. antibodies that hinder various steps of the immune system response Table 1 includes various types of antibodies under investigation for treatment of COVID-19 and their targets.
+
+1.4. Casirivimab and Imdevimab as antibodies cocktail against COVID-19
+
+In the present study, the point of research is antibodies cocktail 
+
+PRIMARY OUTCOMES:
+  - 28-days Mortality Rate
+  - Number of Participants With Positive or Negative Polymerase Chain Reaction (PCR) Test Results at End of Hospital Visit
+  - Number of Participants With Infusion Related Reactions, Hypersensitivity Reactions and Any Serious Adverse Events
+
+INTERVENTIONS:
+  - DRUG: Casirivimab and Imdevimab Drug Combination
+  - DRUG: Remdesivir
+  - DRUG: Favipiravir
+
+ELIGIBILITY:
+Age: 12 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05502081

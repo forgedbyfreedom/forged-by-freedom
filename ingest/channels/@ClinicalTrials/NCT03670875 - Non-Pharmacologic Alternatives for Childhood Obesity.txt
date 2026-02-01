@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03670875
+Title: Non-Pharmacologic Alternatives for Childhood Obesity
+Official Title: Non-Pharmacologic Alternatives for the Treatment of Childhood Obesity in Mexico
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 300
+Topic: omega 3 exercise
+
+SUMMARY:
+Childhood obesity is a global health issue. Mexico has been considered as the country with the higher number of children with obesity. There are not approved drugs to support diet and exercise as the first step to lose weight. Animal models and clinical trials in adults have provided evidence about safety and efficacy of interventions such as: prebiotics, curcumin, and omega- 3 fatty acids. The hypothesis of this study is: that non-pharmacological alternatives could support diet and exercise to decrease the weight of children with obesity.
+
+DETAILED DESCRIPTION:
+The aim of this study is to determinate the efficacy and safety of agave inulin, curcumin, and omega-3 fatty acids (O3FA) to decrease the weight of children with obesity.
+
+Design. Randomized controlled clinical trial (RCT) with four study groups: agave inulin, curcumin, omega-3 fatty acids and a control group. All groups will receive instructions to decrease calories intake and do exercise.
+
+Children sent to the unit with a presumptive diagnosis of obesity will be considered as candidates to the RCT. Children accomplishing with inclusion/exclusion criteria will be randomized to one of the study groups.
+
+Sample size was calculated using a statistical power of 80%, alpha value of 0.05. A 15 % of difference, in the mean of weight reduction, between control group and intervention groups was considered. The estimated sample size was 75 subjects for each group.
+
+Weight, height, BMI, blood pressure, abdominal circumference and body fat percentage will be measured in months 0, 1, 2, and 3. In months 0 and 3 a fasting venous blood sample will be drawn to perform the following test: glucose, insulin, lipid profile and C- Reactive protein, aspartate aminotransferase (AST) and alanine aminotransferase (ALT). Anthropometric measures, food intake recommendation and diaries of food consume will be performed by trained nutritionists. Recommendation about type of exercise and estimation of calories consumed will be performed by a physical education teacher.
+
+The statistical analysis will performed by one to the investigators blinded to treatment groups. Numerical values will be expressed as mean ± standard deviation. Categorical variables will be expressed as proportions. The analysis will be preformed according with CONSORT group recommendations Differences between the groups were estimated using one-way ANOVA with Bonferroni post-hoc test for numerical parameters and χ 2 test for categorical variables. Intragroup differences will be assessed by paired Student t test (Mann-Whitney U test for skewed data). Statistical significance will be considered as a p value \<0.05 and 95% confidence interval (CI). Statistical Package for the Social Sciences will be used for the analysis
+
+PRIMARY OUTCOMES:
+  - Loosing weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Agave inulin
+  - DIETARY_SUPPLEMENT: Curcumin
+  - DIETARY_SUPPLEMENT: O3FA
+  - BEHAVIORAL: Control
+
+ELIGIBILITY:
+Age: 6 Years to 8 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03670875

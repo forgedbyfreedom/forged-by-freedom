@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32449059
+Title: Brief Report: Can a Composite Heart Rate Variability Biomarker Shed New Insights About Autism Spectrum Disorder in School-Aged Children?
+Authors: Frasch, Shen, Wu, Mueller, Neuhaus
+Journal: Journal of autism and developmental disorders
+Year: 2021
+Topic: heart rate variability training
+
+ABSTRACT:
+Several studies show altered heart rate variability (HRV) in autism spectrum disorder (ASD), but findings are neither universal nor specific to ASD. We apply a set of linear and nonlinear HRV measures-including phase rectified signal averaging-to segments of resting ECG data collected from school-age children with ASD, age-matched typically developing controls, and children with other psychiatric conditions characterized by altered HRV (conduct disorder, depression). We use machine learning to identify time, frequency, and geometric signal-analytical domains that are specific to ASD (receiver operating curve area&#x2009;=&#x2009;0.89). This is the first study to differentiate children with ASD from other disorders characterized by altered HRV. Despite a small cohort and lack of external validation, results warrant larger prospective studies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32449059/

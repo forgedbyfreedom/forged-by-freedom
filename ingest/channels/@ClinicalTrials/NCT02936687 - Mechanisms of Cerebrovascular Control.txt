@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02936687
+Title: Mechanisms of Cerebrovascular Control
+Official Title: Mechanisms of Cerebrovascular Control: Acute Insulin Surges Lead to Brain Hypoperfusion in Human Metabolic Syndrome
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 59
+Topic: omega 3 exercise
+
+SUMMARY:
+The objective of this study is to identify insulin-specific cerebral blood flow (CBF) control mechanisms, and establish cerebrovascular responsive baseline in younger (18-45 yrs) metabolic syndrome adults (MetSyn) who are at substantial risk of stroke and other types of cardiovascular mortality even if they never develop diabetes. The central hypothesis is that vasodilator actions of insulin are impaired in MetSyn due to loss of dilator and gain of constrictor signals. This study will focus on 2 mechanisms that likely limit CBF in MetSyn: 1) Disruption of nitric oxide (NO) vasodilation, and 2) Exaggerated endothelin (ET-1) constriction. Three specific aims will be addressed: Aim 1: To test the hypothesis that physiologic surges of insulin acutely increase CBF in young adults, but adults with MetSyn exhibit paradoxical insulin-mediated vasoconstriction. Aim 2: To test the hypotheses that key mechanisms responsible for poor CBF in MetSyn are shifts in NO and ET-1 signaling. Specifically, in healthy controls, NO mediates robust dilation, with little to no ET-1 constriction. In contrast, adults with MetSyn exhibit uncoupled NO synthase (NOS) and exaggerated ET-1 constriction. Aim 3: To test the hypothesis that insulin regulation of CBF is regionally distinct (e.g. Middle Cerebral Artery (MCA) reactive than Anterior Cerebral Artery (ACA) or basilar), and the negative effects of insulin resistance (IR) are similarly regionally specific.
+
+DETAILED DESCRIPTION:
+Introduction It is widely accepted that insulin resistance in MetSyn increases the risk of cerebrovascular disease (CVD) and stroke. Additionally, MetSyn is associated with cognitive impairments and increased risk of neurodegenerative diseases. Despite strong association of poor cerebrovascular health in MetSyn, the cerebral blood flow (CBF) response to acute insulin surges in humans remains largely unexplored. Cerebrovascular dysfunction in response to insulin and potential mechanism(s) that attenuate CBF may not only highlight the central underpinnings of the pathophysiology of stroke and CVD, it may provide key insights to understanding cognitive decline strongly linked to older individuals with MetSyn. Therefore, establishing the mechanisms of insulin-mediated cerebrovascular control are not only important for decreasing mortality in MetSyn, it may be profoundly important to maintaining brain health. Insulin-meditated vasodilation is largely a vascular endothelium-dependent process. Elegant experiments using animal models suggests insulin resistance disrupts six endothelial signaling pathways, with the strongest evidence implicating a loss of nitric oxide (NO) vasodilation, and exaggerated endothelin (ET-1) constriction. The literature indicates that in MetSyn, a spike in insulin leads to vasoconstriction and cerebral hypoperfusion. These findings are directionally opposite from no change or insulin-mediated vasodilation and increase in CBF reported in the literature. Evidence suggests that uncoupled function of nitric oxide synthase (NOS) leads to unfavorable balance between NO, reactive oxygen species, and ET-1. Normally, stimulation of insulin receptor on the vascular endothelium should provide an environment in which NOS manufactures NO leading to vasodilation and inhibition of ET-1. Instead, in MetSyn insulin stimulates the vasoconstrictor ET-1 to a greater extent while, NOS is uncoupled generating more reactive oxygen species that scavenges the NO that is generated leading to a greater vasoconstrictor signal rather than vasodilation.
+
+Specific Aims/Study Objectives
+
+Specific Aims:
+
+The central hypothesis is that vasodilator actions of insulin are already impaired in metabolic syndrome due to loss of dilator and gain of constrictor signals. Cerebral vasodilation to insulin is largely endothelium-dependent. Emerging evidence in animal models suggests insulin resistance disrupts at least six endothelial signaling pathways that could be potential targets, and this proposal focuses on two that most likely reduce CBF in MetSyn: 1) Loss of nitric oxide (NO) vasodilation, and 2) Exaggerated endothelin (ET-1) constriction. These experiments will address three specific aims:
+
+Aim 1: To test the hypothesis that physiologic surges of insulin acutely increase CBF in young adults, but adults with MetSyn exhibit paradoxical insulin-mediated vasoconstriction.
+
+Aim 2: To test the hypotheses that key mechanisms responsible for poor CBF in MetSyn are shif
+
+PRIMARY OUTCOMES:
+  - Change in cerebrovascular blood flow in response to NOS inhibition.
+  - Change in cerebrovascular blood flow in response to ET-1 inhibition.
+
+INTERVENTIONS:
+  - DRUG: NOS Inhibition
+  - DRUG: ET-1 Inhibition
+  - DRUG: NOS Inhibition Placebo
+  - DEVICE: 3 Tesla MRI
+  - DEVICE: Intravenous Catheter
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02936687

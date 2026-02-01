@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 29875202
+Title: Anchor peptide captures, targets, and loads exosomes of diverse origins for diagnostics and therapy.
+Authors: Gao, Ran, Dong, Zuo, Yang
+Journal: Science translational medicine
+Year: 2019
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Exosomes are circulating nanovesicular carriers of macromolecules, increasingly used for diagnostics and therapeutics. The ability to load and target patient-derived exosomes without altering exosomal surfaces is key to unlocking their therapeutic potential. We demonstrate that a peptide (CP05) identified by phage display enables targeting, cargo loading, and capture of exosomes from diverse origins, including patient-derived exosomes, through binding to CD63-an exosomal surface protein. Systemic administration of exosomes loaded with CP05-modified, dystrophin splice-correcting phosphorodiamidate morpholino oligomer (EXOPMO) increased dystrophin protein 18-fold in quadriceps of dystrophin-deficient mdx mice compared to CP05-PMO. Loading CP05-muscle-targeting peptide on EXOPMO further increased dystrophin expression in muscle with functional improvement without any detectable toxicity. Our study demonstrates that an exosomal anchor peptide enables direct, effective functionalization and capture of exosomes, thus providing a tool for exosome engineering, probing gene function in vivo, and targeted therapeutic drug delivery.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/29875202/

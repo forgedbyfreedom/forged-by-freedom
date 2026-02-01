@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02150122
+Title: Dietary Requirement for Vitamin D in Adolescents Aged 14-18 Years
+Official Title: A Dose-response, Double-blind Randomised Placebo-controlled Trial to Estimate the Dietary Requirement for Vitamin D in Caucasian Male and Female Adolescents Aged 14-18 Years (The ODIN Study)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: vitamin D muscle
+
+SUMMARY:
+It is known that low vitamin D status is a very common problem in the UK. It is also known that a lack of vitamin D availability has potentially serious health implications, especially with respect to bone and muscle function. Much research has recently taken place to establish the vitamin D requirements of key population groups (i.e. pregnant women, the elderly, ethnic minorities). However few data are available describing the vitamin D requirements for male and female adolescents. The period of adolescence is a key stage of growth and development - poor nutrition during this time can have detrimental health consequences for a lifetime.
+
+No intervention studies have comprehensively investigated the vitamin D requirements of adolescents. The proposed ODIN Study will enable a better understanding of how adolescents respond to vitamin D supplementation and the most effective daily amount that will raise and maintain vitamin D status in adolescents during the winter-time. In addition, investigations into the mechanisms of action with respect to any differences observed across the doses of vitamin D and between the genders of the participants will also provide key information. Mechanisms of action will focus on genetic differences as well as differences in vitamin D metabolising enzymes.
+
+The results obtained from this significant study will not only inform the European Food Standards Agency (EFSA) with respect to their imminent deliberations regarding vitamin D recommendations. The ODIN Study will also inform the UK Department of Health's Scientific Advisory Committee on Nutrition (SACN), the wider scientific community and be a critical resource for key stakeholders (i.e. food industry, government health agencies) to collaborate in determining future public health strategies, thus potentially positively impacting on the health of the population for years to come.
+
+The investigators propose that the daily supplementation of 10µg/day (400 IU) and 20µg/day (800 IU) of vitamin D3 for five months will meet the vitamin D requirements of males and females aged 14-18 year and will be sufficient to maintain winter-time 25OHD levels above a range of thresholds between 30 and 50nmol/l.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Serum 25-hydroxyvitamin D concentrations
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D3
+
+ELIGIBILITY:
+Age: 14 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02150122

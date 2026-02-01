@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 26950361
+Title: A branched-chain amino acid metabolite drives vascular fatty acid transport and causes insulin resistance.
+Authors: Jang, Oh, Wada, Rowe, Liu
+Journal: Nature medicine
+Year: 2016
+Topic: branched chain amino acids muscle
+
+ABSTRACT:
+Epidemiological and experimental data implicate branched-chain amino acids (BCAAs) in the development of insulin resistance, but the mechanisms that underlie this link remain unclear. Insulin resistance in skeletal muscle stems from the excess accumulation of lipid species, a process that requires blood-borne lipids to initially traverse the blood vessel wall. How this trans-endothelial transport occurs and how it is regulated are not well understood. Here we leveraged PPARGC1a (also known as PGC-1&#x3b1;; encoded by Ppargc1a), a transcriptional coactivator that regulates broad programs of fatty acid consumption, to identify 3-hydroxyisobutyrate (3-HIB), a catabolic intermediate of the BCAA valine, as a new paracrine regulator of trans-endothelial fatty acid transport. We found that 3-HIB is secreted from muscle cells, activates endothelial fatty acid transport, stimulates muscle fatty acid uptake in vivo and promotes lipid accumulation in muscle, leading to insulin resistance in mice. Conversely, inhibiting the synthesis of 3-HIB in muscle cells blocks the ability of PGC-1&#x3b1; to promote endothelial fatty acid uptake. 3-HIB levels are elevated in muscle from db/db mice with diabetes and from human subjects with diabetes, as compared to those without diabetes. These data unveil a mechanism in which the metabolite 3-HIB, by regulating the trans-endothelial flux of fatty acids, links the regulation of fatty acid flux to BCAA catabolism, providing a mechanistic explanation for how increased BCAA catabolic flux can cause diabetes.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/26950361/

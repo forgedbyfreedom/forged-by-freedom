@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06133530
+Title: Human Milk Oligosaccharides (HMOs) and Gut Microbiota, Immune System in Antarctica
+Official Title: Effects of Human Milk Oligosaccharides (HMOs) on Gut Microbiota, Immune System and Metabolism in Adults Wintering Over in Antarctica
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: DHEA supplementation
+
+SUMMARY:
+Human milk oligosaccharides (HMOs) are the third-most abundant component in mothers' milk and are an important prebiotic factor for the development of the gut microbiota of infants, promoting the growth of certain beneficial bacterial strains and providing protection against many bacterial and viral infections. HMOs induce immunomodulatory activity by affecting immune cell populations and functions. In a simulator of the adult human intestinal microbial ecosystem, fermentation of HMOs led to an increase of bifidobacteria in parallel with an increase in short-chain fatty acids as well as a reduction in inflammation markers, supporting the potential of HMOs to provide health benefits also in adults. Long-term stay in microgravity induces many physiological responses, including diminished immune function and impaired glucose tolerance which may lead to rather severe consequences. Similarly, hypoxia conditions as in the Concordia station, affects the immune system and may lead to impaired glucose tolerance and insulin resistance. The hypothesis is that HMOs as a prebiotic supplement will mitigate changes in immune function, glucose tolerance, lipid homeostasis, and neurotransmitter production. It is expected that HMO supplementation will
+
+* Modulate gut microbiota composition and function
+* Improve inflammation status
+* Improve immune function
+* Improve glucose tolerance
+* Improve nutritional status
+* Prevent changes in neurotransmitters associated with anxiety and depression. During the stay in Antarctica an HMO blend will be supplemented to the verum group of volunteers. The control group will receive a placebo. Experiment days with blood drawing, an oral glucose tolerance test, saliva sampling, and feces samples are planned once before, about every second month in Concordia, and once after return.
+
+DETAILED DESCRIPTION:
+The aim of this study is to investigate the effect of supplementation with prebiotics, a specific mixture of carbohydrates found in breast milk (HMOs), as a measure to improve intestinal flora, inflammatory processes in the gut, general immune status, carbohydrate regulation, fat and bone metabolism and neurological changes in Antarctica. The approximately one-year stay at Concordia Station (Antarctica) at an altitude of about 3200 m includes a long journey and subsequent extreme environmental conditions as well as corresponding adaptation mechanisms and is therefore a very good terrestrial model (analogue model) for investigating changes during space stays. Long-term (i.e. \> 6 months) exposure to microgravity leads to numerous physiological responses, including impaired glucose tolerance, reduced immune function and bone loss, which can lead to quite severe health consequences. In this analogue model, similar changes, albeit less severe, are observed with regard to the immune system or glucose tolerance as in space flight.
+
+The composition of the diet significantly influences the composition of the intestinal flora. In particular, dietary carbohydrates provide the substrate for certain bacteria that could have a positive effect on health. Prebiotics are defined as substrates that are selectively used by host microorganisms and that provide health benefits. Prebiotics are digested only by gut microorganisms and stimulate the growth or activity of bacteria in the gut that have shown health benefits or improved well-being. The main nutrients for bacterial growth are non-digestible carbohydrates, which by definition are not digested by the host, in this case the human organism (host). Non-digestible carbohydrates include, for example, resistant starch and dextrins, non-starch polysaccharides (NSPs) (e.g. pectins) and non-digestible oligosaccharides (e.g. Raffinose, inulin, etc.). These carbohydrates are fermented by the intestinal bacteria to short-chain fatty acids (SCFAs), mainly acetic acid, propionic acid and butyric acid. This process takes place mainly in the large intestine, but also in the small intestine. SCFAs are rapidly absorbed by the mucosa of the large intestine and exert whole-body effects, contributing, for example, to the host's energy needs or mediating gut-brain communication, which has a major impact on the physiology and health of the host.
+
+HMOs are also prebiotics and are the third most abundant solid component in breast milk. Most of the research published to date on the effects of HMOs has therefore been conducted on infants. HMOs are not digested in the intestine and are mainly utilised in the large intestine by the bacteria that reside there. In infants, it has been shown that HMOs not only promote a healthy composition of the intestinal flora, but also impair the growth of pathogens and modulate the expression of genes involved in inflammation. Several in vitro and in vivo studies have shown antiviral properties of HMOs
+
+PRIMARY OUTCOMES:
+  - Glucose tolerance
+  - Insulin resistance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Human milk oligosaccharides
+  - DIETARY_SUPPLEMENT: Maltose
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06133530

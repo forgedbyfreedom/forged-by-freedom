@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02043171
+Title: Nutritional Intervention for Age-related Muscular Function and Strength Losses-Study 2
+Official Title: Year-long Double Blind Study on the Efficacy of a Combination of Beta-hydroxy-beta-methylbutyrate and Vitamin D With and Without Exercise on Muscular Strength and Functionality in Older Adults.
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 238
+Topic: HMB supplementation
+
+SUMMARY:
+Men and women lose muscle mass and strength with age. Loss of muscle mass and strength is accompanied by a loss of muscle function which can lead to diminished quality of life and more importantly can lead to serious fall requiring medical treatment. The investigators hypothesize that the combined supplements of Calcium-HMB and Vitamin D will lead to decreased falls and to improved quality of life (QOL) for older adults. The investigators further hypothesize that the addition of a modest exercise regimen to these supplements will enhance the synergistic effects of both Calcium-HMB and Vitamin D.
+
+Subjects will consume the dietary supplement 2 times per day for 12 months. Tests will consist of the following: a) strength of subjects' legs and elbow by Isokinetic Dynamometer; b) body composition; c) hand-grip strength by hand-grip dynamometer; d) functional mobility, balance and agility (Get-Up and Get-Up-and-Go tests); e) filling out questionnaires; and g) having blood drawn for biochemical measurements. Testing will be performed at the baseline (0 months) and at 3, 6, 9, and 12 months.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscular strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DRUG: HMB plus Vitamin D
+  - BEHAVIORAL: Non-Exercise
+  - BEHAVIORAL: Exercise
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02043171

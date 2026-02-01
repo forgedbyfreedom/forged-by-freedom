@@ -1,0 +1,75 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07182292
+Title: Effect of a Combined Exercise and Anti-Inflammatory Nutritional Intervention in Frail Older Adults
+Official Title: Effectiveness of Combined Therapeutic Exercise and Anti-Inflammatory Nutritional Supplementation in Frail, Malnourished Older Adults
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 158
+Topic: omega 3 exercise
+
+SUMMARY:
+The goal of this clinical trial is to evaluate whether a combined intervention of therapeutic exercise and anti-inflammatory nutritional supplementation improves physical performance and reduces systemic inflammation in frail, malnourished older adults. The main questions it aims to answer are:
+
+Does the addition of an anti-inflammatory nutritional supplement (Alisenoc™) to a multicomponent exercise program (Vivifrail) lead to greater improvements in physical performance compared to standard exercise and conventional nutritional support?
+
+Does the combined intervention reduce levels of inflammatory biomarkers (e.g., IL-6, TNF-α, IL-8, GDF-15) in this population?
+
+Are there measurable changes in body composition (e.g., muscle mass, fat mass, bone health) following the intervention?
+
+Does the intervention impact clinical outcomes such as hospital readmissions, functional independence, or mortality over the following 12 months?
+
+Researchers will compare two groups:
+
+One group receiving the Vivifrail exercise program plus a daily dose of the anti-inflammatory nutritional supplement Alisenoc™.
+
+Another group receiving the same Vivifrail program plus an isocaloric, protein-equivalent conventional supplement.
+
+Participants will:
+
+Be aged 75 years or older and identified as frail and malnourished according to Fried and GLIM criteria.
+
+Undergo baseline evaluation including functional performance (SPPB), body composition via bioimpedance analysis, and blood sample collection for inflammatory biomarkers.
+
+Be randomly assigned to one of the two intervention groups.
+
+Follow a 12-week home-based multicomponent exercise program guided by educational materials and supervised remotely.
+
+Consume the assigned oral nutritional supplement daily for the same 12-week period.
+
+Return for outcome assessments at 12 weeks, and again at 6 and 12 months for long-term follow-up.
+
+All study procedures will take place at the Hospital Universitario de Navarra (HUN), Spain. Participants will be recruited from outpatient geriatrics and nutrition clinics and assessed at a dedicated research unit with nursing support. The intervention is designed to be feasible, scalable, and representative of real-world multidisciplinary care in older populations with high vulnerability.
+
+The study aims to provide evidence for an integrative, personalized approach to reversing frailty through combined physical and nutritional strategies targeting the biological basis of inflammaging.
+
+DETAILED DESCRIPTION:
+Frailty and malnutrition are prevalent, closely interconnected syndromes in older adults, associated with adverse outcomes such as functional decline, falls, institutionalization, prolonged hospitalization, and increased mortality. These conditions reinforce each other in a bidirectional cycle: malnutrition contributes to muscle loss and diminished physical function, while frailty can lead to decreased appetite and nutrient intake. Both are increasingly linked to chronic, low-grade systemic inflammation, known as "inflammaging."
+
+Inflammaging is characterized by persistently elevated levels of circulating pro-inflammatory cytokines, such as IL-6, TNF-α, IL-8, and CRP. This inflammatory environment contributes to sarcopenia, bone demineralization, insulin resistance, and immune system decline, all of which further drive the progression of frailty. Therefore, interventions that reduce inflammaging may offer a novel therapeutic pathway to mitigate frailty and its consequences.
+
+Multicomponent physical exercise programs-especially those incorporating strength, balance, and endurance training-have demonstrated efficacy in improving mobility and reducing inflammation in older adults. The Vivifrail© program, developed and validated for frail and pre-frail populations, offers a structured, scalable home-based exercise model. At the same time, nutritional interventions enriched with anti-inflammatory ingredients-such as extra virgin olive oil polyphenols, omega-3 fatty acids (EPA/DHA), and leucine-may support muscle anabolism and reduce systemic inflammation. Yet, despite promising evidence from each modality alone, their combined impact in frail, malnourished populations remains understudied.
+
+The AliFrail trial addresses this gap through a randomized, controlled, open-label, two-arm clinical study conducted at the Hospital Universitario de Navarra (HUN) in Pamplona, Spain. A total of 158 community-dwelling adults aged ≥75 years with frailty and malnutrition will be randomized to receive either:
+
+1. the Vivifrail© exercise program plus a daily anti-inflammatory oral nutritional supplement (Alisenoc™), or
+2. the same exercise program with an isocaloric, protein-equivalent standard nutritional supplement without anti-inflammatory components.
+
+The intervention will last 12 weeks, followed by follow-up assessments at 6 and 12 months. The primary outcome is change in physical performance measured by the Short Physical Performance Battery (SPPB). Secondary outcomes include body composition (via bioelectrical impedance), inflammatory biomarker levels (IL-6, IL-8, TNF-α, GDF-15), handgrip strength, bone health (via REMS), quality of life (EQ-5D), and major clinical outcomes (readmissions, falls, mortality). Participant adherence, safety, and adverse events will also be monitored throughout the study period.
+
+Sample size calculation is based on detecting a 1-point difference in SPPB between groups, assuming a standard deviation of 2 points, α = 0.05, and 80% powe
+
+PRIMARY OUTCOMES:
+  - Short Physical Performance Battery (SPPB)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Anti-Inflammatory Supplement
+  - DIETARY_SUPPLEMENT: Conventional Nutritional Supplement
+
+ELIGIBILITY:
+Age: 75 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07182292

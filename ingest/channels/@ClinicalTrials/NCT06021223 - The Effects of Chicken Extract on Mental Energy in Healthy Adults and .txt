@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06021223
+Title: The Effects of Chicken Extract on Mental Energy in Healthy Adults and the Underlying Mechanisms
+Official Title: Trial of a Chicken Extract for Improving Mental Energy and Mechanisms of Action in Healthy Adults: A Randomized, Double-blind, Placebo-controlled Exploratory Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 189
+Topic: beta alanine
+
+SUMMARY:
+This exploratory trial investigates the effect of a chicken extract supplement on mental energy and its potential underlying mechanisms of action among healthy adults using a randomized, double-blind, placebo-controlled clinical trial design. Mental energy is a multi-dimensional construct comprising transient feelings about fatigue, vigor and motivation and cognitive performance in terms of sustained attention and reaction time.
+
+A sub-study investigates the immediate biochemical changes after taking chicken extract.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Reaction time and sustained attention (composite) assessed by Cogstate Brief Battery (CBB)
+  - Reaction time assessed by Deary-Liewald reaction time task
+  - Sustained attention assessed by psychomotor vigilance test
+  - Sustained attention assessed by trail making test
+  - Fatigue assessed by Profile of Mood States (POMS)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Chicken extract supplement (high-dose)
+  - DIETARY_SUPPLEMENT: Chicken extract supplement (low-dose)
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 35 Years to 64 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06021223

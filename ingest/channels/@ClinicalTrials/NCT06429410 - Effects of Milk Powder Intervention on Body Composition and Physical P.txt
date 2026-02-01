@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06429410
+Title: Effects of Milk Powder Intervention on Body Composition and Physical Performance in Middle-aged and Older Adults
+Official Title: Effects of Daily Supplementation With Milk Powder on Body Composition and Physical Performance in Middle-aged and Older Adults: A Randomized Control Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: vitamin D muscle
+
+SUMMARY:
+This study aims to conduct a 24-week intervention involving formula milk powder for middle-aged and elderly individuals, assessing its impact on body composition and physical performance in comparison to interventions using regular milk powder and individuals without intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - lean body mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: fortified formula milk powder
+  - DIETARY_SUPPLEMENT: formula milk powder
+  - DIETARY_SUPPLEMENT: regular milk powder
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06429410

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04701463
+Title: A Specialized Amino Acid Mixture on Body Composition and Skin State in Overweight and Obese Class I Postmenopausal Women
+Official Title: Effect of a Specialized Amino Acid Mixture on Body Composition and Skin State in Overweight and Obese Class I Sedentary Postmenopausal Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: fat loss muscle
+
+SUMMARY:
+The use of dietary amino acids has been explored for therapeutic and safety intervention of obesity and obesity-induced dysfunction. In particular, 3 molecules have been shown to be effective both in the animal model and in humans, in promoting the loss of fat mass, specifically visceral adipose tissue, and in maintaining free fat mass: arginine, glutamine and leucine (and its metabolite beta hydroxy methyl butyrate, HMB). The aim of this study was to evaluate the efficacy in terms of fat mass, in particular Visceral Adipose Tissue reduction, as primary end point, in obese patients following the administration of specific food for special medical purposes (FSMP) for muscle recovery, consisting of arginine, glutamine and HMB. The secondary end point is the evaluation of skin state, by a validate self-reported questionnaire survey to assess skin, after 4- weeks intake of this FSMP.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Changes on Visceral Adipose Tissue
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-glutamine, L-arginine and calcium beta-hydroxy-beta-methylbutyrate
+  - COMBINATION_PRODUCT: Placebo
+
+ELIGIBILITY:
+Age: 45 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04701463

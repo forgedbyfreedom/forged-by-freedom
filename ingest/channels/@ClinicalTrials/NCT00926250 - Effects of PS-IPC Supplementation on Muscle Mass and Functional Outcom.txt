@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00926250
+Title: Effects of PS-IPC Supplementation on Muscle Mass and Functional Outcomes in Older Adults
+Official Title: Effects of Pro-Stat Immuno-Protein Complex (PS-IPC) Supplementation on Muscle Mass and Function, Inflammatory Markers, and Immune Function in Older Adults
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia, the age-associated loss of skeletal muscle mass and strength, is a frequent precursor to functional impairment, disability, falls, and loss of independence in the elderly. The prevalence of sarcopenia is high, with ≥ 45% of the U.S. population aged 60 years or older sarcopenic. Some possible causative factors include a decline in muscle protein synthesis, inactivity, hormonal changes, pro-inflammatory conditions, and reactive oxygen species within the muscle mitochondria, which may all be exacerbated by inadequate nutritional intake. Since dietary protein is targeted to muscle and muscle mass represents the largest tissue in the body, protein nutrition plays a significant role in muscle metabolism.
+
+SPECIFIC AIMS The specific aim of this proposed study is to determine the effect of PS-IPC supplementation on muscle mass, muscle strength, muscle quality, and inflammatory / immune markers in healthy older adults. Subjects scoring 4 - 10 on the Short-Physical Performance Battery and aged 60-85 years will consume PS-IPC supplements or placebo three times daily for 12 weeks.
+
+HYPOTHESES
+
+1. Subjects consuming PS-IPC will have a greater increase in muscle mass and muscle strength compared to a control group consuming a placebo supplement.
+2. Subjects consuming PS-IPC will demonstrate a greater increase in the fractional rate of muscle protein synthesis compared with a placebo control group.
+3. Subjects receiving PS-IPC will have a reduction in plasma concentrations of various inflammatory markers of immune function, compared to subjects consuming the placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle protein synthesis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral PS-IPC supplement
+  - DIETARY_SUPPLEMENT: Placebo supplement
+
+ELIGIBILITY:
+Age: 60 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00926250

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02255201
+Title: Pre-Workout on Exercise Performance and Cognition
+Official Title: A Randomized, Double-Blind, Crossover Clinical Trial Comparing the Effects of Four Pre-Workout Beverages on Muscular Strength and Endurance and Cognitive Performance in Healthy Adult Males
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: caffeine exercise
+
+SUMMARY:
+The purpose of this study is to determine the effects of four different pre-workout beverages as compared to placebo on muscular strength and endurance, perceived energy and cognitive performance in healthy adult males.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Muscular Strength and Endurance compared to Placebo
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Master Performance Blend Dose 1
+  - DIETARY_SUPPLEMENT: Master Performance Blend Dose 2
+  - DIETARY_SUPPLEMENT: Performance Energy Blend
+  - DIETARY_SUPPLEMENT: Energy Blend
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02255201

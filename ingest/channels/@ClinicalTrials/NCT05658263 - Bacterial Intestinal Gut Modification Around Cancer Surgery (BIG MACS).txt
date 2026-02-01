@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05658263
+Title: Bacterial Intestinal Gut Modification Around Cancer Surgery (BIG MACS) Diet
+Official Title: Bacterial Intestinal Gut Modification Around Cancer Surgery (BIG MACS) Diet
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: fat loss muscle
+
+SUMMARY:
+The long-term study objective is to develop optimized nutritional therapies for surgery and test them in clinical practice. This pilot study will test a microbiome-optimization diet in colorectal cancer surgery patients. The study hypothesizes that the Bacterial Intestinal Gut Modification Around Cancer Surgery (BIG MACS) Diet will provide participants with increased microbiota accessible carbohydrates (MACs) to support the microbiome and improve outcomes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in muscle mass
+  - Frequency of accidental gas leakage
+  - Frequency of accidental mucus leakage
+  - Frequency of accidental liquid stool leakage
+  - Frequency of bowel movements
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Standard Diet
+  - DIETARY_SUPPLEMENT: BIG MACS Diet
+
+ELIGIBILITY:
+Age: 25 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05658263

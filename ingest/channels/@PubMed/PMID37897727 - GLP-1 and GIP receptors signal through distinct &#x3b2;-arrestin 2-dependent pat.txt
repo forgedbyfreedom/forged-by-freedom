@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37897727
+Title: GLP-1 and GIP receptors signal through distinct &#x3b2;-arrestin 2-dependent pathways to regulate pancreatic &#x3b2; cell function.
+Authors: Za&#xef;mia, Obeid, Varrault, Sabatier, Broca
+Journal: Cell reports
+Year: 2023
+Topic: GIP GLP-1 dual agonist
+
+ABSTRACT:
+Glucagon-like peptide 1 (GLP-1R) and glucose-dependent insulinotropic polypeptide (GIPR) receptors are G-protein-coupled receptors involved in glucose homeostasis. Diabetogenic conditions decrease &#x3b2;-arrestin 2 (ARRB2) levels in human islets. In mouse &#x3b2; cells, ARRB2 dampens insulin secretion by partially uncoupling cyclic AMP (cAMP)/protein kinase A (PKA) signaling at physiological doses of GLP-1, whereas at pharmacological doses, the activation of extracellular signal-related kinase (ERK)/cAMP-responsive element-binding protein (CREB) requires ARRB2. In contrast, GIP-potentiated insulin secretion needs ARRB2 in mouse and human islets. The GIPR-ARRB2 axis is not involved in cAMP/PKA or ERK signaling but does mediate GIP-induced F-actin depolymerization. Finally, the dual GLP-1/GIP agonist tirzepatide does not require ARRB2 for the potentiation of insulin secretion. Thus, ARRB2 plays distinct roles in regulating GLP-1R and GIPR signaling, and we highlight (1) its role in the physiological context and the possible functional consequences of its decreased expression in pathological situations such as diabetes and (2) the importance of assessing the signaling pathways engaged by the agonists (biased/dual) for therapeutic purposes.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37897727/

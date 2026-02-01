@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05661994
+Title: Omega-3 Supplementation on Serum Fetuin-A Levels
+Official Title: Effects of Omega-3 Fatty Acid Supplementation on Serum Fetuin-A Levels in Patients With Coronary Artery Disease
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: omega 3 exercise
+
+SUMMARY:
+Background and aims: One of the investigated possible modulators of serum fetuin-A, associated with the risk of developing coronary artery disease (CAD), is omega-3 fatty acids (FAs). This study aims to evaluate the effects of omega-3 FA supplementation on serum fetuin-A concentration in patients with CAD.
+
+Methods: The study was carried out on 34 male volunteer patients aged 35-75 years, newly diagnosed with CAD by conventional coronary angiography. Patients with CAD were divided into the "Omega-3 Group (n:16)" and "Control Group (n:18)". Low-fat diet principles were explained to both groups at baseline. While 1.560 mg/day omega-3 FA supplementation was given to the patients in the omega-3 group for eight weeks, but not in the control group. Food intake was recorded using six-day food records.
+
+DETAILED DESCRIPTION:
+The study was carried out on 34 male volunteer patients aged 35-75 years, newly diagnosed with coronary artery disease (CAD) by conventional coronary angiography. The study did not include the individuals who have dieted in the last six months, been taking an omega-3 FA and/or vitamin/mineral supplements or statin group drugs, been BMI \<18.5 and ≥40 kg/m2, been fasting blood glucose ≥ 126 mg/dL, had a systemic disease such as Type 1 and Type 2 diabetes, kidney diseases, liver diseases, cancer and neurological diseases, active athletes, regular exercisers. Gazi University Faculty of Medicine Clinical Research Ethics Committee approved the study on 26 November 2020 with approval number 810. In addition, the necessary approval was obtained from the Turkish Medicines and Medical Devices Agency with the decision numbered 66175679-514.11.01-E.290378. All participants gave signed informed consent and the study was conducted in accordance with Helsinki Declaration.
+
+Patients with CAD were divided into the "Omega-3 Group (n:16)" and "Control Group (n:18)" to evaluate the effects of omega-3 FA supplementation on biochemical parameters, especially serum fetuin-A, anthropometric measurements, and nutritional status. 1.560 mg/day omega-3 FA supplementation was applied for 8 weeks to 16 participants with CAD included in the omega-3 group, and the principles of a low-fat diet were explained. The principles of the low-fat diet without omega-3 FA supplementation were explained to 18 participants with CAD in the control group. The data of the participants were collected at the beginning, every 15 days and at the end of the 8th week.
+
+PRIMARY OUTCOMES:
+  - Analysis of serum total cholesterol (mg/dL), low-density lipoprotein cholesterol (LDL-C) (mg/dL), high-density lipoprotein cholesterol (HDL-C) (mg/dL), triglyceride (mg/dL), fasting blood glucose (mg/dL), calcium (mg/dL) and phosphorus (mg/dL)
+  - Analysis of serum adiponectin (µg/mL)
+  - Analysis of serum C-reactive protein (CRP) (mg/L)
+  - Analysis of serum fasting insulin (µIU/mL)
+  - Analysis of serum high-sensitivity troponin T (hs) -TnT) (ng/mL)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 fatty acid supplementation
+
+ELIGIBILITY:
+Age: 35 Years to 75 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05661994

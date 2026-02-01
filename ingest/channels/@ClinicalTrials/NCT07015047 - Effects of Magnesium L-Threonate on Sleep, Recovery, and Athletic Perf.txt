@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07015047
+Title: Effects of Magnesium L-Threonate on Sleep, Recovery, and Athletic Performance in Collegiate Athletes
+Official Title: Effects of Magnesium L-Threonate on Sleep, Recovery, and Athletic Performance in UCLA Athletes: A Randomized, Placebo-Controlled Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: sleep athletes
+
+SUMMARY:
+This study is testing whether a special form of magnesium called magnesium L-threonate can help improve sleep quality, recovery, and physical performance in college athletes. Magnesium is important for muscle recovery and sleep, but many forms of it do not enter the brain well. Magnesium L-threonate is unique in that it can cross the blood-brain barrier and may improve deep and REM sleep, heart rate variability, and brain recovery.
+
+In this study, healthy UCLA varsity athletes aged 18 to 35 will be randomly assigned to take either magnesium L-threonate or a placebo each evening for 4 weeks. They will wear a WHOOP strap to track sleep, recovery, and heart rate data. Performance tests including jump height, grip strength, and reaction time will be completed before and after the 4-week period.
+
+This study will help researchers determine if this supplement can support recovery and training in athletes and whether wearable technology can help monitor these changes in real time.
+
+DETAILED DESCRIPTION:
+This is a randomized, placebo-controlled trial examining the effects of magnesium L-threonate (MgT) supplementation on sleep architecture, autonomic recovery, and physical performance in collegiate athletes. Magnesium is a critical mineral for neuromuscular and autonomic function, but common forms have limited central nervous system penetration. MgT crosses the blood-brain barrier and has been shown in non-athletic populations to improve sleep depth, REM sleep, and cognitive function. No prior studies have evaluated its effects in athletes.
+
+Approximately 100 UCLA varsity athletes aged 18-35 will be randomized in a 1:1 ratio to receive 1 gram of MgT or placebo nightly for 4 weeks. Participants will wear a WHOOP strap to continuously monitor deep sleep, REM sleep, heart rate variability, resting heart rate, and recovery score. Daily surveys will track subjective sleep quality, recovery, and for female athletes, menstrual phase and symptoms. Performance outcomes including countermovement jump height, handgrip strength, and light-based reaction time will be measured before and after the intervention.
+
+Primary outcomes include objective changes in sleep stages and HRV. Secondary outcomes include changes in physical performance and subjective recovery. This study will provide insight into whether brain-targeted magnesium supplementation can enhance recovery and performance in an athletic population.
+
+PRIMARY OUTCOMES:
+  - Change in Deep Sleep Duration (minutes) from Baseline to Week 4
+  - Change in Heart Rate Variability (HRV) from Baseline to Week 4
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Magnesium L-Threonate
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07015047

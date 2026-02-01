@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07122778
+Title: Impact of Diet-induced Change in Energy Balance on Metabolism in Endurance Athletes
+Official Title: Impact of Diet-induced Change in Energy Balance on Metabolism in Endurance Athletes: the Carpe DIEM Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: sleep athletes
+
+SUMMARY:
+Recent research has suggested that increasing levels of physical activity are associated with a reduction in the independent components that contribute to total energy expenditure (such as resting metabolic rate and non-exercise movement) - this occurs to conserve energy required for physical activity where energy provision becomes scarce. There are potential deleterious health and performance consequences of a reduced energy supply to fundamental metabolic processes, putting individuals regularly undertaking high levels of physical activity, such as endurance athletes, at risk. However, this association is largely based on observational data in only moderately active populations, and it is currently unclear what role energy balance status and biological sex has on this relationship.
+
+This research intends to address these unknowns by assessing the impact of diet-induced manipulation of energy balance (conditions of energy deficit and energy surplus) in individuals undertaking habitually high levels of physical activity on independent components of total energy expenditure (resting metabolism, exercise and non-exercise movement).
+
+Male and female athletes conducting regular moderate-to-high training volumes will undertake a randomised crossover study with a 7-day state of energy deficit and a 7-day state of energy surplus. Participants will continue to live and train as normal, but their diet will be controlled by specific food provision over the intervention periods in order to facilitate both conditions. Independent components of energy expenditure, markers of health, metabolism and performance will be measured to allow for comparison of conditions.
+
+DETAILED DESCRIPTION:
+People with very active lifestyles such as athletes, dancers, and military personnel, need to eat a lot of food to make up for the large amount of energy they burn. If they don't match their food intake to their energy needs, they may enter a state of 'energy deficit'. This means their bodies are burning more calories than they're taking in, which can lower performance, increase the risk of injuries and illnesses, and potentially harm overall health.
+
+Traditional scientific understanding assumes that more doing physically activity leads to burning more calories (the 'additive' model). However, newer studies suggest that the body might have built-in safeguards to limit how many total calories it burns, no matter how much a person exercises. This idea (the 'constrained' model) proposes that when people exercise more, their bodies might compensate by slowing down other metabolic processes to keep overall energy use within a certain range. Although this mechanism could help the body conserve energy, it may also mean that essential functions (like immune system support and reproductive function) can become impaired.
+
+Most research on energy deficit so far has focused on people with normal or moderate levels of physical activity. Because extremely active people experience far higher daily energy demands, the 'constrained' mechanisms could manifest differently or to a greater degree and the negative health and performance consequences might be more severe. There is also limited knowledge about how quickly these changes in energy use begin and how they affect important processes at the cellular level, such as muscle mitochondrial function or immune cell health.
+
+This study aims to fill these gaps by measuring total energy use (and its separate parts) in highly active individuals under two conditions: when participants eat enough to cover their energy demands and when participants are purposely in an energy deficit (intentionally eating less than they need). One of our main goals is to measure changes in resting metabolic rate (RMR), which is the energy the body uses at rest to keep vital functions going. Investigators will also examine cellular changes by looking at indicators like immune cell function to see how these might help us detect early signs of harmful energy shortages.
+
+By understanding whether, and to what extent, the body's energy use is 'constrained', investigators can develop better guidelines to help very active individuals avoid unhealthy energy deficits. Ultimately, this research could improve both performance and long-term health for athletes, military personnel, dancers, and anyone else who regularly exercises at high levels.
+
+PRIMARY OUTCOMES:
+  - Resting metabolic rate (RMR) in kcal/day
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Controlled energy-deficit diet
+  - DIETARY_SUPPLEMENT: Habitual diet with surplus snacks
+
+ELIGIBILITY:
+Age: 18 Years to 49 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07122778

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02418039
+Title: High Protein Diet Versus Normal Protein Diet in Treating Patients With Minimal Hepatic Encephalopathy
+Official Title: Effect of a High Protein Diet Versus Normal Protein Diet in Treating Patients With Minimal Hepatic Encephalopathy. Double-blind Clinical Trial
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: protein supplementation
+
+SUMMARY:
+A total of 80 patients diagnosed with liver cirrhosis and minimal hepatic encephalopathy will be recruited. They will be randomized to receive high protein diet ( n = 40) and a normal protein diet ( n = 40 ) during one month. Randomization will be conducted by an external monitor and will keep the secret codes until the end of the study. All patients will be provided with structured menus and two snacks a day as an amaranth protein supplement. The supplement will content the same amount of fiber but the protein content will vary depending on the group to which the patient is assigned.
+
+DETAILED DESCRIPTION:
+The protein in the diet is a major source of ammonia in blood, which is considered one of the factors involved in the pathogenesis of hepatic encephalopathy. However ; it is also known than the restriction on the consumption of protein predisposes to depletion of muscle mass, and increase the risk to develop overt hepatic encephalopathy, due to the muscle role in the detoxification of ammonia in presence of liver failure. Currently, the type and amount of protein in the diet to treat minimal hepatic encephalopathy (MHE) is unknown. In this study, the investigators will administrated two types of protein content in patients with MHE: a high protein diet (1.5 g/kg/day) vs a normal protein diet (0.8 g/kg/day) during 1 month.
+
+PRIMARY OUTCOMES:
+  - Reversal of minimal hepatic encephalopathy intervention)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: High protein diet
+  - DIETARY_SUPPLEMENT: Normal protein
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02418039

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36228974
+Title: Characterization of dietary and herbal sourced natural compounds that modulate SEL1L-HRD1 ERAD activity and alleviate protein misfolding in the ER.
+Authors: Yang, Zhi, Wen, Pan, Wang
+Journal: The Journal of nutritional biochemistry
+Year: 2022
+Topic: peptide hormones performance
+
+ABSTRACT:
+Dysregulated production of peptide hormones is the key pathogenic factor of various endocrine diseases. Endoplasmic reticulum (ER) associated degradation (ERAD) is a critical machinery in maintaining ER proteostasis in mammalian cells by degrading misfolded proteins. Dysfunction of ERAD leads to maturation defect of many peptide hormones, such as provasopressin (proAVP), which results in the occurrence of Central Diabetes Insipidus. However, drugs targeting ERAD to regulate the production of peptide hormones are very limited. Herbal products provide not only nutritional sources, but also alternative therapeutics for chronic diseases. Virtual screening provides an effective and high-throughput strategy for identifying protein structure-based interacting compounds extracted from a variety of dietary or herbal sources, which could be served as (pro)drugs for preventing or treating endocrine diseases. Here, we performed a virtual screening by directly targeting SEL1L of the most conserved SEL1L-HRD1 ERAD machinery. Further, we analyzed 58 top-ranked compounds and demonstrated that Cryptochlorogenic acid (CCA) showed strong affinity with the binding pocket of SEL1L with HRD1. Through structure-based docking, protein expression assays, and FACS analysis, we revealed that CCA enhanced ERAD activity and promoted the degradation of misfolded proAVP, thus facilitated the secretion of well-folded proAVP. These results provide us with insights into drug discovery strategies targeting ER protein homeostasis, as well as candidate compounds for treating hormone-related diseases.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36228974/

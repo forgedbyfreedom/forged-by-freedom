@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39203884
+Title: The Effect of Plant-Based Protein Ingestion on Athletic Ability in Healthy People-A Bayesian Meta-Analysis with Systematic Review of Randomized Controlled Trials.
+Authors: Zhao, Xu, Li, Ning
+Journal: Nutrients
+Year: 2024
+Topic: athletic performance enhancement
+
+ABSTRACT:
+Plant-based protein supplements are increasingly popular, yet their efficacy in enhancing athletic performance compared to animal protein, insect protein, or other protein types remains under investigation. This study aimed to assess the effectiveness of plant-based protein on athletic abilities such as muscle strength, endurance performance, and muscle protein synthesis (MPS) rate and compare it to no- or low-protein ingestion and non-plant protein sources. Randomized controlled trials (RCTs) evaluating the beneficial and harmful effects of plant-based protein ingestion on athletic ability in healthy individuals were considered. A systematic search of six databases yielded 2152 studies, which were screened using the Covidence systematic review tool. Thirty-one studies were included for meta-analysis after independent selection, data extraction, and risk of bias assessment by two reviewers. The meta-analysis employed a Bayesian approach using the Markov chain Monte Carlo (MCMC) method through a random-effects model. The results demonstrated that plant-based protein supplements provided greater benefits for athletic performance in healthy individuals compared to the no- or low-protein ingestion group [&#x3bc;(SMD): 0.281, 95% CI: 0.159 to 0.412; heterogeneity &#x3c4;: 0.18, 95% CI: 0.017 to 0.362]. However, when compared to other types of protein, plant-based protein ingestion was less effective in enhancing athletic ability [&#x3bc;(SMD): -0.119, 95% CI: -0.209 to -0.028; heterogeneity &#x3c4;: 0.076, 95% CI: 0.003 to 0.192]. A subgroup analysis indicated significant improvements in muscle strength and endurance performance in both young and older individuals consuming plant-based protein compared to those with no- or low-protein ingestion. Nonetheless, other protein types showed greater benefits in muscle strength compared to plant-based protein [&#x3bc;(SMD): -0.133, 95% CI: -0.235 to -0.034; heterogeneity &#x3c4;: 0.086, 95% CI: 0.004 to 0.214]. In conclusion, while plant-based protein ingestion demonstrates superior efficacy compared to low- or no-protein ingestion, it is not as effective as other protein types such as whey, beef, or milk protein in enhancing athletic performance in healthy individuals. Registration: Registered at the International Prospective Register of Systematic Reviews (PROSPERO) (identification code CRD42024555804).
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39203884/

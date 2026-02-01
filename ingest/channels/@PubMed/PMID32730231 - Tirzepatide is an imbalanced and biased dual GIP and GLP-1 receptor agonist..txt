@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32730231
+Title: Tirzepatide is an imbalanced and biased dual GIP and GLP-1 receptor agonist.
+Authors: Willard, Douros, Gabe, Showalter, Wainscott
+Journal: JCI insight
+Year: 2021
+Topic: tirzepatide obesity
+
+ABSTRACT:
+Tirzepatide (LY3298176) is a dual GIP and GLP-1 receptor agonist under development for the treatment of type 2 diabetes mellitus (T2DM), obesity, and nonalcoholic steatohepatitis. Early phase trials in T2DM indicate that tirzepatide improves clinical outcomes beyond those achieved by a selective GLP-1 receptor agonist. Therefore, we hypothesized that the integrated potency and signaling properties of tirzepatide provide a unique pharmacological profile tailored for improving broad metabolic control. Here, we establish methodology for calculating occupancy of each receptor for clinically efficacious doses of the drug. This analysis reveals a greater degree of engagement of tirzepatide for the GIP receptor than the GLP-1 receptor, corroborating an imbalanced mechanism of action. Pharmacologically, signaling studies demonstrate that tirzepatide mimics the actions of native GIP at the GIP receptor but shows bias at the GLP-1 receptor to favor cAMP generation over &#x3b2;-arrestin recruitment, coincident with a weaker ability to drive GLP-1 receptor internalization compared with GLP-1. Experiments in primary islets reveal &#x3b2;-arrestin1 limits the insulin response to GLP-1, but not GIP or tirzepatide, suggesting that the biased agonism of tirzepatide enhances insulin secretion. Imbalance toward GIP receptor, combined with distinct signaling properties at the GLP-1 receptor, together may account for the promising efficacy of this investigational agent.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32730231/

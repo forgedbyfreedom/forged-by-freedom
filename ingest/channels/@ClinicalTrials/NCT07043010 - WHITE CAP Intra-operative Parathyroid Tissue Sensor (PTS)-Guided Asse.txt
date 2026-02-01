@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07043010
+Title: WHITE CAP: Intra-operative Parathyroid Tissue Sensor (PTS)-Guided Assessment of Parathyroid Viability and Surgical Decision-Making
+Official Title: WHITE CAP Trial: Optical Parathyroid Tissue Sensor-Guided Assessment of Parathyroid Viability and Its Impact on Clinical Decision-Making
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: vitamin D muscle
+
+SUMMARY:
+Primary hyperparathyroidism is usually cured by removing the single over-active parathyroid adenoma. During surgery, however, surgeons often see a thin rim of normal parathyroid tissue that still "glows" under a near-infrared parathyroid tissue sensor (PTS). It is unclear whether keeping this tissue in place helps preserve hormone function or whether it leaves behind cells that could become over-active again.
+
+The WHITE CAP study will compare two common surgical choices:
+
+Preservation strategy - the surgeon removes only the adenoma and leaves the glowing rim of normal tissue untouched.
+
+En-bloc strategy - the surgeon removes the adenoma together with the glowing rim; if too little parathyroid tissue remains, a small fragment is transplanted into the forearm muscle.
+
+About 120 adult patients who have a single parathyroid adenoma will be randomly assigned (like tossing a coin) to one of the two strategies. All operations will use the same FDA-cleared PTS camera that shows the glands in real time without dye or radiation.
+
+The main question is whether preserving the normal rim lowers the rate of temporary low blood-calcium (numbness, tingling) during the first two days after surgery. The study will also check long-term results-blood calcium and parathyroid hormone (PTH) levels, symptoms, and any return of the disease-over two years.
+
+The PTS imaging itself is painless and adds only a few minutes to the operation. Risks are the same as for standard parathyroid surgery, and participants can withdraw at any time without affecting their usual care.
+
+DETAILED DESCRIPTION:
+Background and Rationale Near-infrared autofluorescence (NIRAF) highlights parathyroid tissue at a wavelength of 820 nm. Several devices, including Fluobeam LX and PTeye®, have FDA 510(k) clearance for intra-operative identification of parathyroid glands. In \~70 % of single-gland disease, NIRAF shows a viable rim of normal tissue partially encasing the adenoma. Retrospective data conflict on whether rim preservation reduces transient hypocalcaemia or increases recurrence. No prospective randomized evidence exists.
+
+Objectives Primary: Compare the incidence of transient hypocalcaemia (albumin-corrected Ca \< 2.00 mmol·L-¹ or need for calcium/vit-D supplementation) within 48 h post-operative between preservation and en-bloc strategies.
+
+Secondary: (i) Permanent hypocalcaemia at 6 months; (ii) PTH ≥ 15 pg·mL-¹ at 24 h; (iii) operative time and blood loss; (iv) biochemical or clinical recurrence up to 24 months; (v) correlation of quantitative NIRAF intensity with gland viability.
+
+Study Design Multicentre, parallel-group, 1:1 randomized controlled trial (RCT). Block randomisation (size 4) stratified by centre and baseline vitamin-D status. Total sample 120 participants (60 per arm, includes 10 % attrition). Single-blind: outcome assessors and laboratory staff remain unaware of allocation.
+
+Interventions Preservation arm: After adenoma excision, surgeon confirms NIRAF-positive rim and leaves it in situ; only minimal defatting to ensure vascularity.
+
+En-bloc arm: Adenoma plus NIRAF-positive rim excised en bloc. If fewer than two normal glands remain in the neck, a 30 mg fragment is minced and autotransplanted into the non-dominant brachioradialis.
+
+Eligibility Inclusion: age 18-75 y; biochemically confirmed primary hyperparathyroidism; imaging (MIBI or 4D-CT) concordant with a solitary adenoma; written informed consent.
+
+Exclusion: multiple endocrine neoplasia, \>1 enlarged gland on imaging, eGFR \< 30, pregnancy, neck re-exploration, planned concomitant total thyroidectomy.
+
+Outcome Assessments Serum Ca, phosphate, Mg, PTH measured pre-op; 6 h, 24 h, 48 h; Day 7; Months 1, 6, 12, 24. Laryngoscopy if voice change occurs. Recurrence defined as Ca above upper limit plus PTH \> 65 pg·mL-¹ after Month 12. NIRAF intensity recorded (arbitrary units) using standard ROI software.
+
+Statistical Plan Transient hypocalcaemia expected 30 % in en-bloc vs 10 % in preservation. With α = 0.05, 1-β = 0.80, needs 54 per arm; rounded to 60. Intent-to-treat analysis. Risk ratios with 95 % CI; secondary continuous outcomes by mixed-effects ANCOVA. Interim safety review at 50 % recruitment (O'Brien-Fleming boundary).
+
+Regulatory and Ethics PTS devices are FDA-cleared; study classified as non-significant-risk device research exempt from IDE (21 CFR 812.2(b)). All centres have IRB approval. Data stored in REDCap, anonymised, GDPR-compliant. A three-member DSMB (endocrine surgeon, endocrinologist, biostatistician) will monitor AEs; trial pause if permanent hypocalcaemia excee
+
+PRIMARY OUTCOMES:
+  - Incidence of Transient Hypocalcaemia
+
+INTERVENTIONS:
+  - DEVICE: Near-Infrared Parathyroid Tissue Sensor Imaging (PTS)
+  - PROCEDURE: Rim-Preservation Technique
+  - PROCEDURE: En-bloc Resection Technique
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07043010

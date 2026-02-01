@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05199493
+Title: Reducing Acute Kidney Injury Occurence by Administering Angiotensin II
+Official Title: Biomarker-guided Implementation of Angiotensin-II (AT-II) to Reduce the Occurrence of Kidney Damage After Cardiac Surgery
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: growth hormone treatment
+
+SUMMARY:
+The aim of this study is to evaluate whether adding angiotensin II to the standard of care is superior compared to the standard of care alone with respect to kidney damage (personalized approach) after cardiac surgery.
+
+DETAILED DESCRIPTION:
+Vasoplegic syndrome is a form of distributive shock that is characterized by low arterial pressure with reduced systemic vascular resistance and normal or elevated cardiac output that occurs in 5 to 25% of patients undergoing cardiac surgery. Patients with vasoplegic shock after cardiac surgery are at higher risk of organ failure, including acute kidney injury (AKI). Postsurgical AKI is associated with several adverse outcomes. Attempts to prevent AKI have largely been futile so far. Prior studies often started with the interventions after an AKI event, when a decline of kidney function (i.e. glomerular filtration rate) was already established. Application of norepinephrine is currently considered as the first-line therapy for vasoplegic shock, but all catecholamines have adverse effects, including myocardial ischemia and arrhythmias. In a recent observational trial, we demonstrated that there is a dysregulation in the renin-angiotensin-aldosterone system (RAAS) likely caused by a reduced angiotensin-converting enzyme (ACE) activity after cardiac surgery. Elevated renin levels identified patients at risk for AKI and were associated with cardiovascular instability and increased AKI rate after cardiac surgery. Furthermore, elevated renin levels could be used to identify high-risk patients for cardiovascular instability and AKI who would benefit from timely intervention with angiotensin II that could improve their outcomes. Therefore, the application of angiotensin II to treat a postoperative hypotension would mean a hormone substitution.Shock after cardiac surgery is associated with increased mortality. Cardiopulmonary bypass (CPB) represents a common clinical setting of sympathetic nervous system activation and cardiovascular instability. Vasoplegia is a form of distributive shock that is characterized by low arterial pressure with reduced systemic vascular resistance and normal or elevated cardiac output. It occurs in 5 to 25% of patients undergoing cardiac surgery. Patients with vasoplegia after cardiac surgery are at higher risk of organ failure, including AKI, and have an increased mortality rate and longer hospital length of stay.
+
+Clinical trials focusing on septic patients suggest that AT-II is a potent vasopressor. However, no human data exist whether the application of AT-II in cardiac surgery patients with y hyperreninemia high-risk patients identified by renin levels (individualized approach) reduces kidney damage and improves kidney function after cardiac surgery.
+
+PRIMARY OUTCOMES:
+  - • kidney damage after cardiac surgery identified by the difference between [TIMP-2]*[IGFBP7] levels 12h after randomization and [TIMP-2]*[IGFBP7] levels at randomization
+
+INTERVENTIONS:
+  - DRUG: Angiotensin II
+  - DRUG: Control
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05199493

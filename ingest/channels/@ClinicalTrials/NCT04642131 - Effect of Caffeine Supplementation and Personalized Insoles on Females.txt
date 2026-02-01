@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04642131
+Title: Effect of Caffeine Supplementation and Personalized Insoles on Females
+Official Title: The Effect of Fatigue, Caffeine Supplementation and Personalized Insoles on Biomechanics and Athletic Performance in Female Adult Soccer Players.
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: sleep athletes
+
+SUMMARY:
+Several studies have shown the positive effect that caffeine has on athletic performance related variables. Nonetheless, most studies have been developed in males and have not studied the possible effects on biomechanics and related injuries. Moreover, the inclusion of personalized insoles could also affect biomechanical patterns and thus injury incidence that has shown to be higher when athletes are fatigued. Therefore, the aim of the present randomized controlled trial is to evaluate the effect of fatigue, caffeine supplementation and personalized insoles on biomechanics and athletic performance in female adult soccer players.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Agility after fatigue and caffeine supplementation
+  - Jump height after fatigue and caffeine supplementation
+  - Repeated sprint ability after fatigue and caffeine supplementation
+  - Agility after fatigue and personalized insoles
+  - Jump height after fatigue and personalized insoles
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine supplementation
+  - DEVICE: Personalized insoles
+  - OTHER: Control condition
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04642131

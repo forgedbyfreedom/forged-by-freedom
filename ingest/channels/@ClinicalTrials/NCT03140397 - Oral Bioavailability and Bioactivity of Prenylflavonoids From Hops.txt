@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03140397
+Title: Oral Bioavailability and Bioactivity of Prenylflavonoids From Hops
+Official Title: Examination of the Bioavailability and Bioactivity of the Two Natural Food Ingredients 6-Prenylnaringenin and 8-Prenylnaringenin.
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: beta alanine
+
+SUMMARY:
+The prenylflavonoids 6-prenylnaringenin (6-PN) and 8-prenylnaringenin (8-PN) are secondary plant substances, almost exclusively found in hops (Humulus lupulus). Both compounds have known potential biological properties, but poor bioavailability due to their low oral absorption and retention. Our study followed a single dose (500 mg 6- or 8-PN), placebo controlled, randomized, double-blind, three armed crossover study design with ≥2-week washout periods. Plasma, PBMC and urine samples were collected at intervals up to 24 h after intake. Investigators investigated the safety, pharmacokinetics and impact of oral prenylflavonoids on the function of cells of the immune system.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total 6-prenylnaringenin [nmol/L*h]
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total 8-prenylnaringenin [nmol/L*h]
+  - Mean maximum plasma concentration (Cmax) of total 6-prenylnaringenin [nmol/L]
+  - Mean maximum plasma concentration (Cmax) of total 8-prenylnaringenin [nmol/L]
+  - Time to reach maximum plasma concentration (Tmax) of total 6-prenylnaringenin [h]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: 6-prenylnaringenin
+  - DIETARY_SUPPLEMENT: 8-prenylnaringenin
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03140397

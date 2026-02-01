@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03287882
+Title: Effect of Micronutrients and Life Skills Education on the Health and Nutrition of Adolescent and Young Women in Pakistan
+Official Title: Prospective, Cluster Randomized Effectiveness Trial of Multiple Micronutrient Supplementation and Life Skills Education Provided From Preconception on Health and Nutrition Outcomes of Young, Reproductive-age Pakistani Women (15-24 Years)
+Status: UNKNOWN
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 25447
+Topic: protein supplementation
+
+SUMMARY:
+The primary aims of this study are: 1) To evaluate the impact of supplementation with multiple micronutrients (MMN) from preconception and life skills education among women 15-18.9 years of age at enrolment on the prevalence of anemia in a population setting; and 2) To evaluate the impact of supplementation with MMN from preconception and life skills education among young women 15-24 years of age on the rate of low birth weight (LBW) in a population setting. Infants born to mothers enrolled in the study will be followed for 1 year. This study aims to enrol 25,400 non-pregnant young women in Matiari district. This sample size is anticipated to equate to 1456 births. Participants will be randomized by cluster to receive either MMN supplements and life skills education or the standard of care at enrolment. Clusters have been defined based on health facility catchment areas. MMN supplements will be provided twice weekly during the preconception period, once daily during the pregnancy period, and once daily until 6 months after giving birth during the postpartum period; and a package of life skills education materials will be provided bi-monthly during the preconception period. In addition to the primary outcomes, measurements will include micronutrient status, anthropometrics, birth outcomes, dietary intake and feeding practices, adherence, and indices of empowerment.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Anemia status
+  - Low birth weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Multiple micronutrients (UNIMMAP composition)
+  - BEHAVIORAL: Life skills based education
+
+ELIGIBILITY:
+Age: 15 Years to 24 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03287882

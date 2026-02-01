@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38524820
+Title: Artificial intelligence in sport: Exploring the potential of using ChatGPT in resistance training prescription.
+Authors: Washif, Pagaduan, James, Dergaa, Beaven
+Journal: Biology of sport
+Year: 2024
+Topic: training frequency hypertrophy
+
+ABSTRACT:
+OpenAI's Chat Generative Pre-trained Transformer (ChatGPT) technology enables conversational interactions with applications across various fields, including sport. Here, ChatGPT's proficiency in designing a 12-week resistance training programme, following specific prompts, was investigated. GPT3.5 and GPT4.0 versions were requested to design 12-week resistance training programmes for male and female hypothetical subjects (20-years-old, no injury, and 'intermediate' resistance training experience). Subsequently, GPT4.0 was requested to design an 'advanced' training programme for the same profiles. The proposed training programmes were compared with established guidelines and literature (e.g., National Strength and Conditioning Association textbook), and discussed. ChatGPT suggested 12-week training programmes comprising three, 4-week phases, each with different objectives (e.g., hypertrophy/strength). GPT3.5 proposed a weekly frequency of ~3 sessions, load intensity of 70-85% of one repetition-maximum, repetition range of 4-8 (2-4 sets), and tempo of 2/0/2 (eccentric/pause/concentric/'pause'). GPT4.0 proposed intermediate- and advanced programme, with a frequency of 5 or 4 sessions, 60-90% or 70-95% intensity, 3-5 sets or 3-6 sets, 5-12 or 3-12 repetitions, respectively. GPT3.5 proposed rest intervals of 90-120 s, and exercise tempo of 2/0/2. GPT4.0 proposed 60-180 (intermediate) or 60-300 s (advanced), with exercise tempo of 2/1/2 for intermediates, and 3/0/1/0, 2/0/1/0, and 1/0/1/0 for advanced programmes. All derived programmes were objectively similar regardless of sex. ChatGPT generated training programmes which likely require additional fine-tuning before application. GPT4.0 synthesised more information than GPT3.5 in response to the prompt, and demonstrated recognition awareness of training experience (intermediate vs advanced). ChatGPT may serve as a complementary tool for writing 'draft' programme, but likely requires human expertise to maximise training programme effectiveness.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38524820/

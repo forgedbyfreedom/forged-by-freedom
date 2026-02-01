@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04985877
+Title: Effect of Fermented Milk Containing Lactobacillus Casei Strain Shirota in Sarcopenia Elderly
+Official Title: The Effect of Fermented Milk Containing Lactobacillus Casei Strain Shirota on Sarcopenia in Elderly Taiwanese: Interactions With the Nutrients Utilization, Diversity of Gut Microbiota, Microbiota-derived Metabolites and Muscle Loss
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia, which refers to the progressive loss of skeletal muscle mass and strength, shares many characteristics with other disease states typically associated with risks of falling and fracture, including osteoporosis, frailty, and obesity. Sarcopenia often is linked to an increase in connective tissue, muscle steatosis, impaired muscle metabolism, an increase in inflammatory markers (e.g., TNF-a and IL-6), an increased stiffness of myofibers, slower kinetics in establishing myosin-actin crossing bridges, increased oxidative stress, mitochondria dysfunction, hormonal imbalance, and decreased capillary flow. In addition to the Lactobacillus casei strain, Shirota is a well-known probiotic strain that has been approved and is generally recognized as safe by the United States Food and Drug Administration. L. casei strain Shirota (LCS) has been suggested to confer health benefits. Investigators found that LCS decelerated age-related muscle loss via ensuring mitochondrial function in Senescence-Accelerated Mouse Prone 8 (SAMP8) mice. Investigators also found that 3-Indolepropionic Acid (IPA) is a microbiota-derived metabolite from a healthy intestinal gut. IPA is also a protective factor for the progression of chronic kidney disease in the Chinese population. This clinical trial focuses on the effect of fermented milk containing LCS on sarcopenia in elderly Taiwanese individuals. Investigators focus on the topic of the interaction of LCS with the diversity of the gut microbiota, microbiota-derived metabolites, and protein utilization. The proposal will have four research goals. First, investigators try to investigate whether long term supplementation LCS could restructure the gut microbiota composition and gut microbial metabolites to against Aging related -Gut Dysbiosis in elderly. Second, investigators also try to link the LCS play an important role on muscle loss and alternation of gut microbiota composition. Third, investigators try to study the LCS effect of muscle deterioration with aging, and highlight the two underpinning mechanisms (ROS and protein utilization) regulating declines in muscle mass and function. Fourth, Since IPA is important Microbiota-derived metabolites in health gut, investigators try to investigate whether LCS could play an important role on modulation of IPA production in GI. Fifth, investigators hope that investigators can through gut microbiota composition found some selective microbiota clusters perform positively correlation with IPA.
+
+DETAILED DESCRIPTION:
+1\. Subject Enrollment The definition of sarcopenia is based on the algorithm of Asian Working Group for Sarcopenia (AWGS).
+
+1. Muscle mass: measured by using Inbody S10 and standardized by height, shown by skeletal muscle index \[SMI=appendicular muscle mass (kg)/height (m2)\]. Low muscle mass was defined as:
+
+   * Men: SMI \<7.0 kg/m2
+   * Women: SMI \<5.4 kg/m2
+2. Handgrip strength: measured by electronic hand grip dynamometer. Low handgrip strength was defined as:
+
+   * Men: \<28 kg
+   * Women: \<18 kg
+3. Limb strength: measured by Time for 5 times for chair stand method. Low limb strength was defined as:
+
+   * Time for 5 times for chair stand: ≧12s Sarcopenia was defined by (1) and one of (2), or (3)
+
+     2\. Study intervention Test beverages included Fermentation Milk fermented with L. casei strain Shirota YIT9029 (LCS) provided by the Yakult Company (Taipei, Taiwan). The beverages were distributed and stored at temperatures ranging from 0-10°C. The Fermentation Milk contained LCS at more than 3x10\^8 CFU per 100 ml bottle.
+
+The participants would take 2 bottles per day (104 Kcal/day). Study intervention should be taken twice daily at approximately the same time. All milks would be sent to participant weekly (14 bottles/week).
+
+3\. Study assessment 3-1 Anthropometric measurement and Body Composition Assessment Anthropometric measurement data was detected height, weight, waist circumference, arm muscle circumference, hip circumference, and calf circumference using measure tape and weight scale.
+
+Body composition was detected using bioelectrical impedance analysis (BIA) as a non-invasive test instrument.
+
+3-2 BIA Subjects stand on met without shoes and socks. Arms do not touch the trunk part of body, and are spread naturally to a 15 degree angle away from trunk. The hand electrodes are marked THUMB for the thumb and MIDDLE for the middle finger. The foot electrodes should be positioned between examinee's anklebone and heel. Electric current was supplied from the electrodes on the tips of the heels of both feet and the fingertips of both hands.
+
+3-3 Muscle strength Grip strength measured in standard conditions with a well-studied model of a handheld dynamometer with reference populations can be a reliable surrogate for more complicated measures of muscle strength in the lower arms or legs. The measurement uses electronic hand grip dynamometer. Low handgrip strength is defined in Men: \<28 kg ; Women: \<18kg. Limb strength measured by Time for 5 times for chair stand. Subjects sat and stood for five times, and calculated time by timer. Low limb strength is defined in time for Time for 5 times for chair stand: ≧12s.
+
+3-4 Physical performance Physical performance was assessed by using 6-meter usual gait speed, TUG, and SPPB.
+
+3-5 Gait speed Participants were instructed to walk from a standing start at a pace that was normal and comfortable for them or to walk as fast as participants could until participants reached the end of the marked path. A 
+
+PRIMARY OUTCOMES:
+  - Gut microbiota
+  - Correlation among serum albumin level and serum level of micronutrients
+  - Correlation among 24hr dietary recall and serum level of micronutrients
+  - Correlation among Food frequence questionnaire and serum level of micronutrients
+  - Impact of LCS on the change of muscle mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Yakult light 300
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04985877

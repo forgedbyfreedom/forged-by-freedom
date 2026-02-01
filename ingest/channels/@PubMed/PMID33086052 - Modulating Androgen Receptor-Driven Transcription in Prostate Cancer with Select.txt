@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 33086052
+Title: Modulating Androgen Receptor-Driven Transcription in Prostate Cancer with Selective CDK9 Inhibitors.
+Authors: Richters, Doyle, Freeman, Lee, Leifer
+Journal: Cell chemical biology
+Year: 2021
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Castration-resistant prostate cancers (CRPCs) lose sensitivity to androgen-deprivation therapies but frequently remain dependent on oncogenic transcription driven by the androgen receptor (AR) and its splice variants. To discover modulators of AR-variant activity, we used a lysate-based small-molecule microarray assay and identified KI-ARv-03 as an AR-variant complex binder that reduces AR-driven transcription and proliferation in prostate cancer cells. We deduced KI-ARv-03 to be a potent, selective inhibitor of CDK9, an important cofactor for AR, MYC, and other oncogenic transcription factors. Further optimization resulted in KB-0742, an orally bioavailable, selective CDK9 inhibitor with potent anti-tumor activity in CRPC models. In 22Rv1 cells, KB-0742 rapidly downregulates nascent transcription, preferentially depleting short half-life transcripts and AR-driven oncogenic programs. In&#xa0;vivo, oral administration of KB-0742 significantly reduced tumor growth in CRPC, supporting CDK9 inhibition as a promising therapeutic strategy to target AR dependence in CRPC.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/33086052/

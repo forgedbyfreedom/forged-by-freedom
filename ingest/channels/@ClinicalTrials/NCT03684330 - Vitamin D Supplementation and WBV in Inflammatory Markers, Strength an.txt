@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03684330
+Title: Vitamin D Supplementation and WBV in Inflammatory Markers, Strength and Body Composition in Old Patients With COPD
+Official Title: Efficacy of Vitamin D Supplementation Added to WBV Chronic Protocol in Inflammatory Markers, Peripheral and Respiratory Strength and Body Composition in Old Patients With COPD
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 59
+Topic: vitamin D muscle
+
+SUMMARY:
+Verify the influence off vitamin D supplementation and a whole body vibration (WBV) protocol during 03 months in older patients chronic obstructive pulmonary disease
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - serum inflammatory marker Interleukine-6 (IL-6)
+  - serum inflammatory marker Interleukine-8 (IL-8)
+  - serum inflammatory marker TNF-alpha ( and BDNF)
+  - serum inflammatory marker and brain derived neurotrophic factor (BDNF)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - OTHER: whole body vibration (WBV)
+
+ELIGIBILITY:
+Age: 60 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03684330

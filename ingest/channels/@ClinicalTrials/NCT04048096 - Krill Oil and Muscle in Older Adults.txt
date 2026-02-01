@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04048096
+Title: Krill Oil and Muscle in Older Adults
+Official Title: Effects of Krill Oil Supplementation on Muscle Function in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 102
+Topic: exercise muscle mass
+
+SUMMARY:
+The aim of this study is to determine the effects of krill oil supplementation on muscle mass in function in older adults. Half of the participants will receive krill oil supplements and the other half a placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Muscle strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Krill Oil
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04048096

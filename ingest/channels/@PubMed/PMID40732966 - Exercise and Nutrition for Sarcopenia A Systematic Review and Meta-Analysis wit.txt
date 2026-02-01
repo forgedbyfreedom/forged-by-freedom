@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40732966
+Title: Exercise and Nutrition for Sarcopenia: A Systematic Review and Meta-Analysis with Subgroup Analysis by Population Characteristics.
+Authors: Yang, Pan, Luo, Liu, Ossowski
+Journal: Nutrients
+Year: 2025
+Topic: exercise performance nutrition
+
+ABSTRACT:
+Background: Sarcopenia significantly affects the health and quality of life in older adults. Exercise combined with nutritional interventions is widely recognized as an effective strategy for improving sarcopenia outcomes. However, current studies rarely focus on differential effects across subpopulations with distinct demographic and health characteristics. This study aimed to explore the effects of combined exercise and nutrition interventions on sarcopenia-related outcomes, considering the variations in population characteristics. Methods: A systematic search was conducted across PubMed, Embase, the Web of Science, and Cochrane Library, covering the literature published between January 2010 and March 2025. Only randomized controlled trials (RCTs) evaluating combined exercise and nutritional interventions for sarcopenia were included. The primary outcomes were handgrip strength (HS), the skeletal muscle mass index (SMI), gait speed (GS), and the five-times sit-to-stand test (5STS). The mean differences (MD) with 95% confidence intervals (CIs) were calculated. Random-effects models were used for the meta-analysis and subgroup comparisons. Results: Fifteen RCTs involving 1258 participants in the intervention group and 1233 in the control group were included. Exercise combined with nutritional interventions significantly improved sarcopenia-related outcomes. HS improved with a pooled MD of 1.77 kg (95% CI: 0.51 to 3.03, p = 0.006); SMI increased by 0.22 kg/m2 (95% CI: 0.09 to 0.35, p = 0.0007); GS improved by 0.09 m/s (95% CI: 0.04 to 0.14, p = 0.0002); and 5STS performance improved with a time reduction of -1.38 s (95% CI: -2.47 to -0.28, p = 0.01). Subgroup analyses indicated that the intervention effects varied according to age, BMI, and living environment. Conclusions: Exercise combined with nutrition is effective in improving key outcomes associated with sarcopenia in older adults. The magnitude of these effects differed across population subgroups, underscoring the importance of tailoring interventions to specific demographic and health profiles.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40732966/

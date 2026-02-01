@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01881347
+Title: Effects of Resveratrol on Endothelial Function in Type 2 Diabetes Mellitus
+Official Title: Randomized Crossover Study of The Effects of Resveratrol on Endothelial Function in Subjects With Type 2 Diabetes Mellitus
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: protein supplementation
+
+SUMMARY:
+The present study is designed to test the hypothesis that resveratrol supplementation will improve the function of the endothelium in patients with type 2 diabetes mellitus.
+
+The function of the endothelium will be tested with a non-invasive technique that uses ultrasound to measure the amount of dilation that occurs in the brachial artery following 5-minute cuff occlusion. To help us understand potential mechanisms of benefit, we will also collect blood, urine, and cell samples and test the effects of treatment on protein expression, nitric oxide production, and function of mitochondria.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from baseline in Brachial artery flow mediated dilation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Resveratrol
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 21 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01881347

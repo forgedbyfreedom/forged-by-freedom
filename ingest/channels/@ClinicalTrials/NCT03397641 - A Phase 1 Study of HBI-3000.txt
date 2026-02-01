@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03397641
+Title: A Phase 1 Study of HBI-3000
+Official Title: A Phase 1, Randomized, Double-Blind, Placebo-Controlled, Serial Cohort Dose-Escalation Study of Intravenously Administered HBI-3000
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 47
+Topic: beta alanine
+
+SUMMARY:
+This is a Phase 1 randomised, double-blind, placebo-controlled, serial cohort, dose-escalation study in healthy adult volunteers. It is planned to enroll 5 cohorts (Cohorts A to E) of 8 subjects. Up to 2 additional cohorts (Cohorts F and G) may be enrolled as needed to establish the safety profile of HBI-3000 over a clinically relevant range of doses. Subjects will be randomly assigned to receive a single dose of HBI-3000 or matching placebo in a sequential escalating manner (Regimens A to E and optional Regimens F and G), with a minimum of 7 days and a maximum based on logistics of interim review between dose groups.
+
+As a safety precaution, in each cohort a sentinel dosing group of n = 2 (1 active:1 placebo) will be dosed at least 24 h ahead of the main group. Safety and tolerability will be assessed by the principal investigator or medically-qualified designee before continuing with dosing the remaining subjects. The first 2 subjects will be allocated to active or placebo in a 1:1 ratio. The remaining 6 subjects will be allocated to active or placebo in a 5:1 ratio.
+
+Doses of HBI-3000 may range from 20 mg to a level at which it is expected that the drug exposure will not exceed an AUC(0-t) of 20 μg.h/mL and Cmax of 20 μg/mL (based on the no-observed-adverse-effect levels \[NOAEL\] in both 14 day repeat dose toxicology species the rat and minipig) and the expected therapeutic dose range. Following administration to each cohort, there will be an interim data review during which the PK and safety data will be reviewed to determine the dose to be administered in the next cohort. Dose escalation for serial cohorts will progress unless safety concerns preclude further dose escalation. If the selected dose does not provide the required data, a previously tested dose may be used in a subsequent cohort. However, if the dose level met the dose escalation stopping criteria, that dose level must not be repeated. A previously untested intermediate dose may also be used in a subsequent cohort.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Physical Examination (Safety and Tolerability)
+  - Safety Labs (Safety and Tolerability)
+  - Urinalysis (Safety and Tolerability)
+  - Pulmonary Function Tests (Safety and Tolerability)
+  - 12-Lead ECG (Safety and Tolerability)
+
+INTERVENTIONS:
+  - DRUG: HBI-3000
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03397641

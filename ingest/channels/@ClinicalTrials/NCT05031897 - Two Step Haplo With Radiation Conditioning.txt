@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05031897
+Title: Two Step Haplo With Radiation Conditioning
+Official Title: A 2 Step Approach to Haploidentical Transplant Using Radiation-Based Reduced Intensity Conditioning
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 63
+Topic: beta alanine
+
+SUMMARY:
+This phase II clinical trial evaluates whether a modified modality of conditioning reduces treatment-related mortality (TRM) in patients who undergo a hematopoietic stem cell transplant (HSCT) for a hematological malignancy. HSCT is a curative therapy for many hematopoietic malignancies, however this regimen results in higher rates of TRM than other forms of treatment. In recent years, less intense conditioning regimens with radiation and chemotherapy prior to HSCT have been developed. Radiation therapy uses high energy sources to kill cancer cells and shrink tumors while chemotherapy drugs like fludarabine and cyclophosphamide work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. This study evaluates whether a two-step approach with lower-intensity regimens of these treatments prior to HSCT reduces the rate of TRM.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To assess the 2 year cumulative incidence of TRM in patients undergoing reduced intensity conditioning (RIC) haploidentical (HI) HSCT in this protocol.
+
+SECONDARY OBJECTIVES:
+
+I. To assess the 2 year cumulative incidence of relapse in patients undergoing RIC HI HSCT in this protocol.
+
+II. To assess the consistency and pace of engraftment. III. To assess the pace of T cell and B cell immune recovery. IV. To assess the incidence and severity of graft versus host disease (GVHD).
+
+OUTLINE: Patients are assigned to 1 of 2 cohorts.
+
+RADIATION-BASED COHORT: Patients receive fludarabine intravenously (IV) on days -11, -10, -9, and -8, undergo total-body irradiation (TBI) twice a day (BID) on days -10 and -9, undergo donor lymphocyte infusion (DLI) on day -6, and receive cyclophosphamide IV on days -3 and -2. Patients begin tacrolimus and mycophenolate mofetil IV on day -1. Patients then undergo HSCT on day 0. Treatment continues in the absence of disease progression or unacceptable toxicity. Patients undergo bone marrow biopsy/aspiration, imaging and blood sample collection throughout the study.
+
+CHEMOTHERAPY-BASED COHORT: Patients receive fludarabine IV on days -11, -10, -9, and -8 and melphalan IV on days -10 and -9. Patients undergo TBI and DLI once on day -6. Patients receive cyclophosphamide IV on days -3 and -2 and begin tacrolimus and mycophenolate mofetil on day -1. Patients undergo HSCT on day 0. Treatment continues in the absence of disease progression or unacceptable toxicity. Patients undergo bone marrow biopsy/aspiration, imaging and blood sample collection throughout the study.
+
+After completion of study treatment, patients are followed for 2 years.
+
+PRIMARY OUTCOMES:
+  - Number of Participants Who Experience Treatment-Related Mortality (TRM)
+
+INTERVENTIONS:
+  - DRUG: Fludarabine
+  - RADIATION: Total-Body Irradiation
+  - PROCEDURE: Donor Lymphocyte Infusion
+  - DRUG: Cyclophosphamide
+  - DRUG: Tacrolimus
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05031897

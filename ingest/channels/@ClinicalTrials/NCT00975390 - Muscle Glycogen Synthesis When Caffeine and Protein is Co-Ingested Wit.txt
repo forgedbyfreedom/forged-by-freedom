@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00975390
+Title: Muscle Glycogen Synthesis When Caffeine and Protein is Co-Ingested With Carbohydrates
+Official Title: The Effect of Caffeine or Protein Co-ingestion With Carbohydrate on Post-exercise Muscle Glycogen Synthesis Rate.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: caffeine exercise
+
+SUMMARY:
+The aim of the present study is to investigate the effect of added protein+leucine or caffeine to 1.2 g/kg/h CHO on the rate of post-exercise muscle glycogen re-synthesis in healthy, recreational athletes.
+
+The investigators hypothesize that both interventions (the addition of caffeine or protein+leucine) will lead to higher glycogen re-synthesis compared to the ingestion of CHO only, and that the co-ingestion of protein and leucine will result in the highest muscle glycogen synthesis rates.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle glycogen synthesis rates
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Carbohydrate
+  - DIETARY_SUPPLEMENT: Carbohydrate and protein ingestion
+  - DIETARY_SUPPLEMENT: Carbohydrate and caffeine ingestion
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00975390

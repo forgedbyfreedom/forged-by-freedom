@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05101096
+Title: Study of Sacituzumab Govitecan (SG) in Japanese Participants With Advanced Solid Tumors
+Official Title: A Phase 1/2 Open-Label Study of Sacituzumab Govitecan in Japanese Patients With Advanced Solid Tumors (ASCENT-J02)
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 135
+Topic: growth hormone treatment
+
+SUMMARY:
+The primary objectives of this study are as follows:
+
+Phase 1 (sequential dose-escalation): to evaluate the safety and tolerability of sacituzumab govitecan-hziy (SG) as a single agent and to determine the recommended Phase 2 dose (RP2D) of SG in Japanese participants with advance solid tumors.
+
+Phase 2: Evaluate the safety and efficacy of SG in Japanese participants with metastatic triple-negative breast cancer (mTNBC), hormone receptor-positive (HR+)/human epidermal growth factor receptor 2-negative (HER2-) metastatic breast cancer (mBC), and metastatic urothelial cancer (mUC).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Phase 1: Percentage of Participants Experiencing Treatment-emergent Adverse Events (TEAEs) Defined by the National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) Version 4.03
+  - Phase 1: Percentage of Participants Experiencing Laboratory Abnormalities Defined by the National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) Version 4.03
+  - Phase 1: Percentage of Participants Experiencing Dose-limiting toxicity (DLTs) per Dose level
+  - Phase 2:(Metastatic Triple-negative Breast Cancer (mTNBC);Hormone Receptor-positive/Human Epidermal Growth Factor Receptor 2-negative Metastatic Breast Cancer (HR+/HER2- mBC) Cohorts):Objective Response Rate (ORR) as Assessed by IRC
+  - Phase 2 (Metastatic Urothelial Cancer (mUC) Cohort): ORR as Assessed by Investigator
+
+INTERVENTIONS:
+  - DRUG: Sacituzumab Govitecan-hziy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05101096

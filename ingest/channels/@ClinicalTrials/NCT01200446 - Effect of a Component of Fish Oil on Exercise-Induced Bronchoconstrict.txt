@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01200446
+Title: Effect of a Component of Fish Oil on Exercise-Induced Bronchoconstriction and Airway Inflammation in Asthma
+Official Title: Docosahexaenoic Acid (DHA) as a Nutritional Treatment for Exercise-Induced Bronchoconstriction and Airway Inflammation in Asthma
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: omega 3 exercise
+
+SUMMARY:
+Docosahexaenoic acid (DHA) is a component of fish oil that is known to support a healthy cardiovascular system, maintain brain function, reduce depression, and improve inflammatory diseases. The study hypothesis is that DHA supplementation will diminish exercise-induced bronchoconstriction and airway inflammation as compared to placebo.
+
+DETAILED DESCRIPTION:
+To date, fish oil supplementation studies in patients with asthma have used a combination of omega-3 polyunsaturated fatty acids. A study on the specific formula that is most effective in preventing exercise-induced bronchoconstriction (EIB) has yet to be conducted in humans. Nevertheless, it has been shown that a docosahexaenoic acid (DHA) metabolite, protectin D1, is involved in the active resolution of airway inflammation and that its concentration is greater in healthy control subjects' exhaled breath condensates as compared to patients with asthma during a clinical exacerbation. Supplementing asthmatics with DHA could enable an increased availability of protectin D1 to help resolve airway inflammation during an asthma attack. Furthermore, DHA is known to support a healthy cardiovascular system, maintain brain function, and reduce depression in addition to alleviating inflammatory diseases. Thus, pure DHA supplementation could help patients manage their asthma while providing for their overall health.
+
+The main aim of this study is to determine whether pure DHA can attenuate EIB and airway inflammation in adults with asthma. It is hypothesized that DHA supplementation will diminish EIB and airway inflammation compared to placebo.
+
+PRIMARY OUTCOMES:
+  - Pulmonary Function (Percent Change in FEV1, measured in Liters)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Docosahexaenoic Acid
+  - DIETARY_SUPPLEMENT: Placebo Docosahexaenoic Acid
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01200446

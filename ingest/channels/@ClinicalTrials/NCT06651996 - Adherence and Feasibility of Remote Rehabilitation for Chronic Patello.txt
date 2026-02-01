@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06651996
+Title: Adherence and Feasibility of Remote Rehabilitation for Chronic Patellofemoral Joint Pain: a Randomized Controlled Trial
+Official Title: Adherence and Feasibility of Remote Rehabilitation for Chronic Patellofemoral Joint Pain: a Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 63
+Topic: high intensity interval training
+
+SUMMARY:
+This study is a prospective, single-center trial involving 66 patients diagnosed with patellofemoral pain. The study adhered to ethical guidelines and obtained informed consent from all participants. Participants were randomly assigned to receive face-to-face remote rehabilitation guidance either 1 time, 3 times, or 6 times. The primary outcome measure was exercise adherence assessed using the Exercise Rating Scale (EARS) after 6 weeks of rehabilitation. Secondary outcomes included knee pain severity, muscle strength, knee function, fatigue levels, and a qualitative research questionnaire. An isokinetic strength testing system was used to measure the open-chain strength of the quadriceps muscle.
+
+DETAILED DESCRIPTION:
+The inestigators conducted a forward-looking, single-center pilot study with a follow-up period of 8 weeks. The study recruited 66 patients diagnosed with patellofemoral pain (PFP) by a professional sports physician at the Department of Sports Medicine, Peking University Third Hospital, between January and September 2023. The study adhered to the principles of the Declaration of Helsinki and was approved by the Research Ethics Committee of Peking University Third Hospital. Although this is a pilot study, the inestigators strictly followed the CONSORT guidelines. All participants signed an informed consent form and completed home rehabilitation interventions.
+
+Inclusion and Exclusion Criteria During the trial, an investigator not involved in the study used an electronically generated random sequence to assign patients to three groups. Two professional physical therapists (N.C and S.R) were responsible for assessing and supervising the accuracy of the project and were unaware of the grouping details.
+
+Interventions After randomization, participants received a package containing two wearable motion sensors, a charger, resistance bands, and a manual. Additionally, the rehabilitation software provided lectures and Q\&A sessions related to the condition, accessible via Android or iOS platforms. All data collected by the sensors were strictly encrypted to protect patient information and privacy. Each participant was assigned a therapist for home rehabilitation support, and a follow-up function via the software or telephone was used to remind patients who missed three remote rehabilitation sessions.
+
+Before starting home rehabilitation, patients attended a briefing at the hospital. Participants were divided into three groups: Group 1 received 1 face-to-face remote rehabilitation tutorial (OST), Group 2 received 3 face-to-face remote rehabilitation tutorials (TST), and Group 3 received 6 face-to-face remote rehabilitation tutorials (SST). Each session lasted 40 minutes and was conducted three times a week (on Tuesday, Thursday, and Saturday). Following the briefing, patients performed home remote rehabilitation training on the same day, with each session lasting 40 minutes. The remote rehabilitation program included muscle strengthening, flexibility stretching, and movement quality training.
+
+Primary Outcome The primary outcome was assessed by the Exercise Adherence Rating Scale (EARS) 6 weeks after completing the rehabilitation guidance. The scale consists of Part A, which directly assesses adherence (including 6 questions, each with 5 options, scoring from 0 to 4), and Part B, which assesses reasons affecting adherence (including 10 questions, each with 5 options, scoring from 0 to 4). Items with positive phrasing were reverse scored, so a higher overall adherence score indicates better exercise adherence.
+
+Secondary Outcomes Secondary outcomes were collected at the hospital 8 weeks after the start of the study, including knee pain severity assessed by 
+
+PRIMARY OUTCOMES:
+  - The primary outcome measure was the Exercise Adherence Rating Scale (EARS) at 6 weeks after the completion of the rehabilitation tutorial.
+
+INTERVENTIONS:
+  - DEVICE: one session of face-to-face telerehabilitation tutorial (OST)
+  - DEVICE: Three session of face-to-face telerehabilitation tutorials (TST)
+  - DEVICE: Six session of face-to-face telerehabilitation tutorials (SST)
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06651996

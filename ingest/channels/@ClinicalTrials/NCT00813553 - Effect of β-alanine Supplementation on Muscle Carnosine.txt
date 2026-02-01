@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00813553
+Title: Effect of β-alanine Supplementation on Muscle Carnosine
+Official Title: Effect of Two 8-week β-alanine Supplementation Protocols on Muscle Carnosine
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: beta alanine
+
+SUMMARY:
+Carnosine is a natural acid buffering substance of muscle. The primary objective of this study is to test whether a nutritional supplement of beta-alanine enhances carnosine content in muscle.
+
+DETAILED DESCRIPTION:
+Volunteers will be randomized to receiving 3 nutritional supplements. Two supplements contain beta-alanine at different doses, the third supplement is a placebo.
+
+PRIMARY OUTCOMES:
+  - muscle carnosine concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: placebo
+  - DIETARY_SUPPLEMENT: beta-alanine
+  - DIETARY_SUPPLEMENT: beta-alanine
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00813553

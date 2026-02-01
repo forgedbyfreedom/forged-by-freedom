@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02118181
+Title: Assessment of Physical Performance With A Supplementation Containing HMB in a Sample of Old Women in Good Health
+Official Title: Role of Oral Supplementation of Proteins and β-hydroxy-β-methyl Butyrate (HMB) in a Sample of Older Women in Good Health
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: HMB supplementation
+
+SUMMARY:
+The purpose of this study is to determine whether a supplementation containing β-Hydroxy-β-methylbutyrate is effective in the treatment of age-related muscle loss in a group of older women compared to a non interventional group
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Short Physical Performance Battery
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: HMB
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02118181

@@ -1,0 +1,58 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07275996
+Title: Neuromuscular and Multi-Omics Synergy of Combined Creatine × HMB Supplementation Plus Exercise to Improve Muscle Function in Sarcopenic Frailty
+Official Title: Effects of Creatine Monohydrate and β-Hydroxy-β-Methylbutyrate Supplementation Combined With Multicomponent Exercise on Physical Performance, Cognition and Quality of Life in Institutionalized Older Adults: A Randomized Double-Blind Parallel-Group Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: HMB supplementation
+
+SUMMARY:
+Sarcopenia and physical frailty are highly prevalent among institutionalized older adults and are major contributors to functional decline, reduced mobility, and loss of independence. Combined exercise and targeted nutritional strategies have emerged as promising approaches to mitigate these age-related impairments.
+
+This randomized, double-blind, placebo-controlled, parallel-group clinical trial aims to evaluate the independent and combined effects of creatine monohydrate (CRE) and β-hydroxy-β-methylbutyrate (HMB), administered alongside a supervised multicomponent exercise program, on physical function, body composition, cognitive performance, and quality of life in institutionalized older adults with physical frailty and sarcopenia.
+
+A total of 80 adults aged ≥65 years will be randomized to one of four intervention groups for 12 weeks: placebo plus exercise, creatine plus exercise, HMB plus exercise, or creatine plus HMB plus exercise. A supplement-free follow-up period will be conducted to evaluate the sustainability of intervention effects.
+
+In addition to clinical and functional outcomes, the study incorporates molecular and biological assessments to explore mechanistic pathways underlying functional adaptation and interindividual variability in response to the interventions.
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled, parallel-group clinical trial is designed to evaluate the independent and combined effects of creatine monohydrate (CRE) and β-hydroxy-β-methylbutyrate (HMB) supplementation when administered alongside a structured multicomponent exercise program in institutionalized older adults with physical frailty and sarcopenia. Sarcopenia and frailty are highly prevalent in this population and are associated with functional disability, increased health care utilization, and reduced quality of life. Nutritional strategies targeting muscle metabolism, when combined with systematic exercise, may attenuate functional decline and improve health outcomes in this vulnerable group.
+
+Study Population and Design
+
+A total of 80 institutionalized adults aged ≥65 years will be recruited from nursing homes in the province of Burgos (Spain). Participants will be stratified by sex and randomized to one of four parallel intervention groups for a 12-week intervention period: placebo plus exercise, creatine plus exercise, HMB plus exercise, or creatine plus HMB plus exercise. All intervention groups will be followed by a supplement-free follow-up period to assess the persistence of intervention effects.
+
+Intervention
+
+Dietary supplementation will be administered once daily using identical sachets to ensure blinding and equivalent supplement volume across groups. Participants will receive a total of 6 g/day of powder, consisting of cellulose (placebo), creatine monohydrate, HMB, or their combinations, depending on group allocation. Supplement administration will be supervised by nursing staff and mixed with food or beverages according to standard procedures.
+
+All participants will complete a supervised multicomponent exercise program conducted four times per week (\~60 minutes per session). Exercise sessions will include resistance, balance, coordination, and flexibility training, with intensity individually adapted according to functional capacity using the Borg Rating of Perceived Exertion Scale.
+
+Outcomes and Assessments
+
+Clinical, functional, cognitive, and quality-of-life assessments will be conducted at baseline, post-intervention (Week 12), and during follow-up. Primary and secondary outcome measures focus on physical performance, muscle strength, body composition, cognitive function, activities of daily living, nutritional status, and quality of life.
+
+Molecular and Biological Assessments
+
+In addition to clinical outcomes, the study incorporates biological and molecular assessments to explore mechanistic pathways underlying functional adaptation and interindividual variability in response to supplementation and exercise. Venous blood samples will be collected for the analysis of inflammatory markers, oxidative stress and antioxidant status, hormonal profiles, and circulating and exosomal molecular signatures related to muscle metabolism and neuromuscular function. Body composition parameters will be assessed using dual
+
+PRIMARY OUTCOMES:
+  - Short Physical Performance Battery (SPPB)
+  - Timed Up and Go (TUG)
+  - Appendicular Lean Mass (ALM, kg) by DEXA
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo (Cellulose)
+  - DIETARY_SUPPLEMENT: Creatine Monohydrate
+  - BEHAVIORAL: Multicomponent Exercise Program
+  - DIETARY_SUPPLEMENT: β-Hydroxy-β-Methylbutyrate (HMB)
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07275996

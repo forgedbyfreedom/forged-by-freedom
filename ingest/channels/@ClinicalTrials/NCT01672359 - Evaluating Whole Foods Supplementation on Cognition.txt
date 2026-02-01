@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01672359
+Title: Evaluating Whole Foods Supplementation on Cognition
+Official Title: The Effect of Whole-Food Dietary Supplementation on Cognitive and Immune Functioning and Quality of Life in Healthy Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 97
+Topic: protein supplementation
+
+SUMMARY:
+A six-month study which investigated the effect of Ginkgo Synergy® and Choline or OPC Synergy® and Catalyn® on cognitive and immune function markers and quality of life among healthy older adults with no history of significant cognitive deficits
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cognitive Measures
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Ginkgo Synergy® and Choline
+  - DIETARY_SUPPLEMENT: OPC Synergy® and Catalyn
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01672359

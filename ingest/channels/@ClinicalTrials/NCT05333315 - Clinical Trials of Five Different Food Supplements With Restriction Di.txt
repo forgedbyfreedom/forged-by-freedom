@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05333315
+Title: Clinical Trials of Five Different Food Supplements With Restriction Diet in Adults
+Official Title: The Effects of Five Different Food Supplements With Restriction Diet on the Components of the Metabolic Syndrome in Overweight and Obese Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: vitamin D muscle
+
+SUMMARY:
+In recent years, dietary supplement are of great interest for the improvement of human health. This study is designed as a parallel, randomized, double blind study exploring the efficacy of two months daily oral dosing of five different food supplements together with diet restriction in 120 otherwise healthy overweight or obese adults on different biochemical and anthropometric parameters.
+
+DETAILED DESCRIPTION:
+The incidence of obesity has been rapidly increasing, and this condition has become a major public health threat, since it is strongly linked with increased risk for several diseases including type 2 diabetes, cardiovascular disease, cancer and brain aging. Obesity and overweight are chronic disorders of multifactorial origin that are characterized by high oxidative status and by low chronic inflammation. Thus far, molecular mechanisms underlying obesity and obesity-related metabolic disorders have not been fully clarified, and effective therapeutic approaches to lower inflammation and oxidative stress are currently of general interest.
+
+In recent years, dietary supplement and are of interest for the improvement of human health. This study is designed as a parallel, randomized, double blind study exploring the efficacy of two months daily oral dosing of five different food supplements together with diet restriction in 120 otherwise healthy overweight or obese adults on different biochemical (lipid profile, glucose, C-reactive protein, bilirubin, alanine aminotransferase, etc), and anthropometric parameters (body mass, the percentage of body fat, visceral fat index, etc,...). Food supplements are mainly composed of different fiber and other bioactive compounds.
+
+PRIMARY OUTCOMES:
+  - Change in body fat
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: IP1
+  - DIETARY_SUPPLEMENT: IP2
+  - DIETARY_SUPPLEMENT: IP3
+  - DIETARY_SUPPLEMENT: IP4
+  - DIETARY_SUPPLEMENT: IP5
+
+ELIGIBILITY:
+Age: 40 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05333315

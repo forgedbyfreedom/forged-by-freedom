@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05389566
+Title: Diabetes, Falls, and Fractures
+Official Title: Diabetes, Falls, and Fractures
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 110
+Topic: sarcopenia intervention
+
+SUMMARY:
+Comparing severity of diabetic peripheral neuropathy (small and large fibers including autonomic neuroapthy) to postural control and vestibular measurements
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Co-existence of peripheral- and vestiubular neuropathy in people with diabetes
+  - Co-existence of peripheral neuropathy and impaired dynamic postural control in people with diabetes
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Quantative Sensory Testing
+  - DIAGNOSTIC_TEST: NCStat-DPN-Check
+  - DIAGNOSTIC_TEST: Composite Autonomic Symptom Score 31
+  - DIAGNOSTIC_TEST: Computerized dynamic posturography
+  - DIAGNOSTIC_TEST: Video Head Impulse Test
+
+ELIGIBILITY:
+Age: 40 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05389566

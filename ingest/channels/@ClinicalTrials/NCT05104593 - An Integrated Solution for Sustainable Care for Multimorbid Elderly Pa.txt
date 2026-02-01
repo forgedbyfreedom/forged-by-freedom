@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05104593
+Title: An Integrated Solution for Sustainable Care for Multimorbid Elderly Patients With Dementia
+Official Title: An Integrated Solution for Sustainable Care for Multimorbid Elderly Patients With Mild Cognitive Impairment or Mild Dementia (CAREPATH)
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 204
+Topic: sarcopenia intervention
+
+SUMMARY:
+The CAREPATH will conduct Technical Validation and Usability (TVU) study by involving ≥ 45 target end users (16 patients with MCI or mild dementia with their informal caregivers and 16 healthcare professionals from various disciplines) and Clinical Investigation (CI) study involving ≥ 200 patients (≥ 100 users to pilot the CAREPATH platform and ≥ 100 patients as reference cases). Both of these pilot studies will be coordinated in four European countries (Spain, Romania, Germany and UK) with diverse health and social care systems, ICT landscape/digital maturity of healthcare provision and dementia national programs, which will allow for strengthening the evidence base on health outcomes and efficiency gains.
+
+The CAREPATH outcomes can be summarized as:
+
+1. An Integrated Care Platform that jointly addresses multimorbidity, dementia and diminished intrinsic capacity and optimally manages healthcare interventions for its users (patients, informal caregiver, healthcare providers, etc).
+2. Technical Validation and Usability (TVU) study involving over 45 users and Clinical Investigation (CI) involving over 200 patients that will be conducted in four European countries (Spain, Romania, Germany and UK) during two years and mobilizing the other necessary actors, such as caregivers and healthcare professionals, for the validation of healthcare interventions.
+3. Dementia / Multimorbidity Guidelines that will be conceived for best healthcare delivery.
+4. Health Economics Impact Assessment for healthcare cost effectiveness and care provision equalities. The incremental cost-effectiveness and the incremental cost-utility ratio would allow revealing the incremental cost (or the potential savings) per unit of benefit of switching from usual care to CAREPATH-an integrated patient-centred approach- in multimorbid elderly patients with dementia, and therefore, to determinate whether the CAREPATH approach would be considered as a cost-effective alternative.
+
+DETAILED DESCRIPTION:
+The study will have two parts:
+
+A. Usability study In order to ensure that the CAREPATH system is well-usable by its main target user groups namely patients with Mild Cognitive Impairment (MCI) or mild dementia, their informal caregivers and health care professionals in charge of caring for this patient group, a usability evaluation of the platform will be conducted as part of the Technical Validation and Usability (TVU) study described in chapter 1.3.6 of the proposal (IEC TR 62366-2: 2016-04 Medical devices - Part 2: Guidance on the application of usability engineering to medical devices). It will be carried out at the end of the main development phase to investigate usability issues and its results will serve as input for the (re-)design of the platform before the clinical investigation starts. Implementation of good usability of a medical device such as the CAREPATH platform is also enforced by the usability engineering process required now in the development of a medical devices by the new Medical Device Regulation (Regulation (EU) 2017/745) (Regulation (EU) 2017/745 of the European parliament and of the council of 5 April 2017 on medical devices, amending Directive 2001/83/EC, Regulation (EC) No 178/2002 and Regulation (EC) No 1223/2009 and repealing Council Directives 90/385/EEC and 93/42/EEC) which originates in the concern that increasing complexity and interactivity of medical devices bears a high risk of errors in handling if poorly designed causing harm to patients. Therefore, usability and safety are seen as interrelated and in the CAREPATH usability study possible hazardous situations will also be taken into account.
+
+B. Clinical Investigation with a Medical Device class IIa After finishing the TVU, a Clinical Investigation will be conducted in order to validate the technological system CAREPATH for multimorbid elderly patients with MCI up to mild dementia (see Work Package 5 of the complete proposal). This version of CAREPATH will include the modifications made by engineers in the system after the analysis of the TVU phase.
+
+The main objective will be to analyze the reduction in healthcare appointments and the hypothesis is that CAREPATH will improve Quality of Life (QoL) of these patients through a multicomponent approach based on the 5 following principles:
+
+1. Identification of purpose.
+2. Establishment of disease and treatment burden, by considering how a person's health problems affect their day-to-day life, their mental health and their wellbeing.
+3. Formulation of patient goals, values and priorities
+4. Communicating to patients and caregivers the benefits, risks and costs of treatments and medications.
+5. Provision of an individualised care plan.
+
+PRIMARY OUTCOMES:
+  - Change in healthcare appointments
+
+INTERVENTIONS:
+  - OTHER: Intervention tested (CAREPATH)
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05104593

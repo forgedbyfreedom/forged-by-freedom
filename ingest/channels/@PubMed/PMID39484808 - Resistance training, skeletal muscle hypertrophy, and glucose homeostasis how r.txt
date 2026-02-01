@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39484808
+Title: Resistance training, skeletal muscle hypertrophy, and glucose homeostasis: how related are they? A Systematic review and Meta-analysis.
+Authors: Paquin, Tremblay, Islam, Riesco, Marcotte-Ch&#xe9;nard
+Journal: Applied physiology, nutrition, and metabolism = Physiologie appliquee, nutrition et metabolisme
+Year: 2024
+Topic: resistance training muscle hypertrophy
+
+ABSTRACT:
+Resistance training (RT) promotes skeletal muscle (Skm) hypertrophy, increases muscular strength, and improves metabolic health. Whether changes in fat-free mass (FFM; a surrogate marker of muscle hypertrophy) moderate RT-induced improvements in glucose homeostasis has not been determined, despite extensive research on the benefits of RT for health and performance. The aim of this meta-analysis is to examine whether RT-induced Skm hypertrophy drives improvements in glucose metabolism and to explore confounders, such as biological sex and training parameters. Random-effects meta-analyses were performed using variance random effects. Meta-regressions were performed for confounding factors depending on the heterogeneity (I2). Analyses from 33 intervention studies revealed significant within-study increases in FFM with a moderate effect size (within-studies: (effect size; ES&#xa0;=&#xa0;0.24 [0.10; 0.39]; p&#xa0;=&#xa0;0.002; I2&#xa0;=&#xa0;56%) and a tendency for significance when compared with control groups (ES&#xa0;=&#xa0;0.42 [-0.04-0.88]; p&#xa0;=&#xa0;0.07). Within-study significant increases in glucose tolerance (2 h glucose: ES = -0.3 [-0.50; -0.11]; p&#xa0;&lt;&#xa0;0.01; I2&#xa0;=&#xa0;43%; glucose area under the curve (AUC): -0.40 [-0.66; -0.13] I2&#xa0;=&#xa0;76.1%; p&#xa0;&lt;&#xa0;0.01) and insulin sensitivity (ES&#xa0;=&#xa0;0.38 [0.13; 0.62]; I2&#xa0;=&#xa0;53.0%; p&#xa0;&lt;&#xa0;0.01) were also apparent with RT. When compared to control groups, there was no significant difference in 2 h glucose, nor in glucose AUC from baseline in RT intervention groups. Meta-regression analyses failed to consistently reveal increases in FFM as a moderator of glucose homeostasis. Other mixed-effect models were also unsuccessful to unveil biological sex or training parameters as moderators of FFM increases and glucose homeostasis changes. Although Skm hypertrophy and improvements in glycemic control occur concurrently during RT, changes in these variables were not always related. Well-controlled trials including detailed description of training parameters are needed to inform RT guidelines for improving metabolic health. Registration and protocol number (Prospero): CRD42023397362.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39484808/

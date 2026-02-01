@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 30622136
+Title: Nonconventional glucagon and GLP-1 receptor agonist and antagonist interplay at the GLP-1 receptor revealed in high-throughput FRET assays for cAMP.
+Authors: Chepurny, Matsoukas, Liapakis, Leech, Milliken
+Journal: The Journal of biological chemistry
+Year: 2019
+Topic: glucagon receptor agonist
+
+ABSTRACT:
+G protein-coupled receptors (GPCRs) for glucagon (GluR) and glucagon-like peptide-1 (GLP-1R) are normally considered to be highly selective for glucagon and GLP-1, respectively. However, glucagon secreted from pancreatic &#x3b1;-cells may accumulate at high concentrations to exert promiscuous effects at the &#x3b2;-cell GLP-1R, as may occur in the volume-restricted microenvironment of the islets of Langerhans. Furthermore, systemic administration of GluR or GLP-1R agonists and antagonists at high doses may lead to off-target effects at other receptors. Here, we used molecular modeling to evaluate data derived from FRET assays that detect cAMP as a read-out for GluR and GLP-1R activation. This analysis established that glucagon is a nonconventional GLP-1R agonist, an effect inhibited by the GLP-1R orthosteric antagonist exendin(9-39) (Ex(9-39)). The GluR allosteric inhibitors LY2409021 and MK 0893 antagonized glucagon and GLP-1 action at the GLP-1R, whereas des-His1-[Glu9]glucagon antagonized glucagon action at the GluR, while having minimal inhibitory action versus glucagon or GLP-1 at the GLP-1R. When testing Ex(9-39) in combination with des-His1-[Glu9]glucagon in INS-1 832/13 cells, we validated a dual agonist action of glucagon at the GluR and GLP-1R. Hybrid peptide GGP817 containing glucagon fused to a fragment of peptide YY (PYY) acted as a triagonist at the GluR, GLP-1R, and neuropeptide Y2 receptor (NPY2R). Collectively, these findings provide a new triagonist strategy with which to target the GluR, GLP-1R, and NPY2R. They also provide an impetus to reevaluate prior studies in which GluR and GLP-1R agonists and antagonists were assumed not to exert promiscuous actions at other GPCRs.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/30622136/

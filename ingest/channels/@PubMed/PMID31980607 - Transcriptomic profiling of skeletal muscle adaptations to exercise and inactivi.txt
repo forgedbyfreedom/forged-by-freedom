@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 31980607
+Title: Transcriptomic profiling of skeletal muscle adaptations to exercise and inactivity.
+Authors: Pillon, Gabriel, Dollet, Smith, Sard&#xf3;n Puig
+Journal: Nature communications
+Year: 2020
+Topic: thyroid hormone metabolism exercise
+
+ABSTRACT:
+The molecular mechanisms underlying the response to exercise and inactivity are not fully understood. We propose an innovative approach to profile the skeletal muscle transcriptome to exercise and inactivity using 66 published datasets. Data collected from human studies of aerobic and resistance exercise, including acute and chronic exercise training, were integrated using meta-analysis methods (www.metamex.eu). Here we use gene ontology and pathway analyses to reveal selective pathways activated by inactivity, aerobic versus resistance and acute versus chronic exercise training. We identify NR4A3 as one of the most exercise- and inactivity-responsive genes, and establish a role for this nuclear receptor in mediating the metabolic responses to exercise-like stimuli in vitro. The meta-analysis (MetaMEx) also highlights the differential response to exercise in individuals with metabolic impairments. MetaMEx provides the most extensive dataset of skeletal muscle transcriptional responses to different modes of exercise and an online interface to readily interrogate the database.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/31980607/

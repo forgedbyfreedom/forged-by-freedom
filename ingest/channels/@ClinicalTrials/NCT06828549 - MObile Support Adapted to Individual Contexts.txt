@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06828549
+Title: MObile Support Adapted to Individual Contexts
+Official Title: MObile Support Adapted to Individual Contexts (MOSAIC Study)
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 547
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This behavioral clinical trial evaluates an adaptively tailored, mobile phone-delivered intervention (MOSAIC) designed to support adults managing their type 2 diabetes. Adaptive means the intervention can change over time. Tailored means the intervention may be different for different participants. The main questions the study will aim to answer are:
+
+1. Does the diabetes education and support delivered via the MOSAIC adaptive mobile phone-delivered intervention improve outcomes more than diabetes education and support delivered via print materials alone? This aim compares the study arms on outcomes such as glycemic management (hemoglobin A1c), diabetes distress, and psychosocial well-being. This aim also compares the study arms on intervention targets (mediators) including diabetes self-efficacy and self-care behaviors.
+2. For whom does the MOSAIC adaptive tailoring approach improve outcomes more than the print materials alone? This aim examines how well the tailoring rules used for the MOSAIC intervention worked for different participants on the outcomes examined in the first aim.
+
+Participants will enroll in a 16-month study with assessments every 4 months. Assessments include completion of an A1c test and a survey. For those assigned to MOSAIC, they will experience 12-months of mobile phone-delivered support with 3 opportunities for intervention tailoring.
+
+DETAILED DESCRIPTION:
+MOSAIC intervention components include:
+
+* Monthly coaching sessions (\~30 minutes each) - Persons with diabetes (PWD) will engage in goal setting and skill building relevant to their self-identified diet, exercise, and/or stress management goal
+* Daily one-way and interactive text messages to support the PWD in meeting their goal and supporting medication adherence
+* Weekly interactive text messages asking the PWD to reflect on goal progress followed by personalized feedback from their coach
+* The option to invite an adult support person (SP). SPs may be invited to participate in monthly phone coaching and/or receive text messages (3 one-way texts per week and one interactive text per week) pertaining to supporting the PWD, per the MOSAIC intervention adaptive tailoring rules
+
+PWD participants will be randomized in a parallel design to the MOSAIC adaptive mobile phone-delivered intervention or to print materials alone. The study is powered to detect a 0.5% reduction in hemoglobin A1c. Analyses will examine effects during the intervention (4 and 8 months) and post-intervention (12 months) and sustained effects (16 months). Participants will be analyzed as randomized regardless of withdrawal from the intervention (i.e., intention-to-treat principals) and missing data will be imputed.
+
+PRIMARY OUTCOMES:
+  - Change in Hemoglobin A1c During Intervention Period
+  - Change in Hemoglobin A1c Sustained Post-intervention Effects
+
+INTERVENTIONS:
+  - BEHAVIORAL: MOSAIC
+  - BEHAVIORAL: Print Materials
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06828549

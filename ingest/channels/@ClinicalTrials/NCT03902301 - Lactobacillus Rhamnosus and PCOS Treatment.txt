@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03902301
+Title: Lactobacillus Rhamnosus and PCOS Treatment
+Official Title: The Effect of Lactobacillus Rhamnosus Supplementation on Body Mass, Hyperandrogenism and Insulin Resistance in Overweight and Obese Polycystic Ovary Syndrome Women - Randomized Nutritional Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: DHEA supplementation
+
+SUMMARY:
+The effect of Lactobacillus rhamnosus supplementation on body weight, hyperandrogenism and insulin resistance in overweight and obesity women with Polycystic Ovary Syndrome will be analysed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Insulin Resistance
+  - Oral glucose test OGTT
+  - Testosterone
+  - DHEA-SO4
+  - SHBG
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Lactobacillus group
+  - DIETARY_SUPPLEMENT: Dietary group
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03902301

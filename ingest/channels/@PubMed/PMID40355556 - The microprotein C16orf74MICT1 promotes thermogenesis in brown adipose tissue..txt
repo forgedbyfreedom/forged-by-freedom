@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40355556
+Title: The microprotein C16orf74/MICT1 promotes thermogenesis in brown adipose tissue.
+Authors: Dinh, Yi, Lin, Xue, Holloway
+Journal: The EMBO journal
+Year: 2025
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Brown and beige adipose tissues are metabolically beneficial for increasing energy expenditure via thermogenesis, mainly through UCP1 (uncoupling protein 1). Here, we identify C16orf74, subsequently named MICT1 (microprotein for thermogenesis 1), as a microprotein that is specifically and highly expressed in brown adipose tissue (BAT) and is induced upon cold exposure. MICT1 interacts with protein phosphatase 2B (PP2B, calcineurin) through the docking motif PNIIIT, thereby interfering with dephosphorylation of the regulatory subunit of protein kinase A (PKA), RII&#x3b2;, and potentiating PKA activity in brown adipocytes. Overexpression of MICT1 in differentiated brown adipocytes promotes thermogenesis, showing increased oxygen consumption rate (OCR) with higher thermogenic gene expression during &#x3b2;3-adrenergic stimulation, while knockdown of MICT1 impairs thermogenic responses. Moreover, BAT-specific MICT1 ablation in mice suppresses thermogenic capacity to increase adiposity and insulin resistance. Conversely, MICT1 overexpression in BAT or treating mice with a chemical inhibitor that targets the PP2B docking motif of MICT1 enhances thermogenesis. This results in cold tolerance and increased energy expenditure, protection against diet-induced and genetic obesity and insulin resistance, thus suggesting a therapeutic potential of MICT1 targeting.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40355556/

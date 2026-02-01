@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06011213
+Title: Early-warning Intervention for Heat and Cold in Older Hypertensive Patients: Impact on Blood Pressure and ECG
+Official Title: Early-warning Intervention for Heat and Cold in Older Hypertensive Patients: Impact on Blood Pressure and Electrocardiogram
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 342
+Topic: caffeine exercise
+
+SUMMARY:
+This cluster-randomized trial, conducted in Tianjin, China, aims to evaluate the effectiveness of integrating a digital health risk early warning tool for heat with self-monitoring. Additionally, the study assesses the effectiveness of combining a digital health risk early warning tool for cold with self-monitoring. Communities from three districts will be randomly assigned to one of three groups: the combined intervention group (receiving health warnings via a WeChat mini-program and self-monitoring), the self-monitoring group (daily blood pressure (BP) and electrocardiogram (ECG) monitoring without warnings), and the control group (BP and ECG monitoring only during baseline and routine check-ups). The primary objective of the study is to evaluate the effectiveness of the intervention in improving blood pressure control and reducing the risk of electrocardiogram abnormalities, as well as understanding its underlying biological mechanisms.
+
+DETAILED DESCRIPTION:
+This cluster-randomized trial will be conducted in various districts across Tianjin, China. As part of the early warning interventions for heat and cold, three communities from each of the two selected districts will be randomly chosen and assigned to one of three groups: the combined intervention group, the self-monitoring group, or the control group. The study will be divided into pre-intervention and intervention phases. The pre-intervention period for the heat wave health early-warning information intervention spans from July 1st, 2023, to July 7th, 2023, followed by the intervention period from July 8th to September 9th, 2023. Similarly, during the cold spell health early-warning information intervention, the pre-intervention phase occurs from December 1st, 2023, to December 7th, 2023, and the intervention.
+
+Participants in the combined intervention group will receive heat health risk warnings via digital tools, specifically a WeChat mini-program, providing real-time updates on early warnings and health advisories. Additionally, they will be instructed to perform daily self-monitoring of their blood pressure (BP) and electrocardiogram (ECG) using automated home devices. Participants in the self-monitoring alone group will engage in daily BP and ECG monitoring but not receive any health warnings. In contrast, the control group will monitor their BP and ECG only during baseline assessments and routine health check-ups (the day after the first heat wave in July and August 2023, as well as following the first cold spell in January and February 2024).
+
+All participants will be required to record their daily time-activity patterns. During the baseline and subsequent check-ups, data will be collected on participants' demographics, medical history, lifestyle factors (e.g., diet, smoking, physical activity), environmental exposures, sleep quality, mental health status (including stress levels, emotional stability, and psychological resilience), medication adherence, cardiovascular and cerebrovascular symptoms, respiratory system symptoms, and perceptions of heatwaves and cold spells. In addition, blood, urine, and stool samples will be gathered for further analysis.
+
+PRIMARY OUTCOMES:
+  - Change from baseline in DBP
+  - Change from baseline in SBP
+  - Change from baseline in the risk of the overall warning level for abnormal ECG.
+
+INTERVENTIONS:
+  - BEHAVIORAL: Issuing health risk warning for a heat waves or cold spells
+  - DEVICE: A digital heat or cold health risk early warning tool
+  - DEVICE: Self-monitoring blood pressure and ECG device
+  - BEHAVIORAL: Perform daily self-monitoring of their BP and ECG
+
+ELIGIBILITY:
+Age: 60 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06011213

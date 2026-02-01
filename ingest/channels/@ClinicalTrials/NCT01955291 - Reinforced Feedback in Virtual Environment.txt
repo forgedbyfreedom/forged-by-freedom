@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01955291
+Title: Reinforced Feedback in Virtual Environment
+Official Title: The Role of Virtual Therapy by Means of Reinforced Feedback in Virtual Environment on Upper Limb Function in Post-stroke Patients.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 136
+Topic: muscle rehabilitation
+
+SUMMARY:
+The aims of the study is to explore whether the rehabilitation of the upper extremity performed in interaction with a virtual environment could improve motor function in post-ischemic and post-haemorrhagic stroke subjects with hemiparesis, in comparison to the traditional neuromotor rehabilitation treatment.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Fugl_Meyer Upper Extremity scale (F-M UE)
+
+INTERVENTIONS:
+  - DEVICE: Reinforced Feedback in Virtual Environment (RFVE)
+  - OTHER: Traditional Neuromotor Rehabilitation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01955291

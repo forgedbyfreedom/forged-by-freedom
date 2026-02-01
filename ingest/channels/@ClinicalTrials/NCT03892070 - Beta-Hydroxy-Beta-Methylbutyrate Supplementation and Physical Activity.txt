@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03892070
+Title: Beta-Hydroxy-Beta-Methylbutyrate Supplementation and Physical Activity in Liver Cirrhosis: a Controlled Trial
+Official Title: Beta-Hydroxy-Beta-Methylbutyrate Supplementation and Physical Activity in Liver Cirrhosis: a Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: HMB supplementation
+
+SUMMARY:
+Sarcopenia is an independent predictor of morbidity and mortality in the cirrhotic patient. Beta-hydroxy-beta-methyl butyrate (HMB) is a leucine metabolite with potential efficacy in increasing protein synthesis, muscle mass, and its functionality.
+
+The aim of this randomized controlled study is to evaluate the effect of nutritional supplementation with HMB and physical activity both on muscle mass and on muscle function in cirrhotic patients.
+
+DETAILED DESCRIPTION:
+1. Introduction Changes in nutritional status are a frequent complication in cirrhotic patients. The prevalence of malnutrition is related to the severity of the disease and has been reported by 65-90% in advanced cirrhosis. The most significant component of malnutrition is a progressive and generalized loss of mass understood as sarcopenia.
+
+   Several studies have reported that sarcopenia represents a negative prognostic factor for survival in patients with liver cirrhosis. Other studies have shown that sarcopenia is an independent predictor of complications of portal hypertension.
+
+   For these reasons and being a modifiable condition, identifying and treating sarcopenia in patients is very important for their prognosis.
+
+   Sarcopenia in liver cirrhosis occurs as a result of an increase in proteolysis or a reduction in protein synthesis, or a combination of the two mechanisms. The alterations in the molecular pathways that involve the regulation of these mechanisms are not entirely known. Recent research has led to the identification of increased expression of myostatin, member of the transforming growth factor ß superfamily, in skeletal muscle in animal models of hepatic injury and in the plasma of cirrhotic patients with consequent inhibition of protein synthesis. In addition, myostatin is able to examine the protein kinase 5' AMP-activated protein kinase (AMPK), an inhibitor of signaling of mammalian target of rapamycin (mTOR), a key regulator of protein synthesis.
+
+   I populations of non-cirrhotic malnourished patients, the benefits of a therapy aimed at improving malnutrition are highlighted by reduced mortality, infections, systemic inflammatory responses and hospital stay. For cirrhotic patients, specific studies in this regard are limited by the size of the cohort and by the design of the study, and there are no effective therapies mainly due to the fact that the mechanisms of muscle loss in cirrhosis are not yet well understood. In addition, the end-points of these studies are heterogeneous (regain muscle strength, the disappearance of sarcopenia, mortality, complications of portal hypertension, etc.). In a study that used a nutritional enteral supplement, the authors observed a modest improvement in nutritional parameters but found no statistically significant differences in morbidity and mortality between the two patient groups. Better results have been reported in clinical trials that used nocturnal nutritional support, in most cases represented by branched-chain amino acids (BCAA) (leucine, isoleucine, and valine). This type of intervention has obtained an improvement in the use of energy substrates in the short term and an improvement of some nutritional parameters in the long term.
+
+   Beta hydroxy-beta-methyl-butyrate (HMB) is a leucine metabolite with the potential to increase muscle performance and tropism. Studies conducted in experimental models of cachexia have reported increased phosphorylation and activation of mTOR se
+
+PRIMARY OUTCOMES:
+  - Changes in Fat Free Mass Index after 12 weeks of supplementation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: BETA-HYDROXY-BETA-METHYLBUTYRATE (HMB)
+  - DIETARY_SUPPLEMENT: Mannitol
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03892070

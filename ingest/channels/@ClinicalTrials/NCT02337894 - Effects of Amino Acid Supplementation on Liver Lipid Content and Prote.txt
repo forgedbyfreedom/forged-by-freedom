@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02337894
+Title: Effects of Amino Acid Supplementation on Liver Lipid Content and Protein Metabolism in Obese Children
+Official Title: Effects of Nutritional Supplementation With Amino Acids on Liver Lipid Content, Whole-body Protein Turnover, and Body Composition in Obese Pre-pubertal Children
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: beta alanine
+
+SUMMARY:
+The purpose of this study is to assess the effect of an eight-week dietary supplementation with essential amino acids plus arginine on liver and plasma lipid content, whole-body fat oxidation, whole-body insulin sensitivity, whole body protein metabolism, and body composition in obese pre-pubertal children.
+
+DETAILED DESCRIPTION:
+Up to thirty-two obese pre-pubertal children will be recruited for this study. Up to sixteen will be boys and up to sixteen will be girls. The study will be a double-blinded, placebo-controlled trial using a randomized, but counter-balanced design. This will ensure equal numbers in the two groups that the children are randomized to, for each sex. The control group will receive placebo and the intervention group will receive essential amino acids plus arginine. The supplements (essential amino acids plus arginine, and placebo) will be given in the form of a drink twice a day for a total of 8 weeks. Both the participants and the investigators will be blinded to group assignment.
+
+The primary endpoints of this study are to assess the effect of essential amino acids (EAA) plus arginine supplementation on lipid and protein metabolism. For this, liver lipid content, hepatic apoptosis, plasma lipids, apolipoprotein B-100 (apo B-100) levels, hepatic fatty oxidation, whole body insulin sensitivity, body composition and whole body protein turnover. will be compared between the intervention and placebo groups.
+
+PRIMARY OUTCOMES:
+  - Serum levels of markers of lipid metabolism before and after 8 weeks of supplementation with essential amino acids plus arginine vs placebo.
+  - Liver lipid content before and after 8 weeks of supplementation with essential amino acids plus arginine vs placebo.
+  - Whole body protein turnover before and after 8 weeks of supplementation with essential amino acids plus arginine vs. placebo.
+  - Body composition before and after 8 weeks of supplementation with essential amino acids plus arginine vs. placebo.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Essential amino acids plus arginine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 7 Years to 10 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02337894

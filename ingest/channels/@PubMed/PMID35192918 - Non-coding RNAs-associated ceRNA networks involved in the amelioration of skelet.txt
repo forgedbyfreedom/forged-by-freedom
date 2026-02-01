@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35192918
+Title: Non-coding RNAs-associated ceRNA networks involved in the amelioration of skeletal muscle aging after whey protein supplementation.
+Authors: Liao, Zhou, Xu, Meng, Li
+Journal: The Journal of nutritional biochemistry
+Year: 2022
+Topic: whey protein muscle synthesis
+
+ABSTRACT:
+Whey protein has been reported to be an impactful dietary supplement to ameliorate skeletal muscle aging for a long time. However, whether whey protein could contribute to muscle aging amelioration by post-transcriptional modulation remains unclear. In this study, 19-month-old mice orally received whey protein supplementation (1.0 g/kg/bw/d, whey protein group) or deionized water (the control group) for 3 months. Differentially expressed ncRNAs and mRNAs in quadriceps were identified by RNA-seq. Construction of non-coding RNAs (ncRNAs)-associated competing endogenous RNA (ceRNA) networks as well as GO and KEGG enrichment analyses were also carried out subsequently. Meanwhile, ultrasound measurement, H&amp;E staining, myofiber cross-sectional area measurement, western blotting and RT-qPCR were performed in the quadriceps to evaluate muscle status and verify the RNA-seq data. Whey protein supplementation for 3 months increased quadriceps-body weight ratio and improved the histological as well as ultrasonographic characteristics of aging in muscle. Moreover, the protein expression levels of Myog, Myf4, Myf5 and MyoD1 were all significantly elevated in quadriceps. The expression of 90 lncRNAs, 334 mRNAs, six circRNAs and 52 miRNAs were significantly up or down-regulated in quadriceps after whey protein supplementation. Furthermore, ncRNAs-associated networks and GO and KEGG enrichment analyses revealed whey protein may influence muscle aging process through selected ncRNAs-associated ceRNA networks. Therefore, post-transcriptional modulation could be a potential crucial way to ameliorate skeletal muscle aging after whey protein supplementation. The selected ncRNAs-associated ceRNA networks may provide new insight for the underlying mechanism and profound therapeutic target for skeletal muscle aging.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35192918/

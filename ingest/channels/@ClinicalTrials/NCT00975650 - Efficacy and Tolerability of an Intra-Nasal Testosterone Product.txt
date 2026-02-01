@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00975650
+Title: Efficacy and Tolerability of an Intra-Nasal Testosterone Product
+Official Title: Efficacy and Tolerability of Nasobol®, an Intra-Nasal Testosterone Product, for Testosterone Replacement in Hypogonadal Men
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 57
+Topic: testosterone replacement
+
+SUMMARY:
+This clinical trial is being performed to compare the pharmacokinetic profile of testosterone after repeated intra-nasal administration of products of different strengths in subjects with hypogonadism.
+
+DETAILED DESCRIPTION:
+Primary Objective:
+
+The primary objective of this study was to determine the efficacy of Nasobol in the treatment of hypogonadal men requiring testosterone replacement therapy. Efficacy was determined by establishing a pharmacokinetic profile for serum testosterone levels following Nasobol treatment, and comparing it to that of the active control, Androderm®.
+
+Secondary Objective:
+
+To establish a safety profile for Nasobol.
+
+PRIMARY OUTCOMES:
+  - Serum Testosterone Ln-Cmax
+  - Serum Testosterone Ln-AUCt
+  - Serum Testosterone Cavg
+  - Serum Dihydrotestosterone Ln-Cmax
+  - Serum Dihydrotestosterone Ln-AUCt
+
+INTERVENTIONS:
+  - DRUG: Nasobol®
+  - DRUG: Androderm® (Positive Control)
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00975650

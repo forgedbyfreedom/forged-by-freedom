@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02143323
+Title: A Clinical Study to Explore Biomarkers for Drug-induced Liver Injury (DILI)
+Official Title: A Clinical Study to Evaluate the Effect of Glutathion S-transferase Polymorphism on Pharmacokinetics/Pharmacodynamics After Multiple Administration of Amoxicillin/Clavulanate and Explore Biomarkers for Drug-induced Liver Injury (DILI)
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: beta alanine
+
+SUMMARY:
+This study has an open-label, one-sequence, multiple drug administration design. The purpose of this study is as follows;
+
+* To evaluate the change of liver function according to glutathione s-transferase (GST) genotype after the multiple administration of amoxicillin/clavulanate.
+* To evaluate the intrinsic metabolite, human leukocyte antigen (HLA) genotype, and microRNA (miRNA) based on liver function change as the candidate biomarker for DILI.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Aspartate Aminotransferase (AST)
+  - Alanine Aminotransferase (ALT)
+  - Alkaline phosphatase (ALP)
+
+INTERVENTIONS:
+  - DRUG: Augmentin tablet
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02143323

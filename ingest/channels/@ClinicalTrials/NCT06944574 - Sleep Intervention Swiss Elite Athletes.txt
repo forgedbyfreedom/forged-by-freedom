@@ -1,0 +1,100 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06944574
+Title: Sleep Intervention Swiss Elite Athletes
+Official Title: Sleep Intervention Swiss Elite Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: sleep athletes
+
+SUMMARY:
+Background and Rationale Elite athletes frequently experience sleep disturbances due to factors like irregular schedules, travel, and pre-competition stress. Despite the critical role of sleep in physical recovery and mental health, many athletes fail to meet sleep quality recommendations. While sleep interventions have shown promise in improving sleep outcomes, their effects on mental health-especially in athlete populations-remain underexplored. This study investigates the impact of a 4-week app-based sleep intervention, preceded by a workshop, on both sleep and mental health outcomes in Swiss elite athletes.
+
+Objective To evaluate whether a brief, structured sleep intervention improves sleep quality and mental health in elite athletes and to identify perceived facilitators and barriers to intervention success.
+
+Design A single-center, one-arm pre-post intervention study with four time points (baseline, pre-intervention, post-intervention, and 2-month follow-up). No control group is used due to practical constraints.
+
+Participants 16 elite athletes (sport soldiers) enrolled in the Swiss recruit school. All participants are adults and proficient in German.
+
+Intervention
+
+A one-hour sleep workshop covering the importance of sleep and motivation-setting.
+
+A four-week app-based program ("7-Schläfer") with seven audio modules (approx. 30 minutes each), completed flexibly by participants.
+
+Outcomes
+
+Primary outcomes include:
+
+Sleep quality and disturbances
+
+Mental health (depression, anxiety, well-being)
+
+Data will be collected via REDCap using validated questionnaires. After the intervention, individual interviews will gather qualitative feedback.
+
+Analysis Quantitative data will be analyzed using repeated measures ANOVA. Focus group data will be analyzed thematically.
+
+Significance The study aims to provide practical, scalable insights into how sleep-focused interventions can improve athlete well-being and inform recommendations for sport organizations.
+
+DETAILED DESCRIPTION:
+1. Background and Rationale Elite athletes often suffer from sleep disturbances due to high training loads, frequent travel, jet lag, pre-competition stress, and irregular routines. Poor sleep negatively affects cognitive function, immune response, recovery, and overall performance. It is also strongly associated with mental health challenges including anxiety, depression, and psychological distress.
+
+   Although interventions such as sleep hygiene education and sleep extension strategies show promise in improving subjective sleep quality, there is limited evidence on their long-term effectiveness or impact on mental health in elite athlete populations. Moreover, few studies examine what elements of sleep interventions athletes perceive as most helpful or what barriers they face.
+
+   This study seeks to close these gaps by evaluating the short- and long-term effects of a structured sleep intervention on sleep quality and mental health in elite Swiss athletes, with additional qualitative data on user experience.
+2. Study Objectives Primary Objective To determine whether a 4-week sleep intervention improves sleep quality and mental health (depression, anxiety, and well-being) in elite athletes.
+
+   Hypotheses
+
+   The intervention will reduce sleep disturbances and improve sleep quality.
+
+   The intervention will enhance mental health outcomes, including reduced symptoms of depression and anxiety and improved well-being.
+
+   Secondary Objectives To explore participant experiences, including perceived facilitators, barriers, and the most helpful components of the intervention.
+3. Study Design
+
+   This is a national, single-center, one-arm pre-post intervention study using a within-subjects design. It includes four measurement time points:
+
+   T0: Baseline
+
+   T1: Pre-intervention
+
+   T2: Post-intervention
+
+   T3: Two-month follow-up
+4. Participants Sample Size: 16 elite athletes from the recruit school (sport soldiers).
+
+   Inclusion Criteria:
+
+   Enrolled in the recruit school
+
+   Elite athlete status
+
+   Sufficient understanding of German
+
+   Exclusion Criteria:
+
+   Insufficient German to engage with the app
+
+   All participants are adults capable of providing informed consent.
+5. Intervention Component 1: Workshop A one-hour in-person workshop focused on the importance of sleep for physical and mental performance, sleep hygiene strategies, and goal setting. Participants identify personal motivations, which are later used to encourage adherence.
+
+   Component 2: App-Based Sleep Program ("7-Schläfer") Participants complete 7 modules (approx. 30 minutes each) over four weeks. Modules include guided audio exercises and psychoeducation about sleep. Participants can take private notes, which are not accessed by the research team. Weekly reminder emails with personalized motivational cues are sent to enhance engagement.
+
+   Participation in the intervention is free of charge. The app is provided at no cost and without data sharing.
+6. Outcomes and Measur
+
+PRIMARY OUTCOMES:
+  - Sleep problems
+
+INTERVENTIONS:
+  - BEHAVIORAL: Guided online intervention
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06944574

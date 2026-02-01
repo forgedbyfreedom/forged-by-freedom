@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38284122
+Title: Maintenance of the branched-chain amino acid transporter LAT1 counteracts myotube atrophy following chemotherapy.
+Authors: Mora, Adegoke
+Journal: American journal of physiology. Cell physiology
+Year: 2024
+Topic: branched chain amino acids muscle
+
+ABSTRACT:
+Prevention/management of cachexia remains a critical issue in muscle wasting conditions. The branched-chain amino acids (BCAA) have anabolic properties in skeletal muscle, but their use in treating cachexia has minimal benefits. This may be related to altered BCAA metabolism consequent to the use of chemotherapy, a main cancer treatment. Since this topic is minimally studied, we investigated the effect of chemotherapy on BCAA concentrations, transporter expression, and their metabolism. L6 myotubes were treated with vehicle (1.4 &#x3bc;L/mL DMSO) or a chemotherapy drug cocktail, FOLFIRI [CPT-11 (20 &#x3bc;g/mL), leucovorin (10 &#x3bc;g/mL), and 5-fluorouracil (50 &#x3bc;g/mL)] for 24-48 h. Chemotherapy reduced myotube diameter (-43%), myofibrillar protein content (-50%), and phosphorylation of the mechanistic target of rapamycin complex 1 (mTORC1) substrate S6K1thr389 (-80%). Drug-treated myotubes exhibited decreased BCAA concentrations (-52%) and expression of their transporter, L-type amino acid transporter 1 (LAT1; -67%). BCAA transaminase BCAT2 level was increased, but there was a reduction in PP2CM (-54%), along with increased inhibitory phosphorylation of BCKD-E1&#x3b1;ser293 (+98%), corresponding with decreased BCKD enzyme activity (-23%) in chemotherapy-treated myotubes. Decreases in BCAA concentrations were a later response, preceded by decreases in LAT1 and BCKD activity. Although supplementation with the BCAA restored myotube BCAA levels, it had minimal effects on preventing the loss of myofibrillar proteins. However, RNAi-mediated depletion of neural precursor cell-expressed developmentally downregulated gene 4 (NEdd4), the protein ligase responsible for ubiquitin-dependent degradation of LAT1, attenuated the effects of chemotherapy on BCAA concentrations, anabolic signaling, protein synthesis, and myofibrillar protein abundance. Thus, if our findings are validated in preclinical models, interventions regulating muscle amino acid transporters might represent a promising strategy to treat cachexia.NEW &amp; NOTEWORTHY This is the first study to attenuate chemotherapy-induced myotube atrophy by manipulating a BCAA transporter. Our findings suggest that positive regulation of amino acid transporters may be a promising strategy to treat cachexia.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38284122/

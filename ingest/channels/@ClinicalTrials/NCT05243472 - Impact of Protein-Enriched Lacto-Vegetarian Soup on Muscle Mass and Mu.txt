@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05243472
+Title: Impact of Protein-Enriched Lacto-Vegetarian Soup on Muscle Mass and Muscle Strength Among Older Adults
+Official Title: Clinical Efficacy of Protein-Enriched Lacto-Vegetarian Soup on Muscle Mass and Muscle Strength Among Community-Dwelling Older Adults:A 12-Week Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: DHEA supplementation
+
+SUMMARY:
+The study is a 12-week randomized controlled trial designed to evaluate the clinical effects of protein-enriched Lacto-vegetarian soups on body composition, muscle strength, and physical performance among community-dwelling older adults. Participants are randomly assigned to either an intervention group, which is provided one commercial soup (24-30g of protein) per day for 12 weeks, or the control group, which does not receive this supplement. The investigators also assess the frail status, Mini-Mental Status Examination, Geriatric Depression Scale, Mini Nutritional Assessment, WHOQOL-BREF, and blood tests as outcome measures.
+
+DETAILED DESCRIPTION:
+As age increases, the muscle mass of the individual will gradually decrease, which will affect muscle strength and function. If the condition continues to deteriorate, the individual may develop a syndrome of "sarcopenia" in the elderly. In addition to age, risk factors related to sarcopenia include living alone, excessive drinking, lack of physical activity, malnutrition, and oral and dental problems. Among them, lack of physical activity and malnutrition are considered potential risk factors for preventing or improving sarcopenia. Sufficient protein intake is an important method for frail elderly people to improve malnutrition and further prevent or reverse sarcopenia. There were few studies in the past. Some studies had enrolled older adults with sarcopenia, but the participants did not necessarily have nutritional risks; other studies had enrolled individuals with nutritional risks but without complete evaluation for sarcopenia (especially muscle mass). In addition, the components of nutritional supplements should also be adjusted in response to different dietary preferences. For example, past studies have rarely provided protein-enriched nutritional supplements that can be used by Lacto-vegetarian. Therefore, this study aims to evaluate the clinical effects of protein-enriched Lacto-vegetarian soups on body composition, muscle strength, and physical performance among community-dwelling older adults with risk of sarcopenia and malnutrition.
+
+PRIMARY OUTCOMES:
+  - Changes from baseline muscle strength measure by hand grip strength after 12 weeks
+  - Change from baseline walking speed after 12 weeks
+  - Changes from baseline physical performance after 12 weeks
+  - Changes from baseline frailty after 12 weeks
+  - Changes from baseline frail status after 12 weeks
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protein nutritional supplement
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05243472

@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00902161
+Title: A Single-Dose Crossover Study of MK0893 in Patients With Type 2 Diabetes (0893-019 AM4)(COMPLETED)
+Official Title: A Double-Blind, Randomized, Placebo-Controlled, Single-Dose Crossover Study to Assess the Safety and Tolerability of MK0893 Coadministered With Propranolol Hydrochloride in Patients With Type 2 Diabetes
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: beta alanine
+
+SUMMARY:
+This study will assess the effect of combined treatment with MK0893 plus propranolol versus placebo plus propranolol on hypoglycemia.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Recovery Time (Rt[65] From Insulin-induced Hypoglycemia
+
+INTERVENTIONS:
+  - DRUG: MK0893
+  - DRUG: MK0893-matched Placebo
+  - DRUG: Propranolol Hydrochloride (HCL)
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00902161

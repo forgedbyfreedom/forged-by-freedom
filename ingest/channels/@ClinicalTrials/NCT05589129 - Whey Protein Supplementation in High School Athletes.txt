@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05589129
+Title: Whey Protein Supplementation in High School Athletes
+Official Title: Effects of a Whey Protein Supplement on Performance, Recovery, and Body Composition in Adolescent Soccer Players During the Competitive Season
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 31
+Topic: sleep athletes
+
+SUMMARY:
+The overall aim of this project is to compare protein supplementation on performance, recovery, and body composition changes in adolescent soccer players between the whey protein and the control group in response to the 10-12-week intervention.
+
+DETAILED DESCRIPTION:
+Informed Consent, Parental Permission and Assent: These will be obtained over Zoom, prior to participation in any study procedures.
+
+Randomization: Randomization will occur following baseline testing. Participants will be randomized via random number generator stratified by sex, into either the whey protein supplement group or the placebo (isocaloric) control group.
+
+Baseline and Post-Intervention testing will occur over a single day for each participant.
+
+Baseline:
+
+All athletes will report to testing facilities for a single blood draw to measure inflammatory biomarkers and a body composition assessment (via BodPod) to measure fat mass and fat free mass. Participants will then be escorted to a track where they will run a 30-yard dash to assess their speed and a 1.5-mile run to assess their estimated maximal rate of oxygen consumption (VO2max). Participants will then be transferred back to the testing facility where they will undergo assessment of lower body muscle fatigue (via HumacNorm).
+
+Questionnaires: Athletes will complete the Munich Chronotype Questionnaire and the Pittsburg Sleep Quality Index (PSQI). Participants will also complete 3-day, 24-hour dietary recalls (via ASA-24).
+
+Sleep measures: Fitbit (Inspire 2) will be used measure sleep efficiency, duration, and staging. Fitabase will be utilized to receive Fitbit data. Participants will be instructed to wear their Fitbit for 1-week.
+
+Intervention:
+
+In-season soccer practices and competition will occur 6-days per week across a 10-12 week period, depending on how far teams advance in postseason play. During the 10-12-weeks, participants will consume their assigned supplement or placebo twice per day, every day, immediately after practice or competition (or midday on rest days), and \~1 hour before bedtime.
+
+Sleep measures: Sleep measures will be evaluated as described above. Sleep measures will be collected at weeks 2, 4, 6, 8, and 10.
+
+Questionnaires: Participants will complete 3-days of 24-hour dietary recalls (via ASA-24) at weeks 5 and 10. Pittsburg Sleep Quality Index (PSQI), a delayed-onset muscle soreness questionnaire and a GI symptom Questionnaire will be completed at weeks 2, 4, 6, 8 and 10.
+
+Urine Samples: We will randomly assign participants to provide urine samples at weeks 4 and 7 as a sham measure of compliance to supplementation protocol.
+
+Post-testing will be the same as pre-testing and will commence after the 10-12-week competitive season. All measures described above in baseline testing will be repeated.
+
+PRIMARY OUTCOMES:
+  - Changes in Fat Free Mass
+  - Changes in Fat Mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey Protein Supplement
+  - DIETARY_SUPPLEMENT: Carbohydrate Placebo Control
+
+ELIGIBILITY:
+Age: 13 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05589129

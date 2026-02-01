@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01148771
+Title: Pharmacokinetics (PK) of Ertapenem Intravenous (IV) Bolus Versus Standard Infusion
+Official Title: Comparative Pharmacokinetics, Safety, and Pharmacodynamics of Ertapenem 1 Gram Daily Administered as an IV Bolus Versus Standard 30 Minute Infusion to Healthy Adult Volunteers
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: beta alanine
+
+SUMMARY:
+The purpose of this study is to characterize and compare the concentration-time profiles and multiple dose pharmacokinetics of a 5 minute intravenous (IV) bolus of ertapenem 1 gram daily versus the standard 30 minute infusion in healthy volunteers. Safety and tolerability and pharmacodynamic target attainment using Monte Carlo simulation will also be assessed and compared.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximum Observed Plasma Concentration (Cmax) at Steady-State (After 3rd Dose)
+  - Area Under the Curve From 48 to 72 Hours [AUC(48-72)]
+
+INTERVENTIONS:
+  - DRUG: ertapenem
+  - DRUG: ertapenem
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01148771

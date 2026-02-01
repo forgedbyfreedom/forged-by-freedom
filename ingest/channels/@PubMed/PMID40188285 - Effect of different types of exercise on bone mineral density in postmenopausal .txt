@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40188285
+Title: Effect of different types of exercise on bone mineral density in postmenopausal women: a systematic review and network meta-analysis.
+Authors: Xiaoya, Junpeng, Li, Haoyang, Xueying
+Journal: Scientific reports
+Year: 2025
+Topic: osteoporosis resistance training
+
+ABSTRACT:
+Postmenopausal women (PMW) experience the decline of ovarian function; estrogen reduction will accelerate bone mass loss. Exercise is an effective means of mitigating bone mineral density (BMD) loss in PMW, but the relative effectiveness of different exercise types remains under investigation. Our study encompassed a thorough assessment and network meta-analysis, following the principles specified in the Preferred Reporting Items for Systematic Reviews and Network Meta-analysis (PRISMA) statement. Data sources and searches Literature search databases include PubMed, Embase, Cochrane, Google Scholar, Web of Science (WOS), and Scopus. The data search combined keywords like bone mineral density (BMD), postmenopausal women, and various exercise types. Data synthesis and analysis Perform a network meta-analysis by integrating both direct and indirect comparisons using the R environment. This network meta-analysis aimed to evaluate and compare various exercise types with bone mineral density in PMW to identify the most effective types. The literature comprised a collective of 49 papers, encompassing 3360 people across eight interventions. The Network Meta-analysis ranked the effects of exercise interventions on lumbar spine BMD in descending order, based on the p-scores assigned to them in the forest plot. The exercise modalities that showed significant efficacy were AE&#x2009;+&#x2009;RT(Aerobic Mixed Resistance Exercise, MD&#x2009;=&#x2009;32.35, 95% CrI [8.08;56.62], p&#x2009;=&#x2009;0.87), AE(Aerobic Exercise, MD&#x2009;=&#x2009;22.33, 95% CrI [6.67;37.99], p&#x2009;=&#x2009;0.74), and RT(Resistance Training, MD&#x2009;=&#x2009;16.98, 95% CrI [8.98;24.99], p&#x2009;=&#x2009;0.60). Similarly, the femoral neck sites were ranked in descending order based on their p-scores in the forest plot, and the exercise patterns with significant effects on lumbar spine bone mineral density were AE&#x2009;+&#x2009;RT(MD&#x2009;=&#x2009;140, 95% CrI [40.89;239.11], p&#x2009;=&#x2009;0.99), WBV(Whole Body Vibration, MD&#x2009;=&#x2009;26.07, 95% CrI [2.97;49.16], p&#x2009;=&#x2009;0.80), and RT(MD&#x2009;=&#x2009;16.98, 95% CrI [8.98;24.99], p&#x2009;=&#x2009;0.72). Exercise intervention significantly and effectively alleviated BMD in postmenopausal women, with AE&#x2009;+&#x2009;RT having the best effect.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40188285/

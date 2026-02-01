@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38763320
+Title: Spatially resolved distribution of pancreatic hormones proteoforms by MALDI-imaging mass spectrometry.
+Authors: Sisnande, Brum, Matias, de S&#xe1; Ribeiro, Moulin
+Journal: Analytical biochemistry
+Year: 2024
+Topic: peptide hormones performance
+
+ABSTRACT:
+Zinc plays a crucial role both in the immune system and endocrine processes. Zinc restriction in the diet has been shown to lead to degeneration of the endocrine pancreas, resulting in hormonal imbalance within the &#x3b2;-cells. Proteostasismay vary depending on the stage of a pathophysiological process, which underscores the need for tools aimed at directly analyzing biological status. Among proteomics methods, MALDI-ToF-MS can serve as a rapid peptidomics tool for analyzing extracts or by histological imaging. Here we report the optimization of MALDI imaging mass spectrometry analysis of histological thin sections from mouse pancreas. This optimization enables the identification of the major islet peptide hormones as well as the major accumulated precursors and/or proteolytic products of peptide hormones. Cross-validation of the identified peptide hormones was performed by LC-ESI-MS from pancreatic islet extracts. Mice subjected to a zinc-restricted diet exhibited a relatively lower amount of peptide intermediates compared to the control group. These findings provide evidence for a complex modulation of proteostasis by micronutrients imbalance, a phenomenon directly accessed by MALDI-MSI.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38763320/

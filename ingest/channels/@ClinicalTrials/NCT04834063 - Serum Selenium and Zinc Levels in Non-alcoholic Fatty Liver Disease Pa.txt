@@ -1,0 +1,82 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04834063
+Title: Serum Selenium and Zinc Levels in Non-alcoholic Fatty Liver Disease Patients
+Official Title: Evaluation of Serum Selenium and Zinc Levels in Non-alcoholic Fatty Liver Disease Patients
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 80
+Topic: HMB supplementation
+
+SUMMARY:
+Non-alcoholic fatty liver disease (NAFLD) includes a wide range of disorders that consist of simple fatty infiltration, steatohepatitis (NASH), and end-stage liver disease (cirrhosis). NAFLD is the most common cause of chronic liver disease worldwide and increases the risk of end-stage liver disease and hepatocellular carcinoma (HCC) . While risk factors such as obesity, diabetes, and a sedentary lifestyle may increase the risk of NAFLD, studies have shown that environmental exposures may further contribute to the pathogenesis of NAFLD. Although the pathogenic role of macronutrients is well established in both NAFLD and obesity, the contribution of micronutrients to NAFLD pathogenesis has garnered less attention than with obesity.
+
+Selenium is an essential element in many biological functions and is an important component of human nutrition. Exposure to selenium can be found in nature, such as rocks and sediment, air, soil, fuel oil, drinking water and nutritional supplementation. It is a major component of many enzymes such as glutathione peroxidase and plays an important role in anti-oxidation, DNA synthesis, reproduction, muscle function, and thyroid metabolism. Selenium concentrations have been studied in many diseases and organ systems including the liver. However, the exact relationship between selenium in patients with NAFLD is unclear.
+
+Selenium is an essential element in many biological functions and is an important component of human nutrition. It is a major component of many enzymes such as glutathione peroxidase and plays an important role in anti-oxidation, DNA synthesis, reproduction, muscle function, and thyroid metabolism. Selenium concentrations have been studied in many diseases and organ systems including the liver. However, the exact relationship between selenium in patients with NAFLD is unclear.
+
+Despite data suggesting mineral deficiencies in NAFLD patients, most data do not support insufficient mineral consumption as a possible mechanism for these deficiencies, except in the case of zinc deficiency. Zinc is the second most prevalent trace element in the body. It is integrally involved in the normal life cycle and has many important regulatory, catalytic, and defensive functions. Zinc deficiency occurs in many types of liver disease, especially more advanced/decompensated disease.
+
+DETAILED DESCRIPTION:
+We aim firstly to assess the serum selenium and zinc level in NAFLD patients, secondly to detect the association between hepatic fibrosis, steatosis, and serum selenium level in NAFLD patients, thirdly to detect if there is a synergistic effect of both molecules.
+
+Patients and methods
+
+Study design:
+
+Case-control study.
+
+Studied population \& locality:
+
+This study will be conducted on two groups: Group (1): include 70 patients diagnosed to has NAFLD by ultrasonography presented to the outpatient clinic of Tropical medicine and gastroenterology department, Sohag University Hospitals during the period from March 2021 to August 2021.
+
+Group (2): a control group of 30 healthy volunteers who looks normal on ultrasonographic examination.
+
+Exclusion criteria:
+
+Any patient with a chronic liver disease rather than NAFLD.
+
+Methods:
+
+All included patients will be subjected to:
+
+1. Detailed history, complete general and systemic examination.
+2. BMI will be calculated as follow
+3. Abdominal Ultrasonography.
+4. Laboratory investigations:
+
+   * Fasting blood sugar
+   * Serum lipogram.
+   * Liver function tests.
+   * CBC.
+5. Estimation of serum selenium and zinc level.
+6. Liver stiffness measurements to detect the degree of fibrosis and measurement of the degree of steatosis using (Fibroscan).
+
+Ethical considerations:
+
+The study will be approved by The Ethical committee of medical research, Sohag Faculty of Medicine, Sohag University.
+
+After an explanation about the nature of the procedures, possible complications, benefits, and steps of the study, all patients and controls will give written informed consent for participating in the study, performing the abdominal ultrasound, taking blood samples, performing fibroscan.
+
+Statistical analysis:
+
+Data will be analyzed using STATA version 12.1. Quantitative data were represented as mean, standard deviation, median, and range. Data will be analyzed using a student t-test to compare the means of the two groups. Qualitative data will be presented as numbers and percentages and will be compared using either the Chi-square test or Fisher exact test. P-value will be considered significant if it was less than 0.05.
+
+PRIMARY OUTCOMES:
+  - serum selenium level in NAFLD patients
+  - the association between hepatic fibrosis and serum selenium level in NAFLD patients
+  - serum zinc level in NAFLD patients
+  - the association between hepatic fibrosis and serum zinc level in NAFLD patients
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Serum Zinc a level
+  - DIAGNOSTIC_TEST: serum selenium level
+  - DIAGNOSTIC_TEST: Fibroscan measurement
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04834063

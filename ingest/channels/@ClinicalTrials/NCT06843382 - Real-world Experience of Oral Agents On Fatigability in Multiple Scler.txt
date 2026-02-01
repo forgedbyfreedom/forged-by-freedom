@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06843382
+Title: Real-world Experience of Oral Agents On Fatigability in Multiple Sclerosis
+Official Title: Real-World Comparative Effects of Teriflunomide and Dimethyl Fumarate on Physical and Cognitive Fatigability in Multiple Sclerosis: The ROOF-MS Multicenter Prospective Cohort Study
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: high intensity interval training
+
+SUMMARY:
+This multicenter, prospective, real-world study evaluates how two commonly used oral disease-modifying therapies-teriflunomide and dimethyl fumarate-affect physical and cognitive fatigability in adults with multiple sclerosis (MS). Fatigability refers to an objective decline in physical or cognitive performance during sustained activity and represents a major barrier to daily functioning for many individuals with MS.
+
+Participants starting either teriflunomide or dimethyl fumarate as part of routine clinical care will be followed for 12 months at regular visits (baseline, 3, 6, 9, and 12 months). At each visit, standardized assessments will measure walking endurance, gait performance, hand function, and information-processing speed. Patient-reported outcomes about fatigue, mood, quality of life, and daily functioning will also be collected. Brain MRI scans performed as part of usual care will be reviewed to document disease activity.
+
+The goal of the ROOF-MS study is to understand whether these two therapies differ in their impact on physical and cognitive fatigability, functional outcomes, symptom burden, and real-world treatment adherence. Because this is an observational study, no experimental treatments are given, and all clinical decisions remain the responsibility of the treating physicians.
+
+By examining fatigability in everyday clinical settings, this study aims to generate evidence that can help patients, families, and health care providers make more informed treatment decisions.
+
+DETAILED DESCRIPTION:
+This investigator-initiated, multicenter, prospective observational cohort study examines longitudinal changes in physical and cognitive fatigability among adults with multiple sclerosis (MS) initiating teriflunomide or dimethyl fumarate as part of routine clinical care. The study integrates standardized fatigability assessments into real-world clinical workflows across participating neurology centers.
+
+Fatigability represents an objective performance decline during sustained motor or cognitive activity and provides information that is complementary to subjective fatigue ratings. To quantify physical fatigability, the study applies a structured 6-Minute Walk Test protocol in which distance covered during each minute is recorded. The primary physical fatigability index (DWI6-1) is calculated as the percentage change between the first and sixth minutes, enabling sensitive detection of time-dependent gait deterioration. Cognitive fatigability is quantified via a timed Symbol Digit Modalities Test procedure in which correct responses are recorded at three consecutive 30-second intervals. The Cognitive Fatigability Index (CFI-SDMT) reflects the proportional change between early and late test performance. Both indices allow continuous modeling of longitudinal trajectories and group differences.
+
+All assessments are performed at baseline (within 30 days of treatment initiation) and at months 3, 6, 9, and 12. Functional performance measures (6MWT total distance, Timed 25-Foot Walk, Nine-Hole Peg Test), clinical evaluations (EDSS), patient-reported outcomes (FIS, TSQM, HADS), and MRI findings obtained during routine care are incorporated to contextualize patterns of fatigability. Test administration is standardized across centers through written manuals and joint training sessions. To minimize diurnal variability, fatigability tests are scheduled at approximately the same time of day for each participant.
+
+Because the study is non-interventional, treatment decisions-including drug choice, dosing, and management of side effects-are determined solely by treating physicians. Data are recorded in a secure electronic capture platform using coded identifiers, with center-level access restrictions and prospective time-locked entry to maintain data integrity. All analyses follow a predefined statistical plan using mixed-effects modeling with participant- and center-level random effects to account for repeated measures and between-center heterogeneity.
+
+This study aims to clarify real-world differences in fatigability trajectories between teriflunomide and dimethyl fumarate and to determine how these trajectories relate to functional performance, symptomatic burden, radiological disease activity, and treatment adherence in routine MS care.
+
+PRIMARY OUTCOMES:
+  - Walking Fatigability Index
+  - Cognitive Fatigability Index
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06843382

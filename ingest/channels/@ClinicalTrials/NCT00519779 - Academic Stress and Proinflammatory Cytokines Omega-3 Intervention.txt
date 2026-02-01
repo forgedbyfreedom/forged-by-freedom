@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00519779
+Title: Academic Stress and Proinflammatory Cytokines: Omega-3 Intervention
+Official Title: Academic Stress and Proinflammatory Cytokines: Omega-3 Intervention
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: omega 3 exercise
+
+SUMMARY:
+This study is designed to examine the effects of fish oil on immune function and mood in medical students.
+
+DETAILED DESCRIPTION:
+This study will examine how supplementation with omega-3 polyunsaturated fatty acids (key fish oil components) affects immune and mood responses to examination stress. This study will examine these outcomes in medical students during academic examination periods as well as less stressful non-exam periods. Participants will take fish oil supplements or placebo pills for approximately 3 months during which time relevant mood, endocrine, and immune measures will be assessed.
+
+For detailed information about the study, please visit our website at http://www.stressandhealth.org
+
+PRIMARY OUTCOMES:
+  - Serum ln(IL-6)
+  - Serum ln(TNF-a)
+  - Stimulated ln(IL-6)
+  - Stimulated ln(TNF-alpha)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: omega-3 supplementation
+  - DIETARY_SUPPLEMENT: Oral omega-3 fish oil placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00519779

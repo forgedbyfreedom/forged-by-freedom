@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07046442
+Title: Effect of Pulmonary Rehabilitation and Physical Activity on Long COVID (PuReCOVID)
+Official Title: Effect of Pulmonary Rehabilitation and Physical Activity on the Symptoms of Long COVID. A Pilot Study
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 40
+Topic: muscle rehabilitation
+
+SUMMARY:
+This single-center, observational, longitudinal, retrospective and prospective study investigates the impact of Active Cycle of Breathing Technique (ACBT) and moderate daily physical activity on symptoms associated with long COVID, such as cough, dyspnea, and fatigue. The study aims to assess whether these interventions can moderately alleviate or resolve these symptoms and evaluate their potential association with small airway dysfunction (SAD), as measured by Impulse Oscillometry (IOS).
+
+We will recruit 40 adult patients with long COVID who meet specific inclusion criteria. Participants will perform ACBT twice daily and complete at least 6000 steps per day for six weeks. We will track clinical and lung function parameters, including spirometry, IOS, and exercise capacity.
+
+DETAILED DESCRIPTION:
+Long COVID affects approximately 10% of COVID-19 survivors, with symptoms persisting beyond the acute phase and impacting multiple organ systems. While some individuals experience mild to moderate illness, others develop severe complications, such as Acute Respiratory Distress Syndrome (ARDS), increasing the risk of long-term pulmonary dysfunction. There is no universally accepted definition of long COVID, but it is often categorized based on symptom duration: post-acute COVID-19 (symptoms persisting beyond three weeks) and chronic COVID-19 (lasting beyond 12 weeks). According to NICE and the Italian National Institute of Health (ISS), long COVID includes symptoms lasting between 4 and 12 weeks (ongoing symptomatic COVID-19) or beyond 12 weeks (post-COVID-19 syndrome), provided they are not attributable to alternative diagnoses.
+
+Common symptoms include fatigue, dyspnea, cough, and chest pain. Some patients recover spontaneously with rest, symptomatic treatment, and gradual physical activity, while others require targeted rehabilitation. Since 80% of breathing effort relies on the diaphragm, long COVID patients often exhibit altered breathing patterns, such as shallow breathing and increased reliance on accessory muscles, leading to dyspnea, fatigue, and inefficient respiration.
+
+Rehabilitation programs have been shown to improve ambulation, hospital discharge rates, and overall recovery in COVID-19 patients, highlighting their potential role in long COVID management. Pulmonary rehabilitation, particularly the Active Cycle of Breathing Technique (ACBT), is a structured method aimed at restoring normal breathing patterns, improving respiratory muscle efficiency, and reducing airway irritation. ACBT consists of controlled breathing, thoracic expansion exercises, forced expiration, and huffing, facilitating airway clearance and optimizing lung function. Given the association between physical inactivity and worse COVID-19 outcomes, rehabilitation strategies incorporating breathing exercises and physical activity may be beneficial.
+
+Pulmonary function studies indicate that Forced Expiratory Volume in 1 second (FEV1) and the FEV1/FVC ratio generally remain within normal limits after COVID-19 recovery, regardless of disease severity. However, impairments in Mid-Expiratory Flow (MEF25-75%) suggest small airway dysfunction (SAD), which appears independent of disease severity but may contribute to persistent respiratory symptoms. Early detection of pulmonary abnormalities is crucial, and Impulse Oscillometry (IOS) is recommended for assessing SAD. Studies indicate that up to 70-90% of symptomatic long COVID patients exhibit persistent SAD up to five months post-infection, emphasizing the need for ongoing lung function monitoring.
+
+This retrospective and prospective study aims to evaluate whether ACBT, combined with moderate daily physical activity, can alleviate symptoms such as cough, dyspnea, and fatigue in long COVID patients. Effectiveness will be asse
+
+PRIMARY OUTCOMES:
+  - To investigate whether ACBT and moderate daily physical activity can improve cough (LCQ), dyspnea (mMRC) and fatigue (VAS) associated to Long COVID.
+
+INTERVENTIONS:
+  - OTHER: Pulmonary Rehabilitation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07046442

@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05559385
+Title: Is Robot-Assisted Therapy Effective for the Upper Extremity Following a Stroke
+Official Title: Is Robot-Assisted System Effective for the Maximization of Upper Extremity Motor Recovery in Intensive Body Rehabilitation Following a Stroke
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 41
+Topic: recovery exercise
+
+SUMMARY:
+The aim of this study was to investigate the effects on upper-limb motor function of the addition of robotic rehabilitation (RR) and conventional rehabilitation (CR) treatments to intensive trunk rehabilitation (ITR).
+
+A total of 41 subacute stroke patients were randomly allocated to two groups: RR and CR. Both groups received the same ITR procedure (6x5x60 weeks/days/minutes). Following ITR, a robot-assisted rehabilitation program of 60 minutes, five days a week, for six weeks, was applied to the RR group, and an individualized upper extremity rehabilitation program to the CR group. Evaluations were made at baseline and after six weeks using the Trunk Impairment Scale (TIS), Fugl-Meyer Upper Extremity Motor Evaluation Scale (FMA-UE), and Wolf Motor Function Test (WMFT).
+
+DETAILED DESCRIPTION:
+Assessments:
+
+\- Demographic Data Form: The researchers created a form to include the information on age, gender, stroke onset date, lesion type, affected side, and dominant extremity.
+
+\- Fugl-Meyer Upper Extremity Assessment: This disease-specific scale was created as an objective motor impairment scale to assess recovery in post-stroke hemiplegic patients (18). It includes subsections that assess joint movements, coordination, and reflex activities related to the shoulder, elbow, forearm, wrist, and hand. The maximum score that can be obtained is 66, with a high score indicating good motor condition. The affected upper extremities are assessed with the subject in a seated position.
+
+\- Wolf Motor Function Test: This test was created to evaluate the motor ability of the upper extremity (19). The test consists of 17 items, 15 of which are related to the fields of functional skill and performance time, and 2 to muscle strength (20). The total score is used for the functional ability of the patients. The two items of muscle strength evaluation were not used in this study.
+
+\- Trunk Impairment Scale: This scale evaluates static and dynamic sitting balance and trunk coordination with seventeen items. The total score ranges from 0 - 23 points, with a higher score indicating better performance. The test-retest and inter-rater reliability coefficients of the scale have been shown to be 0.85-0.99 (21).
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer Upper Extremity Assessment:
+  - Fugl-Meyer Upper Extremity Assessment:
+
+INTERVENTIONS:
+  - DEVICE: Robot-Assissted Therapy
+  - PROCEDURE: Conventional Rehabilitation
+
+ELIGIBILITY:
+Age: 40 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05559385

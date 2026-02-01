@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02908828
+Title: Calanus Oil Supplementation and Maximal Oxygen Uptake
+Official Title: Effect of Copepod Oil Supplementation (Calanus Finmarchicus) on Endurance and VO2max in Healthy Obese Subjects
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 71
+Topic: omega 3 exercise
+
+SUMMARY:
+Copepod oil is extracted from the marine copepod Calanus finmarchicus, the dominant plankton species in the marine food web in the Norwegian Sea. Copepods constitute the largest renewable and harvestable resource in the Norwegian Sea and adjacent waters, and it is now developed knowledge and technology for sustainable harvesting of this "new" resource. The purpose of this study is to investigate whether Calanus copepod oil supplementation has an equivalent effect on maximal oxygen uptake in humans to that seen in experimental studies in mice.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - maximal oxygen uptake (VO2max)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Calanus oil
+  - DIETARY_SUPPLEMENT: placebo dietary oil
+
+ELIGIBILITY:
+Age: 30 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02908828

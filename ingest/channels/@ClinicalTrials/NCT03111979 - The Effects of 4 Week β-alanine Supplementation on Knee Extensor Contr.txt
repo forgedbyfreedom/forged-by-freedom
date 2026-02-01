@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03111979
+Title: The Effects of 4 Week β-alanine Supplementation on Knee Extensor Contractile and Force Properties in the Over 60s
+Official Title: The Effects of 4 Week β-alanine Supplementation on Knee Extensor Contractile and Force Properties in the Over 60s
+Status: SUSPENDED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: beta alanine
+
+SUMMARY:
+The older population is the fastest growing age group worldwide, but it is also the most susceptible to chronic diseases and disabilities. One of the most common negative consequences of aging is the decline in muscle mass, strength and power. This is most notable in lower limb muscles. These muscles are required for the performance of daily activities including walking, stair climbing and standing up from sitting. Regular exercise is considered one of the most effective measures to slow, and even reverse the progression of muscle weakness. Nevertheless older adults may notice a decline in their capability to undertake regular exercises, this may be due to a decline in their muscle's ability to buffer pH. Carnosine (made by bonding β-alanine and histidine) has been suggested to contribute to the extension of physical performance, counteracting the decline the muscle's ability to buffer pH. Yet this pH buffering process it largely restricted by the amount of β-alanine available in the human body. β-alanine is already known to decline in older individuals due to a reduction in food products (meat, fish and poultry). Yet through either consumption of β-alanine rich food, or through short-term supplementation, β-alanine is raised, increasing carnosine concentrations. Improved β-alanine levels can potentially advance exercise performance, for example significant improvements in time to exhaustion on both a constant (37%) and incremental (12%) treadmill tests have been demonstrated. It is therefore proposed that via β-alanine supplementation, an individual's perception of their frailty, maintenance of health and independent living can be improved in older individuals.
+
+However, these findings are based on participants, both young and older, who are well-rested with no prior exercise or fatigue to the assessed muscles. It remains unclear if β-alanine supplementation will aid in the buffering of pH when the muscle has already been fatigued. Therefore this investigation hopes to examine the effects of 4 week β-alanine supplementation on lower limb contractile and force properties, pre and post muscle specific fatigue.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Half relaxation time
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: beta-alanine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03111979

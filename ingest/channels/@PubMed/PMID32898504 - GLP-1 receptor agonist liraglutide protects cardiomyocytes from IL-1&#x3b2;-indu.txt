@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32898504
+Title: GLP-1 receptor agonist liraglutide protects cardiomyocytes from IL-1&#x3b2;-induced metabolic disturbance and mitochondrial dysfunction.
+Authors: Zhang, Tian, Diao, Zhang, Xiao
+Journal: Chemico-biological interactions
+Year: 2020
+Topic: GLP-1 receptor agonist metabolism
+
+ABSTRACT:
+Cardiac inflammation plays a critical role in the development of heart failure. Inflammation-induced oxidative stress contributes to aberrant cardiac metabolism and mitochondrial function. GLP-1 receptor agonists (GLP-1 RAs) are a type of blood glucose-lowering agent typically used in the treatment of type 2 diabetes. Recent studies have convincingly shown that GLP-1 RAs possess beneficial effects in diabetes-related cardiovascular complications. Liraglutide is a commonly used long-acting agonist that shows promising cardioprotective benefits. In this study, we investigated the protective role of Liraglutide in cultured cardiomyocytes. We found that HL-1 cardiomyocytes moderately expressed the GLP-1 receptor, and co-treatment with Liraglutide ameliorated IL-1&#x3b2;-induced cellular ROS production and NADPH oxidase (NOX)-4 expression. Furthermore, we found that Liraglutide protected cardiomyocytes from IL-1&#x3b2;-induced decreased mitochondrial membrane potential and reduced ATP production. Seahorse analysis revealed that Liraglutide mitigated IL-1&#x3b2;-induced reduced basal and maximum respiration rates as well as spare respiration capacity. Additionally, we found that Liraglutide alleviated IL-1&#x3b2;-induced aberrant triglyceride accumulation and adiponectin secretion. Mechanistically, we showed that Liraglutide ameliorated IL-1&#x3b2;-induced phosphorylation of AMPK and ACC as well as the reduction in PGC-1&#x3b1;, CPT-1, and DGAT1. Finally, through the study we demonstrated that the blockage of AMPK activity by Compound C abolished the ameliorative effect of Liraglutide on IL-1&#x3b2;-induced repressed ATP production and triglyceride accumulation, indicating that the action of Liraglutide was dependent on AMPK activation. In conclusion, this study revealed the molecular mechanism of Liraglutide protection in cultured cardiomyocytes. The GLP-1 RA Liraglutide could have therapeutic implications by modulating cardiac inflammation.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32898504/

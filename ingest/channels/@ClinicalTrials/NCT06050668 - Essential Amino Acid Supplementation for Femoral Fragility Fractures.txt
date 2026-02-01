@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06050668
+Title: Essential Amino Acid Supplementation for Femoral Fragility Fractures
+Official Title: MEND Repair & Recover Clinical Trial
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: HMB supplementation
+
+SUMMARY:
+This trial will evaluate the impact of 4 weeks of postoperative essential amino acid (EAA)-based supplementation on muscle morphology after femoral fragility fracture. This trial will assess the ability of EAA-based to increase skeletal muscle metabolic activity, reduce inflammation, and induce muscle fiber hypertrophy, as well as preserve skeletal muscle mass and physical performance up to 6 months after injury. Participants will be randomized in a 1:1 ratio to 1) standard of care (no dietary intervention) or 2) EAA-based supplementation.
+
+DETAILED DESCRIPTION:
+This study consists of 7 study visits that occur over 6 months after operative fixation of femoral fragility fracture. Consenting participants will be asked to complete the study assessments/procedures at the time points described below. Patients will be treated with operative fixation of their fracture per standard of care.
+
+Preoperative
+
+* Mini-Mental State Examination (MMSE-2®): This is a screening tool for cognitive impairment and will be used to determine eligibility for the study.
+* Subjects will be randomized to the intervention arm or control arm in a 1:1 ratio. Subjects randomized to the control arm will receive standard of care nutrition during hospital admission. Subjects randomized to intervention arm of this study will receive essential amino acid (EAA)-based oral nutrition supplementation in addition to standard of care nutrition. Subjects will take the supplement twice daily for 4 weeks after injury. Supplementation will begin within 72 hours of surgical fixation.
+
+Day of Surgery (DOS):
+
+* Muscle Biopsy: Bilaterial biopsies will be obtained from the superficial vastus lateralis muscle on the injury extremity. Biopsies will be performed by board-certified orthopedic surgeons.
+* Systemic Inflammatory Labs: A sample of about 15 mL of peripheral venous blood will be obtained by trained clinical staff.
+
+Postoperative Day 1 (POD 1)
+
+* Body composition: Will be assessed using a bioelectrical impedance analysis (BIA) device (InBody S10 Body Composition Analyzer). This is non-invasive test that uses a low-level imperceptible electrical current to measure body composition and body water. In a supine position, electrodes are placed on the hands and ankles of the subjects and the result is recorded in the BIA device. This assessment will be performed by trained study team members.
+* Visual Analog Scale (VAS): This is a survey to report on subjective pain.
+* Patient-Reported Outcomes Measurement Information System (PROMIS) Physical Function: This is a survey that asks subjects to report on subjective measures of pain and physical function. This survey is a computer adaptive test that is completed in REDCap® using a tablet or computer. Subjects will self-administer this survey
+* Mini Nutrition Assessment (MNA): This is a survey designed for elderly patients to identify malnourishment or risk thereof. This survey is a computer adaptive test that is completed in REDCap® using a tablet or computer.
+* Protein Screener: This is a survey designed for older adults to screen for low protein intake. This survey is a computer adaptive test that is completed in REDCap® using a tablet or computer.
+* Barthel Activities of Daily Living Index is a commonly used measure of activities of daily living outcomes for older adults. It measures the ability to perform activities of daily living that are important for maintaining function including feeding, bathing, grooming, dressing, bowel control, bladder control, toilet use, transfers from bed to chair and back, mob
+
+PRIMARY OUTCOMES:
+  - Concentration and average count of satellite cells, myonuclei, M1, and M2 Macrophages for Type 1 and Type 2 fibers
+  - Cross sectional concentration of Type 1 and Type 2 muscle fibers
+  - Concentration of myostatin, interleukin-6, and tumor necrosis factor alpha
+  - Concentration of c-terminal agrin fragments
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Essential Amino Acid Supplementation
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06050668

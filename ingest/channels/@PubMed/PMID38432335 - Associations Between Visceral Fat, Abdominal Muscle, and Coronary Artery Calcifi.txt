@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38432335
+Title: Associations Between Visceral Fat, Abdominal Muscle, and Coronary Artery Calcification: A Cross-Sectional Analysis of the Multi-Ethnic Study of Atherosclerosis.
+Authors: Haidar, Srikanthan, Watson, Allison, Kronmal
+Journal: The American journal of cardiology
+Year: 2024
+Topic: visceral fat health outcomes
+
+ABSTRACT:
+The associations of body composition components, including muscle and adipose tissue, and markers of subclinical coronary artery disease are unclear. We examined the relation between abdominal computed tomography (CT)-derived measures of the area and density of fat and muscle with coronary artery calcification (CAC), using data from the Multi-Ethnic Study of Atherosclerosis (MESA). A total of 1,974 randomly selected MESA participants free of coronary heart disease underwent abdominal CT scans at examinations 2 or 3, with the resulting images interrogated for abdominal body composition. Using 6 cross-sectional slices spanning L2 to L5, the Medical Imaging Processing Analysis and Visualization software was used to determine abdominal muscle and fat composition using appropriate Hounsfield units ranges. CT chest scans were used to obtain CAC scores, calculated using the Agatston method and spatially weighted calcium score. Multivariable linear and logistic regression analyses were performed to assess the relation between abdominal visceral fat and muscle area and density to prevalent CAC. A total of 1,089 participants had a CAC &gt;0, with an average CAC score of 310. In the fully adjusted model, for every 10-cm2 increase in visceral fat area, the likelihood of having a CAC greater than 0 increased by 0.60% (p &lt;0.001). In the minimally adjusted model, abdominal muscle area was significantly associated with CAC &gt;0, which became nonsignificant in the fully adjusted model. For the density of visceral fat, every 1-Hounsfield unit increase (less lipid-dense fat tissue), the likelihood of having a CAC score &gt;0 decreased by 0.29% (p &lt;0.05). No significant relation was observed between density of abdominal muscle and CAC &gt;0. A greater area and higher lipid density of abdominal visceral fat were associated with an increased likelihood of having CAC, whereas there was no significant relation between abdominal muscle area or density and CAC. The quantity and the quality of fat have associations, with an important marker of subclinical atherosclerosis, CAC, and their significance with respect to cardiovascular outcomes, require further evaluation.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38432335/

@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06721208
+Title: Mobile App Use for Physical Activity in Knee Osteoarthritis
+Official Title: Development of a Mobile APP to Promote Physical Activity in Individuals with Knee Osteoarthritis: a "Move for Knee" Study Protocol
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+The goal of this clinical trial is to evaluate the effectiveness of an app developed to provide useful guidance on physical activity for people with knee osteoarthritis.The main question it aims to answer is:
+
+"What physical activity can I perform with knee osteoarthritis?" Researchers will compare use of app developed to provide physicial activity program versus educational advices (a look-alike substance that contains no drug) to see if APP works to treat pain and stiffness related to knee osteoarthritis.
+
+Participants will:
+
+Download and use APP Visit the clinic once every 4 weeks for checkups and tests
+
+DETAILED DESCRIPTION:
+In this no-profit, interventional, double-arm, monocentric study, men and women with unilateral or bilateral tibiofemoral KOA according to the American College of Rheumatology criteria for KOA, aged 45 to 70 years, and radiographic findings (Kellgren-Lawrence grade 1-3) referring to the Physical Medicine and Rehabilitation Unit, University of Campania "Luigi Vanvitelli", will be included. In this trial, the patients will be randomized into two groups:
+
+* patients who will use the "Move for Knee" APP (intervention arm);
+* patients who will be advised to engage in free physical activity (control arm). Patients will be directed to one of the arms through random sampling with consecutive 1:1 randomization (intervention:control).
+
+The mobile APP called Move Your Knee is divided in 4 sections:
+
+1. Know Your Knee: this first section allows the collection of data entered by patients, useful for understanding their lifestyle habits and daily physical activity level, and information relating to KOA pathology.
+
+   At the end of the questionnaire, the algorithm integrated into the APP's computer code will allow the calculation of the patient's presumed level of physical activity. This will then be followed by the assignment of a specific form which includes the exercises and the related execution parameters (i.e. weekly frequency), and useful advice for safely carrying out the exercises to achieve the specific functional objectives.
+2. Move Your Knee: in this section, the patient will be able to select the level of difficulty/intensity in performing the physical exercise (the more advanced levels are blocked until the previous objective is achieved).
+
+   There are 5 levels, each marked by an evocative image that summarizes the functional meaning and, therefore, facilitates the identification of the type of user (in particular, from the most advanced level: "Hawk"; "Tiger"; "Bull", "Turtle", "Sloth").
+
+   Once the exercise program has been started, the patient finds the indications/advice for carrying out each exercise (duration, series and repetitions). Through the motion capture function, he can record the exercise he performed, to check with your doctor the appropriateness and safety of its execution. The video obtained from this recording is saved in the APP's Database (DB) and can be transferred to the doctor via Chat.
+3. Step by step: through this section, patients have the opportunity to record and monitor daily progress, obtaining a real-time view of their progress.
+4. Chat: to facilitate direct contact with the doctor, the APP is equipped with a native instant messaging service, through which patients can directly contact their doctor by communicating and sharing files and videos useful for monitoring.
+
+The system is completed with a control panel that is used by the doctor via terminal/PC. This tool allows:
+
+1. registration of the patient on a specific web platform;
+2. access to the patient files associated with the referring doctor;
+3. patient moni
+
+PRIMARY OUTCOMES:
+  - Brief Pain Inventory (BPI) and its two indexes (severity and interference indexes; BPI-SI, BPI-II)
+
+INTERVENTIONS:
+  - BEHAVIORAL: use the "Move for Knee" APP
+
+ELIGIBILITY:
+Age: 45 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06721208

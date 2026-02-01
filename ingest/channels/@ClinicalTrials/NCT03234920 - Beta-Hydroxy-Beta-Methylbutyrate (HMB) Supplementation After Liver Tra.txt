@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03234920
+Title: Beta-Hydroxy-Beta-Methylbutyrate (HMB) Supplementation After Liver Transplantation
+Official Title: Effects of Beta-hydroxy-beta-methylbutyrate (HMB) Supplementation After Liver Transplantation: Randomized and Controlled Pilot Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: HMB supplementation
+
+SUMMARY:
+Sarcopenia is an independent predictor of morbidity and mortality in cirrhotic patient before and after liver transplantation. Beta-hydroxy-beta-methyl butyrate (HMB) is a leucine metabolite with potential efficacy in increasing protein synthesis, muscle mass and its functionality.
+
+The aim of this randomized controlled study is to evaluate the effect of a nutritional supplementation with HMB after liver transplantation both on muscle mass and on muscle function.
+
+DETAILED DESCRIPTION:
+Protocol
+
+1. Introduction:
+
+   Sarcopenia, a condition of skeletal muscle mass depletion and reduction of muscle strength, is the most important aspect of malnutrition secondary to liver cirrhosis. Sarcopenia is recognized to be an independent factor of morbidity and mortality befor and after liver transplantation. The prevalence of sarcopenia in liver transplanted patients has been reported to vary between 40% and 76%. Sarcopenia in hepatic cirrhosis occurs as a result of an increase in proteolysis or a reduction in protein synthesis, or a combination of the two mechanisms. The alterations in the molecular pathways that regulate these mechanisms are not entirely known. Recent studies reported an increased expression of myostatin, a member of the transforming growth factor ß superfamily , in skeletal muscles of animal models with liver cirrhosis and in plasma of cirrhotic patients. The authors suggested that the increased expression of myostatin resulted in protein synthesis inhibition. In addition, myostatin is able to activate AMPK protein kinase, a signaling inhibitor of mTOR (mammalian target of rapamycin), key regulator of protein synthesis.
+
+   After Liver transplant, secondary to the recovery of liver function, the progressive increase in caloric intakes and the increase in daily physical activity, an improvement in the nutritional status of the patient and normalization of body composition is expected. However, available data on the modification of nutritional status after liver transplantation do not confirm the expected results: worsening of nutritional status was reported in the perioperative period with further depletion of lean mass as a result of surgical stress, bed rest and postoperative complications. A lack of recovery of muscle mass was documented even after one year of transplantation.
+
+   Molecular mechanisms responsible for sarcopenia after liver transplantation are not fully clarified. The only study on a small sample of muscle biopsies in post-transplant patients described a persistent increase in myostatin expression in these patients. The immunosuppressive therapy used in the post transplant involves the use of calcineurin inhibitors, a protein involved in differentiation and hypertrophy of muscle fibers, mTOR inhibitors and corticosteroids. The use of these drugs is another factor contributing to sarcopenia after transplantation.
+
+   o HMB: HMB is a metabolite of leucine with the potential to increase performance and muscle trophism. Studies in experimental models of cachexia have resulted in increased phosphorylation and activation of secondary mTOR after use of HMB. Experimental studies performed on myoblastic cell cultures also revealed an increased expression of IGF-1 secondary to HMB treatment. Such evidence confirms the anabolic properties of the HMB. HMB has also been shown to suppress proteolysis by inhibition of the ubiquitin-proteasome pathway in models of neoplastic cachexia and to eb effective in reducing mu
+
+PRIMARY OUTCOMES:
+  - Changes in Fat Free Mass Index 3-4 months after transplantation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: BETA-HYDROXY-BETA-METHYLBUTYRATE (HMB)
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03234920

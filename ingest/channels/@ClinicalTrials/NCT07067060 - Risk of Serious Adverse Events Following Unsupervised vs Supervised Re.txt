@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07067060
+Title: Risk of Serious Adverse Events Following Unsupervised vs Supervised Rehabilitation After Knee Arthroplasty
+Official Title: Risk of Serious Adverse Events Following Unsupervised vs Supervised Rehabilitation After Knee Arthroplasty: Protocol For An Emulated Noninferiority Trial (SAFE-T)
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 40000
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+SUMMARY
+
+Background:
+
+After knee arthroplasty (KA), rehabilitation is widely recommended, yet its clinical effectiveness-especially the need for supervision-has been challenged. While some argue that supervised rehabilitation may prevent serious adverse events (SAEs), previous trials show no superiority of rehabilitation, supervised or not, over no rehabilitation in terms of function. However, these trials were underpowered for safety outcomes. A large-scale evaluation is needed to determine if supervision impacts SAE risk, thereby informing rational use of health care resources.
+
+Rationale for the proposed study. A conventional randomized trial to assess the safety of supervised versus unsupervised rehabilitation after KA would require an ethically and logistically infeasible sample size. By emulating such a trial using routinely collected registry data, the investigators can estimate the causal effect of supervision on the risk of serious adverse events-while accounting for confounding and preserving real-world relevance.
+
+Actionable objective and hypothesis: To test whether unsupervised rehabilitation after knee arthroplasty increases the risk of serious adverse events over a 2-year period compared with supervised rehabilitation. The investigators hypothesize that unsupervised rehabilitation is non-inferior, defined as a hazard ratio for SAE risk below 1.4.
+
+Design: Target trial emulation (TTE) using nationwide registry data to replicate the design and intent of a pragmatic randomized trial.
+
+Setting: Danish hospitals and municipalities. Patients: Adults undergoing primary total or unicompartmental knee arthroplasty for osteoarthritis, identified from Danish registries. The target trial assumes consecutive recruitment at hospital discharge to mirror real-world referral practices.
+
+Interventions: Referral to unsupervised home-based exercise or supervised municipal physiotherapy, defined by referral to rehabilitation pathways initiated at hospital discharge.
+
+Methods: Primary outcome is serious adverse events; secondary is number of hospital contacts. Propensity score-based weighting will adjust for confounding using patient and administrative covariates (e.g. age, BMI, comorbidities, surgery year), enabling causal inference from observational data.
+
+Results: Findings will inform clinical practice by estimating the comparative safety of unsupervised versus supervised rehabilitation after knee arthroplasty, based on real-world data from over 40,000 patients.
+
+Limitations: As with all non-randomized studies, residual confounding is possible. Despite adjustment strategies, causal interpretations should be made with caution due to reliance on observational data.
+
+Conclusion: While TTE can provide valuable insight, the causal inferences made with TTE should be interpreted with caution, when not supported with an RCT.
+
+Funding: Section for Biostatistics and Evidence-Based Research, the Parker Institute, Bispebjerg and Frederiksberg Hospital is supported by a core grant from the Oak Foundation (OFIL-24-074).
+
+External funding: in process. Registration: TBD (registration on ClinicalTrials.Gov)
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Serious adverse events (SAE)
+  - Serious adverse events (SAE)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07067060

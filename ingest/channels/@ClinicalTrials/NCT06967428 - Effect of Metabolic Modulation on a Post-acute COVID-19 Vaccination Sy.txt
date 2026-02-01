@@ -1,0 +1,53 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06967428
+Title: Effect of Metabolic Modulation on a Post-acute COVID-19 Vaccination Syndrome (PACVS) Cohort
+Official Title: Effectiveness of Metabolic Modulation in Treating Post-vaccination Syndrome: A Prospective Study
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: creatine supplementation
+
+SUMMARY:
+The goal of this clinical trial is to evaluate whether metabolic modulation with a combined nutraceutical product can improve symptoms and metabolic health in adults diagnosed with post-acute Covid-19 vaccination syndrome (PACVS), a condition characterized by persistent fatigue and exercise intolerance attributed to Covid-19 vaccination and confirmed by laboratory testing.
+
+The main questions it aims to answer are:
+
+Does the combined nutraceutical intervention improve quality of life (measured by the PAC-19QoL questionnaire) in PACVS patients?
+
+Does the intervention improve metabolic, inflammatory, and functional biomarkers (e.g., HbA1c, blood lactate, CRP, spike protein levels, heart rate variability, 6-minute walk distance)?
+
+Researchers will compare the intervention group (receiving the ViTAL SCAN nutraceutical) to a placebo group (receiving rice protein powder with vitamin C) to determine if the intervention leads to greater improvements in symptoms and biomarker profiles.
+
+Participants will:
+
+Take the assigned supplement daily for 3 months (ViTAL SCAN or placebo)
+
+Attend clinic visits for blood and urine sampling, physical performance tests (6-minute walk test), and heart rate monitoring
+
+Complete quality of life and health behavior questionnaires
+
+Undergo measurements of metabolic and inflammatory markers (HbA1c, lactate, CRP, spike protein)
+
+Record supplement intake
+
+This study is currently pending IRB approval and aims to enroll 100 adults with PACVS for a randomized, placebo-controlled trial.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - PAC-19QoL Questionnaire
+  - Six-minute walk test
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Combined metabolic modulator
+  - DIETARY_SUPPLEMENT: Rice Protein Powder with Vitamin C
+
+ELIGIBILITY:
+Age: 16 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06967428

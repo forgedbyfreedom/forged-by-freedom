@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05805488
+Title: Evaluation of the Body Slimming Effect of TCI904
+Official Title: Evaluation of the Body Slimming Effect of Lactobacillus Delbrueckii Ssp. Bulgaricus TCI904
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: creatine supplementation
+
+SUMMARY:
+To assess the efficacy of Lactobacillus delbrueckii ssp. bulgaricus TCI904 on body slimming
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The change of body weight (kg)
+  - The change of BMI (kg/m^2)
+  - The change of body fat rate (%)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo sachet
+  - DIETARY_SUPPLEMENT: TCI904 sachet
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05805488

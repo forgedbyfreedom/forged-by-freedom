@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04755530
+Title: Fermented Dairy Products and The Metabolic Syndrome
+Official Title: Matrix Characterization and Effects of Fermented Dairy Products on Liver Fat, Cardiometabolic Risk and Gut Microbiome in Males With Symptoms of Metabolic Syndrome
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: sports nutrition
+
+SUMMARY:
+The study will be conducted as a randomized controlled trial with four parallel arms including four dairy products. We will investigate the health effects of including yogurt in the diet through a 16-weeks intervention period among 100 volunteering males with symptoms of the metabolic syndrome. The study has a total duration of 20 weeks as a wash out period of four weeks will be initiated prior to the intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Liver fat
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Regular whole milk
+  - DIETARY_SUPPLEMENT: Yogurt with live bacteria
+  - DIETARY_SUPPLEMENT: Yogurt with inactivated bacteria
+  - DIETARY_SUPPLEMENT: Acidified whole milk
+
+ELIGIBILITY:
+Age: 30 Years to 70 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04755530

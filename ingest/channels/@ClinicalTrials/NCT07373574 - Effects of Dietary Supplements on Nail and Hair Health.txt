@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07373574
+Title: Effects of Dietary Supplements on Nail and Hair Health
+Official Title: Effects of the Dietary Supplements, Congaplex® and Immuplex®, on Age-Related Changes in Fingernail and Hair Health
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: DHEA supplementation
+
+SUMMARY:
+This is a research study conducted by Standard Process, Inc. and the University of North Carolina and Chapel Hill Nutrition Research Institute, which aims to evaluate the effectiveness of nutritional supplementation in improving the health of fingernails and hair. We value your participation.
+
+DETAILED DESCRIPTION:
+This study is a prospective, randomized, double-blind, controlled clinical trial focused on evaluating the effects of two nutritional supplements, Congaplex® (test product 1, TP1) and Immuplex® (TP2), versus an active control (AC) product, Gastro-Fiber®, on the health of fingernails and hair. The study will include a total of 90 participants across 3 arms and use a parallel-group design: 30 participants in TP1 group, 30 participants in TP2 group, and 30 participants in the AC group. The participants and the research personnel will be blind to the treatment. The AC product contains powder in capsules that have an identical size and similar appearance to Congaplex® and Immuplex® supplements.
+
+PRIMARY OUTCOMES:
+  - Determine the effects of test products (TP1/2) versus active control (AC) on numbers and severity of longitudinal (vertical) nail ridges
+  - Determine the effects of TP1/2 versus AC on nail biostructure and biochemical composition after 6 months of supplementation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Immune Health (Congaplex)
+  - DIETARY_SUPPLEMENT: Active Control (Gastro-Fiber)
+  - DIETARY_SUPPLEMENT: Immune Health (Immuplex)
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07373574

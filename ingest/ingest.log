@@ -4169,3 +4169,37 @@
 📚 Episodes: 4,154
 🧩 Chunks: 8,281
 📝 Words: 14,073,349
+/Users/bryanantonelli/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+🔍 INGEST STARTUP
+• CHANNELS_DIR: /Users/bryanantonelli/forged-by-freedom/ingest/channels
+• Pinecone index: forged-freedom-ai
+• Embedding model: text-embedding-3-large
+• Chunk tokens: 3000
+• Episodes to ingest: 12448
+🚀 BEGIN INGEST
+
+✅ [1/12448] @FoundMyFitness | Dr. Rhonda Patrick | How Micronutrients & Exercise Ameliorate... | 4 chunks
+✅ [2/12448] @FoundMyFitness | Dr. Rhonda Patrick | The Truth About Alcohol： Risks, Benefits... | 13 chunks
+✅ [3/12448] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Brad Schoenfeld： Resistance Training... | 9 chunks
+✅ [4/12448] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Ben Bikman： How To Reverse Insulin R... | 13 chunks
+✅ [5/12448] @FoundMyFitness | Dr. Rhonda Patrick | How Heat Therapy Improves Slow Wave Slee... | 1 chunks
+✅ [6/12448] @FoundMyFitness | Chris McGlory, PhD, | Chris McGlory, PhD, on the Anabolic Pote... | 8 chunks
+✅ [7/12448] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Bill Harris on the Omega-3 Index： In... | 8 chunks
+✅ [8/12448] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Benjamin Levine： How Exercise Preven... | 9 chunks
+✅ [9/12448] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Andy Galpin： The Optimal Diet, Suppl... | 19 chunks
+✅ [10/12448] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Peter Attia on Mastering Longevity –... | 16 chunks
+✅ [11/12448] @FoundMyFitness | Dr. Rhonda Patrick | How to Improve Metabolic Health with HII... | 4 chunks
+✅ [12/12448] @FoundMyFitness | Dr. Rhonda Patrick | Ask Me Anything When You Sign Up as a Fo... | 1 chunks
+✅ [13/12448] @FoundMyFitness | Dr. Rhonda Patrick | What Microplastics Are Doing to the Brai... | 5 chunks
+✅ [14/12448] @FoundMyFitness | Dr. Rhonda Patrick | The Science of Protein and Its Role in L... | 3 chunks
+✅ [15/12448] @FoundMyFitness | Stuart Phillips, PhD, | Stuart Phillips, PhD, on Building Muscle... | 8 chunks
+✅ [16/12448] @FoundMyFitness | Derek from MPMD | How To Increase Your Testosterone Levels... | 13 chunks
+✅ [17/12448] @FoundMyFitness | Dr. Rhonda Patrick | The Brain and Social Impacts of Early De... | 1 chunks
+✅ [18/12448] @FoundMyFitness | Dr. Rhonda Patrick | George Church, PhD： Rewriting Genomes to... | 7 chunks
+✅ [19/12448] @FoundMyFitness | Dr. Rhonda Patrick | Can Psilocybin Treat Depression？... | 1 chunks
+✅ [20/12448] @FoundMyFitness | Dr. Rhonda Patrick | This Supplement Could Cut Your Dementia ... | 2 chunks
+✅ [21/12448] @FoundMyFitness | Dr. Rhonda Patrick | Get the Free 9-Page BDNF Protocol Guide：... | 1 chunks
+✅ [22/12448] @FoundMyFitness | Morgan Levine, PhD, | Morgan Levine, PhD, on PhenoAge and the ... | 6 chunks
+✅ [23/12448] @FoundMyFitness | Dr. Rhonda Patrick | The Science of Magnesium and Its Role in... | 5 chunks

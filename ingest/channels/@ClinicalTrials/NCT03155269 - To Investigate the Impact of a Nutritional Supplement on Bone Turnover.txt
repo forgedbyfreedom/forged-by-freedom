@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03155269
+Title: To Investigate the Impact of a Nutritional Supplement on Bone Turnover Markers in Indian Healthy Premenopausal Women (25- 45 Years) After 6 Months of Intervention
+Official Title: Impact of a Nutritional Supplement on Bone Turnover Markers in Indian Healthy Premenopausal Women (25-45 Yrs; Inclusive) After 6 Months of Intervention: a Randomised Double Blind Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: protein supplementation
+
+SUMMARY:
+To investigate the effect of nutritional supplement on bone turnover markers (which are sensitive and respond quickly to nutrition or drug intervention) in Indian healthy premenopausal women after 6 months of intervention.
+
+DETAILED DESCRIPTION:
+This will be a double blind, single-center, randomized-controlled trial testing the effect of fortified beverage on bone turnover markers as compared to placebo control in 25-45 years old premenopausal women. The study will consist of two groups: Group 1 (Test) - Protein rich beverage powder fortified with MMN and Group 2 (control) - Low protein non-fortified iso-caloric beverage powder.
+
+PRIMARY OUTCOMES:
+  - Change From Baseline in Serum Cross Linking C-telopeptide of Type 1 Collagen (s-CTX-1) at 6 Months
+  - Change From Baseline in the Ratio of Carboxylated (c-OC) to Under-carboxylated Osteocalcin (Uc-OC) at 6 Months
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fortified Beverage Powder
+  - DIETARY_SUPPLEMENT: Non fortified beverage Powder
+
+ELIGIBILITY:
+Age: 25 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03155269

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06097754
+Title: Intermittent Exogenous Ketosis (IEK) at High Altitude
+Official Title: Intermittent Exogenous Ketosis (IEK): A Novel Strategy to Improve Hypoxic Tolerance and Adaptation
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: sleep athletes
+
+SUMMARY:
+Altitude-related hypoxia decreases human functional capacity, especially during exercise. Even with prolonged acclimatization, the physiological adaptations are insufficient to preserve exercise capacity, especially at higher altitudes completely. Consequently, there has been an ongoing search for various interventions to mitigate the negative effects of hypoxia on human performance and functional capacity. Interestingly, early data in rodents and humans indicate that intermittent exogenous ketosis (IEK) by ketone ester intake improves hypoxic tolerance, i.e.by facilitating muscular and neuronal energy homeostasis and reducing oxidative stress. Furthermore, there is evidence to indicate that hypoxia elevates the contribution of ketone bodies to adenosine-triphosphate (ATP) generation, substituting glucose and becoming a priority fuel for the brain. Nevertheless, it is reasonable to postulate that ketone bodies might also facilitate long-term acclimation to hypoxia by upregulation of both hypoxia-inducible factor-1α and stimulation of erythropoietin production.
+
+The present project aims to comprehensively investigate the effects of intermittent exogenous ketosis on physiological, cognitive, and functional responses to acute and sub-acute exposure to altitude/hypoxia during rest, exercise, and sleep in healthy adults. Specifically, we aim to elucidate 1) the effects of acute exogenous ketosis during submaximal and maximal intensity exercise in hypoxia, 2) the effects of exogenous ketosis on sleep architecture and quality in hypoxia, and 3) the effects of exogenous ketosis on hypoxic tolerance and sub-acute high-altitude adaptation. For this purpose, a placebo-controlled clinical trial (CT) in hypobaric hypoxia (real high altitude) corresponding to 3375 m a.s.l. (Rifugio Torino, Courmayeur, Italy) will be performed with healthy individuals to investigate both the functional effects of the tested interventions and elucidate the exact physiological, cellular, and molecular mechanisms involved in acute and chronic adaptation to hypoxia. The generated output will not only provide novel insight into the role of ketone bodies under hypoxic conditions but will also be of applied value for mountaineers and athletes competing at altitude as well as for multiple clinical diseases associated with hypoxia.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cerebrovascular reactivity to carbon dioxide (CO2)
+  - Cognitive function
+  - Acute Mountain Sickness (AMS)
+  - Change in lung function estimating forced vital capacity (FVC) and forced expiratory volume in 1st second (FEV1).
+  - Change in lung function estimating peak expiratory flow (PEF).
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Ketone ester
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06097754

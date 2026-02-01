@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 33149196
+Title: Sweat and saliva cortisol response to stress and nutrition factors.
+Authors: Pearlmutter, DeRose, Samson, Linehan, Cen
+Journal: Scientific reports
+Year: 2021
+Topic: cortisol exercise stress
+
+ABSTRACT:
+Cortisol is a biomarker for stress monitoring; however, the biomedical and clinical relevance is still controversial due to the complexity of cortisol secretion mechanisms and their circadian cycles as well as environmental factors that affect physiological cortisol level, which include individual mood and dietary intake. To further investigate this multifaceted relationship, a human pilot study examined cortisol concentration in sweat and saliva samples collected from 48 college-aged participants during aerobic exercise sessions along with mental distress and nutrition surveys. Enzyme-linked immunosorbent assays determined highly significant differences between apocrine-dominant sweat (AP), saliva before exercise (SBE), and saliva after exercise (SAE) cortisol concentration (AP-SBE: p&#x2009;=&#x2009;0.0017, AP-SAE: p&#x2009;=&#x2009;0.0102). A significantly greater AP cortisol concentration was detected in males compared to females (p&#x2009;=&#x2009;0.0559), and significant SAE cortisol concentration differences were also recorded between recreational athletes and non-athletes (p&#x2009;=&#x2009;0.044). However, Kessler 10 Psychological Distress Scale (K10) scores, an examination administered to deduce overall wellness, provided no significant differences between males and females or athletes and non-athletes in distress levels, which statistically signifies a direct relationship to cortisol was not present. For further analysis, dietary intake from all participants was considered to investigate whether a multiplexed association was prevalent between nutrition, mood, and cortisol release. Significant positive correlations between AP cortisol, SAE cortisol, K10 scores, and fat intake among female participants and athletes were discovered. The various machine learning algorithms utilized the extensive connections between dietary intake, overall well-being, sex factors, athletic activity, and cortisol concentrations in various biofluids to predict K10 scores. Indeed, the understanding of physiochemical stress response and the associations between studied factors can advance algorithm developments for cortisol biosensing systems to mitigate stress-based illnesses and improve an individual's quality of life.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/33149196/

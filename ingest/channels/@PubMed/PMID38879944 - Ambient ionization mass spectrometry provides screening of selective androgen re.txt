@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38879944
+Title: Ambient ionization mass spectrometry provides screening of selective androgen receptor modulators.
+Authors: Neme&#x161;kalov&#xe1;, Konvalinkov&#xe1;, V&#xe1;gnerov&#xe1;, Kucha&#x159;, Bu&#x10d;ek
+Journal: Talanta
+Year: 2024
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Ambient ionization mass spectrometry allows for analysis of samples in their natural state, i.e., with no sample pre-treatment. It can be viewed as a fast, simple, and economical analysis, but its main disadvantages include a lower analytical performance due to the presence of complex sample matrix and the lack of chromatographic separation prior to the introduction of the sample into the mass spectrometer. Here we present an application of two ambient ionization mass spectrometry techniques, i.e., Desorption Atmospheric Pressure Photoionization and Dielectric Barrier Discharge Ionization, for the analysis of known Selective Androgen Receptor Modulators, which represent common compounds of abuse in professional and semiprofessional sport. Eight real samples of illegal food supplements, seized by the local law enforcement, were used to test the performance of the ambient mass spectrometry and the results were validated against a newly developed targeted LC-UV-MS/MS method performed in multiple reaction monitoring mode with an external calibration for each analyte. In order to decide whether or not the compound can be declared as present, we proposed a system of rules for the interpretation of the obtained spectra. The criteria are based on mass spectrum matching (5-10&#xa0;ppm accuracy from the theoretical exact mass and a correct isotopic pattern), duration of the mass signal (three or five consecutive scans, depending on the instrumentation used), and intensity above the background noise (threefold increase in intensity and absolute intensity above 5E4 or 1E5, depending on the instrumentation). When applying these criteria, good agreement was found between the tested methods. Ambient ionization techniques were effective at detecting SARMs at pharmacologically relevant doses, i.e., approximately above 1&#xa0;mg per capsule, although they may fail to detect lower levels or isomeric species. It is demonstrated that when adhering to a set of clear and consistent rules, ambient mass spectrometry can be employed as a qualitative technique for the screening of illegal SARMs with sufficient confidence and without the necessity to perform a regular LC-MS analysis.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38879944/

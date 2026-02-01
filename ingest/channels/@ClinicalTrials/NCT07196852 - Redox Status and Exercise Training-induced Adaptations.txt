@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07196852
+Title: Redox Status and Exercise Training-induced Adaptations
+Official Title: Effects of N-acetylcysteine on Biological Responses to High-intensity Interval Training in Adults With Overweight/Obesity
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: vitamin D muscle
+
+SUMMARY:
+Excess fat accumulation is a key feature of overweight and obesity that is mainly driven by nutrient overload and insufficient physical activity. White adipose tissue displays lipid overload and hypertrophy accompanied by macrophages infiltration, hypoxia, inflammation and excess production of reactive oxygen species (ROS). An inflammatory response and ROS production are also evident in other metabolism regulating tissues and organs such as skeletal muscle, liver, pancreas and hypothalamus, contributing to a chronic inflammatory state, redox status disturbances and metabolic complications. There is overwhelming evidence showing that adults with overweight/obesity exhibit lower glutathione (GSH) levels in blood erythrocytes, skeletal muscle cells and subcutaneous and visceral adipose tissue cells. GSH, a tripeptide consisting of the amino acids glutamate, cysteine and glycine, is the most abundant thiol-containing antioxidant in the human body and has been, recently, characterized as a novel therapeutic target for the treatment of numerous chronic diseases, due to its potent intracellular redox buffering capacity. Interestingly, lower GSH levels have been associated with diet-induced weight loss resistance, while enhancement of GSH levels through N-acetylcysteine (NAC) supplementation reduces markers of oxidative stress, inflammation, insulin resistance, hypertension, endothelia dysfunction and improves vitamin D metabolism. NAC is a thiol donor that elicits antioxidant effects by (i) directly scavenging ROS and (ii) providing reduced cysteine through deacetylation, which supports the biosynthesis of endogenous GSH via the activity of γ-glutamylcysteine synthase. The aim of this study is to investigate whether NAC supplementation can enhance the exercise training-induced improvements on physical fitness and metabolic health in adult men and women with overweight/obesity.
+
+DETAILED DESCRIPTION:
+Forty adults with overweight/obesity (both males and females, aged 35-45 years) who will meet the inclusion criteria will be randomly assigned to a Placebo (Pla, n=20, will be supplemented with 2 placebo pills daily over a 12-week period) or a NAC (NAC, n=20 will be supplemented with 2 pills x 600 mg N-acetylcysteine daily over a 12-week period) group. Both groups will participate in 3 multicomponent high-intensity interval training (m-HIIT) sessions per week over a 12-week period. At baseline, 6 weeks and 12 weeks participants will undergo assessment of their (i) anthropometrics (body weight, waist and hip circumferences) (ii) body composition (through total body DXA scan), (iii) fat liver content (via high-resolution ultrasound), (iv) cardiorespiratory fitness (determination of VO2max), (v) muscle strength (upper and lower body), (vi) habitual physical activity level (via accelerometry) and (vii) daily dietary intake (via dietary recalls). In addition, at the same time-points (Baseline, 6 weeks, 12 weeks), resting blood samples will be collected for the determination of (viii) blood redox status \[reduced glutathione (GSH), oxidized glutathione (GSSH), GSH/GSSG, glutathione peroxidase (GPx), glutathione reductase (GR), superoxide dismutase (SOD) and catalase (CAT)\], (ix) peripheral blood mononuclear cells antioxidant levels and markers of oxidative stress and inflammation (catalase, superoxide dismutase, glutathione peroxidase, glutathione reductase, malondialdehyde, TNF-α and Interleukin-6), (x) low-grade systemic inflammation \[C-reactive protein (CRP) and Interleukin-6 (IL-6)\], (xi) lipidemic profile (triglycerides, total cholesterol, HDL, LDL) and (xii) liver function (SGPT, SGOT, γ-GT, ALP, Fetuin-A), and (xiii) an oral glucose tolerance test (using 75g glucose loading) will be performed.
+
+PRIMARY OUTCOMES:
+  - Change in body weight (kg)
+  - Change in waist circumference
+  - Change in hip circumference
+  - Change in fat mass (kg)
+  - Change in body fat percent (%)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: N Acetyl L Cysteine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 30 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07196852

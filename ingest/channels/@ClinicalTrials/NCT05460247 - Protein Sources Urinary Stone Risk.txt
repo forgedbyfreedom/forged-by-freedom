@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05460247
+Title: Protein Sources Urinary Stone Risk
+Official Title: The Effect of Protein Sources on Urinary Stone Risk
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: protein supplementation
+
+SUMMARY:
+Prior studies have shown that the source of dietary protein can have a significant impact on urinary stone risk. However, whey and plant protein isolates have not been compared. This is an important distinction as protein supplements fortified foods are increasingly popular. Herein, we seek to investigate the effect of different protein supplements, in an otherwise identical diet, on urinary stone risk.
+
+DETAILED DESCRIPTION:
+Each participant will receive a pre-made diet for 5 days at a time, for a total of 4 cycles. Previous studies have shown urine values reach a constant within the first 3 days. Diet will be a constant baseline diet representative of a standard Mediterranean diet. Participants will receive this diet to eat at home for 5 days with a supplemental protein shake at each meal (3 times a day). Participants will be required to drink 2.5-3 liters of fluid daily. Caffeine may be ingested as caffeine pills. Excessive exercise will be discouraged during the treatment phase.
+
+Diet will remain constant with respect to protein quantity and all other ingredients and will only change protein isolate source in supplemental protein shake.
+
+On days 4 and 5 of the diet, participants will be asked to collect two consecutive 24-hour urines. Between each 5-day diet phase, a flexible washout period will be allowed in which participants may eat a self-selected diet to take a break from standardized meals. Participants may resume the next phase diet on a day which is convenient for planned 24-hour urine collection at the end of that phase. The break period is to last no longer than 10 days.
+
+PRIMARY OUTCOMES:
+  - Urinary stone risk
+  - Calcium Oxalate Inhibitor activity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protein
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05460247

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05260905
+Title: Predictors of Affective Responses to Sprint Interval Exercise
+Official Title: Predictors of Affective Responses to Sprint Interval Exercise
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 150
+Topic: high intensity interval training
+
+SUMMARY:
+Regular exercise is needed to ensure good general health and wellbeing. How exercise makes you feel (pleasant / unpleasant) is thought to be important for whether people will stick with a given exercise routine. Sprint interval training (SIT) has been shown be a time-efficient exercise strategy for improving health, but some researchers suggest that SIT may be experienced as unpleasant and therefore unsuitable as an exercise routine for improving general health and wellbeing. However, SIT protocols are diverse, and it has previously been shown that very short SIT protocols such as 'reduced-exertion high-intensity interval training' (REHIT) are not perceived as unpleasant, at least on average. Interestingly, how REHIT is perceived appears to be highly variable between individuals. This individual variability may have important implications for whether people stick with REHIT and/or SIT in real-world settings, and therefore it is important to characterise it and better understand why some people find this exercise unpleasant while others do not. This study aims to characterise the within-participant and between-participant variability in how people perceive REHIT. Furthermore, potential relationships between psychological characteristics and how people perceive REHIT will be explored.
+
+DETAILED DESCRIPTION:
+The study will recruit between 100-150 apparently healthy participants from multiple sites. Participants will be asked to complete the following questionnaires: Anxiety Sensitivity Index 3 (ASI-3), Body Perception Questionnaire (BPQ), Sense of Agency Scale (SoAS), and Preferences and Tolerances for High Intensity Exercise (PRETIE-Q). This data will be used to determine if changes in affective valence during REHIT are associated with the responses to these questionnaires.
+
+Participants' maximal aerobic capacity (VO2max) will be determined using an incremental cycling test to exhaustion. Participants will start cycling on a stationary bike at a low intensity (30 W). The intensity will increase by 1 W every 3 seconds until volitional exhaustion or an inability to maintain a pedalling frequency of \>60 rpm. Expired O2 and CO2 will be continuously measured breath-by-breath using an online gas analyser. VO2max will be determined as the highest value for a 15-breath rolling average of VO2. VO2max will be accepted if at least 2 of the following criteria are met: volitional exhaustion, inability to maintain a pedal frequency of 60 rpm, RER\>1.10, a plateau in VO2, and/or heart rate within 10 bpm of the age predicted maximum (220-age).
+
+Participants will practice REHIT exercise on 2 occasions. Each session will be performed on a mechanically-braked cycle ergometer. REHIT consists of 10 minutes of unloaded cycling interjected with 2 maximal sprints against a resistance equivalent to 7.5% baseline body mass. In the first practice session the sprints will be 10 seconds long; in the second practice session they will be 15 seconds long. Sprints will finish at 2 minutes and 6 minutes into the session. The scales for rating of perceived exertion (RPE, Borg scale), affect (Feeling scale), and arousal (Felt Arousal) will be explained to the participants during the familiarisation sessions.
+
+The final 2 sessions are the experimental sessions and will involve REHIT sessions with 20-second sprints. The Demand and Resource Questionnaire will be administered pre-exercise. Affect (Feeling scale) and arousal (Felt Arousal) will be measured at rest before exercise and at the end of every minute during exercise. Rating of perceived exertion (RPE, Borg scale) will be measured at the same time-points but during exercise only. Heart rate and power output will be measured throughout the 10-minute exercise session. The Physical Activity Enjoyment Scale (PACES) will be administered 10 minutes after exercise.
+
+Within- and between-participant variability in the change in affect with exercise will be determined. Potential associations between psychology questionnaire scores and the change in affect with exercise will be explored.
+
+PRIMARY OUTCOMES:
+  - Exercise-induced change in affective valence
+
+INTERVENTIONS:
+  - BEHAVIORAL: REHIT
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05260905

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00590408
+Title: Efficacy and Safety of Coenzyme Q10 in the Treatment of Statin-Associated Myalgia
+Official Title: 
+Status: TERMINATED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: protein supplementation
+
+SUMMARY:
+Statins are medications that lower blood cholesterol by inhibiting cholesterol production in the liver. Overall, statins are well tolerated. Approximately 10% to 15% of patients report muscle aches/pain while taking statins. In a very small percentage of patients (\<0.01%; less than one in 10,000 people), muscle aches/pains may be accompanied by more serious muscle damage. In these patients, statins must be discontinued. In some reports, patients taking statins have reduced blood levels of coenzyme Q10. Coenzyme Q10 is an essential protein which is present in all human cells needed for normal cell function. Coenzyme Q10 has been tested in patients with heart failure where it has been shown to be safe and effective. Many patients with heart conditions take coenzyme Q10, but the risks and benefits of supplementation with this product is unknown. Coenzyme Q10 is considered a dietary supplement and is not approved by the Food and Drug Administration (FDA) for any medical condition. Coenzyme Q10 has very few, if any, side effects. Upset stomach (gastritis), headache, body ache, and low blood pressure have been reported. The objectives of this project are to test the efficacy and safety of coenzyme Q10 in treating muscle aches/pain in patients already taking statins who develop these symptoms.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - evaluate the efficacy coenzyme Q10 in the treatment of myalgia in patients receiving statin therapy
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: coenzyme Q10
+  - DIETARY_SUPPLEMENT: matching placebo
+
+ELIGIBILITY:
+Age: 19 Years to 79 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00590408

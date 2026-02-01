@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07183475
+Title: Return to Sports After Knee Arthroplasty
+Official Title: Amendment to the Study "Prospective, Multicenter Investigation of Clinical Rehabilitation and Everyday Recovery Following Knee Joint Endoprosthetic Replacement" With Additional Return-to-sports-testing at One Participating Center
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: athletic performance
+
+SUMMARY:
+The ability to return to sports after joint arthroplasty is increasingly becoming an important factor for patients in terms of their perceived quality of life. In sports orthopaedics, standardized functional tests have already been established - particularly for anterior cruciate ligament injuries - to assess athletic performance and prevent re-injury. These tests allow a stepwise evaluation of a subject's physical readiness for sports.
+
+In the field of arthroplasty, and despite increasing sports activity among patients with joint arthroplasty such structured assessment is still lacking. As a result, patients with arthroplasty typically resume sports activities based solely on individual recommendations from the surgeon or treating therapist. However, an objective evaluation of sports capability is currently not available.
+
+Therefore the amendment intends to expand the current testing protocol of the already registered and ongoing study (Protocol ID: UBonn\_TKA\_FollowUp) to include additional standardized, evidence-based return-to-sprort-tests.
+
+DETAILED DESCRIPTION:
+These return-to-sports-tests are based on validated procedures commonly used in sports orthopaedics, particularly following the stepwise testing concept described by Keller et al..
+
+Initially, the participant's individual sport level is determined via structured anamnesis. This is then followed by level-specific functional testing. Participants who do not perform Level 1 testing correctly will not proceed to Level 2 testing -even if their anamnesis suggests a higher sport level. This stepwise approach ensures safety and prevents injury during the testing process.
+
+PRIMARY OUTCOMES:
+  - Level of sports 1-4
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Return to sports test
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07183475

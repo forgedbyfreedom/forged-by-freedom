@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03818568
+Title: Supplemented Low Protein Diet and Progression of CKD
+Official Title: Restriction of Proteins in the Diet and Supplementation With Ketoanalogues to Prevent Disease Progression in Patients With Stage 4 Chronic Kidney Disease
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 149
+Topic: protein supplementation
+
+SUMMARY:
+Investigators intend to analyze diets restricted in protein and supplemented with ketoanalogues of essential amino acids, to slow the progress of renal damage and improve nutritional status in diabetic patients over 60 years with stage 4 chronic kidney disease.
+
+Evey 2 months, evaluations were performed of renal function (creatinine clearance, serum cysteine, proteinuria) and nutritional status (subjective global evaluation,dominant had pressure strength, body composition by bioelectric impedance, serum transferrin, serum prealbumin and serum aminogram) for a follow-up period of 2 years.
+
+DETAILED DESCRIPTION:
+Design. A multicenter, controlled, randomized, open label clinical trial was performed in patients with T2DM in CKD stage 3b-4 (GFR \<44 to \>15 mL/min/1.73 m2) treated in hospitals of the Mexican Social Security Institute. The follow-up period was at least 1 year from the inclusion of the last patient. The study was conducted in accordance with the provisions of the Declarations of Helsinki and Tokyo with the amendments in Venice (1983). The protocol was approved by the National Research and Ethics Committee and by the Research Committees of all participating hospitals and was registered in National Clinical Trials (NCT03818568).
+
+Patients. Inclusion criteria: Adult patients with T2DM (\>18 years) of either sex, with stage 3b-4 of CKD. All patients gave their signed informed consent at the time of recruitment. Exclusion criteria: Previous treatment with KA, kidney transplantation, cancer, HIV-AIDS, or seropositive for hepatitis B or C, patients receiving immunosuppressors, with hypercalcemia, intolerance to KA or disorders of amino acid metabolism. Patients who lost social security during the study, changed address or treating physician were also excluded.
+
+Sample size. Sample size calculation was made on the basis of two independent groups with unequal variances, α=0.05, β=0.20, and assuming a difference of 4.0 mL/min/yr between groups in reduction of eGFR, lower in LPD+KA. Calculation was made with sample size software. A minimum of 51 per group was obtained.
+
+Intervention. Diet design. Energy: 35 kcals/kg of ideal body weight in patients with normal BMI; 30 kcals/kg of ideal body weight in overweight patients (BMI\>25 kg/m2) and 40 kcals/kg of ideal weight in underweight patients (BMI\<25 kg/m2). Lipids accounted for 35% of the total energy intake (2/3 from polyunsaturated fatty acids). Carbohydrate intake was set at 55-60% of the total energy intake, with \>70% of complex carbohydrates. The fiber content was 20-25 g per day. The dietary recommendation for sodium chloride was \~5 g daily and potassium 50-60 mEq/day. Phosphate intake was set at 800-1000 mg per day.
+
+Both groups were prescribed with PrI of 0.6 g/kg/day, preferably plant-based. Patients in LPD+KA group received KA (Ketosteril® (Fresenius Kabi, Deutschland GMBH, BadHomburg, Germany) according to the manufacturer's recommendations (1 tablet/5 kg of body weight divided into 3 doses). All other treatments were provided according to institutional guidelines and prescribed by and according to the criteria of the treating physicians.
+
+Randomization. Patients were centrally randomized 1:1 using an electronic system of random numbers generator.
+
+Outcomes. The primary outcome was: the rate of decline in kidney function (Δ eGFR/year). Secondary outcomes included: start of dialysis, impairment of nutritional status, adverse events, hospitalizations, and mortality.
+
+Follow-up. Patients were followed-up with scheduled visits every two months, for clinical and biochemical evaluation. Blood sam
+
+PRIMARY OUTCOMES:
+  - glomerular filtration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: ketoanalogues of essential amino acids
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03818568

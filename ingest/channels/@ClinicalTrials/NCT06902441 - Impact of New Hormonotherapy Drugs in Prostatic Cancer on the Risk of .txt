@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06902441
+Title: Impact of New Hormonotherapy Drugs in Prostatic Cancer on the Risk of Cardiovascular Events : a Pharmacoepidemiology Study Using the French Health Care Claims Database
+Official Title: Impact of Androgen Receptor Signaling Inhibitors on Cardiovascular Events in Prostate Cancer: a Pharmacoepidemiology Study Using the French Health Care Claims Database
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 52000
+Topic: growth hormone treatment
+
+SUMMARY:
+In prostate cancer, whether advanced or localized, hormone therapy is a key treatment. These therapies work by lowering male hormone levels to slow the growth of cancer.
+
+More recently, a new group of medications called Androgen Receptor Signaling Inhibitors (ARSIs) has been introduced. These drugs are used alongside standard hormone therapy and are now prescribed for both advanced and high-risk localized prostate cancer.
+
+There are two main types of ARSIs: abiraterone acetate, which blocks the body from making androgens, and enzalutamide, apalutamide, and darolutamide, which stop cancer cells from using these hormones. Doctors choose among them based on individual patient needs, as no one drug has been clearly shown to be better than the others. These treatments have significantly improved survival for many patients.
+
+However, research shows that 30% of men with prostate cancer die from heart-related issues-a higher rate than in the general population. It's important to better understand how these treatments might be linked to heart risks.
+
+One study found that all ARSIs increase the risk of serious heart problems. However, it did not take into account whether patients already had heart conditions, even though previous heart issues are known to increase the risk with certain drugs like abiraterone and enzalutamide.
+
+That's why we're conducting a study using a large real-world database to compare the heart risks of abiraterone, enzalutamide, and apalutamide. We will take into account both patients' existing heart conditions and how long they were on treatment.
+
+DETAILED DESCRIPTION:
+In prostate cancer, both in metastatic settings and in many localized cases, androgen suppression via Gonadotropin-Releasing Hormone (GnRH) agonists or antagonists remains the cornerstone of treatment. These androgen deprivation therapies (ADT) aim to reduce circulating androgen levels.
+
+In recent years, Androgen Receptor Signaling Inhibitors (ARSIs) have emerged and are now prescribed in combination with ADT. These treatments have broad indications in metastatic settings and are also increasingly used in localized high-risk prostate cancer.
+
+A conventional distinction is made between abiraterone acetate-a selective inhibitor of androgen synthesis that blocks CYP17-and other ARSIs that inhibit the androgen receptor, namely enzalutamide, apalutamide, and darolutamide. The indications for these treatments are often similar, with no clear evidence supporting the superiority of one over another. For instance, in synchronous metastatic hormone-sensitive prostate cancer, when treated with ARSIs combined with ADT, clinicians may choose between abiraterone acetate, apalutamide, or enzalutamide. Thus, the safety profile of these agents plays a crucial role in therapeutic decision-making. These next-generation hormonal therapies have significantly improved patient survival.
+
+However, when examining causes of death among patients with prostate cancer, studies have shown that 30% of deaths are due to cardiovascular causes, with an excess risk compared to the general population. It is therefore essential to investigate these cardiovascular events and their associations with the treatments administered.
+
+One meta-analysis identified an increased risk of high-grade cardiovascular toxicities associated with all next-generation hormonal therapies (HR 1.75; 95% CI: 1.50-2.04). This excess risk was observed for each ARSI individually. However, the meta-analysis could not account for patients' cardiovascular history, despite demonstrated associations between pre-existing cardiovascular conditions and the risk of cardiovascular toxicity with abiraterone acetate and enzalutamide.
+
+For these reasons, we aimed to compare cardiovascular toxicities associated with abiraterone, enzalutamide, and apalutamide using a large real-world database, taking into account pre-existing cardiovascular comorbidities as well as treatment exposure duration.
+
+PRIMARY OUTCOMES:
+  - Risk of hospitalization for cardiovascular cause
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06902441

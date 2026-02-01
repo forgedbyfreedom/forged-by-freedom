@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00327080
+Title: Sildenafil to Treat HIV-Associated Pulmonary Hypertension
+Official Title: Evaluation of Endothelial and Hemodynamic Function in HIV Associated Pulmonary Hypertension and a Phase I/II Safety and Efficacy Trial of Sildenafil in HIV Associated Pulmonary Hypertension
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: omega 3 exercise
+
+SUMMARY:
+This study will examine how blood pressure in the lungs is controlled in healthy people, people with HIV and people with HIV and pulmonary artery hypertension (high blood pressure in the lungs, also called PAH). PAH sometimes develops in people with HIV, but it is not known why this occurs or how best to treat it.
+
+Healthy volunteers and patients with HIV infection who are 18 years of age or older may be eligible for this study. All candidates are screened with a medical history, physical examination, electrocardiogram (EKG), chest x-ray, echocardiogram and blood tests. Participants undergo the following procedures:
+
+All participants have a right heart catheterization and forearm blood flow study.
+
+* Catheterization study. A catheter (plastic tube) is placed in an arm vein and possibly in an artery in the arm. Then a large catheter is passed through a vein in the groin, neck or chest. Through this "introducer" catheter, another catheter is advanced into the right side of the heart and to the pulmonary artery. A facemask is put in place to measure the amount of nitric oxide produced by the lungs. Acetylcholine is infused through the catheter and its effects on blood pressure in the lungs and on the amount of nitric oxide exhaled is measured. After about 1 hour, the catheter and facemask are removed and a new catheter is inserted through the introducer catheter into the pulmonary artery. The subject is moved into an MRI scanner where blood flow is measured after infusion of three different medications: acetylcholine (causes blood vessels to expand and slows heart rate); sodium nitroprusside (causes blood vessels to expand and increases blood flow to the heart); and L-NMMA (decreases blood flow by blocking production of nitric oxide in cells lining the blood vessels).
+* Blood flow study. Small tubes are inserted into the artery of the patient's forearm. These are used to infuse medicines and draw blood samples. Forearm blood flow is measured using pressure cuffs placed on the wrist and upper arm, and a strain gauge (a rubber band device) placed around the forearm. When the cuffs are inflated, blood flows into the arm, stretching the strain gauge, and the flow measurement is recorded. A small lamp is positioned over the hand to measure the light reflected from the hand and blood flow in the forearm. Blood samples are then drawn to measure blood counts and proteins and other natural body chemicals. Then, forearm blood flow is measured after administration of small doses of sodium nitroprusside, acetylcholine and L-NMMA. There is a 20- to 30-minute rest period between injections of the different drugs.
+
+In addition, HIV-infected patients with PAH undergo the following tests to determine the cause of their PAH: CT scan of the lungs, pulmonary function tests, 6-minute walk test, quality-of-life assessment, assessment of difficulty in breathing, exercise testing while measuring oxygen breathed in and carbon dioxide breathed out, blood tests, monitoring of oxygen saturation during sleep for 1 night and ventilation/perfusion scan. For the ventilation/perfusion scan, the subject breathes in a small amount of radioactive aerosol while images are obtained of the radioactivity as it enters the lungs, and then pictures of the lungs are taken from multiple angles. Next, the patient receives an injection of tiny particles of albumin (a protein) containing a small amount of radioactivity and pictures of the lungs are taken that show the pattern of blood flow to the lungs.
+
+Patients with HIV and PAH who may benefit from the investigational drug, sildenafil (commonly known as Viagra), may continue to participate in the next stage of the study. They receive the first dose of sildenafil after completing the forearm blood flow study. They continue the drug for 16 weeks, returning to the clinic 1 week after the first dose and then every other week to monitor the response to treatment and drug side effects. At the end of 16 weeks, patients return to the clinic for a repeat evaluation, including blood tests, 6-minute walk test, echocardiogram, right heart catheterization and forearm blood flow study.
+
+...
+
+DETAILED DESCRIPTION:
+HIV infection has been associated with an increased prevalence of pulmonary hypertension. In addition, recent data suggests that a state of endothelial dysfunction develops in HIV disease secondary to anti-retroviral therapy and associated dyslipidemia or secondary to direct viral infection of the endothelium. This leads to premature atherosclerosis and possibly contributes to avascular necrosis of the hip. Similar effects on the pulmonary vasculature may be involved in the development of pulmonary vasculopathy.
+
+In this study we plan to invasively characterize the status of pulmonary and systemic endothelial function and determine the mechanisms of pulmonary vascular endothelial dysfunction in HIV disease. To this end we will catheterize healthy volunteers and volunteers with HIV infection with and without pulmonary hypertension and directly measure acetylcholine-dependent blood flow in the pulmonary and brachial artery to assess pulmonary and systemic endothelium-dependent blood flow. Simultaneous measurement of exhaled NO and pulmonary capillary artery NO2 - will allow for complete characterization of the contribution of NO production to endothelium-dependent vasomotor control. We will also use recently developed MRI techniques to measure pulmonary artery blood flow during infusion of acetylcholine (ACH), sodium nitroprusside (SNP) and NG monomethyl-L-arginine (LNMMA) to establish responsiveness to an endothelium dependent vasodilator, endothelium-independent vasodilator and an NO inhibitor, respectively. Volunteers with pulmonary hypertension will have the option to undergo open label phase I/II treatment with sildenafil for 16 weeks and return for a repeat assessment of pulmonary hemodynamics as well as pulmonary and systemic endothelial function.
+
+Endothelial cells will be isolated using novel flow-cytometry methodologies developed over the last two years at the NIH intramural division utilizing combinations of positive and negative selection based on specific surface markers for activated T cells and endothelial cells and markers of cell viability. Endothelial cells will subsequently be interrogated using amplified real time PCR methodologies and affymetrix based gene expression profiling developed in our laboratories. The levels of expression in endothelial cells of HIV virus, HHV8, eNOS, caveolin, HO-1, endothelin receptors A and B, and endothelin 1, in addition to other proteins regulating vascular homeostasis and cellular host defense (i.e. epidermal growth factor, transforming growth factor beta, platelet derived growth factor and interleukin-6), will be assessed.
+
+These studies will provide insights into the mechanisms of pulmonary artery endothelial dysfunction and suggest rationally designed therapies targeting viral load, HHV8, and/or the NO/endothelin pathways. These studies have the promise of opening the door to the study of pulmonary artery endothelial dysfunction at the physiological, cellular and molecular level.
+
+PRIMARY OUTCOMES:
+  - Evaluate pulmonary artery and systemic endothelial function in HIV infected volunteers with pulmonary hypertension in comparison to HIV infected volunteers without pulmonary hypertension.
+
+INTERVENTIONS:
+  - PROCEDURE: MRI
+  - DRUG: L-NMMA
+  - DRUG: Acetylcholine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00327080

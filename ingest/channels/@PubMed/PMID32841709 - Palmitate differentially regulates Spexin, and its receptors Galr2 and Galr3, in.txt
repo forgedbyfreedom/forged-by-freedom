@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32841709
+Title: Palmitate differentially regulates Spexin, and its receptors Galr2 and Galr3, in GnRH neurons through mechanisms involving PKC, MAPKs, and TLR4.
+Authors: Wang, Tran, Lee, Belsham
+Journal: Molecular and cellular endocrinology
+Year: 2021
+Topic: peptide hormones performance
+
+ABSTRACT:
+The function of the gonadotropin-releasing hormone (GnRH) neuron is critical to maintain reproductive function and a significant decrease in GnRH can lead to disorders affecting fertility, including hypogonadotropic hypogonadism. Spexin (SPX) is a novel hypothalamic neuropeptide that exerts inhibitory effects on reproduction and feeding by acting through galanin receptor 2 (GALR2) and galanin receptor 3 (GALR3). Fatty acids can act as nutritional signals that regulate the hypothalamic-pituitary-gonadal (HPG) axis, and elevated levels of circulating saturated fatty acids associated with high fat diet (HFD)-feeding have been shown to induce neuroinflammation, endoplasmic reticulum stress and hormonal resistance in the hypothalamus, as well as alter neuropeptide expression. We previously demonstrated that palmitate, the most common saturated fatty acid in a HFD, elevates the expression of Spx, Galr2 and Galr3 mRNA in a model of appetite-regulating neuropeptide Y hypothalamic neurons. Here, we found that Spx, Galr2 and Galr3 mRNA were also significantly induced by palmitate in a model of reproductive GnRH neurons, mHypoA-GnRH/GFP. As a follow-up to our previous report, we examined the molecular pathways by which Spx and galanin receptor mRNA was regulated in this cell line. Furthermore, we performed inhibitor studies, which revealed that the effect of palmitate on Spx and Galr3 mRNA involved activation of the innate immune receptor TLR4, and we detected differential regulation of the three genes by the protein kinases PKC, JNK, ERK, and p38. However, the intracellular metabolism of palmitate to ceramide did not appear to be involved in the palmitate-mediated gene regulation. Overall, this suggests that SPX may play a role in reproduction at the level of the hypothalamus and the pathways by which Spx, Galr2 and Galr3 are altered by fatty acids could provide insight into the mechanisms underlying reproductive dysfunction in obesity.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32841709/

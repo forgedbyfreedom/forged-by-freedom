@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35060377
+Title: In-Sewer Stability Assessment of Anabolic Steroids and Selective Androgen Receptor Modulators.
+Authors: Shimko, O'Brien, Li, Tscharke, Brooker
+Journal: Environmental science &amp; technology
+Year: 2022
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Wastewater-based epidemiology is a potential complementary technique for monitoring the use of performance- and image-enhancing drugs (PIEDs), such as anabolic steroids and selective androgen receptor modulators (SARMs), within the general population. Assessing in-sewer transformation and degradation is critical for understanding uncertainties associated with wastewater analysis. An electrospray ionization liquid chromatography mass spectrometry method for the quantification of 59 anabolic agents in wastewater influent was developed. Limits of detection and limits of quantification ranged from 0.004 to 1.56 &#x3bc;g/L and 0.01 to 4.75 &#x3bc;g/L, respectively. Method performance was acceptable for linearity (R2 &gt; 0.995, few exceptions), accuracy (68-119%), and precision (1-21%RSD), and applicability was successfully demonstrated. To assess the stability of the selected biomarkers in wastewater, we used laboratory-scale sewer reactors to subject the anabolic agents to simulated realistic sewer environments for 12 h. Anabolic agents, including parent compounds and metabolites, were spiked into freshly collected wastewater that was then fed into three sewer reactor types: control sewer (no biofilm), gravity sewer (aerobic conditions), and rising main sewer (anaerobic conditions). Our results revealed that while most glucuronide conjugates were completely transformed following 12 h in the sewer reactors, 50% of the investigated biomarkers had half-lives longer than 4 h (mean residence time) under gravity sewer conditions. Most anabolic agents were likely subject to biofilm sorption and desorption. These novel results lay the groundwork for any future wastewater-based epidemiology research involving anabolic steroids and SARMs.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35060377/

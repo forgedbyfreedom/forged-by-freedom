@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04184713
+Title: Evaluation of the Effect of an Specific Oral Nutritional Supplement on the Nutritional Status in Cancer and Malnutrition
+Official Title: A Clinical Trial With Nutritional Intervention to Evaluate the Effect of an Specific Oral Nutritional Supplement on the Nutritional Status in Patients With Cancer and Malnutrition
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: omega 3 exercise
+
+SUMMARY:
+Effect of a specific nutritional oral supplement on the nutritional status of patients with cancer and malnutrition
+
+DETAILED DESCRIPTION:
+Multicentric, parallel, randomized, double blind and controlled clinical-nutritional study of 8 weeks of duration and 2 study groups of treatment: Experimental group (experimental nutritional oral supplement); and Control group (control nutritional oral supplement) to evaluate the effect on the nutritional and functional status, the quality of life and body composition of patients with cancer and malnutrition undergoint specficic treatment (chemotherapy, radiotherapy, inmunotherapy).
+
+PRIMARY OUTCOMES:
+  - Nutritional status
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Experimental Group
+  - DIETARY_SUPPLEMENT: Control Group
+
+ELIGIBILITY:
+Age: 28 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04184713

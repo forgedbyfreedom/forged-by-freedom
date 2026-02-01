@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05917483
+Title: Evaluation of Mechanical Characteristics of Tendons of Athletes Using Sonography
+Official Title: Evaluation of Mechanical Characteristics and Prevention From Overuse Injury of Tendons of Elite Athletes Using Dynamic Sonography
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 10
+Topic: tendon injury
+
+SUMMARY:
+The investigators analyzed the strain of the rotator cuff tendon of baseball pitchers obtained using ultrasonography and compared the change in peak tendon strain before and after the regular season.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Peak tendon strain
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Ultrasonography
+
+ELIGIBILITY:
+Age: 21 Years to 33 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05917483

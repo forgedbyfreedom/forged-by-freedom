@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06566157
+Title: PROMOTE: The Effect of a Six Week Prebiotic Supplementation on Wellbeing of Young Adults.
+Official Title: PROMOTE: The Effect of Prebiotic Supplementation on Salivary Cortisol Awakening Response in Young Adults With Mild-To-Moderate Self-Reported Stress: A Double Blinded Parallel Randomised Controlled-Trial.
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: beta alanine
+
+SUMMARY:
+The study will investigate whether taking a prebiotic for six weeks helps to reduce morning cortisol levels in healthy young adults with mild to moderate stress compared to a placebo. Individuals should continue with their usual lifestyle during the study. Other factors of wellbeing will also be assessed.
+
+DETAILED DESCRIPTION:
+PROMOTE is a double blinded parallel randomised controlled-trial investigating if prebiotic supplementation reduce awakening salivary cortisol response, reported as area under the curve compared to a maltodextrin placebo in healthy young adults with a mild-to-moderate self reported stress score. There will be a focus on biological secondary outcomes to better understand how supplementation may influence the microbiome using metabolomics and sequencing techniques. In addition to other measures of wellbeing captured by questionnaires and activity monitors.
+
+PRIMARY OUTCOMES:
+  - Salivary Cortisol Awakening Response - Biological salivary cortisol (µg/dL)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Prebiotic
+  - DIETARY_SUPPLEMENT: Maltodextrin (Corn)
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06566157

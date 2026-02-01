@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01745016
+Title: Effect of Beta-Alanine on Heart Rate Response
+Official Title: The Effect of 28 Days of Beta-alanine Supplementation on the Physical Working Capacity at Heart Rate Threshold (PWCHRT)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: beta alanine
+
+SUMMARY:
+Beta-alanine, as a method to increase muscle carnosine, has been shown to enhance muscle buffering capacity and delay fatigue. Various fatigue tests have been utilized to examine the effectiveness of beta-alanine supplementation. The physical working capacity test has been used to show significant increases in physical working capacities following supplementation. The physical working capacity tests were originally developed by Moritani et al. 1981 and Devries et al. 1982 to measure the point of onset of muscular fatigue. It is hypothesized that beta-alanine will increase physical working capacity at heart rate threshold, thereby signifying a delay in fatigue.
+
+DETAILED DESCRIPTION:
+An equal number of men and women will be recruited \[Men, n=20 (10 placebo \[PL\]; 10 beta-alanine (Active)\]; \[Women,n=20 (10 PL; 10 Active)\]. Men and women will be randomly assigned to respective groups to allow for equal numbers in supplement and placebo groups.
+
+PRIMARY OUTCOMES:
+  - Physical working capacity at heart rate threshold
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Beta-alanine
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01745016

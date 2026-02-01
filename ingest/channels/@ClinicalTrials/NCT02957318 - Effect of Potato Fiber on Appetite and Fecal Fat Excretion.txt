@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02957318
+Title: Effect of Potato Fiber on Appetite and Fecal Fat Excretion
+Official Title: Effect of Potato Fiber on Appetite and Fecal Fat Excretion
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: sports nutrition
+
+SUMMARY:
+Results have indicated that some dietary fibers increase fecal fat excretion and particularly viscous fibers suppress appetite sensation and reduce energy intake. Both these effects may contribute to body weight management.
+
+Aim: The aim of the study is to investigate the potential of 3-weeks daily intake of potato pulp (FiberBind), rhamnogalacturonan I isolated potato fiber (RG-I) vs. a low-fiber control (placebo) on satiety and fecal fat excretion in healthy adults. Furthermore, a number of secondary endpoints are investigated.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Fecal fat excretion
+  - Subjective appetite sensations
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: FiberBind
+  - DIETARY_SUPPLEMENT: RG-I fiber
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02957318

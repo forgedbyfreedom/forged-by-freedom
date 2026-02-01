@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06367218
+Title: Opioid-Free Combined Anesthesia With Spontaneous Breathing for VATS
+Official Title: Opioid-Free Combined Anesthesia Under Spontaneous Breathing for Video-Assisted Thoracoscopic Surgery of Pulmonary Nodules: A Multicenter, Open-Label, Randomized Controlled, 2x2 Factorial Design Clinical Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 480
+Topic: weight loss exercise
+
+SUMMARY:
+Non-tracheal intubated combined anesthesia with preserved spontaneous breathing significantly enhances the quality and speed of recovery post-VATS for patients undergoing lung nodule surgery. The "opioid-sparing strategy," which substitutes ketamine for opioids during surgery, not only provides effective analgesia but also protects perioperative lung function and reasonably prevents the occurrence of opioid-related adverse reactions; it also reduces medical costs and shortens the average hospital stay. However, the degree of benefit to patients lacks high-level clinical evidence. This study aims to comprehensively assess the effect of opioid-free combined anesthesia with preserved spontaneous breathing for VATS lung nodule surgery on postoperative rapid recovery from multiple aspects including postoperative lung function and pulmonary complications, pain, gastrointestinal function, nausea/vomiting, cognitive function, and depression/anxiety, intending to expand the dataset and application prospects in this field, and increase feasibility experience.
+
+DETAILED DESCRIPTION:
+This study is a prospective, multicenter, randomized controlled, open-label, 2x2 factorial design trial involving two types of interventions: ventilation methods (2 levels: preserved spontaneous breathing, mechanical ventilation) and combined anesthesia methods (2 levels: opioid-free combined anesthesia, opioid-based combined anesthesia). To evaluate the clinical efficacy and safety of these two types of interventions, four parallel groups of patients undergoing video-assisted thoracoscopic surgery for pulmonary nodules under different anesthesia strategies were established: preserved spontaneous breathing and opioid-based combined anesthesia (OSB group), preserved spontaneous breathing and opioid-free combined anesthesia (KSB group), double-lumen endotracheal tube mechanical ventilation and opioid-based combined anesthesia (OMV group), and double-lumen endotracheal tube mechanical ventilation and opioid-free combined anesthesia (KMV group). This study will be conducted in the thoracic surgical centers of six hospitals in China, carried out by experienced senior anesthetists and thoracic surgeons. Patients undergoing anesthesia in this study will experience three observation phases. Phase 1 (perioperative phase, day 0 to day 2): Observing the lung function status and the occurrence of adverse events under different anesthesia plans during the perioperative period; Phase 2 (postoperative hospital stay, day 3 to day 7): Observing the lung function status and the occurrence of adverse events under different anesthesia plans during the hospital stay; Phase 3 (short-term follow-up, day 8 to day 30): Observing the lung function status and the occurrence of adverse events under different anesthesia plans during the short-term follow-up period.
+
+PRIMARY OUTCOMES:
+  - Lung function 30 days after surgery
+
+INTERVENTIONS:
+  - DRUG: opioid based strategy
+  - DRUG: opioid-free strategy
+  - PROCEDURE: Laryngeal mask airway; Preserved spontaneous breathing
+  - PROCEDURE: Double lumen tracheal tube; Mechanical ventilation
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06367218

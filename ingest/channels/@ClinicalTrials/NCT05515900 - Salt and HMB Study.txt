@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05515900
+Title: Salt and HMB Study
+Official Title: The Roles of HMB and Sodium in Blood Pressure Regulation and Gut Microbiome
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: HMB supplementation
+
+SUMMARY:
+Hypertension affects one-third of adults in the US. High salt diet is a key risk factor for elevated blood pressure (BP). The associations of gut microbiome with high salt diet and hypertension have been established in both animal and human studies. However, the underlying biological mechanisms linking sodium to BP elevation and gut microbiome alteration are not clear. Increasing evidence supports a pivotal role of leucine metabolism in hypertension. Leucine is initially catalyzed by the branched-chain amino acid aminotransferase enzyme (BCAT), producing α-ketoisocaproate (α-KIC), which can be further metabolized to β-hydroxy-β-methylbutyrate (HMB). Leucine/α-KIC/HMB metabolism pathway shows a promising involvement in the relationships among salt, gut microbiome, and elevated BP. Preliminary studies show that dietary sodium reduction increases circulating HMB, which is further associated with reduced BP, and that HMB treatment decreases Firmicutes/Bacteroidetes ratio, and increases α-diversity and gut microbiota-derived short-chain fatty acids (SCFAs). However, the leucine/α-KIC/HMB metabolism pathway has never been targeted in human studies. To establish causality, I propose a double-blind, two-stage randomized, placebo-controlled trial of sodium and HMB supplements for the following specific aims: Aim 1 will determine the effect of sodium supplement on leucine/α-KIC/HMB metabolism pathway. Aim 2 will determine the effect of HMB supplement on office BP and 24-hour ambulatory BP (Aim 2a), and α- and β-diversities and Firmicutes/Bacteroidetes ratio (Aim 2b). Secondary Aim will test the hypothesis that HMB supplement could partially block the detrimental effects of sodium intake on BP and gut microbiota. The proposed project would help to uncover the role of leucine/α-KIC/HMB metabolism pathway in salt-induced hypertension and the alteration in gut microbiome. Most importantly, the project will provide the training opportunities for me as a junior faculty, to study the new area of gut microbiome, acquire new experience and skills to conduct human trials. In addition, this project will generate rich preliminary data on the role of leucine/α-KIC/HMB metabolism pathway in salt-induced BP elevation, and test the feasibility for developing future NIH R01 project.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Leucine/α-KIC/HMB metabolism
+  - Blood pressure
+  - Gut microbiome
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Sodium
+  - DIETARY_SUPPLEMENT: HMB
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05515900

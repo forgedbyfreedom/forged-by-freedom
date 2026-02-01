@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05715073
+Title: Improving Cognition With Neurodegradation Countermeasure
+Official Title: Improving Neuroprotection, Cognitive Function, and Mental Focus With Neurodegradation Countermeasure
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this randomized, placebo-controlled, three-condition, double-blind, within-participants crossover clinical trial is to compare caffeine, TeaCrine plus caffeine, and a placebo condition in ROTC or tactical personnel.
+
+The main question it aims to answer is the effect of the condition on measures of cognitive performance, cardio-autonomic, and hemodynamic responses after a physically demanding protocol.
+
+The physiological function will be derived from metrics of heart rate variability, whilst cogntive performance will be evaluated using tasks that assess cognitive domains of executive function, reaction time, and memory.
+
+Participants will report to the lab 4 times, once for familiarization of cognitive measures and then 3 times for their experimental visits. Participants will consume their randomized condition an hour prior to the fatiguing interval exercise protocol. Following they will complete a series of cognitive tasks.
+
+DETAILED DESCRIPTION:
+The purpose of this randomized, placebo-controlled, three-condition, double-blind, within-participants crossover clinical trial is to determine and compare the effects of the combination of TeaCrine® and caffeine to a placebo and a caffeine condition on measures of cognitive performance, cardio-autonomic, and hemodynamic responses after a physically demanding protocol. After giving informed consent, 20 ROTC members or tactical personnel will undergo baseline performance testing and familiarization and will then be randomly assigned to order of completion of the placebo (P), caffeine (C) condition, and caffeine + TeaCrine (CT) condition, with each session separated by at least 96 hours. In each condition, Participants will be given the condition pill assigned to them, the pill will be taken orally with water, and will wait 60 minutes. At this time, the Participant will complete a treadmill-based physically fatiguing interval protocol with select cognitive testing during the exercise recovery intervals. Participant measures of mental fatigue will be assessed pre- and post-testing, and following the interval bout participants will perform a series of cognitive tasks. Heart rate variability (HRV) and respiration will be assessed continuously though these tasks and blood pressure will be assessed at baseline, prior to the exercise bout, immediately following the exercise bout, and following the cognitive testing.
+
+PRIMARY OUTCOMES:
+  - Changes in blood lactate
+  - Changes in Autonomic Nervous System Function (ANS) by linear metrics
+  - Changes in Autonomic Nervous System Function (ANS) by nonlinear metrics
+  - Changes in Autonomic Nervous System Function (ANS) by frequency domain metrics
+  - Changes in Inhibitory Control by reaction time (Go/No go)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: TeaCrine and Caffeine
+  - DIETARY_SUPPLEMENT: Caffeine
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05715073

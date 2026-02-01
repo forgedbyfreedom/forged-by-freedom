@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03438812
+Title: Dehydroepiandrosterone Maintain Mitochondrial Quality of Cumulus Cells in Poor Ovarian Responders
+Official Title: The Role of Dehydroepiandrosterone in the Maintenance of Mitochondrial Quality of Cumulus Cells in Poor Ovarian Responders
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 66
+Topic: DHEA supplementation
+
+SUMMARY:
+To investigate whether the DHEA supplementation could improve mitochondrial quality in poor ovarian responders
+
+DETAILED DESCRIPTION:
+Women who underwent in vitro fertilization (IVF) treatment participated, including normal ovarian responders (NORs) and poor ovarian responders (PORs). PORs were assigned to receive DHEA supplementation or not before the IVF cycle. For all patients, cumulus cells (CCs) were obtained after oocyte retrieval. In the CCs, mRNA expression of mitochondria-related genes was measured. To compare the mRNA expression of mitochondria-related genes in the CCs among the three groups.
+
+PRIMARY OUTCOMES:
+  - mitochondria related genes expression
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: dehydroepiandrosterone (DHEA)
+
+ELIGIBILITY:
+Age: 25 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03438812

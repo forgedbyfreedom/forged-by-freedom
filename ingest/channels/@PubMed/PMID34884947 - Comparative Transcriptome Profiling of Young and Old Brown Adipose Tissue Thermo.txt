@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 34884947
+Title: Comparative Transcriptome Profiling of Young and Old Brown Adipose Tissue Thermogenesis.
+Authors: Kim, Kang, Ryu, Oh, Oh
+Journal: International journal of molecular sciences
+Year: 2021
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Brown adipose tissue (BAT) is a major site for uncoupling protein 1 (UCP1)-mediated non-shivering thermogenesis. BAT dissipates energy via heat generation to maintain the optimal body temperature and increases energy expenditure. These energetic processes in BAT use large amounts of glucose and fatty acid. Therefore, the thermogenesis of BAT may be harnessed to treat obesity and related diseases. In mice and humans, BAT levels decrease with aging, and the underlying mechanism is elusive. Here, we compared the transcriptomic profiles of both young and aged BAT in response to thermogenic stimuli. The profiles were extracted from the GEO database. Intriguingly, aging does not cause transcriptional changes in thermogenic genes but upregulates several pathways related to the immune response and downregulates metabolic pathways. Acute severe CE upregulates several pathways related to protein folding. Chronic mild CE upregulates metabolic pathways, especially related to carbohydrate metabolism. Our findings provide a better understanding of the effects of aging and metabolic responses to thermogenic stimuli in BAT at the transcriptome level.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/34884947/

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03486145
+Title: Effect of Nitrate-rich Fruit and Vegetable Supplement on Blood Pressure
+Official Title: Nitrate-rich Fruit and Vegetable Supplement and Blood Pressure in Normotensive Healthy Young Males: a Randomized, Double-blinded, Placebo-controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 57
+Topic: sleep athletes
+
+SUMMARY:
+It is hypothesized that the daily supplementation of a nitrate-rich, two-ounce fruit and vegetable energy supplement (Isagenix International LLC) by healthy young adults with a would increase circulating nitrates and improve cardiovascular parameters compared to a nitrate-deficient placebo (prune juice).
+
+DETAILED DESCRIPTION:
+Endothelial cells of the peripheral vasculature are key sources of vasoactive factors regulating healthy blood pressure. One of the primary vasodilatory factors released from these cells is nitric oxide (NO). Production of NO is stimulated both through enzymatic-dependent mechanisms via NO synthase, as well as from dietary intake of nitrate-containing foods or supplements that increase NO bioavailability. This study examined whether the daily consumption of a nitrate-rich, two-ounce fruit and vegetable energy supplement (Isagenix International LLC) would increase circulating nitrates and improve cardiovascular parameters compared to a nitrate-deficient placebo (prune juice). Healthy male adults aged 18-40y (n=45) were recruited to participate in this longitudinal double-blind, placebo-controlled, randomized clinical trial. Subjects maintained their typical diet and physical activity patterns during the study. Anthropometric and cardiovascular (blood pressure and flow-mediated dilation (FMD)) parameters, along with plasma nitrates and nitrites were measured at baseline and after one and two weeks of supplementation. Subjects also completed questionnaires on sleep quality and mood. It is hypothesized that the nitrate-rich FVS supplement will provide a good source of dietary nitrates and effectively reduced blood pressure in normotensive, healthy young males.
+
+PRIMARY OUTCOMES:
+  - Plasma nitrates and nitrites
+  - Flow-mediated dilation
+  - Blood pressure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: fruit and vegetable juice supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03486145

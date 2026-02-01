@@ -1,0 +1,79 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07094191
+Title: The Effects of Acute Chicory Coffee Consumption on Exercise Performance and Metabolism
+Official Title: Comparative Acute Effects of Caffeine-Free Chicory and Arabica Coffee on Inflammatory and Metabolic Responses to Exercise in Healthy Men: A Randomized Crossover Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: caffeine exercise
+
+SUMMARY:
+The goal of this clinical trial is to evaluate the acute effects of chicory coffee on metabolism and exercise performance in healthy, moderately active male participants aged 18-25. The main questions it aims to answer are:
+
+Does chicory coffee influence glucose, lipid, and energy metabolism after exercise?
+
+Does chicory coffee affect physical performance and perceived fatigue levels?
+
+Researchers will compare chicory coffee (CC), arabica coffee (AC), and a no-drink control to see if chicory coffee has similar or unique metabolic and performance effects compared to caffeinated coffee or no intervention.
+
+Participants will:
+
+Consume one of the test beverages (chicory coffee, arabica coffee, or no drink) 45 minutes before performing a shuttle-run test
+
+Complete a standardized shuttle-run exercise test
+
+Undergo blood sample collection before and after exercise to assess glucose, lactate, LPL, TNF-α, adiponectin, and IL-6
+
+Rate their perceived exertion and record symptoms
+
+DETAILED DESCRIPTION:
+This study used a single-blind, randomized, controlled crossover design involving 22 healthy, moderately active male participants aged 18-25. Each participant underwent three intervention conditions in a randomized order:
+
+Chicory coffee (CC)
+
+Arabica coffee (AC)
+
+Control (no beverage)
+
+Before each trial, baseline data-including health status, dietary habits, and body composition-were collected. Participants consumed the assigned beverage 45 minutes before performing a shuttle-run test designed to assess endurance and physical performance. A 3-day washout period separated each intervention session to eliminate carryover effects.
+
+During each session, pre- and post-exercise measurements included:
+
+Blood glucose, lactate, blood pressure, and oxygen saturation
+
+Subjective fatigue assessed by the Borg Rating of Perceived Exertion (RPE)
+
+Additionally, venous blood samples were collected after exercise and analyzed for key metabolic and inflammatory biomarkers:
+
+Lipoprotein lipase (LPL)
+
+Tumor necrosis factor-alpha (TNF-α)
+
+Adiponectin
+
+Interleukin-6 (IL-6)
+
+All blood samples were processed under cold-chain conditions and analyzed using ELISA methods. Dietary intake was monitored, and participants were instructed to maintain their usual eating habits while avoiding other caffeinated beverages during the study period.
+
+Statistical analysis included MANOVA and ANOVA, with Bonferroni corrections used for multiple comparisons.
+
+PRIMARY OUTCOMES:
+  - This outcome measures blood lactate concentration in mmol/L to evaluate the metabolic response to shuttle run exercise. Capillary blood samples were taken from the fingertip at three time points: before, during, and immediately after exercise.
+  - Venous Blood Glucose Level
+  - Systolic and diastolic blood pressure
+  - Plasma Lipoprotein Lipase (LPL) Level (ng/mL)
+  - Subjective Fatigue Score (Borg Scale)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Chicory Coffee (Caffeine-free, polyphenol-rich beverage from roasted chicory root)
+  - DIETARY_SUPPLEMENT: arabica coffee
+  - DIETARY_SUPPLEMENT: no beverage control
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07094191

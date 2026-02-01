@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00108732
+Title: A Phase II Study of PROSTVAC-V (Vaccinia)/TRICOM and PROSTVAC-F (Fowlpox)/TRICOM With GM-CSF in Patients With PSA Progression After Local Therapy for Prostate Cancer
+Official Title: A Phase II Study of PROSTVAC-V (Vaccinia)/TRICOM and PROSTVAC-F (Fowlpox)/TRICOM With GM-CSF in Patients With PSA Progression After Local Therapy for Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: growth hormone treatment
+
+SUMMARY:
+Vaccines made from a gene-modified virus may help the body build an effective immune response to kill tumor cells. Biological therapies, such as GM-CSF, may stimulate the immune system in different ways and stop tumor cells from growing. Androgens can cause the growth of prostate cancer cells. Drugs, such as bicalutamide and goserelin, may stop the adrenal glands from making androgens in patients whose tumor cells continue to grow. Giving vaccine therapy together with GM-CSF and, when needed, androgen ablation may be a more effective treatment for prostate cancer. This phase II trial is studying how well giving vaccine therapy together with GM-CSF works in treating patients with prostate cancer that progressed after surgery and/or radiation therapy.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To evaluate the effect of PROSTVAC-V/TRICOM (Vaccinia) on cycle 1 followed by PROSTVAC-F/TRICOM (Fowlpox) and GM-CSF on biochemical PSA progression at 6 months.
+
+II. To determine the change in PSA velocity pre-treatment to post-treatment.
+
+SECONDARY OBJECTIVES:
+
+I. To evaluate the percentage of patients experiencing a \>50% decline in serum PSA repeated at 4 weeks.
+
+II. To evaluate tolerability and any toxicity related to treatment with PSA vaccine and GM-CSF.
+
+III. To determine the effect of GM-CSF on PSA immediately after treatment (day 4) compared to a delayed effect (day 15).
+
+IV. To determine the PSA nadir, and percentage of patients with undetectable PSA, treated with combined vaccine and androgen ablation therapy over 12 months.
+
+OUTLINE: This is a multicenter study.
+
+Patients receive vaccinia-PSA-TRICOM vaccine subcutaneously (SC) on day 1 and sargramostim (GM-CSF) SC on days 1-4 during weeks 1-4. Beginning in week 5, patients receive fowlpox-PSA-TRICOM vaccine SC on day 1 and GM-CSF SC on days 1-4. Treatment with fowlpox-PSA-TRICOM vaccine and GM-CSF repeats every 4 weeks for 3 courses (weeks 5-16). Beginning in week 17, patients receive fowlpox-PSA-TRICOM vaccine and GM-CSF as above every 12 weeks in the absence of clinical or biochemical disease progression or unacceptable toxicity.
+
+Patients with biochemical or clinical disease progression receive androgen ablation therapy comprising oral bicalutamide once daily for 1 month and goserelin SC once every 4 weeks in addition to fowlpox-PSA-TRICOM vaccine and GM-CSF. Treatment continues in the absence of further clinical or biochemical disease progression.
+
+After completion of study treatment, patients are followed every 3 months for 2 years, every 6 months for 3 years, and then annually for 10 years.
+
+PROJECTED ACCRUAL: A total of 45 patients will be accrued for this study within 6 months.
+
+PRIMARY OUTCOMES:
+  - Proportion of Patients Free of PSA Progression at 6 Months (Prior to the Start of Androgen Ablation)
+
+INTERVENTIONS:
+  - DRUG: Bicalutamide
+  - DRUG: Goserelin Acetate
+  - BIOLOGICAL: Recombinant Fowlpox-PSA(L155)/TRICOM Vaccine
+  - BIOLOGICAL: Recombinant Vaccinia-TRICOM Vaccine
+  - BIOLOGICAL: Sargramostim
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00108732

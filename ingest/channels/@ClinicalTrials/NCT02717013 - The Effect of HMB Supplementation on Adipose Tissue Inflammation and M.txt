@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02717013
+Title: The Effect of HMB Supplementation on Adipose Tissue Inflammation and Metabolism
+Official Title: The Effect of HMB Supplementation on Adipose Tissue Inflammation and Metabolism
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: HMB supplementation
+
+SUMMARY:
+This study will determine the effects of supplementing beta-hydroxy-beta-methylbutyrate (HMB) on body composition and strength changes during weight loss. When overweight and obese persons lose weight, and in particular in conjunction with dietary restrictions, muscle, bone mass, and muscle strength are also lost. HMB has been shown to preserve muscle mass and strength, and it is thought that HMB may also preserve muscle, bone, and strength during weight-loss.
+
+DETAILED DESCRIPTION:
+Forty obese men (BMI 35-40 kg/m2,18-40 years of age) will be randomly assigned to one of four treatment interventions: 1) Calorie restricted; 2) Calorie restricted and HMB supplemented; 3) No calorie restriction; and 4) No calorie restriction and HMB-supplemented. Over the 8 week interventional period the calorie restricted group is expected to lose 3-5% of initial body weight. Anthropometric measures will be taken weekly, and dual energy x-ray absorptiometry (DXA) body composition and strength will be measured before and after 8-weeks of intervention. Blood and urine will be collected and analyzed at 0, 4, and 8 weeks. Additionally Dietary records and questionnaires concerning quality of life will be administered, and activity will be assessed using questionnaires and pedometers. Muscle biopsies will be taken before and after the 8-week study.
+
+PRIMARY OUTCOMES:
+  - Maintenance of bone mineral density
+  - Maintenance of lean mass
+  - Maintenance of muscle strength
+  - Maintenance of hand muscle strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: HMB
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02717013

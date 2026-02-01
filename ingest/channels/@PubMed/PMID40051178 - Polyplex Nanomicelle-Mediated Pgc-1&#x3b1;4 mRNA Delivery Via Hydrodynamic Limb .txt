@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40051178
+Title: Polyplex Nanomicelle-Mediated Pgc-1&#x3b1;4 mRNA Delivery Via Hydrodynamic Limb Vein Injection Enhances Damage Resistance in Duchenne Muscular Dystrophy Mice.
+Authors: Du, Nakanishi, Yamada, Sin, Minegishi
+Journal: Advanced science (Weinheim, Baden-Wurttemberg, Germany)
+Year: 2025
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Duchenne muscular dystrophy (DMD) is caused by mutations in the DMD gene, leading to the absence of dystrophin and progressive muscle degeneration. Current therapeutic strategies, such as exon-skipping and gene therapy, face limitations including truncated dystrophin production and safety concerns. To address these issues, a novel mRNA-based therapy is explored using polyplex nanomicelles to deliver mRNA encoding peroxisome proliferator-activated receptor gamma coactivator 1 alpha isoform 4 (PGC-1&#x3b1;4) via hydrodynamic limb vein (HLV) administration. Using an in vivo muscle torque measurement technique, it is observed that nanomicelle-delivered Pgc-1&#x3b1;4 mRNA significantly improved muscle damage resistance and mitochondrial activity in mdx mice. Specifically, HLV administration of Pgc-1&#x3b1;4 mRNA in dystrophic muscles significantly relieved the torque reduction and myofiber injury induced by eccentric contraction (ECC), boosted metabolic gene expression, and enhanced muscle oxidative capacity. In comparison, lipid nanoparticles (LNPs), a widely used mRNA delivery system, does not achieve similar protective effects, likely due to their intrinsic immunogenicity. This foundational proof-of-concept study highlights the potential of mRNA-based therapeutics for the treatment of neuromuscular diseases such as DMD and demonstrates the capability of polyplex nanomicelles as a safe and efficient mRNA delivery system for therapeutic applications.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40051178/

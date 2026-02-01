@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35678703
+Title: Detection of selective androgen receptor modulators (SARMs) in serum using a molecularly imprinted nanoparticle surface plasmon resonance sensor.
+Authors: Henderson, Sullivan, Hand, Turner
+Journal: Journal of materials chemistry. B
+Year: 2022
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Selective Androgen Receptor Modulators (SARMs) are a fairly new class of therapeutic compounds that act upon the androgen receptor. They proffer similar anabolic properties to steroids, but with a much-reduced androgenic profile. They have become a popular substance of abuse in competitive sport. Being relatively new, detection systems are limited to chromatographic methods. Here we present a surface plasmon resonance sensor for three commonly-used SARMS, Andarine, Ligandrol and RAD-140, using high-affinity molecularly imprinted nanoparticles (nanoMIPs) as the recognition element. Synthesised nanoMIPS exhibited dissociation constant (KD) values of 29.3 nM, 52.5 nM and 75.1 nM for Andarine, Ligandrol and RAD-140 nanoMIPs, respectively. Cross-reactivity of the particles was explored using the alternative SARMs, with the nanoMIPs demonstrating good specificity. Fetal Bovine Serum (FBS) was used to assess the ability of the SPR-based nanoMIP sensor to detect the target compounds in a comparable biological matrix, with observed KD values of 12.3 nM, 31.9 nM and 28.1 nM for Andarine, Ligandrol and RAD-140 nanoMIPs, respectively. Theoretical limits of detection (LoD) were estimated from a calibration plot in FBS and show that the nanoMIP-based sensors have the potential to theoretically measure these SARMs in the low to sub nM range. Crucially these levels are below the minimum required performance limit (MRPL) set for these compounds by WADA. This study highlights the power of modern molecular imprinting to rapidly address required molecular recognition for new compounds of interest.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35678703/

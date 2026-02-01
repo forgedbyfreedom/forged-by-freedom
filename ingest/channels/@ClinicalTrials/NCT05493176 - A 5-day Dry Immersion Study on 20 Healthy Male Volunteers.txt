@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05493176
+Title: A 5-day Dry Immersion Study on 20 Healthy Male Volunteers
+Official Title: Standardization of the Dry Immersion Model Used as a Ground-based Model to Mimic Weightlessness. Phase 2: a 5-day Dry Immersion Study on 20 Healthy Male Volunteers (VIVALDI2)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise muscle mass
+
+SUMMARY:
+Dry immersion (DI) is a ground-based model of prolonged conditions of simulated microgravity. Dry immersion involves immersing the subject in water covered with an elastic waterproof fabric. As a result, the immersed subject, who is freely suspended in the water mass, remains dry. Within a relatively short duration, the model can faithfully reproduce most physiological effects of actual microgravity, including centralization of body fluids, support unloading, and hypokinesia.
+
+The main objective of the present study is to investigate the physiological effects of 5 days of dry immersion in 20 healthy male subjects, and to obtain DI-in-Men Reference Dataset. A set of measurements will assess the changes in the cardiovascular, neuro-ophthalmological, hematological, metabolic, sensorimotor, immune, muscle and bone systems.
+
+DETAILED DESCRIPTION:
+Space flights have shown the possibilities and limitations of human adaptation to space. For the last 50 years, results have shown that the space environment and microgravity in particular, cause changes that may affect the performance of astronauts. These physiological changes are now better known: prolonged exposure to weightlessness can lead to significant loss of bone and muscle mass, strength, cardiovascular and sensory-motor deconditioning, immune, hormonal and metabolic changes .
+
+Moreover, recently a new suite of physiological adaptations and consequences of space flight has been acknowledged. Indeed, after long flights, some astronauts present persistent ophthalmologic changes, mostly a hyperopic shift, an increase in optic nerve sheath diameter and occasionally a papillary oedema now defined by National Aeronautics and Space Administration (NASA) as Spaceflight-Associated Neuro-ocular Syndrome (SANS). Some of these vision changes remain unresolved for years post-flight. This phenomenon has most likely existed since the beginning of human space flight but is just recently being recognized as a major consequence of adaptation to microgravity.
+
+Overall, spaceflight induces physiological multi-system deconditioning which may impact astronauts' efficiency and create difficulties upon their return to normal gravity. Understanding the underlying mechanisms of these processes and developing efficient countermeasures to prevent, limit or reverse this deconditioning remain important challenges and major priorities for manned space programs.
+
+The space agencies are actively engaged in studying the physiological adaptation to space environment through studies on board the International Space Station (ISS) but also on the ground. Indeed, considering the limited number of flight opportunities, the difficulties related to the performance of in-flight experiments (operational constraints for astronauts, limited capabilities of in-flight biomedical devices), ground-based experiments simulating the effects of weightlessness are used to better understand the mechanisms of physiological adaptation, design and validate the countermeasures. Different methods are used to simulate microgravity on Earth. However, two approaches, -6° head-down bed rest (HDBR) and dry immersion (DI) have provided possibilities for long-term exposures with findings closest to those seen with a weightless state. They produce changes in body composition (including body fluid redistribution), cardiovascular and skeletal muscle characteristics that resemble the effects of microgravity.
+
+The common physiological denominator is the combination of a cephalad shift of body fluids and reduced physical activity. Being similar in their effects on the human body, these models, however, differ in their specifics and acting factors. The HDBR, as the name implies, implicates a long (from several weeks to a year) stay in the supine position, the head tilted down by -6° from the horizontal plane. 
+
+PRIMARY OUTCOMES:
+  - Change in orthostatic tolerance
+  - Change in peak aerobic power (VO2max test)
+  - Change in plasma volume
+  - Change in fluid shift distribution towards the cardiac and cephalic region
+  - Change in vascular endothelium integrity
+
+INTERVENTIONS:
+  - OTHER: Dry immersion
+
+ELIGIBILITY:
+Age: 20 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05493176

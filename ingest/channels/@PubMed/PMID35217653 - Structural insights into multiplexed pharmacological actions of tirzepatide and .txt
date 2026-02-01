@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35217653
+Title: Structural insights into multiplexed pharmacological actions of tirzepatide and peptide 20 at the GIP, GLP-1 or glucagon receptors.
+Authors: Zhao, Zhou, Cong, Hang, Zou
+Journal: Nature communications
+Year: 2022
+Topic: GIP GLP-1 dual agonist
+
+ABSTRACT:
+Glucose homeostasis, regulated by glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1) and glucagon (GCG) is critical to human health. Several multi-targeting agonists at GIPR, GLP-1R or GCGR, developed to maximize metabolic benefits with reduced side-effects, are in clinical trials to treat type 2 diabetes and obesity. To elucidate the molecular mechanisms by which tirzepatide, a GIPR/GLP-1R dual agonist, and peptide 20, a GIPR/GLP-1R/GCGR triagonist, manifest their multiplexed pharmacological actions over monoagonists such as semaglutide, we determine cryo-electron microscopy structures of tirzepatide-bound GIPR and GLP-1R as well as peptide 20-bound GIPR, GLP-1R and GCGR. The structures reveal both common and unique features for the dual and triple agonism by illustrating key interactions of clinical relevance at the near-atomic level. Retention of glucagon function is required to achieve such an advantage over GLP-1 monotherapy. Our findings provide valuable insights into the structural basis of functional versatility of tirzepatide and peptide 20.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35217653/

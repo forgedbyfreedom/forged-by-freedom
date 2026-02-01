@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 31537172
+Title: Peptide-Based Scaffolds for the Culture and Transplantation of Human Dopaminergic Neurons.
+Authors: Francis, Zhao, Calvelli, Saini, Gifford
+Journal: Tissue engineering. Part A
+Year: 2021
+Topic: peptide therapy recovery
+
+ABSTRACT:
+Cell replacement therapy is a promising treatment strategy for Parkinson's disease (PD); however, the poor survival rate of transplanted neurons is a critical barrier to functional recovery. In this study, we used self-assembling peptide nanofiber scaffolds (SAPNS) based on the peptide RADA16-I to support the in vitro maturation and in vivo post-transplantation survival of encapsulated human dopaminergic (DA) neurons derived from induced pluripotent stem cells. Neurons encapsulated within the SAPNS expressed mature neuronal and midbrain DA markers and demonstrated in vitro functional activity similar to neurons cultured in two dimensions. A microfluidic droplet generation method was used to encapsulate cells within monodisperse SAPNS microspheres, which were subsequently used to transplant adherent, functional networks of DA neurons into the striatum of a 6-hydroxydopamine-lesioned PD mouse model. SAPNS microspheres significantly increased the in vivo survival of encapsulated neurons compared with neurons transplanted in suspension, and they enabled significant recovery in motor function compared with control lesioned mice using approximately an order of magnitude fewer neurons than have been previously needed to demonstrate behavioral recovery. These results indicate that such biomaterial scaffolds can be used as neuronal transplantation vehicles to successfully improve the outcome of cell replacement therapies for PD. Impact Statement Transplantation of dopaminergic (DA) neurons holds potential as a treatment for Parkinson's disease (PD), but low survival rates of transplanted neurons is a barrier to successfully improving motor function. In this study, we used hydrogel scaffolds to transplant DA neurons into PD model mice. The hydrogel scaffolds enhanced survival of the transplanted neurons compared with neurons that were transplanted in a conventional manner, and they also improved recovery of motor function by using significantly fewer neurons than have typically been transplanted to see functional benefits. This cell transplantation technology has the capability to improve the outcome of neuron transplantation therapies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/31537172/

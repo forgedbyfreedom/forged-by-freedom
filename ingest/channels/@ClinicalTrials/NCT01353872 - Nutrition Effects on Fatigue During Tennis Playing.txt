@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01353872
+Title: Nutrition Effects on Fatigue During Tennis Playing
+Official Title: Effects of Ingestion of Different Sports Drinks on Fatigue During Playing Tennis
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 8
+Topic: sports nutrition
+
+SUMMARY:
+The main objective of this study is to investigate the effects of ingestion of different sports drinks (Nutrattente / Nutraperf / Nutrarecup) on fatigue induced by a tennis tournament simulation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - peripheral fatigue measured by surface electromyographic (EMG) signal from the right triceps muscle
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nutrattente / Nutraperf / Nutrarecup
+  - DIETARY_SUPPLEMENT: Nutrattente placebo / Nutraperf placebo / Nutrarecup placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01353872

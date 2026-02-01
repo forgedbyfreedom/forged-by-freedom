@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06543082
+Title: MACT (Mono Antiplatelet and Colchicine Therapy) Prospective Multicenter Study
+Official Title: Clinical Outcomes of Colchicine Therapy Following Percutaneous Coronary Intervention in Patients With Acute Coronary Syndrome: the MACT (Mono Antiplatelet and Colchicine Therapy) Prospective Multicenter Study
+Status: RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 490
+Topic: creatine supplementation
+
+SUMMARY:
+The previous Mono Antiplatelet and Colchicine Therapy (MACT) pilot study (NCT04949516) demonstrated that it was feasible to discontinue aspirin therapy and administer low-dose colchicine on the day after percutaneous coronary intervention (PCI) in addition to potent P2Y12 inhibitors in patients with acute coronary syndrome (ACS). However, the efficacy and safety of MACT have not yet been investigated. The goal of this clinical trial is to evaluate the clinical outcomes of ticagrelor P2Y12 inhibitor monotherapy combined with colchicine immediately after PCI in patients with ACS. The main questions it aims to answer are:
+
+* What is the frequency of the composite endpoint of cardiovascular death, nonfatal spontaneous myocardial infarction, nonfatal ischemic stroke, unplanned hospitalization leading to urgent revascularization, and major bleeding at 12 months post-intervention?
+* What is the frequency of stent thrombosis at 12 months post-intervention?
+
+For pre-specified analyses, researchers will compare MACT to less than 1 month, 3-month, and 12-month dual antiplatelet therapy (individual patient data from the T-PASS \[NCT03797651\] and TICO \[NCT02494895\] trials) to determine if MACT is effective in treating ACS.
+
+Participants will:
+
+* Take low-dose colchicine in addition to ticagrelor maintenance therapy, discontinuing aspirin the day after PCI.
+* Take a high-sensitivity C-reactive protein (hs-CRP) test 1 month after PCI.
+* Discontinue colchicine if the hs-CRP level is less than 2 mg/L, or continue colchicine if it is not.
+* Visit the clinic for check-ups at 1, 3, 6, 9, and 12 months after PCI.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Efficacy Outcome: Net adverse clinical event
+  - Safety Outcome: Stent thrombosis
+
+INTERVENTIONS:
+  - DRUG: Colchicine 0.6 mg
+
+ELIGIBILITY:
+Age: 20 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06543082

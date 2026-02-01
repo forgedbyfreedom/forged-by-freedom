@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35255809
+Title: Transcriptomic characterization of the molecular mechanisms induced by RGMa during skeletal muscle nuclei accretion and hypertrophy.
+Authors: Copola, Dos Santos, Coutinho, Del-Bem, de Almeida Campos-Junior
+Journal: BMC genomics
+Year: 2022
+Topic: skeletal muscle hypertrophy mechanisms
+
+ABSTRACT:
+The repulsive guidance molecule a (RGMa) is a GPI-anchor axon guidance molecule first found to play important roles during neuronal development. RGMa expression patterns and signaling pathways via Neogenin and/or as BMP coreceptors indicated that this axon guidance molecule could also be working in other processes and diseases, including during myogenesis. Previous works from our research group have consistently shown that RGMa is expressed in skeletal muscle cells and that its overexpression induces both nuclei accretion and hypertrophy in muscle cell lineages. However, the cellular components and molecular mechanisms induced by RGMa during the differentiation of skeletal muscle cells are poorly understood. In this work, the global transcription expression profile of RGMa-treated C2C12 myoblasts during the differentiation stage, obtained by RNA-seq, were reported.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35255809/

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04579770
+Title: Effect of Oral Ketone and Sodium Bicarbonate Administration During Endurance Exercise in Hypoxia
+Official Title: Effect of Oral Ketone and Sodium Bicarbonate Administration on Physiological and Metabolic Parameters During Endurance Exercise in Hypoxia
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: athletic performance
+
+SUMMARY:
+This study is investigating the effects of oral ketone and sodium bicarbonate administration on physiological and metabolic parameters during cycling endurance exercise in hypoxia. Ketone body supplementation is commonly used among elite endurance athletes that also compete in the hypoxia (at altitude). To-date effects of ketones have only been investigated in normoxia and the data in hypoxia is lacking. Hence, we want to investigate the effect of oral ketone ester intake with and without additional sodium bicarbonate (NaHCO3) ingestion on i) blood-acid base balance and ii) exercise performance during prolonged exercise under hypoxic conditions. Information obtained via this study should provide valuable information with regard to optimisation of exercise training and athletic performance, and more importantly, provide pioneering insight on the metabolic and physiological responses to ketosis under hypoxic conditions.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Cycling performance - Simulated 15-min long time trial
+  - Change in Cycling performance - Simulated Sprint
+  - Change in Blood acid-base balance (pH and [HCO3-]) during cycling
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Ketone ester
+  - OTHER: Sodium bicarbonate
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04579770

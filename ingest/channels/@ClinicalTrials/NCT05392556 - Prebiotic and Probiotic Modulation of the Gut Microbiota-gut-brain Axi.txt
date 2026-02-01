@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05392556
+Title: Prebiotic and Probiotic Modulation of the Gut Microbiota-gut-brain Axis During Acute Stress
+Official Title: Prebiotic and Probiotic Modulation of the Gut Microbiota-gut-brain Axis During Acute Stress
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 73
+Topic: DHEA supplementation
+
+SUMMARY:
+Emerging evidence supports the existence of a microbiota-gut-brain axis through which gut microbes influence cognition, mood and behavior. Targeting this axis with probiotics and/or prebiotics may provide novel strategies for mitigating stress-induced decrements in gastrointestinal and cognitive function. This double-blind, placebo-controlled, randomized, parallel-arm trial will determine the effects of a prebiotic and a probiotic dietary intervention on gastrointestinal, cognitive and physiologic responses to acute military-relevant physical and cognitive stress. Healthy men and women will be recruited and randomized to receive a placebo, probiotic or prebiotic for 4wk. Volunteers will be fed a controlled diet during the 4th week of supplementation. Fecal, blood, urine and saliva samples will be collected. Physical stress will be induced by a weighted walk on a treadmill, and will be followed by a cognitively challenging testing scenario that uses intermittent electric shocks to the abdomen to induce a stress response.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from baseline in intestinal permeability
+  - Difference from baseline in circulating cortisol concentrations
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic
+  - DIETARY_SUPPLEMENT: Prebiotic
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 17 Years to 39 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05392556

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03586102
+Title: Effect of Increased Enteral Protein on Body Composition of Preterm Infants
+Official Title: Effect of Increased Enteral Protein on Body Composition of Preterm Infants: A Randomized Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 56
+Topic: protein supplementation
+
+SUMMARY:
+The study hypothesis is that, in human milk-fed extremely preterm infants, higher protein intake compared to usual protein intake reduces percent body fat (%BF) at 3 months of age.
+
+DETAILED DESCRIPTION:
+Qualifying participants will be randomly assigned to receive either standard protein supplementation (control group) or high protein supplementation (intervention group).
+
+Intervention group: A fixed amount of commercially available hydrolyzed bovine protein will be added to fortified human milk after establishment of full enteral feeding.
+
+Control group: Hydrolyzed bovine protein will not be added to fortified human milk after establishment of full enteral feeding.
+
+If parent agrees, stool "dirty" diapers will be collected 2 times (at the time of hospital discharge and at 3 months of corrected age).
+
+PRIMARY OUTCOMES:
+  - Infant body composition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: High protein supplementation
+  - DIETARY_SUPPLEMENT: Standard protein supplementation
+
+ELIGIBILITY:
+Age: 1 Day to 21 Days
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03586102

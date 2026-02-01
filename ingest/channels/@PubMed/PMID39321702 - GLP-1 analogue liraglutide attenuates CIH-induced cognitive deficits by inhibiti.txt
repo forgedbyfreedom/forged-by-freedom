@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39321702
+Title: GLP-1 analogue liraglutide attenuates CIH-induced cognitive deficits by inhibiting oxidative stress, neuroinflammation, and apoptosis via the Nrf2/HO-1 and MAPK/NF-&#x3ba;B signaling pathways.
+Authors: Lv, Zhao, Wang, He, Dong
+Journal: International immunopharmacology
+Year: 2024
+Topic: GLP-1 receptor agonist metabolism
+
+ABSTRACT:
+Obstructive sleep apnea (OSA) is a common clinical condition linked to cognitive impairment, mainly characterized by chronic intermittent hypoxia (CIH). GLP-1 receptor agonist, known for promoting insulin secretion and reducing glucose levels, has demonstrated neuroprotective effects in various experimental models such as stroke, Alzheimer's disease, and Parkinson's disease. This study aims to investigate the potential role and mechanisms of the GLP-1 receptor agonist liraglutide in ameliorating OSA-induced cognitive deficits. CIH exposure, a well-established and mature OSA pathological model, was used both in vitro and in vivo. In vitro, CIH significantly activated oxidative stress, inflammation, and apoptosis in SH-SY5Y cells. Liraglutide enhanced the nuclear translocation of Nrf2, activating its downstream pathways, thereby mitigating CIH-induced injury in SH-SY5Y cells. Additionally, liraglutide modulated the MAPK/NF-&#x3ba;B signaling pathway, reducing the expression of inflammatory factors and proteins. In vivo, we subjected mice to an intermittent hypoxia incubator to mimic the pathogenesis of human OSA. The Morris water maze test revealed that CIH exposure substantially impaired spatial memory. Subsequent western blot analyses and histopathological examinations indicated that liraglutide could activate the Nrf2/HO-1 axis and inhibit the MAPK/NF-&#x3ba;B signaling pathway, thereby alleviating OSA-associated cognitive dysfunction in mice. These findings suggest that GLP-1 receptor agonists may offer a promising preventive strategy for OSA-associated cognitive impairment. By refining these findings, we provide new insights into GLP-1's protective mechanisms in combating cognitive deficits associated with CIH, underscoring its potential as a therapeutic agent for conditions linked to OSA.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39321702/

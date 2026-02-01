@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 26002812
+Title: Novel bioluminescent receptor-binding assays for peptide hormones: using ghrelin as a model.
+Authors: Liu, Shao, Zhang, Song, Liu
+Journal: Amino acids
+Year: 2016
+Topic: peptide hormones performance
+
+ABSTRACT:
+Peptide hormones perform important biological functions by binding specific cell membrane receptors. For hormone-receptor interaction studies, receptor-binding assays are widely used. However, conventional receptor-binding assays rely on radioactive tracers that have drawbacks. In recent studies, we established novel non-radioactive receptor-binding assays for some recombinant protein hormones based on the ultrasensitive bioluminescence of a newly developed nanoluciferase (NanoLuc) reporter. In the present work, we extended the novel bioluminescent receptor-binding assay to peptide hormones that have small size and can be conveniently prepared by chemical synthesis. Human ghrelin, a 28-amino acid peptide hormone carrying a special O-fatty acid modification, was used as a model. To prepare a bioluminescent ghrelin tracer, a chemically synthesized ghrelin analog with a unique cysteine residue at the C-terminus was site-specifically conjugated with an engineered NanoLuc with a unique exposed cysteine residue at the C-terminus via a reversible disulfide linkage. The NanoLuc-conjugated ghrelin retained high binding affinity with the ghrelin receptor GHSR1a (K d&#xa0;=&#xa0;1.14&#xa0;&#xb1;&#xa0;0.13&#xa0;nM, n&#xa0;=&#xa0;3) and was able to sensitively monitor the receptor-binding of various GHSR1a ligands. The novel bioluminescent receptor-binding assay will facilitate the interaction studies of ghrelin with its receptor. We also proposed general procedures for convenient conjugation of other peptide hormones with NanoLuc for novel bioluminescent receptor-binding assays.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/26002812/

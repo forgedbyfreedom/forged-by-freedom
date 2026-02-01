@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06340035
+Title: Percutaneous Peripheral Nerve Stimulation of Gluteus Nerves to Improve Hip Strength and Power
+Official Title: Ultrasound Guided Peripheral Nerve Stimulation of Gluteal Nerves to Enhance Strength and Power in Individuals With Chronic Knee Pain: A Randomized Controlled Pilot Study
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: athletic performance
+
+SUMMARY:
+The goal of this pilot clinical trial is to evaluate whether the ultrasound-guided percutaneous peripheral nerve stimulation through a needle results in greater gains in strength and power compared to the administration of current through surface electrodes in patients undergoing strength and power assessments. The main questions it aims to answer are:
+
+Does percutaneous stimulation of the superior and inferior gluteal nerves using ultrasound-guided needles enhance strength and power more effectively than transcutaneous stimulation through electrodes?
+
+Is the effectiveness of current delivery significantly different between percutaneous and transcutaneous methods when assessed with a linear encoder in a standarized hip extension exercise?
+
+Participants will:
+
+Be randomized into two groups: one undergoing ultrasound-guided percutaneous stimulation of the gluteal nerves (experimental group) and the other undergoing transcutaneous stimulation through electrodes (control group).
+
+The same stimulation protocol at 10 Hz frequency with the maximum muscle contraction evoked without pain will be performed in both groups. Then, the participants will undergo strength and power assessment before and after therapy administration using a linear encoder in a hip extension exercise.
+
+Researchers will compare the experimental group to the control group to see if the method of current delivery (percutaneous vs. transcutaneous) has a significant impact on the gains in strength and power. This comparison is based on the hypothesis that percutaneous delivery of current, guided by ultrasound, is more effective than simply positioning a surface electrode for transcutaneous stimulation. The evaluation of strength and power will be performed through a linear encoder that measures peak strength and concentric power in each repetition, conducted by a blind operator unaware of the patients' group allocations.
+
+DETAILED DESCRIPTION:
+This study delves into the comparative efficacy of two modalities of nerve stimulation for enhancing muscular strength and power: the percutaneous application of electrical current via acupuncture needles versus traditional transcutaneous electrical nerve stimulation (TENS). The overarching objective is to discern whether percutaneous peripheral nerve stimulation (pPNS), guided by ultrasound, facilitates superior gains in muscle strength and power in the gluteal muscles compared to conventional TENS.
+
+Participants, suffering from chronic knee pain, were systematically randomized into two cohorts: the experimental group underwent ultrasound-guided pPNS targeting the superior and inferior gluteal nerves, whereas the control group received TENS. The experimental setup was meticulously designed to ensure the sole variable of distinction between groups was the method of electrical stimulation applied. pPNS was delivered using a biphasic asymmetric electric current, set to a frequency of 10 Hz, a pulse width of 240 microseconds, and an intensity tailored to achieve maximal muscle contraction without inducing pain, based on a protocol of ten 10-second stimulations interspersed with 10-second rest periods. This regimen was predicated on prior findings demonstrating its efficacy in augmenting isometric strength following femoral nerve stimulation. The control group was subjected to a parallel protocol, differing only in the application technique, wherein electrodes replaced needles, adhering to the same stimulation parameters.
+
+The therapeutic efficacy of both interventions was assessed through a rigorous evaluation of strength and power before and after the administration of therapy. This assessment employed a linear encoder to measure peak strength and concentric power during the Hip Thrust exercise, a method chosen for its reliability in quantifying these parameters. The procedure entailed performing the exercise under three different loads (30%, 50%, and 70% of the participant's maximum capacity, 1RM), with the evaluation aimed at capturing the concentric peak power in each repetition until a noticeable decline in performance was observed.
+
+The hypothesis posits that pPNS, by virtue of its targeted and invasive nature, will yield greater improvements in muscle strength and power than TENS, attributed to its more direct stimulation of the nerve fibers and the encompassing muscle groups. The underpinning rationale is that pPNS's ultrasound-guided approach allows for a more precise delivery of electrical current to the nerves, potentially overcoming limitations associated with the superficial and diffuse application of TENS.
+
+For the analysis of the collected data, an initial evaluation of distribution characteristics will be performed utilizing visual tools such as Q-Q plots and density plots, complemented by statistical measures of kurtosis and skewness to understand the data's underlying structure. The Shapiro-Wilk test will be applied to assess the n
+
+PRIMARY OUTCOMES:
+  - Hip Extension Concentric Peak Power (Watts)
+  - Hip Extension Concentric Peak Strength (Newtons)
+
+INTERVENTIONS:
+  - OTHER: TENS
+  - OTHER: Percutaneous Peripheral Nerve Stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06340035

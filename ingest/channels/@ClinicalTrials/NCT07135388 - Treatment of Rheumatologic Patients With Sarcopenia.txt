@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07135388
+Title: Treatment of Rheumatologic Patients With Sarcopenia
+Official Title: Treatment of Sarcopenia With Food for Special Medical Purposes in Rheumatologic Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: HMB supplementation
+
+SUMMARY:
+Sarcopenia is defined as a pathological condition related to muscle strength and muscle mass reduction. It is caused by ageing (primary sarcopenia) and diseases associated with systemic inflammation (secondary sarcopenia). Systemic inflammation in rheumatological diseases often leads to physical inactivity, which is the main predictor of sarcopenia in this pathological condition. In these patients, the treatment of sarcopenia must necessarily include an appropriate nutritional approach, and the addition of oral supplements should be considered a complementary approach.
+
+DETAILED DESCRIPTION:
+Sarcopenia is linked to two distinct pathogenetic mechanisms that often overlap: ageing (primary sarcopenia), and diseases associated with either systemic inflammation or impaired physical activity, or nutritional deficiencies (secondary sarcopenia). Some of the latter mechanisms are intimately connected since the pathway to sarcopenia often begins with a chronic disease that triggers systemic inflammation, leading to physical inactivity, as occurs in rheumatological diseases. Notably, in these patients, the reduction in physical activity leading to sarcopenia represents a prognostic indicator for potential complications and compromised quality of life.
+
+Skeletal muscle trophism is influenced by hormone-like factors known as myokines, which are mainly secreted by muscles themselves, and by cytokines. Among these molecules, irisin, decorin, myonectin, myostatin, and interleukin-15 have been widely studied to develop pharmacological strategies to counteract sarcopenia.
+
+In any case, the treatment of sarcopenia must necessarily include an appropriate nutritional approach that should consider both specific dietary components (dietary patterns) and nutrient intakes (total calories). As a matter of fact, specific dietary patterns are increasingly considered in nutritional studies on sarcopenia.
+
+Currently, it has been observed that "high-quality diets" are associated with better physical functionality and a reduced risk of sarcopenia. However, although some nutrients and dietary patterns seem to have a potential protective effect against sarcopenia, in the presence of pathological conditions, the addition of oral nutritional supplements should offer the opportunity of adding high levels of specific nutritional components which are able to promote muscle trophism.
+
+In this prospective longitudinal study, we evaluated the effect of a specific food for special medical purposes (FSMPs) supplementation on muscle strength, muscle mass, and muscle quality in rheumatologic patients with sarcopenia. In addition, we assessed myokine and cytokine variations in the serum, which are associated with this nutritional approach.
+
+PRIMARY OUTCOMES:
+  - Muscle mass
+  - Muscle strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Food for special medical purposes
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07135388

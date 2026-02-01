@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06367413
+Title: Effects of Protein and NAC Co-ingestion on Skeletal Muscle Recovery
+Official Title: Effects of Whey Protein and N-acetylcysteine Co-ingestion on Skeletal Muscle Recovery Following Exercise-induced Muscle Damage.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: sleep athletes
+
+SUMMARY:
+Previous evidence suggests that though N-acetylcysteine (NAC) supplementation following eccentric exercise-induced muscle damage disrupts the skeletal muscle's repair and remodelling process at 8 days of recovery, it attenuates substantially the decline of skeletal muscle performance during the first 48 hours of recovery. The enhanced performance capacity during the first phase of recovery in response to NAC supplementation might be attributed to the altered redox status in skeletal muscle as a consequence of the NAC-mediated elevation of reduced glutathione (GSH) levels. The rise in GSH results in a redox-dependent attenuation of immune cell mobilisation and reduction of oxidative stress response, leading to a blunted rise of muscle damage and inflammatory markers during the first 2-3 days of recovery. However, following exercise-induced muscle damage, protein synthesis increases in skeletal muscle over the next 24-48 hours to support its repair process, and thus protein supplementation might accelerate the recovery process by enhancing the protein synthetic response. Therefore, the present study aims at investigating for first time the combined effect of NAC and whey protein supplementation on the short-term (during the first 72 hours) recovery process of skeletal muscle following damaging exercise (eccentric exercise) and compared it with the well-documented efficacy of NAC supplementation. The results of this study might be particularly useful for athletes, such as those in soccer and basketball, that participate in 3 games or intense training sessions during the same macrocycle with only 48-72 hours of recovery in-between.
+
+DETAILED DESCRIPTION:
+Participants will initially undergo baseline testing including assessment of their (i) anthropometrics, (ii) body composition via DXA, (iii) habitual physical activity level via accelerometry, (iv) resting metabolic rate via indirect calorimetry, (v) daily dietary intake via 7-day dietary recalls and (vi) cardiorespiratory fitness using a treadmill ramp test. After baseline testing, participants will be assigned to (a) a Placebo, (b) a N-acetylcysteine (NAC) or (c) a N-acetylcysteine + Whey protein (PRoNAC) group, in a randomized, double-blind, placebo-controlled, parallel group, repeated measures design. In all groups, participants will execute an eccentric exercise protocol on an isokinetic dynamometer consisted of 150 eccentric muscle contractions. Before exercise as well as at 1-, 2-, 3-, 24-, 48- and 72-hours post-exercise they will undergo assessment of their maximal voluntary isometric peal torque, maximal countermovement jump height and muscle soreness level. In addition, blood sample will be drawn before exercise and at 24-, 48- and 72-hours post-exercise for the determination of myoglobin concentration, reduced (GSH) and oxidized (GSSG) glutathione content, protein carbonyl formation and catalase activity.
+
+Throughout the 4-day experimental period (Day 1: exercise day, Days 2, 3 and 4: 24-, 48- and 72-hours post-exercise, respectively) participants will receive daily, 3 doses from the respective supplement as follows: the 1st dose at mid-morning (between breakfast and lunch), the 2nd dose at mid-afternoon (post-exercise on day 1 and between lunch and dinner on days 2-4) and the 3rd dose before sleep. In Placebo group, participants will be supplemented with 0.31 gr of maltodextrin per kg of body weight in the first two servings (at mid-morning and mid-afternoon supplements) and with 0.49 gr of maltodextrin per kg of body weight in the pre-sleep serving (1.1 gr maltodextrin/kg BW/day). In NAC group, participants will be supplemented with 13.33 mg of N-acetylcysteine per kg of body weight per serving (40 mg NAC/kg BW/day). In PRoNAC group participants will be supplemented with 0.31 gr of whey protein and 13.33 mg of N-acetylcysteine per kg of body weight in the first two servings (at mid-morning and mid-afternoon supplements) and with 0.49 gr of whey protein and 13.33 mg of N-acetylcysteine per kg of body weight in the pre-sleep serving (1.1 gr Whey protein + 40 mg NAC /kg BW/day).
+
+PRIMARY OUTCOMES:
+  - Change in maximal voluntary isometric muscle contraction.
+  - Change in countermovement jump height.
+  - Change in delayed onset of muscle soreness (DOMS)
+  - Change in reduced glutathione content.
+  - Change in oxidized glutathione content.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: NAC
+  - DIETARY_SUPPLEMENT: NAC + Whey Protein
+
+ELIGIBILITY:
+Age: 18 Years to 27 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06367413

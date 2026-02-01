@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40879532
+Title: In Vivo Phage Display for the Identification of Muscle Homing Peptides to Improve the Delivery of Phosphorodiamidate Morpholino Oligomers for Duchenne Muscular Dystrophy Therapy.
+Authors: Schneider, Winter, Mei, Jirka, Tan
+Journal: Nucleic acid therapeutics
+Year: 2025
+Topic: peptide therapy muscle
+
+ABSTRACT:
+The severe X-linked degenerative neuromuscular disease Duchenne muscular dystrophy (DMD) is caused by the loss of dystrophin through reading frame disruptive mutations in the DMD gene. Dystrophin protein is crucial for the stability of the muscle. Targeting specific exons with antisense oligonucleotides (ASO) will prevent inclusion of the exon during pre-mRNA splicing, which can restore the reading frame, facilitating the production of partially functional dystrophin proteins. For DMD, four ASOs of the phosphorodiamidate morpholino oligomer (PMOs) chemistry are FDA approved. It is anticipated that improved delivery to skeletal muscle and heart will lead to larger therapeutic results. With our research, we sought to identify muscle-homing peptides that can achieve increased delivery of ASOs to muscle or heart when conjugated to PMOs. We applied in&#xa0;vivo phage display biopanning mouse models for DMD to identify muscle-homing peptides while simultaneously negatively selecting peptides that home to unwanted organs, such as the kidney and liver. After confirmation of the muscle homing ability in vitro, we conjugated selected candidate peptides to PMOs to be tested in&#xa0;vivo, where we found that conjugation of one specific muscle homing peptide led to significantly improved delivery to muscle, with a small improvement in exon skipping and dystrophin restoration.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40879532/

@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03806023
+Title: EMG Triggered Closed-Loop Stimulation for Spinal Cord Injury Individuals
+Official Title: EMG Triggered Closed-Loop Stimulation for Spinal Cord Injury Individuals
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 8
+Topic: strength training
+
+SUMMARY:
+Most individuals with spinal cord injury (SCI) have residual nerve circuits. The investigators aim to strengthen those circuits to improve motor recovery after injury. To do this, the investigators are attempting to pair electrical and magnetic stimulation with physical training targeted toward the connections between nerve circuits. Past studies by other groups have shown that synapse strength can be improved temporarily after a short period of paired stimulation between the brain (motor cortex) and the peripheral nerves serving target muscles - in other words, "Fire Together, Wire Together".
+
+The brain's intention to move a muscle can be read by recording surface electrical activity over target muscles (electromyography or EMG). In animal models of SCI, scientists have successfully used target muscle EMG to trigger spinal cord electrical stimulation pulses while the animals perform physical exercises. Using the body's own signals to trigger nerve stimulation is called "closed-loop stimulation". This might be an optimal method to coordinate brain and nerve activity, especially with the clinical advantage of being possible to combine with physical exercise training. However, whether EMG-triggered closed loop stimulation has the same amount of effect when applied non-invasively in humans is still unknown.
+
+This proposed study is a proof-of-principle to demonstrate the potential of non-invasive closed-loop stimulation in humans with incomplete cervical SCI. We will test different combinations of triggered and non-triggered electrical and magnetic stimulation, and record the short-term effects on nerve transmission and skilled function of hand muscles. This pilot study will be a foundation for future studies combining EMG-triggered stimulation with long-term physical exercise training.
+
+DETAILED DESCRIPTION:
+In both animal models and humans with spinal cord injury (SCI), synaptic efficacy between corticospinal axons and spinal motor neurons has improved temporarily after a short period of paired stimulation between motor cortex and spinal or peripheral sites. In a demonstration of closed-loop stimulation in SCI rats, target muscle electromyography (EMG) signals were used to trigger spinal cord electrical stimulation while performing physical retraining. Results showed that EMG-triggered stimulation plus physical retraining led to greater motor recovery than non-triggered stimulation or physical training alone. However, these studies used invasive direct spinal cord stimulation in rodent models. Whether this approach can work non-invasively in humans remains unknown.
+
+Twenty participants (10 able bodied and 10 SCI subjects) will be recruited. Each subject will undergo five different 20-minute interventions. Stimulation will be delivered at the motor cortex via transcranial magnetic stimulation (TMS), the median nerve, or both. Stimulation will occur either while the subject is passively at rest or triggered by reaching endogenous EMG threshold during a pinch task. Outcomes will be measured at baseline and every 20 minutes for one hour after the intervention.
+
+The investigators hypothesize that for at least 20 minutes after stimulation, one session of EMG-triggered stimulation will significantly improve motor evoked potential amplitude, increase cortical silent period duration, and decrease time required to complete a pegboard task compared with one session of passively delivered stimulation. The investigators further hypothesize that EMG triggered median nerve stimulation alone will provide equal or greater benefits as EMG triggered TMS or EMG-triggered paired stimulation.
+
+Hypothesis 1: One session of EMG-triggered stimulation will significantly improve motor evoked potential (MEP) amplitude, increase cortical silent period duration of APB, and decrease time required to complete a manual pegboard task compared with one session of passively delivered stimulation or one session of voluntary contraction alone for at least 20 minutes post-stimulation.
+
+Hypothesis 2: EMG-triggered PNS alone will result in equal or greater effects than EMG triggered TMS or TMS+PNS paired stimulation. This would indicate that EMG triggered PNS might be used as a potential intervention to add during physical training, a setting in which TMS is difficult to apply.
+
+PRIMARY OUTCOMES:
+  - Change in motor evoked potential (MEP) amplitude of the abductor pollicis brevis (APB) muscle response to single pulses of TMS
+  - Hand dexterity
+
+INTERVENTIONS:
+  - DEVICE: hand movements (signals from thumb muscle) triggered PNS and TMS
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03806023

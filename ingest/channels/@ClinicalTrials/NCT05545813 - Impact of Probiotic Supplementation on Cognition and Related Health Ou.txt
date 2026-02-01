@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05545813
+Title: Impact of Probiotic Supplementation on Cognition and Related Health Outcomes Among Video Gamers
+Official Title: Impact of Probiotic Supplementation on Cognition and Related Health Outcomes Among Video Gamers: A Randomized, Placebo-Controlled, Double-Blind, Clinical Trial
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: DHEA supplementation
+
+SUMMARY:
+The primary objective of the current study is to investigate the effect of two probiotic formulations on task-switching following acute stress in healthy, adult action video gamers. It is hypothesized that the participants that consume the probiotic formulations will have improved task-switching performance following acute stress compared to those who consume a placebo.
+
+DETAILED DESCRIPTION:
+Participants who are action gamers will be recruited to participate in this randomized, placebo-controlled, 2-arm, parallel trial. Eligible participants will be enrolled in this study for 8 weeks.
+
+The study will consist of 2 laboratory visits: Baseline Visit and Post-Treatment Visit.
+
+PRIMARY OUTCOMES:
+  - Change in reaction time
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 19 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05545813

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04143711
+Title: Study of DF1001 in Patients with Advanced Solid Tumors
+Official Title: A Phase I/II, First-In-Human, Multi-Part, Open-Label, Multiple-Ascending Dose Study to Investigate the Safety, Tolerability, Pharmacokinetics, Biological, and Clinical Activity of DF1001 in Patients with Locally Advanced or Metastatic Solid Tumors, and Expansion in Selected Indications
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 378
+Topic: growth hormone treatment
+
+SUMMARY:
+DF1001-001 is a study of a new molecule that targets natural killer (NK) cells and T-cell activation signals to specific receptors on cancer cells. The study will occur in two phases. The first phase will be a dose escalation phase, enrolling patients with various types of solid tumors that express human epidermal growth factor receptor 2 (HER2). The second phase will include a dose expansion using the best dose selected from the first phase of the study. Multiple cohorts will be opened with eligible patients having either HER2 activated non-small cell lung cancer, hormone receptor (HR) positive HER2 negative metastatic breast cancer, or HER2 positive metastatic breast cancer. DF1001-001 will be administered as monotherapy or in combination; combinations are DF1001 + nivolumab, DF1001 + Nab paclitaxel, and DF1001 + sacituzumab govitecan-hziy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Assessment of number of dose limiting toxicities experienced on study as defined per criteria in the study protocol
+  - Assess Overall Response Rate
+  - Assess number of adverse events observed during treatment with DF1001 in combination with Nivolumab
+  - Assess number of adverse events observed during treatment with DF1001 in combination with Nab paclitaxel
+  - Assess number of adverse events observed during treatment with DF1001 in combination with Sacituzumab govitecan-hziy
+
+INTERVENTIONS:
+  - DRUG: DF1001
+  - DRUG: Nivolumab
+  - DRUG: Nab paclitaxel
+  - DRUG: Sacituzumab Govitecan-hziy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04143711

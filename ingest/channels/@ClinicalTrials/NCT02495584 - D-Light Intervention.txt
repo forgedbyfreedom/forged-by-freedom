@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02495584
+Title: D-Light Intervention
+Official Title: D-Light Intervention: A Randomised Controlled Human Intervention Study to Assess the Impact of Vitamin D From Milk and Supplements on Functional Health Outcomes and Future Vitamin D Synthesis From UV Exposure
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 52
+Topic: vitamin D muscle
+
+SUMMARY:
+Vitamin D insufficiency has become a global concern, with low vitamin D status associated with bone disorders, cardiovascular disease and certain cancers. The United Kingdom (UK) and Ireland are at particular risk of vitamin D deficiency owing to the northerly latitude, increased use of sunscreen, decreased sun exposure and a high level of cloud cover. A recent survey in the UK showed that more than 50% of UK adults have insufficient vitamin D status, with lower levels noted in the winter months. Variations in vitamin D status have been known to vary between summer and winter, owing to our northern latitude (52-55°N) the Ultraviolet (UV)-B intensity in Northern Ireland is inadequate to promote the dermal synthesis of vitamin D during the winter months, causing us to rely on dietary sources. The aim of this intervention is to investigate the main effects of vitamin D3-fortified milk and supplemental vitamin D3 on vitamin D status and functional health outcomes during the winter, and how this intervention will affect subsequent dermal synthesis of vitamin D from UV exposure. Participants will be recruited from the local community. Blood samples will be collected from each participant at two timepoints (September/October and March/April). Pre- and post-intervention blood pressure, grip strength, height, weight, waist and hip circumferences will be measured, in addition participants will undergo a dual energy x-ray absorptiometry (DXA) scan to assess body composition and bone mineral density. Information on general health, lifestyle, physical activity, dietary intake and typical behaviours in the sun will be collected. Following the dietary intervention, a subset of participants will be invited to participate in a follow-up study, examining UV exposure during the summer months, when they will wear a personal wrist dosimeter for 1 month, complete a sun dairy and provide 2 additional blood samples.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in vitamin D status (25-hydroxyvitamin D serum concentration)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fortified milk (10µg vitamin D3)
+  - DIETARY_SUPPLEMENT: Unfortified milk (placebo)
+  - DIETARY_SUPPLEMENT: 10µg vitamin D3 supplement
+  - DIETARY_SUPPLEMENT: Placebo supplement
+
+ELIGIBILITY:
+Age: 20 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02495584

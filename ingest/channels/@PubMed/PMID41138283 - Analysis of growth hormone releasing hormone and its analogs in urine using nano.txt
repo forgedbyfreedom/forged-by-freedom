@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41138283
+Title: Analysis of growth hormone releasing hormone and its analogs in urine using nano liquid chromatography coupled with quadrupole/orbitrap mass spectrometry.
+Authors: U&#xe7;akt&#xfc;rk, Nemutlu
+Journal: Journal of pharmaceutical and biomedical analysis
+Year: 2025
+Topic: CJC-1295 growth hormone
+
+ABSTRACT:
+Growth hormone-releasing hormone (GHRH) and its synthetic analogs are considered performance-enhancing substances and are therefore prohibited by the World Anti-Doping Agency (WADA). The analysis of GHRH and its analogs in urine presents significant analytical challenges due to their inherent in vivo instability, rapid renal clearance, and low urinary concentrations. The present study aimed to develop a robust nano-LC quadrupole/orbitrap mass spectrometry (nano-LC-Q/Orbitrap MS) method for both screening and confirmation analyses of GHRH and its synthetic analogs (sermorelin/CJC-1293, tesamorelin, and CJC-1295) and the primary metabolite of sermorelin in urine, in accordance with WADA requirements. The sample preparation workflow was systematically investigated. Existing solid-phase extraction (SPE) protocols were compared, and two additional commercially available SPE cartridges were evaluated. Within the SPE step, the influence of various washing and elution solvent strengths on peptide recovery was also systematically examined. The effectiveness of different cleanup solvents during the ultrafiltration step was further assessed. Based on these evaluations, a refined approach was developed, incorporating an initial ultrafiltration step followed by SPE. The proposed method was fully validated according to WADA guidelines, assessing key parameters such as selectivity, reliability, limits of detection (LOD), carryover, limits of identification (LOI), robustness, autosampler stability, and matrix effects. The validation results confirmed the method's suitability and robustness for anti-doping testing. Achieved LODs (&#x2264;&#x202f;0.5&#x202f;ng/mL) and LOIs (0.5-0.75&#x202f;ng/mL) demonstrated sufficient sensitivity for effective detection and confirmation analysis of the target peptides in urine.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41138283/

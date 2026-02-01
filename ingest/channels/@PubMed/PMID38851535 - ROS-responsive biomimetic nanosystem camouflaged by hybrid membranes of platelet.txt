@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38851535
+Title: ROS-responsive biomimetic nanosystem camouflaged by hybrid membranes of platelet-exosomes engineered with neuronal targeting peptide for TBI therapy.
+Authors: Li, Xin, Zhou, Liu, Liu
+Journal: Journal of controlled release : official journal of the Controlled Release Society
+Year: 2024
+Topic: peptide therapy recovery
+
+ABSTRACT:
+Recovery and survival following traumatic brain injury (TBI) depends on optimal amelioration of secondary injuries at lesion site. Delivering mitochondria-protecting drugs to neurons may revive damaged neurons at sites secondarily traumatized by TBI. Pioglitazone (PGZ) is a promising candidate for TBI treatment, limited by its low brain accumulation and poor targetability to neurons. Herein, we report a ROS-responsive nanosystem, camouflaged by hybrid membranes of platelets and engineered extracellular vesicles (EVs) (C3-EPm-|TKNPs|), that can be used for targeted delivery of PGZ for TBI therapy. Inspired by intrinsic ability of macrophages for inflammatory chemotaxis, engineered M2-like macrophage-derived EVs were constructed by fusing C3 peptide to EVs membrane integrator protein, Lamp2b, to confer them with ability to target neurons in inflamed lesions. Platelets provided hybridized EPm with capabilities to target hemorrhagic area caused by trauma via surface proteins. Consequently, C3-EPm-|PGZ-TKNPs| were orientedly delivered to neurons located in the traumatized hemisphere after intravenous administration, and triggered the release of PGZ from TKNPs via oxidative stress. The current work demonstrate that C3-EPm-|TKNPs| can effectively deliver PGZ to alleviate mitochondrial damage via mitoNEET for neuroprotection, further reversing behavioral deficits in TBI mice. Our findings provide proof-of-concept evidence of C3-EPm-|TKNPs|-derived nanodrugs as potential clinical approaches against neuroinflammation-related intracranial diseases.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38851535/

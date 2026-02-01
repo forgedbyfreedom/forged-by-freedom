@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39107586
+Title: A novel nomogram for predicting optimal weight loss response following diet and exercise intervention in patients with obesity.
+Authors: Yu, Wang, Hu, Xu, Zhou
+Journal: Scientific reports
+Year: 2024
+Topic: obesity exercise weight loss
+
+ABSTRACT:
+This study aimed to identify factors associated with optimal weight loss response by analyzing pre-weight loss data from a cohort of 2577 patients with obesity who visited weight management clinics between 2013 and 2022. Out of these, 1276 patients had follow-up data available. Following dietary and exercise interventions, 580 participants achieved optimal weight loss outcomes. Participants were subsequently divided into two groups based on their weight loss outcomes: those who achieved optimal weight loss response and those who did not. Statistical analysis, conducted using RStudio, identified thirteen predictor variables through LASSO and logistic regression, with age emerging as the most influential predictor. A nomogram was developed to predict optimal weight loss response, showing good predictive performance (AUC&#x2009;=&#x2009;0.807) and clinical applicability, validated by internal validation methods. Decision curve analysis (DCA) further illustrated the nomogram's clinical utility. The developed nomogram prediction model for optimal weight loss response is user-friendly, highly accurate, and demonstrates excellent discriminative and calibration capabilities.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39107586/

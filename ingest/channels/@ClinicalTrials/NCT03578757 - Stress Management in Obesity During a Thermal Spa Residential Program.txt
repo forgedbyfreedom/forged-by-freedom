@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03578757
+Title: Stress Management in Obesity During a Thermal Spa Residential Program
+Official Title: Stress Management in Obesity During a Thermal Spa Residential Program: a Randomized Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 140
+Topic: fat loss muscle
+
+SUMMARY:
+Stress can lead to obesity via inappropriate eating. In addition, obesity is a major stress factor. Furthermore, stressed people are also those who have the greatest difficulties to lose weight. The relationships between obesity and stress are biological via the action of stress on the major hormones regulating appetite (leptin, ghrelin). International recommendation proposals suggest to implement stress management programs in obesity for a sustainable weight loss. Moreover, stress and obesity are two public health issues. Among the multiple physical and psychological consequences of stress and obesity, increased mortality and cardiovascular morbidity seem the main concern. Many spa resorts are specialized in the treatment of obesity in France but actually no thermal spa proposes a specific program to manage stress in obesity.
+
+The main hypothesis is that a thermal spa residential program (21 days) of stress management in obesity will exhibit its efficacy through objective measures of well-being and cardiovascular morbidity.
+
+DETAILED DESCRIPTION:
+The Obesi-Stress protocol was designed to provide a better understanding of the effect of a spa residential program combined with a stress management program on the improvement of heart rate variability in the treatment of obesity.
+
+In the present protocol, parameters are measured on five occasions (inclusion, at the start of the spa, at the end of the spa, at 6 months and at 12 months).
+
+Statistical analysis will be performed using Stata software (version 13; Stata-Corp, College Station, Tex., USA). All statistical tests will be two-sided and p\<0.05 will be considered significant. After testing for normal distribution (Shapiro-Wilk test), data will be treated either by parametric or non-parametric analyses according to statistical assumptions. Inter-groups comparisons will systematically be performed 1) without adjustment and 2) adjusting on factors liable to be biased between groups.
+
+Analysis will be performed using Student t-test or Mann-Whitney tests. Linear regression (with logarithmic transformation if necessary) considering an adjustment on covariates fixed according to univariate results, epidemiological relevance and observance to physical activity will complete the analysis. Comparisons of categorical variables will be performed using Chi-squared or Fischer test. Relations between quantitative outcomes will be analyzed using correlation coefficients (Pearson or Spearman). Fisher's Z transformation and William's T2 statistic will be performed to compare correlations between variables and within a single group of subjects. Longitudinal data will be treated using mixt-model analyses in order to treat fixed effects group, time and group x time interaction taking into account between and within participant variability.
+
+PRIMARY OUTCOMES:
+  - heart rate variability (biomarker of both stress and morbidity/mortality)
+
+INTERVENTIONS:
+  - BEHAVIORAL: 21-day residential program
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03578757

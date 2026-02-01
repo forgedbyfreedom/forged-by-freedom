@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37296162
+Title: GLP&#x2011;1 receptor agonist protects palmitate-induced insulin resistance in skeletal muscle cells by up-regulating sestrin2 to promote autophagy.
+Authors: Tian, Gao, Kong, Zhao, Xing
+Journal: Scientific reports
+Year: 2023
+Topic: GLP-1 agonist muscle
+
+ABSTRACT:
+In this study, we aimed to determine whether liraglutide could effectively reduce insulin resistance (IR) by regulating Sestrin2 (SESN2) expression in L6 rat skeletal muscle cells by examining its interactions with SESN2, autophagy, and IR. L6 cells were incubated with liraglutide (10-1000&#xa0;nM) in the presence of palmitate (PA; 0.6&#xa0;mM), and cell viability was detected using the cell counting kit-8 (CCK-8) assay. IR-related and autophagy-related proteins were detected using western blotting, and IR and autophagy-related genes were analyzed using quantitative real-time polymerase chain reaction. Silencing SESN2 was used to inhibit the activities of SESN2. A reduction in insulin-stimulated glucose uptake was observed in PA-treated L6 cells, confirming IR. Meanwhile, PA decreased the levels of GLUT4 and phosphorylation of Akt and affected SESN2 expression. Further investigation revealed that autophagic activity decreased following PA treatment, but that liraglutide reversed this PA-induced reduction in autophagic activity. Additionally, silencing SESN2 inhibited the ability of liraglutide to up-regulate the expression of IR-related proteins and activate autophagy signals. In summary, the data showed that liraglutide improved PA-induced IR in L6 myotubes by increasing autophagy mediated by SESN2.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37296162/

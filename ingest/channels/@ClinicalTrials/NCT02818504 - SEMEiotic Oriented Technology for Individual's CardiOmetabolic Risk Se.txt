@@ -1,0 +1,66 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02818504
+Title: SEMEiotic Oriented Technology for Individual's CardiOmetabolic Risk Self- assessmeNt and Self-monitoring
+Official Title: SEMEiotic Oriented Technology for Individual's CardiOmetabolic Risk Self- assessmeNt and Self-monitoring
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 78
+Topic: body composition exercise
+
+SUMMARY:
+Cardio-metabolic risk factors include obesity, physical inactivity, smoke, alcohol abuse, high blood lipids or sugar and arterial hypertension. Systems for self-learning and self-monitoring may help people improve and maintain a healthy lifestyle through tailored suggestions about diet, weight control, physical activity, fatigue,stress.
+
+SEMEOTICONS exploits the human face as an indicator of individual's health status and translates signs obtained from the face using contactless sensors into measures and descriptors to be automatically evaluated by a an interactive smart mirror. This "Wize Mirror" extracts descriptors from videos, images and gas concentration signals and integrates them in a virtual model used to compute and trace the evolution of an individual's wellness index. A health diary enables each individual to evaluate and personally relate his/her lifestyle to his/her well-being. Coaching messages are provided, in relation to the evolution of the wellness index and of each descriptor, to provide useful suggestions on correct lifestyle self-monitoring.
+
+The purpose of this study is assess the accuracy of the information derived from the Wize Mirror in expressing the health status of the individual.
+
+The reproducibility and repeatability study will evaluate whether measurements are stable over short time spans and whether they are influenced by meals light and temperature conditions.
+
+To verify whether the Wize Mirror is able to detect variations in physical and emotional health status with appropriate lifestyle changes, the validation study will cross-check measurements from the Wize Mirror against reference clinical tests at enrolment and after 3 months of personalized suggestions for healthy behavior.
+
+Reference tests include
+
+* Physician visit
+* Measurement of blood oxygen content and skin end products of sugar metabolism,body composition, energy expenditure, vascular function
+* Laboratory profile and exhaled gas composition
+* Questionnaires on quality of life and lifestyle (food, sleep, physical activity, smoking, alcohol, stress).
+
+Wize Mirror measures include
+
+* 3D reconstruction of face images for roundness, color, stress and fatigue
+* Heart and respiratory rate
+* Detection of skin sugar metabolism end-products and of eye lipid deposits
+* Small vessel vasodilating ability with local heating The results will allow to assess whether the Wize Mirror is easy to use and helpful for self-monitoring of cardio-metabolic risk.
+
+DETAILED DESCRIPTION:
+Cardio--metabolic (CM) risk is a cluster of risk factors indicative of a patient's overall risk for cardiovascular diseases (CVD), the leading cause of morbidity and mortality worldwide and type-2 diabetes. CM risk factors include obesity, physical inactivity, smoke, alcohol abuse, abnormal lipid metabolism, hyper-glycaemia and arterial hypertension.
+
+Educational programs and lifestyle interventions represent effective tools to improve the risk profile but they need time consuming and expensive counselling and supervision of various health professionals . A rational alternative to intensive individual coaching is the use of systems for self-learning and self-monitoring, to help people change and maintain a healthy lifestyle through tailored suggestions about nutrition, weight control, physical activity, fatigue, and stress.
+
+SEMEOTICONS exploits the human face as an indicator of individual's health status and translates signs obtained from the face into measures and descriptors to be automatically evaluated by a computerized application, an interactive smart mirror, which seamlessly integrates contactless sensors, such as 3D optical sensors, a multispectral camera, gas detection sensors, and microphones and a touch-screen interface for user's interactions and output visualization.
+
+This "Wize Mirror" collects data in the form of videos, images and gas concentration signals, and extracts a number of biometric, morphometric, colorimetric, and compositional descriptors that represent individual's facial signs. The integration of such descriptors constitute a virtual model used to compute and trace the evolution of an individual's wellness index. A health diary about this index enables each individual to evaluate and personally relate his/her lifestyle to his/her well-being. Coaching messages are provided, in relation to the evolution of the wellness index and of each descriptor to provide useful suggestions on correct lifestyle self-monitoring.
+
+The purpose of this study is assess the accuracy of the information derived from the Wize Mirror in expressing the health status of an individual.
+
+Arm 1 Reproducibility and repeatability study (to be performed at the French site Lyon only).
+
+The reproducibility and repeatability study will evaluate whether Wize Mirror measurements are influenced by meals, light and temperature conditions in 6 healthy volunteers Data will be acquired during 4 modules corresponding to different use conditions of the mirror
+
+1. \- Changes in the fasting state Under artificial lights and at environment temperature (18-20°C), Wize Mirror measurements will be acquired at baseline in the fasting state and at 30, 60 and 120 minutes after a standardized breakfast during three consecutive days.
+2. \- Changes in light conditions Wize Mirror measurements will be performed at baseline under artificial lights and at environment temperature (18-20°C) then at 30' under artificial lights and at environment temperature (18-20°C) for 3 times 
+
+PRIMARY OUTCOMES:
+  - Plumpness index
+
+INTERVENTIONS:
+  - OTHER: Wize Mirror
+
+ELIGIBILITY:
+Age: 25 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02818504

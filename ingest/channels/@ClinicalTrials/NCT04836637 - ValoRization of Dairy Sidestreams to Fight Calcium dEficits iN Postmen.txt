@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04836637
+Title: ValoRization of Dairy Sidestreams to Fight Calcium dEficits iN Postmenopausal Women
+Official Title: ValoRization of Dairy Sidestreams to Fight Calcium dEficits iN Postmenopausal Women - A Randomized Controlled Double-blinded Intervention Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 420
+Topic: sports nutrition
+
+SUMMARY:
+The primary objective of this study is to investigate the effects of 12-months supplementation with calcium-enriched permeate, taken alone or in conjunction with inulin, on changes in markers of bone formation and resorption and in bone mass density (BMD) in apparently healthy postmenopausal women compared with calcium-carbonate or maltodextrin supplementation.
+
+DETAILED DESCRIPTION:
+The study will include an information visit, a randomization visit, a month 3 visit and a final visit at month 12. Besides, two visits at month 6 and 9 for dispensing of trial products. Outcome parameters will be measured using blood samples obtained at the randomization visit, the month 3 visit and at the final visit at month 12. Outcome parameters will moreover be analyzed based on DXA scan obtained at the randomization visit and at the final visit at 12 months.
+
+PRIMARY OUTCOMES:
+  - The change in bone turnover marker CTX.
+  - The change in bone turnover marker P1NP.
+  - The change in loss of bone mineral density.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Maltodextrin
+  - DIETARY_SUPPLEMENT: Calcium-carbonate
+  - DIETARY_SUPPLEMENT: Calcium-enriched permeate
+  - DIETARY_SUPPLEMENT: Calcium-enriched permeate with Inulin
+
+ELIGIBILITY:
+Age: 45 Years to 75 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04836637

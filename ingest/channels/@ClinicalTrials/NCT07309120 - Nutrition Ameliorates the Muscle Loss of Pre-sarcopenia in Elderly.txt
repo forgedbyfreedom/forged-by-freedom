@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07309120
+Title: Nutrition Ameliorates the Muscle Loss of Pre-sarcopenia in Elderly
+Official Title: Nutrition Ameliorates the Muscle Loss of Pre-sarcopenia in Elderly
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: sarcopenia intervention
+
+SUMMARY:
+This study evaluates the effects of a 12-week leucine-enriched protein supplementation in adults aged 60 years and more. Participants will undergo assessments of muscle mass and function, as well as metabolic profiles in blood, urine, and feces before and after the intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Appendicular Skeletal Muscle Index (ASMI)
+  - Handgrip Strength (HGS)
+  - Gait speed (m/s)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Participants consume two sachets daily over a 12-week intervention period.
+
+ELIGIBILITY:
+Age: 60 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07309120

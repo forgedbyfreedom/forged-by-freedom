@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41067247
+Title: Metabolic Score for Visceral Fat as a Predictor of All-Cause and Cardiovascular Mortality in US Adults with Diabetes or Prediabetes.
+Authors: Yang, Wang, Yin, Xu, Xue
+Journal: Hormone and metabolic research = Hormon- und Stoffwechselforschung = Hormones et metabolisme
+Year: 2025
+Topic: visceral fat health outcomes
+
+ABSTRACT:
+The metabolic score for visceral fat was a newly developed surrogate marker for evaluating visceral fat. This study aimed to investigate the relationship between the metabolic score for visceral fat and the mortality risk in US adults with diabetes or prediabetes. A cohort of 12,992 individuals with diabetes or prediabetes was identified from the US National Health and Nutrition Examination Survey (1999-2018). Baseline metabolic score for visceral fat measurements were recorded, and mortality outcomes were assessed by linking participants to the National Death Index records up to December 31, 2019. Multivariate Cox regression and restricted cubic spline models were employed to examine the relationship between the metabolic score for visceral fat and both all-cause mortality and cardiovascular mortality. Over a median follow-up of 97 months, a total of 2,438 all-cause deaths and 662 cardiovascular deaths were recorded. Multivariate Cox regression analysis indicated that individuals in the highest metabolic score for visceral fat quartile exhibited adjusted hazard ratios of 2.857 (95% confidence interval: 2.348-3.477) for all-cause mortality and 3.290 (95% confidence interval: 2.218-4.881) for cardiovascular mortality, compared to those in the lowest quartile. Additionally, a nonlinear relationship between the metabolic score for visceral fat and the mortality risk was observed, with inflection points identified at 7.093 for all-cause mortality and 7.220 for cardiovascular mortality. Elevated metabolic score for visceral fat levels are strongly associated with heightened risks of mortality among diabetic or prediabetic population, underscoring their potential utility as a prognostic indicator.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41067247/

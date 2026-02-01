@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 27613141
+Title: Transcriptional profiling of rat skeletal muscle hypertrophy under restriction of blood flow.
+Authors: Xu, Liu, Chen, Li, Chen
+Journal: Gene
+Year: 2017
+Topic: skeletal muscle hypertrophy mechanisms
+
+ABSTRACT:
+Blood flow restriction (BFR) under low-intensity resistance training (LIRT) can produce similar effects upon muscles to that of high-intensity resistance training (HIRT) while overcoming many of the restrictions to HIRT that occurs in a clinical setting. However, the potential molecular mechanisms of BFR induced muscle hypertrophy remain largely unknown. Here, using a BFR rat model, we aim to better elucidate the mechanisms regulating muscle hypertrophy as induced by BFR and reveal possible clinical therapeutic targets for atrophy cases. We performed genome wide screening with microarray analysis to identify unique differentially expressed genes during rat muscle hypertrophy. We then successfully separated the differentially expressed genes from BRF treated soleus samples by comparing the Affymetrix rat Genome U34 2.0 array with the control. Using qRT-PCR and immunohistochemistry (IHC) we also analyzed other related differentially expressed genes. Results suggested that muscle hypertrophy induced by BFR is essentially regulated by the rate of protein turnover. Specifically, PI3K/AKT and MAPK pathways act as positive regulators in controlling protein synthesis where ubiquitin-proteasome acts as a negative regulator. This represents the first general genome wide level investigation of the gene expression profile in the rat soleus after BFR treatment. This may aid our understanding of the molecular mechanisms regulating and controlling muscle hypertrophy and provide support to the BFR strategies aiming to prevent muscle atrophy in a clinical setting.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/27613141/

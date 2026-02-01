@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36509749
+Title: SIRT7 suppresses energy expenditure and thermogenesis by regulating brown adipose tissue functions in mice.
+Authors: Yoshizawa, Sato, Sobuz, Mizumoto, Tsuyama
+Journal: Nature communications
+Year: 2022
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Brown adipose tissue plays a central role in the regulation of the energy balance by expending energy to produce heat. NAD+-dependent deacylase sirtuins have widely been recognized as positive regulators of brown adipose tissue thermogenesis. However, here we reveal that SIRT7, one of seven mammalian sirtuins, suppresses energy expenditure and thermogenesis by regulating brown adipose tissue functions. Whole-body and brown adipose tissue-specific Sirt7 knockout mice have higher body temperature and energy expenditure. SIRT7 deficiency increases the protein level of UCP1, a key regulator of brown adipose tissue thermogenesis. Mechanistically, we found that SIRT7 deacetylates insulin-like growth factor 2 mRNA-binding protein 2, an RNA-binding protein that inhibits the translation of Ucp1 mRNA, thereby enhancing its inhibitory action on Ucp1. Furthermore, SIRT7 attenuates the expression of batokine genes, such as fibroblast growth factor 21. In conclusion, we propose that SIRT7 serves as an energy-saving factor by suppressing brown adipose tissue functions.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36509749/

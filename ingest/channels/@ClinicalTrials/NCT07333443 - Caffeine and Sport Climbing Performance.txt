@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07333443
+Title: Caffeine and Sport Climbing Performance
+Official Title: Caffeine Ingestion at Acute and Moderate Doses Does Not Improve Sport Climbing Performance: Results From a Randomized Controlled Trial.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 13
+Topic: exercise muscle mass
+
+SUMMARY:
+To determine the effects of ingesting caffeine at a dose of 3 mg/kg body mass on pull-up performance and handgrip-related measures in trained climbers.
+
+DETAILED DESCRIPTION:
+Introduction: Caffeine is widely recognized as a performance-enhancing substance across numerous athletic disciplines; however, its role in sport climbing has received comparatively limited scientific attention. Because climbing performance relies heavily on grip force, explosive upper-body strength, and localized muscular endurance, this investigation evaluated the short-term impact of a low caffeine dose on climbing-relevant performance outcomes.
+
+Objective: To determine the effects of ingesting caffeine at a dose of 3 mg/kg body mass on pull-up performance and handgrip-related measures in trained climbers.
+
+Methods: Thirteen trained young male climbers participated in a triple-blind, randomized, crossover study design, completing two experimental conditions (caffeine and placebo). Performance assessments included a pull-up one-repetition maximum (1RM), a pull-up power test conducted at multiple external loads, a pull-up endurance test, and several grip performance evaluations, namely maximal dead-hang duration, maximal dead-hang force, and rate of force development (RFD).
+
+PRIMARY OUTCOMES:
+  - Pull-up 1RM
+  - Pull-up strength and power test 1
+  - Pull-up strength and power test 2
+  - Pull-up muscular endurance test
+  - Grip endurance in dead-hang.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Acute and moderate dose of caffeine (3 mg/kg body mass)
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07333443

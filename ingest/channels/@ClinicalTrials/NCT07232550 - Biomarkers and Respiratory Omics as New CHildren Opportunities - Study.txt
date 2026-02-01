@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07232550
+Title: Biomarkers and Respiratory Omics as New CHildren Opportunities - Study of Clinical Outcomes and Predictivity Evaluation
+Official Title: Biomarkers and Respiratory Omics as New CHildren Opportunities - Study of Clinical Outcomes and Predictivity Evaluation - a Multi-cohort, Multi-center Study
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 160
+Topic: body composition exercise
+
+SUMMARY:
+The goal of this observational study is to improve the identification of biomarkers that predict disease progression and to assess the effectiveness of current therapies in children with asthma and protracted bacterial bronchitis.
+
+The main aim of the study is to evaluate the microbiome composition and diversity, cellular composition, and metabolomic profile. In addition, to assess their correlation on subsequent treatment and disease course in children with asthma, protracted bacterial bronchitis, and in those receiving inhaled glucocorticosteroids without a diagnosis of asthma.
+
+Participants will undergo fiberoptic bronchoscopy. During bronchoscopy, the performing physician will collect Bronchoalveolar lavage fluid samples for metagenomic and metabolomic analysis, as well as mucosal biopsies for histopathological evaluation.
+
+DETAILED DESCRIPTION:
+This prospective cohort study will enroll 160 participants and allocate them into study arms according to their medical history. The planned arms include: children with asthma, children with protracted bacterial bronchitis, children without asthma who are exposed to inhaled glucocorticosteroids, children with chronic cough, and a control group.
+
+Participants will be recruited from the Pediatric Pulmonology Departments of the Medical Universities in Warsaw and Lodz. At baseline, investigators will administer a standardized medical questionnaire approved by both medical centers. All participants will undergo a single fiberoptic bronchoscopy during hospitalization according to clinical indications and with informed consent. During bronchoscopy, bronchoalveolar lavage (BAL) fluid samples will be collected for metagenomic, metabolomic, culture, biochemical, and cytological analyses. Additional mucosal biopsies will be obtained with separate consent if applicable.
+
+Follow-up visits will include blood sample collection, sputum sampling (for cooperative children), spirometry, impulse oscillometry, and Fractional Exhaled Nitric Oxide measurements, without repeat bronchoscopy. The bronchoscopy procedure will not be repeated.
+
+The study involves analysis of biological samples obtained during clinically indicated bronchoscopy, followed by a 5-year observation period. The findings will aid in distinguishing asthma phenotypes, identifying risk factors for asthma and protracted bacterial bronchitis, and improving the understanding of factors contributing to poor treatment response in these conditions.
+
+PRIMARY OUTCOMES:
+  - Evaluation on microbiome composition and diversity, cellular composition, and metabolomic profile between study groups
+  - Correlation of metagenomic and metabolomic findings on subsequent treatment and disease course between groups
+
+INTERVENTIONS:
+  - PROCEDURE: fiberoptic bronchoscopy
+  - PROCEDURE: blood sample collection
+  - DIAGNOSTIC_TEST: Respiratory functional tests
+  - DIAGNOSTIC_TEST: Sputum culture
+
+ELIGIBILITY:
+Age:  to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07232550

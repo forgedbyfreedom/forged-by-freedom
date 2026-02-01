@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07226570
+Title: Mapping Ibogaine Neural Dynamics in Opioid Use Disorder
+Official Title: Central Neural Actions of Ibogaine in Opioid Use Disorder (OUD)
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+This study aims to understand how ibogaine treatment may change brain activity and symptoms in people with moderate-severe opioid use disorder (OUD), as defined by the DSM-5. Ibogaine is a plant-derived compound that some studies suggest can reduce opioid cravings and withdrawal. Participants in this study will already be independently scheduled to receive legal ibogaine treatment at a licensed clinic outside of the U.S. The University of California, Irvine (UCI) research team will not provide the treatment but will conduct brain imaging, administer psychometric questionnaires, and obtain urine samples throughout the course of this study.
+
+The main goal is to see if ibogaine changes brain function as assessed with magnetic resonance imaging (MRI), magnetic resonance spectroscopy (MRS), and electroencephalography (EEG). MRI/MRS will measure brain activity when participants view opioid-related images, brain connectivity at rest, and levels of brain chemicals involved in craving and substance use. EEG will measure brain wave activity. MRI/MRS/EEG will be administered across 3 study time points. In addition, participants will complete psychometric surveys related to opioid craving, withdrawal symptoms, mood, anxiety, pain, and quality of life, along with urine tests to monitor substance use and screen for pregnancy.
+
+The investigators hypothesize that after ibogaine treatment, participants will show reduced brain responses to opioid cues, changes in brain connectivity and chemistry, and improvements in self-reported cravings and other symptoms. This information may help researchers better understand how ibogaine works in the brain and whether it could play a role in future treatments for OUD.
+
+DETAILED DESCRIPTION:
+Primary Hypothesis:
+
+3-5 days and 1-month after ibogaine treatment (compared to baseline), participants will show reduced brain responses to opioid-related images on task fMRI and reduced resting-state connectivity within reward circuitry. The brain areas expected to be affected include the basal ganglia, cingulate cortex, hippocampus, and amygdala. Post-ibogaine spectroscopy will also show lower glutamate + glutamine (Glx) levels within the insula and nucleus accumbens.
+
+Exploratory Hypotheses:
+
+The magnitude of MRI/MRS changes (including activation/connectivity in the cingulate, hippocampus, and amygdala) will correlate with improvements in opioid craving and related symptoms measured by validated questionnaires (e.g., VAS craving, SOWS, CEQ).
+
+EEG will show relative increases in alpha power, relative decreases in gamma power, and decreases in frontal alpha frequency and signal complexity, which will track with reductions in craving and withdrawal.
+
+PRIMARY OUTCOMES:
+  - Change in Resting-State Functional Connectivity in Reward Circuitry
+  - Change in BOLD Activation to Drug Cues During Task-Based fMRI
+  - Change in Glutamate+Glutamine Concentration in Nucleus Accumbens
+  - Change in Glutamate+Glutamine Concentration in Anterior Insula
+
+INTERVENTIONS:
+  - OTHER: Observational study with MRI/EEG
+
+ELIGIBILITY:
+Age: 21 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07226570

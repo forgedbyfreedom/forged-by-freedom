@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 27369865
+Title: Development of antibody-siRNA conjugate targeted to cardiac and skeletal muscles.
+Authors: Sugo, Terada, Oikawa, Miyata, Nishimura
+Journal: Journal of controlled release : official journal of the Controlled Release Society
+Year: 2017
+Topic: peptide therapy muscle
+
+ABSTRACT:
+Despite considerable efforts to develop efficient carriers, the major target organ of short-interfering RNAs (siRNAs) remains limited to the liver. Expanding the application outside the liver is required to increase the value of siRNAs. Here we report on a novel platform targeted to muscular organs by conjugation of siRNAs with anti-CD71 Fab' fragment. This conjugate showed durable gene-silencing in the heart and skeletal muscle for one month after intravenous administration in normal mice. In particular, 1&#x3bc;g siRNA conjugate showed significant gene-silencing in the gastrocnemius when injected intramuscularly. In a mouse model of peripheral artery disease, the treatment with myostatin-targeting siRNA conjugate by intramuscular injection resulted in significant silencing of myostatin and hypertrophy of the gastrocnemius, which was translated into the recovery of running performance. These data demonstrate the utility of antibody conjugation for siRNA delivery and the therapeutic potential for muscular diseases.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/27369865/

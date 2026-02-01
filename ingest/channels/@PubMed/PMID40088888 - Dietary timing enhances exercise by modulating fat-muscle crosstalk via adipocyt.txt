@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40088888
+Title: Dietary timing enhances exercise by modulating fat-muscle crosstalk via adipocyte AMPK&#x3b1;2 signaling.
+Authors: Chen, Xiang, Zhou, Huang, Zhang
+Journal: Cell metabolism
+Year: 2025
+Topic: nutrient timing exercise
+
+ABSTRACT:
+Feeding rhythms regulate exercise performance and muscle energy metabolism. However, the mechanisms regulating adipocyte functions remain unclear. Here, using multi-omics analyses, involving (phospho-)proteomics and lipidomics, we found that day-restricted feeding (DRF) regulates diurnal rhythms of the mitochondrial proteome, neutral lipidome, and nutrient-sensing pathways in mouse gonadal white adipose tissue (GWAT). Adipocyte-specific knockdown of Prkaa2 (the gene encoding AMPK&#x3b1;2) impairs physical endurance. This defect is associated with altered rhythmicity in acyl-coenzyme A (CoA) metabolism-related genes, a loss of rhythmicity in the GWAT lipidome, and circadian remodeling of serum metabolites-in particular, lactate and succinate. We also found that adipocyte Prkaa2 regulates muscle clock genes during DRF. Notably, oral administration of the AMPK activator C29 increases endurance and muscle functions in a time-of-day manner, which requires intact adipocyte AMPK&#x3b1;2 signaling. Collectively, our work defines adipocyte AMPK&#x3b1;2 signaling as a critical regulator of circadian metabolic coordination between fat and muscle, thereby enhancing exercise performance.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40088888/

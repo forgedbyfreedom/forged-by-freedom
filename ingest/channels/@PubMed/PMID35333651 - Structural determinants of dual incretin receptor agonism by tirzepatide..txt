@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35333651
+Title: Structural determinants of dual incretin receptor agonism by tirzepatide.
+Authors: Sun, Willard, Feng, Alsina-Fernandez, Chen
+Journal: Proceedings of the National Academy of Sciences of the United States of America
+Year: 2022
+Topic: GIP GLP-1 dual agonist
+
+ABSTRACT:
+SignificanceTirzepatide is a dual agonist of the glucose-dependent insulinotropic polypeptide receptor (GIPR) and the glucagon-like peptide-1 receptor (GLP-1R), which are incretin receptors that regulate carbohydrate metabolism. This investigational agent has proven superior to selective GLP-1R agonists in clinical trials in subjects with type 2 diabetes mellitus. Intriguingly, although tirzepatide closely resembles native GIP in how it activates the GIPR, it differs markedly from GLP-1 in its activation of the GLP-1R, resulting in less agonist-induced receptor desensitization. We report how cryogenic electron microscopy and molecular dynamics simulations inform the structural basis for the unique pharmacology of tirzepatide. These studies reveal the extent to which fatty acid modification, combined with amino acid sequence, determines the mode of action of a multireceptor agonist.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35333651/

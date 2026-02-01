@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07286292
+Title: Vorasidenib Study in Pediatric Participants With Grade 2 Astrocytoma or Oligodendroglioma With an IDH1 or IDH2 Mutation
+Official Title: A Phase 2, Single Arm, Open-label Study to Assess the Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of Vorasidenib in Pediatric Participants Aged 12 to < 18 Years Old With Grade 2 Astrocytoma or Oligodendroglioma With an IDH1 or IDH2 Mutation
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: growth hormone treatment
+
+SUMMARY:
+The objective of this study is to evaluate the safety, tolerability, efficacy profile, and effect on growth and development of vorasidenib in pediatric participants aged 12 to \< 18 years old with grade 2 glioma with an IDH1 or IDH2 mutation. The study includes a screening period, a treatment period consisting of continuous 28-day cycles of treatment, a safety follow-up period and a long-term follow-up period. The long-term follow-up period will assess participants for growth, development, and long-term safety impacts for approximately 5 years after the start of treatment or until Tanner Stage V is reached (whichever is later). Participants may undergo blood tests, heart tests (electrocardiogram (ECG)), imaging (MRI, X-ray), vital sign checks, and physical exams.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Adverse Events (AEs), Serious Adverse Events (SAEs), Adverse Events (AEs) leading to discontinuation, or Adverse Events (AEs) leading to death
+  - Severity of AEs
+  - Height and Weight Percentiles at Study Visits
+  - Change in Height and Weight Percentiles from Cycle 1 Day 1 (C1D1)
+  - Tanner staging
+
+INTERVENTIONS:
+  - DRUG: Vorasidenib
+
+ELIGIBILITY:
+Age: 12 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07286292

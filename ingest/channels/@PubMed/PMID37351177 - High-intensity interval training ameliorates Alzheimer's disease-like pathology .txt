@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37351177
+Title: High-intensity interval training ameliorates Alzheimer's disease-like pathology by regulating astrocyte phenotype-associated AQP4 polarization.
+Authors: Feng, Wu, Zou, Deng, Chen
+Journal: Theranostics
+Year: 2023
+Topic: high intensity interval training
+
+ABSTRACT:
+Background: Alzheimer's disease (AD), one of the most common forms of dementia, is a widely studied neurodegenerative disease characterized by A&#x3b2; accumulation and tau hyperphosphorylation. Currently, there is no effective cure available for AD. The astrocyte AQP4 polarized distribution-mediated glymphatic system is essential for A&#x3b2; and abnormal tau clearance and is a potential therapeutic target for AD. However, the role of exercise on the AQP4 polarized distribution and the association between the AQP4 polarized distribution and astrocyte phenotype polarization are poorly understood. Methods: Using a streptozotocin (STZ)-induced sporadic AD rat model, we investigated the effects of high-intensity interval training on AD pathologies. The Branes maze task was conducted to measure spatial learning and memory. Immunofluorescence staining of NeuN with TUNEL, Fluoro-Jade C, and relative neuronal damage markers was applied to measure neuronal apoptosis, neurodegeneration, and damage. Sholl analysis was carried out to analyze the morphology of microglia. Line-scan analysis, 3D rendering, and the orthogonal view were applied to analyze the colocalization. Western blot analysis and enzyme-linked immunosorbent assay (ELISA) analysis were conducted to examine AQP4 and A&#x3b2;, respectively. An APP/PS1 transgenic AD mice model was used to confirm the key findings. Results: High-intensity interval training (HIIT) alleviates cognitive dysfunction in STZ-induced AD-like rat models and provides neuroprotection against neurodegeneration, neuronal damage, and neuronal loss. Additionally, HIIT improved the drainage of abnormal tau and A&#x3b2; from the cortex and hippocampus via the glymphatic system to the kidney. Further mechanistic studies support that the beneficial effects of HIIT on AD might be due, in part, to the polarization of glial cells from a neurotoxic phenotype towards a neuroprotective phenotype. Furthermore, an intriguing finding of our study is that the polarized distribution of AQP4 was strongly correlated with astrocyte phenotype. We found A2 phenotype exhibited more evident AQP4 polarization than the A1 phenotype. Conclusion: Our findings indicate that HIIT ameliorates Alzheimer's disease-like pathology by regulating astrocyte phenotype and astrocyte phenotype-associated AQP4 polarization. These changes promote A&#x3b2; and p-tau clearance from the brain tissue through the glymphatic system and the kidney.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37351177/

@@ -1,0 +1,64 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03538626
+Title: Phase I, Open-Label, Dose-Escalation Study of a Human Monoclonal Antibody, VRC-HIVMAB091-00-AB (N6LS), Administered Intravenously or Subcutaneously With or Without Recombinant Human Hyaluronidase PH20 (rHuPH20)
+Official Title: VRC 609: A Phase I, Open-Label, Dose-Escalation Study of the Safety and Pharmacokinetics of a Human Monoclonal Antibody, VRC-HIVMAB091-00-AB (N6LS), Administered Intravenously or Subcutaneously With or Without Recombinant Human Hyaluronidase PH20 (rHuPH20) to Healthy Adults
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: beta alanine
+
+SUMMARY:
+Background:
+
+The experimental product in this study, N6LS, is a human monoclonal antibody. Antibodies are one way that the human body fights infection. Monoclonal means that all the antibodies in the product are the same. N6LS is directed against the HIV virus. There is no HIV in the N6LS study product and you cannot get HIV from this product. This study is the first time N6LS is tested in humans. It was given into a vein in the arm (intravenously, IV) or as an injection underneath the skin (subcutaneously, SC). The study also tested N6LS mixed with an enzyme, rHuPH20 (recombinant human hyaluronidase). rHuPH20 increases the spread of fluids injected underneath your skin (subcutaneously, SC) and allows for the rapid delivery of large volume injections that can be given with a single needle. It was given as a SC infusion using a small needle attached to an infusion pump. Study products were only given to healthy adults who are not infected with HIV.
+
+Objective:
+
+The main purpose of the study is to see if N6LS alone and N6LS mixed with rHuPH20 is safe in healthy adults. Another goal is to learn how amounts of N6LS in the body change over time.
+
+Study Plan:
+
+Assigned study groups depended on the dose of product, the numbers of times the product was given (once or three times at 12-week intervals), and how the product was given (IV or SC). Blood samples for research were collected at most of the visits. There were about 14 clinic visits over 6 months for all groups who got one dose of product, and about 26 clinic visits over 12 months for the groups who got three doses of product.
+
+DETAILED DESCRIPTION:
+Study Design:
+
+This is the first study in healthy adults of the N6LS monoclonal antibody (MAb). It was a dose-escalation study to examine safety, tolerability, dose, and pharmacokinetics (PK) of N6LS administered intravenously (IV) and subcutaneously (SC) to healthy adults. For SC administration, N6LS was administered alone or co-administered with the permeation enhancer rHuPH20 enzyme. Primary hypotheses are that N6LS administration to healthy adults will be safe by the IV and SC routes, alone and with rHuPH20 co-administration. A secondary hypothesis is that all N6LS administrations will be detectable in human sera with a definable half-life
+
+Product Description:
+
+N6LS (VRC-HIVMAB091-00-AB) is a human MAb targeted to the HIV-1 CD4 binding site. It was developed by the VRC/NIAID/NIH and manufactured under current Good Manufacturing Practice (cGMP) regulations at the VRC Vaccine Pilot Plant operated under contract by the Vaccine Clinical Materials Program (VCMP), Leidos Biomedical Research, Inc., Frederick, MD. The product was provided as a sterile aqueous buffered solution in 10 mL glass vials at a concentration of 100 mg/mL and volume of 6.25 mL.
+
+Each vial of ENHANZE™ Drug Product (EDP) contains 0.5 mL of rHuPH20 formulated at a concentration of 1 mg/mL (approximately 110,000 U/mL rHuPH20). rHuPH20 is a tissue permeability modifier that depolymerizes hyaluronan (HA), increasing the dispersion of a substance into the subcutaneous space, which enables SC delivery of co-administered antibody (-ies) at higher dose volumes (e.g., \>10 mL) that cannot be administered quickly without rHuPH20. EDP is manufactured by Ajinomoto Althea, Inc. (San Diego, CA) for Halozyme Therapeutics, Inc. (San Diego, CA) and is supplied in 2 mL glass vials as a sterile, single-dose, injectable liquid.
+
+Subjects:
+
+Healthy adults, 18-50 years of age.
+
+Study Plan:
+
+This open-label study included 8 dose groups to assess N6LS alone given as a single IV infusion at the 5, 20, or 40 mg/kg dose level (Groups 1,3 and 4); a single SC injection at the 5 mg/kg dose level (Group 2); or in 3 administrations, spaced 12 weeks apart by SC injection at the 5 mg/kg dose level (Group 5), or by IV infusion at the 20 mg/kg dose level (Group 6). Two additional groups assessed N6LS given as a single SC injection mixed with rHuPH20 (2000 U/mL) at 5 mg/kg (Group 7) or 20 mg/kg (Group 8) doses. Enrollment opened with Groups 1, 2 and 5; and was followed by the sequential activation of Groups 3, 4, and 6. With implementation of the two SC N6LS+rHuPH20 arms as a protocol amendment, Group 7 opened first to accrual, followed by Group 8.
+
+Study Duration:
+
+Study participation was approximately 24 weeks for participants in Groups 1-4, 7 and 8; and 48 weeks for participants in Groups 5 and 6.
+
+PRIMARY OUTCOMES:
+  - Number of Participants Reporting Local Reactogenicity Signs and Symptoms Within 3 Days of N6LS Product Administration Alone or N6LS Co-Administered With rHuPH20
+  - Number of Participants Reporting Systemic Reactogenicity Signs and Symptoms Within 3 Days of N6LS Product Administration Alone or N6LS Co-Administered With rHuPH20
+  - Number of Participants With One or More Unsolicited Non-Serious Adverse Events (AEs) Following N6LS Product Administration Alone or N6LS Co-Administered With rHuPH20
+  - Number of Participants With Serious Adverse Events (SAEs) Following N6LS Product Administration Alone or N6LS Co-Administered With rHuPH20
+  - Number of Participants With New Chronic Medical Conditions Following N6LS Product Administration Alone or N6LS Co-Administered With rHuPH20
+
+INTERVENTIONS:
+  - BIOLOGICAL: VRC-HIVMAB091-00-AB
+  - BIOLOGICAL: rHuPH20
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03538626

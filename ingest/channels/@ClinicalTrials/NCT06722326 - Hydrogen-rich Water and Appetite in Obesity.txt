@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06722326
+Title: Hydrogen-rich Water and Appetite in Obesity
+Official Title: The Effects of 8-week Hydrogen-rich Water Consumption on Body Composition, Appetite and Obesity-specific Quality of Life, and Circulating Glucagon-like Peptide-1 in Obese Men and Women (Hydrappet): a Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: sports nutrition
+
+SUMMARY:
+The main goal of this study is to investigate how dihydrogen supplementation impacts body composition, appetite, quality of life specific to obesity, and levels of the hormone GLP-1 in men and women with obesity. This randomized controlled trial aims to explore whether dihydrogen can improve these health indicators.
+
+DETAILED DESCRIPTION:
+The primary aim of this randomized controlled trial is to evaluate the effects of dihydrogen supplementation on body composition indices, appetite, obesity-specific quality of life, and circulating GLP-1 levels in obese men and women
+
+PRIMARY OUTCOMES:
+  - Appetite
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary Supplement: Hydrogen-rich water
+  - DIETARY_SUPPLEMENT: Dietary Supplement: Control water
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06722326

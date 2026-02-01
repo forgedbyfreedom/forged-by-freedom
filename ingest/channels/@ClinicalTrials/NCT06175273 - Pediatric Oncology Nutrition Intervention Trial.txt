@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06175273
+Title: Pediatric Oncology Nutrition Intervention Trial
+Official Title: The Pediatric Oncology Interventional Nutrition Therapy (POINT) Trial: A Pilot Study
+Status: COMPLETED
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: vitamin D muscle
+
+SUMMARY:
+Nearly 60% of pediatric patients diagnosed with cancer develop malnutrition caused by a combination of disease burden, side effects of chemotherapy, and the intensity of cancer treatment. These patients are known to have an increased risk of infection, treatment-related toxicity, inferior clinical outcomes, and increased risk of mortality. Malnutrition may progress to cancer cachexia, characterized by anorexia, increased inflammation, decreased fat, and decreased muscle mass with subsequent weight loss, which is associated with decreased overall survival.
+
+The goal of the proposed research is to determine changes in body composition, weight status, and nutritional status between common nutrition interventions including oral nutrition supplements (ONS), appetite stimulants, and enteral nutrition (EN) among pediatric cancer patients. A secondary goal of this research is to utilize the findings to develop clinical nutrition guidelines for this patient population. The specific objective of the research proposed is to solve the lack of evidence to adequately treat nutritional deficits in the pediatric oncology population. Without this data, there is a lack of clinical consistency in the initiation and selection of appropriate nutrition interventions to provide a more definitive pathway of care. This study can help formulate a clinical guideline for this patient population before, during, and after treatment.
+
+DETAILED DESCRIPTION:
+The investigators plan to enroll a minimum of 45 subjects between the ages of 2-18 years old, over the course of one year, including males and females of all ethnicities. The subject will be a newly diagnosed pediatric patient with cancer who will actively receive chemotherapy at UK Healthcare's Kentucky Children's Hospital (KCH).
+
+All those who enroll will have a baseline ultrasound and biomarkers taken at enrollment. Participants will also receive 'standard of care' medical nutrition therapy (MNT) counseling at diagnosis for following a high protein/high-calorie diet. If any of the enrolled participants lose \>10% of the diagnosis weight, the participants will then be randomized to receive (1) oral nutrition supplements, (2) age-appropriate appetite stimulants, or (3) enteral nutrition via a feeding tube. At the point of randomization, participants will receive another ultrasound and biomarkers. Those randomized will then receive additional ultrasounds and biomarkers at 1 month and 3 months after randomization. The remaining patients that have either weight maintenance or weight gain, will be utilized as a comparator group and will receive an ultrasound at 3 months and 6 months from enrollment/diagnosis. Each group will have a goal of at least 10 patients per group.
+
+Those receiving ONS will be prescribed a standard ONS (1.0 kcal per mL) that will meet a minimum of 50% of estimated energy needs to promote weight gain but allow for continued regular dietary intakes. The ONS will be prescribed as 8oz (240mL) per dose at least once a day, but up to six times per day depending on estimated nutrient needs. Those receiving age-appropriate appetite stimulants will be provided either cyproheptadine or olanzapine. Subjects will be given cyproheptadine if the participants fall between the ages of 2-12 years of age and olanzapine if the participants are \>12 years of age or older. Table 1 summarizes the medication dosage forms, initial and dose titration options, and precautions/contraindications of each appetite stimulant. Medication adjustments will be made within 2-4 weeks of initiation due to the variable peak effect times, and chemotherapy treatment plans dictating clinic follow-up. Those randomized to EN will have a feeding tube placed and started on tube feeds via a designated pump for overnight feeds, meeting at least 50% of estimated energy needs to allow for continued regular dietary intakes during the day. After placement of a feeding tube, an abdominal x-ray will be obtained per hospital policy to confirm the appropriate placement of the feeding tube prior to use to ensure the safety of using said feeding tube.
+
+Baseline demographics will be collected, including gender, age, diagnosis, QMLT ultrasound measurement, subjective global assessment (SGA) malnutrition risk, pediatric z-scores, and activity levels. Investigators will assess the subjects' nutritional intake, body composition via QMLT ultrasound, mid-upper arm circumference, pediatric z
+
+PRIMARY OUTCOMES:
+  - Body Composition
+  - Body Composition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral Nutrition Supplement
+  - DIETARY_SUPPLEMENT: Tube Feed
+  - DRUG: Cyproheptadine
+  - DRUG: Olanzapine
+  - OTHER: Standard of Care
+
+ELIGIBILITY:
+Age: 2 Years to 19 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06175273

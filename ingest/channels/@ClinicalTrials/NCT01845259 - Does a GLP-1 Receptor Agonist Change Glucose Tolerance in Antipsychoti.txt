@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01845259
+Title: Does a GLP-1 Receptor Agonist Change Glucose Tolerance in Antipsychotic-treated Patients?
+Official Title: Does a GLP-1 Receptor Agonist Change Glucose Tolerance in Antipsychotic-treated Patients? A Randomized, Double-blinded, Placebo-controlled Clinical Trial
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 103
+Topic: body composition exercise
+
+SUMMARY:
+Metabolic disturbances, obesity and life-shortening cardiovascular morbidity are major clinical problems among antipsychotic-treated patients. Especially two of the most efficacious antipsychotics, clozapine and olanzapine, cause weight gain and metabolic disturbances and can rarely be replaced by other drugs due to the effectiveness of the compounds. Glucagon-like peptide 1 (GLP-1) has improved glycemic control among patients with type 2 diabetes. The study will investigate whether the beneficial effects of GLP-1 analogues on glycemic control in type 2 diabetic patients, can be extended to a population of non-diabetic, dysglycemic psychiatric patients, receiving antipsychotic medical treatment.
+
+DETAILED DESCRIPTION:
+Statistical analyses:
+
+Power calculation:
+
+A sample size of 96 participants (48 in each group) was estimated, with two-sided t-testing, an α of 5% and a power of 90%. The power calculation was based on the primary outcome measurement: Change in glucose tolerance. The glucose tolerance was estimated by the total Area Under the Curve (AUC) following a 4-hour 75-g. Oral Glucose Tolerance Test (OGTT). The expected mean total AUC for the plasma glucose excursion following a 4-hour 75-g. OGTT was estimated as 1695 (SD 158) and 1800 (SD 158) after 16 weeks of treatment for the liraglutide and liraglutide placebo group, respectively. The difference in total AUC was based on unpublished data in individuals with and without Impaired Glucose Tolerance (IGT) following a 4-hour 75-g. OGTT at baseline from the study: "The Impact of Liraglutide on Glucose Tolerance and the Risk of Type 2 Diabetes in Women With Previous Pregnancy-induced Diabetes".(1)
+
+Procedure:
+
+All analyses will be carried out with the treatment groups still blinded and labeled as "treatment group A" and "treatment group B". Before dividing participants into group A and group B, the statistical plan was completed and uploaded on clinicaltrials.gov, and the data set was locked. The final unblinding of treatment groups (liraglutide or liraglutide placebo), will not be carried out until all statistical analyses are performed. All analyses will be performed using SAS 9.4, with α set at 0.05 and two-sided testing.
+
+All efficacy analyses will be performed using a modified intention-to-treat principle. All participants who were randomized, received at least one dose of the trial compound (liraglutide or liraglutide placebo) and who had at least one assessment after baseline will be included in the efficacy analyses. All safety analyses will be performed in the intent-to-treat sample that includes all participants, who were randomized and received at least one dose of the trial compound (liraglutide or liraglutide placebo).
+
+Primary endpoint:
+
+The primary endpoint is the change in glucose tolerance following a 4-hour 75-g. OGTT from week 0 to week 16. During the 4-hour 75-g. OGTT, blood was sampled at fixed time points: -15, -10, 0, 5, 10, 15, 20, 30, 40, 50, 60, 90, 120, 150, 180, and 240 minutes. An analysis of covariance (ANCOVA) will be use to analyze change in glucose tolerance from week 0 to week 16 using mixed model analyses for the plasma glucose levels for the liraglutide and the liraglutide placebo group, respectively. In case of relevant baseline differences between the two groups, demographic, illness or treatment parameters will be included in the model as fixed effects together with the baseline value of the OGTTs as a covariate.
+
+Secondary endpoints:
+
+Blood was also sampled for analyses of C-peptide, glucagon and incretin hormones in response to the glucose load at the same fixed time points during the OGTT. Change in secretion of C-peptide, glucagon and incretin hormones from week 0 t
+
+PRIMARY OUTCOMES:
+  - Glucose tolerance
+
+INTERVENTIONS:
+  - DRUG: Liraglutide
+  - DRUG: Liraglutide Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01845259

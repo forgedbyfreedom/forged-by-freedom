@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04907084
+Title: Serine and Fenofibrate Study in Patients With MacTel Type 2
+Official Title: Phase 2a Study of the Effect of Serine Supplementation and Fenofibrate Treatment on Serum Deoxysphinganine Levels in Patients With Macular Telangiectasia (MacTel) Type 2 (SAFE Study)
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+This is a Phase 2a study of the effect of serine supplementation and fenofibrate treatment on serum deoxysphingolipid levels in patients with macular telangiectasia type 2 (MacTel). This study involves six arms. Participants will be randomly assigned to one of the following treatment groups: serine 200 mg/kg/day, serine 400 mg/kg/day, fenofibrate 160 mg/day, both serine 200 mg/kg/day and fenofibrate 160 mg/day, both serine 400 mg/kg/day and fenofibrate 160 mg/day, or no treatment (control group). Serum deoxysphingolipid levels will be used as the primary outcome, and safety will be evaluated. The participants will be followed for 10 weeks, with visits at Screening, Week 0, 3, 6 and 10.
+
+DETAILED DESCRIPTION:
+Additional Procedures include:
+
+1. Fasting blood work
+2. Collection of microbiome samples
+
+PRIMARY OUTCOMES:
+  - Serum Deosxysphingolipid Levels
+  - Safety Assessment
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Serine
+  - DRUG: Fenofibrate
+
+ELIGIBILITY:
+Age: 21 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04907084

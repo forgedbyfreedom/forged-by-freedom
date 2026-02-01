@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07015970
+Title: Real-life Follow-up of the Physical Activity in Type 1 Diabetes Participants Equipped With an Insulin Pump With Hybrid Closed Loop
+Official Title: Suivi en Vie Réelle de l'Activité Physique de Patients Présentant un Diabète de Type 1 Sportifs Equipés d'Une Pompe à Insuline Avec Délivrance Automatisée d'Insuline
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 87
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This is a non-interventional, prospective, multi-site study conducted in France among adults with type 1 diabetes mellitus using automated insulin delivery (AID) systems and engaging in at least two exercise sessions per week, each lasting at least 30 minutes. The main objective of this study is to describe the glycemic control of athletic participants with type 1 diabetes mellitus who use an insulin pump with AID and engage in physical exercise under real-life conditions.
+
+Two physician data collection time points are planned: the first occurs at baseline and includes demographic and clinical data, glycemic control during the month preceding inclusion, diabetes management, and information on usual physical exercise (duration, type, sport practiced, competition participation, and adherence to a specific diet). The second occurs at 1-month follow-up and involves downloading insulin pump and glucose sensor data, covering the period from 15 days before the first reported exercise session to 15 days after the last session.
+
+During the 1-month study period, participants will complete a paper logbook after each exercise session to document information such as the type of exercise, self-reported intensity using the modified Borg scale and the WHO physical activity intensity scale, duration, system adjustments, dietary intake, occurrence of hypoglycemia and associated symptoms, snacks consumed, and treatments administered for hypoglycemia.
+
+DETAILED DESCRIPTION:
+Three hybrid closed-loop systems dedicated to the automated management of type 1 diabetes are currently available in France: the Minimed 780G paired with the Guardian 4 continuous glucose monitoring system, Control-IQ, and mylife CamAPS-FX. Stratification will be performed based on the type of pump used by participants at the time of inclusion, at the national level, in order to obtain groups balanced in size.
+
+PRIMARY OUTCOMES:
+  - Time Below Range
+
+INTERVENTIONS:
+  - OTHER: No Intervention: Observational Cohort
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07015970

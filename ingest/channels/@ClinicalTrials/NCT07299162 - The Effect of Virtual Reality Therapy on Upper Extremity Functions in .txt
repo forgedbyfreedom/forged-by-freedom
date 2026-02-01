@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07299162
+Title: The Effect of Virtual Reality Therapy on Upper Extremity Functions in Subacute Stroke Patients Receiving Rehabilitation
+Official Title: The Effect of Virtual Reality Therapy on Upper Extremity Functions in Subacute Stroke Patients Receiving Conventional Rehabilitation and Action Observation Therapy: A Randomized Controlled Single-Blind Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: strength training
+
+SUMMARY:
+Stroke ranks second among the leading causes of death worldwide and third among the causes of disability. In stroke patients, motor impairment typically affects facial movements and the upper and lower extremities unilaterally. Upper extremity involvement, in particular, negatively impacts patients' activities of daily living, such as eating and dressing. Various rehabilitation methods are used to improve the function of the paretic upper extremity in stroke patients. Action Observation Therapy and Virtual Reality are among the rehabilitation approaches currently used to support upper extremity rehabilitation.
+
+In our study, patients will be randomly divided into two groups: one group will receive conventional rehabilitation and Action Observation Therapy, while the other group will additionally receive Virtual Reality therapy. This study aims to investigate the contribution of Virtual Reality therapy, when added to conventional rehabilitation and Action Observation Therapy, to the recovery of the paretic upper extremity in patients with subacute stroke.
+
+DETAILED DESCRIPTION:
+Methodology
+
+All volunteer patients will be evaluated at the beginning of the treatment using the following assessment tools: Fugl-Meyer Assessment-Upper Extremity, Brunnstrom Stages-Upper Extremity/Hand, Wolf Motor Function Test, Motricity Index-Arm, Stroke Impact Scale 3.0, and Task-Based Exercises (number of times the patient can bring their hand to the mouth, behind the head, and to the sacrum in one minute).
+
+Patients will be randomly assigned to two groups using computerized randomization.
+
+One group will receive conventional therapy 5 days per week plus Action Observation Therapy (AOT) 3 times per week for 30 minutes.
+
+Each AOT session will consist of videos featuring goal-oriented tasks prepared according to the individual needs of the patient. The videos will change weekly. The first session each week will be supervised by the physician, while the other two sessions will be performed independently by the patient.
+
+In AOT, each task is broken down into subcomponents. Each sub-task will be observed for 3 minutes, followed by a 2-minute practice period. For example, the task of drinking water from a glass will be divided into three sub-actions: (1) fill the glass, (2) hold the glass, and (3) bring the glass to the mouth. Each sub-action will be presented as a video for 3 minutes, followed by 2 minutes of attempted execution by the patient.
+
+The second group will receive conventional therapy 5 days per week, plus Action Observation Therapy (as described above) and Virtual Reality therapy (exergaming) using Becure SmartPose games, 3 times per week for 30 minutes.
+
+After completing the 5-week treatment program, a follow-up assessment will be performed at the end of treatment and one month after treatment completion.
+
+Sample Size Calculation
+
+The primary outcome measure is the Fugl-Meyer Assessment-Upper Extremity. Measurements will be taken at baseline, post-treatment, and one month after treatment for both the virtual reality group and the control group.
+
+Using a medium effect size (partial eta-squared = 0.06) for repeated measures mixed model ANOVA, with α = 0.05 and power = 0.85, the minimum required sample size was calculated as 16 participants per group, 32 in total. Considering an estimated 15% dropout rate, the final sample size was adjusted to 38 participants. The calculation was performed using G\*Power version 3.1.9.4 (Franz Faul, Universität Kiel, Germany).
+
+Statistical Analysis
+
+The normality of the data distribution will be tested using the Shapiro-Wilk test.
+
+If data are normally distributed, repeated measures ANOVA will be used to compare all variables (Fugl-Meyer Upper Extremity, Brunnstrom Upper Extremity/Hand, Wolf Motor Function Test, Motricity Index-Arm, Stroke Impact Scale 3.0, and Task-Based Exercises).
+
+If the overall ANOVA reveals significance (p \< 0.05), Post Hoc pairwise comparisons will be conducted to determine which time points differ.
+
+If data are not normally distributed, within-group comparisons will be conduct
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer Upper Extremity
+
+INTERVENTIONS:
+  - OTHER: Virtual Reality
+  - OTHER: Conventional rehabilitation
+  - OTHER: Action observation therapy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07299162

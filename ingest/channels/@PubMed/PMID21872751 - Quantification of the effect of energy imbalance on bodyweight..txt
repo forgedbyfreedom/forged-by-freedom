@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 21872751
+Title: Quantification of the effect of energy imbalance on bodyweight.
+Authors: Hall, Sacks, Chandramohan, Chow, Wang
+Journal: Lancet (London, England)
+Year: 2011
+Topic: metabolic adaptation weight loss
+
+ABSTRACT:
+Obesity interventions can result in weight loss, but accurate prediction of the bodyweight time course requires properly accounting for dynamic energy imbalances. In this report, we describe a mathematical modelling approach to adult human metabolism that simulates energy expenditure adaptations during weight loss. We also present a web-based simulator for prediction of weight change dynamics. We show that the bodyweight response to a change of energy intake is slow, with half times of about 1 year. Furthermore, adults with greater adiposity have a larger expected weight loss for the same change of energy intake, and to reach their steady-state weight will take longer than it would for those with less initial body fat. Using a population-averaged model, we calculated the energy-balance dynamics corresponding to the development of the US adult obesity epidemic. A small persistent average daily energy imbalance gap between intake and expenditure of about 30 kJ per day underlies the observed average weight gain. However, energy intake must have risen to keep pace with increased expenditure associated with increased weight. The average increase of energy intake needed to sustain the increased weight (the maintenance energy gap) has amounted to about 0&#xb7;9 MJ per day and quantifies the public health challenge to reverse the obesity epidemic.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/21872751/

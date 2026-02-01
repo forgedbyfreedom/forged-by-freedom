@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01375374
+Title: Hormonal and Lipid Levels in Male Subjects After a Switch From Carbamazepine to Lacosamide
+Official Title: Multicenter, Open-label, Single-arm Study to Evaluate Hormone and Lipid Levels in Male Subjects With Partial-onset Seizures After a Switch of Treatment From Carbamazepine as Adjunctive Treatment to Levetiracetam to Lacosamide as Adjunctive Treatment to Levetiracetam
+Status: TERMINATED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: testosterone replacement
+
+SUMMARY:
+The purpose of the trial is to investigate whether changes in lipids and hormonal parameters can be observed in blood when Carbamazepine treatment is replaced with Lacosamide treatment, while Levetiracetam treatment remains unchanged.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Serum Sex Hormone Binding Globulin (SHBG) From Baseline to Treatment Period End (Comprised of a 4-week Titration Period and an 8-week Maintenance Period)
+
+INTERVENTIONS:
+  - DRUG: Lacosamide
+  - DRUG: Levetiracetam
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01375374

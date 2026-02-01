@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40355558
+Title: YTHDC1 promotes postnatal brown adipose tissue development and thermogenesis by stabilizing PPAR&#x3b3;.
+Authors: Wang, Wang, Ding, Li, Zhang
+Journal: The EMBO journal
+Year: 2025
+Topic: brown adipose tissue thermogenesis
+
+ABSTRACT:
+Brown adipose tissue (BAT) plays a vital role in non-shivering thermogenesis and energy metabolism and is influenced by factors like environmental temperature, ageing, and obesity. However, the molecular mechanisms behind BAT development and thermogenesis are not fully understood. Our study identifies the m6A reader protein YTHDC1 as a crucial regulator of postnatal interscapular BAT development and energy metabolism in mice. YTHDC1 directly interacts with PPAR&#x3b3; through its intrinsically disordered region (IDR), thus protecting PPAR&#x3b3; from binding the E3 ubiquitin ligase ARIH2, and preventing its ubiquitin-mediated proteasomal degradation. Specifically, the ARIH2 RING2 domain is essential for PPAR&#x3b3; degradation, while PPAR&#x3b3;'s A/B domain is necessary for their interaction. Deletion of Ythdc1 in BAT increases PPAR&#x3b3; degradation, impairing interscapular BAT development, thermogenesis, and overall energy expenditure. These findings reveal a novel mechanism by which YTHDC1 regulates BAT development and energy homeostasis independently of its m6A recognition function.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40355558/

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05118711
+Title: Sequelae of COVID-19 With Focus on Exercise Capacity and Underlying Mechanisms
+Official Title: COVID-19 Severity, Long-term Consequences for Exercise Capacity and Link to Associated Mechanisms
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 128
+Topic: body composition exercise
+
+SUMMARY:
+The project is designed as a cross-sectional study and aims to examine long-term consequences of coronavirus disease 2019 (COVID-19) for selected bio-behavioural parameters while taking the disease course severity into account.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cardiorespiratory fitness (as % of predicted V̇O2max)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Cardiorespiratory fitness
+  - DIAGNOSTIC_TEST: Lung function
+  - DIAGNOSTIC_TEST: Muscular strength and balance tests
+  - DIAGNOSTIC_TEST: Micro- and macrovascular endothelial function and cardiac function
+  - DIAGNOSTIC_TEST: Blood sampling and analysis
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05118711

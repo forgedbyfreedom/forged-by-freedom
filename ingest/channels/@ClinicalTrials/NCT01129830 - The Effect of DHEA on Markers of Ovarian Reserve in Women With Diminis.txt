@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01129830
+Title: The Effect of DHEA on Markers of Ovarian Reserve in Women With Diminished Ovarian Reserve
+Official Title: The Effect of DHEA on Markers of Ovarian Reserve in Women With Diminished Ovarian Reserve
+Status: TERMINATED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: DHEA supplementation
+
+SUMMARY:
+This prospective study evaluates the effect of DHEA supplementation on markers of ovarian reserve in women with diminished ovarian reserve.
+
+DETAILED DESCRIPTION:
+Ovarian reserve markers, such as FSH, estradiol, AMH, ovarian volume and antral follicle counts will be monitored on DHEA supplementation in a prospective fashion.
+
+PRIMARY OUTCOMES:
+  - live birth rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: dehydroepiandrosterone
+
+ELIGIBILITY:
+Age: 21 Years to 44 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01129830

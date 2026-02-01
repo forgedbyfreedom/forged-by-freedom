@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 28758805
+Title: Immunoaffinity techniques coupled to mass spectrometry for the analysis of human peptide hormones: advances and applications.
+Authors: Thomas, Sch&#xe4;nzer, Thevis
+Journal: Expert review of proteomics
+Year: 2018
+Topic: peptide hormones performance
+
+ABSTRACT:
+The accurate and comprehensive determination of peptide hormones from biological fluids has represented a considerable challenge to analytical chemists for decades. Besides long-established bioanalytical ligand binding assays (or ELISA, RIA, etc.), more and more mass spectrometry-based methods have been developed recently for purposes commonly referred to as targeted proteomics. Eventually the combination of both, analyte extraction by immunoaffinity and subsequent detection by mass spectrometry, has shown to synergistically enhance the test methods' performance characteristics. Areas covered: The review provides an overview about the actual state of existing methods and applications concerning the analysis of endogenous peptide hormones. Here, special focus is on recent developments considering the extraction procedures with immobilized antibodies, the subsequent separation of target analytes, and their detection by mass spectrometry. Expert commentary: Key aspects of procedures aiming at the detection and/or quantification of peptidic analytes in biological matrices have experienced considerable improvements in the last decade, particularly in terms of the assays' sensitivity, the option of multiplexing target compounds, automatization, and high throughput operation. Despite these advances and progress as expected to be seen in the near future, immunoaffinity purification coupled to mass spectrometry is not yet a standard procedure in routine analysis compared to ELISA/RIA.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/28758805/

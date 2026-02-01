@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02692235
+Title: Carnitine Supplementation and Skeletal Muscle Function
+Official Title: Carnitine Supplementation and Skeletal Muscle Function in Aging
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: protein supplementation
+
+SUMMARY:
+Research project objectives The primary aim of the current research project is to use carnitine supplementation as the anti-inflammatory intervention for exploring the relationship between inflammation and associated with aging reduction of skeletal muscle mass.
+
+Hypothesis The carnitine supplementation modulates the blood cytokines concentration. Anti-inflammatory intervention delay the reduction of skeletal muscle mass associated with aging
+
+DETAILED DESCRIPTION:
+Volunteers over 65 years old (n=40) are supplemented either with carnitine or placebo for 24 weeks. Before the start, in the mid-point, and after finishing the supplementation the following primary outputs variables are performed: body composition analysis (InBody720), maximal isokinetic knee extensor peak torque (Biodex System 4 Pro), blood cytokines and carnitine concentration, blood lipid profile.
+
+PRIMARY OUTCOMES:
+  - Blood Inflammatory Marker
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: carnitine
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 65 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02692235

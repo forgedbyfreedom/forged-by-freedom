@@ -1,0 +1,59 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02917096
+Title: Ruxolitinib Phosphate and Chemotherapy Given Before and After Reduced Intensity Donor Stem Cell Transplant in Treating Patients With Myelofibrosis
+Official Title: Pilot Open-Label Study of Safety and Efficacy of Ruxolitinib Given Peri-Transplant During Reduced Intensity Allogeneic Hematopoietic Cell Transplantation (HCT) in Patients With Myelofibrosis
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: beta alanine
+
+SUMMARY:
+This pilot clinical trial studies the side effects and best dose of ruxolitinib phosphate when given together with chemotherapy before and after a donor stem cell transplant in treating patients with myelofibrosis. Ruxolitinib phosphate may stop the growth of cancer cells by blocking some of the enzymes needed for cell growth. Drugs used in chemotherapy, such as fludarabine phosphate and melphalan, work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving ruxolitinib phosphate together with chemotherapy before and after a donor stem cell transplant may help stop the growth of cells in the bone marrow, including normal blood-forming cells (stem cells) and cancer cells. It may also stop the patient's immune system from rejecting the donor's stem cells. When the healthy stem cells from a donor are infused into the patient they may help the patient's bone marrow make stem cells, red blood cells, white blood cells, and platelets. The donated stem cells may also replace the patient?s immune cells and help destroy any remaining cancer cells.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Among the dose levels tested, to determine the maximum tolerated dose (MTD) and recommended phase II dose (RP2D) of ruxolitinib phosphate (ruxolitinib), when given as part of reduced intensity allogeneic hematopoietic cell transplant (HCT), in patients with myelofibrosis.
+
+II. To determine if the addition of ruxolitinib is safe by evaluation of toxicities including: type, frequency, severity, attribution, time course and duration.
+
+SECONDARY OBJECTIVES:
+
+I. To characterize and evaluate hematologic recovery, donor cell engraftment and immune reconstitution by cell count and flow cytometry of lymphocyte subsets.
+
+II. To estimate the cumulative incidence of acute graft-versus-host disease (aGVHD) and non-relapse mortality (NRM) at 100-days post transplant.
+
+III. To estimate the cumulative incidence of chronic GVHD at 1- and 2-years post transplant.
+
+IV. To estimate the probabilities of overall and progression-free survival (OS/PFS) at 1- and 2-years post transplant.
+
+V. To characterize changes in aGVHD biomarkers (Reg-3 alpha, soluble tumor necrosis factor receptor I \[sTNF RI\], IL2R alpha), janus associated kinases (JAK)-regulated pro-inflammatory cytokines (i.e. IL-6, TNF alpha, CRP, beta 2microglobulin) and STAT3 phosphorylation (downstream of JAK signaling) over time and by aGVHD status/grade.
+
+OUTLINE: This is a dose-escalation study of ruxolitinib phosphate.
+
+PREPARATIVE REGIMEN: Patients receive fludarabine phosphate intravenously (IV) on days -9 to -5, melphalan IV over 20 minutes on day -4, and ruxolitinib phosphate orally (PO) twice daily (BID) on days -3 to 30 with a taper for 2-3 weeks in the absence of disease progression or unacceptable toxicity.
+
+GVHD PROPHYLAXIS: Patients receive tacrolimus IV continuously beginning on day -3 and convert to PO daily when the patient is able to tolerate and absorb oral medications. Patients also receive sirolimus PO daily beginning on day -3. Treatment continues in the absence of GVHD.
+
+STEM CELL TRANSPLANT: Patients undergo allogeneic HCT on day 0.
+
+After completion of study treatment, patients are followed up for 2 years.
+
+PRIMARY OUTCOMES:
+  - Maximum tolerated dose of ruxolitinib phosphate, defined as less than or equal to 1 of 6 dose limiting toxicities, graded according to the Bearman criteria and the National Cancer Institute Common Terminology Criteria for Adverse Events version 4.03
+
+INTERVENTIONS:
+  - PROCEDURE: Allogeneic Hematopoietic Stem Cell Transplantation
+  - DRUG: Fludarabine
+  - DRUG: Fludarabine Phosphate
+  - OTHER: Laboratory Biomarker Analysis
+  - DRUG: Melphalan
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02917096

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38067833
+Title: Failure of Digital Device Performance in Monitoring Physical Exercise in a Pilot Study in Sedentary Persons with HIV.
+Authors: Bonato, Marmondi, Turrini, Albergoni, Pennacchi
+Journal: Sensors (Basel, Switzerland)
+Year: 2023
+Topic: exercise performance nutrition
+
+ABSTRACT:
+Digital devices have gained popularity in the last 10 years as a tool for exercise prescription, the monitoring of daily physical activity, and nutrition for the management of a health-related parameter. Therefore, the aim of this study was to assess the effectiveness of the use of digital devices to monitor exercise data in sedentary persons with HIV who exercise following an individualized activity pacing (AP) protocol on cardiorespiratory fitness body composition, blood lipid profile, and psychological parameters. Twenty-four PLWH were enrolled in an 18-week randomized, open-label, pilot AP exercise protocol. All participants were monitored by a Health Band connected to a mobile app that transmitted the data to a server. At week 3, they were randomized either in an experimental group (EG), in which an open device configuration enabled them to receive training data feedback (n = 12), or continued with no data feedback (control group, n = 12). The primary endpoint was improvement from the baseline of 15% of steady-state oxygen consumption (V&#x2d9;O2) during a 6-min walking test. Technical issues occurred when pairing the health band with the app, which prevented EG participants from regularly receiving data feedback, and with data transmission to the server, which enabled only 40% monitoring of the total training days. Consequently, the study outcomes could not be compared between the two groups, and participants also lost confidence in the study. However, 19 out of 24 participants completed the AP program. Overall, only 6 (32%) improved steady-state V&#x2d9;O2, with no significant changes at W18 from the baseline. Significant reductions were observed of BMI (p = 0.040), hip circumference (p = 0.027), and total-(p = 0.049) and HDL-cholesterol (p = 0.045). The failure of digital device performance substantially affected study procedures, monitoring, and participants' engagement, and likely limited the potential benefits of the AP exercise program.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38067833/

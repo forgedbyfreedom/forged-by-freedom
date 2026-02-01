@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04321031
+Title: Metabolic Interventions to Resolve Non-alcoholic Steatohepatitis (NASH) With Fibrosis (MIRNA)
+Official Title: A PHASE 2, RANDOMIZED, DOUBLE-BLIND, DOUBLE-DUMMY, PLACEBO-CONTROLLED, DOSE-RANGING, DOSE-FINDING, PARALLEL GROUP STUDY TO ASSESS EFFICACY AND SAFETY OF PF-06865571 (DGAT2I) ALONE AND WHEN COADMINISTERED WITH PF-05221304 (ACCI) IN ADULT PARTICIPANTS WITH BIOPSY-CONFIRMED NONALCOHOLIC STEATOHEPATITIS AND FIBROSIS STAGE 2 OR 3
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 256
+Topic: creatine supplementation
+
+SUMMARY:
+The study aims to evaluate two, orally administered, investigational agents - PF-06865571 (DGAT2 inhibitor) and the coadministration of PF-06865571 with PF-05221304 (ACC inhibitor). This study is specifically designed to evaluate the effect of a range of doses of DGAT2i alone, and DGAT2i + ACCi, on resolution of NASH or improvement in liver fibrosis, as assessed histologically (via liver biopsy).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean Proportion of Participants Achieving Resolution of NASH Without Worsening/Improvement of Fibrosis by >=1 Stage Without Worsening of NASH/Both Based on Assessment by Sponsor-Identified Central Pathologist at Week 48:Bayesian Dose Response Model (BDRM)
+  - Number of Participants Achieving Resolution of NASH Without Worsening or Improvement in Fibrosis by >= 1 Stage Without Worsening of NASH or Both Based on Assessment by Sponsor-Identified Central Pathologist at Week 48: Logistic Regression Model
+
+INTERVENTIONS:
+  - DRUG: Placebo
+  - DRUG: PF-06865571
+  - DRUG: PF-05221304
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04321031

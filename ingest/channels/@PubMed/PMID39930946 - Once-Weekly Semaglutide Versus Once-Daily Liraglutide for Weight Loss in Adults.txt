@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39930946
+Title: Once-Weekly Semaglutide Versus Once-Daily Liraglutide for Weight Loss in Adults: A Meta-Analysis of Randomized Controlled Trials.
+Authors: Hashmi, Ahmed, Haider, Naseem, Jafar
+Journal: Clinical and translational science
+Year: 2025
+Topic: semaglutide weight loss
+
+ABSTRACT:
+The effectiveness of glucagon-like peptide-1 receptor agonists in facilitating weight loss among patients with diabetes is widely recognized. However, there are limited data available on the relative effectiveness and safety of once-weekly semaglutide versus once-daily liraglutide. We conducted a systematic review and meta-analysis of randomized controlled trials (RCTs) identified through a comprehensive search of the Cochrane Library, PubMed, and ScienceDirect databases from inception until July 2024. Statistical analysis was conducted using R version 4.4.1 with the "meta" package, employing a random effects model. Three RCTs with a total of 922 patients were included in our meta-analysis. The results indicated that OW semaglutide significantly reduced body weight (WMD: -4.55; 95% CI: -6.43, -2.67, p&#x2009;&lt;&#x2009;0.01), HbA1c (WMD: -0.46; 95% CI: -0.84, -0.08; p&#x2009;=&#x2009;0.02), and fasting plasma glucose levels (WMD: -1.23; 95% CI: -1.51, -0.95; p&#x2009;&lt;&#x2009;0.01) in comparison to OD liraglutide. The risk of severe adverse effects (OR, 1.66; 95% CI, 0.53-5.16; p&#x2009;=&#x2009;0.38) and gastrointestinal adverse effects (OR, 1.84; 95% CI, 0.82-4.14; p&#x2009;=&#x2009;0.14) was comparable between both groups. Once-weekly semaglutide therapy results in a more pronounced loss in body weight, HbA1c, and fasting glucose levels compared to once-daily liraglutide.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39930946/

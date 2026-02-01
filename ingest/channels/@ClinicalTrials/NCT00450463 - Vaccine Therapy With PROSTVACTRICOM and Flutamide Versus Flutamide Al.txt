@@ -1,0 +1,84 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00450463
+Title: Vaccine Therapy With PROSTVAC/TRICOM and Flutamide Versus Flutamide Alone to Treat Prostate Cancer
+Official Title: A Randomized Phase II Trial Combining Vaccine Therapy With PROSTVAC/TRICOM and Flutamide vs. Flutamide Alone in Men With Androgen Insensitive, Non-Metastatic (D0.5) Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: testosterone replacement
+
+SUMMARY:
+Background:
+
+* Flutamide is an approved drug for prostate cancer that blocks the effects of testosterone on prostate cancer cells and may slow the progression of the disease.
+* The vaccine in this study consists of a priming vaccine called PROSTVAC (rilimogene galvacirepvec/rilimogene glafolivec) -V/TRICOM (triad of costimulatory molecules), made from vaccinia virus, and a boosting vaccine called PROSTVAC-F/TRICOM, made from fowlpox virus. DNA (Deoxyribonuceic acid) is inserted into the priming and boosting vaccine viruses to cause production of proteins that enhance immune activity and also to produce prostate specific antigen (PSA) a protein that is normally produced by the patients tumor cells.
+* GM-CSF (granulocyte macrophage colony stimulating factor), given along with the vaccine, is a chemical that boosts the immune system. It is used in this study to try to increase the usefulness of the vaccine by increasing the number of immune cells at the vaccination site.
+
+Objectives:
+
+-To determine if treatment with a prostate cancer vaccine plus flutamide is more effective than flutamide alone in delaying disease progression in patients with prostate cancer.
+
+Eligibility:
+
+* Patients 18 years of age and older with androgen-insensitive prostate cancer that has not spread beyond the prostate gland.
+* Patients with a rising PSA (prostatic specific antigen) who have already been treated with anti-iandrogen therapy (either bicalutamide or nilutamide).
+
+Design:
+
+* There are two treatment groups in this study. Group A receives only flutamide; group B receive flutamide plus vaccine.
+* Patients in both groups receive flutamide by mouth three times a day.
+* Patients in group B receive PROSTVAC-V/TRICOM on day 1 and PROSTVAC-F/TRICOM on day 29 and again every 4 weeks. All vaccines are given as injections under the skin.
+* Patients have blood tests for PSA levels every month and scans every 3 months until the disease worsens.
+* After 3 months of therapy, patients receiving in group A (flutamide alone) may cross over to receive vaccine if they develop a rising PSA and scans show no sign of disease spread. Patients in group B (flutamide plus vaccine) stop flutamide and may continue vaccine therapy. At this point patients may continue to receive treatment until the disease progresses or PSA levels rise....
+
+DETAILED DESCRIPTION:
+Background:
+
+* There is no standard of care for prostate cancer patients progressing on hormone therapy with a rising serum PSA (prostatic specific antigen) level without evidence of metastatic disease.
+* We have completed a phase II trial in which men with this stage of disease were randomized to receive a pox vector PSA vaccine vs. the antiandrogen nilutamide.
+* The median time to treatment failure on nilutamide was 7.6 months.
+* 12 patients on the vaccine arm had nilutamide added at the time of PSA progression.
+* The median time for treatment failure after the addition of nilutamide was 13.9 months, for a total of 25.9 months from initiation of vaccine therapy.
+* This suggests that the combination of hormone therapy with vaccine therapy may lead to an improved clinical benefit compared to hormone therapy alone.
+* Due to the increased toxicity of nilutamide compared to other antiandrogens and the patients prior exposure to bicalutamide therapy, we plan to use flutamide as a second line hormonal manipulation in the below study.
+
+Objectives (Primary):
+
+-To determine if use of a combination of vaccine plus flutamide may be associated with a trend toward improvement in time to treatment failure compared to flutamide alone.
+
+Eligibility:
+
+* Must have non metastatic androgen insensitive prostate cancer with a rising PSA with castrate levels of testosterone and no evidence of metastatic disease on CT (computed tomography) scan or bone scan.
+* Hgb (hemoglobin) greater than or equal to 9 g/dL.
+* Lymphocyte count greater than or equal to 500/mm(3).
+* Hepatic function: Bilirubin less than or equal to 1.5 mg/dL, OR patients with Gilbert's syndrome, a total bilirubin less than or equal to 3.0 mg/dL, AST (aspartate aminotransferase) and ALT (alanine aminotransferase) less than 2.5 times upper limit of normal
+
+Design:
+
+-Flutamide will be administered at a dose of 250 mg PO (by mouth) tid (three times a day) every day in both arms A and B.
+
+rV-PSATRICOM will be administered s.c. (subcutaneous) on day 1 in Arm B.
+
+rF-PSATRICOM will be administered s.c. on day 29 \& every 4 weeks in Arm B.
+
+* For patients with declining PSA no restaging will be done unless they develop symptoms consistent with metastatic disease.
+* For patients with rising PSA, once 2 consecutive PSA rises are seen, a CT will be done at their next scheduled visit. They will then be re-staged (CT and bone scans) at 3 month intervals as long as PSA continues to rise.
+* After 3 months of therapy, patients receiving the flutamide alone (arm A) may cross over to receive vaccine if they develop a rising PSA and scans are without metastatic disease. The vaccine may commence 4 weeks after flutamide is stopped if the PSA continues to rise. If there is an antiandrogen withdrawal response (a decline in PSA 28 days after the discontinuation of flutamide), PSA serum levels will be checked every 28 days and vaccine may commence when the serum PSA levels begin to rise (if scans are negative for metastatsis). P
+
+PRIMARY OUTCOMES:
+  - Time to Treatment Failure
+
+INTERVENTIONS:
+  - DRUG: Sargramostim (GM-CSF, Leukine)
+  - DRUG: Flutamide (Eulexin)
+  - BIOLOGICAL: PROSTVAC-F/ TRICOM
+  - BIOLOGICAL: PROSTVAC-V/TRICOM
+
+ELIGIBILITY:
+Age: 18 Years to 110 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00450463

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04385186
+Title: Inactivated Convalescent Plasma as a Therapeutic Alternative in Patients CoViD-19
+Official Title: Inactivated Convalescent Plasma as a Therapeutic Alternative in Hospitalized Patients CoViD-19
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: creatine supplementation
+
+SUMMARY:
+Convalescent plasma is a way to provide passive immunity to a person exposed to an infectious agent. It has been used as a therapeutic tool for emerging viral infections without specific treatment and with high morbidity and mortality, such as Influenza H1N1, H5N1, H7N9, Ebola, MERS, SARS-CoV1, and even SARS-Cov2, with satisfactory results regarding evolution clinic of patients treated and without significant adverse events reported. One of its main advantages of convalescent plasma is to generate a rapid immune response (even faster than a vaccine), against a pathogen that circulates in a specific geographic area, probably common for both donor and recipient.
+
+DETAILED DESCRIPTION:
+This study consists of obtaining convalescent plasma by means of apheresis, from recovered donors, who meet the eligibility criteria to donate. Then this plasma will be inactivated by riboflavin and UV based photochemical treatment (Mirasol technology - Terumo BCT®), in order to add more transfusion security to the procedure. Finally, it will be transfused to CoViD-19 patients hospitalized in any of the participating clinics. There are currently no reported significant adverse events associated with this therapy. Have been published two serial cases reports,more evidence is necessary to standardize the treatment.
+
+PRIMARY OUTCOMES:
+  - Mortality reduction in CoViD-19 patients treated with inactivated convalescent plasma + support treatment
+
+INTERVENTIONS:
+  - DRUG: Inactivated convalescent plasma
+  - DRUG: Support treatment
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04385186

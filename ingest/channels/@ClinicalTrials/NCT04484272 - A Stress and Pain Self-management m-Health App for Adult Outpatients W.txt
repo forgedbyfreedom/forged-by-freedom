@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04484272
+Title: A Stress and Pain Self-management m-Health App for Adult Outpatients With Sickle Cell Disease
+Official Title: A Stress and Pain Self-management m-Health App for Adult Outpatients With Sickle Cell Disease
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 185
+Topic: caffeine exercise
+
+SUMMARY:
+Our long-term goal is to reduce stress and improve sickle cell disease (SCD) pain control with less opioid use through an intervention with self-management relaxation/distraction exercises (RDE), named You Cope, We Support (YCWS). Americans living with SCD suffer recurrent episodes of acute and chronic pain, both of which are exacerbated by stress. Building on the successes of our prior formative studies, we now propose a well-designed, appropriately powered study to test efficacy of YCWS on outcomes (pain intensity, stress intensity, opioid use) in adults with SCD. We propose to recruit 170 adults for a randomized controlled trial of the short-term (8 weeks) and long-term (6 months) effects of YCWS on outcomes (pain, stress, and opioid use). Stratified on worst pain intensity (\<=5; \>5), we will randomly assign patients to groups: 85 to Control (Self-monitoring of outcomes + alerts/reminders), and 85 to Experimental (Self-monitoring of outcomes + alerts/reminders + use of YCWS \[RDE + Support\]). We will ask participants to report outcomes daily. During weeks 1-8, we will send system-generated alerts/reminders to both groups via phone call, text, or email to facilitate data entry (both groups) and intervention use support (experimental). If the patient does not enter data after 24 hours, study support staff will contact him/her for data entry trouble-shooting (both groups) and YCWS use (experimental). We will time stamp and track participants' online activities to understand the study context and conduct exit interviews on acceptability of the staff and system-generated support. We will analyze data using mixed-effects regression models (short-term, long-term) to account for repeated measurements over time and utilize machine learning to construct and evaluate models predictive of outcomes. Specific aims are: Aim 1: To determine the short-term effects of YCWS. Aim 2: To determine the long-term effects of YCWS. Aim 3 (exploratory): Using machine learning, to develop and evaluate models that predict patient outcomes based on their group assignment and on their personal (e.g., self-efficacy, sex, education, family income, computer experience, etc.,) and environmental characteristics (e.g., distance from care, quality of cell connection, etc.).
+
+DETAILED DESCRIPTION:
+Design. The study is a RCT of the short-term (8 weeks) and long-term (6 months) effects of YCWS on efficacy outcomes (pain, stress, and opioid use). We will stratify patients on worst pain intensity (\<=5, \>5) and randomly assign 170 adult outpatients to Control or Experimental groups. The Aim 3 analysis is exploratory to understand predictors of intervention effects.
+
+Setting and Sample. The University of Florida (UF) will be the site for data collection, intervention delivery, and data analysis. Together, the UF Health Shands Hospital Pediatric and Adult sickle cell programs have a clinic panel of 700 (400 pediatric and 300 adult) patients with SCD. The available panel for this study is 403 patients with SCD (300 from the adult program and from the pediatric program 47 who currently are 18 years old and have not yet transitioned to adult care, and 56 who will become adults during our study period). We will use Internet and remote technologies, which will allow subjects to complete the study in their setting of choice where Internet service is available. We will also load some of the video clips on patients' mobile devices for use when the internet is not available. For those who meet the eligibility criteria, we anticipate enrolling 195 subjects in order to retain 170 subjects with complete data at 8 weeks based on a 13% attrition rate and approximately the rate observed in our previous longitudinal studies in which follow-up was more than a year.15 Randomization: Using our group's randomization software, we will use permuted block randomization with stratification based on worst pain intensity (\<=5, \> 5). We will randomly assign the 195 consecutively selected patients to the two study groups. Assignment will be unknown until a sealed electronic envelope is opened after a patient completes pretest data collection procedures.
+
+Procedures. After introduction by clinic staff, the research specialist (RS) will approach patients during their outpatient clinic visits, inpatient hospitalization, or by phone or e-mail for those registered in the UF SCD research registry. The RS will explain the study and ascertain their willingness to participate. The RS will inform patients that participation is voluntary and a decision to decline participation will not affect their care. For patients choosing to participate, the RS will ask them to sign a written consent at the time of recruitment or on the day of the first study visit. The RS will contact the patients the day before the study visit as a reminder for the upcoming visit. After informed consent, patients will complete baseline measures and be randomly assigned to Experimental or Control groups (Figure 3). The RS will provide standardized instruction on how to use the study Galaxy tablet or their personal mobile device for daily study procedures at home, focusing on alerts/reminders, daily data entry, and customization of YCWS app via settings panel (Tolerable and optimal pain goal, time of day to co
+
+PRIMARY OUTCOMES:
+  - Stress intensity scale
+  - Pain intensity scale
+  - Opioid use
+
+INTERVENTIONS:
+  - BEHAVIORAL: Self-monitoring of pain, stress, and opioid use + alerts/reminders + use of YCWS. [three video banks of RDE + Support]).
+  - BEHAVIORAL: Self-monitoring of pain, stress, and opioid use + alerts/reminders.
+
+ELIGIBILITY:
+Age: 18 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04484272

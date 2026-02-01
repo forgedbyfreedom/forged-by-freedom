@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03610334
+Title: A Combined SAD and MAD Study to Investigate the Safety, Tolerability and Pharmacokinetic Profile of IFB-088
+Official Title: A Double-blind, Randomized, Placebo-controlled, Combined Single and Multiple Ascending Dose Study to Investigate the Safety, Tolerability and Pharmacokinetic Profile of IFB-088, in Healthy Volunteers
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 72
+Topic: beta alanine
+
+SUMMARY:
+This is the first study of single and multiple doses of IFB-088 in human subjects. The current study is designed to assess in the first part, the safety, tolerability, plasma and urine pharmacokinetics (PK) of single oral doses of IFB-088 in healthy subjects (Single Ascending Doses - SAD) and in a second part safety, tolerability, plasma and urine pharmacokinetics (PK) of multiple oral doses of IFB-088 in healthy subjects (Multiple Ascending Doses - MAD)
+
+DETAILED DESCRIPTION:
+Randomized, double blind, placebo controlled study of single ascending doses (SAD) and multiple ascending doses (MAD).
+
+The SAD part consists of 6 cohorts of 8 healthy young male subjects, each receiving a single oral dose of IFB-088 or placebo (6 verum and 2 placebo). In each cohort, 2 subjects (1 verum and 1 placebo) will be dosed first. If the safety and tolerability results are acceptable, the 6 remaining subjects will be dosed by 2 successive groups of 3 subjects, with an adequate period between the 2 groups to detect the occurrence of any reaction or adverse events, namely at least 48H for the first cohort and at least 36H for the following cohorts. Indeed, in the first cohort (2.5 mg IFB-088 base), dosing will be in the morning only. From the second cohort, the planned daily dose will be divided into 2 doses separated by an interval of 12 hours (1 dose in the morning fasting and 1 dose in the evening 2 hours before dinner).
+
+The MAD part consists of 3 cohorts of 8 healthy young male subjects, each receiving an oral dose divided into two doses of IFB-088 or placebo (6 verum and 2 placebo) for 14 days. In each cohort, the 2 first subjects will be dosed on Day 1 (one on active treatment and one on placebo). The 6 remaining subjects will be dosed by 2 successive groups of maximum 3 subjects with an adequate period between the groups to observe for any reaction and adverse events. This period will be of at least 36H, corresponding to at least 5-fold the half-life of the drug (based on results obtained during the SAD part) when steady state will be achieved. In each MAD cohort, the total daily dose will be divided into 2 doses separated by an interval of 12 hours.
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment Emergent Adverse Events Per Group
+
+INTERVENTIONS:
+  - DRUG: IFB-088 (2.5-60.0mg) oral capsule
+  - DRUG: Placebo (2.5-60.mg) oral capsule
+  - DRUG: IFB-088 (15.0-50.0mg) oral capsule
+  - DRUG: Placebo oral (15.0-50.0mg) capsule
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03610334

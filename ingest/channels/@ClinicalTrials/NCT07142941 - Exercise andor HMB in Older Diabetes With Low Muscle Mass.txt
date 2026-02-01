@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07142941
+Title: Exercise and/or HMB in Older Diabetes With Low Muscle Mass
+Official Title: Effects of Exercise and/or β-hydroxy-β-methylbutyrate Supplementation on Muscle Mass, Physical Performance and Insulin Resistance in Older Diabetes With Low Muscle Mass: a Randomized, Double-blind, Placebo-controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: HMB supplementation
+
+SUMMARY:
+The investigators aimed to examine if β-hydroxy-β-methylbutyrate (HMB) supplementation enhances the effects of exercise on muscle mass, physical performance and insulin resistance and observe potential residual effects in older diabetes with low muscle mass, and to find the optimal treatment plan.
+
+DETAILED DESCRIPTION:
+The interaction between exercise and nutritional supplementation is unclear among older diabetes at risk of sarcopenia. The investigators aimed to examine if β-hydroxy-β-methylbutyrate (HMB) supplementation enhances the effects of exercise on muscle mass, physical performance and insulin resistance and observe potential residual effects in older diabetes with low muscle mass, and to find the optimal treatment plan. This 12-wk, randomized, double-blind, placebo controlled, 2 × 2 factorial design (exercise-only, HMB-only, both, and none) trial included 120 older diabetes aged 60-80 y with skeletal muscle index \<5.7 kg/m2 for women, and \<7.0 kg/m2 for men, and was followed by a 12-wk observational period.
+
+PRIMARY OUTCOMES:
+  - muscle mass
+  - Handgrip strength
+  - 5-repetition sit-to-stand time
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: HMB
+  - BEHAVIORAL: Exercise
+  - DIETARY_SUPPLEMENT: Placebo
+  - OTHER: Education
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07142941

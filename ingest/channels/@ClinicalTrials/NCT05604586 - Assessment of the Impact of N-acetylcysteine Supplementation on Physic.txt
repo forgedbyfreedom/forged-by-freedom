@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05604586
+Title: Assessment of the Impact of N-acetylcysteine Supplementation on Physical Performance
+Official Title: Assessment of the Impact of N-acetylcysteine Supplementation on Physical Performance Depending on the Polymorphism of Genes Related to Folate Metabolism
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: athletic performance
+
+SUMMARY:
+Study aims to verify the hypothesis:
+
+* N-acetylcysteine (NAC) supplementation improves exercise capacity in people training endurance sports and the effectiveness of this supplementation depends on the polymorphism of genes related to folate and glutathione metabolism.
+* NAC supplementation affects the parameters of oxidative stress among women and men training endurance disciplines
+
+DETAILED DESCRIPTION:
+* Glutathione depletion caused by a combination of intense physical exertion associated with the generation of significant amounts of reactive oxygen species (ROS), and possibly with having an unfavorable variant of the methylenetetrahydrofolate reductase (MTHFR), glutamate-cysteine ligase catalytic subunit (GCLC); glutamate-cysteine ligase modifier subunit (GCLM); glutathione S-transferase Pi 1 (GSTP1); glutathione synthetase (GSS) or cystathionine-β-synthase (CBS) genes may contribute to lower adaptation to exercise, but also to deterioration of health of people training endurance sports.
+* The main objective of the study is to verify the hypothesis that NAC supplementation has a beneficial effect on regeneration between intense exercise tests simulating a race characteristic for a given discipline. In addition, this study is aimed at checking whether genotype may modify the effectiveness of the supplementation measured as exercise and biochemical parameters . A double-blind study involving 100 women and men supplementing 1200 mg of N-acetylcysteine daily or 1200 mg of maltodextrin in three equal doses. Supplementation will last for 7 days. Blood sampling and body composition testing will be performed in the morning of the exercise test day. Discipline-specific exercise testing will be performed before and after the intervention.
+
+PRIMARY OUTCOMES:
+  - Assesment of change in results of time trial test
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: N-acetylcysteine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05604586

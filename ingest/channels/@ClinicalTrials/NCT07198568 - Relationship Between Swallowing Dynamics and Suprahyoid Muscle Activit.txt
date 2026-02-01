@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07198568
+Title: Relationship Between Swallowing Dynamics and Suprahyoid Muscle Activity in Sarcopenic Dysphagia
+Official Title: Relationship Between Swallowing Dynamics and Suprahyoid Muscle Activity in Sarcopenic Dysphagia
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenic dysphagia is defined as swallowing difficulty among the elderly due to the loss of whole body skeletal and swallowing muscle mass and function. However, the pathophysiology and dynamics of swallowing in sarcopenic dysphagia have been poorly investigated. Therefore, the present study aims to investigate the characteristics of sarcopenic dysphagia using the Videofluoroscopic study (VFSS) focusing on each phase of dysphagia, and surface Electromyography (surface EMG) to assess suprahyoid muscle activity.
+
+In sarcopenic dysphagia, impairments will occur in both the oral and pharyngeal phases, particularly affecting bolus formation, premature bolus spillage and laryngeal elevation during swallowing due to the loss of swallowing muscle mass and function. These changes will be considered to have led to an change of duration and amplitude of suprahyoid muscle activity measured via surface EMG.
+
+DETAILED DESCRIPTION:
+Measuring the muscle activity of the suprahyoid muscles presents a challenge due to their location, which is difficult to access. Despite this difficulty, surface Electromyography (sEMG) is an effective method for assessing the electrical activity of the suprahyoid muscles. sEMG is a non-invasive, portable, and cost-effective technique that records activity within the electrode detection area. It has been suggested as a diagnostic tool for identifying dysphagia. Several studies have demonstrated that specific patterns in the sEMG of suprahyoid muscles, including duration and amplitude, exhibit distinct characteristics attributable to various etiologies.
+
+A previous study has examined the suprahyoid muscle activity patterns in sarcopenic dysphagia patients using sEMG. However, there was a lack of research analyzing the swallowing dynamics of sarcopenic dysphagia alongside Videofluoroscopic Swallowing Study (VFSS). VFSS enables the observation of swallowing in phases, offering a crucial method for assessing the presence of dysphagia and identifying the specific phases where dysphagia occurs.
+
+Therefore, the present study aims to investigate the characteristics of sarcopenic dysphagia across phases using sEMG and VFSS. Additionally, Investigators aim to analyze the relationship between suprahyoid muscle activity patterns and swallowing dynamics utilizing these modalities.
+
+Videofluoroscopic swallowing study (VFSS) will done for all participants to evaluate swallowing function. The VFSS procedure followed the Logemann protocol and will be supervised by a rehabilitation physician and an occupational therapist. Another physician will observe and score the test without having access to the patient's personal details.
+
+During the VFSS, participants will seat upright in a chair, swallowing images of the lateral projection will be obtained from participants. The participants undergo swallowing trials with varying viscosities, including semiliquid, semisolid, solid, and thin liquids (2cc, 5cc, 10cc). All trials are mixed with an undiluted liquid barium solution, barium sulfate. During the procedure, participants will undergo progressively thicker food, starting from liquids and advancing to solid materials. Following the protocol, liquid 2 cubic centimeter (cc) trial will precede to the 5cc trial. If, the 2cc trial indicated aspiration and the physician determined there was a high risk for aspiration, next step of trial can be skipped and the VFSS will be stopped. If, a large amount of aspiration occurred, the VFSS will be halted, and the participant will encouraged to expectorate the food material.
+
+The activity of suprahyoid muscles will be recorded using a surface electromyography. Pairs of disposable self-adhesive electrodes will fixed to the skin surface of the suprahyoid muscles. The electrodes positioned symmetrically between the hyoid bone and the chin, with a center-to-center distance of 20mm. Before attaching, participants will seated upright in a
+
+PRIMARY OUTCOMES:
+  - Amplitude of suprahyoid muscle activity: Surface electromyography data
+  - Total duration of suprahyoid muscle activity: Surface electromyography data
+  - Onset to peak duration of suprahyoid muscle activity: Surface electromyography data
+  - Peak to onset duration of suprahyoid muscle activity: Surface electromyography data
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Surface electromyography
+  - DIAGNOSTIC_TEST: Videofluoroscopic swallowing study (VFSS)
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07198568

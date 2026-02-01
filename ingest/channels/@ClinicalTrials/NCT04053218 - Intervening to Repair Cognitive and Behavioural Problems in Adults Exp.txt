@@ -1,0 +1,64 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04053218
+Title: Intervening to Repair Cognitive and Behavioural Problems in Adults Exposed to Childhood Malnutrition
+Official Title: Intervening to Repair Neuropsychological Deficits in Adult Survivors of Severe Childhood Malnutrition
+Status: UNKNOWN
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: omega 3 exercise
+
+SUMMARY:
+Globally, in 2011, 52 million children under 5 years old suffered from acute malnutrition, and a further 165 million children showed evidence of chronic undernutrition or stunting. It was also estimated that 3.1 million children died in 2011 of malnutrition related causes. The survivors, due to deprivation of critical nutrients in the most important period of development and growth, are left with permanent damage, including an increased risk of cardio-metabolic disease, poorer educational achievement and diminished earning potential.
+
+In Jamaica in 2012, 2.5% of children were moderately or severely underweight (more than two standard deviations below weight-for-age by international reference populations), falling from as high as 8.9% in 1993. Though there have been modest reductions in the incidence of acute malnutrition in Jamaica over the past 20 years, the risk remains high in poor families and among children who are being weaned. Hence, the problem is an ongoing one and we have a significant pool of survivors of childhood malnutrition who have now reached adulthood and face the consequences of early nutrient deprivation.
+
+The brain is particularly vulnerable to the effects of malnutrition and studies have demonstrated both structural (brain atrophy) and functional (cognitive impairment and poor academic achievement) changes. This evidence, however, has been mainly in later childhood and adolescence. In addition, there is local data that suggests that cardio-metabolic risk factors are increased in these adult survivors, which are well-described precursors of cerebrovascular disease and cognitive impairment. Therefore, in adulthood there may be accelerated cognitive decline due to a poor cardio-metabolic profile superimposed on pre-existing brain injury.
+
+We hypothesise that there are differences in cognitive function (poorer memory and executive function)and emotional responses in adult survivors of childhood malnutrition compared to those not exposed to early childhood malnutrition.
+
+There is evidence suggesting that aerobic exercise and omega-3 supplementation have some benefit in reversing cognitive decline in older adults, but they have not been investigated in survivors of childhood malnutrition.Hence, we propose to introduce a six month intervention of supervised aerobic exercise and omega-3 supplementation, and will compare cognitive function pre and post intervention/placebo between malnutrition survivors and controls.
+
+DETAILED DESCRIPTION:
+This study will assess anthropometry, cardio metabolic profiles, cognitive and emotional domains between adult survivors of severe acute malnutrition (SAM) in childhood and healthy controls from similar communities, pre and post a six month intervention of supervised aerobic exercise and omega-3 supplementation.
+
+Recruitment: The cases will include adult SAM survivors admitted to the University Hospital of the West Indies (UHWI) now between 20 and 55 years. They have been identified from UHWI records and traced using last known addresses by experienced field workers. Community controls will be recruited from the same communities, one per case and matched for sex, and age (within 5 years).
+
+Sample Size Calculations: These are based on assessing differences in cognitive function using the NIH (National Institutes of Health) Toolbox Cognitive battery as the primary outcome measure between SAM survivors and community controls, and between pre-and post-intervention groups.
+
+Using a test at the 5% level of statistical significance we will have 80% power to detect a difference of 2.8 √(2/n) standard deviations between cases and controls, where n=number of cases.
+
+Therefore, at n=50, difference= 2.8 √ (2/50) = 0.56 SD
+
+For the NIH Toolbox, raw scores are converted to a normalized score, where 100 is equivalent to the normative mean for the relevant age/education stratification, and 15 units corresponds to 1 standard deviation (SD).
+
+For n=50, 0.56 x 15 = 8.4 units. So, using a test at the 5% level of statistical significance we will have 80% power to detect a difference of 8.4 units between the two groups. Meta-analyses on intervention studies of cognitive changes with aerobic exercise have shown a medium effect size of approximately 0.48-0.57, (154) which corresponds to 7.2-8.5 units. Hence, using 50 subjects per group will provide an adequate sample size.
+
+Standard Operating Procedures:
+
+After obtaining informed written consent, all baseline data will be collected by one of two trained researchers over one to two visits. These tests will be repeated after the six-month intervention.
+
+Details of Methods to be used:
+
+Anthropometry: Height and weight will be measured with subjects without shoes and in light clothing to calculate body mass index (BMI, kg/m2). Weight will be measured to the nearest 0.1kg. Height will be measured to the nearest 0.1cm.
+
+Dual-energy X-ray absorption (DXA) (Model General Electric Lunar Prodigy) will be used to measure total and regional percent (%) body fat, fat mass, lean tissue mass, and bone mineral content.
+
+Blood Pressure: Participants will be rested for \>10 minutes seated in a temperature controlled environment. Blood pressure will be measured three times on the right arm using an automatic blood pressure monitor with at least 30 seconds in between each reading. The three measurements will be averaged for analysis. The mid upper arm circumference will be measured to determine the appropriate sized blood pressure cuff.
+
+F
+
+PRIMARY OUTCOMES:
+  - Cognition
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Exercise plus omega-3 supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04053218

@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04322864
+Title: Web-based Instrument Intervention for Individuals with Shoulder Pain
+Official Title: Web-based Instrument Intervention for Individuals with Shoulder Pain: Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 184
+Topic: recovery exercise
+
+SUMMARY:
+Introduction: Shoulder pain is a condition of high prevalence in the general population. Studies indicate that physiotherapeutic treatment with exercise is effective in reducing pain and restoring function in patients with shoulder pain. Patients may have difficulty accessing the physiotherapy service due to the cost of treatment, transportation to the service, and long waiting lines. A possible solution is the use of a web-based exercise prescription instrument to increase access to physiotherapy for shoulder pain patients. Objective: To verify the effects of an intervention with a web-based instrument compared to a in person and supervised intervention. Methods: This study is a controlled, randomized, blinded clinical trial. There will be 184 individuals with shoulder pain who will be randomly assigned to two groups. One group will receive a web-based instrument intervention and the other group will receive the in person and supervised intervention. The intervention will consist of strengthening exercises with emphasis on the lateral rotator and scapulothoracic muscles. The primary outcome will be pain and disability (SPADI, Shoulder Pain and Disability Index), and the secondary outcomes will be function (DASH questionnaire, Disabilities of the Arm, Shoulder and Hand), self-efficacy (CPSS, Chronic Pain Self-Efficacy Scale), kinesiophobia (Cover Scale), patient expectation of treatment (7-point Likert Scale), and patient satisfaction (Global Change Assessment Scale). All outcomes will be measured before and after 12 weeks of treatment (2x/week), after 6 months and 12 months from the end of treatment. Normality of data will be verified by Kolmogorov Smirnov's test. Differences between groups will be verified using the mixed linear models with the interaction terms versus time. The effect size will be calculated for the variables between the groups. The significance level will be set at 5%.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in baseline Shoulder Pain and Disability to 12 weeks, 6 months (follow-up 1) and 12 months (follow-up 2)
+
+INTERVENTIONS:
+  - OTHER: Therapeutic exercises
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04322864

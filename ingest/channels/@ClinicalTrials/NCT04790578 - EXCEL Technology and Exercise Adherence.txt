@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04790578
+Title: EXCEL: Technology and Exercise Adherence
+Official Title: Technology to Support Exercise Adherence in Project EXCEL Participants
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 140
+Topic: body composition exercise
+
+SUMMARY:
+Exercise adherence and maintenance in the EXCEL program supported with a smart phone application: A pilot randomized controlled trial
+
+DETAILED DESCRIPTION:
+Purpose: The primary aim of this proposed pilot randomized controlled trial is to investigate the effectiveness and patterns of use of a mHealth application (ZoeInsights - ZI) for supporting physical activity (PA) maintenance in remote and rural cancer survivors within an online-delivered exercise oncology program (Project EXCEL; ethics HREBA-CC.20-0098).
+
+Background/Rationale: Evidence indicates mixed effectiveness for online-delivered exercise oncology programs to improve physical activity (PA) behavior, especially with regards to maintenance of PA behavior post-intervention. Supportive resources are needed, especially for remote/rural cancer survivors who may have lower social support, PA self-efficacy, motivation, as well as unique barriers to PA. Mobile health technology (mHealth) has potential to support PA behavior change in cancer survivors, but evidence for its impact and best implementation practices in exercise oncology remains limited. Prior findings on PA behavior change suggest that in order to elicit lasting effects, early integration of supportive resources (eg. self-monitoring via a mhealth app) within PA participation is important. And in particular, research is needed to determine the effectiveness of mHealth within exercise oncology programs for supporting long-term PA maintenance. No studies on mhealth exercise interventions have been carried out in remote/rural cancer survivors.
+
+Objectives: Primary aim is to assess the effectiveness of the mhealth app, ZI for supporting maintenance of PA behavior change, up to 24-weeks from program initiation. The impact of the ZI intervention on PA behaviour change will be measured by weekly objectively measured minutes of moderate to vigorous physical activity (MVPA), subjectively reported weekly minutes of MVPA, and program attendance. The investigators hypothesize the ZI intervention group will have improved maintenance of PA behavior change at 24-weeks compared to those in EXCEL only group. The secondary outcomes aim to assess the extent of use of the application. This will be assessed by app usage, satisfaction reports, and the participants perspectives on the continued use of the ZI application. The investigators hypothesize that majority of users will download and continue to use the application throughout the 24-week study period.
+
+Methods:
+
+Participants and Recruitment All EXCEL participants will be eligible to participate in the proposed sub-study, including those who may already be using PA-related apps. Email invitations will be sent to eligible participants with a study overview, instructions on who to contact to answer questions, and a link to complete the informed consent form in the EXCEL RedCap database if they are interested in participating. The consent form will require an electronic signature. It will be marked as complete in RedCap as soon as all required fields are completed and the participant submits the form. After completion of recruitment, randomization using a 
+
+PRIMARY OUTCOMES:
+  - Objective Physical Activity Minutes Per Week
+  - Subjective Physical Activity Minutes Per Week
+  - EXCEL class attendance
+
+INTERVENTIONS:
+  - DEVICE: ZoeInsights Application
+  - BEHAVIORAL: EXCEL Exercise Class
+
+ELIGIBILITY:
+Age: 19 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04790578

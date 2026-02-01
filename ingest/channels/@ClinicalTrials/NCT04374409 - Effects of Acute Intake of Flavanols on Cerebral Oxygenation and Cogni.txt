@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04374409
+Title: Effects of Acute Intake of Flavanols on Cerebral Oxygenation and Cognition in Young Male Adults
+Official Title: A Placebo-controlled, Randomized, Double-masked, Cross-over Acute Intervention Study Investigating the Effects of Flavanols on Cerebral Oxygenation and Cognition in Young Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: caffeine exercise
+
+SUMMARY:
+The study evaluates the impact of one acute dose of cocoa flavanols on brain oxygenation during a hypercapnia challenge, as well as impact on cognitive performance in young healthy males. It further assesses the impact of flavanols on peripheral vascular function, as measured by brachial Flow-mediated dilation (FMD). All participants received a high-flavanol cocoa intervention (185.5 mg of flavanols (-)-epicatechin and (+)- catechin) and a low-flavanol cocoa intervention (\< 4 mg of flavanols). It is hypothesized that the high-flavanol intervention increases cerebral oxygenation during hypercapnia and vascular function in comparison to the low-flavanol intervention.
+
+DETAILED DESCRIPTION:
+Cocoa flavanols have been shown to be protective against vascular disease in humans, as evidenced by improvements in peripheral endothelial function (as measured by brachial Flow-mediated dilatation, FMD). There is also emerging evidence suggesting that flavanol-rich diets protect against cognitive aging, but mechanisms remain elusive. In this study the investigators suggest that such mechanisms might be associated with benefits within the brain vasculature. The aim of the present study was therefore to determine whether intake of flavanols enhances cerebral oxygenation in frontal cortical areas of the brain during a hypercapnia challenge (which is a well-established biomarker of vascular reactivity in the brain) to a greater extent than a low-flavanol intervention in young healthy adults.
+
+PRIMARY OUTCOMES:
+  - Cortical Blood Oxygenation reactivity to hypercapnia using functional near-infrared spectroscopy (fNIRS)
+  - Time to reach 90% of maximum cortical blood oxygenation during hypercapnia using functional near-infrared spectroscopy (fNIRS)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: High-flavanol cocoa powder
+  - DIETARY_SUPPLEMENT: Low-flavanol cocoa powder
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04374409

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03481153
+Title: Post-concussion and Transcranial Direct Current Stimulation
+Official Title: Post-concussion and Transcranial Direct Current Stimulation
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: sleep athletes
+
+SUMMARY:
+Children and youth are at a greater risk of concussions than adults, and once injured, take longer to recover. The increased incidence of sports-related concussion in youth and the potentially serious long-term negative impact on their developing brains has enormous repercussions. While most young athletes recover within several days, many continue to experience symptoms for many months post-concussion. Symptoms are wide ranging and include - most notably: headache, sleep disturbances, brain fog, irritability as well as impairments in emotion and cognitive function (i.e. attention, memory, concentration, etc.). Yet there are no evidence-based intervention studies that have successfully addressed these symptoms. Thus, there is an urgent need for improved therapeutic strategies, which promote optimal functional recovery in youth concussion.
+
+Transcranial direct current stimulation (tDCS) is a safe, non-invasive neurostimulation technique that can modulate neural excitability in the brain to positively impact cognition, behaviour and mood, particularly when combined with a behavioural intervention. Our long-term goal is to determine whether exercise combined with neurostimulation improves recovery from concussion. However, to our knowledge, the therapeutic potential of tDCS has not been studied in youth with concussion. Our objectives are as follows:
+
+1. To determine the tolerability of a 20-minute session of tDCS in symptomatic youth athletes;
+2. To evaluate the association between symptoms and EEG metrics at baseline and following a single session of tDCS in symptomatic athletes and compare these associations in symptomatic athletes who do not receive tDCS.
+
+DETAILED DESCRIPTION:
+Transcranial direct current stimulation is a non-invasive technique of neuromodulation that is inexpensive, easy to use and more importantly shows great promise to modify cortical excitability. Application of a weak direct current through the scalp has been shown to induce polarity specific changes in the excitability of cortical neurons23. This effect of transcranial direct current stimulation was first demonstrated in the human motor cortex. Since then it has also shown to be effective for other brain regions such as visual, somatosensory or frontal regions.
+
+The advantage of tDCS in managing concussion is that this technique can be used to focally suppress or enhance neuronal firing depending on the size and location of the applied electrodes. Thus, at different points during the trajectory of concussion, the technique can be matched to the underlying pathophysiology. For example, work by Demitras et al suggests that cathodal tDCS may be used to suppress the acute glutamatergic hyperexcitability in the acute stages of brain injury; in the subacute stage, when GABAergic activity is excessive, anodal tDCS may increase excitability to counter these aberrant GABAergic effects. In the chronic stage, brain stimulation coupled to rehabilitation may enhance behavioral recovery, learning of new skills and cortical plasticity. Thus far, one pilot study has shown that a single session of anodal tDCS over the dorsolateral prefrontal cortex was associated with improvements in attention in adults with chronic TBI.
+
+PRIMARY OUTCOMES:
+  - Comfort Rating Questionnaire (CRQ)
+
+INTERVENTIONS:
+  - DEVICE: Transcranial direct current stimulation (tDCS)
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03481153
