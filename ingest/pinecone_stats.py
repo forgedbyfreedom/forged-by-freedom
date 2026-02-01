@@ -1,25 +1,38 @@
 #!/usr/bin/env python3
+"""
+Forged By Freedom — Pinecone Stats
+----------------------------------
+Display index statistics and namespace breakdown.
+"""
+
 import os
 from pinecone import Pinecone
 
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_HOST    = os.getenv("PINECONE_HOST")
+INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")
 
-if not PINECONE_API_KEY or not PINECONE_HOST:
-    raise RuntimeError("Missing Pinecone environment variables (PINECONE_API_KEY, PINECONE_HOST)")
+if not os.getenv("PINECONE_API_KEY"):
+    raise RuntimeError("PINECONE_API_KEY not set")
 
-PINECONE_HOST = PINECONE_HOST.strip()
-
-pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(host=PINECONE_HOST)
-
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+index = pc.Index(INDEX_NAME)
 stats = index.describe_index_stats()
 
-print("\n📊 Pinecone Index Stats")
-namespaces = list((stats.get("namespaces") or {}).keys())
-print("Namespaces:", namespaces)
+print("\n┌─────────────────────────────────────────┐")
+print("│       PINECONE INDEX STATS              │")
+print("├─────────────────────────────────────────┤")
+print(f"│  Index:     {INDEX_NAME:<26} │")
+print(f"│  Dimension: {stats.get('dimension', 'N/A'):<26} │")
+print(f"│  Total:     {stats.get('total_vector_count', 0):>20,} vectors │")
+print("├─────────────────────────────────────────┤")
 
-ns = "__default__"
-vec_count = (stats.get("namespaces") or {}).get(ns, {}).get("vector_count", 0)
-print(f"Vector count ({ns}): {vec_count}")
+namespaces = stats.get("namespaces", {})
+if namespaces:
+    print("│  NAMESPACES                             │")
+    for ns, data in sorted(namespaces.items()):
+        count = data.get("vector_count", 0)
+        name = ns if ns else "(default)"
+        print(f"│    {name:<20} {count:>12,} │")
+else:
+    print("│  No namespaces found                    │")
 
+print("└─────────────────────────────────────────┘\n")

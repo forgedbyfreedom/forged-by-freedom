@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<!--
+  FORGED BY FREEDOM — Nightly Ingest Schedule
+  ============================================
+  Runs at 1:00 AM daily
+  Pipeline: youtube → whisper → pinecone → search → answer
+-->
 <dict>
     <key>Label</key>
     <string>com.forgedbyfreedom.nightly-ingest</string>
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/bryanantonelli/forged-by-freedom/ingest/nightly_full_ingest.sh</string>
+        <string>/bin/bash</string>
+        <string>/Users/bryanantonelli/forged-by-freedom/ingest/pipeline.sh</string>
+        <string>full</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -19,10 +27,10 @@
     </dict>
 
     <key>StandardOutPath</key>
-    <string>/Users/bryanantonelli/forged-by-freedom/ingest/logs/launchd_stdout.log</string>
+    <string>/Users/bryanantonelli/forged-by-freedom/ingest/logs/launchd.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/bryanantonelli/forged-by-freedom/ingest/logs/launchd_stderr.log</string>
+    <string>/Users/bryanantonelli/forged-by-freedom/ingest/logs/launchd.log</string>
 
     <key>WorkingDirectory</key>
     <string>/Users/bryanantonelli/forged-by-freedom/ingest</string>
@@ -30,7 +38,10 @@
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
-        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
     </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
 </dict>
 </plist>
