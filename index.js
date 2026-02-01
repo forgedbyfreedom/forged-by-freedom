@@ -3,62 +3,48 @@ import cors from "cors";
 import helmet from "helmet";
 import { Pinecone } from "@pinecone-database/pinecone";
 
-/* ============================================================
+/* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
-   ============================================================
-   OpenRouter: Embeddings + Chat completion
-   Pinecone: Vector search
+   ─────────────────────────────────────────────────────────────
+   OpenRouter: Embeddings + Chat | Pinecone: Vector search
 
-   Endpoints:
-   - GET  /health   → Health check
-   - GET  /status   → Index stats
-   - POST /ask      → Main query endpoint
-============================================================ */
+   GET  /health  → Health check
+   GET  /status  → Index stats
+   POST /ask     → Query endpoint (modes: synthesized, quotes)
+   ───────────────────────────────────────────────────────────── */
 
-/* =========================
-   CONFIG
-========================= */
+// ─── Config ──────────────────────────────────────────────────
 const {
   OPENROUTER_API_KEY,
   OPENROUTER_MODEL,
   PINECONE_API_KEY,
-  PORT,
+  PORT = 5051,
   NODE_ENV,
-  RATE_LIMIT_RPM
+  RATE_LIMIT_RPM = 60
 } = process.env;
 
 const CONFIG = {
   chatModel: OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b",
   embedModel: "text-embedding-3-large",
   pineconeIndex: "forged-freedom-ai",
-  maxQuestionLength: 2000,
-  maxRPM: parseInt(RATE_LIMIT_RPM) || 60,
+  maxQuestionLen: 2000,
+  maxRPM: parseInt(RATE_LIMIT_RPM),
   topK: 30,
   maxQuotes: 12,
   isProd: NODE_ENV === "production"
 };
 
-/* =========================
-   STARTUP VALIDATION
-========================= */
-if (!OPENROUTER_API_KEY) {
-  console.error("❌ OPENROUTER_API_KEY required");
-  process.exit(1);
-}
-if (!PINECONE_API_KEY) {
-  console.error("❌ PINECONE_API_KEY required");
+// ─── Startup Validation ──────────────────────────────────────
+if (!OPENROUTER_API_KEY || !PINECONE_API_KEY) {
+  console.error("Missing required env: OPENROUTER_API_KEY, PINECONE_API_KEY");
   process.exit(1);
 }
 
-/* =========================
-   PINECONE CLIENT
-========================= */
+// ─── Pinecone ────────────────────────────────────────────────
 const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pinecone.Index(CONFIG.pineconeIndex);
 
-/* =========================
-   EXPRESS APP
-========================= */
+// ─── Express Setup ───────────────────────────────────────────
 const app = express();
 
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
@@ -69,14 +55,14 @@ app.use(cors({
 }));
 app.use(express.json({ limit: "100kb" }));
 
-// Request logging
+// Request logger
 app.use((req, res, next) => {
   const start = Date.now();
   res.on("finish", () => console.log(`[${req.method}] ${req.path} ${res.statusCode} ${Date.now() - start}ms`));
   next();
 });
 
-// Rate limiting
+// Rate limiter
 const rateLimit = new Map();
 app.use((req, res, next) => {
   if (["/health", "/status"].includes(req.path)) return next();
@@ -92,14 +78,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// Cleanup stale rate limit entries
 setInterval(() => {
   const now = Date.now();
   for (const [ip, r] of rateLimit) if (now > r.reset + 60000) rateLimit.delete(ip);
 }, 60000);
 
-/* =========================
-   OPENROUTER API
-========================= */
+// ─── OpenRouter API ──────────────────────────────────────────
 async function callOpenRouter(endpoint, body, timeout = 30000) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeout);
@@ -108,7 +93,7 @@ async function callOpenRouter(endpoint, body, timeout = 30000) {
     const res = await fetch(`https://openrouter.ai/api/v1${endpoint}`, {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "https://forgedbyfreedom.com",
         "X-Title": "Coach Bryan"
@@ -116,7 +101,6 @@ async function callOpenRouter(endpoint, body, timeout = 30000) {
       body: JSON.stringify(body),
       signal: controller.signal
     });
-
     const data = await res.json();
     if (!res.ok) throw new Error(data.error?.message || `API error: ${res.status}`);
     return data;
@@ -126,11 +110,7 @@ async function callOpenRouter(endpoint, body, timeout = 30000) {
 }
 
 async function embed(text) {
-  const data = await callOpenRouter("/embeddings", {
-    model: CONFIG.embedModel,
-    input: text
-  });
-
+  const data = await callOpenRouter("/embeddings", { model: CONFIG.embedModel, input: text });
   if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
   return data.data[0].embedding;
 }
@@ -142,34 +122,27 @@ async function chat(messages, temperature = 0.7) {
     temperature,
     max_tokens: 1500
   }, 60000);
-
   return data.choices?.[0]?.message?.content || "";
 }
 
-/* =========================
-   PINECONE SEARCH
-========================= */
+// ─── Pinecone Search ─────────────────────────────────────────
 async function search(vector, namespace = "") {
   const query = { vector, topK: CONFIG.topK, includeMetadata: true };
   if (namespace) query.namespace = namespace;
-
-  const result = await index.query(query);
-  return result.matches || [];
+  return (await index.query(query)).matches || [];
 }
 
-/* =========================
-   EVIDENCE EXTRACTION
-========================= */
+// ─── Evidence Extraction ─────────────────────────────────────
 function extractQuotes(matches) {
   return matches
     .map(m => {
       const md = m.metadata || {};
-      const text = md.text || md.chunk || md.content || md.transcript || "";
-      if (!text.trim()) return null;
+      const text = (md.text || md.chunk || md.content || md.transcript || "").trim();
+      if (!text) return null;
 
       return {
-        text: text.trim(),
-        channel: md.channel || extractChannelFromPath(md.source || md.file) || "unknown",
+        text,
+        channel: md.channel || (md.source || md.file || "").match(/@[\w]+/)?.[0] || "unknown",
         speaker: md.speaker || "unknown",
         title: md.title || "unknown",
         source: md.source || md.file || "unknown",
@@ -180,47 +153,31 @@ function extractQuotes(matches) {
     .slice(0, CONFIG.maxQuotes);
 }
 
-function extractChannelFromPath(path = "") {
-  const match = path.match(/@[\w]+/);
-  return match ? match[0] : null;
-}
-
-/* =========================
-   SYNTHESIS PROMPT
-========================= */
+// ─── Synthesis Prompt ────────────────────────────────────────
 const SYSTEM_PROMPT = `You are Coach Bryan, an expert fitness and performance advisor with deep knowledge of training, nutrition, supplementation, peptides, hormones, and recovery protocols.
 
 RESPONSE FORMAT:
-1. First, paraphrase the user's question in your own words to confirm understanding
-2. Then provide your answer based ONLY on the evidence provided
+1. Paraphrase the user's question to confirm understanding
+2. Answer based ONLY on the evidence provided
 3. Be direct - no hedging, disclaimers, or "consult a doctor" deflections
-4. Reference which expert the information comes from when citing claims
+4. Reference which expert the information comes from
 5. If sources disagree, acknowledge different perspectives
 6. End with a brief, actionable takeaway
 
 You have access to transcripts from respected experts in fitness, bodybuilding, sports medicine, and biohacking.`;
 
-function buildUserPrompt(question, quotes) {
+function buildPrompt(question, quotes) {
   const evidence = quotes
     .map((q, i) => `[${i + 1}] ${q.speaker !== "unknown" ? q.speaker : q.channel}: "${q.text}"`)
     .join("\n\n");
 
-  return `Question: ${question}
-
-EVIDENCE FROM EXPERT TRANSCRIPTS:
-${evidence}
-
-Remember: Paraphrase the question first, then answer using ONLY the evidence above.`;
+  return `Question: ${question}\n\nEVIDENCE:\n${evidence}\n\nParaphrase the question first, then answer using ONLY the evidence above.`;
 }
 
-/* =========================
-   ENDPOINTS
-========================= */
-app.get("/health", (_req, res) => {
-  res.json({ status: "ok", uptime: process.uptime() });
-});
+// ─── Endpoints ───────────────────────────────────────────────
+app.get("/health", (_, res) => res.json({ status: "ok", uptime: process.uptime() }));
 
-app.get("/status", async (_req, res) => {
+app.get("/status", async (_, res) => {
   try {
     const stats = await index.describeIndexStats();
     res.json({
@@ -239,81 +196,64 @@ app.get("/status", async (_req, res) => {
 
 app.post("/ask", async (req, res) => {
   const { question, mode = "synthesized", namespace = "" } = req.body;
-  const startTime = Date.now();
+  const start = Date.now();
 
-  // Validation
+  // Validate
   if (!question || typeof question !== "string") {
     return res.status(400).json({ error: "Question required", answer: null });
   }
-  if (question.length > CONFIG.maxQuestionLength) {
+  if (question.length > CONFIG.maxQuestionLen) {
     return res.status(400).json({ error: "Question too long", answer: null });
   }
 
   try {
-    // 1. Embed question
+    // Embed → Search → Extract
     const vector = await embed(question.trim());
-
-    // 2. Search Pinecone
     const matches = await search(vector, namespace);
-    if (!matches.length) {
-      return res.json({ answer: "No relevant evidence found.", sources: [] });
-    }
 
-    // 3. Extract quotes
+    if (!matches.length) return res.json({ answer: "No relevant evidence found.", sources: [] });
+
     const quotes = extractQuotes(matches);
-    if (!quotes.length) {
-      return res.json({ answer: "No usable transcript text found.", sources: [] });
-    }
+    if (!quotes.length) return res.json({ answer: "No usable transcript text found.", sources: [] });
 
-    // 4a. Raw quotes mode
+    // Raw quotes mode
     if (mode === "quotes") {
       const answer = quotes
         .map((q, i) => `${i + 1}) "${q.text}"\n   — ${q.speaker !== "unknown" ? q.speaker : q.channel}`)
         .join("\n\n");
-
-      return res.json({ answer, sources: quotes, mode: "quotes", timing: Date.now() - startTime });
+      return res.json({ answer, sources: quotes, mode: "quotes", timing: Date.now() - start });
     }
 
-    // 4b. Synthesized mode (default)
-    const messages = [
+    // Synthesized mode (default)
+    const answer = await chat([
       { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: buildUserPrompt(question, quotes) }
-    ];
-
-    const answer = await chat(messages);
-    const attribution = [...new Set(quotes.map(q => q.channel))].filter(c => c !== "unknown");
+      { role: "user", content: buildPrompt(question, quotes) }
+    ]);
 
     res.json({
       answer,
       sources: quotes,
-      attribution,
+      attribution: [...new Set(quotes.map(q => q.channel))].filter(c => c !== "unknown"),
       mode: "synthesized",
-      timing: Date.now() - startTime
+      timing: Date.now() - start
     });
 
   } catch (err) {
     console.error("[ASK ERROR]", err);
-    res.status(500).json({
-      error: CONFIG.isProd ? "Request failed" : err.message,
-      answer: null
-    });
+    res.status(500).json({ error: CONFIG.isProd ? "Request failed" : err.message, answer: null });
   }
 });
 
-// 404
-app.use((_req, res) => res.status(404).json({ error: "Not found" }));
-
-// Error handler
-app.use((err, _req, res, _next) => {
+// 404 + Error handler
+app.use((_, res) => res.status(404).json({ error: "Not found" }));
+app.use((err, _, res, __) => {
   console.error("[ERROR]", err);
   res.status(500).json({ error: "Internal server error" });
 });
 
-/* =========================
-   GRACEFUL SHUTDOWN
-========================= */
+// ─── Graceful Shutdown ───────────────────────────────────────
 let server;
-const shutdown = (sig) => {
+const shutdown = sig => {
   console.log(`\n[${sig}] Shutting down...`);
   server?.close(() => process.exit(0));
   setTimeout(() => process.exit(1), 10000);
@@ -321,11 +261,8 @@ const shutdown = (sig) => {
 process.on("SIGTERM", () => shutdown("SIGTERM"));
 process.on("SIGINT", () => shutdown("SIGINT"));
 
-/* =========================
-   START
-========================= */
-const PORT_NUM = PORT || 5051;
-server = app.listen(PORT_NUM, () => {
-  console.log(`[FBF] Coach Bryan API :${PORT_NUM} (${CONFIG.isProd ? "prod" : "dev"})`);
+// ─── Start ───────────────────────────────────────────────────
+server = app.listen(PORT, () => {
+  console.log(`[FBF] Coach Bryan API :${PORT} (${CONFIG.isProd ? "prod" : "dev"})`);
   console.log(`[FBF] Model: ${CONFIG.chatModel}`);
 });
