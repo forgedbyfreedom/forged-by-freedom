@@ -7,6 +7,7 @@
 # Usage:
 #   ./pipeline.sh              # Run full pipeline
 #   ./pipeline.sh download     # YouTube download only
+#   ./pipeline.sh research     # PubMed + ClinicalTrials fetch
 #   ./pipeline.sh fix          # Vocabulary corrections only
 #   ./pipeline.sh ingest       # Pinecone ingest only
 #   ./pipeline.sh stats        # Show stats only
@@ -81,6 +82,19 @@ download_transcripts() {
     log "Download complete: $success succeeded, $failed failed"
 }
 
+# ─── Node 1b: Fetch Research Data ────────────────────────────
+fetch_research() {
+    header "NODE 1b: RESEARCH DATA (PubMed + ClinicalTrials)"
+    cd "$SCRIPT_DIR"
+
+    log "Fetching PubMed abstracts..."
+    python3 -u fetch_pubmed.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ PubMed fetch had errors"
+
+    log ""
+    log "Fetching ClinicalTrials.gov data..."
+    python3 -u fetch_clinicaltrials.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ ClinicalTrials fetch had errors"
+}
+
 # ─── Node 2: Vocabulary Corrections (Whisper post-process) ────
 fix_transcripts() {
     header "NODE 2: VOCABULARY CORRECTIONS"
@@ -132,19 +146,21 @@ main() {
 
     case "${1:-full}" in
         download) download_transcripts ;;
+        research) fetch_research ;;
         fix)      fix_transcripts ;;
         masters)  build_masters ;;
         ingest)   ingest_pinecone ;;
         stats)    show_stats ;;
         full)
             download_transcripts
+            fetch_research
             fix_transcripts
             build_masters
             ingest_pinecone
             show_stats
             ;;
         *)
-            echo "Usage: $0 {full|download|fix|masters|ingest|stats}"
+            echo "Usage: $0 {full|download|research|fix|masters|ingest|stats}"
             exit 1
             ;;
     esac

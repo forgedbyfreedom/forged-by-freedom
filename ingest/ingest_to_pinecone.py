@@ -213,6 +213,36 @@ def extract_speaker(title: str, channel: str) -> str:
         "@SquatUniversity": "Dr. Aaron Horschig",
         "@BenPatrick": "Ben Patrick (Knees Over Toes)",
         "@DrJohnRusin": "Dr. John Rusin",
+        # Medical Education
+        "@NinjaNerdOfficial": "Ninja Nerd",
+        "@ArmandoHasudungan": "Armando Hasudungan",
+        "@OsmosisOrg": "Osmosis",
+        "@LecturioMedical": "Lecturio",
+        "@MedCram": "Dr. Roger Seheult",
+        "@InstituteofHumanAnatomy": "Institute of Human Anatomy",
+        "@AnatomyZone": "AnatomyZone",
+        "@DrMattAndDrMike": "Dr. Matt & Dr. Mike",
+        "@DrJohnCampbell": "Dr. John Campbell",
+        "@DrBeen": "Dr. Mobeen Syed",
+        "@Kenhub": "Kenhub",
+        "@muscleandmotion": "Muscle and Motion",
+        # Research / Journals
+        "@PubMed": "PubMed Research",
+        "@ClinicalTrials": "ClinicalTrials.gov",
+        "@NEJMvideo": "NEJM",
+        "@NatureVideo": "Nature",
+        "@LancetTV": "The Lancet",
+        # Academic Institutions
+        "@mitocw": "MIT OpenCourseWare",
+        "@Stanford": "Stanford",
+        "@YaleCourses": "Yale",
+        "@MayoClinic": "Mayo Clinic",
+        "@ClevelandClinic": "Cleveland Clinic",
+        "@JohnsHopkinsMedicine": "Johns Hopkins",
+        # Sports Science
+        "@NSCA": "NSCA",
+        "@ACSM_org": "ACSM",
+        "@ISSN_Sport": "ISSN",
     }
 
     if channel in channel_speakers:
@@ -228,6 +258,28 @@ def get_namespace(channel: str, path: Path) -> str:
 
     # Map channels to namespaces
     namespace_map = {
+        # Research (highest priority)
+        "@PubMed": "research_primary",
+        "@ClinicalTrials": "research_primary",
+        "@NEJMvideo": "research_primary",
+        "@NatureVideo": "research_primary",
+        "@LancetTV": "research_primary",
+        # Medical Education
+        "@NinjaNerdOfficial": "medical_education",
+        "@OsmosisOrg": "medical_education",
+        "@LecturioMedical": "medical_education",
+        "@MedCram": "medical_education",
+        "@InstituteofHumanAnatomy": "medical_education",
+        "@Kenhub": "medical_education",
+        "@DrJohnCampbell": "medical_education",
+        # Academic
+        "@mitocw": "academic",
+        "@Stanford": "academic",
+        "@YaleCourses": "academic",
+        "@MayoClinic": "medical_primary",
+        "@ClevelandClinic": "medical_primary",
+        "@JohnsHopkinsMedicine": "medical_primary",
+        # Existing mappings
         "@MorePlatesMoreDates": "anabolic_bodybuilding_priority",
         "@GregDoucette": "anabolic_bodybuilding_priority",
         "@vigoroussteve": "anabolic_bodybuilding_priority",
@@ -235,12 +287,15 @@ def get_namespace(channel: str, path: Path) -> str:
         "@ThinkBIGBodybuilding": "thinkbig_priority",
         "@FoundMyFitness": "biohacking",
         "@hubermanlab": "biohacking",
+        "@AndrewHuberman": "biohacking",
         "@PeterAttiaMD": "medical_primary",
         "@DrGabrielleLyon": "medical_primary",
         "@BarbellMedicine": "medical_primary",
         "@JeffNippard": "sports_nutrition",
         "@RenaissancePeriodization": "sports_nutrition",
         "@Biolayne": "sports_nutrition",
+        "@NSCA": "sports_science",
+        "@ACSM_org": "sports_science",
         "@DavidGoggins": "sports_psych",
         "@JockoPodcastOfficial": "sports_psych",
     }
