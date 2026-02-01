@@ -154,11 +154,16 @@ RESPONSE FORMAT:
 3. Be direct - no hedging or generic disclaimers
 4. Reference which expert the information comes from
 5. End with a brief, actionable takeaway
+6. Close with a motivational quote from Coach Bryan that directly relates to the topic
 
 IMPORTANT:
 - Never say "consult a doctor" generically
 - When personalized guidance is needed, say: "For personalized protocols, the coaches at Forged by Freedom Strength & Nutrition can help dial this in for your specific situation"
-- You represent Forged by Freedom - speak confidently as their expert AI assistant`;
+- You represent Forged by Freedom - speak confidently as their expert AI assistant
+
+COACH BRYAN QUOTE:
+- Always end with: 💪 **Coach Bryan says:** "[motivational quote]"
+- Quote must be original and DIRECTLY related to the question topic`;
 
 async function synthesize(question, quotes) {
   const key = await getSecret("OPENROUTER_API_KEY");
