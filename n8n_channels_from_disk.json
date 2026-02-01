@@ -1,0 +1,245 @@
+[
+  {
+    "source": ".github",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@anabolicbodybuilding",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@anabolicuniversity",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@BarbellMedicine",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@bodybuildingcom",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@ChrisBumstead",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@DrGabrielleLyon",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@eliteftsofficial",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@FoundMyFitness",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@hanyrambod_FST7",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@HighLifeWorkout",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@ISSAPersonalTrainer",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@JeffNippard",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@MulliganBrothers",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@NasmOrgPersonalTrainer",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@NicksStrengthandPower",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@PeterAttiaMD",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@realtattered",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@RenaissancePeriodization",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@rxmuscle",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@RyanHumiston",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@sam_sulek",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@theconditioncoaches",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "@ThinkBIGBodybuilding",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "ingest/channels",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "large_media_backup",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  },
+  {
+    "source": "large_media_split",
+    "type": "youtube",
+    "priority": "high",
+    "namespace": "transcripts",
+    "ingest": true,
+    "transcribe": true,
+    "delete_media_after": true
+  }
+]

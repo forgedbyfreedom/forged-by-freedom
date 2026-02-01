@@ -1,0 +1,225 @@
+{
+  "name": "FBF Nightly Ingest Pipeline",
+  "nodes": [
+    {
+      "id": "trigger",
+      "name": "Nightly Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [100, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 1,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "load_channels",
+      "name": "Load Channel List",
+      "type": "n8n-nodes-base.readBinaryFiles",
+      "position": [300, 300],
+      "parameters": {
+        "fileSelector": "n8n_channels_FULL.json"
+      }
+    },
+    {
+      "id": "parse_channels",
+      "name": "Parse Channels",
+      "type": "n8n-nodes-base.code",
+      "position": [500, 300],
+      "parameters": {
+        "jsCode": "const channels = JSON.parse($input.first().json.data);\n\n// Filter to YouTube channels with ingest enabled\nconst toProcess = channels.filter(c => \n  c.type === 'youtube' && \n  c.ingest === true &&\n  c.source.startsWith('@')\n);\n\n// Shuffle to distribute load\nconst shuffled = toProcess.sort(() => Math.random() - 0.5);\n\nreturn shuffled.map(c => ({ json: c }));"
+      }
+    },
+    {
+      "id": "rate_limiter",
+      "name": "Rate Limiter",
+      "type": "n8n-nodes-base.wait",
+      "position": [700, 300],
+      "parameters": {
+        "amount": "={{Math.floor(Math.random() * 30) + 15}}",
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "download_transcripts",
+      "name": "Download Transcripts",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [900, 300],
+      "parameters": {
+        "command": "cd /path/to/forged-by-freedom/ingest && yt-dlp --skip-download --write-auto-subs --sub-lang en --sub-format vtt --convert-subs txt --ignore-errors --no-warnings --sleep-interval 15 --max-sleep-interval 45 --download-archive channels/{{ $json.source }}/.downloaded -o 'channels/{{ $json.source }}/%(title)s [%(id)s].%(ext)s' 'https://youtube.com/{{ $json.source }}'",
+        "timeout": 1800000
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 300000
+    },
+    {
+      "id": "channel_pause",
+      "name": "Channel Pause",
+      "type": "n8n-nodes-base.wait",
+      "position": [1100, 300],
+      "parameters": {
+        "amount": 120,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "error_handler",
+      "name": "Error Handler",
+      "type": "n8n-nodes-base.code",
+      "position": [900, 500],
+      "parameters": {
+        "jsCode": "const error = $input.first().json;\nconst channel = $('parse_channels').first().json.source;\n\nconsole.log(`[ERROR] Channel ${channel} failed: ${error.message}`);\n\n// Log to file or send notification\nreturn [{ json: { channel, error: error.message, timestamp: new Date().toISOString() }}];"
+      }
+    },
+    {
+      "id": "merge_results",
+      "name": "Merge Results",
+      "type": "n8n-nodes-base.merge",
+      "position": [1300, 300],
+      "parameters": {
+        "mode": "append"
+      }
+    },
+    {
+      "id": "apply_corrections",
+      "name": "Apply Vocabulary Corrections",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [1500, 300],
+      "parameters": {
+        "command": "cd /path/to/forged-by-freedom/ingest && python3 fix_transcripts.py",
+        "timeout": 600000
+      },
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 30000
+    },
+    {
+      "id": "rebuild_masters",
+      "name": "Rebuild Master Transcripts",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [1700, 300],
+      "parameters": {
+        "command": "cd /path/to/forged-by-freedom/ingest/channels && python3 build_master_transcripts.py",
+        "timeout": 600000
+      },
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 30000
+    },
+    {
+      "id": "ingest_pinecone",
+      "name": "Ingest to Pinecone",
+      "type": "n8n-nodes-base.executeCommand",
+      "position": [1900, 300],
+      "parameters": {
+        "command": "cd /path/to/forged-by-freedom/ingest && python3 ingest_to_pinecone.py",
+        "timeout": 3600000
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 60000
+    },
+    {
+      "id": "notify_complete",
+      "name": "Notify Complete",
+      "type": "n8n-nodes-base.code",
+      "position": [2100, 300],
+      "parameters": {
+        "jsCode": "const stats = {\n  completedAt: new Date().toISOString(),\n  channelsProcessed: $('parse_channels').all().length,\n  status: 'success'\n};\n\nconsole.log('[FBF] Nightly ingest complete:', JSON.stringify(stats));\n\nreturn [{ json: stats }];"
+      }
+    },
+    {
+      "id": "notify_failure",
+      "name": "Notify Failure",
+      "type": "n8n-nodes-base.code",
+      "position": [2100, 500],
+      "parameters": {
+        "jsCode": "const error = $input.first().json;\n\nconst notification = {\n  type: 'error',\n  message: `FBF ingest failed: ${error.message}`,\n  timestamp: new Date().toISOString()\n};\n\nconsole.error('[FBF] Ingest failed:', JSON.stringify(notification));\n\n// Could add Slack/Discord/email notification here\n\nreturn [{ json: notification }];"
+      }
+    }
+  ],
+  "connections": {
+    "trigger": {
+      "main": [
+        [{ "node": "load_channels", "type": "main", "index": 0 }]
+      ]
+    },
+    "load_channels": {
+      "main": [
+        [{ "node": "parse_channels", "type": "main", "index": 0 }]
+      ]
+    },
+    "parse_channels": {
+      "main": [
+        [{ "node": "rate_limiter", "type": "main", "index": 0 }]
+      ]
+    },
+    "rate_limiter": {
+      "main": [
+        [{ "node": "download_transcripts", "type": "main", "index": 0 }]
+      ]
+    },
+    "download_transcripts": {
+      "main": [
+        [{ "node": "channel_pause", "type": "main", "index": 0 }]
+      ],
+      "error": [
+        [{ "node": "error_handler", "type": "main", "index": 0 }]
+      ]
+    },
+    "channel_pause": {
+      "main": [
+        [{ "node": "merge_results", "type": "main", "index": 0 }]
+      ]
+    },
+    "error_handler": {
+      "main": [
+        [{ "node": "merge_results", "type": "main", "index": 1 }]
+      ]
+    },
+    "merge_results": {
+      "main": [
+        [{ "node": "apply_corrections", "type": "main", "index": 0 }]
+      ]
+    },
+    "apply_corrections": {
+      "main": [
+        [{ "node": "rebuild_masters", "type": "main", "index": 0 }]
+      ],
+      "error": [
+        [{ "node": "notify_failure", "type": "main", "index": 0 }]
+      ]
+    },
+    "rebuild_masters": {
+      "main": [
+        [{ "node": "ingest_pinecone", "type": "main", "index": 0 }]
+      ],
+      "error": [
+        [{ "node": "notify_failure", "type": "main", "index": 0 }]
+      ]
+    },
+    "ingest_pinecone": {
+      "main": [
+        [{ "node": "notify_complete", "type": "main", "index": 0 }]
+      ],
+      "error": [
+        [{ "node": "notify_failure", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null,
+  "tags": ["ingest", "nightly", "fbf"],
+  "triggerCount": 1
+}

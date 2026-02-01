@@ -1,0 +1,67 @@
+[
+  {"source":"@MorePlatesMoreDates","type":"youtube","priority":"high","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@vigoroussteve","type":"youtube","priority":"high","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@GregDoucette","type":"youtube","priority":"high","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@Biolayne","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@LayneNorton","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@RenaissancePeriodization","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@JeffNippard","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@BarbellMedicine","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@PeterAttiaMD","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@FoundMyFitness","type":"youtube","priority":"high","namespace":"biohacking","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@DrGabrielleLyon","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@hubermanlab","type":"youtube","priority":"high","namespace":"biohacking","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@MindPumpShow","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@mountaindog1","type":"youtube","priority":"high","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@FouadAbiad","type":"youtube","priority":"high","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@SethFeroce","type":"youtube","priority":"medium","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@NickTrigg","type":"youtube","priority":"medium","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@ThePumpingIronPodcast","type":"youtube","priority":"medium","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@DrBenBikman","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@JasonFung","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@DrTyna","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@GlucoseRevolution","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@SiimLand","type":"youtube","priority":"medium","namespace":"biohacking","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@NutritionMadeSimple","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@Osmosis","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@MedCram","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@StrongMedicine","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@ArmandoHasudungan","type":"youtube","priority":"medium","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@NinjaNerdOfficial","type":"youtube","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@Kenhub","type":"youtube","priority":"medium","namespace":"medical_primary","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@JuggernautTrainingSystems","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@CalStrength","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@WestsideBarbell","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@elitefts","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@NSCAPersonalTraining","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@MarkBellsPowerProject","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@StrongerByScience","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@CalgaryBarbell","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@KabukiStrength","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@CrossFit","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@MayhemNation","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@MisfitAthletics","type":"youtube","priority":"medium","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@BJJFanatics","type":"youtube","priority":"high","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@Chewjitsu","type":"youtube","priority":"high","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@JordanTeachesJiujitsu","type":"youtube","priority":"medium","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@KeenanCornelius","type":"youtube","priority":"medium","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@DavidGoggins","type":"youtube","priority":"high","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@JockoPodcastOfficial","type":"youtube","priority":"high","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@ImpactTheory","type":"youtube","priority":"medium","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@MulliganBrothers","type":"youtube","priority":"medium","namespace":"sports_psych","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"@RenaissancePeriodization","type":"youtube","priority":"high","namespace":"sports_nutrition","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@NicksStrengthandPower","type":"youtube","priority":"medium","namespace":"anabolic_bodybuilding_priority","ingest":true,"transcribe":true,"delete_media_after":true},
+  {"source":"@sam_sulek","type":"youtube","priority":"medium","namespace":"bodybuilding","ingest":true,"transcribe":true,"delete_media_after":true},
+
+  {"source":"clinicaltrials.gov","type":"clinical","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":false,"delete_media_after":false},
+  {"source":"pubmed","type":"medical","priority":"high","namespace":"medical_primary","ingest":true,"transcribe":false,"delete_media_after":false}
+]
+

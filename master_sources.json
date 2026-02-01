@@ -1,0 +1,143 @@
+{
+  "lastUpdated": "2026-01-31",
+  "ingestSchedule": "Nightly 01:00 UTC",
+  "sources": {
+    "youtube": [
+      {
+        "channel": ".github",
+        "type": "youtube"
+      },
+      {
+        "channel": "@anabolicbodybuilding",
+        "type": "youtube"
+      },
+      {
+        "channel": "@anabolicuniversity",
+        "type": "youtube"
+      },
+      {
+        "channel": "@BarbellMedicine",
+        "type": "youtube"
+      },
+      {
+        "channel": "@bodybuildingcom",
+        "type": "youtube"
+      },
+      {
+        "channel": "@ChrisBumstead",
+        "type": "youtube"
+      },
+      {
+        "channel": "@DrGabrielleLyon",
+        "type": "youtube"
+      },
+      {
+        "channel": "@eliteftsofficial",
+        "type": "youtube"
+      },
+      {
+        "channel": "@FoundMyFitness",
+        "type": "youtube"
+      },
+      {
+        "channel": "@hanyrambod_FST7",
+        "type": "youtube"
+      },
+      {
+        "channel": "@HighLifeWorkout",
+        "type": "youtube"
+      },
+      {
+        "channel": "@ISSAPersonalTrainer",
+        "type": "youtube"
+      },
+      {
+        "channel": "@JeffNippard",
+        "type": "youtube"
+      },
+      {
+        "channel": "@MulliganBrothers",
+        "type": "youtube"
+      },
+      {
+        "channel": "@NasmOrgPersonalTrainer",
+        "type": "youtube"
+      },
+      {
+        "channel": "@NicksStrengthandPower",
+        "type": "youtube"
+      },
+      {
+        "channel": "@PeterAttiaMD",
+        "type": "youtube"
+      },
+      {
+        "channel": "@realtattered",
+        "type": "youtube"
+      },
+      {
+        "channel": "@RenaissancePeriodization",
+        "type": "youtube"
+      },
+      {
+        "channel": "@rxmuscle",
+        "type": "youtube"
+      },
+      {
+        "channel": "@RyanHumiston",
+        "type": "youtube"
+      },
+      {
+        "channel": "@sam_sulek",
+        "type": "youtube"
+      },
+      {
+        "channel": "@theconditioncoaches",
+        "type": "youtube"
+      },
+      {
+        "channel": "@ThinkBIGBodybuilding",
+        "type": "youtube"
+      },
+      {
+        "channel": "ingest/channels",
+        "type": "youtube"
+      },
+      {
+        "channel": "large_media_backup",
+        "type": "youtube"
+      },
+      {
+        "channel": "large_media_split",
+        "type": "youtube"
+      }
+    ],
+    "medical": [
+      {
+        "name": "Medical Primary",
+        "namespace": "medical_primary",
+        "description": "Clinical, endocrinology, physician-led content"
+      },
+      {
+        "name": "Women Steroids",
+        "namespace": "women_steroids",
+        "description": "Female PED use, virilization, risk profiles"
+      },
+      {
+        "name": "Sports Nutrition",
+        "namespace": "sports_nutrition",
+        "description": "Diet, metabolism, performance nutrition"
+      },
+      {
+        "name": "Biohacking",
+        "namespace": "biohacking",
+        "description": "Peptides, longevity, recovery"
+      },
+      {
+        "name": "Sports Psychology",
+        "namespace": "sports_psych",
+        "description": "Mental performance and cognition"
+      }
+    ]
+  }
+}

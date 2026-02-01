@@ -1,0 +1,115 @@
+// backend/transcriptIngest.jsw
+// Wix backend for manual transcript ingestion (backup method)
+// Main ingestion is handled by Python scripts in /ingest/
+
+import { getSecret } from 'wix-secrets-backend';
+import { fetch } from 'wix-fetch';
+
+const CHUNK_SIZE = 2000;
+const BATCH_SIZE = 16;
+
+/* ============================================================
+   PUBLIC: INGEST TRANSCRIPT
+============================================================ */
+export async function ingestTranscriptText(text, channel, metadata = {}) {
+  if (!text || !channel) {
+    throw new Error("Text and channel required");
+  }
+
+  const chunks = chunkText(text, channel, metadata);
+  let processed = 0;
+
+  for (let i = 0; i < chunks.length; i += BATCH_SIZE) {
+    const batch = chunks.slice(i, i + BATCH_SIZE);
+    const vectors = await embedBatch(batch);
+    await upsertToPinecone(vectors);
+    processed += batch.length;
+  }
+
+  return { processed, total: chunks.length };
+}
+
+/* ============================================================
+   CHUNKING
+============================================================ */
+function chunkText(text, channel, metadata) {
+  const chunks = [];
+  let index = 0;
+
+  while (index < text.length) {
+    const chunk = text.slice(index, index + CHUNK_SIZE);
+
+    chunks.push({
+      id: `${channel}:${Date.now()}:${index}`,
+      text: chunk,
+      metadata: {
+        channel,
+        text: chunk,
+        chunk_index: chunks.length,
+        ...metadata
+      }
+    });
+
+    index += CHUNK_SIZE;
+  }
+
+  return chunks;
+}
+
+/* ============================================================
+   OPENROUTER EMBEDDINGS
+============================================================ */
+async function embedBatch(chunks) {
+  const key = await getSecret("OPENROUTER_API_KEY");
+
+  const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${key}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "text-embedding-3-large",
+      input: chunks.map(c => c.text)
+    })
+  });
+
+  const data = await res.json();
+
+  if (!res.ok || !data?.data) {
+    throw new Error(data?.error?.message || "Embedding failed");
+  }
+
+  return chunks.map((chunk, i) => ({
+    id: chunk.id,
+    values: data.data[i].embedding,
+    metadata: chunk.metadata
+  }));
+}
+
+/* ============================================================
+   PINECONE UPSERT
+============================================================ */
+async function upsertToPinecone(vectors) {
+  const key = await getSecret("PINECONE_API_KEY");
+  const host = await getSecret("PINECONE_HOST");
+
+  const res = await fetch(`https://${host}/vectors/upsert`, {
+    method: "POST",
+    headers: {
+      "Api-Key": key,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      vectors,
+      namespace: "transcripts"
+    })
+  });
+
+  if (!res.ok) {
+    const error = await res.json();
+    throw new Error(error?.message || "Pinecone upsert failed");
+  }
+
+  return res.json();
+}

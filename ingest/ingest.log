@@ -1,0 +1,302 @@
+/Users/bryanantonelli/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+🔍 INGEST STARTUP
+• CHANNELS_DIR: /Users/bryanantonelli/forged-by-freedom/ingest/channels
+• Pinecone index: forged-freedom-ai
+• Embedding model: text-embedding-3-large
+• Chunk tokens: 3000
+• Episodes to ingest: 4184
+🚀 BEGIN INGEST
+
+✅ [1/4184] @FoundMyFitness | Dr. Rhonda Patrick | How Micronutrients & Exercise Ameliorate... | 4 chunks
+✅ [2/4184] @FoundMyFitness | Dr. Rhonda Patrick | The Truth About Alcohol： Risks, Benefits... | 13 chunks
+✅ [3/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Brad Schoenfeld： Resistance Training... | 9 chunks
+✅ [4/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Ben Bikman： How To Reverse Insulin R... | 13 chunks
+✅ [5/4184] @FoundMyFitness | Dr. Rhonda Patrick | How Heat Therapy Improves Slow Wave Slee... | 1 chunks
+✅ [6/4184] @FoundMyFitness | Chris McGlory, PhD, | Chris McGlory, PhD, on the Anabolic Pote... | 8 chunks
+✅ [7/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Bill Harris on the Omega-3 Index： In... | 8 chunks
+✅ [8/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Benjamin Levine： How Exercise Preven... | 9 chunks
+✅ [9/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Andy Galpin： The Optimal Diet, Suppl... | 19 chunks
+✅ [10/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Peter Attia on Mastering Longevity –... | 16 chunks
+✅ [11/4184] @FoundMyFitness | Dr. Rhonda Patrick | How to Improve Metabolic Health with HII... | 4 chunks
+✅ [12/4184] @FoundMyFitness | Dr. Rhonda Patrick | Ask Me Anything When You Sign Up as a Fo... | 1 chunks
+✅ [13/4184] @FoundMyFitness | Dr. Rhonda Patrick | What Microplastics Are Doing to the Brai... | 5 chunks
+✅ [14/4184] @FoundMyFitness | Dr. Rhonda Patrick | The Science of Protein and Its Role in L... | 3 chunks
+✅ [15/4184] @FoundMyFitness | Stuart Phillips, PhD, | Stuart Phillips, PhD, on Building Muscle... | 8 chunks
+✅ [16/4184] @FoundMyFitness | Derek from MPMD | How To Increase Your Testosterone Levels... | 13 chunks
+✅ [17/4184] @FoundMyFitness | Dr. Rhonda Patrick | The Brain and Social Impacts of Early De... | 1 chunks
+✅ [18/4184] @FoundMyFitness | Dr. Rhonda Patrick | George Church, PhD： Rewriting Genomes to... | 7 chunks
+✅ [19/4184] @FoundMyFitness | Dr. Rhonda Patrick | Can Psilocybin Treat Depression？... | 1 chunks
+✅ [20/4184] @FoundMyFitness | Dr. Rhonda Patrick | This Supplement Could Cut Your Dementia ... | 2 chunks
+✅ [21/4184] @FoundMyFitness | Dr. Rhonda Patrick | Get the Free 9-Page BDNF Protocol Guide：... | 1 chunks
+✅ [22/4184] @FoundMyFitness | Morgan Levine, PhD, | Morgan Levine, PhD, on PhenoAge and the ... | 6 chunks
+✅ [23/4184] @FoundMyFitness | Dr. Rhonda Patrick | The Science of Magnesium and Its Role in... | 5 chunks
+✅ [24/4184] @FoundMyFitness | Dr. Michael Grandner | Why You Can’t Sleep (and How to Fix It) ... | 17 chunks
+✅ [25/4184] @FoundMyFitness | Dr. Rhonda Patrick | Peter Diamandis and Tony Robbins on stra... | 7 chunks
+✅ [26/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Martin Gibala： The Science of Vigoro... | 11 chunks
+✅ [27/4184] @FoundMyFitness | Dr. Rhonda Patrick | Is there a limit to human longevity？... | 1 chunks
+✅ [28/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Rhonda Patrick： Optimizing Longevity... | 4 chunks
+✅ [29/4184] @FoundMyFitness | Dr. Rhonda Patrick | Why Exercise Intensity Matters for Longe... | 4 chunks
+✅ [30/4184] @FoundMyFitness | Dr. Rhonda Patrick | How to Train According to the Experts... | 14 chunks
+✅ [31/4184] @FoundMyFitness | Dr. Rhonda Patrick | The Longevity & Brain Benefits of Vigoro... | 4 chunks
+✅ [32/4184] @FoundMyFitness | Axel Montagne, PhD, | Axel Montagne, PhD, on Solving Alzheimer... | 6 chunks
+✅ [33/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Luc Van Loon： Optimizing Protein Int... | 9 chunks
+✅ [34/4184] @FoundMyFitness | Dr. Rhonda Patrick | How to Solve Aging in America (US Senate... | 1 chunks
+✅ [35/4184] @FoundMyFitness | Darren Candow, PhD | The Optimal Creatine Protocol for Streng... | 9 chunks
+✅ [36/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Layne Norton on Building Muscle – In... | 16 chunks
+✅ [37/4184] @FoundMyFitness | Dr. Rhonda Patrick | Intestinal Permeability： the Bacterial l... | 4 chunks
+✅ [38/4184] @FoundMyFitness | Dr. Rhonda Patrick | How To Use Coffee To Live Longer (Full G... | 4 chunks
+✅ [39/4184] @FoundMyFitness | Dr. Rhonda Patrick | How Vitamin D, Omega-3s, & Exercise May ... | 5 chunks
+✅ [40/4184] @FoundMyFitness | Dr. Rhonda Patrick | Andrew Huberman, PhD： How to Improve Mot... | 16 chunks
+✅ [41/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Ashley Mason on Sauna Use for Depres... | 8 chunks
+✅ [42/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Eran Elinav on Microbiome Insights i... | 7 chunks
+✅ [43/4184] @FoundMyFitness | Dr. Rhonda Patrick | Cold-Water Immersion and Cryotherapy： Ne... | 1 chunks
+✅ [44/4184] @FoundMyFitness | Kerry Courneya, PhD | The Science of Exercise for Cancer ｜ Ker... | 8 chunks
+✅ [45/4184] @FoundMyFitness | Dr. Rhonda Patrick | Try FoundMyFitness Premium for 30-days f... | 1 chunks
+✅ [46/4184] @FoundMyFitness | Dr. Rhonda Patrick | Can exercise replace alcohol cravings？... | 1 chunks
+✅ [47/4184] @FoundMyFitness | Dr. Rhonda Patrick | Dr. Dominic D'Agostino on Developing a W... | 12 chunks
+✅ [48/4184] @bodybuildingcom | unknown | Dead Bug - Abdominal ⧸ Core Exercise Gui... | 1 chunks
+✅ [49/4184] @bodybuildingcom | unknown | Getting Ripped And Cover Ready - Part 1 ... | 1 chunks
+✅ [50/4184] @bodybuildingcom | unknown | Define Your Greatness - Show Us Your Bea... | 1 chunks
+✅ [51/4184] @bodybuildingcom | unknown | Ava Cowan： Naturally Driven - Ava's Stor... | 1 chunks
+✅ [52/4184] @bodybuildingcom | Hunter Labrada's Chest Workout | 5 Moves To Powerful Pecs ｜ Hunter Labrad... | 1 chunks
+✅ [53/4184] @bodybuildingcom | unknown | Cable Crunch - Abs ⧸ Core Exercise - Bod... | 1 chunks
+✅ [54/4184] @bodybuildingcom | Build Legs You'll Love | Ashley Hoffmann Legs Workout ｜ Build Leg... | 1 chunks
+✅ [55/4184] @bodybuildingcom | unknown | How To Bench Press： Layne Norton's Compl... | 1 chunks
+✅ [56/4184] @bodybuildingcom | unknown | NFL Combine Trainer： Shuttle Run - Bodyb... | 1 chunks
+✅ [57/4184] @bodybuildingcom | unknown | Train Abs with Ashley Conrad - Bodybuild... | 1 chunks
+✅ [58/4184] @bodybuildingcom | unknown | Soy Protein Guide - Bodybuilding.com... | 1 chunks
+✅ [59/4184] @bodybuildingcom | Hunter Labrada | 5 Moves To Massive Shoulders ｜ Hunter La... | 1 chunks
+✅ [60/4184] @bodybuildingcom | unknown | Train with Vinny Russo - Bodybuilding.co... | 2 chunks
+✅ [61/4184] @bodybuildingcom | unknown | Crunches - Ab Exercises - Bodybuilding.c... | 1 chunks
+✅ [62/4184] @bodybuildingcom | unknown | Gladiator Circuit Workout ｜ Spartacus： G... | 1 chunks
+✅ [63/4184] @bodybuildingcom | Katie Chung Hua | Upper-Body Dorm Room Workout ｜ Katie Chu... | 1 chunks
+✅ [64/4184] @bodybuildingcom | Hellraiser Training Testimonial | Ross Bowman ｜ Hellraiser Training Testim... | 1 chunks
+✅ [65/4184] @bodybuildingcom | unknown | Jackknife Sit Up - Core ⧸ Abs - Bodybuil... | 1 chunks
+✅ [66/4184] @bodybuildingcom | unknown | Ab Roller - Ab Exercises - Bodybuilding.... | 1 chunks
+✅ [67/4184] @bodybuildingcom | unknown | MuscleTech Fit Squad Fitness Challenge： ... | 1 chunks
+✅ [68/4184] @bodybuildingcom | unknown | Meet the Bodybuilding.com Master Coaches... | 1 chunks
+✅ [69/4184] @bodybuildingcom | unknown | Back & Biceps With Sonya Vecchiarelli - ... | 1 chunks
+✅ [70/4184] @bodybuildingcom | unknown | One Arm Dumbbell Row - Back Exercise - B... | 1 chunks
+✅ [71/4184] @bodybuildingcom | unknown | Jennifer Nicole Lee -- Fitness for Women... | 1 chunks
+✅ [72/4184] @bodybuildingcom | unknown | Train Hard & Eat Right For One Solid Yea... | 1 chunks
+✅ [73/4184] @bodybuildingcom | unknown | Take a T-levels test to gain health insi... | 1 chunks
+✅ [74/4184] @bodybuildingcom | unknown | James Grage's Rewired Fitness Trainer - ... | 1 chunks
+✅ [75/4184] @bodybuildingcom | unknown | Standing Calf Raises - Calves Exercise -... | 1 chunks
+✅ [76/4184] @bodybuildingcom | The Westside Method EP 3 | Breaking Down the Westside Method ｜ The ... | 1 chunks
+✅ [77/4184] @bodybuildingcom | unknown | This is Bodybuilding.com： Athletes Versi... | 1 chunks
+✅ [78/4184] @bodybuildingcom | unknown | Power Clean - Back & Legs Exercise - Bod... | 1 chunks
+✅ [79/4184] @bodybuildingcom | unknown | Butt Lift Bridge - Legs ⧸ Glutes Exercis... | 1 chunks
+✅ [80/4184] @bodybuildingcom | unknown | Jim Stoppani's 6-Week Shortcut To Shred ... | 1 chunks
+✅ [81/4184] @bodybuildingcom | unknown | Ashley Conrad's 21-Day Clutch Cut Traini... | 1 chunks
+✅ [82/4184] @bodybuildingcom | unknown | Laura McGraw Fitness 360： Survivor Stron... | 1 chunks
+✅ [83/4184] @bodybuildingcom | unknown | Jamie Eason's Fish in Foil Recipe -- Bod... | 1 chunks
+✅ [84/4184] @bodybuildingcom | unknown | Bench Press - Chest Exercise - Bodybuild... | 1 chunks
+✅ [85/4184] @bodybuildingcom | unknown | Seated Cable Rows - Back Exercise - Body... | 1 chunks
+✅ [86/4184] @bodybuildingcom | unknown | Seated Bent Over Rear Delt Raise - Shoul... | 1 chunks
+✅ [87/4184] @bodybuildingcom | unknown | Taco Potato Bowls IG：@jalalsamfit#mealpr... | 1 chunks
+✅ [88/4184] @bodybuildingcom | Big Man on Campus | Steve Cook Leg Workout for Strength ｜ Bi... | 1 chunks
+✅ [89/4184] @bodybuildingcom | unknown | 2011 Employee Transformation Challenge... | 1 chunks
+✅ [90/4184] @bodybuildingcom | unknown | Ashley Conrad's Upper-Body Circuit Worko... | 1 chunks
+✅ [91/4184] @bodybuildingcom | unknown | Romanian Deadlift - Leg Exercise - Bodyb... | 1 chunks
+✅ [92/4184] @bodybuildingcom | The Original Online Supplement Supplier Since 1999 | 25 Years of Bodybuilding.com ｜ The Origi... | 1 chunks
+✅ [93/4184] @bodybuildingcom | 1-Min Promo | #FREAKMODE Alex Savva's 12-Week Fitness ... | 1 chunks
+✅ [94/4184] @bodybuildingcom | unknown | Training with Scott Dorn - Bodybuilding.... | 1 chunks
+✅ [95/4184] @bodybuildingcom | unknown | Reverse Crunch - Abs ⧸ Core Exercise - B... | 1 chunks
+✅ [96/4184] @bodybuildingcom | Ep. 22 ｜ Craig Bongelli ｜ Bodybuilding.com | Becoming a Professional Strongman & Dril... | 4 chunks
+✅ [97/4184] @bodybuildingcom | The Bodybuilding.com Podcast ｜ Ep. 21 ｜ Lance Parker | Building Your Aerobic Base ｜ The Bodybui... | 6 chunks
+✅ [98/4184] @bodybuildingcom | unknown | Kizzito Ejam - 'Lift Life' Bodybuilding.... | 1 chunks
+✅ [99/4184] @bodybuildingcom | unknown | WORKOUT PREVIEW： Total Upper Body #1 wit... | 1 chunks
+✅ [100/4184] @bodybuildingcom | unknown | Highlight Reel Olympia 2011 - Bodybuildi... | 1 chunks
+✅ [101/4184] @bodybuildingcom | unknown | 5 Lessons After Running the Berlin Marat... | 1 chunks
+✅ [102/4184] @bodybuildingcom | unknown | Dips - Triceps Version - Tricep Exercise... | 1 chunks
+✅ [103/4184] @bodybuildingcom | unknown | Close Grip Bench Press - Tricep ⧸ Chest ... | 1 chunks
+✅ [104/4184] @bodybuildingcom | unknown | Fitness 360： Daniel Banks, Swole Patrol ... | 1 chunks
+✅ [105/4184] @bodybuildingcom | unknown | Fitness, Bikini And Ms  Olympia Finals P... | 2 chunks
+✅ [106/4184] @bodybuildingcom | unknown | Barbell Side Bend - Core ⧸ Abs - Bodybui... | 1 chunks
+✅ [107/4184] @bodybuildingcom | unknown | David Otunga's Training & Fitness Progra... | 2 chunks
+✅ [108/4184] @bodybuildingcom | unknown | Jamie Eason - Big 'Ol Butt Video - Bodyb... | 1 chunks
+✅ [109/4184] @bodybuildingcom | unknown | One-Legged Cable Kickback - Leg Exercise... | 1 chunks
+✅ [110/4184] @bodybuildingcom | unknown | Meet Your Trainers - Bodybuilding.com... | 1 chunks
+✅ [111/4184] @bodybuildingcom | unknown | Barbell Hip Thrust - Legs ⧸ Glutes Exerc... | 1 chunks
+✅ [112/4184] @bodybuildingcom | unknown | Air Bike - Ab Exercises - Bodybuilding.c... | 1 chunks
+✅ [113/4184] @bodybuildingcom | Ep. 06 ｜ Ebenezer Samuel ｜ Building Muscle & Training for Your Decade | The Bodybuilding.com Podcast ｜ Ep. 06 ｜ ... | 6 chunks
+✅ [114/4184] @bodybuildingcom | unknown | Incline Dumbbell Press - Chest Exercise ... | 1 chunks
+✅ [115/4184] @bodybuildingcom | unknown | Dips   Chest Version - Chest Exercise - ... | 1 chunks
+✅ [116/4184] @bodybuildingcom | unknown | CT Fletcher's Armed Warfare Arm Workout... | 1 chunks
+✅ [117/4184] @bodybuildingcom | unknown | Spartacus War Of The Damned - Arm Workou... | 2 chunks
+✅ [118/4184] @bodybuildingcom | 20 Minute at Home Flexibility Workout ｜ Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | Day 18 ｜ 20 Minute at Home Flexibility W... | 2 chunks
+✅ [119/4184] @bodybuildingcom | unknown | Dumbbell Side Bend - Core ⧸ Abs - Bodybu... | 1 chunks
+✅ [120/4184] @bodybuildingcom | unknown | IFBB Pro Jessie Hilgenberg's Fitness Jou... | 1 chunks
+✅ [121/4184] @bodybuildingcom | EP 26 ｜ Yaya Vargas | From Rebuilding Homes to Rebuilding Bodi... | 2 chunks
+✅ [122/4184] @bodybuildingcom | unknown | Nicole Moneer Fitness Program - Bodybuil... | 1 chunks
+✅ [123/4184] @bodybuildingcom | unknown | Marc Megna's Lifting Lessons： Barbell Ba... | 1 chunks
+✅ [124/4184] @bodybuildingcom | unknown | PRO MMA RADIO with Urijah Faber - UFC FA... | 1 chunks
+✅ [125/4184] @bodybuildingcom | unknown | Side Lateral Raise - Shoulder Exercise -... | 1 chunks
+✅ [126/4184] @bodybuildingcom | The Bodybuilding.com Podcast ｜ Ep. 12 ｜ Todd Anderson ｜ | How to Get Better Sleep ｜ The Bodybuildi... | 6 chunks
+✅ [127/4184] @bodybuildingcom | unknown | Amanda Latona's Fitness Program... | 1 chunks
+✅ [128/4184] @bodybuildingcom | unknown | Bodybuilding.com 2023： Year In Review... | 1 chunks
+✅ [129/4184] @bodybuildingcom | unknown | Julien Greaux's 365 Circuit Trainer - Bo... | 1 chunks
+✅ [130/4184] @bodybuildingcom | unknown | Figure Dynasty： How Nicole Wilkins Won H... | 1 chunks
+✅ [131/4184] @bodybuildingcom | Day 3_12-Week Hardcore Daily Video Trainer With Kris Gethin | Nutrition & Shopping ｜ Day 3_12-Week Har... | 1 chunks
+✅ [132/4184] @bodybuildingcom | unknown | Terminator Genisys Trailer： Arnold Schwa... | 1 chunks
+✅ [133/4184] @bodybuildingcom | unknown | Pullups -  Back Exercise - Bodybuilding.... | 1 chunks
+✅ [134/4184] @bodybuildingcom | unknown | Your Transformation Is Our Passion ｜ 201... | 1 chunks
+✅ [135/4184] @bodybuildingcom | unknown | Jaquelyn Kastelic's Training & Fitness P... | 1 chunks
+✅ [136/4184] @bodybuildingcom | unknown | Lee Labrada announces Transformation Win... | 1 chunks
+✅ [137/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | 30 Minute at Home Strength Workout： Day ... | 3 chunks
+✅ [138/4184] @bodybuildingcom | unknown | CT Fletcher's Commandment #7 Of Muscle G... | 1 chunks
+✅ [139/4184] @bodybuildingcom | Ep. 20 ｜ Peter Nelson ｜ The Bodybuilding.com Podcast | The Top Health Benefits of Sauna Therapy... | 5 chunks
+✅ [140/4184] @bodybuildingcom | unknown | Spider Curl - Biceps Exercise - Bodybuil... | 1 chunks
+✅ [141/4184] @bodybuildingcom | unknown | Meet the Newest Bodybuilding.com Coaches... | 1 chunks
+✅ [142/4184] @bodybuildingcom | unknown | Train Abs with Mario Lopez - Bodybuildin... | 1 chunks
+✅ [143/4184] @bodybuildingcom | unknown | How I Became Jamie Eason's Cart Boy -- B... | 1 chunks
+✅ [144/4184] @bodybuildingcom | unknown | Ashley Conrad's 7-Day Clutch Cleanse - B... | 1 chunks
+✅ [145/4184] @bodybuildingcom | unknown | 2011 Arnold Classic Rap - Bodybuilding.c... | 1 chunks
+✅ [146/4184] @bodybuildingcom | Nick Scott Fitness 360 | Becoming The Beast ｜ Nick Scott Fitness ... | 1 chunks
+✅ [147/4184] @bodybuildingcom | unknown | Getting Ripped and Cover Ready - Part 2 ... | 1 chunks
+✅ [148/4184] @bodybuildingcom | unknown | Look Strong, Lift Strong： Layne Norton's... | 1 chunks
+✅ [149/4184] @bodybuildingcom | unknown | Plank ⧸ Planking - Ab Exercises - Bodybu... | 1 chunks
+✅ [150/4184] @bodybuildingcom | unknown | Training With Nikia Dyson -- Bodybuildin... | 1 chunks
+✅ [151/4184] @bodybuildingcom | unknown | Testosterone Replacement Therapy (TRT)： ... | 1 chunks
+✅ [152/4184] @bodybuildingcom | unknown | BodySpace Demo Part 2： Dashboard Introdu... | 1 chunks
+✅ [153/4184] @bodybuildingcom | unknown | Ashley Horner's Full-Body Tabata Workout... | 1 chunks
+✅ [154/4184] @bodybuildingcom | unknown | Fit Dreams Come True With Diana Chaloux ... | 1 chunks
+✅ [155/4184] @bodybuildingcom | unknown | Natural Ways To Boost Testosterone... | 1 chunks
+✅ [156/4184] @bodybuildingcom | unknown | Stop Doing Leg Extensions Like This!!! #... | 1 chunks
+✅ [157/4184] @bodybuildingcom | unknown | Dorian Yates Answers Bodybuilding.com Fa... | 1 chunks
+✅ [158/4184] @bodybuildingcom | unknown | Tricep Dumbbell Kickback - Tricep Exerci... | 1 chunks
+✅ [159/4184] @bodybuildingcom | unknown | Kris Gethin & Team Grenade Ab Workout - ... | 2 chunks
+✅ [160/4184] @bodybuildingcom | unknown | Throwback Shoulder Workout with James Gr... | 2 chunks
+✅ [161/4184] @bodybuildingcom | unknown | Standing Dumbbell Upright Row - Shoulder... | 1 chunks
+✅ [162/4184] @bodybuildingcom | unknown | Seth Feroce's Training & Fitness Program... | 1 chunks
+✅ [163/4184] @bodybuildingcom | unknown | WORKOUT PREVIEW： Strength for Athletes #... | 1 chunks
+✅ [164/4184] @bodybuildingcom | unknown | Arnold Dumbbell Press - Shoulder Exercis... | 1 chunks
+✅ [165/4184] @bodybuildingcom | unknown | Ashley Conrad's High-Intensity Leg Circu... | 1 chunks
+✅ [166/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer - Day 4 | 20 Minute at Home Flexibility Workout ｜ ... | 2 chunks
+✅ [167/4184] @bodybuildingcom | unknown | Meet Bodybuilding.com Master Coach ｜ CRA... | 1 chunks
+✅ [168/4184] @bodybuildingcom | unknown | 2012 Mr. Olympia Highlight Reel - Bodybu... | 1 chunks
+✅ [169/4184] @bodybuildingcom | unknown | Bodybuilding.com Spokesmodel Search 2016... | 1 chunks
+✅ [170/4184] @bodybuildingcom | unknown | Rodney Razor's Training, Diet, and Nutri... | 1 chunks
+✅ [171/4184] @bodybuildingcom | unknown | Ashley Schutz  - 'Lift Life' Bodybuildin... | 1 chunks
+✅ [172/4184] @bodybuildingcom | Cory Gregory's Squat Every Day Training Program | Program Overview ｜ Cory Gregory's Squat ... | 1 chunks
+✅ [173/4184] @bodybuildingcom | unknown | Get Mile Wide - Brandan Fokken's Mile-Wi... | 1 chunks
+✅ [174/4184] @bodybuildingcom | Ep. 19 ｜ Alex Silver-Fagan ｜ Bodybuilding.com | Intentional Movement Theories & Finding ... | 4 chunks
+✅ [175/4184] @bodybuildingcom | unknown | CT Fletcher's Commandment #1 Of Muscle G... | 1 chunks
+✅ [176/4184] @bodybuildingcom | The Westside Method EP 4 | Breaking Down the Results of Four Weeks ... | 1 chunks
+✅ [177/4184] @bodybuildingcom | unknown | Marc Megna's Lifting Lessons： Barbell Bi... | 1 chunks
+✅ [178/4184] @bodybuildingcom | unknown | Elite by Bodybuilding.com ｜ Thermo + BCA... | 1 chunks
+✅ [179/4184] @bodybuildingcom | 30 Minute at Home Strength Workout ｜ Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | Day 1 ｜ 30 Minute at Home Strength Worko... | 3 chunks
+✅ [180/4184] @bodybuildingcom | unknown | Clean and Jerk - Shoulders ⧸ Legs ⧸ Back... | 1 chunks
+✅ [181/4184] @bodybuildingcom | unknown | Kris Gethin's Quad Radical Equation Work... | 2 chunks
+✅ [182/4184] @bodybuildingcom | unknown | One-Arm Dumbbell Row - Back Exercise - B... | 1 chunks
+✅ [183/4184] @bodybuildingcom | Built By Science | Back Anatomy & Training Program ｜ Built ... | 2 chunks
+✅ [184/4184] @bodybuildingcom | unknown | NFL Combine Trainer： Vertical Jump - Bod... | 1 chunks
+✅ [185/4184] @bodybuildingcom | unknown | Living Large： Jay Cutler's 8-Week Mass-B... | 1 chunks
+✅ [186/4184] @bodybuildingcom | unknown | Add Strength & Size With Mike O'Hearn's ... | 1 chunks
+✅ [187/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | At Home Cardio and Core Workout ｜ Clutch... | 4 chunks
+✅ [188/4184] @bodybuildingcom | Ep. 08 ｜ Kristen Lettenberger ｜ Pelvic Floor Health and Breathing | The Bodybuilding.com Podcast ｜ Ep. 08 ｜ ... | 5 chunks
+✅ [189/4184] @bodybuildingcom | unknown | Abel Albonetti's Ultimate Back Workout... | 1 chunks
+✅ [190/4184] @bodybuildingcom | unknown | Ben Affleck's Nutrition Plan for ＂The To... | 1 chunks
+✅ [191/4184] @bodybuildingcom | unknown | Smith Machine Squat - Leg Exercise - Bod... | 1 chunks
+✅ [192/4184] @bodybuildingcom | unknown | Lee Labrada 12-Week Lean Body Workout & ... | 1 chunks
+✅ [193/4184] @bodybuildingcom | unknown | Bill Phillips & Ryan DeLuca： Titans Of T... | 1 chunks
+✅ [194/4184] @bodybuildingcom | Chad Hollmer | Wide-Back, Boulder-Shoulder Workout ｜ Ch... | 1 chunks
+✅ [195/4184] @bodybuildingcom | unknown | NFL Combine Trainer： Overview - Bodybuil... | 1 chunks
+✅ [196/4184] @bodybuildingcom | unknown | 2015 True Strength Student Challenge - L... | 1 chunks
+✅ [197/4184] @bodybuildingcom | unknown | Ashley Conrad's 21-Day Clutch Cut Traini... | 2 chunks
+✅ [198/4184] @bodybuildingcom | unknown | Ben Affleck's Training  For ＂The Town＂ b... | 1 chunks
+✅ [199/4184] @bodybuildingcom | Jamie Eason | Orange Almond Biscotti Cookies Recipe ｜ ... | 1 chunks
+✅ [200/4184] @bodybuildingcom | unknown | Brendy Scheerer's Training & Fitness Pro... | 1 chunks
+✅ [201/4184] @bodybuildingcom | unknown | WORKOUT PREVIEW： Lower Body #2 with Kris... | 1 chunks
+✅ [202/4184] @bodybuildingcom | unknown | It's Your Life (Motocross) ｜ 2010 Bodybu... | 1 chunks
+✅ [203/4184] @bodybuildingcom | unknown | How to Increase Mile Splits with 5K Bloc... | 1 chunks
+✅ [204/4184] @bodybuildingcom | unknown | Steve Cook's Big Man On Campus Training ... | 1 chunks
+✅ [205/4184] @bodybuildingcom | Brian Casad | Arm Building Superset Workout ｜ Brian Ca... | 1 chunks
+✅ [206/4184] @bodybuildingcom | unknown | Push Press - Shoulder Exercise - Bodybui... | 1 chunks
+✅ [207/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | 40 Minute at Home Full-Body Workout： Day... | 3 chunks
+✅ [208/4184] @bodybuildingcom | Jim Stoppani | Push Your Strength Chest Workout ｜ Jim S... | 1 chunks
+✅ [209/4184] @bodybuildingcom | unknown | Week 2 Prep Contest - $200,000 Transform... | 1 chunks
+✅ [210/4184] @bodybuildingcom | Gaming Supplement Line for Focus, Energy and Sleep | Remix Nutrition, by Bodybuilding.com ｜ G... | 1 chunks
+✅ [211/4184] @bodybuildingcom | Jay Cutler Living Large ｜ Mass-Building Workouts, Training Tips, Nutrition Plan ｜ Ep 2 | Train Large ｜ Jay Cutler Living Large ｜ ... | 2 chunks
+✅ [212/4184] @bodybuildingcom | unknown | The 21-Day Bizzy Diet Trainer： Trailer -... | 1 chunks
+✅ [213/4184] @bodybuildingcom | unknown | Stiff Legged Dumbbell Deadlift - Legs ⧸ ... | 1 chunks
+✅ [214/4184] @bodybuildingcom | unknown | Seated Barbell Military Press - Shoulder... | 1 chunks
+✅ [215/4184] @bodybuildingcom | unknown | Jimmy Peña's Power Rack Training Episode... | 1 chunks
+✅ [216/4184] @bodybuildingcom | unknown | High-Volume Leg Workout： 12-Week Hardcor... | 1 chunks
+✅ [217/4184] @bodybuildingcom | Power Bodybuilding Training Program | Mike O'Hearn's Chest Workout ｜ Power Bod... | 1 chunks
+✅ [218/4184] @bodybuildingcom | unknown | Jamie Eason's Tips & Techniques - Bodybu... | 1 chunks
+✅ [219/4184] @bodybuildingcom | unknown | Not Hungry After Workout #nutrition #hun... | 1 chunks
+✅ [220/4184] @bodybuildingcom | unknown | Glute Ham Raise - Legs ⧸ Glutes Exercise... | 1 chunks
+✅ [221/4184] @bodybuildingcom | unknown | Erin Stern's Training & Fitness Program... | 1 chunks
+✅ [222/4184] @bodybuildingcom | Craig Bongelli ｜ Building Muscle Mass and Finding Your One Rep Max | EP. 30 ｜ Craig Bongelli ｜ Building Muscl... | 4 chunks
+✅ [223/4184] @bodybuildingcom | unknown | Cory Gregory's Squat Every Day Trainer ｜... | 1 chunks
+✅ [224/4184] @bodybuildingcom | unknown | Legs Like Jessie's： Hilgenberg's 7-Move ... | 1 chunks
+✅ [225/4184] @bodybuildingcom | unknown | Alicia Harris' Training & Fitness Progra... | 1 chunks
+✅ [226/4184] @bodybuildingcom | unknown | Dumbbell Workout Inspo IG： alexabergfit ... | 1 chunks
+✅ [227/4184] @bodybuildingcom | unknown | CT Fletcher's Commandment #3 Of Muscle G... | 1 chunks
+✅ [228/4184] @bodybuildingcom | unknown | Whey Protein Guide - Bodybuilding.com... | 1 chunks
+✅ [229/4184] @bodybuildingcom | unknown | Dumbbell Triceps Extension - Tricep Exer... | 1 chunks
+✅ [230/4184] @bodybuildingcom | unknown | Finding Inspiration In Nature! Watch the... | 1 chunks
+✅ [231/4184] @bodybuildingcom | unknown | Rachel Flint's Training & Fitness Progra... | 1 chunks
+✅ [232/4184] @bodybuildingcom | Kris Gethin's 12-Week Muscle-Building Trainer ｜ Day 2 | Chest and Triceps Workout ｜ Kris Gethin'... | 1 chunks
+✅ [233/4184] @bodybuildingcom | unknown | 2013 Arnold Classic ⧸ Sports Festival Hi... | 1 chunks
+✅ [234/4184] @bodybuildingcom | unknown | Butt Lift (Bridge) - Leg Exercise - Body... | 1 chunks
+✅ [235/4184] @bodybuildingcom | unknown | Barbell Shoulder Press - Shoulder Exerci... | 1 chunks
+✅ [236/4184] @bodybuildingcom | unknown | Ashley Horner's Stronger-Legs Workout... | 1 chunks
+✅ [237/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | At Home Training Program ｜ Clutch Life： ... | 1 chunks
+✅ [238/4184] @bodybuildingcom | Katie Chung Hua | Lower-Body Dorm Room Workout ｜ Katie Chu... | 1 chunks
+✅ [239/4184] @bodybuildingcom | unknown | Behind The Back Wrist Curl - Forearm Exe... | 1 chunks
+✅ [240/4184] @bodybuildingcom | IFBB Pro Jake Alvarez | Three-move Calf Workout ｜ IFBB Pro Jake ... | 1 chunks
+✅ [241/4184] @bodybuildingcom | unknown | Straight Arm Pulldown Technique #backday... | 1 chunks
+✅ [242/4184] @bodybuildingcom | unknown | Bill Phillips BACK TO FIT 12-Week Traine... | 2 chunks
+✅ [243/4184] @bodybuildingcom | unknown | Sean Sarantos Fitness Program - Bodybuil... | 1 chunks
+✅ [244/4184] @bodybuildingcom | IFBB Bikini Pro Amanda Latona | Glutes Training Guide ｜ IFBB Bikini Pro ... | 1 chunks
+✅ [245/4184] @bodybuildingcom | unknown | Race for the Cure 2011 News Clip - Bodyb... | 1 chunks
+✅ [246/4184] @bodybuildingcom | unknown | Clay Guida's Fitness Program - Bodybuild... | 2 chunks
+✅ [247/4184] @bodybuildingcom | unknown | Final Approach To Fitness： Cellucor's Da... | 1 chunks
+✅ [248/4184] @bodybuildingcom | unknown | Leg Press - Leg Exercise - Bodybuilding.... | 1 chunks
+✅ [249/4184] @bodybuildingcom | unknown | 2014 Olympia Webcast Highlights Reel... | 1 chunks
+✅ [250/4184] @bodybuildingcom | unknown | Waxy Maize Guide - Bodybuilding.com... | 1 chunks
+✅ [251/4184] @bodybuildingcom | Ultimate Pre Stim-Free ｜ The Pre Workout Pump Without Caffeine | Elite by Bodybuilding.com ｜ Ultimate Pre... | 1 chunks
+✅ [252/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | At Home Cardio and Core Workout： Day 9 ｜... | 4 chunks
+✅ [253/4184] @bodybuildingcom | Anatomy, Biomechanics & 6-Week Training Program | Built by Science ｜ Anatomy, Biomechanics... | 1 chunks
+✅ [254/4184] @bodybuildingcom | unknown | 12-Week Hardcore Daily Video Trainer Wit... | 1 chunks
+✅ [255/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | 40 Minute at Home Strength Workout： Day ... | 3 chunks
+✅ [256/4184] @bodybuildingcom | unknown | Bodybuilding.com Guide to Glutamine... | 1 chunks
+✅ [257/4184] @bodybuildingcom | unknown | Hanging Leg Raise - Core ⧸ Abs - Bodybui... | 1 chunks
+✅ [258/4184] @bodybuildingcom | unknown | Ronnie Milo's MVP Leg Workout... | 1 chunks
+✅ [259/4184] @bodybuildingcom | Big Man on Campus | Steve Cook's Shoulders & Traps Workout ｜... | 1 chunks
+✅ [260/4184] @bodybuildingcom | unknown | Farmer's Walk - Forearm Exercise - Bodyb... | 1 chunks
+✅ [261/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | At Home Cardio and Core Workout： Day 23 ... | 5 chunks
+✅ [262/4184] @bodybuildingcom | unknown | How To Deadlift： Layne Norton's Complete... | 1 chunks
+✅ [263/4184] @bodybuildingcom | unknown | 2010 Joe Weider Interview - The Father o... | 1 chunks
+✅ [264/4184] @bodybuildingcom | Jim Stoppani's Shortcut to Shred Training Program | Nutrition Overview ｜ Jim Stoppani's Shor... | 2 chunks
+✅ [265/4184] @bodybuildingcom | unknown | Give Yourself One Good Year! Louis Shepp... | 1 chunks
+✅ [266/4184] @bodybuildingcom | unknown | It's Your Life (Football) ｜ 2010 Bodybui... | 1 chunks
+✅ [267/4184] @bodybuildingcom | unknown | $200,000 Transformation Challenge - Week... | 1 chunks
+✅ [268/4184] @bodybuildingcom | unknown | Jamie Eason's Post-Pregnancy Trainer： Pr... | 1 chunks
+✅ [269/4184] @bodybuildingcom | unknown | Triceps Dumbbell Kickback - Triceps Exer... | 1 chunks
+✅ [270/4184] @bodybuildingcom | unknown | Bodybuilding.com Guide to Glucosamine... | 1 chunks
+✅ [271/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | 45 Minute at Home Strength Workout： Day ... | 3 chunks
+✅ [272/4184] @bodybuildingcom | unknown | Concentration Curls - Biceps Exercise - ... | 1 chunks
+✅ [273/4184] @bodybuildingcom | unknown | Straight Arm Pulldown - Back Exercise - ... | 1 chunks
+✅ [274/4184] @bodybuildingcom | Tyrone Bell： Spartacus War Of The Damned | 19-Minute Gladiator Workout ｜ Tyrone Bel... | 1 chunks
+✅ [275/4184] @bodybuildingcom | Dorian Yates' Blood & Guts | Leg Crushing Workout Part 1 ｜ Dorian Yat... | 1 chunks
+✅ [276/4184] @bodybuildingcom | unknown | Fighting Shape - Ryan Bader MMA Workout ... | 1 chunks
+✅ [277/4184] @bodybuildingcom | unknown | CT Fletcher's Commandment #5 Of Muscle G... | 1 chunks
+✅ [278/4184] @bodybuildingcom | unknown | Jen Jewell's Training & Fitness Program ... | 1 chunks
+✅ [279/4184] @bodybuildingcom | Clutch Life： Ashley Conrad's 24⧸7 Fitness Trainer | 45 Minute at Home Strength Workout： Day ... | 3 chunks
+✅ [280/4184] @bodybuildingcom | Ep. 24 ｜ Anthony Crouchelli | Putting Community First & The Rise of Ru... | 3 chunks
+✅ [281/4184] @bodybuildingcom | unknown | It's Your Life (MMA) ｜ 2010 Bodybuilding... | 1 chunks
+✅ [282/4184] @bodybuildingcom | unknown | Barbell Deadlift - Leg & Back Exercise -... | 1 chunks
+✅ [283/4184] @bodybuildingcom | unknown | Jamie Eason's Lemon Protein Bars - Bodyb... | 1 chunks
+✅ [284/4184] @bodybuildingcom | unknown | Marc Megna's Lifting Lessons： Single-Arm... | 1 chunks
+✅ [285/4184] @bodybuildingcom | unknown | Bodybuilding.com Guide to Green Tea... | 1 chunks
+✅ [286/4184] @bodybuildingcom | unknown | Jamie Eason 3-Bean Turkey Chili Recipe -... | 1 chunks
+✅ [287/4184] @bodybuildingcom | unknown | Chest Workout with Derek Charlebois - Bo... | 1 chunks
+✅ [288/4184] @bodybuildingcom | unknown | Athlete ｜ Bodybuilding.com Commercial... | 1 chunks
+✅ [289/4184] @bodybuildingcom | unknown | Carl Roberts' Training & Fitness Program... | 1 chunks
+✅ [290/4184] @bodybuildingcom | unknown | Chin-Up - Back Exercise - Bodybuilding.c... | 1 chunks
+✅ [291/4184] @bodybuildingcom | unknown | Jamie Eason's Turkey Meatloaf Muffins - ... | 1 chunks

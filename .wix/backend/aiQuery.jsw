@@ -1,77 +1,198 @@
 // backend/aiQuery.jsw
+// Wix backend for Coach Bryan AI queries
+// Uses OpenRouter for embeddings + chat, Pinecone for vector search
+
 import { fetch } from 'wix-fetch';
 import { getSecret } from 'wix-secrets-backend';
 
-/* ===============================
-   CONFIG (WIX-SAFE)
-================================ */
+/* ============================================================
+   CONFIG
+============================================================ */
+const CONFIG = {
+  openRouterBase: "https://openrouter.ai/api/v1",
+  chatModel: "nousresearch/hermes-3-llama-3.1-70b",
+  embedModel: "text-embedding-3-large",
+  pineconeHost: "forged-freedom-ai-xxxxx.svc.environment.pinecone.io", // Update with your host
+  topK: 12,
+  maxQuotes: 8,
+  timeout: 25000
+};
 
-const OPENROUTER_BASE = "https://openrouter.ai/api/v1";
-const OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-8b"; // REQUIRED for Wix
-const OPENROUTER_TIMEOUT_MS = 12000;
-
-const MAX_PINECONE_MATCHES = 6;
-const MAX_QUOTE_CHARS = 1000;
-const PINECONE_NAMESPACE = "";
-
-/* ===============================
-   PUBLIC METHOD
-================================ */
-
+/* ============================================================
+   PUBLIC: ASK COACH BRYAN
+============================================================ */
 export async function askCoach(payload) {
   try {
-    if (!payload || !payload.question) {
-      return error("INVALID_INPUT", "No question provided.");
+    // Validate input
+    if (!payload?.question?.trim()) {
+      return { status: "ERROR", code: "INVALID_INPUT", message: "Question required" };
     }
 
     const question = payload.question.trim();
-    if (!question) {
-      return error("INVALID_INPUT", "Empty question.");
-    }
 
-    const embedding = await embed(question);
-    const matches = await queryPinecone(embedding);
+    // 1. Embed the question
+    const vector = await embed(question);
 
+    // 2. Search Pinecone
+    const matches = await searchPinecone(vector);
     if (!matches.length) {
-      return error("NO_DB_MATCH", "No relevant material found.");
+      return { status: "ERROR", code: "NO_MATCHES", message: "No relevant content found" };
     }
 
-    const context = buildContext(matches);
-    if (!context || context.length < 200) {
-      return error("INSUFFICIENT_CONTEXT", "Usable text not found.");
+    // 3. Extract evidence
+    const quotes = extractQuotes(matches);
+    if (!quotes.length) {
+      return { status: "ERROR", code: "NO_EVIDENCE", message: "No usable text found" };
     }
 
-    const answer = await runLLM(question, context);
+    // 4. Generate answer
+    const answer = await synthesize(question, quotes);
 
     return {
       status: "OK",
-      answer
+      answer,
+      sources: quotes.map(q => ({
+        speaker: q.speaker,
+        channel: q.channel,
+        title: q.title
+      }))
     };
 
   } catch (err) {
-    console.error("AI ERROR:", err);
-    return error("EXECUTION_ERROR", err.message || "Backend failure");
+    console.error("[askCoach ERROR]", err);
+    return { status: "ERROR", code: "EXECUTION_ERROR", message: err.message };
   }
 }
 
-/* ===============================
-   EMBEDDINGS
-================================ */
-
+/* ============================================================
+   OPENROUTER: EMBEDDINGS
+============================================================ */
 async function embed(text) {
   const key = await getSecret("OPENROUTER_API_KEY");
-  if (!key) throw new Error("Missing OPENROUTER_API_KEY");
 
-  const res = await fetch(OPENROUTER_BASE + "/embeddings", {
+  const res = await fetch(`${CONFIG.openRouterBase}/embeddings`, {
     method: "POST",
     headers: {
-      "Authorization": "Bearer " + key,
+      "Authorization": `Bearer ${key}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "text-embedding-3-large",
+      model: CONFIG.embedModel,
       input: text
     })
   });
 
-  const data = awai
+  const data = await res.json();
+
+  if (!res.ok || !data?.data?.[0]?.embedding) {
+    throw new Error(data?.error?.message || "Embedding failed");
+  }
+
+  return data.data[0].embedding;
+}
+
+/* ============================================================
+   PINECONE: VECTOR SEARCH
+============================================================ */
+async function searchPinecone(vector) {
+  const key = await getSecret("PINECONE_API_KEY");
+  const host = await getSecret("PINECONE_HOST") || CONFIG.pineconeHost;
+
+  const res = await fetch(`https://${host}/query`, {
+    method: "POST",
+    headers: {
+      "Api-Key": key,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      vector,
+      topK: CONFIG.topK,
+      includeMetadata: true
+    })
+  });
+
+  const data = await res.json();
+  return data.matches || [];
+}
+
+/* ============================================================
+   EVIDENCE EXTRACTION
+============================================================ */
+function extractQuotes(matches) {
+  return matches
+    .map(m => {
+      const md = m.metadata || {};
+      const text = md.text || md.chunk || md.content || "";
+
+      if (!text || text.length < 50) return null;
+
+      return {
+        text: text.substring(0, 1500), // Limit for prompt size
+        channel: md.channel || extractChannel(md.source) || "unknown",
+        speaker: md.speaker || "unknown",
+        title: md.title || "unknown",
+        score: m.score || 0
+      };
+    })
+    .filter(Boolean)
+    .slice(0, CONFIG.maxQuotes);
+}
+
+function extractChannel(path = "") {
+  const match = path.match(/@[\w]+/);
+  return match ? match[0] : null;
+}
+
+/* ============================================================
+   OPENROUTER: SYNTHESIS
+============================================================ */
+const SYSTEM_PROMPT = `You are Coach Bryan, an expert fitness and performance advisor.
+
+RESPONSE FORMAT:
+1. Paraphrase the question first to confirm understanding
+2. Answer using ONLY the evidence provided
+3. Be direct - no hedging or "consult a doctor" deflections
+4. Reference which expert the information comes from
+5. End with a brief, actionable takeaway`;
+
+async function synthesize(question, quotes) {
+  const key = await getSecret("OPENROUTER_API_KEY");
+
+  const evidence = quotes
+    .map((q, i) => `[${i + 1}] ${q.speaker !== "unknown" ? q.speaker : q.channel}: "${q.text}"`)
+    .join("\n\n");
+
+  const userPrompt = `Question: ${question}
+
+EVIDENCE:
+${evidence}
+
+Remember: Paraphrase the question first, then answer using ONLY the evidence above.`;
+
+  const res = await fetch(`${CONFIG.openRouterBase}/chat/completions`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${key}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "https://forgedbyfreedom.com",
+      "X-Title": "Coach Bryan"
+    },
+    body: JSON.stringify({
+      model: CONFIG.chatModel,
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userPrompt }
+      ],
+      temperature: 0.7,
+      max_tokens: 1200
+    })
+  });
+
+  const data = await res.json();
+
+  if (!res.ok || data.error) {
+    throw new Error(data.error?.message || "Synthesis failed");
+  }
+
+  return data.choices?.[0]?.message?.content || "Unable to generate answer.";
+}

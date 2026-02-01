@@ -1,18 +1,30 @@
 services:
   - type: web
     name: forged-by-freedom-api
-    rootDir: api
     runtime: node
     repo: https://github.com/forgedbyfreedom/forged-by-freedom
     branch: main
     region: oregon
-    plan: free
+    plan: starter
     buildCommand: "npm install"
-    startCommand: "node src/index.js"
+    startCommand: "node index.js"
+    healthCheckPath: /health
+    autoDeploy: true
     envVars:
-      - key: X_AUTH_KEY
-        value: FREEDOM_2025
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
       - key: OPENROUTER_API_KEY
         sync: false
-      - key: FBF_MODEL
+      - key: OPENROUTER_MODEL
         value: "nousresearch/hermes-3-llama-3.1-70b"
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: RATE_LIMIT_RPM
+        value: "60"
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 80
+      targetCPUPercent: 80
