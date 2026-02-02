@@ -138,6 +138,10 @@ const CHANNEL_DISPLAY_NAMES = {
   "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
   "@rxmuscle": "RXMuscle",
   "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  // Female-Specific Experts (priority for women's questions)
+  "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
+  "@johnjewett3": "John Jewett",
+  "@J3University": "J3 University",
   // PED/Longevity Experts
   "@MorePlatesMoreDates": "More Plates More Dates",
   "@MPMD": "More Plates More Dates",
@@ -156,7 +160,6 @@ const CHANNEL_DISPLAY_NAMES = {
   "@AndrewHuberman": "Huberman Lab",
   "@PeterAttiaMD": "The Peter Attia Drive",
   "@FoundMyFitness": "Found My Fitness",
-  "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
   // Research Sources
   "@PubMed": "PubMed Research",
   "@ClinicalTrials": "ClinicalTrials.gov",
@@ -198,6 +201,8 @@ const CHANNEL_SPEAKERS = {
   "@PeterAttiaMD": "Dr. Peter Attia",
   "@FoundMyFitness": "Dr. Rhonda Patrick",
   "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
+  "@johnjewett3": "John Jewett",
+  "@J3University": "John Jewett",
   "@mountainabordog1": "John Meadows",
   "@JohnMeadowsMountainDog": "John Meadows",
   "@AthleanX": "Jeff Cavaliere",
@@ -218,10 +223,20 @@ const SOURCE_PRIORITY = {
   "@JeffNippard": 5, "@RenaissancePeriodization": 5, "@Biolayne": 5 // Fitness science
 };
 
+// Female-specific sources (boosted priority for women's questions)
+const FEMALE_PRIORITY_SOURCES = ["@DrGabrielleLyon", "@johnjewett3", "@J3University"];
+const FEMALE_KEYWORDS = ["female", "women", "woman", "girl", "ladies", "menstrual", "pregnancy", "pregnant", "menopause", "estrogen", "progesterone", "birth control", "pcos", "ovarian", "breast", "feminine", "her cycle", "women's"];
+
+function isFemaleRelatedQuestion(question) {
+  const q = question.toLowerCase();
+  return FEMALE_KEYWORDS.some(kw => q.includes(kw));
+}
+
 // ─── Evidence Extraction ─────────────────────────────────────
-function extractQuotes(matches) {
+function extractQuotes(matches, question = "") {
   const MIN_TEXT_LENGTH = 100; // Filter out very short quotes
   const seen = new Set(); // Track seen content for dedup
+  const isFemaleQuestion = isFemaleRelatedQuestion(question);
 
   return matches
     .map(m => {
@@ -245,8 +260,11 @@ function extractQuotes(matches) {
         ? md.speaker
         : CHANNEL_SPEAKERS[channel] || "unknown";
 
-      // Get priority for sorting
-      const priority = SOURCE_PRIORITY[channel] || 10;
+      // Get priority for sorting - boost female experts for women's questions
+      let priority = SOURCE_PRIORITY[channel] || 10;
+      if (isFemaleQuestion && FEMALE_PRIORITY_SOURCES.includes(channel)) {
+        priority = 0; // Highest priority for female-related questions
+      }
 
       return {
         text,
@@ -274,6 +292,9 @@ Start by briefly restating what the user is asking in your own words, then dive 
 
 PRIORITY SOURCES:
 ThinkBig Bodybuilding shows are your PRIMARY sources - Blood Sweat and Gear, It's Just Bodybuilding, Drugs N Stuff, RXMuscle. Dave Palumbo is a key authority. When you see ThinkBig content in the evidence, lead with it and cite it by name.
+
+FEMALE-SPECIFIC QUESTIONS:
+For questions about women's fitness, female hormones, women's PED use, or female-specific topics, prioritize Dr. Gabrielle Lyon and John Jewett (J3 University) as your main authorities. They are the go-to experts for female athletes and women's health in the fitness space.
 
 IMPORTANT RULES:
 - Write in flowing paragraphs, NOT with section headers or labels
@@ -365,7 +386,7 @@ app.post("/ask", async (req, res) => {
 
     if (!matches.length) return res.json({ answer: "No relevant evidence found.", sources: [] });
 
-    const quotes = extractQuotes(matches);
+    const quotes = extractQuotes(matches, question);
     if (!quotes.length) return res.json({ answer: "No usable transcript text found.", sources: [] });
 
     // Raw quotes mode
