@@ -142,6 +142,22 @@ const CHANNEL_DISPLAY_NAMES = {
   "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
   "@johnjewett3": "John Jewett",
   "@J3University": "J3 University",
+  "@DrStacySims": "Dr. Stacy Sims",
+  "@drmaryclairehaver": "Dr. Mary Claire Haver",
+  "@DrMindyPelz": "Dr. Mindy Pelz",
+  "@HollyBaxter": "Holly Baxter",
+  "@SoheeFit": "Sohee Lee",
+  "@LaurinConlin": "Laurin Conlin",
+  "@megsquats": "Meg Squats",
+  "@AshleyKaltwasser": "Ashley Kaltwasser",
+  "@ErinSternFitness": "Erin Stern",
+  "@JulieLohre": "Julie Lohre",
+  "@coachmusclenugget": "Britt Larson",
+  "@CarolineGirvan": "Caroline Girvan",
+  "@KatieCrewe": "Katie Crewe",
+  "@KristyHawkins": "Kristy Hawkins",
+  "@AbbeySharp": "Abbey Sharp",
+  "@LoriHarder": "Lori Harder",
   // PED/Longevity Experts
   "@MorePlatesMoreDates": "More Plates More Dates",
   "@MPMD": "More Plates More Dates",
@@ -203,6 +219,23 @@ const CHANNEL_SPEAKERS = {
   "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
   "@johnjewett3": "John Jewett",
   "@J3University": "John Jewett",
+  // Female Experts
+  "@DrStacySims": "Dr. Stacy Sims",
+  "@drmaryclairehaver": "Dr. Mary Claire Haver",
+  "@DrMindyPelz": "Dr. Mindy Pelz",
+  "@HollyBaxter": "Holly Baxter",
+  "@SoheeFit": "Sohee Lee",
+  "@LaurinConlin": "Laurin Conlin",
+  "@megsquats": "Meg Gallagher",
+  "@AshleyKaltwasser": "Ashley Kaltwasser",
+  "@ErinSternFitness": "Erin Stern",
+  "@JulieLohre": "Julie Lohre",
+  "@coachmusclenugget": "Britt Larson",
+  "@CarolineGirvan": "Caroline Girvan",
+  "@KatieCrewe": "Katie Crewe",
+  "@KristyHawkins": "Kristy Hawkins",
+  "@AbbeySharp": "Abbey Sharp",
+  "@LoriHarder": "Lori Harder",
   "@mountainabordog1": "John Meadows",
   "@JohnMeadowsMountainDog": "John Meadows",
   "@AthleanX": "Jeff Cavaliere",
@@ -224,8 +257,21 @@ const SOURCE_PRIORITY = {
 };
 
 // Female-specific sources (boosted priority for women's questions)
-const FEMALE_PRIORITY_SOURCES = ["@DrGabrielleLyon", "@johnjewett3", "@J3University"];
-const FEMALE_KEYWORDS = ["female", "women", "woman", "girl", "ladies", "menstrual", "pregnancy", "pregnant", "menopause", "estrogen", "progesterone", "birth control", "pcos", "ovarian", "breast", "feminine", "her cycle", "women's"];
+const FEMALE_PRIORITY_SOURCES = [
+  // Primary Female Experts
+  "@DrGabrielleLyon", "@johnjewett3", "@J3University",
+  // Hormones & Menopause
+  "@DrStacySims", "@drmaryclairehaver", "@DrMindyPelz",
+  // Science-Based Female Fitness
+  "@HollyBaxter", "@SoheeFit", "@LaurinConlin", "@megsquats", "@StephanieButtermore",
+  // Female Bodybuilding & Contest Prep
+  "@AshleyKaltwasser", "@ErinSternFitness", "@JulieLohre", "@coachmusclenugget",
+  // Women's Strength & Training
+  "@CarolineGirvan", "@KatieCrewe", "@KristyHawkins", "@Natacha_Oceane", "@StefiCohen",
+  // Women's Nutrition & Mental Health
+  "@AbbeySharp", "@LoriHarder"
+];
+const FEMALE_KEYWORDS = ["female", "women", "woman", "girl", "ladies", "menstrual", "pregnancy", "pregnant", "menopause", "perimenopause", "estrogen", "progesterone", "birth control", "pcos", "ovarian", "breast", "feminine", "her cycle", "women's", "bikini", "figure competition", "wellness division", "postpartum", "breastfeeding"];
 
 function isFemaleRelatedQuestion(question) {
   const q = question.toLowerCase();

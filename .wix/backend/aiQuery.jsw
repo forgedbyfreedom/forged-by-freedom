@@ -183,8 +183,15 @@ const SOURCE_PRIORITY = {
 };
 
 // Female-specific sources (boosted priority for women's questions)
-const FEMALE_PRIORITY_SOURCES = ["@DrGabrielleLyon", "@johnjewett3", "@J3University"];
-const FEMALE_KEYWORDS = ["female", "women", "woman", "girl", "ladies", "menstrual", "pregnancy", "pregnant", "menopause", "estrogen", "progesterone", "birth control", "pcos", "ovarian", "breast", "feminine", "her cycle", "women's"];
+const FEMALE_PRIORITY_SOURCES = [
+  "@DrGabrielleLyon", "@johnjewett3", "@J3University",
+  "@DrStacySims", "@drmaryclairehaver", "@DrMindyPelz",
+  "@HollyBaxter", "@SoheeFit", "@LaurinConlin", "@megsquats", "@StephanieButtermore",
+  "@AshleyKaltwasser", "@ErinSternFitness", "@JulieLohre", "@coachmusclenugget",
+  "@CarolineGirvan", "@KatieCrewe", "@KristyHawkins", "@Natacha_Oceane", "@StefiCohen",
+  "@AbbeySharp", "@LoriHarder"
+];
+const FEMALE_KEYWORDS = ["female", "women", "woman", "girl", "ladies", "menstrual", "pregnancy", "pregnant", "menopause", "perimenopause", "estrogen", "progesterone", "birth control", "pcos", "ovarian", "breast", "feminine", "her cycle", "women's", "bikini", "figure competition", "wellness division", "postpartum", "breastfeeding"];
 
 function isFemaleRelatedQuestion(question) {
   const q = question.toLowerCase();
