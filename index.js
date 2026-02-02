@@ -132,24 +132,136 @@ async function search(vector, namespace = "") {
   return (await index.query(query)).matches || [];
 }
 
+// ─── Channel & Speaker Mappings ─────────────────────────────
+const CHANNEL_DISPLAY_NAMES = {
+  // ThinkBig Priority (Dave Palumbo shows)
+  "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
+  "@rxmuscle": "RXMuscle",
+  "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  // PED/Longevity Experts
+  "@MorePlatesMoreDates": "More Plates More Dates",
+  "@MPMD": "More Plates More Dates",
+  "@vigoroussteve": "Vigorous Steve",
+  "@LeoandLongevity": "Leo and Longevity",
+  "@AnabolicDoc": "The Anabolic Doc",
+  "@TonyHuge": "Enhanced Athlete",
+  "@CoachTrevorBlack": "Coach Trevor",
+  "@GregDoucette": "Greg Doucette",
+  // Science-Based Fitness
+  "@JeffNippard": "Jeff Nippard",
+  "@RenaissancePeriodization": "Renaissance Periodization",
+  "@Biolayne": "Biolayne",
+  "@StrongerByScience": "Stronger By Science",
+  "@hubermanlab": "Huberman Lab",
+  "@AndrewHuberman": "Huberman Lab",
+  "@PeterAttiaMD": "The Peter Attia Drive",
+  "@FoundMyFitness": "Found My Fitness",
+  "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
+  // Research Sources
+  "@PubMed": "PubMed Research",
+  "@ClinicalTrials": "ClinicalTrials.gov",
+  // Bodybuilding
+  "@mountainabordog1": "Mountain Dog (John Meadows)",
+  "@JohnMeadowsMountainDog": "Mountain Dog (John Meadows)",
+  "@ChrisBumstead": "Chris Bumstead",
+  "@sam_sulek": "Sam Sulek",
+  // Strength
+  "@AthleanX": "Athlean-X",
+  "@JuggernautTrainingSystems": "Juggernaut Training",
+  "@eliteftsofficial": "EliteFTS",
+  "@SquatUniversity": "Squat University",
+  "@BenPatrick": "Knees Over Toes Guy",
+  // Medical Education
+  "@NinjaNerdOfficial": "Ninja Nerd",
+  "@MedCram": "MedCram",
+  "@InstituteofHumanAnatomy": "Institute of Human Anatomy"
+};
+
+const CHANNEL_SPEAKERS = {
+  "@ThinkBIGBodybuilding": "Dave Palumbo",
+  "@rxmuscle": "Dave Palumbo",
+  "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  "@MorePlatesMoreDates": "Derek (MPMD)",
+  "@MPMD": "Derek (MPMD)",
+  "@vigoroussteve": "Vigorous Steve",
+  "@LeoandLongevity": "Leo Rex",
+  "@AnabolicDoc": "Dr. Thomas O'Connor",
+  "@TonyHuge": "Tony Huge",
+  "@CoachTrevorBlack": "Coach Trevor",
+  "@GregDoucette": "Greg Doucette",
+  "@JeffNippard": "Jeff Nippard",
+  "@RenaissancePeriodization": "Dr. Mike Israetel",
+  "@Biolayne": "Dr. Layne Norton",
+  "@StrongerByScience": "Greg Nuckols",
+  "@hubermanlab": "Dr. Andrew Huberman",
+  "@AndrewHuberman": "Dr. Andrew Huberman",
+  "@PeterAttiaMD": "Dr. Peter Attia",
+  "@FoundMyFitness": "Dr. Rhonda Patrick",
+  "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
+  "@mountainabordog1": "John Meadows",
+  "@JohnMeadowsMountainDog": "John Meadows",
+  "@AthleanX": "Jeff Cavaliere",
+  "@SquatUniversity": "Dr. Aaron Horschig",
+  "@BenPatrick": "Ben Patrick",
+  "@NinjaNerdOfficial": "Ninja Nerd",
+  "@MedCram": "Dr. Roger Seheult",
+  "@PubMed": "PubMed Research",
+  "@ClinicalTrials": "ClinicalTrials.gov"
+};
+
+// Priority tiers for source ranking (lower = higher priority)
+const SOURCE_PRIORITY = {
+  "@ThinkBIGBodybuilding": 1, "@rxmuscle": 1, // ThinkBig highest
+  "@PubMed": 2, "@ClinicalTrials": 2, // Research second
+  "@AnabolicDoc": 3, "@MorePlatesMoreDates": 3, "@vigoroussteve": 3, // PED experts
+  "@hubermanlab": 4, "@PeterAttiaMD": 4, "@FoundMyFitness": 4, // Science
+  "@JeffNippard": 5, "@RenaissancePeriodization": 5, "@Biolayne": 5 // Fitness science
+};
+
 // ─── Evidence Extraction ─────────────────────────────────────
 function extractQuotes(matches) {
+  const MIN_TEXT_LENGTH = 100; // Filter out very short quotes
+  const seen = new Set(); // Track seen content for dedup
+
   return matches
     .map(m => {
       const md = m.metadata || {};
       const text = (md.text || md.chunk || md.content || md.transcript || "").trim();
-      if (!text) return null;
+
+      // Filter short or empty text
+      if (!text || text.length < MIN_TEXT_LENGTH) return null;
+
+      // Simple deduplication: check first 150 chars
+      const fingerprint = text.substring(0, 150).toLowerCase().replace(/\s+/g, " ");
+      if (seen.has(fingerprint)) return null;
+      seen.add(fingerprint);
+
+      // Extract channel from metadata or path
+      const channel = md.channel || (md.source || md.file || "").match(/@[\w]+/)?.[0] || "unknown";
+
+      // Get display name and speaker from mappings
+      const displayName = CHANNEL_DISPLAY_NAMES[channel] || channel.replace(/^@/, "");
+      const speaker = md.speaker !== "unknown" && md.speaker
+        ? md.speaker
+        : CHANNEL_SPEAKERS[channel] || "unknown";
+
+      // Get priority for sorting
+      const priority = SOURCE_PRIORITY[channel] || 10;
 
       return {
         text,
-        channel: md.channel || (md.source || md.file || "").match(/@[\w]+/)?.[0] || "unknown",
-        speaker: md.speaker || "unknown",
+        channel,
+        displayName,
+        speaker,
         title: md.title || "unknown",
         source: md.source || md.file || "unknown",
-        score: Math.round((m.score || 0) * 1000) / 1000
+        score: Math.round((m.score || 0) * 1000) / 1000,
+        priority
       };
     })
     .filter(Boolean)
+    // Sort by priority first, then by score
+    .sort((a, b) => (a.priority - b.priority) || (b.score - a.score))
     .slice(0, CONFIG.maxQuotes);
 }
 
@@ -183,22 +295,22 @@ function buildPrompt(question, quotes) {
   const evidence = quotes
     .map((q, i) => {
       const speaker = q.speaker !== "unknown" ? q.speaker : null;
-      const channel = q.channel !== "unknown" ? q.channel : null;
+      const showName = q.displayName || q.channel.replace(/^@/, "");
       const title = q.title !== "unknown" ? q.title : null;
 
-      // Build attribution line
+      // Build attribution line using display names
       let attribution = "";
-      if (speaker && channel) {
-        attribution = `${speaker} on ${channel}`;
+      if (speaker && showName) {
+        attribution = `${speaker} on ${showName}`;
       } else if (speaker) {
         attribution = speaker;
-      } else if (channel) {
-        attribution = channel;
+      } else if (showName) {
+        attribution = showName;
       } else {
         attribution = "Unknown source";
       }
 
-      if (title) {
+      if (title && title !== showName) {
         attribution += ` — "${title}"`;
       }
 
@@ -208,10 +320,10 @@ function buildPrompt(question, quotes) {
 
   return `Question: ${question}
 
-EVIDENCE (cite these sources by name, channel, and episode when answering):
+EVIDENCE (cite these sources by their show name, speaker, and episode when answering):
 ${evidence}
 
-Remember: Paraphrase the question first, credit your sources fully (speaker + podcast + episode), then answer.`;
+Remember: Paraphrase the question first, credit your sources fully (speaker + show/podcast name + episode title), then answer.`;
 }
 
 // ─── Endpoints ───────────────────────────────────────────────
@@ -259,7 +371,10 @@ app.post("/ask", async (req, res) => {
     // Raw quotes mode
     if (mode === "quotes") {
       const answer = quotes
-        .map((q, i) => `${i + 1}) "${q.text}"\n   — ${q.speaker !== "unknown" ? q.speaker : q.channel}`)
+        .map((q, i) => {
+          const attr = q.speaker !== "unknown" ? `${q.speaker} on ${q.displayName}` : q.displayName;
+          return `${i + 1}) "${q.text}"\n   — ${attr}`;
+        })
         .join("\n\n");
       return res.json({ answer, sources: quotes, mode: "quotes", timing: Date.now() - start });
     }
@@ -273,7 +388,7 @@ app.post("/ask", async (req, res) => {
     res.json({
       answer,
       sources: quotes,
-      attribution: [...new Set(quotes.map(q => q.channel))].filter(c => c !== "unknown"),
+      attribution: [...new Set(quotes.map(q => q.displayName))].filter(c => c !== "unknown"),
       mode: "synthesized",
       timing: Date.now() - start
     });

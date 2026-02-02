@@ -53,7 +53,7 @@ export async function askCoach(payload) {
       answer,
       sources: quotes.map(q => ({
         speaker: q.speaker,
-        channel: q.channel,
+        channel: q.displayName || q.channel,
         title: q.title
       }))
     };
@@ -116,25 +116,103 @@ async function searchPinecone(vector) {
 }
 
 /* ============================================================
+   CHANNEL & SPEAKER MAPPINGS
+============================================================ */
+const CHANNEL_DISPLAY_NAMES = {
+  "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
+  "@rxmuscle": "RXMuscle",
+  "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  "@MorePlatesMoreDates": "More Plates More Dates",
+  "@vigoroussteve": "Vigorous Steve",
+  "@LeoandLongevity": "Leo and Longevity",
+  "@AnabolicDoc": "The Anabolic Doc",
+  "@TonyHuge": "Enhanced Athlete",
+  "@GregDoucette": "Greg Doucette",
+  "@JeffNippard": "Jeff Nippard",
+  "@RenaissancePeriodization": "Renaissance Periodization",
+  "@Biolayne": "Biolayne",
+  "@hubermanlab": "Huberman Lab",
+  "@AndrewHuberman": "Huberman Lab",
+  "@PeterAttiaMD": "The Peter Attia Drive",
+  "@FoundMyFitness": "Found My Fitness",
+  "@PubMed": "PubMed Research",
+  "@ClinicalTrials": "ClinicalTrials.gov",
+  "@mountainabordog1": "Mountain Dog (John Meadows)",
+  "@AthleanX": "Athlean-X",
+  "@SquatUniversity": "Squat University",
+  "@NinjaNerdOfficial": "Ninja Nerd",
+  "@MedCram": "MedCram"
+};
+
+const CHANNEL_SPEAKERS = {
+  "@ThinkBIGBodybuilding": "Dave Palumbo",
+  "@rxmuscle": "Dave Palumbo",
+  "@MorePlatesMoreDates": "Derek (MPMD)",
+  "@vigoroussteve": "Vigorous Steve",
+  "@LeoandLongevity": "Leo Rex",
+  "@AnabolicDoc": "Dr. Thomas O'Connor",
+  "@TonyHuge": "Tony Huge",
+  "@GregDoucette": "Greg Doucette",
+  "@JeffNippard": "Jeff Nippard",
+  "@RenaissancePeriodization": "Dr. Mike Israetel",
+  "@Biolayne": "Dr. Layne Norton",
+  "@hubermanlab": "Dr. Andrew Huberman",
+  "@AndrewHuberman": "Dr. Andrew Huberman",
+  "@PeterAttiaMD": "Dr. Peter Attia",
+  "@FoundMyFitness": "Dr. Rhonda Patrick",
+  "@mountainabordog1": "John Meadows",
+  "@AthleanX": "Jeff Cavaliere",
+  "@SquatUniversity": "Dr. Aaron Horschig",
+  "@PubMed": "PubMed Research",
+  "@ClinicalTrials": "ClinicalTrials.gov"
+};
+
+const SOURCE_PRIORITY = {
+  "@ThinkBIGBodybuilding": 1, "@rxmuscle": 1,
+  "@PubMed": 2, "@ClinicalTrials": 2,
+  "@AnabolicDoc": 3, "@MorePlatesMoreDates": 3, "@vigoroussteve": 3,
+  "@hubermanlab": 4, "@PeterAttiaMD": 4, "@FoundMyFitness": 4,
+  "@JeffNippard": 5, "@RenaissancePeriodization": 5, "@Biolayne": 5
+};
+
+/* ============================================================
    EVIDENCE EXTRACTION
 ============================================================ */
 function extractQuotes(matches) {
+  const MIN_TEXT_LENGTH = 100;
+  const seen = new Set();
+
   return matches
     .map(m => {
       const md = m.metadata || {};
-      const text = md.text || md.chunk || md.content || "";
+      const text = (md.text || md.chunk || md.content || "").trim();
 
-      if (!text || text.length < 50) return null;
+      if (!text || text.length < MIN_TEXT_LENGTH) return null;
+
+      // Deduplication
+      const fingerprint = text.substring(0, 150).toLowerCase().replace(/\s+/g, " ");
+      if (seen.has(fingerprint)) return null;
+      seen.add(fingerprint);
+
+      const channel = md.channel || extractChannel(md.source) || "unknown";
+      const displayName = CHANNEL_DISPLAY_NAMES[channel] || channel.replace(/^@/, "");
+      const speaker = md.speaker !== "unknown" && md.speaker
+        ? md.speaker
+        : CHANNEL_SPEAKERS[channel] || "unknown";
+      const priority = SOURCE_PRIORITY[channel] || 10;
 
       return {
-        text: text.substring(0, 1500), // Limit for prompt size
-        channel: md.channel || extractChannel(md.source) || "unknown",
-        speaker: md.speaker || "unknown",
+        text: text.substring(0, 1500),
+        channel,
+        displayName,
+        speaker,
         title: md.title || "unknown",
-        score: m.score || 0
+        score: m.score || 0,
+        priority
       };
     })
     .filter(Boolean)
+    .sort((a, b) => (a.priority - b.priority) || (b.score - a.score))
     .slice(0, CONFIG.maxQuotes);
 }
 
@@ -170,11 +248,11 @@ async function synthesize(question, quotes) {
   const evidence = quotes
     .map((q, i) => {
       const speaker = q.speaker !== "unknown" ? q.speaker : null;
-      const channel = q.channel !== "unknown" ? q.channel : null;
+      const showName = q.displayName || q.channel.replace(/^@/, "");
       const title = q.title !== "unknown" ? q.title : null;
 
-      let attribution = speaker && channel ? `${speaker} on ${channel}` : (speaker || channel || "Unknown");
-      if (title) attribution += ` — "${title}"`;
+      let attribution = speaker && showName ? `${speaker} on ${showName}` : (speaker || showName || "Unknown");
+      if (title && title !== showName) attribution += ` — "${title}"`;
 
       return `[${i + 1}] ${attribution}:\n"${q.text}"`;
     })
@@ -182,10 +260,10 @@ async function synthesize(question, quotes) {
 
   const userPrompt = `Question: ${question}
 
-EVIDENCE (cite sources by speaker, channel, and episode):
+EVIDENCE (cite sources by their show name, speaker, and episode):
 ${evidence}
 
-Remember: Paraphrase the question first, then answer using ONLY the evidence above.`;
+Remember: Paraphrase the question first, credit your sources fully, then answer.`;
 
   const res = await fetch(`${CONFIG.openRouterBase}/chat/completions`, {
     method: "POST",

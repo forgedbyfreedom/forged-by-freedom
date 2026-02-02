@@ -1,5 +1,44 @@
+# Large media files
 ingest/channels/**/large_media_split/**
 ingest/channels/**/*.mp4*
+ingest/channels/**/*.mp3*
+ingest/channels/**/*.wav*
+ingest/channels/**/*.srt
+
+# Logs
 *.log
+ingest/logs/
+
+# Environment
 .venv/
-.venv/
+.env.local
+.env.*.local
+
+# Temp/generated files
+all_channels.txt
+channels.normalized.json
+master_sources.json
+n8n_*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+ingest/_loose_files_backup/
+*.bak
