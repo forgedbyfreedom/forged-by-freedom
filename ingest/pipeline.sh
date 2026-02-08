@@ -32,12 +32,13 @@ if [ -f "$SCRIPT_DIR/../.env" ]; then
     export $(grep -v '^#' "$SCRIPT_DIR/../.env" | xargs)
 fi
 
-# Add common paths for yt-dlp
-export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin"
+# Add common paths for yt-dlp + deno
+export PATH="$HOME/Library/Python/3.12/bin:$PATH:/opt/homebrew/bin:/usr/local/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin"
 
-# Use python module as fallback
-YT_DLP="yt-dlp"
-command -v yt-dlp >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
+# Use Python 3.12 yt-dlp (has latest YouTube extractors + EJS support)
+YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
+[ -x "$YT_DLP" ] || YT_DLP="yt-dlp"
+command -v "$YT_DLP" >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
 
 # ─── Node 1: YouTube Download AUDIO + Whisper Transcribe ─────
 download_and_transcribe() {
@@ -63,6 +64,7 @@ download_and_transcribe() {
         local retry=0 done=false
         while [ $retry -lt $MAX_RETRIES ] && [ "$done" = false ]; do
             if $YT_DLP \
+                --cookies-from-browser chrome \
                 -x --audio-format mp3 --audio-quality 64K \
                 --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
                 --ignore-errors --no-warnings \
@@ -125,6 +127,7 @@ download_subtitles_only() {
         log "[$count] $channel_name"
 
         if $YT_DLP \
+            --cookies-from-browser chrome \
             --skip-download \
             --write-subs --write-auto-subs \
             --sub-lang en \
