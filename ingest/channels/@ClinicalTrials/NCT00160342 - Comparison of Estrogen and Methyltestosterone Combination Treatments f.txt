@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT00160342
 Title: Comparison of Estrogen and Methyltestosterone Combination Treatments for Postmenopausal Hot Flushes
-Official Title: A Multi-Center, Double-Blind, Placebo-Controlled Comparison of Multiple Doses of Esterified Estrogens and Methyltestosterone, in Combination and Alone, in Relieving Vasomotor Symptoms in Postmenopausal Women
+Official Title: A Multi-Center, Double-Blind, Placebo-Controlled Comparison of Multiple Doses of esterified Estrogens and Methyltestosterone, in Combination and Alone, in Relieving Vasomotor Symptoms in Postmenopausal Women
 Status: COMPLETED
 Phase: PHASE2
 Study Type: INTERVENTIONAL
@@ -22,11 +22,11 @@ PRIMARY OUTCOMES:
   - Mean change in severity of moderate to severe VMS from baseline to Week 12
 
 INTERVENTIONS:
-  - DRUG: Esterified Estrogens (EE) and Methyltestosterone (MT)
-  - DRUG: Esterified Estrogens (EE) and Methyltestosterone (MT)
-  - DRUG: Esterified Estrogens (EE) and Methyltestosterone (MT)
-  - DRUG: Esterified Estrogens (EE) and Methyltestosterone (MT)
-  - DRUG: Esterified Estrogens (EE) and Methyltestosterone (MT)
+  - DRUG: esterified Estrogens (EE) and Methyltestosterone (MT)
+  - DRUG: esterified Estrogens (EE) and Methyltestosterone (MT)
+  - DRUG: esterified Estrogens (EE) and Methyltestosterone (MT)
+  - DRUG: esterified Estrogens (EE) and Methyltestosterone (MT)
+  - DRUG: esterified Estrogens (EE) and Methyltestosterone (MT)
 
 ELIGIBILITY:
 Age: 45 Years to 65 Years

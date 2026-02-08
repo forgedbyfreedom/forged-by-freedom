@@ -10,7 +10,7 @@ Enrollment: 13
 Topic: omega 3 exercise
 
 SUMMARY:
-This is a prospective parallel group, double-blinded randomized controlled trial. Subjects are randomized into two groups - the intervention group and waitlist control group. Subjects received resistance, aerobic, flexibility and balance exercise training; and nutritional supplement containing β-hydroxy β-methylbutyrate (HMB). The intervention group would first receive the intervention during the 12-week study period. Meanwhile, the waitlist control group would receive 12 weeks of conventional care. After the study period, they would receive the same intervention.
+This is a prospective parallel group, double-blinded randomized controlled trial. Subjects are randomized into two groups - the intervention group and waitlist control group. Subjects received resistance, aerobic, flexibility and balance exercise trening; and nutritional supplement containing β-hydroxy β-methylbutyrate (HMB). The intervention group would first receive the intervention during the 12-week study period. Meanwhile, the waitlist control group would receive 12 weeks of conventionALCARe. After the study period, they would receive the same intervention.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -20,7 +20,7 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: β-hydroxy β-methylbutyrate (HMB)
-  - BEHAVIORAL: Resistance, aerobic, flexibility and balance exercise training
+  - BEHAVIORAL: Resistance, aerobic, flexibility and balance exercise trening
 
 ELIGIBILITY:
 Age:  to 

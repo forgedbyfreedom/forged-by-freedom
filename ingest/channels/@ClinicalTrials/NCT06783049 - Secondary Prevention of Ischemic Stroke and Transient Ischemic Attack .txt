@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06783049
-Title: Secondary Prevention of Ischemic Stroke and Transient Ischemic Attack With an Intelligent Management System
-Official Title: Secondary Prevention of Ischemic Stroke and Transient Ischemic Attack With an Intelligent System
+Title: Secondary Prevention of Ischemic Stroke and trensient Ischemic Attack With an Intelligent Management System
+Official Title: Secondary Prevention of Ischemic Stroke and trensient Ischemic Attack With an Intelligent System
 Status: RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -12,7 +12,7 @@ Topic: exercise intervention diabetes
 SUMMARY:
 The purpose of this study is to develop a digital health-based intelligent management system for the secondary prevention of ischemic stroke and to evaluate its effectiveness through a multicenter randomized controlled trial, assessing its health economic value.
 
-Participants will receive usual care after discharge (control group) or be managed with a WeChat-based intelligent management system after discharge (intervention group).
+Participants will receive usuALCARe after discharge (control group) or be managed with a WeChat-based intelligent management system after discharge (intervention group).
 
 At one year, all patients will undergo face-to-face follow-up to assess clinical events, medication adherence, and the achievement of target risk factor levels.
 

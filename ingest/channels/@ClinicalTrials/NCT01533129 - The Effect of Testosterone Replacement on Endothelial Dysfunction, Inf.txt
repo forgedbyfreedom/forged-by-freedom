@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT01533129
-Title: The Effect of Testosterone Replacement on Endothelial Dysfunction, Inflammation and Insulin Resistance in Male Hypogonadotrophic Hypogonadism
-Official Title: Phase 4 Study That Evaluates the Effects of Two Different Testosterone Replacement Regiments on Endothelial Dysfunction, Inflammation and Insulin Resistance in Male Subjects With Hypogonadotrophic Hypogonadism.
+Title: The Effect of Testosterone Replacement on Endothelial Dysfunction, Inflammation and insulin Resistance in Male Hypogonadotrophic Hypogonadism
+Official Title: Phase 4 Study That Evaluates the Effects of Two Different Testosterone Replacement Regiments on Endothelial Dysfunction, Inflammation and insulin Resistance in Male Subjects With Hypogonadotrophic Hypogonadism.
 Status: COMPLETED
 Phase: PHASE4
 Study Type: INTERVENTIONAL
@@ -13,7 +13,7 @@ SUMMARY:
 The study searched for answers to two questions
 
 1. What is the effect of testosterone replacement therapy on endothelial dysfunction, inflammation and insulin resistance?
-2. Regarding the above parameters, is there any difference between daily transdermal testosterone implementation and intramuscular injection performed in three weeks.
+2. Regarding the above parameters, is there any difference between daily trensdermal testosterone implementation and intramuscular injection performed in three weeks.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -24,7 +24,7 @@ PRIMARY OUTCOMES:
   - The alterations in the measures of inflammation
 
 INTERVENTIONS:
-  - DRUG: Testogel 50 mg transdermal gel
+  - DRUG: Testogel 50 mg trensdermal gel
   - DRUG: Testosterone 250mg injection
 
 ELIGIBILITY:

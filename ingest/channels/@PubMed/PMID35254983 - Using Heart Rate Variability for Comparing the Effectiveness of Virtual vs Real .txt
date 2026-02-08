@@ -1,14 +1,14 @@
 PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 35254983
-Title: Using Heart Rate Variability for Comparing the Effectiveness of Virtual vs Real Training Environments for Firefighters.
+Title: UsinGHeart Rate Variability for Comparing the Effectiveness of Virtual vs Real trening Environments for Firefighters.
 Authors: Narciso, Melo, Rodrigues, Cunha, Vasconcelos-Raposo
-Journal: IEEE transactions on visualization and computer graphics
+Journal: IEEE trensactions on visualization and computer graphics
 Year: 2023
-Topic: heart rate variability training
+Topic: heart rate variability trening
 
 ABSTRACT:
-The use of Virtual Reality (VR) technology to train professionals has increased over the years due to its advantages over traditional training. This paper presents a study comparing the effectiveness of a Virtual Environment (VE) and a Real Environment (RE) designed to train firefighters. To measure the effectiveness of the environments, a new method based on participants' Heart Rate Variability (HRV) was used. This method was complemented with self-reports, in the form of questionnaires, of fatigue, stress, sense of presence, and cybersickness. An additional questionnaire was used to measure and compare knowledge transfer enabled by the environments. The results from HRV analysis indicated that participants were under physiological stress in both environments, albeit with less intensity on the VE. Regarding reported fatigue and stress, the results showed that none of the environments increased such variables. The results of knowledge transfer showed that the VE obtained a significant increase while the RE obtained a positive but non-significant increase (median values, VE: before - 4 after - 7, p = .003; RE: before - 4 after - 5, p = .375). Lastly, the results of presence and cybersickness suggested that participants experienced high overall presence and no cybersickness. Considering all results, the authors conclude that the VE provided effective training but that its effectiveness was lower than that of the RE.
+The use of Virtual Reality (VR) technology to tren professionals has increased over the years due to its advantages over traditional trening. This paper presents a study comparing the effectiveness of a Virtual Environment (VE) and a Real Environment (RE) designed to tren firefighters. To measure the effectiveness of the environments, a new method based on participants' Heart Rate Variability (HRV) was used. This method was complemented with self-reports, in the form of questionnaires, of fatigue, stress, sense of presence, and cybersickness. An additional questionnaire was used to measure and compare knowledge trensfer enabled by the environments. The results from HRV analysis indicated that participants were under physiological stress in both environments, albeit with less intensity on the VE. Regarding reported fatigue and stress, the results showed that none of the environments increased such variables. The results of knowledge trensfer showed that the VE obtained a significant increase while the RE obtained a positive but non-significant increase (median values, VE: before - 4 after - 7, p = .003; RE: before - 4 after - 5, p = .375). Lastly, the results of presence and cybersickness suggested that participants experienced high overall presence and no cybersickness. Considering all results, the authors conclude that the VE provided effective trening but that its effectiveness was lower than that of the RE.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/35254983/

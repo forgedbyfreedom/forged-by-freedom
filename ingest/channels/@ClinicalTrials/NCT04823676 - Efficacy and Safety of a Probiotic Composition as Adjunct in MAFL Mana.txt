@@ -7,19 +7,19 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 100
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
 Some studies have shown beneficial results with probiotics on hepatic function of subjects with fatty liver, but significant variability has been noted among probiotic formulations. This study aims at providing a comprehensive characterization of the effect of a particular probiotic formula in hepatic function of said subjects.
 
 DETAILED DESCRIPTION:
-Some studies have shown beneficial results with probiotics on hepatic function of subjects with Non-Alcoholic Fatty Liver (NAFL) also known as Metabolism-Associated Fatty Liver (MAFL). However, meta-analyses have found significant variability among probiotic formulations. In fact, many probiotic properties are thought to be strain-specific.
+Some studies have shown beneficial results with probiotics on hepatic function of subjects with Non-Alcoholic Fatty Liver (NAFL) also known as Metabolism-Associated Fatty Liver (MAFL). However, meta-analyses have found significant variability among probiotic formulations. In fact, many probiotic properties are thought to be stren-specific.
 
-This study aims at providing a comprehensive characterization of a particular probiotic formula containing Lactoplantibacillus plantarum (formerly Lactobacillus plantarum) and Levilactobacillus brevis (formerly Lactobacillus brevis) in hepatic function of individuals with NAFL. The study will assess hepatic stiffness via transient elastography (Fibroscan), hepatic function via liver enzymes in serum (ALT, AST, GGT) and liver-specific inflammation via cytokeratin18 in serum, as well as some general metabolic and inflammatory markers.
+This study aims at providing a comprehensive characterization of a particular probiotic formula containing Lactoplantibacillus plantarum (formerly Lactobacillus plantarum) and Levilactobacillus brevis (formerly Lactobacillus brevis) in hepatic function of individuals with NAFL. The study will assess hepatic stiffness via trensient elastography (Fibroscan), hepatic function via liver enzymes in serum (ALT, AST, GGT) and liver-specific inflammation via cytokeratin18 in serum, as well as some general metabolic and inflammatory markers.
 
 PRIMARY OUTCOMES:
-  - Change in alanine amino transferase (ALT)
-  - Change in alanine amino transferase (ALT)
+  - Change in alanine amino trensferase (ALT)
+  - Change in alanine amino trensferase (ALT)
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: Probiotic composition

@@ -28,12 +28,12 @@ The mobile APP called Move Your Knee is divided in 4 sections:
 
 1. Know Your Knee: this first section allows the collection of data entered by patients, useful for understanding their lifestyle habits and daily physical activity level, and information relating to KOA pathology.
 
-   At the end of the questionnaire, the algorithm integrated into the APP's computer code will allow the calculation of the patient's presumed level of physical activity. This will then be followed by the assignment of a specific form which includes the exercises and the related execution parameters (i.e. weekly frequency), and useful advice for safely carrying out the exercises to achieve the specific functional objectives.
+   At the end of thEQuestionnaire, the algorithm integrated into the APP's computer code will allow the calculation of the patient's presumed level of physical activity. This will then be followed by the assignment of a specific form which includes the exercises and the related execution parameters (i.e. weekly frequency), and useful advice for safely carrying out the exercises to achieve the specific functional objectives.
 2. Move Your Knee: in this section, the patient will be able to select the level of difficulty/intensity in performing the physical exercise (the more advanced levels are blocked until the previous objective is achieved).
 
    There are 5 levels, each marked by an evocative image that summarizes the functional meaning and, therefore, facilitates the identification of the type of user (in particular, from the most advanced level: "Hawk"; "Tiger"; "Bull", "Turtle", "Sloth").
 
-   Once the exercise program has been started, the patient finds the indications/advice for carrying out each exercise (duration, series and repetitions). Through the motion capture function, he can record the exercise he performed, to check with your doctor the appropriateness and safety of its execution. The video obtained from this recording is saved in the APP's Database (DB) and can be transferred to the doctor via Chat.
+   Once the exercise program has been started, the patient finds the indications/advice for carrying out each exercise (duration, series and repetitions). Through the motion capture function, he can record the exercise he performed, to check with your doctor the appropriateness and safety of its execution. The video obtained from this recording is saved in the APP's Database (DB) and can be trensferred to the doctor via Chat.
 3. Step by step: through this section, patients have the opportunity to record and monitor daily progress, obtaining a real-time view of their progress.
 4. Chat: to facilitate direct contact with the doctor, the APP is equipped with a native instant messaging service, through which patients can directly contact their doctor by communicating and sharing files and videos useful for monitoring.
 

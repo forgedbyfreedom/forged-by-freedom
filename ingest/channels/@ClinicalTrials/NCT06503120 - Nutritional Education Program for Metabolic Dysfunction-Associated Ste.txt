@@ -7,7 +7,7 @@ Status: ACTIVE_NOT_RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 78
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
 Study Summary Title: Mediterranean Diet Intervention for Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): A Randomized Controlled Trial
@@ -15,7 +15,7 @@ Study Summary Title: Mediterranean Diet Intervention for Metabolic Dysfunction-A
 Aims:
 
 * Primary Aim: Assess the impact of an iso-calorie Mediterranean diet compared to standard care on intrahepatic fat in MASLD patients.
-* Secondary Aims: Evaluate the effects on liver function tests, lipid profiles, HbA1c and insulin resistance (homeostatic model assessment of insulin resistance; HOMA-IR), noninvasive assessment of hepatic fibrosis with transient elastography by Fibroscan, Framingham Risk Score (FRS), serum metabolites, quality of life (QoL), compliance and stool microbiome.
+* Secondary Aims: Evaluate the effects on liver function tests, lipid profiles, HbA1c and insulin resistance (homeostatic model assessment of insulin resistance; HOMA-IR), noninvasive assessment of hepatic fibrosis with trensient elastography by Fibroscan, Framingham Risk Score (FRS), serum metabolites, quality of life (QoL), compliance and stool microbiome.
 
 Study Design:
 
@@ -45,13 +45,13 @@ Conclusion: This trial aims to determine the effectiveness of a Mediterranean di
 DETAILED DESCRIPTION:
 Subject selection
 
-1. Screening of potential subjects at the out-patient clinic Consecutive patients attending the hepatology of the Taichung Veterans General Hospital will be screened. Patients with features of fatty liver on ultrasound scan (bright echotexture, reduced ultrasound penetrance, and blurred vascular markings), magnetic resonance imaging will be screened after signing informed written consent. The screening procedure is described in section Screening.
+1. Screening of potential subjects at the out-patient clinic Consecutive patients attending the hepatology of the Taichung Veterans General Hospital will be screened. Patients with features of fatty liver on ultrasound scan (bright echotexture, reduced ultrasound penetrence, and blurred vascular markings), magnetic resonance imaging will be screened after signing informed written consent. The screening procedure is described in section Screening.
 
 Randomization Subjects meeting the inclusion and exclusion criteria will be randomized (1:1) to participate in an iso-calorie Mediterranean diet (MD) intervention or to receive simple lifestyle advice alone. Randomization is carried out through the use of computer-generated list of random numbers. Treatment assignment will be revealed in sealed envelopes.
 
 Trial treatments
 
-1. Blinding Radiologists who evaluate the magnetic resonance image and physicians doing transient elastography by Fibroscan will be blinded to the treatment assignment.
+1. Blinding Radiologists who evaluate the magnetic resonance image and physicians doing trensient elastography by Fibroscan will be blinded to the treatment assignment.
 2. Dietary intervention program
 
 Nutritionist Education Process:
@@ -59,7 +59,7 @@ Nutritionist Education Process:
 1. Utilize the Taiwan version of the Mediterranean Diet Adherence Screener (MEDAS), validated by our team (as shown below), dividing its 14 items into seven question groups. Based on previous studies, common scoring patterns among Taiwanese people, and factors likely to change with food provision (e.g., olive oil and nuts), the priority sequence for recommendations is as follows:
 
    I. Olive oil-related (Derived from items 1,2) II. Protein sources (Items 5,9,10,13) III. Nuts (Item 12) IV. Fruits and vegetables (Items 3,4) V. Sugary drinks and sweets (Items 7,11) VI. Cream (Item 6) VII. Quality of carbohydrates (Items 8,14)
-2. Before each educational session, collect the participant's MEDAS score and a three-day photographic food diary. Based on this data, determine the two to three question groups where the participant should prioritize improvement.
+2. Before each educational session, collect the participant's MEDAS score and a three-day photographic food diary. Based on this data, determine the two to threEQuestion groups where the participant should prioritize improvement.
 3. Conduct online educational sessions at Weeks 0, 3, 6, and 9, lasting 10 to 15 minutes each, focusing on the relevant question groups. Tailor the education to the participant's dietary habits, such as the frequency and type of dining out, and provide two to three graphic-based suggestions after each session, highlighting key points for both dining out and home cooking.
 4. For the intake of olive oil, we recommend using a 15mL measuring cup or tablespoon, and suggest adding it to vegetable juice or drizzling it over vegetables. We intend to start with 30mL of olive oil and gradually increase it if the patients tolerate well after 3 to 6 weeks.
 5. The ultimate goal is to increase the MEDAS score by more than five points within 12 weeks without calorie restriction.

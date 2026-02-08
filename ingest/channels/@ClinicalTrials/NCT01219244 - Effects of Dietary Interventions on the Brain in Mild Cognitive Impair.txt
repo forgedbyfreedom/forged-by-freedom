@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT01219244
 Title: Effects of Dietary Interventions on the Brain in Mild Cognitive Impairment (MCI)
-Official Title: Enhancing Memory Functions in Patients With Mild Cognitive Impairment by Dietary Interventions and in Combination With Exercise and Cognitive Training - Proof of Concept and Mechanisms
+Official Title: Enhancing Memory Functions in Patients With Mild Cognitive Impairment by Dietary Interventions and in Combination With Exercise and Cognitive trening - Proof of Concept and Mechanisms
 Status: COMPLETED
 Phase: PHASE2, PHASE3
 Study Type: INTERVENTIONAL
@@ -25,7 +25,7 @@ INTERVENTIONS:
   - BEHAVIORAL: omega-3 supplementation
   - BEHAVIORAL: resveratrol supplementation
   - BEHAVIORAL: Placebo
-  - BEHAVIORAL: 2nd step: intervention + physical / cognitive training
+  - BEHAVIORAL: 2nd step: intervention + physical / cognitive trening
 
 ELIGIBILITY:
 Age: 50 Years to 80 Years

@@ -13,15 +13,15 @@ SUMMARY:
 To determine whether the home telerehabilitation therapy is feasible and lessens caregiver burden in chronic stroke patients with and without vascular dementia (VaD)
 
 DETAILED DESCRIPTION:
-This is a controlled evaluator masked parallel study of chronic (\>6mo from stroke onset) ischemic or hemorrhagic stroke patients diagnosed with and without vascular dementia to test the feasibility and effect of remote rehabilitation therapy targeting the weaker arm compared to usual care. All patients will undergo baseline evaluation, then usual care for 1 month followed by a remote telerehabilitation treatment for one month, followed by an evaluation 1 month after the completion of treatment.
+This is a controlled evaluator masked parallel study of chronic (\>6mo from stroke onset) ischemic or hemorrhagic stroke patients diagnosed with and without vascular dementia to test the feasibility and effect of remote rehabilitation therapy targeting the weaker arm compared to usuALCARe. All patients will undergo baseline evaluation, then usuALCARe for 1 month followed by a remote telerehabilitation treatment for one month, followed by an evaluation 1 month after the completion of treatment.
 
 Research procedures:
 
 Subject Recruitment/Screening: Participants will be recruited from the PI's stroke recovery specialty clinic, and the Houston Methodist Hospital system by flyers and educating clinicians about the proposed study and the patient requirements. Prospective participants may also be identified through mining electronic medical records for ICD-9 and ICD-10 codes for stroke and hemiparesis for potentially eligible participants. Participants that appear to meet eligibility criteria based on the phone screening and medical record review will be invited to participate in an in-person screening session to ensure that they met the full inclusion criteria prior to being enrolled in the study.
 
-Throughout all study visits subjects will be monitored for safety, comfort and any adverse events by trained study staff.
+Throughout all study visits subjects will be monitored for safety, comfort and any adverse events by trened study staff.
 
-Initial Evaluation/Dependent Measures: The subject's initial evaluation will include questionnaires and impairment and functional scales. We will record demographic information, brain imaging, stroke history and medical history and medications from electronic medical records. We will store the deidentified brain imaging in XNAT under a study identifier on the secure server available at HMH.
+Initial Evaluation/Dependent Measures: The subject's initial evaluation will includEQuestionnaires and impairment and functional scales. We will record demographic information, brain imaging, stroke history and medical history and medications from electronic medical records. We will store the deidentified brain imaging in XNAT under a study identifier on the secure server available at HMH.
 
 Intervention:
 

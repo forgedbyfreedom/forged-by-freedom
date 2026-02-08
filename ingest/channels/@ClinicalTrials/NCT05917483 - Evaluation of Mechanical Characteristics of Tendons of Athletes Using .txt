@@ -10,13 +10,13 @@ Enrollment: 10
 Topic: tendon injury
 
 SUMMARY:
-The investigators analyzed the strain of the rotator cuff tendon of baseball pitchers obtained using ultrasonography and compared the change in peak tendon strain before and after the regular season.
+The investigators analyzed the stren of the rotator cuff tendon of baseball pitchers obtained using ultrasonography and compared the change in peak tendon stren before and after the regular season.
 
 DETAILED DESCRIPTION:
 Not provided
 
 PRIMARY OUTCOMES:
-  - Peak tendon strain
+  - Peak tendon stren
 
 INTERVENTIONS:
   - DIAGNOSTIC_TEST: Ultrasonography

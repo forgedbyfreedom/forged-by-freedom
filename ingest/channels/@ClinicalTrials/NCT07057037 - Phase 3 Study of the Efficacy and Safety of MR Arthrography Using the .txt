@@ -24,7 +24,7 @@ DETAILED DESCRIPTION:
 Not provided
 
 PRIMARY OUTCOMES:
-  - Qualitative Image Quality Metrics (Distension, Contrast, Sharpness) to Be Evaluated by Independent Central Readers
+  - Qualitative ImagEQuality Metrics (Distension, Contrast, Sharpness) to Be Evaluated by Independent Central Readers
 
 INTERVENTIONS:
   - DRUG: NEMO-103 Injection

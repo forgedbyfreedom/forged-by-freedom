@@ -10,10 +10,10 @@ Enrollment: 45
 Topic: sports nutrition
 
 SUMMARY:
-The purpose of this study is to examine the effect of long-term carbohydrate periodization protocols on sleep architecture, sleep quality, daytime sleepiness, physical performance, body composition, gut microbiome, and miRNA in healthy trained individuals.
+The purpose of this study is to examine the effect of long-term carbohydrate periodization protocols on sleep architecture, sleep quality, daytime sleepiness, physical performance, body composition, gut microbiome, and miRNA in healthy trened individuals.
 
 DETAILED DESCRIPTION:
-Athletic populations have been particularly susceptible to sleep inadequacies, experience several sleep issues, and fall below the age-specific sleep recommendations. However, it is well demonstrated that exercise does not impair sleep by itself, and furthermore, acute post-exercise nutrition could elevate the exercise-induced sleep-optimizing effect, with further benefits for the next physical performance. In line with these findings, in a metanalysis of clinical trials, it was shown that pre-bed carbohydrate availability resulted in significant alterations in sleep architecture. It is of utmost importance to highlight that throughout this metanalysis, it was revealed that no long-term nutrition intervention for sleep optimization has been studied yet. These data raise the question of whether a long-term carbohydrate periodization protocol could optimize sleep and alter gut function in a way that athletic performance will be also enhanced. This would allow elucidating further potential interrelations and biological pathways underlying these adaptations.
+Athletic populations have been particularly susceptible to sleep inadequacies, experience several sleep issues, and fall below the age-specific sleep recommendations. However, it is well demonstrated that exercise does not impair sleep by itself, and furthermore, acute post-exercise nutrition could elevate the exercise-induced sleep-optimizing effect, with further benefits for the next physical performance. In line with these findings, in a metanalysis of clinical trials, it was shown that pre-bed carbohydrate availability resulted in significant alterations in sleep architecture. It is of utmost importance to highlight that throughout this metanalysis, it was revealed that no long-term nutrition intervention for sleep optimization has been studied yet. These data raise thEQuestion of whether a long-term carbohydrate periodization protocol could optimize sleep and alter gut function in a way that athletic performance will be also enhanced. This would allow elucidating further potential interrelations and biological pathways underlying these adaptations.
 
 PRIMARY OUTCOMES:
   - Sleep Efficiency
@@ -22,7 +22,7 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - BEHAVIORAL: Evening LGI Carbohydrate Consumption Group
-  - BEHAVIORAL: Evening HGI Carbohydrate Consumption
+  - BEHAVIORAL: EveninGHGI Carbohydrate Consumption
   - BEHAVIORAL: Evening NO-CHO Carbohydrate Consumption
 
 ELIGIBILITY:

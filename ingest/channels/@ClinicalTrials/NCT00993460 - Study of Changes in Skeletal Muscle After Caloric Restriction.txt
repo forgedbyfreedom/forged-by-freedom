@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT00993460
 Title: Study of Changes in Skeletal Muscle After Caloric Restriction
-Official Title: Diacylglycerols and Insulin Action in Skeletal Muscle Upon Caloric Restriction
+Official Title: Diacylglycerols and insulin Action in Skeletal Muscle Upon Caloric Restriction
 Status: ACTIVE_NOT_RECRUITING
 Phase: N/A
 Study Type: OBSERVATIONAL
@@ -15,10 +15,10 @@ Research has shown that fat stored within muscles affects the muscle's sensitivi
 DETAILED DESCRIPTION:
 We hypothesize that in a setting of surgically-induced weight loss decrements in select DAGs result in improved glucose utilization, altered insulin signaling and decreased inflammatory responses. We propose to examine the impact of molecular DAG species accumulation on glucose utilization, insulin signaling and inflammation in skeletal muscle from morbidly obese subjects before/after 10% weight loss facilitated by Roux-en-Y Gastric Bypass (RYGB). We will compare these results to those from a control, normal weight cohort
 
-The detected differences in DAG molecular species, insulin action, inflammatory responses between normal and obese subjects (before/after weight loss) will emphasize pathways coordinately altered as a consequence of adiposity and RYGB surgery. The primary endpoints for this study will be: Insulin sensitivity (glucose Rd, insulin levels, DAG mass, DAG species amounts).Secondary endpoints will be: FFA levels, inflammatory cytokine production, and insulin signaling in skeletal muscle.
+The detected differences in DAG molecular species, insulin action, inflammatory responses between normal and obese subjects (before/after weight loss) will emphasize pathways coordinately altered as a consequence of adiposity and RYGB surgery. The primary endpoints for this study will be: insulin sensitivity (glucose Rd, insulin levels, DAG mass, DAG species amounts).Secondary endpoints will be: FFA levels, inflammatory cytokine production, and insulin signaling in skeletal muscle.
 
 PRIMARY OUTCOMES:
-  - UPLC-ESI MS/MS profiling of lipd extracts from muscle biopsies to evaluate effects of gastric bypass induced-caloric restriction on diacylglycerol molecular species accumulation.
+  - UPLC-ESIMS/MS profiling of lipd extracts from muscle biopsies to evaluate effects of gastric bypass induced-caloric restriction on diacylglycerol molecular species accumulation.
 
 INTERVENTIONS:
   Not specified

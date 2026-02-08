@@ -12,7 +12,7 @@ Topic: exercise muscle mass
 SUMMARY:
 The purpose of this research is to find the optimal patterns of functional electrical stimulation (FES) of muscles in the lower legs that will improve walking ability in those who have had a stroke and at the same time ensure walking stability. FES involves applying small electric currents to the nerves, which cause the muscles to contract.
 
-FES research projects vary from simple investigations of the therapeutic effects of exercise on muscle function and skin health, to more complex studies of functional movements such as standing or walking.
+FES research projects vary from simple investigations of the therapeutic effects of exercise on muscle function and skin health, to morecomplex studies of functional movements such as standing or walking.
 
 DETAILED DESCRIPTION:
 The study aims to find the optimal patterns of functional electrical stimulation (FES) of muscles in the lower legs that will improve walking ability in those who have had a stroke and at the same time ensure walking stability will be achieved through an analytical approach comprised of computational models and gait simulations to objectively determine patient-specific patterns of muscle activation. The investigators will develop a computer simulation of the dynamics of hemiplegic gait characterized by unilateral plantarflexor weakness. Then, the investigators will relate the results of the computer model results to real data collected from subjects with known plantarflexor weakness to provide a theoretical basis for improving gait efficiency and stability with FES.

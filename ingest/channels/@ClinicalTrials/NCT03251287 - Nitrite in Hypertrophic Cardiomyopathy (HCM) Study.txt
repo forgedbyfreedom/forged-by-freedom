@@ -24,7 +24,7 @@ INTERVENTIONS:
   - DRUG: Sodium Nitrate
   - DRUG: Placebo
   - DIAGNOSTIC_TEST: Phosphorous Magnetic Resonance Spectroscopy
-  - DIAGNOSTIC_TEST: Exercise Stress Transthoracic Echocardiogram
+  - DIAGNOSTIC_TEST: Exercise Stress trensthoracic Echocardiogram
 
 ELIGIBILITY:
 Age: 18 Years to 80 Years

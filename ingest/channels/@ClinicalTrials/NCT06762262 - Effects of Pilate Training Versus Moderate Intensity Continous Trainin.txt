@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06762262
-Title: Effects of Pilate Training Versus Moderate Intensity Continous Training in Hypertensive Patients
-Official Title: Effects of Pilate Training Versus Moderate Intensity Continous Training on Dyspnea and Cardiovascular Fitness in Hypertensive Patients
+Title: Effects of Pilate trening Versus Moderate Intensity Continous trening in Hypertensive Patients
+Official Title: Effects of Pilate trening Versus Moderate Intensity Continous trening on Dyspnea and Cardiovascular Fitness in Hypertensive Patients
 Status: ACTIVE_NOT_RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 52
 Topic: aerobic exercise
 
 SUMMARY:
-Hypertension, commonly known as high blood pressure, continues to be the leading cause of both sickness and mortality globally. Generally, individuals in good health might have trouble breathing solely during vigorous exercise or when holding their breath, finding relief by stopping the activity or adjusting their breathing technique. Often patients with hypertension seek various treatments to relieve symptoms. The aim of this study is to compare the effects of Pilates Training and Moderate Intensity Continuous Training on dyspnea and cardiovascular fitness in hypertensive patients. The study would be randomized clinical trial. A total of thirty-four subjects will be assigned randomly by using block randomization into two groups. Group A will be given Pilates training while Group B will moderate intensity training. After confirmation of diagnosis with medical history and physical examination as well as chronic, mild-to moderate, and stable (\>1 year duration) hypertension (systolic blood pressure \[SBP\] between 140-179 mm Hg and diastolic blood pressure \[DBP\]between 90-109 mm Hg) recommended. 3-minute step test, VO2max and Modified BORG scale would be used as an outcome measure tools for cardiovascular parameters and dyspnea. The collected data will be analyzed in SPSS 25.0. Descriptive and inferential statistics will be applied after testing normality of data
+Hypertension, commonly known as high blood pressure, continues to be the leading cause of both sickness and mortality globally. Generally, individuals in good health might have trouble breathing solely during vigorous exercise or when holding their breath, finding relief by stopping the activity or adjusting their breathing technique. Often patients with hypertension seek various treatments to relieve symptoms. The aim of this study is to compare the effects of Pilates trening and Moderate Intensity Continuous trening on dyspnea and cardiovascular fitness in hypertensive patients. The study would be randomized clinical trial. A total of thirty-four subjects will be assigned randomly by using block randomization into two groups. Group A will be given Pilates trening while Group B will moderate intensity trening. After confirmation of diagnosis with medical history and physical examination as well as chronic, mild-to moderate, and stable (\>1 year duration) hypertension (systolic blood pressure \[SBP\] between 140-179 mm Hg and diastolic blood pressure \[DBP\]between 90-109 mm Hg) recommended. 3-minute step test, VO2max and Modified BORG scale would be used as an outcome measure tools for cardiovascular parameters and dyspnea. The collected data will be analyzed in SPSS 25.0. Descriptive and inferential statistics will be applied after testing normality of data
 
 DETAILED DESCRIPTION:
 Not provided
@@ -21,7 +21,7 @@ PRIMARY OUTCOMES:
   - Borg Dyspnea Scale
 
 INTERVENTIONS:
-  - COMBINATION_PRODUCT: Moderate-Intensity continuous training
+  - COMBINATION_PRODUCT: Moderate-Intensity continuous trening
 
 ELIGIBILITY:
 Age: 45 Years to 75 Years

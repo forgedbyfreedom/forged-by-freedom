@@ -7,17 +7,17 @@ Status: UNKNOWN
 Phase: N/A
 Study Type: OBSERVATIONAL
 Enrollment: 315
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 SUMMARY:
 This study aims to prospectively investigate the relationship between a number of clinical and biomechanical variables and running-related injuries among a group of novice and recreational runners over a two year time period. To date, the incidence of running injuries among runners is high, with a lack of prospective research investigating the factors related to injury. It is thought that loading in excess of the tissues capabilities may be be a contributing factor to sustaining a running related injury. As such, this study hypothesizes that biomechanical factors may be related to injury.
 
-Healthy participants will perform a battery of clinical tests at baseline, as well as completing a survey that details their injury history and training habits. Kinematic and kinetic motion analysis will be used as participants perform a series of functional movements and a treadmill run. Enrolled participants will be monitored for the occurrence of running-related injuries via email for the duration of the study.
+Healthy participants will perform a battery of clinical tests at baseline, as well as completing a survey that details their injury history and treninGHabits. Kinematic and kinetic motion analysis will be used as participants perform a series of functional movements and a treadmill run. Enrolled participants will be monitored for the occurrence of running-related injuries via email for the duration of the study.
 
 DETAILED DESCRIPTION:
 Recruitment:
 
-Novice and recreational runners will be recruited via emails, posters and social media. A novice runner is defined as a person who has not been running on a regular basis during the last year and completed ≤10km total training volume per week during the preceding year. A recreational runner will be defined as a person who runs a minimum of 10km per week, for at least six months prior to inclusion in the study.
+Novice and recreational runners will be recruited via emails, posters and social media. A novice runner is defined as a person who has not been running on a regular basis during the last year and completed ≤10km total Trening volume per week during the preceding year. A recreational runner will be defined as a person who runs a minimum of 10km per week, for at least six months prior to inclusion in the study.
 
 Study Protocol:
 
@@ -25,7 +25,7 @@ Upon screening for inclusion and exclusion, participants will complete a baselin
 
 1. Survey:
 
-   This survey will be self-reported by each participant. The aim of this survey is to detail each participants history of injuries and training habits. Questions are deigned based on previous survey designs relating to running injuries.
+   This survey will be self-reported by each participant. The aim of this survey is to detail each participants history of injuries and treninGHabits. Questions are deigned based on previous survey designs relating to running injuries.
 2. Battery of clinical tests:
 
    The battery of physical performance tests will include: The foot posture index, the navicular drop, goniometry of the hip and ankle, dynamometry of the hip abductors, hip extensors, knee extensors, knee flexors and plantar flexors.
@@ -33,7 +33,7 @@ Upon screening for inclusion and exclusion, participants will complete a baselin
 
 This will be broken into two components; a functional movement protocol and a treadmill run. During these components, motion will be tracked using wearable inertial sensors (Shimmer, Dublin, Ireland) and two forceplates (AMTI, Watertown, MA, USA). A 17-camera 3D motion analysis system (Vicon, Oxford, United Kingdom) will capture data at a sampling rate of 200 Hz. Reflective markers will be applied to the skin using specific anatomical landmarks to map their location. The functional movement protocol will consist of a series of jumping and landing movements, including double leg and single leg counter movement jumps, unilateral hopping, single leg drop landings and single leg drop jumps. Following this, participants will complete a run to fatigue. Motion analysis data will be captured at the end and start of this run. Fatigue will be determined by a reported rate of perceived exertion score of 17 (very hard) on the BORG Scale and a heart rate of 85% of the heart rate max, as determined by the Karvonen Formula (220-age).
 
-Participants will then resume their normal training regime. Participants will be tracked for injuries via email over the course of the study.
+Participants will then resume their normal trening regime. Participants will be tracked for injuries via email over the course of the study.
 
 PRIMARY OUTCOMES:
   - The occurrence of a running-related injury

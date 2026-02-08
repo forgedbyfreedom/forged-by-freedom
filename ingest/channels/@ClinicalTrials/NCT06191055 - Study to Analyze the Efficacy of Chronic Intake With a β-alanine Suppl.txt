@@ -10,12 +10,12 @@ Enrollment: 75
 Topic: protein supplementation
 
 SUMMARY:
-Randomized, controlled, double-blind, single-center, controlled clinical trial with three parallel arms depending on the product consumed (experimental product dose 1 and dose 2 and placebo product) to measure the efficacy of 28-day consumption of a sustained-release beta alanine on the physiological efficacy of physical performance in recreational cyclists.
+Randomized, controlled, double-blind, single-center, controlled clinical trial with three parallel arms depending on the product consumed (experimental product dose 1 and dose 2 and placebo product) to measure the efficacy of 28-day consumption of a sustained-release beta-alanine on the physiological efficacy of physical performance in recreational cyclists.
 
 DETAILED DESCRIPTION:
 Subjects meeting the selection criteria will be randomly assigned to each of the study groups (investigational product dose 1 or dose 2, or placebo, depending on the group to which they have been assigned).
 
-The product to be consumed is beta alanine. Participants will consume the product for 28 days. They will have to take 4 intakes every three hours, the first intake being two hours after waking up.
+The product to be consumed is beta-alanine. Participants will consume the product for 28 days. They will have to take 4 intakes every three hours, the first intake being two hours after waking up.
 
 The study subjects will have to make 2 visits to the laboratory. Physical performance and physiological changes will be evaluated with a 10-minute time trial. The first test will be performed without product consumption and the second after 28 days of consumption.
 
@@ -24,8 +24,8 @@ PRIMARY OUTCOMES:
   - Distance covered
 
 INTERVENTIONS:
-  - DIETARY_SUPPLEMENT: Beta Alanine high dose
-  - DIETARY_SUPPLEMENT: Beta Alanine low dose
+  - DIETARY_SUPPLEMENT: beta-alanine high dose
+  - DIETARY_SUPPLEMENT: beta-alanine low dose
   - OTHER: Control group
 
 ELIGIBILITY:

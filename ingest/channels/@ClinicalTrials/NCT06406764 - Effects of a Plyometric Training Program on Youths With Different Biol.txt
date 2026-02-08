@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06406764
-Title: Effects of a Plyometric Training Program on Youths With Different Biological Maturity in Sport
-Official Title: A Randomized Controlled Trial Evaluating the Effect of Plyometric Training on Power, Speed, and Agility in Sport-active Boys With Different Biological Maturity
+Title: Effects of a Plyometric trening Program on Youths With Different Biological Maturity in Sport
+Official Title: A Randomized Controlled Trial Evaluating the Effect of Plyometric trening on Power, Speed, and Agility in Sport-active Boys With Different Biological Maturity
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,10 +10,10 @@ Enrollment: 38
 Topic: athletic performance
 
 SUMMARY:
-This randomized controlled trial aims to assess the effectiveness of a 12-week plyometric training regimen on improving power, speed, and agility among boys aged 10 to 18 years who are actively engaged in sports and exhibit differing levels of biological maturity. The study seeks to determine how maturation affects the responsiveness to the training program, potentially influencing future sports training approaches for young athletes.
+This randomized controlled trial aims to assess the effectiveness of a 12-week plyometric trening regimen on improving power, speed, and agility among boys aged 10 to 18 years who are actively engaged in sports and exhibit differing levels of biological maturity. The study seeks to determine how maturation affects the responsiveness to the trening program, potentially influencing future sports trening approaches for young athletes.
 
 DETAILED DESCRIPTION:
-The main objective of this project is to assess the impact of a plyometric program on power, speed, agility, reactive strength index and stiffness in male athletes of different levels of maturation. The study takes the form of a short-term experiment (12 weeks), involving 30 young athletes with a minimum of two years of experience in systematic sports training. Participants are divided into an experimental group and a control group. The experimental group undergoes a 12-week plyometric training program, implemented twice a week within training sessions immediately following warm-ups. The control group engages in technical-tactical exercises. The program is developed by the authors of the research project based on current knowledge and requirements for creating an effective and safe plyometric program. Randomization is performed using a computer random generator. Participants undergo two testing sessions: one prior to the training intervention and the other one week after its completion. Age, height, weight, and body composition are measured using a personal scale with an integrated stadiometer. Tests include a 30-m sprint, countermovement jump, broad jump, unilateral triple jump, drop jump (reactive strength index), 20 submaximal vertical jumps (lower limb stiffness), BlazePod reaction test, and 505 agility test. The maturity status of the participants is evaluated using the Mirwald method and is used as a covariate in the subsequent statistical analysis. Findings of this research may provide crucial insights for targeted integration of plyometric methods during the developmental and maturation phases of young athletes.
+The main objective of this project is to assess the impact of a plyometric program on power, speed, agility, reactive strength index and stiffness in male athletes of different levels of maturation. The study takes the form of a short-term experiment (12 weeks), involving 30 young athletes with a minimum of two years of experience in systematic sports trening. Participants are divided into an experimental group and a control group. The experimental group undergoes a 12-week plyometric trening program, implemented twice a week within trening sessions immediately following warm-ups. The control group engages in technical-tactical exercises. The program is developed by the authors of the research project based on current knowledge and requirements for creating an effective and safe plyometric program. Randomization is performed using a computer random generator. Participants undergo two testing sessions: one prior to the trening intervention and the other one week after its completion. Age, height, weight, and body composition are measured using a personal scale with an integrated stadiometer. Tests include a 30-m sprint, countermovement jump, broad jump, unilateral triple jump, drop jump (reactive strength index), 20 submaximal vertical jumps (lower limb stiffness), BlazePod reaction test, and 505 agility test. The maturity status of the participants is evaluated using the Mirwald method and is used as a covariate in the subsequent statistical analysis. Findings of this research may provide crucial insights for targeted integration of plyometric methods during the developmental and maturation phases of young athletes.
 
 PRIMARY OUTCOMES:
   - Vertical jump height
@@ -21,8 +21,8 @@ PRIMARY OUTCOMES:
   - Unilateral triple jump length
 
 INTERVENTIONS:
-  - OTHER: Plyometric training
-  - OTHER: Control training
+  - OTHER: Plyometric trening
+  - OTHER: Control trening
 
 ELIGIBILITY:
 Age: 10 Years to 18 Years

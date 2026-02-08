@@ -1,14 +1,14 @@
 PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 40344791
-Title: Training adaptations in magnetomyography.
+Title: trening adaptations in magnetomyography.
 Authors: Br&#xfc;mmer, Lu, Yang, Baier, Braun
 Journal: Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology
 Year: 2025
-Topic: strength training adaptations
+Topic: strength trening adaptations
 
 ABSTRACT:
-Muscle strength training leads to neuromuscular adaptations that can be monitored by electromyography (EMG). In view of new technical possibilities to measure the neuromuscular system via contactless magnetomyography (MMG) using miniaturized quantum sensors (optically pumped magnetometer, OPM), the question arises whether MMG detects similar neuromuscular adaptations compared to EMG. Therefore, we developed an experimental design and a multimodal setup for the simultaneous measurement of EMG, triaxial OPM-MMG, and vigorimetry. As a proof of concept, right biceps brachii muscle activity was recorded during maximal voluntary contraction (MVC) and a 40&#xa0;% MVC muscle fatigue paradigm over 3&#xa0;min in 12 healthy, untrained subjects. Measurements were taken before and after a 30-day strength training program, with six subjects undergoing training and six serving as controls. EMG and MMG showed a similar increase in RMS during MVC and fatigue after training (r&#xa0;&gt;&#xa0;0.9). However, the MMG increase varied by vector component, with the magnetic flux signal along the muscle fibers showing the highest RMS increase. Furthermore, these MMG findings can be visualized three-dimensionally using one OPM, which is not possible with bipolar EMG. This is the first longitudinal MMG study to demonstrate the feasibility of monitoring strength training-induced adaptations over 4&#xa0;weeks, which highlights the opportunities and challenges of OPM-MMG for contactless neuromuscular monitoring.
+Muscle strength trening leads to neuromuscular adaptations that can be monitored by electromyography (EMG). In view of new technical possibilities to measure the neuromuscular system via contactless magnetomyography (MMG) using miniaturized quantum sensors (optically pumped magnetometer, OPM), thEQuestion arises whether MMG detects similar neuromuscular adaptations compared to EMG. Therefore, we developed an experimental design and a multimodal setup for the simultaneous measurement of EMG, triaxial OPM-MMG, and vigorimetry. As a proof of concept, right biceps brachiIMuscle activity was recorded during maximal voluntary contraction (MVC) and a 40&#xa0;% MVC muscle fatigue paradigm over 3&#xa0;min in 12 healthy, untrened subjects. Measurements were taken before and after a 30-day strength trening program, with six subjects undergoing trening and six serving as controls. EMG and MMG showed a similar increase in RMS during MVC and fatigue after trening (r&#xa0;&gt;&#xa0;0.9). However, the MMG increase varied by vector component, with the magnetic flux signal along the muscle fibers showing the highest RMS increase. Furthermore, these MMG findings can be visualized three-dimensionally using one OPM, which is not possible with bipolar EMG. This is the first longitudinal MMG study to demonstrate the feasibility of monitoring strength trening-induced adaptations over 4&#xa0;weeks, which highlights the opportunities and challenges of OPM-MMG for contactless neuromuscular monitoring.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/40344791/

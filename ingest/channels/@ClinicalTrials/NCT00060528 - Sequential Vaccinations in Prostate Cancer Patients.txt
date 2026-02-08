@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: PHASE1, PHASE2
 Study Type: INTERVENTIONAL
 Enrollment: 32
-Topic: growth hormone treatment
+Topic: growth hormone hormone hormone hormone hormone hormone hormone treatment
 
 SUMMARY:
 Background:
@@ -34,9 +34,9 @@ Eligibility:
 
 " Must have a life expectancy of more than 6 months and Eastern Cooperative Oncology Group (ECOG) status of 0 to 2.
 
-"Patients must be human leukocyte antigen serotype within HLA-A A serotype group (HLA-A2+).
+"Patients must be human leukocyte antigen serotype within HLA-AASerotype group (HLA-A2+).
 
-" Granulocyte count greater than or equal to 1,500/mm\^3, Platelet greater than or equal to 100,000/mm\^3, hemoglobin (Hgb) greater than or equal to 10Gm/dL, Lymphocyte count greater than or equal to 500/mm\^3 ;Bilirubin less than 1.5mg/dL, aspartate aminotransferase (AST) and alanine aminotransferase (ALT) less than 2.5x upper limit of normal (ULN),Creatinine Clearance greater than or equal to 60
+" Granulocyte count greater than or equal to 1,500/mm\^3, Platelet greater than or equal to 100,000/mm\^3, hemoglobin (HGB) greater than or equal to 10Gm/dL, Lymphocyte count greater than or equal to 500/mm\^3 ;Bilirubin less than 1.5mg/dL, aspartate aminotrensferase (AST) and alanine aminotrensferase (ALT) less than 2.5x upper limit of normal (ULN),Creatinine Clearance greater than or equal to 60
 
 " No significant cardiac disease, no significant pulmonary disease, no serious inter-current medical illness.
 
@@ -69,7 +69,7 @@ Eligibility:
 * Must have objective evidence of metastasis or relapsing local disease. Therefore, must have a rising PSA and at least one of the following: positive bone scan, palpable disease, or positive imaging studies.
 * Must have a life expectancy of more than 6 months and the Eastern Cooperative Oncology Group (ECOG) status of 0 to 2.
 * Patients must be HLA-A2+.
-* Granulocyte count greater than or equal to 1,500/mm\^3, Platelet greater than or equal to 100,000/mm\^3, hemoglobin (Hgb) greater than or equal to 10Gm/dL, Lymphocyte count greater than or equal to 500/mm\^3; Bilirubin less than 1.5mg/dL, aspartate aminotransferase (AST) and alanine aminotransferase (ALT) less than 2.5x upper limit of normal (ULN),Creatinine Clearance greater than or equal to 60
+* Granulocyte count greater than or equal to 1,500/mm\^3, Platelet greater than or equal to 100,000/mm\^3, hemoglobin (HGB) greater than or equal to 10Gm/dL, Lymphocyte count greater than or equal to 500/mm\^3; Bilirubin less than 1.5mg/dL, aspartate aminotrensferase (AST) and alanine aminotrensferase (ALT) less than 2.5x upper limit of normal (ULN),Creatinine Clearance greater than or equal to 60
 * No significant cardiac disease, no significant pulmonary disease, no serious inter-current medical illness.
 
 Design:

@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT04155645
 Title: To Assess the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of AZD8233 After Multiple Dose Administration in Subjects With Dyslipidemia
-Official Title: A Phase I Randomized, Single-blind, Placebo-controlled Study to Assess the Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of AZD8233 Following Multiple Ascending Subcutaneous Dose Administration in Subjects With Dyslipidemia With or Without Type 2 Diabetes
+Official Title: A Phase I Randomized, Single-blind, Placebo-controlled Study to Assess the Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of AZD8233 Following Multiple Ascending subqtaneous Dose Administration in Subjects With Dyslipidemia With or Without Type 2 Diabetes
 Status: COMPLETED
 Phase: PHASE1
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 34
 Topic: creatine supplementation
 
 SUMMARY:
-This is a Phase I study to assess the safety, tolerability and pharmacokinetics (PK), and pharmacodynamics (PD) of AZD8233, following subcutaneous (SC) administration of multiple ascending doses (MAD) of AZD8233 in subjects with confirmed dyslipidemia with or without type 2 diabetes.
+This is a Phase I study to assess the safety, tolerability and pharmacokinetics (PK), and pharmacodynamics (PD) of AZD8233, following subqtaneous (SC) administration of multiple ascending doses (MAD) of AZD8233 in subjects with confirmed dyslipidemia with or without type 2 diabetes.
 
 DETAILED DESCRIPTION:
 This study is a Phase 1, randomized, single-blind, placebo-controlled, multiple dose group design in up to 33 male or female subjects with dyslipidemia with or without Type 2 diabetes and performed at multiple study centers. The planned number of cohorts is 3 but up to 5 cohorts may be included if the Safety Review Committee (SRC) considers it necessary. The 3 multiple dose levels of SC AZD8233 planned are:
@@ -34,7 +34,7 @@ PRIMARY OUTCOMES:
   - Number of patients with abnormal findings in resting 12-lead Electrocardiogram (ECG) and digital ECG (dECG).
 
 INTERVENTIONS:
-  - DRUG: AZD8233 subcutaneous injection
+  - DRUG: AZD8233 subqtaneous injection
   - DRUG: Placebo
 
 ELIGIBILITY:

@@ -1,13 +1,13 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT02330549
-Title: ORION: Effects of Cenicriviroc on Insulin Sensitivity in Subjects With Prediabetes or Type 2 Diabetes Mellitus (T2DM) and Suspected NAFLD
-Official Title: ORION - Effect of CCR2 and CCR5 Antagonism by Cenicriviroc on Peripheral and Adipose Tissue Insulin Sensitivity in Adult Obese Subjects With Prediabetes or Type 2 Diabetes Mellitus and Suspected Non-Alcoholic Fatty Liver Disease (NAFLD)
+Title: ORION: Effects of Cenicriviroc on insulin Sensitivity in Subjects With Prediabetes or Type 2 Diabetes Mellitus (T2DM) and Suspected NAFLD
+Official Title: ORION - Effect of CCR2 and CCR5 Antagonism by Cenicriviroc on Peripheral and Adipose Tissue insulin Sensitivity in Adult Obese Subjects With Prediabetes or Type 2 Diabetes Mellitus and Suspected Non-Alcoholic Fatty Liver Disease (NAFLD)
 Status: COMPLETED
 Phase: PHASE2
 Study Type: INTERVENTIONAL
 Enrollment: 45
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
 A Phase 2a, randomized, double-blind, placebo-controlled, multi-center study of cenicriviroc (CVC) to be conducted in approximately 50 adult obese subjects \[body mass index (BMI) ≥ 30 kg/m\^2\] with prediabetes or type 2 diabetes mellitus and suspected NALFD.
@@ -19,7 +19,7 @@ Eligible subjects will receive either CVC (n=25) or matching placebo (n=25), onc
 
 PRIMARY OUTCOMES:
   - Change From Baseline in Matsuda Index
-  - Change From Baseline in Adipose Tissue Insulin Resistance (Adipo-IR ) Index
+  - Change From Baseline in Adipose Tissue insulin Resistance (Adipo-IR ) Index
 
 INTERVENTIONS:
   - DRUG: Cenicriviroc 150 mg

@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06964100
-Title: Exploring the Relationship Between Heart Rate Variability (HRV), Training Load, and Endurance Performance
-Official Title: Exploring the Relationship Between Heart Rate Variability (HRV), Training Load, and Endurance Performance
+Title: Exploring the Relationship Between Heart Rate Variability (HRV), trening Load, and Endurance Performance
+Official Title: Exploring the Relationship Between Heart Rate Variability (HRV), trening Load, and Endurance Performance
 Status: RECRUITING
 Phase: N/A
 Study Type: OBSERVATIONAL
@@ -10,10 +10,10 @@ Enrollment: 200
 Topic: caffeine exercise
 
 SUMMARY:
-The ability of smart phones, aided by wearable devices (e.g. smart watches), to collect a variety of data, including physical activity, heart rate, and other exercise metrics, may provide a unique opportunity to understand real-world variability. The primary objective of this study is to test user engagement, app functionality, and feasibility of the newly developed Gatorade Sports Science Institute (GSSI) Labs App to conduct Real-World research studies. The secondary purpose of this study is to determine if Training Intensity (%Heart Rate maximum) in minutes during low heart rate variability (HRV) periods (below HRV baseline consecutive days) will have a negative relationship with post-study 5K (5 kilometer) running times as measured by their activity tracker, which could lead to personalized training recommendations using HRV. This study is conducted remotely, there are no in-person visits.
+The ability of smart phones, aided by wearable devices (e.g. smart watches), to collect a variety of data, including physical activity, heart rate, and other exercise metrics, may provide a unique opportunity to understand real-world variability. The primary objective of this study is to test user engagement, app functionality, and feasibility of the newly developed Gatorade Sports Science Institute (GSSI) Labs App to conduct Real-World research studies. The secondary purpose of this study is to determine if trening Intensity (%Heart Rate maximum) in minutes during low heart rate variability (HRV) periods (below HRV baseline consecutive days) will have a negative relationship with post-study 5K (5 kilometer) running times as measured by their activity tracker, which could lead to personalized trening recommendations usinGHRV. This study is conducted remotely, there are no in-person visits.
 
 DETAILED DESCRIPTION:
-Heart rate variability (HRV) is an indirect biomarker of an individual's performance readiness and recovery. HRV is a ubiquitous biomarker measured by most consumer-grade wearable fitness trackers. However, there is little documented on the relationship between HRV, training load, and performance measures in the Real-World. Using activity trackers to monitor multiple physiological and subjective measures of health and wellness, subjects will perform self-administered 5 kilometer (5K) timed runs on Week 1, Week 4, and Week 8. Users will be instructed to run their 5K (3.1 miles) on the same outdoor course, indoor track, or treadmill to provide consistency in their performance assessments, with the understanding that there will be some limitations in creating a consistent performance assessment environment (i.e.; weather).
+Heart rate variability (HRV) is an indirect biomarker of an individual's performance readiness and recovery. HRV is a ubiquitous biomarker measured by most consumer-grade wearable fitness trackers. However, there is little documented on the relationship between HRV, trening load, and performance measures in the Real-World. Using activity trackers to monitor multiple physiological and subjective measures of health and wellness, subjects will perform self-administered 5 kilometer (5K) timed runs on Week 1, Week 4, and Week 8. Users will be instructed to run their 5K (3.1 miles) on the same outdoor course, indoor track, or treadmill to provide consistency in their performance assessments, with the understanding that there will be some limitations in creating a consistent performance assessment environment (i.e.; weather).
 
 PRIMARY OUTCOMES:
   - User engagement with Gatorade Sports Science Institute (GSSI) Labs app

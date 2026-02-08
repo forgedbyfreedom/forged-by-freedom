@@ -7,7 +7,7 @@ Status: WITHDRAWN
 Phase: PHASE1, PHASE2
 Study Type: INTERVENTIONAL
 Enrollment: 0
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
 The aim of the current study is to evaluate the safety and efficay of cilostazol in treatment of patients with fatty liver disease. Several previous reports have shown that cilostazol ameliorates lipid imbalances in NAFLD. Cilostazol appeared to exert beneficial effects against NAFLD
@@ -16,7 +16,7 @@ DETAILED DESCRIPTION:
 Not provided
 
 PRIMARY OUTCOMES:
-  - Hepatic transaminases
+  - Hepatic trensaminases
   - Serum ferritin
 
 INTERVENTIONS:

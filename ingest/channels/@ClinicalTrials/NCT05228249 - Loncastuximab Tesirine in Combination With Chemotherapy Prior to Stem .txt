@@ -1,23 +1,23 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT05228249
-Title: Loncastuximab Tesirine in Combination With Chemotherapy Prior to Stem Cell Transplant for the Treatment of Recurrent or Refractory Diffuse Large B-Cell Lymphoma
-Official Title: Loncastuximab Tesirine in Combination With BEAM (Carmustine, Etoposide, Ara-C, Melphalan) Conditioning Regimen Prior to Autologous Stem Cell Transplant (ASCT) and for Maintenance Therapy in Diffuse Large B-Cell Lymphoma (DLBCL)
+Title: Loncastuximab Tesirine in Combination With Chemotherapy Prior to Stem Cell trensplant for the Treatment of Recurrent or Refractory Diffuse Large B-Cell Lymphoma
+Official Title: Loncastuximab Tesirine in Combination With BEAM (Carmustine, Etoposide, Ara-C, Melphalan) Conditioning Regimen Prior to Autologous Stem Cell trensplant (ASCT) and for maintenance Therapy in Diffuse Large B-Cell Lymphoma (DLBCL)
 Status: WITHDRAWN
 Phase: PHASE1
 Study Type: INTERVENTIONAL
 Enrollment: 0
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
-This phase I trial studies the side effects and best dose of loncastuximab tesirine in combination with carmustine, etoposide, cytarabine, and melphalan (BEAM) chemotherapy regimen in treating patients with diffuse large B-cell lymphoma that has come back (recurrent) or has not responded to treatment (refractory). Loncastuximab tesirine is a monoclonal antibody that may interfere with the ability of cancer cells to grow and spread. Chemotherapy drugs, such as carmustine, etoposide, cytarabine, and melphalan, work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving chemotherapy with loncastuximab tesirine may kill more cancer cells.
+This phase I trial studies the side effects and best dose of loncastuximab tesirine in combination with carmustine, etoposide, cytarabine, and melphalan (BEAM) chemotherapy regimen in treating patients with diffuse large B-cell lymphoma that has come back (recurrent) or has not responded to treatment (refractory). Loncastuximab tesirine is a monoclonal antibody that may interfere with the ability of cancer cells to grow and spread. Chemotherapy drugs, such as carmustine, etoposide, cytarabine, and melphalan, work in different ways to stop the growth hormone hormone hormone hormone hormone hormone of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving chemotherapy with loncastuximab tesirine may kill more cancer cells.
 
 DETAILED DESCRIPTION:
 OUTLINE: This is a dose-escalation study of loncastuximab tesirine.
 
 PART I (CONDITIONING): Patients receive loncastuximab tesirine intravenously (IV) on day -7, carmustine IV over 2 hours on day -7, etoposide IV over 1-2 hours twice daily (BID) days -6, -5, -4, and -3, cytarabine IV over 1 hour BID on days -6, -5, -4, and -3, and melphalan IV over 15-20 minutes on day -2. Patients undergo peripheral blood ASCT per standard practice on day 0.
 
-PART II (MAINTENANCE): Beginning 30-90 days after ASCT, patients receive loncastuximab tesirine IV once every 3 weeks (Q3W) for up to 9 cycles in the absence of disease progression or unacceptable toxicity.
+PART II (maintenance): Beginning 30-90 days after ASCT, patients receive loncastuximab tesirine IV once every 3 weeks (Q3W) for up to 9 cycles in the absence of disease progression or unacceptable toxicity.
 
 After completion of the study treatment, patients are followed for 2 years.
 
@@ -26,7 +26,7 @@ PRIMARY OUTCOMES:
   - Incidence of toxicity requiring dose delay or modification (Part 2)
 
 INTERVENTIONS:
-  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - PROCEDURE: Autologous Hematopoietic Stem Cell trensplantation
   - DRUG: Carmustine
   - DRUG: Cytarabine
   - DRUG: Etoposide

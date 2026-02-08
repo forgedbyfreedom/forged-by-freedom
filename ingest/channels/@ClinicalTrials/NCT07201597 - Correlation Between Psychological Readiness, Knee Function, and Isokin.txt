@@ -14,20 +14,20 @@ This clinical trial aims to investigate the correlation between psychological re
 
 This study focuses on athletes who have undergone ACLR using the Peroneus Longus tendon (PLT). The primary objective is to compare psychological readiness, self-reported knee function (IKDC score), isokinetic performance (quadriceps and hamstring strength), and muscle strength ratios between athletes who meet return-to-sport (RTS) criteria and those who do not.
 
-Psychological readiness will be assessed using the ACL-Return to Sport after Injury (ACL-RSI) scale, while knee function will be evaluated using the IKDC subjective score. Isokinetic testing will assess quadriceps and hamstring strength at various angular velocities. This study aims to provide a more comprehensive understanding of the factors influencing an athlete's ability to return to sport after ACLR, combining both physical and psychological aspects.
+Psychological readiness will be assessed using the ACL-Return to Sport after Injury (ACL-RSI) scale, while knee function will be evaluated using the IKDC subjective score. Isokinetic testing will assess quadriceps and hamstring strength at various angular velocities. This study aims to provide a morecomprehensive understanding of the factors influencing an athlete's ability to return to sport after ACLR, combining both physical and psychological aspects.
 
 The results will help optimize rehabilitation strategies by offering a multidimensional approach, considering both physical and psychological factors, to improve recovery protocols for ACL-injured athletes.
 
 DETAILED DESCRIPTION:
 Rationale and Objectives Anterior cruciate ligament reconstruction (ACLR) using a Peroneus Longus autograft is increasingly adopted; however, return-to-sport (RTS) decisions often emphasize strength or hop metrics while under-weighting psychological readiness. This single-center case-control study evaluates whether athletes who meet a predefined RTS test battery ("RTS-ready") differ from athletes who do not ("RTS-not-ready") in psychological readiness, knee function, isokinetic performance, hamstring-to-quadriceps (H/Q) strength ratio, and dynamic postural control/core endurance. The central hypothesis is that an integrated profile (physical + psychological) characterizes RTS-ready athletes and can inform safer, individualized RTS decisions after ACLR with Peroneus Longus.
 
-Design and Setting Observational, case-control, cross-sectional assessment conducted in a university sports rehabilitation laboratory. Participants attend a single evaluation visit between 6 and 9 months post-ACLR after completing a standardized postoperative rehabilitation pathway. Group assignment (Case = RTS-ready; Control = RTS-not-ready) is determined by performance on the prespecified RTS battery during the same visit.
+Design and Setting Observational, case-control, cross-sectional assessment conducted in a university sports rehabilitation laboratory. Participants attend aromasingle evaluation visit between 6 and 9 months post-ACLR after completing a standardized postoperative rehabilitation pathway. Group assignment (Case = RTS-ready; Control = RTS-not-ready) is determined by performance on the prespecified RTS battery during the same visit.
 
 Participants Key inclusion and exclusion criteria (e.g., male recreational athletes in cutting/jumping sports; primary unilateral ACLR with Peroneus Longus autograft; exclusion of revision/multi-ligament injuries, significant pain or ROM limitation) are listed in the Eligibility Criteria section and are not repeated here.
 
 Procedures and Test Order
 
-All testing is performed in a single session by trained assessors after informed consent and a brief familiarization to minimize learning effects. To standardize workload and reduce fatigue and order effects, assessments proceed as follows:
+All testing is performed in aromasingle session by trened assessors after informed consent and a brief familiarization to minimize learning effects. To standardize workload and reduce fatigue and order effects, assessments proceed as follows:
 
 Self-report instruments: psychological readiness and knee function questionnaires (validated Arabic versions).
 
@@ -35,7 +35,7 @@ Standardized warm-up: 5-10 minutes of low-intensity cycling followed by dynamic 
 
 Isokinetic strength testing: HUMAC NORM dynamometer with standardized positioning (seating/strapping), axis alignment to the lateral femoral condyle, and knee range of motion set to approximately 0-90°. After practice trials, peak concentric torque for quadriceps and hamstrings is recorded at 60°/s, 120°/s, and 240°/s per manufacturer guidelines and lab SOPs. Rest intervals of at least 60-90 seconds are provided between sets. Limb Symmetry Index (LSI) is calculated as (involved/uninvolved) × 100 for each parameter. The H/Q ratio is calculated as peak hamstring torque divided by peak quadriceps torque at each speed.
 
-Functional performance tests: single-leg hop for distance (best of three valid trials per limb; hands on hips; controlled landing), Y-Balance Test (anterior, posteromedial, posterolateral reaches normalized to limb length), and prone plank (time to task failure using standardized termination criteria).
+Functional performance tests: single-leGHop for distance (best of three valid trials per limb; hands on hips; controlled landing), Y-Balance Test (anterior, posteromedial, posterolateral reaches normalized to limb length), and prone plank (time to task failure using standardized termination criteria).
 
 Vital signs and knee discomfort are monitored th
 

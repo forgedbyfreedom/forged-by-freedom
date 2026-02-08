@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT04444349
 Title: Protective Effect of CoQ10 Against Negative Inflammatory Response and Organ Dysfunction in Cardiovascular Surgery (PANDA V)
-Official Title: Protective Effect of Coenzyme Q10 Against Negative Inflammatory Response and Organ Dysfunction in Cardiac and Aortic Surgery (PANDA V): a Randomized Controlled Trial
+Official Title: Protective Effect of CoenzymEQ10 Against Negative Inflammatory Response and Organ Dysfunction in Cardiac and Aortic Surgery (PANDA V): a Randomized Controlled Trial
 Status: RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -19,7 +19,7 @@ PRIMARY OUTCOMES:
   - C-reactive protein
 
 INTERVENTIONS:
-  - DRUG: Coenzyme Q10
+  - DRUG: CoenzymEQ10
   - DIETARY_SUPPLEMENT: Standard Medical Therapy
 
 ELIGIBILITY:

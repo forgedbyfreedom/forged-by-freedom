@@ -2,15 +2,15 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT04136457
 Title: Proteome Remodelling
-Official Title: Proteome Remodelling and Dynamics in Human Skeletal Muscle: Effect of Training
+Official Title: Proteome Remodelling and Dynamics in Human Skeletal Muscle: Effect of trening
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 72
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 SUMMARY:
-The purpose of the project is to investigate the proteome signature dynamics and remodelling in human skeletal muscle induced by exercise training
+The purpose of the project is to investigate the proteome signature dynamics and remodelling in human skeletal muscle induced by exercise trening
 
 DETAILED DESCRIPTION:
 Not provided
@@ -20,9 +20,9 @@ PRIMARY OUTCOMES:
   - Anabolic signaling
 
 INTERVENTIONS:
-  - OTHER: Endurance training
-  - OTHER: Resistance training
-  - OTHER: Sprint training
+  - OTHER: Endurance trening
+  - OTHER: Resistance trening
+  - OTHER: Sprint trening
 
 ELIGIBILITY:
 Age: 18 Years to 45 Years

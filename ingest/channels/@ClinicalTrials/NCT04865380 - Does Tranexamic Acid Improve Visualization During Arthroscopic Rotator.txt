@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT04865380
-Title: Does Tranexamic Acid Improve Visualization During Arthroscopic Rotator Cuff Repair
-Official Title: Does Tranexamic Acid Improve Visualization During Arthroscopic Rotator Cuff Repair: A Double Blinded, Randomized Control Trial
+Title: Does trenexamic Acid Improve Visualization During Arthroscopic Rotator Cuff Repair
+Official Title: Does trenexamic Acid Improve Visualization During Arthroscopic Rotator Cuff Repair: A Double Blinded, Randomized Control Trial
 Status: UNKNOWN
 Phase: PHASE3
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 50
 Topic: tendon injury
 
 SUMMARY:
-This clinical trial examines whether intravenous preoperative administration of tranexamic acid (TXA) before arthroscopic rotator cuff repair (ARCR) can improve arthroscopic visualization during the procedure.
+This clinical trial examines whether intravenous preoperative administration of trenexamic acid (TXA) before arthroscopic rotator cuff repair (ARCR) can improve arthroscopic visualization during the procedure.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -19,7 +19,7 @@ PRIMARY OUTCOMES:
   - Arthroscopic Visualization Score
 
 INTERVENTIONS:
-  - DRUG: Tranexamic Acid 100 MG/ML
+  - DRUG: trenexamic Acid 100 MG/ML
 
 ELIGIBILITY:
 Age: 18 Years to 100 Years

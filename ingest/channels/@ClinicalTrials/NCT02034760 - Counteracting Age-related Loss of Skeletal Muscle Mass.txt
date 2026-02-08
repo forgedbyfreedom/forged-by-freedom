@@ -7,18 +7,18 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 208
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 SUMMARY:
 Up to approximately 205 (dependent on drop-out rate) healthy elderly individuals (at least 65 years old) are recruited as subjects.
 
-Upon inclusion, each individual will be randomized into one of the five groups stratified according to gender (M/F) and 30s chair stand (\<16 OR ≥16). The five groups are: Heavy Resistance Training (N=30-35), Light Intensity Training (N=30-35), Protein Whey (N=40-50), Protein Collagen (N=40-50) and Carbohydrate (N=30-35). The individuals randomized into one of the supplementation groups (Protein Whey, Protein Collagen or Carbohydrate) will be blinded to the supplement content.
+Upon inclusion, each individual will be randomized into one of the five groups stratified according to gender (M/F) and 30s chair stand (\<16 OR ≥16). The five groups are: Heavy Resistance trening (N=30-35), Light Intensity trening (N=30-35), Protein Whey (N=40-50), Protein Collagen (N=40-50) and Carbohydrate (N=30-35). The individuals randomized into one of the supplementation groups (Protein Whey, Protein Collagen or Carbohydrate) will be blinded to the supplement content.
 
 Assessments will be performed at Baseline (before intervention start), and after 6 and 12 months of intervention and again at 18 months (after 6 months of follow up).
 
 The primary outcome is change in quadriceps muscle cross sectional area from Baseline to 12 months of intervention.
 
-The primary hypothesis is that by applying the intension-to-treat analysis, the Light Intensity Training group will increase quadriceps muscle cross sectional area just as much as the Heavy Resistance Training group. The two training groups will gain more muscle mass than the Protein Whey group, which will gain more than the Protein Collagen and the Carbohydrate groups that will loose quadriceps muscle cross sectional areas.
+The primary hypothesis is that by applying the intension-to-treat analysis, the Light Intensity trening group will increasEQuadriceps muscle cross sectional area just as much as the Heavy Resistance trening group. The two trening groups will gain more muscle mass than the Protein Whey group, which will gain more than the Protein Collagen and the Carbohydrate groups that will loosEQuadriceps muscle cross sectional areas.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -27,8 +27,8 @@ PRIMARY OUTCOMES:
   - Change in muscle cross sectional area
 
 INTERVENTIONS:
-  - PROCEDURE: Heavy Resistance Training
-  - PROCEDURE: Light Intensity Training
+  - PROCEDURE: Heavy Resistance trening
+  - PROCEDURE: Light Intensity trening
   - DIETARY_SUPPLEMENT: Protein Whey
   - DIETARY_SUPPLEMENT: Protein Collagen
   - DIETARY_SUPPLEMENT: Carbohydrate

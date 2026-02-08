@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT03824769
 Title: Physical Activity Choices Everyday
-Official Title: Is Long-term Maintenance Worth the Wait? Using Real Time Data Capture to Examine Delayed Discounting as a Putative Target of Physical Activity Adherence in Weight Loss Maintenance Interventions
+Official Title: Is Long-term maintenance Worth the Wait? Using Real Time Data Capture to Examine Delayed Discounting as a Putative Target of Physical Activity Adherence in Weight Loss maintenance Interventions
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -18,11 +18,11 @@ Not provided
 PRIMARY OUTCOMES:
   - Weekly Moderate-Vigorous Physical Activity Minutes, Accelerometry
   - Delay Discounting (Adjusting Amount Task)
-  - Delay Discounting (Monetary Choice Questionnaire)
+  - Delay Discounting (Monetary ChoicEQuestionnaire)
 
 INTERVENTIONS:
-  - BEHAVIORAL: Weight Loss Maintenance + Healthy Thinking
-  - BEHAVIORAL: Weight Loss Maintenance Treatment + Future Thinking
+  - BEHAVIORAL: Weight Loss maintenance + Healthy Thinking
+  - BEHAVIORAL: Weight Loss maintenance Treatment + Future Thinking
 
 ELIGIBILITY:
 Age: 18 Years to 70 Years

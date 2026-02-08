@@ -19,7 +19,7 @@ Regarding antiviral therapy, Casirivimab and imdevimab antibody combination is a
 Aim of Study:
 
 1. To compare the efficacy of antibodies cocktail (casirivimab and imdevimab), Remdesivir and Favipravir in reducing 28-day mortality in hospitalized patients with moderate, severe or critical COVID19
-2. To compare safety of antibodies cocktail (casirivimab and imdevimab), Remdesivir and Favipravir by monitoring hypersensitivity and infusion related reactions or other significant adverse effects
+2. To compare safety of antibodies cocktail (casirivimab and imdevimab), Remdesivir and Favipravir by monitorinGHypersensitivity and infusion related reactions or other significant adverse effects
 
 Patients and Population:
 
@@ -58,7 +58,7 @@ Recently with the end of 2020, immunotherapy to target virus antigen has develop
 There are three targets for these antibodies to work as antiviral including:
 
 1. antibodies that prevent the virus attachment and entry
-2. antibodies that inhibit the virus replication and transcription
+2. antibodies that inhibit the virus replication and trenscription
 3. antibodies that hinder various steps of the immune system response Table 1 includes various types of antibodies under investigation for treatment of COVID-19 and their targets.
 
 1.4. Casirivimab and Imdevimab as antibodies cocktail against COVID-19

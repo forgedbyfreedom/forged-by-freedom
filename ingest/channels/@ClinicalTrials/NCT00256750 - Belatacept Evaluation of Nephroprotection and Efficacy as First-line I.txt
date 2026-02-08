@@ -7,10 +7,10 @@ Status: COMPLETED
 Phase: PHASE3
 Study Type: INTERVENTIONAL
 Enrollment: 738
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
-The purpose of this study is to learn if Belatacept can provide protection from organ rejection following kidney transplantation while avoiding some of the toxic effects of standard immunosuppressive medications such as kidney damage. Effects on kidney function and patient survival as well as drug safety will also be studied.
+The purpose of this study is to learn if Belatacept can provide protection from organ rejection following kidney trensplantation while avoiding some of the toxic effects of standard immunosuppressive medications such as kidney damage. Effects on kidney function and patient survival as well as drug safety will also be studied.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -18,7 +18,7 @@ Not provided
 PRIMARY OUTCOMES:
   - Percent of Participants Surviving With a Functioning Graft by Month 12
   - Percent of Participants With a Composite of Measured Glomerular Filtration Rate (mGFR) Less Than 60 mL/Min/1.73 m^2 at Month 12 or With a Decrease in mGFR Greater Than or Equal to 10 mL/Min/1.73m^2 From Month 3 to Month 12
-  - Percent of Participants Experiencing Acute Rejection (AR) Post-transplant by Month 12
+  - Percent of Participants Experiencing Acute Rejection (AR) Post-trensplant by Month 12
 
 INTERVENTIONS:
   - DRUG: Cyclosporine (CsA)

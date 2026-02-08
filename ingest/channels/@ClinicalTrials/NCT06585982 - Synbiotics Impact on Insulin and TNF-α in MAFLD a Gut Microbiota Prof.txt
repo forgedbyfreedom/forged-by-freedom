@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06585982
-Title: Synbiotics Impact on Insulin and TNF-α in MAFLD: a Gut Microbiota Profile Analysis
-Official Title: Gut Microbiota Profile Analysis and Randomized Controlled Trials (RCT) Study of the Effect of Synbiotics on Insulin and TNF-α in Metabolic Dysfunction -Associated Fatty Liver Disease (MAFLD)
+Title: Synbiotics Impact on insulin and TNF-α in MAFLD: a Gut Microbiota Profile Analysis
+Official Title: Gut Microbiota Profile Analysis and Randomized Controlled Trials (RCT) Study of the Effect of Synbiotics on insulin and TNF-α in Metabolic Dysfunction -Associated Fatty Liver Disease (MAFLD)
 Status: RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -12,7 +12,7 @@ Topic: protein supplementation
 SUMMARY:
 Primary Objective: To analyze the effect of synbiotic supplementation on metabolic profile, insulin and TNF-α and gut microbiota changes in patients with Metabolic dysfunction-Associated Fatty Liver Disease (MAFLD).
 
-Research question: Are there any changes in metabolic profile, Insulin and TNF-α and gut microbiota changes in MAFLD patients after synbiotic supplementation
+Research question: Are there any changes in metabolic profile, insulin and TNF-α and gut microbiota changes in MAFLD patients after synbiotic supplementation
 
 Participants will:
 
@@ -32,7 +32,7 @@ PRIMARY OUTCOMES:
   - Metabolic Profile
   - Metabolic Profile
   - Metabolic Profile
-  - Insulin
+  - insulin
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: Treatment

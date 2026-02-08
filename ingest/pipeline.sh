@@ -39,15 +39,16 @@ export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin:$HOME/Library/Python/3.9/bin
 YT_DLP="yt-dlp"
 command -v yt-dlp >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
 
-# ─── Node 1: YouTube Download ─────────────────────────────────
-download_transcripts() {
-    header "NODE 1: YOUTUBE TRANSCRIPT DOWNLOAD"
+# ─── Node 1: YouTube Download AUDIO + Whisper Transcribe ─────
+download_and_transcribe() {
+    header "NODE 1: YOUTUBE AUDIO DOWNLOAD + WHISPER TRANSCRIPTION"
 
-    local SLEEP_MIN=15 SLEEP_MAX=45 SLEEP_BETWEEN=120 MAX_RETRIES=3
-    local count=0 success=0 failed=0
+    local SLEEP_MIN=10 SLEEP_MAX=30 SLEEP_BETWEEN=60 MAX_RETRIES=2
+    local count=0 success=0 failed=0 transcribed=0
 
     log "Channels: $CHANNELS_DIR"
-    log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos, ${SLEEP_BETWEEN}s between channels"
+    log "Mode: Download audio → Whisper transcribe → Delete audio"
+    log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos"
 
     for url_file in $(find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$0}' | sort -n | cut -f2-); do
         local channel_url=$(head -n 1 "$url_file")
@@ -58,14 +59,11 @@ download_transcripts() {
         log ""
         log "[$count] $channel_name"
 
+        # Download audio files (not video, to save space/time)
         local retry=0 done=false
         while [ $retry -lt $MAX_RETRIES ] && [ "$done" = false ]; do
             if $YT_DLP \
-                --skip-download \
-                --write-subs --write-auto-subs \
-                --sub-lang en \
-                --sub-format "best" \
-                --convert-subs srt \
+                -x --audio-format mp3 --audio-quality 64K \
                 --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
                 --ignore-errors --no-warnings \
                 --sleep-interval $SLEEP_MIN --max-sleep-interval $SLEEP_MAX \
@@ -73,22 +71,78 @@ download_transcripts() {
                 --extractor-retries 3 --fragment-retries 3 \
                 --retry-sleep extractor:30 --retry-sleep http:10 \
                 --download-archive "$output_dir/.downloaded" \
+                --max-downloads 20 \
                 "$channel_url" >> "$LOG_FILE" 2>&1; then
                 done=true
                 success=$((success + 1))
-                log "  ✓ Complete"
+                log "  ✓ Audio downloaded"
             else
                 retry=$((retry + 1))
-                [ $retry -lt $MAX_RETRIES ] && { log "  ⚠ Retry $retry/$MAX_RETRIES"; sleep 300; }
+                [ $retry -lt $MAX_RETRIES ] && { log "  ⚠ Retry $retry/$MAX_RETRIES"; sleep 120; }
             fi
         done
 
-        [ "$done" = false ] && { failed=$((failed + 1)); log "  ✗ Failed"; }
+        [ "$done" = false ] && { failed=$((failed + 1)); log "  ✗ Download failed"; }
+
+        # Transcribe any mp3 files without corresponding txt
+        for mp3 in "$output_dir"/*.mp3; do
+            [ -f "$mp3" ] || continue
+            local txt="${mp3%.mp3}.txt"
+            if [ ! -f "$txt" ]; then
+                log "  🎤 Transcribing: $(basename "$mp3")"
+                if python3 -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
+                    transcribed=$((transcribed + 1))
+                    log "    ✓ Transcribed"
+                    rm -f "$mp3"  # Delete audio after successful transcription
+                else
+                    log "    ✗ Transcription failed"
+                fi
+            else
+                rm -f "$mp3"  # Already have transcript, delete audio
+            fi
+        done
+
         sleep $SLEEP_BETWEEN
     done
 
     log ""
-    log "Download complete: $success succeeded, $failed failed"
+    log "Complete: $success channels, $transcribed transcriptions, $failed failures"
+}
+
+# Legacy function for subtitle-only mode (faster but less coverage)
+download_subtitles_only() {
+    header "NODE 1-ALT: SUBTITLE DOWNLOAD ONLY (Fast Mode)"
+
+    local SLEEP_MIN=15 SLEEP_MAX=45 SLEEP_BETWEEN=120 MAX_RETRIES=3
+    local count=0 success=0 failed=0
+
+    for url_file in $(find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$0}' | sort -n | cut -f2-); do
+        local channel_url=$(head -n 1 "$url_file")
+        local output_dir=$(dirname "$url_file")
+        local channel_name=$(basename "$output_dir")
+        count=$((count + 1))
+
+        log "[$count] $channel_name"
+
+        if $YT_DLP \
+            --skip-download \
+            --write-subs --write-auto-subs \
+            --sub-lang en \
+            --sub-format "best" \
+            --convert-subs srt \
+            --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
+            --ignore-errors --no-warnings \
+            --sleep-interval $SLEEP_MIN --max-sleep-interval $SLEEP_MAX \
+            --download-archive "$output_dir/.downloaded" \
+            "$channel_url" >> "$LOG_FILE" 2>&1; then
+            success=$((success + 1))
+        else
+            failed=$((failed + 1))
+        fi
+        sleep $SLEEP_BETWEEN
+    done
+
+    log "Subtitle download: $success succeeded, $failed failed"
 }
 
 # ─── Node 1b: Fetch Research Data ────────────────────────────
@@ -154,14 +208,24 @@ main() {
     log "Log: $LOG_FILE"
 
     case "${1:-full}" in
-        download) download_transcripts ;;
-        research) fetch_research ;;
-        fix)      fix_transcripts ;;
-        masters)  build_masters ;;
-        ingest)   ingest_pinecone ;;
-        stats)    show_stats ;;
+        download)   download_and_transcribe ;;      # Full: audio + Whisper
+        subs-only)  download_subtitles_only ;;      # Fast: subtitles only
+        research)   fetch_research ;;
+        fix)        fix_transcripts ;;
+        masters)    build_masters ;;
+        ingest)     ingest_pinecone ;;
+        stats)      show_stats ;;
         full)
-            download_transcripts
+            download_and_transcribe
+            fetch_research
+            fix_transcripts
+            build_masters
+            ingest_pinecone
+            show_stats
+            ;;
+        fast)
+            # Fast mode: subtitles only (for channels with good auto-captions)
+            download_subtitles_only
             fetch_research
             fix_transcripts
             build_masters
@@ -169,7 +233,17 @@ main() {
             show_stats
             ;;
         *)
-            echo "Usage: $0 {full|download|research|fix|masters|ingest|stats}"
+            echo "Usage: $0 {full|fast|download|subs-only|research|fix|masters|ingest|stats}"
+            echo ""
+            echo "  full      - Download audio + Whisper transcribe (thorough)"
+            echo "  fast      - Download subtitles only (quick but limited)"
+            echo "  download  - Audio + Whisper only"
+            echo "  subs-only - Subtitles only"
+            echo "  research  - PubMed + ClinicalTrials"
+            echo "  fix       - Vocabulary corrections"
+            echo "  masters   - Build master transcripts"
+            echo "  ingest    - Pinecone ingest"
+            echo "  stats     - Show statistics"
             exit 1
             ;;
     esac

@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT07117357
-Title: Neuroathletic Training Effects on Muscle Strength, Balance, and Cognition
-Official Title: Acute Effects of Neuroathletic Training on Posterior Chain Muscle Strength, Endurance, Proprioception, Dynamic Balance, and Cognitive Performance in Non-Athletic Individuals
+Title: Neuroathletic trening Effects on Muscle Strength, Balance, and Cognition
+Official Title: Acute Effects of Neuroathletic trening on Posterior Chain Muscle Strength, Endurance, Proprioception, Dynamic Balance, and Cognitive Performance in Non-Athletic Individuals
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 20
 Topic: athletic performance
 
 SUMMARY:
-Neuroathletic training is an innovative approach aimed at enhancing neurophysiological processes to improve motor control, reflex responses, balance, proprioception, and cognitive functions. While this method has shown promise in athletes, its acute effects on non-athletic individuals remain underexplored. The posterior chain (gluteus maximus, hamstrings, and erector spinae) plays a critical role in postural stability, movement, and injury prevention. Weakness in these muscles, coupled with poor balance and proprioception, may increase injury risk. Additionally, cognitive performance, including attention and reaction time, is vital for functional activities and may be enhanced through neuroathletic interventions. This study seeks to address the gap in understanding the acute effects of neuroathletic training on non-athletic individuals, providing evidence to support its integration into rehabilitation and injury prevention programs.
+Neuroathletic trening is an innolvative approach aimed at enhancing neurophysiological processes to improve motor control, reflex responses, balance, proprioception, and cognitive functions. While this method has shown promise in athletes, its acute effects on non-athletic individuals remain underexplored. The posterior chain (gluteus maximus, hamstrings, and erector spinae) plays a critical role in postural stability, movement, and injury prevention. Weakness in these muscles, coupled with poor balance and proprioception, may increase injury risk. Additionally, cognitive performance, including attention and reaction time, is vital for functional activities and may be enhanced through neuroathletic interventions. This study seeks to address the gap in understanding the acute effects of neuroathletic trening on non-athletic individuals, providing evidence to support its integration into rehabilitation and injury prevention programs.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -23,7 +23,7 @@ PRIMARY OUTCOMES:
   - Cognitive Performance - Stroop Test Reaction Time
 
 INTERVENTIONS:
-  - BEHAVIORAL: Neuroathletic Training Protocol
+  - BEHAVIORAL: Neuroathletic trening Protocol
   - BEHAVIORAL: Standard Warm-Up Protocol
 
 ELIGIBILITY:

@@ -14,7 +14,7 @@ Background and Rationale Elite athletes frequently experience sleep disturbances
 
 Objective To evaluate whether a brief, structured sleep intervention improves sleep quality and mental health in elite athletes and to identify perceived facilitators and barriers to intervention success.
 
-Design A single-center, one-arm pre-post intervention study with four time points (baseline, pre-intervention, post-intervention, and 2-month follow-up). No control group is used due to practical constraints.
+Design aromasingle-center, one-arm pre-post intervention study with four time points (baseline, pre-intervention, post-intervention, and 2-month follow-up). No control group is used due to practical constrents.
 
 Participants 16 elite athletes (sport soldiers) enrolled in the Swiss recruit school. All participants are adults and proficient in German.
 
@@ -34,12 +34,12 @@ Mental health (depression, anxiety, well-being)
 
 Data will be collected via REDCap using validated questionnaires. After the intervention, individual interviews will gather qualitative feedback.
 
-Analysis Quantitative data will be analyzed using repeated measures ANOVA. Focus group data will be analyzed thematically.
+Analysis Quantitative data will be analyzed using repeated measures Anolva. Focus group data will be analyzed thematically.
 
 Significance The study aims to provide practical, scalable insights into how sleep-focused interventions can improve athlete well-being and inform recommendations for sport organizations.
 
 DETAILED DESCRIPTION:
-1. Background and Rationale Elite athletes often suffer from sleep disturbances due to high training loads, frequent travel, jet lag, pre-competition stress, and irregular routines. Poor sleep negatively affects cognitive function, immune response, recovery, and overall performance. It is also strongly associated with mental health challenges including anxiety, depression, and psychological distress.
+1. Background and Rationale Elite athletes often suffer from sleep disturbances due to high trening loads, frequent travel, jet lag, pre-competition stress, and irregular routines. Poor sleep negatively affects cognitive function, immune response, recovery, and overall performance. It is also strongly associated with mental health challenges including anxiety, depression, and psychological distress.
 
    Although interventions such as sleep hygiene education and sleep extension strategies show promise in improving subjective sleep quality, there is limited evidence on their long-term effectiveness or impact on mental health in elite athlete populations. Moreover, few studies examine what elements of sleep interventions athletes perceive as most helpful or what barriers they face.
 

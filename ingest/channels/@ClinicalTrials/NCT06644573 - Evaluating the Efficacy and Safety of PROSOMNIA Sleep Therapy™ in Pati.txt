@@ -14,7 +14,7 @@ This clinical trial aims to evaluate the safety and efficacy of PROSOMNIA Sleep 
 
 Objectives: The primary goals of the trial are to determine:
 
-1. Whether PROSOMNIA Sleep Therapy increases the quality of REM sleep.
+1. Whether PROSOMNIA Sleep Therapy increases thEQuality of REM sleep.
 2. Whether PSTx increases the duration of REM and/or NREM sleep.
 3. Whether PSTx decreases the time it takes participants to fall asleep (sleep onset latency).
 
@@ -54,10 +54,10 @@ Potential Implications: If successful, this trial could revolutionize how we tre
 
 Key Concepts:
 
-Homeostatic sleep drive, (Process S), caused by adenosine buildup during wakefulness, is disrupted by chronic insomnia. This impacts cognitive function health and recovery. Anesthesia-induced REM sleep via PSTx helps regulate this homeostatic sleep stage, offering deeper and more restorative sleep compared to other sleep therapies. The study uses statistical methods like ANOVA and Chi-square to measure outcomes.
+Homeostatic sleep drive, (Process S), caused by adenosine buildup during wakefulness, is disrupted by chronic insomnia. This impacts cognitive function health and recovery. Anesthesia-induced REM sleep via PSTx helps regulate this homeostatic sleep stage, offering deeper and more restorative sleep compared to other sleep therapies. The study uses statistical methods like Anolva and Chi-square to measure outcomes.
 
 DETAILED DESCRIPTION:
-The clinical trial aims to evaluate the safety and efficacy of PROSOMNIA Sleep Therapy (PSTx), an innovative anesthesia-induced treatment, for patients experiencing chronic insomnia, sleep deprivation, and REM sleep disorders. Chronic insomnia, characterized by persistent difficulty falling or staying asleep, often disrupts sleep homeostasis, affecting cognitive function, mood, and overall quality of life. Conventional treatments, such as Cognitive Behavioral Therapy for Insomnia (CBT-I) and pharmacological interventions, frequently yield suboptimal results, making this trial critical for those unresponsive to standard therapies.
+The clinical trial aims to evaluate the safety and efficacy of PROSOMNIA Sleep Therapy (PSTx), an innolvative anesthesia-induced treatment, for patients experiencing chronic insomnia, sleep deprivation, and REM sleep disorders. Chronic insomnia, characterized by persistent difficulty falling or staying asleep, often disrupts sleep homeostasis, affecting cognitive function, mood, and overall quality of life. Conventional treatments, such as Cognitive Behavioral Therapy for Insomnia (CBT-I) and pharmacological interventions, frequently yield suboptimal results, making this trial critical for those unresponsive to standard therapies.
 
 Mechanism and Methodology:
 
@@ -71,7 +71,7 @@ The primary objectives are to determine if PSTx increases REM sleep duration, re
 
 Broader Implications:
 
-PROSOMNIA Sleep Therapy's innovative method could have broader applications beyond insomnia, including treating mental health disorders (e.g., depression, PTSD), neurodegenerative diseases (e.g., Alzheimer's), and enhancing cardiovascular and metabolic health. Athletes or individuals recovering from injury may also benefit from improved sleep quality and recovery.
+PROSOMNIA Sleep Therapy's innolvative method could have broader applications beyond insomnia, including treating mental health disorders (e.g., depression, PTSD), neurodegenerative diseases (e.g., Alzheimer's), and enhancing cardiovascular and metabolic health. Athletes or individuals recovering from injury may also benefit from improved sleep quality and recovery.
 
 Study Design:
 
@@ -81,7 +81,7 @@ Participant Criteria:
 
 Inclusion: Adults aged 18-65 with diagnosed or undiagnosed chronic insomnia or sleep deprivation, with or without prior therapy.
 
-Exclusion: Severe obesity (BMI \>35), cardiovascular, neurological, or psychiatric conditions that contraindicate anesthesia, ASA status above II, or diagnosed sleep disorders unrelated to insomnia.
+Exclusion: Severe obesity (BMI \>35), cardiovascular, neurological, or psychiatric conditions that contrenicate anesthesia, ASA status above II, or diagnosed sleep disorders unrelated to insomnia.
 
 Outcome Measures:
 

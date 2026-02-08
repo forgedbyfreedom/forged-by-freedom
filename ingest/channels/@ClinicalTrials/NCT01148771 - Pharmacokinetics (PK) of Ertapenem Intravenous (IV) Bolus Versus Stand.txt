@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: PHASE4
 Study Type: INTERVENTIONAL
 Enrollment: 12
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
 The purpose of this study is to characterize and compare the concentration-time profiles and multiple dose pharmacokinetics of a 5 minute intravenous (IV) bolus of ertapenem 1 gram daily versus the standard 30 minute infusion in healthy volunteers. Safety and tolerability and pharmacodynamic target attainment using Monte Carlo simulation will also be assessed and compared.

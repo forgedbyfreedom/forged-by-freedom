@@ -8,7 +8,7 @@ Year: 2024
 Topic: longevity exercise intervention
 
 ABSTRACT:
-Eating healthier is associated with a range of favorable health outcomes. Our previous model estimated the impact of dietary changes on life expectancy gains but did not consider height, weight, or physical activity.
+EatinGHealthier is associated with a range of favorable health outcomes. Our previous model estimated the impact of dietary changes on life expectancy gains but did not consider height, weight, or physical activity.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/38692410/

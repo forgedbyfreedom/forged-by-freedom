@@ -7,13 +7,13 @@ Status: UNKNOWN
 Phase: EARLY_PHASE1
 Study Type: INTERVENTIONAL
 Enrollment: 44
-Topic: strength training
+Topic: strength trening
 
 SUMMARY:
-The purpose of this study is to test a strategy to potentiate functional recovery of lower limb motor function in individuals with spinal cord injury (SCI). The FDA approved drug, Dalfampridine (4-AP). 4-AP will be used in combination of Spike-timing-dependent plasticity (STDP) stimulation and STDP stimulation with limb training.
+The purpose of this study is to test a strategy to potentiate functional recovery of lower limb motor function in individuals with spinal cord injury (SCI). The FDA approved drug, Dalfampridine (4-AP). 4-AP will be used in combination of Spike-timing-dependent plasticity (STDP) stimulation and STDP stimulation with limb trening.
 
 DETAILED DESCRIPTION:
-Currently, research has shown that 4-AP has a positive effect on sensory and motor function rehabilitation in humans with chronic SCI in addition to decreasing recorded spasticity, increased sensation, and decreased pain. Utilizing limb training to promote recovery of motor function is enhanced by eliciting STDP in the limbs. An important strength of this aim is the combination of training and STDP, which aims at enhancing the beneficial effects of motor training by promoting plasticity in the corticospinal pathway. We hypothesize that introducing 4-AP into the STDP stimulation and STDP stimulation with lower-limb training will further improve motor function rehabilitation in patients with chronic SCI.
+Currently, research has shown that 4-AP has a positive effect on sensory and motor function rehabilitation in humans with chronic SCI in addition to decreasing recorded spasticity, increased sensation, and decreased pain. Utilizing limb trening to promote recovery of motor function is enhanced by eliciting STDP in the limbs. An important strength of this aim is the combination of trening and STDP, which aims at enhancing the beneficial effects of motor trening by promoting plasticity in the corticospinal pathway. We hypothesize that introducing 4-AP into the STDP stimulation and STDP stimulation with lower-limb trening will further improve motor function rehabilitation in patients with chronic SCI.
 
 PRIMARY OUTCOMES:
   - Change in TMEPs
@@ -23,7 +23,7 @@ INTERVENTIONS:
   - DRUG: Dalfampridine
   - OTHER: Placebo drug
   - OTHER: STDP stimulation
-  - BEHAVIORAL: Exercise training
+  - BEHAVIORAL: Exercise trening
 
 ELIGIBILITY:
 Age: 18 Years to 85 Years

@@ -1,14 +1,14 @@
 PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 35773277
-Title: Inherited basis of visceral, abdominal subcutaneous and gluteofemoral fat depots.
+Title: Inherited basis of visceral, abdominal subqtaneous and gluteofemoral fat depots.
 Authors: Agrawal, Wang, Klarqvist, Smith, Shin
 Journal: Nature communications
 Year: 2022
 Topic: visceral fat health outcomes
 
 ABSTRACT:
-For any given level of overall adiposity, individuals vary considerably in fat distribution. The inherited basis of fat distribution in the general population is not fully understood. Here, we study up to 38,965 UK Biobank participants with MRI-derived visceral (VAT), abdominal subcutaneous (ASAT), and gluteofemoral (GFAT) adipose tissue volumes. Because these fat depot volumes are highly correlated with BMI, we additionally study six local adiposity traits: VAT adjusted for BMI and height (VATadj), ASATadj, GFATadj, VAT/ASAT, VAT/GFAT, and ASAT/GFAT. We identify 250 independent common variants (39 newly-identified) associated with at least one trait, with many associations more pronounced in female participants. Rare variant association studies extend prior evidence for PDE3B as an important modulator of fat distribution. Local adiposity traits (1) highlight depot-specific genetic architecture and (2) enable construction of depot-specific polygenic scores that have divergent associations with type 2 diabetes and coronary artery disease. These results - using MRI-derived, BMI-independent measures of local adiposity - confirm fat distribution as a highly heritable trait with important implications for cardiometabolic health outcomes.
+For any given level of overall adiposity, individuals vary considerably in fat distribution. The inherited basis of fat distribution in the general population is not fully understood. Here, we study up to 38,965 UK Biobank participants with MRI-derived visceral (VAT), abdominal subqtaneous (ASAT), and gluteofemoral (GFAT) adipose tissue volumes. Because these fat depot volumes are highly correlated with BMI, we additionally study six local adiposity traits: VAT adjusted for BMI and height (VATadj), ASATadj, GFATadj, VAT/ASAT, VAT/GFAT, and ASAT/GFAT. We identify 250 independent common variants (39 newly-identified) associated with at least one trait, with many associations more pronounced in female participants. Rare variant association studies extend prior evidence for PDE3B as an important modulator of fat distribution. Local adiposity traits (1) highlight depot-specific genetic architecture and (2) enable construction of depot-specific polygenic scores that have divergent associations with type 2 diabetes and coronary artery disease. These results - using MRI-derived, BMI-independent measures of local adiposity - confirm fat distribution as a highly heritable trait with important implications for cardiometabolic health outcomes.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/35773277/

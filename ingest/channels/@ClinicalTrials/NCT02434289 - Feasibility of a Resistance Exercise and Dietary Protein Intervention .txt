@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 23
-Topic: resistance training
+Topic: resistance trening
 
 SUMMARY:
 The purpose of this pilot study is to investigate the feasibility and potential impact of a combined resistance exercise and increased protein intake intervention in (frail) elderly, in a real-life setting.
@@ -20,7 +20,7 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: Dietary protein products
-  - OTHER: Resistance exercise training
+  - OTHER: Resistance exercise trening
 
 ELIGIBILITY:
 Age: 65 Years to 

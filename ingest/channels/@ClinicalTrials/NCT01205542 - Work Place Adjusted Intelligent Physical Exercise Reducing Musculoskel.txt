@@ -7,10 +7,10 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 50
-Topic: resistance training
+Topic: resistance trening
 
 SUMMARY:
-Basic strength training for the neck/shoulder muscles can decrease intensity of neck/shoulder pain, but it is uncertain whether training should focus directly on the upper trapezius - which is most often tender - or on the lower compartments and serratus anterior.
+Basic strength trening for the neck/shoulder muscles can decrease intensity of neck/shoulder pain, but it is uncertain whether trening should focus directly on the upper trapezius - which is most often tender - or on the lower compartments and serratus anterior.
 
 We hypothesize that strengthening exercise for the lower and middle trapezius as well as the serratus anterior will decrease intensity of neck/shoulder pain among office workers
 
@@ -21,7 +21,7 @@ PRIMARY OUTCOMES:
   - Neck/shoulder pain
 
 INTERVENTIONS:
-  - BEHAVIORAL: Training
+  - BEHAVIORAL: trening
   - BEHAVIORAL: Reference
 
 ELIGIBILITY:

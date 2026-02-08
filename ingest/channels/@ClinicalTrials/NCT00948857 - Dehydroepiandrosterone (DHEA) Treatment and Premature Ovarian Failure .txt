@@ -44,7 +44,7 @@ Experimental plan:
    * Secondary Outcomes
    * Endocrine Factors
    * Androgen side effects
-   * Primary analysis. We will perform a factorial ANOVA for the two pretreatment factors DHEA and Placebo. Baseline AMH and age as main covariates
+   * Primary analysis. We will perform a factorial Anolva for the two pretreatment factors DHEA and Placebo. Baseline AMH and age as main covariates
    * Secondary analysis.
    * Examine rate of change of estradiol and other endocrine response over the four cycles of treatment
    * Compare antral follicle counts across cycles between groups

@@ -10,7 +10,7 @@ Enrollment: 64
 Topic: sports nutrition
 
 SUMMARY:
-The primary aim of this clinical trial is to evaluate how fasted prolonged exercise may influence circulating reproductive hormones (i.e., estradiol, progesterone, luteinizing hormone) and menstrual cycle length when energy availability is maintained at or above 30 kcal/kg lean body mass/ day among women who regularly do running or cycling exercise. A secondary aim is to determine the effects of fasted prolonged exercise on serum leptin and cortisol.
+The primary aim of this clinical trial is to evaluate how fasted prolonged exercise may influence circulating reproductive hormones (i.e., estradiol, progesterone, luteinizinGHormone) and menstrual cycle length when energy availability is maintained at or above 30 kcal/kg lean body mass/ day among women who regularly do running or cycling exercise. A secondary aim is to determine the effects of fasted prolonged exercise on serum leptin and cortisol.
 
 Participants will be asked to do the following over a \~3 month enrollment period:
 
@@ -25,7 +25,7 @@ Not provided
 PRIMARY OUTCOMES:
   - Urinary estrone-3-glucuronide (E3G)
   - Urinary pregnanediol glucuronide (PdG)
-  - Urinary luteinizing hormone (LH)
+  - Urinary luteinizinGHormone (LH)
   - Menstrual cycle length
 
 INTERVENTIONS:

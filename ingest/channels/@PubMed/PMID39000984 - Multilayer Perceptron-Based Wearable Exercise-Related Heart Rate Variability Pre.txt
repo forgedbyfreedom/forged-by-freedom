@@ -5,7 +5,7 @@ Title: Multilayer Perceptron-Based Wearable Exercise-Related Heart Rate Variabil
 Authors: Li, Zou, Li
 Journal: Sensors (Basel, Switzerland)
 Year: 2024
-Topic: heart rate variability training
+Topic: heart rate variability trening
 
 ABSTRACT:
 (1) Background: This study aims to investigate the correlation between heart rate variability (HRV) during exercise and recovery periods and the levels of anxiety and depression among college students. Additionally, the study assesses the accuracy of a multilayer perceptron-based HRV analysis in predicting these emotional states. (2) Methods: A total of 845 healthy college students, aged between 18 and 22, participated in the study. Participants completed self-assessment scales for anxiety and depression (SAS and PHQ-9). HRV data were collected during exercise and for a 5-min period post-exercise. The multilayer perceptron neural network model, which included several branches with identical configurations, was employed for data processing. (3) Results: Through a 5-fold cross-validation approach, the average accuracy of HRV in predicting anxiety levels was 89.3% for no anxiety, 83.6% for mild anxiety, and 74.9% for moderate to severe anxiety. For depression levels, the average accuracy was 90.1% for no depression, 84.2% for mild depression, and 82.1% for moderate to severe depression. The predictive R-squared values for anxiety and depression scores were 0.62 and 0.41, respectively. (4) Conclusions: The study demonstrated that HRV during exercise and recovery in college students can effectively predict levels of anxiety and depression. However, the accuracy of score prediction requires further improvement. HRV related to exercise can serve as a non-invasive biomarker for assessing psychological health.

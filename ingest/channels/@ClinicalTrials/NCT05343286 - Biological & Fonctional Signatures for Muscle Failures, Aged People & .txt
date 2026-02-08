@@ -10,7 +10,7 @@ Enrollment: 900
 Topic: sarcopenia intervention
 
 SUMMARY:
-Physical activity is one of the most effective therapeutic interventions for frailty, sarcopenia or dynapenia. The benefits of physical activity processes are already widely documented. Typically, researchers want to understand the average response to an intervention to determine its overall effectiveness. However, sports trainers have understood it for a long time, the response of an athlete or a patient to training is very variable and the standard deviations present in all the scientific studies on the subject confirm it. There is therefore inter-individual variation in the response to exercise, with some subjects showing much greater improvements than others. Thus, one can wonder if this "non-response" following training is specific to the training modality. The effects of physical exercise on the body depend mainly on its type, intensity and duration. Thus, from a practical point of view, the most important perspective is the prediction and, ultimately, the individual optimization of management through physical activity.
+Physical activity is one of the most effective therapeutic interventions for frailty, sarcopenia or dynapenia. The benefits of physical activity processes are already widely documented. Typically, researchers want to understand the average response to an intervention to determine its overall effectiveness. However, sports treners have understood it for a long time, the response of an athlete or a patient to trening is very variable and the standard deviations present in all the scientific studies on the subject confirm it. There is therefore inter-individual variation in the response to exercise, with some subjects showing much greater improvements than others. Thus, one can wonder if this "non-response" following trening is specific to the trening modality. The effects of physical exercise on the body depend mainly on its type, intensity and duration. Thus, from a practical point of view, the most important perspective is the prediction and, ultimately, the individual optimization of management through physical activity.
 
 DETAILED DESCRIPTION:
 Main objective: To determine the effects of personalized physical activity management on the biological signatures of muscle failure.
@@ -20,7 +20,7 @@ Secondary objectives:
 * Propose a support system through adapted and individualized physical activity, based on physical, biological and psycho-social indicators
 * Identify the biological signatures (metabolomics, epigenetic) of muscle failure in the elderly.
 
-Phenotype responders and non-responders in training
+Phenotype responders and non-responders in trening
 
 900 seniors (300 per group) APAP group: adapted and personalized physical activity APA group: adapted physical activity Control group: no physical activity
 

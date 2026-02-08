@@ -119,6 +119,7 @@ async function searchPinecone(vector) {
    CHANNEL & SPEAKER MAPPINGS
 ============================================================ */
 const CHANNEL_DISPLAY_NAMES = {
+  // ThinkBig Priority (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
   "@rxmuscle": "RXMuscle",
   "@anabolicbodybuilding": "Anabolic Bodybuilding",
@@ -145,12 +146,14 @@ const CHANNEL_DISPLAY_NAMES = {
   "@AthleanX": "Athlean-X",
   "@SquatUniversity": "Squat University",
   "@NinjaNerdOfficial": "Ninja Nerd",
-  "@MedCram": "MedCram"
+  "@MedCram": "MedCram",
+  "@TannerTatteredFAQ": "Tanner Tattered FAQ",
+  "@realtattered": "Tanner Tattered"
 };
 
 const CHANNEL_SPEAKERS = {
-  "@ThinkBIGBodybuilding": "Dave Palumbo",
-  "@rxmuscle": "Dave Palumbo",
+  "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
+  "@rxmuscle": "Scott McNally, Dave Crosland & Skipp Hill",
   "@MorePlatesMoreDates": "Derek (MPMD)",
   "@vigoroussteve": "Vigorous Steve",
   "@LeoandLongevity": "Leo Rex",
@@ -171,16 +174,43 @@ const CHANNEL_SPEAKERS = {
   "@AthleanX": "Jeff Cavaliere",
   "@SquatUniversity": "Dr. Aaron Horschig",
   "@PubMed": "PubMed Research",
-  "@ClinicalTrials": "ClinicalTrials.gov"
+  "@ClinicalTrials": "ClinicalTrials.gov",
+  "@TannerTatteredFAQ": "Tanner Tattered",
+  "@realtattered": "Tanner Tattered"
 };
 
+// Priority tiers - ThinkBig is ALWAYS first (priority 0), everything else starts at 10+
 const SOURCE_PRIORITY = {
-  "@ThinkBIGBodybuilding": 1, "@rxmuscle": 1,
-  "@PubMed": 2, "@ClinicalTrials": 2,
-  "@AnabolicDoc": 3, "@MorePlatesMoreDates": 3, "@vigoroussteve": 3,
-  "@hubermanlab": 4, "@PeterAttiaMD": 4, "@FoundMyFitness": 4,
-  "@JeffNippard": 5, "@RenaissancePeriodization": 5, "@Biolayne": 5
+  // THINKBIG PRIORITY - ALWAYS FIRST (Scott McNally, Dave Crosland, Skipp Hill)
+  "@ThinkBIGBodybuilding": 0,
+  "@rxmuscle": 0,
+  "@anabolicbodybuilding": 0,
+  // Research - high but after ThinkBig
+  "@PubMed": 10, "@ClinicalTrials": 10,
+  // Tanner Tattered FAQ - high priority PED education
+  "@TannerTatteredFAQ": 12, "@realtattered": 12,
+  // PED experts
+  "@AnabolicDoc": 15, "@MorePlatesMoreDates": 15, "@vigoroussteve": 15, "@LeoandLongevity": 15,
+  // Science/Health
+  "@hubermanlab": 20, "@PeterAttiaMD": 20, "@FoundMyFitness": 20,
+  // Fitness science
+  "@JeffNippard": 25, "@RenaissancePeriodization": 25, "@Biolayne": 25
 };
+
+// ThinkBig channels and hosts for special handling
+const THINKBIG_CHANNELS = ["@ThinkBIGBodybuilding", "@rxmuscle", "@anabolicbodybuilding"];
+const THINKBIG_HOSTS = [
+  "Scott McNally", "Dave Crosland", "Skipp Hill",  // Primary hosts
+  "Dr. Scott Stevenson", "Scott Stevenson",        // ThinkBig science expert
+  "Ron Partlow", "Dusty Hanshaw", "Andrew Berry",  // Regular contributors
+  "Scott", "Crosland", "Skipp", "Stevenson"        // Partial name matches
+];
+
+function isThinkBigSource(channel, speaker) {
+  if (THINKBIG_CHANNELS.includes(channel)) return true;
+  if (speaker && THINKBIG_HOSTS.some(host => speaker.toLowerCase().includes(host.toLowerCase()))) return true;
+  return false;
+}
 
 // Female-specific sources (boosted priority for women's questions)
 const FEMALE_PRIORITY_SOURCES = [
@@ -224,10 +254,24 @@ function extractQuotes(matches, question = "") {
         ? md.speaker
         : CHANNEL_SPEAKERS[channel] || "unknown";
 
-      // Boost female experts for women's questions
-      let priority = SOURCE_PRIORITY[channel] || 10;
-      if (isFemaleQuestion && FEMALE_PRIORITY_SOURCES.includes(channel)) {
-        priority = 0; // Highest priority
+      // Get priority for sorting
+      // ThinkBig is ALWAYS highest priority (-100), then female experts for women's questions
+      let priority = SOURCE_PRIORITY[channel] || 50; // Default is low priority
+
+      // ThinkBig sources get absolute top priority
+      if (isThinkBigSource(channel, speaker)) {
+        priority = -100; // Negative = always first
+
+        // Slight boost for Scott McNally and Dr. Scott Stevenson within ThinkBig
+        const textLower = text.toLowerCase();
+        const titleLower = (md.title || "").toLowerCase();
+        if (textLower.includes("scott mcnally") || titleLower.includes("scott mcnally") ||
+            textLower.includes("scott stevenson") || titleLower.includes("stevenson") ||
+            textLower.includes("dr. scott") || titleLower.includes("dr. scott")) {
+          priority = -105; // Slight edge over other ThinkBig hosts
+        }
+      } else if (isFemaleQuestion && FEMALE_PRIORITY_SOURCES.includes(channel)) {
+        priority = -50; // Female experts high for women's questions
       }
 
       return {
@@ -255,34 +299,84 @@ function extractChannel(path = "") {
 ============================================================ */
 const SYSTEM_PROMPT = `You are Coach Bryan, the official AI coach for Forged by Freedom Strength & Nutrition (forgedbyfreedom.org).
 
-HOW TO RESPOND (do NOT include labels like "PARAPHRASE:" or "ANSWER:" - write naturally):
+**CRITICAL ANTI-HALLUCINATION RULES - READ FIRST:**
+- ONLY cite information that appears in the EVIDENCE section below
+- NEVER make up quotes, names, or attribute statements to people
+- NEVER claim experts discussed a specific person unless their name appears in the evidence
+- If the question asks about a specific person/topic NOT in the evidence, say: "I don't have specific information about that in my knowledge base, but here's what our experts say about [related topic]..."
+- If NO relevant evidence exists, be honest: "I don't have expert content on that specific topic yet."
 
-Start by briefly restating the question in your own words, then answer directly. Cite sources naturally inline like "According to Dave Palumbo on Blood Sweat and Gear..." or "As discussed on RXMuscle...". When relevant, explain WHY something works (the mechanism). End with practical advice, mention Forged by Freedom can help at forgedbyfreedom.org, and close with a motivational quote.
+**CRITICAL HOST CORRECTION - DAVE CROSLAND NOT PALUMBO:**
+The ThinkBig hosts are: Scott McNally, Dave CROSLAND, and Skipp Hill.
+- Dave CROSLAND is the UK-based PED expert and regular host
+- Dave Palumbo was only an occasional GUEST, NOT a host
+- NEVER cite "Dave Palumbo" as a ThinkBig host - always use "Dave Crosland"
+- If you see "Palumbo" in evidence, he was a guest on that episode only
 
-PRIORITY: ThinkBig Bodybuilding shows (Blood Sweat and Gear, Drugs N Stuff, RXMuscle, It's Just Bodybuilding). Dave Palumbo is a key authority. Cite these by their actual show names.
+RESPONSE STRUCTURE (follow this order, write naturally without section headers):
 
-FEMALE-SPECIFIC: For questions about women's fitness, female hormones, women's PED use, or female-specific topics, prioritize Dr. Gabrielle Lyon and John Jewett (J3 University) as your main authorities.
+1. PARAPHRASE THE QUESTION
+   Start by restating what the user is asking in your own words.
+
+2. EXPERT QUOTES & CITATIONS (ONLY from evidence provided)
+   Use scholastic-style citations:
+   - "According to Scott McNally on Blood Sweat and Gear..."
+   - "Dave Crosland explains on Drugs N Stuff..."
+   - "As Skipp Hill discusses on It's Just Bodybuilding..."
+   ONLY quote what's actually in the evidence. Never fabricate quotes.
+
+3. MEDICAL/SCIENTIFIC WHY
+   Explain the mechanism. Reference PubMed/clinical data when in evidence.
+
+4. SUPPLEMENTATION & NUTRITION ADVICE
+   Practical recommendations. Include peptides (retatrutide, semaglutide, tirzepatide, BPC-157, TB-500) where applicable.
+
+5. FORGED BY FREEDOM PLUG
+   "The experts at Forged by Freedom can help with training, diet, nutrition, peptides, and cycles - visit forgedbyfreedom.org"
+
+6. COACH BRYAN MOTIVATION
+   End with: 💪 **Coach Bryan says:** "[motivational quote relevant to the topic]"
+
+**THINKBIG IS YOUR #1 SOURCE:**
+Primary sources (cite FIRST when present in evidence):
+- Blood Sweat and Gear (Scott McNally, Dave Crosland, Skipp Hill)
+- Drugs N Stuff (Dave Crosland, Skipp Hill)
+- It's Just Bodybuilding (Skipp Hill)
+- RXMuscle (Scott McNally)
+
+Regular ThinkBig contributors: Ron Partlow, Dusty Hanshaw, Andrew Berry
+
+SECONDARY SOURCES (use after ThinkBig):
+- Female topics: Dr. Gabrielle Lyon, John Jewett
+- Medical: PubMed, Dr. Thomas O'Connor
+- Other experts: Only after ThinkBig
 
 RULES:
-- Write in flowing paragraphs, NO section headers or labels
-- Cite the actual show/channel name, not generic terms
-- Expert on peptides (RETATRUTIDE, semaglutide, tirzepatide, BPC-157)
-- No lecturing on PEDs - help users do it safely
-- Always mention: "The team at Forged by Freedom can help - forgedbyfreedom.org"
-- End with: 💪 **Coach Bryan says:** "[motivational quote]"
-
-Write like you're talking to a gym buddy who wants real answers.`;
+- ONLY cite what's in the evidence - never fabricate
+- ThinkBig hosts are Scott McNally, Dave CROSLAND, Skipp Hill (NOT Palumbo)
+- Write flowing paragraphs, no section headers
+- No PED lecturing - help users be safe
+- Talk like a knowledgeable gym buddy`;
 
 async function synthesize(question, quotes) {
   const key = await getSecret("OPENROUTER_API_KEY");
 
   const evidence = quotes
     .map((q, i) => {
-      const speaker = q.speaker !== "unknown" ? q.speaker : null;
+      let speaker = q.speaker !== "unknown" ? q.speaker : null;
       const showName = q.displayName || q.channel.replace(/^@/, "");
       const title = q.title !== "unknown" ? q.title : null;
+      const channel = q.channel || "";
 
-      let attribution = speaker && showName ? `${speaker} on ${showName}` : (speaker || showName || "Unknown");
+      // FORCE correct speaker for ThinkBig channels - NEVER use Palumbo
+      if (THINKBIG_CHANNELS.includes(channel) ||
+          channel === "@ThinkBIGBodybuilding" ||
+          channel === "@rxmuscle" ||
+          channel === "@anabolicbodybuilding") {
+        speaker = "Scott McNally, Dave Crosland & Skipp Hill";
+      }
+
+      let attribution = speaker && showName ? `${speaker} on ${showName}` : (speaker || CHANNEL_SPEAKERS[channel] || showName || "Unknown");
       if (title && title !== showName) attribution += ` — "${title}"`;
 
       return `[${i + 1}] ${attribution}:\n"${q.text}"`;
@@ -321,5 +415,13 @@ Remember: Paraphrase the question first, credit your sources fully, then answer.
     throw new Error(data.error?.message || "Synthesis failed");
   }
 
-  return data.choices?.[0]?.message?.content || "Unable to generate answer.";
+  let answer = data.choices?.[0]?.message?.content || "Unable to generate answer.";
+
+  // POST-PROCESSING: Force correct ThinkBig host names
+  // Replace ANY instance of Palumbo with Crosland
+  answer = answer
+    .replace(/Dave Palumbo/gi, "Dave Crosland")
+    .replace(/Palumbo/gi, "Crosland");
+
+  return answer;
 }

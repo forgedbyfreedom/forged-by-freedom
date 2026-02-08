@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT03404271
-Title: Time-Restricted Feeding Plus Resistance Training in Active Females
-Official Title: Time-Restricted Feeding Plus Resistance Training in Active Females: Effects on Body Composition, Muscular Performance and Physiological Variables
+Title: Time-Restricted Feeding Plus Resistance trening in Active Females
+Official Title: Time-Restricted Feeding Plus Resistance trening in Active Females: Effects on Body Composition, Muscular Performance and Physiological Variables
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 40
 Topic: HMB supplementation
 
 SUMMARY:
-The objective of this study is to examine the effects of time-restricted feeding (TRF; consuming all calories within an 8-hour period of time each day) and resistance training, with or without the addition of the dietary supplement HMB, on body composition, muscular performance and physiological outcomes in active females.
+The objective of this study is to examine the effects of time-restricted feeding (TRF; consuming all calories within an 8-hour period of time each day) and resistance trening, with or without the addition of the dietary supplement HMB, on body composition, muscular performance and physiological outcomes in active females.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -24,7 +24,7 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: Beta-hydroxy beta-methylbutyrate
-  - OTHER: Resistance Training
+  - OTHER: Resistance trening
   - DIETARY_SUPPLEMENT: Protein Supplementation
   - BEHAVIORAL: Time-Restricted Feeding
 

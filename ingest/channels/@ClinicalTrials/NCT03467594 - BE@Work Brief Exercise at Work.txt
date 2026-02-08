@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 60
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 SUMMARY:
 BE@Work (Brief Exercise at Work) is a pilot controlled before and after trial of a workplace physical activity programme.
@@ -23,7 +23,7 @@ PRIMARY OUTCOMES:
   - Resting blood pressure
 
 INTERVENTIONS:
-  - BEHAVIORAL: High-intensity interval training
+  - BEHAVIORAL: High-intensity interval trening
 
 ELIGIBILITY:
 Age: 18 Years to 65 Years

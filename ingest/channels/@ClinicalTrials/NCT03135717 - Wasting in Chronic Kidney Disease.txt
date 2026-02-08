@@ -18,10 +18,10 @@ DETAILED DESCRIPTION:
 Not provided
 
 PRIMARY OUTCOMES:
-  - Nutritional care evaluated with questionnaire
+  - NutritionALCARe evaluated with questionnaire
 
 INTERVENTIONS:
-  - DIETARY_SUPPLEMENT: Nutritional care
+  - DIETARY_SUPPLEMENT: NutritionALCARe
 
 ELIGIBILITY:
 Age: 44 Years to 73 Years

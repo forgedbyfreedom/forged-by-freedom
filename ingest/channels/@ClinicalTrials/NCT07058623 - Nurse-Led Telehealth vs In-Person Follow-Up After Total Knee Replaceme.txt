@@ -31,7 +31,7 @@ This study will help determine if telehealth nursing consultations can provide s
 DETAILED DESCRIPTION:
 Detailed Description This study is a randomized controlled trial designed to evaluate the clinical effectiveness and feasibility of nurse-led telehealth consultations compared to traditional in-person nursing consultations for post-operative care following total knee replacement (TKR) surgery.
 
-Background and Rationale Total knee replacement is a common surgical intervention for end-stage knee osteoarthritis, offering significant pain relief and improved function. Post-operative follow-up is essential to monitor recovery, detect complications early, and support rehabilitation. However, traditional in-person consultations can pose logistical challenges for patients, including mobility limitations, travel burden, and time constraints. Telehealth has emerged as a promising alternative by enabling remote clinical assessments and patient monitoring, especially amplified by recent advances and adoption during the COVID-19 pandemic.
+Background and Rationale Total knee replacement is a common surgical intervention for end-stage knee osteoarthritis, offering significant pain relief and improved function. Post-operative follow-up is essential to monitor recovery, detect complications early, and support rehabilitation. However, traditional in-person consultations can pose logistical challenges for patients, including mobility limitations, travel burden, and time constrents. Telehealth has emerged as a promising alternative by enabling remote clinical assessments and patient monitoring, especially amplified by recent advances and adoption during the COVID-19 pandemic.
 
 While telehealth models led by physicians have been studied extensively, there is a relative lack of evidence regarding nurse-led telehealth consultations in the orthopedic post-operative setting. Nurses play a crucial role in patient education, symptom monitoring, and care coordination, making nurse-led telehealth a potentially efficient and scalable solution. This study aims to fill this gap by rigorously evaluating whether nurse-led telehealth consultations can detect complications and support recovery as effectively as standard in-person visits.
 
@@ -39,7 +39,7 @@ Study Design
 
 This is an open-label, parallel-group randomized controlled trial with two arms:
 
-* Intervention arm: Nurse-led telehealth consultations delivered via a secure, hospital-approved mobile platform (the HA Go app).
+* Intervention arm: Nurse-led telehealth consultations delivered viAASecure, hospital-approved mobile platform (the HA Go app).
 * Control arm: Traditional in-person nursing consultations conducted at the Specialist Outpatient Department (SOPD).
 
 Randomization will be performed using computer-generated block randomization with allocation concealment ensured through sealed opaque envelopes. Blinded outcome assessment and data analysis will be conducted to minimize bias.

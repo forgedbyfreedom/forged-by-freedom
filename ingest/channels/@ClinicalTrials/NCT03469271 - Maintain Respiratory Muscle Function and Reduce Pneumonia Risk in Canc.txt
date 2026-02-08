@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT03469271
 Title: Maintain Respiratory Muscle Function and Reduce Pneumonia Risk in Cancer Patients
-Official Title: Resistance Training and 1,25 (OH)2D3 Administration to Maintain Respiratory Muscle Function and Reduce Pneumonia Risk in Cancer Patients
+Official Title: Resistance trening and 1,25 (OH)2D3 Administration to Maintain Respiratory Muscle Function and Reduce Pneumonia Risk in Cancer Patients
 Status: COMPLETED
 Phase: PHASE4
 Study Type: INTERVENTIONAL
@@ -20,10 +20,10 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - DRUG: 1,25 (OH)2 D3
-  - OTHER: Inspiratory isometric resistance training
+  - OTHER: Inspiratory isometric resistance trening
   - DRUG: Oral Placebo
-  - OTHER: Sham Inspiratory Isometric Resistance Training
-  - DEVICE: Threshold Inspiratory Muscle Trainer (IMT)
+  - OTHER: Sham Inspiratory Isometric Resistance trening
+  - DEVICE: Threshold Inspiratory Muscle trener (IMT)
 
 ELIGIBILITY:
 Age: 18 Years to 

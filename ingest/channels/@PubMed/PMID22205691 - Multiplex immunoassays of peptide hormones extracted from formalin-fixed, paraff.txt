@@ -8,7 +8,7 @@ Year: 2012
 Topic: peptide hormones performance
 
 ABSTRACT:
-The current gold standard for diagnostic classification of many solid-tissue neoplasms is immunohistochemistry (IHC) performed on formalin-fixed, paraffin-embedded (FFPE) tissue. Although IHC is commonly used, there remain important issues related to preanalytic variability, nonstandard methods, and operator bias that may contribute to clinically significant error. To increase the quantitative accuracy and reliability of FFPE tissue-based diagnosis, we sought to develop a clinical proteomic method to characterize protein expression in pathologic tissue samples rapidly and quantitatively.
+The current gold standard for diagnostic classification of many solid-tissue neoplasms is immunohistochemistry (IHC) performed on formalin-fixed, paraffin-embedded (FFPE) tissue. Although IHC is commonly used, there remain important issues related to preanalytic variability, nonstandard methods, and operator bias that may contribute to clinically significant error. To increase thEQuantitative accuracy and reliability of FFPE tissue-based diagnosis, we sought to develop a clinical proteomic method to characterize protein expression in pathologic tissue samples rapidly and quantitatively.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/22205691/

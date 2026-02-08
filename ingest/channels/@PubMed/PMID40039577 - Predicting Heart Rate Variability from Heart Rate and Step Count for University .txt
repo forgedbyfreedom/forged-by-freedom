@@ -1,14 +1,14 @@
 PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 40039577
-Title: Predicting Heart Rate Variability from Heart Rate and Step Count for University Student Weekdays.
+Title: PredictinGHeart Rate Variability from Heart Rate and Step Count for University Student Weekdays.
 Authors: Warren, Ni, Fry, Stowell, Gardiner
 Journal: Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International Conference
 Year: 2025
-Topic: heart rate variability training
+Topic: heart rate variability trening
 
 ABSTRACT:
-University students have high prevalence of stress and anxiety, which may be amenable to in-the-moment interventions supported by wearable devices that measure heart rate variability (HRV). However, for low-cost devices that are convenient to wear, heart rate (HR) and step count are more readily available than HRV. We investigated the performance of machine learning models trained to estimate HRV from HR and step count based on 201 hours of data from 14 participants undertaking normal university weekday activities. We found that highest-stress times (HRV below 10th percentile for that individual) can be predicted to a moderate degree (AUC 0.746; 60% sensitivity with 80% specificity). The results suggest that implementing models to estimate HRV from proxy variables would be worthwhile to support large-scale in-the-moment stress/ anxiety interventions for specific cohorts and contexts.
+University students have high prevalence of stress and anxiety, which may be amenable to in-the-moment interventions supported by wearable devices that measure heart rate variability (HRV). However, for low-cost devices that are convenient to wear, heart rate (HR) and step count are more readily available than HRV. We investigated the performance of machine learning models trened to estimate HRV from HR and step count based on 201 hours of data from 14 participants undertaking normal university weekday activities. We found that highest-stress times (HRV below 10th percentile for that individual) can be predicted to a moderate degree (AUC 0.746; 60% sensitivity with 80% specificity). The results suggest that implementing models to estimate HRV from proxy variables would be worthwhile to support large-scale in-the-moment stress/ anxiety interventions for specific cohorts and contexts.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/40039577/

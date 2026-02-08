@@ -13,7 +13,7 @@ SUMMARY:
 Polycystic ovary syndrome (PCOS) affects 5-10% of women in the United States. Its onset is usually at the time of puberty with manifestations of menstrual irregularity, hirsutism, and obesity. Women with PCOS suffer at an early stage of adulthood from all of the components of the metabolic syndrome, a syndrome that typically has its peak in mid-life in other subject populations. Women with PCOS are more insulin resistant than weight-matched control women and have exceptionally high rates of early-onset impaired glucose tolerance and type 2 diabetes, as well as a substantially elevated risk for hypertension, dyslipidemia, coronary, and other vascular diseases. While recent evidence indicates that the prevalence of sleep-disordered breathing (SDB) is 30-40 fold higher in PCOS than in weight-matched control women, the possible role of SDB in causing the increased metabolic and cardiovascular risks of PCOS has not been evaluated. The overall objective of the proposed study is to analyze the direction of causality between sleep disturbances and markers of the metabolic syndrome in PCOS.
 
 DETAILED DESCRIPTION:
-Polycystic ovary syndrome (PCOS) affects 5-10% of women and may be viewed as the combination of hyperandrogenism with the classical features of the metabolic syndrome in young women. PCOS presents a unique opportunity to dissect the relationship between metabolic and cardiovascular risk and sleep disordered breathing (SDB) in a population where intrinsic effects of aging have not yet developed. Because a relationship between obstructive sleep apnea, insulin resistance and elevated testosterone levels has also been observed in men and in women without PCOS, insights gained from studies in PCOS will have broad implications.
+Polycystic ovary syndrome (PCOS) affects 5-10% of women and may be viewed as the combination of hyperandrogenism with the classical features of the metabolic syndrome in young women. PCOS presents a unique opportunity to dissect the relationship between metabolic and cardiovascular risk and sleep disordered breathing (SDB) in a population where intrinsic effects of aginGHave not yet developed. Because a relationship between obstructive sleep apnea, insulin resistance and elevated testosterone levels has also been observed in men and in women without PCOS, insights gained from studies in PCOS will have broad implications.
 
 The Specific Aims of the present application are:
 
@@ -26,9 +26,9 @@ Specific Aim 3: to test the hypothesis that in normal young women, experimental 
 PRIMARY OUTCOMES:
   - Aim 1: Apnea-Hypopnea Index (AHI) [Baseline]
   - Aim 1: Apnea-hypopnea Index (AHI) [After Treatment]
-  - Aim 2: Insulin Sensitivity Index (SI) From Intravenous Glucose Tolerance Test [Baseline]
-  - Aim 2: Insulin Sensitivity Index (SI) From Intravenous Glucose Tolerance Test [After CPAP]
-  - Aim 2: Acute Insulin Resistance to Intravenous Glucose (AIRg) [Baseline]
+  - Aim 2: insulin Sensitivity Index (SI) From Intravenous Glucose Tolerance Test [Baseline]
+  - Aim 2: insulin Sensitivity Index (SI) From Intravenous Glucose Tolerance Test [After CPAP]
+  - Aim 2: Acute insulin Resistance to Intravenous Glucose (AIRg) [Baseline]
 
 INTERVENTIONS:
   - DEVICE: continuous positive airway pressure (CPAP)

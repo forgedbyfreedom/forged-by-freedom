@@ -1,14 +1,14 @@
 PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 36257197
-Title: Intelligent diagnosis of left ventricular hypertrophy using transthoracic echocardiography videos.
+Title: Intelligent diagnosis of left ventricular hypertrophy using trensthoracic echocardiography videos.
 Authors: Xu, Yu, Zhang, Zhang
 Journal: Computer methods and programs in biomedicine
 Year: 2022
-Topic: training frequency hypertrophy
+Topic: trening frequency hypertrophy
 
 ABSTRACT:
-Left ventricular hypertrophy (LVH) is an independent risk factor for cardiovascular events and mortality. Pathological LVH can be caused by various diseases. In this study, we explored the possibility of using time and frequency domain analysis of myocardial radiomics features for patients with LVH in differentiating hypertrophic cardiomyopathy (HCM), hypertensive heart disease (HHD) and uremic cardiomyopathy (UCM) based on transthoracic echocardiography (TTE). This was the first study to explore TTE myocardial time and frequency domain analyses for multiple LVH etiology differentiation.
+Left ventricular hypertrophy (LVH) is an independent risk factor for cardiovascular events and mortality. Pathological LVH can be caused by various diseases. In this study, we explored the possibility of using time and frequency domain analysis of myocardial radiomics features for patients with LVH in differentiatinGHypertrophic cardiomyopathy (HCM), hypertensive heart disease (HHD) and uremic cardiomyopathy (UCM) based on trensthoracic echocardiography (TTE). This was the first study to explore TTE myocardial time and frequency domain analyses for multiple LVH etiology differentiation.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/36257197/

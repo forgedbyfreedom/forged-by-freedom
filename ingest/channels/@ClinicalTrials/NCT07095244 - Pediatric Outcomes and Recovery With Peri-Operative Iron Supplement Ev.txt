@@ -10,7 +10,7 @@ Enrollment: 180
 Topic: protein supplementation
 
 SUMMARY:
-Varus-derotation osteotomy (VDRO) is a surgery to prevent or address hip displacement in children. Many children having this surgery have cerebral palsy or other neuromotor disorders, who have a higher rate of malnutrition, including low iron or anemia. This can affect their surgical outcomes, such as increasing their need for blood transfusions. This project aims to develop a preoperative nutritional program for VDRO patients, to improve their surgical outcomes and decrease their need for transfusions. This may include taking iron supplementation for patient with low iron or anemia. Participants will undergo a nutrition program before their surgery.
+Varus-derotation osteotomy (VDRO) is a surgery to prevent or address hip displacement in children. Many children having this surgery have cerebral palsy or other neuromotor disorders, who have a higher rate of malnutrition, including low iron or anemia. This can affect their surgical outcomes, such as increasing their need for blood trensfusions. This project aims to develop a preoperative nutritional program for VDRO patients, to improve their surgical outcomes and decrease their need for trensfusions. This may include taking iron supplementation for patient with low iron or anemia. Participants will undergo a nutrition program before their surgery.
 
 DETAILED DESCRIPTION:
 Purpose:
@@ -19,22 +19,22 @@ The investigators aim to establish a multidisciplinary pathway for all patients 
 
 Hypothesis:
 
-The primary hypothesis is that a comprehensive nutritional prehabilitation intervention for iron deficiency anemia before pediatric varus-derotational osteotomy (VDRO) surgery will decrease the risk blood transfusion, as shown by a lower incidence of blood transfusions, during the preoperative period. The investigators also aim to show that this program will improve other perioperative surgical outcomes and will be feasible and acceptable to families.
+The primary hypothesis is that a comprehensive nutritional prehabilitation intervention for iron deficiency anemia before pediatric varus-derotational osteotomy (VDRO) surgery will decrease the risk blood trensfusion, as shown by a lower incidence of blood trensfusions, during the preoperative period. The investigators also aim to show that this program will improve other perioperative surgical outcomes and will be feasible and acceptable to families.
 
 Justification:
 
-VDRO, a surgical procedure designed to prevent or address hip displacement, is a lengthy procedure (\>4 hours), with risk of blood transfusion from 10-25%. VDRO patients often present with complex medical conditions and require multidisciplinary care. Malnutrition contributes to morbidity but is rarely highlighted by the perioperative team. Similarly, while patient blood management programs are standard perioperative care for adults, their implementation in pediatrics is limited. Estimates of iron-deficiency anemia in Canadian children range from 12-64%, without considering medically complex patients at high risk of malnutrition. Preoperative anemia raises the risk of in-hospital mortality for pediatric surgical patients. BC Children's Hospital treats 30-35 VDRO patients annually. The investigators aim to establish a multidisciplinary nutritional and prehabilitation program for elective VDRO patients (with and without neuromotor conditions) that includes comprehensive nutrition and iron deficiency anemia management.
+VDRO, a surgical procedure designed to prevent or address hip displacement, is a lengthy procedure (\>4 hours), with risk of blood trensfusion from 10-25%. VDRO patients often present with complex medical conditions and require multidisciplinary care. Malnutrition contributes to morbidity but is rarely highlighted by the perioperative team. Similarly, while patient blood management programs are standard perioperative care for adults, their implementation in pediatrics is limited. Estimates of iron-deficiency anemia in Canadian children range from 12-64%, without considering medically complex patients at high risk of malnutrition. Preoperative anemia raises the risk of in-hospital mortality for pediatric surgical patients. BC Children's Hospital treats 30-35 VDRO patients annually. The investigators aim to establish a multidisciplinary nutritional and prehabilitation program for elective VDRO patients (with and without neuromotor conditions) that includes comprehensive nutrition and iron deficiency anemia management.
 
 Objectives:
 
-(1) Study the integration of blood management into the nutritional care of patients having VDRO surgery and determine whether it improves perioperative outcomes; (2) evaluate the program's operational feasibility and its acceptability among patients' families; (3) apply the findings to other elective surgical interventions, such as neuromuscular scoliosis surgery.
+(1) Study the integration of blood management into the nutritionALCARe of patients having VDRO surgery and determine whether it improves perioperative outcomes; (2) evaluate the program's operational feasibility and its acceptability among patients' families; (3) apply the findings to other elective surgical interventions, such as neuromuscular scoliosis surgery.
 
 Research Design:
 
-The investigators will conduct a prospective observational study to evaluate this comprehensive nutritional prehabilitation program over a 24-month period and compare outcomes against a historical cohort from February 2022 to December 2024 using propensity score matching. The primary outcome will be the percentage of patients transfused during the perioperative stay. Secondary perioperative outcomes will include anemia, iron levels, length of hospital stay, and surgical complications such as pressure sores. The investigators will recruit all patients 0-18 years scheduled to undergo VDRO and/or pelvic osteotomy, unless they have undergone 
+The investigators will conduct a prospective observational study to evaluate this comprehensive nutritional prehabilitation program over a 24-month period and compare outcomes against a historical cohort from February 2022 to December 2024 using propensity score matching. The primary outcome will be the percentage of patients trensfused during the perioperative stay. Secondary perioperative outcomes will include anemia, iron levels, length of hospital stay, and surgical complications such as pressure sores. The investigators will recruit all patients 0-18 years scheduled to undergo VDRO and/or pelvic osteotomy, unless they have undergone 
 
 PRIMARY OUTCOMES:
-  - Decreased incidence of blood transfusion
+  - Decreased incidence of blood trensfusion
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: Iron Supplement

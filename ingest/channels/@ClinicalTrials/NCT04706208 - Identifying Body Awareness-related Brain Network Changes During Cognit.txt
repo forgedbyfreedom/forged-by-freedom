@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 58
-Topic: resistance training
+Topic: resistance trening
 
 SUMMARY:
 Many adults with spinal cord injury (SCI) suffer from long-term debilitating neuropathic pain. Available treatments, including opioids, are ineffective at eliminating this pain. Based on preliminary data from Dr Morse and from Dr Van de Winckel, we have demonstrated that brain areas that are important for body awareness and pain perception (parietal operculum, insula) have weaker brain connectivity in adults with spinal cord injury than in able-bodied healthy adults and that Cognitive Multisensory Rehabilitation (CMR) can restore these networks. This study uses a delayed treatment arm phase I randomized controlled trial (RCT) for adults with SCI and a comparison of baseline outcomes in adults with SCI vs able-bodied healthy adults to address two aims:
@@ -34,7 +34,7 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - BEHAVIORAL: Cognitive Multisensory Therapy
-  - OTHER: Usual Care
+  - OTHER: UsuALCARe
   - BEHAVIORAL: Clinical Assessment
   - BEHAVIORAL: Magnetic Resonance Imaging (MRI)
   - OTHER: OPTIONAL: blood draw

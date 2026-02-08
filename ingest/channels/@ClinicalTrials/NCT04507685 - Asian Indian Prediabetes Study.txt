@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT04507685
 Title: Asian Indian Prediabetes Study
-Official Title: Diet and Lifestyle Intervention Strategies to Treat β-cell Dysfunction and Insulin Resistance in Asian Indians
+Official Title: Diet and Lifestyle Intervention Strategies to Treat β-cell Dysfunction and insulin Resistance in Asian Indians
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -12,7 +12,7 @@ Topic: exercise intervention diabetes
 SUMMARY:
 Compared to other races, Indians have higher insulin resistance, poorer pancreatic function and a greater risk of developing diabetes, highlighting the importance of early strategies for improving insulin sensitivity and improving pancreatic function in Indians to prevent diabetes and lower the risk of heart disease.
 
-A low carbohydrate diet can deplete fat from undesirable places, such as fat around organs in the abdominal cavity. In this study, we will determine if restriction of dietary carbohydrates will deplete fat in the pancreas and liver, and improve insulin sensitivity and early insulin secretion in Indians. These changes may prevent diabetes from developing. Hepatic and pancreatic fat will be measured using magnetic resonance imaging. Insulin sensitivity and secretion will be measured during an oral glucose tolerance test. In addition, this study will investigate if the higher insulin resistance in Indians is due to genes that cause the inability to store fat in the legs.
+A low carbohydrate diet can deplete fat from undesirable places, such as fat around organs in the abdominal cavity. In this study, we will determine if restriction of dietary carbohydrates will deplete fat in the pancreas and liver, and improve insulin sensitivity and early insulin secretion in Indians. These changes may prevent diabetes from developing. Hepatic and pancreatic fat will be measured using magnetic resonance imaging. insulin sensitivity and secretion will be measured during an oral glucose tolerance test. In addition, this study will investigate if the higher insulin resistance in Indians is due to genes that cause the inability to store fat in the legs.
 
 The results on the type of diet that is more effective for reducing pancreatic and hepatic fat is important for informing dietary guidelines on the use of low carbohydrate diets for diabetes prevention, particularly in Indians who have a higher risk of developing diabetes.
 
@@ -27,9 +27,9 @@ The results will broaden the evidence base for effective prevention strategies i
 
 PRIMARY OUTCOMES:
   - Change in β-cell Function [First-phase β-cell response (PhiD)]
-  - Change in Insulinogenic index (ΔC-peptide/∆glucose during the first 30 minutes of the OGTT)
+  - Change in insulinogenic index (ΔC-peptide/∆glucose during the first 30 minutes of the OGTT)
   - Change in Incremental AUC
-  - Change in Insulin sensitivity (Oral Minimal model)
+  - Change in insulin sensitivity (Oral Minimal model)
   - Change in Matsuda index for whole body insulin sensitivity
 
 INTERVENTIONS:

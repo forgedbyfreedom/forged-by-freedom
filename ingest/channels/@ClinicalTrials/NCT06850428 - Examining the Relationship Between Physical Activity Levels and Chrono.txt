@@ -10,12 +10,12 @@ Enrollment: 207
 Topic: caffeine exercise
 
 SUMMARY:
-Alcohol use disorders are characterized by excessive alcohol consumption and loss of control and are associated with high mortality and disease burden. The relationship between physical activity and alcoholism is complex, and low physical activity has been shown to be linked to alcohol consumption. Additionally, individuals' circadian rhythms (chronotypes) may influence alcohol consumption habits; Evening-type individuals are more likely to consume alcohol. This study aims to examine the relationship between physical activity levels and chronotype trends in individuals with alcohol addiction.
+Alcohol use disorders are characterized by excessive alcohol consumption and loss of control and are associated with high mortality and disease burden. The relationship between physical activity and alcoholism is complex, and low physical activity has been shown to be linked to alcohol consumption. Additionally, individuals' circadian rhythms (chronotypes) may influence alcohol consumption habits; Evening-type individuals are more likely to consume alcohol. This study aims to examine the relationship between physical activity levels and chronotype trens in individuals with alcohol addiction.
 
 DETAILED DESCRIPTION:
 This study aims to examine the relationship between physical activity levels and chronotype tendencies in individuals with alcohol dependency. Alcohol use disorders are characterized by excessive alcohol consumption and loss of control, and are associated with high mortality rates and disease burden. The relationship between physical activity and alcoholism is complex, with connections found between low physical activity levels and increased alcohol consumption. Additionally, individuals' circadian rhythms (chronotypes) can influence alcohol consumption habits, and evening-type individuals may be more likely to consume alcohol.
 
-Participants and Method The study will include individuals aged 18-65, diagnosed with alcohol dependency according to DSM-5 criteria, and who have been in remission for at least one month. Individuals with active psychiatric disorders or physical disabilities will be excluded from the study. The sample size was determined using G\*Power analysis, with a target of 207 participants for the ANOVA test. Participants will be reached through social media, support groups, rehabilitation centers, and health professionals, and assessments will be conducted via Google Forms. Participants will provide informed consent prior to participation. The sampling method is non-probability sampling.
+Participants and Method The study will include individuals aged 18-65, diagnosed with alcohol dependency according to DSM-5 criteria, and who have been in remission for at least one month. Individuals with active psychiatric disorders or physical disabilities will be excluded from the study. The sample size was determined using G\*Power analysis, with a target of 207 participants for the Anolva test. Participants will be reached through social media, support groups, rehabilitation centers, and health professionals, and assessments will be conducted via Google Forms. Participants will provide informed consent prior to participation. The sampling method is non-probability sampling.
 
 Assessment Tools Chronotype Evaluation: The participants' circadian rhythms will be assessed using the "Morningness-Eveningness Questionnaire" in Turkish, which has proven validity and reliability. This scale consists of 19 items used to determine whether individuals have a morning, evening, or intermediate chronotype. Total scores will be categorized into five different chronotype groups based on predetermined ranges.
 
@@ -24,7 +24,7 @@ Physical Activity Level Evaluation The "International Physical Activity Question
 This research aims to contribute to a better understanding of the relationship between physical activity and chronotype in individuals with alcohol dependency. This study is designed as a cross-sectional observational research.
 
 PRIMARY OUTCOMES:
-  - Relationship between physical activity levels and chronotype trends
+  - Relationship between physical activity levels and chronotype trens
 
 INTERVENTIONS:
   Not specified

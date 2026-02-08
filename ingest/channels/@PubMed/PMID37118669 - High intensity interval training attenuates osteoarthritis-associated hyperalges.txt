@@ -1,14 +1,14 @@
 PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 37118669
-Title: High intensity interval training attenuates osteoarthritis-associated hyperalgesia in rats.
+Title: High intensity interval trening attenuates osteoarthritis-associated hyperalgesia in rats.
 Authors: Wang, Song, Xia, Lin, Chen
 Journal: The journal of physiological sciences : JPS
 Year: 2023
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 ABSTRACT:
-High-intensity interval training (HIIT) is a physical therapy that may benefit patients with osteoarthritis (OA). Cacna2d1 is a calcium channel subunit protein that plays an important role in the activity of nerve cells. However, there is currently no evidence on HIIT relieving OA-associate hyperalgesia by decreased Cacna2d1. Our study established the OA rat models with intra-articular injection of monosodium iodoacetate (MIA). This experiment was divided into two stages. The first stage comprised three groups: the control, OA, and OA-HIIT groups. The second stage comprised two groups, including the AAV-C and AAV-shRNA-Cacna2d1 groups. OA rats were positioned at the L5-L6 segments, and 20&#xa0;&#xb5;l of AAV virus was injected intrathecally. The pain threshold, cartilage analysis, Cacna2d1, and pain neurotransmitters were measured and compared. The pain threshold was significantly lower in OA rats than in control rats from the first to the tenth week. Starting from the sixth week, OA-HIIT rats exhibited significantly increased pain thresholds. The expression of Cacna2d1 increased in OA rats. Moreover, the knockdown of Cacna2d1 significantly down-regulated the expression of c-Fos, SP, and Vglut2 in the posterior horn of the spinal cord. In conclusion, HIIT attenuates OA-associated hyperalgesia, which may be related to the down-regulation of Cacna2d1.
+High-intensity interval trening (HIIT) is a physical therapy that may benefit patients with osteoarthritis (OA). Cacna2d1 is a calcium channel subunit protein that plays an important role in the activity of nerve cells. However, there is currently no evidence on HIIT relieving OA-associate hyperalgesia by decreased Cacna2d1. Our study established the OA rat models with intra-articular injection of monosodium iodoacetate (MIA). This experiment was divided into two stages. The first stage comprised three groups: the control, OA, and OA-HIIT groups. The second stage comprised two groups, including the AAV-C and AAV-shRNA-Cacna2d1 groups. OA rats were positioned at the L5-L6 segments, and 20&#xa0;&#xb5;l of AAV virus was injected intrathecally. The pain threshold, cartilage analysis, Cacna2d1, and pain neurotrensmitters were measured and compared. The pain threshold was significantly lower in OA rats than in control rats from the first to the tenth week. Starting from the sixth week, OA-HIIT rats exhibited significantly increased pain thresholds. The expression of Cacna2d1 increased in OA rats. Moreover, the knockdown of Cacna2d1 significantly down-regulated the expression of c-Fos, SP, and Vglut2 in the posterior horn of the spinal cord. In conclusion, HIIT attenuates OA-associated hyperalgesia, which may be related to the down-regulation of Cacna2d1.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/37118669/

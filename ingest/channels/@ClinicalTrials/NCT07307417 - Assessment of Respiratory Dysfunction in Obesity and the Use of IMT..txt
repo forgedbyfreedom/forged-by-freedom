@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT07307417
 Title: Assessment of Respiratory Dysfunction in Obesity and the Use of IMT.
-Official Title: Functional Respiratory Tract Dysfunctions in Individuals With Obesity Undergoing Experimental Inspiratory Muscle Training.
+Official Title: Functional Respiratory Tract Dysfunctions in Individuals With Obesity Undergoing Experimental Inspiratory Muscle trening.
 Status: NOT_YET_RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 40
 Topic: sports nutrition
 
 SUMMARY:
-The aim of the project will be to assess the functional condition of the respiratory tract and inflammation resulting from obesity, as well as the possibility of using inspiratory muscle training as a factor reducing the occurrence of dysfunction in the respiratory system.
+The aim of the project will be to assess the functional condition of the respiratory tract and inflammation resulting from obesity, as well as the possibility of using inspiratory muscle trening as a factor reducing the occurrence of dysfunction in the respiratory system.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -22,7 +22,7 @@ PRIMARY OUTCOMES:
   - Laboratory tests
 
 INTERVENTIONS:
-  - DEVICE: inspiratory muscle training
+  - DEVICE: inspiratory muscle trening
   - DEVICE: placebo-IMT
 
 ELIGIBILITY:

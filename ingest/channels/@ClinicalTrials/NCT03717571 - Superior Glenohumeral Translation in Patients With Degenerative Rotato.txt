@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT03717571
-Title: Superior Glenohumeral Translation in Patients With Degenerative Rotator Cuff Tears
-Official Title: ROTCUFF - Measuring Load-induced Superior Glenohumeral Translation in Patients With Degenerative Rotator Cuff Tears and Asymptomatic Subjects: 3-dimensional Motion Analysis Versus Single Plane Fluoroscopy
+Title: Superior Glenohumeral trenslation in Patients With Degenerative Rotator Cuff Tears
+Official Title: ROTCUFF - Measuring Load-induced Superior Glenohumeral trenslation in Patients With Degenerative Rotator Cuff Tears and Asymptomatic Subjects: 3-dimensional Motion Analysis Versus Single Plane Fluoroscopy
 Status: COMPLETED
 Phase: N/A
 Study Type: OBSERVATIONAL
@@ -10,18 +10,18 @@ Enrollment: 21
 Topic: tendon injury
 
 SUMMARY:
-Degenerative partial and complete rupture of the rotator cuff is a common injury among elder patients. However, the clinical manifestation varies largely with some patients having severe pain and limiting range of motion and others having no complaints. The basic functions of the rotator cuff are to facilitate shoulder motion and stabilization and centering of the glenohumeral joint. The objective of this study is to quantify the difference in superior glenohumeral translation in patients with degenerative rotator cuff tear compared to healthy control subjects and to determine the effect of isolated complete supraspinatus tear and combined complete supraspinatus and either partial infraspinatus or partial subscapularis tear.
+Degenerative partial and complete rupture of the rotator cuff is a common injury among elder patients. However, the clinical manifestation varies largely with some patients having severe pain and limiting range of motion and others having no complaints. The basic functions of the rotator cuff are to facilitate shoulder motion and stabilization and centering of the glenohumeral joint. The objective of this study is to quantify the difference in superior glenohumeral trenslation in patients with degenerative rotator cuff tear compared to healthy control subjects and to determine the effect of isolated complete supraspinatus tear and combined complete supraspinatus and either partial infraspinatus or partial subscapularis tear.
 
 DETAILED DESCRIPTION:
 The study will examine a cohort of 10 patients with isolated complete supraspinatus muscle tear and 10 patients with complete supraspinatus muscle tear and either partial infraspinatus muscle tear or partial subscapularis muscle tear, and a cohort of 10 age-matched healthy control persons. The participants will be recruited from the Clinic of Orthopaedics and Traumatology at the University Hospital Basel. Inclusion criteria: 45 years \< age \< 65 years; degenerative complete supraspinatus muscle tear or complete supraspinatus muscle tear and either partial infraspinatus muscle tear or partial subscapularis muscle tear; unilateral rotator cuff tear. Exclusion criteria: traumatic tendon ruptures; prior treatment of the ipsilateral upper extremity; clinical history of the contralateral glenohumeral joint; no complete supraspinatus muscle tear; tears in more than two rotator cuff muscles; neuromuscular disorders affecting upper limb movement; additional pathologies that influence the mobility of the shoulder joint; inability to provide informed consent.
 
-Patients will complete the health questionnaire and reflective markers and electromyographic sensors will be placed on anatomical landmarks and shoulder muscles, respectively, before loaded and unloaded abduction and flexion arm movements will be performed. Centre of rotation of both shoulders will be calculated to determine glenohumeral translation. This parameter will be compared between patient groups and control subjects using linear mixed models with group membership and load as fixed factor and subject as random factor. The critical shoulder angle will be included as covariate into the model to detect a potential modulating role of this factor on glenohumeral translation.
+Patients will complete the health questionnaire and reflective markers and electromyographic sensors will be placed on anatomical landmarks and shoulder muscles, respectively, before loaded and unloaded abduction and flexion arm movements will be performed. Centre of rotation of both shoulders will be calculated to determine glenohumeral trenslation. This parameter will be compared between patient groups and control subjects using linear mixed models with group membership and load as fixed factor and subject as random factor. The critical shoulder angle will be included as covariate into the model to detect a potential modulating role of this factor on glenohumeral trenslation.
 
 PRIMARY OUTCOMES:
-  - Glenohumeral translation
+  - Glenohumeral trenslation
 
 INTERVENTIONS:
-  - DIAGNOSTIC_TEST: Glenohumeral translation assessment
+  - DIAGNOSTIC_TEST: Glenohumeral trenslation assessment
 
 ELIGIBILITY:
 Age: 45 Years to 65 Years

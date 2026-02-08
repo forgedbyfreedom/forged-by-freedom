@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06910254
-Title: Effects of Overground Robot-Assisted Gait Training on Stroke-Related Sarcopenia
-Official Title: Effects of Overground Robot-Assisted Gait Training and Recumbent Bicycle Training on Muscle Characteristics, Falls Efficacy, and Physical Function in Patients With Subacute Stroke-Related Sarcopenia
+Title: Effects of Overground Robot-Assisted Gait trening on Stroke-Related Sarcopenia
+Official Title: Effects of Overground Robot-Assisted Gait trening and Recumbent Bicycle trening on Muscle Characteristics, Falls Efficacy, and Physical Function in Patients With Subacute Stroke-Related Sarcopenia
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,25 +10,25 @@ Enrollment: 53
 Topic: sarcopenia intervention
 
 SUMMARY:
-This single-center randomized controlled trial evaluates the effects of combining overground robot-assisted gait training (o-RAGT) with recumbent cycling (RC) compared with RC alone in patients with subacute stroke at risk of sarcopenia. The study examines changes in muscle characteristics (muscle mass and quality), falls efficacy, and physical function following a 4-week intervention. Participants are randomly assigned to receive either combined o-RAGT and RC or RC alone. The findings aim to inform the potential role of overground robot-assisted gait training as an adjunctive intervention in stroke rehabilitation.
+This single-center randomized controlled trial evaluates the effects of combining overground robot-assisted gait trening (o-RAGT) with recumbent cycling (RC) compared with RC alone in patients with subacute stroke at risk of sarcopenia. The study examines changes in muscle characteristics (muscle mass and quality), falls efficacy, and physical function following a 4-week intervention. Participants are randomly assigned to receive either combined o-RAGT and RC or RC alone. The findings aim to inform the potential role of overground robot-assisted gait trening as an adjunctive intervention in stroke rehabilitation.
 
 DETAILED DESCRIPTION:
-This study is a single-center, randomized controlled trial designed to evaluate the effects of combining overground robot-assisted gait training (o-RAGT) with recumbent cycling (RC) in patients with subacute stroke at risk of sarcopenia. A total of 53 participants were randomly assigned to either an experimental group receiving combined o-RAGT and RC or a control group receiving RC alone.
+This study is aromasingle-center, randomized controlled trial designed to evaluate the effects of combining overground robot-assisted gait trening (o-RAGT) with recumbent cycling (RC) in patients with subacute stroke at risk of sarcopenia. A total of 53 participants were randomly assigned to either an experimental group receiving combined o-RAGT and RC or a control group receiving RC alone.
 
-The intervention was conducted five times per week for 60 minutes per session over a 4-week period. Overground robot-assisted gait training was performed using the Angel Legs M20 exoskeleton, while recumbent cycling was provided as conventional exercise training.
+The intervention was conducted five times per week for 60 minutes per session over a 4-week period. Overground robot-assisted gait trening was performed using the Angel Legs M20 exoskeleton, while recumbent cycling was provided as conventional exercise trening.
 
-The primary outcomes were changes in skeletal muscle mass index, muscle quality, and falls efficacy. Secondary outcomes included measures of physical performance and functional mobility, such as the Short Physical Performance Battery, 6-Minute Walk Test, Timed Up and Go test, and lower extremity motor function.
+The primary outcomes were changes in skeletal muscle mass index, musclEQuality, and falls efficacy. Secondary outcomes included measures of physical performance and functional mobility, such as the Short Physical Performance Battery, 6-Minute Walk Test, Timed Up and Go test, and lower extremity motor function.
 
-This study aims to provide clinical information regarding the feasibility and potential effects of combining overground robot-assisted gait training with conventional exercise in stroke rehabilitation.
+This study aims to provide clinical information regarding the feasibility and potential effects of combining overground robot-assisted gait trening with conventional exercise in stroke rehabilitation.
 
 PRIMARY OUTCOMES:
-  - Change in Muscle Quality
+  - Change in MusclEQuality
   - Change in Fall Efficacy (K-FES-I)
   - Change in Skeletal Muscle Mass Index (SMI)
 
 INTERVENTIONS:
-  - DEVICE: Overground Robot-Assisted Gait Training (o-RAGT)
-  - DEVICE: Recumbent Bicycle Training
+  - DEVICE: Overground Robot-Assisted Gait trening (o-RAGT)
+  - DEVICE: Recumbent Bicycle trening
 
 ELIGIBILITY:
 Age: 19 Years to 80 Years

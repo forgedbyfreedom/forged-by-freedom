@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT03839082
-Title: Structured Mobile Technology Based Lifestyle Program vs Usual Care for Patients With Non-alcoholic Fatty Liver Disease
-Official Title: A Randomized Controlled Pilot Trial of a Structured Mobile Technology Based Lifestyle Program vs Usual Care for Patients With Non-alcoholic Fatty Liver Disease
+Title: Structured Mobile Technology Based Lifestyle Program vs UsuALCARe for Patients With Non-alcoholic Fatty Liver Disease
+Official Title: A Randomized Controlled Pilot Trial of a Structured Mobile Technology Based Lifestyle Program vs UsuALCARe for Patients With Non-alcoholic Fatty Liver Disease
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,7 +10,7 @@ Enrollment: 75
 Topic: weight loss exercise
 
 SUMMARY:
-This study will look at physical activity and nutrition in patients with non-alcoholic fatty liver disease (NAFLD) or non-alcoholic steatohepatitis (NASH). The researchers will see if providing patients with NAFLD/NASH with specific physical activity and nutrition feedback as an addition to their usual clinical care helps them to lose weight and improve liver-related parameters.
+This study will look at physical activity and nutrition in patients with non-alcoholic fatty liver disease (NAFLD) or non-alcoholic steatohepatitis (NASH). The researchers will see if providing patients with NAFLD/NASH with specific physical activity and nutrition feedback as an addition to their usual clinicALCARe helps them to lose weight and improve liver-related parameters.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -19,8 +19,8 @@ PRIMARY OUTCOMES:
   - Percent Change in Hepatic Steatosis as Measured by Controlled Attenuation Parameter (CAP) Score
 
 INTERVENTIONS:
-  - OTHER: Usual Care then FitBit
-  - OTHER: FitBit then Usual Care
+  - OTHER: UsuALCARe then FitBit
+  - OTHER: FitBit then UsuALCARe
 
 ELIGIBILITY:
 Age: 18 Years to 

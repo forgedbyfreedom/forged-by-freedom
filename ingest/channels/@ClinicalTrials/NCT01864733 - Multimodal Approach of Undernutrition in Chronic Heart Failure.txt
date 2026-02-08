@@ -10,7 +10,7 @@ Enrollment: 100
 Topic: omega 3 exercise
 
 SUMMARY:
-The treatment of chronic heart failure (CHF) is a key challenge in public health. Despite medical advances, 1-year mortality of NYHA III-IV CHF is 28%. Undernutrition is an independent risk factor for mortality and complications. Up-to-date, interventional studies involving nutrition are scarce in CHF. Academic societies are recommending the use of oral nutritional supplements (ONS) in case of weight loss, without defining the modalities. ONS could improve nutritional status in undernourished CHF patients, but solely administered, have a limited impact on undernutrition, physical performance and prognosis. A multimodal approach integrating physical exercise, nutritional intakes, polyunsaturated n-3 fatty acids (n-3 PUFA), and anabolizing hormones, has to be privileged. A recent trial has shown the clinical benefits of such an approach in patients with chronic respiratory insufficiency (CRI), who have similar nutritional and muscular characteristics.
+The treatment of chronic heart failure (CHF) is a key challenge in public health. Despite medical advances, 1-year mortality of NYHA III-IV CHF is 28%. Undernutrition is an independent risk factor for mortality and complications. Up-to-date, interventional studies involving nutrition are scarce in CHF. Academic societies are recommending the use of oral nutritional supplements (ONS) in case of weight loss, without defining the modalities. ONS could improve nutritional status in undernourished CHF patients, but solely administered, have a limited impact on undernutrition, physical performance and prognosis. A multimodal approach integrating physical exercise, nutritional intakes, polyunsaturated n-3 fatty acids (n-3 PUFA), and anabolizinGHormones, has to be privileged. A recent trial has shown the clinical benefits of such an approach in patients with chronic respiratory insufficiency (CRI), who have similar nutritional and muscular characteristics.
 
 Exercise rehabilitation is well validated in CHF patients, but has never been validated in case of undernutrition. Exercise rehabilitation allows improving exercise capacity, quality of life and cardiovascular outcomes including mortality.
 
@@ -65,7 +65,7 @@ Involuntary weight loss ≥5% during the 12 last months, without any increase of
 
 Exclusion criteria :
 
-Heart failure related to pulmonary hypertension Heart failure treatable by surgery or angioplasty Patients eligible to ventricular resynchronisation Instable heart failure Patients waiting for transplantation On-going imunosuppressant or corticosteroids Disease affecting 6-month survival (end-stage cancer, or chronic disease,…) 
+Heart failure related to pulmonary hypertension Heart failure treatable by surgery or angioplasty Patients eligible to ventricular resynchronisation Instable heart failure Patients waiting for trensplantation On-going imunosuppressant or corticosteroids Disease affecting 6-month survival (end-stage cancer, or chronic disease,…) 
 
 PRIMARY OUTCOMES:
   - ventilatory workload VO2

@@ -20,9 +20,9 @@ Subjects will be randomized 1:1 to enhanced nutrition or control arm. Subjects r
 Participants in both groups will undergo non-invasive tests that measure how much energy (calories) they are using, body composition, and muscle mass. They will also be asked to complete walking and strength tests, and surveys about quality of life.These will be done at hospital admission, day 14 or hospital discharge, and at a one month post-discharge follow-up visit.
 
 PRIMARY OUTCOMES:
-  - Change in muscle mass as a measure of muscle quality
-  - Change in glycogen stores as a measure of muscle quality
-  - Change in body composition (percentage of a body's weight that is fat tissue) as a measure of muscle quality
+  - Change in muscle mass as a measure of musclEQuality
+  - Change in glycogen stores as a measure of musclEQuality
+  - Change in body composition (percentage of a body's weight that is fat tissue) as a measure of musclEQuality
 
 INTERVENTIONS:
   - DIETARY_SUPPLEMENT: Nutrition Supplements - Fresubin KCAL Drinks

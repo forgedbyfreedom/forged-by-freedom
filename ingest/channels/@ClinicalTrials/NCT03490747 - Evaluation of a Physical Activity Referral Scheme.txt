@@ -10,7 +10,7 @@ Enrollment: 68
 Topic: exercise intervention obesity
 
 SUMMARY:
-The study will evaluate the effectiveness of a co-developed exercise referral scheme. Participants will be recruited to one of three groups 1. Co-developed exercise referral scheme, 2. Usual care exercise referral scheme, 3. No treatment control (no intervention). The study will measure effectiveness by observing change in cardiorespiratory fitness at 12 weeks. Intervention cost-effectiveness will also be evaluated at 3 months follow-up using objective physical activity data.
+The study will evaluate the effectiveness of a co-developed exercise referral scheme. Participants will be recruited to one of three groups 1. Co-developed exercise referral scheme, 2. UsuALCARe exercise referral scheme, 3. No treatment control (no intervention). The study will measure effectiveness by observing change in cardiorespiratory fitness at 12 weeks. Intervention cost-effectiveness will also be evaluated at 3 months follow-up using objective physical activity data.
 
 DETAILED DESCRIPTION:
 Evidence of effectiveness for UK exercise referral is unclear. This representation has been deemed an unfair assessment of its potential to impact public health. This is due to systematic review evidence that reports evaluations of exercise referral interventions that are not evidence-based or underpinned by behaviour change theory.
@@ -24,7 +24,7 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - BEHAVIORAL: Physical activity referral scheme
-  - BEHAVIORAL: Usual care exercise referral scheme
+  - BEHAVIORAL: UsuALCARe exercise referral scheme
 
 ELIGIBILITY:
 Age: 18 Years to 

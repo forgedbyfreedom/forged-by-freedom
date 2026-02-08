@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT06388226
-Title: Leg Heat Therapy in Heart Failure With Preserved Ejection Fraction
-Official Title: Leg Heat Therapy to Improve Functional Performance in Heart Failure With Preserved Ejection Fraction (HFpEF)
+Title: LeGHeat Therapy in Heart Failure With Preserved Ejection Fraction
+Official Title: LeGHeat Therapy to Improve Functional Performance in Heart Failure With Preserved Ejection Fraction (HFpEF)
 Status: RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -19,7 +19,7 @@ PRIMARY OUTCOMES:
   - Change in time to exhaustion during treadmill exercise
 
 INTERVENTIONS:
-  - DEVICE: Leg heat therapy
+  - DEVICE: LeGHeat therapy
   - DEVICE: Leg sham therapy
 
 ELIGIBILITY:

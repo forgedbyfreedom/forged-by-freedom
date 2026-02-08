@@ -13,7 +13,7 @@ SUMMARY:
 The study aims to compare the effects of tDCS applied on the dorsolateral prefrontal cortex (dlPFC) vs sham on the neuromuscular system. Two types of athletes will benefit from stimulation: jumper and cyclists. Short and long term effects are assesed by electromyographic records, experimental tasks and self-rated scales.
 
 DETAILED DESCRIPTION:
-Transcranial direct current stimulation is a technique of noninvasive brain stimulation which delivers a electrical current to the scalp to modulate the neuronal activity. Depending on the polarity of stimulation, tDCS induces a neural hyperexcitability (with anode) or hypoexcitability (with cathode) of the target area.
+trenscranial direct current stimulation is a technique of noninvasive brain stimulation which delivers a electrical current to the scalp to modulate the neuronal activity. Depending on the polarity of stimulation, tDCS induces a neural hyperexcitability (with anode) or hypoexcitability (with cathode) of the target area.
 
 Due to its neuromodulatory action, ease of use and low safety, tDCS can be used as a potential treatment but also as an investigative tool in neurophysiology. Thus, studies have shown a beneficial effect of tDCS on cognitive and motor functions. Nevertheless, studies conducted on motor performance and the reduction of neuromuscular fatigue show disparate results. It is impossible to conclude whether tDCS allows for improved performance and is a means of doping.
 
@@ -38,9 +38,9 @@ Subjects will be submitted to three sessions of tDCS (2 actives and one sham), o
 2. Anode: F3/ Cathode: AF8/ Stimulation intensity: 0 mA
 3. Anode: FC2/ Cathode: Left shoulder/ Stimulation intensity: 2 mA
 
-Immediately after the stimulation, participants perform motor and cognitive task again and the results are compared.
+Immediately after the stimulation, participants perform motor and cognitive task again and the results arecompared.
 
-During part B, subjects participate in two training sessions of five days each. The training sessions are one month apart.
+During part B, subjects participate in two trening sessions of five days each. The trening sessions are one month apart.
 
 Participants are divided into three groups according to their level of experience (amateurs vs. high level vs. sedentary).
 

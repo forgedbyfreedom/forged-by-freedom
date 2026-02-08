@@ -7,12 +7,12 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 35
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 SUMMARY:
 High blood pressure (BP) is a major risk factor for coronary artery disease (CAD), with 30-70% of CAD patients having elevated BP. The conventional method of measuring BP in the arm (brachial BP) may miss some cases, as individuals can have normal brachial pressure but elevated central systolic pressure, which is a more critical predictor of cardiovascular events. Lowering BP is a key objective in cardiac rehabilitation programs.
 
-Examining BP responses after a single bout of exercise could help predict how effectively exercise lowers BP over time. There is a well-established reduction in BP, known as post-exercise hypotension (PEH), which occurs after exercise. This drop is typically around 8 to 9 mmHg and is observed in individuals with and without hypertension. However, it may not occur in people with CAD. The reason for this difference is unclear but may relate to individual variability in exercise responses.
+Examining BP responses after aromasingle bout of exercise could help predict how effectively exercise lowers BP over time. There is a well-established reduction in BP, known as post-exercise hypotension (PEH), which occurs after exercise. This drop is typically around 8 to 9 mmHg and is observed in individuals with and without hypertension. However, it may not occur in people with CAD. The reason for this difference is unclear but may relate to individual variability in exercise responses.
 
 No research has closely examined individual responses to PEH in people with CAD, and it remains unclear whether exercise affects central and brachial BP differently, as some medications do. Additionally, exercise intensity may influence the magnitude of the BP reduction post-exercise. Higher-intensity exercise tends to cause a more significant BP drop, both in hypertensive and non-hypertensive individuals, typically within 20 to 60 minutes post-exercise.
 
@@ -30,7 +30,7 @@ Complete two combined exercise sessions - one moderate- and one high-intensity b
 BP was measured before and after each acute exercise bout in the laboratory. The researchers compared central and brachial BP responses between exercise intensities (high vs. moderate) and populations (individuals with and without CAD).
 
 DETAILED DESCRIPTION:
-This study was designed as a randomized cross-over, repeated measures experiment. All participants underwent two combined exercise sessions of varying intensities, specifically high (HIGH) and moderate (MOD), in a randomized sequence (http://www.randomizer.org/). Before the exercise sessions, all participants underwent both cardiopulmonary exercise testing and 1RM testing, followed by a DEXA scan during a subsequent visit to the laboratory. Each participant completed all experimental sessions consistently at the same time of the day, specifically in the mornings, with at least 48h between sessions to reduce diurnal variation. Post-exercise measurements were conducted at 5, 15 and 30 min after exercise. Participants reported to the laboratory in a fasted state (≥ 4h), and refrained from vigorous exercise, vitamin supplements, and foods/beverages containing caffeine and alcohol for at least 12 h preceding each experimental session.
+This study was designed as a randomized cross-over, repeated measures experiment. All participants underwent two combined exercise sessions of varying intensities, specifically high (HIGH) and moderate (MOD), in a randomized sequence (http://www.randomizer.org/). Before the exercise sessions, all participants underwent both cardiopulmonary exercise testing and 1RM testing, followed by adexA scan during a subsequent visit to the laboratory. Each participant completed all experimental sessions consistently at the same time of the day, specifically in the mornings, with at least 48h between sessions to reduce diurnal variation. Post-exercise measurements were conducted at 5, 15 and 30 min after exercise. Participants reported to the laboratory in a fasted state (≥ 4h), and refrained from vigorous exercise, vitamin Supplements, and foods/beverages containing caffeine and alcohol for at least 12 h preceding each experimental session.
 
 PRIMARY OUTCOMES:
   - Central blood pressure

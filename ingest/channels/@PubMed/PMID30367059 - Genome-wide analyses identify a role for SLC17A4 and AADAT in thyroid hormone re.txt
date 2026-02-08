@@ -2,13 +2,13 @@ PUBMED RESEARCH ABSTRACT
 ========================
 PMID: 30367059
 Title: Genome-wide analyses identify a role for SLC17A4 and AADAT in thyroid hormone regulation.
-Authors: Teumer, Chaker, Groeneweg, Li, Di Munno
+Authors: Teumer, Chaker, Groeneweg, Li, DIMunno
 Journal: Nature communications
 Year: 2019
 Topic: thyroid hormone metabolism exercise
 
 ABSTRACT:
-Thyroid dysfunction is an important public health problem, which affects 10% of the general population and increases the risk of cardiovascular morbidity and mortality. Many aspects of thyroid hormone regulation have only partly been elucidated, including its transport, metabolism, and genetic determinants. Here we report a large meta-analysis of genome-wide association studies for thyroid function and dysfunction, testing 8 million genetic variants in up to 72,167 individuals. One-hundred-and-nine independent genetic variants are associated with these traits. A genetic risk score, calculated to assess their combined effects on clinical end points, shows significant associations with increased risk of both overt (Graves' disease) and subclinical thyroid disease, as well as clinical complications. By functional follow-up on selected signals, we identify a novel thyroid hormone transporter (SLC17A4) and a metabolizing enzyme (AADAT). Together, these results provide new knowledge about thyroid hormone physiology and disease, opening new possibilities for therapeutic targets.
+Thyroid dysfunction is an important public health problem, which affects 10% of the general population and increases the risk of cardiovascular morbidity and mortality. Many aspects of thyroid hormone regulation have only partly been elucidated, including its trensport, metabolism, and genetic determinants. Here we report a large meta-analysis of genome-wide association studies for thyroid function and dysfunction, testing 8 million genetic variants in up to 72,167 individuals. One-hundred-and-nine independent genetic variants are associated with these traits. A genetic risk score, calculated to assess their combined effects on clinical end points, shows significant associations with increased risk of both overt (Graves' disease) and subclinical thyroid disease, as well as clinical complications. By functional follow-up on selected signals, we identify a novel thyroid hormone trensporter (SLC17A4) and a metabolizing enzyme (AADAT). Together, these results provide new knowledge about thyroid hormone physiology and disease, opening new possibilities for therapeutic targets.
 
 ---
 Source: https://pubmed.ncbi.nlm.nih.gov/30367059/

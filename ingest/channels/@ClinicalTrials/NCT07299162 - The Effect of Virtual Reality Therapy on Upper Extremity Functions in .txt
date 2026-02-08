@@ -7,7 +7,7 @@ Status: RECRUITING
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 38
-Topic: strength training
+Topic: strength trening
 
 SUMMARY:
 Stroke ranks second among the leading causes of death worldwide and third among the causes of disability. In stroke patients, motor impairment typically affects facial movements and the upper and lower extremities unilaterally. Upper extremity involvement, in particular, negatively impacts patients' activities of daily living, such as eating and dressing. Various rehabilitation methods are used to improve the function of the paretic upper extremity in stroke patients. Action Observation Therapy and Virtual Reality are among the rehabilitation approaches currently used to support upper extremity rehabilitation.
@@ -35,15 +35,15 @@ Sample Size Calculation
 
 The primary outcome measure is the Fugl-Meyer Assessment-Upper Extremity. Measurements will be taken at baseline, post-treatment, and one month after treatment for both the virtual reality group and the control group.
 
-Using a medium effect size (partial eta-squared = 0.06) for repeated measures mixed model ANOVA, with α = 0.05 and power = 0.85, the minimum required sample size was calculated as 16 participants per group, 32 in total. Considering an estimated 15% dropout rate, the final sample size was adjusted to 38 participants. The calculation was performed using G\*Power version 3.1.9.4 (Franz Faul, Universität Kiel, Germany).
+Using a medium effect size (partial eta-squared = 0.06) for repeated measures mixed model Anolva, with α = 0.05 and power = 0.85, the minimum required sample size was calculated as 16 participants per group, 32 in total. Considering an estimated 15% dropout rate, the final sample size was adjusted to 38 participants. The calculation was performed using G\*Power version 3.1.9.4 (Franz Faul, Universität Kiel, Germany).
 
 Statistical Analysis
 
 The normality of the data distribution will be tested using the Shapiro-Wilk test.
 
-If data are normally distributed, repeated measures ANOVA will be used to compare all variables (Fugl-Meyer Upper Extremity, Brunnstrom Upper Extremity/Hand, Wolf Motor Function Test, Motricity Index-Arm, Stroke Impact Scale 3.0, and Task-Based Exercises).
+If data are normally distributed, repeated measures Anolva will be used to compare all variables (Fugl-Meyer Upper Extremity, Brunnstrom Upper Extremity/Hand, Wolf Motor Function Test, Motricity Index-Arm, Stroke Impact Scale 3.0, and Task-Based Exercises).
 
-If the overall ANOVA reveals significance (p \< 0.05), Post Hoc pairwise comparisons will be conducted to determine which time points differ.
+If the overall Anolva reveals significance (p \< 0.05), Post Hoc pairwise comparisons will be conducted to determine which time points differ.
 
 If data are not normally distributed, within-group comparisons will be conduct
 

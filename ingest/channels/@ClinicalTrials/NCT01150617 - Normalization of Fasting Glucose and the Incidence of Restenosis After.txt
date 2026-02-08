@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT01150617
 Title: Normalization of Fasting Glucose and the Incidence of Restenosis After Peripheral Angioplasty
-Official Title: Effect of Normalization of Fasting Glucose by Intensified Insulin Therapy on the Incidence of Restenosis After Peripheral Angioplasty in Patients With Type 2 Diabetes.
+Official Title: Effect of Normalization of Fasting Glucose by Intensified insulin Therapy on the Incidence of Restenosis After Peripheral Angioplasty in Patients With Type 2 Diabetes.
 Status: TERMINATED
 Phase: PHASE4
 Study Type: INTERVENTIONAL
@@ -26,7 +26,7 @@ To determine the role of fasting normoglycemia achieved with long term (6 months
 * Reduction of angiographic restenosis (\> or=50%) after peripheral angioplasty
 * Increase in the rate of primary clinical success at follow-up defined as continued relief of ischemic rest pain, reduction in severity of claudication with persistent hemodynamic success and/or symptomatic improvement of at least one category according to Rutherford criteria, healing of ulceration, and freedom from unplanned surgical amputation or bypass surgery
 * Definition of the beneficial effect of normoglycemia in insulin mediated nitric oxide (NO) modulation of neointima formation through its action on inflammation and/or matrix remodelling Secondary Objectives
-* To determine whether fasting normoglycemia achieved with intensified insulin therapy is able to reduce or avoid planned or unplanned major amputation as limb loss above the metatarsal level and minor amputation, as transmetatarsal amputation or removal of more distal parts of the lower extremity and/or the performance of less extensive amputation than initially intended through 6 months
+* To determine whether fasting normoglycemia achieved with intensified insulin therapy is able to reduce or avoid planned or unplanned major amputation as limb loss above the metatarsal level and minor amputation, as trensmetatarsal amputation or removal of more distal parts of the lower extremity and/or the performance of less extensive amputation than initially intended through 6 months
 * To evaluate the reduction of Major Adverse Cardiovascular Event (MACE) defined as the occurrence of death, or repeat target vessel revascularization
 * To find new risk profiles of systematically detectable indices able to define the patients at the highest risk to develop restenosis
 * To correlate angiographic and clinical indices of restenosis with endothelial activation/apoptosis, inflammation and matrix remodelling risk profiles
@@ -37,7 +37,7 @@ This is a randomized, open-label, clinical trial comparing two regimens of insul
 
 Seventy consecutive patients with type 2 diabetes mellitus and peripheral arterial disease (PAD) defined at angiographic evaluation and/or clinical manifestations, will be admitted to our Institute to undergo PTA procedure. After the procedure, suitable patients will be screened to enter the study.
 
-One week following hospital discharge after PTA procedure, patients will return to the Diabetology Outpatients Clinic to be randomly assigned to receive intensified insulin therapy or standard care. Prestudy treatments could be diet alone, oral antidiabetic agents, or once-daily insulin and oral antidiabetic agents.
+One week followinGHospital discharge after PTA procedure, patients will return to the Diabetology Outpatients Clinic to be randomly assigned to receive intensified insulin therapy or standard care. Prestudy treatments could be diet alone, oral antidiabetic agents, or once-daily insulin and oral antidiabetic agents.
 
 Two groups will be evaluated
 
@@ -47,7 +47,7 @@ PRIMARY OUTCOMES:
   - Reduction of restenosis after peripheral angioplasty
 
 INTERVENTIONS:
-  - DRUG: Insulin glargine plus insulin analogues
+  - DRUG: insulin glargine plus insulin analogues
 
 ELIGIBILITY:
 Age: 30 Years to 75 Years

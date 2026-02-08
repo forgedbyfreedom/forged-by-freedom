@@ -29,7 +29,7 @@ INTERVENTIONS:
   - BEHAVIORAL: BMI screening
   - BEHAVIORAL: Next Steps brief clinical intervention
   - BEHAVIORAL: MEND/CATCH
-  - BEHAVIORAL: MEND/CATCH Transition Phase
+  - BEHAVIORAL: MEND/CATCH trensition Phase
   - BEHAVIORAL: Next Steps Self-Paced Booklet
 
 ELIGIBILITY:

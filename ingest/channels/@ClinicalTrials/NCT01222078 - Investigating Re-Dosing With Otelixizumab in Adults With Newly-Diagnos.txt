@@ -7,7 +7,7 @@ Status: TERMINATED
 Phase: PHASE2
 Study Type: INTERVENTIONAL
 Enrollment: 1
-Topic: beta alanine
+Topic: beta-alanine
 
 SUMMARY:
 The purpose of this study to assess the safety and tolerability of re-dosing at 6 months with otelixizumab (given as an 8-day series of intravenous infusions) in adult subjects with newly diagnosed type 1 diabetes mellitus

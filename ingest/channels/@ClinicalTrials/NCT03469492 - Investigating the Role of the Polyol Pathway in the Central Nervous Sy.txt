@@ -19,7 +19,7 @@ PRIMARY OUTCOMES:
   - Change in HbA1c Levels
 
 INTERVENTIONS:
-  - DRUG: Insulin
+  - DRUG: insulin
   - BEHAVIORAL: exercise
   - DIETARY_SUPPLEMENT: Dietary counseling
 

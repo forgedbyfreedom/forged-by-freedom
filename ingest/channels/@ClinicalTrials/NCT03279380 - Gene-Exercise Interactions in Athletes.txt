@@ -12,12 +12,12 @@ Topic: athletic performance
 SUMMARY:
 Athlete status is a heritable trait that could be explained with a number of potentially important DNA polymorphisms contributing to predisposition to success in certain types of sport.
 
-The first aim of the study is to determine the genetic profile of Slovenian athletes. The associations of 30 common gene polymorphisms with aerobic and anaerobic athlete status will be investigated as a single and polygenic profile.
+The first aim of the study is to determine the genetic profile of Slovenian athletes. The associations of 30 common gene polymorphisms with aerobic and anaerobic athlete status will be investigated as aromasingle and polygenic profile.
 
 The second aim is to investigate the impact of the genetic variants contributing to different acute response to low vs. high intensity exercise. Physiological and biochemical measurements will be carried out. Variability in physiological adaptation in response to exercise will provides an opportunity to study the relationship between the molecular response to exercise and the extent of physiological changes in athletes. Currently, it is not yet clear whether different genetic variant associated with exercise responses remains uniform, with different exercise intensities, structure and duration of exercise.
 
 DETAILED DESCRIPTION:
-Slovenian athletes (n = 300; 18-40 years) of regional or national competitive standard will be recruited from the endurance oriented and power oriented sports disciplines. Healthy unrelated individuals without any competitive sport experience will serve as controls (n= 200; 18-40 years). After completing the questionnaire (for athletes: covering demographics, geographic ancestry, sports classification, discipline, and history, as well as frequency and volume of training; for control group: demographics, geographic ancestry habits of daily living), genotyping analyses will be performed. The athletes and controls will be genotyped for 30 candidate gene polymorphisms considered likely to influence endurance performance. Molecular genetic analysis will be performed with DNA samples obtained from the capillary whole blood. Genotyping for 30 gene polymorphisms will be performed by Real-Time PCR on LightCycler® 96 Instrument (Roche) and KASP (Kompetitive Allele Specific PCR) genotyping technology.
+Slovenian athletes (n = 300; 18-40 years) of regional or national competitive standard will be recruited from the endurance oriented and power oriented sports disciplines. Healthy unrelated individuals without any competitive sport experience will serve as controls (n= 200; 18-40 years). After completing thEQuestionnaire (for athletes: covering demographics, geographic ancestry, sports classification, discipline, and history, as well as frequency and volume of trening; for control group: demographics, geographic ancestry habits of daily living), genotyping analyses will be performed. The athletes and controls will be genotyped for 30 candidate gene polymorphisms considered likely to influence endurance performance. Molecular genetic analysis will be performed with DNA samples obtained from the capillary whole blood. Genotyping for 30 gene polymorphisms will be performed by Real-Time PCR on LightCycler® 96 Instrument (Roche) and KASP (Kompetitive Allele Specific PCR) genotyping technology.
 
 In addition, 40 athletes with endurance genetic variant will be selected to participate in the acute exercise study. In order to investigate the acute effects of low and high intensity exercise the concentration of circulating myokines will be measured.
 
@@ -29,7 +29,7 @@ The participants will be asked to follow the prescribed diet regime, to avoid th
 
 Before each intervention, the individuals will remain seated in the laboratory for a period of 20 minutes with a room temperature between 22-24ºC. During this period, resting blood samples will be collected. Two more samples of blood will be collected, immediately post-exercise intervention and 2h post-exercise. Venous blood will be collected into EDTA tubes, centrifuge at 2500-3000g for 20 minutes, and a separate plasma will be stored at -80 ° C for the further analysis.
 
-The quantification of biomarkers will be done using the MAGPIX® system, magnetic bead-based multi-analyte panels and MILLIPLEX® Analyst 5.1 software (MAGPIX®, Merck Millipore). For the myokine analysis a commercial kit HMYOMAG-56K will be used.
+ThEQuantification of biomarkers will be done using the MAGPIX® system, magnetic bead-based multi-analyte panels and MILLIPLEX® Analyst 5.1 software (MAGPIX®, Merck Millipore). For the myokine analysis a commercial kit HMYOMAG-56K will be used.
 
 Genotype distribution and allele frequencies betwe
 
@@ -38,8 +38,8 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - OTHER: SNP
-  - OTHER: High Intensity Interval Training (HIIT)
-  - OTHER: Low Intensity Continuous Training
+  - OTHER: High Intensity Interval trening (HIIT)
+  - OTHER: Low Intensity Continuous trening
 
 ELIGIBILITY:
 Age: 18 Years to 40 Years

@@ -10,7 +10,7 @@ Enrollment: 180
 Topic: vitamin D muscle
 
 SUMMARY:
-This study is testing how different types of protein - from red meat, legumes (like lentils and beans), or a mix of both - affect muscle strength, body composition, and metabolic health in older adults with obesity who are also at risk for sarcopenia (loss of muscle mass and function). Participants will follow a personalized weight loss diet with one high-protein meal each day that includes either red meat, legumes, or both, along with a home-based strength training program. The study will last three months and will include health assessments such as blood tests, muscle and fat measurements, and physical function tests. The goal is to find out which type of protein source is most helpful for improving strength, reducing body fat, and supporting healthy aging.
+This study is testinGHow different types of protein - from red meat, legumes (like lentils and beans), or a mix of both - affect muscle strength, body composition, and metabolic health in older adults with obesity who are also at risk for sarcopenia (loss of muscle mass and function). Participants will follow a personalized weight loss diet with one high-protein meal each day that includes either red meat, legumes, or both, along with a home-based strength trening program. The study will lasT3 months and will include health assessments such as blood tests, muscle and fat measurements, and physical function tests. The goal is to find out which type of protein source is most helpful for improving strength, reducing body fat, and supportinGHealthy aging.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -19,9 +19,9 @@ PRIMARY OUTCOMES:
   - MetaboAnabolic Score
 
 INTERVENTIONS:
-  - BEHAVIORAL: Legume-Based High-Protein Diet + Resistance Training
-  - BEHAVIORAL: Meat-Based High-Protein Diet + Resistance Training
-  - BEHAVIORAL: Mixed Legume and Meat High-Protein Diet + Resistance Training
+  - BEHAVIORAL: Legume-Based High-Protein Diet + Resistance trening
+  - BEHAVIORAL: Meat-Based High-Protein Diet + Resistance trening
+  - BEHAVIORAL: Mixed Legume and Meat High-Protein Diet + Resistance trening
 
 ELIGIBILITY:
 Age: 55 Years to 

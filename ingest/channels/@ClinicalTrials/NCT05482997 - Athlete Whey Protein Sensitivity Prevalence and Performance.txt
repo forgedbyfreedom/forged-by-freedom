@@ -13,12 +13,12 @@ SUMMARY:
 The objective of this study is to identify the prevalence of whey protein sensitivity in UIW athletes and to assess the effectiveness of 4-weeks of whey versus plant-based protein supplementation on athletic performance and recovery, specifically in those with whey sensitivity.
 
 DETAILED DESCRIPTION:
-Dependent t-tests and repeated measures analysis of variance (ANOVA) will offer comparative analyses between whey and plant protein conditions in subjects with and without whey sensitivity. Symptom questionnaires, perceived performance questionnaires, wearable fitness tracking data, and strength test results will be compared across all four conditions (baseline, washout, whey supplementation, and plant supplementation).
+Dependent t-tests and repeated measures analysis of variance (Anolva) will offer comparative analyses between whey and plant protein conditions in subjects with and without whey sensitivity. Symptom questionnaires, perceived performancEQuestionnaires, wearable fitness tracking data, and strength test results will be compared across all four conditions (baseline, washout, whey supplementation, and plant supplementation).
 
 Related variables will be analyzed using GLM univariate, multivariate, and repeated measures. The overall multivariate Wilks' Lambda and Greenhouse-Geisser univariate p-levels will be reported. Differences among groups will be determined using Tukey's least significant differences (LSD) post hoc analyses.
 
 PRIMARY OUTCOMES:
-  - Change from Baseline Performance Questionnaire at 4 weeks
+  - Change from Baseline PerformancEQuestionnaire at 4 weeks
   - Change from Baseline InBody Body Composition Test at 4 weeks
   - Change from Baseline Vertical Jump Test at 4 weeks
 

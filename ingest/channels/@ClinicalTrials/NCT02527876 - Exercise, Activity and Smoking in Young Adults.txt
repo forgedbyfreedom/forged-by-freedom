@@ -2,12 +2,12 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT02527876
 Title: Exercise, Activity and Smoking in Young Adults
-Official Title: Exercise to Promote Quit Attempts in Young Adults
+Official Title: Exercise to PromotEQuit Attempts in Young Adults
 Status: WITHDRAWN
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 0
-Topic: high intensity interval training
+Topic: high intensity interval trening
 
 SUMMARY:
 The purpose of this study is to evaluate how physical activity levels change in young adults when they start a specific exercise program.
@@ -19,7 +19,7 @@ PRIMARY OUTCOMES:
   - Number of Participants With Increase in Physical Activity as assessed by FitBit
 
 INTERVENTIONS:
-  - BEHAVIORAL: High Intensity Interval Training
+  - BEHAVIORAL: High Intensity Interval trening
   - BEHAVIORAL: Moderate Intensity
   - BEHAVIORAL: Delayed Control
   - DEVICE: FitBit Flex

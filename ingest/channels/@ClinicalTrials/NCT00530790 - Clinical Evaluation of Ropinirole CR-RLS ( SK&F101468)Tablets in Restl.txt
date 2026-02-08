@@ -20,7 +20,7 @@ PRIMARY OUTCOMES:
   - Haematology Clinical Lab Values Change From Baseline
   - Blood Chemistry Clinical Lab Values Change From Baseline
   - Urinalysis Clinical Lab Values
-  - 12-Lead Electrocardiogram (ECG) Findings Transitions From Baseline
+  - 12-Lead Electrocardiogram (ECG) Findings trensitions From Baseline
 
 INTERVENTIONS:
   - DRUG: ropinirole controlled release (CR)-RLS

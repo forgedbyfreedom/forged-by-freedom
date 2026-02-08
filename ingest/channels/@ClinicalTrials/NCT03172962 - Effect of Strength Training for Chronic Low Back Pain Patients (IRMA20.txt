@@ -1,13 +1,13 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT03172962
-Title: Effect of Strength Training for Chronic Low Back Pain Patients (IRMA20)
-Official Title: Effect of Strength Training for Chronic Low Back Pain Patients: Randomized Clinical Trial
+Title: Effect of Strength trening for Chronic Low Back Pain Patients (IRMA20)
+Official Title: Effect of Strength trening for Chronic Low Back Pain Patients: Randomized Clinical Trial
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 85
-Topic: resistance training
+Topic: resistance trening
 
 SUMMARY:
 Low back pain (LBP) is common in the population and has great socioeconomic consequences for societies across Europe and the United States. About a third of working-age adults have frequent LBP, and for about 10% the pain becomes chronic with consequences for work and leisure activities. A Cochrane review from April 2017 concluded that physical exercise is an intervention with few adverse events and positive outcomes on pain and function in adults with chronic pain. However, when scrutinizing the specific studies of the review there are large differences in adherence to the exercise interventions and consequently in the results obtained. Thus, there is a need for simple exercises that the patients can easily adhere to.
@@ -20,8 +20,8 @@ PRIMARY OUTCOMES:
   - Back pain recurrence
 
 INTERVENTIONS:
-  - BEHAVIORAL: Strength training
-  - BEHAVIORAL: Usual care (control)
+  - BEHAVIORAL: Strength trening
+  - BEHAVIORAL: UsuALCARe (control)
 
 ELIGIBILITY:
 Age: 18 Years to 75 Years

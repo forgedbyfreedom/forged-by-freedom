@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT07148726
-Title: EFFECTS OF PYRROLOQUINOLINE QUINONE (PQQ) SUPPLEMENTATION ON NON-ENDURANCE TRAINED ATHLETES
-Official Title: EFFECTS OF PYRROLOQUINOLINE QUINONE (PQQ) SUPPLEMENTATION ON METABOLIC AND PHYSIOLOGICAL ADAPTATION AT REST AND DURING SUBMAXIMAL EXERCISE IN NON-ENDURANCE-TRAINED ATHLETES: A RANDOMIZED PLACEBO-CONTROLLED TRIAL
+Title: EFFECTS OF PYRROLOQUINOLINEQUINONE (PQQ) SUPPLEMENTATION ON NON-ENDURANCE trenED ATHLETES
+Official Title: EFFECTS OF PYRROLOQUINOLINEQUINONE (PQQ) SUPPLEMENTATION ON METABOLIC AND PHYSIOLOGICAL ADAPTATION AT REST AND DURING SUBMAXIMAL EXERCISE IN NON-ENDURANCE-trenED ATHLETES: A RANDOMIZED PLACEBO-CONTROLLED TRIAL
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -10,11 +10,11 @@ Enrollment: 24
 Topic: creatine supplementation
 
 SUMMARY:
-The aim of this study was to investigate the effects of six weeks of PQQ supplementation in non-endurance-trained individuals on:
+The aim of this study was to investigate the effects of six weeks of PQQ supplementation in non-endurance-trened individuals on:
 
 1. physiological and metabolic response during a FATmax-VO₂peak exercise test
 2. resting energy expenditure, body composition and blood biomarkers (fasting glucose, lactate dehydrogenase (LDH), creatine phosphokinase (CPK) and C-reactive protein (CRP) levels)
-3. blood and urine omics markers of oxidative metabolism 24 basketball players will be randomized to consume a supplement containing 20 mg/day of PQQ or placebo (PLA) during a six-week intervention. Subjects will be encouraged to maintain their usual diet and training schedule. Body composition will be assessed by dual-energy-x-ray-absorptiometry and bioimpedance analysis. Aerobic exercise performance will be evaluated through a graded exercise protocol (six 5-minutes steps followed by n 2-minutes steps until exhaustion; the initial workload was 60 watts and increased by 35 watts at the end of each step) performed on a cycle ergometer. Capillary blood lactate samples were collected at the end of each step. Blood and urine samples were also collected, and metabolomics analysis will be performed.
+3. blood and urine omics markers of oxidative metabolism 24 basketball players will be randomized to consume a supplement containing 20 mg/day of PQQ or placebo (PLA) during a six-week intervention. Subjects will be encouraged to maintain their usual diet and trening schedule. Body composition will be assessed by dual-energy-x-ray-absorptiometry and bioimpedance analysis. Aerobic exercise performance will be evaluated through a graded exercise protocol (six 5-minutes steps followed by n 2-minutes steps until exhaustion; the initial workload was 60 watts and increased by 35 watts at the end of each step) performed on a cycle ergometer. Capillary blood lactate samples were collected at the end of each step. Blood and urine samples were also collected, and metabolomics analysis will be performed.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -23,7 +23,7 @@ PRIMARY OUTCOMES:
   - Fat oxidation during FATmax-VO₂peak exercise test using gas analyzer.
 
 INTERVENTIONS:
-  - DIETARY_SUPPLEMENT: Pyrrole Quinoline Quinone (PQQ)
+  - DIETARY_SUPPLEMENT: PyrrolEQuinolinEQuinone (PQQ)
   - OTHER: Placebo
 
 ELIGIBILITY:

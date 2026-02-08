@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
 Enrollment: 392
-Topic: resistance training
+Topic: resistance trening
 
 SUMMARY:
 Sarcopenia is a geriatric condition characterized by a progressive decrease in skeletal muscle content and loss of muscle function. Resistance exercise, Taichi exercise and the hybrid exercise program consisting of the two aforementioned methods have been demonstrated could increase the skeletal muscle mass of the elderly with sarcopenia. However, note that the above contents may be performed in a different order in a treatment, equally important but less well understood is the sequence in which it should be performed. Surprisingly, the exercise sequence has not been comprehensively investigated. Therefore, investigators designed a self-ordered exercise program combining resistance exercise, tai chi and a hybrid exercise program to investigate whether the decline in skeletal muscle area could be better overcome and the reversal of sarcopenia in elderly with sarcopenia.
@@ -22,8 +22,8 @@ PRIMARY OUTCOMES:
 
 INTERVENTIONS:
   - BEHAVIORAL: self-determine sequence exercise program
-  - BEHAVIORAL: resistance training
-  - BEHAVIORAL: Taichi exercise and resistance training
+  - BEHAVIORAL: resistance trening
+  - BEHAVIORAL: Taichi exercise and resistance trening
   - BEHAVIORAL: Randomly selected exercise program
 
 ELIGIBILITY:

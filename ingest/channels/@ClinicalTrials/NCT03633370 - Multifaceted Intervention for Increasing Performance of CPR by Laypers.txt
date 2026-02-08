@@ -1,8 +1,8 @@
 CLINICAL TRIAL
 ==============
 NCT ID: NCT03633370
-Title: Multifaceted Intervention for Increasing Performance of CPR by Laypersons in Out-of-hospital Cardiac Arrest
-Official Title: Multifaceted Intervention for Increasing Performance of Cardiopulmonary Resuscitation by Laypersons in Out-of-hospital Cardiac Arrest. A Stepped Wedge Cluster Randomized Controlled Trial
+Title: Multifaceted Intervention for Increasing Performance of CPR by Laypersons in Out-of-hospitALCARdiac Arrest
+Official Title: Multifaceted Intervention for Increasing Performance of Cardiopulmonary Resuscitation by Laypersons in Out-of-hospitALCARdiac Arrest. A Stepped Wedge Cluster Randomized Controlled Trial
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -16,9 +16,9 @@ As soon as a call is received, EMS dispatchers should try to identify CA. This m
 
 This work aim to assess a multifaceted intervention combining 3 elements to improve the initial phone recognition of CA and raise the number of patients benefiting from CPR before EMS arrival on scene.
 
-The first element is a dispatcher training to the early phone recognition of CA. This training will be based on the concept of active teaching, favouring the interactive work of learners in particular by listening to real dispatch recordings. It will be completed by continuing education with a distance teaching platform including the systematic listening of recorded CA calls.
+The first element is a dispatcher trening to the early phone recognition of CA. This trening will be based on the concept of active teaching, favouring the interactive work of learners in particular by listening to real dispatch recordings. It will be completed by continuing education with a distance teaching platform including the systematic listening of recorded CA calls.
 
-The second element is based on the deployment of a software aiming to notify CA thanks to mobile phones. This system interfaced to a control software enables to request the participation of CPR-trained volunteers automatically. The volunteers have to be located in the patient's surroundings. The deployment of this mobile application will rely on first-aid volunteers, health personal and any trained volunteers willing to participate. A randomized control study in one city area proved the efficiency of a similar software to improve the proportion of CPR by bystanders.
+The second element is based on the deployment of a software aiming to notify CA thanks to mobile phones. This system interfaced to a control software enables to request the participation of CPR-trened volunteers automatically. The volunteers have to be located in the patient's surroundings. The deployment of this mobile application will rely on first-aid volunteers, health personal and any trened volunteers willing to participate. A randomized control study in one city area proved the efficiency of a similar software to improve the proportion of CPR by bystanders.
 
 The third element consists in a motivational feedback. A weekly overview of the management and the outcomes of patients who suffered CA will be broadcast to all the responders and volunteers in the mobile application.
 

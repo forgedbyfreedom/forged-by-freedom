@@ -10,7 +10,7 @@ Enrollment: 342
 Topic: caffeine exercise
 
 SUMMARY:
-This cluster-randomized trial, conducted in Tianjin, China, aims to evaluate the effectiveness of integrating a digital health risk early warning tool for heat with self-monitoring. Additionally, the study assesses the effectiveness of combining a digital health risk early warning tool for cold with self-monitoring. Communities from three districts will be randomly assigned to one of three groups: the combined intervention group (receiving health warnings via a WeChat mini-program and self-monitoring), the self-monitoring group (daily blood pressure (BP) and electrocardiogram (ECG) monitoring without warnings), and the control group (BP and ECG monitoring only during baseline and routine check-ups). The primary objective of the study is to evaluate the effectiveness of the intervention in improving blood pressure control and reducing the risk of electrocardiogram abnormalities, as well as understanding its underlying biological mechanisms.
+This cluster-randomized trial, conducted in Tianjin, China, aims to evaluate the effectiveness of integrating a digital health risk early warning tool for heat with self-monitoring. Additionally, the study assesses the effectiveness of combining a digital health risk early warning tool for cold with self-monitoring. Communities from three districts will be randomly assigned to one of three groups: the combined intervention group (receivinGHealth warnings via a WeChat mini-program and self-monitoring), the self-monitoring group (daily blood pressure (BP) and electrocardiogram (ECG) monitoring without warnings), and the control group (BP and ECG monitoring only during baseline and routine check-ups). The primary objective of the study is to evaluate the effectiveness of the intervention in improving blood pressure control and reducing the risk of electrocardiogram abnormalities, as well as understanding its underlying biological mechanisms.
 
 DETAILED DESCRIPTION:
 This cluster-randomized trial will be conducted in various districts across Tianjin, China. As part of the early warning interventions for heat and cold, three communities from each of the two selected districts will be randomly chosen and assigned to one of three groups: the combined intervention group, the self-monitoring group, or the control group. The study will be divided into pre-intervention and intervention phases. The pre-intervention period for the heat wave health early-warning information intervention spans from July 1st, 2023, to July 7th, 2023, followed by the intervention period from July 8th to September 9th, 2023. Similarly, during the cold spell health early-warning information intervention, the pre-intervention phase occurs from December 1st, 2023, to December 7th, 2023, and the intervention.
@@ -25,7 +25,7 @@ PRIMARY OUTCOMES:
   - Change from baseline in the risk of the overall warning level for abnormal ECG.
 
 INTERVENTIONS:
-  - BEHAVIORAL: Issuing health risk warning for a heat waves or cold spells
+  - BEHAVIORAL: IssuinGHealth risk warning for a heat waves or cold spells
   - DEVICE: A digital heat or cold health risk early warning tool
   - DEVICE: Self-monitoring blood pressure and ECG device
   - BEHAVIORAL: Perform daily self-monitoring of their BP and ECG
