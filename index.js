@@ -137,7 +137,7 @@ const CHANNEL_DISPLAY_NAMES = {
   // ThinkBig Priority (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
   "@rxmuscle": "RXMuscle",
-  "@anabolicbodybuilding": "ThinkBig Bodybuilding",
+  "@anabolicbodybuilding": "Anabolic Bodybuilding",
   // Female-Specific Experts (priority for women's questions)
   "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
   "@johnjewett3": "John Jewett",
@@ -202,7 +202,7 @@ const CHANNEL_DISPLAY_NAMES = {
 const CHANNEL_SPEAKERS = {
   "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
   "@rxmuscle": "Scott McNally, Dave Crosland & Skipp Hill",
-  "@anabolicbodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
+  "@anabolicbodybuilding": "Anabolic Bodybuilding",
   "@MorePlatesMoreDates": "Derek (MPMD)",
   "@MPMD": "Derek (MPMD)",
   "@vigoroussteve": "Vigorous Steve",
@@ -258,7 +258,6 @@ const SOURCE_PRIORITY = {
   // THINKBIG PRIORITY - ALWAYS FIRST (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": 0,
   "@rxmuscle": 0,
-  "@anabolicbodybuilding": 0,
   // Research - high but after ThinkBig
   "@PubMed": 10, "@ClinicalTrials": 10,
   // Tanner Tattered FAQ - high priority PED education
@@ -272,7 +271,7 @@ const SOURCE_PRIORITY = {
 };
 
 // ThinkBig channels and hosts for special handling
-const THINKBIG_CHANNELS = ["@ThinkBIGBodybuilding", "@rxmuscle", "@anabolicbodybuilding"];
+const THINKBIG_CHANNELS = ["@ThinkBIGBodybuilding", "@rxmuscle"];
 const THINKBIG_HOSTS = [
   "Scott McNally", "Dave Crosland", "Skipp Hill",  // Primary hosts
   "Dr. Scott Stevenson", "Scott Stevenson",        // ThinkBig science expert
@@ -446,8 +445,7 @@ function buildPrompt(question, quotes) {
       // FORCE correct speaker and show name for ThinkBig channels
       const isThinkBig = THINKBIG_CHANNELS.includes(channel) ||
           channel === "@ThinkBIGBodybuilding" ||
-          channel === "@rxmuscle" ||
-          channel === "@anabolicbodybuilding";
+          channel === "@rxmuscle";
       if (isThinkBig) {
         speaker = "Scott McNally, Dave Crosland & Skipp Hill";
       }
