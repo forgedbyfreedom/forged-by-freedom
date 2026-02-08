@@ -202,7 +202,7 @@ const CHANNEL_DISPLAY_NAMES = {
 const CHANNEL_SPEAKERS = {
   "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
   "@rxmuscle": "Scott McNally, Dave Crosland & Skipp Hill",
-  "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  "@anabolicbodybuilding": "Paul Barnett (Big Paul)",
   "@MorePlatesMoreDates": "Derek (MPMD)",
   "@MPMD": "Derek (MPMD)",
   "@vigoroussteve": "Vigorous Steve",
@@ -258,6 +258,8 @@ const SOURCE_PRIORITY = {
   // THINKBIG PRIORITY - ALWAYS FIRST (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": 0,
   "@rxmuscle": 0,
+  // Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul) - high priority, after ThinkBig
+  "@anabolicbodybuilding": 5,
   // Research - high but after ThinkBig
   "@PubMed": 10, "@ClinicalTrials": 10,
   // Tanner Tattered FAQ - high priority PED education
@@ -422,10 +424,15 @@ Primary sources (cite FIRST when present in evidence):
 
 Regular ThinkBig contributors: Ron Partlow, Dusty Hanshaw, Andrew Berry
 
-SECONDARY SOURCES (use after ThinkBig):
+**ANABOLIC BODYBUILDING is your #2 SOURCE (after ThinkBig):**
+- Hosted by IFBB Pro Paul Barnett (Big Paul)
+- Cite as: "Paul Barnett explains on Anabolic Bodybuilding..."
+- Excellent PED education content - use right after ThinkBig
+
+SECONDARY SOURCES (use after ThinkBig and Anabolic Bodybuilding):
 - Female topics: Dr. Gabrielle Lyon, John Jewett
 - Medical: PubMed, Dr. Thomas O'Connor
-- Other experts: Only after ThinkBig
+- Other experts: Only after ThinkBig and Anabolic Bodybuilding
 
 RULES:
 - ONLY cite what's in the evidence - never fabricate
