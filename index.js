@@ -137,7 +137,7 @@ const CHANNEL_DISPLAY_NAMES = {
   // ThinkBig Priority (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
   "@rxmuscle": "RXMuscle",
-  "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  "@anabolicbodybuilding": "ThinkBig Bodybuilding",
   // Female-Specific Experts (priority for women's questions)
   "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
   "@johnjewett3": "John Jewett",
@@ -202,7 +202,7 @@ const CHANNEL_DISPLAY_NAMES = {
 const CHANNEL_SPEAKERS = {
   "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
   "@rxmuscle": "Scott McNally, Dave Crosland & Skipp Hill",
-  "@anabolicbodybuilding": "Anabolic Bodybuilding",
+  "@anabolicbodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
   "@MorePlatesMoreDates": "Derek (MPMD)",
   "@MPMD": "Derek (MPMD)",
   "@vigoroussteve": "Vigorous Steve",
@@ -443,17 +443,27 @@ function buildPrompt(question, quotes) {
       const title = q.title !== "unknown" ? q.title : null;
       const channel = q.channel || "";
 
-      // FORCE correct speaker for ThinkBig channels - NEVER use Palumbo
-      if (THINKBIG_CHANNELS.includes(channel) ||
+      // FORCE correct speaker and show name for ThinkBig channels
+      const isThinkBig = THINKBIG_CHANNELS.includes(channel) ||
           channel === "@ThinkBIGBodybuilding" ||
           channel === "@rxmuscle" ||
-          channel === "@anabolicbodybuilding") {
+          channel === "@anabolicbodybuilding";
+      if (isThinkBig) {
         speaker = "Scott McNally, Dave Crosland & Skipp Hill";
       }
 
       // Build attribution line using display names
       let attribution = "";
-      if (speaker && showName) {
+      if (isThinkBig) {
+        // Detect specific ThinkBig show from title
+        const t = (title || "").toLowerCase();
+        let show = "ThinkBig";
+        if (t.includes("blood sweat") || t.includes("bsg")) show = "Blood Sweat and Gear";
+        else if (t.includes("drugs n stuff") || t.includes("drugs and stuff")) show = "Drugs N Stuff";
+        else if (t.includes("it's just bodybuilding") || t.includes("its just bodybuilding")) show = "It's Just Bodybuilding";
+        else if (t.includes("rxmuscle") || channel === "@rxmuscle") show = "RXMuscle";
+        attribution = `${speaker} on ${show}`;
+      } else if (speaker && showName) {
         attribution = `${speaker} on ${showName}`;
       } else if (speaker) {
         attribution = speaker;
