@@ -421,7 +421,7 @@ RESPONSE STRUCTURE (follow this order, write naturally without section headers):
 **SOURCE PRIORITY (cite in this order when present in evidence):**
 
 1. ThinkBig Bodybuilding - Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow, Dusty Hanshaw
-   Shows: Blood Sweat and Gear, Drugs N Stuff, It's Just Bodybuilding
+   Shows: Blood Sweat and Gear, Drugs N Stuff, It's Just Bodybuilding, Iron Rage, Fortitude Training
 
 2. RXMuscle - Dave Palumbo (his own show, NOT ThinkBig)
    Cite as: "Dave Palumbo explains on RXMuscle..."
@@ -466,6 +466,8 @@ function buildPrompt(question, quotes) {
         if (t.includes("blood sweat") || t.includes("bsg")) show = "Blood Sweat and Gear";
         else if (t.includes("drugs n stuff") || t.includes("drugs and stuff")) show = "Drugs N Stuff";
         else if (t.includes("it's just bodybuilding") || t.includes("its just bodybuilding")) show = "It's Just Bodybuilding";
+        else if (t.includes("iron rage")) show = "Iron Rage";
+        else if (t.includes("fortitude training") || t.includes("fortitude")) show = "Fortitude Training";
         attribution = `${speaker} on ${show}`;
       } else if (speaker && showName) {
         attribution = `${speaker} on ${showName}`;
