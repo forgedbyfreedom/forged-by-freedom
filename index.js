@@ -134,9 +134,11 @@ async function search(vector, namespace = "") {
 
 // ─── Channel & Speaker Mappings ─────────────────────────────
 const CHANNEL_DISPLAY_NAMES = {
-  // ThinkBig Priority (Scott McNally, Dave Crosland, Skipp Hill)
-  "@ThinkBIGBodybuilding": "Blood Sweat and Gear",
+  // ThinkBig (Scott McNally, Dave Crosland, Skipp Hill)
+  "@ThinkBIGBodybuilding": "ThinkBig Bodybuilding",
+  // RXMuscle (Dave Palumbo)
   "@rxmuscle": "RXMuscle",
+  // Anabolic Bodybuilding (IFBB Pro Paul Barnett / Big Paul)
   "@anabolicbodybuilding": "Anabolic Bodybuilding",
   // Female-Specific Experts (priority for women's questions)
   "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
@@ -201,7 +203,7 @@ const CHANNEL_DISPLAY_NAMES = {
 
 const CHANNEL_SPEAKERS = {
   "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
-  "@rxmuscle": "Scott McNally, Dave Crosland & Skipp Hill",
+  "@rxmuscle": "Dave Palumbo",
   "@anabolicbodybuilding": "Paul Barnett (Big Paul)",
   "@MorePlatesMoreDates": "Derek (MPMD)",
   "@MPMD": "Derek (MPMD)",
@@ -257,8 +259,9 @@ const CHANNEL_SPEAKERS = {
 const SOURCE_PRIORITY = {
   // THINKBIG PRIORITY - ALWAYS FIRST (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": 0,
-  "@rxmuscle": 0,
-  // Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul) - high priority, after ThinkBig
+  // RXMUSCLE - Dave Palumbo - high priority, separate from ThinkBig
+  "@rxmuscle": 2,
+  // Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul)
   "@anabolicbodybuilding": 5,
   // Research - high but after ThinkBig
   "@PubMed": 10, "@ClinicalTrials": 10,
@@ -273,7 +276,7 @@ const SOURCE_PRIORITY = {
 };
 
 // ThinkBig channels and hosts for special handling
-const THINKBIG_CHANNELS = ["@ThinkBIGBodybuilding", "@rxmuscle"];
+const THINKBIG_CHANNELS = ["@ThinkBIGBodybuilding"];
 const THINKBIG_HOSTS = [
   "Scott McNally", "Dave Crosland", "Skipp Hill",  // Primary hosts
   "Dr. Scott Stevenson", "Scott Stevenson",        // ThinkBig science expert
@@ -384,12 +387,11 @@ const SYSTEM_PROMPT = `You are Coach Bryan, the official AI coach for Forged by 
 - If the question asks about a specific person/topic NOT in the evidence, say: "I don't have specific information about that in my knowledge base, but here's what our experts say about [related topic]..."
 - If NO relevant evidence exists, be honest: "I don't have expert content on that specific topic yet."
 
-**CRITICAL HOST CORRECTION - DAVE CROSLAND NOT PALUMBO:**
-The ThinkBig hosts are: Scott McNally, Dave CROSLAND, and Skipp Hill.
-- Dave CROSLAND is the UK-based PED expert and regular host
-- Dave Palumbo was only an occasional GUEST, NOT a host
-- NEVER cite "Dave Palumbo" as a ThinkBig host - always use "Dave Crosland"
-- If you see "Palumbo" in evidence, he was a guest on that episode only
+**CRITICAL - DO NOT MIX UP THESE SHOWS:**
+- ThinkBig Bodybuilding (@ThinkBIGBodybuilding) = Scott McNally, Dave Crosland, Skipp Hill
+- RXMuscle (@rxmuscle) = Dave Palumbo (this is Dave Palumbo's own show)
+- Anabolic Bodybuilding (@anabolicbodybuilding) = IFBB Pro Paul Barnett (Big Paul)
+These are THREE SEPARATE shows with DIFFERENT hosts. NEVER cross-attribute hosts to the wrong show.
 
 RESPONSE STRUCTURE (follow this order, write naturally without section headers):
 
@@ -397,10 +399,11 @@ RESPONSE STRUCTURE (follow this order, write naturally without section headers):
    Start by restating what the user is asking in your own words.
 
 2. EXPERT QUOTES & CITATIONS (ONLY from evidence provided)
-   Use scholastic-style citations:
-   - "According to Scott McNally on Blood Sweat and Gear..."
-   - "Dave Crosland explains on Drugs N Stuff..."
-   - "As Skipp Hill discusses on It's Just Bodybuilding..."
+   Use scholastic-style citations matching the correct host to the correct show:
+   - "According to Scott McNally on ThinkBig's Blood Sweat and Gear..."
+   - "Dave Crosland explains on ThinkBig's Drugs N Stuff..."
+   - "Dave Palumbo discusses on RXMuscle..."
+   - "Paul Barnett breaks it down on Anabolic Bodybuilding..."
    ONLY quote what's actually in the evidence. Never fabricate quotes.
 
 3. MEDICAL/SCIENTIFIC WHY
@@ -415,28 +418,27 @@ RESPONSE STRUCTURE (follow this order, write naturally without section headers):
 6. COACH BRYAN MOTIVATION
    End with: 💪 **Coach Bryan says:** "[motivational quote relevant to the topic]"
 
-**THINKBIG IS YOUR #1 SOURCE:**
-Primary sources (cite FIRST when present in evidence):
-- Blood Sweat and Gear (Scott McNally, Dave Crosland, Skipp Hill)
-- Drugs N Stuff (Dave Crosland, Skipp Hill)
-- It's Just Bodybuilding (Skipp Hill)
-- RXMuscle (Scott McNally)
+**SOURCE PRIORITY (cite in this order when present in evidence):**
 
-Regular ThinkBig contributors: Ron Partlow, Dusty Hanshaw, Andrew Berry
+1. ThinkBig Bodybuilding - Scott McNally, Dave Crosland, Skipp Hill
+   Shows: Blood Sweat and Gear, Drugs N Stuff, It's Just Bodybuilding
+   Contributors: Ron Partlow, Dusty Hanshaw, Andrew Berry
 
-**ANABOLIC BODYBUILDING is your #2 SOURCE (after ThinkBig):**
-- Hosted by IFBB Pro Paul Barnett (Big Paul)
-- Cite as: "Paul Barnett explains on Anabolic Bodybuilding..."
-- Excellent PED education content - use right after ThinkBig
+2. RXMuscle - Dave Palumbo (his own show, NOT ThinkBig)
+   Cite as: "Dave Palumbo explains on RXMuscle..."
 
-SECONDARY SOURCES (use after ThinkBig and Anabolic Bodybuilding):
-- Female topics: Dr. Gabrielle Lyon, John Jewett
-- Medical: PubMed, Dr. Thomas O'Connor
-- Other experts: Only after ThinkBig and Anabolic Bodybuilding
+3. Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul)
+   Cite as: "Paul Barnett explains on Anabolic Bodybuilding..."
+
+4. Research: PubMed, ClinicalTrials.gov
+5. Tanner Tattered FAQ
+6. PED experts: Dr. Thomas O'Connor, Derek (MPMD), Vigorous Steve
+7. Female topics: Dr. Gabrielle Lyon, John Jewett
+8. Science: Huberman, Attia, FoundMyFitness
 
 RULES:
 - ONLY cite what's in the evidence - never fabricate
-- ThinkBig hosts are Scott McNally, Dave CROSLAND, Skipp Hill (NOT Palumbo)
+- NEVER mix up hosts between shows (Palumbo = RXMuscle, NOT ThinkBig)
 - Write flowing paragraphs, no section headers
 - No PED lecturing - help users be safe
 - Talk like a knowledgeable gym buddy`;
@@ -451,8 +453,7 @@ function buildPrompt(question, quotes) {
 
       // FORCE correct speaker and show name for ThinkBig channels
       const isThinkBig = THINKBIG_CHANNELS.includes(channel) ||
-          channel === "@ThinkBIGBodybuilding" ||
-          channel === "@rxmuscle";
+          channel === "@ThinkBIGBodybuilding";
       if (isThinkBig) {
         speaker = "Scott McNally, Dave Crosland & Skipp Hill";
       }
@@ -466,7 +467,6 @@ function buildPrompt(question, quotes) {
         if (t.includes("blood sweat") || t.includes("bsg")) show = "Blood Sweat and Gear";
         else if (t.includes("drugs n stuff") || t.includes("drugs and stuff")) show = "Drugs N Stuff";
         else if (t.includes("it's just bodybuilding") || t.includes("its just bodybuilding")) show = "It's Just Bodybuilding";
-        else if (t.includes("rxmuscle") || channel === "@rxmuscle") show = "RXMuscle";
         attribution = `${speaker} on ${show}`;
       } else if (speaker && showName) {
         attribution = `${speaker} on ${showName}`;
@@ -554,11 +554,11 @@ app.post("/ask", async (req, res) => {
       { role: "user", content: buildPrompt(question, quotes) }
     ]);
 
-    // POST-PROCESSING: Force correct ThinkBig host names
-    // Replace ANY instance of Palumbo with Crosland
+    // POST-PROCESSING: Prevent LLM from attributing Palumbo as a ThinkBig host
+    // Only fix cases where Palumbo is wrongly credited on ThinkBig shows
     answer = answer
-      .replace(/Dave Palumbo/gi, "Dave Crosland")
-      .replace(/Palumbo/gi, "Crosland");
+      .replace(/Palumbo\s+(on|from|of)\s+(ThinkBig|Think Big|Blood Sweat|Drugs N Stuff|It'?s Just Bodybuilding)/gi,
+        "Scott McNally, Dave Crosland & Skipp Hill $1 $2");
 
     res.json({
       answer,
