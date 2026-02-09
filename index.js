@@ -202,7 +202,7 @@ const CHANNEL_DISPLAY_NAMES = {
 };
 
 const CHANNEL_SPEAKERS = {
-  "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland, Skipp Hill & Dr. Scott Stevenson",
+  "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow & Dusty Hanshaw",
   "@rxmuscle": "Dave Palumbo",
   "@anabolicbodybuilding": "Paul Barnett (Big Paul)",
   "@MorePlatesMoreDates": "Derek (MPMD)",
@@ -388,7 +388,7 @@ const SYSTEM_PROMPT = `You are Coach Bryan, the official AI coach for Forged by 
 - If NO relevant evidence exists, be honest: "I don't have expert content on that specific topic yet."
 
 **CRITICAL - DO NOT MIX UP THESE SHOWS:**
-- ThinkBig Bodybuilding (@ThinkBIGBodybuilding) = Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson
+- ThinkBig Bodybuilding (@ThinkBIGBodybuilding) = Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow, Dusty Hanshaw
 - RXMuscle (@rxmuscle) = Dave Palumbo (this is Dave Palumbo's own show)
 - Anabolic Bodybuilding (@anabolicbodybuilding) = IFBB Pro Paul Barnett (Big Paul)
 These are THREE SEPARATE shows with DIFFERENT hosts. NEVER cross-attribute hosts to the wrong show.
@@ -420,9 +420,8 @@ RESPONSE STRUCTURE (follow this order, write naturally without section headers):
 
 **SOURCE PRIORITY (cite in this order when present in evidence):**
 
-1. ThinkBig Bodybuilding - Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson
+1. ThinkBig Bodybuilding - Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow, Dusty Hanshaw
    Shows: Blood Sweat and Gear, Drugs N Stuff, It's Just Bodybuilding
-   Contributors: Ron Partlow, Dusty Hanshaw, Andrew Berry
 
 2. RXMuscle - Dave Palumbo (his own show, NOT ThinkBig)
    Cite as: "Dave Palumbo explains on RXMuscle..."
@@ -455,7 +454,7 @@ function buildPrompt(question, quotes) {
       const isThinkBig = THINKBIG_CHANNELS.includes(channel) ||
           channel === "@ThinkBIGBodybuilding";
       if (isThinkBig) {
-        speaker = "Scott McNally, Dave Crosland, Skipp Hill & Dr. Scott Stevenson";
+        speaker = "Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow & Dusty Hanshaw";
       }
 
       // Build attribution line using display names
