@@ -25,7 +25,7 @@ echo "📅 Schedule: Nightly" | tee -a "$LOG_FILE"
 echo "==============================================" | tee -a "$LOG_FILE"
 
 CHANNEL_COUNT=0
-find "$CHANNELS_DIR" -name "channel.url" | shuf | while read -r CHANNEL_FILE; do
+find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$0}' | sort -n | cut -f2- | while read -r CHANNEL_FILE; do
     CHANNEL_URL=$(head -n 1 "$CHANNEL_FILE")
     OUTPUT_DIR=$(dirname "$CHANNEL_FILE")
     CHANNEL_NAME=$(basename "$OUTPUT_DIR")

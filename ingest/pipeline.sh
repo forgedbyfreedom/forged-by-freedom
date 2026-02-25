@@ -5,8 +5,9 @@
 # Nodes: cron → youtube → whisper → pinecone → search → answer
 #
 # Usage:
-#   ./pipeline.sh              # Run full pipeline
-#   ./pipeline.sh download     # YouTube download only
+#   ./pipeline.sh              # Run full pipeline (download + fix + masters + ingest — NO Whisper)
+#   ./pipeline.sh download     # YouTube download only (FREE — no Whisper)
+#   ./pipeline.sh transcribe   # Whisper transcribe pending mp3s (FREE — local MLX Whisper)
 #   ./pipeline.sh research     # PubMed + ClinicalTrials fetch
 #   ./pipeline.sh fix          # Vocabulary corrections only
 #   ./pipeline.sh ingest       # Pinecone ingest only
@@ -40,75 +41,129 @@ YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
 [ -x "$YT_DLP" ] || YT_DLP="yt-dlp"
 command -v "$YT_DLP" >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
 
+# ─── Channel Priority Tiers ──────────────────────────────────
+# Tier 1: Primary sources — your core content (max 50 downloads)
+TIER1="ThinkBIGBodybuilding|rxmuscle|anabolicbodybuilding|realtattered|TannerTatteredFAQ|johnjewett3"
+# Tier 2: Key PED/fitness experts + female health + medical (max 30 downloads)
+TIER2="AnabolicDoc|MorePlatesMoreDates|MPMD|vigoroussteve|LeoandLongevity|hubermanlab|AndrewHuberman|PeterAttiaMD|FoundMyFitness|GregDoucette|JohnMeadowsMountainDog|dorian_yates_official|FouadAbiad|RenaissancePeriodization|rpstrength|StanEfferding|JeffNippard|Biolayne|AthleanX|BarbellMedicine|GregNuckols|StrongerByScience|DrGabrielleLyon|DrStacySims|DrMindyPelz|HollyBaxter|SoheeFit|LaurinConlin|megsquats|StephanieButtermore|AshleyKaltwasser|ErinSternFitness|JulieLohre|KristyHawkins|Natacha_Oceane|StefiCohen|AbbeySharp|LoriHarder|MedCram|NinjaNerdOfficial|SquatUniversity|NorthwesternMed|TOTRevolution|gillettehealth|TaylorMadeCompounding|JayCampbell|DrCraigKoniver|TonyHuge|CoachTrevorBlack|TrevorBachmeyer|drtrevorbachmeyer"
+# Skip: Completely irrelevant for fitness AI (do these in a separate run)
+SKIP_CHANNELS="3Blue1Brown|kurzgesagt|veritasium|Vsauce|numberphile|minutephysics|Vihart|StudyForce|AliAbdaal|melrobbins|MulliganBrothers|BroScienceLife"
+# Low priority: General education, processed last (max 10 downloads)
+LOW_PRIORITY="ProfessorDaveExplains|TEDxTalks|TED|mitocw|Stanford|YaleCourses|SciShow|TheRoyalInstitution|CarolineGirvan"
+
+get_max_downloads() {
+    local channel="$1"
+    echo "$channel" | grep -qE "$TIER1" && { echo 50; return; }
+    echo "$channel" | grep -qE "$TIER2" && { echo 30; return; }
+    echo "$channel" | grep -qE "$LOW_PRIORITY" && { echo 10; return; }
+    echo 20  # Default for everything else
+}
+
+get_tier_label() {
+    local channel="$1"
+    echo "$channel" | grep -qE "$TIER1" && { echo "PRIORITY"; return; }
+    echo "$channel" | grep -qE "$TIER2" && { echo "HIGH"; return; }
+    echo "$channel" | grep -qE "$LOW_PRIORITY" && { echo "LOW"; return; }
+    echo "MID"
+}
+
 # ─── Node 1: YouTube Download AUDIO + Whisper Transcribe ─────
 download_and_transcribe() {
     header "NODE 1: YOUTUBE AUDIO DOWNLOAD + WHISPER TRANSCRIPTION"
 
-    local SLEEP_MIN=10 SLEEP_MAX=30 SLEEP_BETWEEN=60 MAX_RETRIES=2
-    local count=0 success=0 failed=0 transcribed=0
+    local SLEEP_MIN=3 SLEEP_MAX=8 SLEEP_BETWEEN=8 MAX_RETRIES=1
+    local MAX_PARALLEL=4
+    local count=0 success=0 failed=0 skipped=0
 
     log "Channels: $CHANNELS_DIR"
-    log "Mode: Download audio → Whisper transcribe → Delete audio"
+    log "Mode: Download audio → Whisper transcribe (${MAX_PARALLEL}x parallel) → Delete audio"
     log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos"
+    log "Tiers: PRIORITY(50) → HIGH(30) → MID(20) → LOW(10) | SKIP: irrelevant"
 
-    for url_file in $(find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$0}' | sort -n | cut -f2-); do
+    # Build priority-sorted channel list into temp file
+    local sorted_file=$(mktemp)
+    find "$CHANNELS_DIR" -name "channel.url" | while IFS= read -r url_file; do
+        local dir=$(dirname "$url_file")
+        local name=$(basename "$dir")
+        # Assign sort prefix by tier
+        if echo "$name" | grep -qE "$SKIP_CHANNELS"; then
+            echo "SKIP|$url_file"
+        elif echo "$name" | grep -qE "$TIER1"; then
+            echo "AAA|$url_file"
+        elif echo "$name" | grep -qE "$TIER2"; then
+            echo "BBB|$url_file"
+        elif echo "$name" | grep -qE "$LOW_PRIORITY"; then
+            echo "ZZZ|$url_file"
+        else
+            echo "CCC|$url_file"
+        fi
+    done | sort -t'|' -k1,1 | grep -v "^SKIP|" | cut -d'|' -f2 > "$sorted_file"
+
+    local total_process=$(wc -l < "$sorted_file" | tr -d ' ')
+    local total_all=$(find "$CHANNELS_DIR" -name "channel.url" | wc -l | tr -d ' ')
+    skipped=$((total_all - total_process))
+
+    log "Processing $total_process channels ($skipped skipped as irrelevant)"
+
+    # Count transcripts before run
+    local transcripts_before=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+
+    while IFS= read -r url_file; do
         local channel_url=$(head -n 1 "$url_file")
         local output_dir=$(dirname "$url_file")
         local channel_name=$(basename "$output_dir")
+        local max_dl=$(get_max_downloads "$channel_name")
+        local tier=$(get_tier_label "$channel_name")
         count=$((count + 1))
 
         log ""
-        log "[$count] $channel_name"
+        log "[$count/$total_process] $channel_name [$tier] (max $max_dl)"
 
-        # Download audio files (not video, to save space/time)
-        local retry=0 done=false
-        while [ $retry -lt $MAX_RETRIES ] && [ "$done" = false ]; do
+        # Count channel transcripts before
+        local ch_before=$(find "$output_dir" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+
+        # Download audio files
+        local retry=0 dl_done=false
+        while [ $retry -lt $MAX_RETRIES ] && [ "$dl_done" = false ]; do
             if $YT_DLP \
                 --cookies-from-browser chrome \
+                --extractor-args "youtubetab:skip=authcheck" \
                 -x --audio-format mp3 --audio-quality 64K \
                 --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
                 --ignore-errors --no-warnings \
                 --sleep-interval $SLEEP_MIN --max-sleep-interval $SLEEP_MAX \
-                --sleep-requests 2 \
-                --extractor-retries 3 --fragment-retries 3 \
-                --retry-sleep extractor:30 --retry-sleep http:10 \
+                --sleep-requests 1 \
+                --extractor-retries 2 --fragment-retries 2 \
+                --retry-sleep extractor:5 --retry-sleep http:3 \
                 --download-archive "$output_dir/.downloaded" \
-                --max-downloads 20 \
+                --max-downloads $max_dl \
                 "$channel_url" >> "$LOG_FILE" 2>&1; then
-                done=true
+                dl_done=true
                 success=$((success + 1))
                 log "  ✓ Audio downloaded"
             else
                 retry=$((retry + 1))
-                [ $retry -lt $MAX_RETRIES ] && { log "  ⚠ Retry $retry/$MAX_RETRIES"; sleep 120; }
+                [ $retry -lt $MAX_RETRIES ] && { log "  ⚠ Retry $retry/$MAX_RETRIES"; sleep 15; }
             fi
         done
 
-        [ "$done" = false ] && { failed=$((failed + 1)); log "  ✗ Download failed"; }
+        [ "$dl_done" = false ] && { failed=$((failed + 1)); log "  ✗ Download failed"; }
 
-        # Transcribe any mp3 files without corresponding txt
-        for mp3 in "$output_dir"/*.mp3; do
-            [ -f "$mp3" ] || continue
-            local txt="${mp3%.mp3}.txt"
-            if [ ! -f "$txt" ]; then
-                log "  🎤 Transcribing: $(basename "$mp3")"
-                if python3 -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
-                    transcribed=$((transcribed + 1))
-                    log "    ✓ Transcribed"
-                    rm -f "$mp3"  # Delete audio after successful transcription
-                else
-                    log "    ✗ Transcription failed"
-                fi
-            else
-                rm -f "$mp3"  # Already have transcript, delete audio
-            fi
-        done
+        # Count new mp3s (downloaded but not yet transcribed)
+        local new_mp3s=$(find "$output_dir" -maxdepth 1 -name "*.mp3" 2>/dev/null | wc -l | tr -d ' ')
+        [ "$new_mp3s" -gt 0 ] && log "  📥 $new_mp3s audio files downloaded (run './pipeline.sh transcribe' to transcribe — FREE local Whisper)"
 
         sleep $SLEEP_BETWEEN
-    done
+    done < "$sorted_file"
+
+    rm -f "$sorted_file"
+
+    # Final stats
+    local transcripts_after=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+    local total_new=$((transcripts_after - transcripts_before))
 
     log ""
-    log "Complete: $success channels, $transcribed transcriptions, $failed failures"
+    log "Complete: $success channels, $total_new new transcripts, $failed failures, $skipped skipped"
 }
 
 # Legacy function for subtitle-only mode (faster but less coverage)
@@ -161,6 +216,47 @@ fetch_research() {
     python3 -u fetch_clinicaltrials.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ ClinicalTrials fetch had errors"
 }
 
+# ─── Node 1c: Whisper Transcription (FREE — local MLX Whisper on Apple Silicon) ────
+transcribe_pending() {
+    header "NODE 1c: LOCAL WHISPER TRANSCRIPTION (FREE — MLX Whisper)"
+    local MAX_PARALLEL=1  # Local GPU — run one at a time for stability
+    local count=0 transcribed=0
+
+    # Count pending mp3s
+    local pending=$(find "$CHANNELS_DIR" -name "*.mp3" | wc -l | tr -d ' ')
+    log "Pending mp3 files: $pending"
+
+    if [ "$pending" -eq 0 ]; then
+        log "No mp3 files to transcribe. Download first with './pipeline.sh download'"
+        return
+    fi
+
+    # Estimate audio duration
+    local total_mb=$(find "$CHANNELS_DIR" -name "*.mp3" -exec du -k {} + 2>/dev/null | awk '{sum+=$1} END {printf "%.0f", sum/1024}')
+    local est_minutes=$((total_mb * 1024 / 8 / 60))  # 64kbps = 8KB/s
+    log "Estimated: ~${est_minutes} minutes of audio"
+    log "💰 Cost: FREE (running locally on Apple Silicon)"
+
+    find "$CHANNELS_DIR" -name "*.mp3" -print0 | sort -z | while IFS= read -r -d '' mp3; do
+        [ -f "$mp3" ] || continue
+        local txt="${mp3%.mp3}.txt"
+        if [ ! -f "$txt" ]; then
+            count=$((count + 1))
+            log "  [$count/$pending] 🎤 Transcribing: $(basename "$mp3")"
+            if python3 -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
+                rm -f "$mp3"
+                transcribed=$((transcribed + 1))
+                log "  ✅ Done: $(basename "$mp3")"
+            else
+                log "  ❌ Failed: $(basename "$mp3")"
+            fi
+        else
+            rm -f "$mp3"  # Already have transcript
+        fi
+    done
+    log "Transcribed $transcribed files"
+}
+
 # ─── Node 2: Vocabulary Corrections (Whisper post-process) ────
 fix_transcripts() {
     header "NODE 2: VOCABULARY CORRECTIONS"
@@ -199,6 +295,11 @@ show_stats() {
         python3 -u pinecone_stats.py 2>&1 | tee -a "$LOG_FILE"
     fi
 
+    # Generate and push live stats for AI coach display
+    if [ -f "$SCRIPT_DIR/generate_stats.sh" ]; then
+        bash "$SCRIPT_DIR/generate_stats.sh" 2>&1 | tee -a "$LOG_FILE"
+    fi
+
     # Cleanup old logs (keep 7 days)
     find "$LOG_DIR" -name "*.log" -mtime +7 -delete 2>/dev/null || true
     log "Cleaned logs older than 7 days"
@@ -211,7 +312,8 @@ main() {
     log "Log: $LOG_FILE"
 
     case "${1:-full}" in
-        download)   download_and_transcribe ;;      # Full: audio + Whisper
+        download)   download_and_transcribe ;;      # Download audio only (FREE)
+        transcribe) transcribe_pending ;;            # Local Whisper transcribe (FREE)
         subs-only)  download_subtitles_only ;;      # Fast: subtitles only
         research)   fetch_research ;;
         fix)        fix_transcripts ;;
@@ -219,7 +321,7 @@ main() {
         ingest)     ingest_pinecone ;;
         stats)      show_stats ;;
         full)
-            download_and_transcribe
+            download_and_transcribe                 # Download only (FREE)
             fetch_research
             fix_transcripts
             build_masters
@@ -235,11 +337,46 @@ main() {
             ingest_pinecone
             show_stats
             ;;
+        auto)
+            # Auto-loop: keeps running full pipeline until no new content found
+            local run=1
+            while true; do
+                header "AUTO RUN #$run"
+                local before=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+
+                download_and_transcribe
+                fetch_research
+                fix_transcripts
+                build_masters
+                ingest_pinecone
+                show_stats
+
+                local after=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+                local gained=$((after - before))
+
+                log ""
+                log "Run #$run complete: $gained new transcripts (total: $after)"
+
+                if [ "$gained" -eq 0 ]; then
+                    log "No new content found — backlog fully processed!"
+                    break
+                fi
+
+                run=$((run + 1))
+                log "New content found. Restarting in 60 seconds..."
+                sleep 60
+
+                # Refresh log file for new run
+                TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+                LOG_FILE="$LOG_DIR/pipeline_$TIMESTAMP.log"
+            done
+            ;;
         *)
-            echo "Usage: $0 {full|fast|download|subs-only|research|fix|masters|ingest|stats}"
+            echo "Usage: $0 {full|fast|download|subs-only|research|fix|masters|ingest|stats|auto}"
             echo ""
-            echo "  full      - Download audio + Whisper transcribe (thorough)"
+            echo "  full      - Download audio + local Whisper transcribe (thorough, FREE)"
             echo "  fast      - Download subtitles only (quick but limited)"
+            echo "  auto      - Loop full pipeline until all channels fully processed"
             echo "  download  - Audio + Whisper only"
             echo "  subs-only - Subtitles only"
             echo "  research  - PubMed + ClinicalTrials"

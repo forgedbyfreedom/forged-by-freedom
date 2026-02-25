@@ -49,7 +49,11 @@ const app = express();
 
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
 app.use(cors({
-  origin: CONFIG.isProd ? ["https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com"] : "*",
+  origin: CONFIG.isProd ? [
+    "https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com",
+    "https://www.forgedbyfreedom.org",
+    /\.wixsite\.com$/, /\.wix\.com$/
+  ] : "*",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -573,6 +577,39 @@ app.post("/ask", async (req, res) => {
     console.error("[ASK ERROR]", err);
     res.status(500).json({ error: CONFIG.isProd ? "Request failed" : err.message, answer: null });
   }
+});
+
+// ─── Stats Endpoint (for AI Coach live stats display) ─────
+let cachedStats = { transcripts: 0, words: 0, channels: 0, vectors: 0, lastUpdated: null };
+
+app.get("/stats", async (_, res) => {
+  try {
+    const stats = await index.describeIndexStats();
+    cachedStats.vectors = stats.totalRecordCount || cachedStats.vectors;
+    res.json({
+      transcripts: cachedStats.transcripts,
+      words: cachedStats.words,
+      channels: cachedStats.channels,
+      vectors: cachedStats.vectors,
+      lastUpdated: cachedStats.lastUpdated || new Date().toISOString()
+    });
+  } catch (err) {
+    res.json(cachedStats);
+  }
+});
+
+app.post("/update-stats", async (req, res) => {
+  const key = req.headers["x-stats-key"];
+  const expectedKey = process.env.STATS_UPDATE_KEY;
+  if (expectedKey && key !== expectedKey) return res.status(401).json({ error: "Unauthorized" });
+
+  const { transcripts, words, channels } = req.body;
+  if (transcripts != null) cachedStats.transcripts = transcripts;
+  if (words != null) cachedStats.words = words;
+  if (channels != null) cachedStats.channels = channels;
+  cachedStats.lastUpdated = new Date().toISOString();
+
+  res.json({ status: "ok", stats: cachedStats });
 });
 
 // 404 + Error handler
