@@ -7,7 +7,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CHANNELS_DIR="$SCRIPT_DIR/channels"
-API_URL="${FBF_API_URL:-https://forged-by-freedom-api.onrender.com}"
+API_URL="${FBF_API_URL:-https://forged-by-freedom-api-nm4f.onrender.com}"
 STATS_KEY="${STATS_UPDATE_KEY:-}"
 
 echo "📊 Generating stats..."

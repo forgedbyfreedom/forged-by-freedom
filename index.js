@@ -52,7 +52,7 @@ app.use(cors({
   origin: CONFIG.isProd ? [
     "https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com",
     "https://www.forgedbyfreedom.org",
-    /\.wixsite\.com$/, /\.wix\.com$/
+    /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/
   ] : "*",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
@@ -130,10 +130,57 @@ async function chat(messages, temperature = 0.7) {
 }
 
 // ─── Pinecone Search ─────────────────────────────────────────
+const SEARCH_NAMESPACES = [
+  { ns: "thinkbig_priority", topK: 8 },
+  { ns: "anabolic_bodybuilding_priority", topK: 8 },
+  { ns: "rxmuscle_priority", topK: 8 },
+  { ns: "cycle_design_guides", topK: 8 },
+  { ns: "medical_primary", topK: 5 },
+  { ns: "research_primary", topK: 5 },
+  { ns: "female_health_priority", topK: 5 },
+  { ns: "peptides", topK: 5 },
+  { ns: "vendor_testing", topK: 5 },
+  { ns: "biohacking", topK: 5 },
+  { ns: "sports_nutrition", topK: 5 },
+  { ns: "transcripts", topK: 5 },
+  { ns: "bodybuilding_history", topK: 5 },
+  { ns: "sports_psych", topK: 5 },
+  { ns: "sports_science", topK: 5 },
+  { ns: "women_steroids", topK: 5 },
+  { ns: "medical_education", topK: 5 },
+  { ns: "endocrinology", topK: 5 },
+  { ns: "harm_reduction", topK: 5 },
+  { ns: "bodybuilding_legends", topK: 5 },
+];
+
 async function search(vector, namespace = "") {
-  const query = { vector, topK: CONFIG.topK, includeMetadata: true };
-  if (namespace) query.namespace = namespace;
-  return (await index.query(query)).matches || [];
+  // If a specific namespace is requested, search just that one
+  if (namespace) {
+    const query = { vector, topK: CONFIG.topK, includeMetadata: true, namespace };
+    return (await index.query(query)).matches || [];
+  }
+
+  // Otherwise, search all namespaces in parallel (matches Wix backend behavior)
+  const results = await Promise.all(
+    SEARCH_NAMESPACES.map(({ ns, topK }) =>
+      index.namespace(ns).query({ vector, topK, includeMetadata: true })
+        .then(r => r.matches || [])
+        .catch(() => [])
+    )
+  );
+
+  // Merge, deduplicate by ID, sort by score
+  const seen = new Set();
+  const allMatches = [];
+  for (const matches of results) {
+    for (const m of matches) {
+      if (!seen.has(m.id)) {
+        seen.add(m.id);
+        allMatches.push(m);
+      }
+    }
+  }
+  return allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
 }
 
 // ─── Channel & Speaker Mappings ─────────────────────────────
@@ -325,7 +372,8 @@ function extractQuotes(matches, question = "") {
   return matches
     .map(m => {
       const md = m.metadata || {};
-      const text = (md.text || md.chunk || md.content || md.transcript || "").trim();
+      const raw = md.text || md.chunk || md.content || md.transcript || "";
+      const text = (typeof raw === "string" ? raw : String(raw)).trim();
 
       // Filter short or empty text
       if (!text || text.length < MIN_TEXT_LENGTH) return null;
@@ -580,7 +628,7 @@ app.post("/ask", async (req, res) => {
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 0, words: 0, channels: 0, vectors: 0, lastUpdated: null };
+let cachedStats = { transcripts: 13200, words: 23000000, channels: 344, vectors: 289000, lastUpdated: null };
 
 app.get("/stats", async (_, res) => {
   try {
