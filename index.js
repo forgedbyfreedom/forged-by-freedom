@@ -153,6 +153,17 @@ const SEARCH_NAMESPACES = [
   { ns: "bodybuilding_legends", topK: 5 },
 ];
 
+// Keywords that should boost cycle_design_guides and peptides namespaces
+const FBF_BOOST_KEYWORDS = [
+  "fbf", "forged by freedom", "recomp protocol", "recomp", "recomposition",
+  "retatrutide", "tesofensine", "cagrilintide", "7 system", "seven system",
+  "glp-1", "glp1", "gip", "glucagon", "amylin",
+  "cycle design", "pct protocol", "post cycle therapy",
+  "semaglutide", "tirzepatide", "ozempic", "mounjaro", "wegovy",
+  "peptide protocol", "bpc-157", "tb-500", "ipamorelin", "cjc-1295",
+  "bloodwork", "lab results", "intervention ladder"
+];
+
 async function search(vector, namespace = "") {
   // If a specific namespace is requested, search just that one
   if (namespace) {
@@ -183,10 +194,59 @@ async function search(vector, namespace = "") {
   return allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
 }
 
+// Boost search when question matches FBF/protocol keywords — extra cycle_design_guides + peptides results
+async function searchWithBoost(vector, question) {
+  const q = question.toLowerCase();
+  const needsBoost = FBF_BOOST_KEYWORDS.some(kw => q.includes(kw));
+
+  // Standard search
+  const baseResults = await search(vector);
+
+  if (!needsBoost) return baseResults;
+
+  // Extra dedicated search of cycle_design_guides and peptides with higher topK
+  const boostResults = await Promise.all([
+    index.namespace("cycle_design_guides").query({ vector, topK: 15, includeMetadata: true })
+      .then(r => r.matches || []).catch(() => []),
+    index.namespace("peptides").query({ vector, topK: 8, includeMetadata: true })
+      .then(r => r.matches || []).catch(() => []),
+    index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true })
+      .then(r => r.matches || []).catch(() => []),
+  ]);
+
+  // Merge boost results into base, dedup, boost scores for guide matches
+  const seen = new Set(baseResults.map(m => m.id));
+  const merged = [...baseResults];
+  for (const matches of boostResults) {
+    for (const m of matches) {
+      if (!seen.has(m.id)) {
+        seen.add(m.id);
+        // Boost score for cycle_design_guides to ensure they rank high
+        const src = (m.metadata?.source || "").toLowerCase();
+        if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
+          m.score = (m.score || 0) + 0.15;
+        }
+        merged.push(m);
+      } else {
+        // Already in results — boost score if it's a guide match
+        const src = (m.metadata?.source || "").toLowerCase();
+        if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
+          const existing = merged.find(e => e.id === m.id);
+          if (existing) existing.score = (existing.score || 0) + 0.15;
+        }
+      }
+    }
+  }
+
+  return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
+}
+
 // ─── Channel & Speaker Mappings ─────────────────────────────
 const CHANNEL_DISPLAY_NAMES = {
   // ThinkBig (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": "ThinkBig Bodybuilding",
+  // FBF Cycle Design Guides (Forged by Freedom's own protocols)
+  "@CycleDesignGuide": "Forged by Freedom Cycle Design Guide",
   // RXMuscle (Dave Palumbo)
   "@rxmuscle": "RXMuscle",
   // Anabolic Bodybuilding (IFBB Pro Paul Barnett / Big Paul)
@@ -254,6 +314,7 @@ const CHANNEL_DISPLAY_NAMES = {
 
 const CHANNEL_SPEAKERS = {
   "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow & Dusty Hanshaw",
+  "@CycleDesignGuide": "Forged by Freedom",
   "@rxmuscle": "Dave Palumbo",
   "@anabolicbodybuilding": "Paul Barnett (Big Paul)",
   "@MorePlatesMoreDates": "Derek (MPMD)",
@@ -310,6 +371,8 @@ const CHANNEL_SPEAKERS = {
 const SOURCE_PRIORITY = {
   // THINKBIG PRIORITY - ALWAYS FIRST (Scott McNally, Dave Crosland, Skipp Hill)
   "@ThinkBIGBodybuilding": 0,
+  // FBF CYCLE DESIGN GUIDES - Forged by Freedom's own content, highest priority
+  "@CycleDesignGuide": 1,
   // RXMUSCLE - Dave Palumbo - high priority, separate from ThinkBig
   "@rxmuscle": 2,
   // Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul)
@@ -396,9 +459,13 @@ function extractQuotes(matches, question = "") {
       // ThinkBig is ALWAYS highest priority (-100), then female experts for women's questions
       let priority = SOURCE_PRIORITY[channel] || 50; // Default is low priority
 
-      // ThinkBig sources get absolute top priority
-      if (isThinkBigSource(channel, speaker)) {
-        priority = -100; // Negative = always first
+      // FBF Cycle Design Guides get highest priority (Forged by Freedom's own content)
+      if (channel === "@CycleDesignGuide") {
+        priority = -110; // Higher than ThinkBig — FBF's own protocols always come first
+      }
+      // ThinkBig sources get top priority after FBF guides
+      else if (isThinkBigSource(channel, speaker)) {
+        priority = -100; // Negative = always first after FBF guides
 
         // Slight boost for Scott McNally and Dr. Scott Stevenson within ThinkBig
         const textLower = text.toLowerCase();
@@ -713,9 +780,9 @@ app.post("/ask", async (req, res) => {
   }
 
   try {
-    // Embed → Search → Extract
+    // Embed → Search (with FBF/protocol boost) → Extract
     const vector = await embed(question.trim());
-    const matches = await search(vector, namespace);
+    const matches = namespace ? await search(vector, namespace) : await searchWithBoost(vector, question);
 
     if (!matches.length) return res.json({ answer: "No relevant evidence found.", sources: [] });
 
