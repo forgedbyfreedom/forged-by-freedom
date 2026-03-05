@@ -27,7 +27,7 @@ const CONFIG = {
   chatModel: OPENROUTER_MODEL || "meta-llama/llama-3.3-70b-instruct",
   embedModel: "text-embedding-3-large",
   pineconeIndex: "forged-freedom-ai",
-  maxQuestionLen: 2000,
+  maxQuestionLen: 15000,
   maxRPM: parseInt(RATE_LIMIT_RPM),
   topK: 30,
   maxQuotes: 15,
