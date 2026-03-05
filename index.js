@@ -842,7 +842,7 @@ app.post("/ask", async (req, res) => {
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 15289, words: 56220481, channels: 179, vectors: 289000, lastUpdated: null };
+let cachedStats = { transcripts: 15289, words: 126592253, channels: 179, vectors: 289000, lastUpdated: null };
 
 app.get("/stats", async (_, res) => {
   try {
