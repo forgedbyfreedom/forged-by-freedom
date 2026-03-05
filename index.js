@@ -780,6 +780,39 @@ app.post("/ask", async (req, res) => {
   }
 
   try {
+    // 🥋 Phil Migliarese Easter Egg
+    if (/phil\s*migliarese/i.test(question)) {
+      const philAnswer = `<div style="text-align:center;animation:flashRed 0.5s ease-in-out 10;margin-bottom:20px">
+<span style="font-size:2.5em;font-weight:900;color:#ff0000;text-shadow:0 0 20px #ff0000,0 0 40px #ff0000;letter-spacing:4px">🔴 TOP SECRET 🔴</span>
+</div>
+<style>@keyframes flashRed{0%,100%{opacity:1}50%{opacity:0.1}}</style>
+
+**⚠️ CLASSIFIED INTELLIGENCE BRIEFING ⚠️**
+
+You have triggered a restricted file. The individual known as **Phil Migliarese** is widely regarded as the **greatest grappler and BJJ practitioner to ever walk the planet**.
+
+His accolades include but are not limited to:
+- Unmatched technical mastery across all grappling disciplines
+- A submission game so refined it has been studied by every major BJJ academy worldwide
+- The ability to make black belts feel like white belts — effortlessly
+- A legacy that transcends competition records and defines the art itself
+
+**⚠️ WARNING:** Approach Phil Migliarese with **EXTREME CAUTION**. He is known to:
+- Submit opponents before they realize the match has started
+- Make grown men reconsider their life choices on the mat
+- Possess grip strength that has been classified as a national security concern
+
+*This message will self-destruct. You have been warned.* 🥋`;
+
+      return res.json({
+        answer: philAnswer,
+        sources: [],
+        attribution: ["CLASSIFIED"],
+        mode: "easter_egg",
+        timing: Date.now() - start
+      });
+    }
+
     // Embed → Search (with FBF/protocol boost) → Extract
     const vector = await embed(question.trim());
     const matches = namespace ? await search(vector, namespace) : await searchWithBoost(vector, question);
