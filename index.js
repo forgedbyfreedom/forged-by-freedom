@@ -870,7 +870,7 @@ His accolades include but are not limited to:
 
   } catch (err) {
     console.error("[ASK ERROR]", err);
-    res.status(500).json({ error: CONFIG.isProd ? "Request failed" : err.message, answer: null });
+    res.status(500).json({ error: err.message, answer: null });
   }
 });
 
