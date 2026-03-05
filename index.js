@@ -24,7 +24,7 @@ const {
 } = process.env;
 
 const CONFIG = {
-  chatModel: OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b",
+  chatModel: OPENROUTER_MODEL || "meta-llama/llama-3.3-70b-instruct",
   embedModel: "text-embedding-3-large",
   pineconeIndex: "forged-freedom-ai",
   maxQuestionLen: 2000,
@@ -842,7 +842,7 @@ app.post("/ask", async (req, res) => {
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 13200, words: 23000000, channels: 344, vectors: 289000, lastUpdated: null };
+let cachedStats = { transcripts: 15289, words: 56220481, channels: 179, vectors: 289000, lastUpdated: null };
 
 app.get("/stats", async (_, res) => {
   try {
