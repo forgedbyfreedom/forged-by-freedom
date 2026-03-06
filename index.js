@@ -875,7 +875,7 @@ His accolades include but are not limited to:
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 15289, words: 126592253, channels: 179, vectors: 289000, lastUpdated: null };
+let cachedStats = { transcripts: 34746, words: 126592085, channels: 179, vectors: 100622, lastUpdated: null };
 
 app.get("/stats", async (_, res) => {
   try {
