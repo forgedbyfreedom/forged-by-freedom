@@ -18,6 +18,7 @@ const {
   OPENROUTER_API_KEY,
   OPENROUTER_MODEL,
   PINECONE_API_KEY,
+  ELEVENLABS_API_KEY,
   PORT = 5051,
   NODE_ENV,
   RATE_LIMIT_RPM = 60
@@ -914,82 +915,143 @@ app.post("/update-stats", async (req, res) => {
   res.json({ status: "ok", stats: cachedStats });
 });
 
-// ─── Blog Publishing Endpoint ──────────────────────────────                                                            
-   app.post("/publish-blog", async (req, res) => {                                                                           
-     const authKey = req.headers["x-api-key"];                                                                               
-     if (authKey !== process.env.FBF_API_KEY) {                                                                              
-       return res.status(401).json({ error: "Unauthorized" });                                                               
-     }                                                                                                                       
-                                                                                                                             
-     const { title, content, tags = [], excerpt = "", slug = "" } = req.body;                                                
-                                                                                                                             
-     if (!title || !content) {                                                                                               
-       return res.status(400).json({ error: "title and content are required" });                                             
-     }                                                                                                                       
-                                                                                                                             
-     const WIX_API_KEY = process.env.WIX_API_KEY;                                                                            
-     const WIX_SITE_ID = process.env.WIX_SITE_ID;                                                                            
-                                                                                                                             
-     if (!WIX_API_KEY || !WIX_SITE_ID) {                                                                                     
-       return res.status(500).json({ error: "Wix credentials not configured" });                                             
-     }                                                                                                                       
-                                                                                                                             
-     try {                                                                                                                   
-       // Create draft post                                                                                                  
-       const response = await fetch("https://www.wixapis.com/blog/v3/draft-posts", {                                         
-         method: "POST",                                                                                                     
-         headers: {                                                                                                          
-           "Authorization": WIX_API_KEY,                                                                                     
-           "wix-site-id": WIX_SITE_ID,                                                                                       
-           "Content-Type": "application/json"                                                                                
-         },                                                                                                                  
-         body: JSON.stringify({                                                                                              
-           draftPost: {                                                                                                      
-             title,                                                                                                          
-             richContent: {                                                                                                  
-               nodes: [{                                                                                                     
-                 type: "PARAGRAPH",                                                                                          
-                 nodes: [{                                                                                                   
-                   type: "TEXT",                                                                                             
-                   textData: { text: content }                                                                               
-                 }]                                                                                                          
-               }]                                                                                                            
-             },                                                                                                              
-             excerpt: excerpt || content.substring(0, 200),                                                                  
-             tags,                                                                                                           
-             ...(slug && { slug })                                                                                           
-           }                                                                                                                 
-         })                                                                                                                  
-       });                                                                                                                   
-                                                                                                                             
-       const data = await response.json();                                                                                   
-                                                                                                                             
-       if (!response.ok) {                                                                                                   
-         console.error("[BLOG] Wix error:", data);                                                                           
-         return res.status(response.status).json ({ error: data.message || "Wix API error", details: data });                
-       }                                                                                                                     
-                                                                                                                             
-       // Auto-publish the draft                                                                                             
-       const draftId = data.draftPost?.id;                                                                                   
-       if (draftId) {                                                                                                        
-         await fetch(`https://www.wixapis.com/blog/v3/draft-posts/${draftId}/publish`, {                                     
-           method: "POST",                                                                                                   
-           headers: {                                                                                                        
-             "Authorization": WIX_API_KEY,                                                                                   
-             "wix-site-id": WIX_SITE_ID,                                                                                     
-             "Content-Type": "application/json"                                                                              
-           }                                                                                                                 
-         });                                                                                                                 
-       }                                                                                                                     
-                                                                                                                             
-       console.log(`[BLOG] Published: "${title}"`);                                                                          
-       res.json({ status: "published", postId: draftId, title });                                                            
-                                                                                                                             
-     } catch (err) {                                                                                                         
-       console.error("[BLOG ERROR]", err);                                                                                   
-       res.status(500).json({ error: err.message });                                                                         
-     }                                                                                                                       
-   });                                 
+// ─── Blog Publishing Endpoint ──────────────────────────────
+app.post("/publish-blog", async (req, res) => {
+  const authKey = req.headers["x-api-key"];
+  if (authKey !== process.env.FBF_API_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  const { title, content, tags = [], excerpt = "", slug = "" } = req.body;
+
+  if (!title || !content) {
+    return res.status(400).json({ error: "title and content are required" });
+  }
+
+  const WIX_API_KEY = process.env.WIX_API_KEY;
+  const WIX_SITE_ID = process.env.WIX_SITE_ID;
+
+  if (!WIX_API_KEY || !WIX_SITE_ID) {
+    return res.status(500).json({ error: "Wix credentials not configured" });
+  }
+
+  try {
+    const response = await fetch("https://www.wixapis.com/blog/v3/draft-posts", {
+      method: "POST",
+      headers: {
+        "Authorization": WIX_API_KEY,
+        "wix-site-id": WIX_SITE_ID,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        draftPost: {
+          title,
+          richContent: {
+            nodes: [{
+              type: "PARAGRAPH",
+              nodes: [{
+                type: "TEXT",
+                textData: { text: content }
+              }]
+            }]
+          },
+          excerpt: excerpt || content.substring(0, 200),
+          tags,
+          ...(slug && { slug })
+        }
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("[BLOG] Wix error:", data);
+      return res.status(response.status).json({ error: data.message || "Wix API error", details: data });
+    }
+
+    const draftId = data.draftPost?.id;
+    if (draftId) {
+      await fetch(`https://www.wixapis.com/blog/v3/draft-posts/${draftId}/publish`, {
+        method: "POST",
+        headers: {
+          "Authorization": WIX_API_KEY,
+          "wix-site-id": WIX_SITE_ID,
+          "Content-Type": "application/json"
+        }
+      });
+    }
+
+    console.log(`[BLOG] Published: "${title}"`);
+    res.json({ status: "published", postId: draftId, title });
+
+  } catch (err) {
+    console.error("[BLOG ERROR]", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── TTS Proxy (ElevenLabs) ──────────────────────────────────
+const TTS_VOICE_ID = "21m00Tcm4TlvDq8ikWAM"; // Rachel
+const TTS_MAX_CHARS = 5000;
+
+app.post("/tts", async (req, res) => {
+  if (!ELEVENLABS_API_KEY) {
+    return res.status(503).json({ error: "TTS not configured" });
+  }
+
+  const { text, voice_id } = req.body;
+  if (!text || typeof text !== "string" || !text.trim()) {
+    return res.status(400).json({ error: "text is required" });
+  }
+
+  const truncated = text.trim().slice(0, TTS_MAX_CHARS);
+  const voiceId = voice_id || TTS_VOICE_ID;
+
+  try {
+    const ttsRes = await fetch(
+      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
+      {
+        method: "POST",
+        headers: {
+          "xi-api-key": ELEVENLABS_API_KEY,
+          "Content-Type": "application/json",
+          Accept: "audio/mpeg",
+        },
+        body: JSON.stringify({
+          text: truncated,
+          model_id: "eleven_monolingual_v1",
+          voice_settings: { stability: 0.5, similarity_boost: 0.75 },
+        }),
+      }
+    );
+
+    if (!ttsRes.ok) {
+      const errBody = await ttsRes.text();
+      console.error("[TTS] ElevenLabs error:", ttsRes.status, errBody);
+      return res.status(ttsRes.status).json({ error: "TTS generation failed" });
+    }
+
+    res.set({
+      "Content-Type": "audio/mpeg",
+      "Cache-Control": "public, max-age=3600",
+    });
+
+    // Stream the audio response
+    const reader = ttsRes.body.getReader();
+    const pump = async () => {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        res.write(value);
+      }
+      res.end();
+    };
+    await pump();
+  } catch (err) {
+    console.error("[TTS] Error:", err);
+    res.status(500).json({ error: "TTS request failed" });
+  }
+});
 
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
