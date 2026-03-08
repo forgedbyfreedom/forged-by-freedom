@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { Pinecone } from "@pinecone-database/pinecone";
+import { createClient } from "@supabase/supabase-js";
 
 /* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
@@ -1052,6 +1053,158 @@ app.post("/tts", async (req, res) => {
     res.status(500).json({ error: "TTS request failed" });
   }
 });
+
+// ─── Supabase Client ──────────────────────────────────────
+const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY)
+  ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
+  : null;
+
+// ─── Lead Capture (Stage 1) ──────────────────────────────
+app.post("/api/leads", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Lead system not configured" });
+
+  const { name, email, phone, primary_goal, struggle_duration, what_held_back, commitment_level, referral_source, disclaimer_acknowledged } = req.body;
+
+  if (!name || !email || !phone) {
+    return res.status(400).json({ error: "Name, email, and phone are required" });
+  }
+  if (!disclaimer_acknowledged) {
+    return res.status(400).json({ error: "Disclaimer must be acknowledged" });
+  }
+
+  // Auto-reject low commitment
+  const rejected = commitment_level === "I'll do what I can when it's convenient";
+  const status = rejected ? "rejected" : "new";
+
+  try {
+    const { data, error } = await supabase.from("leads").insert({
+      name, email, phone, primary_goal, struggle_duration, what_held_back,
+      commitment_level, referral_source, disclaimer_acknowledged, status
+    }).select().single();
+
+    if (error) {
+      console.error("[LEADS] Supabase error:", error);
+      return res.status(500).json({ error: "Failed to save application" });
+    }
+
+    if (rejected) {
+      return res.json({
+        status: "rejected",
+        message: "Thank you for reaching out. Based on your responses, FBF may not be the right fit at this time. When you're ready to commit fully, we'll be here."
+      });
+    }
+
+    // Trigger n8n webhook
+    const webhookUrl = process.env.N8N_LEAD_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "new_lead",
+          lead: { name, email, phone, primary_goal, commitment_level, created_at: data.created_at }
+        })
+      }).catch(err => console.error("[LEADS] Webhook error:", err.message));
+    }
+
+    console.log(`[LEADS] New lead: ${name} (${email})`);
+    res.json({
+      status: "approved",
+      message: "Application received. You're one step closer.",
+      onboarding_link: `/onboarding?token=${data.id}`
+    });
+
+  } catch (err) {
+    console.error("[LEADS] Error:", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// ─── Client Intake (Stage 2) ─────────────────────────────
+app.post("/api/intake", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Intake system not configured" });
+
+  const { lead_id, ...fields } = req.body;
+
+  if (!lead_id) {
+    return res.status(400).json({ error: "Lead token required" });
+  }
+  if (!fields.disclaimer_acknowledged) {
+    return res.status(400).json({ error: "Disclaimer must be acknowledged" });
+  }
+
+  try {
+    // Verify lead exists and is approved
+    const { data: lead, error: leadErr } = await supabase
+      .from("leads").select("id, status, name, email").eq("id", lead_id).single();
+
+    if (leadErr || !lead) {
+      return res.status(404).json({ error: "Invalid onboarding link" });
+    }
+    if (lead.status !== "approved") {
+      return res.status(403).json({ error: "Your application has not been approved yet. We'll be in touch soon." });
+    }
+
+    const { error } = await supabase.from("clients").insert({ lead_id, ...fields });
+
+    if (error) {
+      console.error("[INTAKE] Supabase error:", error);
+      return res.status(500).json({ error: "Failed to save intake" });
+    }
+
+    // Trigger n8n webhook
+    const webhookUrl = process.env.N8N_INTAKE_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "intake_complete",
+          client_name: fields.full_name || lead.name,
+          email: lead.email
+        })
+      }).catch(err => console.error("[INTAKE] Webhook error:", err.message));
+    }
+
+    console.log(`[INTAKE] Complete: ${fields.full_name || lead.name}`);
+    res.json({ status: "ok", message: "Intake complete. Bryan will review your profile and be in touch within 24 hours." });
+
+  } catch (err) {
+    console.error("[INTAKE] Error:", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// ─── Admin: List Leads ───────────────────────────────────
+app.get("/api/leads", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Lead system not configured" });
+
+  if (req.query.key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from("leads").select("*").order("created_at", { ascending: false });
+
+    if (error) {
+      return res.status(500).json({ error: error.message });
+    }
+
+    res.json({ leads: data, count: data.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Serve Embed HTML Files ──────────────────────────────
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.get("/apply", (_, res) => res.sendFile(join(__dirname, "embed", "apply.html")));
+app.get("/onboarding", (_, res) => res.sendFile(join(__dirname, "embed", "onboarding.html")));
 
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
