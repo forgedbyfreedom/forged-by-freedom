@@ -1028,7 +1028,7 @@ app.post("/tts", async (req, res) => {
     if (!ttsRes.ok) {
       const errBody = await ttsRes.text();
       console.error("[TTS] ElevenLabs error:", ttsRes.status, errBody);
-      return res.status(ttsRes.status).json({ error: "TTS generation failed" });
+      return res.status(ttsRes.status).json({ error: "TTS generation failed", detail: errBody });
     }
 
     res.set({
