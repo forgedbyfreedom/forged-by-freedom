@@ -4,6 +4,11 @@
 
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Use venv Python for processing scripts (has dotenv, tiktoken, openai, pinecone)
+PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+[ -x "$PYTHON" ] || PYTHON="python3"
+
 CHANNELS_DIR="$SCRIPT_DIR/channels"
 LOG_FILE="$SCRIPT_DIR/logs/female_priority_$(date +%Y%m%d_%H%M%S).log"
 
@@ -90,7 +95,7 @@ for channel in "${FEMALE_CHANNELS[@]}"; do
         txt="${mp3%.mp3}.txt"
         if [ ! -f "$txt" ]; then
             log "  🎤 Transcribing: $(basename "$mp3")"
-            if python3 -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
+            if $PYTHON -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
                 log "    ✓ Transcribed"
                 rm -f "$mp3"
             else

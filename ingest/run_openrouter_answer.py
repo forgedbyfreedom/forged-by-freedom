@@ -36,6 +36,10 @@ import re
 import json
 import hashlib
 from typing import List, Dict, Any, Tuple, Optional
+from pathlib import Path
+
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).parent.parent / ".env", override=True)
 
 import requests
 from pinecone import Pinecone

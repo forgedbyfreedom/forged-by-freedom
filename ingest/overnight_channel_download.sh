@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ensure Homebrew binaries (yt-dlp, python3, etc.) are in PATH
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
 set -e
 
 CHANNELS_DIR="$(pwd)/channels"
@@ -46,7 +49,7 @@ find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$
             --write-auto-subs \
             --sub-lang en \
             --sub-format vtt \
-            --convert-subs txt \
+            --convert-subs srt \
             --output "$OUTPUT_DIR/%(title)s [%(id)s].%(ext)s" \
             --ignore-errors \
             --no-warnings \

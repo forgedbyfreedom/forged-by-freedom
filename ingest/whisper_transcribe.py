@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Transcribe audio/video files using OpenAI Whisper with
+Transcribe audio/video files using local MLX Whisper with
 domain-specific prompting for anabolics/fitness vocabulary.
+
+Runs 100% locally on Apple Silicon — no API fees.
 
 Usage:
     python whisper_transcribe.py video.mp4                    # Single file
@@ -9,7 +11,7 @@ Usage:
     python whisper_transcribe.py --url "youtube_url" --out .  # Download + transcribe
 
 Requirements:
-    pip install openai yt-dlp
+    pip install mlx-whisper yt-dlp
 """
 
 import os
@@ -18,20 +20,11 @@ import argparse
 import tempfile
 import subprocess
 from pathlib import Path
-from openai import OpenAI
+import mlx_whisper
 from anabolics_vocabulary import get_whisper_prompt, correct_transcript
 
-# Max file size for Whisper API (25MB)
-MAX_FILE_SIZE = 25 * 1024 * 1024
-
-
-def get_client():
-    """Get OpenAI client."""
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("❌ OPENAI_API_KEY not set")
-        sys.exit(1)
-    return OpenAI(api_key=api_key)
+# MLX Whisper model — same architecture as OpenAI's API (large-v3)
+WHISPER_MODEL = "mlx-community/whisper-large-v3-turbo"
 
 
 def extract_audio(video_path, output_path=None):
@@ -81,43 +74,19 @@ def split_audio(audio_path, chunk_duration=600):
     return chunks
 
 
-def transcribe_audio(client, audio_path):
-    """Transcribe audio file using Whisper with domain prompting."""
+def transcribe_audio(audio_path):
+    """Transcribe audio file using local MLX Whisper with domain prompting."""
     prompt = get_whisper_prompt()
 
-    file_size = os.path.getsize(audio_path)
+    result = mlx_whisper.transcribe(
+        str(audio_path),
+        path_or_hf_repo=WHISPER_MODEL,
+        initial_prompt=prompt,
+        language="en",
+        verbose=False,
+    )
 
-    if file_size > MAX_FILE_SIZE:
-        print(f"  ⚠️  File too large ({file_size / 1024 / 1024:.1f}MB), splitting...")
-        chunks = split_audio(audio_path)
-        transcripts = []
-
-        for i, chunk in enumerate(chunks):
-            print(f"  📝 Transcribing chunk {i + 1}/{len(chunks)}...")
-            with open(chunk, "rb") as f:
-                response = client.audio.transcriptions.create(
-                    model="whisper-1",
-                    file=f,
-                    prompt=prompt,
-                    language="en"
-                )
-            transcripts.append(response.text)
-            os.remove(chunk)  # Clean up chunk
-
-        # Clean up chunks directory
-        chunks[0].parent.rmdir()
-
-        return " ".join(transcripts)
-
-    with open(audio_path, "rb") as f:
-        response = client.audio.transcriptions.create(
-            model="whisper-1",
-            file=f,
-            prompt=prompt,
-            language="en"
-        )
-
-    return response.text
+    return result["text"]
 
 
 def download_youtube(url, output_dir):
@@ -143,7 +112,7 @@ def download_youtube(url, output_dir):
     return None
 
 
-def process_file(client, input_path, output_path=None):
+def process_file(input_path, output_path=None):
     """Process a single video/audio file."""
     input_path = Path(input_path)
 
@@ -163,8 +132,8 @@ def process_file(client, input_path, output_path=None):
         audio_path = extract_audio(input_path, Path(temp_audio.name))
 
     # Transcribe
-    print("  🎤 Transcribing with Whisper...")
-    transcript = transcribe_audio(client, audio_path)
+    print("  🎤 Transcribing with local MLX Whisper (FREE)...")
+    transcript = transcribe_audio(audio_path)
 
     # Apply post-processing corrections
     print("  🔧 Applying vocabulary corrections...")
@@ -208,7 +177,8 @@ def main():
 
     args = parser.parse_args()
 
-    client = get_client()
+    print(f"🧠 Using local MLX Whisper model: {WHISPER_MODEL}")
+    print(f"💰 Cost: FREE (runs on your Apple Silicon)")
 
     if args.url:
         output_dir = Path(args.out) if args.out else Path(".")
@@ -217,7 +187,7 @@ def main():
         print(f"📥 Downloading: {args.url}")
         audio_path = download_youtube(args.url, output_dir)
         if audio_path:
-            process_file(client, audio_path)
+            process_file(audio_path)
             os.remove(audio_path)  # Remove audio after transcription
 
     elif args.channel:
@@ -231,11 +201,11 @@ def main():
             if media.suffix.lower() in ['.mp4', '.mkv', '.webm', '.mp3']:
                 txt_path = media.with_suffix('.txt')
                 if not txt_path.exists():
-                    process_file(client, media)
+                    process_file(media)
 
     elif args.input:
         output = Path(args.out) if args.out else None
-        process_file(client, args.input, output)
+        process_file(args.input, output)
 
     else:
         parser.print_help()

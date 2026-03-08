@@ -6,6 +6,11 @@ Display index statistics and namespace breakdown.
 """
 
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent.parent / ".env", override=True)
+
 from pinecone import Pinecone
 
 INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "forged-freedom-ai")

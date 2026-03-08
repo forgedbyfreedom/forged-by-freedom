@@ -13,6 +13,11 @@
 
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Use venv Python for processing scripts (has dotenv, tiktoken, openai, pinecone)
+PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+[ -x "$PYTHON" ] || PYTHON="python3"
+
 CHANNELS_DIR="$SCRIPT_DIR/channels"
 LOG_FILE="$SCRIPT_DIR/logs/slow_download_$(date +%Y%m%d_%H%M%S).log"
 
@@ -88,7 +93,7 @@ transcribe_channel() {
 
         if [ ! -f "$txt" ]; then
             log "  🎤 Transcribing: $(basename "$mp3")"
-            if python3 -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
+            if $PYTHON -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
                 log "    ✓ Transcribed"
                 rm -f "$mp3"
                 count=$((count + 1))
@@ -106,7 +111,7 @@ transcribe_channel() {
 ingest_new() {
     log "📊 Running Pinecone ingest for new content..."
     cd "$SCRIPT_DIR"
-    python3 -u ingest_to_pinecone.py >> "$LOG_FILE" 2>&1 &
+    $PYTHON -u ingest_to_pinecone.py >> "$LOG_FILE" 2>&1 &
     log "  ✓ Ingest started in background"
 }
 

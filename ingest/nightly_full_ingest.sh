@@ -12,7 +12,15 @@
 
 set -e
 
+# Ensure Homebrew binaries (yt-dlp, python3, etc.) are in PATH
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Use venv Python (has dotenv, tiktoken, openai, pinecone installed)
+PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+[ -x "$PYTHON" ] || PYTHON="python3"
+
 LOG_DIR="$SCRIPT_DIR/logs"
 LOG_FILE="$LOG_DIR/nightly_$(date +%Y%m%d_%H%M%S).log"
 
@@ -48,7 +56,7 @@ log ""
 log "🔧 STEP 2: Applying vocabulary corrections..."
 log "------------------------------------------"
 cd "$SCRIPT_DIR"
-python3 fix_transcripts.py >> "$LOG_FILE" 2>&1
+$PYTHON fix_transcripts.py >> "$LOG_FILE" 2>&1
 log "✅ Vocabulary corrections applied"
 
 # Step 3: Rebuild master transcripts
@@ -56,7 +64,7 @@ log ""
 log "📚 STEP 3: Rebuilding master transcripts..."
 log "------------------------------------------"
 cd "$SCRIPT_DIR/channels"
-python3 build_master_transcripts.py >> "$LOG_FILE" 2>&1
+$PYTHON build_master_transcripts.py >> "$LOG_FILE" 2>&1
 log "✅ Master transcripts rebuilt"
 
 # Step 4: Ingest to Pinecone
@@ -64,14 +72,14 @@ log ""
 log "🚀 STEP 4: Ingesting to Pinecone..."
 log "------------------------------------------"
 cd "$SCRIPT_DIR"
-python3 ingest_to_pinecone.py >> "$LOG_FILE" 2>&1
+$PYTHON ingest_to_pinecone.py >> "$LOG_FILE" 2>&1
 log "✅ Pinecone ingest complete"
 
 # Stats
 log ""
 log "📊 STEP 5: Post-ingest stats..."
 log "------------------------------------------"
-python3 pinecone_stats.py >> "$LOG_FILE" 2>&1
+$PYTHON pinecone_stats.py >> "$LOG_FILE" 2>&1
 
 log ""
 log "=========================================="
