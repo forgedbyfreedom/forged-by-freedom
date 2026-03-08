@@ -1107,6 +1107,21 @@ app.post("/api/leads", async (req, res) => {
       }).catch(err => console.error("[LEADS] Webhook error:", err.message));
     }
 
+    // Push notification via ntfy
+    const ntfyTopic = process.env.NTFY_TOPIC;
+    if (ntfyTopic) {
+      fetch(`https://ntfy.sh/${ntfyTopic}`, {
+        method: "POST",
+        headers: {
+          "Title": "New FBF Application",
+          "Priority": "high",
+          "Tags": "muscle,fire",
+          "Click": `https://forged-by-freedom-api-nm4f.onrender.com/admin`
+        },
+        body: `${name} — ${primary_goal || 'No goal set'}\n${email} | ${phone}\nCommitment: ${commitment_level || 'Not specified'}`
+      }).catch(err => console.error("[NTFY] Error:", err.message));
+    }
+
     console.log(`[LEADS] New lead: ${name} (${email})`);
     res.json({
       status: "approved",
@@ -1205,6 +1220,34 @@ const __dirname = dirname(__filename);
 
 app.get("/apply", (_, res) => res.sendFile(join(__dirname, "embed", "apply.html")));
 app.get("/onboarding", (_, res) => res.sendFile(join(__dirname, "embed", "onboarding.html")));
+app.get("/admin", (_, res) => res.sendFile(join(__dirname, "embed", "admin.html")));
+
+// ─── Admin: Update Lead Status ───────────────────────────
+app.patch("/api/leads/:id/status", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  const { status, key } = req.body;
+  if (key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  if (!["new", "approved", "rejected"].includes(status)) {
+    return res.status(400).json({ error: "Invalid status" });
+  }
+
+  try {
+    const { error } = await supabase
+      .from("leads").update({ status }).eq("id", req.params.id);
+
+    if (error) {
+      return res.status(500).json({ error: error.message });
+    }
+
+    console.log(`[LEADS] ${req.params.id} → ${status}`);
+    res.json({ status: "ok" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
