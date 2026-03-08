@@ -7,7 +7,7 @@ Status: COMPLETED
 Phase: EARLY_PHASE1
 Study Type: INTERVENTIONAL
 Enrollment: 18
-Topic: growth hormone hormone hormone hormone hormone hormone hormone treatment
+Topic: growth hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone treatment
 
 SUMMARY:
 Current endometriosis therapy is based on interrupting the menstrual cycle and suppression of estrogen synthesis in order to induce atrophy of endometrial tissue. Progestins, oral contraceptives, androgenic agents, aromatase inhibitors, gonadotropin-releasinGHormone analogues all play a role in the treatment of endometriosis. However, none of these treatments can definitely cure the disease and they require long-term use despite the side effects of the drug. It is clear that new treatment methods are needed for this disease, and therefore many different new treatment methods are being investigated. Some of the treatment methods have focused on inhibiting angiogenesis and inflammation, which seems to play an important role in the progression of the disease. In the present study, it was investigated whether ezetimibe which is a cholesterol absorption inhibitor with anti-inflammatory and antiangiogenic properties, has therapeutic effect on endometriosis in an experimental rat model.
@@ -21,7 +21,7 @@ Ezetimibe, which is a member of a different class of antilipidemic agents than s
 
 PRIMARY OUTCOMES:
   - The volume of endometriotic explants in mm3.
-  - The amount of vascular endothelial growth hormone hormone hormone hormone hormone hormone factor
+  - The amount of vascular endothelial growth hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone hormone factor
   - The amount of tumor necrosis factor alpha
   - The number of mast cells
 

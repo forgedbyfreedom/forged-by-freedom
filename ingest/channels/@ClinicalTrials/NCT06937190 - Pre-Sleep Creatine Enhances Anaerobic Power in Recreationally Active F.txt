@@ -10,7 +10,7 @@ Enrollment: 24
 Topic: sleep athletes
 
 SUMMARY:
-This study is a randomized, double-blind, placebo-controlled trial designed to examine the effects of pre-sleep creatine monohydratehydratehydratehydratehydratehydratehydrate supplementation on anaerobic performance and muscle damage markers in recreationally active females. Participants will be randomly assigned to receive either 5 grams of creatine monohydratehydratehydratehydratehydratehydratehydrate or a placebo 30 minutes before sleep for seven consecutive days. Anaerobic performance will be assessed using the Wingate Anaerobic Test, evaluating peak and average power output and fatigue index. Blood samples will be collected before and after the supplementation period to analyze markers of muscle damage, including creatine kinase and lactate dehydrogenase. This study aims to provide insight into the efficacy of short-term, time-specific creatine supplementation for enhancing performance and recovery.
+This study is a randomized, double-blind, placebo-controlled trial designed to examine the effects of pre-sleep creatine monohydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydrate supplementation on anaerobic performance and muscle damage markers in recreationally active females. Participants will be randomly assigned to receive either 5 grams of creatine monohydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydrate or a placebo 30 minutes before sleep for seven consecutive days. Anaerobic performance will be assessed using the Wingate Anaerobic Test, evaluating peak and average power output and fatigue index. Blood samples will be collected before and after the supplementation period to analyze markers of muscle damage, including creatine kinase and lactate dehydrogenase. This study aims to provide insight into the efficacy of short-term, time-specific creatine supplementation for enhancing performance and recovery.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -19,7 +19,7 @@ PRIMARY OUTCOMES:
   - Average Power Output (Watts) - 30-Second Wingate Test
 
 INTERVENTIONS:
-  - DIETARY_SUPPLEMENT: creatine monohydratehydratehydratehydratehydratehydratehydrate
+  - DIETARY_SUPPLEMENT: creatine monohydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydrate
   - DIETARY_SUPPLEMENT: Placebo (Maltodextrin)
 
 ELIGIBILITY:

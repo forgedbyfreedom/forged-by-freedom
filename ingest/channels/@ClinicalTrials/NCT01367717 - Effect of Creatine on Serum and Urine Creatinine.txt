@@ -2,7 +2,7 @@ CLINICAL TRIAL
 ==============
 NCT ID: NCT01367717
 Title: Effect of Creatine on Serum and Urine Creatinine
-Official Title: Effect of creatine monohydratehydratehydratehydratehydratehydratehydrate and Creatine Ethyl ester on Serum and Urinary Creatinine
+Official Title: Effect of creatine monohydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydrate and Creatine Ethyl ester on Serum and Urinary Creatinine
 Status: COMPLETED
 Phase: NA
 Study Type: INTERVENTIONAL
@@ -12,7 +12,7 @@ Topic: creatine supplementation
 SUMMARY:
 Background: Creatinine (Crn) concentration is used to assess renal function via calculation of GFR (Glomerular Filtration Rate). By RIFLE (Risk, Injury, Failure, Loss, End Stage Kidney Disease) criteria, acute kidney injury (AKI) and acute renal failure (ARF) are defined by a two-fold and three-fold increase in serum Crn, respectively. Crn is a breakdown product of proteins and circulating creatine, and it is generally a benign product present in serum. Creatine is a nutritional supplement that has been available since 1993, and it is widely used among athletes today.
 
-Methods: In an IRB approved, blinded crossover trial, 25 human volunteers ingested 2 creatine supplements to determine any associated statistically significant increase in serum Crn and clinically significant increase in serum Crn to a degree associated with AKI or ARF. Urine samples were also collected to examine excretion patterns after an ingested sample. Participants ingested 10 gm of creatine ethyl ester (CEE) or creatine monohydratehydratehydratehydratehydratehydratehydrate (CrM) and had serum Crn assayed at 0, 1, 2, 3, 4, 5 and 24 hours. Urinary Crn levels were assayed at 0, 1.5, 3, 5 and 24 hours. Exclusion factors were any history of renal disease or use of creatine within the last month. Statistical analysis was performed by Wilcoxon Matched-Pair Signed Ranks Test and descriptive summary statistics were performed.
+Methods: In an IRB approved, blinded crossover trial, 25 human volunteers ingested 2 creatine supplements to determine any associated statistically significant increase in serum Crn and clinically significant increase in serum Crn to a degree associated with AKI or ARF. Urine samples were also collected to examine excretion patterns after an ingested sample. Participants ingested 10 gm of creatine ethyl ester (CEE) or creatine monohydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydrate (CrM) and had serum Crn assayed at 0, 1, 2, 3, 4, 5 and 24 hours. Urinary Crn levels were assayed at 0, 1.5, 3, 5 and 24 hours. Exclusion factors were any history of renal disease or use of creatine within the last month. Statistical analysis was performed by Wilcoxon Matched-Pair Signed Ranks Test and descriptive summary statistics were performed.
 
 DETAILED DESCRIPTION:
 Not provided
@@ -22,7 +22,7 @@ PRIMARY OUTCOMES:
   - Urine Creatinine
 
 INTERVENTIONS:
-  - DIETARY_SUPPLEMENT: creatine monohydratehydratehydratehydratehydratehydratehydrate
+  - DIETARY_SUPPLEMENT: creatine monohydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydratehydrate
   - DIETARY_SUPPLEMENT: Creatine Ethyl ester
 
 ELIGIBILITY:

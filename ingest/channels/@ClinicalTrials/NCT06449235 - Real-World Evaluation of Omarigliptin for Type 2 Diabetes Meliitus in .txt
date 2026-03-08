@@ -14,14 +14,14 @@ The study titled "Efficacy and Safety of Omarigliptin, A Weekly Dipeptidyl Pepti
 
 T2DM is a growing global health concern, necessitating effective treatment strategies. Omarigliptin, a once-weekly DPP-4 inhibitor, has shown promising results in clinical trials worldwide. However, its real-world efficacy and safety in diverse populations like Bangladesh remain under-explored. This study aims to fill this gap by evaluating omarigliptin in a typical clinical setting in Bangladesh, potentially providing valuable insights for healthcare providers.
 
-Study Objectives: To assess the real-world efficacy and safety of omarigliptin in managing newly diagnosed T2DM. Specific objectives include evaluating glycemic control (HbA1C levels), safety regarding adverse events, and other outcomes such as changes in fasting plasma glucose, electrolyte levels, liver enzymes, creatinine, and lipid profile.
+Study Objectives: To assess the real-world efficacy and safety of omarigliptin in managing newly diagnosed T2DM. Specific objectives include evaluating glycemic control (HbA1c levels), safety regarding adverse events, and other outcomes such as changes in fasting plasma glucose, electrolyte levels, liver enzymes, creatinine, and lipid profile.
 
 Methodology: Conducted in the Department of Endocrinology at BIRDEM General Hospital over 12 months, the study population includes newly diagnosed T2DM patients divided into two groups: those receiving omarigliptin and those receiving other antidiabetic agents. Sample size calculation determined 469 patients per group, accounting for a 15% dropout rate.
 
 Inclusion Criteria:
 
 * Newly diagnosed T2DM (according to ADA guidelines) aged ≥ 18 years
-* HbA1C levels between ≥7.0% and ≤10.0%
+* HbA1c levels between ≥7.0% and ≤10.0%
 * Stable doses of antidiabetic drugs for at least 4 weeks
 
 Exclusion Criteria:
@@ -29,7 +29,7 @@ Exclusion Criteria:
 * Prescribed insulin for diabetes management
 * Significant weight loss, hypersensitivity to antidiabetic drugs, type 1 diabetes, ketoacidosis, active liver disease, significant cardiovascular disease, malignancy, hematological disorders, pregnancy, and severe renal impairment, among others.
 
-Study Variables: Data will be collected on demographic variables (age, gender, socio-economic status, BMI), laboratory variables (HbA1C, fasting blood glucose, lipid profile, creatinine, electrolytes, ALT, and postprandial glucose), and adverse events (respiratory infections, headaches, gastrointestinal issues, joint pain).
+Study Variables: Data will be collected on demographic variables (age, gender, socio-economic status, BMI), laboratory variables (HbA1c, fasting blood glucose, lipid profile, creatinine, electrolytes, ALT, and postprandial glucose), and adverse events (respiratory infections, headaches, gastrointestinal issues, joint pain).
 
 Study Procedure: Patients will receive personalized antidiabetic treatment with or without omarigliptin, alongside standard dietary and exercise recommendations. Follow-up assessments will occur at 14 days, 3 months, and 6 months post-enrollment. Data will be collected through interviews, physical exams, and laboratory tests, recorded in case record forms (CRFs).
 
