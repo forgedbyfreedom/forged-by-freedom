@@ -5,7 +5,7 @@ import { askCoach } from "backend/aiQuery";
 
 $w.onReady(() => {
   // Element ID must match the HtmlComponent ID in Wix editor (check Properties panel)
-  const htmlComp = $w("#html2");
+  const htmlComp = $w("#html5");
   console.log("AI Coach page code loaded, htmlComp type:", htmlComp.type);
 
   htmlComp.onMessage(async (event) => {
@@ -58,5 +58,5 @@ async function handleBloodwork(labText) {
 }
 
 function sendToHtml(data) {
-  $w("#html2").postMessage(JSON.stringify(data));
+  $w("#html5").postMessage(JSON.stringify(data));
 }

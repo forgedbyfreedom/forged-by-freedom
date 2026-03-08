@@ -17,6 +17,11 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Use venv Python (has dotenv, tiktoken, openai, pinecone installed)
+PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+[ -x "$PYTHON" ] || PYTHON="python3"
+
 CHANNELS_DIR="$SCRIPT_DIR/channels"
 LOG_DIR="$SCRIPT_DIR/logs"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -209,11 +214,11 @@ fetch_research() {
     cd "$SCRIPT_DIR"
 
     log "Fetching PubMed abstracts..."
-    python3 -u fetch_pubmed.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ PubMed fetch had errors"
+    $PYTHON -u fetch_pubmed.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ PubMed fetch had errors"
 
     log ""
     log "Fetching ClinicalTrials.gov data..."
-    python3 -u fetch_clinicaltrials.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ ClinicalTrials fetch had errors"
+    $PYTHON -u fetch_clinicaltrials.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ ClinicalTrials fetch had errors"
 }
 
 # ─── Node 1c: Whisper Transcription (FREE — local MLX Whisper on Apple Silicon) ────
@@ -243,7 +248,7 @@ transcribe_pending() {
         if [ ! -f "$txt" ]; then
             count=$((count + 1))
             log "  [$count/$pending] 🎤 Transcribing: $(basename "$mp3")"
-            if python3 -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
+            if $PYTHON -u "$SCRIPT_DIR/whisper_transcribe.py" "$mp3" >> "$LOG_FILE" 2>&1; then
                 rm -f "$mp3"
                 transcribed=$((transcribed + 1))
                 log "  ✅ Done: $(basename "$mp3")"
@@ -261,21 +266,21 @@ transcribe_pending() {
 fix_transcripts() {
     header "NODE 2: VOCABULARY CORRECTIONS"
     cd "$SCRIPT_DIR"
-    python3 -u fix_transcripts.py 2>&1 | tee -a "$LOG_FILE"
+    $PYTHON -u fix_transcripts.py 2>&1 | tee -a "$LOG_FILE"
 }
 
 # ─── Node 3: Build Master Transcripts ─────────────────────────
 build_masters() {
     header "NODE 3: BUILD MASTER TRANSCRIPTS"
     cd "$SCRIPT_DIR"
-    python3 -u build_master_transcripts.py 2>&1 | tee -a "$LOG_FILE"
+    $PYTHON -u build_master_transcripts.py 2>&1 | tee -a "$LOG_FILE"
 }
 
 # ─── Node 4: Pinecone Ingest ──────────────────────────────────
 ingest_pinecone() {
     header "NODE 4: PINECONE INGEST"
     cd "$SCRIPT_DIR"
-    python3 -u ingest_to_pinecone.py 2>&1 | tee -a "$LOG_FILE"
+    $PYTHON -u ingest_to_pinecone.py 2>&1 | tee -a "$LOG_FILE"
 }
 
 # ─── Node 5: Stats & Cleanup ──────────────────────────────────
@@ -292,7 +297,7 @@ show_stats() {
 
     # Pinecone stats
     if [ -f pinecone_stats.py ]; then
-        python3 -u pinecone_stats.py 2>&1 | tee -a "$LOG_FILE"
+        $PYTHON -u pinecone_stats.py 2>&1 | tee -a "$LOG_FILE"
     fi
 
     # Generate and push live stats for AI coach display

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: transparent;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .input-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Upload row */
+  .upload-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+  }
+  .upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #2a2a2a;
+    color: #c9a227;
+    border: 1px solid #c9a227;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .upload-btn:hover { background: #333; }
+  .upload-btn svg { width: 16px; height: 16px; fill: #c9a227; flex-shrink: 0; }
+  .upload-hint {
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .upload-filename {
+    color: #c9a227;
+    font-size: 12px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Processing overlay */
+  .processing-overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    gap: 12px;
+  }
+  .processing-text {
+    color: #c9a227;
+    font-size: 14px;
+    text-align: center;
+  }
+  .progress-bar {
+    width: 80%;
+    max-width: 300px;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #c9a227;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.3s;
+  }
+
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #333;
+  }
+  .divider span {
+    color: #555;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  textarea {
+    width: 100%;
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e0e0e0;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    font-family: 'Courier New', monospace;
+  }
+  textarea::placeholder {
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: italic;
+  }
+  textarea:focus {
+    border-color: #c9a227;
+    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.2);
+  }
+  .btn-row {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  #analyzeBtn {
+    flex: 1;
+    background: #c9a227;
+    color: #000;
+  }
+  #analyzeBtn:hover { background: #d4b03a; }
+  #analyzeBtn:disabled {
+    background: #555;
+    color: #999;
+    cursor: not-allowed;
+  }
+  #clearBtn {
+    background: #333;
+    color: #ccc;
+    padding: 10px 14px;
+  }
+  #clearBtn:hover { background: #444; }
+
+  /* Results area */
+  .results-area {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+  .results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    flex-shrink: 0;
+  }
+  .results-header h3 {
+    color: #c9a227;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #backBtn {
+    background: #333;
+    color: #ccc;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  #backBtn:hover { background: #444; }
+  .results-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 14px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .results-content h4 {
+    color: #c9a227;
+    margin: 16px 0 6px 0;
+    font-size: 14px;
+  }
+  .results-content h4:first-child { margin-top: 0; }
+  .results-content p { margin: 4px 0; }
+  .results-content strong { color: #f0d060; }
+  .results-content .red-flag { color: #ff4444; font-weight: bold; }
+  .results-content .watch { color: #ffaa00; font-weight: bold; }
+  .results-content .normal { color: #44cc44; }
+  .error-msg {
+    color: #ff6666;
+    padding: 12px;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 6px;
+    text-align: center;
+  }
+  .loading {
+    text-align: center;
+    color: #c9a227;
+    padding: 40px 20px;
+    font-size: 15px;
+  }
+  .loading-dots::after {
+    content: '';
+    animation: dots 1.5s steps(4, end) infinite;
+  }
+  @keyframes dots {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+  }
+  .results-content::-webkit-scrollbar { width: 6px; }
+  .results-content::-webkit-scrollbar-track { background: #111; border-radius: 3px; }
+  .results-content::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+  .results-content::-webkit-scrollbar-thumb:hover { background: #555; }
+</style>
+</head>
+<body>
+
+  <!-- INPUT VIEW -->
+  <div class="input-area" id="inputView">
+
+    <!-- File upload row -->
+    <div class="upload-row">
+      <button class="upload-btn" type="button" onclick="document.getElementById('fileInput').click()">
+        <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+        Upload Lab Report
+      </button>
+      <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" style="display:none">
+      <span class="upload-hint" id="uploadStatus">PDF, JPG, or PNG</span>
+    </div>
+
+    <!-- Processing overlay (shown during file extraction) -->
+    <div class="processing-overlay" id="processingOverlay">
+      <div class="processing-text" id="processingText">Extracting text from file...</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="divider"><span>or paste below</span></div>
+
+    <textarea id="bloodwork" placeholder="Paste your raw lab report or bloodwork results here...&#10;&#10;Example:&#10;Testosterone, Total: 850 ng/dL&#10;Estradiol (Sensitive): 32 pg/mL&#10;Hematocrit: 48.5%&#10;ALT: 45 U/L&#10;AST: 38 U/L&#10;LDL: 135 mg/dL&#10;HDL: 42 mg/dL&#10;eGFR: 68 mL/min&#10;Fasting Glucose: 102 mg/dL"></textarea>
+
+    <div class="btn-row">
+      <button id="analyzeBtn" onclick="analyzeBloodwork()">Analyze Bloodwork</button>
+      <button id="clearBtn" onclick="clearAll()">Clear</button>
+    </div>
+  </div>
+
+  <!-- RESULTS VIEW -->
+  <div class="results-area" id="resultsView">
+    <div class="results-header">
+      <h3>Coach Bryan's Analysis</h3>
+      <button id="backBtn" onclick="showInput()">Back</button>
+    </div>
+    <div class="results-content" id="resultsContent"></div>
+  </div>
+
+  <script>
+    var inputView = document.getElementById("inputView");
+    var resultsView = document.getElementById("resultsView");
+    var resultsContent = document.getElementById("resultsContent");
+    var textarea = document.getElementById("bloodwork");
+    var analyzeBtn = document.getElementById("analyzeBtn");
+    var fileInput = document.getElementById("fileInput");
+    var uploadStatus = document.getElementById("uploadStatus");
+    var processingOverlay = document.getElementById("processingOverlay");
+    var processingText = document.getElementById("processingText");
+    var progressFill = document.getElementById("progressFill");
+    var divider = document.querySelector(".divider");
+
+    // Set up pdf.js worker
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+    // ── Listen for messages FROM the Wix page code ──
+    window.onmessage = function(event) {
+      if (!event.data) return;
+
+      // Page code requesting current bloodwork text
+      if (event.data.type === "getBloodwork") {
+        window.parent.postMessage({
+          type: "bloodworkData",
+          text: textarea.value || ""
+        }, "*");
+      }
+
+      // Page code sending back analysis results
+      if (event.data.type === "analyzeResult") {
+        analyzeBtn.disabled = false;
+        analyzeBtn.textContent = "Analyze Bloodwork";
+
+        if (event.data.status === "OK" && event.data.answer) {
+          resultsContent.innerHTML = formatAnswer(event.data.answer);
+        } else if (event.data.error) {
+          resultsContent.innerHTML = '<div class="error-msg">' + escapeHtml(event.data.error) + '</div>';
+        } else {
+          resultsContent.innerHTML = '<div class="error-msg">Analysis failed. Please try again.</div>';
+        }
+      }
+    };
+
+    // ── Real-time sync with page code ──
+    textarea.addEventListener("input", function() {
+      window.parent.postMessage({ type: "bloodworkData", text: this.value || "" }, "*");
+    });
+
+    textarea.addEventListener("paste", function() {
+      var el = this;
+      setTimeout(function() {
+        window.parent.postMessage({ type: "bloodworkData", text: el.value || "" }, "*");
+      }, 50);
+    });
+
+    // ── File upload handler ──
+    fileInput.addEventListener("change", async function() {
+      var file = this.files[0];
+      if (!file) return;
+
+      var name = file.name.toLowerCase();
+      var isPDF = name.endsWith(".pdf");
+      var isImage = name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png");
+
+      if (!isPDF && !isImage) {
+        uploadStatus.textContent = "Unsupported file type";
+        uploadStatus.style.color = "#ff6666";
+        return;
+      }
+
+      showProcessing(true);
+      uploadStatus.textContent = file.name;
+      uploadStatus.style.color = "#c9a227";
+      uploadStatus.className = "upload-filename";
+
+      try {
+        var extractedText = "";
+        if (isPDF) {
+          extractedText = await extractPDFText(file);
+        } else {
+          extractedText = await extractImageText(file);
+        }
+
+        extractedText = extractedText.trim();
+
+        if (!extractedText) {
+          uploadStatus.textContent = "No text found in file. Try pasting instead.";
+          uploadStatus.style.color = "#ff6666";
+          uploadStatus.className = "upload-hint";
+        } else {
+          textarea.value = extractedText;
+          uploadStatus.textContent = file.name + " — text extracted";
+          uploadStatus.style.color = "#44cc44";
+          window.parent.postMessage({ type: "bloodworkData", text: extractedText }, "*");
+        }
+      } catch (err) {
+        console.error("File extraction error:", err);
+        uploadStatus.textContent = "Error reading file. Try pasting instead.";
+        uploadStatus.style.color = "#ff6666";
+        uploadStatus.className = "upload-hint";
+      } finally {
+        showProcessing(false);
+        fileInput.value = "";
+      }
+    });
+
+    // ── PDF text extraction (pdf.js) ──
+    async function extractPDFText(file) {
+      processingText.textContent = "Reading PDF...";
+      progressFill.style.width = "10%";
+
+      var arrayBuffer = await file.arrayBuffer();
+      var pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      var totalPages = pdf.numPages;
+      var allText = [];
+
+      for (var i = 1; i <= totalPages; i++) {
+        processingText.textContent = "Extracting page " + i + " of " + totalPages + "...";
+        progressFill.style.width = (10 + (80 * i / totalPages)) + "%";
+
+        var page = await pdf.getPage(i);
+        var content = await page.getTextContent();
+        var pageText = content.items.map(function(item) { return item.str; }).join(" ");
+        if (pageText.trim()) allText.push(pageText);
+      }
+
+      progressFill.style.width = "100%";
+      processingText.textContent = "Done!";
+      return allText.join("\n\n");
+    }
+
+    // ── Image OCR (Tesseract.js — loaded on demand) ──
+    async function extractImageText(file) {
+      processingText.textContent = "Loading OCR engine...";
+      progressFill.style.width = "5%";
+
+      if (!window.Tesseract) {
+        await new Promise(function(resolve, reject) {
+          var script = document.createElement("script");
+          script.src = "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js";
+          script.onload = resolve;
+          script.onerror = function() { reject(new Error("Failed to load OCR engine")); };
+          document.head.appendChild(script);
+        });
+      }
+
+      progressFill.style.width = "20%";
+      processingText.textContent = "Initializing OCR...";
+
+      var worker = await Tesseract.createWorker("eng", 1, {
+        logger: function(m) {
+          if (m.status === "recognizing text") {
+            var pct = Math.round(20 + m.progress * 75);
+            progressFill.style.width = pct + "%";
+            processingText.textContent = "Reading image... " + Math.round(m.progress * 100) + "%";
+          }
+        }
+      });
+
+      var result = await worker.recognize(file);
+      await worker.terminate();
+
+      progressFill.style.width = "100%";
+      processingText.textContent = "Done!";
+      return result.data.text;
+    }
+
+    function showProcessing(show) {
+      if (show) {
+        processingOverlay.style.display = "flex";
+        textarea.style.display = "none";
+        divider.style.display = "none";
+        progressFill.style.width = "0%";
+      } else {
+        processingOverlay.style.display = "none";
+        textarea.style.display = "";
+        divider.style.display = "";
+      }
+    }
+
+    // ── Analyze: send to page code via postMessage ──
+    function analyzeBloodwork() {
+      var text = (textarea.value || "").trim();
+      if (!text) {
+        alert("Please paste your bloodwork results or upload a file first.");
+        return;
+      }
+
+      analyzeBtn.disabled = true;
+      analyzeBtn.textContent = "Analyzing...";
+      showResults();
+      resultsContent.innerHTML = '<div class="loading">Coach Bryan is analyzing your bloodwork<span class="loading-dots"></span></div>';
+
+      // Send to Wix page code — it calls askCoach() and sends results back
+      window.parent.postMessage({
+        type: "analyzeBloodwork",
+        text: text
+      }, "*");
+    }
+
+    function formatAnswer(text) {
+      var html = escapeHtml(text);
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+      html = html.replace(/^#{1,3}\s+(.+)$/gm, '<h4>$1</h4>');
+      html = html.replace(/\b(RED FLAG|INTERVENE|CRITICAL|URGENT|DANGEROUS|EMERGENCY)\b/gi, '<span class="red-flag">$1</span>');
+      html = html.replace(/\b(WATCH|MONITOR|CAUTION|ELEVATED|BORDERLINE)\b/gi, '<span class="watch">$1</span>');
+      html = html.replace(/\b(NORMAL|OPTIMAL|GOOD|HEALTHY)\b/gi, '<span class="normal">$1</span>');
+      html = html.replace(/^[\-\*]\s+(.+)$/gm, '&bull; $1');
+      html = html.replace(/^(\d+)\.\s+(.+)$/gm, '<strong>$1.</strong> $2');
+      html = html.replace(/→/g, ' &rarr; ');
+      html = html.replace(/\n\n/g, '</p><p>');
+      html = html.replace(/\n/g, '<br>');
+      return '<p>' + html + '</p>';
+    }
+
+    function escapeHtml(str) {
+      var div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function showResults() {
+      inputView.style.display = "none";
+      resultsView.style.display = "flex";
+    }
+
+    function showInput() {
+      resultsView.style.display = "none";
+      inputView.style.display = "flex";
+    }
+
+    function clearAll() {
+      textarea.value = "";
+      resultsContent.innerHTML = "";
+      uploadStatus.textContent = "PDF, JPG, or PNG";
+      uploadStatus.style.color = "#666";
+      uploadStatus.className = "upload-hint";
+      window.parent.postMessage({ type: "bloodworkData", text: "" }, "*");
+    }
+  </script>
+</body>
+</html>

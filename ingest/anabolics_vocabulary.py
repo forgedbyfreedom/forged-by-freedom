@@ -363,13 +363,33 @@ free T, free testosterone,
 sensitive E2, sensitive estradiol,
 hematocrit, HCT, thick blood,
 hemoglobin, HGB,
-liver values, liver enzymes, AST, ALT,
-lipids, cholesterol panel, lipid panel,
+liver values, liver enzymes, AST, ALT, GGT,
+lipids, cholesterol panel, lipid panel, HDL, LDL,
 RBC, red blood cells, polycythemia,
-kidney function, creatinine, BUN,
+kidney function, creatinine, BUN, eGFR, cystatin C,
 CBC, complete blood count,
 CMP, comprehensive metabolic panel,
 prolactin, prolactin gyno, deca dick,
+
+ADVANCED BLOODWORK MARKERS:
+hs-CRP, C-reactive protein, homocysteine, BNP, NT-proBNP, troponin,
+HbA1c, A1c, fasting glucose, fasting insulin, HOMA-IR, C-peptide,
+ferritin, TIBC, transferrin saturation, iron panel,
+microalbumin, cystatin C, eGFR, glomerular filtration rate,
+coronary calcium score, CIMT, carotid intima-media thickness,
+reticulocyte count, blood viscosity,
+TSH, free T3, free T4, reverse T3, thyroid antibodies, calcitonin,
+IL-6, TNF-alpha, fibrinogen, ESR,
+
+BLOODWORK PHARMACEUTICALS:
+rosuvastatin, atorvastatin, pitavastatin, ezetimibe,
+telmisartan, lisinopril, amlodipine,
+TUDCA, UDCA, NAC, N-acetyl cysteine,
+cabergoline, P5P, pyridoxal-5-phosphate,
+metformin, berberine,
+citrus bergamot, naringin, niacin,
+NAD+, L-carnitine, injectable L-carnitine,
+anastrozole, exemestane, aromasin, arimidex,
 """
 
 # Post-processing corrections for common ASR mistakes
@@ -384,9 +404,8 @@ CORRECTIONS = {
     "drost a known": "drostanolone",
 
     # Trenbolone variants
-    "trend": "tren",
-    "tran": "tren",
-    "train": "tren",
+    # NOTE: "trend", "tran", "train" removed — too aggressive as substring matches
+    # They corrupt "training" → "trening", "trend" → "tren", "transaction" → etc.
     "tremble own": "trenbolone",
     "trend below": "trenbolone",
     "tremble on": "trenbolone",
@@ -482,7 +501,8 @@ CORRECTIONS = {
     "rad one four zero": "RAD-140",
     "card a reen": "cardarine",
     "card uh reen": "cardarine",
-    "ibuprofen": "ibutamoren",  # common mistake
+    # NOTE: "ibuprofen" → "ibutamoren" removed — ibuprofen is a real drug (NSAID)
+    # that users legitimately discuss. This was NOT a safe correction.
     "i boot a more in": "ibutamoren",
     "m k six seventy seven": "MK-677",
 
@@ -525,7 +545,7 @@ CORRECTIONS = {
     # Clen / Fat burners
     "clean boot a roll": "clenbuterol",
     "clen brutal": "clenbuterol",
-    "clean": "clen",
+    # NOTE: "clean" → "clen" removed — corrupts "clean", "cleanest", "cleaner", etc.
     "d n p": "DNP",
     "die nitro": "dinitrophenol",
     "al beauty roll": "albuterol",
@@ -622,7 +642,7 @@ CORRECTIONS = {
     "arrow mitt eyes": "aromatize",
     "arrow ma taze": "aromatase",
     "andro gin": "androgen",
-    "ester": "ester",
+    # NOTE: "ester" → "ester" removed (no-op that wastes processing)
     "half life": "half-life",
     "bio availability": "bioavailability",
     "sub q": "subq",
@@ -731,7 +751,8 @@ CORRECTIONS = {
     # SARM nicknames
     "osta reen": "ostarine",
     "rad one forty": "RAD-140",
-    "test alone": "testolone",
+    # NOTE: "test alone" → "testolone" removed — matches normal English phrase
+    # "testolone" is already in WHISPER_PROMPT for Whisper biasing
     "anna bolic um": "anabolicum",
     "enduro ball": "endurobol",
     "new tro ball": "nutrobal",
@@ -754,8 +775,9 @@ CORRECTIONS = {
     "estrogen rebound": "estrogen rebound",
 
     # Peptide slang
-    "g h": "GH",
-    "growth": "growth hormone",
+    # NOTE: "g h" → "GH" removed — too short, matches inside words like "hiGH", "weigHt"
+    # NOTE: "growth" → "growth hormone" removed — corrupts "growth" in all contexts
+    # These are handled by the REGEX_PATTERNS section with proper word boundaries
     "slinning": "slinning",
     "human log": "humalog",
     "nova log": "novolog",
@@ -841,6 +863,95 @@ CORRECTIONS = {
     "dave crosland": "Dave Crosland",
     "skip hill": "Skipp Hill",
     "skipp hill": "Skipp Hill",
+
+    # ─── PHARMACEUTICAL CORRECTIONS (bloodwork interventions) ───
+    # Statins
+    "rosu vast atin": "rosuvastatin",
+    "rose ooh vast atin": "rosuvastatin",
+    "a tore vast atin": "atorvastatin",
+    "at or vast atin": "atorvastatin",
+    "pita vast atin": "pitavastatin",
+    "eze tim ibe": "ezetimibe",
+    "ez it a mibe": "ezetimibe",
+
+    # Blood pressure meds
+    "tell me sartan": "telmisartan",
+    "tele me sartan": "telmisartan",
+    "tell a me sartan": "telmisartan",
+    "lice in a pril": "lisinopril",
+    "lisin a pril": "lisinopril",
+    "lie sin oh pril": "lisinopril",
+    "am low dip een": "amlodipine",
+
+    # Liver/kidney support
+    "tudka": "TUDCA",
+    "tud ca": "TUDCA",
+    "you dca": "UDCA",
+    "ur so dee oxy": "ursodeoxycholic",
+
+    # Prolactin management
+    "cab a go lean": "cabergoline",
+    "cab urge oh lean": "cabergoline",
+    "cab er go lean": "cabergoline",
+    "p five p": "P5P",
+    "p 5 p": "P5P",
+    "pyridoxal five phosphate": "pyridoxal-5-phosphate",
+
+    # Metabolic drugs
+    "berber een": "berberine",
+    "burr burr een": "berberine",
+
+    # Supplements for bloodwork
+    "citrus berg a mot": "citrus bergamot",
+    "berg a mot": "bergamot",
+    "nigh a sin": "niacin",
+    "narin gin": "naringin",
+    "narrow gin": "naringin",
+    "n a c": "NAC",
+    "n a d plus": "NAD+",
+    "l car nah teen": "L-carnitine",
+    "l car nih teen": "L-carnitine",
+    "injectable l carnitine": "injectable L-carnitine",
+
+    # ─── BLOODWORK MARKER CORRECTIONS ───
+    "sis tatin c": "cystatin C",
+    "sys tatin c": "cystatin C",
+    "cyst a tin c": "cystatin C",
+    "homo sis teen": "homocysteine",
+    "homo cyst een": "homocysteine",
+    "home oh sis teen": "homocysteine",
+    "homa ir": "HOMA-IR",
+    "homer ir": "HOMA-IR",
+    "micro album in": "microalbumin",
+    "micro al bumen": "microalbumin",
+    "c reactive protein": "C-reactive protein",
+    "see reactive protein": "C-reactive protein",
+    "trop oh nin": "troponin",
+    "trope oh nin": "troponin",
+    "ferro tin": "ferritin",
+    "fair a tin": "ferritin",
+    "transfer in sat": "transferrin sat",
+    "retick you low site": "reticulocyte",
+    "eh gee fr": "eGFR",
+    "glomer you lar": "glomerular",
+    "cal see tonin": "calcitonin",
+    "corona ree calcium": "coronary calcium",
+
+    # ─── COMMON ASR ERRORS ───
+    "natural prediction": "natural production",
+    "arrow my taste": "aromatase",
+    "aroma taste": "aromatase",
+    "enhance ate": "enanthate",
+    "in anthem": "enanthate",
+    "sip your nate": "cypionate",
+    "trend alone": "trenbolone",
+    "trend bolo": "trenbolone",
+    "nan dra loan": "nandrolone",
+    "bold and own": "boldenone",
+    "method own own": "methenolone",
+    "anna straw sole": "anastrozole",
+    "example stain": "exemestane",
+    "cab ergo lean": "cabergoline",
 }
 
 # Case-insensitive regex patterns for trickier replacements
@@ -934,6 +1045,20 @@ REGEX_PATTERNS = [
     (r'\b19\s*[-]?\s*nor\b', '19-nor'),
     (r'\bd\s*h\s*t\b', 'DHT'),
     (r'\bd\s*h\s*b\b', 'DHB'),
+
+    # Bloodwork markers
+    (r'\bg\s*g\s*t\b', 'GGT'),
+    (r'\be\s*g\s*f\s*r\b', 'eGFR'),
+    (r'\bh\s*s\s*[-]?\s*c\s*r\s*p\b', 'hs-CRP'),
+    (r'\bc\s*r\s*p\b', 'CRP'),
+    (r'\bb\s*n\s*p\b', 'BNP'),
+    (r'\bh\s*b\s*a\s*1\s*c\b', 'HbA1c'),
+    (r'\ba\s*1\s*c\b', 'A1c'),
+    (r'\bn\s*t\s*[-]?\s*pro\s*b\s*n\s*p\b', 'NT-proBNP'),
+    (r'\bc\s*i\s*m\s*t\b', 'CIMT'),
+    (r'\bt\s*u\s*d\s*c\s*a\b', 'TUDCA'),
+    (r'\bu\s*d\s*c\s*a\b', 'UDCA'),
+    (r'\bn\s*a\s*c\b', 'NAC'),
 ]
 
 
@@ -948,12 +1073,17 @@ def correct_transcript(text):
 
     result = text
 
-    # Apply simple replacements (case-insensitive)
+    # Apply simple replacements (case-insensitive) with WORD BOUNDARIES
+    # to prevent substring corruption (e.g., "train" inside "training")
     for wrong, right in CORRECTIONS.items():
-        pattern = re.compile(re.escape(wrong), re.IGNORECASE)
+        # Skip comment-only entries (values starting with #)
+        if wrong.startswith('#') or wrong.startswith('//'):
+            continue
+        escaped = re.escape(wrong)
+        pattern = re.compile(r'\b' + escaped + r'\b', re.IGNORECASE)
         result = pattern.sub(right, result)
 
-    # Apply regex patterns
+    # Apply regex patterns (these already have their own boundary handling)
     for pattern, replacement in REGEX_PATTERNS:
         result = re.sub(pattern, replacement, result, flags=re.IGNORECASE)
 

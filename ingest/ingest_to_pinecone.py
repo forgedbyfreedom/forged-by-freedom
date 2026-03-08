@@ -17,6 +17,13 @@ import time
 import hashlib
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+# Load .env from project root (one level up from ingest/)
+_env_path = Path(__file__).parent.parent / ".env"
+if _env_path.exists():
+    load_dotenv(_env_path, override=True)
+
 import tiktoken
 from openai import OpenAI
 from pinecone import Pinecone
@@ -34,13 +41,16 @@ SLEEP_BETWEEN_BATCHES = 0.3
 
 # ----------------------------------------
 
-if not os.getenv("OPENAI_API_KEY"):
-    raise RuntimeError("❌ OPENAI_API_KEY not set")
+if not os.getenv("OPENROUTER_API_KEY"):
+    raise RuntimeError("❌ OPENROUTER_API_KEY not set")
 
 if not os.getenv("PINECONE_API_KEY"):
     raise RuntimeError("❌ PINECONE_API_KEY not set")
 
-client = OpenAI()
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.getenv("OPENROUTER_API_KEY")
+)
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(INDEX_NAME)
 
@@ -140,7 +150,7 @@ def extract_speaker(title: str, channel: str) -> str:
         "@LeoandLongevity": "Leo Rex",
         "@AnabolicDoc": "Dr. Thomas O'Connor",
         "@AnabolicTV": "Anabolic TV",
-        "@anabolicbodybuilding": "Anabolic Bodybuilding",
+        "@anabolicbodybuilding": "Paul Barnett (Big Paul)",
         "@anabolicuniversity": "Anabolic University",
         "@EnhancedAthlete": "Enhanced Athlete",
         "@TonyHuge": "Tony Huge",
@@ -233,7 +243,7 @@ def extract_speaker(title: str, channel: str) -> str:
         "@sam_sulek": "Sam Sulek",
         "@Biolayne": "Dr. Layne Norton",
         "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
-        "@rxmuscle": "Scott McNally, Dave Crosland & Skipp Hill",
+        "@rxmuscle": "Dave Palumbo",
         "@mountainabordog1": "John Meadows",
         "@JohnMeadowsMountainDog": "John Meadows",
         "@dorian_yates_official": "Dorian Yates",
@@ -361,7 +371,10 @@ def extract_speaker(title: str, channel: str) -> str:
         "@DrSarfrazZaidi": "Dr. Sarfraz Zaidi",
         "@DrAlanChristianson": "Dr. Alan Christianson",
         "@TOTRevolution": "Jay Campbell",
+        "@JayCampbell": "Jay Campbell",
         "@gillettehealth": "Dr. Kyle Gillett",
+        "@TaylorMadeCompounding": "Taylor Made Compounding",
+        "@DrCraigKoniver": "Dr. Craig Koniver",
         "@ThyroidUK": "Thyroid UK",
         # Sports Psychology
         "@PeakPerformanceSports": "Dr. Patrick Cohn",
@@ -441,6 +454,11 @@ def extract_speaker(title: str, channel: str) -> str:
         # Supplement Science
         "@ExamineCom": "Examine.com",
         "@NutritionExamined": "Nutrition Examined",
+        # Dosing Guides / Reference / Cycle Design
+        "@DanDuchaine": "Dan Duchaine",
+        "@CycleDesignGuide": "Forged by Freedom Cycle Design Guide",
+        # Vendor Testing / Lab Results
+        "@Janoshik": "Janoshik Analytical",
         # Harm Reduction / PED Education
         "@SethFeroce": "Seth Feroce",
         "@RussoLifts": "Russo Lifts",
@@ -474,7 +492,7 @@ def get_namespace(channel: str, path: Path) -> str:
         "@CellPress": "research_primary",
         # ThinkBig Priority
         "@ThinkBIGBodybuilding": "thinkbig_priority",
-        "@rxmuscle": "thinkbig_priority",
+        "@rxmuscle": "rxmuscle_priority",
         # Medical Education
         "@NinjaNerdOfficial": "medical_education",
         "@OsmosisOrg": "medical_education",
@@ -520,9 +538,9 @@ def get_namespace(channel: str, path: Path) -> str:
         "@hubermanlab": "biohacking",
         "@AndrewHuberman": "biohacking",
         "@PeterAttiaMD": "medical_primary",
-        "@DrGabrielleLyon": "female_health_priority",
-        "@johnjewett3": "female_health_priority",
-        "@J3University": "female_health_priority",
+        "@DrGabrielleLyon": "medical_primary",
+        "@johnjewett3": "anabolic_bodybuilding_priority",
+        "@J3University": "anabolic_bodybuilding_priority",
         # Female Hormone & Menopause Experts
         "@DrStacySims": "female_health_priority",
         "@drmaryclairehaver": "female_health_priority",
@@ -566,6 +584,14 @@ def get_namespace(channel: str, path: Path) -> str:
         "@rpstrength": "sports_nutrition",
         "@CarbonDietCoach": "sports_nutrition",
         "@PrecisionNutrition": "sports_nutrition",
+        # Peptides & GLP-1
+        "@TaylorMadeCompounding": "peptides",
+        "@DrSeedman": "peptides",
+        "@JayCampbell": "peptides",
+        "@TOTRevolution": "peptides",
+        "@gillettehealth": "peptides",
+        "@DrCraigKoniver": "peptides",
+        "@PeptidesScienceDaily": "peptides",
         # Endocrinology
         "@DocGerryTan": "endocrinology",
         "@DrSarfrazZaidi": "endocrinology",
@@ -658,6 +684,11 @@ def get_namespace(channel: str, path: Path) -> str:
         # Supplement Science
         "@ExamineCom": "sports_nutrition",
         "@NutritionExamined": "sports_nutrition",
+        # Dosing Guides / Reference / Cycle Design
+        "@DanDuchaine": "anabolic_bodybuilding_priority",
+        "@CycleDesignGuide": "cycle_design_guides",
+        # Vendor Testing / Lab Results
+        "@Janoshik": "vendor_testing",
         # Harm Reduction / PED Education
         "@SethFeroce": "harm_reduction",
         "@RussoLifts": "harm_reduction",
@@ -674,13 +705,41 @@ def get_namespace(channel: str, path: Path) -> str:
     return "transcripts"
 
 
-def ingest():
-    """Main ingest function with rich metadata."""
+def delete_channel_vectors(channel, namespace):
+    """Delete all existing vectors for a channel in a namespace before re-ingesting.
+    Prevents duplicate/stale vectors when re-running ingest for the same channel.
+    """
+    print(f"🗑️  Deleting existing vectors for {channel} in namespace '{namespace}'...")
+
+    # Use list+delete approach since Pinecone doesn't support delete-by-metadata-filter
+    # on all plans. We'll list vectors with a prefix scan.
+    try:
+        # Try metadata filter delete (works on Standard+ plans)
+        index.delete(
+            filter={"channel": {"$eq": channel}},
+            namespace=namespace
+        )
+        print(f"   ✅ Deleted existing {channel} vectors from '{namespace}'")
+    except Exception as e:
+        # If filter delete isn't supported, fall back to listing and deleting by ID
+        print(f"   ⚠️  Filter delete not supported ({e}), skipping pre-delete")
+        print(f"   ℹ️  Vectors will be upserted (overwritten if same ID)")
+
+
+def ingest(only_channels=None):
+    """Main ingest function with rich metadata.
+
+    Args:
+        only_channels: Optional list of channel names (e.g. ['@ThinkBIGBodybuilding'])
+                       to ingest. If None, ingests all channels.
+    """
     print("\n🔍 INGEST STARTUP")
     print(f"• CHANNELS_DIR: {CHANNELS_DIR}")
     print(f"• Pinecone index: {INDEX_NAME}")
     print(f"• Embedding model: {EMBED_MODEL}")
     print(f"• Chunk tokens: {CHUNK_TOKENS}")
+    if only_channels:
+        print(f"• Targeting channels: {', '.join(only_channels)}")
 
     # Get all txt files, excluding master transcripts
     txt_files = [
@@ -689,8 +748,24 @@ def ingest():
         and not f.name.startswith(".")
     ]
 
+    # Filter to specific channels if requested
+    if only_channels:
+        txt_files = [f for f in txt_files if extract_channel(f) in only_channels]
+
     total_files = len(txt_files)
     print(f"• Episodes to ingest: {total_files}")
+
+    # Dedup: delete existing vectors for targeted channels before re-ingesting
+    if only_channels:
+        cleaned = set()
+        for txt in txt_files:
+            ch = extract_channel(txt)
+            ns = get_namespace(ch, txt)
+            key = f"{ch}:{ns}"
+            if key not in cleaned:
+                delete_channel_vectors(ch, ns)
+                cleaned.add(key)
+
     print("🚀 BEGIN INGEST\n")
 
     episode_count = 0
@@ -777,4 +852,8 @@ def ingest():
 
 
 if __name__ == "__main__":
-    ingest()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--channels", nargs="+", help="Only ingest specific channels (e.g. @ThinkBIGBodybuilding @rxmuscle)")
+    args = parser.parse_args()
+    ingest(only_channels=args.channels)

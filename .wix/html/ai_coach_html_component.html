@@ -213,6 +213,54 @@ body{padding:16px;display:flex;flex-direction:column;min-height:100%}
 .text-input::placeholder{color:var(--text-muted)}
 .text-input.large{min-height:120px;resize:vertical}
 
+/* ── DROP ZONE ── */
+.dropzone{
+  border:2px dashed var(--border);
+  border-radius:10px;
+  padding:24px 16px;
+  text-align:center;
+  cursor:pointer;
+  transition:border-color .2s,background .2s;
+  margin-bottom:10px;
+  position:relative;
+}
+.dropzone:hover,.dropzone.dragover{
+  border-color:var(--accent);
+  background:rgba(255,106,0,.06);
+}
+.dropzone.dragover{
+  box-shadow:0 0 0 3px var(--accent-glow);
+}
+.dropzone-icon{
+  width:36px;height:36px;margin:0 auto 8px;
+  fill:var(--text-muted);transition:fill .2s;
+}
+.dropzone:hover .dropzone-icon,.dropzone.dragover .dropzone-icon{fill:var(--accent)}
+.dropzone-text{font-size:13px;color:var(--text-muted);line-height:1.5}
+.dropzone-text strong{color:var(--text);font-weight:600}
+.dropzone-text .accent-link{color:var(--accent);font-weight:600;cursor:pointer}
+.dropzone-formats{font-size:10px;color:var(--text-muted);margin-top:6px;opacity:.7}
+.dropzone-file{
+  display:none;align-items:center;gap:8px;
+  background:var(--surface2);border-radius:8px;
+  padding:8px 12px;margin-top:10px;font-size:12px;color:var(--text);
+}
+.dropzone-file.visible{display:flex}
+.dropzone-file svg{width:16px;height:16px;fill:var(--accent);flex-shrink:0}
+.dropzone-file .filename{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dropzone-file .remove-file{
+  background:none;border:none;cursor:pointer;
+  fill:var(--text-muted);padding:2px;
+}
+.dropzone-file .remove-file:hover{fill:var(--danger)}
+.dropzone-file .remove-file svg{width:14px;height:14px}
+.dropzone-processing{display:none;font-size:11px;color:var(--accent);margin-top:8px}
+.dropzone-processing.visible{display:block}
+.input-divider{
+  text-align:center;font-size:11px;color:var(--text-muted);
+  margin:4px 0;text-transform:uppercase;letter-spacing:1px;
+}
+
 /* ── BUTTONS ── */
 .btn-row{display:flex;gap:8px;margin-bottom:16px;align-items:center}
 .btn{
@@ -487,7 +535,25 @@ body{padding:16px;display:flex;flex-direction:column;min-height:100%}
 <!-- BLOODWORK PANEL -->
 <div class="panel" id="panelBloodwork">
   <div class="input-group">
-    <label for="bloodworkInput">Paste Your Bloodwork Results</label>
+    <label>Upload or Paste Your Bloodwork Results</label>
+    <div class="dropzone" id="bwDropzone">
+      <input type="file" id="bwFileInput" accept=".pdf,.txt,.csv,.png,.jpg,.jpeg" style="display:none">
+      <svg class="dropzone-icon" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+      <div class="dropzone-text">
+        <strong>Drag & drop your lab file here</strong><br>
+        or <span class="accent-link">browse files</span>
+      </div>
+      <div class="dropzone-formats">PDF, TXT, CSV, or image (PNG/JPG)</div>
+      <div class="dropzone-file" id="bwFileInfo">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+        <span class="filename" id="bwFileName"></span>
+        <button class="remove-file" id="bwRemoveFile" title="Remove file">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="dropzone-processing" id="bwProcessing">Extracting text from file...</div>
+    </div>
+    <div class="input-divider">— or paste manually —</div>
     <textarea class="text-input large" id="bloodworkInput" placeholder="Paste your lab results here...&#10;&#10;Example:&#10;Testosterone Total: 856 ng/dL&#10;Estradiol (E2): 42 pg/mL&#10;Hematocrit: 51.2%&#10;ALT: 67 U/L&#10;AST: 54 U/L&#10;LDL: 142 mg/dL&#10;HDL: 38 mg/dL&#10;eGFR: 68 mL/min"></textarea>
   </div>
   <div class="btn-row">
@@ -586,10 +652,104 @@ async function doSearch() {
 const bwInput = document.getElementById('bloodworkInput');
 const bwBtn = document.getElementById('bloodworkBtn');
 const clearBtn = document.getElementById('clearBloodwork');
+const bwDropzone = document.getElementById('bwDropzone');
+const bwFileInput = document.getElementById('bwFileInput');
+const bwFileInfo = document.getElementById('bwFileInfo');
+const bwFileName = document.getElementById('bwFileName');
+const bwRemoveFile = document.getElementById('bwRemoveFile');
+const bwProcessing = document.getElementById('bwProcessing');
+
+/* ── Drag & Drop ── */
+bwDropzone.addEventListener('click', () => bwFileInput.click());
+bwDropzone.addEventListener('dragover', e => { e.preventDefault(); bwDropzone.classList.add('dragover'); });
+bwDropzone.addEventListener('dragleave', () => bwDropzone.classList.remove('dragover'));
+bwDropzone.addEventListener('drop', e => {
+  e.preventDefault();
+  bwDropzone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) handleBwFile(e.dataTransfer.files[0]);
+});
+bwFileInput.addEventListener('change', () => {
+  if (bwFileInput.files.length) handleBwFile(bwFileInput.files[0]);
+});
+bwRemoveFile.addEventListener('click', e => {
+  e.stopPropagation();
+  clearBwFile();
+});
+
+function clearBwFile() {
+  bwFileInput.value = '';
+  bwFileInfo.classList.remove('visible');
+  bwProcessing.classList.remove('visible');
+  bwFileName.textContent = '';
+}
+
+async function handleBwFile(file) {
+  const name = file.name.toLowerCase();
+  bwFileName.textContent = file.name;
+  bwFileInfo.classList.add('visible');
+  bwProcessing.classList.add('visible');
+  hideError('bloodwork');
+
+  try {
+    let text = '';
+    if (name.endsWith('.txt') || name.endsWith('.csv')) {
+      text = await file.text();
+    } else if (name.endsWith('.pdf')) {
+      text = await extractPdfText(file);
+    } else if (/\.(png|jpg|jpeg)$/.test(name)) {
+      bwProcessing.classList.remove('visible');
+      showError('bloodwork', 'Image files require OCR — please use a PDF or copy/paste your results for now.');
+      return;
+    } else {
+      bwProcessing.classList.remove('visible');
+      showError('bloodwork', 'Unsupported file type. Please use PDF, TXT, or CSV.');
+      return;
+    }
+
+    bwProcessing.classList.remove('visible');
+    if (text.trim()) {
+      bwInput.value = text.trim();
+      bwInput.focus();
+    } else {
+      showError('bloodwork', 'Could not extract text from this file. Try pasting your results manually.');
+    }
+  } catch (err) {
+    bwProcessing.classList.remove('visible');
+    showError('bloodwork', 'Error reading file: ' + err.message);
+  }
+}
+
+/* PDF text extraction using pdf.js */
+let pdfjsLoaded = false;
+function loadPdfJs() {
+  return new Promise((resolve, reject) => {
+    if (pdfjsLoaded) return resolve();
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+    s.onload = () => { pdfjsLoaded = true; pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'; resolve(); };
+    s.onerror = () => reject(new Error('Failed to load PDF library'));
+    document.head.appendChild(s);
+  });
+}
+
+async function extractPdfText(file) {
+  await loadPdfJs();
+  const buf = await file.arrayBuffer();
+  const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+  let fullText = '';
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const pageText = content.items.map(item => item.str).join(' ');
+    fullText += pageText + '\n';
+  }
+  return fullText;
+}
 
 bwBtn.addEventListener('click', doBloodwork);
 clearBtn.addEventListener('click', () => {
   bwInput.value = '';
+  clearBwFile();
   hideOutput('bloodwork');
   hideError('bloodwork');
   document.getElementById('bloodworkPlaceholder').style.display = '';
@@ -636,12 +796,17 @@ function hideLoading(panel) {
 }
 function showOutput(panel, text) {
   const el = document.getElementById(panel + 'Output');
-  el.textContent = text;
+  if (text.includes('<div') || text.includes('<span') || text.includes('<style>')) {
+    el.innerHTML = text;
+  } else {
+    el.textContent = text;
+  }
   el.classList.add('visible');
 }
 function hideOutput(panel) {
   const el = document.getElementById(panel + 'Output');
   el.textContent = '';
+  el.innerHTML = '';
   el.classList.remove('visible');
 }
 function showError(panel, msg) {
@@ -674,7 +839,7 @@ function formatStat(n, suffix) {
   return n.toLocaleString();
 }
 (function fetchStats() {
-  var fallback = { transcripts: 13200, words: 23000000, channels: 344, vectors: 289000 };
+  var fallback = { transcripts: 15289, words: 56220481, channels: 179, vectors: 289000 };
   var data = fallback;
   var dur = 1800;
   try {

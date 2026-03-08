@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FORGED BY FREEDOM — Cutting-Edge Compound Research: BAM15 & The Future of Fat Loss</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0D0D0D;
+      --bg2: #1A1A1A;
+      --bg3: #2E2E2E;
+      --orange: #FF6A00;
+      --white: #FFFFFF;
+      --text: #EDEDED;
+      --muted: #BFBFBF;
+      --green: #1ECC71;
+      --red: #E74C3C;
+      --blue: #2A9FD6;
+      --yellow: #F7C537;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--white); font-family: "Inter", system-ui, sans-serif; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(1100px, 92vw); margin: 0 auto; padding: 28px 0 60px; }
+
+    header.brand {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0 10px;
+    }
+    header.brand h1 { font-family: "Oswald", sans-serif; font-weight: 700; letter-spacing: .5px; margin: 0; font-size: 28px; }
+    header.brand .tag { color: var(--muted); font-size: 12px; }
+
+    nav.topnav {
+      position: sticky; top: 0; z-index: 10; background: #0B0B0BAA;
+      backdrop-filter: blur(2px);
+      border-bottom: 1px solid #333;
+    }
+    nav.topnav ul { display:flex; gap: 14px; padding: 10px 20px; list-style: none; margin: 0; overflow:auto; }
+    nav.topnav a { color: #ddd; font-size: 13px; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
+    nav.topnav a:hover { background: rgba(255,255,255,0.08); color: #fff; text-decoration: none; }
+
+    section { margin: 40px 0; padding: 20px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid #333; }
+
+    h2 { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 28px; margin: 0 0 12px; letter-spacing: .3px; }
+    h3 { font-family: "Oswald", sans-serif; font-weight: 600; font-size: 20px; margin: 0 0 8px; }
+    h4 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 16px; margin: 6px 0 8px; color: #fff; }
+
+    p { line-height: 1.7; color: #eee; margin: 0 0 12px; }
+    ul { margin: 6px 0 12px 18px; padding: 0; line-height: 1.7; color: #eee; }
+    li { margin-bottom: 4px; }
+
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+    .card { background: #121212; border: 1px solid #2a2a2a; border-radius: 10px; padding: 14px; }
+    .card.highlight { border-color: var(--orange); box-shadow: 0 0 20px rgba(255, 106, 0, 0.08); }
+    .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; border:1px solid #444; color:#ddd; font-size:12px; }
+    .badge-orange { background: rgba(255,106,0,0.15); border-color: var(--orange); color: var(--orange); }
+    .badge-green { background: rgba(30,204,113,0.15); border-color: var(--green); color: var(--green); }
+    .badge-red { background: rgba(231,76,60,0.15); border-color: var(--red); color: var(--red); }
+    .badge-blue { background: rgba(42,159,214,0.15); border-color: var(--blue); color: var(--blue); }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+    th, td { padding: 8px 6px; border-bottom: 1px solid #333; text-align:left; font-size: 13px; color: #eee; }
+    th { color: var(--orange); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .chart { width: 100%; height: 260px; display: block; }
+
+    details { border: 1px solid #333; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; background: #141414; }
+    details summary { font-family: "Oswald", sans-serif; font-size: 15px; cursor: pointer; color: #fff; list-style: none; padding: 4px 0; }
+    details summary::before { content: '+ '; color: var(--orange); font-weight: 700; }
+    details[open] summary::before { content: '- '; }
+    details[open] { background: #1a1a1a; }
+
+    .quote { font-style: italic; color: #ddd; border-left: 4px solid var(--orange); padding-left: 12px; margin: 6px 0; line-height: 1.7; }
+
+    .stat-row { display: flex; gap: 14px; flex-wrap: wrap; margin: 12px 0; }
+    .stat-box { flex: 1; min-width: 120px; background: #121212; border: 1px solid #2a2a2a; border-radius: 10px; padding: 14px; text-align: center; }
+    .stat-box .num { font-family: "Oswald", sans-serif; font-size: 32px; font-weight: 700; color: var(--orange); }
+    .stat-box .label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    .warning-box { background: rgba(231,76,60,0.08); border: 1px solid var(--red); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
+    .warning-box h4 { color: var(--red); margin-top: 0; }
+
+    .timeline-bar { display: flex; gap: 4px; margin: 16px 0; }
+    .timeline-bar .gen { flex: 1; padding: 10px 8px; border-radius: 6px; text-align: center; font-size: 12px; font-weight: 600; }
+
+    .cta-box { background: linear-gradient(135deg, rgba(255,106,0,0.15), rgba(255,210,122,0.08)); border: 1px solid var(--orange); border-radius: 12px; padding: 24px; text-align: center; margin: 20px 0; }
+    .cta-box h3 { color: var(--orange); font-size: 24px; margin-bottom: 12px; }
+    .cta-box p { color: #ddd; max-width: 700px; margin: 0 auto 12px; }
+    .cta-box .cta-btn { display: inline-block; background: var(--orange); color: #000; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 14px; margin-top: 8px; }
+    .cta-box .cta-btn:hover { background: #ff8533; text-decoration: none; }
+
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .mb-8 { margin-bottom: 8px; }
+    .mt-16 { margin-top: 16px; }
+
+    @media print {
+      nav.topnav { display: none; }
+      body { color: #000; background: #fff; }
+      section { background: #fff; border: none; }
+      .card { background: #fff; border: 1px solid #ddd; }
+      .cta-box { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav" aria-label="Section navigation">
+    <ul>
+      <li><a href="#cover">Cover</a></li>
+      <li><a href="#edge">Cutting Edge</a></li>
+      <li><a href="#pipeline">Pipeline Scan</a></li>
+      <li><a href="#bam15-intro">What Is BAM15?</a></li>
+      <li><a href="#mechanism">Mechanism</a></li>
+      <li><a href="#research">Research Data</a></li>
+      <li><a href="#vs-dnp">BAM15 vs DNP</a></li>
+      <li><a href="#eighth-system">The 8th System</a></li>
+      <li><a href="#synergy">Stack Synergy</a></li>
+      <li><a href="#next-gen">Next Generation</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="#outlook">Outlook</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <!-- ============================================================ -->
+    <!-- COVER -->
+    <!-- ============================================================ -->
+    <section id="cover" class="cover">
+      <div class="text-center">
+        <div class="badge badge-orange" style="display:inline-block; margin-bottom:8px;">FBF RESEARCH REPORT</div>
+      </div>
+      <h1 style="font-family: 'Oswald', sans-serif; font-weight:700; font-size: 38px; text-align:center; margin: 6px 0 8px;">
+        FORGED BY FREEDOM
+      </h1>
+      <h2 style="text-align:center; font-family:'Oswald', sans-serif; font-weight:600; font-size: 26px; margin:0 0 6px;">
+        STRENGTH &amp; NUTRITION
+      </h2>
+      <h3 style="text-align:center; font-family:'Inter', sans-serif; font-weight:400; font-size: 18px; margin:0 0 8px; color: var(--muted);">
+        Cutting-Edge Compound Research Report
+      </h3>
+      <h2 style="text-align:center; font-family:'Oswald', sans-serif; font-weight:700; font-size: 30px; margin:0 0 24px; color: var(--orange);">
+        BAM15 &amp; The Future of Metabolic Fat Loss
+      </h2>
+
+      <div style="max-width:900px; margin: 0 auto; text-align:center;">
+        <svg class="chart" viewBox="0 0 800 260" role="img" aria-label="Mitochondrial uncoupling visualization">
+          <defs>
+            <linearGradient id="grad" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#FF6A00"/>
+              <stop offset="100%" stop-color="#FFD27A"/>
+            </linearGradient>
+            <linearGradient id="heatGrad" x1="0" x2="0" y1="1" y2="0">
+              <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.1"/>
+              <stop offset="100%" stop-color="#FF6A00" stop-opacity="0.5"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="800" height="260" fill="#121212" rx="8"/>
+          <!-- Mitochondria outer membrane -->
+          <ellipse cx="400" cy="130" rx="280" ry="100" fill="none" stroke="#444" stroke-width="2"/>
+          <ellipse cx="400" cy="130" rx="240" ry="80" fill="none" stroke="#555" stroke-width="1.5"/>
+          <!-- Cristae folds -->
+          <path d="M180,130 Q220,60 260,130 Q300,200 340,130 Q380,60 420,130 Q460,200 500,130 Q540,60 580,130" fill="none" stroke="url(#grad)" stroke-width="2.5" opacity="0.6"/>
+          <!-- Proton flow arrows -->
+          <text x="160" y="50" fill="#c9a227" font-family="Inter" font-size="11">H+</text>
+          <text x="280" y="40" fill="#c9a227" font-family="Inter" font-size="11">H+</text>
+          <text x="440" y="38" fill="#c9a227" font-family="Inter" font-size="11">H+</text>
+          <text x="580" y="45" fill="#c9a227" font-family="Inter" font-size="11">H+</text>
+          <line x1="170" y1="55" x2="180" y2="80" stroke="#c9a227" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+          <line x1="290" y1="45" x2="300" y2="75" stroke="#c9a227" stroke-width="1.5"/>
+          <line x1="450" y1="43" x2="440" y2="73" stroke="#c9a227" stroke-width="1.5"/>
+          <line x1="590" y1="50" x2="580" y2="80" stroke="#c9a227" stroke-width="1.5"/>
+          <!-- BAM15 label -->
+          <rect x="320" y="105" width="160" height="50" rx="8" fill="var(--orange)" fill-opacity="0.2" stroke="var(--orange)" stroke-width="1.5"/>
+          <text x="400" y="127" fill="var(--orange)" font-family="Oswald" font-size="18" font-weight="700" text-anchor="middle">BAM15</text>
+          <text x="400" y="145" fill="#ddd" font-family="Inter" font-size="11" text-anchor="middle">Proton Leak = Heat + Fat Burn</text>
+          <!-- Energy output -->
+          <text x="400" y="245" fill="#888" font-family="Inter" font-size="12" text-anchor="middle">Selective Mitochondrial Uncoupling &mdash; Increased Energy Expenditure Without Appetite Suppression</text>
+        </svg>
+      </div>
+
+      <p style="text-align:center; color: var(--muted); font-size: 13px; margin-top: 12px;">
+        Published by Forged by Freedom Strength &amp; Nutrition &mdash; February 2026
+      </p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CUTTING EDGE PHILOSOPHY -->
+    <!-- ============================================================ -->
+    <section id="edge">
+      <h2>Always on the Cutting Edge</h2>
+      <p>At <strong style="color:var(--orange);">Forged by Freedom</strong>, we don't wait for mainstream fitness to catch up. We are <em>constantly monitoring the global research pipeline</em> &mdash; from preclinical pharmacology studies to Phase 3 human trials &mdash; to identify the safest, most effective compounds for body recomposition, metabolic health, and athletic performance.</p>
+      <p>Our FBF Recomp Protocol was built on this philosophy. While everyone else was using single-agent GLP-1 drugs and watching their clients waste away into "GLP Skeletor," we engineered a <strong>7-system approach</strong> that targets appetite, partitioning, hormones, and adherence simultaneously. The result: aggressive fat loss with full muscle preservation.</p>
+      <p>But we never stop. New research emerges daily. New compounds enter clinical trials. New mechanisms are discovered. And when the science is compelling enough, we integrate it.</p>
+      <p><strong>This report is our latest intelligence briefing.</strong> We've identified several emerging compounds that could reshape body composition science over the next 2&ndash;3 years &mdash; and one in particular, <strong style="color:var(--orange);">BAM15</strong>, that could become the <strong>8th system</strong> in our protocol.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PIPELINE SCAN: NEW COMPOUNDS -->
+    <!-- ============================================================ -->
+    <section id="pipeline">
+      <h2>Pipeline Scan &mdash; Emerging Compounds We're Watching</h2>
+      <p>These are the compounds making waves in metabolic research right now. Forged by Freedom is tracking every one of them.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="badge badge-blue mb-8">ORAL GLP-1</div>
+          <h4>Orforglipron (Eli Lilly)</h4>
+          <p>The first <strong>oral small-molecule GLP-1 agonist</strong> &mdash; no injections required. Phase 2 showed <strong>14.7% weight loss at 36 weeks</strong>. FDA approval expected March 2026. This could democratize GLP-1 therapy for millions who refuse needles.</p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">DUAL AGONIST</div>
+          <h4>Survodutide (Boehringer Ingelheim)</h4>
+          <p>GLP-1 + Glucagon dual agonist. Phase 2 delivered <strong>19% weight loss at 48 weeks</strong>. Phase 3 SYNCHRONIZE trials ongoing. Hits two of the same pathways as retatrutide but with a different receptor profile.</p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">GLP-1 + GLUCAGON</div>
+          <h4>Pemvidutide (Altimmune)</h4>
+          <p>GLP-1/Glucagon dual agonist showing <strong>15.6% weight loss at 48 weeks</strong> in Phase 2. Notable for <strong>preferential reduction of visceral fat</strong> &mdash; the metabolically dangerous deep belly fat.</p>
+        </div>
+        <div class="card">
+          <div class="badge badge-green mb-8">GLP-1 + AMYLIN</div>
+          <h4>CagriSema (Novo Nordisk)</h4>
+          <p>Semaglutide + Cagrilintide combination. Phase 3 REDEFINE 1 showed <strong>22.7% weight loss at 68 weeks</strong>. 60% of participants lost 20%+ bodyweight. FDA submission December 2025, decision expected late 2026.</p>
+        </div>
+        <div class="card">
+          <div class="badge badge-green mb-8">DUAL GLP-1/AMYLIN</div>
+          <h4>Amycretin (Novo Nordisk)</h4>
+          <p>Novel single-molecule GLP-1 + Amylin dual agonist. Early data shows strong weight loss in both diabetes and obesity populations. Novo expanding pivotal program after Phase 2 success.</p>
+        </div>
+        <div class="card">
+          <div class="badge badge-orange mb-8">METABOLIC ACCELERATOR</div>
+          <h4>HU6 (Rivus Pharmaceuticals)</h4>
+          <p>The first controlled metabolic accelerator in human trials. Phase 2 M-ACCEL showed <strong>significant liver fat reduction + fat-selective weight loss while preserving skeletal muscle</strong>. The clinical proof-of-concept for mitochondrial uncoupling.</p>
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <div class="card highlight">
+          <h4 style="color:var(--orange); font-size:18px; font-family:'Oswald',sans-serif;">And then there's BAM15.</h4>
+          <p>Every compound above works through hormonal signaling &mdash; appetite suppression, receptor agonism, incretin pathways. BAM15 is fundamentally different. It operates at the <strong>deepest metabolic layer</strong>: the mitochondria themselves. It doesn't make you eat less. It makes your cells <em>burn more</em>. And the preclinical data is extraordinary.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- WHAT IS BAM15 -->
+    <!-- ============================================================ -->
+    <section id="bam15-intro">
+      <h2>Deep Dive: What Is BAM15?</h2>
+
+      <p><strong>BAM15</strong> (N5,N6-bis(2-fluorophenyl)-[1,2,5]oxadiazolo[3,4-b]pyrazine-5,6-diamine) is a <strong>selective mitochondrial uncoupler</strong> &mdash; a compound that disrupts the normal coupling between electron transport and ATP production inside your mitochondria.</p>
+
+      <p>In plain terms: your mitochondria are the power plants of every cell. They burn fuel (fat, carbs) to generate ATP (energy). Normally this process is tightly coupled &mdash; fuel in, ATP out. BAM15 creates a <strong>controlled proton leak</strong> across the inner mitochondrial membrane, which means your mitochondria have to burn <em>more fuel</em> to produce the <em>same amount of ATP</em>. The excess energy is dissipated as heat.</p>
+
+      <p>Think of it like opening the drain at the bottom of your metabolic sink. The water (stored energy, body fat) runs out faster &mdash; not because you turned off the faucet (appetite), but because the drain is wider.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="num">67%</div>
+          <div class="label">Oral Bioavailability</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">1.7h</div>
+          <div class="label">Half-Life</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">7x</div>
+          <div class="label">More Potent Than DNP</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">0</div>
+          <div class="label">Change in Body Temp</div>
+        </div>
+      </div>
+
+      <div class="quote mt-8">
+        "BAM15 increases nutrient oxidation and decreases body fat mass without altering food intake, lean body mass, body temperature, or biochemical and haematological markers of toxicity."
+        <br><span style="color:var(--muted); font-size:12px;">&mdash; Nature Communications, 2020</span>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MECHANISM OF ACTION -->
+    <!-- ============================================================ -->
+    <section id="mechanism">
+      <h2>How BAM15 Works &mdash; Mechanism of Action</h2>
+
+      <p>BAM15 is classified as an <strong>anionic protonophore</strong>. It carries protons (H+) across the inner mitochondrial membrane, bypassing ATP synthase. This dissipates the proton motive force and forces the electron transport chain to run harder to maintain the membrane potential &mdash; burning more substrates in the process.</p>
+
+      <div class="grid mt-16">
+        <div class="card">
+          <h4>Step 1: Proton Leak</h4>
+          <p>BAM15 shuttles H+ ions back into the mitochondrial matrix without passing through ATP synthase. This reduces the proton gradient that normally drives ATP production.</p>
+        </div>
+        <div class="card">
+          <h4>Step 2: Compensatory Respiration</h4>
+          <p>To restore the gradient, mitochondria increase electron transport chain activity. This requires <strong>more substrate oxidation</strong> &mdash; primarily fatty acids.</p>
+        </div>
+        <div class="card">
+          <h4>Step 3: AMPK Activation</h4>
+          <p>The increased energy demand activates AMPK (AMP-activated protein kinase), the master metabolic sensor. AMPK promotes glucose uptake, fatty acid oxidation, and mitochondrial biogenesis.</p>
+        </div>
+        <div class="card">
+          <h4>Step 4: Lipogenesis Shutdown</h4>
+          <p>In adipose tissue, BAM15 activates ACC phosphorylation and massively downregulates lipogenic genes (Srebf1: <strong>490-fold</strong>, Scd1: <strong>898-fold</strong>, Fasn: <strong>89-fold</strong>). Fat storage pathways are effectively shut off.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-16">Multi-Tissue Effects</h3>
+      <table>
+        <tr><th>Tissue</th><th>Primary Effect</th><th>Mechanism</th></tr>
+        <tr><td><strong>Liver</strong></td><td>54% increase in respiration rate</td><td>Direct uncoupling + enhanced palmitate oxidation</td></tr>
+        <tr><td><strong>Adipose</strong></td><td>Lipogenesis shutdown</td><td>AMPK activation + ACC phosphorylation</td></tr>
+        <tr><td><strong>Skeletal Muscle</strong></td><td>Increased fat oxidation</td><td>Substrate redistribution from adipose</td></tr>
+        <tr><td><strong>Pancreas</strong></td><td>Reduced insulin demand</td><td>Improved systemic insulin sensitivity</td></tr>
+      </table>
+
+      <h3 class="mt-16">The Critical Distinction: Mitochondrial Selectivity</h3>
+      <p>What makes BAM15 different from older uncouplers is its <strong>selectivity for the inner mitochondrial membrane</strong>. Unlike FCCP and DNP, BAM15 does NOT depolarize the plasma membrane of cells. This means it can sustain maximal mitochondrial respiration across a <strong>wide concentration range</strong> without causing the cellular toxicity that made earlier uncouplers dangerous.</p>
+
+      <div class="quote">
+        "BAM15 sustains oxygen consumption over a wider concentration range than FCCP, with this sustained activity due to maintaining normal plasma membrane potential."
+        <br><span style="color:var(--muted); font-size:12px;">&mdash; Biochimica et Biophysica Acta, 2020</span>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- RESEARCH DATA -->
+    <!-- ============================================================ -->
+    <section id="research">
+      <h2>The Research &mdash; What BAM15 Actually Did in Studies</h2>
+      <p>All BAM15 data below comes from peer-reviewed preclinical studies published in <em>Nature Communications</em> and <em>EMBO Molecular Medicine</em>. No human trials have been completed.</p>
+
+      <details open>
+        <summary>Fat Loss &mdash; Prevention &amp; Reversal</summary>
+        <div class="mt-8">
+          <p><strong>Prevention Study (8 days, diet-induced obesity mice):</strong></p>
+          <ul>
+            <li>0.1&ndash;0.15% BAM15 in diet <strong>completely prevented fat mass gain</strong></li>
+            <li>Fat pad masses significantly reduced across ALL depots (visceral, subcutaneous, brown fat)</li>
+            <li>No change in food intake, lean mass, or body temperature</li>
+          </ul>
+          <p><strong>Reversal Study (5 weeks treatment, already-obese mice):</strong></p>
+          <ul>
+            <li>Body weight: <strong>15% less</strong> than untreated controls</li>
+            <li>Weight loss was <strong>almost entirely fat mass</strong></li>
+            <li>Lean mass: <strong>no statistical difference</strong> vs. controls</li>
+            <li>Gonadal fat: p=0.0003, Inguinal fat: p=0.0125, Retroperitoneal fat: p=0.0007</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Energy Expenditure &mdash; The "Burn More" Effect</summary>
+        <div class="mt-8">
+          <p><strong>Acute dosing:</strong></p>
+          <ul>
+            <li>50 mg/kg: <strong>30% increase</strong> in oxygen consumption in the first hour</li>
+            <li>100 mg/kg: <strong>50% increase</strong> over baseline (p&lt;0.001), sustained at 48% for 2 hours</li>
+          </ul>
+          <p><strong>Chronic feeding (0.1% in diet):</strong></p>
+          <ul>
+            <li><strong>15% increase</strong> in oxygen consumption during active period (p&lt;0.001)</li>
+            <li>Respiratory exchange ratio dropped from 0.86 to 0.82 (p=0.010) &mdash; indicating a shift to <strong>increased fat oxidation</strong></li>
+          </ul>
+          <p><strong>This is the key finding for body composition:</strong> BAM15 increased total daily energy expenditure while shifting fuel preference toward fat. Not by reducing intake. Not by increasing activity. By making the mitochondria burn more fuel to do the same work.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Liver Fat &mdash; Complete Correction</summary>
+        <div class="mt-8">
+          <ul>
+            <li>Liver triglycerides: <strong>completely normalized</strong> to levels of lean controls</li>
+            <li>Liver NEFA: <strong>42% reduction</strong></li>
+            <li>Palmitate oxidation: <strong>51% increase</strong> ex vivo (p&lt;0.05)</li>
+            <li>Oil Red O staining: Fatty liver completely corrected histologically</li>
+          </ul>
+          <p>For enhanced athletes running orals, this hepatoprotective profile is particularly relevant.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Insulin Sensitivity &mdash; Dramatic Improvement</summary>
+        <div class="mt-8">
+          <ul>
+            <li>Glucose intolerance: <strong>completely reversed</strong> within 3 weeks</li>
+            <li>Insulin levels: <strong>twofold less</strong> than untreated obese controls</li>
+            <li>Hyperinsulinemic-euglycemic clamp: glucose infusion rate normalized to lean levels</li>
+            <li>Skeletal muscle glucose uptake: significantly improved (p&lt;0.0001)</li>
+            <li>Adipose NEFA suppression: improved insulin-mediated suppression (p=0.0011)</li>
+          </ul>
+          <p>This is particularly meaningful for athletes using GH and insulin &mdash; BAM15 may counteract the glucose intolerance that GH induces.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Antioxidant &amp; Anti-Inflammatory Effects</summary>
+        <div class="mt-8">
+          <ul>
+            <li>Reduced glutathione (GSH): <strong>2.3-fold increase</strong> (p=0.01)</li>
+            <li>Gamma-glutamylcysteine: <strong>4.6-fold increase</strong> (p=0.001)</li>
+            <li>4-hydroxynonenal (oxidative damage marker): <strong>49% decrease</strong> (p=0.002)</li>
+            <li>Pro-inflammatory lipids (12-HETE, 15-HETE): all significantly decreased</li>
+            <li>Liver ATP levels: <strong>not altered</strong> (energy production maintained)</li>
+          </ul>
+          <p>Counterintuitive but important: despite increasing mitochondrial throughput, BAM15 <em>reduced</em> oxidative stress. It accomplishes this by improving electron transfer efficiency and reducing electron leakage (the main source of reactive oxygen species).</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Adipose Tissue Gene Expression &mdash; The Shutdown</summary>
+        <div class="mt-8">
+          <p>BAM15 didn't just reduce fat &mdash; it reprogrammed adipose tissue gene expression:</p>
+          <table>
+            <tr><th>Gene</th><th>Function</th><th>Change</th></tr>
+            <tr><td>Srebf1</td><td>Master lipogenesis regulator</td><td style="color:var(--green);font-weight:700;">490-fold downregulated</td></tr>
+            <tr><td>Scd1</td><td>Fat synthesis enzyme</td><td style="color:var(--green);font-weight:700;">898-fold downregulated</td></tr>
+            <tr><td>Fasn</td><td>Fatty acid synthase</td><td style="color:var(--green);font-weight:700;">89-fold downregulated</td></tr>
+            <tr><td>Mlxipl (ChREBP)</td><td>Carb-responsive fat storage</td><td style="color:var(--green);font-weight:700;">99-fold downregulated</td></tr>
+            <tr><td>PPARg</td><td>Adipocyte differentiation</td><td style="color:var(--green);font-weight:700;">Undetectable</td></tr>
+          </table>
+          <p class="mt-8">These are not minor changes. This is a near-complete shutdown of the molecular machinery that creates new fat.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BAM15 VS DNP -->
+    <!-- ============================================================ -->
+    <section id="vs-dnp">
+      <h2>BAM15 vs. DNP &mdash; Why This Is Not Your Grandfather's Uncoupler</h2>
+      <p>Everyone who hears "mitochondrial uncoupler" immediately thinks of DNP (2,4-Dinitrophenol) &mdash; the notoriously dangerous compound that has killed bodybuilders. BAM15 was specifically engineered to address DNP's fatal flaws.</p>
+
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th style="color:var(--red);">DNP</th>
+          <th style="color:var(--green);">BAM15</th>
+        </tr>
+        <tr><td><strong>Membrane Selectivity</strong></td><td>Non-selective (all membranes)</td><td>Mitochondria-selective only</td></tr>
+        <tr><td><strong>Plasma Membrane Effect</strong></td><td>Depolarizes (toxic)</td><td>No depolarization</td></tr>
+        <tr><td><strong>Hyperthermia Risk</strong></td><td>Severe &mdash; fatal at higher doses</td><td>No body temperature change up to 200 mg/kg</td></tr>
+        <tr><td><strong>Therapeutic Window</strong></td><td>Extremely narrow</td><td>Wide &mdash; limited by solubility, not toxicity</td></tr>
+        <tr><td><strong>Potency (EC50)</strong></td><td>10.1 &micro;M</td><td>1.4 &micro;M (7x more potent)</td></tr>
+        <tr><td><strong>Respiratory Collapse</strong></td><td>Occurs at high doses</td><td>Does not occur</td></tr>
+        <tr><td><strong>Brain Penetration</strong></td><td>Significant</td><td>Very low</td></tr>
+        <tr><td><strong>Lean Mass</strong></td><td>Commonly lost</td><td>Preserved in all studies</td></tr>
+        <tr><td><strong>Caspase 3/7 Activation</strong></td><td>Yes, at 5 &micro;M (cell death)</td><td>Inactive up to 40 &micro;M</td></tr>
+        <tr><td><strong>Cell Viability</strong></td><td>Compromised</td><td>Maintained up to 100 &micro;M</td></tr>
+        <tr><td><strong>Oral Bioavailability</strong></td><td>High</td><td>67%</td></tr>
+      </table>
+
+      <div class="quote mt-16">
+        "BAM15 demonstrated ~7-fold greater potency and a superior dosing window without respiratory collapse. Doses were limited by solubility rather than toxicity."
+        <br><span style="color:var(--muted); font-size:12px;">&mdash; Nature Communications, 2020</span>
+      </div>
+
+      <p class="mt-8">The critical distinction: DNP crashes <em>everything</em> &mdash; every membrane in every cell. BAM15 targets only the mitochondrial inner membrane, leaving the plasma membrane intact. This is why DNP causes uncontrollable hyperthermia and BAM15 does not.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- THE 8TH SYSTEM -->
+    <!-- ============================================================ -->
+    <section id="eighth-system" style="border-color: var(--orange);">
+      <div class="text-center mb-8">
+        <div class="badge badge-orange" style="font-size:14px; padding: 4px 16px;">NEW SYSTEM PROPOSAL</div>
+      </div>
+      <h2 style="text-align:center;">System 8: Mitochondrial Energy Expenditure</h2>
+      <h3 style="text-align:center; color:var(--muted); font-weight:400;">How BAM15 Could Complete the FBF Protocol</h3>
+
+      <p class="mt-16">The FBF Recomp Protocol currently targets <strong>7 biological systems</strong> for body recomposition. Each system addresses a different lever of fat loss and muscle preservation. But there's one lever we haven't pulled yet: <strong>direct cellular energy expenditure</strong>.</p>
+
+      <p>Every compound in the current 7-system stack works "from the top down" &mdash; hormones, receptors, neurotransmitters, appetite signals. BAM15 works "from the bottom up" &mdash; at the mitochondrial level, the most fundamental unit of energy metabolism in the body.</p>
+
+      <h3 class="mt-16">The Current 7 Systems + The Proposed 8th</h3>
+
+      <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 1</div>
+          <h4>GLP-1 Receptors</h4>
+          <p>Appetite control<br><span style="color:var(--muted);font-size:12px;">Supported by: Retatrutide</span></p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 2</div>
+          <h4>GIP Receptors</h4>
+          <p>Nutrient partitioning<br><span style="color:var(--muted);font-size:12px;">Supported by: Retatrutide</span></p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 3</div>
+          <h4>Glucagon Receptors</h4>
+          <p>Energy expenditure (hormonal)<br><span style="color:var(--muted);font-size:12px;">Supported by: Retatrutide</span></p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 4</div>
+          <h4>Amylin Receptors</h4>
+          <p>Satiety signaling<br><span style="color:var(--muted);font-size:12px;">Supported by: Cagrilintide</span></p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 5</div>
+          <h4>IGF-1 / GH Pathway</h4>
+          <p>Muscle preservation + fat mobilization<br><span style="color:var(--muted);font-size:12px;">Supported by: GH / Peptides</span></p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 6</div>
+          <h4>Androgen Receptors</h4>
+          <p>Lean mass retention + strength<br><span style="color:var(--muted);font-size:12px;">Supported by: Testosterone</span></p>
+        </div>
+        <div class="card">
+          <div class="badge badge-blue mb-8">SYSTEM 7</div>
+          <h4>CNS Monoamine System</h4>
+          <p>Motivation + appetite drive<br><span style="color:var(--muted);font-size:12px;">Supported by: Tesofensine</span></p>
+        </div>
+        <div class="card highlight">
+          <div class="badge badge-orange mb-8">SYSTEM 8 &mdash; PROPOSED</div>
+          <h4 style="color:var(--orange);">Mitochondrial Uncoupling</h4>
+          <p>Direct cellular energy expenditure<br><span style="color:var(--muted);font-size:12px;">Candidate: BAM15 / Next-Gen Uncouplers</span></p>
+        </div>
+      </div>
+
+      <h3 class="mt-16">Why the 8th System Matters</h3>
+      <p>The first 7 systems work through <strong>signaling</strong> &mdash; they tell your body what to do with energy. System 8 would be the only one that directly <strong>increases energy consumption</strong> at the cellular level. It's the difference between managing the flow of water through pipes (Systems 1&ndash;7) and opening the drain (System 8).</p>
+
+      <table class="mt-8">
+        <tr><th>System Type</th><th>Mechanism</th><th>What It Does</th></tr>
+        <tr><td>Systems 1&ndash;4</td><td>Appetite &amp; Satiety</td><td>Reduce intake, improve nutrient handling</td></tr>
+        <tr><td>Systems 5&ndash;6</td><td>Anabolic Protection</td><td>Preserve muscle, maintain strength</td></tr>
+        <tr><td>System 7</td><td>CNS Drive</td><td>Sustain adherence, energy, motivation</td></tr>
+        <tr><td style="color:var(--orange);font-weight:700;">System 8</td><td style="color:var(--orange);">Cellular Burn</td><td style="color:var(--orange);">Increase caloric expenditure at the mitochondrial level</td></tr>
+      </table>
+
+      <p class="mt-16">This is the one fat-loss lever the current protocol doesn't directly pull. Every other system either reduces intake or protects tissue. System 8 would increase output &mdash; making the body burn more fuel regardless of intake, activity, or hormonal state.</p>
+
+      <div class="quote mt-8">
+        "The likely 'ultimate stack' direction scientists talk about is: incretins + amylin + androgen support + mitochondrial uncoupling. Which is surprisingly close to what FBF is already building."
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SYNERGY WITH FBF STACK -->
+    <!-- ============================================================ -->
+    <section id="synergy">
+      <h2>Stack Synergy &mdash; How BAM15 Would Interact With Each System</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h4>With Retatrutide (Systems 1&ndash;3)</h4>
+          <p>Retatrutide mobilizes fuel through glucagon signaling. BAM15 <strong>burns the mobilized fuel</strong>. Retatrutide opens the floodgates; BAM15 widens the drain. Together, the theoretical synergy is: faster depletion of liberated fatty acids.</p>
+        </div>
+        <div class="card">
+          <h4>With Cagrilintide (System 4)</h4>
+          <p>Cagrilintide controls satiety and meal size. BAM15 doesn't affect appetite at all &mdash; making them <strong>fully complementary, non-overlapping mechanisms</strong>. No redundancy. Pure additive effect.</p>
+        </div>
+        <div class="card">
+          <h4>With GH / Peptides (System 5)</h4>
+          <p>GH increases lipolysis (fat mobilization). BAM15 increases fat oxidation (fat burning). <strong>Combined effect: faster stubborn-fat mobilization with less reliance on calorie cuts.</strong> Additionally, BAM15 improved insulin sensitivity in studies &mdash; potentially counteracting GH-induced glucose elevation.</p>
+        </div>
+        <div class="card">
+          <h4>With Testosterone (System 6)</h4>
+          <p>Androgens preserve muscle during deficits. This matters because uncoupling increases total energy demand. With androgen protection, <strong>the increased energy demand is met primarily from fat, not muscle</strong>. BAM15 studies confirmed lean mass preservation.</p>
+        </div>
+        <div class="card">
+          <h4>With Tesofensine (System 7)</h4>
+          <p>Tesofensine provides CNS drive and appetite suppression. BAM15 provides metabolic acceleration without any CNS effects. <strong>Different pathways, no overlap, no interaction.</strong> One works in the brain, the other in the mitochondria.</p>
+        </div>
+        <div class="card highlight">
+          <h4 style="color:var(--orange);">The Combined Effect</h4>
+          <p>If validated in humans, the 8-system stack would hit every known fat-loss lever simultaneously: appetite, satiety, hormonal signaling, nutrient partitioning, muscle preservation, CNS drive, AND direct cellular expenditure. <strong>No single compound or protocol currently addresses all eight.</strong></p>
+        </div>
+      </div>
+
+      <h3 class="mt-16">Where BAM15 Helps Most</h3>
+      <p>Based on the research, BAM15-type compounds would theoretically provide the greatest benefit when:</p>
+      <ul>
+        <li><strong>Calories are already low</strong> &mdash; when you can't cut intake further without losing muscle</li>
+        <li><strong>Training volume is high</strong> &mdash; when performance matters and you can't just "do more cardio"</li>
+        <li><strong>A plateau has occurred</strong> &mdash; when hormonal adaptations have slowed progress</li>
+        <li><strong>Stubborn fat remains</strong> &mdash; when lower abs, lower chest, or hip fat won't respond to further restriction</li>
+      </ul>
+      <p>In these scenarios, increasing expenditure matters more than further restriction &mdash; and that's exactly what mitochondrial uncoupling does.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- NEXT GENERATION -->
+    <!-- ============================================================ -->
+    <section id="next-gen">
+      <h2>The Next Generation &mdash; What Comes After BAM15</h2>
+
+      <p>BAM15 is Generation 3 uncoupling technology. The field is already moving toward Generation 4 &mdash; and pharmaceutical companies are investing heavily.</p>
+
+      <div class="timeline-bar">
+        <div class="gen" style="background: #333; color: var(--red);">
+          <strong>Gen 1</strong><br>DNP<br><span style="font-size:10px;">Dangerous</span>
+        </div>
+        <div class="gen" style="background: #2a2a2a; color: var(--yellow);">
+          <strong>Gen 2</strong><br>FCCP / Mild Protonophores<br><span style="font-size:10px;">Lab-only</span>
+        </div>
+        <div class="gen" style="background: #1a1a1a; color: var(--orange); border: 1px solid var(--orange);">
+          <strong>Gen 3</strong><br>BAM15<br><span style="font-size:10px;">We are here</span>
+        </div>
+        <div class="gen" style="background: rgba(30,204,113,0.1); color: var(--green); border: 1px solid var(--green);">
+          <strong>Gen 4</strong><br>Targeted Uncouplers<br><span style="font-size:10px;">In development</span>
+        </div>
+      </div>
+
+      <h3 class="mt-16">Compounds in Development</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h4>HU6 (Rivus Pharma)</h4>
+          <p><span class="badge badge-green">HUMAN TRIALS</span></p>
+          <p class="mt-8">The first "controlled metabolic accelerator" to reach Phase 2 human trials. Results show fat-selective weight loss while <strong>preserving skeletal muscle</strong>. Significant liver fat reduction in MASH patients. Three successful Phase 2 trials completed.</p>
+        </div>
+        <div class="card">
+          <h4>SHM115</h4>
+          <p><span class="badge badge-blue">PRECLINICAL</span></p>
+          <p class="mt-8">BAM15-derived analog with improved pharmacokinetics. <strong>75% oral bioavailability</strong> (vs BAM15's 67%). Demonstrated increased energy expenditure and lower body fat in two obesity models.</p>
+        </div>
+        <div class="card">
+          <h4>ES9 / CZ5 / OPC-163493</h4>
+          <p><span class="badge badge-blue">PRECLINICAL</span></p>
+          <p class="mt-8">Next-generation candidates focused on improved tissue targeting (liver-selective, adipose-selective), wider therapeutic windows, and better pharmacokinetics. All in early research stages.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-16">The 5 Research Areas Getting the Most Funding</h3>
+      <table>
+        <tr><th>#</th><th>Area</th><th>Goal</th><th>Status</th></tr>
+        <tr><td>1</td><td>Triple/Quadruple Incretin Drugs</td><td>Multi-receptor appetite control</td><td style="color:var(--green);">Phase 3</td></tr>
+        <tr><td>2</td><td>Controlled Mitochondrial Uncouplers</td><td>Direct energy expenditure</td><td style="color:var(--yellow);">Phase 2</td></tr>
+        <tr><td>3</td><td>Brown Fat / Beige Fat Activators</td><td>Natural thermogenesis</td><td style="color:var(--blue);">Preclinical</td></tr>
+        <tr><td>4</td><td>Muscle-Preserving Fat Loss Agents</td><td>Myostatin / Activin blockers</td><td style="color:var(--yellow);">Phase 2</td></tr>
+        <tr><td>5</td><td>Liver-Targeted Metabolic Drugs</td><td>NASH resolution + metabolic reset</td><td style="color:var(--green);">Phase 3</td></tr>
+      </table>
+
+      <p class="mt-16"><strong>Forged by Freedom is tracking every one of these categories.</strong> When the science matures, when human safety data confirms what the preclinical data promises, we'll be the first to integrate it into our protocols.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SAFETY & HONESTY -->
+    <!-- ============================================================ -->
+    <section id="safety">
+      <h2>Safety, Transparency &amp; What We Don't Know Yet</h2>
+      <p>We're presenting this research because we believe in <strong>informed clients</strong>. We will never hype a compound beyond what the data supports. Here's the honest assessment:</p>
+
+      <div class="grid">
+        <div class="card" style="border-color: var(--green);">
+          <h4 style="color:var(--green);">What the Data Supports</h4>
+          <ul>
+            <li>BAM15 is orally bioavailable (67%)</li>
+            <li>Reduced fat mass without reducing lean mass in all animal studies</li>
+            <li>Did not increase body temperature (up to 200 mg/kg)</li>
+            <li>Improved insulin sensitivity across multiple tissue types</li>
+            <li>Completely corrected fatty liver disease in obese animals</li>
+            <li>7x more potent than DNP with a far wider safety margin</li>
+            <li>No adverse biochemical or hematological markers detected</li>
+            <li>Reduced oxidative stress and inflammation</li>
+            <li>Preserved physical activity levels</li>
+          </ul>
+        </div>
+        <div class="card" style="border-color: var(--red);">
+          <h4 style="color:var(--red);">What We Don't Know</h4>
+          <ul>
+            <li><strong>No human clinical trials</strong> have been completed for BAM15 specifically</li>
+            <li>Optimal human dosing is completely unknown</li>
+            <li>Long-term safety in humans is unestablished</li>
+            <li>Cardiovascular effects at higher doses are biphasic (protective at low doses, potentially harmful at high)</li>
+            <li>Gender-specific responses have not been studied (all animal studies used males)</li>
+            <li>Drug-drug interactions with PEDs, peptides, and other compounds are unstudied</li>
+            <li>Low water solubility creates formulation challenges</li>
+            <li>Half-life of 1.7 hours may require multiple daily doses</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="warning-box mt-16">
+        <h4>Our Position</h4>
+        <p>BAM15 shows extraordinary preclinical promise, and HU6 (its pharmaceutical cousin) has produced real human clinical data. But we do not currently include BAM15 in the FBF Recomp Protocol because the human safety and dosing data has not yet caught up with the animal research. <strong>We monitor. We research. We wait for the data. And when the data is ready, we act.</strong></p>
+        <p>This is what separates us from companies that hype untested compounds for quick sales. We are builders, not hype merchants.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- OUTLOOK -->
+    <!-- ============================================================ -->
+    <section id="outlook">
+      <h2>The FBF Outlook &mdash; What This Means for Our Clients</h2>
+
+      <p>The science of body recomposition is evolving faster than at any point in history. The compounds entering clinical trials today are more targeted, more effective, and safer than anything available even 5 years ago.</p>
+
+      <div class="card highlight mt-16" style="padding: 24px;">
+        <h3 style="color:var(--orange); text-align:center;">What Researchers Believe the Future of Fat Loss Looks Like</h3>
+        <div class="grid mt-8" style="grid-template-columns: repeat(4, 1fr); gap: 10px;">
+          <div style="text-align:center; padding: 12px;">
+            <div style="font-size:32px;">1</div>
+            <p style="font-size:13px;"><strong>Appetite Control</strong><br>GLP-1, GIP, Amylin multi-agonists</p>
+          </div>
+          <div style="text-align:center; padding: 12px;">
+            <div style="font-size:32px;">2</div>
+            <p style="font-size:13px;"><strong>Hormonal Signaling</strong><br>Androgen + GH/IGF-1 protection</p>
+          </div>
+          <div style="text-align:center; padding: 12px;">
+            <div style="font-size:32px;">3</div>
+            <p style="font-size:13px;"><strong>Energy Expenditure</strong><br>Controlled mitochondrial uncoupling</p>
+          </div>
+          <div style="text-align:center; padding: 12px;">
+            <div style="font-size:32px;">4</div>
+            <p style="font-size:13px;"><strong>Muscle Preservation</strong><br>Myostatin / activin pathway modulation</p>
+          </div>
+        </div>
+        <p style="text-align:center; color:var(--muted); margin-top:12px;">The FBF Recomp Protocol already covers pillars 1, 2, and most of 4. BAM15-class compounds would add pillar 3.</p>
+      </div>
+
+      <h3 class="mt-16">Our Commitment</h3>
+      <ul>
+        <li><strong>We will continue monitoring BAM15, HU6, and every next-generation metabolic compound</strong> as new data is published.</li>
+        <li>When human safety data from controlled clinical trials is sufficient, we will evaluate integration into the FBF Protocol.</li>
+        <li>Our clients will always receive <strong>research-backed, honest assessments</strong> &mdash; not hype.</li>
+        <li>The FBF 7-System Protocol remains the most comprehensive body recomposition system available today. When the 8th system is ready, you'll be the first to know.</li>
+      </ul>
+
+      <div class="cta-box mt-16">
+        <h3>Ready to Start Your Recomposition?</h3>
+        <p>The FBF Recomp Protocol &mdash; our 7-system, 24-week body recomposition program &mdash; is available now. Combining retatrutide, tesofensine, cagrilintide, testosterone optimization, and optional GH peptides with custom nutrition and training.</p>
+        <p><strong>Don't wait for the 8th system. Start with the 7 that are proven today.</strong></p>
+        <a href="https://www.forgedbyfreedom.org" class="cta-btn">Visit ForgedByFreedom.org</a>
+        <p style="margin-top:12px; font-size:13px; color:var(--muted);">Or email us directly: <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a> &bull; <a href="mailto:forgedbyfreedom@proton.me">forgedbyfreedom@proton.me</a></p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- REFERENCES -->
+    <!-- ============================================================ -->
+    <section id="references" style="background: rgba(255,255,255,0.02);">
+      <h2>References &amp; Sources</h2>
+      <ol style="font-size:12px; color:var(--muted); line-height: 2;">
+        <li>Kenwood BM, et al. "Identification of a novel mitochondrial uncoupler that does not depolarize the plasma membrane." <em>Molecular Metabolism</em>. 2014;3(2):114-123.</li>
+        <li>Axelrod CL, et al. "BAM15-mediated mitochondrial uncoupling protects against obesity and improves glycemic control." <em>EMBO Molecular Medicine</em>. 2020;12(7):e12088.</li>
+        <li>Alexopoulos SJ, et al. "Mitochondrial uncoupler BAM15 reverses diet-induced obesity and insulin resistance in mice." <em>Nature Communications</em>. 2020;11:2397.</li>
+        <li>Chen S, et al. "BAM15 as a mitochondrial uncoupler: a promising therapeutic agent for diverse diseases." <em>Frontiers in Endocrinology</em>. 2023;14:1252141.</li>
+        <li>Gerasimenko MV, et al. "Protonophoric action of BAM15 on planar bilayers, liposomes, mitochondria, bacteria and neurons." <em>Biochimica et Biophysica Acta (BBA) - Biomembranes</em>. 2020;1862(10):183339.</li>
+        <li>Kalinovich AV, et al. "Oxadiazolopyridine Derivatives as Efficacious Mitochondrial Uncouplers in the Prevention of Diet-Induced Obesity." <em>Journal of Medicinal Chemistry</em>. 2023.</li>
+        <li>Rivus Pharmaceuticals. "Positive Topline Results from Phase 2 M-ACCEL Trial of HU6 in MASH." PR Newswire. 2025.</li>
+        <li>Novo Nordisk. "CagriSema Phase 3 REDEFINE program results." 2025-2026.</li>
+        <li>Eli Lilly. "Orforglipron Phase 2/3 obesity trial results." 2025.</li>
+        <li>Altimmune. "Pemvidutide MOMENTUM Phase 2 results." 2024.</li>
+      </ol>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BACK COVER -->
+    <!-- ============================================================ -->
+    <section style="text-align:center; border:none; background:transparent;">
+      <h2 style="font-family:'Oswald',sans-serif; font-size:32px;">FORGED BY FREEDOM</h2>
+      <p style="font-family:'Oswald',sans-serif; font-size:18px; color:var(--muted);">STRENGTH &amp; NUTRITION</p>
+      <p style="margin-top:16px;">
+        <a href="https://www.forgedbyfreedom.org">www.forgedbyfreedom.org</a> &bull;
+        <a href="https://www.instagram.com/forgedbyfreedom">@forgedbyfreedom</a>
+        <br>
+        <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a> &bull;
+        <a href="mailto:forgedbyfreedom@proton.me">forgedbyfreedom@proton.me</a>
+      </p>
+      <div style="background: rgba(255,106,0,0.06); border: 1px solid #333; border-radius: 10px; padding: 18px 24px; margin: 20px auto; max-width: 750px; text-align: center;">
+        <h3 style="color:var(--orange); font-family:'Oswald',sans-serif; font-size:18px; margin:0 0 8px;">Personal Research Update</h3>
+        <p style="color:#ddd; font-size:14px; line-height:1.7; margin:0;">Coach Bryan is planning to conduct personal research with BAM15 in the near future. As always, he'll be documenting the process, tracking bloodwork, body composition, and subjective effects &mdash; and keeping everyone up to date with real-world data. Stay tuned for updates on the blog and through our email list.</p>
+      </div>
+
+      <p style="color:var(--muted); font-size:12px; margin-top:20px;">
+        This document is for educational and informational purposes only. It does not constitute medical advice.
+        <br>All compound discussions reference published preclinical and clinical research.
+        <br>Consult a qualified healthcare provider before starting any supplementation or medication protocol.
+      </p>
+      <div class="mt-8">
+        <svg width="120" height="40" viewBox="0 0 120 40" role="img" aria-label="FBF logo">
+          <rect width="120" height="40" fill="#141414"/>
+          <circle cx="20" cy="20" r="8" fill="#FF6A00"/>
+          <circle cx="40" cy="20" r="8" fill="#FF6A00"/>
+          <circle cx="60" cy="20" r="8" fill="#FF6A00"/>
+          <text x="90" y="26" fill="#ddd" font-family="Oswald" font-size="12">FBF</text>
+        </svg>
+      </div>
+    </section>
+
+  </main>
+
+  <div style="position: fixed; right: 18px; bottom: 18px; z-index: 999;">
+    <button onclick="window.print();" style="background: var(--orange); color:#111; border:none; padding:12px 16px; border-radius:8px; font-family:inherit; font-weight:700; cursor:pointer;">
+      Print PDF
+    </button>
+  </div>
+
+</body>
+</html>
