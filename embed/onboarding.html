@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Client Intake — Forged by Freedom</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#141414;
+  --surface2:#1c1c1c;
+  --border:#2a2a2a;
+  --accent:#ff6a00;
+  --accent-glow:rgba(255,106,0,.15);
+  --text:#e8e8e8;
+  --text-dim:#aaa;
+  --text-muted:#666;
+  --success:#22c55e;
+  --danger:#ef4444;
+  --radius:12px;
+  --radius-sm:8px;
+}
+html,body{
+  min-height:100%;
+  background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+body{padding:0;display:flex;justify-content:center;align-items:flex-start}
+
+.container{width:100%;max-width:700px;padding:24px 20px 40px}
+
+.header{text-align:center;margin-bottom:32px}
+.header h1{
+  font-size:26px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--accent),#ffb347);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+}
+.header p{font-size:14px;color:var(--text-dim);line-height:1.5;max-width:520px;margin:0 auto}
+.header-line{width:60px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,transparent,var(--accent),transparent);border-radius:2px}
+
+/* Disclaimer */
+.disclaimer{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:24px}
+.disclaimer-text{font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:14px}
+.disclaimer-check{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.disclaimer-check input[type="checkbox"]{width:20px;height:20px;min-width:20px;accent-color:var(--accent);margin-top:1px;cursor:pointer}
+.disclaimer-check label{font-size:13px;font-weight:600;color:var(--text);cursor:pointer}
+
+/* Sections */
+.section{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:24px 20px;margin-bottom:20px;
+}
+.section-title{
+  font-size:14px;font-weight:700;text-transform:uppercase;
+  letter-spacing:1.2px;color:var(--accent);
+  margin-bottom:16px;padding-bottom:10px;
+  border-bottom:1px solid var(--border);
+}
+.section-note{
+  font-size:12px;color:var(--text-muted);font-style:italic;
+  margin-bottom:16px;line-height:1.5;
+  padding:10px 14px;background:rgba(255,106,0,.05);
+  border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* Form elements */
+.form-group{margin-bottom:18px}
+.form-group:last-child{margin-bottom:0}
+.form-label{display:block;font-size:12px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+.form-label .req{color:var(--accent);margin-left:2px}
+.form-input,.form-select,.form-textarea{
+  width:100%;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);
+  color:var(--text);font-size:15px;padding:12px 16px;outline:none;
+  transition:border-color .2s,box-shadow .2s;font-family:inherit;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted)}
+.form-select{cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;
+}
+.form-select option{background:var(--surface);color:var(--text)}
+.form-textarea{min-height:90px;resize:vertical}
+
+.row{display:flex;gap:12px}
+.row .form-group{flex:1}
+
+/* Submit */
+.btn-submit{
+  display:block;width:100%;padding:16px 24px;
+  background:linear-gradient(135deg,var(--accent),#e05500);
+  color:#fff;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+  border:none;border-radius:var(--radius);cursor:pointer;
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-submit:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(255,106,0,.3)}
+.btn-submit:active{transform:translateY(0)}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Messages */
+.result-msg{display:none;background:var(--surface);border:1.5px solid var(--success);border-radius:var(--radius);padding:28px 24px;margin-top:20px;text-align:center;line-height:1.6}
+.result-msg.visible{display:block}
+.result-msg h3{font-size:20px;margin-bottom:10px;color:var(--success)}
+.result-msg p{font-size:14px;color:var(--text-dim)}
+.error-msg{display:none;background:rgba(239,68,68,.1);border:1px solid var(--danger);border-radius:var(--radius-sm);padding:10px 14px;font-size:13px;color:var(--danger);margin-bottom:16px}
+.error-msg.visible{display:block}
+.form-wrapper.hidden{display:none}
+
+.lab-rec{
+  background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);
+  padding:20px;margin-bottom:24px;
+}
+.lab-rec p{font-size:12px;color:var(--text-dim);line-height:1.6}
+
+.invalid-token{text-align:center;padding:60px 20px}
+.invalid-token h2{font-size:22px;color:var(--danger);margin-bottom:12px}
+.invalid-token p{font-size:14px;color:var(--text-dim)}
+
+@media(max-width:480px){
+  .container{padding:16px 14px 32px}
+  .header h1{font-size:20px}
+  .section{padding:18px 14px}
+  .form-input,.form-select,.form-textarea{font-size:14px;padding:10px 12px}
+  .row{flex-direction:column;gap:0}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Client Intake Form</h1>
+    <p>Complete this form thoroughly. The more Bryan knows, the better your program. Every field matters.</p>
+    <div class="header-line"></div>
+  </div>
+
+  <div class="invalid-token" id="invalidToken" style="display:none">
+    <h2>Invalid Link</h2>
+    <p>This onboarding link is not valid. Please apply first at <a href="/apply" style="color:var(--accent)">forgedbyfreedom.org/apply</a>.</p>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer" id="disclaimerBlock">
+    <div class="disclaimer-text">
+      All information provided by Forged by Freedom is for educational and research purposes only. Nothing herein constitutes medical advice, diagnosis, or treatment. No recommendations for human consumption of any substance are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation program.
+    </div>
+    <div class="disclaimer-check">
+      <input type="checkbox" id="disclaimerCheck">
+      <label for="disclaimerCheck">I have read and acknowledge this disclaimer</label>
+    </div>
+  </div>
+
+  <div class="error-msg" id="errorMsg"></div>
+
+  <div class="form-wrapper" id="formWrapper">
+    <form id="intakeForm" autocomplete="on">
+
+      <!-- PERSONAL INFORMATION -->
+      <div class="section">
+        <div class="section-title">Personal Information</div>
+        <div class="form-group">
+          <label class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" class="form-input" name="full_name" required placeholder="First and last name" autocomplete="name">
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Date of Birth</label>
+            <input type="text" class="form-input" name="dob" placeholder="MM/DD/YYYY">
+          </div>
+          <div class="form-group">
+            <label class="form-label">City / State</label>
+            <input type="text" class="form-input" name="location" placeholder="e.g. Philadelphia, PA">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Emergency Contact (name + phone)</label>
+          <input type="text" class="form-input" name="emergency_contact" placeholder="Jane Doe — (555) 123-4567">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Primary Physician (name + contact)</label>
+          <input type="text" class="form-input" name="physician" placeholder="Dr. Smith — (555) 987-6543">
+        </div>
+      </div>
+
+      <!-- HEALTH HISTORY -->
+      <div class="section">
+        <div class="section-title">Health History</div>
+        <div class="form-group">
+          <label class="form-label">Current or prior medical conditions</label>
+          <textarea class="form-textarea" name="health_conditions" placeholder="List any conditions — past or present"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current medications and supplements</label>
+          <textarea class="form-textarea" name="medications" placeholder="Include all prescription meds, OTC, and supplements"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Prior surgeries or significant injuries (with year)</label>
+          <textarea class="form-textarea" name="surgeries_injuries" placeholder="e.g. ACL repair (2019), rotator cuff (2021)"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Physical limitations to train around</label>
+          <textarea class="form-textarea" name="physical_limitations" placeholder="Bad knees, herniated disc, etc."></textarea>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Tobacco / nicotine use</label>
+            <input type="text" class="form-input" name="tobacco_use" placeholder="No / Yes — details">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Alcoholic drinks per week</label>
+            <input type="text" class="form-input" name="alcohol_use" placeholder="e.g. 3-4">
+          </div>
+        </div>
+      </div>
+
+      <!-- HORMONE & LAB STATUS -->
+      <div class="section">
+        <div class="section-title">Hormone & Lab Status</div>
+        <div class="section-note">
+          The following questions are for educational and research purposes only. No recommendations for human consumption are made or implied.
+        </div>
+        <div class="form-group">
+          <label class="form-label">Have you had bloodwork or hormone panels done?</label>
+          <select class="form-select" name="bloodwork_history">
+            <option value="" disabled selected>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">If yes — when was your last panel and key markers?</label>
+          <textarea class="form-textarea" name="last_panel" placeholder="e.g. Oct 2025 — Total T: 650, Free T: 18, E2: 35, HCT: 48%"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Currently on TRT, HRT, or prescribed hormone therapy?</label>
+          <input type="text" class="form-input" name="trt_hrt" placeholder="No / Yes — details (dose, frequency, how long)">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Any experience with peptides or research compounds? (educational purposes only)</label>
+          <input type="text" class="form-input" name="peptide_experience" placeholder="No / Yes — details">
+        </div>
+        <div class="form-group">
+          <label class="form-label">FBF recommends a full baseline lab panel before beginning. Willing to pursue through your physician?</label>
+          <select class="form-select" name="bloodwork_willing">
+            <option value="" disabled selected>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Already have recent labs</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Do you have a physician you work with, or do you need a referral?</label>
+          <input type="text" class="form-input" name="physician_referral_needed" placeholder="I have a physician / I need a referral">
+        </div>
+      </div>
+
+      <!-- TRAINING BACKGROUND -->
+      <div class="section">
+        <div class="section-title">Training Background</div>
+        <div class="form-group">
+          <label class="form-label">Years training consistently</label>
+          <input type="text" class="form-input" name="training_years" placeholder="e.g. 8 years">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current training week — frequency, type, duration</label>
+          <textarea class="form-textarea" name="training_week" placeholder="e.g. 5x/week, push/pull/legs, 75 min sessions"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Training history — sports, military, powerlifting, etc.</label>
+          <textarea class="form-textarea" name="training_history" placeholder="Include anything relevant"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current working weights (squat, deadlift, bench, press)</label>
+          <textarea class="form-textarea" name="current_lifts" placeholder="e.g. Squat 365, Deadlift 405, Bench 275, OHP 185"></textarea>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Cardio — type & frequency</label>
+            <input type="text" class="form-input" name="cardio" placeholder="e.g. 3x/week walking, 2x LISS">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Equipment access</label>
+            <select class="form-select" name="equipment_access">
+              <option value="" disabled selected>Select</option>
+              <option>Full commercial gym</option>
+              <option>Home gym</option>
+              <option>Limited</option>
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- NUTRITION -->
+      <div class="section">
+        <div class="section-title">Nutrition</div>
+        <div class="form-group">
+          <label class="form-label">Current eating habits — be honest</label>
+          <textarea class="form-textarea" name="diet_habits" placeholder="Describe a typical day of eating"></textarea>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Meals per day</label>
+            <input type="text" class="form-input" name="meals_per_day" placeholder="e.g. 4">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Do you track macros?</label>
+            <select class="form-select" name="tracks_macros">
+              <option value="" disabled selected>Select</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Sometimes</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">If yes — current macro targets</label>
+          <input type="text" class="form-input" name="macro_targets" placeholder="e.g. 200P / 300C / 80F">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Food allergies, intolerances, dietary restrictions</label>
+          <textarea class="form-textarea" name="food_restrictions" placeholder="e.g. Lactose intolerant, no shellfish"></textarea>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Estimated daily protein</label>
+            <input type="text" class="form-input" name="daily_protein" placeholder="e.g. 180g">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Willing to track nutrition?</label>
+            <select class="form-select" name="will_track_nutrition">
+              <option value="" disabled selected>Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- BODY COMPOSITION -->
+      <div class="section">
+        <div class="section-title">Body Composition</div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Current weight</label>
+            <input type="text" class="form-input" name="current_weight" placeholder="e.g. 215 lbs">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Height</label>
+            <input type="text" class="form-input" name="height" placeholder="e.g. 5'10&quot;">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Estimated body fat %</label>
+            <input type="text" class="form-input" name="body_fat" placeholder="e.g. 18%">
+          </div>
+        </div>
+        <div class="section-note">
+          Progress photos (front, back, side) will be requested before your program begins.
+        </div>
+      </div>
+
+      <!-- SLEEP & RECOVERY -->
+      <div class="section">
+        <div class="section-title">Sleep & Recovery</div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Avg hours of sleep / night</label>
+            <input type="text" class="form-input" name="sleep_hours" placeholder="e.g. 7">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Sleep quality</label>
+            <select class="form-select" name="sleep_quality">
+              <option value="" disabled selected>Select</option>
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Fair</option>
+              <option>Poor</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Daily stress level</label>
+            <select class="form-select" name="stress_level">
+              <option value="" disabled selected>Select</option>
+              <option>Low</option>
+              <option>Moderate</option>
+              <option>High</option>
+              <option>Very High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Recovery practices</label>
+            <input type="text" class="form-input" name="recovery_practices" placeholder="Sauna, massage, stretching, etc.">
+          </div>
+        </div>
+      </div>
+
+      <!-- GOALS -->
+      <div class="section">
+        <div class="section-title">Goals</div>
+        <div class="form-group">
+          <label class="form-label">Your #1 goal from this program — be specific <span class="req">*</span></label>
+          <textarea class="form-textarea" name="goal_primary" required placeholder="What is the single most important outcome?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Where do you want to be at 24 weeks?</label>
+          <textarea class="form-textarea" name="goal_24_weeks" placeholder="Be as specific as possible — weight, body fat, strength, etc."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What does success look like to you?</label>
+          <textarea class="form-textarea" name="success_definition" placeholder="Beyond the numbers — how will you know this worked?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Have you attempted this before? What happened?</label>
+          <textarea class="form-textarea" name="previous_attempts" placeholder="What worked, what didn't, why did you stop?"></textarea>
+        </div>
+      </div>
+
+      <!-- COMMITMENT & FIT -->
+      <div class="section">
+        <div class="section-title">Commitment & Fit</div>
+        <div class="form-group">
+          <label class="form-label">Why Forged by Freedom? Why now?</label>
+          <textarea class="form-textarea" name="why_fbf" placeholder="What brought you here at this point in your life?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How far are you willing to push?</label>
+          <select class="form-select" name="commitment_level">
+            <option value="" disabled selected>Select</option>
+            <option>I'm motivated but need flexibility</option>
+            <option>I'm fully committed — tell me what to do and I'll do it</option>
+            <option>I will do whatever it takes, no excuses</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Support system — partner/family on board?</label>
+          <textarea class="form-textarea" name="support_system" placeholder="Do the people around you support this?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What would make you quit? Be honest.</label>
+          <textarea class="form-textarea" name="quit_factors" placeholder="What has derailed you in the past?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Anything else Bryan should know?</label>
+          <textarea class="form-textarea" name="additional_notes" placeholder="Mental health, family situation, travel schedule, anything relevant"></textarea>
+        </div>
+      </div>
+
+      <!-- LAB RECOMMENDATION -->
+      <div class="lab-rec">
+        <p>
+          <strong style="color:var(--accent)">Lab Work Recommendation:</strong> Forged by Freedom recommends bloodwork at the start of your program, at week 12, and at week 24. This allows for objective progress tracking. We strongly encourage working with a licensed physician for all lab work and medical oversight. This is for educational and informational purposes only.
+        </p>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn" disabled>Submit Intake Form</button>
+    </form>
+  </div>
+
+  <div class="result-msg" id="resultMsg"></div>
+</div>
+
+<script>
+const API_BASE = window.location.origin.includes('localhost')
+  ? 'http://localhost:5051'
+  : 'https://forged-by-freedom-api-nm4f.onrender.com';
+
+const params = new URLSearchParams(window.location.search);
+const token = params.get('token');
+
+const form = document.getElementById('intakeForm');
+const disclaimerCheck = document.getElementById('disclaimerCheck');
+const submitBtn = document.getElementById('submitBtn');
+const errorMsg = document.getElementById('errorMsg');
+const resultMsg = document.getElementById('resultMsg');
+const formWrapper = document.getElementById('formWrapper');
+const disclaimerBlock = document.getElementById('disclaimerBlock');
+const invalidToken = document.getElementById('invalidToken');
+
+// Validate token exists
+if (!token || token.length < 10) {
+  disclaimerBlock.style.display = 'none';
+  formWrapper.style.display = 'none';
+  invalidToken.style.display = 'block';
+}
+
+disclaimerCheck.addEventListener('change', () => {
+  submitBtn.disabled = !disclaimerCheck.checked;
+});
+
+function showError(msg) {
+  errorMsg.textContent = msg;
+  errorMsg.classList.add('visible');
+  errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function hideError() { errorMsg.classList.remove('visible'); }
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  hideError();
+
+  if (!disclaimerCheck.checked) {
+    showError('You must acknowledge the disclaimer to continue.');
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(form));
+  data.lead_id = token;
+  data.disclaimer_acknowledged = true;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  try {
+    const res = await fetch(API_BASE + '/api/intake', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (!res.ok) {
+      showError(result.error || 'Something went wrong. Please try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Intake Form';
+      return;
+    }
+
+    formWrapper.classList.add('hidden');
+    disclaimerBlock.style.display = 'none';
+
+    resultMsg.className = 'result-msg visible';
+    resultMsg.innerHTML = '<h3>Intake Complete</h3>' +
+      '<p>Bryan will review your profile and be in touch within 24 hours.</p>' +
+      '<p style="margin-top:12px;font-size:16px;color:var(--accent);font-weight:700">Welcome to Forged by Freedom.</p>';
+
+    resultMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  } catch (err) {
+    showError('Network error. Please check your connection and try again.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Intake Form';
+  }
+});
+</script>
+</body>
+</html>

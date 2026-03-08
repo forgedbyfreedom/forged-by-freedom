@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apply — Forged by Freedom</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#141414;
+  --surface2:#1c1c1c;
+  --border:#2a2a2a;
+  --accent:#ff6a00;
+  --accent-glow:rgba(255,106,0,.15);
+  --accent-soft:#ff8c33;
+  --text:#e8e8e8;
+  --text-dim:#aaa;
+  --text-muted:#666;
+  --success:#22c55e;
+  --danger:#ef4444;
+  --radius:12px;
+  --radius-sm:8px;
+}
+html,body{
+  min-height:100%;
+  background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+body{padding:0;display:flex;justify-content:center;align-items:flex-start}
+
+.container{
+  width:100%;max-width:640px;
+  padding:24px 20px 40px;
+}
+
+/* Header */
+.header{text-align:center;margin-bottom:32px}
+.header h1{
+  font-size:28px;font-weight:800;
+  letter-spacing:1px;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--accent),#ffb347);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+}
+.header p{font-size:14px;color:var(--text-dim);line-height:1.5;max-width:480px;margin:0 auto}
+.header-line{
+  width:60px;height:3px;margin:16px auto 0;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+  border-radius:2px;
+}
+
+/* Disclaimer */
+.disclaimer{
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  margin-bottom:24px;
+}
+.disclaimer-text{
+  font-size:12px;color:var(--text-dim);line-height:1.6;
+  margin-bottom:14px;
+}
+.disclaimer-check{
+  display:flex;align-items:flex-start;gap:10px;
+  cursor:pointer;
+}
+.disclaimer-check input[type="checkbox"]{
+  width:20px;height:20px;min-width:20px;
+  accent-color:var(--accent);
+  margin-top:1px;cursor:pointer;
+}
+.disclaimer-check label{
+  font-size:13px;font-weight:600;color:var(--text);
+  cursor:pointer;
+}
+
+/* Form */
+.form-section{
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  margin-bottom:16px;
+}
+.form-group{margin-bottom:20px}
+.form-group:last-child{margin-bottom:0}
+.form-label{
+  display:block;font-size:12px;font-weight:600;
+  color:var(--text-dim);text-transform:uppercase;
+  letter-spacing:.7px;margin-bottom:6px;
+}
+.form-label .required{color:var(--accent);margin-left:2px}
+.form-input,.form-select,.form-textarea{
+  width:100%;
+  background:var(--surface2);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  color:var(--text);
+  font-size:15px;
+  padding:12px 16px;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  font-family:inherit;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--accent-glow);
+}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted)}
+.form-select{cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;
+  padding-right:36px;
+}
+.form-select option{background:var(--surface);color:var(--text)}
+.form-textarea{min-height:100px;resize:vertical}
+
+/* Submit */
+.btn-submit{
+  display:block;width:100%;
+  padding:16px 24px;
+  background:linear-gradient(135deg,var(--accent),#e05500);
+  color:#fff;font-size:16px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+  border:none;border-radius:var(--radius);
+  cursor:pointer;
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-submit:hover{
+  transform:translateY(-1px);
+  box-shadow:0 4px 20px rgba(255,106,0,.3);
+}
+.btn-submit:active{transform:translateY(0)}
+.btn-submit:disabled{
+  opacity:.5;cursor:not-allowed;
+  transform:none;box-shadow:none;
+}
+
+/* Messages */
+.result-msg{
+  display:none;
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  margin-top:20px;
+  text-align:center;
+  line-height:1.6;
+}
+.result-msg.visible{display:block}
+.result-msg.success{border-color:var(--success)}
+.result-msg.rejected{border-color:var(--accent)}
+.result-msg h3{font-size:18px;margin-bottom:10px}
+.result-msg p{font-size:14px;color:var(--text-dim)}
+.result-msg a{color:var(--accent);text-decoration:none;font-weight:600}
+.result-msg a:hover{text-decoration:underline}
+
+.error-msg{
+  display:none;
+  background:rgba(239,68,68,.1);
+  border:1px solid var(--danger);
+  border-radius:var(--radius-sm);
+  padding:10px 14px;
+  font-size:13px;color:var(--danger);
+  margin-bottom:16px;
+}
+.error-msg.visible{display:block}
+
+/* Form hidden state */
+.form-wrapper.hidden{display:none}
+
+/* Responsive */
+@media(max-width:480px){
+  .container{padding:16px 14px 32px}
+  .header h1{font-size:22px}
+  .form-section{padding:18px 14px}
+  .form-input,.form-select,.form-textarea{font-size:14px;padding:10px 12px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Apply to Forged by Freedom</h1>
+    <p>Strength & nutrition coaching for athletes who are done settling. This isn't for everyone — and that's the point.</p>
+    <div class="header-line"></div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <div class="disclaimer-text">
+      All information provided by Forged by Freedom is for educational and research purposes only. Nothing herein constitutes medical advice, diagnosis, or treatment. No recommendations for human consumption of any substance are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation program.
+    </div>
+    <div class="disclaimer-check">
+      <input type="checkbox" id="disclaimerCheck">
+      <label for="disclaimerCheck">I have read and acknowledge this disclaimer</label>
+    </div>
+  </div>
+
+  <div class="error-msg" id="errorMsg"></div>
+
+  <div class="form-wrapper" id="formWrapper">
+    <form id="applyForm" autocomplete="on">
+      <div class="form-section">
+        <div class="form-group">
+          <label class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" class="form-input" name="name" required placeholder="Your full name" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" class="form-input" name="email" required placeholder="you@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number <span class="required">*</span></label>
+          <input type="tel" class="form-input" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-group">
+          <label class="form-label">Primary Goal <span class="required">*</span></label>
+          <select class="form-select" name="primary_goal" required>
+            <option value="" disabled selected>Select your primary goal</option>
+            <option>Body Recomposition</option>
+            <option>Fat Loss</option>
+            <option>Muscle Gain</option>
+            <option>Athletic Performance</option>
+            <option>Complete Transformation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How long have you been trying to reach this goal?</label>
+          <select class="form-select" name="struggle_duration">
+            <option value="" disabled selected>Select duration</option>
+            <option>Less than 6 months</option>
+            <option>6 months – 2 years</option>
+            <option>2 – 5 years</option>
+            <option>5+ years — I've tried everything</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What has held you back so far?</label>
+          <textarea class="form-textarea" name="what_held_back" placeholder="Be honest — what's gotten in the way?"></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-group">
+          <label class="form-label">How far are you willing to push? <span class="required">*</span></label>
+          <select class="form-select" name="commitment_level" required>
+            <option value="" disabled selected>Select your commitment level</option>
+            <option>I'll do what I can when it's convenient</option>
+            <option>I'm motivated but need flexibility</option>
+            <option>I'm fully committed — tell me what to do and I'll do it</option>
+            <option>I will do whatever it takes, no excuses</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How did you find Forged by Freedom?</label>
+          <input type="text" class="form-input" name="referral_source" placeholder="Instagram, Google, friend, AI Coach, etc.">
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn" disabled>Submit Application</button>
+    </form>
+  </div>
+
+  <div class="result-msg" id="resultMsg"></div>
+</div>
+
+<script>
+const API_BASE = window.location.origin.includes('localhost')
+  ? 'http://localhost:5051'
+  : 'https://forged-by-freedom-api-nm4f.onrender.com';
+
+const form = document.getElementById('applyForm');
+const disclaimerCheck = document.getElementById('disclaimerCheck');
+const submitBtn = document.getElementById('submitBtn');
+const errorMsg = document.getElementById('errorMsg');
+const resultMsg = document.getElementById('resultMsg');
+const formWrapper = document.getElementById('formWrapper');
+
+// Enable submit only when disclaimer is checked
+disclaimerCheck.addEventListener('change', () => {
+  submitBtn.disabled = !disclaimerCheck.checked;
+});
+
+function showError(msg) {
+  errorMsg.textContent = msg;
+  errorMsg.classList.add('visible');
+  errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function hideError() {
+  errorMsg.classList.remove('visible');
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  hideError();
+
+  if (!disclaimerCheck.checked) {
+    showError('You must acknowledge the disclaimer to continue.');
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(form));
+  data.disclaimer_acknowledged = true;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  try {
+    const res = await fetch(API_BASE + '/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (!res.ok) {
+      showError(result.error || 'Something went wrong. Please try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Application';
+      return;
+    }
+
+    formWrapper.classList.add('hidden');
+
+    if (result.status === 'rejected') {
+      resultMsg.className = 'result-msg visible rejected';
+      resultMsg.innerHTML = '<h3>Thank You</h3><p>' + result.message + '</p>';
+    } else {
+      const link = API_BASE + result.onboarding_link;
+      resultMsg.className = 'result-msg visible success';
+      resultMsg.innerHTML = '<h3>Application Received</h3>' +
+        '<p>You\'re one step closer. Check your phone — we\'ll be in touch shortly.</p>' +
+        '<p style="margin-top:14px">When approved, complete your full intake here:<br>' +
+        '<a href="' + link + '" target="_blank">Complete Intake Form</a></p>';
+    }
+
+    resultMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  } catch (err) {
+    showError('Network error. Please check your connection and try again.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Application';
+  }
+});
+</script>
+</body>
+</html>
