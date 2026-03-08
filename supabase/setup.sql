@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS leads (
 );
 
 -- CLIENTS (Stage 2 — Full Intake)
-CREATE TABLE IF NOT EXISTS clients (
+CREATE TABLE IF NOT EXISTS client_intakes (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   created_at TIMESTAMPTZ DEFAULT now(),
   lead_id UUID REFERENCES leads(id),
@@ -78,18 +78,18 @@ CREATE TABLE IF NOT EXISTS clients (
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_leads_email ON leads(email);
 CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status);
-CREATE INDEX IF NOT EXISTS idx_clients_lead_id ON clients(lead_id);
+CREATE INDEX IF NOT EXISTS idx_client_intakes_lead_id ON client_intakes(lead_id);
 
 -- Row Level Security (enable but allow API access via service key)
 ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
-ALTER TABLE clients ENABLE ROW LEVEL SECURITY;
+ALTER TABLE client_intakes ENABLE ROW LEVEL SECURITY;
 
 -- Allow anon key to insert leads (public form submission)
 CREATE POLICY "Allow public lead insertion" ON leads FOR INSERT TO anon WITH CHECK (true);
 -- Allow anon key to read leads by id (for token validation)
 CREATE POLICY "Allow public lead read by id" ON leads FOR SELECT TO anon USING (true);
--- Allow anon key to insert clients
-CREATE POLICY "Allow public client insertion" ON clients FOR INSERT TO anon WITH CHECK (true);
+-- Allow anon key to insert client_intakes
+CREATE POLICY "Allow public client insertion" ON client_intakes FOR INSERT TO anon WITH CHECK (true);
 -- Allow authenticated/service reads for admin
 CREATE POLICY "Allow service full access leads" ON leads FOR ALL TO authenticated USING (true);
-CREATE POLICY "Allow service full access clients" ON clients FOR ALL TO authenticated USING (true);
+CREATE POLICY "Allow service full access client_intakes" ON client_intakes FOR ALL TO authenticated USING (true);

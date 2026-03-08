@@ -1145,7 +1145,7 @@ app.post("/api/intake", async (req, res) => {
       return res.status(403).json({ error: "Your application has not been approved yet. We'll be in touch soon." });
     }
 
-    const { error } = await supabase.from("clients").insert({ lead_id, ...fields });
+    const { error } = await supabase.from("client_intakes").insert({ lead_id, ...fields });
 
     if (error) {
       console.error("[INTAKE] Supabase error:", error);
