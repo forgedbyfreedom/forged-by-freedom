@@ -1,0 +1,95 @@
+-- ═══════════════════════════════════════════════════════════
+--  FORGED BY FREEDOM — Lead & Client Tables
+--  Run this in Supabase SQL Editor (https://supabase.com/dashboard)
+-- ═══════════════════════════════════════════════════════════
+
+-- LEADS (Stage 1 — Application)
+CREATE TABLE IF NOT EXISTS leads (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  created_at TIMESTAMPTZ DEFAULT now(),
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  primary_goal TEXT,
+  struggle_duration TEXT,
+  what_held_back TEXT,
+  commitment_level TEXT,
+  referral_source TEXT,
+  disclaimer_acknowledged BOOLEAN DEFAULT false,
+  status TEXT DEFAULT 'new',   -- new / approved / rejected
+  notes TEXT
+);
+
+-- CLIENTS (Stage 2 — Full Intake)
+CREATE TABLE IF NOT EXISTS clients (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  created_at TIMESTAMPTZ DEFAULT now(),
+  lead_id UUID REFERENCES leads(id),
+  full_name TEXT,
+  dob TEXT,
+  location TEXT,
+  emergency_contact TEXT,
+  physician TEXT,
+  health_conditions TEXT,
+  medications TEXT,
+  surgeries_injuries TEXT,
+  physical_limitations TEXT,
+  tobacco_use TEXT,
+  alcohol_use TEXT,
+  bloodwork_history TEXT,
+  last_panel TEXT,
+  trt_hrt TEXT,
+  peptide_experience TEXT,
+  bloodwork_willing TEXT,
+  physician_referral_needed TEXT,
+  training_years TEXT,
+  training_week TEXT,
+  training_history TEXT,
+  current_lifts TEXT,
+  cardio TEXT,
+  equipment_access TEXT,
+  diet_habits TEXT,
+  meals_per_day TEXT,
+  tracks_macros TEXT,
+  macro_targets TEXT,
+  food_restrictions TEXT,
+  daily_protein TEXT,
+  will_track_nutrition TEXT,
+  current_weight TEXT,
+  height TEXT,
+  body_fat TEXT,
+  sleep_hours TEXT,
+  sleep_quality TEXT,
+  stress_level TEXT,
+  recovery_practices TEXT,
+  goal_primary TEXT,
+  goal_24_weeks TEXT,
+  success_definition TEXT,
+  previous_attempts TEXT,
+  why_fbf TEXT,
+  commitment_level TEXT,
+  support_system TEXT,
+  quit_factors TEXT,
+  additional_notes TEXT,
+  disclaimer_acknowledged BOOLEAN DEFAULT false,
+  status TEXT DEFAULT 'pending'
+);
+
+-- Indexes
+CREATE INDEX IF NOT EXISTS idx_leads_email ON leads(email);
+CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status);
+CREATE INDEX IF NOT EXISTS idx_clients_lead_id ON clients(lead_id);
+
+-- Row Level Security (enable but allow API access via service key)
+ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
+ALTER TABLE clients ENABLE ROW LEVEL SECURITY;
+
+-- Allow anon key to insert leads (public form submission)
+CREATE POLICY "Allow public lead insertion" ON leads FOR INSERT TO anon WITH CHECK (true);
+-- Allow anon key to read leads by id (for token validation)
+CREATE POLICY "Allow public lead read by id" ON leads FOR SELECT TO anon USING (true);
+-- Allow anon key to insert clients
+CREATE POLICY "Allow public client insertion" ON clients FOR INSERT TO anon WITH CHECK (true);
+-- Allow authenticated/service reads for admin
+CREATE POLICY "Allow service full access leads" ON leads FOR ALL TO authenticated USING (true);
+CREATE POLICY "Allow service full access clients" ON clients FOR ALL TO authenticated USING (true);
