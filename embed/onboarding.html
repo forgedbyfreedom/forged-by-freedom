@@ -42,12 +42,32 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
 .header p{font-size:14px;color:var(--text-dim);line-height:1.5;max-width:520px;margin:0 auto}
 .header-line{width:60px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,transparent,var(--accent),transparent);border-radius:2px}
 
-/* Disclaimer */
-.disclaimer{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:24px}
-.disclaimer-text{font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:14px}
-.disclaimer-check{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
-.disclaimer-check input[type="checkbox"]{width:20px;height:20px;min-width:20px;accent-color:var(--accent);margin-top:1px;cursor:pointer}
-.disclaimer-check label{font-size:13px;font-weight:600;color:var(--text);cursor:pointer}
+/* Waiver */
+.waiver{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px 20px;margin-bottom:24px}
+.waiver-title{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--danger);margin-bottom:4px}
+.waiver-subtitle{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.waiver-scroll{max-height:400px;overflow-y:auto;padding:16px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:16px;font-size:12.5px;color:var(--text-dim);line-height:1.7}
+.waiver-scroll::-webkit-scrollbar{width:6px}
+.waiver-scroll::-webkit-scrollbar-track{background:var(--surface2)}
+.waiver-scroll::-webkit-scrollbar-thumb{background:var(--text-muted);border-radius:3px}
+.waiver-scroll h3{font-size:13px;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.5px;margin:18px 0 8px;padding-top:12px;border-top:1px solid var(--border)}
+.waiver-scroll h3:first-child{margin-top:0;padding-top:0;border-top:none}
+.waiver-scroll ol,.waiver-scroll ul{padding-left:20px;margin:8px 0}
+.waiver-scroll li{margin-bottom:6px}
+.waiver-scroll strong{color:var(--text)}
+.waiver-initial{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px 14px;background:rgba(255,106,0,.05);border:1px solid var(--border);border-radius:var(--radius-sm)}
+.waiver-initial input[type="text"]{width:80px;background:var(--surface2);border:1.5px solid var(--border);border-radius:4px;color:var(--accent);font-size:14px;font-weight:700;padding:6px 10px;text-align:center;outline:none;text-transform:uppercase}
+.waiver-initial input[type="text"]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.waiver-initial span{font-size:12px;color:var(--text-dim);line-height:1.4}
+.waiver-sig{margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.waiver-sig label{display:block;font-size:12px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.waiver-sig input[type="text"]{width:100%;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:15px;padding:12px 16px;outline:none;margin-bottom:10px;font-style:italic}
+.waiver-sig input[type="text"]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.waiver-sig .sig-date{font-size:12px;color:var(--text-muted)}
+.waiver-check{display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin-top:14px}
+.waiver-check input[type="checkbox"]{width:20px;height:20px;min-width:20px;accent-color:var(--accent);margin-top:1px;cursor:pointer}
+.waiver-check label{font-size:13px;font-weight:600;color:var(--text);cursor:pointer;line-height:1.4}
+.waiver-warning{font-size:11px;color:var(--danger);margin-top:10px;display:none}
 
 /* Sections */
 .section{
@@ -142,15 +162,126 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
     <p>This onboarding link is not valid. Please apply first at <a href="/apply" style="color:var(--accent)">forgedbyfreedom.org/apply</a>.</p>
   </div>
 
-  <!-- Disclaimer -->
-  <div class="disclaimer" id="disclaimerBlock">
-    <div class="disclaimer-text">
+  <!-- Educational Disclaimer -->
+  <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px">
+    <div style="font-size:12px;color:var(--text-dim);line-height:1.6">
       All information provided by Forged by Freedom is for educational and research purposes only. Nothing herein constitutes medical advice, diagnosis, or treatment. No recommendations for human consumption of any substance are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation program.
     </div>
-    <div class="disclaimer-check">
-      <input type="checkbox" id="disclaimerCheck">
-      <label for="disclaimerCheck">I have read and acknowledge this disclaimer</label>
+  </div>
+
+  <!-- Waiver of Liability -->
+  <div class="waiver" id="waiverBlock">
+    <div class="waiver-title">Waiver of Liability, Assumption of Risk & Release</div>
+    <div class="waiver-subtitle">You must read, initial, and sign before proceeding</div>
+
+    <div class="waiver-scroll" id="waiverScroll">
+      <h3>1. Nature of Services</h3>
+      <p>Forged by Freedom Strength &amp; Nutrition, LLC, and its owner Bryan Antonelli (hereinafter "FBF," "Coach," or "Company") provides <strong>educational fitness coaching, nutritional guidance, and research-based informational content</strong>. FBF is <strong>not</strong> a medical provider, licensed physician, pharmacist, registered dietitian, or licensed healthcare professional. All services, protocols, content, and communications — whether delivered via consultation, written program, digital platform, AI-assisted tools, text message, email, or any other medium — are provided <strong>strictly for educational and informational purposes only</strong>.</p>
+
+      <h3>2. No Medical Advice</h3>
+      <p>Nothing provided by FBF — including but not limited to training programs, nutritional recommendations, supplement suggestions, peptide education, hormone optimization discussion, cycle design information, bloodwork interpretation guidance, or body recomposition protocols — constitutes <strong>medical advice, diagnosis, prescription, or treatment</strong>. No recommendation for human consumption of any substance, compound, peptide, hormone, or pharmaceutical is made or implied at any time.</p>
+      <p>Client acknowledges and agrees that:</p>
+      <ol>
+        <li>FBF does not prescribe, dispense, administer, or recommend any drug, controlled substance, peptide, hormone, or pharmaceutical for human use.</li>
+        <li>Any discussion of compounds, dosages, protocols, or substances is <strong>purely educational</strong> and based on publicly available research, expert commentary, and published literature.</li>
+        <li>Client is solely responsible for any decision to use, purchase, administer, or consume any substance, and does so entirely at their own risk and of their own volition.</li>
+        <li>Client <strong>must</strong> consult with a licensed physician, endocrinologist, or qualified healthcare provider before beginning any fitness program, nutritional plan, supplementation regimen, or hormone-related protocol.</li>
+      </ol>
+
+      <h3>3. Assumption of Risk</h3>
+      <p>Client acknowledges that participation in exercise, resistance training, cardiovascular training, dietary modification, supplementation, and related activities involves <strong>inherent risks</strong> including but not limited to:</p>
+      <ul>
+        <li>Musculoskeletal injury (sprains, strains, fractures, herniated discs, tendon/ligament tears)</li>
+        <li>Cardiovascular events (elevated heart rate, blood pressure changes, cardiac arrhythmia)</li>
+        <li>Metabolic disruption (hormonal imbalance, electrolyte disturbance, hypoglycemia)</li>
+        <li>Organ stress (hepatic, renal, or cardiac strain from intense training or supplementation)</li>
+        <li>Adverse reactions to supplements, foods, or other substances</li>
+        <li>Psychological effects (mood changes, anxiety, depression, body dysmorphia)</li>
+        <li>In rare cases, <strong>permanent disability or death</strong></li>
+      </ul>
+      <p><strong>Client voluntarily assumes all risks</strong> — known and unknown, foreseeable and unforeseeable — associated with participation in any FBF program, following any FBF guidance, or acting upon any information provided by FBF or its AI-assisted tools.</p>
+
+      <h3>4. AI-Assisted Tools Disclaimer</h3>
+      <p>FBF utilizes AI-powered coaching tools ("Coach Bryan AI") that generate responses based on a curated knowledge base of expert content, research abstracts, and educational materials. Client acknowledges that:</p>
+      <ol>
+        <li>AI-generated responses are <strong>informational only</strong> and may contain errors, omissions, or outdated information.</li>
+        <li>AI tools are not a substitute for professional medical advice, and no AI-generated response should be interpreted as a prescription, diagnosis, or medical recommendation.</li>
+        <li>Client assumes full responsibility for any action taken based on AI-generated content.</li>
+        <li>FBF is not liable for any harm, injury, or adverse outcome resulting from reliance on AI-generated information.</li>
+      </ol>
+
+      <h3>5. Release of Liability</h3>
+      <p>To the fullest extent permitted by law, Client hereby <strong>releases, waives, discharges, and holds harmless</strong> Forged by Freedom Strength &amp; Nutrition, LLC, Bryan Antonelli, and all affiliated coaches, employees, contractors, agents, representatives, successors, and assigns (collectively "Released Parties") from <strong>any and all claims, demands, actions, causes of action, suits, damages, losses, expenses, and liability</strong> of any kind — including but not limited to personal injury, bodily harm, illness, death, property damage, emotional distress, financial loss, or consequential damages — arising out of or in connection with:</p>
+      <ol>
+        <li>Participation in any FBF program, protocol, or coaching engagement</li>
+        <li>Following or acting upon any guidance, recommendation, or information provided by FBF</li>
+        <li>Use of any FBF digital platform, AI tool, website, or communication channel</li>
+        <li>Any decision to use, purchase, or administer any substance discussed in FBF materials</li>
+        <li>Any third-party products, services, or vendors referenced by FBF</li>
+      </ol>
+      <p>This release applies regardless of whether such claims arise from the <strong>negligence, errors, or omissions</strong> of the Released Parties, and shall be binding upon Client and Client's heirs, executors, administrators, personal representatives, and assigns.</p>
+
+      <h3>6. Indemnification</h3>
+      <p>Client agrees to <strong>indemnify, defend, and hold harmless</strong> the Released Parties from and against any and all claims, liabilities, damages, costs, and expenses (including reasonable attorneys' fees) arising from or related to: (a) Client's participation in FBF programs; (b) Client's breach of this Agreement; (c) Client's misuse of information provided by FBF; or (d) any third-party claim arising from Client's actions or omissions.</p>
+
+      <h3>7. Medical Clearance Requirement</h3>
+      <p>Client represents and warrants that they:</p>
+      <ol>
+        <li>Are in sufficient physical health to participate in an exercise and nutrition program</li>
+        <li>Have consulted with (or will consult with) a qualified physician before beginning this program</li>
+        <li>Have disclosed all known medical conditions, injuries, medications, and health concerns in this intake form</li>
+        <li>Will immediately cease activity and seek medical attention if they experience chest pain, dizziness, severe shortness of breath, unusual heart rhythm, or any concerning symptoms</li>
+        <li>Will notify FBF immediately of any changes in health status, medications, or medical conditions</li>
+      </ol>
+
+      <h3>8. Confidentiality &amp; Data</h3>
+      <p>Client's personal information, health data, and program details will be kept confidential and used solely for coaching purposes. FBF will not share Client's information with third parties without consent, except as required by law. Client consents to FBF storing their data in secure digital systems for program management. Anonymized, aggregate data may be used for educational content or marketing purposes (no identifying information will be disclosed without explicit written consent).</p>
+
+      <h3>9. No Guarantees</h3>
+      <p>FBF makes <strong>no guarantees, warranties, or promises</strong> — express or implied — regarding specific results, outcomes, body composition changes, performance improvements, or health markers. Results vary based on individual genetics, effort, consistency, adherence, pre-existing conditions, and factors outside FBF's control. Testimonials or before/after examples reflect individual experiences and are not guarantees of similar results.</p>
+
+      <h3>10. Governing Law &amp; Dispute Resolution</h3>
+      <p>This Agreement shall be governed by and construed in accordance with the laws of the State of South Carolina. Any dispute arising under this Agreement shall first be submitted to good-faith mediation. If mediation is unsuccessful, disputes shall be resolved through binding arbitration in South Carolina in accordance with the rules of the American Arbitration Association. Client waives the right to a jury trial and to participate in any class action.</p>
+
+      <h3>11. Severability &amp; Entire Agreement</h3>
+      <p>If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. This Agreement constitutes the entire agreement between Client and FBF regarding its subject matter and supersedes all prior agreements, representations, or understandings. This Agreement may only be modified in writing signed by both parties.</p>
     </div>
+
+    <!-- Initials -->
+    <div class="waiver-initial">
+      <input type="text" id="initialRisk" maxlength="4" placeholder="Initials">
+      <span>I understand and <strong>assume all risks</strong> associated with exercise, nutrition, and supplementation programs (Section 3)</span>
+    </div>
+    <div class="waiver-initial">
+      <input type="text" id="initialMedical" maxlength="4" placeholder="Initials">
+      <span>I confirm FBF does <strong>not provide medical advice</strong> and I will consult a licensed physician (Section 2 &amp; 7)</span>
+    </div>
+    <div class="waiver-initial">
+      <input type="text" id="initialRelease" maxlength="4" placeholder="Initials">
+      <span>I <strong>release FBF from all liability</strong> including claims arising from negligence (Section 5)</span>
+    </div>
+    <div class="waiver-initial">
+      <input type="text" id="initialAI" maxlength="4" placeholder="Initials">
+      <span>I understand <strong>AI-generated content is informational only</strong> and not medical advice (Section 4)</span>
+    </div>
+    <div class="waiver-initial">
+      <input type="text" id="initialSubstance" maxlength="4" placeholder="Initials">
+      <span>I am <strong>solely responsible</strong> for any decision to use any substance and do so at my own risk (Section 2)</span>
+    </div>
+
+    <!-- Signature -->
+    <div class="waiver-sig">
+      <label>Full Legal Name (Electronic Signature)</label>
+      <input type="text" id="waiverSignature" placeholder="Type your full legal name">
+      <div class="sig-date">Date: <span id="sigDate"></span></div>
+    </div>
+
+    <!-- Final Checkbox -->
+    <div class="waiver-check">
+      <input type="checkbox" id="disclaimerCheck">
+      <label for="disclaimerCheck">I have read, understood, and agree to the entire Waiver of Liability, Assumption of Risk &amp; Release Agreement. I sign this voluntarily and of my own free will.</label>
+    </div>
+    <div class="waiver-warning" id="waiverWarning">You must initial all 5 sections and provide your signature to continue.</div>
   </div>
 
   <div class="error-msg" id="errorMsg"></div>
@@ -478,19 +609,37 @@ const submitBtn = document.getElementById('submitBtn');
 const errorMsg = document.getElementById('errorMsg');
 const resultMsg = document.getElementById('resultMsg');
 const formWrapper = document.getElementById('formWrapper');
-const disclaimerBlock = document.getElementById('disclaimerBlock');
+const waiverBlock = document.getElementById('waiverBlock');
 const invalidToken = document.getElementById('invalidToken');
+const waiverWarning = document.getElementById('waiverWarning');
+
+// Set signature date
+document.getElementById('sigDate').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
 // Validate token exists
 if (!token || token.length < 10) {
-  disclaimerBlock.style.display = 'none';
+  waiverBlock.style.display = 'none';
   formWrapper.style.display = 'none';
   invalidToken.style.display = 'block';
 }
 
-disclaimerCheck.addEventListener('change', () => {
-  submitBtn.disabled = !disclaimerCheck.checked;
-});
+// Waiver validation — all initials + signature + checkbox required
+const initialFields = ['initialRisk','initialMedical','initialRelease','initialAI','initialSubstance'];
+const sigField = document.getElementById('waiverSignature');
+
+function validateWaiver() {
+  const allInitialed = initialFields.every(id => document.getElementById(id).value.trim().length >= 2);
+  const signed = sigField.value.trim().length >= 3;
+  const checked = disclaimerCheck.checked;
+  const valid = allInitialed && signed && checked;
+  submitBtn.disabled = !valid;
+  waiverWarning.style.display = (checked && !valid) ? 'block' : 'none';
+  return valid;
+}
+
+disclaimerCheck.addEventListener('change', validateWaiver);
+sigField.addEventListener('input', validateWaiver);
+initialFields.forEach(id => document.getElementById(id).addEventListener('input', validateWaiver));
 
 function showError(msg) {
   errorMsg.textContent = msg;
@@ -508,9 +657,17 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
+  if (!validateWaiver()) {
+    showError('You must complete the full waiver — initials, signature, and checkbox — before submitting.');
+    return;
+  }
+
   const data = Object.fromEntries(new FormData(form));
   data.lead_id = token;
   data.disclaimer_acknowledged = true;
+  data.waiver_signature = sigField.value.trim();
+  data.waiver_signed_date = new Date().toISOString();
+  data.waiver_initials = initialFields.map(id => document.getElementById(id).value.trim().toUpperCase()).join(', ');
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Submitting...';
@@ -532,7 +689,7 @@ form.addEventListener('submit', async (e) => {
     }
 
     formWrapper.classList.add('hidden');
-    disclaimerBlock.style.display = 'none';
+    waiverBlock.style.display = 'none';
 
     resultMsg.className = 'result-msg visible';
     resultMsg.innerHTML = '<h3>Intake Complete</h3>' +
