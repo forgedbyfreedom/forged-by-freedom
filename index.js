@@ -49,7 +49,7 @@ const index = pinecone.Index(CONFIG.pineconeIndex);
 // ─── Express Setup ───────────────────────────────────────────
 const app = express();
 
-app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
+app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false, frameguard: false }));
 app.use(cors({
   origin: CONFIG.isProd ? [
     "https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com",
