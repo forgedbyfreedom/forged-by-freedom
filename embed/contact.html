@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Forged by Freedom</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#141414;
+  --surface2:#1c1c1c;
+  --border:#2a2a2a;
+  --accent:#ff6a00;
+  --accent-glow:rgba(255,106,0,.15);
+  --text:#e8e8e8;
+  --text-dim:#aaa;
+  --text-muted:#666;
+  --success:#22c55e;
+  --danger:#ef4444;
+  --radius:12px;
+  --radius-sm:8px;
+}
+html,body{
+  min-height:100%;
+  background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+body{padding:0;display:flex;justify-content:center;align-items:flex-start}
+
+.container{width:100%;max-width:560px;padding:24px 20px 40px}
+
+.header{text-align:center;margin-bottom:32px}
+.header h1{
+  font-size:28px;font-weight:800;
+  letter-spacing:1px;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--accent),#ffb347);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+}
+.header p{font-size:14px;color:var(--text-dim);line-height:1.5;max-width:480px;margin:0 auto}
+.header-line{width:60px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,var(--accent),#ffb347);border-radius:2px}
+
+.form-card{
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px 24px;
+}
+
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--text-dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.field input,.field textarea{
+  width:100%;
+  background:var(--surface2);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  color:var(--text);
+  font-size:15px;
+  padding:12px 16px;
+  outline:none;
+  font-family:inherit;
+  transition:border-color .2s;
+}
+.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.field textarea{min-height:120px;resize:vertical;line-height:1.5}
+
+.submit-btn{
+  width:100%;
+  padding:14px;
+  background:linear-gradient(135deg,var(--accent),#e05500);
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  border:none;
+  border-radius:var(--radius);
+  cursor:pointer;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-top:8px;
+  transition:opacity .2s;
+}
+.submit-btn:hover{opacity:.9}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed}
+
+.success-msg{
+  display:none;
+  text-align:center;
+  padding:32px 20px;
+}
+.success-msg h2{font-size:22px;color:var(--success);margin-bottom:12px}
+.success-msg p{font-size:14px;color:var(--text-dim);line-height:1.6}
+.success-msg .ai-reply{
+  margin-top:20px;
+  padding:16px;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  text-align:left;
+  font-size:14px;
+  color:var(--text);
+  line-height:1.6;
+}
+.ai-reply-label{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+
+.error-msg{color:var(--danger);font-size:13px;margin-top:8px;display:none;text-align:center}
+
+@media(max-width:500px){
+  .form-card{padding:20px 16px}
+  .header h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Contact Coach Bryan</h1>
+    <p>Got a question about training, nutrition, peptides, or protocols? Drop me a message and I'll get back to you.</p>
+    <div class="header-line"></div>
+  </div>
+
+  <div class="form-card" id="formCard">
+    <form id="contactForm" onsubmit="submitContact(event)">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" id="fname" required placeholder="Your name">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="femail" required placeholder="your@email.com">
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <textarea id="fmessage" required placeholder="What's on your mind?"></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+      <div class="error-msg" id="errorMsg"></div>
+    </form>
+  </div>
+
+  <div class="success-msg" id="successMsg">
+    <h2>Message Received</h2>
+    <p>Thanks for reaching out! Here's a quick response from Coach Bryan — I'll follow up personally soon.</p>
+    <div class="ai-reply">
+      <div class="ai-reply-label">Coach Bryan</div>
+      <div id="aiReplyText"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = window.location.origin.includes('localhost')
+  ? 'http://localhost:5051'
+  : 'https://forged-by-freedom-api-nm4f.onrender.com';
+
+async function submitContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const errEl = document.getElementById('errorMsg');
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('femail').value.trim();
+  const message = document.getElementById('fmessage').value.trim();
+
+  try {
+    const res = await fetch(API_BASE + '/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      errEl.textContent = data.error || 'Something went wrong. Try again.';
+      errEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      return;
+    }
+
+    // Show success + AI reply
+    document.getElementById('formCard').style.display = 'none';
+    document.getElementById('aiReplyText').textContent = data.ai_reply || 'Thanks for reaching out! I\'ll get back to you soon.';
+    document.getElementById('successMsg').style.display = 'block';
+
+  } catch (err) {
+    errEl.textContent = 'Network error. Check your connection and try again.';
+    errEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  }
+}
+</script>
+</body>
+</html>

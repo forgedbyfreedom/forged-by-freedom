@@ -93,3 +93,61 @@ CREATE POLICY "Allow public client insertion" ON client_intakes FOR INSERT TO an
 -- Allow authenticated/service reads for admin
 CREATE POLICY "Allow service full access leads" ON leads FOR ALL TO authenticated USING (true);
 CREATE POLICY "Allow service full access client_intakes" ON client_intakes FOR ALL TO authenticated USING (true);
+
+-- ═══════════════════════════════════════════════════════════
+--  CONVERSATIONS — Auto-reply threads across all channels
+-- ═══════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS conversations (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  created_at TIMESTAMPTZ DEFAULT now(),
+  channel TEXT NOT NULL,            -- sms, contact_form, email, instagram_dm, facebook_dm
+  sender_id TEXT NOT NULL,          -- phone number, email, or social handle
+  sender_name TEXT,
+  direction TEXT NOT NULL,          -- inbound / outbound
+  message TEXT NOT NULL,
+  ai_response TEXT,                 -- AI-generated reply (null for outbound)
+  lead_id UUID REFERENCES leads(id),
+  metadata JSONB DEFAULT '{}'::jsonb
+);
+
+CREATE INDEX IF NOT EXISTS idx_conversations_sender ON conversations(sender_id);
+CREATE INDEX IF NOT EXISTS idx_conversations_channel ON conversations(channel);
+CREATE INDEX IF NOT EXISTS idx_conversations_created ON conversations(created_at DESC);
+
+ALTER TABLE conversations ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow public conversation insertion" ON conversations FOR INSERT TO anon WITH CHECK (true);
+CREATE POLICY "Allow service full access conversations" ON conversations FOR ALL TO authenticated USING (true);
+CREATE POLICY "Allow anon read conversations" ON conversations FOR SELECT TO anon USING (true);
+
+-- ═══════════════════════════════════════════════════════════
+--  CONTENT QUEUE — AI-generated content for all platforms
+-- ═══════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS content_queue (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  created_at TIMESTAMPTZ DEFAULT now(),
+  platform TEXT NOT NULL,           -- instagram, facebook, linkedin, email, blog, sms
+  content_type TEXT NOT NULL,       -- post, story, article, newsletter, broadcast
+  topic TEXT,
+  tone TEXT DEFAULT 'coach',        -- coach, educational, motivational, science
+  body TEXT NOT NULL,
+  hashtags TEXT[],
+  subject_line TEXT,                -- for email/blog
+  status TEXT DEFAULT 'pending',    -- pending / approved / rejected / published
+  edited_body TEXT,                 -- admin-edited version (used on publish if set)
+  scheduled_for TIMESTAMPTZ,
+  published_at TIMESTAMPTZ,
+  publish_result JSONB,
+  metadata JSONB DEFAULT '{}'::jsonb
+);
+
+CREATE INDEX IF NOT EXISTS idx_content_queue_status ON content_queue(status);
+CREATE INDEX IF NOT EXISTS idx_content_queue_platform ON content_queue(platform);
+CREATE INDEX IF NOT EXISTS idx_content_queue_scheduled ON content_queue(scheduled_for);
+
+ALTER TABLE content_queue ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow service full access content_queue" ON content_queue FOR ALL TO authenticated USING (true);
+CREATE POLICY "Allow anon read content_queue" ON content_queue FOR SELECT TO anon USING (true);
+CREATE POLICY "Allow anon insert content_queue" ON content_queue FOR INSERT TO anon WITH CHECK (true);
+CREATE POLICY "Allow anon update content_queue" ON content_queue FOR UPDATE TO anon USING (true);

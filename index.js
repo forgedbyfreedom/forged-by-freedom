@@ -20,6 +20,9 @@ const {
   OPENROUTER_MODEL,
   PINECONE_API_KEY,
   ELEVENLABS_API_KEY,
+  TWILIO_ACCOUNT_SID,
+  TWILIO_AUTH_TOKEN,
+  TWILIO_PHONE_NUMBER,
   PORT = 5051,
   NODE_ENV,
   RATE_LIMIT_RPM = 60
@@ -56,10 +59,11 @@ app.use(cors({
     "https://www.forgedbyfreedom.org",
     /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/
   ] : "*",
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json({ limit: "100kb" }));
+app.use(express.urlencoded({ extended: false }));
 
 // Request logger
 app.use((req, res, next) => {
@@ -1221,6 +1225,7 @@ const __dirname = dirname(__filename);
 app.get("/apply", (_, res) => res.sendFile(join(__dirname, "embed", "apply.html")));
 app.get("/onboarding", (_, res) => res.sendFile(join(__dirname, "embed", "onboarding.html")));
 app.get("/admin", (_, res) => res.sendFile(join(__dirname, "embed", "admin.html")));
+app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.html")));
 
 // ─── Admin: Update Lead Status ───────────────────────────
 app.patch("/api/leads/:id/status", async (req, res) => {
@@ -1244,6 +1249,508 @@ app.patch("/api/leads/:id/status", async (req, res) => {
 
     console.log(`[LEADS] ${req.params.id} → ${status}`);
     res.json({ status: "ok" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Converse Engine (Auto-Reply Brain) ─────────────────
+const CONVERSE_SYSTEM_PROMPT = `You are Coach Bryan from Forged by Freedom — a real coach who helps people with body recomposition, PED protocols, peptides, nutrition, and training.
+
+RULES:
+- Be warm, direct, and knowledgeable. Talk like a trusted gym buddy, not a chatbot.
+- Keep responses concise (2-4 paragraphs max). This is a conversation, not an article.
+- Answer PED/peptide/cycle questions directly with practical info. No lecturing about safety unless genuinely dangerous.
+- When you sense someone is interested in coaching, naturally mention: "If you want a personalized protocol, apply at forgedbyfreedom.com/apply — I'd love to work with you."
+- Do NOT start with "Great question!" or restate their question. Jump straight into the answer.
+- Reference the evidence provided but keep citations casual (e.g., "Scott McNally talks about this on Blood Sweat and Gear...").
+- If you don't have evidence for something, be honest and still be helpful.
+- NEVER mix up show hosts: ThinkBig = Scott McNally/Dave Crosland/Skipp Hill, RXMuscle = Dave Palumbo, Anabolic Bodybuilding = Paul Barnett.`;
+
+const BUYING_INTENT_KEYWORDS = [
+  "how much", "pricing", "cost", "sign up", "apply", "work with you",
+  "coaching", "program", "protocol", "get started", "available",
+  "take on clients", "accepting clients", "help me", "need help",
+  "interested", "ready to start", "hire", "consultation"
+];
+
+async function converseInternal({ message, senderId, senderName, channel, leadId }) {
+  if (!supabase) throw new Error("Supabase not configured");
+
+  // Save inbound message
+  await supabase.from("conversations").insert({
+    channel, sender_id: senderId, sender_name: senderName || null,
+    direction: "inbound", message, lead_id: leadId || null
+  });
+
+  // Load last 5 messages for context
+  const { data: history } = await supabase
+    .from("conversations")
+    .select("direction, message, ai_response")
+    .eq("sender_id", senderId)
+    .eq("channel", channel)
+    .order("created_at", { ascending: false })
+    .limit(5);
+
+  const historyMessages = (history || []).reverse().flatMap(h => {
+    const msgs = [];
+    if (h.direction === "inbound") msgs.push({ role: "user", content: h.message });
+    if (h.ai_response) msgs.push({ role: "assistant", content: h.ai_response });
+    return msgs;
+  });
+
+  // Search knowledge base for relevant evidence
+  let evidenceBlock = "";
+  try {
+    const vector = await embed(message.trim());
+    const matches = await searchWithBoost(vector, message);
+    const quotes = extractQuotes(matches, message).slice(0, 5);
+    if (quotes.length) {
+      evidenceBlock = "\n\nEVIDENCE:\n" + quotes.map((q, i) => {
+        const attr = q.speaker !== "unknown" ? `${q.speaker} on ${q.displayName}` : q.displayName;
+        return `[${i + 1}] ${attr}: "${q.text.substring(0, 500)}"`;
+      }).join("\n");
+    }
+  } catch (err) {
+    console.error("[CONVERSE] Evidence search failed:", err.message);
+  }
+
+  // Detect buying intent
+  const lowerMsg = message.toLowerCase();
+  const hasBuyingIntent = BUYING_INTENT_KEYWORDS.some(kw => lowerMsg.includes(kw));
+  const intentNote = hasBuyingIntent
+    ? "\n\n[SYSTEM: This person is showing buying intent. Naturally suggest they apply at forgedbyfreedom.com/apply — don't be pushy, but make it easy for them.]"
+    : "";
+
+  // Build messages
+  const chatMessages = [
+    { role: "system", content: CONVERSE_SYSTEM_PROMPT + evidenceBlock + intentNote },
+    ...historyMessages,
+    { role: "user", content: message }
+  ];
+
+  const aiReply = await chat(chatMessages, 0.7);
+
+  // Save outbound response
+  await supabase.from("conversations").insert({
+    channel, sender_id: senderId, sender_name: "Coach Bryan",
+    direction: "outbound", message: aiReply, ai_response: aiReply,
+    lead_id: leadId || null
+  });
+
+  // Also update the inbound record with the AI response
+  // (find the most recent inbound from this sender)
+  const { data: lastInbound } = await supabase
+    .from("conversations")
+    .select("id")
+    .eq("sender_id", senderId)
+    .eq("channel", channel)
+    .eq("direction", "inbound")
+    .order("created_at", { ascending: false })
+    .limit(1);
+
+  if (lastInbound?.[0]) {
+    await supabase.from("conversations")
+      .update({ ai_response: aiReply })
+      .eq("id", lastInbound[0].id);
+  }
+
+  // Push notification
+  const ntfyTopic = process.env.NTFY_TOPIC;
+  if (ntfyTopic) {
+    fetch(`https://ntfy.sh/${ntfyTopic}`, {
+      method: "POST",
+      headers: {
+        "Title": `New ${channel} message`,
+        "Priority": hasBuyingIntent ? "high" : "default",
+        "Tags": hasBuyingIntent ? "money_mouth_face,fire" : "speech_balloon",
+        "Click": "https://forged-by-freedom-api-nm4f.onrender.com/admin"
+      },
+      body: `From: ${senderName || senderId}\n${message.substring(0, 200)}`
+    }).catch(err => console.error("[NTFY] Error:", err.message));
+  }
+
+  return aiReply;
+}
+
+// POST /api/converse — universal auto-reply endpoint
+app.post("/api/converse", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  const { message, sender_id, sender_name, channel = "web" } = req.body;
+  if (!message || !sender_id) {
+    return res.status(400).json({ error: "message and sender_id are required" });
+  }
+
+  try {
+    const reply = await converseInternal({
+      message, senderId: sender_id, senderName: sender_name, channel
+    });
+    res.json({ reply, channel });
+  } catch (err) {
+    console.error("[CONVERSE] Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /api/contact — replaces Formspree, routes through AI
+app.post("/api/contact", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  const { name, email, message } = req.body;
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "name, email, and message are required" });
+  }
+
+  try {
+    // Check if this email already has a lead record
+    const { data: existingLead } = await supabase
+      .from("leads")
+      .select("id")
+      .eq("email", email)
+      .limit(1);
+
+    let leadId = existingLead?.[0]?.id || null;
+
+    // Create a basic lead if new email
+    if (!leadId) {
+      const { data: newLead } = await supabase.from("leads").insert({
+        name, email, phone: "—", status: "new",
+        referral_source: "contact_form", disclaimer_acknowledged: true
+      }).select("id").single();
+      leadId = newLead?.id || null;
+    }
+
+    const reply = await converseInternal({
+      message, senderId: email, senderName: name, channel: "contact_form", leadId
+    });
+
+    console.log(`[CONTACT] From: ${name} (${email})`);
+    res.json({
+      status: "ok",
+      message: "Thanks for reaching out! Coach Bryan will follow up soon.",
+      ai_reply: reply
+    });
+  } catch (err) {
+    console.error("[CONTACT] Error:", err);
+    res.status(500).json({ error: "Failed to process contact form" });
+  }
+});
+
+// POST /api/sms/inbound — Twilio SMS webhook
+app.post("/api/sms/inbound", async (req, res) => {
+  const { Body: body, From: from, FromCity, FromState } = req.body;
+
+  if (!body || !from) {
+    return res.status(400).send("<Response><Message>Invalid request</Message></Response>");
+  }
+
+  try {
+    const senderName = [FromCity, FromState].filter(Boolean).join(", ") || from;
+    const reply = await converseInternal({
+      message: body, senderId: from, senderName, channel: "sms"
+    });
+
+    // Respond with TwiML
+    const twiml = `<?xml version="1.0" encoding="UTF-8"?><Response><Message>${reply.replace(/[<>&]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' })[c])}</Message></Response>`;
+    res.set("Content-Type", "text/xml");
+    res.send(twiml);
+  } catch (err) {
+    console.error("[SMS] Error:", err);
+    res.set("Content-Type", "text/xml");
+    res.send('<Response><Message>Sorry, I hit a snag. Try again in a moment.</Message></Response>');
+  }
+});
+
+// ─── Admin: List Conversations ───────────────────────────
+app.get("/api/conversations", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { data, error } = await supabase
+      .from("conversations")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(200);
+
+    if (error) return res.status(500).json({ error: error.message });
+
+    // Group by sender_id for thread view
+    const threads = {};
+    for (const msg of (data || []).reverse()) {
+      const key = msg.sender_id;
+      if (!threads[key]) {
+        threads[key] = {
+          sender_id: msg.sender_id,
+          sender_name: msg.sender_name,
+          channel: msg.channel,
+          messages: [],
+          last_message_at: msg.created_at
+        };
+      }
+      threads[key].messages.push(msg);
+      threads[key].last_message_at = msg.created_at;
+      if (msg.sender_name && msg.sender_name !== "Coach Bryan") {
+        threads[key].sender_name = msg.sender_name;
+      }
+    }
+
+    const threadList = Object.values(threads).sort(
+      (a, b) => new Date(b.last_message_at) - new Date(a.last_message_at)
+    );
+
+    res.json({ threads: threadList, total: threadList.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Content Generation Engine ──────────────────────────
+const PLATFORM_PROMPTS = {
+  instagram: {
+    maxWords: 220,
+    instruction: `Write an Instagram post (150-220 words). Start with a strong hook that stops the scroll. Use short paragraphs and line breaks. End with a CTA: "Link in bio to apply for coaching → forgedbyfreedom.com/apply". Include 15-20 relevant hashtags on a separate line at the end. Tone: confident, direct, like a coach talking to his athletes.`
+  },
+  facebook: {
+    maxWords: 400,
+    instruction: `Write a Facebook post (250-400 words). Educational or narrative format. Tell a story or break down a concept. Conversational but authoritative. End with: "Ready for a real plan? Apply at forgedbyfreedom.com/apply". No hashtags.`
+  },
+  linkedin: {
+    maxWords: 500,
+    instruction: `Write a LinkedIn post (300-500 words). Professional and science-forward. Lead with data or a counterintuitive insight. Include relevant research citations from the evidence. End with a professional CTA to forgedbyfreedom.com. No hashtags.`
+  },
+  email: {
+    maxWords: 600,
+    instruction: `Write a marketing email. First line: "Subject: [compelling subject line]". Then the body (400-600 words). Personal tone, like writing to a friend who asked for advice. Include one clear CTA button text: "Apply for Coaching" linking to forgedbyfreedom.com/apply. Sign off as Coach Bryan.`
+  },
+  blog: {
+    maxWords: 2000,
+    instruction: `Write a blog article (1200-2000 words). Include an H1 title, H2 subheadings, and H3 sub-sections where appropriate. Cite expert sources from the evidence with their names and shows. Include scientific mechanisms and practical protocols. End with a section about how Forged by Freedom can help and a CTA to apply. Format in clean HTML.`
+  },
+  sms: {
+    maxWords: 30,
+    instruction: `Write an SMS message (140-160 characters MAX). Punchy, direct, one clear message. Include a short CTA. Example tone: "Your recomp protocol is waiting. Apply now → forgedbyfreedom.com/apply"`
+  }
+};
+
+app.post("/api/content/generate", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.body.key !== process.env.ADMIN_KEY && req.headers["x-api-key"] !== process.env.FBF_API_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  const { platform, content_type = "post", topic, tone = "coach" } = req.body;
+  if (!platform || !topic) {
+    return res.status(400).json({ error: "platform and topic are required" });
+  }
+
+  const platformConfig = PLATFORM_PROMPTS[platform];
+  if (!platformConfig) {
+    return res.status(400).json({ error: `Invalid platform. Choose: ${Object.keys(PLATFORM_PROMPTS).join(", ")}` });
+  }
+
+  try {
+    // Search knowledge base for supporting evidence
+    const vector = await embed(topic);
+    const matches = await searchWithBoost(vector, topic);
+    const quotes = extractQuotes(matches, topic).slice(0, 8);
+
+    const evidence = quotes.length
+      ? "\n\nSUPPORTING EVIDENCE (use these to back up your points):\n" +
+        quotes.map((q, i) => {
+          const attr = q.speaker !== "unknown" ? `${q.speaker} on ${q.displayName}` : q.displayName;
+          return `[${i + 1}] ${attr}: "${q.text.substring(0, 400)}"`;
+        }).join("\n")
+      : "";
+
+    const systemPrompt = `You are Coach Bryan, creating content for Forged by Freedom's ${platform} account. Topic: "${topic}". Tone: ${tone}.
+
+${platformConfig.instruction}
+
+RULES:
+- Write as Coach Bryan — confident, knowledgeable, direct
+- NEVER lecture about PED safety or suggest "natural alternatives"
+- Reference expert sources naturally when evidence is provided
+- ThinkBig = Scott McNally/Dave Crosland/Skipp Hill; RXMuscle = Dave Palumbo; Anabolic Bodybuilding = Paul Barnett
+- Always drive toward forgedbyfreedom.com/apply as the CTA${evidence}`;
+
+    const content = await chat([
+      { role: "system", content: systemPrompt },
+      { role: "user", content: `Create a ${platform} ${content_type} about: ${topic}` }
+    ], 0.8);
+
+    // Extract hashtags if Instagram
+    let hashtags = null;
+    if (platform === "instagram") {
+      const hashtagMatch = content.match(/#[\w]+/g);
+      hashtags = hashtagMatch || [];
+    }
+
+    // Extract subject line if email
+    let subjectLine = null;
+    if (platform === "email") {
+      const subjectMatch = content.match(/^Subject:\s*(.+)$/m);
+      subjectLine = subjectMatch?.[1]?.trim() || null;
+    }
+
+    // Save to content_queue
+    const { data, error } = await supabase.from("content_queue").insert({
+      platform, content_type, topic, tone, body: content,
+      hashtags, subject_line: subjectLine, status: "pending"
+    }).select().single();
+
+    if (error) {
+      console.error("[CONTENT] Supabase error:", error);
+      return res.status(500).json({ error: "Failed to save content" });
+    }
+
+    // Push notification
+    const ntfyTopic = process.env.NTFY_TOPIC;
+    if (ntfyTopic) {
+      fetch(`https://ntfy.sh/${ntfyTopic}`, {
+        method: "POST",
+        headers: {
+          "Title": "New content ready for review",
+          "Tags": "memo,sparkles",
+          "Click": "https://forged-by-freedom-api-nm4f.onrender.com/admin"
+        },
+        body: `${platform.toUpperCase()}: ${topic}\nStatus: Pending approval`
+      }).catch(err => console.error("[NTFY] Error:", err.message));
+    }
+
+    console.log(`[CONTENT] Generated ${platform} content: "${topic}"`);
+    res.json({ status: "pending", content: data });
+
+  } catch (err) {
+    console.error("[CONTENT] Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/content — list content queue
+app.get("/api/content", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    let query = supabase.from("content_queue").select("*").order("created_at", { ascending: false });
+    if (req.query.status) query = query.eq("status", req.query.status);
+    if (req.query.platform) query = query.eq("platform", req.query.platform);
+    query = query.limit(100);
+
+    const { data, error } = await query;
+    if (error) return res.status(500).json({ error: error.message });
+
+    res.json({ content: data, total: data.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// PATCH /api/content/:id/approve
+app.patch("/api/content/:id/approve", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.body.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  const { edited_body, scheduled_for } = req.body;
+
+  try {
+    const update = { status: "approved" };
+    if (edited_body) update.edited_body = edited_body;
+    if (scheduled_for) update.scheduled_for = scheduled_for;
+
+    const { data, error } = await supabase.from("content_queue")
+      .update(update).eq("id", req.params.id).select().single();
+
+    if (error) return res.status(500).json({ error: error.message });
+
+    // Auto-publish blog posts on approval
+    if (data.platform === "blog") {
+      try {
+        const blogBody = data.edited_body || data.body;
+        const titleMatch = blogBody.match(/<h1[^>]*>(.*?)<\/h1>/i) || blogBody.match(/^#\s+(.+)$/m);
+        const title = titleMatch?.[1] || data.topic || "Untitled";
+
+        const publishRes = await fetch(`http://localhost:${PORT}/publish-blog`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "x-api-key": process.env.FBF_API_KEY },
+          body: JSON.stringify({ title, content: blogBody, tags: ["ai-generated"] })
+        });
+
+        const publishResult = await publishRes.json();
+        await supabase.from("content_queue")
+          .update({ status: "published", published_at: new Date().toISOString(), publish_result: publishResult })
+          .eq("id", req.params.id);
+
+        return res.json({ status: "published", publish_result: publishResult });
+      } catch (pubErr) {
+        console.error("[CONTENT] Blog publish failed:", pubErr.message);
+      }
+    }
+
+    res.json({ status: "approved", content: data });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// PATCH /api/content/:id/reject
+app.patch("/api/content/:id/reject", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.body.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { error } = await supabase.from("content_queue")
+      .update({ status: "rejected" }).eq("id", req.params.id);
+    if (error) return res.status(500).json({ error: error.message });
+    res.json({ status: "rejected" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /api/content/:id/publish — manual publish trigger
+app.post("/api/content/:id/publish", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  const authKey = req.body.key || req.headers["x-api-key"];
+  if (authKey !== process.env.ADMIN_KEY && authKey !== process.env.FBF_API_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  try {
+    const { data: item, error } = await supabase.from("content_queue")
+      .select("*").eq("id", req.params.id).single();
+
+    if (error || !item) return res.status(404).json({ error: "Content not found" });
+
+    const body = item.edited_body || item.body;
+
+    // Blog → publish via /publish-blog
+    if (item.platform === "blog") {
+      const titleMatch = body.match(/<h1[^>]*>(.*?)<\/h1>/i) || body.match(/^#\s+(.+)$/m);
+      const title = titleMatch?.[1] || item.topic || "Untitled";
+
+      const publishRes = await fetch(`http://localhost:${PORT}/publish-blog`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-api-key": process.env.FBF_API_KEY },
+        body: JSON.stringify({ title, content: body, tags: ["ai-generated"] })
+      });
+      const publishResult = await publishRes.json();
+
+      await supabase.from("content_queue")
+        .update({ status: "published", published_at: new Date().toISOString(), publish_result: publishResult })
+        .eq("id", req.params.id);
+
+      return res.json({ status: "published", platform: "blog", publish_result: publishResult });
+    }
+
+    // Other platforms: mark as published (external APIs added in Phase 4)
+    await supabase.from("content_queue")
+      .update({ status: "published", published_at: new Date().toISOString(), publish_result: { note: "Manual publish — external API pending" } })
+      .eq("id", req.params.id);
+
+    res.json({ status: "published", platform: item.platform, note: "Content marked as published. External API delivery coming in Phase 4." });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

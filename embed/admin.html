@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FBF Admin — Lead Management</title>
+<title>FBF Admin</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -11,6 +11,7 @@
   --border:#2a2a2a;--accent:#ff6a00;--accent-glow:rgba(255,106,0,.15);
   --text:#e8e8e8;--text-dim:#aaa;--text-muted:#666;
   --success:#22c55e;--warning:#f59e0b;--danger:#ef4444;
+  --info:#3b82f6;
   --radius:12px;--radius-sm:8px;
 }
 html,body{min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
@@ -24,13 +25,22 @@ body{padding:0}
 .login-box button{width:100%;padding:12px;background:linear-gradient(135deg,var(--accent),#e05500);color:#fff;font-size:15px;font-weight:700;border:none;border-radius:var(--radius);cursor:pointer}
 .login-box .error{color:var(--danger);font-size:13px;margin-top:8px;display:none}
 
-.admin{display:none;max-width:900px;margin:0 auto;padding:24px 20px}
+.admin{display:none;max-width:960px;margin:0 auto;padding:24px 20px}
 .admin.visible{display:block}
 
-.admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
 .admin-header h1{font-size:22px;font-weight:800;color:var(--accent)}
 .admin-header .refresh-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text-dim);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;font-size:13px}
 .admin-header .refresh-btn:hover{border-color:var(--accent);color:var(--text)}
+
+/* Tabs */
+.tab-bar{display:flex;gap:4px;margin-bottom:24px;border-bottom:2px solid var(--border);padding-bottom:0}
+.tab-btn{background:none;border:none;color:var(--text-muted);font-size:14px;font-weight:600;padding:10px 18px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s}
+.tab-btn:hover{color:var(--text-dim)}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-btn .badge{display:inline-block;background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:10px;margin-left:6px;vertical-align:middle}
+.tab-content{display:none}
+.tab-content.active{display:block}
 
 .stats-row{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap}
 .stat-card{flex:1;min-width:100px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;text-align:center}
@@ -54,6 +64,8 @@ body{padding:0}
 .badge-new{background:rgba(245,158,11,.15);color:var(--warning)}
 .badge-approved{background:rgba(34,197,94,.15);color:var(--success)}
 .badge-rejected{background:rgba(239,68,68,.15);color:var(--danger)}
+.badge-pending{background:rgba(245,158,11,.15);color:var(--warning)}
+.badge-published{background:rgba(59,130,246,.15);color:var(--info)}
 
 .lead-details{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:13px;margin-bottom:14px}
 .lead-details dt{color:var(--text-muted);font-weight:600}
@@ -68,9 +80,58 @@ body{padding:0}
 .btn-reject{background:var(--danger);color:#fff}
 .btn-copy-link{background:var(--surface2);border:1px solid var(--border);color:var(--text-dim)}
 .btn-copy-link:hover{border-color:var(--accent);color:var(--text)}
+.btn-publish{background:var(--info);color:#fff}
+.btn-regen{background:var(--surface2);border:1px solid var(--border);color:var(--text-dim)}
+.btn-regen:hover{border-color:var(--accent);color:var(--text)}
 .lead-actions button:disabled{opacity:.4;cursor:not-allowed}
 
 .empty{text-align:center;padding:40px;color:var(--text-muted);font-size:14px}
+
+/* Conversations */
+.thread-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;cursor:pointer;transition:border-color .2s}
+.thread-card:hover{border-color:#444}
+.thread-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.thread-name{font-size:16px;font-weight:700}
+.channel-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.channel-sms{background:rgba(59,130,246,.15);color:var(--info)}
+.channel-contact_form{background:rgba(34,197,94,.15);color:var(--success)}
+.channel-email{background:rgba(168,85,247,.15);color:#a855f7}
+.channel-web{background:rgba(255,106,0,.15);color:var(--accent)}
+.channel-instagram_dm{background:rgba(236,72,153,.15);color:#ec4899}
+.channel-facebook_dm{background:rgba(59,130,246,.15);color:var(--info)}
+.thread-preview{font-size:13px;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thread-time{font-size:11px;color:var(--text-muted)}
+
+.thread-detail{display:none;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px}
+.thread-detail.open{display:block}
+.msg-bubble{padding:10px 14px;border-radius:var(--radius-sm);margin-bottom:8px;font-size:13px;line-height:1.5;max-width:85%}
+.msg-inbound{background:var(--surface2);border:1px solid var(--border);margin-right:auto}
+.msg-outbound{background:rgba(255,106,0,.1);border:1px solid rgba(255,106,0,.2);margin-left:auto}
+.msg-sender{font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px}
+.msg-time{font-size:10px;color:var(--text-muted);margin-top:4px}
+
+/* Content Queue */
+.content-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px}
+.content-card.status-pending{border-left:4px solid var(--warning)}
+.content-card.status-approved{border-left:4px solid var(--success)}
+.content-card.status-rejected{border-left:4px solid var(--danger)}
+.content-card.status-published{border-left:4px solid var(--info)}
+.content-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.content-topic{font-size:16px;font-weight:700}
+.content-meta{font-size:12px;color:var(--text-muted);margin-bottom:12px}
+.content-body{font-size:13px;color:var(--text-dim);line-height:1.6;padding:12px 14px;background:var(--surface2);border-radius:var(--radius-sm);margin-bottom:14px;white-space:pre-wrap;max-height:300px;overflow-y:auto}
+.content-body textarea{width:100%;min-height:200px;background:transparent;border:none;color:var(--text-dim);font-size:13px;line-height:1.6;resize:vertical;outline:none;font-family:inherit}
+.char-count{font-size:11px;color:var(--text-muted);text-align:right;margin-top:4px}
+.content-hashtags{font-size:12px;color:var(--info);margin-bottom:10px}
+
+/* Generate Form */
+.generate-form{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:24px}
+.generate-form h3{font-size:16px;font-weight:700;color:var(--accent);margin-bottom:14px}
+.form-row{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.form-row select,.form-row input{flex:1;min-width:150px;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:13px;padding:10px 14px;outline:none}
+.form-row select:focus,.form-row input:focus{border-color:var(--accent)}
+.form-row button{padding:10px 24px;background:linear-gradient(135deg,var(--accent),#e05500);color:#fff;font-size:13px;font-weight:700;border:none;border-radius:var(--radius-sm);cursor:pointer;white-space:nowrap}
+.form-row button:disabled{opacity:.5;cursor:not-allowed}
 
 .toast{position:fixed;bottom:20px;right:20px;background:var(--success);color:#fff;padding:12px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;display:none;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,.4)}
 .toast.visible{display:block}
@@ -80,6 +141,8 @@ body{padding:0}
   .stats-row{gap:8px}
   .stat-card{min-width:70px;padding:10px}
   .stat-card .num{font-size:22px}
+  .tab-btn{padding:8px 12px;font-size:12px}
+  .form-row{flex-direction:column}
 }
 </style>
 </head>
@@ -98,25 +161,84 @@ body{padding:0}
 <!-- ADMIN PANEL -->
 <div class="admin" id="adminPanel">
   <div class="admin-header">
-    <h1>Lead Management</h1>
-    <button class="refresh-btn" onclick="loadLeads()">Refresh</button>
+    <h1>FBF Admin</h1>
+    <button class="refresh-btn" onclick="refreshCurrentTab()">Refresh</button>
   </div>
 
-  <div class="stats-row">
-    <div class="stat-card"><div class="num" id="statTotal">-</div><div class="label">Total</div></div>
-    <div class="stat-card"><div class="num" id="statNew">-</div><div class="label">New</div></div>
-    <div class="stat-card"><div class="num" id="statApproved">-</div><div class="label">Approved</div></div>
-    <div class="stat-card"><div class="num" id="statRejected">-</div><div class="label">Rejected</div></div>
+  <!-- Tab Bar -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="leads" onclick="switchTab('leads')">Leads <span class="badge" id="leadsCount">0</span></button>
+    <button class="tab-btn" data-tab="conversations" onclick="switchTab('conversations')">Conversations <span class="badge" id="convosCount">0</span></button>
+    <button class="tab-btn" data-tab="content" onclick="switchTab('content')">Content <span class="badge" id="contentCount">0</span></button>
   </div>
 
-  <div class="filter-row">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="new">New</button>
-    <button class="filter-btn" data-filter="approved">Approved</button>
-    <button class="filter-btn" data-filter="rejected">Rejected</button>
+  <!-- LEADS TAB -->
+  <div class="tab-content active" id="tab-leads">
+    <div class="stats-row">
+      <div class="stat-card"><div class="num" id="statTotal">-</div><div class="label">Total</div></div>
+      <div class="stat-card"><div class="num" id="statNew">-</div><div class="label">New</div></div>
+      <div class="stat-card"><div class="num" id="statApproved">-</div><div class="label">Approved</div></div>
+      <div class="stat-card"><div class="num" id="statRejected">-</div><div class="label">Rejected</div></div>
+    </div>
+
+    <div class="filter-row" id="leadFilters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="new">New</button>
+      <button class="filter-btn" data-filter="approved">Approved</button>
+      <button class="filter-btn" data-filter="rejected">Rejected</button>
+    </div>
+
+    <div id="leadsContainer"></div>
   </div>
 
-  <div id="leadsContainer"></div>
+  <!-- CONVERSATIONS TAB -->
+  <div class="tab-content" id="tab-conversations">
+    <div class="filter-row" id="convoFilters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sms">SMS</button>
+      <button class="filter-btn" data-filter="contact_form">Contact</button>
+      <button class="filter-btn" data-filter="email">Email</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+    </div>
+    <div id="convosContainer"></div>
+  </div>
+
+  <!-- CONTENT TAB -->
+  <div class="tab-content" id="tab-content">
+    <!-- Generate Form -->
+    <div class="generate-form">
+      <h3>Generate Content</h3>
+      <div class="form-row">
+        <select id="genPlatform">
+          <option value="instagram">Instagram</option>
+          <option value="facebook">Facebook</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="email">Email</option>
+          <option value="blog">Blog</option>
+          <option value="sms">SMS</option>
+        </select>
+        <select id="genTone">
+          <option value="coach">Coach</option>
+          <option value="educational">Educational</option>
+          <option value="motivational">Motivational</option>
+          <option value="science">Science-Forward</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <input type="text" id="genTopic" placeholder="Topic (e.g., retatrutide recomp protocol)">
+        <button id="genBtn" onclick="generateContent()">Generate</button>
+      </div>
+    </div>
+
+    <div class="filter-row" id="contentFilters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="approved">Approved</button>
+      <button class="filter-btn" data-filter="published">Published</button>
+      <button class="filter-btn" data-filter="rejected">Rejected</button>
+    </div>
+    <div id="contentContainer"></div>
+  </div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -128,9 +250,14 @@ const API_BASE = window.location.origin.includes('localhost')
 
 let adminKey = '';
 let allLeads = [];
-let currentFilter = 'all';
+let allThreads = [];
+let allContent = [];
+let currentTab = 'leads';
+let leadFilter = 'all';
+let convoFilter = 'all';
+let contentFilter = 'all';
 
-// Login
+// ─── Login ───────────────────────────────
 document.getElementById('keyInput').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
 
 function doLogin() {
@@ -141,13 +268,14 @@ function doLogin() {
       document.getElementById('loginScreen').style.display = 'none';
       document.getElementById('adminPanel').classList.add('visible');
       localStorage.setItem('fbf_admin_key', adminKey);
+      loadConversations();
+      loadContent();
     } else {
       document.getElementById('loginError').style.display = 'block';
     }
   });
 }
 
-// Auto-login from localStorage
 const savedKey = localStorage.getItem('fbf_admin_key');
 if (savedKey) {
   adminKey = savedKey;
@@ -155,16 +283,31 @@ if (savedKey) {
     if (ok) {
       document.getElementById('loginScreen').style.display = 'none';
       document.getElementById('adminPanel').classList.add('visible');
+      loadConversations();
+      loadContent();
     }
   });
 }
 
-// Filters
-document.querySelectorAll('.filter-btn').forEach(btn => {
+// ─── Tabs ────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === 'tab-' + tab));
+}
+
+function refreshCurrentTab() {
+  if (currentTab === 'leads') loadLeads();
+  else if (currentTab === 'conversations') loadConversations();
+  else if (currentTab === 'content') loadContent();
+}
+
+// ─── Leads ───────────────────────────────
+document.querySelectorAll('#leadFilters .filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#leadFilters .filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentFilter = btn.dataset.filter;
+    leadFilter = btn.dataset.filter;
     renderLeads();
   });
 });
@@ -175,12 +318,11 @@ async function loadLeads() {
     if (!res.ok) return false;
     const data = await res.json();
     allLeads = data.leads || [];
+    document.getElementById('leadsCount').textContent = allLeads.filter(l => l.status === 'new').length || allLeads.length;
     updateStats();
     renderLeads();
     return true;
-  } catch (err) {
-    return false;
-  }
+  } catch { return false; }
 }
 
 function updateStats() {
@@ -192,12 +334,9 @@ function updateStats() {
 
 function renderLeads() {
   const container = document.getElementById('leadsContainer');
-  const filtered = currentFilter === 'all' ? allLeads : allLeads.filter(l => l.status === currentFilter);
+  const filtered = leadFilter === 'all' ? allLeads : allLeads.filter(l => l.status === leadFilter);
 
-  if (!filtered.length) {
-    container.innerHTML = '<div class="empty">No leads found</div>';
-    return;
-  }
+  if (!filtered.length) { container.innerHTML = '<div class="empty">No leads found</div>'; return; }
 
   container.innerHTML = filtered.map(lead => {
     const date = new Date(lead.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
@@ -223,42 +362,240 @@ function renderLeads() {
       ${lead.what_held_back ? `<div class="lead-held-back"><strong>What held them back</strong>${esc(lead.what_held_back)}</div>` : ''}
       <div class="lead-actions">
         ${lead.status === 'new' ? `
-          <button class="btn-approve" onclick="updateStatus('${lead.id}','approved')">Approve</button>
-          <button class="btn-reject" onclick="updateStatus('${lead.id}','rejected')">Reject</button>
+          <button class="btn-approve" onclick="updateLeadStatus('${lead.id}','approved')">Approve</button>
+          <button class="btn-reject" onclick="updateLeadStatus('${lead.id}','rejected')">Reject</button>
         ` : ''}
         ${lead.status === 'approved' ? `
           <button class="btn-copy-link" onclick="copyLink('${onboardingLink}')">Copy Onboarding Link</button>
         ` : ''}
         ${lead.status === 'rejected' ? `
-          <button class="btn-approve" onclick="updateStatus('${lead.id}','approved')">Reconsider → Approve</button>
+          <button class="btn-approve" onclick="updateLeadStatus('${lead.id}','approved')">Reconsider</button>
         ` : ''}
       </div>
     </div>`;
   }).join('');
 }
 
-async function updateStatus(leadId, newStatus) {
+async function updateLeadStatus(leadId, newStatus) {
   try {
     const res = await fetch(API_BASE + '/api/leads/' + leadId + '/status', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status: newStatus, key: adminKey })
     });
-    if (res.ok) {
-      showToast(newStatus === 'approved' ? 'Lead approved' : 'Lead rejected');
-      await loadLeads();
-    } else {
-      const data = await res.json();
-      showToast(data.error || 'Failed to update', true);
-    }
-  } catch (err) {
-    showToast('Network error', true);
-  }
+    if (res.ok) { showToast(newStatus === 'approved' ? 'Lead approved' : 'Lead rejected'); await loadLeads(); }
+    else { const data = await res.json(); showToast(data.error || 'Failed', true); }
+  } catch { showToast('Network error', true); }
 }
 
-function copyLink(link) {
-  navigator.clipboard.writeText(link).then(() => showToast('Onboarding link copied'));
+// ─── Conversations ───────────────────────
+document.querySelectorAll('#convoFilters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#convoFilters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    convoFilter = btn.dataset.filter;
+    renderConversations();
+  });
+});
+
+async function loadConversations() {
+  try {
+    const res = await fetch(API_BASE + '/api/conversations?key=' + encodeURIComponent(adminKey));
+    if (!res.ok) return;
+    const data = await res.json();
+    allThreads = data.threads || [];
+    document.getElementById('convosCount').textContent = allThreads.length;
+    renderConversations();
+  } catch (e) { console.error('Load convos failed:', e); }
 }
+
+function renderConversations() {
+  const container = document.getElementById('convosContainer');
+  const filtered = convoFilter === 'all' ? allThreads : allThreads.filter(t => t.channel === convoFilter);
+
+  if (!filtered.length) { container.innerHTML = '<div class="empty">No conversations yet</div>'; return; }
+
+  container.innerHTML = filtered.map((thread, idx) => {
+    const lastMsg = thread.messages[thread.messages.length - 1];
+    const time = new Date(thread.last_message_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    const preview = lastMsg ? (lastMsg.direction === 'inbound' ? lastMsg.message : lastMsg.ai_response || lastMsg.message) : '';
+
+    const messagesHtml = thread.messages.map(m => {
+      const mTime = new Date(m.created_at).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      const isIn = m.direction === 'inbound';
+      return `<div class="msg-bubble ${isIn ? 'msg-inbound' : 'msg-outbound'}">
+        <div class="msg-sender">${isIn ? esc(m.sender_name || m.sender_id) : 'Coach Bryan'}</div>
+        ${esc(isIn ? m.message : (m.ai_response || m.message))}
+        <div class="msg-time">${mTime}</div>
+      </div>`;
+    }).join('');
+
+    return `<div class="thread-card" onclick="toggleThread('thread-${idx}')">
+      <div class="thread-header">
+        <div>
+          <span class="thread-name">${esc(thread.sender_name || thread.sender_id)}</span>
+          <span class="channel-badge channel-${thread.channel}">${thread.channel.replace('_', ' ')}</span>
+        </div>
+        <span class="thread-time">${time}</span>
+      </div>
+      <div class="thread-preview">${esc(preview.substring(0, 120))}</div>
+    </div>
+    <div class="thread-detail" id="thread-${idx}">${messagesHtml}</div>`;
+  }).join('');
+}
+
+function toggleThread(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// ─── Content Queue ───────────────────────
+document.querySelectorAll('#contentFilters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#contentFilters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    contentFilter = btn.dataset.filter;
+    renderContent();
+  });
+});
+
+async function loadContent() {
+  try {
+    const res = await fetch(API_BASE + '/api/content?key=' + encodeURIComponent(adminKey));
+    if (!res.ok) return;
+    const data = await res.json();
+    allContent = data.content || [];
+    document.getElementById('contentCount').textContent = allContent.filter(c => c.status === 'pending').length || allContent.length;
+    renderContent();
+  } catch (e) { console.error('Load content failed:', e); }
+}
+
+function renderContent() {
+  const container = document.getElementById('contentContainer');
+  const filtered = contentFilter === 'all' ? allContent : allContent.filter(c => c.status === contentFilter);
+
+  if (!filtered.length) { container.innerHTML = '<div class="empty">No content in queue</div>'; return; }
+
+  container.innerHTML = filtered.map(item => {
+    const date = new Date(item.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    const badgeClass = 'badge-' + item.status;
+    const body = item.edited_body || item.body;
+    const isEditable = item.status === 'pending' || item.status === 'approved';
+
+    return `<div class="content-card status-${item.status}">
+      <div class="content-header">
+        <div>
+          <div class="content-topic">${esc(item.topic || 'Untitled')}</div>
+          <div class="content-meta">${item.platform.toUpperCase()} · ${item.content_type} · ${item.tone} · ${date}</div>
+        </div>
+        <span class="lead-badge ${badgeClass}">${item.status}</span>
+      </div>
+      ${item.subject_line ? `<div style="font-size:13px;color:var(--accent);margin-bottom:8px">Subject: ${esc(item.subject_line)}</div>` : ''}
+      <div class="content-body" id="body-${item.id}">
+        ${isEditable
+          ? `<textarea onchange="markEdited('${item.id}')" id="textarea-${item.id}">${esc(body)}</textarea>`
+          : esc(body)}
+      </div>
+      <div class="char-count">${body.length} chars · ~${Math.round(body.split(/\s+/).length)} words</div>
+      ${item.hashtags?.length ? `<div class="content-hashtags">${item.hashtags.map(h => '#' + h.replace('#', '')).join(' ')}</div>` : ''}
+      <div class="lead-actions">
+        ${item.status === 'pending' ? `
+          <button class="btn-approve" onclick="approveContent('${item.id}')">Approve</button>
+          <button class="btn-reject" onclick="rejectContent('${item.id}')">Reject</button>
+          <button class="btn-regen" onclick="regenerateContent('${item.platform}','${esc(item.topic)}','${item.tone}')">Regenerate</button>
+        ` : ''}
+        ${item.status === 'approved' ? `
+          <button class="btn-publish" onclick="publishContent('${item.id}')">Publish Now</button>
+        ` : ''}
+        ${item.status === 'published' ? '<span style="font-size:12px;color:var(--success)">Published</span>' : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function generateContent() {
+  const platform = document.getElementById('genPlatform').value;
+  const tone = document.getElementById('genTone').value;
+  const topic = document.getElementById('genTopic').value.trim();
+  if (!topic) { showToast('Enter a topic', true); return; }
+
+  const btn = document.getElementById('genBtn');
+  btn.disabled = true;
+  btn.textContent = 'Generating...';
+
+  try {
+    const res = await fetch(API_BASE + '/api/content/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ platform, content_type: 'post', topic, tone, key: adminKey })
+    });
+    const data = await res.json();
+    if (res.ok) {
+      showToast('Content generated!');
+      document.getElementById('genTopic').value = '';
+      await loadContent();
+    } else {
+      showToast(data.error || 'Generation failed', true);
+    }
+  } catch { showToast('Network error', true); }
+  finally { btn.disabled = false; btn.textContent = 'Generate'; }
+}
+
+function markEdited(id) {
+  // Visual indicator that content has been edited
+  const card = document.querySelector(`#body-${id}`).closest('.content-card');
+  if (card) card.style.borderColor = 'var(--accent)';
+}
+
+async function approveContent(id) {
+  const textarea = document.getElementById('textarea-' + id);
+  const edited = textarea ? textarea.value : null;
+
+  try {
+    const res = await fetch(API_BASE + '/api/content/' + id + '/approve', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: adminKey, edited_body: edited })
+    });
+    if (res.ok) { showToast('Content approved!'); await loadContent(); }
+    else { const d = await res.json(); showToast(d.error || 'Failed', true); }
+  } catch { showToast('Network error', true); }
+}
+
+async function rejectContent(id) {
+  try {
+    const res = await fetch(API_BASE + '/api/content/' + id + '/reject', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: adminKey })
+    });
+    if (res.ok) { showToast('Content rejected'); await loadContent(); }
+    else { showToast('Failed', true); }
+  } catch { showToast('Network error', true); }
+}
+
+async function publishContent(id) {
+  try {
+    const res = await fetch(API_BASE + '/api/content/' + id + '/publish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: adminKey })
+    });
+    const data = await res.json();
+    if (res.ok) { showToast('Published!'); await loadContent(); }
+    else { showToast(data.error || 'Publish failed', true); }
+  } catch { showToast('Network error', true); }
+}
+
+function regenerateContent(platform, topic, tone) {
+  document.getElementById('genPlatform').value = platform;
+  document.getElementById('genTone').value = tone;
+  document.getElementById('genTopic').value = topic;
+  generateContent();
+}
+
+// ─── Utilities ───────────────────────────
+function copyLink(link) { navigator.clipboard.writeText(link).then(() => showToast('Link copied')); }
 
 function showToast(msg, isError) {
   const toast = document.getElementById('toast');
@@ -271,7 +608,7 @@ function showToast(msg, isError) {
 function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
 // Auto-refresh every 30s
-setInterval(() => { if (adminKey) loadLeads(); }, 30000);
+setInterval(() => { if (adminKey) refreshCurrentTab(); }, 30000);
 </script>
 </body>
 </html>
