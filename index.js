@@ -1180,6 +1180,11 @@ const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY)
   ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
   : null;
 
+// Service-role client for admin writes (bypasses RLS)
+const supabaseAdmin = (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
+  ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
+  : supabase;
+
 // ─── File Upload (Supabase Storage) ──────────────────────
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
@@ -1236,7 +1241,8 @@ app.post("/api/leads", async (req, res) => {
   const status = rejected ? "rejected" : "approved";
 
   try {
-    const { data, error } = await supabase.from("leads").insert({
+    const db = supabaseAdmin || supabase;
+    const { data, error } = await db.from("leads").insert({
       name, email, phone, primary_goal, struggle_duration, what_held_back,
       commitment_level, referral_source, disclaimer_acknowledged, status
     }).select().single();
