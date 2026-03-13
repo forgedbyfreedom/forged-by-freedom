@@ -3635,10 +3635,36 @@ app.post("/api/intake-with-program", async (req, res) => {
     if (leadErr || !lead) return res.status(404).json({ error: "Invalid onboarding link" });
     if (lead.status !== "approved") return res.status(403).json({ error: "Application not yet approved." });
 
-    // Save intake
-    
+    // Save intake — filter to only valid client_intakes columns
+    const INTAKE_COLUMNS = [
+      "full_name", "dob", "location", "emergency_contact", "physician",
+      "health_conditions", "medications", "surgeries_injuries", "physical_limitations",
+      "tobacco_use", "alcohol_use", "bloodwork_history", "last_panel", "trt_hrt",
+      "peptide_experience", "bloodwork_willing", "physician_referral_needed",
+      "training_years", "training_week", "training_history", "current_lifts", "cardio",
+      "equipment_access", "diet_habits", "meals_per_day", "tracks_macros", "macro_targets",
+      "food_restrictions", "daily_protein", "will_track_nutrition", "current_weight", "height",
+      "body_fat", "sleep_hours", "sleep_quality", "stress_level", "recovery_practices",
+      "goal_primary", "goal_24_weeks", "success_definition", "previous_attempts", "why_fbf",
+      "commitment_level", "support_system", "quit_factors", "additional_notes",
+      "disclaimer_acknowledged", "status",
+      // migration-002
+      "gender", "training_time_preference", "max_session_length", "training_days_available",
+      "exercise_restrictions", "meal_timing", "preferred_foods", "disliked_foods",
+      "water_intake", "caffeine_intake", "meal_prep", "occupation", "daily_activity_level",
+      "daily_steps", "travel_frequency", "current_supplements", "supplement_budget",
+      "peptide_interest", "compounds_interest", "goal_weight", "goal_body_fat",
+      "waiver_signature", "waiver_signed_date", "waiver_initials",
+      // migration-003
+      "bloodwork_file_urls", "body_scan_file_urls",
+    ];
+    const intakeData = { lead_id };
+    for (const col of INTAKE_COLUMNS) {
+      if (col in fields) intakeData[col] = fields[col];
+    }
+
     const { data: intake, error: intakeErr } = await supabase
-      .from("client_intakes").insert({ lead_id, ...fields }).select().single();
+      .from("client_intakes").insert(intakeData).select().single();
 
     if (intakeErr) {
       console.error("[INTAKE] Supabase error:", intakeErr);
