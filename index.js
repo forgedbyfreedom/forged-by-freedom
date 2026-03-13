@@ -2392,6 +2392,419 @@ app.get("/api/metabolic-map/:clientId", async (req, res) => {
   }
 });
 
+// ─── 16b. AI COACHING DECISION ENGINE ────────────────────
+// Analyzes recent check-in data and generates proactive coaching suggestions
+app.get('/api/client/:id/ai-insights', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Get client data
+    const { data: client } = await supabase
+      .from('clients')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (!client) return res.status(404).json({ error: 'Client not found' });
+
+    // Get last 14 check-ins
+    const { data: checkins } = await supabase
+      .from('checkins')
+      .select('*')
+      .eq('client_id', id)
+      .order('date', { ascending: false })
+      .limit(14);
+
+    if (!checkins || checkins.length < 3) {
+      return res.json({ insights: [], message: 'Need at least 3 check-ins for insights' });
+    }
+
+    const insights = [];
+
+    // Calculate averages for recent (last 3) vs prior (4-7)
+    const recent = checkins.slice(0, 3);
+    const prior = checkins.slice(3, 7);
+
+    const avg = (arr, key) => {
+      const vals = arr.filter(c => c[key] != null).map(c => parseFloat(c[key]));
+      return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+    };
+
+    // --- BODY TEMP / METABOLIC ---
+    const recentTemp = avg(recent, 'body_temp');
+    const priorTemp = avg(prior, 'body_temp');
+
+    if (recentTemp && recentTemp < 97.3) {
+      insights.push({
+        id: 'temp_critical',
+        category: 'metabolism',
+        severity: 'critical',
+        icon: '🌡️',
+        title: 'Metabolic Slowdown Detected',
+        summary: `Body temp averaging ${recentTemp.toFixed(1)}°F over last 3 days — below 97.3°F threshold.`,
+        action: 'Implement high-carb refeed: add 100-150g carbs from clean sources for 1-2 days. If temp doesn\'t recover within 48 hours, consider reducing deficit.',
+        metrics: { current: recentTemp.toFixed(1), threshold: '97.3', unit: '°F' }
+      });
+    } else if (recentTemp && priorTemp && recentTemp < priorTemp - 0.3) {
+      insights.push({
+        id: 'temp_declining',
+        category: 'metabolism',
+        severity: 'warning',
+        icon: '🌡️',
+        title: 'Body Temperature Trending Down',
+        summary: `Temp dropped from ${priorTemp.toFixed(1)}°F to ${recentTemp.toFixed(1)}°F — early sign of metabolic adaptation.`,
+        action: 'Monitor closely. If trend continues, add a moderate refeed day (+50-75g carbs). Prioritize sleep and stress management.',
+        metrics: { current: recentTemp.toFixed(1), previous: priorTemp.toFixed(1), unit: '°F' }
+      });
+    }
+
+    // --- SLEEP ---
+    const recentSleep = avg(recent, 'sleep_hours');
+    const priorSleep = avg(prior, 'sleep_hours');
+
+    if (recentSleep && recentSleep < 6) {
+      insights.push({
+        id: 'sleep_critical',
+        category: 'recovery',
+        severity: 'critical',
+        icon: '😴',
+        title: 'Sleep Critically Low',
+        summary: `Averaging ${recentSleep.toFixed(1)} hours — well below the 7+ hour minimum for recovery and hormone optimization.`,
+        action: 'Prioritize sleep immediately. Set a hard cutoff for screens 1 hour before bed. Consider magnesium glycinate 400mg before bed. Reduce training volume if sleep doesn\'t improve within 3 days.',
+        metrics: { current: recentSleep.toFixed(1), target: '7+', unit: 'hrs' }
+      });
+    } else if (recentSleep && priorSleep && recentSleep < priorSleep - 0.5) {
+      insights.push({
+        id: 'sleep_declining',
+        category: 'recovery',
+        severity: 'warning',
+        icon: '😴',
+        title: 'Sleep Quality Declining',
+        summary: `Sleep dropped from ${priorSleep.toFixed(1)}h to ${recentSleep.toFixed(1)}h average.`,
+        action: 'Review sleep hygiene. Consistent bed/wake times, reduce evening caffeine, consider ZMA or magnesium supplementation.',
+        metrics: { current: recentSleep.toFixed(1), previous: priorSleep.toFixed(1), unit: 'hrs' }
+      });
+    }
+
+    // --- STRESS ---
+    const recentStress = avg(recent, 'stress_level');
+    if (recentStress && recentStress > 7) {
+      insights.push({
+        id: 'stress_high',
+        category: 'recovery',
+        severity: 'warning',
+        icon: '🧠',
+        title: 'Elevated Stress Levels',
+        summary: `Stress averaging ${recentStress.toFixed(1)}/10 over last 3 days.`,
+        action: 'High cortisol impairs recovery and fat loss. Consider reducing training intensity, adding 10-min daily walks, or implementing breathing exercises. If life stress is the driver, a deload week may help.',
+        metrics: { current: recentStress.toFixed(1), threshold: '7', unit: '/10' }
+      });
+    }
+
+    // --- MOOD ---
+    const recentMood = avg(recent, 'mood_rating');
+    if (recentMood && recentMood < 4) {
+      insights.push({
+        id: 'mood_low',
+        category: 'recovery',
+        severity: 'warning',
+        icon: '😔',
+        title: 'Low Mood Detected',
+        summary: `Mood averaging ${recentMood.toFixed(1)}/10 — could indicate overtraining, undereating, or life stress.`,
+        action: 'Check if deficit is too aggressive. Consider a refeed or diet break. Low mood combined with poor sleep and high stress is a red flag for burnout — schedule a coach check-in.',
+        metrics: { current: recentMood.toFixed(1), threshold: '4', unit: '/10' }
+      });
+    }
+
+    // --- NUTRITION COMPLIANCE ---
+    const targetCals = client.target_calories;
+    const recentCals = avg(recent, 'calories');
+    if (targetCals && recentCals) {
+      const calCompliance = (recentCals / targetCals) * 100;
+      if (calCompliance < 80) {
+        insights.push({
+          id: 'cals_low',
+          category: 'nutrition',
+          severity: 'warning',
+          icon: '🍽️',
+          title: 'Under-Eating Detected',
+          summary: `Averaging ${Math.round(recentCals)} cals vs ${targetCals} target (${Math.round(calCompliance)}% compliance).`,
+          action: 'Consistently eating below target slows metabolism and impairs recovery. Focus on hitting your calorie target — undereating is not faster fat loss, it\'s metabolic damage.',
+          metrics: { current: Math.round(recentCals), target: targetCals, unit: 'cal' }
+        });
+      } else if (calCompliance > 115) {
+        insights.push({
+          id: 'cals_high',
+          category: 'nutrition',
+          severity: 'warning',
+          icon: '🍽️',
+          title: 'Calorie Overshoot',
+          summary: `Averaging ${Math.round(recentCals)} cals vs ${targetCals} target (${Math.round(calCompliance)}%).`,
+          action: 'Review portion sizes and tracking accuracy. Consider meal prepping to stay closer to targets.',
+          metrics: { current: Math.round(recentCals), target: targetCals, unit: 'cal' }
+        });
+      }
+    }
+
+    // --- PROTEIN ---
+    const targetProtein = client.target_protein;
+    const recentProtein = avg(recent, 'protein_g');
+    if (targetProtein && recentProtein && (recentProtein / targetProtein) < 0.85) {
+      insights.push({
+        id: 'protein_low',
+        category: 'nutrition',
+        severity: 'warning',
+        icon: '🥩',
+        title: 'Protein Below Target',
+        summary: `Averaging ${Math.round(recentProtein)}g vs ${targetProtein}g target.`,
+        action: 'Protein is non-negotiable for muscle preservation during a deficit. Add a protein shake or increase protein portions at each meal.',
+        metrics: { current: Math.round(recentProtein), target: targetProtein, unit: 'g' }
+      });
+    }
+
+    // --- STEPS ---
+    const targetSteps = client.target_steps;
+    const recentSteps = avg(recent, 'steps');
+    if (targetSteps && recentSteps && (recentSteps / targetSteps) < 0.7) {
+      insights.push({
+        id: 'steps_low',
+        category: 'activity',
+        severity: 'info',
+        icon: '🚶',
+        title: 'Step Count Below Target',
+        summary: `Averaging ${Math.round(recentSteps)} steps vs ${targetSteps} target.`,
+        action: 'NEAT (non-exercise activity) is a major driver of daily calorie burn. Add a 10-15 min walk after meals to close the gap.',
+        metrics: { current: Math.round(recentSteps), target: targetSteps, unit: 'steps' }
+      });
+    }
+
+    // --- TRAINING FREQUENCY ---
+    const trainingDays = recent.filter(c => c.training_done).length;
+    if (trainingDays === 0 && recent.length >= 3) {
+      insights.push({
+        id: 'no_training',
+        category: 'training',
+        severity: 'warning',
+        icon: '🏋️',
+        title: 'No Training Logged Recently',
+        summary: 'No training sessions logged in the last 3 check-ins.',
+        action: 'Consistency is key. Even a shorter session is better than skipping. If recovering from injury or illness, log it so we can adjust the program.',
+        metrics: { current: 0, target: 'Programmed', unit: 'sessions' }
+      });
+    }
+
+    // --- PERFORMANCE DECLINE ---
+    const recentPerf = avg(recent, 'performance_rating');
+    const priorPerf = avg(prior, 'performance_rating');
+    if (recentPerf && priorPerf && recentPerf < priorPerf - 1.5) {
+      insights.push({
+        id: 'performance_drop',
+        category: 'training',
+        severity: 'warning',
+        icon: '📉',
+        title: 'Performance Declining',
+        summary: `Training performance dropped from ${priorPerf.toFixed(1)} to ${recentPerf.toFixed(1)}/10.`,
+        action: 'Performance decline + any combination of poor sleep, high stress, or low temp = deload needed. Reduce volume 40-50% for one week while maintaining intensity.',
+        metrics: { current: recentPerf.toFixed(1), previous: priorPerf.toFixed(1), unit: '/10' }
+      });
+    }
+
+    // --- COMPOUND INSIGHT: DELOAD SIGNAL ---
+    const needsDeload = (recentTemp && recentTemp < 97.5) && (recentSleep && recentSleep < 6.5) && (recentPerf && recentPerf < 6);
+    if (needsDeload) {
+      insights.push({
+        id: 'deload_signal',
+        category: 'recovery',
+        severity: 'critical',
+        icon: '⚠️',
+        title: 'Multiple Recovery Signals — Deload Recommended',
+        summary: 'Low body temp + poor sleep + declining performance = classic overreaching pattern.',
+        action: 'Implement immediate deload: reduce training volume 40-50%, add refeed day, prioritize 8+ hours sleep for the next 5-7 days. Resume normal programming only when temp normalizes.',
+        metrics: { temp: recentTemp?.toFixed(1), sleep: recentSleep?.toFixed(1), performance: recentPerf?.toFixed(1) }
+      });
+    }
+
+    // --- SUPPLEMENT COMPLIANCE ---
+    const recentSuppComp = avg(recent, 'supplement_compliance');
+    if (recentSuppComp !== null && recentSuppComp < 60) {
+      insights.push({
+        id: 'supps_low',
+        category: 'adherence',
+        severity: 'info',
+        icon: '💊',
+        title: 'Supplement Compliance Dropping',
+        summary: `Only ${Math.round(recentSuppComp)}% supplement compliance over last 3 days.`,
+        action: 'Set daily reminders or use a pill organizer. Supplements like NAC and fish oil support liver health and inflammation — especially important if running compounds.',
+        metrics: { current: Math.round(recentSuppComp), target: 100, unit: '%' }
+      });
+    }
+
+    // Sort by severity: critical > warning > info
+    const severityOrder = { critical: 0, warning: 1, info: 2 };
+    insights.sort((a, b) => (severityOrder[a.severity] || 2) - (severityOrder[b.severity] || 2));
+
+    // Positive reinforcement if no issues
+    if (insights.length === 0) {
+      insights.push({
+        id: 'all_good',
+        category: 'overall',
+        severity: 'positive',
+        icon: '💪',
+        title: 'All Systems Strong',
+        summary: 'No concerning patterns detected. Keep doing what you\'re doing.',
+        action: 'Stay consistent. Your metrics are on track across the board.',
+        metrics: {}
+      });
+    }
+
+    res.json({ insights, checkin_count: checkins.length, analysis_window: '3-7 day comparison' });
+  } catch (err) {
+    console.error('AI insights error:', err);
+    res.status(500).json({ error: 'Failed to generate insights' });
+  }
+});
+
+// ─── 16c. PREDICTIVE PROGRESS MODELING ───────────────────
+// Calculates weight loss/gain rate and projects ETA to goal
+app.get('/api/client/:id/progress-projection', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Get client
+    const { data: client } = await supabase
+      .from('clients')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (!client) return res.status(404).json({ error: 'Client not found' });
+
+    // Get all check-ins with weight data (last 90 days)
+    const ninetyDaysAgo = new Date();
+    ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
+
+    const { data: checkins } = await supabase
+      .from('checkins')
+      .select('date, weight_lbs, calories, protein_g, steps, body_temp')
+      .eq('client_id', id)
+      .not('weight_lbs', 'is', null)
+      .gte('date', ninetyDaysAgo.toISOString().split('T')[0])
+      .order('date', { ascending: true });
+
+    if (!checkins || checkins.length < 5) {
+      return res.json({ projection: null, message: 'Need at least 5 weigh-ins for projection' });
+    }
+
+    // Get goal weight from intake or client record
+    const goalWeight = client.goal_weight || client.target_weight;
+    const currentWeight = checkins[checkins.length - 1].weight_lbs;
+    const startWeight = checkins[0].weight_lbs;
+
+    // Calculate weekly rate using linear regression
+    const weights = checkins.map((c, i) => {
+      const daysSinceStart = (new Date(c.date) - new Date(checkins[0].date)) / (1000 * 60 * 60 * 24);
+      return { x: daysSinceStart, y: parseFloat(c.weight_lbs) };
+    });
+
+    // Simple linear regression
+    const n = weights.length;
+    const sumX = weights.reduce((s, p) => s + p.x, 0);
+    const sumY = weights.reduce((s, p) => s + p.y, 0);
+    const sumXY = weights.reduce((s, p) => s + p.x * p.y, 0);
+    const sumX2 = weights.reduce((s, p) => s + p.x * p.x, 0);
+
+    const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX); // lbs per day
+    const intercept = (sumY - slope * sumX) / n;
+
+    const weeklyRate = slope * 7; // lbs per week
+    const totalDays = (new Date(checkins[checkins.length - 1].date) - new Date(checkins[0].date)) / (1000 * 60 * 60 * 24);
+    const totalChange = currentWeight - startWeight;
+
+    // Project future weights (next 12 weeks)
+    const projections = [];
+    const today = new Date();
+    for (let week = 1; week <= 12; week++) {
+      const projDate = new Date(today);
+      projDate.setDate(projDate.getDate() + week * 7);
+      const projWeight = currentWeight + (weeklyRate * week);
+      projections.push({
+        week,
+        date: projDate.toISOString().split('T')[0],
+        projected_weight: Math.round(projWeight * 10) / 10
+      });
+    }
+
+    // Calculate ETA to goal
+    let etaWeeks = null;
+    let etaDate = null;
+    let onTrack = null;
+
+    if (goalWeight) {
+      const remaining = currentWeight - goalWeight;
+      if (weeklyRate !== 0 && Math.sign(remaining) !== Math.sign(weeklyRate)) {
+        // Moving in right direction
+        etaWeeks = Math.abs(remaining / weeklyRate);
+        const etaDateObj = new Date(today);
+        etaDateObj.setDate(etaDateObj.getDate() + Math.round(etaWeeks * 7));
+        etaDate = etaDateObj.toISOString().split('T')[0];
+        onTrack = true;
+      } else if (weeklyRate === 0) {
+        onTrack = false; // stalled
+      } else {
+        onTrack = false; // moving wrong direction
+      }
+    }
+
+    // Determine phase assessment
+    let phase = 'unknown';
+    if (weeklyRate < -0.3) phase = 'cutting';
+    else if (weeklyRate > 0.3) phase = 'bulking';
+    else if (weeklyRate >= -0.3 && weeklyRate <= 0.3) phase = 'maintenance';
+
+    // Rate assessment
+    let rateAssessment = 'optimal';
+    if (phase === 'cutting') {
+      if (weeklyRate < -2.5) rateAssessment = 'too_aggressive';
+      else if (weeklyRate < -2.0) rateAssessment = 'aggressive';
+      else if (weeklyRate > -0.5) rateAssessment = 'slow';
+      else rateAssessment = 'optimal';
+    } else if (phase === 'bulking') {
+      if (weeklyRate > 1.5) rateAssessment = 'too_aggressive';
+      else if (weeklyRate > 1.0) rateAssessment = 'aggressive';
+      else rateAssessment = 'optimal';
+    }
+
+    // Historical weight data points for chart
+    const weightHistory = checkins.map(c => ({
+      date: c.date,
+      weight: parseFloat(c.weight_lbs)
+    }));
+
+    res.json({
+      projection: {
+        current_weight: currentWeight,
+        start_weight: startWeight,
+        goal_weight: goalWeight || null,
+        total_change: Math.round(totalChange * 10) / 10,
+        weekly_rate: Math.round(weeklyRate * 100) / 100,
+        daily_rate: Math.round(slope * 100) / 100,
+        phase,
+        rate_assessment: rateAssessment,
+        data_points: checkins.length,
+        tracking_days: Math.round(totalDays),
+        eta_weeks: etaWeeks ? Math.round(etaWeeks * 10) / 10 : null,
+        eta_date: etaDate,
+        on_track: onTrack,
+        projections,
+        weight_history: weightHistory
+      }
+    });
+  } catch (err) {
+    console.error('Progress projection error:', err);
+    res.status(500).json({ error: 'Failed to generate projection' });
+  }
+});
+
 // ─── 17. CONTEXT-AWARE AI COACH ─────────────────────────
 app.post("/api/coach-chat", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
@@ -2522,44 +2935,64 @@ const FBF_PROGRAMMING_RULES = `
 FORGED BY FREEDOM — CORE PROGRAMMING RULES
 These rules MUST be followed in every program generated.
 
-1. SIMPLICITY FIRST — Dumbbells over barbells when possible. Keep exercises accessible and safe. Machines and cables are fine. Only use barbells when the movement truly demands it (e.g., deadlifts, squats for advanced lifters). Default to dumbbell variations.
+EXERCISE SELECTION:
+- PRESSING movements: ALWAYS use dumbbells (DB bench press, DB incline press, DB OHP). Dumbbells allow natural joint tracking and unilateral balance.
+- COMPOUND PULLS & LEGS: Use barbells (barbell deadlift, barbell squat, barbell bent-over row, barbell RDL). These movements load better with a barbell.
+- ISOLATION & ACCESSORIES: Cables and machines are excellent (cable fly, lat pulldown, leg press, cable curl, face pull, etc.)
+- NEVER program "dumbbell deadlifts" — use barbell or trap bar for deadlifts.
+- Match exercises to the client's experience level. Goblet squat before barbell squat for beginners.
 
-2. PROGRESSIVE OVERLOAD — The #1 driver of growth. Every program must include a clear progression scheme: more weight, more reps, or more sets over time. Without progressive overload, nothing else matters.
+VOLUME & INTENSITY:
+- 5-6 exercises per training day MAXIMUM. Quality over quantity.
+- Compound movements: 3-4 sets. Isolation movements: 2-3 sets.
+- Most working sets at RIR 1-3. Beginners: RIR 3-4. Advanced: RIR 0-2 on key lifts.
+- Deload every 4-5 weeks. Reduce volume 40-50%, keep intensity moderate.
 
-3. EXERCISE SELECTION — Choose exercises that match the client's anatomy, injury history, and equipment. Stability before complexity. A goblet squat is better than a barbell squat if the client can't stabilize. Prioritize dumbbell presses, rows, lunges, RDLs, and machine work.
+PROGRESSIVE OVERLOAD:
+- The #1 driver of growth. Every program must include a clear progression scheme.
+- When client hits top of rep range for all sets → increase weight by 2.5-5 lbs next session.
+- Keep the same core movements for 4-8 weeks to track progress.
 
-4. TRAIN CLOSE TO FAILURE — Most working sets should be taken to 1-3 reps from failure (RIR 1-3). Not to failure on every set, but close enough to create a stimulus. Beginners: RIR 3-4. Intermediate: RIR 1-3. Advanced: RIR 0-2 on key sets.
-
-5. FATIGUE MANAGEMENT — Manage total weekly volume and intensity. Use deload weeks every 4-6 weeks. Watch for signs of overreaching: declining performance, poor sleep, low mood, elevated resting HR. When in doubt, pull back.
-
-6. VOLUME MATCHES RECOVERY — More is not always better. Match training volume to the client's recovery capacity (sleep, stress, nutrition, age, PED status). A stressed, sleep-deprived client needs LESS volume, not more.
-
-7. FREQUENCY DISTRIBUTION — Train each muscle group 2x per week minimum for hypertrophy. Upper/lower, push/pull/legs, or full body depending on available days. 3-day: full body. 4-day: upper/lower. 5-6 day: PPL or custom split.
-
-8. PROGRAM CONSISTENCY — Don't change exercises every week. Keep the same core movements for 4-8 weeks to track progress. Variation comes from rep ranges and load, not exercise swapping.
-
-9. EXECUTION QUALITY — Controlled eccentrics (2-3 sec), full ROM, no ego lifting. The rep should be earned, not survived. Quality over quantity always.
-
-10. FIT THE ATHLETE'S LIFE — The best program is the one they'll actually do. Match training days, session length, and complexity to their real schedule and experience. A perfect program they skip is worse than a simple one they crush.
+PROGRAM STRUCTURE:
+- 3-day: full body. 4-day: upper/lower. 5-day: chest-tris/legs/shoulders/back-bis/core or PPL+upper+lower.
+- Each muscle group hit 2x per week minimum for hypertrophy.
+- Controlled eccentrics (2-3 sec), full ROM, no ego lifting.
+- Include detailed execution cues in notes for EVERY exercise (not just "control the eccentric" — specify tempo, breathing, form cues, common mistakes to avoid).
 
 NUTRITION RULES:
-- Protein: 0.8-1.2g per pound of body weight (higher end for cutting, lower for bulking)
-- Calories: Based on TDEE calculation using activity level, adjusted for goal
+- Protein: 0.8-1.2g per pound of body weight (higher for cutting)
+- Provide SEPARATE macros for training days vs rest days (training days get more carbs)
 - For fat loss: 300-500 calorie deficit. Never crash diet.
-- For muscle gain: 200-400 calorie surplus. Lean bulk, not dirty bulk.
-- Carbs: Fill remaining calories after protein and fats. Prioritize around training.
+- For muscle gain: 200-400 calorie surplus. Lean bulk.
 - Fats: 0.3-0.4g per pound minimum for hormone health
-- Meal timing: Pre and post workout nutrition matters. Otherwise, eat when it fits your schedule.
-- Water: Minimum 0.5oz per pound of body weight daily.
+- Water: Minimum 0.5oz per pound of body weight daily
+- Include specific meal timing around training windows
 
-SUPPLEMENT BASELINE (adjust based on budget):
-- Creatine monohydrate: 5g daily (non-negotiable if budget allows)
-- Protein powder: As needed to hit daily protein target
-- Multivitamin: Daily
-- Fish oil / omega-3: 2-3g EPA+DHA daily
-- Vitamin D3: 2000-5000 IU daily (based on labs)
-- Magnesium glycinate: 200-400mg before bed
-- Optional: Ashwagandha for stress/cortisol, zinc if deficient
+METABOLIC MONITORING (REQUIRED IN EVERY PROGRAM):
+- Daily oral body temperature tracking upon waking (before food/drink/movement)
+- 97.8-98.6°F = optimal, stay the course
+- 97.3-97.7°F = mild metabolic slowdown, moderate refeed (+50-75g carbs)
+- <97.3°F for 3+ days = high-carb refeed mandatory (+100-150g carbs for 1-2 days)
+- Track weight, temp, sleep quality, energy, mood, stress daily
+
+PED/PEPTIDE PROTOCOL (REQUIRED when client reports compounds):
+- If the client reports ANY PEDs, peptides, GH, TRT, GLP-1 agonists, or other compounds:
+- List EACH compound with: name, dose, frequency, timing, purpose, and what to monitor
+- Include bloodwork monitoring recommendations specific to their stack
+- Include side effect awareness and intervention thresholds
+- This is EDUCATIONAL information for discussion with their physician
+- Frame as "Your Current Protocol" — we document and monitor, not prescribe
+
+CARDIO:
+- Include a week-by-week LISS treadmill progression chart (speed, incline, duration, HR target)
+- Calculate LISS HR target: (220 - age) × 0.55 to 0.65
+- Progress incline and duration gradually over the program duration
+
+RECOVERY:
+- Sleep recommendations (7-9 hrs)
+- Post-session stretching
+- Mention any recovery modalities they already use (sauna, cold plunge, etc.)
+- Weekly self-assessment: energy, performance, soreness, motivation
 `;
 
 // ─── Program Generation via AI ───────────────────────────
@@ -2638,6 +3071,18 @@ IMPORTANT: You MUST output valid JSON only. No markdown, no explanation — just
 
 Generate a complete 4-week program in this exact JSON structure:
 {
+  "plan_at_a_glance": {
+    "program_name": "Fat Loss Phase 1" or "Hypertrophy Block A" etc,
+    "duration": "4 weeks + 1 deload",
+    "training_days": 4,
+    "split": "Upper/Lower",
+    "phase_goal": "One sentence summary of what this phase achieves",
+    "training_day_macros": { "calories": 2400, "protein_g": 200, "carbs_g": 280, "fats_g": 65 },
+    "rest_day_macros": { "calories": 2000, "protein_g": 200, "carbs_g": 180, "fats_g": 65 },
+    "cardio": "3x/week LISS, 25-35 min",
+    "daily_tracking": ["Body weight (AM, post-void)", "Oral body temperature (AM, before food/drink)", "Water intake", "Sleep hours + quality", "Steps"]
+  },
+  "methodology": "2-4 paragraphs explaining WHY you designed this specific program for this specific client. Reference their goals, training history, body comp, schedule, and any compounds. Explain the split choice, exercise selection rationale, volume decisions, and nutritional strategy. This should read like a letter from their coach — personal, not generic.",
   "training_program": {
     "split_type": "Upper/Lower" or "Push/Pull/Legs" or "Full Body" etc,
     "days_per_week": 4,
@@ -2647,8 +3092,8 @@ Generate a complete 4-week program in this exact JSON structure:
     "progression_scheme": "Add 5lbs when hitting top of rep range for all sets",
     "days": {
       "Day 1 - Upper Push": [
-        { "exercise": "Dumbbell Bench Press", "sets": 4, "reps": "8-10", "rir": 2, "rest": "90s", "notes": "Control the eccentric 2-3 sec" },
-        ...more exercises (5-7 per day)
+        { "exercise": "DB Incline Bench Press", "sets": 4, "reps": "8-10", "rir": 2, "rest": "90s", "tempo": "3-1-1-0", "notes": "Set bench to 30°. Elbows at 45°, squeeze chest hard at top. Inhale on the way down, exhale pressing up. Common mistake: flaring elbows — keep them tucked." },
+        ...more exercises (5-6 per day MAX)
       ],
       "Day 2 - Lower": [...],
       ...
@@ -2656,23 +3101,26 @@ Generate a complete 4-week program in this exact JSON structure:
   },
   "nutrition_plan": {
     "goal": "Fat Loss" or "Lean Bulk" or "Recomp",
-    "calories": 2400,
-    "protein_g": 200,
-    "carbs_g": 250,
-    "fats_g": 75,
+    "training_day": { "calories": 2400, "protein_g": 200, "carbs_g": 280, "fats_g": 65 },
+    "rest_day": { "calories": 2000, "protein_g": 200, "carbs_g": 180, "fats_g": 65 },
     "protein_per_lb": "1.0",
     "meal_count": 4,
-    "meal_timing_notes": "Pre-workout meal 60-90 min before training. Post-workout within 60 min.",
-    "sample_day": {
-      "meal_1": { "time": "7:00 AM", "description": "4 eggs, 2 slices whole grain toast, 1 banana", "macros": "P:28 C:55 F:22" },
-      "meal_2": { "time": "12:00 PM", "description": "8oz grilled chicken, 1.5 cups rice, mixed greens, 1 tbsp olive oil", "macros": "P:50 C:70 F:15" },
+    "meal_timing_notes": "Pre-workout meal 60-90 min before training with 30-40g protein + 40-60g carbs. Post-workout within 60 min with 40g protein + fast carbs.",
+    "training_day_sample": {
+      "meal_1": { "time": "7:00 AM", "description": "4 whole eggs scrambled, 2 slices sourdough, 1 banana", "macros": "P:28 C:55 F:22" },
+      "meal_2": { "time": "12:00 PM", "description": "8oz grilled chicken breast, 1.5 cups jasmine rice, mixed greens, 1 tbsp olive oil", "macros": "P:50 C:70 F:15" },
       ...
     },
-    "food_notes": "Adjust portions to hit macro targets. These are examples — swap proteins/carbs as desired within your preferred foods."
+    "rest_day_sample": {
+      "meal_1": { "time": "8:00 AM", "description": "...", "macros": "P:... C:... F:..." },
+      ...
+    },
+    "food_notes": "Adjust portions to hit macro targets. These are examples — swap proteins/carbs as desired within your preferred foods.",
+    "refeed_protocol": "If AM body temp drops below 97.3°F for 3+ consecutive days, implement a high-carb refeed: add 100-150g carbs from clean sources (rice, potatoes, oats) for 1-2 days. Resume normal macros once temp normalizes."
   },
   "supplement_protocol": {
     "daily": [
-      { "supplement": "Creatine Monohydrate", "dose": "5g", "timing": "Any time, with water", "priority": "Essential" },
+      { "supplement": "Creatine Monohydrate", "dose": "5g", "timing": "Any time, with water", "purpose": "Muscle hydration, strength, recovery", "priority": "Essential" },
       ...
     ],
     "optional": [
@@ -2681,18 +3129,59 @@ Generate a complete 4-week program in this exact JSON structure:
     "estimated_monthly_cost": "$60-80",
     "notes": "Start with essentials only. Add optionals based on budget and response."
   },
+  "ped_protocol": null or {
+    "disclaimer": "This section documents compounds the client has reported using. Forged by Freedom does not prescribe or recommend PEDs. All compounds should be used under physician supervision with appropriate bloodwork monitoring.",
+    "compounds": [
+      { "compound": "Testosterone Cypionate", "dose": "200mg/week", "frequency": "2x/week (100mg Mon/Thu)", "timing": "IM or SubQ injection", "purpose": "TRT — maintain physiological testosterone levels", "monitoring": "Total T, Free T, E2, Hematocrit every 90 days", "notes": "Keep injection sites clean, rotate injection locations" }
+    ],
+    "bloodwork_schedule": "Baseline panel before starting, follow-up at 6 weeks, then every 90 days. Key markers: Total T, Free T, E2, SHBG, CBC (hematocrit), Lipid panel, Liver enzymes (AST/ALT), PSA (males 40+)",
+    "side_effect_awareness": "Watch for: elevated hematocrit >54% (donate blood), elevated E2 symptoms (water retention, mood changes, nipple sensitivity), elevated liver enzymes >2x upper limit"
+  },
+  "metabolic_monitoring": {
+    "daily_tracking": ["Oral body temperature (AM, before food/drink/movement)", "Body weight (AM, post-void, before food)", "Sleep hours + subjective quality (1-10)", "Energy level (1-10)", "Mood (1-10)", "Stress (1-10)", "Water intake (oz)"],
+    "temperature_guide": {
+      "optimal": "97.8–98.6°F — metabolism running well, stay the course",
+      "moderate": "97.3–97.7°F — mild metabolic slowdown, add a moderate refeed (+50-75g carbs from rice/potatoes/oats for 1 day)",
+      "low": "<97.3°F for 3+ days — high-carb refeed mandatory (+100-150g carbs for 1-2 days), reassess caloric deficit"
+    },
+    "weekly_check": "Every Sunday: compare weekly average temp, weight, and performance. If all three are trending down, you are in too aggressive a deficit."
+  },
+  "treadmill_progression": {
+    "hr_target_low": 120,
+    "hr_target_high": 145,
+    "weekly_plan": [
+      { "week": 1, "sessions": 3, "duration_min": 20, "speed_mph": 3.0, "incline_pct": 3, "notes": "Establish baseline. Stay in HR zone." },
+      { "week": 2, "sessions": 3, "duration_min": 25, "speed_mph": 3.0, "incline_pct": 4, "notes": "Add 5 min duration, bump incline 1%." },
+      { "week": 3, "sessions": 3, "duration_min": 30, "speed_mph": 3.2, "incline_pct": 5, "notes": "Increase speed slightly. Monitor HR." },
+      { "week": 4, "sessions": 3, "duration_min": 35, "speed_mph": 3.2, "incline_pct": 6, "notes": "Peak volume. Maintain HR zone." }
+    ]
+  },
   "cardio_protocol": {
     "weekly_sessions": 3,
-    "type": "LISS (walking, incline treadmill)",
-    "duration": "25-35 min",
-    "timing": "Post-weights or separate session",
-    "heart_rate_zone": "Zone 2 (120-140 bpm)",
+    "type": "LISS (incline treadmill walking)",
+    "timing": "Post-weights or separate session (AM fasted OK if energy permits)",
+    "heart_rate_zone": "Zone 2 (120-145 bpm)",
     "step_goal": 8000,
-    "notes": "Increase steps before adding formal cardio sessions"
+    "notes": "Priority is daily steps. Formal cardio sessions supplement, not replace, daily movement."
+  },
+  "recovery": {
+    "sleep": "7-9 hours per night. Keep consistent bed/wake times. Cool, dark room. No screens 30 min before bed.",
+    "post_workout": "5-10 min light stretching or foam rolling on trained muscle groups. Focus on hip flexors, thoracic spine, and any tight areas.",
+    "weekly_assessment": ["Rate energy 1-10", "Rate gym performance 1-10", "Rate muscle soreness 1-10", "Rate motivation 1-10", "If 3+ categories score <5, consider an extra rest day or deload"],
+    "modalities": "Sauna 3-4x/week (15-20 min), cold plunge if available (2-5 min post-sauna), daily walking for active recovery.",
+    "deload_protocol": "Week 5: reduce all working sets by 40-50%, keep intensity moderate (RIR 4-5). Maintain nutrition. This is NOT a week off — it's active recovery."
   }
 }
 
-Use the client's preferred foods in the sample meal plan. Respect food restrictions and dislikes. Default to dumbbell movements. Match volume and intensity to their experience level and recovery capacity. Respect their schedule and session time limit.`;
+CRITICAL INSTRUCTIONS:
+- Every exercise MUST have a "tempo" field (e.g. "3-1-1-0" = 3s eccentric, 1s pause, 1s concentric, 0s top) and detailed "notes" with specific form cues, breathing pattern, and common mistakes to avoid.
+- MAX 5-6 exercises per training day. Do NOT exceed this.
+- If the client reports ANY PEDs, peptides, GH, TRT, GLP-1 agonists, or other compounds, the "ped_protocol" section is REQUIRED with full detail. If no compounds, set to null.
+- Use the client's preferred foods in the sample meal plans. Respect food restrictions and dislikes.
+- PRESSING movements get dumbbells. DEADLIFTS, SQUATS, ROWS get barbells.
+- Match volume and intensity to their experience level and recovery capacity. Respect their schedule and session time limit.
+- The "methodology" section should be personal and specific to THIS client — never generic.
+- Calculate LISS HR targets from client age: (220 - age) × 0.55 to 0.65.`;
 
   const result = await callOpenRouter("/chat/completions", {
     model: CONFIG.chatModel,
@@ -2701,8 +3190,8 @@ Use the client's preferred foods in the sample meal plan. Respect food restricti
       { role: "user", content: clientProfile }
     ],
     temperature: 0.4,
-    max_tokens: 8000
-  }, 180000);
+    max_tokens: 16000
+  }, 300000);
 
   const content = result.choices?.[0]?.message?.content || "";
 
@@ -2734,9 +3223,23 @@ Use the client's preferred foods in the sample meal plan. Respect food restricti
 // ─── Format Program as HTML ──────────────────────────────
 function formatProgramHTML(program, clientName) {
   const { training_program: tp, nutrition_plan: np, supplement_protocol: sp, cardio_protocol: cp } = program;
+  const pag = program.plan_at_a_glance || {};
+  const methodology = program.methodology || "";
+  const pedProto = program.ped_protocol;
+  const metMon = program.metabolic_monitoring || {};
+  const treadmill = program.treadmill_progression || {};
+  const recovery = program.recovery || {};
 
+  // Shared styles
+  const sectionStyle = 'background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;';
+  const sectionTitle = 'color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;';
+  const statBox = 'background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;';
+  const statLabel = 'color:#666;font-size:11px;text-transform:uppercase;';
+  const statValue = 'color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;';
+
+  // Training days HTML
   let trainingHTML = "";
-  if (tp.days) {
+  if (tp && tp.days) {
     for (const [dayName, exercises] of Object.entries(tp.days)) {
       trainingHTML += `<h3 style="color:#ff6a00;margin-top:24px;font-size:16px;">${dayName}</h3>
       <table style="width:100%;border-collapse:collapse;margin-top:8px;">
@@ -2744,50 +3247,198 @@ function formatProgramHTML(program, clientName) {
           <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Exercise</th>
           <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Sets</th>
           <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Reps</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Tempo</th>
           <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">RIR</th>
           <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Rest</th>
-          <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Notes</th>
         </tr>`;
-      for (const ex of exercises) {
-        trainingHTML += `
-        <tr style="border-bottom:1px solid #1c1c1c;">
-          <td style="padding:8px 12px;color:#e8e8e8;font-weight:500;">${ex.exercise}</td>
-          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.sets}</td>
-          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.reps}</td>
-          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.rir}</td>
-          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.rest}</td>
-          <td style="padding:8px 12px;color:#666;font-size:13px;">${ex.notes || ""}</td>
-        </tr>`;
+      if (Array.isArray(exercises)) {
+        for (const ex of exercises) {
+          trainingHTML += `
+          <tr style="border-bottom:1px solid #1c1c1c;">
+            <td style="padding:8px 12px;color:#e8e8e8;font-weight:500;">${ex.exercise}</td>
+            <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.sets}</td>
+            <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.reps}</td>
+            <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.tempo || "—"}</td>
+            <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.rir || "—"}</td>
+            <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.rest || "—"}</td>
+          </tr>
+          ${ex.notes ? `<tr><td colspan="6" style="padding:4px 12px 12px;color:#888;font-size:12px;font-style:italic;border-bottom:1px solid #1c1c1c;">↳ ${ex.notes}</td></tr>` : ""}`;
+        }
       }
       trainingHTML += "</table>";
     }
   }
 
-  let mealsHTML = "";
-  if (np.sample_day) {
-    for (const [mealKey, meal] of Object.entries(np.sample_day)) {
-      mealsHTML += `
+  // Meal builder helper
+  const buildMealsHTML = (mealData, label) => {
+    if (!mealData) return "";
+    let html = `<h3 style="color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin:16px 0 10px;">${label}</h3>`;
+    for (const [mealKey, meal] of Object.entries(mealData)) {
+      if (!meal || typeof meal !== "object") continue;
+      html += `
       <div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:8px;">
         <div style="display:flex;justify-content:space-between;align-items:center;">
-          <strong style="color:#e8e8e8;">${mealKey.replace("_", " ").toUpperCase()}</strong>
-          <span style="color:#ff6a00;font-size:12px;font-weight:600;">${meal.time}</span>
+          <strong style="color:#e8e8e8;">${mealKey.replace(/_/g, " ").toUpperCase()}</strong>
+          <span style="color:#ff6a00;font-size:12px;font-weight:600;">${meal.time || ""}</span>
         </div>
-        <p style="color:#aaa;margin:6px 0 4px;font-size:14px;">${meal.description}</p>
-        <span style="color:#666;font-size:12px;">${meal.macros}</span>
+        <p style="color:#aaa;margin:6px 0 4px;font-size:14px;">${meal.description || ""}</p>
+        <span style="color:#666;font-size:12px;">${meal.macros || ""}</span>
       </div>`;
     }
-  }
+    return html;
+  };
+
+  // Support both old (single sample_day) and new (training_day_sample/rest_day_sample) formats
+  const trainingDayMeals = np?.training_day_sample || np?.sample_day;
+  const restDayMeals = np?.rest_day_sample;
+  const trainingMacros = np?.training_day || { calories: np?.calories, protein_g: np?.protein_g, carbs_g: np?.carbs_g, fats_g: np?.fats_g };
+  const restMacros = np?.rest_day;
 
   let supplementsHTML = "";
-  const allSupps = [...(sp.daily || []), ...(sp.optional || [])];
+  const allSupps = [...(sp?.daily || []), ...(sp?.optional || [])];
   for (const s of allSupps) {
     supplementsHTML += `
     <tr style="border-bottom:1px solid #1c1c1c;">
       <td style="padding:8px 12px;color:#e8e8e8;font-weight:500;">${s.supplement}</td>
       <td style="padding:8px 12px;color:#aaa;text-align:center;">${s.dose}</td>
       <td style="padding:8px 12px;color:#aaa;">${s.timing}</td>
+      <td style="padding:8px 12px;color:#aaa;font-size:12px;">${s.purpose || ""}</td>
       <td style="padding:8px 12px;color:${s.priority === "Essential" ? "#22c55e" : "#666"};font-size:12px;font-weight:600;">${s.priority}</td>
     </tr>`;
+  }
+
+  // PED Protocol HTML
+  let pedHTML = "";
+  if (pedProto && pedProto.compounds && pedProto.compounds.length > 0) {
+    let compoundsRows = "";
+    for (const c of pedProto.compounds) {
+      compoundsRows += `
+      <div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:16px;margin-bottom:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <strong style="color:#ff6a00;font-size:15px;">${c.compound}</strong>
+          <span style="color:#e8e8e8;font-size:13px;font-weight:600;">${c.dose}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px;">
+          <div><span style="color:#666;">Frequency:</span> <span style="color:#aaa;">${c.frequency}</span></div>
+          <div><span style="color:#666;">Timing:</span> <span style="color:#aaa;">${c.timing}</span></div>
+          <div style="grid-column:span 2;"><span style="color:#666;">Purpose:</span> <span style="color:#aaa;">${c.purpose}</span></div>
+          <div style="grid-column:span 2;"><span style="color:#666;">Monitor:</span> <span style="color:#aaa;">${c.monitoring}</span></div>
+          ${c.notes ? `<div style="grid-column:span 2;"><span style="color:#666;">Notes:</span> <span style="color:#aaa;">${c.notes}</span></div>` : ""}
+        </div>
+      </div>`;
+    }
+    pedHTML = `
+    <div style="${sectionStyle}">
+      <h2 style="${sectionTitle}">Your Current Protocol</h2>
+      <p style="color:#ef4444;font-size:12px;font-style:italic;margin:0 0 16px;padding:10px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;">${pedProto.disclaimer || "This section documents compounds the client has reported using. Forged by Freedom does not prescribe or recommend PEDs. All compounds should be used under physician supervision."}</p>
+      ${compoundsRows}
+      ${pedProto.bloodwork_schedule ? `<div style="margin-top:14px;padding:12px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Bloodwork Schedule</strong>
+        <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${pedProto.bloodwork_schedule}</p>
+      </div>` : ""}
+      ${pedProto.side_effect_awareness ? `<div style="margin-top:10px;padding:12px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;">
+        <strong style="color:#ef4444;font-size:12px;text-transform:uppercase;">Side Effect Awareness</strong>
+        <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${pedProto.side_effect_awareness}</p>
+      </div>` : ""}
+    </div>`;
+  }
+
+  // Metabolic Monitoring HTML
+  let metMonHTML = "";
+  if (metMon.temperature_guide || metMon.daily_tracking) {
+    const tempGuide = metMon.temperature_guide || {};
+    metMonHTML = `
+    <div style="${sectionStyle}">
+      <h2 style="${sectionTitle}">Metabolic Monitoring</h2>
+      ${metMon.daily_tracking ? `<div style="margin-bottom:16px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Daily Tracking Checklist</strong>
+        <ul style="color:#aaa;font-size:13px;margin:8px 0 0;padding-left:20px;">
+          ${metMon.daily_tracking.map(t => `<li style="margin-bottom:4px;">${t}</li>`).join("")}
+        </ul>
+      </div>` : ""}
+      <div style="margin-bottom:12px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Body Temperature Guide</strong>
+        <div style="margin-top:10px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:12px;height:12px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
+            <div><strong style="color:#22c55e;font-size:13px;">Optimal:</strong> <span style="color:#aaa;font-size:13px;">${tempGuide.optimal || "97.8–98.6°F"}</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:12px;height:12px;border-radius:50%;background:#eab308;flex-shrink:0;"></div>
+            <div><strong style="color:#eab308;font-size:13px;">Moderate:</strong> <span style="color:#aaa;font-size:13px;">${tempGuide.moderate || "97.3–97.7°F"}</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:12px;height:12px;border-radius:50%;background:#ef4444;flex-shrink:0;"></div>
+            <div><strong style="color:#ef4444;font-size:13px;">Low:</strong> <span style="color:#aaa;font-size:13px;">${tempGuide.low || "<97.3°F for 3+ days"}</span></div>
+          </div>
+        </div>
+      </div>
+      ${metMon.weekly_check ? `<p style="color:#aaa;font-size:13px;margin:12px 0 0;padding:10px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;"><strong style="color:#e8e8e8;">Weekly Check:</strong> ${metMon.weekly_check}</p>` : ""}
+    </div>`;
+  }
+
+  // Treadmill Progression HTML
+  let treadmillHTML = "";
+  if (treadmill.weekly_plan && treadmill.weekly_plan.length > 0) {
+    let rows = "";
+    for (const w of treadmill.weekly_plan) {
+      rows += `
+      <tr style="border-bottom:1px solid #1c1c1c;">
+        <td style="padding:8px 12px;color:#ff6a00;font-weight:600;">Wk ${w.week}</td>
+        <td style="padding:8px 12px;text-align:center;color:#aaa;">${w.sessions}x</td>
+        <td style="padding:8px 12px;text-align:center;color:#aaa;">${w.duration_min} min</td>
+        <td style="padding:8px 12px;text-align:center;color:#aaa;">${w.speed_mph} mph</td>
+        <td style="padding:8px 12px;text-align:center;color:#aaa;">${w.incline_pct}%</td>
+        <td style="padding:8px 12px;color:#666;font-size:12px;">${w.notes || ""}</td>
+      </tr>`;
+    }
+    treadmillHTML = `
+    <div style="${sectionStyle}">
+      <h2 style="${sectionTitle}">Treadmill Progression Chart</h2>
+      <p style="color:#aaa;font-size:13px;margin:0 0 12px;"><strong style="color:#e8e8e8;">Target HR:</strong> ${treadmill.hr_target_low || 120}–${treadmill.hr_target_high || 145} bpm</p>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr style="background:#1c1c1c;color:#aaa;font-size:12px;text-transform:uppercase;">
+          <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Week</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Sessions</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Duration</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Speed</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Incline</th>
+          <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Notes</th>
+        </tr>
+        ${rows}
+      </table>
+    </div>`;
+  }
+
+  // Recovery HTML
+  let recoveryHTML = "";
+  if (recovery.sleep || recovery.post_workout || recovery.weekly_assessment) {
+    recoveryHTML = `
+    <div style="${sectionStyle}">
+      <h2 style="${sectionTitle}">Recovery Protocol</h2>
+      ${recovery.sleep ? `<div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:10px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Sleep</strong>
+        <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${recovery.sleep}</p>
+      </div>` : ""}
+      ${recovery.post_workout ? `<div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:10px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Post-Workout</strong>
+        <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${recovery.post_workout}</p>
+      </div>` : ""}
+      ${recovery.modalities ? `<div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:10px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Recovery Modalities</strong>
+        <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${recovery.modalities}</p>
+      </div>` : ""}
+      ${recovery.weekly_assessment ? `<div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:10px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Weekly Self-Assessment</strong>
+        <ul style="color:#aaa;font-size:13px;margin:8px 0 0;padding-left:20px;">
+          ${(Array.isArray(recovery.weekly_assessment) ? recovery.weekly_assessment : [recovery.weekly_assessment]).map(a => `<li style="margin-bottom:4px;">${a}</li>`).join("")}
+        </ul>
+      </div>` : ""}
+      ${recovery.deload_protocol ? `<div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;">
+        <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Deload Protocol</strong>
+        <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${recovery.deload_protocol}</p>
+      </div>` : ""}
+    </div>`;
   }
 
   return `<!DOCTYPE html>
@@ -2799,110 +3450,181 @@ function formatProgramHTML(program, clientName) {
   <!-- Header -->
   <div style="text-align:center;margin-bottom:40px;">
     <h1 style="font-size:28px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;">FORGED BY FREEDOM</h1>
-    <p style="color:#666;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-top:6px;">Custom Training & Nutrition Program</p>
+    <p style="color:#666;font-size:11px;text-transform:uppercase;letter-spacing:2px;margin-top:6px;">Strength &bull; Discipline &bull; Freedom</p>
     <div style="width:60px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,transparent,#ff6a00,transparent);border-radius:2px;"></div>
   </div>
 
-  <!-- Client Info -->
-  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
-    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;">Program For</h2>
-    <p style="color:#e8e8e8;font-size:20px;font-weight:700;margin:0;">${clientName}</p>
-    <p style="color:#aaa;font-size:13px;margin:8px 0 0;">Generated: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+  <!-- Cover / Client Info -->
+  <div style="${sectionStyle}text-align:center;padding:32px 20px;">
+    <p style="color:#666;font-size:11px;text-transform:uppercase;letter-spacing:2px;margin:0 0 8px;">Custom Program For</p>
+    <h2 style="color:#e8e8e8;font-size:24px;font-weight:700;margin:0;">${clientName}</h2>
+    ${pag.program_name ? `<p style="color:#ff6a00;font-size:16px;font-weight:600;margin:12px 0 0;">${pag.program_name}</p>` : ""}
+    <p style="color:#aaa;font-size:13px;margin:12px 0 0;">Generated: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+    <p style="color:#666;font-size:12px;margin:4px 0 0;">Coach Bryan Antonelli · Forged by Freedom</p>
   </div>
 
-  <!-- Training Overview -->
-  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
-    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Training Program</h2>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
-        <div style="color:#666;font-size:11px;text-transform:uppercase;">Split</div>
-        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${tp.split_type}</div>
-      </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
-        <div style="color:#666;font-size:11px;text-transform:uppercase;">Days/Week</div>
-        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${tp.days_per_week}</div>
-      </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
-        <div style="color:#666;font-size:11px;text-transform:uppercase;">Phase</div>
-        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${tp.phase}</div>
-      </div>
+  <!-- Plan at a Glance -->
+  ${pag.phase_goal ? `<div style="${sectionStyle}">
+    <h2 style="${sectionTitle}">Plan at a Glance</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="${statBox}"><div style="${statLabel}">Duration</div><div style="${statValue}">${pag.duration || `${tp?.duration_weeks || 4} weeks`}</div></div>
+      <div style="${statBox}"><div style="${statLabel}">Training</div><div style="${statValue}">${pag.training_days || tp?.days_per_week || 4} days/wk</div></div>
+      <div style="${statBox}"><div style="${statLabel}">Split</div><div style="${statValue}">${pag.split || tp?.split_type || "—"}</div></div>
+      <div style="${statBox}"><div style="${statLabel}">Cardio</div><div style="${statValue}">${pag.cardio || `${cp?.weekly_sessions || 3}x LISS`}</div></div>
     </div>
-    <p style="color:#aaa;font-size:13px;margin:0;"><strong style="color:#e8e8e8;">Progression:</strong> ${tp.progression_scheme}</p>
-    <p style="color:#aaa;font-size:13px;margin:8px 0 0;"><strong style="color:#e8e8e8;">Deload:</strong> Week ${tp.deload_week}</p>
+    <p style="color:#aaa;font-size:14px;margin:0 0 16px;"><strong style="color:#e8e8e8;">Phase Goal:</strong> ${pag.phase_goal}</p>
+
+    <!-- Training vs Rest Day Macros Side-by-Side -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;">
+        <div style="color:#ff6a00;font-size:11px;text-transform:uppercase;font-weight:600;margin-bottom:10px;">Training Day</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <div style="text-align:center;flex:1;"><div style="color:#ff6a00;font-size:18px;font-weight:700;">${pag.training_day_macros?.calories || trainingMacros?.calories || "—"}</div><div style="color:#666;font-size:10px;">CAL</div></div>
+          <div style="text-align:center;flex:1;"><div style="color:#22c55e;font-size:18px;font-weight:700;">${pag.training_day_macros?.protein_g || trainingMacros?.protein_g || "—"}g</div><div style="color:#666;font-size:10px;">PRO</div></div>
+          <div style="text-align:center;flex:1;"><div style="color:#3b82f6;font-size:18px;font-weight:700;">${pag.training_day_macros?.carbs_g || trainingMacros?.carbs_g || "—"}g</div><div style="color:#666;font-size:10px;">CARB</div></div>
+          <div style="text-align:center;flex:1;"><div style="color:#eab308;font-size:18px;font-weight:700;">${pag.training_day_macros?.fats_g || trainingMacros?.fats_g || "—"}g</div><div style="color:#666;font-size:10px;">FAT</div></div>
+        </div>
+      </div>
+      ${restMacros || pag.rest_day_macros ? `<div style="flex:1;min-width:200px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;">
+        <div style="color:#aaa;font-size:11px;text-transform:uppercase;font-weight:600;margin-bottom:10px;">Rest Day</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <div style="text-align:center;flex:1;"><div style="color:#ff6a00;font-size:18px;font-weight:700;">${pag.rest_day_macros?.calories || restMacros?.calories || "—"}</div><div style="color:#666;font-size:10px;">CAL</div></div>
+          <div style="text-align:center;flex:1;"><div style="color:#22c55e;font-size:18px;font-weight:700;">${pag.rest_day_macros?.protein_g || restMacros?.protein_g || "—"}g</div><div style="color:#666;font-size:10px;">PRO</div></div>
+          <div style="text-align:center;flex:1;"><div style="color:#3b82f6;font-size:18px;font-weight:700;">${pag.rest_day_macros?.carbs_g || restMacros?.carbs_g || "—"}g</div><div style="color:#666;font-size:10px;">CARB</div></div>
+          <div style="text-align:center;flex:1;"><div style="color:#eab308;font-size:18px;font-weight:700;">${pag.rest_day_macros?.fats_g || restMacros?.fats_g || "—"}g</div><div style="color:#666;font-size:10px;">FAT</div></div>
+        </div>
+      </div>` : ""}
+    </div>
+    ${pag.daily_tracking ? `<div style="margin-top:14px;">
+      <strong style="color:#e8e8e8;font-size:11px;text-transform:uppercase;">Daily Tracking</strong>
+      <p style="color:#aaa;font-size:12px;margin:6px 0 0;">${Array.isArray(pag.daily_tracking) ? pag.daily_tracking.join(" · ") : pag.daily_tracking}</p>
+    </div>` : ""}
+  </div>` : ""}
+
+  <!-- Why We Do What We Do (Methodology) -->
+  ${methodology ? `<div style="${sectionStyle}">
+    <h2 style="${sectionTitle}">Why We Do What We Do</h2>
+    ${methodology.split("\n").filter(p => p.trim()).map(p => `<p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 12px;">${p.trim()}</p>`).join("")}
+  </div>` : ""}
+
+  <!-- Training Program -->
+  <div style="${sectionStyle}">
+    <h2 style="${sectionTitle}">Training Program</h2>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="${statBox}"><div style="${statLabel}">Split</div><div style="${statValue}">${tp?.split_type || "—"}</div></div>
+      <div style="${statBox}"><div style="${statLabel}">Days/Week</div><div style="${statValue}">${tp?.days_per_week || "—"}</div></div>
+      <div style="${statBox}"><div style="${statLabel}">Phase</div><div style="${statValue}">${tp?.phase || "—"}</div></div>
+    </div>
+    <p style="color:#aaa;font-size:13px;margin:0;"><strong style="color:#e8e8e8;">Progression:</strong> ${tp?.progression_scheme || "—"}</p>
+    <p style="color:#aaa;font-size:13px;margin:8px 0 0;"><strong style="color:#e8e8e8;">Deload:</strong> Week ${tp?.deload_week || 5}</p>
     ${trainingHTML}
   </div>
 
   <!-- Nutrition Plan -->
-  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
-    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Nutrition Plan</h2>
+  <div style="${sectionStyle}">
+    <h2 style="${sectionTitle}">Nutrition Plan</h2>
+
+    <!-- Training Day Macros -->
+    <h3 style="color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 10px;">Training Day Macros</h3>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
-        <div style="color:#ff6a00;font-size:22px;font-weight:700;">${np.calories}</div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#ff6a00;font-size:22px;font-weight:700;">${trainingMacros?.calories || "—"}</div>
         <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Calories</div>
       </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
-        <div style="color:#22c55e;font-size:22px;font-weight:700;">${np.protein_g}g</div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#22c55e;font-size:22px;font-weight:700;">${trainingMacros?.protein_g || "—"}g</div>
         <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Protein</div>
       </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
-        <div style="color:#3b82f6;font-size:22px;font-weight:700;">${np.carbs_g}g</div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#3b82f6;font-size:22px;font-weight:700;">${trainingMacros?.carbs_g || "—"}g</div>
         <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Carbs</div>
       </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
-        <div style="color:#eab308;font-size:22px;font-weight:700;">${np.fats_g}g</div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#eab308;font-size:22px;font-weight:700;">${trainingMacros?.fats_g || "—"}g</div>
         <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Fats</div>
       </div>
     </div>
-    <p style="color:#aaa;font-size:13px;margin:0 0 12px;"><strong style="color:#e8e8e8;">Goal:</strong> ${np.goal} · <strong style="color:#e8e8e8;">Meals:</strong> ${np.meal_count}/day</p>
-    <p style="color:#aaa;font-size:13px;margin:0 0 16px;">${np.meal_timing_notes || ""}</p>
 
-    <h3 style="color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 10px;">Sample Day</h3>
-    ${mealsHTML}
-    <p style="color:#666;font-size:12px;font-style:italic;margin:12px 0 0;">${np.food_notes || ""}</p>
+    ${restMacros ? `<!-- Rest Day Macros -->
+    <h3 style="color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 10px;">Rest Day Macros</h3>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#ff6a00;font-size:22px;font-weight:700;">${restMacros.calories}</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Calories</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#22c55e;font-size:22px;font-weight:700;">${restMacros.protein_g}g</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Protein</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#3b82f6;font-size:22px;font-weight:700;">${restMacros.carbs_g}g</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Carbs</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:70px;text-align:center;">
+        <div style="color:#eab308;font-size:22px;font-weight:700;">${restMacros.fats_g}g</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Fats</div>
+      </div>
+    </div>` : ""}
+
+    <p style="color:#aaa;font-size:13px;margin:0 0 12px;"><strong style="color:#e8e8e8;">Goal:</strong> ${np?.goal || "—"} · <strong style="color:#e8e8e8;">Meals:</strong> ${np?.meal_count || "—"}/day</p>
+    <p style="color:#aaa;font-size:13px;margin:0 0 16px;">${np?.meal_timing_notes || ""}</p>
+
+    ${buildMealsHTML(trainingDayMeals, restDayMeals ? "Training Day Sample" : "Sample Day")}
+    ${restDayMeals ? buildMealsHTML(restDayMeals, "Rest Day Sample") : ""}
+    <p style="color:#666;font-size:12px;font-style:italic;margin:12px 0 0;">${np?.food_notes || ""}</p>
+    ${np?.refeed_protocol ? `<div style="margin-top:14px;padding:12px;background:#1c1c1c;border:1px solid #eab308;border-radius:8px;">
+      <strong style="color:#eab308;font-size:12px;text-transform:uppercase;">Refeed Protocol</strong>
+      <p style="color:#aaa;font-size:13px;margin:8px 0 0;">${np.refeed_protocol}</p>
+    </div>` : ""}
   </div>
 
   <!-- Supplements -->
-  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
-    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Supplement Protocol</h2>
+  <div style="${sectionStyle}">
+    <h2 style="${sectionTitle}">Supplement Protocol</h2>
     <table style="width:100%;border-collapse:collapse;">
       <tr style="background:#1c1c1c;color:#aaa;font-size:12px;text-transform:uppercase;">
         <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Supplement</th>
         <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Dose</th>
         <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Timing</th>
+        <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Purpose</th>
         <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Priority</th>
       </tr>
       ${supplementsHTML}
     </table>
-    <p style="color:#666;font-size:12px;margin:12px 0 0;">Est. monthly cost: ${sp.estimated_monthly_cost || "Varies"}</p>
-    <p style="color:#666;font-size:12px;font-style:italic;margin:6px 0 0;">${sp.notes || ""}</p>
+    <p style="color:#666;font-size:12px;margin:12px 0 0;">Est. monthly cost: ${sp?.estimated_monthly_cost || "Varies"}</p>
+    <p style="color:#666;font-size:12px;font-style:italic;margin:6px 0 0;">${sp?.notes || ""}</p>
   </div>
 
-  <!-- Cardio -->
-  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
-    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Cardio Protocol</h2>
+  <!-- PED/Peptide Protocol -->
+  ${pedHTML}
+
+  <!-- Metabolic Monitoring -->
+  ${metMonHTML}
+
+  <!-- Treadmill Progression -->
+  ${treadmillHTML}
+
+  <!-- Cardio Protocol -->
+  <div style="${sectionStyle}">
+    <h2 style="${sectionTitle}">Cardio Protocol</h2>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
-        <div style="color:#666;font-size:11px;text-transform:uppercase;">Sessions/Week</div>
-        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${cp.weekly_sessions}</div>
-      </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
-        <div style="color:#666;font-size:11px;text-transform:uppercase;">Type</div>
-        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${cp.type}</div>
-      </div>
-      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
-        <div style="color:#666;font-size:11px;text-transform:uppercase;">Duration</div>
-        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${cp.duration}</div>
-      </div>
+      <div style="${statBox}"><div style="${statLabel}">Sessions/Week</div><div style="${statValue}">${cp?.weekly_sessions || "—"}</div></div>
+      <div style="${statBox}"><div style="${statLabel}">Type</div><div style="${statValue}">${cp?.type || "—"}</div></div>
     </div>
-    <p style="color:#aaa;font-size:13px;margin:0;"><strong style="color:#e8e8e8;">HR Zone:</strong> ${cp.heart_rate_zone || "Zone 2"}</p>
-    <p style="color:#aaa;font-size:13px;margin:6px 0 0;"><strong style="color:#e8e8e8;">Daily Step Goal:</strong> ${cp.step_goal || "8,000"}</p>
-    <p style="color:#666;font-size:12px;font-style:italic;margin:8px 0 0;">${cp.notes || ""}</p>
+    <p style="color:#aaa;font-size:13px;margin:0;"><strong style="color:#e8e8e8;">HR Zone:</strong> ${cp?.heart_rate_zone || "Zone 2"}</p>
+    <p style="color:#aaa;font-size:13px;margin:6px 0 0;"><strong style="color:#e8e8e8;">Timing:</strong> ${cp?.timing || "Post-weights or separate session"}</p>
+    <p style="color:#aaa;font-size:13px;margin:6px 0 0;"><strong style="color:#e8e8e8;">Daily Step Goal:</strong> ${cp?.step_goal || "8,000"}</p>
+    <p style="color:#666;font-size:12px;font-style:italic;margin:8px 0 0;">${cp?.notes || ""}</p>
   </div>
+
+  <!-- Recovery -->
+  ${recoveryHTML}
 
   <!-- Footer -->
   <div style="text-align:center;padding:24px 0;border-top:1px solid #2a2a2a;">
-    <p style="color:#666;font-size:12px;margin:0;">This program is for educational purposes only. Consult your physician before starting.</p>
+    <p style="color:#666;font-size:12px;margin:0;">This program is for educational purposes only. Consult your physician before starting any exercise, nutrition, or supplement program.</p>
     <p style="color:#ff6a00;font-size:13px;font-weight:600;margin:8px 0 0;">FORGED BY FREEDOM STRENGTH & NUTRITION</p>
+    <p style="color:#666;font-size:11px;margin:4px 0 0;">forgedbyfreedom.com</p>
   </div>
 </div>
 </body>
@@ -2989,6 +3711,12 @@ app.post("/api/intake/generate-program", async (req, res) => {
       nutrition_plan: program.nutrition_plan,
       supplement_protocol: program.supplement_protocol,
       cardio_protocol: program.cardio_protocol,
+      ped_protocol: program.ped_protocol || null,
+      metabolic_monitoring: program.metabolic_monitoring || null,
+      treadmill_progression: program.treadmill_progression || null,
+      recovery: program.recovery || null,
+      methodology: program.methodology || null,
+      plan_at_a_glance: program.plan_at_a_glance || null,
       program_html: programHtml,
       ai_model_used: CONFIG.chatModel,
       status: "pending_review"
@@ -3039,6 +3767,88 @@ app.get("/api/programs/:id/approve", async (req, res) => {
     await supabase.from("generated_programs")
       .update({ status: "approved", approved_at: new Date().toISOString(), coach_notes: req.query.notes || null })
       .eq("id", req.params.id);
+
+    // Auto-populate client record with supplements, PEDs, peptides, and targets from approved program
+    try {
+      // Find the client record linked to this program's lead
+      const { data: lead } = program.lead_id
+        ? await supabase.from("leads").select("email").eq("id", program.lead_id).single()
+        : { data: null };
+
+      const clientEmail = lead?.email || program.client_email;
+      if (clientEmail) {
+        const { data: client } = await supabase.from("clients").select("id").eq("email", clientEmail).single();
+
+        if (client) {
+          const updatePayload = {};
+
+          // Build supplement list from program
+          const sp = program.supplement_protocol;
+          if (sp) {
+            const allSupps = [...(sp.daily || []), ...(sp.optional || [])];
+            if (allSupps.length > 0) {
+              updatePayload.current_supplements = allSupps.map(s => ({
+                name: s.supplement,
+                dose: s.dose,
+                timing: s.timing,
+                priority: s.priority || "Essential"
+              }));
+            }
+          }
+
+          // Build PED list from program
+          const pedProto = program.ped_protocol;
+          if (pedProto && pedProto.compounds && pedProto.compounds.length > 0) {
+            const peds = [];
+            const peptides = [];
+            for (const c of pedProto.compounds) {
+              const nameLower = (c.compound || "").toLowerCase();
+              // Classify as peptide or PED
+              if (nameLower.includes("peptide") || nameLower.includes("bpc") || nameLower.includes("tb-500") ||
+                  nameLower.includes("semax") || nameLower.includes("selank") || nameLower.includes("mots") ||
+                  nameLower.includes("ghk") || nameLower.includes("nad") || nameLower.includes("ipamorelin") ||
+                  nameLower.includes("cjc") || nameLower.includes("tesamorelin") || nameLower.includes("sermorelin")) {
+                peptides.push({ name: c.compound, dose: c.dose, frequency: c.frequency, timing: c.timing });
+              } else {
+                peds.push({ compound: c.compound, dose: c.dose, frequency: c.frequency, timing: c.timing });
+              }
+            }
+            if (peds.length > 0) updatePayload.current_peds = peds;
+            if (peptides.length > 0) updatePayload.current_peptides = peptides;
+          }
+
+          // Set nutrition targets from program
+          const np = program.nutrition_plan;
+          const trainingMacros = np?.training_day || { calories: np?.calories, protein_g: np?.protein_g, carbs_g: np?.carbs_g, fats_g: np?.fats_g };
+          if (trainingMacros?.calories) updatePayload.target_calories = trainingMacros.calories;
+          if (trainingMacros?.protein_g) updatePayload.target_protein = trainingMacros.protein_g;
+          if (trainingMacros?.carbs_g) updatePayload.target_carbs = trainingMacros.carbs_g;
+          if (trainingMacros?.fats_g) updatePayload.target_fat = trainingMacros.fats_g;
+
+          // Set step goal from cardio
+          const cp = program.cardio_protocol;
+          if (cp?.step_goal) updatePayload.target_steps = cp.step_goal;
+
+          // Set water target from nutrition
+          if (np?.water_target_oz) updatePayload.target_water = np.water_target_oz;
+
+          // Set program name
+          const pag = program.plan_at_a_glance;
+          if (pag?.program_name) updatePayload.program_name = pag.program_name;
+
+          if (Object.keys(updatePayload).length > 0) {
+            const { error: updateErr } = await supabase.from("clients").update(updatePayload).eq("id", client.id);
+            if (updateErr) {
+              console.error("[APPROVE] Failed to auto-populate client record:", updateErr.message);
+            } else {
+              console.log(`[APPROVE] Auto-populated client ${client.id} with supplements, PEDs, peptides, and targets from program`);
+            }
+          }
+        }
+      }
+    } catch (populateErr) {
+      console.error("[APPROVE] Auto-populate error (non-fatal):", populateErr.message);
+    }
 
     // If Stripe is configured, create checkout session
     if (stripe && process.env.STRIPE_PRICE_ID) {
@@ -3156,266 +3966,59 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
       `);
     }
 
-    // Build the branded client-facing preview
-    const tp = program.training_program || {};
-    const np = program.nutrition_plan || {};
-    const sp = program.supplement_protocol || {};
-    const cp = program.cardio_protocol || {};
+    // Use the stored program_html (generated by formatProgramHTML which includes all sections)
+    // Re-generate to ensure latest formatting if the program data is available
+    const fullProgram = {
+      plan_at_a_glance: program.plan_at_a_glance,
+      methodology: program.methodology,
+      training_program: program.training_program,
+      nutrition_plan: program.nutrition_plan,
+      supplement_protocol: program.supplement_protocol,
+      cardio_protocol: program.cardio_protocol,
+      ped_protocol: program.ped_protocol,
+      metabolic_monitoring: program.metabolic_monitoring,
+      treadmill_progression: program.treadmill_progression,
+      recovery: program.recovery,
+    };
+    const programHtml = formatProgramHTML(fullProgram, program.client_name);
+
+    // Build payment CTA section
     const firstName = (program.client_name || "").split(" ")[0];
-
-    // Training days HTML
-    let trainingHTML = "";
-    if (tp.days) {
-      for (const [dayName, exercises] of Object.entries(tp.days)) {
-        trainingHTML += `<div class="day-block">
-          <h3 class="day-title">${dayName}</h3>
-          <table class="exercise-table">
-            <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RIR</th><th>Rest</th><th>Notes</th></tr></thead>
-            <tbody>`;
-        for (const ex of exercises) {
-          trainingHTML += `<tr>
-            <td class="ex-name">${ex.exercise}</td>
-            <td class="center">${ex.sets}</td>
-            <td class="center">${ex.reps}</td>
-            <td class="center">${ex.rir || "—"}</td>
-            <td class="center">${ex.rest || "—"}</td>
-            <td class="ex-notes">${ex.notes || ""}</td>
-          </tr>`;
-        }
-        trainingHTML += `</tbody></table></div>`;
-      }
-    }
-
-    // Meals HTML
-    let mealsHTML = "";
-    if (np.sample_day) {
-      for (const [mealKey, meal] of Object.entries(np.sample_day)) {
-        mealsHTML += `<div class="meal-card">
-          <div class="meal-header">
-            <strong>${mealKey.replace(/_/g, " ").toUpperCase()}</strong>
-            <span class="meal-time">${meal.time || ""}</span>
-          </div>
-          <p class="meal-desc">${meal.description || ""}</p>
-          <span class="meal-macros">${meal.macros || ""}</span>
-        </div>`;
-      }
-    }
-
-    // Supplements HTML
-    let supplementsHTML = "";
-    const allSupps = [...(sp.daily || []), ...(sp.optional || [])];
-    for (const s of allSupps) {
-      const priorityClass = (s.priority || "").toLowerCase() === "essential" ? "priority-essential" : "priority-optional";
-      supplementsHTML += `<tr>
-        <td class="supp-name">${s.supplement}</td>
-        <td class="center">${s.dose}</td>
-        <td>${s.timing}</td>
-        <td class="${priorityClass}">${s.priority}</td>
-      </tr>`;
-    }
-
-    // Payment button (only if approved and not yet paid)
     let paymentSection = "";
     if (program.payment_status === "paid" || program.status === "delivered") {
-      paymentSection = `<div class="cta-section paid">
-        <div class="cta-badge">PURCHASED</div>
-        <h2>You're All Set</h2>
-        <p>Your program has been delivered. Check your email for the full copy.</p>
-        <p class="cta-note">Questions? Email <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
+      paymentSection = `<div style="background:linear-gradient(135deg,#001a00,#141414);border:2px solid #22c55e;border-radius:16px;padding:40px 24px;text-align:center;margin:0 auto 24px;max-width:700px;">
+        <div style="display:inline-block;background:#22c55e;color:#000;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:12px;">PURCHASED</div>
+        <h2 style="color:#22c55e;font-size:24px;font-weight:800;margin-bottom:10px;">You're All Set</h2>
+        <p style="color:#aaa;font-size:15px;">Your program has been delivered. Check your email for the full copy.</p>
+        <p style="color:#666;font-size:12px;margin-top:16px;">Questions? Email <a href="mailto:forgedbyfreedom@gmail.com" style="color:#ff6a00;text-decoration:none;">forgedbyfreedom@gmail.com</a></p>
       </div>`;
     } else if (program.stripe_checkout_session_id) {
-      // Has a checkout session — show pay button
-      paymentSection = `<div class="cta-section">
-        <h2>Ready to Get Started?</h2>
-        <p>Review your program above. When you're ready, lock it in.</p>
-        <a href="/api/programs/${program.id}/checkout" class="cta-btn">Approve & Pay — Start Your Transformation</a>
-        <p class="cta-note">Secure checkout powered by Stripe. Questions? <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
+      paymentSection = `<div style="background:linear-gradient(135deg,#1a1000,#141414);border:2px solid #ff6a00;border-radius:16px;padding:40px 24px;text-align:center;margin:0 auto 24px;max-width:700px;">
+        <h2 style="color:#ff6a00;font-size:24px;font-weight:800;margin-bottom:10px;">Ready to Get Started?</h2>
+        <p style="color:#aaa;font-size:15px;margin-bottom:20px;">Review your program above. When you're ready, lock it in.</p>
+        <a href="/api/programs/${program.id}/checkout" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 40px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 4px 24px rgba(255,106,0,.35);">Approve & Pay — Start Your Transformation</a>
+        <p style="color:#666;font-size:12px;margin-top:16px;">Secure checkout powered by Stripe. Questions? <a href="mailto:forgedbyfreedom@gmail.com" style="color:#ff6a00;text-decoration:none;">forgedbyfreedom@gmail.com</a></p>
       </div>`;
     } else {
-      paymentSection = `<div class="cta-section">
-        <h2>Your Program is Ready</h2>
-        <p>Coach Bryan will be in touch with next steps.</p>
-        <p class="cta-note">Questions? <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
+      paymentSection = `<div style="background:linear-gradient(135deg,#1a1000,#141414);border:2px solid #ff6a00;border-radius:16px;padding:40px 24px;text-align:center;margin:0 auto 24px;max-width:700px;">
+        <h2 style="color:#ff6a00;font-size:24px;font-weight:800;margin-bottom:10px;">Your Program is Ready</h2>
+        <p style="color:#aaa;font-size:15px;">Coach Bryan will be in touch with next steps.</p>
+        <p style="color:#666;font-size:12px;margin-top:16px;">Questions? <a href="mailto:forgedbyfreedom@gmail.com" style="color:#ff6a00;text-decoration:none;">forgedbyfreedom@gmail.com</a></p>
       </div>`;
     }
 
-    const html = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Your FBF Program — ${program.client_name}</title>
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#0a0a0a;color:#e8e8e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
-  .container{max-width:720px;margin:0 auto;padding:32px 20px}
+    // Inject welcome header and CTA into the program HTML
+    const welcomeHeader = `<div style="text-align:center;margin-bottom:24px;"><p style="color:#aaa;font-size:18px;">${firstName ? `Welcome, <strong style="color:#e8e8e8;">${firstName}</strong> — here's your custom program.` : "Your custom program is ready."}</p></div>`;
 
-  /* Header */
-  .header{text-align:center;margin-bottom:48px;padding-top:20px}
-  .header-brand{font-size:32px;font-weight:800;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-  .header-sub{color:#666;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
-  .header-line{width:80px;height:3px;margin:20px auto 0;background:linear-gradient(90deg,transparent,#ff6a00,transparent);border-radius:2px}
-  .header-welcome{color:#aaa;font-size:18px;margin-top:24px}
-  .header-welcome strong{color:#e8e8e8}
-
-  /* Section Cards */
-  .section{background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:24px;margin-bottom:24px}
-  .section-title{color:#ff6a00;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-  .section-title::before{content:'';display:inline-block;width:3px;height:16px;background:#ff6a00;border-radius:2px}
-
-  /* Stat pills */
-  .stat-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-  .stat-pill{background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:100px}
-  .stat-pill .label{color:#666;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-  .stat-pill .value{color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px}
-  .macro-pill .value{font-size:22px;font-weight:700}
-  .macro-pill.cal .value{color:#ff6a00}
-  .macro-pill.pro .value{color:#22c55e}
-  .macro-pill.carb .value{color:#3b82f6}
-  .macro-pill.fat .value{color:#eab308}
-
-  /* Training tables */
-  .day-block{margin-top:20px}
-  .day-title{color:#ff6a00;font-size:15px;font-weight:700;margin-bottom:10px}
-  .exercise-table{width:100%;border-collapse:collapse;font-size:13px}
-  .exercise-table thead tr{background:#1c1c1c;color:#888;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-  .exercise-table th,.exercise-table td{padding:8px 10px;border-bottom:1px solid #1c1c1c;text-align:left}
-  .exercise-table .center{text-align:center}
-  .ex-name{color:#e8e8e8;font-weight:500}
-  .ex-notes{color:#666;font-size:12px}
-  .exercise-table td{color:#aaa}
-
-  /* Meals */
-  .meal-card{background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:8px}
-  .meal-header{display:flex;justify-content:space-between;align-items:center}
-  .meal-header strong{color:#e8e8e8;font-size:13px}
-  .meal-time{color:#ff6a00;font-size:12px;font-weight:600}
-  .meal-desc{color:#aaa;font-size:14px;margin:6px 0 4px}
-  .meal-macros{color:#666;font-size:12px}
-  .sample-label{color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:.5px;margin:0 0 10px;font-weight:600}
-
-  /* Supplements */
-  .supp-table{width:100%;border-collapse:collapse;font-size:13px}
-  .supp-table thead tr{background:#1c1c1c;color:#888;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-  .supp-table th,.supp-table td{padding:8px 10px;border-bottom:1px solid #1c1c1c;text-align:left}
-  .supp-table .center{text-align:center}
-  .supp-name{color:#e8e8e8;font-weight:500}
-  .supp-table td{color:#aaa}
-  .priority-essential{color:#22c55e;font-weight:600;font-size:12px}
-  .priority-optional{color:#666;font-size:12px}
-  .supp-footer{color:#666;font-size:12px;margin-top:12px;font-style:italic}
-
-  /* Cardio */
-  .info-line{color:#aaa;font-size:13px;margin:6px 0}
-  .info-line strong{color:#e8e8e8}
-
-  /* CTA Section */
-  .cta-section{background:linear-gradient(135deg,#1a1000,#141414);border:2px solid #ff6a00;border-radius:16px;padding:40px 24px;text-align:center;margin:40px 0 24px}
-  .cta-section h2{color:#ff6a00;font-size:24px;font-weight:800;margin-bottom:10px}
-  .cta-section p{color:#aaa;font-size:15px;margin-bottom:20px}
-  .cta-btn{display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 40px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.3px;box-shadow:0 4px 24px rgba(255,106,0,.35);transition:all .2s}
-  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 32px rgba(255,106,0,.5)}
-  .cta-note{color:#666;font-size:12px;margin-top:16px}
-  .cta-note a{color:#ff6a00;text-decoration:none}
-  .cta-section.paid{border-color:#22c55e}
-  .cta-section.paid h2{color:#22c55e}
-  .cta-badge{display:inline-block;background:#22c55e;color:#000;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:12px}
-
-  /* Footer */
-  .footer{text-align:center;padding:24px 0;border-top:1px solid #1c1c1c;margin-top:16px}
-  .footer p{color:#666;font-size:11px}
-  .footer .brand{color:#ff6a00;font-size:12px;font-weight:600;margin-top:6px}
-  .footer a{color:#ff6a00;text-decoration:none}
-
-  /* Responsive */
-  @media(max-width:480px){
-    .container{padding:16px 12px}
-    .header-brand{font-size:22px}
-    .stat-row{gap:8px}
-    .stat-pill{min-width:0;flex:1 1 calc(50% - 8px)}
-    .exercise-table{font-size:11px}
-    .exercise-table th,.exercise-table td{padding:6px 6px}
-    .cta-btn{padding:14px 24px;font-size:14px}
-  }
-</style>
-</head>
-<body>
-<div class="container">
-
-  <!-- Header -->
-  <div class="header">
-    <div class="header-brand">FORGED BY FREEDOM</div>
-    <div class="header-sub">Strength & Nutrition</div>
-    <div class="header-line"></div>
-    <p class="header-welcome">${firstName ? `Welcome, <strong>${firstName}</strong> — here's your custom program.` : "Your custom program is ready."}</p>
-  </div>
-
-  <!-- Training Program -->
-  <div class="section">
-    <div class="section-title">Training Program</div>
-    <div class="stat-row">
-      <div class="stat-pill"><div class="label">Split</div><div class="value">${tp.split_type || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Days/Week</div><div class="value">${tp.days_per_week || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Phase</div><div class="value">${tp.phase || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Duration</div><div class="value">${tp.duration || "—"}</div></div>
-    </div>
-    <p class="info-line"><strong>Progression:</strong> ${tp.progression_scheme || "Progressive overload"}</p>
-    <p class="info-line"><strong>Deload:</strong> Week ${tp.deload_week || "4"}</p>
-    ${trainingHTML}
-  </div>
-
-  <!-- Nutrition Plan -->
-  <div class="section">
-    <div class="section-title">Nutrition Plan</div>
-    <div class="stat-row">
-      <div class="stat-pill macro-pill cal"><div class="label">Calories</div><div class="value">${np.calories || "—"}</div></div>
-      <div class="stat-pill macro-pill pro"><div class="label">Protein</div><div class="value">${np.protein_g || "—"}g</div></div>
-      <div class="stat-pill macro-pill carb"><div class="label">Carbs</div><div class="value">${np.carbs_g || "—"}g</div></div>
-      <div class="stat-pill macro-pill fat"><div class="label">Fats</div><div class="value">${np.fats_g || "—"}g</div></div>
-    </div>
-    <p class="info-line"><strong>Goal:</strong> ${np.goal || "—"} · <strong>Meals:</strong> ${np.meal_count || "—"}/day</p>
-    ${np.meal_timing_notes ? `<p class="info-line">${np.meal_timing_notes}</p>` : ""}
-    ${mealsHTML ? `<p class="sample-label" style="margin-top:16px;">Sample Day</p>${mealsHTML}` : ""}
-    ${np.food_notes ? `<p class="supp-footer">${np.food_notes}</p>` : ""}
-  </div>
-
-  <!-- Supplements -->
-  <div class="section">
-    <div class="section-title">Supplement Protocol</div>
-    <table class="supp-table">
-      <thead><tr><th>Supplement</th><th class="center">Dose</th><th>Timing</th><th>Priority</th></tr></thead>
-      <tbody>${supplementsHTML}</tbody>
-    </table>
-    ${sp.estimated_monthly_cost ? `<p class="supp-footer">Est. monthly cost: ${sp.estimated_monthly_cost}</p>` : ""}
-    ${sp.notes ? `<p class="supp-footer">${sp.notes}</p>` : ""}
-  </div>
-
-  <!-- Cardio -->
-  <div class="section">
-    <div class="section-title">Cardio Protocol</div>
-    <div class="stat-row">
-      <div class="stat-pill"><div class="label">Sessions/Week</div><div class="value">${cp.weekly_sessions || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Type</div><div class="value">${cp.type || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Duration</div><div class="value">${cp.duration || "—"}</div></div>
-    </div>
-    <p class="info-line"><strong>HR Zone:</strong> ${cp.heart_rate_zone || "Zone 2"}</p>
-    <p class="info-line"><strong>Daily Step Goal:</strong> ${cp.step_goal || "8,000"}</p>
-    ${cp.notes ? `<p class="supp-footer">${cp.notes}</p>` : ""}
-  </div>
-
-  <!-- CTA -->
-  ${paymentSection}
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>This program is for educational purposes only. Consult your physician before starting any exercise or nutrition program.</p>
-    <p class="brand">FORGED BY FREEDOM STRENGTH & NUTRITION</p>
-    <p style="margin-top:4px"><a href="https://www.forgedbyfreedom.org" target="_blank">forgedbyfreedom.org</a></p>
-  </div>
-
-</div>
-</body>
-</html>`;
+    // Insert welcome after the header div, and CTA before the footer
+    let html = programHtml.replace(
+      '<!-- Cover / Client Info -->',
+      welcomeHeader + '\n  <!-- Cover / Client Info -->'
+    );
+    html = html.replace(
+      '<!-- Footer -->',
+      paymentSection + '\n  <!-- Footer -->'
+    );
 
     res.type("html").send(html);
 
@@ -3705,6 +4308,12 @@ app.post("/api/intake-with-program", async (req, res) => {
         nutrition_plan: program.nutrition_plan,
         supplement_protocol: program.supplement_protocol,
         cardio_protocol: program.cardio_protocol,
+        ped_protocol: program.ped_protocol || null,
+        metabolic_monitoring: program.metabolic_monitoring || null,
+        treadmill_progression: program.treadmill_progression || null,
+        recovery: program.recovery || null,
+        methodology: program.methodology || null,
+        plan_at_a_glance: program.plan_at_a_glance || null,
         program_html: programHtml,
         ai_model_used: CONFIG.chatModel,
         status: "pending_review"
