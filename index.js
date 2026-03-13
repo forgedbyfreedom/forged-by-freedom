@@ -2468,7 +2468,7 @@ const emailTransporter = process.env.SMTP_HOST
     })
   : null;
 
-const COACH_EMAIL = process.env.COACH_EMAIL || "bryan@forgedbyfreedom.com";
+const COACH_EMAIL = process.env.COACH_EMAIL || "forgedbyfreedom@proton.me";
 const APP_URL = process.env.APP_URL || "https://forged-by-freedom-api-nm4f.onrender.com";
 
 // ─── FBF PROGRAMMING RULES ──────────────────────────────
@@ -3591,7 +3591,7 @@ app.post("/api/intake-with-program", async (req, res) => {
 
     // Save intake
     
-    const { data: intake, error: intakeErr } = await db
+    const { data: intake, error: intakeErr } = await supabase
       .from("client_intakes").insert({ lead_id, ...fields }).select().single();
 
     if (intakeErr) {
