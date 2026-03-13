@@ -1176,14 +1176,15 @@ app.post("/tts", async (req, res) => {
 });
 
 // ─── Supabase Client ──────────────────────────────────────
-const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY)
-  ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
-  : null;
-
-// Service-role client for admin writes (bypasses RLS)
-const supabaseAdmin = (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
+// Prefer service-role key (bypasses RLS) since this is a backend API server
+const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
   ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
-  : supabase;
+  : (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY)
+    ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
+    : null;
+
+// Alias for backwards compat with any code referencing supabaseAdmin
+const supabaseAdmin = supabase;
 
 // ─── File Upload (Supabase Storage) ──────────────────────
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
@@ -1241,8 +1242,8 @@ app.post("/api/leads", async (req, res) => {
   const status = rejected ? "rejected" : "approved";
 
   try {
-    const db = supabaseAdmin || supabase;
-    const { data, error } = await db.from("leads").insert({
+    
+    const { data, error } = await supabase.from("leads").insert({
       name, email, phone, primary_goal, struggle_duration, what_held_back,
       commitment_level, referral_source, disclaimer_acknowledged, status
     }).select().single();
@@ -1403,7 +1404,7 @@ app.patch("/api/leads/:id/status", async (req, res) => {
   }
 
   try {
-    const db = supabaseAdmin || supabase;
+    
     const { data: lead, error: fetchErr } = await db
       .from("leads").select("id, name, email").eq("id", req.params.id).single();
 
@@ -3589,7 +3590,7 @@ app.post("/api/intake-with-program", async (req, res) => {
     if (lead.status !== "approved") return res.status(403).json({ error: "Application not yet approved." });
 
     // Save intake
-    const db = supabaseAdmin || supabase;
+    
     const { data: intake, error: intakeErr } = await db
       .from("client_intakes").insert({ lead_id, ...fields }).select().single();
 
