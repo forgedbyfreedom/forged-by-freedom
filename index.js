@@ -3589,12 +3589,13 @@ app.post("/api/intake-with-program", async (req, res) => {
     if (lead.status !== "approved") return res.status(403).json({ error: "Application not yet approved." });
 
     // Save intake
-    const { data: intake, error: intakeErr } = await supabase
+    const db = supabaseAdmin || supabase;
+    const { data: intake, error: intakeErr } = await db
       .from("client_intakes").insert({ lead_id, ...fields }).select().single();
 
     if (intakeErr) {
       console.error("[INTAKE] Supabase error:", intakeErr);
-      return res.status(500).json({ error: "Failed to save intake" });
+      return res.status(500).json({ error: "Failed to save intake", detail: intakeErr.message });
     }
 
     // Trigger n8n webhook
