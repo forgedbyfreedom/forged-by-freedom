@@ -485,6 +485,10 @@ body{padding:16px;display:flex;flex-direction:column;min-height:100%}
     Bloodwork Analyzer
     <span class="tab-badge">New</span>
   </button>
+  <button class="tab" id="tabDashboard" onclick="window.open('https://fbf-dashboard.vercel.app/portal','_blank');">
+    <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+    Coach Dashboard
+  </button>
 </div>
 
 <!-- SEARCH PANEL -->
@@ -838,7 +842,7 @@ function formatStat(n, suffix) {
   return n.toLocaleString();
 }
 (function fetchStats() {
-  var fallback = { transcripts: 15289, words: 56220481, channels: 179, vectors: 289000 };
+  var fallback = { transcripts: 34746, words: 126592085, channels: 179, vectors: 100622 };
   var data = fallback;
   var dur = 1800;
   try {
