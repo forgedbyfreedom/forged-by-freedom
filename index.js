@@ -2812,7 +2812,7 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
       await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
         method: "POST",
         headers: { "Title": `Program Ready: ${clientName}`, "Priority": "high", "Tags": "clipboard" },
-        body: `New program generated for ${clientName} (${clientEmail}).\n\nReview & approve: ${APP_URL}/admin\n\nProgram ID: ${programId}`
+        body: `New program generated for ${clientName} (${clientEmail}).\n\nReview branded program: ${APP_URL}/api/programs/${programId}/client-view?key=${process.env.ADMIN_KEY}\n\nApprove: ${APP_URL}/api/programs/${programId}/approve?key=${process.env.ADMIN_KEY}`
       });
     } catch (e) { console.error("[PROGRAM] ntfy error:", e.message); }
     return;
@@ -2823,14 +2823,24 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
     to: COACH_EMAIL,
     subject: `Program Ready for Review: ${clientName}`,
     html: `
-      <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px;">
-        <h2 style="color:#ff6a00;">New Program Ready for Approval</h2>
-        <p><strong>Client:</strong> ${clientName}</p>
-        <p><strong>Email:</strong> ${clientEmail}</p>
-        <p>A program has been auto-generated from their intake form.</p>
-        <p><a href="${APP_URL}/api/programs/${programId}/preview" style="display:inline-block;background:#ff6a00;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;margin:16px 0;">View Program</a></p>
-        <p><a href="${APP_URL}/api/programs/${programId}/approve?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send Payment Link</a></p>
-        <p><a href="${APP_URL}/api/programs/${programId}/reject?key=${process.env.ADMIN_KEY}" style="color:#ef4444;font-weight:bold;">Reject / Request Changes</a></p>
+      <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 20px;background:#0a0a0a;color:#e8e8e8;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <h1 style="font-size:20px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ff6a00;margin:0;">FORGED BY FREEDOM</h1>
+        </div>
+        <h2 style="color:#ff6a00;margin-bottom:16px;">New Program Ready for Your Review</h2>
+        <div style="background:#141414;border:1px solid #2a2a2a;border-radius:8px;padding:16px;margin-bottom:20px;">
+          <p style="margin:0 0 6px;"><strong style="color:#ff6a00;">Client:</strong> <span style="color:#e8e8e8;">${clientName}</span></p>
+          <p style="margin:0;"><strong style="color:#ff6a00;">Email:</strong> <span style="color:#e8e8e8;">${clientEmail}</span></p>
+        </div>
+        <p style="color:#aaa;">A custom program has been auto-generated from their intake. Review the branded program below — this is exactly what the client will see.</p>
+        <div style="margin:24px 0;text-align:center;">
+          <a href="${APP_URL}/api/programs/${programId}/client-view?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Review Branded Program</a>
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;margin:20px 0;">
+          <a href="${APP_URL}/api/programs/${programId}/approve?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send to Client</a>
+          <a href="${APP_URL}/api/programs/${programId}/reject?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:transparent;border:1px solid #ef4444;color:#ef4444;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Reject</a>
+        </div>
+        <p style="color:#666;font-size:12px;text-align:center;">Once you approve, the client will receive an email with the branded program preview + payment button.</p>
       </div>
     `
   });
@@ -3029,7 +3039,9 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
       </div>
     `);
 
-    if (program.status !== "approved" && program.status !== "delivered") {
+    // Allow Bryan to preview before approval via admin key, block everyone else
+    const isAdmin = req.query.key === process.env.ADMIN_KEY;
+    if (program.status !== "approved" && program.status !== "delivered" && !isAdmin) {
       return res.type("html").send(`
         <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
           <h2 style="color:#ff6a00;">Program Under Review</h2>
