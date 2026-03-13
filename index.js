@@ -5,6 +5,7 @@ import { Pinecone } from "@pinecone-database/pinecone";
 import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
 import nodemailer from "nodemailer";
+import multer from "multer";
 
 /* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
@@ -1065,6 +1066,44 @@ const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY)
   ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY)
   : null;
 
+// ─── File Upload (Supabase Storage) ──────────────────────
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
+
+app.post("/api/upload", upload.single("file"), async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Storage not configured" });
+  if (!req.file) return res.status(400).json({ error: "No file provided" });
+
+  const { lead_id, category } = req.body;
+  if (!lead_id) return res.status(400).json({ error: "lead_id required" });
+
+  const ext = req.file.originalname.split(".").pop() || "bin";
+  const fileName = `${category || "uploads"}/${lead_id}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+
+  try {
+    const { data, error } = await supabase.storage
+      .from("client-uploads")
+      .upload(fileName, req.file.buffer, {
+        contentType: req.file.mimetype,
+        upsert: false,
+      });
+
+    if (error) {
+      console.error("[UPLOAD] Storage error:", error);
+      return res.status(500).json({ error: "Upload failed: " + error.message });
+    }
+
+    const { data: urlData } = supabase.storage
+      .from("client-uploads")
+      .getPublicUrl(fileName);
+
+    console.log(`[UPLOAD] ${req.file.originalname} → ${fileName}`);
+    res.json({ url: urlData.publicUrl, path: fileName });
+  } catch (err) {
+    console.error("[UPLOAD] Error:", err);
+    res.status(500).json({ error: "Upload failed" });
+  }
+});
+
 // ─── Lead Capture (Stage 1) ──────────────────────────────
 app.post("/api/leads", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Lead system not configured" });
@@ -1757,6 +1796,27 @@ app.post("/api/content/:id/publish", async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// ─── Body Scan CRUD ──────────────────────────────────────
+app.post("/api/body-scans", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  try {
+    const { data, error } = await supabase.from("body_scans").insert(req.body).select().single();
+    if (error) return res.status(500).json({ error: error.message });
+    res.json({ scan: data });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.get("/api/body-scans/:clientId", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  try {
+    const { data, error } = await supabase.from("body_scans")
+      .select("*").eq("client_id", req.params.clientId)
+      .order("scan_date", { ascending: false });
+    if (error) return res.status(500).json({ error: error.message });
+    res.json({ scans: data });
+  } catch (err) { res.status(500).json({ error: err.message }); }
 });
 
 // ─── Stripe + Email Config ────────────────────────────────

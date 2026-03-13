@@ -130,6 +130,30 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
 .error-msg.visible{display:block}
 .form-wrapper.hidden{display:none}
 
+/* File upload drop zone */
+.drop-zone{
+  border:2px dashed var(--border);border-radius:var(--radius-sm);
+  padding:28px 20px;text-align:center;cursor:pointer;
+  transition:border-color .2s,background .2s;
+  background:var(--surface2);
+}
+.drop-zone:hover,.drop-zone.drag-over{
+  border-color:var(--accent);background:var(--accent-glow);
+}
+.drop-zone-icon{font-size:32px;margin-bottom:8px}
+.drop-zone-text{font-size:13px;color:var(--text-dim);line-height:1.5}
+.drop-zone-text strong{color:var(--accent)}
+.drop-zone-hint{font-size:11px;color:var(--text-muted);margin-top:6px}
+.file-list{margin-top:10px}
+.file-item{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 12px;background:var(--surface2);border:1px solid var(--border);
+  border-radius:var(--radius-sm);margin-top:6px;font-size:13px;color:var(--text);
+}
+.file-item .file-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:8px}
+.file-item .file-size{color:var(--text-muted);font-size:11px;margin-right:10px}
+.file-remove{background:none;border:none;color:var(--danger);cursor:pointer;font-size:16px;font-weight:700;padding:0 4px}
+
 .lab-rec{
   background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);
   padding:20px;margin-bottom:24px;
@@ -374,6 +398,26 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
         <div class="form-group">
           <label class="form-label">If yes — when was your last panel and key markers?</label>
           <textarea class="form-textarea" name="last_panel" placeholder="e.g. Oct 2025 — Total T: 650, Free T: 18, E2: 35, HCT: 48%"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Upload bloodwork / lab results (PDF, image, or screenshot)</label>
+          <div class="drop-zone" id="bloodworkDrop">
+            <div class="drop-zone-icon">📋</div>
+            <div class="drop-zone-text">Drag & drop your bloodwork files here<br>or <strong>click to browse</strong></div>
+            <div class="drop-zone-hint">PDF, PNG, JPG — up to 10MB each</div>
+            <input type="file" id="bloodworkFileInput" multiple accept=".pdf,.png,.jpg,.jpeg,.heic" style="display:none">
+          </div>
+          <div class="file-list" id="bloodworkFileList"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Upload InBody, DEXA, or body composition scan</label>
+          <div class="drop-zone" id="bodyScanDrop">
+            <div class="drop-zone-icon">📊</div>
+            <div class="drop-zone-text">Drag & drop your scan results here<br>or <strong>click to browse</strong></div>
+            <div class="drop-zone-hint">PDF, PNG, JPG — up to 10MB each</div>
+            <input type="file" id="bodyScanFileInput" multiple accept=".pdf,.png,.jpg,.jpeg,.heic" style="display:none">
+          </div>
+          <div class="file-list" id="bodyScanFileList"></div>
         </div>
         <div class="form-group">
           <label class="form-label">Currently on TRT, HRT, or prescribed hormone therapy?</label>
@@ -764,6 +808,74 @@ const API_BASE = window.location.origin.includes('localhost')
 const params = new URLSearchParams(window.location.search);
 const token = params.get('token');
 
+// ─── File Upload (Drag & Drop) ───────────────────────────
+const uploadedFiles = { bloodwork: [], bodyScan: [] };
+
+function setupDropZone(dropId, inputId, listId, fileKey) {
+  const drop = document.getElementById(dropId);
+  const input = document.getElementById(inputId);
+  const list = document.getElementById(listId);
+
+  drop.addEventListener('click', () => input.click());
+  drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('drag-over'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('drag-over'));
+  drop.addEventListener('drop', (e) => {
+    e.preventDefault();
+    drop.classList.remove('drag-over');
+    handleFiles(e.dataTransfer.files, fileKey, list);
+  });
+  input.addEventListener('change', (e) => {
+    handleFiles(e.target.files, fileKey, list);
+    input.value = '';
+  });
+}
+
+function handleFiles(fileList, fileKey, listEl) {
+  for (const file of fileList) {
+    if (file.size > 10 * 1024 * 1024) { alert(file.name + ' is too large (max 10MB)'); continue; }
+    uploadedFiles[fileKey].push(file);
+    renderFileList(fileKey, listEl);
+  }
+}
+
+function renderFileList(fileKey, listEl) {
+  listEl.innerHTML = '';
+  uploadedFiles[fileKey].forEach((file, i) => {
+    const div = document.createElement('div');
+    div.className = 'file-item';
+    const sizeMB = (file.size / 1024 / 1024).toFixed(1);
+    div.innerHTML = '<span class="file-name">' + file.name + '</span><span class="file-size">' + sizeMB + ' MB</span><button type="button" class="file-remove" data-key="' + fileKey + '" data-idx="' + i + '">&times;</button>';
+    listEl.appendChild(div);
+  });
+  listEl.querySelectorAll('.file-remove').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const k = btn.dataset.key;
+      const idx = parseInt(btn.dataset.idx);
+      uploadedFiles[k].splice(idx, 1);
+      renderFileList(k, listEl);
+    });
+  });
+}
+
+async function uploadFilesToServer(files, leadId, category) {
+  const urls = [];
+  for (const file of files) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('lead_id', leadId);
+    formData.append('category', category);
+    try {
+      const res = await fetch(API_BASE + '/api/upload', { method: 'POST', body: formData });
+      const result = await res.json();
+      if (result.url) urls.push(result.url);
+    } catch (err) { console.error('Upload error:', err); }
+  }
+  return urls;
+}
+
+setupDropZone('bloodworkDrop', 'bloodworkFileInput', 'bloodworkFileList', 'bloodwork');
+setupDropZone('bodyScanDrop', 'bodyScanFileInput', 'bodyScanFileList', 'bodyScan');
+
 const form = document.getElementById('intakeForm');
 const disclaimerCheck = document.getElementById('disclaimerCheck');
 const submitBtn = document.getElementById('submitBtn');
@@ -831,6 +943,22 @@ form.addEventListener('submit', async (e) => {
   data.waiver_initials = initialFields.map(id => document.getElementById(id).value.trim().toUpperCase()).join(', ');
 
   submitBtn.disabled = true;
+  submitBtn.textContent = 'Uploading files...';
+
+  // Upload files first
+  try {
+    if (uploadedFiles.bloodwork.length > 0) {
+      const urls = await uploadFilesToServer(uploadedFiles.bloodwork, token, 'bloodwork');
+      data.bloodwork_file_urls = JSON.stringify(urls);
+    }
+    if (uploadedFiles.bodyScan.length > 0) {
+      const urls = await uploadFilesToServer(uploadedFiles.bodyScan, token, 'body_scan');
+      data.body_scan_file_urls = JSON.stringify(urls);
+    }
+  } catch (err) {
+    console.error('File upload error:', err);
+  }
+
   submitBtn.textContent = 'Submitting...';
 
   try {
