@@ -3135,6 +3135,344 @@ app.post("/api/intake-with-program", async (req, res) => {
   }
 });
 
+// ─── Coach Dashboard ─────────────────────────────────────────
+app.get("/coach-dashboard", (_, res) => res.sendFile(join(__dirname, "embed", "coach-dashboard.html")));
+
+// Coach dashboard API: get all clients with latest metrics for a coach
+app.get("/api/coach/clients", async (req, res) => {
+  try {
+    const adminKey = req.query.key;
+    if (adminKey !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+    const { data: clients, error } = await sb.from("clients")
+      .select("id, first_name, last_name, email, is_active, target_calories, target_protein, target_steps, last_weight, created_at")
+      .eq("is_active", true)
+      .order("last_name");
+
+    if (error) throw error;
+
+    // Get latest metrics for each client
+    const clientIds = clients.map(c => c.id);
+    const { data: metrics } = await sb.from("client_metrics")
+      .select("*")
+      .in("client_id", clientIds);
+
+    // Get latest checkin for each client
+    const { data: checkins } = await sb.rpc("get_latest_checkins_per_client", { client_ids: clientIds }).catch(() => ({ data: null }));
+
+    // Fallback: get recent checkins manually if RPC doesn't exist
+    let latestCheckins = checkins;
+    if (!latestCheckins) {
+      const { data: allCheckins } = await sb.from("checkins")
+        .select("*")
+        .in("client_id", clientIds)
+        .order("date", { ascending: false })
+        .limit(clientIds.length * 2);
+      // Group by client, keep latest
+      const byClient = {};
+      (allCheckins || []).forEach(c => {
+        if (!byClient[c.client_id]) byClient[c.client_id] = c;
+      });
+      latestCheckins = Object.values(byClient);
+    }
+
+    const metricsMap = {};
+    (metrics || []).forEach(m => metricsMap[m.client_id] = m);
+    const checkinMap = {};
+    (latestCheckins || []).forEach(c => checkinMap[c.client_id] = c);
+
+    const enriched = clients.map(c => ({
+      ...c,
+      metrics: metricsMap[c.id] || null,
+      latest_checkin: checkinMap[c.id] || null,
+    }));
+
+    res.json({ clients: enriched });
+  } catch (err) {
+    console.error("[COACH CLIENTS]", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// Coach dashboard API: get full client detail with all checkins
+app.get("/api/coach/clients/:id", async (req, res) => {
+  try {
+    const adminKey = req.query.key;
+    if (adminKey !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+    const clientId = req.params.id;
+
+    const [clientRes, checkinsRes, scansRes, metricsRes] = await Promise.all([
+      sb.from("clients").select("*").eq("id", clientId).single(),
+      sb.from("checkins").select("*").eq("client_id", clientId).order("date", { ascending: false }).limit(90),
+      sb.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
+      sb.from("client_metrics").select("*").eq("client_id", clientId).single(),
+    ]);
+
+    if (clientRes.error) throw clientRes.error;
+
+    res.json({
+      client: clientRes.data,
+      checkins: checkinsRes.data || [],
+      scans: scansRes.data || [],
+      metrics: metricsRes.data || null,
+    });
+  } catch (err) {
+    console.error("[COACH CLIENT DETAIL]", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// Coach dashboard API: get checkin trends (aggregated)
+app.get("/api/coach/clients/:id/trends", async (req, res) => {
+  try {
+    const adminKey = req.query.key;
+    if (adminKey !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+    const clientId = req.params.id;
+    const days = parseInt(req.query.days) || 30;
+
+    const since = new Date();
+    since.setDate(since.getDate() - days);
+
+    const { data: checkins, error } = await sb.from("checkins")
+      .select("date, weight_lbs, body_temp, blood_glucose, resting_heart_rate, blood_pressure_systolic, blood_pressure_diastolic, mood_rating, stress_level, calories, protein_g, carbs_g, fat_g, water_oz, steps, sleep_hours, sleep_quality, training_done, performance_rating, supplement_compliance, workout_duration_min, avg_heart_rate, cardio_minutes")
+      .eq("client_id", clientId)
+      .gte("date", since.toISOString().split("T")[0])
+      .order("date", { ascending: true });
+
+    if (error) throw error;
+
+    res.json({ checkins: checkins || [], days });
+  } catch (err) {
+    console.error("[COACH TRENDS]", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// ─── Client Report Generation ────────────────────────────────
+app.get("/api/coach/clients/:id/report", async (req, res) => {
+  try {
+    const adminKey = req.query.key;
+    if (adminKey !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+    const clientId = req.params.id;
+    const days = parseInt(req.query.days) || 30;
+
+    const since = new Date();
+    since.setDate(since.getDate() - days);
+
+    const [clientRes, checkinsRes, scansRes, metricsRes] = await Promise.all([
+      sb.from("clients").select("*").eq("id", clientId).single(),
+      sb.from("checkins").select("*").eq("client_id", clientId).gte("date", since.toISOString().split("T")[0]).order("date", { ascending: true }),
+      sb.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
+      sb.from("client_metrics").select("*").eq("client_id", clientId).single(),
+    ]);
+
+    if (clientRes.error) throw clientRes.error;
+
+    const client = clientRes.data;
+    const checkins = checkinsRes.data || [];
+    const scans = scansRes.data || [];
+    const metrics = metricsRes.data || {};
+
+    // Calculate averages
+    const avg = (arr) => arr.length ? (arr.reduce((a,b) => a+b, 0) / arr.length).toFixed(1) : "--";
+    const weights = checkins.map(c => c.weight_lbs).filter(Boolean);
+    const cals = checkins.map(c => c.calories).filter(Boolean);
+    const proteins = checkins.map(c => c.protein_g).filter(Boolean);
+    const sleeps = checkins.map(c => c.sleep_hours).filter(Boolean);
+    const steps = checkins.map(c => c.steps).filter(Boolean);
+    const moods = checkins.map(c => c.mood_rating).filter(Boolean);
+    const temps = checkins.map(c => c.body_temp).filter(Boolean);
+    const trainDays = checkins.filter(c => c.training_done).length;
+    const totalDays = checkins.length;
+    const adherence = totalDays > 0 ? ((totalDays / days) * 100).toFixed(0) : 0;
+    const suppComp = checkins.filter(c => c.supplement_compliance).length;
+
+    const latestScan = scans[0] || {};
+    const firstScan = scans.length > 1 ? scans[scans.length - 1] : {};
+
+    const reportDate = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+
+    const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Report — ${client.first_name} ${client.last_name}</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#fff;padding:24px;max-width:900px;margin:0 auto}
+.header{text-align:center;padding:32px 0;border-bottom:2px solid #FF6A00}
+.header h1{font-size:28px;color:#FF6A00;margin-bottom:4px}
+.header .name{font-size:22px;font-weight:700;margin-top:8px}
+.header .period{color:#888;font-size:14px;margin-top:4px}
+.section{margin-top:32px}
+.section h2{font-size:18px;color:#FF6A00;border-bottom:1px solid #333;padding-bottom:8px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.stat-card{background:#141414;border:1px solid #2a2a2a;border-radius:12px;padding:16px;text-align:center}
+.stat-card .value{font-size:24px;font-weight:700;color:#fff}
+.stat-card .label{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.stat-card .delta{font-size:12px;font-weight:600;margin-top:4px}
+.delta-good{color:#22c55e}.delta-bad{color:#ef4444}.delta-neutral{color:#888}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #2a2a2a;font-size:13px}
+th{color:#888;text-transform:uppercase;letter-spacing:0.5px;font-size:11px}
+td{color:#fff}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700}
+.badge-green{background:rgba(34,197,94,0.15);color:#22c55e}
+.badge-yellow{background:rgba(234,179,8,0.15);color:#eab308}
+.badge-red{background:rgba(239,68,68,0.15);color:#ef4444}
+.footer{text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid #333;color:#555;font-size:12px}
+@media print{body{background:#fff;color:#000} .stat-card{background:#f5f5f5;border-color:#ddd} .stat-card .value{color:#000} th{color:#666} td{color:#000} .header{border-color:#FF6A00}}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>FORGED BY FREEDOM</h1>
+  <div class="name">${client.first_name} ${client.last_name}</div>
+  <div class="period">${days}-Day Report — Generated ${reportDate}</div>
+</div>
+
+<div class="section">
+  <h2>Overview</h2>
+  <div class="grid">
+    <div class="stat-card">
+      <div class="value">${adherence}%</div>
+      <div class="label">Check-in Rate</div>
+      <div class="delta delta-neutral">${totalDays} / ${days} days</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">${trainDays}</div>
+      <div class="label">Training Days</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">${suppComp}/${totalDays}</div>
+      <div class="label">Supp. Compliance</div>
+    </div>
+    <div class="stat-card">
+      <div class="value"><span class="badge badge-${metrics.status || 'neutral'}">${(metrics.status || 'N/A').toUpperCase()}</span></div>
+      <div class="label">Current Status</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Key Metrics (${days}-Day Averages)</h2>
+  <div class="grid">
+    <div class="stat-card">
+      <div class="value">${avg(weights)}</div>
+      <div class="label">Avg Weight (lbs)</div>
+      ${weights.length >= 2 ? `<div class="delta ${weights[weights.length-1] < weights[0] ? 'delta-good' : 'delta-bad'}">${(weights[weights.length-1] - weights[0]).toFixed(1)} lbs</div>` : ''}
+    </div>
+    <div class="stat-card">
+      <div class="value">${avg(cals)}</div>
+      <div class="label">Avg Calories</div>
+      ${client.target_calories ? `<div class="delta delta-neutral">Target: ${client.target_calories}</div>` : ''}
+    </div>
+    <div class="stat-card">
+      <div class="value">${avg(proteins)}g</div>
+      <div class="label">Avg Protein</div>
+      ${client.target_protein ? `<div class="delta delta-neutral">Target: ${client.target_protein}g</div>` : ''}
+    </div>
+    <div class="stat-card">
+      <div class="value">${avg(sleeps)}h</div>
+      <div class="label">Avg Sleep</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">${avg(steps)}</div>
+      <div class="label">Avg Steps</div>
+      ${client.target_steps ? `<div class="delta delta-neutral">Target: ${client.target_steps}</div>` : ''}
+    </div>
+    <div class="stat-card">
+      <div class="value">${avg(moods)}/10</div>
+      <div class="label">Avg Mood</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">${avg(temps)}°F</div>
+      <div class="label">Avg Body Temp</div>
+    </div>
+  </div>
+</div>
+
+${scans.length > 0 ? `
+<div class="section">
+  <h2>Body Composition</h2>
+  <div class="grid">
+    ${latestScan.body_fat_pct != null ? `<div class="stat-card">
+      <div class="value">${latestScan.body_fat_pct}%</div>
+      <div class="label">Body Fat</div>
+      ${firstScan.body_fat_pct != null ? `<div class="delta ${latestScan.body_fat_pct < firstScan.body_fat_pct ? 'delta-good' : 'delta-bad'}">${(latestScan.body_fat_pct - firstScan.body_fat_pct).toFixed(1)}%</div>` : ''}
+    </div>` : ''}
+    ${latestScan.lean_mass_lbs != null ? `<div class="stat-card">
+      <div class="value">${latestScan.lean_mass_lbs}</div>
+      <div class="label">Lean Mass (lbs)</div>
+      ${firstScan.lean_mass_lbs != null ? `<div class="delta ${latestScan.lean_mass_lbs > firstScan.lean_mass_lbs ? 'delta-good' : 'delta-bad'}">${(latestScan.lean_mass_lbs - firstScan.lean_mass_lbs).toFixed(1)} lbs</div>` : ''}
+    </div>` : ''}
+    ${latestScan.skeletal_muscle_mass_lbs != null ? `<div class="stat-card">
+      <div class="value">${latestScan.skeletal_muscle_mass_lbs}</div>
+      <div class="label">Skeletal Muscle (lbs)</div>
+      ${firstScan.skeletal_muscle_mass_lbs != null ? `<div class="delta ${latestScan.skeletal_muscle_mass_lbs > firstScan.skeletal_muscle_mass_lbs ? 'delta-good' : 'delta-bad'}">${(latestScan.skeletal_muscle_mass_lbs - firstScan.skeletal_muscle_mass_lbs).toFixed(1)} lbs</div>` : ''}
+    </div>` : ''}
+    ${latestScan.total_weight_lbs != null ? `<div class="stat-card">
+      <div class="value">${latestScan.total_weight_lbs}</div>
+      <div class="label">Scan Weight (lbs)</div>
+    </div>` : ''}
+  </div>
+</div>
+` : ''}
+
+<div class="section">
+  <h2>Recent Check-ins</h2>
+  <table>
+    <tr><th>Date</th><th>Weight</th><th>Cal</th><th>Protein</th><th>Sleep</th><th>Steps</th><th>Mood</th><th>Train</th></tr>
+    ${checkins.slice(-14).reverse().map(c => `
+    <tr>
+      <td>${new Date(c.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</td>
+      <td>${c.weight_lbs || '--'}</td>
+      <td>${c.calories || '--'}</td>
+      <td>${c.protein_g ? c.protein_g + 'g' : '--'}</td>
+      <td>${c.sleep_hours ? c.sleep_hours + 'h' : '--'}</td>
+      <td>${c.steps ? c.steps.toLocaleString() : '--'}</td>
+      <td>${c.mood_rating || '--'}</td>
+      <td>${c.training_done ? '✓' : '—'}</td>
+    </tr>`).join('')}
+  </table>
+</div>
+
+<div class="footer">
+  <p>Forged by Freedom — Coaching Report</p>
+  <p>Generated on ${reportDate}</p>
+</div>
+</body></html>`;
+
+    if (req.query.format === "json") {
+      res.json({
+        client: { first_name: client.first_name, last_name: client.last_name, email: client.email },
+        period: { days, checkins: totalDays, training_days: trainDays },
+        averages: {
+          weight: avg(weights), calories: avg(cals), protein: avg(proteins),
+          sleep: avg(sleeps), steps: avg(steps), mood: avg(moods), body_temp: avg(temps),
+        },
+        body_composition: latestScan.body_fat_pct != null ? {
+          body_fat_pct: latestScan.body_fat_pct,
+          lean_mass_lbs: latestScan.lean_mass_lbs,
+          skeletal_muscle_mass_lbs: latestScan.skeletal_muscle_mass_lbs,
+        } : null,
+        adherence: `${adherence}%`,
+        supplement_compliance: `${suppComp}/${totalDays}`,
+        status: metrics.status,
+      });
+    } else {
+      res.setHeader("Content-Type", "text/html");
+      res.send(html);
+    }
+  } catch (err) {
+    console.error("[REPORT]", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
 app.use((err, _, res, __) => {
