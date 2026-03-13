@@ -1081,7 +1081,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
 
   try {
     const { data, error } = await supabase.storage
-      .from("client-uploads")
+      .from("client-documents")
       .upload(fileName, req.file.buffer, {
         contentType: req.file.mimetype,
         upsert: false,
@@ -1093,7 +1093,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
     }
 
     const { data: urlData } = supabase.storage
-      .from("client-uploads")
+      .from("client-documents")
       .getPublicUrl(fileName);
 
     console.log(`[UPLOAD] ${req.file.originalname} → ${fileName}`);
