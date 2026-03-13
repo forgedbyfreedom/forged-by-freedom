@@ -3061,22 +3061,22 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
     let trainingHTML = "";
     if (tp.days) {
       for (const [dayName, exercises] of Object.entries(tp.days)) {
-        trainingHTML += \`<div class="day-block">
-          <h3 class="day-title">\${dayName}</h3>
+        trainingHTML += `<div class="day-block">
+          <h3 class="day-title">${dayName}</h3>
           <table class="exercise-table">
             <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RIR</th><th>Rest</th><th>Notes</th></tr></thead>
-            <tbody>\`;
+            <tbody>`;
         for (const ex of exercises) {
-          trainingHTML += \`<tr>
-            <td class="ex-name">\${ex.exercise}</td>
-            <td class="center">\${ex.sets}</td>
-            <td class="center">\${ex.reps}</td>
-            <td class="center">\${ex.rir || "—"}</td>
-            <td class="center">\${ex.rest || "—"}</td>
-            <td class="ex-notes">\${ex.notes || ""}</td>
-          </tr>\`;
+          trainingHTML += `<tr>
+            <td class="ex-name">${ex.exercise}</td>
+            <td class="center">${ex.sets}</td>
+            <td class="center">${ex.reps}</td>
+            <td class="center">${ex.rir || "—"}</td>
+            <td class="center">${ex.rest || "—"}</td>
+            <td class="ex-notes">${ex.notes || ""}</td>
+          </tr>`;
         }
-        trainingHTML += \`</tbody></table></div>\`;
+        trainingHTML += `</tbody></table></div>`;
       }
     }
 
@@ -3084,14 +3084,14 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
     let mealsHTML = "";
     if (np.sample_day) {
       for (const [mealKey, meal] of Object.entries(np.sample_day)) {
-        mealsHTML += \`<div class="meal-card">
+        mealsHTML += `<div class="meal-card">
           <div class="meal-header">
-            <strong>\${mealKey.replace(/_/g, " ").toUpperCase()}</strong>
-            <span class="meal-time">\${meal.time || ""}</span>
+            <strong>${mealKey.replace(/_/g, " ").toUpperCase()}</strong>
+            <span class="meal-time">${meal.time || ""}</span>
           </div>
-          <p class="meal-desc">\${meal.description || ""}</p>
-          <span class="meal-macros">\${meal.macros || ""}</span>
-        </div>\`;
+          <p class="meal-desc">${meal.description || ""}</p>
+          <span class="meal-macros">${meal.macros || ""}</span>
+        </div>`;
       }
     }
 
@@ -3100,45 +3100,45 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
     const allSupps = [...(sp.daily || []), ...(sp.optional || [])];
     for (const s of allSupps) {
       const priorityClass = (s.priority || "").toLowerCase() === "essential" ? "priority-essential" : "priority-optional";
-      supplementsHTML += \`<tr>
-        <td class="supp-name">\${s.supplement}</td>
-        <td class="center">\${s.dose}</td>
-        <td>\${s.timing}</td>
-        <td class="\${priorityClass}">\${s.priority}</td>
-      </tr>\`;
+      supplementsHTML += `<tr>
+        <td class="supp-name">${s.supplement}</td>
+        <td class="center">${s.dose}</td>
+        <td>${s.timing}</td>
+        <td class="${priorityClass}">${s.priority}</td>
+      </tr>`;
     }
 
     // Payment button (only if approved and not yet paid)
     let paymentSection = "";
     if (program.payment_status === "paid" || program.status === "delivered") {
-      paymentSection = \`<div class="cta-section paid">
+      paymentSection = `<div class="cta-section paid">
         <div class="cta-badge">PURCHASED</div>
         <h2>You're All Set</h2>
         <p>Your program has been delivered. Check your email for the full copy.</p>
         <p class="cta-note">Questions? Email <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
-      </div>\`;
+      </div>`;
     } else if (program.stripe_checkout_session_id) {
       // Has a checkout session — show pay button
-      paymentSection = \`<div class="cta-section">
+      paymentSection = `<div class="cta-section">
         <h2>Ready to Get Started?</h2>
         <p>Review your program above. When you're ready, lock it in.</p>
-        <a href="/api/programs/\${program.id}/checkout" class="cta-btn">Approve & Pay — Start Your Transformation</a>
+        <a href="/api/programs/${program.id}/checkout" class="cta-btn">Approve & Pay — Start Your Transformation</a>
         <p class="cta-note">Secure checkout powered by Stripe. Questions? <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
-      </div>\`;
+      </div>`;
     } else {
-      paymentSection = \`<div class="cta-section">
+      paymentSection = `<div class="cta-section">
         <h2>Your Program is Ready</h2>
         <p>Coach Bryan will be in touch with next steps.</p>
         <p class="cta-note">Questions? <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
-      </div>\`;
+      </div>`;
     }
 
-    const html = \`<!DOCTYPE html>
+    const html = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Your FBF Program — \${program.client_name}</title>
+<title>Your FBF Program — ${program.client_name}</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#0a0a0a;color:#e8e8e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
@@ -3241,36 +3241,36 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
     <div class="header-brand">FORGED BY FREEDOM</div>
     <div class="header-sub">Strength & Nutrition</div>
     <div class="header-line"></div>
-    <p class="header-welcome">\${firstName ? \`Welcome, <strong>\${firstName}</strong> — here's your custom program.\` : "Your custom program is ready."}</p>
+    <p class="header-welcome">${firstName ? `Welcome, <strong>${firstName}</strong> — here's your custom program.` : "Your custom program is ready."}</p>
   </div>
 
   <!-- Training Program -->
   <div class="section">
     <div class="section-title">Training Program</div>
     <div class="stat-row">
-      <div class="stat-pill"><div class="label">Split</div><div class="value">\${tp.split_type || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Days/Week</div><div class="value">\${tp.days_per_week || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Phase</div><div class="value">\${tp.phase || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Duration</div><div class="value">\${tp.duration || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Split</div><div class="value">${tp.split_type || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Days/Week</div><div class="value">${tp.days_per_week || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Phase</div><div class="value">${tp.phase || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Duration</div><div class="value">${tp.duration || "—"}</div></div>
     </div>
-    <p class="info-line"><strong>Progression:</strong> \${tp.progression_scheme || "Progressive overload"}</p>
-    <p class="info-line"><strong>Deload:</strong> Week \${tp.deload_week || "4"}</p>
-    \${trainingHTML}
+    <p class="info-line"><strong>Progression:</strong> ${tp.progression_scheme || "Progressive overload"}</p>
+    <p class="info-line"><strong>Deload:</strong> Week ${tp.deload_week || "4"}</p>
+    ${trainingHTML}
   </div>
 
   <!-- Nutrition Plan -->
   <div class="section">
     <div class="section-title">Nutrition Plan</div>
     <div class="stat-row">
-      <div class="stat-pill macro-pill cal"><div class="label">Calories</div><div class="value">\${np.calories || "—"}</div></div>
-      <div class="stat-pill macro-pill pro"><div class="label">Protein</div><div class="value">\${np.protein_g || "—"}g</div></div>
-      <div class="stat-pill macro-pill carb"><div class="label">Carbs</div><div class="value">\${np.carbs_g || "—"}g</div></div>
-      <div class="stat-pill macro-pill fat"><div class="label">Fats</div><div class="value">\${np.fats_g || "—"}g</div></div>
+      <div class="stat-pill macro-pill cal"><div class="label">Calories</div><div class="value">${np.calories || "—"}</div></div>
+      <div class="stat-pill macro-pill pro"><div class="label">Protein</div><div class="value">${np.protein_g || "—"}g</div></div>
+      <div class="stat-pill macro-pill carb"><div class="label">Carbs</div><div class="value">${np.carbs_g || "—"}g</div></div>
+      <div class="stat-pill macro-pill fat"><div class="label">Fats</div><div class="value">${np.fats_g || "—"}g</div></div>
     </div>
-    <p class="info-line"><strong>Goal:</strong> \${np.goal || "—"} · <strong>Meals:</strong> \${np.meal_count || "—"}/day</p>
-    \${np.meal_timing_notes ? \`<p class="info-line">\${np.meal_timing_notes}</p>\` : ""}
-    \${mealsHTML ? \`<p class="sample-label" style="margin-top:16px;">Sample Day</p>\${mealsHTML}\` : ""}
-    \${np.food_notes ? \`<p class="supp-footer">\${np.food_notes}</p>\` : ""}
+    <p class="info-line"><strong>Goal:</strong> ${np.goal || "—"} · <strong>Meals:</strong> ${np.meal_count || "—"}/day</p>
+    ${np.meal_timing_notes ? `<p class="info-line">${np.meal_timing_notes}</p>` : ""}
+    ${mealsHTML ? `<p class="sample-label" style="margin-top:16px;">Sample Day</p>${mealsHTML}` : ""}
+    ${np.food_notes ? `<p class="supp-footer">${np.food_notes}</p>` : ""}
   </div>
 
   <!-- Supplements -->
@@ -3278,27 +3278,27 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
     <div class="section-title">Supplement Protocol</div>
     <table class="supp-table">
       <thead><tr><th>Supplement</th><th class="center">Dose</th><th>Timing</th><th>Priority</th></tr></thead>
-      <tbody>\${supplementsHTML}</tbody>
+      <tbody>${supplementsHTML}</tbody>
     </table>
-    \${sp.estimated_monthly_cost ? \`<p class="supp-footer">Est. monthly cost: \${sp.estimated_monthly_cost}</p>\` : ""}
-    \${sp.notes ? \`<p class="supp-footer">\${sp.notes}</p>\` : ""}
+    ${sp.estimated_monthly_cost ? `<p class="supp-footer">Est. monthly cost: ${sp.estimated_monthly_cost}</p>` : ""}
+    ${sp.notes ? `<p class="supp-footer">${sp.notes}</p>` : ""}
   </div>
 
   <!-- Cardio -->
   <div class="section">
     <div class="section-title">Cardio Protocol</div>
     <div class="stat-row">
-      <div class="stat-pill"><div class="label">Sessions/Week</div><div class="value">\${cp.weekly_sessions || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Type</div><div class="value">\${cp.type || "—"}</div></div>
-      <div class="stat-pill"><div class="label">Duration</div><div class="value">\${cp.duration || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Sessions/Week</div><div class="value">${cp.weekly_sessions || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Type</div><div class="value">${cp.type || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Duration</div><div class="value">${cp.duration || "—"}</div></div>
     </div>
-    <p class="info-line"><strong>HR Zone:</strong> \${cp.heart_rate_zone || "Zone 2"}</p>
-    <p class="info-line"><strong>Daily Step Goal:</strong> \${cp.step_goal || "8,000"}</p>
-    \${cp.notes ? \`<p class="supp-footer">\${cp.notes}</p>\` : ""}
+    <p class="info-line"><strong>HR Zone:</strong> ${cp.heart_rate_zone || "Zone 2"}</p>
+    <p class="info-line"><strong>Daily Step Goal:</strong> ${cp.step_goal || "8,000"}</p>
+    ${cp.notes ? `<p class="supp-footer">${cp.notes}</p>` : ""}
   </div>
 
   <!-- CTA -->
-  \${paymentSection}
+  ${paymentSection}
 
   <!-- Footer -->
   <div class="footer">
@@ -3309,18 +3309,18 @@ app.get("/api/programs/:id/client-view", async (req, res) => {
 
 </div>
 </body>
-</html>\`;
+</html>`;
 
     res.type("html").send(html);
 
   } catch (err) {
     console.error("[PROGRAM] Client view error:", err);
-    res.status(500).type("html").send(\`
+    res.status(500).type("html").send(`
       <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
         <h2 style="color:#ef4444;">Something went wrong</h2>
         <p>Please try again or contact <a href="mailto:forgedbyfreedom@gmail.com" style="color:#ff6a00;">forgedbyfreedom@gmail.com</a></p>
       </div>
-    \`);
+    `);
   }
 });
 
@@ -3335,16 +3335,16 @@ app.get("/api/programs/:id/checkout", async (req, res) => {
 
     if (!program) return res.status(404).json({ error: "Program not found" });
     if (program.payment_status === "paid") {
-      return res.redirect(\`/api/programs/\${req.params.id}/client-view\`);
+      return res.redirect(`/api/programs/${req.params.id}/client-view`);
     }
 
     if (!stripe || !program.stripe_checkout_session_id) {
-      return res.type("html").send(\`
+      return res.type("html").send(`
         <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
           <h2 style="color:#ff6a00;">Payment Setup Pending</h2>
           <p>Coach Bryan will send you a payment link directly. Hang tight!</p>
         </div>
-      \`);
+      `);
     }
 
     const session = await stripe.checkout.sessions.retrieve(program.stripe_checkout_session_id);
@@ -3357,8 +3357,8 @@ app.get("/api/programs/:id/checkout", async (req, res) => {
         mode: "payment",
         customer_email: program.client_email,
         line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
-        success_url: \`\${APP_URL}/api/programs/\${req.params.id}/payment-success?session_id={CHECKOUT_SESSION_ID}\`,
-        cancel_url: \`\${APP_URL}/api/programs/\${req.params.id}/client-view\`,
+        success_url: `${APP_URL}/api/programs/${req.params.id}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${APP_URL}/api/programs/${req.params.id}/client-view`,
         metadata: { program_id: req.params.id, client_name: program.client_name },
       });
 

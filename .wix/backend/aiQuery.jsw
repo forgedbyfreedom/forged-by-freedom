@@ -19,6 +19,34 @@ const CONFIG = {
 };
 
 /* ============================================================
+   PUBLIC: ANALYZE BLOODWORK (routes to Render /analyze-bloodwork)
+============================================================ */
+export async function analyzeBloodwork(labText) {
+  try {
+    if (!labText?.trim()) {
+      return { status: "ERROR", message: "Please paste your lab results." };
+    }
+
+    const resp = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/analyze-bloodwork", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ labs: labText.trim() })
+    });
+
+    const data = await resp.json();
+
+    if (data?.answer) {
+      return { status: "OK", answer: data.answer, sources: data.sources || [] };
+    } else {
+      return { status: "ERROR", message: data?.error || "Analysis failed" };
+    }
+  } catch (err) {
+    console.error("[analyzeBloodwork ERROR]", err.message);
+    return { status: "ERROR", message: "Bloodwork analysis failed: " + err.message };
+  }
+}
+
+/* ============================================================
    PUBLIC: ASK COACH BRYAN
 ============================================================ */
 export async function askCoach(payload) {

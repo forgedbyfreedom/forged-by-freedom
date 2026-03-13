@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════
 //  AI COACH — Page Code (paste into Wix page { } panel)
 // ═══════════════════════════════════════════════════════════
-import { askCoach } from "backend/aiQuery";
+import { askCoach, analyzeBloodwork } from "backend/aiQuery";
 
 $w.onReady(() => {
   // Element ID must match the HtmlComponent ID in Wix editor (check Properties panel)
@@ -43,16 +43,11 @@ async function handleSearch(question) {
 
 async function handleBloodwork(labText) {
   try {
-    const resp = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/analyze-bloodwork", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ labs: labText })
-    });
-    const data = await resp.json();
-    if (data.answer) {
-      sendToHtml({ type: "bloodworkResult", answer: data.answer });
+    const res = await analyzeBloodwork(labText);
+    if (res && res.status === "OK") {
+      sendToHtml({ type: "bloodworkResult", answer: res.answer || "No answer returned." });
     } else {
-      sendToHtml({ type: "bloodworkResult", error: data.error || "Analysis failed. Try again." });
+      sendToHtml({ type: "bloodworkResult", error: res?.message || "Analysis failed. Try again." });
     }
   } catch (err) {
     console.error("Bloodwork error:", err);
