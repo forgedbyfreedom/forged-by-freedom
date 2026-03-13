@@ -1403,11 +1403,44 @@ app.patch("/api/leads/:id/status", async (req, res) => {
   }
 
   try {
-    const { error } = await supabase
+    const db = supabaseAdmin || supabase;
+    const { data: lead, error: fetchErr } = await db
+      .from("leads").select("id, name, email").eq("id", req.params.id).single();
+
+    if (fetchErr || !lead) {
+      return res.status(404).json({ error: "Lead not found" });
+    }
+
+    const { error } = await db
       .from("leads").update({ status }).eq("id", req.params.id);
 
     if (error) {
       return res.status(500).json({ error: error.message });
+    }
+
+    // When approving, email the client their onboarding link
+    if (status === "approved" && emailTransporter && lead.email) {
+      const onboardingUrl = `${APP_URL}/onboarding?token=${lead.id}`;
+      try {
+        await emailTransporter.sendMail({
+          from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+          to: lead.email,
+          subject: "You're In — Complete Your Onboarding",
+          html: `
+            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;">
+              <h2 style="color:#FF6A00;">Welcome to Forged by Freedom, ${lead.name}!</h2>
+              <p>Your application has been approved. Complete your onboarding to get your custom program:</p>
+              <div style="text-align:center;margin:30px 0;">
+                <a href="${onboardingUrl}" style="display:inline-block;background:#FF6A00;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;">Complete Onboarding</a>
+              </div>
+              <p style="color:#666;font-size:13px;">This link is unique to you. Once you complete the intake form, Coach Bryan will build your personalized program.</p>
+            </div>
+          `,
+        });
+        console.log(`[LEADS] Approval email sent to ${lead.email}`);
+      } catch (emailErr) {
+        console.error(`[LEADS] Failed to send approval email:`, emailErr.message);
+      }
     }
 
     console.log(`[LEADS] ${req.params.id} → ${status}`);
