@@ -959,6 +959,14 @@ Then provide:
 - For liver markers: differentiate exercise-induced AST from genuine hepatic stress (look at ALT + GGT together, not AST alone)
 - For female bloodwork: use female reference ranges, emphasize virilization markers
 
+**DOCTOR DISCUSSION RECOMMENDATIONS:**
+At the end of your analysis, include a dedicated section titled "📋 Recommendations to Discuss with Your Doctor" that provides:
+- A clear, prioritized list of specific concerns to bring to their physician based on the lab results
+- Suggested follow-up tests or panels that would give a more complete picture (e.g., "Request Cystatin C-based eGFR if creatinine is elevated" or "Ask for a lipid particle size test if LDL is high")
+- Specific pharmaceutical interventions to ASK their doctor about (with drug names, typical dose ranges, and why — e.g., "Discuss telmisartan 40-80mg for blood pressure and kidney protection" or "Ask about rosuvastatin 5-10mg for LDL management")
+- Any markers that warrant URGENT medical attention — make these unmistakably clear
+- Frame everything as "discuss with your doctor" — we provide the knowledge, the physician makes the call
+
 End with testing frequency recommendations and where to order labs (DiscountedLabs, Marek Health, PrivateMDLabs).
 
 Finish with: 💪 Coach Bryan says: [motivational health-focused quote]
@@ -2932,32 +2940,36 @@ app.get("/api/programs/:id/approve", async (req, res) => {
         .update({ stripe_checkout_session_id: session.id, payment_status: "pending" })
         .eq("id", req.params.id);
 
-      // Send payment link to client
+      // Send program preview link to client (they see the full program + pay button)
+      const clientViewUrl = `${APP_URL}/api/programs/${req.params.id}/client-view`;
       if (emailTransporter) {
         await emailTransporter.sendMail({
           from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
           to: program.client_email,
-          subject: "Your FBF Program is Ready — Complete Payment",
+          subject: "Your FBF Program is Ready — Review & Approve",
           html: `
-            <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#0a0a0a;color:#e8e8e8;">
-              <h1 style="color:#ff6a00;text-align:center;">Your Program is Ready</h1>
+            <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 20px;background:#0a0a0a;color:#e8e8e8;">
+              <div style="text-align:center;margin-bottom:24px;">
+                <h1 style="font-size:24px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;">FORGED BY FREEDOM</h1>
+              </div>
+              <h2 style="color:#ff6a00;text-align:center;margin-bottom:16px;">Your Program is Ready</h2>
               <p>Hey ${program.client_name.split(" ")[0]},</p>
-              <p>Coach Bryan has reviewed and approved your custom training & nutrition program.</p>
-              <p>Complete payment to get instant access:</p>
-              <p style="text-align:center;margin:24px 0;">
-                <a href="${session.url}" style="display:inline-block;background:#ff6a00;color:#fff;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;">Complete Payment</a>
+              <p>Coach Bryan has personally reviewed and approved your custom training, nutrition, and supplement program.</p>
+              <p><strong style="color:#ff6a00;">Click below to review your full program.</strong> You'll see everything — your training split, nutrition plan, supplement protocol, and cardio — before deciding to lock it in.</p>
+              <p style="text-align:center;margin:28px 0;">
+                <a href="${clientViewUrl}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 36px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Review Your Program</a>
               </p>
-              <p style="color:#666;font-size:13px;">If you have questions, reply to this email or message Coach Bryan directly.</p>
-              <p style="color:#ff6a00;font-weight:bold;margin-top:24px;">— Forged by Freedom</p>
+              <p style="color:#666;font-size:13px;">If you have questions, reply to this email or reach out to Coach Bryan directly.</p>
+              <p style="color:#ff6a00;font-weight:bold;margin-top:24px;">— Forged by Freedom Strength & Nutrition</p>
             </div>
           `
         });
       } else {
-        // Fallback: notify via ntfy with payment link
+        // Fallback: notify via ntfy with client view link
         await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
           method: "POST",
           headers: { "Title": `Program Approved: ${program.client_name}`, "Tags": "white_check_mark" },
-          body: `Send this payment link to ${program.client_name} (${program.client_email}):\n\n${session.url}`
+          body: `Send this program review link to ${program.client_name} (${program.client_email}):\n\n${clientViewUrl}`
         }).catch(() => {});
       }
 
@@ -2995,6 +3007,357 @@ app.get("/api/programs/:id/approve", async (req, res) => {
     }
   } catch (err) {
     console.error("[PROGRAM] Approve error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Client Program Preview (branded view with Approve & Pay) ──
+app.get("/api/programs/:id/client-view", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  try {
+    const { data: program, error } = await supabase
+      .from("generated_programs")
+      .select("*")
+      .eq("id", req.params.id)
+      .single();
+
+    if (error || !program) return res.status(404).type("html").send(`
+      <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+        <h2 style="color:#ef4444;">Program Not Found</h2>
+        <p>This link may have expired or is invalid.</p>
+      </div>
+    `);
+
+    if (program.status !== "approved" && program.status !== "delivered") {
+      return res.type("html").send(`
+        <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+          <h2 style="color:#ff6a00;">Program Under Review</h2>
+          <p>Coach Bryan is still reviewing your program. You'll receive an email when it's ready.</p>
+        </div>
+      `);
+    }
+
+    // Build the branded client-facing preview
+    const tp = program.training_program || {};
+    const np = program.nutrition_plan || {};
+    const sp = program.supplement_protocol || {};
+    const cp = program.cardio_protocol || {};
+    const firstName = (program.client_name || "").split(" ")[0];
+
+    // Training days HTML
+    let trainingHTML = "";
+    if (tp.days) {
+      for (const [dayName, exercises] of Object.entries(tp.days)) {
+        trainingHTML += \`<div class="day-block">
+          <h3 class="day-title">\${dayName}</h3>
+          <table class="exercise-table">
+            <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>RIR</th><th>Rest</th><th>Notes</th></tr></thead>
+            <tbody>\`;
+        for (const ex of exercises) {
+          trainingHTML += \`<tr>
+            <td class="ex-name">\${ex.exercise}</td>
+            <td class="center">\${ex.sets}</td>
+            <td class="center">\${ex.reps}</td>
+            <td class="center">\${ex.rir || "—"}</td>
+            <td class="center">\${ex.rest || "—"}</td>
+            <td class="ex-notes">\${ex.notes || ""}</td>
+          </tr>\`;
+        }
+        trainingHTML += \`</tbody></table></div>\`;
+      }
+    }
+
+    // Meals HTML
+    let mealsHTML = "";
+    if (np.sample_day) {
+      for (const [mealKey, meal] of Object.entries(np.sample_day)) {
+        mealsHTML += \`<div class="meal-card">
+          <div class="meal-header">
+            <strong>\${mealKey.replace(/_/g, " ").toUpperCase()}</strong>
+            <span class="meal-time">\${meal.time || ""}</span>
+          </div>
+          <p class="meal-desc">\${meal.description || ""}</p>
+          <span class="meal-macros">\${meal.macros || ""}</span>
+        </div>\`;
+      }
+    }
+
+    // Supplements HTML
+    let supplementsHTML = "";
+    const allSupps = [...(sp.daily || []), ...(sp.optional || [])];
+    for (const s of allSupps) {
+      const priorityClass = (s.priority || "").toLowerCase() === "essential" ? "priority-essential" : "priority-optional";
+      supplementsHTML += \`<tr>
+        <td class="supp-name">\${s.supplement}</td>
+        <td class="center">\${s.dose}</td>
+        <td>\${s.timing}</td>
+        <td class="\${priorityClass}">\${s.priority}</td>
+      </tr>\`;
+    }
+
+    // Payment button (only if approved and not yet paid)
+    let paymentSection = "";
+    if (program.payment_status === "paid" || program.status === "delivered") {
+      paymentSection = \`<div class="cta-section paid">
+        <div class="cta-badge">PURCHASED</div>
+        <h2>You're All Set</h2>
+        <p>Your program has been delivered. Check your email for the full copy.</p>
+        <p class="cta-note">Questions? Email <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
+      </div>\`;
+    } else if (program.stripe_checkout_session_id) {
+      // Has a checkout session — show pay button
+      paymentSection = \`<div class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Review your program above. When you're ready, lock it in.</p>
+        <a href="/api/programs/\${program.id}/checkout" class="cta-btn">Approve & Pay — Start Your Transformation</a>
+        <p class="cta-note">Secure checkout powered by Stripe. Questions? <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
+      </div>\`;
+    } else {
+      paymentSection = \`<div class="cta-section">
+        <h2>Your Program is Ready</h2>
+        <p>Coach Bryan will be in touch with next steps.</p>
+        <p class="cta-note">Questions? <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a></p>
+      </div>\`;
+    }
+
+    const html = \`<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your FBF Program — \${program.client_name}</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a0a;color:#e8e8e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+  .container{max-width:720px;margin:0 auto;padding:32px 20px}
+
+  /* Header */
+  .header{text-align:center;margin-bottom:48px;padding-top:20px}
+  .header-brand{font-size:32px;font-weight:800;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .header-sub{color:#666;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
+  .header-line{width:80px;height:3px;margin:20px auto 0;background:linear-gradient(90deg,transparent,#ff6a00,transparent);border-radius:2px}
+  .header-welcome{color:#aaa;font-size:18px;margin-top:24px}
+  .header-welcome strong{color:#e8e8e8}
+
+  /* Section Cards */
+  .section{background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:24px;margin-bottom:24px}
+  .section-title{color:#ff6a00;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .section-title::before{content:'';display:inline-block;width:3px;height:16px;background:#ff6a00;border-radius:2px}
+
+  /* Stat pills */
+  .stat-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+  .stat-pill{background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:100px}
+  .stat-pill .label{color:#666;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  .stat-pill .value{color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px}
+  .macro-pill .value{font-size:22px;font-weight:700}
+  .macro-pill.cal .value{color:#ff6a00}
+  .macro-pill.pro .value{color:#22c55e}
+  .macro-pill.carb .value{color:#3b82f6}
+  .macro-pill.fat .value{color:#eab308}
+
+  /* Training tables */
+  .day-block{margin-top:20px}
+  .day-title{color:#ff6a00;font-size:15px;font-weight:700;margin-bottom:10px}
+  .exercise-table{width:100%;border-collapse:collapse;font-size:13px}
+  .exercise-table thead tr{background:#1c1c1c;color:#888;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  .exercise-table th,.exercise-table td{padding:8px 10px;border-bottom:1px solid #1c1c1c;text-align:left}
+  .exercise-table .center{text-align:center}
+  .ex-name{color:#e8e8e8;font-weight:500}
+  .ex-notes{color:#666;font-size:12px}
+  .exercise-table td{color:#aaa}
+
+  /* Meals */
+  .meal-card{background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:8px}
+  .meal-header{display:flex;justify-content:space-between;align-items:center}
+  .meal-header strong{color:#e8e8e8;font-size:13px}
+  .meal-time{color:#ff6a00;font-size:12px;font-weight:600}
+  .meal-desc{color:#aaa;font-size:14px;margin:6px 0 4px}
+  .meal-macros{color:#666;font-size:12px}
+  .sample-label{color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:.5px;margin:0 0 10px;font-weight:600}
+
+  /* Supplements */
+  .supp-table{width:100%;border-collapse:collapse;font-size:13px}
+  .supp-table thead tr{background:#1c1c1c;color:#888;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  .supp-table th,.supp-table td{padding:8px 10px;border-bottom:1px solid #1c1c1c;text-align:left}
+  .supp-table .center{text-align:center}
+  .supp-name{color:#e8e8e8;font-weight:500}
+  .supp-table td{color:#aaa}
+  .priority-essential{color:#22c55e;font-weight:600;font-size:12px}
+  .priority-optional{color:#666;font-size:12px}
+  .supp-footer{color:#666;font-size:12px;margin-top:12px;font-style:italic}
+
+  /* Cardio */
+  .info-line{color:#aaa;font-size:13px;margin:6px 0}
+  .info-line strong{color:#e8e8e8}
+
+  /* CTA Section */
+  .cta-section{background:linear-gradient(135deg,#1a1000,#141414);border:2px solid #ff6a00;border-radius:16px;padding:40px 24px;text-align:center;margin:40px 0 24px}
+  .cta-section h2{color:#ff6a00;font-size:24px;font-weight:800;margin-bottom:10px}
+  .cta-section p{color:#aaa;font-size:15px;margin-bottom:20px}
+  .cta-btn{display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 40px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.3px;box-shadow:0 4px 24px rgba(255,106,0,.35);transition:all .2s}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 32px rgba(255,106,0,.5)}
+  .cta-note{color:#666;font-size:12px;margin-top:16px}
+  .cta-note a{color:#ff6a00;text-decoration:none}
+  .cta-section.paid{border-color:#22c55e}
+  .cta-section.paid h2{color:#22c55e}
+  .cta-badge{display:inline-block;background:#22c55e;color:#000;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:12px}
+
+  /* Footer */
+  .footer{text-align:center;padding:24px 0;border-top:1px solid #1c1c1c;margin-top:16px}
+  .footer p{color:#666;font-size:11px}
+  .footer .brand{color:#ff6a00;font-size:12px;font-weight:600;margin-top:6px}
+  .footer a{color:#ff6a00;text-decoration:none}
+
+  /* Responsive */
+  @media(max-width:480px){
+    .container{padding:16px 12px}
+    .header-brand{font-size:22px}
+    .stat-row{gap:8px}
+    .stat-pill{min-width:0;flex:1 1 calc(50% - 8px)}
+    .exercise-table{font-size:11px}
+    .exercise-table th,.exercise-table td{padding:6px 6px}
+    .cta-btn{padding:14px 24px;font-size:14px}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-brand">FORGED BY FREEDOM</div>
+    <div class="header-sub">Strength & Nutrition</div>
+    <div class="header-line"></div>
+    <p class="header-welcome">\${firstName ? \`Welcome, <strong>\${firstName}</strong> — here's your custom program.\` : "Your custom program is ready."}</p>
+  </div>
+
+  <!-- Training Program -->
+  <div class="section">
+    <div class="section-title">Training Program</div>
+    <div class="stat-row">
+      <div class="stat-pill"><div class="label">Split</div><div class="value">\${tp.split_type || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Days/Week</div><div class="value">\${tp.days_per_week || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Phase</div><div class="value">\${tp.phase || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Duration</div><div class="value">\${tp.duration || "—"}</div></div>
+    </div>
+    <p class="info-line"><strong>Progression:</strong> \${tp.progression_scheme || "Progressive overload"}</p>
+    <p class="info-line"><strong>Deload:</strong> Week \${tp.deload_week || "4"}</p>
+    \${trainingHTML}
+  </div>
+
+  <!-- Nutrition Plan -->
+  <div class="section">
+    <div class="section-title">Nutrition Plan</div>
+    <div class="stat-row">
+      <div class="stat-pill macro-pill cal"><div class="label">Calories</div><div class="value">\${np.calories || "—"}</div></div>
+      <div class="stat-pill macro-pill pro"><div class="label">Protein</div><div class="value">\${np.protein_g || "—"}g</div></div>
+      <div class="stat-pill macro-pill carb"><div class="label">Carbs</div><div class="value">\${np.carbs_g || "—"}g</div></div>
+      <div class="stat-pill macro-pill fat"><div class="label">Fats</div><div class="value">\${np.fats_g || "—"}g</div></div>
+    </div>
+    <p class="info-line"><strong>Goal:</strong> \${np.goal || "—"} · <strong>Meals:</strong> \${np.meal_count || "—"}/day</p>
+    \${np.meal_timing_notes ? \`<p class="info-line">\${np.meal_timing_notes}</p>\` : ""}
+    \${mealsHTML ? \`<p class="sample-label" style="margin-top:16px;">Sample Day</p>\${mealsHTML}\` : ""}
+    \${np.food_notes ? \`<p class="supp-footer">\${np.food_notes}</p>\` : ""}
+  </div>
+
+  <!-- Supplements -->
+  <div class="section">
+    <div class="section-title">Supplement Protocol</div>
+    <table class="supp-table">
+      <thead><tr><th>Supplement</th><th class="center">Dose</th><th>Timing</th><th>Priority</th></tr></thead>
+      <tbody>\${supplementsHTML}</tbody>
+    </table>
+    \${sp.estimated_monthly_cost ? \`<p class="supp-footer">Est. monthly cost: \${sp.estimated_monthly_cost}</p>\` : ""}
+    \${sp.notes ? \`<p class="supp-footer">\${sp.notes}</p>\` : ""}
+  </div>
+
+  <!-- Cardio -->
+  <div class="section">
+    <div class="section-title">Cardio Protocol</div>
+    <div class="stat-row">
+      <div class="stat-pill"><div class="label">Sessions/Week</div><div class="value">\${cp.weekly_sessions || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Type</div><div class="value">\${cp.type || "—"}</div></div>
+      <div class="stat-pill"><div class="label">Duration</div><div class="value">\${cp.duration || "—"}</div></div>
+    </div>
+    <p class="info-line"><strong>HR Zone:</strong> \${cp.heart_rate_zone || "Zone 2"}</p>
+    <p class="info-line"><strong>Daily Step Goal:</strong> \${cp.step_goal || "8,000"}</p>
+    \${cp.notes ? \`<p class="supp-footer">\${cp.notes}</p>\` : ""}
+  </div>
+
+  <!-- CTA -->
+  \${paymentSection}
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>This program is for educational purposes only. Consult your physician before starting any exercise or nutrition program.</p>
+    <p class="brand">FORGED BY FREEDOM STRENGTH & NUTRITION</p>
+    <p style="margin-top:4px"><a href="https://www.forgedbyfreedom.org" target="_blank">forgedbyfreedom.org</a></p>
+  </div>
+
+</div>
+</body>
+</html>\`;
+
+    res.type("html").send(html);
+
+  } catch (err) {
+    console.error("[PROGRAM] Client view error:", err);
+    res.status(500).type("html").send(\`
+      <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+        <h2 style="color:#ef4444;">Something went wrong</h2>
+        <p>Please try again or contact <a href="mailto:forgedbyfreedom@gmail.com" style="color:#ff6a00;">forgedbyfreedom@gmail.com</a></p>
+      </div>
+    \`);
+  }
+});
+
+// ─── Checkout redirect (for client-view CTA button) ─────
+app.get("/api/programs/:id/checkout", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  try {
+    const { data: program } = await supabase.from("generated_programs")
+      .select("stripe_checkout_session_id, status, payment_status, client_name")
+      .eq("id", req.params.id).single();
+
+    if (!program) return res.status(404).json({ error: "Program not found" });
+    if (program.payment_status === "paid") {
+      return res.redirect(\`/api/programs/\${req.params.id}/client-view\`);
+    }
+
+    if (!stripe || !program.stripe_checkout_session_id) {
+      return res.type("html").send(\`
+        <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+          <h2 style="color:#ff6a00;">Payment Setup Pending</h2>
+          <p>Coach Bryan will send you a payment link directly. Hang tight!</p>
+        </div>
+      \`);
+    }
+
+    const session = await stripe.checkout.sessions.retrieve(program.stripe_checkout_session_id);
+    if (session.url) {
+      res.redirect(session.url);
+    } else {
+      // Session expired — create a new one
+      const newSession = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        mode: "payment",
+        customer_email: program.client_email,
+        line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
+        success_url: \`\${APP_URL}/api/programs/\${req.params.id}/payment-success?session_id={CHECKOUT_SESSION_ID}\`,
+        cancel_url: \`\${APP_URL}/api/programs/\${req.params.id}/client-view\`,
+        metadata: { program_id: req.params.id, client_name: program.client_name },
+      });
+
+      await supabase.from("generated_programs")
+        .update({ stripe_checkout_session_id: newSession.id })
+        .eq("id", req.params.id);
+
+      res.redirect(newSession.url);
+    }
+  } catch (err) {
+    console.error("[CHECKOUT] Error:", err);
     res.status(500).json({ error: err.message });
   }
 });
