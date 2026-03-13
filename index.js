@@ -901,7 +901,7 @@ app.post("/analyze-bloodwork", async (req, res) => {
   if (!labs || typeof labs !== "string" || !labs.trim()) {
     return res.status(400).json({ error: "Please paste your lab results.", answer: null });
   }
-  if (labs.length > 8000) {
+  if (labs.length > 25000) {
     return res.status(400).json({ error: "Lab results too long. Please paste only the relevant markers.", answer: null });
   }
 
