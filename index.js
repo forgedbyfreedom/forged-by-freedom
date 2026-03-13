@@ -1231,9 +1231,9 @@ app.post("/api/leads", async (req, res) => {
     return res.status(400).json({ error: "Disclaimer must be acknowledged" });
   }
 
-  // Auto-reject low commitment
+  // Auto-reject low commitment, auto-approve everyone else
   const rejected = commitment_level === "I'll do what I can when it's convenient";
-  const status = rejected ? "rejected" : "new";
+  const status = rejected ? "rejected" : "approved";
 
   try {
     const { data, error } = await supabase.from("leads").insert({
@@ -2615,14 +2615,34 @@ Use the client's preferred foods in the sample meal plan. Respect food restricti
       { role: "user", content: clientProfile }
     ],
     temperature: 0.4,
-    max_tokens: 6000
-  }, 120000);
+    max_tokens: 8000
+  }, 180000);
 
   const content = result.choices?.[0]?.message?.content || "";
 
   // Parse JSON from response (strip markdown code fences if present)
-  const jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
-  return JSON.parse(jsonStr);
+  let jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
+
+  // Handle truncated JSON — try to close it
+  try {
+    return JSON.parse(jsonStr);
+  } catch (firstErr) {
+    console.warn("[PROGRAM] First JSON parse failed, attempting repair...");
+    // Try adding closing braces
+    let repaired = jsonStr;
+    const openBraces = (repaired.match(/\{/g) || []).length;
+    const closeBraces = (repaired.match(/\}/g) || []).length;
+    const openBrackets = (repaired.match(/\[/g) || []).length;
+    const closeBrackets = (repaired.match(/\]/g) || []).length;
+    repaired += "]".repeat(Math.max(0, openBrackets - closeBrackets));
+    repaired += "}".repeat(Math.max(0, openBraces - closeBraces));
+    try {
+      return JSON.parse(repaired);
+    } catch (secondErr) {
+      console.error("[PROGRAM] JSON repair failed. Raw content:", content.slice(0, 500));
+      throw new Error("Program generation returned invalid JSON. Model output may have been truncated.");
+    }
+  }
 }
 
 // ─── Format Program as HTML ──────────────────────────────
