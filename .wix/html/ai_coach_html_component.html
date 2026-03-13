@@ -762,12 +762,11 @@ async function doBloodwork() {
   showLoading('bloodwork');
   hideError('bloodwork');
   bwBtn.disabled = true;
-  const question = 'Please analyze my bloodwork results. For each marker, tell me: the value, standard lab range, enhanced athlete acceptable range, and your assessment (normal/watch/intervene/red flag). Flag anything concerning, explain which compounds could cause abnormal values, and provide the intervention ladder (lifestyle → supplements with doses → pharmaceuticals with doses → discontinuation thresholds). Here are my results:\n\n' + labs;
   try {
-    const res = await fetch('https://forged-by-freedom-api-nm4f.onrender.com/ask', {
+    const res = await fetch('https://forged-by-freedom-api-nm4f.onrender.com/analyze-bloodwork', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: question })
+      body: JSON.stringify({ labs: labs })
     });
     const data = await res.json();
     hideLoading('bloodwork');

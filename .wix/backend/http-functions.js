@@ -63,12 +63,15 @@ export async function post_analyze(request) {
       });
     }
 
-    // Build a bloodwork analysis prompt and send to Coach Bryan
-    const question = `Please analyze my bloodwork results. For each marker, tell me: the value, standard lab range, enhanced athlete acceptable range, and your assessment (normal/watch/intervene/red flag). Flag anything concerning, explain which compounds could cause abnormal values, and provide the intervention ladder (lifestyle → supplements with doses → pharmaceuticals with doses → discontinuation thresholds). Here are my results:\n\n${labText}`;
+    // Route to the dedicated bloodwork analysis endpoint on Render API
+    const resp = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/analyze-bloodwork", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ labs: labText })
+    });
+    const result = await resp.json();
 
-    const result = await askCoach({ question });
-
-    if (result?.status === "OK") {
+    if (result?.answer) {
       return ok({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -80,7 +83,7 @@ export async function post_analyze(request) {
     } else {
       return serverError({
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ error: result?.message || "Analysis failed" })
+        body: JSON.stringify({ error: result?.error || "Analysis failed" })
       });
     }
 

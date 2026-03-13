@@ -131,13 +131,13 @@ async function embed(text) {
   return data.data[0].embedding;
 }
 
-async function chat(messages, temperature = 0.7) {
+async function chat(messages, temperature = 0.7, maxTokens = 2500) {
   const data = await callOpenRouter("/chat/completions", {
     model: CONFIG.chatModel,
     messages,
     temperature,
-    max_tokens: 2500
-  }, 60000);
+    max_tokens: maxTokens
+  }, maxTokens > 2500 ? 90000 : 60000);
   return data.choices?.[0]?.message?.content || "";
 }
 
@@ -889,6 +889,109 @@ His accolades include but are not limited to:
 
   } catch (err) {
     console.error("[ASK ERROR]", err);
+    res.status(500).json({ error: err.message, answer: null });
+  }
+});
+
+// ─── Bloodwork Analysis Endpoint ─────────────────────────────
+app.post("/analyze-bloodwork", async (req, res) => {
+  const { labs } = req.body;
+  const start = Date.now();
+
+  if (!labs || typeof labs !== "string" || !labs.trim()) {
+    return res.status(400).json({ error: "Please paste your lab results.", answer: null });
+  }
+  if (labs.length > 8000) {
+    return res.status(400).json({ error: "Lab results too long. Please paste only the relevant markers.", answer: null });
+  }
+
+  try {
+    // Search for bloodwork-related evidence from the knowledge base
+    const bwQuery = "bloodwork analysis lab results interpretation enhanced athlete intervention ladder markers ranges";
+    const vector = await embed(bwQuery);
+    const matches = await searchWithBoost(vector, bwQuery);
+    const quotes = matches.length ? extractQuotes(matches, bwQuery) : [];
+
+    // Build evidence context from knowledge base (if available)
+    let evidenceBlock = "";
+    if (quotes.length) {
+      const evidence = quotes
+        .slice(0, 10)
+        .map((q, i) => {
+          const speaker = q.speaker !== "unknown" ? q.speaker : "";
+          const show = q.displayName || "";
+          const attr = speaker && show ? `${speaker} on ${show}` : speaker || show || "FBF Knowledge Base";
+          return `[${i + 1}] ${attr}:\n"${q.text}"`;
+        })
+        .join("\n\n");
+      evidenceBlock = `\n\nREFERENCE MATERIAL FROM FBF KNOWLEDGE BASE (use this to supplement your analysis where relevant):\n${evidence}`;
+    }
+
+    const bloodworkPrompt = `BLOODWORK ANALYSIS REQUEST
+
+Please analyze the following bloodwork results using the FBF Precision Bloodwork framework.
+
+For EACH marker the user provides:
+1. **Value** — what they reported
+2. **Standard Lab Range** — the reference range a standard lab would use
+3. **Enhanced Athlete Range** — the acceptable range for muscular/enhanced athletes (these often differ significantly)
+4. **Assessment** — classify as: ✅ NORMAL | ⚠️ WATCH | 🔶 INTERVENE | 🚨 RED FLAG
+
+Then provide:
+- **Pattern Analysis** — look for marker combinations that tell a story (e.g., elevated ALT + GGT + low HDL = hepatic stress from orals; elevated HCT + BP + RBC = polycythemia risk)
+- **Compound Connections** — if values suggest specific compound effects, explain which compounds typically cause those changes
+- **Intervention Ladder** for any out-of-range marker:
+  1. Lifestyle modifications (cardio, hydration, diet changes)
+  2. Supplements with specific doses (NAC, fish oil, citrus bergamot, etc.)
+  3. Pharmaceuticals with specific doses (telmisartan, rosuvastatin, metformin, etc.) — for discussion with their doctor
+  4. Discontinuation thresholds — when to stop a compound
+
+**RED FLAG THRESHOLDS** (flag immediately if present):
+- Hematocrit >54%
+- ALT >200 U/L
+- eGFR <45 mL/min
+- Blood Pressure >180/110
+- Potassium >5.5 or <3.0
+- Platelets <100K
+
+**IMPORTANT NOTES:**
+- For kidney markers (eGFR, creatinine): mention that standard formulas underestimate kidney function in muscular people — recommend Cystatin C-based eGFR
+- For liver markers: differentiate exercise-induced AST from genuine hepatic stress (look at ALT + GGT together, not AST alone)
+- For female bloodwork: use female reference ranges, emphasize virilization markers
+
+End with testing frequency recommendations and where to order labs (DiscountedLabs, Marek Health, PrivateMDLabs).
+
+Finish with: 💪 Coach Bryan says: [motivational health-focused quote]
+
+USER'S LAB RESULTS:
+${labs.trim()}${evidenceBlock}`;
+
+    let answer = await chat([
+      { role: "system", content: SYSTEM_PROMPT },
+      { role: "user", content: bloodworkPrompt }
+    ], 0.5, 4000);
+
+    // Strip leaked system prompt
+    const leakPatterns = [
+      /You are Coach Bryan, the official AI coach[\s\S]*/i,
+      /I have provided a detailed[\s\S]*/i,
+      /Do not mix up the show names[\s\S]*/i,
+      /Always cite evidence properly[\s\S]*/i,
+      /RESPONSE CHECKLIST[\s\S]*/i,
+    ];
+    for (const pat of leakPatterns) {
+      answer = answer.replace(pat, "").trim();
+    }
+
+    res.json({
+      answer,
+      sources: quotes.slice(0, 5),
+      mode: "bloodwork",
+      timing: Date.now() - start
+    });
+
+  } catch (err) {
+    console.error("[BLOODWORK ERROR]", err);
     res.status(500).json({ error: err.message, answer: null });
   }
 });

@@ -42,14 +42,17 @@ async function handleSearch(question) {
 }
 
 async function handleBloodwork(labText) {
-  const question = `Please analyze my bloodwork results. For each marker, tell me: the value, standard lab range, enhanced athlete acceptable range, and your assessment (normal/watch/intervene/red flag). Flag anything concerning, explain which compounds could cause abnormal values, and provide the intervention ladder (lifestyle → supplements with doses → pharmaceuticals with doses → discontinuation thresholds). Here are my results:\n\n${labText}`;
-
   try {
-    const res = await askCoach({ question });
-    if (res && res.status === "OK") {
-      sendToHtml({ type: "bloodworkResult", answer: res.answer || "No answer returned." });
+    const resp = await fetch("https://forged-by-freedom-api-nm4f.onrender.com/analyze-bloodwork", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ labs: labText })
+    });
+    const data = await resp.json();
+    if (data.answer) {
+      sendToHtml({ type: "bloodworkResult", answer: data.answer });
     } else {
-      sendToHtml({ type: "bloodworkResult", error: res?.message || "Analysis failed. Try again." });
+      sendToHtml({ type: "bloodworkResult", error: data.error || "Analysis failed. Try again." });
     }
   } catch (err) {
     console.error("Bloodwork error:", err);
