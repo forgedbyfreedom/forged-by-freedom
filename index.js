@@ -1708,7 +1708,7 @@ app.post("/api/sms/inbound", async (req, res) => {
 // ─── Admin: List Conversations ───────────────────────────
 app.get("/api/conversations", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
-  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
 
   try {
     const { data, error } = await supabase
@@ -1874,7 +1874,7 @@ RULES:
 // GET /api/content — list content queue
 app.get("/api/content", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
-  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
 
   try {
     let query = supabase.from("content_queue").select("*").order("created_at", { ascending: false });
@@ -2159,7 +2159,7 @@ function computeRiskScore(intake, lead) {
 
 app.get("/api/risk-score/:intakeId", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
-  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
 
   try {
     const { data: intake } = await supabase.from("client_intakes").select("*").eq("id", req.params.intakeId).single();
@@ -3028,7 +3028,7 @@ app.get("/api/programs/:id/preview", async (req, res) => {
 // ─── Approve Program → Create Stripe Checkout ────────────
 app.get("/api/programs/:id/approve", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
-  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
 
   try {
     const { data: program, error } = await supabase
@@ -3482,7 +3482,7 @@ app.get("/api/programs/:id/checkout", async (req, res) => {
 
 // ─── Reject Program ──────────────────────────────────────
 app.get("/api/programs/:id/reject", async (req, res) => {
-  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
 
   await supabase.from("generated_programs")
     .update({ status: "rejected", coach_notes: req.query.reason || "Needs revision" })
@@ -3569,7 +3569,8 @@ app.get("/api/programs/:id/payment-cancelled", (req, res) => {
 
 // ─── List Programs (Admin) ───────────────────────────────
 app.get("/api/programs", async (req, res) => {
-  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  const validKey = req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY;
+  if (!validKey) return res.status(401).json({ error: "Unauthorized" });
 
   const { data, error } = await supabase.from("generated_programs")
     .select("id, client_name, client_email, status, payment_status, created_at, approved_at, delivered_at")
