@@ -60,7 +60,10 @@ app.use(cors({
   origin: CONFIG.isProd ? [
     "https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com",
     "https://www.forgedbyfreedom.org",
-    /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/
+    "https://fbf-dashboard.vercel.app",
+    /\.vercel\.app$/,
+    /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/,
+    "http://localhost:8081"
   ] : "*",
   methods: ["GET", "POST", "PATCH", "PUT"],
   allowedHeaders: ["Content-Type", "Authorization"]
