@@ -1819,6 +1819,486 @@ app.get("/api/body-scans/:clientId", async (req, res) => {
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
 
+// ─── 14. CLIENT RISK SCORING ─────────────────────────────
+function computeRiskScore(intake, lead) {
+  const flags = [];
+  let score = 0; // 0-100, higher = more risk
+
+  // Health conditions
+  const conditions = (intake.health_conditions || "").toLowerCase();
+  const highRiskConditions = ["diabetes", "heart disease", "cardiac", "liver", "kidney", "cancer", "stroke", "seizure", "thyroid"];
+  const medRiskConditions = ["high blood pressure", "hypertension", "asthma", "arthritis", "anxiety", "depression"];
+
+  for (const c of highRiskConditions) {
+    if (conditions.includes(c)) {
+      score += 15;
+      flags.push({ level: "red", text: `Medical condition: ${c}`, category: "health" });
+    }
+  }
+  for (const c of medRiskConditions) {
+    if (conditions.includes(c)) {
+      score += 8;
+      flags.push({ level: "yellow", text: `Medical condition: ${c}`, category: "health" });
+    }
+  }
+
+  // Medications
+  const meds = (intake.medications || "").toLowerCase();
+  const riskMeds = ["blood thinner", "warfarin", "insulin", "metformin", "beta blocker", "statin", "ssri", "antidepressant"];
+  for (const m of riskMeds) {
+    if (meds.includes(m)) {
+      score += 10;
+      flags.push({ level: "yellow", text: `On medication: ${m}`, category: "medications" });
+    }
+  }
+
+  // Surgeries/injuries
+  const injuries = (intake.surgeries_injuries || "").toLowerCase();
+  const recentYear = new Date().getFullYear();
+  if (injuries.includes(String(recentYear)) || injuries.includes(String(recentYear - 1))) {
+    score += 10;
+    flags.push({ level: "yellow", text: "Recent surgery/injury (within 1-2 years)", category: "injuries" });
+  }
+  const seriousInjuries = ["spinal", "spine", "herniated", "torn", "rupture", "fracture", "replacement"];
+  for (const s of seriousInjuries) {
+    if (injuries.includes(s)) {
+      score += 8;
+      flags.push({ level: "yellow", text: `Serious injury history: ${s}`, category: "injuries" });
+    }
+  }
+
+  // Physical limitations
+  if (intake.physical_limitations && intake.physical_limitations.trim().length > 5) {
+    score += 5;
+    flags.push({ level: "info", text: "Has physical limitations to train around", category: "limitations" });
+  }
+
+  // Tobacco
+  const tobacco = (intake.tobacco_use || "").toLowerCase();
+  if (tobacco.includes("yes") || tobacco.includes("daily") || tobacco.includes("pack")) {
+    score += 10;
+    flags.push({ level: "yellow", text: "Active tobacco/nicotine use", category: "lifestyle" });
+  }
+
+  // Alcohol
+  const alcohol = (intake.alcohol_use || "").toLowerCase();
+  const alcoholNum = parseInt(alcohol);
+  if (alcoholNum > 10) {
+    score += 15;
+    flags.push({ level: "red", text: `High alcohol intake: ${alcohol} drinks/week`, category: "lifestyle" });
+  } else if (alcoholNum > 5) {
+    score += 5;
+    flags.push({ level: "yellow", text: `Moderate alcohol: ${alcohol} drinks/week`, category: "lifestyle" });
+  }
+
+  // Sleep
+  const sleepHrs = parseFloat(intake.sleep_hours || "0");
+  if (sleepHrs > 0 && sleepHrs < 5) {
+    score += 12;
+    flags.push({ level: "red", text: `Very low sleep: ${sleepHrs} hrs/night`, category: "recovery" });
+  } else if (sleepHrs > 0 && sleepHrs < 6) {
+    score += 6;
+    flags.push({ level: "yellow", text: `Low sleep: ${sleepHrs} hrs/night`, category: "recovery" });
+  }
+
+  // Stress
+  const stress = (intake.stress_level || "").toLowerCase();
+  if (stress === "very high") {
+    score += 10;
+    flags.push({ level: "red", text: "Very high stress level", category: "recovery" });
+  } else if (stress === "high") {
+    score += 5;
+    flags.push({ level: "yellow", text: "High stress level", category: "recovery" });
+  }
+
+  // Body fat extremes
+  const bf = parseFloat(intake.body_fat || "0");
+  if (bf > 35) {
+    score += 8;
+    flags.push({ level: "yellow", text: `High body fat: ${bf}%`, category: "body_comp" });
+  }
+
+  // No physician
+  const physRef = (intake.physician_referral_needed || "").toLowerCase();
+  if (physRef.includes("need") || physRef.includes("referral")) {
+    score += 5;
+    flags.push({ level: "info", text: "Needs physician referral", category: "medical" });
+  }
+
+  // Bloodwork not willing
+  if ((intake.bloodwork_willing || "").toLowerCase() === "no") {
+    score += 5;
+    flags.push({ level: "info", text: "Not willing to get baseline bloodwork", category: "medical" });
+  }
+
+  // TRT/HRT
+  if (intake.trt_hrt && !["no", "n/a", "none", ""].includes(intake.trt_hrt.toLowerCase().trim())) {
+    flags.push({ level: "info", text: "On TRT/HRT — monitor bloodwork closely", category: "hormones" });
+  }
+
+  // Peptide experience
+  if (intake.peptide_experience && !["no", "n/a", "none", ""].includes(intake.peptide_experience.toLowerCase().trim())) {
+    flags.push({ level: "info", text: "Has peptide experience", category: "hormones" });
+  }
+
+  // Commitment level
+  const commitment = (intake.commitment_level || lead?.commitment_level || "").toLowerCase();
+  if (commitment.includes("motivated but need flexibility") || commitment.includes("convenient")) {
+    score += 5;
+    flags.push({ level: "yellow", text: "Lower commitment level — may need extra accountability", category: "commitment" });
+  }
+
+  // Determine tier
+  let tier = "green";
+  if (score >= 40) tier = "red";
+  else if (score >= 15) tier = "yellow";
+
+  return { score: Math.min(score, 100), tier, flags, flag_count: flags.length };
+}
+
+app.get("/api/risk-score/:intakeId", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { data: intake } = await supabase.from("client_intakes").select("*").eq("id", req.params.intakeId).single();
+    if (!intake) return res.status(404).json({ error: "Intake not found" });
+
+    const { data: lead } = await supabase.from("leads").select("*").eq("id", intake.lead_id).single();
+    const risk = computeRiskScore(intake, lead || {});
+    res.json({ risk });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// ─── 15. AUTO CLIENT SUMMARY ────────────────────────────
+async function generateClientSummary(intake, lead) {
+  const prompt = `You are Coach Bryan's assistant. Generate a concise client profile summary that a coach would need to quickly understand this new client. Keep it under 300 words. Be direct and practical.
+
+CLIENT DATA:
+Name: ${intake.full_name || lead?.name}
+Gender: ${intake.gender || "Unknown"}
+Age: ${intake.dob ? Math.floor((Date.now() - new Date(intake.dob).getTime()) / 31557600000) : "Unknown"}
+Location: ${intake.location || "Unknown"}
+Weight: ${intake.current_weight || "Unknown"}, Height: ${intake.height || "Unknown"}, BF: ${intake.body_fat || "Unknown"}
+Goal Weight: ${intake.goal_weight || "N/A"}, Goal BF: ${intake.goal_body_fat || "N/A"}
+Primary Goal: ${intake.goal_primary || lead?.primary_goal || "Not specified"}
+24-Week Goal: ${intake.goal_24_weeks || "Not specified"}
+Training: ${intake.training_years || "Unknown"} years, ${intake.training_days_available || "Unknown"} days/week
+Current Program: ${intake.training_week || "Unknown"}
+Lifts: ${intake.current_lifts || "Unknown"}
+Equipment: ${intake.equipment_access || "Unknown"}
+Diet: ${intake.diet_habits || "Unknown"}
+Macros: ${intake.tracks_macros || "Unknown"} — ${intake.macro_targets || "None set"}
+Protein: ${intake.daily_protein || "Unknown"}
+Meal Prep: ${intake.meal_prep || "Unknown"}
+Health: ${intake.health_conditions || "None reported"}
+Medications: ${intake.medications || "None"}
+Injuries: ${intake.surgeries_injuries || "None"}
+Limitations: ${intake.physical_limitations || "None"}
+TRT/HRT: ${intake.trt_hrt || "No"}
+Peptides: ${intake.peptide_experience || "None"}
+Sleep: ${intake.sleep_hours || "Unknown"} hrs, Quality: ${intake.sleep_quality || "Unknown"}
+Stress: ${intake.stress_level || "Unknown"}
+Occupation: ${intake.occupation || "Unknown"}
+Activity Level: ${intake.daily_activity_level || "Unknown"}
+Travel: ${intake.travel_frequency || "Unknown"}
+Commitment: ${intake.commitment_level || "Unknown"}
+Why FBF: ${intake.why_fbf || "Not stated"}
+What would make them quit: ${intake.quit_factors || "Not stated"}
+Previous attempts: ${intake.previous_attempts || "Not stated"}
+Supplement Budget: ${intake.supplement_budget || "Unknown"}
+Peptide Interest: ${intake.peptide_interest || "Not interested"}
+
+Format the summary as:
+**QUICK PROFILE** (1 sentence — who they are, what they want)
+**KEY STRENGTHS** (2-3 bullet points — what's working for them)
+**RED FLAGS / CONCERNS** (2-3 bullet points — what to watch)
+**PROGRAMMING NOTES** (2-3 bullet points — key things to consider for their program)
+**COACH APPROACH** (1-2 sentences — how to work with this person)`;
+
+  return await chat([{ role: "user", content: prompt }], 0.5);
+}
+
+app.post("/api/client-summary", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.body.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { data: intake } = await supabase.from("client_intakes").select("*").eq("id", req.body.intake_id).single();
+    if (!intake) return res.status(404).json({ error: "Intake not found" });
+
+    const { data: lead } = await supabase.from("leads").select("*").eq("id", intake.lead_id).single();
+
+    const summary = await generateClientSummary(intake, lead || {});
+    const risk = computeRiskScore(intake, lead || {});
+
+    // Save summary and risk to intake
+    await supabase.from("client_intakes").update({
+      status: "reviewed",
+    }).eq("id", req.body.intake_id);
+
+    res.json({ summary, risk });
+  } catch (err) {
+    console.error("[SUMMARY] Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── 16. METABOLIC ENGINE MAP DATA ──────────────────────
+// Returns a structured view of all active "systems" for a client
+app.get("/api/metabolic-map/:clientId", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  try {
+    // Get latest check-ins
+    const { data: checkins } = await supabase.from("checkins")
+      .select("*").eq("client_id", req.params.clientId)
+      .order("created_at", { ascending: false }).limit(14);
+
+    // Get client data
+    const { data: client } = await supabase.from("clients")
+      .select("*").eq("id", req.params.clientId).single();
+
+    // Get body scans
+    const { data: scans } = await supabase.from("body_scans")
+      .select("*").eq("client_id", req.params.clientId)
+      .order("scan_date", { ascending: false }).limit(5);
+
+    const recent = checkins || [];
+    const latest = recent[0] || {};
+    const avg = (key) => {
+      const vals = recent.map(c => c[key]).filter(v => v != null);
+      return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+    };
+
+    const map = {
+      training: {
+        label: "Training Stimulus",
+        status: latest.training_done ? "active" : "inactive",
+        metrics: {
+          sessions_7d: recent.filter(c => c.training_done).length,
+          avg_performance: avg("performance_rating"),
+          avg_duration: avg("workout_duration_min"),
+          avg_heart_rate: avg("avg_heart_rate"),
+        },
+        signal: (() => {
+          const perf = avg("performance_rating");
+          if (perf === null) return "neutral";
+          if (perf >= 7) return "strong";
+          if (perf >= 5) return "moderate";
+          return "weak";
+        })(),
+      },
+      nutrition: {
+        label: "Nutrition Engine",
+        status: avg("calories") ? "active" : "inactive",
+        metrics: {
+          avg_calories: Math.round(avg("calories") || 0),
+          avg_protein: Math.round(avg("protein_g") || 0),
+          avg_carbs: Math.round(avg("carbs_g") || 0),
+          avg_fats: Math.round(avg("fat_g") || 0),
+          avg_water: Math.round(avg("water_oz") || 0),
+          target_calories: client?.target_calories,
+          target_protein: client?.target_protein,
+          compliance: client?.target_calories && avg("calories")
+            ? Math.round((avg("calories") / client.target_calories) * 100)
+            : null,
+        },
+        signal: (() => {
+          if (!client?.target_calories || !avg("calories")) return "neutral";
+          const pct = avg("calories") / client.target_calories;
+          if (pct >= 0.9 && pct <= 1.1) return "strong";
+          if (pct >= 0.75) return "moderate";
+          return "weak";
+        })(),
+      },
+      recovery: {
+        label: "Recovery & Sleep",
+        status: avg("sleep_hours") ? "active" : "inactive",
+        metrics: {
+          avg_sleep: avg("sleep_hours")?.toFixed(1),
+          avg_sleep_quality: avg("sleep_quality"),
+          avg_stress: avg("stress_level"),
+          avg_mood: avg("mood_rating"),
+        },
+        signal: (() => {
+          const sleep = avg("sleep_hours");
+          const stress = avg("stress_level");
+          if (sleep === null) return "neutral";
+          if (sleep >= 7 && (stress === null || stress <= 5)) return "strong";
+          if (sleep >= 6) return "moderate";
+          return "weak";
+        })(),
+      },
+      body_comp: {
+        label: "Body Composition",
+        status: (scans && scans.length > 0) || latest.weight_lbs ? "active" : "inactive",
+        metrics: {
+          current_weight: latest.weight_lbs,
+          body_temp: latest.body_temp,
+          avg_temp: avg("body_temp")?.toFixed(1),
+          latest_scan: scans?.[0] ? {
+            date: scans[0].scan_date,
+            type: scans[0].scan_type,
+            body_fat: scans[0].body_fat_pct,
+            lean_mass: scans[0].lean_mass_lbs,
+          } : null,
+          weight_trend: recent.length >= 2 && recent[0].weight_lbs && recent[recent.length - 1].weight_lbs
+            ? (recent[0].weight_lbs - recent[recent.length - 1].weight_lbs).toFixed(1)
+            : null,
+        },
+        signal: (() => {
+          const temp = avg("body_temp");
+          if (temp && temp <= 97.0) return "weak";
+          if (temp && temp <= 97.4) return "moderate";
+          return "strong";
+        })(),
+      },
+      hormones: {
+        label: "Hormones & Compounds",
+        status: (client?.current_peds?.length > 0 || client?.current_peptides?.length > 0) ? "active" : "inactive",
+        metrics: {
+          peds: client?.current_peds || [],
+          peptides: client?.current_peptides || [],
+          supplements: client?.current_supplements || [],
+          blood_glucose: latest.blood_glucose,
+          resting_hr: latest.resting_heart_rate,
+          bp: latest.blood_pressure_systolic ? `${latest.blood_pressure_systolic}/${latest.blood_pressure_diastolic}` : null,
+        },
+        signal: "neutral",
+      },
+      adherence: {
+        label: "Adherence & Consistency",
+        status: recent.length > 0 ? "active" : "inactive",
+        metrics: {
+          checkins_7d: recent.length,
+          supplement_compliance: recent.filter(c => c.supplement_compliance).length,
+          steps_avg: Math.round(avg("steps") || 0),
+          target_steps: client?.target_steps,
+        },
+        signal: (() => {
+          if (recent.length >= 6) return "strong";
+          if (recent.length >= 4) return "moderate";
+          return "weak";
+        })(),
+      },
+    };
+
+    res.json({ map, client_name: client ? `${client.first_name} ${client.last_name}` : "Unknown" });
+  } catch (err) {
+    console.error("[METABOLIC MAP] Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── 17. CONTEXT-AWARE AI COACH ─────────────────────────
+app.post("/api/coach-chat", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  const { client_id, message } = req.body;
+  if (!message) return res.status(400).json({ error: "Message required" });
+
+  try {
+    // Gather client context
+    let context = "";
+
+    if (client_id) {
+      const { data: client } = await supabase.from("clients")
+        .select("*").eq("id", client_id).single();
+
+      const { data: checkins } = await supabase.from("checkins")
+        .select("*").eq("client_id", client_id)
+        .order("created_at", { ascending: false }).limit(7);
+
+      const { data: scans } = await supabase.from("body_scans")
+        .select("*").eq("client_id", client_id)
+        .order("scan_date", { ascending: false }).limit(3);
+
+      if (client) {
+        const recent = checkins || [];
+        const avg = (key) => {
+          const vals = recent.map(c => c[key]).filter(v => v != null);
+          return vals.length > 0 ? (vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1) : "N/A";
+        };
+
+        context = `
+CLIENT CONTEXT (use this to personalize your answer):
+Name: ${client.first_name} ${client.last_name}
+Current Weight: ${recent[0]?.weight_lbs || client.last_weight || "Unknown"} lbs
+Targets: ${client.target_calories || "?"} cal, ${client.target_protein || "?"}g protein, ${client.target_steps || "?"} steps
+7-Day Averages: Calories ${avg("calories")}, Protein ${avg("protein_g")}g, Sleep ${avg("sleep_hours")}h, Mood ${avg("mood_rating")}/10, Steps ${avg("steps")}
+Last Check-in: ${recent[0] ? new Date(recent[0].created_at).toLocaleDateString() : "None"}
+Training: ${recent.filter(c => c.training_done).length}/${recent.length} days trained
+Body Temp: ${avg("body_temp")}°F
+${recent[0]?.blood_glucose ? `Blood Glucose: ${recent[0].blood_glucose} mg/dL` : ""}
+${recent[0]?.blood_pressure_systolic ? `Blood Pressure: ${recent[0].blood_pressure_systolic}/${recent[0].blood_pressure_diastolic}` : ""}
+Supplements: ${client.current_supplements?.map(s => s.name).join(", ") || "None logged"}
+${client.current_peds?.length > 0 ? `PEDs: ${client.current_peds.map(p => p.compound).join(", ")}` : ""}
+${client.current_peptides?.length > 0 ? `Peptides: ${client.current_peptides.map(p => p.name).join(", ")}` : ""}
+${scans?.[0] ? `Latest Scan (${scans[0].scan_type}): BF ${scans[0].body_fat_pct}%, Lean ${scans[0].lean_mass_lbs} lbs` : ""}
+`;
+      }
+    }
+
+    // Search knowledge base for relevant context
+    let knowledgeContext = "";
+    try {
+      const queryVec = await embed(message);
+      const searchPromises = SEARCH_NAMESPACES.map(({ ns, topK }) =>
+        index.namespace(ns).query({ vector: queryVec, topK, includeMetadata: true })
+      );
+      const results = await Promise.all(searchPromises);
+      const allMatches = results.flatMap(r => r.matches || [])
+        .filter(m => m.score >= 0.3)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 8);
+
+      if (allMatches.length > 0) {
+        knowledgeContext = "\n\nRELEVANT KNOWLEDGE BASE:\n" +
+          allMatches.map(m => m.metadata?.text || "").filter(Boolean).join("\n---\n");
+      }
+    } catch (err) {
+      console.warn("[COACH-CHAT] Knowledge search failed:", err.message);
+    }
+
+    const systemPrompt = `You are Coach Bryan from Forged by Freedom — a real coach who helps people with body recomposition, training, nutrition, PED protocols, peptides, and overall health optimization.
+
+RULES:
+- Be warm, direct, and knowledgeable. Talk like a trusted gym buddy who knows his stuff, not a chatbot.
+- Use the client's data to personalize your response. Reference their actual numbers, trends, and progress.
+- If their data shows a concern (low sleep, high stress, declining performance, low body temp), mention it proactively.
+- Keep answers practical and actionable. Tell them what to DO, not just what to think about.
+- For supplement/PED/peptide questions: provide educational information based on the knowledge base. Always note this is educational, not medical advice.
+- If you don't have enough context, ask a follow-up question.
+- Keep responses concise (2-4 paragraphs max unless they ask for detail).
+- Use the FBF programming philosophy: simplicity first, dumbbells over barbells, progressive overload, train close to failure, match volume to recovery.
+${context}${knowledgeContext}`;
+
+    const reply = await chat([
+      { role: "system", content: systemPrompt },
+      { role: "user", content: message }
+    ], 0.7);
+
+    // Save conversation
+    if (client_id) {
+      await supabase.from("conversations").insert({
+        channel: "app_coach",
+        sender_id: client_id,
+        sender_name: "Client",
+        direction: "inbound",
+        message,
+        ai_response: reply,
+        metadata: { source: "context_aware_coach" }
+      }).catch(() => {});
+    }
+
+    res.json({ reply });
+  } catch (err) {
+    console.error("[COACH-CHAT] Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ─── Stripe + Email Config ────────────────────────────────
 const stripe = process.env.STRIPE_SECRET_KEY
   ? new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -2589,7 +3069,15 @@ app.post("/api/intake-with-program", async (req, res) => {
     // Auto-generate program in background
     console.log(`[INTAKE] Complete: ${fields.full_name || lead.name}. Starting program generation...`);
 
-    generateProgram(intake, lead).then(async (program) => {
+    // Compute risk score immediately
+    const riskScore = computeRiskScore(intake, lead);
+    console.log(`[RISK] ${intake.full_name || lead.name}: ${riskScore.tier} (score: ${riskScore.score}, ${riskScore.flag_count} flags)`);
+
+    // Generate program + summary in parallel
+    Promise.all([
+      generateProgram(intake, lead),
+      generateClientSummary(intake, lead).catch(err => { console.error("[SUMMARY] Failed:", err.message); return null; })
+    ]).then(async ([program, summary]) => {
       const programHtml = formatProgramHTML(program, intake.full_name || lead.name);
 
       const { data: saved } = await supabase.from("generated_programs").insert({
@@ -2607,7 +3095,23 @@ app.post("/api/intake-with-program", async (req, res) => {
       }).select().single();
 
       if (saved) {
+        // Include risk score and summary in approval email
+        const riskEmoji = riskScore.tier === "red" ? "🔴" : riskScore.tier === "yellow" ? "🟡" : "🟢";
+        const extraInfo = `\n\nRisk: ${riskEmoji} ${riskScore.tier.toUpperCase()} (${riskScore.score}/100, ${riskScore.flag_count} flags)` +
+          (riskScore.flags.filter(f => f.level === "red").length > 0
+            ? `\nRed flags: ${riskScore.flags.filter(f => f.level === "red").map(f => f.text).join(", ")}`
+            : "") +
+          (summary ? `\n\nSummary:\n${summary.slice(0, 500)}` : "");
+
         await sendApprovalEmail(saved.id, intake.full_name || lead.name, lead.email, programHtml);
+
+        // Also send risk + summary via ntfy
+        fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+          method: "POST",
+          headers: { "Title": `${riskEmoji} New Client: ${intake.full_name || lead.name}`, "Priority": riskScore.tier === "red" ? "high" : "default", "Tags": "clipboard" },
+          body: `Risk: ${riskScore.tier.toUpperCase()} (${riskScore.score}/100)${extraInfo}\n\nProgram ready for review: ${APP_URL}/api/programs/${saved.id}/preview`
+        }).catch(() => {});
+
         console.log(`[PROGRAM] Generated and pending review: ${intake.full_name || lead.name}`);
       }
     }).catch(err => {
