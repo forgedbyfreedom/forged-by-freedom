@@ -3,6 +3,8 @@ import cors from "cors";
 import helmet from "helmet";
 import { Pinecone } from "@pinecone-database/pinecone";
 import { createClient } from "@supabase/supabase-js";
+import Stripe from "stripe";
+import nodemailer from "nodemailer";
 
 /* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
@@ -59,7 +61,7 @@ app.use(cors({
     "https://www.forgedbyfreedom.org",
     /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/
   ] : "*",
-  methods: ["GET", "POST", "PATCH"],
+  methods: ["GET", "POST", "PATCH", "PUT"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json({ limit: "100kb" }));
@@ -1226,6 +1228,7 @@ app.get("/apply", (_, res) => res.sendFile(join(__dirname, "embed", "apply.html"
 app.get("/onboarding", (_, res) => res.sendFile(join(__dirname, "embed", "onboarding.html")));
 app.get("/admin", (_, res) => res.sendFile(join(__dirname, "embed", "admin.html")));
 app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.html")));
+app.get("/store", (_, res) => res.sendFile(join(__dirname, "embed", "store.html")));
 
 // ─── Admin: Update Lead Status ───────────────────────────
 app.patch("/api/leads/:id/status", async (req, res) => {
@@ -1753,6 +1756,818 @@ app.post("/api/content/:id/publish", async (req, res) => {
     res.json({ status: "published", platform: item.platform, note: "Content marked as published. External API delivery coming in Phase 4." });
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Stripe + Email Config ────────────────────────────────
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
+
+const emailTransporter = process.env.SMTP_HOST
+  ? nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || "587"),
+      secure: process.env.SMTP_SECURE === "true",
+      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    })
+  : null;
+
+const COACH_EMAIL = process.env.COACH_EMAIL || "bryan@forgedbyfreedom.com";
+const APP_URL = process.env.APP_URL || "https://forged-by-freedom-api-nm4f.onrender.com";
+
+// ─── FBF PROGRAMMING RULES ──────────────────────────────
+const FBF_PROGRAMMING_RULES = `
+FORGED BY FREEDOM — CORE PROGRAMMING RULES
+These rules MUST be followed in every program generated.
+
+1. SIMPLICITY FIRST — Dumbbells over barbells when possible. Keep exercises accessible and safe. Machines and cables are fine. Only use barbells when the movement truly demands it (e.g., deadlifts, squats for advanced lifters). Default to dumbbell variations.
+
+2. PROGRESSIVE OVERLOAD — The #1 driver of growth. Every program must include a clear progression scheme: more weight, more reps, or more sets over time. Without progressive overload, nothing else matters.
+
+3. EXERCISE SELECTION — Choose exercises that match the client's anatomy, injury history, and equipment. Stability before complexity. A goblet squat is better than a barbell squat if the client can't stabilize. Prioritize dumbbell presses, rows, lunges, RDLs, and machine work.
+
+4. TRAIN CLOSE TO FAILURE — Most working sets should be taken to 1-3 reps from failure (RIR 1-3). Not to failure on every set, but close enough to create a stimulus. Beginners: RIR 3-4. Intermediate: RIR 1-3. Advanced: RIR 0-2 on key sets.
+
+5. FATIGUE MANAGEMENT — Manage total weekly volume and intensity. Use deload weeks every 4-6 weeks. Watch for signs of overreaching: declining performance, poor sleep, low mood, elevated resting HR. When in doubt, pull back.
+
+6. VOLUME MATCHES RECOVERY — More is not always better. Match training volume to the client's recovery capacity (sleep, stress, nutrition, age, PED status). A stressed, sleep-deprived client needs LESS volume, not more.
+
+7. FREQUENCY DISTRIBUTION — Train each muscle group 2x per week minimum for hypertrophy. Upper/lower, push/pull/legs, or full body depending on available days. 3-day: full body. 4-day: upper/lower. 5-6 day: PPL or custom split.
+
+8. PROGRAM CONSISTENCY — Don't change exercises every week. Keep the same core movements for 4-8 weeks to track progress. Variation comes from rep ranges and load, not exercise swapping.
+
+9. EXECUTION QUALITY — Controlled eccentrics (2-3 sec), full ROM, no ego lifting. The rep should be earned, not survived. Quality over quantity always.
+
+10. FIT THE ATHLETE'S LIFE — The best program is the one they'll actually do. Match training days, session length, and complexity to their real schedule and experience. A perfect program they skip is worse than a simple one they crush.
+
+NUTRITION RULES:
+- Protein: 0.8-1.2g per pound of body weight (higher end for cutting, lower for bulking)
+- Calories: Based on TDEE calculation using activity level, adjusted for goal
+- For fat loss: 300-500 calorie deficit. Never crash diet.
+- For muscle gain: 200-400 calorie surplus. Lean bulk, not dirty bulk.
+- Carbs: Fill remaining calories after protein and fats. Prioritize around training.
+- Fats: 0.3-0.4g per pound minimum for hormone health
+- Meal timing: Pre and post workout nutrition matters. Otherwise, eat when it fits your schedule.
+- Water: Minimum 0.5oz per pound of body weight daily.
+
+SUPPLEMENT BASELINE (adjust based on budget):
+- Creatine monohydrate: 5g daily (non-negotiable if budget allows)
+- Protein powder: As needed to hit daily protein target
+- Multivitamin: Daily
+- Fish oil / omega-3: 2-3g EPA+DHA daily
+- Vitamin D3: 2000-5000 IU daily (based on labs)
+- Magnesium glycinate: 200-400mg before bed
+- Optional: Ashwagandha for stress/cortisol, zinc if deficient
+`;
+
+// ─── Program Generation via AI ───────────────────────────
+async function generateProgram(intake, lead) {
+  const clientProfile = `
+CLIENT PROFILE:
+Name: ${intake.full_name}
+Gender: ${intake.gender || "Not specified"}
+Age: ${intake.dob ? Math.floor((Date.now() - new Date(intake.dob).getTime()) / 31557600000) : "Unknown"}
+Weight: ${intake.current_weight || "Unknown"}
+Height: ${intake.height || "Unknown"}
+Body Fat: ${intake.body_fat || "Unknown"}
+Goal Weight: ${intake.goal_weight || "Not specified"}
+Goal Body Fat: ${intake.goal_body_fat || "Not specified"}
+Primary Goal: ${intake.goal_primary || lead.primary_goal || "Body recomposition"}
+24-Week Goal: ${intake.goal_24_weeks || "Not specified"}
+
+TRAINING BACKGROUND:
+Years Training: ${intake.training_years || "Unknown"}
+Current Training: ${intake.training_week || "Unknown"}
+Training History: ${intake.training_history || "None"}
+Current Lifts: ${intake.current_lifts || "Unknown"}
+Equipment Access: ${intake.equipment_access || "Full commercial gym"}
+Training Days Available: ${intake.training_days_available || "4 days"}
+Preferred Training Time: ${intake.training_time_preference || "No preference"}
+Max Session Length: ${intake.max_session_length || "60"} minutes
+Exercise Restrictions: ${intake.exercise_restrictions || "None"}
+Physical Limitations: ${intake.physical_limitations || "None"}
+
+NUTRITION:
+Current Diet: ${intake.diet_habits || "Unknown"}
+Meals Per Day: ${intake.meals_per_day || "Unknown"}
+Tracks Macros: ${intake.tracks_macros || "No"}
+Current Macros: ${intake.macro_targets || "None"}
+Daily Protein: ${intake.daily_protein || "Unknown"}
+Willing to Track: ${intake.will_track_nutrition || "Unknown"}
+Meal Timing: ${intake.meal_timing || "Not specified"}
+Preferred Foods: ${intake.preferred_foods || "Not specified"}
+Disliked Foods: ${intake.disliked_foods || "None"}
+Food Restrictions: ${intake.food_restrictions || "None"}
+Water Intake: ${intake.water_intake || "Unknown"}
+Caffeine Intake: ${intake.caffeine_intake || "Unknown"}
+Meal Prep: ${intake.meal_prep || "Unknown"}
+
+HEALTH:
+Health Conditions: ${intake.health_conditions || "None"}
+Medications: ${intake.medications || "None"}
+Surgeries/Injuries: ${intake.surgeries_injuries || "None"}
+TRT/HRT: ${intake.trt_hrt || "No"}
+Peptide Experience: ${intake.peptide_experience || "None"}
+
+LIFESTYLE:
+Occupation: ${intake.occupation || "Unknown"}
+Activity Level: ${intake.daily_activity_level || "Unknown"}
+Daily Steps: ${intake.daily_steps || "Unknown"}
+Travel: ${intake.travel_frequency || "Unknown"}
+Sleep: ${intake.sleep_hours || "Unknown"} hrs, Quality: ${intake.sleep_quality || "Unknown"}
+Stress Level: ${intake.stress_level || "Unknown"}
+Recovery Practices: ${intake.recovery_practices || "None"}
+
+SUPPLEMENTS:
+Current Supplements: ${intake.current_supplements || "None"}
+Budget: ${intake.supplement_budget || "Unknown"}
+Peptide Interest: ${intake.peptide_interest || "Not interested"}
+Compounds Interest: ${intake.compounds_interest || "None"}
+
+CARDIO: ${intake.cardio || "None"}
+Commitment Level: ${intake.commitment_level || "Unknown"}
+`;
+
+  const systemPrompt = `You are Coach Bryan's programming engine for Forged by Freedom. You create professional, detailed training and nutrition programs based on client intake data.
+
+${FBF_PROGRAMMING_RULES}
+
+IMPORTANT: You MUST output valid JSON only. No markdown, no explanation — just the JSON object.
+
+Generate a complete 4-week program in this exact JSON structure:
+{
+  "training_program": {
+    "split_type": "Upper/Lower" or "Push/Pull/Legs" or "Full Body" etc,
+    "days_per_week": 4,
+    "phase": "Hypertrophy Base" or "Strength" or "Fat Loss" etc,
+    "duration_weeks": 4,
+    "deload_week": 5,
+    "progression_scheme": "Add 5lbs when hitting top of rep range for all sets",
+    "days": {
+      "Day 1 - Upper Push": [
+        { "exercise": "Dumbbell Bench Press", "sets": 4, "reps": "8-10", "rir": 2, "rest": "90s", "notes": "Control the eccentric 2-3 sec" },
+        ...more exercises (5-7 per day)
+      ],
+      "Day 2 - Lower": [...],
+      ...
+    }
+  },
+  "nutrition_plan": {
+    "goal": "Fat Loss" or "Lean Bulk" or "Recomp",
+    "calories": 2400,
+    "protein_g": 200,
+    "carbs_g": 250,
+    "fats_g": 75,
+    "protein_per_lb": "1.0",
+    "meal_count": 4,
+    "meal_timing_notes": "Pre-workout meal 60-90 min before training. Post-workout within 60 min.",
+    "sample_day": {
+      "meal_1": { "time": "7:00 AM", "description": "4 eggs, 2 slices whole grain toast, 1 banana", "macros": "P:28 C:55 F:22" },
+      "meal_2": { "time": "12:00 PM", "description": "8oz grilled chicken, 1.5 cups rice, mixed greens, 1 tbsp olive oil", "macros": "P:50 C:70 F:15" },
+      ...
+    },
+    "food_notes": "Adjust portions to hit macro targets. These are examples — swap proteins/carbs as desired within your preferred foods."
+  },
+  "supplement_protocol": {
+    "daily": [
+      { "supplement": "Creatine Monohydrate", "dose": "5g", "timing": "Any time, with water", "priority": "Essential" },
+      ...
+    ],
+    "optional": [
+      { "supplement": "Ashwagandha KSM-66", "dose": "600mg", "timing": "Morning", "purpose": "Stress/cortisol management", "priority": "Nice to have" }
+    ],
+    "estimated_monthly_cost": "$60-80",
+    "notes": "Start with essentials only. Add optionals based on budget and response."
+  },
+  "cardio_protocol": {
+    "weekly_sessions": 3,
+    "type": "LISS (walking, incline treadmill)",
+    "duration": "25-35 min",
+    "timing": "Post-weights or separate session",
+    "heart_rate_zone": "Zone 2 (120-140 bpm)",
+    "step_goal": 8000,
+    "notes": "Increase steps before adding formal cardio sessions"
+  }
+}
+
+Use the client's preferred foods in the sample meal plan. Respect food restrictions and dislikes. Default to dumbbell movements. Match volume and intensity to their experience level and recovery capacity. Respect their schedule and session time limit.`;
+
+  const result = await callOpenRouter("/chat/completions", {
+    model: CONFIG.chatModel,
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: clientProfile }
+    ],
+    temperature: 0.4,
+    max_tokens: 6000
+  }, 120000);
+
+  const content = result.choices?.[0]?.message?.content || "";
+
+  // Parse JSON from response (strip markdown code fences if present)
+  const jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
+  return JSON.parse(jsonStr);
+}
+
+// ─── Format Program as HTML ──────────────────────────────
+function formatProgramHTML(program, clientName) {
+  const { training_program: tp, nutrition_plan: np, supplement_protocol: sp, cardio_protocol: cp } = program;
+
+  let trainingHTML = "";
+  if (tp.days) {
+    for (const [dayName, exercises] of Object.entries(tp.days)) {
+      trainingHTML += `<h3 style="color:#ff6a00;margin-top:24px;font-size:16px;">${dayName}</h3>
+      <table style="width:100%;border-collapse:collapse;margin-top:8px;">
+        <tr style="background:#1c1c1c;color:#aaa;font-size:12px;text-transform:uppercase;">
+          <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Exercise</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Sets</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Reps</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">RIR</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Rest</th>
+          <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Notes</th>
+        </tr>`;
+      for (const ex of exercises) {
+        trainingHTML += `
+        <tr style="border-bottom:1px solid #1c1c1c;">
+          <td style="padding:8px 12px;color:#e8e8e8;font-weight:500;">${ex.exercise}</td>
+          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.sets}</td>
+          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.reps}</td>
+          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.rir}</td>
+          <td style="padding:8px 12px;text-align:center;color:#aaa;">${ex.rest}</td>
+          <td style="padding:8px 12px;color:#666;font-size:13px;">${ex.notes || ""}</td>
+        </tr>`;
+      }
+      trainingHTML += "</table>";
+    }
+  }
+
+  let mealsHTML = "";
+  if (np.sample_day) {
+    for (const [mealKey, meal] of Object.entries(np.sample_day)) {
+      mealsHTML += `
+      <div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:8px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <strong style="color:#e8e8e8;">${mealKey.replace("_", " ").toUpperCase()}</strong>
+          <span style="color:#ff6a00;font-size:12px;font-weight:600;">${meal.time}</span>
+        </div>
+        <p style="color:#aaa;margin:6px 0 4px;font-size:14px;">${meal.description}</p>
+        <span style="color:#666;font-size:12px;">${meal.macros}</span>
+      </div>`;
+    }
+  }
+
+  let supplementsHTML = "";
+  const allSupps = [...(sp.daily || []), ...(sp.optional || [])];
+  for (const s of allSupps) {
+    supplementsHTML += `
+    <tr style="border-bottom:1px solid #1c1c1c;">
+      <td style="padding:8px 12px;color:#e8e8e8;font-weight:500;">${s.supplement}</td>
+      <td style="padding:8px 12px;color:#aaa;text-align:center;">${s.dose}</td>
+      <td style="padding:8px 12px;color:#aaa;">${s.timing}</td>
+      <td style="padding:8px 12px;color:${s.priority === "Essential" ? "#22c55e" : "#666"};font-size:12px;font-weight:600;">${s.priority}</td>
+    </tr>`;
+  }
+
+  return `<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#0a0a0a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<div style="max-width:700px;margin:0 auto;padding:32px 20px;">
+
+  <!-- Header -->
+  <div style="text-align:center;margin-bottom:40px;">
+    <h1 style="font-size:28px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;">FORGED BY FREEDOM</h1>
+    <p style="color:#666;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-top:6px;">Custom Training & Nutrition Program</p>
+    <div style="width:60px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,transparent,#ff6a00,transparent);border-radius:2px;"></div>
+  </div>
+
+  <!-- Client Info -->
+  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
+    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;">Program For</h2>
+    <p style="color:#e8e8e8;font-size:20px;font-weight:700;margin:0;">${clientName}</p>
+    <p style="color:#aaa;font-size:13px;margin:8px 0 0;">Generated: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+  </div>
+
+  <!-- Training Overview -->
+  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
+    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Training Program</h2>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
+        <div style="color:#666;font-size:11px;text-transform:uppercase;">Split</div>
+        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${tp.split_type}</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
+        <div style="color:#666;font-size:11px;text-transform:uppercase;">Days/Week</div>
+        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${tp.days_per_week}</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
+        <div style="color:#666;font-size:11px;text-transform:uppercase;">Phase</div>
+        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${tp.phase}</div>
+      </div>
+    </div>
+    <p style="color:#aaa;font-size:13px;margin:0;"><strong style="color:#e8e8e8;">Progression:</strong> ${tp.progression_scheme}</p>
+    <p style="color:#aaa;font-size:13px;margin:8px 0 0;"><strong style="color:#e8e8e8;">Deload:</strong> Week ${tp.deload_week}</p>
+    ${trainingHTML}
+  </div>
+
+  <!-- Nutrition Plan -->
+  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
+    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Nutrition Plan</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
+        <div style="color:#ff6a00;font-size:22px;font-weight:700;">${np.calories}</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Calories</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
+        <div style="color:#22c55e;font-size:22px;font-weight:700;">${np.protein_g}g</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Protein</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
+        <div style="color:#3b82f6;font-size:22px;font-weight:700;">${np.carbs_g}g</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Carbs</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:80px;text-align:center;">
+        <div style="color:#eab308;font-size:22px;font-weight:700;">${np.fats_g}g</div>
+        <div style="color:#666;font-size:11px;text-transform:uppercase;margin-top:2px;">Fats</div>
+      </div>
+    </div>
+    <p style="color:#aaa;font-size:13px;margin:0 0 12px;"><strong style="color:#e8e8e8;">Goal:</strong> ${np.goal} · <strong style="color:#e8e8e8;">Meals:</strong> ${np.meal_count}/day</p>
+    <p style="color:#aaa;font-size:13px;margin:0 0 16px;">${np.meal_timing_notes || ""}</p>
+
+    <h3 style="color:#e8e8e8;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 10px;">Sample Day</h3>
+    ${mealsHTML}
+    <p style="color:#666;font-size:12px;font-style:italic;margin:12px 0 0;">${np.food_notes || ""}</p>
+  </div>
+
+  <!-- Supplements -->
+  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
+    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Supplement Protocol</h2>
+    <table style="width:100%;border-collapse:collapse;">
+      <tr style="background:#1c1c1c;color:#aaa;font-size:12px;text-transform:uppercase;">
+        <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Supplement</th>
+        <th style="padding:8px 12px;text-align:center;border-bottom:1px solid #2a2a2a;">Dose</th>
+        <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Timing</th>
+        <th style="padding:8px 12px;text-align:left;border-bottom:1px solid #2a2a2a;">Priority</th>
+      </tr>
+      ${supplementsHTML}
+    </table>
+    <p style="color:#666;font-size:12px;margin:12px 0 0;">Est. monthly cost: ${sp.estimated_monthly_cost || "Varies"}</p>
+    <p style="color:#666;font-size:12px;font-style:italic;margin:6px 0 0;">${sp.notes || ""}</p>
+  </div>
+
+  <!-- Cardio -->
+  <div style="background:#141414;border:1.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:24px;">
+    <h2 style="color:#ff6a00;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;">Cardio Protocol</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
+        <div style="color:#666;font-size:11px;text-transform:uppercase;">Sessions/Week</div>
+        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${cp.weekly_sessions}</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
+        <div style="color:#666;font-size:11px;text-transform:uppercase;">Type</div>
+        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${cp.type}</div>
+      </div>
+      <div style="background:#1c1c1c;border-radius:8px;padding:12px 16px;flex:1;min-width:120px;">
+        <div style="color:#666;font-size:11px;text-transform:uppercase;">Duration</div>
+        <div style="color:#e8e8e8;font-size:15px;font-weight:600;margin-top:4px;">${cp.duration}</div>
+      </div>
+    </div>
+    <p style="color:#aaa;font-size:13px;margin:0;"><strong style="color:#e8e8e8;">HR Zone:</strong> ${cp.heart_rate_zone || "Zone 2"}</p>
+    <p style="color:#aaa;font-size:13px;margin:6px 0 0;"><strong style="color:#e8e8e8;">Daily Step Goal:</strong> ${cp.step_goal || "8,000"}</p>
+    <p style="color:#666;font-size:12px;font-style:italic;margin:8px 0 0;">${cp.notes || ""}</p>
+  </div>
+
+  <!-- Footer -->
+  <div style="text-align:center;padding:24px 0;border-top:1px solid #2a2a2a;">
+    <p style="color:#666;font-size:12px;margin:0;">This program is for educational purposes only. Consult your physician before starting.</p>
+    <p style="color:#ff6a00;font-size:13px;font-weight:600;margin:8px 0 0;">FORGED BY FREEDOM STRENGTH & NUTRITION</p>
+  </div>
+</div>
+</body>
+</html>`;
+}
+
+// ─── Send Approval Email to Coach ────────────────────────
+async function sendApprovalEmail(programId, clientName, clientEmail, programHtml) {
+  if (!emailTransporter) {
+    console.log(`[PROGRAM] Email not configured. Program ${programId} ready for review.`);
+    // Fallback: send via ntfy
+    try {
+      await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+        method: "POST",
+        headers: { "Title": `Program Ready: ${clientName}`, "Priority": "high", "Tags": "clipboard" },
+        body: `New program generated for ${clientName} (${clientEmail}).\n\nReview & approve: ${APP_URL}/admin\n\nProgram ID: ${programId}`
+      });
+    } catch (e) { console.error("[PROGRAM] ntfy error:", e.message); }
+    return;
+  }
+
+  await emailTransporter.sendMail({
+    from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+    to: COACH_EMAIL,
+    subject: `Program Ready for Review: ${clientName}`,
+    html: `
+      <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px;">
+        <h2 style="color:#ff6a00;">New Program Ready for Approval</h2>
+        <p><strong>Client:</strong> ${clientName}</p>
+        <p><strong>Email:</strong> ${clientEmail}</p>
+        <p>A program has been auto-generated from their intake form.</p>
+        <p><a href="${APP_URL}/api/programs/${programId}/preview" style="display:inline-block;background:#ff6a00;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;margin:16px 0;">View Program</a></p>
+        <p><a href="${APP_URL}/api/programs/${programId}/approve?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send Payment Link</a></p>
+        <p><a href="${APP_URL}/api/programs/${programId}/reject?key=${process.env.ADMIN_KEY}" style="color:#ef4444;font-weight:bold;">Reject / Request Changes</a></p>
+      </div>
+    `
+  });
+  console.log(`[PROGRAM] Approval email sent for ${clientName}`);
+}
+
+// ─── Enhanced Intake Handler (replace original) ──────────
+// Override the original POST /api/intake to add program generation
+const originalIntakeHandler = app._router.stack.find(
+  layer => layer.route?.path === "/api/intake" && layer.route?.methods?.post
+);
+
+// We'll add the program generation as a new route triggered after intake
+app.post("/api/intake/generate-program", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  const { intake_id, key } = req.body;
+  if (key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  try {
+    const { data: intake, error: intakeErr } = await supabase
+      .from("client_intakes").select("*").eq("id", intake_id).single();
+    if (intakeErr || !intake) return res.status(404).json({ error: "Intake not found" });
+
+    const { data: lead } = await supabase
+      .from("leads").select("*").eq("id", intake.lead_id).single();
+
+    console.log(`[PROGRAM] Generating program for ${intake.full_name}...`);
+    const program = await generateProgram(intake, lead || {});
+    const programHtml = formatProgramHTML(program, intake.full_name);
+
+    const { data: saved, error: saveErr } = await supabase.from("generated_programs").insert({
+      intake_id: intake.id,
+      lead_id: intake.lead_id,
+      client_name: intake.full_name,
+      client_email: lead?.email || "",
+      training_program: program.training_program,
+      nutrition_plan: program.nutrition_plan,
+      supplement_protocol: program.supplement_protocol,
+      cardio_protocol: program.cardio_protocol,
+      program_html: programHtml,
+      ai_model_used: CONFIG.chatModel,
+      status: "pending_review"
+    }).select().single();
+
+    if (saveErr) {
+      console.error("[PROGRAM] Save error:", saveErr);
+      return res.status(500).json({ error: "Failed to save program" });
+    }
+
+    // Notify Bryan for approval
+    await sendApprovalEmail(saved.id, intake.full_name, lead?.email || "", programHtml);
+
+    res.json({ status: "ok", program_id: saved.id, message: "Program generated and sent for review" });
+  } catch (err) {
+    console.error("[PROGRAM] Generation error:", err);
+    res.status(500).json({ error: "Program generation failed: " + err.message });
+  }
+});
+
+// ─── Preview Program ─────────────────────────────────────
+app.get("/api/programs/:id/preview", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+
+  try {
+    const { data, error } = await supabase
+      .from("generated_programs").select("program_html, client_name, status")
+      .eq("id", req.params.id).single();
+
+    if (error || !data) return res.status(404).json({ error: "Program not found" });
+    res.type("html").send(data.program_html);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Approve Program → Create Stripe Checkout ────────────
+app.get("/api/programs/:id/approve", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { data: program, error } = await supabase
+      .from("generated_programs").select("*").eq("id", req.params.id).single();
+    if (error || !program) return res.status(404).json({ error: "Program not found" });
+
+    // Update status to approved
+    await supabase.from("generated_programs")
+      .update({ status: "approved", approved_at: new Date().toISOString(), coach_notes: req.query.notes || null })
+      .eq("id", req.params.id);
+
+    // If Stripe is configured, create checkout session
+    if (stripe && process.env.STRIPE_PRICE_ID) {
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        mode: "payment",
+        customer_email: program.client_email,
+        line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
+        success_url: `${APP_URL}/api/programs/${req.params.id}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${APP_URL}/api/programs/${req.params.id}/payment-cancelled`,
+        metadata: { program_id: req.params.id, client_name: program.client_name },
+      });
+
+      await supabase.from("generated_programs")
+        .update({ stripe_checkout_session_id: session.id, payment_status: "pending" })
+        .eq("id", req.params.id);
+
+      // Send payment link to client
+      if (emailTransporter) {
+        await emailTransporter.sendMail({
+          from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+          to: program.client_email,
+          subject: "Your FBF Program is Ready — Complete Payment",
+          html: `
+            <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#0a0a0a;color:#e8e8e8;">
+              <h1 style="color:#ff6a00;text-align:center;">Your Program is Ready</h1>
+              <p>Hey ${program.client_name.split(" ")[0]},</p>
+              <p>Coach Bryan has reviewed and approved your custom training & nutrition program.</p>
+              <p>Complete payment to get instant access:</p>
+              <p style="text-align:center;margin:24px 0;">
+                <a href="${session.url}" style="display:inline-block;background:#ff6a00;color:#fff;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;">Complete Payment</a>
+              </p>
+              <p style="color:#666;font-size:13px;">If you have questions, reply to this email or message Coach Bryan directly.</p>
+              <p style="color:#ff6a00;font-weight:bold;margin-top:24px;">— Forged by Freedom</p>
+            </div>
+          `
+        });
+      } else {
+        // Fallback: notify via ntfy with payment link
+        await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+          method: "POST",
+          headers: { "Title": `Program Approved: ${program.client_name}`, "Tags": "white_check_mark" },
+          body: `Send this payment link to ${program.client_name} (${program.client_email}):\n\n${session.url}`
+        }).catch(() => {});
+      }
+
+      res.type("html").send(`
+        <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+          <h2 style="color:#22c55e;">Program Approved</h2>
+          <p>${program.client_name}'s program has been approved.</p>
+          <p>Payment link sent to: <strong>${program.client_email}</strong></p>
+          <p style="color:#666;font-size:13px;margin-top:16px;">Checkout URL: <a href="${session.url}" style="color:#ff6a00;">${session.url}</a></p>
+        </div>
+      `);
+    } else {
+      // No Stripe — just mark approved and deliver directly
+      await supabase.from("generated_programs")
+        .update({ payment_status: "paid", delivered_at: new Date().toISOString(), status: "delivered" })
+        .eq("id", req.params.id);
+
+      // Send program directly
+      if (emailTransporter) {
+        await emailTransporter.sendMail({
+          from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+          to: program.client_email,
+          subject: "Your FBF Program — Forged by Freedom",
+          html: program.program_html
+        });
+      }
+
+      res.type("html").send(`
+        <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+          <h2 style="color:#22c55e;">Program Approved & Delivered</h2>
+          <p>${program.client_name}'s program has been sent.</p>
+          <p style="color:#666;">No payment processor configured — program sent directly.</p>
+        </div>
+      `);
+    }
+  } catch (err) {
+    console.error("[PROGRAM] Approve error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Reject Program ──────────────────────────────────────
+app.get("/api/programs/:id/reject", async (req, res) => {
+  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  await supabase.from("generated_programs")
+    .update({ status: "rejected", coach_notes: req.query.reason || "Needs revision" })
+    .eq("id", req.params.id);
+
+  res.type("html").send(`
+    <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+      <h2 style="color:#ef4444;">Program Rejected</h2>
+      <p>You can regenerate this program from the admin panel.</p>
+    </div>
+  `);
+});
+
+// ─── Payment Success ─────────────────────────────────────
+app.get("/api/programs/:id/payment-success", async (req, res) => {
+  if (!stripe) return res.status(503).json({ error: "Stripe not configured" });
+
+  try {
+    const sessionId = req.query.session_id;
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
+
+    if (session.payment_status === "paid") {
+      const { data: program } = await supabase.from("generated_programs")
+        .select("*").eq("id", req.params.id).single();
+
+      await supabase.from("generated_programs").update({
+        payment_status: "paid",
+        stripe_payment_intent_id: session.payment_intent,
+        payment_amount: session.amount_total,
+        status: "delivered",
+        delivered_at: new Date().toISOString()
+      }).eq("id", req.params.id);
+
+      // Deliver program via email
+      if (emailTransporter && program) {
+        await emailTransporter.sendMail({
+          from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+          to: program.client_email,
+          subject: "Your FBF Program — Forged by Freedom",
+          html: program.program_html
+        });
+      }
+
+      // Notify coach
+      await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+        method: "POST",
+        headers: { "Title": `Payment Received: ${program?.client_name}`, "Tags": "money_with_wings" },
+        body: `${program?.client_name} paid $${(session.amount_total / 100).toFixed(2)}. Program delivered.`
+      }).catch(() => {});
+
+      res.type("html").send(`
+        <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+          <h1 style="color:#ff6a00;">FORGED BY FREEDOM</h1>
+          <h2 style="color:#22c55e;margin-top:24px;">Payment Complete</h2>
+          <p>Your custom program has been sent to your email.</p>
+          <p style="color:#666;font-size:13px;margin-top:16px;">Check your inbox (and spam folder) for your full program.</p>
+          <p style="color:#ff6a00;font-weight:bold;margin-top:24px;">Let's get to work.</p>
+        </div>
+      `);
+    } else {
+      res.type("html").send(`
+        <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;padding:40px;">
+          <h2 style="color:#eab308;">Payment Processing</h2>
+          <p>Your payment is still processing. You'll receive your program via email once confirmed.</p>
+        </div>
+      `);
+    }
+  } catch (err) {
+    console.error("[PAYMENT] Error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Payment Cancelled ──────────────────────────────────
+app.get("/api/programs/:id/payment-cancelled", (req, res) => {
+  res.type("html").send(`
+    <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+      <h2 style="color:#eab308;">Payment Cancelled</h2>
+      <p>No worries — your program is saved. When you're ready, contact Coach Bryan to get a new payment link.</p>
+      <p style="color:#ff6a00;font-weight:bold;margin-top:16px;">— Forged by Freedom</p>
+    </div>
+  `);
+});
+
+// ─── List Programs (Admin) ───────────────────────────────
+app.get("/api/programs", async (req, res) => {
+  if (req.query.key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+
+  const { data, error } = await supabase.from("generated_programs")
+    .select("id, client_name, client_email, status, payment_status, created_at, approved_at, delivered_at")
+    .order("created_at", { ascending: false });
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.json({ programs: data });
+});
+
+// ─── Stripe Webhook ──────────────────────────────────────
+app.post("/api/stripe/webhook", express.raw({ type: "application/json" }), async (req, res) => {
+  if (!stripe) return res.status(503).json({ error: "Stripe not configured" });
+
+  const sig = req.headers["stripe-signature"];
+  let event;
+
+  try {
+    event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
+  } catch (err) {
+    console.error("[STRIPE] Webhook signature verification failed:", err.message);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+
+  if (event.type === "checkout.session.completed") {
+    const session = event.data.object;
+    const programId = session.metadata?.program_id;
+    if (programId) {
+      await supabase.from("generated_programs").update({
+        payment_status: "paid",
+        stripe_payment_intent_id: session.payment_intent,
+        payment_amount: session.amount_total,
+        status: "delivered",
+        delivered_at: new Date().toISOString()
+      }).eq("id", programId);
+
+      console.log(`[STRIPE] Payment confirmed for program ${programId}`);
+    }
+  }
+
+  res.json({ received: true });
+});
+
+// ─── Auto-Generate on Intake (add to existing intake flow) ─
+// Patch the existing intake endpoint to trigger program generation
+const _originalIntakeRoute = app._router.stack.findIndex(
+  layer => layer.route?.path === "/api/intake" && layer.route?.methods?.post
+);
+
+// Add auto-generation trigger after intake
+app.post("/api/intake-with-program", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Intake system not configured" });
+
+  const { lead_id, ...fields } = req.body;
+
+  if (!lead_id) return res.status(400).json({ error: "Lead token required" });
+  if (!fields.disclaimer_acknowledged) return res.status(400).json({ error: "Disclaimer must be acknowledged" });
+
+  try {
+    // Verify lead
+    const { data: lead, error: leadErr } = await supabase
+      .from("leads").select("id, status, name, email").eq("id", lead_id).single();
+
+    if (leadErr || !lead) return res.status(404).json({ error: "Invalid onboarding link" });
+    if (lead.status !== "approved") return res.status(403).json({ error: "Application not yet approved." });
+
+    // Save intake
+    const { data: intake, error: intakeErr } = await supabase
+      .from("client_intakes").insert({ lead_id, ...fields }).select().single();
+
+    if (intakeErr) {
+      console.error("[INTAKE] Supabase error:", intakeErr);
+      return res.status(500).json({ error: "Failed to save intake" });
+    }
+
+    // Trigger n8n webhook
+    const webhookUrl = process.env.N8N_INTAKE_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "intake_complete", client_name: fields.full_name || lead.name, email: lead.email })
+      }).catch(err => console.error("[INTAKE] Webhook error:", err.message));
+    }
+
+    // Auto-generate program in background
+    console.log(`[INTAKE] Complete: ${fields.full_name || lead.name}. Starting program generation...`);
+
+    generateProgram(intake, lead).then(async (program) => {
+      const programHtml = formatProgramHTML(program, intake.full_name || lead.name);
+
+      const { data: saved } = await supabase.from("generated_programs").insert({
+        intake_id: intake.id,
+        lead_id: intake.lead_id,
+        client_name: intake.full_name || lead.name,
+        client_email: lead.email,
+        training_program: program.training_program,
+        nutrition_plan: program.nutrition_plan,
+        supplement_protocol: program.supplement_protocol,
+        cardio_protocol: program.cardio_protocol,
+        program_html: programHtml,
+        ai_model_used: CONFIG.chatModel,
+        status: "pending_review"
+      }).select().single();
+
+      if (saved) {
+        await sendApprovalEmail(saved.id, intake.full_name || lead.name, lead.email, programHtml);
+        console.log(`[PROGRAM] Generated and pending review: ${intake.full_name || lead.name}`);
+      }
+    }).catch(err => {
+      console.error(`[PROGRAM] Auto-generation failed for ${intake.full_name}:`, err.message);
+      // Notify Bryan that generation failed
+      fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+        method: "POST",
+        headers: { "Title": `Program Generation Failed: ${intake.full_name}`, "Priority": "high", "Tags": "warning" },
+        body: `Auto-program generation failed for ${intake.full_name}. Error: ${err.message}\n\nGenerate manually: ${APP_URL}/admin`
+      }).catch(() => {});
+    });
+
+    res.json({
+      status: "ok",
+      message: "Intake complete. Your custom program is being generated. Bryan will review it and you'll receive it via email."
+    });
+
+  } catch (err) {
+    console.error("[INTAKE] Error:", err);
+    res.status(500).json({ error: "Server error" });
   }
 });
 

@@ -302,9 +302,19 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
             <input type="text" class="form-input" name="dob" placeholder="MM/DD/YYYY">
           </div>
           <div class="form-group">
-            <label class="form-label">City / State</label>
-            <input type="text" class="form-input" name="location" placeholder="e.g. Philadelphia, PA">
+            <label class="form-label">Gender</label>
+            <select class="form-select" name="gender">
+              <option value="" disabled selected>Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+              <option>Prefer not to say</option>
+            </select>
           </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">City / State</label>
+          <input type="text" class="form-input" name="location" placeholder="e.g. Philadelphia, PA">
         </div>
         <div class="form-group">
           <label class="form-label">Emergency Contact (name + phone)</label>
@@ -417,11 +427,46 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
             <select class="form-select" name="equipment_access">
               <option value="" disabled selected>Select</option>
               <option>Full commercial gym</option>
-              <option>Home gym</option>
-              <option>Limited</option>
+              <option>Home gym — full (rack, bench, dumbbells)</option>
+              <option>Home gym — basic (dumbbells, bands)</option>
+              <option>Limited (hotel, travel)</option>
               <option>None</option>
             </select>
           </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Preferred training time</label>
+            <select class="form-select" name="training_time_preference">
+              <option value="" disabled selected>Select</option>
+              <option>Early morning (5-7am)</option>
+              <option>Morning (7-10am)</option>
+              <option>Midday (11am-1pm)</option>
+              <option>Afternoon (2-5pm)</option>
+              <option>Evening (5-8pm)</option>
+              <option>Late night (8pm+)</option>
+              <option>Varies / no preference</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Max session length (minutes)</label>
+            <input type="text" class="form-input" name="max_session_length" placeholder="e.g. 60, 75, 90">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How many days per week can you realistically train?</label>
+          <select class="form-select" name="training_days_available">
+            <option value="" disabled selected>Select</option>
+            <option>3 days</option>
+            <option>4 days</option>
+            <option>5 days</option>
+            <option>6 days</option>
+            <option>7 days</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Any exercises you cannot do or strongly dislike?</label>
+          <textarea class="form-textarea" name="exercise_restrictions" placeholder="e.g. No barbell back squats (bad knees), no running"></textarea>
         </div>
       </div>
 
@@ -469,6 +514,39 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
             </select>
           </div>
         </div>
+        <div class="form-group">
+          <label class="form-label">Preferred meal timing</label>
+          <textarea class="form-textarea" name="meal_timing" placeholder="e.g. First meal 8am, last meal 8pm, pre-workout shake 30min before"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Foods you enjoy and eat regularly</label>
+          <textarea class="form-textarea" name="preferred_foods" placeholder="e.g. Chicken, rice, eggs, steak, oats, sweet potatoes"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Foods you refuse to eat</label>
+          <textarea class="form-textarea" name="disliked_foods" placeholder="e.g. Fish, broccoli, cottage cheese"></textarea>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Daily water intake</label>
+            <input type="text" class="form-input" name="water_intake" placeholder="e.g. 1 gallon, 80oz">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Caffeine intake</label>
+            <input type="text" class="form-input" name="caffeine_intake" placeholder="e.g. 2 cups coffee, 1 energy drink">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Do you meal prep or cook at home?</label>
+          <select class="form-select" name="meal_prep">
+            <option value="" disabled selected>Select</option>
+            <option>Yes — I meal prep weekly</option>
+            <option>Yes — I cook daily</option>
+            <option>Sometimes</option>
+            <option>Rarely — mostly eating out</option>
+            <option>No — need help starting</option>
+          </select>
+        </div>
       </div>
 
       <!-- BODY COMPOSITION -->
@@ -486,6 +564,16 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
           <div class="form-group">
             <label class="form-label">Estimated body fat %</label>
             <input type="text" class="form-input" name="body_fat" placeholder="e.g. 18%">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Goal weight</label>
+            <input type="text" class="form-input" name="goal_weight" placeholder="e.g. 195 lbs">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Goal body fat %</label>
+            <input type="text" class="form-input" name="goal_body_fat" placeholder="e.g. 12%">
           </div>
         </div>
         <div class="section-note">
@@ -527,6 +615,79 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
             <label class="form-label">Recovery practices</label>
             <input type="text" class="form-input" name="recovery_practices" placeholder="Sauna, massage, stretching, etc.">
           </div>
+        </div>
+      </div>
+
+      <!-- LIFESTYLE & SCHEDULE -->
+      <div class="section">
+        <div class="section-title">Lifestyle & Schedule</div>
+        <div class="form-group">
+          <label class="form-label">Occupation / work schedule</label>
+          <textarea class="form-textarea" name="occupation" placeholder="e.g. Firefighter, 24-on/48-off. Office job M-F 8-5. Construction, long hours."></textarea>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="form-label">Activity level outside the gym</label>
+            <select class="form-select" name="daily_activity_level">
+              <option value="" disabled selected>Select</option>
+              <option>Sedentary (desk job, minimal movement)</option>
+              <option>Lightly active (some walking, light tasks)</option>
+              <option>Moderately active (on feet, manual tasks)</option>
+              <option>Very active (labor-intensive job, always moving)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Daily step count (estimate)</label>
+            <input type="text" class="form-input" name="daily_steps" placeholder="e.g. 6000, 10000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Travel frequency</label>
+          <select class="form-select" name="travel_frequency">
+            <option value="" disabled selected>Select</option>
+            <option>Rarely</option>
+            <option>1-2 times per month</option>
+            <option>Weekly</option>
+            <option>Constantly on the road</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- SUPPLEMENT & PEPTIDE INTEREST -->
+      <div class="section">
+        <div class="section-title">Supplement & Peptide Interest</div>
+        <div class="section-note">
+          For educational purposes only. FBF does not prescribe or recommend any compound for human consumption. All decisions are made at the client's own discretion and risk.
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current supplements you're taking</label>
+          <textarea class="form-textarea" name="current_supplements" placeholder="e.g. Creatine 5g, multivitamin, fish oil, vitamin D, magnesium"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Monthly budget for supplements</label>
+          <select class="form-select" name="supplement_budget">
+            <option value="" disabled selected>Select</option>
+            <option>Under $50</option>
+            <option>$50-100</option>
+            <option>$100-200</option>
+            <option>$200-500</option>
+            <option>$500+</option>
+            <option>No budget concern</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Interest level in peptide education</label>
+          <select class="form-select" name="peptide_interest">
+            <option value="" disabled selected>Select</option>
+            <option>Not interested</option>
+            <option>Curious — want to learn more</option>
+            <option>Interested — open to education</option>
+            <option>Already experienced — looking for optimization</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Any specific compounds you're interested in learning about?</label>
+          <textarea class="form-textarea" name="compounds_interest" placeholder="e.g. BPC-157, GH peptides, fat loss compounds — educational only"></textarea>
         </div>
       </div>
 
@@ -673,7 +834,7 @@ form.addEventListener('submit', async (e) => {
   submitBtn.textContent = 'Submitting...';
 
   try {
-    const res = await fetch(API_BASE + '/api/intake', {
+    const res = await fetch(API_BASE + '/api/intake-with-program', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
@@ -693,7 +854,8 @@ form.addEventListener('submit', async (e) => {
 
     resultMsg.className = 'result-msg visible';
     resultMsg.innerHTML = '<h3>Intake Complete</h3>' +
-      '<p>Bryan will review your profile and be in touch within 24 hours.</p>' +
+      '<p>Your custom training and nutrition program is being generated now.</p>' +
+      '<p style="margin-top:8px">Bryan will review it personally before sending it to you via email.</p>' +
       '<p style="margin-top:12px;font-size:16px;color:var(--accent);font-weight:700">Welcome to Forged by Freedom.</p>';
 
     resultMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
