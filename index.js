@@ -906,78 +906,124 @@ app.post("/analyze-bloodwork", async (req, res) => {
   }
 
   try {
-    // Search for bloodwork-related evidence from the knowledge base
-    const bwQuery = "bloodwork analysis lab results interpretation enhanced athlete intervention ladder markers ranges";
-    const vector = await embed(bwQuery);
-    const matches = await searchWithBoost(vector, bwQuery);
-    const quotes = matches.length ? extractQuotes(matches, bwQuery) : [];
+    // Build a targeted search query from the actual lab data
+    // Extract marker names to search for relevant intervention protocols
+    const markerKeywords = [];
+    const markerPatterns = [
+      /hematocrit|hct/i, /hemoglobin|hgb/i, /rbc|red blood/i, /wbc|white blood/i, /platelet/i,
+      /alt|alanine/i, /ast|aspartate/i, /ggt|gamma/i, /bilirubin/i, /albumin/i, /alkaline phos/i,
+      /creatinine/i, /egfr|gfr/i, /bun|urea/i, /cystatin/i,
+      /cholesterol/i, /ldl/i, /hdl/i, /triglyceride/i, /apob/i, /lipo/i,
+      /testosterone/i, /estradiol|e2/i, /shbg/i, /lh|luteinizing/i, /fsh|follicle/i, /prolactin/i, /progesterone/i, /dhea/i,
+      /tsh/i, /t3|triiodo/i, /t4|thyrox/i, /thyroid/i,
+      /glucose|a1c|hba1c/i, /insulin/i, /igf/i,
+      /ferritin/i, /iron/i, /transferrin/i, /tibc/i,
+      /hs-crp|crp|c-reactive/i, /homocysteine/i, /fibrinogen/i,
+      /vitamin d|25-oh/i, /b12/i, /folate/i, /magnesium/i, /zinc/i,
+      /psa/i, /cortisol/i, /sodium|potassium|chloride|calcium|phosph/i,
+    ];
+    const labsLower = labs.toLowerCase();
+    for (const pat of markerPatterns) {
+      if (pat.test(labsLower)) markerKeywords.push(pat.source.replace(/\\/g, "").replace(/\|/g, " ").replace(/\(.+?\)/g, ""));
+    }
 
-    // Build evidence context from knowledge base (if available)
+    // Search Pinecone with targeted queries — hit bloodwork-heavy namespaces hard
+    const labSearchQuery = `bloodwork analysis interpretation intervention ladder enhanced athlete ranges ${markerKeywords.slice(0, 8).join(" ")}`;
+    const vector = await embed(labSearchQuery);
+
+    // Parallel search: targeted bloodwork namespaces + general boost search
+    const [guideResults, medicalResults, endoResults, researchResults, generalResults] = await Promise.all([
+      index.namespace("cycle_design_guides").query({ vector, topK: 15, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
+      index.namespace("medical_primary").query({ vector, topK: 10, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
+      index.namespace("endocrinology").query({ vector, topK: 8, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
+      index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
+      index.namespace("harm_reduction").query({ vector, topK: 5, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
+    ]);
+
+    // Merge and deduplicate, prioritizing cycle_design_guides (Precision Bloodwork manual)
+    const seen = new Set();
+    const allMatches = [];
+    for (const m of guideResults) {
+      if (!seen.has(m.id)) { seen.add(m.id); m.score = (m.score || 0) + 0.2; allMatches.push(m); }
+    }
+    for (const m of [...medicalResults, ...endoResults, ...researchResults, ...generalResults]) {
+      if (!seen.has(m.id)) { seen.add(m.id); allMatches.push(m); }
+    }
+    allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+    const quotes = allMatches.length ? extractQuotes(allMatches.slice(0, 20), labSearchQuery) : [];
+
+    // Build evidence context from knowledge base
     let evidenceBlock = "";
     if (quotes.length) {
       const evidence = quotes
-        .slice(0, 10)
+        .slice(0, 15)
         .map((q, i) => {
           const speaker = q.speaker !== "unknown" ? q.speaker : "";
           const show = q.displayName || "";
-          const attr = speaker && show ? `${speaker} on ${show}` : speaker || show || "FBF Knowledge Base";
+          const attr = speaker && show ? `${speaker} on ${show}` : speaker || show || "FBF Precision Bloodwork";
           return `[${i + 1}] ${attr}:\n"${q.text}"`;
         })
         .join("\n\n");
-      evidenceBlock = `\n\nREFERENCE MATERIAL FROM FBF KNOWLEDGE BASE (use this to supplement your analysis where relevant):\n${evidence}`;
+      evidenceBlock = `\n\nFBF PRECISION BLOODWORK KNOWLEDGE BASE — USE THIS TO GUIDE YOUR ANALYSIS:\n${evidence}`;
     }
 
-    const bloodworkPrompt = `BLOODWORK ANALYSIS REQUEST
+    const bloodworkPrompt = `INDIVIDUALIZED BLOODWORK ANALYSIS
 
-Please analyze the following bloodwork results using the FBF Precision Bloodwork framework.
+You are analyzing a SPECIFIC person's ACTUAL lab results. Do NOT give generic bloodwork education. Parse every marker and value from their report and provide a personalized assessment.
 
-For EACH marker the user provides:
-1. **Value** — what they reported
-2. **Standard Lab Range** — the reference range a standard lab would use
-3. **Enhanced Athlete Range** — the acceptable range for muscular/enhanced athletes (these often differ significantly)
-4. **Assessment** — classify as: ✅ NORMAL | ⚠️ WATCH | 🔶 INTERVENE | 🚨 RED FLAG
+STEP 1 — PARSE & LIST EVERY MARKER from their labs. For EACH one:
+| Marker | Their Value | Standard Range | Enhanced Athlete Range | Assessment |
+Use: ✅ NORMAL | ⚠️ WATCH | 🔶 INTERVENE | 🚨 RED FLAG
 
-Then provide:
-- **Pattern Analysis** — look for marker combinations that tell a story (e.g., elevated ALT + GGT + low HDL = hepatic stress from orals; elevated HCT + BP + RBC = polycythemia risk)
-- **Compound Connections** — if values suggest specific compound effects, explain which compounds typically cause those changes
-- **Intervention Ladder** for any out-of-range marker:
-  1. Lifestyle modifications (cardio, hydration, diet changes)
-  2. Supplements with specific doses (NAC, fish oil, citrus bergamot, etc.)
-  3. Pharmaceuticals with specific doses (telmisartan, rosuvastatin, metformin, etc.) — for discussion with their doctor
-  4. Discontinuation thresholds — when to stop a compound
+STEP 2 — PATTERN ANALYSIS
+Look at marker COMBINATIONS that tell a story about THIS person's health:
+- Elevated ALT + GGT + low HDL → hepatic stress (likely oral compounds)
+- High HCT + high RBC + high hemoglobin → polycythemia risk
+- Low HDL + high LDL + high triglycerides → cardiovascular risk profile
+- Elevated creatinine with normal GGT → likely muscular (not kidney damage)
+- High estradiol + low SHBG → possible aromatase issues
+Connect patterns to likely causes (compounds, lifestyle, genetics).
 
-**RED FLAG THRESHOLDS** (flag immediately if present):
-- Hematocrit >54%
-- ALT >200 U/L
-- eGFR <45 mL/min
-- Blood Pressure >180/110
-- Potassium >5.5 or <3.0
-- Platelets <100K
+STEP 3 — INTERVENTION LADDER (for EACH out-of-range marker)
+1. **Lifestyle** — specific diet, cardio, hydration changes
+2. **Supplements** — exact product, dose, timing (NAC 600mg 2x/day, fish oil 3g/day, citrus bergamot 500mg 2x/day, etc.)
+3. **Pharmaceuticals** — drug name, dose range, mechanism (for doctor discussion)
+4. **Discontinuation threshold** — when to stop the compound causing the issue
 
-**IMPORTANT NOTES:**
-- For kidney markers (eGFR, creatinine): mention that standard formulas underestimate kidney function in muscular people — recommend Cystatin C-based eGFR
-- For liver markers: differentiate exercise-induced AST from genuine hepatic stress (look at ALT + GGT together, not AST alone)
-- For female bloodwork: use female reference ranges, emphasize virilization markers
+STEP 4 — NUTRITION & SUPPLEMENT PROTOCOL
+Based on THIS person's specific markers, recommend:
+- Foods to add or avoid
+- Specific supplements with doses to address their weak points
+- Timing recommendations
 
-**DOCTOR DISCUSSION RECOMMENDATIONS:**
-At the end of your analysis, include a dedicated section titled "📋 Recommendations to Discuss with Your Doctor" that provides:
-- A clear, prioritized list of specific concerns to bring to their physician based on the lab results
-- Suggested follow-up tests or panels that would give a more complete picture (e.g., "Request Cystatin C-based eGFR if creatinine is elevated" or "Ask for a lipid particle size test if LDL is high")
-- Specific pharmaceutical interventions to ASK their doctor about (with drug names, typical dose ranges, and why — e.g., "Discuss telmisartan 40-80mg for blood pressure and kidney protection" or "Ask about rosuvastatin 5-10mg for LDL management")
-- Any markers that warrant URGENT medical attention — make these unmistakably clear
-- Frame everything as "discuss with your doctor" — we provide the knowledge, the physician makes the call
+STEP 5 — 📋 RECOMMENDATIONS TO DISCUSS WITH THEIR DOCTOR
+- Prioritized list of concerns from their actual results
+- Follow-up tests to request
+- Pharmaceutical interventions to ask about (with drug names, doses, and why)
+- Any RED FLAG markers needing URGENT attention
 
-End with testing frequency recommendations and where to order labs (DiscountedLabs, Marek Health, PrivateMDLabs).
+**RED FLAG THRESHOLDS** (flag immediately):
+- Hematocrit >54% | ALT >200 U/L | eGFR <45 | BP >180/110 | Potassium >5.5 or <3.0 | Platelets <100K
+
+**KEY RULES:**
+- For kidney markers: standard eGFR formulas underestimate kidney function in muscular people — recommend Cystatin C-based eGFR
+- For liver: differentiate exercise-induced AST from hepatic stress (ALT + GGT together, not AST alone)
+- For female labs: use female reference ranges, emphasize virilization markers
+- Reference the FBF Precision Bloodwork knowledge base evidence provided below
+- Be SPECIFIC to their numbers — do not give generic advice
+
+End with retest timing recommendations and where to order labs (DiscountedLabs, Marek Health, PrivateMDLabs).
 
 Finish with: 💪 Coach Bryan says: [motivational health-focused quote]
 
-USER'S LAB RESULTS:
+THIS PERSON'S ACTUAL LAB RESULTS:
 ${labs.trim()}${evidenceBlock}`;
 
     let answer = await chat([
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: bloodworkPrompt }
-    ], 0.5, 4000);
+    ], 0.4, 8000);
 
     // Strip leaked system prompt
     const leakPatterns = [
