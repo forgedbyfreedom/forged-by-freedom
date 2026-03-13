@@ -2805,6 +2805,261 @@ app.get('/api/client/:id/progress-projection', async (req, res) => {
   }
 });
 
+app.get('/api/client/:id/daily-score', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const { data: client } = await supabase
+      .from('clients')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (!client) return res.status(404).json({ error: 'Client not found' });
+
+    // Get today's or most recent check-in
+    const { data: checkins } = await supabase
+      .from('checkins')
+      .select('*')
+      .eq('client_id', id)
+      .order('date', { ascending: false })
+      .limit(7);
+
+    if (!checkins || checkins.length === 0) {
+      return res.json({ score: null, message: 'No check-ins yet' });
+    }
+
+    const today = checkins[0];
+    const recent7 = checkins;
+
+    // ── NUTRITION SCORE (0-100) ──
+    let nutritionScore = 50; // base
+    const targetCals = client.target_calories || 2200;
+    const targetProtein = client.target_protein || 180;
+
+    if (today.calories) {
+      const calDiff = Math.abs(today.calories - targetCals) / targetCals;
+      if (calDiff <= 0.05) nutritionScore = 100;
+      else if (calDiff <= 0.10) nutritionScore = 90;
+      else if (calDiff <= 0.15) nutritionScore = 80;
+      else if (calDiff <= 0.20) nutritionScore = 70;
+      else if (calDiff <= 0.30) nutritionScore = 55;
+      else nutritionScore = 40;
+    }
+    if (today.protein_g) {
+      const protRatio = today.protein_g / targetProtein;
+      if (protRatio >= 0.95) nutritionScore = Math.min(100, nutritionScore + 5);
+      else if (protRatio < 0.80) nutritionScore = Math.max(0, nutritionScore - 15);
+    }
+
+    // ── TRAINING SCORE (0-100) ──
+    let trainingScore = 0;
+    if (today.trained === true || today.training_completed === true || today.workout_completed === true) {
+      trainingScore = 90;
+      // Bonus for logging compounds/performance
+      if (today.compound_lifts && Object.keys(today.compound_lifts).length > 0) trainingScore = 100;
+    } else {
+      // Check if it's a rest day (training_days field on client)
+      const trainingDays = client.training_days_per_week || 5;
+      // If they've trained enough recently, rest day is fine
+      const recentTrainCount = recent7.filter(c => c.trained || c.training_completed || c.workout_completed).length;
+      if (recentTrainCount >= trainingDays) {
+        trainingScore = 85; // scheduled rest day
+      } else {
+        trainingScore = 40; // missed session
+      }
+    }
+
+    // ── STEPS / CARDIO SCORE (0-100) ──
+    let stepsScore = 50;
+    const targetSteps = client.target_steps || 8000;
+    if (today.steps) {
+      const stepRatio = today.steps / targetSteps;
+      if (stepRatio >= 1.0) stepsScore = 100;
+      else if (stepRatio >= 0.90) stepsScore = 90;
+      else if (stepRatio >= 0.75) stepsScore = 75;
+      else if (stepRatio >= 0.50) stepsScore = 55;
+      else stepsScore = 35;
+    }
+    if (today.cardio_completed || today.cardio_minutes > 0) {
+      stepsScore = Math.min(100, stepsScore + 10);
+    }
+
+    // ── RECOVERY SCORE (0-100) ──
+    let recoveryScore = 50;
+    if (today.sleep_hours) {
+      if (today.sleep_hours >= 7.5) recoveryScore = 100;
+      else if (today.sleep_hours >= 7) recoveryScore = 90;
+      else if (today.sleep_hours >= 6.5) recoveryScore = 75;
+      else if (today.sleep_hours >= 6) recoveryScore = 60;
+      else if (today.sleep_hours >= 5) recoveryScore = 40;
+      else recoveryScore = 20;
+    }
+    // Factor in stress and mood
+    if (today.stress_level) {
+      if (today.stress_level <= 3) recoveryScore = Math.min(100, recoveryScore + 5);
+      else if (today.stress_level >= 7) recoveryScore = Math.max(0, recoveryScore - 15);
+      else if (today.stress_level >= 5) recoveryScore = Math.max(0, recoveryScore - 5);
+    }
+    if (today.mood_rating) {
+      if (today.mood_rating >= 8) recoveryScore = Math.min(100, recoveryScore + 5);
+      else if (today.mood_rating <= 3) recoveryScore = Math.max(0, recoveryScore - 10);
+    }
+
+    // ── METABOLIC SIGNALS SCORE (0-100) ──
+    let metabolicScore = 70; // default neutral
+    if (today.body_temp) {
+      if (today.body_temp >= 97.8) metabolicScore = 95;
+      else if (today.body_temp >= 97.4) metabolicScore = 80;
+      else if (today.body_temp >= 97.0) metabolicScore = 60;
+      else metabolicScore = 40;
+    }
+    // Energy and hunger signals
+    if (today.energy_level) {
+      if (today.energy_level >= 7) metabolicScore = Math.min(100, metabolicScore + 5);
+      else if (today.energy_level <= 3) metabolicScore = Math.max(0, metabolicScore - 10);
+    }
+
+    // ── SUPPLEMENT / PED / PEPTIDE COMPLIANCE SCORE (0-100) ──
+    let complianceScore = 100; // default full compliance if no protocols
+    let hasProtocol = false;
+
+    // Check supplement compliance
+    if (today.supplements_taken !== undefined && today.supplements_taken !== null) {
+      hasProtocol = true;
+      if (today.supplements_taken === true || today.supplements_taken === 'all') {
+        complianceScore = 100;
+      } else if (today.supplements_taken === 'partial' || today.supplements_taken === 'some') {
+        complianceScore = 70;
+      } else if (today.supplements_taken === false || today.supplements_taken === 'none') {
+        complianceScore = 30;
+      }
+    }
+
+    // Check PED/compound compliance from check-in data
+    if (client.ped_protocol || client.current_compounds) {
+      hasProtocol = true;
+      if (today.ped_taken === true || today.compounds_taken === true || today.ped_compliance === true) {
+        complianceScore = Math.min(complianceScore, 100);
+      } else if (today.ped_taken === false || today.compounds_taken === false || today.ped_compliance === false) {
+        complianceScore = Math.max(0, complianceScore - 30);
+      }
+    }
+
+    // Check peptide compliance
+    if (client.peptide_protocol || client.current_peptides) {
+      hasProtocol = true;
+      if (today.peptides_taken === true || today.peptide_compliance === true) {
+        complianceScore = Math.min(complianceScore, 100);
+      } else if (today.peptides_taken === false || today.peptide_compliance === false) {
+        complianceScore = Math.max(0, complianceScore - 25);
+      }
+    }
+
+    // ── CALCULATE OVERALL SCORE ──
+    // Weighted average
+    const weights = {
+      nutrition: 0.25,
+      training: 0.20,
+      steps: 0.15,
+      recovery: 0.20,
+      metabolic: 0.10,
+      compliance: 0.10,
+    };
+
+    const overallScore = Math.round(
+      nutritionScore * weights.nutrition +
+      trainingScore * weights.training +
+      stepsScore * weights.steps +
+      recoveryScore * weights.recovery +
+      metabolicScore * weights.metabolic +
+      complianceScore * weights.compliance
+    );
+
+    // ── GENERATE EXPLANATION ──
+    const explanations = [];
+    const categories = [
+      { name: 'nutrition', score: nutritionScore, label: 'Nutrition' },
+      { name: 'training', score: trainingScore, label: 'Training' },
+      { name: 'steps', score: stepsScore, label: 'Steps/Cardio' },
+      { name: 'recovery', score: recoveryScore, label: 'Recovery' },
+      { name: 'metabolic', score: metabolicScore, label: 'Metabolic Signals' },
+      { name: 'compliance', score: complianceScore, label: 'Protocol Compliance' },
+    ];
+
+    // Praise top areas
+    const topAreas = categories.filter(c => c.score >= 90).map(c => c.label);
+    if (topAreas.length > 0) {
+      explanations.push(`Crushed it on ${topAreas.join(' and ').toLowerCase()}.`);
+    }
+
+    // Flag weak areas
+    if (recoveryScore < 70 && today.sleep_hours) {
+      explanations.push(`Sleep was low at ${today.sleep_hours}h. Aim for 7+ hours tonight.`);
+    }
+    if (stepsScore < 60 && today.steps) {
+      explanations.push(`Steps at ${today.steps.toLocaleString()} — try to push closer to ${targetSteps.toLocaleString()}.`);
+    }
+    if (nutritionScore < 70) {
+      explanations.push('Nutrition was off target today. Tighten up macros tomorrow.');
+    }
+    if (metabolicScore < 60) {
+      explanations.push('Metabolic signals are low. Monitor temp and energy levels.');
+    }
+    if (complianceScore < 70 && hasProtocol) {
+      explanations.push('Protocol compliance dropped. Stay consistent with supplements and compounds.');
+    }
+    if (trainingScore < 60) {
+      explanations.push('Missed training today. Get back on track tomorrow.');
+    }
+
+    // Overall vibe
+    let vibe = 'solid';
+    if (overallScore >= 90) vibe = 'exceptional';
+    else if (overallScore >= 80) vibe = 'strong';
+    else if (overallScore >= 70) vibe = 'decent';
+    else if (overallScore >= 60) vibe = 'needs work';
+    else vibe = 'off day';
+
+    // Calculate streak of days above 85
+    let streakAbove85 = 0;
+    // We only have 7 days, but that's enough for the display
+    for (const c of recent7) {
+      // Quick approximate score for streak calc
+      let approxScore = 75; // base
+      if (c.calories && Math.abs(c.calories - targetCals) / targetCals <= 0.10) approxScore += 5;
+      if (c.trained || c.training_completed || c.workout_completed) approxScore += 5;
+      if (c.steps && c.steps >= targetSteps * 0.9) approxScore += 5;
+      if (c.sleep_hours && c.sleep_hours >= 7) approxScore += 5;
+      if (c.body_temp && c.body_temp >= 97.4) approxScore += 3;
+      if (approxScore >= 85) streakAbove85++;
+      else break;
+    }
+
+    res.json({
+      score: {
+        overall: overallScore,
+        vibe,
+        categories: {
+          nutrition: nutritionScore,
+          training: trainingScore,
+          steps: stepsScore,
+          recovery: recoveryScore,
+          metabolic: metabolicScore,
+          compliance: complianceScore,
+        },
+        explanation: explanations.join(' '),
+        streak_above_85: streakAbove85,
+        date: today.date,
+        has_protocol: hasProtocol,
+      },
+    });
+  } catch (err) {
+    console.error('Daily score error:', err);
+    res.status(500).json({ error: 'Failed to calculate daily score' });
+  }
+});
+
 // ─── 17. CONTEXT-AWARE AI COACH ─────────────────────────
 app.post("/api/coach-chat", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
