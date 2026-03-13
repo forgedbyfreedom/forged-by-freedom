@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Forged by Freedom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface2: #1c1c1c;
+      --orange: #FF6A00;
+      --orange-glow: rgba(255,106,0,0.15);
+      --white: #ffffff;
+      --text: #ededed;
+      --muted: #999;
+      --border: #2a2a2a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: "Oswald", sans-serif; font-weight: 700; letter-spacing: 0.5px; color: var(--white); }
+    h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; }
+    h2 { font-size: clamp(28px, 4vw, 42px); line-height: 1.2; margin-bottom: 16px; }
+    h3 { font-size: clamp(20px, 3vw, 28px); font-weight: 600; }
+    p { color: var(--text); margin-bottom: 12px; }
+    a { color: var(--orange); text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.85; }
+    .container { width: min(1140px, 90vw); margin: 0 auto; }
+    .section { padding: 80px 0; }
+
+    /* Nav */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 5vw; max-width: 1200px; margin: 0 auto; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .nav-logo-text { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 18px; color: var(--white); letter-spacing: 1px; }
+    .nav-logo-sub { font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; display: block; }
+    .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
+    .nav-links a { color: #ccc; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .nav-links a.active { color: var(--orange); }
+    .nav-cta { background: var(--orange) !important; color: #000 !important; font-weight: 700 !important; border-radius: 6px !important; padding: 8px 18px !important; }
+    .mobile-toggle { display: none; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+
+    /* Hero */
+    .page-hero { padding: 140px 20px 60px; text-align: center; position: relative; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, var(--orange-glow) 0%, transparent 70%); pointer-events: none; }
+    .page-hero h1 { position: relative; z-index: 2; }
+    .page-hero p { position: relative; z-index: 2; color: var(--muted); font-size: 18px; max-width: 600px; margin: 16px auto 0; }
+
+    /* Contact Layout */
+    .contact-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+
+    /* Form */
+    .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--white); font-family: "Inter", sans-serif; font-size: 15px; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--orange); }
+    .form-group textarea { min-height: 140px; resize: vertical; }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--surface); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { width: 100%; padding: 16px; background: var(--orange); color: #000; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; transition: all 0.2s; margin-top: 8px; }
+    .form-submit:hover { background: #e85f00; }
+
+    /* Sidebar Info */
+    .info-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 24px; }
+    .info-card h3 { font-size: 18px; margin-bottom: 16px; }
+    .info-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .info-icon { font-size: 20px; color: var(--orange); flex-shrink: 0; margin-top: 2px; }
+    .info-item p { margin: 0; color: #ccc; font-size: 14px; }
+    .info-item a { color: var(--orange); font-size: 14px; }
+
+    /* Quick Links */
+    .quick-links { list-style: none; padding: 0; }
+    .quick-links li { margin-bottom: 8px; }
+    .quick-links a { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: #ccc; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+    .quick-links a:hover { border-color: var(--orange); color: var(--orange); }
+    .quick-links .arrow { color: var(--orange); font-weight: 600; }
+
+    /* Success message */
+    .form-success { display: none; text-align: center; padding: 60px 20px; }
+    .form-success h3 { color: var(--orange); margin-bottom: 12px; }
+
+    /* Footer */
+    .footer { background: var(--surface); border-top: 1px solid var(--border); padding: 40px 0 24px; text-align: center; margin-top: 40px; }
+    .footer p { font-size: 13px; color: #666; }
+    .footer a { color: var(--muted); margin: 0 12px; font-size: 14px; }
+    .footer a:hover { color: var(--orange); }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,10,0.98); border-bottom: 1px solid var(--border); padding: 16px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .section { padding: 60px 0; }
+      .form-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="https://www.forgedbyfreedom.org" class="nav-logo">
+        <div class="nav-mark">FBF</div>
+        <div>
+          <span class="nav-logo-text">FORGED BY FREEDOM</span>
+          <span class="nav-logo-sub">Strength & Nutrition</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="https://www.forgedbyfreedom.org">Home</a></li>
+        <li><a href="https://www.forgedbyfreedom.org/programs">Programs</a></li>
+        <li><a href="https://www.forgedbyfreedom.org/about">About</a></li>
+        <li><a href="https://www.forgedbyfreedom.org/ai-coach">AI Coach</a></li>
+        <li><a href="/store">Store</a></li>
+        <li><a href="/support" class="active">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <h1>LET'S BUILD YOUR <span style="color:var(--orange)">PROTOCOL</span></h1>
+    <p>Tell us about your goals and we'll reach out with a personalized plan.</p>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid fade-in">
+
+        <!-- Form -->
+        <div class="form-card" id="form-card">
+          <h3 style="margin-bottom: 24px;">Send Us a Message</h3>
+          <form id="contact-form" action="https://formspree.io/f/xpwzgklq" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (Optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm Interested In *</label>
+              <select id="interest" name="interest" required>
+                <option value="" disabled selected>Select a program</option>
+                <option value="FBF Recomp Protocol">FBF Recomp Protocol</option>
+                <option value="Custom 1-on-1 Coaching">Custom 1-on-1 Coaching</option>
+                <option value="AI Coach">AI Coach</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your goals, experience level, and what you're looking for..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+          <div class="form-success" id="form-success">
+            <h3>MESSAGE SENT</h3>
+            <p style="color: var(--muted);">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <!-- Direct Contact Info -->
+          <div class="info-card fade-in">
+            <h3>DIRECT CONTACT</h3>
+            <div class="info-item">
+              <span class="info-icon">&#9993;</span>
+              <div>
+                <p style="color:var(--muted); font-size:12px; margin-bottom:2px;">PRIMARY EMAIL</p>
+                <a href="mailto:forgedbyfreedom@gmail.com">forgedbyfreedom@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">&#128274;</span>
+              <div>
+                <p style="color:var(--muted); font-size:12px; margin-bottom:2px;">SECURE EMAIL</p>
+                <a href="mailto:forgedbyfreedom@proton.me">forgedbyfreedom@proton.me</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">&#128205;</span>
+              <div>
+                <p style="color:var(--muted); font-size:12px; margin-bottom:2px;">LOCATION</p>
+                <p>Chapin, SC</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="info-card fade-in">
+            <h3>QUICK LINKS</h3>
+            <ul class="quick-links">
+              <li>
+                <a href="https://www.forgedbyfreedom.org/programs">
+                  <span class="arrow">→</span> View Our Programs
+                </a>
+              </li>
+              <li>
+                <a href="https://www.forgedbyfreedom.org/ai-coach">
+                  <span class="arrow">→</span> Try the AI Coach (Free)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.forgedbyfreedom.org/about">
+                  <span class="arrow">→</span> Learn About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Response Time -->
+          <div class="info-card fade-in" style="border-color: rgba(255,106,0,0.3); background: linear-gradient(135deg, rgba(255,106,0,0.05) 0%, var(--surface) 100%);">
+            <h3 style="color: var(--orange); font-size: 16px;">TYPICAL RESPONSE TIME</h3>
+            <p style="color: #ccc; font-size: 14px; margin: 0;">We respond to all inquiries within <strong style="color:var(--white);">24 hours</strong>. For urgent questions, email us directly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div style="margin-bottom: 16px;">
+        <a href="https://www.forgedbyfreedom.org">Home</a>
+        <a href="https://www.forgedbyfreedom.org/programs">Programs</a>
+        <a href="https://www.forgedbyfreedom.org/about">About</a>
+        <a href="https://www.forgedbyfreedom.org/ai-coach">AI Coach</a>
+        <a href="/support">Contact</a>
+      </div>
+      <p>&copy; 2025 Forged by Freedom. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Form success handling
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+        .then(response => {
+          if (response.ok) {
+            form.style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+          }
+        })
+        .catch(() => {
+          alert('Something went wrong. Please email us directly at forgedbyfreedom@gmail.com');
+        });
+    });
+  </script>
+
+</body>
+</html>

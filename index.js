@@ -1268,6 +1268,7 @@ app.get("/onboarding", (_, res) => res.sendFile(join(__dirname, "embed", "onboar
 app.get("/admin", (_, res) => res.sendFile(join(__dirname, "embed", "admin.html")));
 app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.html")));
 app.get("/store", (_, res) => res.sendFile(join(__dirname, "embed", "store.html")));
+app.get("/support", (_, res) => res.sendFile(join(__dirname, "embed", "support.html")));
 
 // ─── Admin: Update Lead Status ───────────────────────────
 app.patch("/api/leads/:id/status", async (req, res) => {
