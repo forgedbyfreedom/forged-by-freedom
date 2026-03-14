@@ -4540,18 +4540,21 @@ app.post("/api/intake-with-program", async (req, res) => {
       }).catch(err => console.error("[INTAKE] Webhook error:", err.message));
     }
 
-    // Auto-generate program in background
+    // Generate program synchronously (must complete before response to prevent Render from killing it)
     console.log(`[INTAKE] Complete: ${fields.full_name || lead.name}. Starting program generation...`);
 
     // Compute risk score immediately
     const riskScore = computeRiskScore(intake, lead);
     console.log(`[RISK] ${intake.full_name || lead.name}: ${riskScore.tier} (score: ${riskScore.score}, ${riskScore.flag_count} flags)`);
 
-    // Generate program + summary in parallel
-    Promise.all([
-      generateProgram(intake, lead),
-      generateClientSummary(intake, lead).catch(err => { console.error("[SUMMARY] Failed:", err.message); return null; })
-    ]).then(async ([program, summary]) => {
+    let programStatus = "generating";
+    try {
+      // Generate program + summary in parallel — but AWAIT completion before responding
+      const [program, summary] = await Promise.all([
+        generateProgram(intake, lead),
+        generateClientSummary(intake, lead).catch(err => { console.error("[SUMMARY] Failed:", err.message); return null; })
+      ]);
+
       const programHtml = formatProgramHTML(program, intake.full_name || lead.name);
 
       const { data: saved } = await supabase.from("generated_programs").insert({
@@ -4575,7 +4578,6 @@ app.post("/api/intake-with-program", async (req, res) => {
       }).select().single();
 
       if (saved) {
-        // Include risk score and summary in approval email
         const riskEmoji = riskScore.tier === "red" ? "🔴" : riskScore.tier === "yellow" ? "🟡" : "🟢";
         const extraInfo = `\n\nRisk: ${riskEmoji} ${riskScore.tier.toUpperCase()} (${riskScore.score}/100, ${riskScore.flag_count} flags)` +
           (riskScore.flags.filter(f => f.level === "red").length > 0
@@ -4593,20 +4595,25 @@ app.post("/api/intake-with-program", async (req, res) => {
         }).catch(() => {});
 
         console.log(`[PROGRAM] Generated and pending review: ${intake.full_name || lead.name}`);
+        programStatus = "pending_review";
       }
-    }).catch(err => {
+    } catch (err) {
       console.error(`[PROGRAM] Auto-generation failed for ${intake.full_name}:`, err.message);
+      programStatus = "failed";
       // Notify Bryan that generation failed
       fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
         method: "POST",
         headers: { "Title": `Program Generation Failed: ${intake.full_name}`, "Priority": "high", "Tags": "warning" },
         body: `Auto-program generation failed for ${intake.full_name}. Error: ${err.message}\n\nGenerate manually: ${APP_URL}/admin`
       }).catch(() => {});
-    });
+    }
 
     res.json({
       status: "ok",
-      message: "Intake complete. Your custom program is being generated. Bryan will review it and you'll receive it via email."
+      program_status: programStatus,
+      message: programStatus === "pending_review"
+        ? "Intake complete. Your custom program has been generated and is being reviewed by Coach Bryan."
+        : "Intake complete. Your program is being prepared — Coach Bryan will be in touch shortly."
     });
 
   } catch (err) {
