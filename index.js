@@ -4275,13 +4275,16 @@ app.get("/api/programs/:id/approve", async (req, res) => {
       console.error("[APPROVE] Auto-populate error (non-fatal):", populateErr.message);
     }
 
-    // If Stripe is configured, create checkout session
-    if (stripe && process.env.STRIPE_PRICE_ID) {
+    // If Stripe is configured, create checkout session with gender-based pricing
+    const stripePriceMen = process.env.STRIPE_PRICE_MEN;
+    const stripePriceWomen = process.env.STRIPE_PRICE_WOMEN;
+    const stripePriceId = program.client_gender === 'female' ? stripePriceWomen : stripePriceMen;
+    if (stripe && stripePriceId) {
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         mode: "payment",
         customer_email: program.client_email,
-        line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
+        line_items: [{ price: stripePriceId, quantity: 1 }],
         success_url: `${APP_URL}/api/programs/${req.params.id}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${APP_URL}/api/programs/${req.params.id}/payment-cancelled`,
         metadata: { program_id: req.params.id, client_name: program.client_name },
