@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /apply
+Allow: /store
+Allow: /support
+Allow: /contact
+Disallow: /admin
+Disallow: /onboarding
+Disallow: /api/
