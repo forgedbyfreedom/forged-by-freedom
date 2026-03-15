@@ -5133,6 +5133,117 @@ ${scans.length > 0 ? `
   }
 });
 
+// ─── Testimonials / Reviews ─────────────────────────────────
+
+// GET /api/testimonials — Public: get approved testimonials
+app.get("/api/testimonials", async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from("testimonials")
+      .select("id, name, program, rating, review, photo_url, created_at")
+      .eq("status", "approved")
+      .order("created_at", { ascending: false });
+    if (error) throw error;
+    res.json({ testimonials: data || [] });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /api/testimonials — Public: submit a new testimonial (pending approval)
+app.post("/api/testimonials", async (req, res) => {
+  const { name, email, program, rating, review } = req.body;
+  if (!name || !review || !rating) {
+    return res.status(400).json({ error: "Name, review, and rating are required" });
+  }
+
+  try {
+    const { data, error } = await supabase.from("testimonials").insert({
+      name,
+      email: email || null,
+      program: program || "General",
+      rating: Math.min(Math.max(parseInt(rating), 1), 5),
+      review,
+      status: "pending",
+    }).select().single();
+
+    if (error) throw error;
+
+    // Notify Bryan via ntfy for approval
+    const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
+    const approveUrl = `${APP_URL}/api/testimonials/${data.id}/approve?key=${process.env.ADMIN_KEY}`;
+    const denyUrl = `${APP_URL}/api/testimonials/${data.id}/deny?key=${process.env.ADMIN_KEY}`;
+
+    fetch(`https://ntfy.sh/${ntfyTopic}`, {
+      method: "POST",
+      headers: {
+        "Title": `New Review: ${name} (${rating}/5 stars)`,
+        "Priority": "default",
+        "Tags": "star",
+        "Actions": `view, Approve, ${approveUrl}; view, Deny, ${denyUrl}`,
+      },
+      body: `"${review.slice(0, 200)}${review.length > 200 ? '...' : ''}"\n\nProgram: ${program || 'General'}\nRating: ${'★'.repeat(rating)}${'☆'.repeat(5-rating)}\n\nTap Approve or Deny above.`,
+    }).catch(() => {});
+
+    // Also send email notification if configured
+    if (emailTransporter) {
+      emailTransporter.sendMail({
+        from: `"FBF Reviews" <${process.env.SMTP_USER}>`,
+        to: process.env.SMTP_USER || "forgedbyfreedom@gmail.com",
+        subject: `New Review from ${name} (${rating}/5) — Approve or Deny`,
+        html: `
+          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#0a0a0a;color:#ededed;">
+            <h2 style="color:#FF6A00;">New Client Review</h2>
+            <p><strong>${name}</strong> left a ${rating}/5 star review</p>
+            <p>Program: ${program || 'General'}</p>
+            <div style="background:#141414;border:1px solid #2a2a2a;border-radius:8px;padding:16px;margin:16px 0;">
+              <p style="font-style:italic;color:#ccc;">"${review}"</p>
+            </div>
+            <div style="text-align:center;margin:24px 0;">
+              <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;margin:0 8px;">✓ Approve</a>
+              <a href="${denyUrl}" style="display:inline-block;background:#ef4444;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;margin:0 8px;">✗ Deny</a>
+            </div>
+          </div>
+        `,
+      }).catch(() => {});
+    }
+
+    res.json({ status: "ok", message: "Thank you! Your review has been submitted for approval." });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/testimonials/:id/approve — Admin: approve a testimonial
+app.get("/api/testimonials/:id/approve", async (req, res) => {
+  if (req.query.key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  try {
+    await supabase.from("testimonials")
+      .update({ status: "approved", approved_at: new Date().toISOString() })
+      .eq("id", req.params.id);
+    res.send(`<html><body style="background:#0a0a0a;color:#22c55e;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;">✓ Review Approved</body></html>`);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/testimonials/:id/deny — Admin: deny a testimonial
+app.get("/api/testimonials/:id/deny", async (req, res) => {
+  if (req.query.key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  try {
+    await supabase.from("testimonials")
+      .update({ status: "denied" })
+      .eq("id", req.params.id);
+    res.send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;">✗ Review Denied</body></html>`);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
 app.use((err, _, res, __) => {
