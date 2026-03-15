@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Store — Forged by Freedom</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;
+  --border:#2a2a2a;--accent:#ff6a00;--accent-glow:rgba(255,106,0,.15);
+  --text:#e8e8e8;--text-dim:#aaa;--text-muted:#666;
+  --success:#22c55e;--radius:12px;--radius-sm:8px;
+}
+html,body{min-height:100%;background:var(--bg);font-family:'Oswald',-apple-system,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+
+.store-header{text-align:center;padding:48px 20px 32px}
+.store-header h1{font-size:36px;font-weight:700;text-transform:uppercase;letter-spacing:3px;background:linear-gradient(135deg,var(--accent),#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.store-header p{font-size:14px;color:var(--text-dim);max-width:500px;margin:0 auto;font-family:-apple-system,sans-serif}
+.store-header-line{width:60px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,var(--accent),#ffb347);border-radius:2px}
+
+/* Category Nav */
+.cat-nav{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:0 20px 32px;max-width:900px;margin:0 auto}
+.cat-btn{background:var(--surface);border:1px solid var(--border);color:var(--text-dim);padding:8px 18px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:600;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;transition:all .2s}
+.cat-btn:hover,.cat-btn.active{border-color:var(--accent);color:var(--accent);background:var(--accent-glow)}
+
+/* Product Grid */
+.store-container{max-width:1100px;margin:0 auto;padding:0 20px 60px}
+.cat-section{margin-bottom:40px;display:none}
+.cat-section.visible{display:block}
+.cat-title{font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.cat-title span{color:var(--accent)}
+
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+
+.product-card{
+  background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;transition:border-color .2s,transform .2s;cursor:pointer;
+  text-decoration:none;color:inherit;display:block;
+}
+.product-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+
+.product-img{
+  width:100%;aspect-ratio:1;background:var(--surface2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:40px;color:var(--text-muted);overflow:hidden;
+}
+.product-img img{width:100%;height:100%;object-fit:cover}
+
+.product-info{padding:14px 16px}
+.product-name{font-size:13px;font-weight:500;color:var(--text);line-height:1.3;margin-bottom:8px;font-family:-apple-system,sans-serif;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-price{font-size:18px;font-weight:700;color:var(--accent)}
+.product-tag{display:inline-block;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;margin-bottom:6px}
+.tag-bestseller{background:rgba(34,197,94,.15);color:var(--success)}
+.tag-new{background:rgba(59,130,246,.15);color:#3b82f6}
+.tag-couples{background:rgba(168,85,247,.15);color:#a855f7}
+
+.shop-cta{text-align:center;padding:40px 20px}
+.shop-cta a{display:inline-block;padding:16px 40px;background:linear-gradient(135deg,var(--accent),#e05500);color:#fff;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:2px;text-decoration:none;border-radius:var(--radius);font-family:'Oswald',sans-serif;transition:transform .15s,box-shadow .2s}
+.shop-cta a:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,106,0,.3)}
+
+@media(max-width:600px){
+  .store-header h1{font-size:26px}
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .product-info{padding:10px 12px}
+  .product-name{font-size:12px}
+  .product-price{font-size:15px}
+  .cat-btn{padding:6px 12px;font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<div class="store-header">
+  <h1>FBF Gear</h1>
+  <p>Rep Forged by Freedom. Every purchase supports the mission.</p>
+  <div class="store-header-line"></div>
+</div>
+
+<div class="cat-nav" id="catNav">
+  <button class="cat-btn active" data-cat="all">All</button>
+  <button class="cat-btn" data-cat="hoodies">Hoodies & Zip-Ups</button>
+  <button class="cat-btn" data-cat="tees">Tees & Tops</button>
+  <button class="cat-btn" data-cat="sweatshirts">Sweatshirts</button>
+  <button class="cat-btn" data-cat="bottoms">Bottoms & Shorts</button>
+  <button class="cat-btn" data-cat="jerseys">Jerseys</button>
+  <button class="cat-btn" data-cat="hats">Hats</button>
+  <button class="cat-btn" data-cat="drinkware">Drinkware</button>
+  <button class="cat-btn" data-cat="bags">Bags</button>
+  <button class="cat-btn" data-cat="accessories">Accessories</button>
+  <button class="cat-btn" data-cat="womens">Women's</button>
+</div>
+
+<div class="store-container">
+
+  <!-- HOODIES & ZIP-UPS -->
+  <div class="cat-section visible" data-category="hoodies">
+    <div class="cat-title"><span>//</span> Hoodies & Zip-Ups</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <span class="product-tag tag-bestseller">Bestseller</span>
+          <div class="product-name">Forged by Freedom Full Zip Hooded Sweatshirt</div>
+          <div class="product-price">$51.60</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <div class="product-name">Forged by Freedom Hoodie</div>
+          <div class="product-price">$41.25</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <span class="product-tag tag-couples">Couples</span>
+          <div class="product-name">Couples Forged by Freedom Hoodie</div>
+          <div class="product-price">$41.25</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <div class="product-name">Forged by Freedom College Hoodie</div>
+          <div class="product-price">$46.41</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <div class="product-name">Patriotic Full Zip Hooded Sweatshirt</div>
+          <div class="product-price">$51.60</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <span class="product-tag tag-couples">Couples</span>
+          <div class="product-name">Couples Patriotic Full Zip Hoodie</div>
+          <div class="product-price">$51.60</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <div class="product-name">FBF Embroidered Hoodie</div>
+          <div class="product-price">$50.20</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <div class="product-name">FBF Live For Them Hooded Long Sleeve</div>
+          <div class="product-price">$40.00</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🔥</div>
+        <div class="product-info">
+          <div class="product-name">FBF Discipline Hoodie</div>
+          <div class="product-price">$41.25</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- TEES & TOPS -->
+  <div class="cat-section visible" data-category="tees">
+    <div class="cat-title"><span>//</span> Tees & Tops</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👕</div>
+        <div class="product-info">
+          <span class="product-tag tag-bestseller">Bestseller</span>
+          <div class="product-name">Discipline Over Everything Tee</div>
+          <div class="product-price">$34.04</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👕</div>
+        <div class="product-info">
+          <div class="product-name">Men's Heavy Oversized Tee</div>
+          <div class="product-price">$47.99</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👕</div>
+        <div class="product-info">
+          <span class="product-tag tag-couples">Couples</span>
+          <div class="product-name">Couples Oversized Toxy Tee</div>
+          <div class="product-price">$34.04</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👕</div>
+        <div class="product-info">
+          <div class="product-name">Forged by Freedom Heavy Oversized Tee</div>
+          <div class="product-price">$47.99</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👕</div>
+        <div class="product-info">
+          <div class="product-name">Eagle Bodybuilders Crop Tee</div>
+          <div class="product-price">$32.33</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👕</div>
+        <div class="product-info">
+          <div class="product-name">Performance Fitness T-Shirt</div>
+          <div class="product-price">$31.49</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SWEATSHIRTS -->
+  <div class="cat-section visible" data-category="sweatshirts">
+    <div class="cat-title"><span>//</span> Sweatshirts & Crewnecks</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏋️</div>
+        <div class="product-info">
+          <div class="product-name">FBF Unisex Sweatshirt</div>
+          <div class="product-price">$44.30</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏋️</div>
+        <div class="product-info">
+          <div class="product-name">Forged by Freedom Crewneck Sweatshirt</div>
+          <div class="product-price">$45.05</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏋️</div>
+        <div class="product-info">
+          <div class="product-name">FBF Embroidered Crewneck Sweatshirt</div>
+          <div class="product-price">$45.05</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏋️</div>
+        <div class="product-info">
+          <div class="product-name">FBF Discipline Crewneck Sweatshirt</div>
+          <div class="product-price">$36.31</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BOTTOMS & SHORTS -->
+  <div class="cat-section visible" data-category="bottoms">
+    <div class="cat-title"><span>//</span> Bottoms & Shorts</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🩳</div>
+        <div class="product-info">
+          <div class="product-name">Unisex Fleece Sweat Shorts</div>
+          <div class="product-price">$41.48</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🩳</div>
+        <div class="product-info">
+          <div class="product-name">Unisex Embroidered Joggers</div>
+          <div class="product-price">$37.88</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🩳</div>
+        <div class="product-info">
+          <div class="product-name">Men's Swim Trunks</div>
+          <div class="product-price">$39.68</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🩳</div>
+        <div class="product-info">
+          <div class="product-name">Men's Freedom Boxer Briefs</div>
+          <div class="product-price">$36.04</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- JERSEYS -->
+  <div class="cat-section visible" data-category="jerseys">
+    <div class="cat-title"><span>//</span> Jerseys</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏀</div>
+        <div class="product-info">
+          <div class="product-name">FBF Unisex Basketball Jersey (AOP)</div>
+          <div class="product-price">$40.70</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏀</div>
+        <div class="product-info">
+          <div class="product-name">Forged by Freedom Unisex Jersey (AOP)</div>
+          <div class="product-price">$40.70</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- WOMEN'S -->
+  <div class="cat-section visible" data-category="womens">
+    <div class="cat-title"><span>//</span> Women's Collection</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Empowering Women's Spaghetti Strap Tank Top</div>
+          <div class="product-price">$29.91</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Empowering Sports Bra</div>
+          <div class="product-price">$37.26</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Women's Casual Shorts — Black with Gold Logo</div>
+          <div class="product-price">$24.66</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Strong & Free Women's Workout Shorts</div>
+          <div class="product-price">$56.87</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Freedom-Inspired Women's Thongs</div>
+          <div class="product-price">$21.84</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Ladies Water Bottle — 32oz</div>
+          <div class="product-price">$41.99</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Ladies Patriotic Black Mug</div>
+          <div class="product-price">$11.09</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <div class="product-name">Ladies Tough Magnetic Phone Case</div>
+          <div class="product-price">$26.41</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- HATS -->
+  <div class="cat-section visible" data-category="hats">
+    <div class="cat-title"><span>//</span> Hats</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🧢</div>
+        <div class="product-info">
+          <div class="product-name">Camouflage Trucker Hat</div>
+          <div class="product-price">$28.45</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🧢</div>
+        <div class="product-info">
+          <div class="product-name">FBF Snapback Trucker Cap (Embroidered)</div>
+          <div class="product-price">$29.44</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🧢</div>
+        <div class="product-info">
+          <div class="product-name">Classic Cuffed Beanie (Embroidered)</div>
+          <div class="product-price">$18.48</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- DRINKWARE -->
+  <div class="cat-section visible" data-category="drinkware">
+    <div class="cat-title"><span>//</span> Drinkware</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <span class="product-tag tag-bestseller">Bestseller</span>
+          <div class="product-name">Patriotic Black Mug</div>
+          <div class="product-price">$11.09</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <span class="product-tag tag-couples">Couples</span>
+          <div class="product-name">Couples Patriotic Black Mug</div>
+          <div class="product-price">$11.09</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">Inspirational "Forged By Freedom" Mug</div>
+          <div class="product-price">$11.09</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">15oz Muscular Eagle Couple Mug</div>
+          <div class="product-price">$13.90</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">Ceramic Mug (11oz / 15oz)</div>
+          <div class="product-price">$8.05</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">Stainless Steel Travel Mug — Orange on Black</div>
+          <div class="product-price">$28.99</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">Technique Over Strength Travel Mug</div>
+          <div class="product-price">$28.99</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">Stainless Steel Travel Mug</div>
+          <div class="product-price">$24.36</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <div class="product-name">Patriotic Protein Shaker Bottle</div>
+          <div class="product-price">$18.40</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">☕</div>
+        <div class="product-info">
+          <span class="product-tag tag-couples">Couples</span>
+          <div class="product-name">Couples Water Bottle — 32oz</div>
+          <div class="product-price">$41.99</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BAGS -->
+  <div class="cat-section visible" data-category="bags">
+    <div class="cat-title"><span>//</span> Bags</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🎒</div>
+        <div class="product-info">
+          <div class="product-name">Patriotic Drawstring Bag</div>
+          <div class="product-price">$43.94</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🎒</div>
+        <div class="product-info">
+          <div class="product-name">FBF Gym Bag</div>
+          <div class="product-price">$46.65</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ACCESSORIES -->
+  <div class="cat-section visible" data-category="accessories">
+    <div class="cat-title"><span>//</span> Accessories</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">📱</div>
+        <div class="product-info">
+          <div class="product-name">Tough Magnetic Phone Case</div>
+          <div class="product-price">$26.41</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">📱</div>
+        <div class="product-info">
+          <div class="product-name">Men's Tough Magnetic Phone Case</div>
+          <div class="product-price">$26.41</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">📓</div>
+        <div class="product-info">
+          <div class="product-name">FBF Spiral Notebook — Ruled</div>
+          <div class="product-price">$11.70</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🛏️</div>
+        <div class="product-info">
+          <div class="product-name">Patriotic Fleece Blanket</div>
+          <div class="product-price">$19.69</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏌️</div>
+        <div class="product-info">
+          <div class="product-name">FBF Patriotic Golf Towel</div>
+          <div class="product-price">$16.33</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">🏌️</div>
+        <div class="product-info">
+          <div class="product-name">Forged by Freedom Golf Towel</div>
+          <div class="product-price">$16.33</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💧</div>
+        <div class="product-info">
+          <div class="product-name">Motivational Hand Towel</div>
+          <div class="product-price">$15.04</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">💧</div>
+        <div class="product-info">
+          <div class="product-name">FBF Patriotic Hand Towel</div>
+          <div class="product-price">$15.04</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">
+        <div class="product-img">👟</div>
+        <div class="product-info">
+          <span class="product-tag tag-new">New</span>
+          <div class="product-name">King Crown Lion High Top Sneakers — Black Canvas</div>
+          <div class="product-price">$46.33</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="shop-cta">
+  <a href="https://www.etsy.com/shop/FBFStrengthNutrition" target="_blank">Shop All on Etsy →</a>
+</div>
+
+<script>
+// Category filtering
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.cat-section').forEach(s => {
+      s.classList.toggle('visible', cat === 'all' || s.dataset.category === cat);
+    });
+  });
+});
+</script>
+</body>
+</html>
