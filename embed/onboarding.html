@@ -276,6 +276,17 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
 
       <h3>11. Severability &amp; Entire Agreement</h3>
       <p>If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. This Agreement constitutes the entire agreement between Client and FBF regarding its subject matter and supersedes all prior agreements, representations, or understandings. This Agreement may only be modified in writing signed by both parties.</p>
+
+      <h3>12. Confidentiality &amp; Non-Disclosure</h3>
+      <p>All programs, protocols, dosing frameworks, cycling strategies, nutrition plans, training methodologies, and proprietary systems provided by Forged by Freedom ("FBF Materials") are confidential and proprietary intellectual property. By participating in any FBF program, you agree to:</p>
+      <ul>
+        <li><strong>Non-Disclosure:</strong> You will not share, copy, distribute, screenshot, photograph, or reproduce any FBF Materials, including but not limited to the FBF Recomp Protocol, compound protocols, dosing schedules, cycling strategies, or custom program documents.</li>
+        <li><strong>Non-Distribution:</strong> You will not provide FBF Materials to any third party, whether for free or for compensation, including but not limited to friends, family, training partners, or online communities.</li>
+        <li><strong>Personal Use Only:</strong> FBF Materials are licensed for your personal use only and may not be used for commercial purposes, resale, or to develop competing products or services.</li>
+        <li><strong>Permitted Sharing:</strong> You ARE permitted to discuss your personal results, progress, and experience with FBF coaching. You ARE permitted to leave reviews and testimonials. You are NOT permitted to share the specific proprietary methodology, protocols, or program documents.</li>
+        <li><strong>Enforcement:</strong> Violation of this confidentiality agreement may result in immediate termination of coaching services without refund and may subject you to legal action for breach of contract and intellectual property infringement.</li>
+        <li><strong>Duration:</strong> This confidentiality obligation survives the termination of the coaching relationship and remains in effect indefinitely.</li>
+      </ul>
     </div>
 
     <!-- Initials -->
@@ -299,6 +310,10 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
       <input type="text" id="initialSubstance" maxlength="4" placeholder="Initials">
       <span>I am <strong>solely responsible</strong> for any decision to use any substance and do so at my own risk (Section 2)</span>
     </div>
+    <div class="waiver-initial">
+      <input type="text" id="initialNDA" maxlength="4" placeholder="Initials">
+      <span>I agree to the <strong>Confidentiality &amp; Non-Disclosure</strong> terms and will not share proprietary FBF materials (Section 12)</span>
+    </div>
 
     <!-- Signature -->
     <div class="waiver-sig">
@@ -312,7 +327,7 @@ body{padding:0;display:flex;justify-content:center;align-items:flex-start}
       <input type="checkbox" id="disclaimerCheck">
       <label for="disclaimerCheck">I have read, understood, and agree to the entire Waiver of Liability, Assumption of Risk &amp; Release Agreement. I sign this voluntarily and of my own free will.</label>
     </div>
-    <div class="waiver-warning" id="waiverWarning">You must initial all 5 sections and provide your signature to continue.</div>
+    <div class="waiver-warning" id="waiverWarning">You must initial all 6 sections and provide your signature to continue.</div>
   </div>
 
   <div class="error-msg" id="errorMsg"></div>
@@ -904,7 +919,7 @@ if (!token || token.length < 10) {
 }
 
 // Waiver validation — all initials + signature + checkbox required
-const initialFields = ['initialRisk','initialMedical','initialRelease','initialAI','initialSubstance'];
+const initialFields = ['initialRisk','initialMedical','initialRelease','initialAI','initialSubstance','initialNDA'];
 const sigField = document.getElementById('waiverSignature');
 
 function validateWaiver() {

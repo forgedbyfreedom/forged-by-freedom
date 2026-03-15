@@ -4042,6 +4042,14 @@ function formatProgramHTML(program, clientName) {
   <!-- Recovery -->
   ${recoveryHTML}
 
+  <!-- Confidentiality Notice -->
+  <div style="text-align:center;padding:20px 24px;border-top:1px solid #2a2a2a;margin-top:24px;background:#0c0c0c;">
+    <p style="color:#ef4444;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">CONFIDENTIAL — DO NOT SHARE</p>
+    <p style="color:#888;font-size:11px;line-height:1.6;max-width:600px;margin:0 auto;">
+      This program is proprietary intellectual property of Forged by Freedom. It is provided for your personal use only under the terms of your confidentiality agreement. Do not copy, screenshot, share, or distribute this document or any of its contents. Violation may result in termination of services and legal action.
+    </p>
+  </div>
+
   <!-- Footer -->
   <div style="text-align:center;padding:24px;border-top:2px solid #ff6a00;margin-top:40px;background:#0c0c0c;">
     <p style="color:#ff6a00;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">IMPORTANT DISCLAIMER</p>
@@ -4343,11 +4351,12 @@ app.get("/api/programs/:id/approve", async (req, res) => {
 
       // Send program directly
       if (emailTransporter) {
+        const confidentialFooter = '<p style="color:#ef4444;font-size:11px;text-align:center;margin-top:20px;font-weight:600;">⚠️ CONFIDENTIAL: This program is for your personal use only. Do not forward, share, or distribute.</p>';
         await emailTransporter.sendMail({
           from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
           to: program.client_email,
           subject: "Your FBF Program — Forged by Freedom",
-          html: program.program_html
+          html: program.program_html + confidentialFooter
         });
       }
 
@@ -4549,11 +4558,12 @@ app.get("/api/programs/:id/payment-success", async (req, res) => {
 
       // Deliver program via email
       if (emailTransporter && program) {
+        const confidentialFooter = '<p style="color:#ef4444;font-size:11px;text-align:center;margin-top:20px;font-weight:600;">⚠️ CONFIDENTIAL: This program is for your personal use only. Do not forward, share, or distribute.</p>';
         await emailTransporter.sendMail({
           from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
           to: program.client_email,
           subject: "Your FBF Program — Forged by Freedom",
-          html: program.program_html
+          html: program.program_html + confidentialFooter
         });
       }
 
