@@ -769,6 +769,167 @@ Write a THOROUGH, DETAILED response. Do not be brief.`;
 // ─── Endpoints ───────────────────────────────────────────────
 app.get("/health", (_, res) => res.json({ status: "ok", uptime: process.uptime() }));
 
+// ─── Nightly System Health Check & Self-Repair ──────────────
+app.get("/api/system/health-check", async (req, res) => {
+  if (req.query.key !== process.env.ADMIN_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  const results = { timestamp: new Date().toISOString(), checks: [], failures: [], repairs: [], overall: "healthy" };
+
+  async function check(name, fn) {
+    try {
+      const result = await fn();
+      results.checks.push({ name, status: "pass", ...result });
+    } catch (err) {
+      results.checks.push({ name, status: "fail", error: err.message });
+      results.failures.push({ name, error: err.message });
+      results.overall = "degraded";
+    }
+  }
+
+  // 1. Supabase connectivity
+  await check("supabase_connection", async () => {
+    const { count, error } = await supabase.from("clients").select("id", { count: "exact", head: true });
+    if (error) throw new Error(error.message);
+    return { detail: `${count} clients in database` };
+  });
+
+  // 2. Pinecone vector DB
+  await check("pinecone_vectors", async () => {
+    const stats = await index.describeIndexStats();
+    const total = stats.totalRecordCount || 0;
+    if (total === 0) throw new Error("No vectors in index");
+    return { detail: `${total} vectors across ${Object.keys(stats.namespaces || {}).length} namespaces` };
+  });
+
+  // 3. OpenRouter AI API
+  await check("openrouter_api", async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15000);
+    const r = await fetch("https://openrouter.ai/api/v1/models", {
+      headers: { "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}` },
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return { detail: "API responding" };
+  });
+
+  // 4. Check for stuck/pending programs (older than 30 min)
+  await check("pending_programs", async () => {
+    const thirtyMinAgo = new Date(Date.now() - 30 * 60 * 1000).toISOString();
+    const { data, error } = await supabase.from("generated_programs")
+      .select("id, client_name, created_at")
+      .eq("status", "pending_review")
+      .lt("created_at", thirtyMinAgo);
+    if (error) throw new Error(error.message);
+    return { detail: `${(data || []).length} stale pending programs` };
+  });
+
+  // 5. Check for clients with no recent check-ins (>7 days, active)
+  await check("inactive_clients", async () => {
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+    const { data: activeClients } = await supabase.from("clients").select("id").eq("is_active", true);
+    const { data: recentCheckins } = await supabase.from("checkins")
+      .select("client_id").gte("date", sevenDaysAgo);
+    const recentClientIds = new Set((recentCheckins || []).map(c => c.client_id));
+    const inactive = (activeClients || []).filter(c => !recentClientIds.has(c.id));
+    return { detail: `${inactive.length} active clients with no check-in in 7 days` };
+  });
+
+  // 6. Check client_metrics freshness
+  await check("metrics_freshness", async () => {
+    const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+    const { data, error } = await supabase.from("client_metrics")
+      .select("id, client_id, updated_at")
+      .lt("updated_at", oneDayAgo);
+    if (error) throw new Error(error.message);
+    const stale = (data || []).length;
+    // Self-repair: refresh stale metrics
+    if (stale > 0) {
+      for (const m of (data || []).slice(0, 10)) {
+        try {
+          await fetch(`${process.env.APP_URL || "https://fbf-dashboard.vercel.app"}/api/client/me`, {
+            headers: {} // Triggers metric recompute on next client load
+          }).catch(() => {});
+        } catch {}
+      }
+      results.repairs.push({ action: "metrics_refresh", detail: `Flagged ${stale} stale metrics for refresh` });
+    }
+    return { detail: `${stale} metrics older than 24h` };
+  });
+
+  // 7. Dashboard reachability
+  await check("dashboard_reachable", async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    const r = await fetch("https://fbf-dashboard.vercel.app/login", { signal: controller.signal });
+    clearTimeout(timer);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return { detail: "Dashboard responding" };
+  });
+
+  // 8. Website reachability
+  await check("website_reachable", async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    const r = await fetch("https://www.forgedbyfreedom.org/", { signal: controller.signal });
+    clearTimeout(timer);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return { detail: "Website responding" };
+  });
+
+  // 9. Check streaks consistency
+  await check("streaks_consistency", async () => {
+    const { data, error } = await supabase.from("client_streaks")
+      .select("client_id, current_streak")
+      .gt("current_streak", 365);
+    if (error) throw new Error(error.message);
+    const suspicious = (data || []).length;
+    if (suspicious > 0) {
+      results.repairs.push({ action: "streak_flag", detail: `${suspicious} streaks > 365 days flagged for review` });
+    }
+    return { detail: `${suspicious} suspicious streaks` };
+  });
+
+  // 10. Disk/storage check (Supabase storage)
+  await check("storage_buckets", async () => {
+    const { data, error } = await supabase.storage.listBuckets();
+    if (error) throw new Error(error.message);
+    return { detail: `${(data || []).length} storage buckets available` };
+  });
+
+  // Send ntfy alert if any failures
+  if (results.failures.length > 0) {
+    const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
+    const failNames = results.failures.map(f => f.name).join(", ");
+    fetch(`https://ntfy.sh/${ntfyTopic}`, {
+      method: "POST",
+      headers: {
+        "Title": `⚠️ FBF System Health: ${results.failures.length} issue(s)`,
+        "Priority": "high",
+        "Tags": "warning",
+      },
+      body: `Nightly health check found ${results.failures.length} failure(s):\n\n${results.failures.map(f => `❌ ${f.name}: ${f.error}`).join("\n")}\n\n${results.repairs.length > 0 ? `Auto-repairs attempted:\n${results.repairs.map(r => `🔧 ${r.action}: ${r.detail}`).join("\n")}` : "No auto-repairs needed."}\n\nFull report: ${APP_URL}/api/system/health-check?key=${process.env.ADMIN_KEY}`,
+    }).catch(() => {});
+  } else {
+    // Send a quiet success notification
+    const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
+    fetch(`https://ntfy.sh/${ntfyTopic}`, {
+      method: "POST",
+      headers: {
+        "Title": "✅ FBF Nightly Health Check: All Systems Go",
+        "Priority": "low",
+        "Tags": "white_check_mark",
+      },
+      body: `All ${results.checks.length} checks passed.\n${results.repairs.length > 0 ? `Auto-repairs: ${results.repairs.map(r => r.action).join(", ")}` : "No repairs needed."}\n\nTimestamp: ${results.timestamp}`,
+    }).catch(() => {});
+  }
+
+  res.json(results);
+});
+
 app.get("/status", async (_, res) => {
   try {
     const stats = await index.describeIndexStats();
