@@ -1040,6 +1040,8 @@ His accolades include but are not limited to:
       answer = answer.replace(pat, "").trim();
     }
 
+    answer += "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+
     res.json({
       answer,
       sources: quotes,
@@ -1197,6 +1199,8 @@ ${labs.trim()}${evidenceBlock}`;
     for (const pat of leakPatterns) {
       answer = answer.replace(pat, "").trim();
     }
+
+    answer += "\n\n---\n⚠️ This bloodwork analysis is educational only and not a medical evaluation. Always consult a licensed physician before making changes to any protocol based on lab results.";
 
     res.json({
       answer,
@@ -3322,7 +3326,9 @@ ${context}${knowledgeContext}`;
       }).catch(() => {});
     }
 
-    res.json({ reply });
+    const disclaimedReply = reply + "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+
+    res.json({ reply: disclaimedReply });
   } catch (err) {
     console.error("[COACH-CHAT] Error:", err);
     res.status(500).json({ error: err.message });
@@ -4037,9 +4043,12 @@ function formatProgramHTML(program, clientName) {
   ${recoveryHTML}
 
   <!-- Footer -->
-  <div style="text-align:center;padding:24px 0;border-top:1px solid #2a2a2a;">
-    <p style="color:#666;font-size:12px;margin:0;">This program is for educational purposes only. Consult your physician before starting any exercise, nutrition, or supplement program.</p>
-    <p style="color:#ff6a00;font-size:13px;font-weight:600;margin:8px 0 0;">FORGED BY FREEDOM STRENGTH & NUTRITION</p>
+  <div style="text-align:center;padding:24px;border-top:2px solid #ff6a00;margin-top:40px;background:#0c0c0c;">
+    <p style="color:#ff6a00;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">IMPORTANT DISCLAIMER</p>
+    <p style="color:#888;font-size:11px;line-height:1.6;max-width:600px;margin:0 auto;">
+      This program is for educational and research purposes only. Nothing herein constitutes medical advice, diagnosis, or treatment. No recommendations for human consumption of any substance are made or implied. All compound, peptide, and hormone information is presented for educational research only. Always consult a licensed physician before beginning any fitness, nutrition, supplementation, or hormone-related protocol. Individual results vary. The client assumes full responsibility for any decision to follow program guidance. Use at your own risk.
+    </p>
+    <p style="color:#ff6a00;font-size:13px;font-weight:600;margin:12px 0 0;">FORGED BY FREEDOM STRENGTH & NUTRITION</p>
     <p style="color:#666;font-size:11px;margin:4px 0 0;">forgedbyfreedom.com</p>
   </div>
 </div>

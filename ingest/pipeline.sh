@@ -14,7 +14,7 @@
 #   ./pipeline.sh stats        # Show stats only
 # ─────────────────────────────────────────────────────────────
 
-set -e
+set +e  # Don't exit on errors — pipeline should always reach ingestion step
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -51,17 +51,20 @@ command -v "$YT_DLP" >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
 TIER1="ThinkBIGBodybuilding|rxmuscle|anabolicbodybuilding|realtattered|TannerTatteredFAQ|johnjewett3"
 # Tier 2: Key PED/fitness experts + female health + medical (max 30 downloads)
 TIER2="AnabolicDoc|MorePlatesMoreDates|MPMD|vigoroussteve|LeoandLongevity|hubermanlab|AndrewHuberman|PeterAttiaMD|FoundMyFitness|GregDoucette|JohnMeadowsMountainDog|dorian_yates_official|FouadAbiad|RenaissancePeriodization|rpstrength|StanEfferding|JeffNippard|Biolayne|AthleanX|BarbellMedicine|GregNuckols|StrongerByScience|DrGabrielleLyon|DrStacySims|DrMindyPelz|HollyBaxter|SoheeFit|LaurinConlin|megsquats|StephanieButtermore|AshleyKaltwasser|ErinSternFitness|JulieLohre|KristyHawkins|Natacha_Oceane|StefiCohen|AbbeySharp|LoriHarder|MedCram|NinjaNerdOfficial|SquatUniversity|NorthwesternMed|TOTRevolution|gillettehealth|TaylorMadeCompounding|JayCampbell|DrCraigKoniver|TonyHuge|CoachTrevorBlack|TrevorBachmeyer|drtrevorbachmeyer"
-# Skip: Completely irrelevant for fitness AI (do these in a separate run)
-SKIP_CHANNELS="3Blue1Brown|kurzgesagt|veritasium|Vsauce|numberphile|minutephysics|Vihart|StudyForce|AliAbdaal|melrobbins|MulliganBrothers|BroScienceLife"
-# Low priority: General education, processed last (max 10 downloads)
-LOW_PRIORITY="ProfessorDaveExplains|TEDxTalks|TED|mitocw|Stanford|YaleCourses|SciShow|TheRoyalInstitution|CarolineGirvan"
+# Skip: Not relevant to fitness/bodybuilding/PED coaching — already indexed content stays in Pinecone
+SKIP_CHANNELS="3Blue1Brown|kurzgesagt|veritasium|Vsauce|numberphile|minutephysics|Vihart|StudyForce|AliAbdaal|melrobbins|MulliganBrothers|BroScienceLife|mitocw|Stanford|YaleCourses|ProfessorDaveExplains|TheRoyalInstitution|SciShow|TEDxTalks|TED|CarolineGirvan|HandwrittenTutorials|LecturioMedical|SketchyMedical|BoardsBeyond|USMLEFirstAid|NBMEmedical|Physeo|PathologyOutlines|ScienceNaturePage|NatureVideo|LancetTV|CellPress|PsychiatryOnline|Neurology|NeuroscientificallyC|CochraneCollaboration|BMJupdates|JAMANetwork|WHO|CDCgov|FDAChannel|NIH|ACPInternist"
+# Low priority: Tangentially relevant (max 5 downloads per night)
+LOW_PRIORITY="PickUpLimes|WhatIveLearned|ThomasDeLauer|VShred|WillTennyson|MattDoesFitness|BradleyMartyn|DavidGoggins|JockoPodcast|LondonReal"
+
+# ─── Per-channel timeout (30 min max per channel) ───────────
+CHANNEL_TIMEOUT=1800
 
 get_max_downloads() {
     local channel="$1"
     echo "$channel" | grep -qE "$TIER1" && { echo 50; return; }
     echo "$channel" | grep -qE "$TIER2" && { echo 30; return; }
-    echo "$channel" | grep -qE "$LOW_PRIORITY" && { echo 10; return; }
-    echo 20  # Default for everything else
+    echo "$channel" | grep -qE "$LOW_PRIORITY" && { echo 5; return; }
+    echo 15  # Default for everything else
 }
 
 get_tier_label() {
@@ -127,32 +130,35 @@ download_and_transcribe() {
         # Count channel transcripts before
         local ch_before=$(find "$output_dir" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
 
-        # Download audio files
-        local retry=0 dl_done=false
-        while [ $retry -lt $MAX_RETRIES ] && [ "$dl_done" = false ]; do
-            if $YT_DLP \
-                --cookies-from-browser chrome \
-                --extractor-args "youtubetab:skip=authcheck" \
-                -x --audio-format mp3 --audio-quality 64K \
-                --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
-                --ignore-errors --no-warnings \
-                --sleep-interval $SLEEP_MIN --max-sleep-interval $SLEEP_MAX \
-                --sleep-requests 1 \
-                --extractor-retries 2 --fragment-retries 2 \
-                --retry-sleep extractor:5 --retry-sleep http:3 \
-                --download-archive "$output_dir/.downloaded" \
-                --max-downloads $max_dl \
-                "$channel_url" >> "$LOG_FILE" 2>&1; then
-                dl_done=true
-                success=$((success + 1))
-                log "  ✓ Audio downloaded"
-            else
-                retry=$((retry + 1))
-                [ $retry -lt $MAX_RETRIES ] && { log "  ⚠ Retry $retry/$MAX_RETRIES"; sleep 15; }
-            fi
-        done
-
-        [ "$dl_done" = false ] && { failed=$((failed + 1)); log "  ✗ Download failed"; }
+        # Download audio files (with per-channel timeout)
+        local dl_done=false
+        timeout $CHANNEL_TIMEOUT $YT_DLP \
+            --cookies-from-browser chrome \
+            --extractor-args "youtubetab:skip=authcheck" \
+            -x --audio-format mp3 --audio-quality 64K \
+            --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
+            --ignore-errors --no-warnings \
+            --sleep-interval $SLEEP_MIN --max-sleep-interval $SLEEP_MAX \
+            --sleep-requests 1 \
+            --extractor-retries 2 --fragment-retries 2 \
+            --retry-sleep extractor:5 --retry-sleep http:3 \
+            --download-archive "$output_dir/.downloaded" \
+            --max-downloads $max_dl \
+            "$channel_url" >> "$LOG_FILE" 2>&1
+        local exit_code=$?
+        if [ $exit_code -eq 0 ] || [ $exit_code -eq 101 ]; then
+            # 0 = success, 101 = max-downloads reached (expected)
+            dl_done=true
+            success=$((success + 1))
+            log "  ✓ Download complete"
+        elif [ $exit_code -eq 124 ]; then
+            # 124 = timeout hit
+            failed=$((failed + 1))
+            log "  ⏰ Timed out after ${CHANNEL_TIMEOUT}s — moving on"
+        else
+            failed=$((failed + 1))
+            log "  ✗ Download failed (exit $exit_code)"
+        fi
 
         # Count new mp3s (downloaded but not yet transcribed)
         local new_mp3s=$(find "$output_dir" -maxdepth 1 -name "*.mp3" 2>/dev/null | wc -l | tr -d ' ')
@@ -326,8 +332,9 @@ main() {
         ingest)     ingest_pinecone ;;
         stats)      show_stats ;;
         full)
-            download_and_transcribe                 # Download only (FREE)
-            fetch_research
+            # Downloads can fail — never block ingestion of existing content
+            download_and_transcribe || log "⚠ Some downloads failed — continuing with ingestion"
+            fetch_research || log "⚠ Research fetch had issues — continuing"
             fix_transcripts
             build_masters
             ingest_pinecone
