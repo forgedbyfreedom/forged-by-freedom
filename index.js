@@ -5433,6 +5433,108 @@ app.get("/api/oura/today", async (req, res) => {
   }
 });
 
+// ─── Garmin Connect Integration ─────────────────────────────
+
+// Webhook: Garmin pushes daily summary data here
+app.post("/api/garmin/webhook", async (req, res) => {
+  try {
+    const data = req.body;
+    console.log("[GARMIN] Webhook received:", JSON.stringify(data).slice(0, 200));
+
+    // Garmin sends arrays of daily summaries
+    const dailies = data.dailies || data.activities || [data];
+
+    for (const daily of dailies) {
+      // Extract relevant fields
+      const garminData = {
+        date: daily.calendarDate || daily.startTimeLocal?.split('T')[0] || new Date().toISOString().split('T')[0],
+        steps: daily.steps || daily.totalSteps || null,
+        resting_hr: daily.restingHeartRate || daily.restingHeartRateInBeatsPerMinute || null,
+        avg_hr: daily.averageHeartRate || null,
+        max_hr: daily.maxHeartRate || null,
+        stress_avg: daily.averageStressLevel || null,
+        body_battery_high: daily.bodyBatteryChargedValue || daily.bodyBatteryHighestValue || null,
+        body_battery_low: daily.bodyBatteryDrainedValue || daily.bodyBatteryLowestValue || null,
+        sleep_hours: daily.sleepTimeInSeconds ? daily.sleepTimeInSeconds / 3600 : null,
+        deep_sleep_min: daily.deepSleepDurationInSeconds ? daily.deepSleepDurationInSeconds / 60 : null,
+        light_sleep_min: daily.lightSleepDurationInSeconds ? daily.lightSleepDurationInSeconds / 60 : null,
+        rem_sleep_min: daily.remSleepInSeconds ? daily.remSleepInSeconds / 60 : null,
+        spo2_avg: daily.averageSPO2 || null,
+        respiration_avg: daily.averageRespirationValue || null,
+        calories_total: daily.totalKilocalories || daily.activeKilocalories || null,
+        floors_climbed: daily.floorsClimbed || null,
+        active_minutes: (daily.moderateIntensityMinutes || 0) + (daily.vigorousIntensityMinutes || 0),
+        distance_meters: daily.totalDistanceInMeters || null,
+        source: 'garmin',
+      };
+
+      // Store in wearable_data table
+      if (supabase) {
+        await supabase.from("wearable_data").upsert({
+          ...garminData,
+          provider: 'garmin',
+          raw_json: daily,
+        }, { onConflict: 'date,provider' }).catch(err => console.error("[GARMIN] DB error:", err.message));
+      }
+    }
+
+    res.json({ status: "ok", processed: dailies.length });
+  } catch (err) {
+    console.error("[GARMIN] Webhook error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET: Fetch stored Garmin data for a date range
+app.get("/api/garmin/data", async (req, res) => {
+  const { client_id, start_date, end_date } = req.query;
+  if (!supabase) return res.status(503).json({ error: "Database not configured" });
+
+  try {
+    let query = supabase.from("wearable_data").select("*").eq("provider", "garmin");
+    if (client_id) query = query.eq("client_id", client_id);
+    if (start_date) query = query.gte("date", start_date);
+    if (end_date) query = query.lte("date", end_date);
+    query = query.order("date", { ascending: false }).limit(30);
+
+    const { data, error } = await query;
+    if (error) throw error;
+    res.json({ data: data || [] });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST: Manual import of Garmin data (CSV/JSON paste)
+app.post("/api/garmin/import", async (req, res) => {
+  const { client_id, data } = req.body;
+  if (!Array.isArray(data)) return res.status(400).json({ error: "Data must be an array" });
+  if (!supabase) return res.status(503).json({ error: "Database not configured" });
+
+  try {
+    const records = data.map(d => ({
+      client_id: client_id || null,
+      date: d.date || d.calendarDate || new Date().toISOString().split('T')[0],
+      steps: d.steps || null,
+      resting_hr: d.restingHeartRate || d.resting_hr || null,
+      avg_hr: d.averageHeartRate || d.avg_hr || null,
+      sleep_hours: d.sleepTimeInSeconds ? d.sleepTimeInSeconds / 3600 : (d.sleep_hours || null),
+      stress_avg: d.averageStressLevel || d.stress_avg || null,
+      body_battery_high: d.bodyBatteryChargedValue || d.body_battery_high || null,
+      calories_total: d.totalKilocalories || d.calories_total || null,
+      spo2_avg: d.averageSPO2 || d.spo2_avg || null,
+      provider: 'garmin',
+      raw_json: d,
+    }));
+
+    const { error } = await supabase.from("wearable_data").upsert(records, { onConflict: 'date,provider' });
+    if (error) throw error;
+    res.json({ status: "ok", imported: records.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
 app.use((err, _, res, __) => {
