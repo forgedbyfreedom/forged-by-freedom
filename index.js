@@ -5343,6 +5343,96 @@ app.post("/api/analyze-document", upload.single("file"), async (req, res) => {
   }
 });
 
+// ─── Oura Ring Integration ──────────────────────────────────
+app.get("/api/oura/connect", (req, res) => {
+  // Return OAuth URL for Oura authorization
+  const OURA_CLIENT_ID = process.env.OURA_CLIENT_ID;
+  if (!OURA_CLIENT_ID) return res.status(503).json({ error: "Oura not configured" });
+  const redirectUri = encodeURIComponent(`${APP_URL}/api/oura/callback`);
+  const authUrl = `https://cloud.ouraring.com/oauth/authorize?client_id=${OURA_CLIENT_ID}&redirect_uri=${redirectUri}&response_type=code&scope=daily+heartrate+personal+session+workout`;
+  res.json({ auth_url: authUrl });
+});
+
+app.get("/api/oura/callback", async (req, res) => {
+  // Exchange code for token
+  const { code } = req.query;
+  const OURA_CLIENT_ID = process.env.OURA_CLIENT_ID;
+  const OURA_CLIENT_SECRET = process.env.OURA_CLIENT_SECRET;
+
+  const tokenRes = await fetch("https://api.ouraring.com/oauth/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `grant_type=authorization_code&code=${code}&client_id=${OURA_CLIENT_ID}&client_secret=${OURA_CLIENT_SECRET}&redirect_uri=${APP_URL}/api/oura/callback`
+  });
+  const tokenData = await tokenRes.json();
+  // Store token — for now redirect with token in URL (client stores it)
+  res.redirect(`${APP_URL}/api/oura/success?token=${tokenData.access_token}`);
+});
+
+app.get("/api/oura/today", async (req, res) => {
+  // Fetch today's Oura data using a personal access token
+  const token = req.query.token || req.headers.authorization?.replace('Bearer ', '');
+  if (!token) return res.status(401).json({ error: "Oura token required" });
+
+  const today = new Date().toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+  try {
+    const headers = { Authorization: `Bearer ${token}` };
+
+    const [sleepRes, readinessRes, activityRes, hrRes] = await Promise.all([
+      fetch(`https://api.ouraring.com/v2/usercollection/daily_sleep?start_date=${yesterday}&end_date=${today}`, { headers }),
+      fetch(`https://api.ouraring.com/v2/usercollection/daily_readiness?start_date=${yesterday}&end_date=${today}`, { headers }),
+      fetch(`https://api.ouraring.com/v2/usercollection/daily_activity?start_date=${yesterday}&end_date=${today}`, { headers }),
+      fetch(`https://api.ouraring.com/v2/usercollection/heartrate?start_datetime=${yesterday}T00:00:00&end_datetime=${today}T23:59:59`, { headers }),
+    ]);
+
+    const sleep = await sleepRes.json();
+    const readiness = await readinessRes.json();
+    const activity = await activityRes.json();
+    const hr = await hrRes.json();
+
+    // Extract most recent data
+    const latestSleep = sleep.data?.[sleep.data.length - 1];
+    const latestReadiness = readiness.data?.[readiness.data.length - 1];
+    const latestActivity = activity.data?.[activity.data.length - 1];
+
+    // Calculate average and resting HR
+    const hrData = hr.data || [];
+    const restingHR = hrData.length > 0 ? Math.min(...hrData.map(h => h.bpm)) : null;
+    const avgHR = hrData.length > 0 ? Math.round(hrData.reduce((s, h) => s + h.bpm, 0) / hrData.length) : null;
+
+    res.json({
+      sleep: {
+        hours: latestSleep ? (latestSleep.contributors?.total_sleep || 0) / 3600 : null,
+        score: latestSleep?.score || null,
+        efficiency: latestSleep?.contributors?.efficiency || null,
+        deep_sleep_min: latestSleep ? (latestSleep.contributors?.deep_sleep || 0) / 60 : null,
+        rem_sleep_min: latestSleep ? (latestSleep.contributors?.rem_sleep || 0) / 60 : null,
+      },
+      readiness: {
+        score: latestReadiness?.score || null,
+        hrv_balance: latestReadiness?.contributors?.hrv_balance || null,
+        body_temperature: latestReadiness?.contributors?.body_temperature || null,
+        recovery_index: latestReadiness?.contributors?.recovery_index || null,
+      },
+      activity: {
+        steps: latestActivity?.steps || null,
+        active_calories: latestActivity?.active_calories || null,
+        total_calories: latestActivity?.total_calories || null,
+        movement_equivalent_minutes: latestActivity?.equivalent_walking_distance || null,
+      },
+      heart_rate: {
+        resting: restingHR,
+        average: avgHR,
+      },
+      raw: { sleep: sleep.data, readiness: readiness.data, activity: activity.data },
+    });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch Oura data: " + err.message });
+  }
+});
+
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
 app.use((err, _, res, __) => {
