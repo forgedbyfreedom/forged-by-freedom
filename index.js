@@ -28,7 +28,8 @@ const {
   TWILIO_PHONE_NUMBER,
   PORT = 5051,
   NODE_ENV,
-  RATE_LIMIT_RPM = 60
+  RATE_LIMIT_RPM = 60,
+  ANTHROPIC_API_KEY
 } = process.env;
 
 const CONFIG = {
@@ -5251,6 +5252,94 @@ app.get("/api/testimonials/:id/deny", async (req, res) => {
     res.send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;">✗ Review Denied</body></html>`);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── Claude Vision: Document & Image Analysis ──────────────
+app.post("/api/analyze-document", upload.single("file"), async (req, res) => {
+  if (!ANTHROPIC_API_KEY) return res.status(503).json({ error: "Anthropic API not configured" });
+
+  try {
+    const { type } = req.body; // bloodwork, body_scan, nutrition_label, general
+    const file = req.file;
+
+    if (!file) return res.status(400).json({ error: "No file uploaded" });
+
+    // Convert file to base64
+    const base64 = file.buffer.toString('base64');
+    const mediaType = file.mimetype || 'image/jpeg';
+
+    // Build prompt based on document type
+    const prompts = {
+      bloodwork: `Analyze this bloodwork/lab report. Extract EVERY marker with its value, unit, and reference range. Format as JSON array: [{"marker": "name", "value": "number", "unit": "unit", "range": "low-high", "status": "normal|high|low|critical"}]. Also provide a summary of key findings and any concerning values. Flag any markers relevant to athletes or enhanced athletes (testosterone, estradiol, hematocrit, liver enzymes, lipids, kidney function).`,
+
+      body_scan: `Analyze this body composition scan (InBody, DEXA, or similar). Extract: body_fat_pct, lean_mass_lbs, fat_mass_lbs, total_weight_lbs, skeletal_muscle_mass_lbs, body_water_lbs, bmi, visceral_fat_level, basal_metabolic_rate, and any segmental data (arms, legs, trunk). Return as JSON with a summary field describing the key findings.`,
+
+      nutrition_label: `Extract all nutrition facts from this food label. Return as JSON: {"product_name": "", "serving_size": "", "calories": 0, "protein_g": 0, "carbs_g": 0, "fat_g": 0, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 0, "ingredients": ""}. Include any other nutrients shown.`,
+
+      general: `Analyze this document/image and extract all relevant information. Provide a structured summary of the contents, any data points, and key takeaways. If it contains tables or forms, extract the data in a structured format.`,
+
+      medical: `Extract all medical information from this document. Include: patient name, date, provider, diagnoses, medications, dosages, lab orders, and any recommendations. Flag anything relevant to fitness coaching or PED protocols. Format as structured JSON.`,
+    };
+
+    const prompt = prompts[type] || prompts.general;
+
+    // Call Claude Vision API
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 4096,
+        messages: [{
+          role: "user",
+          content: [
+            {
+              type: "image",
+              source: {
+                type: "base64",
+                media_type: mediaType,
+                data: base64,
+              },
+            },
+            {
+              type: "text",
+              text: prompt,
+            },
+          ],
+        }],
+      }),
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      return res.status(response.status).json({ error: err.error?.message || "Claude API error" });
+    }
+
+    const result = await response.json();
+    const analysis = result.content?.[0]?.text || "No analysis returned";
+
+    // Try to parse JSON from the response
+    let structured = null;
+    try {
+      const jsonMatch = analysis.match(/\[[\s\S]*\]|\{[\s\S]*\}/);
+      if (jsonMatch) structured = JSON.parse(jsonMatch[0]);
+    } catch {}
+
+    res.json({
+      type,
+      analysis,
+      structured,
+      model: "claude-sonnet-4-20250514",
+      disclaimer: "This analysis is for educational purposes only and does not constitute medical advice. Always consult a licensed physician.",
+    });
+  } catch (err) {
+    console.error("[ANALYZE-DOC] Error:", err.message);
+    res.status(500).json({ error: "Document analysis failed: " + err.message });
   }
 });
 
