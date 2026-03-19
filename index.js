@@ -45,9 +45,18 @@ const CONFIG = {
 };
 
 // ─── Startup Validation ──────────────────────────────────────
-if (!OPENROUTER_API_KEY || !PINECONE_API_KEY) {
-  console.error("Missing required env: OPENROUTER_API_KEY, PINECONE_API_KEY");
+if (!PINECONE_API_KEY) {
+  console.error("Missing required env: PINECONE_API_KEY");
   process.exit(1);
+}
+if (!OPENROUTER_API_KEY && !ANTHROPIC_API_KEY) {
+  console.error("Missing required env: need OPENROUTER_API_KEY or ANTHROPIC_API_KEY");
+  process.exit(1);
+}
+if (ANTHROPIC_API_KEY) {
+  console.log("✅ Using Anthropic Claude API for chat (OpenRouter as fallback for embeddings)");
+} else {
+  console.log("✅ Using OpenRouter for chat");
 }
 if (OPENAI_API_KEY) {
   console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
@@ -162,6 +171,10 @@ async function embed(text) {
 }
 
 async function chat(messages, temperature = 0.7, maxTokens = 2500) {
+  // Prefer Anthropic API if key is available (avoids OpenRouter quota issues)
+  if (ANTHROPIC_API_KEY) {
+    return callAnthropic(messages, temperature, maxTokens);
+  }
   const data = await callOpenRouter("/chat/completions", {
     model: CONFIG.chatModel,
     messages,
@@ -169,6 +182,42 @@ async function chat(messages, temperature = 0.7, maxTokens = 2500) {
     max_tokens: maxTokens
   }, maxTokens > 2500 ? 90000 : 60000);
   return data.choices?.[0]?.message?.content || "";
+}
+
+async function callAnthropic(messages, temperature = 0.7, maxTokens = 2500) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), maxTokens > 2500 ? 90000 : 60000);
+
+  try {
+    // Separate system message from user/assistant messages
+    const systemMsg = messages.find(m => m.role === "system");
+    const chatMsgs = messages.filter(m => m.role !== "system");
+
+    const body = {
+      model: "claude-sonnet-4-20250514",
+      max_tokens: maxTokens,
+      temperature,
+      messages: chatMsgs,
+    };
+    if (systemMsg) body.system = systemMsg.content;
+
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": ANTHROPIC_API_KEY,
+        "content-type": "application/json",
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error?.message || `Anthropic API error: ${res.status}`);
+    return data.content?.[0]?.text || "";
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 // ─── Pinecone Search ─────────────────────────────────────────
