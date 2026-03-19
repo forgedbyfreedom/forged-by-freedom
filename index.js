@@ -21,6 +21,7 @@ import multer from "multer";
 const {
   OPENROUTER_API_KEY,
   OPENROUTER_MODEL,
+  OPENAI_API_KEY,
   PINECONE_API_KEY,
   ELEVENLABS_API_KEY,
   TWILIO_ACCOUNT_SID,
@@ -47,6 +48,11 @@ const CONFIG = {
 if (!OPENROUTER_API_KEY || !PINECONE_API_KEY) {
   console.error("Missing required env: OPENROUTER_API_KEY, PINECONE_API_KEY");
   process.exit(1);
+}
+if (OPENAI_API_KEY) {
+  console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
+} else {
+  console.log("[FBF] Embeddings: via OpenRouter (add OPENAI_API_KEY to use OpenAI direct)");
 }
 
 // ─── Pinecone ────────────────────────────────────────────────
@@ -127,6 +133,29 @@ async function callOpenRouter(endpoint, body, timeout = 30000) {
 }
 
 async function embed(text) {
+  // Use OpenAI directly for embeddings (no OpenRouter middleman)
+  if (OPENAI_API_KEY) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30000);
+    try {
+      const res = await fetch("https://api.openai.com/v1/embeddings", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
+        signal: controller.signal
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
+      if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
+      return data.data[0].embedding;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  // Fallback to OpenRouter if no OpenAI key
   const data = await callOpenRouter("/embeddings", { model: CONFIG.embedModel, input: text });
   if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
   return data.data[0].embedding;
@@ -1212,7 +1241,17 @@ ${labs.trim()}${evidenceBlock}`;
 
   } catch (err) {
     console.error("[BLOODWORK ERROR]", err);
-    res.status(500).json({ error: err.message, answer: null });
+    const msg = err.message || "";
+    if (msg.includes("limit") || msg.includes("429") || msg.includes("quota") || msg.includes("exceeded")) {
+      return res.status(503).json({
+        error: "Our analysis service is temporarily at capacity. Please try again in a few minutes.",
+        answer: null
+      });
+    }
+    res.status(500).json({
+      error: "Bloodwork analysis is temporarily unavailable. Please try again shortly.",
+      answer: null
+    });
   }
 });
 

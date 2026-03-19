@@ -41,16 +41,21 @@ SLEEP_BETWEEN_BATCHES = 0.3
 
 # ----------------------------------------
 
-if not os.getenv("OPENROUTER_API_KEY"):
-    raise RuntimeError("❌ OPENROUTER_API_KEY not set")
-
 if not os.getenv("PINECONE_API_KEY"):
     raise RuntimeError("❌ PINECONE_API_KEY not set")
 
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY")
-)
+# Use OpenAI directly for embeddings (cheaper, more reliable, no OpenRouter middleman)
+if os.getenv("OPENAI_API_KEY"):
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    print("📡 Embeddings: OpenAI direct")
+elif os.getenv("OPENROUTER_API_KEY"):
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=os.getenv("OPENROUTER_API_KEY")
+    )
+    print("📡 Embeddings: via OpenRouter (set OPENAI_API_KEY to go direct)")
+else:
+    raise RuntimeError("❌ Need OPENAI_API_KEY or OPENROUTER_API_KEY")
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(INDEX_NAME)
 
