@@ -538,12 +538,41 @@ def get_namespace(channel: str, path: Path) -> str:
         "@CoachTrevorBlack": "anabolic_bodybuilding_priority",
         "@anabolicbodybuilding": "anabolic_bodybuilding_priority",
         "@anabolicuniversity": "anabolic_bodybuilding_priority",
-        # Biohacking / Health
+        # Peptide Experts (priority namespace)
+        "@TrevorBachmeyer": "peptide_priority",
+        "@drtrevorbachmeyer": "peptide_priority",
+        "@TOTRevolution": "peptide_priority",
+        "@JayCampbell": "peptide_priority",
+        "@DrCraigKoniver": "peptide_priority",
+        "@TaylorMadeCompounding": "peptide_priority",
+        "@gillettehealth": "peptide_priority",
+        # Biohacking / Health / Longevity
         "@FoundMyFitness": "biohacking",
         "@hubermanlab": "biohacking",
         "@AndrewHuberman": "biohacking",
         "@PeterAttiaMD": "medical_primary",
         "@DrGabrielleLyon": "medical_primary",
+        "@HighIntensityHealth": "biohacking",
+        "@BryanJohnson": "biohacking",
+        "@DavidSinclair": "biohacking",
+        "@DrBradStanfield": "biohacking",
+        "@Physionic": "biohacking",
+        # PED Pharmacology
+        "@SethFeroce": "anabolic_bodybuilding_priority",
+        "@MilosSarcev": "anabolic_bodybuilding_priority",
+        # Sports Science / Hypertrophy
+        "@DrAndyGalpin": "sports_nutrition",
+        "@BradSchoenfeldPhD": "sports_nutrition",
+        "@3DMuscleJourney": "sports_nutrition",
+        "@EricHelms3DMJ": "sports_nutrition",
+        "@OmarIsuf": "sports_nutrition",
+        "@MuscleIntelligence": "anabolic_bodybuilding_priority",
+        # Contest Prep
+        "@HypertrophyCoach": "anabolic_bodybuilding_priority",
+        "@MattJansen": "anabolic_bodybuilding_priority",
+        # Hormone / Endocrinology
+        "@BalanceMyHormones": "endocrinology",
+        "@DrAkshayJainMD": "endocrinology",
         "@johnjewett3": "anabolic_bodybuilding_priority",
         "@J3University": "anabolic_bodybuilding_priority",
         # Female Hormone & Menopause Experts

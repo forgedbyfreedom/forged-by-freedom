@@ -301,6 +301,8 @@ async function searchWithBoost(vector, question) {
       .then(r => r.matches || []).catch(() => []),
     index.namespace("peptides").query({ vector, topK: 8, includeMetadata: true })
       .then(r => r.matches || []).catch(() => []),
+    index.namespace("peptide_priority").query({ vector, topK: 10, includeMetadata: true })
+      .then(r => r.matches || []).catch(() => []),
     index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true })
       .then(r => r.matches || []).catch(() => []),
   ]);
