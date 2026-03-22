@@ -30,7 +30,10 @@ const {
   PORT = 5051,
   NODE_ENV,
   RATE_LIMIT_RPM = 60,
-  ANTHROPIC_API_KEY
+  ANTHROPIC_API_KEY,
+  LINKEDIN_CLIENT_ID,
+  LINKEDIN_CLIENT_SECRET,
+  LINKEDIN_REDIRECT_URI
 } = process.env;
 
 const CONFIG = {
@@ -5627,6 +5630,167 @@ app.post("/api/garmin/import", async (req, res) => {
 
 // 404 + Error handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
+// ─── LINKEDIN INTEGRATION ────────────────────────────────────
+// Step 1: Redirect user to LinkedIn OAuth consent screen
+app.get("/api/linkedin/auth", (req, res) => {
+  const clientId = LINKEDIN_CLIENT_ID;
+  const redirectUri = LINKEDIN_REDIRECT_URI || "https://forged-by-freedom-api-nm4f.onrender.com/api/linkedin/callback";
+  const scope = "openid profile email w_member_social";
+  const state = Math.random().toString(36).substring(7);
+  const url = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}&state=${state}`;
+  res.redirect(url);
+});
+
+// Step 2: Handle OAuth callback — exchange code for access token
+let linkedinAccessToken = null;
+let linkedinPersonUrn = null;
+
+app.get("/api/linkedin/callback", async (req, res) => {
+  const { code } = req.query;
+  if (!code) return res.status(400).send("Missing authorization code");
+
+  try {
+    const redirectUri = LINKEDIN_REDIRECT_URI || "https://forged-by-freedom-api-nm4f.onrender.com/api/linkedin/callback";
+    // Exchange code for access token
+    const tokenRes = await fetch("https://www.linkedin.com/oauth/v2/accessToken", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "authorization_code",
+        code,
+        redirect_uri: redirectUri,
+        client_id: LINKEDIN_CLIENT_ID,
+        client_secret: LINKEDIN_CLIENT_SECRET,
+      }),
+    });
+    const tokenData = await tokenRes.json();
+    if (!tokenRes.ok) return res.status(400).json({ error: tokenData });
+
+    linkedinAccessToken = tokenData.access_token;
+
+    // Get user profile to get person URN
+    const profileRes = await fetch("https://api.linkedin.com/v2/userinfo", {
+      headers: { Authorization: `Bearer ${linkedinAccessToken}` },
+    });
+    const profile = await profileRes.json();
+    linkedinPersonUrn = `urn:li:person:${profile.sub}`;
+
+    console.log(`[LinkedIn] Connected as ${profile.name} (${linkedinPersonUrn})`);
+    console.log(`[LinkedIn] Token expires in ${tokenData.expires_in} seconds`);
+
+    // Store token in env for persistence (or save to DB)
+    if (supabase) {
+      await supabase.from("app_settings").upsert({
+        key: "linkedin_access_token",
+        value: linkedinAccessToken,
+      }, { onConflict: "key" }).catch(() => {});
+      await supabase.from("app_settings").upsert({
+        key: "linkedin_person_urn",
+        value: linkedinPersonUrn,
+      }, { onConflict: "key" }).catch(() => {});
+    }
+
+    res.send(`
+      <html><body style="background:#0a0a0a;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0">
+        <div style="text-align:center">
+          <h1 style="color:#FF6A00">LinkedIn Connected!</h1>
+          <p>Connected as <strong>${profile.name}</strong></p>
+          <p style="color:#888">You can close this window. FBF will now auto-post to your LinkedIn.</p>
+        </div>
+      </body></html>
+    `);
+  } catch (err) {
+    console.error("[LinkedIn] OAuth error:", err);
+    res.status(500).json({ error: "LinkedIn OAuth failed" });
+  }
+});
+
+// Step 3: Post to LinkedIn
+app.post("/api/linkedin/post", async (req, res) => {
+  const { text, article_url, article_title, article_description, admin_key } = req.body;
+
+  // Simple admin auth
+  if (admin_key !== process.env.ADMIN_KEY) {
+    return res.status(403).json({ error: "Unauthorized" });
+  }
+
+  // Try to load token from DB if not in memory
+  if (!linkedinAccessToken && supabase) {
+    const { data: tokenRow } = await supabase
+      .from("app_settings").select("value").eq("key", "linkedin_access_token").single().catch(() => ({ data: null }));
+    const { data: urnRow } = await supabase
+      .from("app_settings").select("value").eq("key", "linkedin_person_urn").single().catch(() => ({ data: null }));
+    if (tokenRow?.value) linkedinAccessToken = tokenRow.value;
+    if (urnRow?.value) linkedinPersonUrn = urnRow.value;
+  }
+
+  if (!linkedinAccessToken || !linkedinPersonUrn) {
+    return res.status(401).json({
+      error: "LinkedIn not connected. Visit /api/linkedin/auth to connect.",
+      auth_url: "https://forged-by-freedom-api-nm4f.onrender.com/api/linkedin/auth",
+    });
+  }
+
+  try {
+    const postBody = {
+      author: linkedinPersonUrn,
+      lifecycleState: "PUBLISHED",
+      specificContent: {
+        "com.linkedin.ugc.ShareContent": {
+          shareCommentary: { text: text || "" },
+          shareMediaCategory: article_url ? "ARTICLE" : "NONE",
+        },
+      },
+      visibility: {
+        "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC",
+      },
+    };
+
+    // Add article if provided
+    if (article_url) {
+      postBody.specificContent["com.linkedin.ugc.ShareContent"].media = [{
+        status: "READY",
+        originalUrl: article_url,
+        title: { text: article_title || "" },
+        description: { text: article_description || "" },
+      }];
+    }
+
+    const postRes = await fetch("https://api.linkedin.com/v2/ugcPosts", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${linkedinAccessToken}`,
+        "Content-Type": "application/json",
+        "X-Restli-Protocol-Version": "2.0.0",
+      },
+      body: JSON.stringify(postBody),
+    });
+
+    if (!postRes.ok) {
+      const err = await postRes.text();
+      console.error("[LinkedIn] Post error:", err);
+      return res.status(postRes.status).json({ error: `LinkedIn API error: ${err}` });
+    }
+
+    const postId = postRes.headers.get("x-restli-id");
+    console.log(`[LinkedIn] Posted successfully: ${postId}`);
+    res.json({ success: true, post_id: postId });
+  } catch (err) {
+    console.error("[LinkedIn] Post error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Step 4: Check LinkedIn connection status
+app.get("/api/linkedin/status", async (req, res) => {
+  if (!linkedinAccessToken && supabase) {
+    const { data: tokenRow } = await supabase
+      .from("app_settings").select("value").eq("key", "linkedin_access_token").single().catch(() => ({ data: null }));
+    if (tokenRow?.value) linkedinAccessToken = tokenRow.value;
+  }
+  res.json({ connected: !!linkedinAccessToken, person_urn: linkedinPersonUrn || null });
+});
+
 app.use((err, _, res, __) => {
   console.error("[ERROR]", err);
   res.status(500).json({ error: "Internal server error" });
