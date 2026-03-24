@@ -3446,6 +3446,27 @@ const emailTransporter = process.env.SMTP_HOST
 const COACH_EMAIL = process.env.COACH_EMAIL || "forgedbyfreedom@proton.me";
 const APP_URL = process.env.APP_URL || "https://forged-by-freedom-api-nm4f.onrender.com";
 
+// ─── EMAIL RELAY (for dashboard to send emails via SMTP) ─
+app.post("/api/send-email", async (req, res) => {
+  const { key, to, subject, html } = req.body;
+  if (key !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (!emailTransporter) return res.status(503).json({ error: "SMTP not configured" });
+  if (!to || !subject) return res.status(400).json({ error: "to and subject required" });
+
+  try {
+    await emailTransporter.sendMail({
+      from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      html,
+    });
+    res.json({ success: true });
+  } catch (err) {
+    console.error("[EMAIL RELAY] Error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ─── FBF PROGRAMMING RULES ──────────────────────────────
 const FBF_PROGRAMMING_RULES = `
 FORGED BY FREEDOM — CORE PROGRAMMING RULES
