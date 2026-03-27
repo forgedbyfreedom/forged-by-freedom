@@ -1593,6 +1593,31 @@ app.post("/api/leads", async (req, res) => {
       }).catch(err => console.error("[NTFY] Error:", err.message));
     }
 
+    // Bridge to dashboard — create client + send intake form automatically
+    const dashboardUrl = process.env.DASHBOARD_URL || "https://fbf-dashboard.vercel.app";
+    const webhookSecret = process.env.N8N_WEBHOOK_SECRET || process.env.ADMIN_KEY || "";
+    fetch(`${dashboardUrl}/api/webhooks/new-lead`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-webhook-secret": webhookSecret,
+      },
+      body: JSON.stringify({
+        name, email, phone,
+        primary_goal: primary_goal || null,
+        commitment_level: commitment_level || null,
+        lead_id: data.id,
+      }),
+    }).then(async (r) => {
+      if (r.ok) {
+        const result = await r.json();
+        console.log(`[LEADS] Dashboard bridge success: client ${result.client_id}, intake sent to ${email}`);
+      } else {
+        const err = await r.text();
+        console.error(`[LEADS] Dashboard bridge failed: ${r.status} ${err}`);
+      }
+    }).catch(err => console.error("[LEADS] Dashboard bridge error:", err.message));
+
     console.log(`[LEADS] New lead: ${name} (${email})`);
     res.json({
       status: "approved",
