@@ -4393,17 +4393,18 @@ app.post("/api/intake/generate-program", async (req, res) => {
     try { await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake_id); } catch(e) { /* ignore */ }
 
     // Notify Bryan for approval
-    await sendApprovalEmail(saved.id, intake.full_name, lead?.email || "", programHtml);
+    const programId = saved?.id || "dashboard";
+    try { await sendApprovalEmail(programId, intake.full_name, lead?.email || "", programHtml); } catch(e) { console.warn("[PROGRAM] Approval email failed:", e.message); }
 
     // ntfy notification
     const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
     fetch(`https://ntfy.sh/${ntfyTopic}`, {
       method: "POST",
       headers: { Title: `📋 Program Ready: ${intake.full_name}`, Priority: "high", Tags: "clipboard,fire" },
-      body: `AI-generated program for ${intake.full_name} is ready for review.\n\nReview: https://forged-by-freedom-api-nm4f.onrender.com/api/programs/${saved.id}/preview?key=${process.env.ADMIN_KEY}`,
+      body: `AI-generated program for ${intake.full_name} is ready for review.${saved ? "\n\nPreview: https://forged-by-freedom-api-nm4f.onrender.com/api/programs/" + saved.id + "/preview?key=" + process.env.ADMIN_KEY : "\n\nReview in dashboard."}`,
     }).catch(() => {});
 
-    res.json({ status: "ok", program_id: saved.id, message: "Program generated and sent for review" });
+    res.json({ status: "ok", program_id: programId, message: "Program generated and sent for review" });
   } catch (err) {
     console.error("[PROGRAM] Generation error:", err);
     res.status(500).json({ error: "Program generation failed: " + err.message });
