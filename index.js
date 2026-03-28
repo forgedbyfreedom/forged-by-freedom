@@ -3745,17 +3745,40 @@ CRITICAL INSTRUCTIONS:
 - The "methodology" section should be personal and specific to THIS client — never generic.
 - Calculate LISS HR targets from client age: (220 - age) × 0.55 to 0.65.`;
 
-  const result = await callOpenRouter("/chat/completions", {
-    model: CONFIG.chatModel,
-    messages: [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: clientProfile }
-    ],
-    temperature: 0.4,
-    max_tokens: 16000
-  }, 300000);
-
-  const content = result.choices?.[0]?.message?.content || "";
+  // Use Anthropic Claude directly for program generation (more reliable than OpenRouter)
+  let content = "";
+  if (ANTHROPIC_API_KEY) {
+    const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 16000,
+        system: systemPrompt,
+        messages: [{ role: "user", content: clientProfile }],
+        temperature: 0.4,
+      }),
+    });
+    const anthropicData = await anthropicRes.json();
+    if (!anthropicRes.ok) throw new Error(anthropicData.error?.message || `Anthropic error: ${anthropicRes.status}`);
+    content = anthropicData.content?.[0]?.text || "";
+  } else {
+    // Fallback to OpenRouter
+    const result = await callOpenRouter("/chat/completions", {
+      model: CONFIG.chatModel,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: clientProfile }
+      ],
+      temperature: 0.4,
+      max_tokens: 16000
+    }, 300000);
+    content = result.choices?.[0]?.message?.content || "";
+  }
 
   // Parse JSON from response (strip markdown code fences if present)
   let jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
