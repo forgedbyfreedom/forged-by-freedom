@@ -4328,7 +4328,9 @@ app.post("/api/intake/generate-program", async (req, res) => {
     const program = await generateProgram(intake, lead || {});
     const programHtml = formatProgramHTML(program, intake.full_name);
 
-    const { data: saved, error: saveErr } = await supabase.from("generated_programs").insert({
+    // Try saving to Render's generated_programs table (may fail if intake is from dashboard table)
+    let saved = null;
+    const { data: gpSaved, error: saveErr } = await supabase.from("generated_programs").insert({
       intake_id: intake.id,
       lead_id: intake.lead_id,
       client_name: intake.full_name,
@@ -4344,13 +4346,15 @@ app.post("/api/intake/generate-program", async (req, res) => {
       methodology: program.methodology || null,
       plan_at_a_glance: program.plan_at_a_glance || null,
       program_html: programHtml,
-      ai_model_used: CONFIG.chatModel,
+      ai_model_used: "claude-sonnet-4-20250514",
       status: "pending_review"
     }).select().single();
 
     if (saveErr) {
-      console.error("[PROGRAM] Save error:", saveErr);
-      return res.status(500).json({ error: "Failed to save program" });
+      console.warn("[PROGRAM] generated_programs save failed (likely dashboard intake):", saveErr.message);
+      // Not fatal — we still write to program_reviews below
+    } else {
+      saved = gpSaved;
     }
 
     // Also update dashboard's program_reviews if review_id was passed
