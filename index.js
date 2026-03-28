@@ -4258,18 +4258,48 @@ const originalIntakeHandler = app._router.stack.find(
 app.post("/api/intake/generate-program", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
 
-  const { intake_id, key } = req.body;
+  const { intake_id, key, client_id, client_name } = req.body;
   if (key !== process.env.ADMIN_KEY) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
   try {
-    const { data: intake, error: intakeErr } = await supabase
+    // Check both intake tables (Render's client_intakes AND Dashboard's client_intake)
+    let intake = null;
+    const { data: renderIntake } = await supabase
       .from("client_intakes").select("*").eq("id", intake_id).single();
-    if (intakeErr || !intake) return res.status(404).json({ error: "Intake not found" });
+    intake = renderIntake;
 
+    if (!intake) {
+      // Try dashboard table
+      const { data: dashIntake } = await supabase
+        .from("client_intake").select("*").eq("id", intake_id).single();
+      if (dashIntake) {
+        // Map dashboard fields to Render format
+        intake = {
+          ...dashIntake,
+          full_name: client_name || "Client",
+          lead_id: dashIntake.client_id,
+        };
+      }
+    }
+
+    if (!intake) {
+      // Last resort: if client_id was provided, look up by that
+      if (client_id) {
+        const { data: byClient } = await supabase
+          .from("client_intake").select("*").eq("client_id", client_id).single();
+        if (byClient) {
+          intake = { ...byClient, full_name: client_name || "Client", lead_id: client_id };
+        }
+      }
+    }
+
+    if (!intake) return res.status(404).json({ error: "Intake not found in either table" });
+
+    // Try to get lead info
     const { data: lead } = await supabase
-      .from("leads").select("*").eq("id", intake.lead_id).single();
+      .from("leads").select("*").eq("id", intake.lead_id).maybeSingle();
 
     console.log(`[PROGRAM] Generating program for ${intake.full_name}...`);
     const program = await generateProgram(intake, lead || {});
@@ -4300,8 +4330,51 @@ app.post("/api/intake/generate-program", async (req, res) => {
       return res.status(500).json({ error: "Failed to save program" });
     }
 
+    // Also update dashboard's program_reviews if review_id was passed
+    const reviewId = req.body.review_id;
+    if (reviewId) {
+      const dashProgram = {
+        program_name: `FBF Custom Program - ${(intake.full_name || "").split(" ")[0]}`,
+        workout_program: program.training_program,
+        meal_plan: program.nutrition_plan,
+        cardio_protocol: program.cardio_protocol,
+        current_supplements: program.supplement_protocol,
+        current_peptides: program.ped_protocol,
+        medical_protocol: program.metabolic_monitoring,
+        program_raw_text: program.methodology || "",
+        target_calories: program.plan_at_a_glance?.daily_calories || null,
+        target_protein: program.plan_at_a_glance?.daily_protein_g || null,
+        target_carbs: program.plan_at_a_glance?.daily_carbs_g || null,
+        target_fats: program.plan_at_a_glance?.daily_fat_g || null,
+        target_steps: program.plan_at_a_glance?.daily_steps || 10000,
+        target_water_oz: program.plan_at_a_glance?.daily_water_oz || 100,
+        weigh_in_day: "monday",
+      };
+      await supabase.from("program_reviews").update({
+        generated_program: dashProgram,
+        status: "pending_review",
+        generated_at: new Date().toISOString(),
+      }).eq("id", reviewId);
+
+      // Update dashboard intake status
+      if (req.body.client_id) {
+        await supabase.from("client_intake").update({ program_status: "ready_for_review" }).eq("client_id", req.body.client_id);
+      }
+    }
+
+    // Update Render's client_intakes status too
+    await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake_id).catch(() => {});
+
     // Notify Bryan for approval
     await sendApprovalEmail(saved.id, intake.full_name, lead?.email || "", programHtml);
+
+    // ntfy notification
+    const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
+    fetch(`https://ntfy.sh/${ntfyTopic}`, {
+      method: "POST",
+      headers: { Title: `📋 Program Ready: ${intake.full_name}`, Priority: "high", Tags: "clipboard,fire" },
+      body: `AI-generated program for ${intake.full_name} is ready for review.\n\nReview: https://forged-by-freedom-api-nm4f.onrender.com/api/programs/${saved.id}/preview?key=${process.env.ADMIN_KEY}`,
+    }).catch(() => {});
 
     res.json({ status: "ok", program_id: saved.id, message: "Program generated and sent for review" });
   } catch (err) {
