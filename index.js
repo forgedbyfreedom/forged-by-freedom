@@ -4390,7 +4390,7 @@ app.post("/api/intake/generate-program", async (req, res) => {
     }
 
     // Update Render's client_intakes status too
-    await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake_id).catch(() => {});
+    try { await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake_id); } catch(e) { /* ignore */ }
 
     // Notify Bryan for approval
     await sendApprovalEmail(saved.id, intake.full_name, lead?.email || "", programHtml);
