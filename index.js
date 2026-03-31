@@ -1579,9 +1579,8 @@ app.post("/api/leads", async (req, res) => {
     }
 
     // Push notification via ntfy
-    const ntfyTopic = process.env.NTFY_TOPIC;
-    if (ntfyTopic) {
-      fetch(`https://ntfy.sh/${ntfyTopic}`, {
+    const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
+    fetch(`https://ntfy.sh/${ntfyTopic}`, {
         method: "POST",
         headers: {
           "Title": "New FBF Application",
@@ -1591,7 +1590,6 @@ app.post("/api/leads", async (req, res) => {
         },
         body: `${name} — ${primary_goal || 'No goal set'}\n${email} | ${phone}\nCommitment: ${commitment_level || 'Not specified'}`
       }).catch(err => console.error("[NTFY] Error:", err.message));
-    }
 
     // Bridge to dashboard — create client + send intake form automatically
     const dashboardUrl = process.env.DASHBOARD_URL || "https://fbf-dashboard.vercel.app";
