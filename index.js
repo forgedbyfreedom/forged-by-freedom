@@ -1591,30 +1591,56 @@ app.post("/api/leads", async (req, res) => {
         body: `${name} — ${primary_goal || 'No goal set'}\n${email} | ${phone}\nCommitment: ${commitment_level || 'Not specified'}`
       }).catch(err => console.error("[NTFY] Error:", err.message));
 
+    // Email notification to coach for every new lead
+    const coachEmail = process.env.COACH_EMAIL || "forgedbyfreedom@proton.me";
+    if (emailTransporter) {
+      emailTransporter.sendMail({
+        from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+        to: coachEmail,
+        subject: `New FBF Application: ${name}`,
+        html: `
+          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#0a0a0a;color:#e8e8e8;">
+            <h2 style="color:#FF6A00;">💪🔥 New Application</h2>
+            <table style="width:100%;border-collapse:collapse;">
+              <tr><td style="padding:8px 0;color:#999;width:140px;">Name</td><td style="color:#fff;font-weight:bold;">${name}</td></tr>
+              <tr><td style="padding:8px 0;color:#999;">Email</td><td style="color:#fff;">${email}</td></tr>
+              <tr><td style="padding:8px 0;color:#999;">Phone</td><td style="color:#fff;">${phone}</td></tr>
+              <tr><td style="padding:8px 0;color:#999;">Goal</td><td style="color:#fff;">${primary_goal || 'Not specified'}</td></tr>
+              <tr><td style="padding:8px 0;color:#999;">Commitment</td><td style="color:#fff;">${commitment_level || 'Not specified'}</td></tr>
+              <tr><td style="padding:8px 0;color:#999;">Submitted</td><td style="color:#fff;">${new Date().toLocaleString()}</td></tr>
+            </table>
+          </div>
+        `,
+      }).catch(err => console.error("[LEADS] Coach email error:", err.message));
+    }
+
     // Bridge to dashboard — create client + send intake form automatically
     const dashboardUrl = process.env.DASHBOARD_URL || "https://fbf-dashboard.vercel.app";
     const webhookSecret = process.env.N8N_WEBHOOK_SECRET || process.env.ADMIN_KEY || "";
-    fetch(`${dashboardUrl}/api/webhooks/new-lead`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-webhook-secret": webhookSecret,
-      },
-      body: JSON.stringify({
-        name, email, phone,
-        primary_goal: primary_goal || null,
-        commitment_level: commitment_level || null,
-        lead_id: data.id,
-      }),
-    }).then(async (r) => {
-      if (r.ok) {
-        const result = await r.json();
+    try {
+      const bridgeRes = await fetch(`${dashboardUrl}/api/webhooks/new-lead`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-webhook-secret": webhookSecret,
+        },
+        body: JSON.stringify({
+          name, email, phone,
+          primary_goal: primary_goal || null,
+          commitment_level: commitment_level || null,
+          lead_id: data.id,
+        }),
+      });
+      if (bridgeRes.ok) {
+        const result = await bridgeRes.json();
         console.log(`[LEADS] Dashboard bridge success: client ${result.client_id}, intake sent to ${email}`);
       } else {
-        const err = await r.text();
-        console.error(`[LEADS] Dashboard bridge failed: ${r.status} ${err}`);
+        const err = await bridgeRes.text();
+        console.error(`[LEADS] Dashboard bridge failed: ${bridgeRes.status} ${err}`);
       }
-    }).catch(err => console.error("[LEADS] Dashboard bridge error:", err.message));
+    } catch (err) {
+      console.error("[LEADS] Dashboard bridge error:", err.message);
+    }
 
     console.log(`[LEADS] New lead: ${name} (${email})`);
     res.json({
