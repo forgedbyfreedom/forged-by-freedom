@@ -19,8 +19,6 @@ import multer from "multer";
 
 // ─── Config ──────────────────────────────────────────────────
 const {
-  OPENROUTER_API_KEY,
-  OPENROUTER_MODEL,
   OPENAI_API_KEY,
   PINECONE_API_KEY,
   ELEVENLABS_API_KEY,
@@ -37,7 +35,6 @@ const {
 } = process.env;
 
 const CONFIG = {
-  chatModel: OPENROUTER_MODEL || "meta-llama/llama-3.3-70b-instruct",
   embedModel: "text-embedding-3-large",
   pineconeIndex: "forged-freedom-ai",
   maxQuestionLen: 15000,
@@ -52,15 +49,11 @@ if (!PINECONE_API_KEY) {
   console.error("Missing required env: PINECONE_API_KEY");
   process.exit(1);
 }
-if (!OPENROUTER_API_KEY && !ANTHROPIC_API_KEY) {
-  console.error("Missing required env: need OPENROUTER_API_KEY or ANTHROPIC_API_KEY");
+if (!ANTHROPIC_API_KEY) {
+  console.error("Missing required env: ANTHROPIC_API_KEY");
   process.exit(1);
 }
-if (ANTHROPIC_API_KEY) {
-  console.log("✅ Using Anthropic Claude API for chat (OpenRouter as fallback for embeddings)");
-} else {
-  console.log("✅ Using OpenRouter for chat");
-}
+console.log("✅ Using Anthropic Claude API for chat");
 if (OPENAI_API_KEY) {
   console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
 } else {
@@ -119,85 +112,17 @@ setInterval(() => {
   for (const [ip, r] of rateLimit) if (now > r.reset + 60000) rateLimit.delete(ip);
 }, 60000);
 
-// ─── OpenRouter API ──────────────────────────────────────────
-async function callOpenRouter(endpoint, body, timeout = 30000) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeout);
-
-  try {
-    const res = await fetch(`https://openrouter.ai/api/v1${endpoint}`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://forgedbyfreedom.com",
-        "X-Title": "Coach Bryan"
-      },
-      body: JSON.stringify(body),
-      signal: controller.signal
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `API error: ${res.status}`);
-    return data;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
-async function embed(text) {
-  // Use OpenAI directly for embeddings (no OpenRouter middleman)
-  if (OPENAI_API_KEY) {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 30000);
-    try {
-      const res = await fetch("https://api.openai.com/v1/embeddings", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${OPENAI_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
-        signal: controller.signal
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
-      if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
-      return data.data[0].embedding;
-    } finally {
-      clearTimeout(timer);
-    }
-  }
-  // Fallback to OpenRouter if no OpenAI key
-  const data = await callOpenRouter("/embeddings", { model: CONFIG.embedModel, input: text });
-  if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
-  return data.data[0].embedding;
-}
-
+// ─── Anthropic API ───────────────────────────────────────────
 async function chat(messages, temperature = 0.7, maxTokens = 2500) {
-  // Prefer Anthropic API if key is available (avoids OpenRouter quota issues)
-  if (ANTHROPIC_API_KEY) {
-    return callAnthropic(messages, temperature, maxTokens);
-  }
-  const data = await callOpenRouter("/chat/completions", {
-    model: CONFIG.chatModel,
-    messages,
-    temperature,
-    max_tokens: maxTokens
-  }, maxTokens > 2500 ? 90000 : 60000);
-  return data.choices?.[0]?.message?.content || "";
-}
-
-async function callAnthropic(messages, temperature = 0.7, maxTokens = 2500) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), maxTokens > 2500 ? 90000 : 60000);
 
   try {
-    // Separate system message from user/assistant messages
     const systemMsg = messages.find(m => m.role === "system");
     const chatMsgs = messages.filter(m => m.role !== "system");
 
     const body = {
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: maxTokens,
       temperature,
       messages: chatMsgs,
@@ -218,6 +143,28 @@ async function callAnthropic(messages, temperature = 0.7, maxTokens = 2500) {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error?.message || `Anthropic API error: ${res.status}`);
     return data.content?.[0]?.text || "";
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function embed(text) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30000);
+  try {
+    const res = await fetch("https://api.openai.com/v1/embeddings", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
+      signal: controller.signal
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
+    if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
+    return data.data[0].embedding;
   } finally {
     clearTimeout(timer);
   }
@@ -887,12 +834,12 @@ app.get("/api/system/health-check", async (req, res) => {
     return { detail: `${total} vectors across ${Object.keys(stats.namespaces || {}).length} namespaces` };
   });
 
-  // 3. OpenRouter AI API
-  await check("openrouter_api", async () => {
+  // 3. Anthropic API
+  await check("anthropic_api", async () => {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15000);
-    const r = await fetch("https://openrouter.ai/api/v1/models", {
-      headers: { "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}` },
+    const r = await fetch("https://api.anthropic.com/v1/models", {
+      headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
       signal: controller.signal,
     });
     clearTimeout(timer);
@@ -1019,7 +966,7 @@ app.get("/status", async (_, res) => {
     const stats = await index.describeIndexStats();
     res.json({
       status: "ok",
-      model: CONFIG.chatModel,
+      model: "claude-sonnet-4-6",
       embedModel: CONFIG.embedModel,
       index: CONFIG.pineconeIndex,
       totalVectors: stats.totalRecordCount || 0,
@@ -3769,40 +3716,24 @@ CRITICAL INSTRUCTIONS:
 - The "methodology" section should be personal and specific to THIS client — never generic.
 - Calculate LISS HR targets from client age: (220 - age) × 0.55 to 0.65.`;
 
-  // Use Anthropic Claude directly for program generation (more reliable than OpenRouter)
-  let content = "";
-  if (ANTHROPIC_API_KEY) {
-    const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 16000,
-        system: systemPrompt,
-        messages: [{ role: "user", content: clientProfile }],
-        temperature: 0.4,
-      }),
-    });
-    const anthropicData = await anthropicRes.json();
-    if (!anthropicRes.ok) throw new Error(anthropicData.error?.message || `Anthropic error: ${anthropicRes.status}`);
-    content = anthropicData.content?.[0]?.text || "";
-  } else {
-    // Fallback to OpenRouter
-    const result = await callOpenRouter("/chat/completions", {
-      model: CONFIG.chatModel,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: clientProfile }
-      ],
+  const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": ANTHROPIC_API_KEY,
+      "anthropic-version": "2023-06-01",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-6",
+      max_tokens: 16000,
+      system: systemPrompt,
+      messages: [{ role: "user", content: clientProfile }],
       temperature: 0.4,
-      max_tokens: 16000
-    }, 300000);
-    content = result.choices?.[0]?.message?.content || "";
-  }
+    }),
+  });
+  const anthropicData = await anthropicRes.json();
+  if (!anthropicRes.ok) throw new Error(anthropicData.error?.message || `Anthropic error: ${anthropicRes.status}`);
+  const content = anthropicData.content?.[0]?.text || "";
 
   // Parse JSON from response (strip markdown code fences if present)
   let jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
@@ -5021,7 +4952,7 @@ app.post("/api/intake-with-program", async (req, res) => {
         methodology: program.methodology || null,
         plan_at_a_glance: program.plan_at_a_glance || null,
         program_html: programHtml,
-        ai_model_used: CONFIG.chatModel,
+        ai_model_used: "claude-sonnet-4-6",
         status: "pending_review"
       }).select().single();
 
@@ -5427,7 +5358,7 @@ app.get("/api/testimonials", async (req, res) => {
 
 // POST /api/testimonials — Public: submit a new testimonial (pending approval)
 app.post("/api/testimonials", async (req, res) => {
-  const { name, email, program, rating, review } = req.body;
+  const { name, email, program, rating, review, photo_url } = req.body;
   if (!name || !review || !rating) {
     return res.status(400).json({ error: "Name, review, and rating are required" });
   }
@@ -5439,6 +5370,7 @@ app.post("/api/testimonials", async (req, res) => {
       program: program || "General",
       rating: Math.min(Math.max(parseInt(rating), 1), 5),
       review,
+      photo_url: photo_url || null,
       status: "pending",
     }).select().single();
 
@@ -5980,5 +5912,5 @@ process.on("SIGINT", () => shutdown("SIGINT"));
 // ─── Start ───────────────────────────────────────────────────
 server = app.listen(PORT, () => {
   console.log(`[FBF] Coach Bryan API :${PORT} (${CONFIG.isProd ? "prod" : "dev"})`);
-  console.log(`[FBF] Model: ${CONFIG.chatModel}`);
+  console.log(`[FBF] Model: ${"claude-sonnet-4-6"}`);
 });
