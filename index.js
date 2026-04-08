@@ -1575,7 +1575,8 @@ app.post("/api/leads", async (req, res) => {
         const program = await generateProgramFromApplication({ name, email, primary_goal, commitment_level, struggle_duration, what_held_back });
         const programHtml = formatProgramHTML(program, name);
 
-        // Save to generated_programs
+        // Save to generated_programs (generate per-program approval token)
+        const approvalToken = crypto.randomUUID();
         const { data: saved, error: saveErr } = await supabase.from("generated_programs").insert({
           lead_id: data.id,
           client_name: name,
@@ -1589,15 +1590,17 @@ app.post("/api/leads", async (req, res) => {
           plan_at_a_glance: program.plan_at_a_glance || null,
           program_html: programHtml,
           ai_model_used: "claude-sonnet-4-6",
-          status: "pending_review"
+          status: "pending_review",
+          approval_token: approvalToken
         }).select().single();
 
         if (saveErr) throw new Error(saveErr.message);
 
         // Email Bryan with full program + application answers for review
-        const approveUrl = `${APP_URL}/api/programs/${saved.id}/approve?key=${process.env.ADMIN_KEY}`;
-        const denyUrl = `${APP_URL}/api/programs/${saved.id}/deny?key=${process.env.ADMIN_KEY}`;
-        const previewUrl = `${APP_URL}/api/programs/${saved.id}/preview?key=${process.env.ADMIN_KEY}`;
+        // Use per-program token so URL works regardless of which env generated it
+        const approveUrl = `${APP_URL}/api/programs/${saved.id}/approve?token=${approvalToken}`;
+        const denyUrl = `${APP_URL}/api/programs/${saved.id}/deny?token=${approvalToken}`;
+        const previewUrl = `${APP_URL}/api/programs/${saved.id}/preview?token=${approvalToken}`;
         const tp = program.training_program || {};
         const np = program.nutrition_plan || {};
         const spArr = Array.isArray(program.supplement_protocol) ? program.supplement_protocol : [];
@@ -1893,6 +1896,7 @@ app.get("/admin", (_, res) => res.sendFile(join(__dirname, "embed", "admin.html"
 app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.html")));
 app.get("/store", (_, res) => res.sendFile(join(__dirname, "embed", "store.html")));
 app.get("/support", (_, res) => res.sendFile(join(__dirname, "embed", "support.html")));
+app.get("/programs", (_, res) => res.sendFile(join(__dirname, "embed", "programs.html")));
 
 // ─── Admin: Update Lead Status ───────────────────────────
 app.patch("/api/leads/:id/status", async (req, res) => {
@@ -4405,7 +4409,7 @@ function formatProgramHTML(program, clientName) {
     <h2 style="color:#e8e8e8;font-size:24px;font-weight:700;margin:0;">${clientName}</h2>
     ${pag.program_name ? `<p style="color:#ff6a00;font-size:16px;font-weight:600;margin:12px 0 0;">${pag.program_name}</p>` : ""}
     <p style="color:#aaa;font-size:13px;margin:12px 0 0;">Generated: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
-    <p style="color:#666;font-size:12px;margin:4px 0 0;">Coach Bryan Antonelli · Forged by Freedom</p>
+    <p style="color:#666;font-size:12px;margin:4px 0 0;">Coach Bryan Antonelli · NASM CPT · NASM Meal Prep Made Easy · Forged by Freedom</p>
   </div>
 
   <!-- Plan at a Glance -->
@@ -4588,7 +4592,13 @@ function formatProgramHTML(program, clientName) {
 }
 
 // ─── Send Approval Email to Coach ────────────────────────
-async function sendApprovalEmail(programId, clientName, clientEmail, programHtml) {
+async function sendApprovalEmail(programId, clientName, clientEmail, programHtml, approvalToken) {
+  // Build URLs using per-program token (works regardless of which env generated it)
+  const tokenParam = approvalToken ? `token=${approvalToken}` : `key=${process.env.ADMIN_KEY}`;
+  const approveUrl = `${APP_URL}/api/programs/${programId}/approve?${tokenParam}`;
+  const rejectUrl = `${APP_URL}/api/programs/${programId}/reject?${tokenParam}`;
+  const reviewUrl = `${APP_URL}/api/programs/${programId}/client-view?${tokenParam}`;
+
   if (!emailTransporter) {
     console.log(`[PROGRAM] Email not configured. Program ${programId} ready for review.`);
     // Fallback: send via ntfy
@@ -4596,7 +4606,7 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
       await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
         method: "POST",
         headers: { "Title": `Program Ready: ${clientName}`, "Priority": "high", "Tags": "clipboard" },
-        body: `New program generated for ${clientName} (${clientEmail}).\n\nReview branded program: ${APP_URL}/api/programs/${programId}/client-view?key=${process.env.ADMIN_KEY}\n\nApprove: ${APP_URL}/api/programs/${programId}/approve?key=${process.env.ADMIN_KEY}`
+        body: `New program generated for ${clientName} (${clientEmail}).\n\nReview: ${reviewUrl}\n\nApprove: ${approveUrl}`
       });
     } catch (e) { console.error("[PROGRAM] ntfy error:", e.message); }
     return;
@@ -4618,11 +4628,11 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
         </div>
         <p style="color:#aaa;">A custom program has been auto-generated from their intake. Review the branded program below — this is exactly what the client will see.</p>
         <div style="margin:24px 0;text-align:center;">
-          <a href="${APP_URL}/api/programs/${programId}/client-view?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Review Branded Program</a>
+          <a href="${reviewUrl}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Review Branded Program</a>
         </div>
         <div style="display:flex;gap:12px;justify-content:center;margin:20px 0;">
-          <a href="${APP_URL}/api/programs/${programId}/approve?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send to Client</a>
-          <a href="${APP_URL}/api/programs/${programId}/reject?key=${process.env.ADMIN_KEY}" style="display:inline-block;background:transparent;border:1px solid #ef4444;color:#ef4444;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Reject</a>
+          <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send to Client</a>
+          <a href="${rejectUrl}" style="display:inline-block;background:transparent;border:1px solid #ef4444;color:#ef4444;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Reject</a>
         </div>
         <p style="color:#666;font-size:12px;text-align:center;">Once you approve, the client will receive an email with the branded program preview + payment button.</p>
       </div>
@@ -4690,6 +4700,7 @@ app.post("/api/intake/generate-program", async (req, res) => {
 
     // Try saving to Render's generated_programs table (may fail if intake is from dashboard table)
     let saved = null;
+    const gpApprovalToken = crypto.randomUUID();
     const { data: gpSaved, error: saveErr } = await supabase.from("generated_programs").insert({
       intake_id: intake.id,
       lead_id: intake.lead_id,
@@ -4707,7 +4718,8 @@ app.post("/api/intake/generate-program", async (req, res) => {
       plan_at_a_glance: program.plan_at_a_glance || null,
       program_html: programHtml,
       ai_model_used: "claude-sonnet-4-20250514",
-      status: "pending_review"
+      status: "pending_review",
+      approval_token: gpApprovalToken
     }).select().single();
 
     if (saveErr) {
@@ -4754,7 +4766,7 @@ app.post("/api/intake/generate-program", async (req, res) => {
 
     // Notify Bryan for approval
     const programId = saved?.id || "dashboard";
-    try { await sendApprovalEmail(programId, intake.full_name, lead?.email || "", programHtml); } catch(e) { console.warn("[PROGRAM] Approval email failed:", e.message); }
+    try { await sendApprovalEmail(programId, intake.full_name, lead?.email || "", programHtml, saved?.approval_token || gpApprovalToken); } catch(e) { console.warn("[PROGRAM] Approval email failed:", e.message); }
 
     // ntfy notification
     const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
@@ -4790,12 +4802,16 @@ app.get("/api/programs/:id/preview", async (req, res) => {
 // ─── Approve Program → Create Stripe Checkout ────────────
 app.get("/api/programs/:id/approve", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
-  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
 
   try {
     const { data: program, error } = await supabase
       .from("generated_programs").select("*").eq("id", req.params.id).single();
     if (error || !program) return res.status(404).json({ error: "Program not found" });
+
+    // Accept per-program token OR global ADMIN_KEY/COACH_KEY
+    const tokenValid = req.query.token && program.approval_token && req.query.token === program.approval_token;
+    const keyValid = (req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY);
+    if (!tokenValid && !keyValid) return res.status(401).json({ error: "Unauthorized" });
 
     // Update status to approved
     await supabase.from("generated_programs")
@@ -5123,7 +5139,12 @@ app.get("/api/programs/:id/checkout", async (req, res) => {
 
 // ─── Reject Program ──────────────────────────────────────
 app.get("/api/programs/:id/reject", async (req, res) => {
-  if (req.query.key !== process.env.ADMIN_KEY && req.query.key !== process.env.COACH_KEY) return res.status(401).json({ error: "Unauthorized" });
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  // Accept per-program token OR global key
+  const { data: prog } = await supabase.from("generated_programs").select("approval_token").eq("id", req.params.id).single();
+  const tokenValid = req.query.token && prog?.approval_token && req.query.token === prog.approval_token;
+  const keyValid = (req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY);
+  if (!tokenValid && !keyValid) return res.status(401).json({ error: "Unauthorized" });
 
   await supabase.from("generated_programs")
     .update({ status: "rejected", coach_notes: req.query.reason || "Needs revision" })
@@ -5341,6 +5362,7 @@ app.post("/api/intake-with-program", async (req, res) => {
 
       const programHtml = formatProgramHTML(program, intake.full_name || lead.name);
 
+      const savedApprovalToken = crypto.randomUUID();
       const { data: saved } = await supabase.from("generated_programs").insert({
         intake_id: intake.id,
         lead_id: intake.lead_id,
@@ -5358,7 +5380,8 @@ app.post("/api/intake-with-program", async (req, res) => {
         plan_at_a_glance: program.plan_at_a_glance || null,
         program_html: programHtml,
         ai_model_used: "claude-sonnet-4-6",
-        status: "pending_review"
+        status: "pending_review",
+        approval_token: savedApprovalToken
       }).select().single();
 
       if (saved) {
@@ -5369,7 +5392,7 @@ app.post("/api/intake-with-program", async (req, res) => {
             : "") +
           (summary ? `\n\nSummary:\n${summary.slice(0, 500)}` : "");
 
-        await sendApprovalEmail(saved.id, intake.full_name || lead.name, lead.email, programHtml);
+        await sendApprovalEmail(saved.id, intake.full_name || lead.name, lead.email, programHtml, saved.approval_token || savedApprovalToken);
 
         // Also send risk + summary via ntfy
         fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
