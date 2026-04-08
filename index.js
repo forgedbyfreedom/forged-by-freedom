@@ -1897,6 +1897,7 @@ app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.h
 app.get("/store", (_, res) => res.sendFile(join(__dirname, "embed", "store.html")));
 app.get("/support", (_, res) => res.sendFile(join(__dirname, "embed", "support.html")));
 app.get("/programs", (_, res) => res.sendFile(join(__dirname, "embed", "programs.html")));
+app.get("/blog", (_, res) => res.sendFile(join(__dirname, "embed", "blog.html")));
 
 // ─── Admin: Update Lead Status ───────────────────────────
 app.patch("/api/leads/:id/status", async (req, res) => {
@@ -5774,7 +5775,7 @@ app.get("/api/testimonials", async (req, res) => {
   try {
     const { data, error } = await supabase
       .from("testimonials")
-      .select("id, name, program, rating, review, photo_url, created_at")
+      .select("id, name, program, rating, review, photo_url, before_photo_url, created_at")
       .eq("status", "approved")
       .order("created_at", { ascending: false });
     if (error) throw error;
@@ -5786,7 +5787,7 @@ app.get("/api/testimonials", async (req, res) => {
 
 // POST /api/testimonials — Public: submit a new testimonial (pending approval)
 app.post("/api/testimonials", async (req, res) => {
-  const { name, email, program, rating, review, photo_url } = req.body;
+  const { name, email, program, rating, review, photo_url, before_photo_url } = req.body;
   if (!name || !review || !rating) {
     return res.status(400).json({ error: "Name, review, and rating are required" });
   }
@@ -5799,6 +5800,7 @@ app.post("/api/testimonials", async (req, res) => {
       rating: Math.min(Math.max(parseInt(rating), 1), 5),
       review,
       photo_url: photo_url || null,
+      before_photo_url: before_photo_url || null,
       status: "pending",
     }).select().single();
 
