@@ -1891,6 +1891,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 app.get("/apply", (_, res) => res.sendFile(join(__dirname, "embed", "apply.html")));
+app.get("/", (_, res) => res.redirect("/admin"));
 app.get("/onboarding", (_, res) => res.sendFile(join(__dirname, "embed", "onboarding.html")));
 app.get("/admin", (_, res) => res.sendFile(join(__dirname, "embed", "admin.html")));
 app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.html")));
