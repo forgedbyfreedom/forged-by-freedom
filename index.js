@@ -1541,6 +1541,8 @@ app.post("/api/leads", async (req, res) => {
     // Email notification to coach for every new lead
     const coachEmail = process.env.COACH_EMAIL || "forgedbyfreedom@proton.me";
     if (emailTransporter) {
+      const approveUrl = `${APP_URL}/api/leads/${data.id}/approve?key=${process.env.ADMIN_KEY}`;
+      const adminUrl = `${APP_URL}/admin`;
       emailTransporter.sendMail({
         from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
         to: coachEmail,
@@ -1556,10 +1558,210 @@ app.post("/api/leads", async (req, res) => {
               <tr><td style="padding:8px 0;color:#999;">Commitment</td><td style="color:#fff;">${commitment_level || 'Not specified'}</td></tr>
               <tr><td style="padding:8px 0;color:#999;">Submitted</td><td style="color:#fff;">${new Date().toLocaleString()}</td></tr>
             </table>
+            <div style="text-align:center;margin:28px 0 12px;">
+              <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;margin:0 8px;">✓ Approve & Send Onboarding</a>
+            </div>
+            <p style="text-align:center;margin:0;"><a href="${adminUrl}" style="color:#FF6A00;font-size:13px;">Open Admin Panel</a></p>
           </div>
         `,
       }).catch(err => console.error("[LEADS] Coach email error:", err.message));
     }
+
+    // Generate program from application data and email to Bryan for review
+    // Do this async — don't block the response
+    (async () => {
+      try {
+        console.log(`[PROGRAM] Generating default program for new lead: ${name}`);
+        const program = await generateProgramFromApplication({ name, email, primary_goal, commitment_level, struggle_duration, what_held_back });
+        const programHtml = formatProgramHTML(program, name);
+
+        // Save to generated_programs
+        const { data: saved, error: saveErr } = await supabase.from("generated_programs").insert({
+          lead_id: data.id,
+          client_name: name,
+          client_email: email,
+          training_program: program.training_program,
+          nutrition_plan: program.nutrition_plan,
+          supplement_protocol: program.supplement_protocol,
+          cardio_protocol: program.cardio_protocol,
+          metabolic_monitoring: program.metabolic_monitoring,
+          recovery: program.recovery || null,
+          plan_at_a_glance: program.plan_at_a_glance || null,
+          program_html: programHtml,
+          ai_model_used: "claude-sonnet-4-6",
+          status: "pending_review"
+        }).select().single();
+
+        if (saveErr) throw new Error(saveErr.message);
+
+        // Email Bryan with full program + application answers for review
+        const approveUrl = `${APP_URL}/api/programs/${saved.id}/approve?key=${process.env.ADMIN_KEY}`;
+        const denyUrl = `${APP_URL}/api/programs/${saved.id}/deny?key=${process.env.ADMIN_KEY}`;
+        const previewUrl = `${APP_URL}/api/programs/${saved.id}/preview?key=${process.env.ADMIN_KEY}`;
+        const tp = program.training_program || {};
+        const np = program.nutrition_plan || {};
+        const spArr = Array.isArray(program.supplement_protocol) ? program.supplement_protocol : [];
+        const cardioP = program.cardio_protocol || {};
+        const pag = program.plan_at_a_glance || {};
+
+        // Build training days HTML
+        let trainingEmailHTML = "";
+        if (tp.days) {
+          for (const [dayName, exercises] of Object.entries(tp.days)) {
+            trainingEmailHTML += `<h3 style="color:#ff6a00;margin:20px 0 10px;font-size:15px;border-bottom:1px solid #2a2a2a;padding-bottom:6px;">${dayName}</h3>
+            <table style="width:100%;border-collapse:collapse;">
+              <tr style="background:#1c1c1c;color:#999;font-size:11px;text-transform:uppercase;">
+                <th style="padding:6px 8px;text-align:left;">Exercise</th>
+                <th style="padding:6px 4px;text-align:center;">Sets</th>
+                <th style="padding:6px 4px;text-align:center;">Reps</th>
+                <th style="padding:6px 4px;text-align:center;">Tempo</th>
+                <th style="padding:6px 4px;text-align:center;">RIR</th>
+                <th style="padding:6px 4px;text-align:center;">Rest</th>
+              </tr>`;
+            if (Array.isArray(exercises)) {
+              for (const ex of exercises) {
+                trainingEmailHTML += `<tr style="border-bottom:1px solid #1c1c1c;">
+                  <td style="padding:7px 8px;color:#e8e8e8;font-weight:500;">${ex.exercise}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.sets}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.reps}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.tempo || "—"}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.rir}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.rest}</td>
+                </tr>
+                ${ex.notes ? `<tr><td colspan="6" style="padding:2px 8px 8px;color:#888;font-size:12px;font-style:italic;">↳ ${ex.notes}</td></tr>` : ""}`;
+              }
+            }
+            trainingEmailHTML += "</table>";
+          }
+        }
+
+        // Build meals HTML
+        const mealsEmailHTML = (np.meal_plan || []).map(m => `
+          <tr style="border-bottom:1px solid #1c1c1c;">
+            <td style="padding:7px 8px;color:#e8e8e8;">${m.name}</td>
+            <td style="padding:7px 4px;text-align:center;color:#ff6a00;font-weight:600;">${m.protein_g}g</td>
+            <td style="padding:7px 4px;text-align:center;color:#aaa;">${m.carbs_g}g</td>
+            <td style="padding:7px 4px;text-align:center;color:#aaa;">${m.fat_g}g</td>
+            <td style="padding:7px 4px;text-align:center;color:#aaa;">${m.calories}</td>
+          </tr>`).join("");
+
+        // Build supps HTML
+        const suppsEmailHTML = spArr.map(s => `
+          <tr style="border-bottom:1px solid #1c1c1c;">
+            <td style="padding:7px 8px;color:#e8e8e8;">${s.name}</td>
+            <td style="padding:7px 4px;text-align:center;color:#ff6a00;">${s.dose}</td>
+            <td style="padding:7px 8px;color:#aaa;">${s.timing}</td>
+          </tr>`).join("");
+
+        const ss = 'background:#141414;border:1px solid #2a2a2a;border-radius:10px;padding:18px;margin-bottom:18px;';
+        const st = 'color:#ff6a00;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;';
+
+        if (emailTransporter) {
+          await emailTransporter.sendMail({
+            from: `"FBF Programs" <${process.env.SMTP_USER}>`,
+            to: process.env.COACH_EMAIL || "forgedbyfreedom@proton.me",
+            subject: `Program Ready for Review: ${name}`,
+            html: `
+              <div style="font-family:Arial,sans-serif;max-width:800px;margin:0 auto;padding:24px 20px;background:#0a0a0a;color:#e8e8e8;">
+                <h1 style="color:#FF6A00;font-size:18px;margin-bottom:4px;">FORGED BY FREEDOM</h1>
+                <h2 style="color:#e8e8e8;font-size:15px;margin:0 0 20px;font-weight:400;">Program Review — ${name}</h2>
+
+                <div style="${ss}">
+                  <p style="${st}">Client Application Answers</p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr><td style="padding:5px 0;color:#999;width:160px;">Name</td><td style="color:#fff;font-weight:bold;">${name}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Email</td><td style="color:#fff;">${email}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Phone</td><td style="color:#fff;">${phone || "Not provided"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Primary Goal</td><td style="color:#fff;">${primary_goal || "Not specified"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Commitment</td><td style="color:#fff;">${commitment_level}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Struggle Duration</td><td style="color:#fff;">${struggle_duration || "Not specified"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">What Held Them Back</td><td style="color:#fff;">${what_held_back || "Not specified"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Referred By</td><td style="color:#fff;">${referral_source || "Not specified"}</td></tr>
+                  </table>
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Program: ${pag.program_name || "FBF Default Program"}</p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr><td style="padding:5px 0;color:#999;width:160px;">Split</td><td style="color:#fff;">${pag.split || "Upper/Lower A/B/C/D Rotating"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Duration</td><td style="color:#fff;">${pag.duration || "4 weeks + 1 deload"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Training Macros</td><td style="color:#fff;">${np.training_day_macros?.calories || np.daily_calories} cal / ${np.training_day_macros?.protein_g || np.protein_g}g P / ${np.training_day_macros?.carbs_g || np.carbs_g}g C / ${np.training_day_macros?.fat_g || np.fat_g}g F</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Active Rest Macros</td><td style="color:#fff;">${np.rest_day_macros?.calories} cal / ${np.rest_day_macros?.protein_g}g P / ${np.rest_day_macros?.carbs_g}g C / ${np.rest_day_macros?.fat_g}g F</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Adjustments Made</td><td style="color:#fff;">${pag.key_adjustments || "Standard FBF default"}</td></tr>
+                  </table>
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Training Program — 4-Day A/B/C/D Rotating Split</p>
+                  ${trainingEmailHTML}
+                  <div style="margin-top:14px;padding:10px;background:#1c1c1c;border-radius:6px;">
+                    <span style="color:#999;font-size:11px;text-transform:uppercase;">Progression: </span><span style="color:#aaa;font-size:12px;">${tp.progression || ""}</span>
+                  </div>
+                  <div style="margin-top:8px;padding:10px;background:#1c1c1c;border-radius:6px;">
+                    <span style="color:#999;font-size:11px;text-transform:uppercase;">Deload (Week 5): </span><span style="color:#aaa;font-size:12px;">${tp.deload || ""}</span>
+                  </div>
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Nutrition Plan</p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr style="background:#1c1c1c;color:#999;font-size:11px;text-transform:uppercase;">
+                      <th style="padding:6px 8px;text-align:left;">Meal</th>
+                      <th style="padding:6px 4px;text-align:center;">Protein</th>
+                      <th style="padding:6px 4px;text-align:center;">Carbs</th>
+                      <th style="padding:6px 4px;text-align:center;">Fat</th>
+                      <th style="padding:6px 4px;text-align:center;">Cal</th>
+                    </tr>
+                    ${mealsEmailHTML}
+                  </table>
+                  ${np.food_notes ? `<p style="color:#888;font-size:12px;margin:10px 0 0;">${np.food_notes}</p>` : ""}
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Cardio Protocol</p>
+                  <p style="margin:0 0 6px;"><strong>Daily:</strong> ${cardioP.daily || "30 min incline treadmill walk"}</p>
+                  <p style="margin:0;">${cardioP.weekend || "30-60 min outdoor activity on weekends"}</p>
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Supplement Protocol</p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr style="background:#1c1c1c;color:#999;font-size:11px;text-transform:uppercase;">
+                      <th style="padding:6px 8px;text-align:left;">Supplement</th>
+                      <th style="padding:6px 4px;text-align:center;">Dose</th>
+                      <th style="padding:6px 8px;text-align:left;">Timing</th>
+                    </tr>
+                    ${suppsEmailHTML}
+                  </table>
+                </div>
+
+                <div style="text-align:center;margin:28px 0 16px;">
+                  <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px;margin:0 6px;">✓ Approve & Send to Client</a>
+                  <a href="${denyUrl}" style="display:inline-block;background:#ef4444;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px;margin:0 6px;">✗ Deny</a>
+                </div>
+                <p style="text-align:center;margin:0;"><a href="${previewUrl}" style="color:#FF6A00;font-size:13px;">View full branded preview</a></p>
+              </div>
+            `,
+          });
+          console.log(`[PROGRAM] Review email sent to coach for ${name}`);
+        }
+
+        // ntfy notification
+        fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+          method: "POST",
+          headers: { "Title": `Program Ready: ${name}`, "Priority": "default", "Tags": "white_check_mark" },
+          body: `Program generated from application. Goal: ${primary_goal}. Adjustments: ${keyAdj}\n\nPreview: ${previewUrl}`
+        }).catch(() => {});
+
+      } catch (err) {
+        console.error(`[PROGRAM] Auto-generation failed for ${name}:`, err.message);
+        fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+          method: "POST",
+          headers: { "Title": `Program Gen Failed: ${name}`, "Priority": "high", "Tags": "warning" },
+          body: `Error: ${err.message}`
+        }).catch(() => {});
+      }
+    })();
 
     // Bridge to dashboard — create client + send intake form automatically
     const dashboardUrl = process.env.DASHBOARD_URL || "https://fbf-dashboard.vercel.app";
@@ -1749,6 +1951,53 @@ app.patch("/api/leads/:id/status", async (req, res) => {
     res.json({ status: "ok" });
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/leads/:id/approve — one-click approve from email
+app.get("/api/leads/:id/approve", async (req, res) => {
+  if (req.query.key !== process.env.ADMIN_KEY) {
+    return res.status(401).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">Unauthorized</body></html>`);
+  }
+  if (!supabase) return res.status(503).send("Not configured");
+
+  try {
+    const { data: lead, error: fetchErr } = await db
+      .from("leads").select("id, name, email, status").eq("id", req.params.id).single();
+
+    if (fetchErr || !lead) return res.status(404).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">Lead not found</body></html>`);
+
+    if (lead.status === "approved") {
+      return res.send(`<html><body style="background:#0a0a0a;color:#22c55e;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">✓ ${lead.name} was already approved</body></html>`);
+    }
+
+    const { error } = await db.from("leads").update({ status: "approved" }).eq("id", req.params.id);
+    if (error) return res.status(500).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;padding:40px;font-family:Arial;">Error: ${error.message}</body></html>`);
+
+    // Send onboarding email to client
+    if (emailTransporter && lead.email) {
+      const onboardingUrl = `${APP_URL}/onboarding?token=${lead.id}`;
+      emailTransporter.sendMail({
+        from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+        to: lead.email,
+        subject: "You're In — Complete Your Onboarding",
+        html: `
+          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;">
+            <h2 style="color:#FF6A00;">Welcome to Forged by Freedom, ${lead.name}!</h2>
+            <p>Your application has been approved. Complete your onboarding to get your custom program:</p>
+            <div style="text-align:center;margin:30px 0;">
+              <a href="${onboardingUrl}" style="display:inline-block;background:#FF6A00;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;">Complete Onboarding</a>
+            </div>
+            <p style="color:#666;font-size:13px;">This link is unique to you. Once you complete the intake form, Coach Bryan will build your personalized program.</p>
+          </div>
+        `,
+      }).catch(err => console.error(`[LEADS] Approval email failed:`, err.message));
+    }
+
+    console.log(`[LEADS] One-click approved: ${lead.name} (${lead.id})`);
+    res.send(`<html><body style="background:#0a0a0a;color:#22c55e;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;text-align:center;">✓ ${lead.name} approved!<br><span style="font-size:14px;color:#aaa;display:block;margin-top:12px;">Onboarding email sent to ${lead.email}</span></body></html>`);
+  } catch (err) {
+    res.status(500).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;padding:40px;">Error: ${err.message}</body></html>`);
   }
 });
 
@@ -3527,6 +3776,153 @@ RECOVERY:
 - Mention any recovery modalities they already use (sauna, cold plunge, etc.)
 - Weekly self-assessment: energy, performance, soreness, motivation
 `;
+
+// ─── Generate Program from Application Data Only (no intake form needed) ───
+async function generateProgramFromApplication(lead) {
+  const isMale = true; // default until we know — adjust via goal signals
+  const calorieTarget = isMale ? 2400 : 1800;
+  const proteinTarget = isMale ? 210 : 140;
+  const carbTarget = isMale ? 260 : 180;
+  const fatTarget = isMale ? 65 : 55;
+  const waterTarget = isMale ? 100 : 80;
+
+  const prompt = `You are Coach Bryan's programming engine for Forged by Freedom.
+
+A new client just applied. Use the FBF Default Program as the base and modify it to fit their goal, limitations, and what held them back.
+
+CLIENT APPLICATION DATA:
+Name: ${lead.name}
+Primary Goal: ${lead.primary_goal || "Body recomposition"}
+Commitment: ${lead.commitment_level}
+Struggle Duration: ${lead.struggle_duration || "Unknown"}
+What Held Them Back: ${lead.what_held_back || "Not specified"}
+
+FBF DEFAULT PROGRAM (use this as the base — only modify what the client's situation requires):
+
+WORKOUT — 4-Day Upper/Lower Rotating Split (A/B/C/D — NOT assigned to specific days of the week):
+- Day A: Upper Push — Chest, Shoulders, Triceps (DB pressing over barbell, machines OK)
+- Day B: Lower Quad Focus — Leg press, hack squat, leg extension, lunges, calves
+- Day C: Upper Pull — Back, Biceps — Lat pulldowns, rows, rear delts, curls
+- Day D: Lower Posterior — RDLs, leg curls, hip thrusts, Bulgarian split squat, calves
+Each day: 5-6 exercises max. Compound: 3-4 sets. Isolation: 2-3 sets. RIR 2-3.
+Progressive overload: when client hits top of rep range all sets → add 2.5-5 lbs.
+
+NUTRITION DEFAULTS:
+Calories: ${calorieTarget} | Protein: ${proteinTarget}g | Carbs: ${carbTarget}g | Fat: ${fatTarget}g | Water: ${waterTarget}oz | Steps: 10,000/day
+
+MEAL PLAN (5 meals):
+1. Protein Oatmeal Bowl (breakfast)
+2. Chicken & Rice Bowl (lunch)
+3. Greek Yogurt & Berries (snack)
+4. Salmon & Sweet Potato (dinner)
+5. Protein Shake (snack)
+
+CARDIO:
+Daily: 30 min incline treadmill walk (10-12% grade, 3.0-3.5 mph) — fasted or post-workout
+Weekend: 30-60 min outdoor activity
+
+SUPPLEMENTS (standard):
+- Creatine Monohydrate 5g (morning)
+- Fish Oil EPA/DHA 2g (with breakfast)
+- Vitamin D3 5000 IU (with a meal)
+- Magnesium Glycinate 400mg (before bed)
+- Zinc 30mg (before bed)
+- Ashwagandha KSM-66 600mg (morning)
+
+RULES:
+- NEVER say "Rest Day" — always say "Active Rest"
+- NEVER use "dumbbell deadlifts" — barbell or trap bar only for deadlifts
+- ALWAYS use dumbbells for pressing movements (DB bench, DB incline, DB OHP)
+- ALWAYS use barbells for compound pulls/legs (deadlift, squat, row, RDL)
+- Keep the default structure unless the client's goal explicitly requires a change
+- Adjust calories/macros if goal is athletic performance (add ~200 cal, more carbs) or fat loss (subtract ~300 cal)
+- If accountability/consistency was the issue, add a note about daily check-in and tracking
+
+${FBF_PROGRAMMING_RULES}
+
+IMPORTANT: Output valid JSON only. No markdown, no explanation.
+
+Generate the program in this exact JSON structure:
+{
+  "plan_at_a_glance": {
+    "program_name": "string",
+    "duration": "4 weeks + 1 deload",
+    "training_days": 4,
+    "split": "Upper/Lower A/B/C/D Rotating",
+    "primary_goal": "string",
+    "key_adjustments": "string — what you changed from the default and why"
+  },
+  "training_program": {
+    "days": {
+      "Day A - Upper Push": [{"exercise":"string","sets":3,"reps":"8-12","rest":"90s","tempo":"3-1-1-0","rir":2,"notes":"string"}],
+      "Day B - Lower Quad": [...],
+      "Day C - Upper Pull": [...],
+      "Day D - Lower Posterior": [...]
+    },
+    "progression": "string",
+    "deload": "Week 5: reduce volume 40-50%, maintain intensity"
+  },
+  "nutrition_plan": {
+    "daily_calories": ${calorieTarget},
+    "protein_g": ${proteinTarget},
+    "carbs_g": ${carbTarget},
+    "fat_g": ${fatTarget},
+    "water_oz": ${waterTarget},
+    "steps": 10000,
+    "training_day_macros": {"calories":"number","protein_g":"number","carbs_g":"number","fat_g":"number"},
+    "rest_day_macros": {"calories":"number","protein_g":"number","carbs_g":"number","fat_g":"number"},
+    "meal_plan": [
+      {"meal":"Meal 1 - Breakfast","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
+      {"meal":"Meal 2 - Lunch","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
+      {"meal":"Meal 3 - Snack","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
+      {"meal":"Meal 4 - Dinner","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
+      {"meal":"Meal 5 - Snack","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"}
+    ],
+    "food_notes": "string"
+  },
+  "cardio_protocol": {
+    "daily": "30 min incline treadmill walk — 10-12% grade, 3.0-3.5 mph, fasted or post-workout",
+    "weekend": "30-60 min outdoor activity (walk, hike, bike)",
+    "notes": "string"
+  },
+  "supplement_protocol": [
+    {"name":"Creatine Monohydrate","dose":"5g","timing":"Morning","notes":"string"},
+    {"name":"Fish Oil EPA/DHA","dose":"2g","timing":"With breakfast","notes":"string"},
+    {"name":"Vitamin D3","dose":"5000 IU","timing":"With a meal","notes":"string"},
+    {"name":"Magnesium Glycinate","dose":"400mg","timing":"Before bed","notes":"string"},
+    {"name":"Zinc","dose":"30mg","timing":"Before bed","notes":"string"},
+    {"name":"Ashwagandha KSM-66","dose":"600mg","timing":"Morning","notes":"string"}
+  ],
+  "metabolic_monitoring": {
+    "daily_temp": "Track oral body temp upon waking (before food/drink/movement). 97.8-98.6°F = optimal. 97.3-97.7°F = mild slowdown, add 50-75g carbs. Below 97.3°F 3+ days = mandatory refeed (+100-150g carbs 1-2 days).",
+    "track_daily": ["Weight","Body temperature","Sleep quality","Energy (1-10)","Mood (1-10)","Stress (1-10)"],
+    "check_in": "Daily check-in via FBF app — this is non-negotiable"
+  },
+  "recovery": "string",
+  "recovery": "string — recovery recommendations for this client"
+}`;
+
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": process.env.ANTHROPIC_API_KEY,
+      "anthropic-version": "2023-06-01",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-6",
+      max_tokens: 8000,
+      messages: [{ role: "user", content: prompt }]
+    })
+  });
+
+  if (!response.ok) throw new Error(`Anthropic error: ${response.status}`);
+  const data = await response.json();
+  let raw = data.content?.[0]?.text || "";
+  const jsonMatch = raw.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) throw new Error("No JSON in response");
+  return JSON.parse(jsonMatch[0]);
+}
 
 // ─── Program Generation via AI ───────────────────────────
 async function generateProgram(intake, lead) {
