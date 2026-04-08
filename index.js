@@ -3786,9 +3786,9 @@ async function generateProgramFromApplication(lead) {
   const fatTarget = isMale ? 65 : 55;
   const waterTarget = isMale ? 100 : 80;
 
-  const prompt = `You are Coach Bryan's programming engine for Forged by Freedom.
+  const prompt = `You are Coach Bryan's programming engine for Forged by Freedom. Coach Bryan is a former elite NCAA athlete. His standard is elite execution.
 
-A new client just applied. Use the FBF Default Program as the base and modify it to fit their goal, limitations, and what held them back.
+A new client just applied. Use the FBF Default Program as the base. Only modify nutrition targets, exercise notes, and specific substitutions if the client has injuries or limitations. Do not invent a different split.
 
 CLIENT APPLICATION DATA:
 Name: ${lead.name}
@@ -3797,70 +3797,71 @@ Commitment: ${lead.commitment_level}
 Struggle Duration: ${lead.struggle_duration || "Unknown"}
 What Held Them Back: ${lead.what_held_back || "Not specified"}
 
-FBF DEFAULT PROGRAM (use this as the base — only modify what the client's situation requires):
+FBF DEFAULT PROGRAM — USE THIS EXACTLY:
 
-WORKOUT — 4-Day Upper/Lower Rotating Split (A/B/C/D — NOT assigned to specific days of the week):
-- Day A: Upper Push — Chest, Shoulders, Triceps (DB pressing over barbell, machines OK)
-- Day B: Lower Quad Focus — Leg press, hack squat, leg extension, lunges, calves
-- Day C: Upper Pull — Back, Biceps — Lat pulldowns, rows, rear delts, curls
-- Day D: Lower Posterior — RDLs, leg curls, hip thrusts, Bulgarian split squat, calves
-Each day: 5-6 exercises max. Compound: 3-4 sets. Isolation: 2-3 sets. RIR 2-3.
-Progressive overload: when client hits top of rep range all sets → add 2.5-5 lbs.
+SPLIT: A/B/C/D rotating. Train minimum 5 business days per week. One optional weekend day. Active Rest on the other weekend day (or both). Days rotate continuously and are NOT tied to specific weekdays.
+- Day A: Chest and Triceps
+- Day B: Legs
+- Day C: Shoulders
+- Day D: Back and Biceps
 
-NUTRITION DEFAULTS:
-Calories: ${calorieTarget} | Protein: ${proteinTarget}g | Carbs: ${carbTarget}g | Fat: ${fatTarget}g | Water: ${waterTarget}oz | Steps: 10,000/day
+TRAINING RULES (non-negotiable):
+- ALL bench presses and shoulder presses: DUMBBELLS ONLY. No barbell bench. No barbell OHP.
+- Barbells only for: deadlifts, squats, RDLs, barbell rows
+- Mind-muscle connection over ego weight. Full ROM. 3-second eccentric on every rep.
+- Tempo 3-1-1-0 on all pressing and pulling movements.
+- 5-6 exercises per day MAX. Compound 3-4 sets. Isolation 2-3 sets. RIR 2-3.
+- Progressive overload: add weight only when all sets hit top of rep range at RIR 2 or better. Log every session.
+- NEVER say Rest Day. Always say Active Rest.
+- Elite NCAA athlete standard. Show up. Execute. Log it.
 
-MEAL PLAN (5 meals):
-1. Protein Oatmeal Bowl (breakfast)
-2. Chicken & Rice Bowl (lunch)
-3. Greek Yogurt & Berries (snack)
-4. Salmon & Sweet Potato (dinner)
-5. Protein Shake (snack)
+EXERCISE BASE (use these):
+Day A Chest and Triceps: DB Flat Bench Press, DB Incline Press, Cable Fly, Tricep Rope Pushdown, Overhead Tricep Extension
+Day B Legs: Barbell Back Squat, Romanian Deadlift, Leg Extension, Leg Curl, DB Walking Lunge, Standing Calf Raise
+Day C Shoulders: DB Overhead Press seated, DB Lateral Raise, Cable Front Raise, Rear Delt Fly cable, Face Pull, DB Shrug
+Day D Back and Biceps: Barbell Row, Lat Pulldown wide grip, Seated Cable Row, DB Hammer Curl, DB Bicep Curl
 
-CARDIO:
-Daily: 30 min incline treadmill walk (10-12% grade, 3.0-3.5 mph) — fasted or post-workout
-Weekend: 30-60 min outdoor activity
+NUTRITION: Protein-focused. Net zero to 250 calorie deficit.
+Men: ~${calorieTarget} cal / ${proteinTarget}g protein / ${carbTarget}g carbs / ${fatTarget}g fat / ${waterTarget}oz water / 10000 steps
+Women: ~1800 cal / 150g protein / 180g carbs / 55g fat / 80oz water / 10000 steps
+Adjust based on goal. Protein stays at 0.9-1.1g per lb bodyweight.
+
+5 meals per day: Protein Oatmeal Bowl, Chicken and Rice Bowl, Greek Yogurt and Berries, Salmon and Sweet Potato, Protein Shake
+
+CARDIO: 30 min incline treadmill walk daily, 10-12 percent grade, 3.0-3.5 mph, fasted or post-workout
+Active Rest day: 30-60 min outdoor activity
 
 SUPPLEMENTS (standard):
-- Creatine Monohydrate 5g (morning)
-- Fish Oil EPA/DHA 2g (with breakfast)
-- Vitamin D3 5000 IU (with a meal)
-- Magnesium Glycinate 400mg (before bed)
-- Zinc 30mg (before bed)
-- Ashwagandha KSM-66 600mg (morning)
+Creatine Monohydrate 5g morning, Fish Oil 2g with breakfast, Vitamin D3 5000IU with a meal, Magnesium Glycinate 400mg before bed, Zinc 30mg before bed, Ashwagandha KSM-66 600mg morning
 
-RULES:
-- NEVER say "Rest Day" — always say "Active Rest"
-- NEVER use "dumbbell deadlifts" — barbell or trap bar only for deadlifts
-- ALWAYS use dumbbells for pressing movements (DB bench, DB incline, DB OHP)
-- ALWAYS use barbells for compound pulls/legs (deadlift, squat, row, RDL)
-- Keep the default structure unless the client's goal explicitly requires a change
-- Adjust calories/macros if goal is athletic performance (add ~200 cal, more carbs) or fat loss (subtract ~300 cal)
-- If accountability/consistency was the issue, add a note about daily check-in and tracking
+PEPTIDE RECOMMENDATIONS (always include):
+Retatrutide: strongly recommend for body recomposition and performance. Multi-receptor GLP-1 GIP Glucagon agonist. Discuss with physician.
+MoTS-C: mitochondrial peptide for energy, fat metabolism, and performance. Stack with Reta. Discuss with physician.
 
-${FBF_PROGRAMMING_RULES}
+ASSESSMENTS (always include):
+InBody scan at gym front desk. Baseline today, repeat monthly on same date.
+Before photo today. Monthly progress photos same day same lighting same position.
 
-IMPORTANT: Output valid JSON only. No markdown, no explanation.
+IMPORTANT: Output valid JSON only. No markdown.
 
-Generate the program in this exact JSON structure:
 {
   "plan_at_a_glance": {
     "program_name": "string",
-    "duration": "4 weeks + 1 deload",
-    "training_days": 4,
-    "split": "Upper/Lower A/B/C/D Rotating",
+    "split": "A/B/C/D Rotating: Chest-Tris / Legs / Shoulders / Back-Bis",
+    "training_days": "Minimum 5 business days per week, optional weekend day, Active Rest on remaining day",
     "primary_goal": "string",
-    "key_adjustments": "string — what you changed from the default and why"
+    "key_adjustments": "string — only what was changed from the default for this specific client"
   },
   "training_program": {
+    "schedule": "Rotate A to B to C to D continuously. Minimum 5 business days per week. One optional weekend workout. Active Rest on remaining weekend day.",
     "days": {
-      "Day A - Upper Push": [{"exercise":"string","sets":3,"reps":"8-12","rest":"90s","tempo":"3-1-1-0","rir":2,"notes":"string"}],
-      "Day B - Lower Quad": [...],
-      "Day C - Upper Pull": [...],
-      "Day D - Lower Posterior": [...]
+      "Day A - Chest and Triceps": [{"exercise":"string","sets":4,"reps":"8-12","rest":"90s","tempo":"3-1-1-0","rir":2,"notes":"string — mind-muscle cues"}],
+      "Day B - Legs": [{"exercise":"string","sets":4,"reps":"8-12","rest":"90s","tempo":"3-1-1-0","rir":2,"notes":"string"}],
+      "Day C - Shoulders": [{"exercise":"string","sets":3,"reps":"10-15","rest":"90s","tempo":"3-1-1-0","rir":2,"notes":"string"}],
+      "Day D - Back and Biceps": [{"exercise":"string","sets":4,"reps":"8-12","rest":"90s","tempo":"3-1-1-0","rir":2,"notes":"string"}]
     },
     "progression": "string",
-    "deload": "Week 5: reduce volume 40-50%, maintain intensity"
+    "deload": "Week 5: reduce volume 40-50 percent, maintain weight. Non-negotiable."
   },
   "nutrition_plan": {
     "daily_calories": ${calorieTarget},
@@ -3869,20 +3870,21 @@ Generate the program in this exact JSON structure:
     "fat_g": ${fatTarget},
     "water_oz": ${waterTarget},
     "steps": 10000,
-    "training_day_macros": {"calories":"number","protein_g":"number","carbs_g":"number","fat_g":"number"},
-    "rest_day_macros": {"calories":"number","protein_g":"number","carbs_g":"number","fat_g":"number"},
+    "approach": "Protein-focused. Net zero to 250 calorie deficit.",
+    "training_day_macros": {"calories": ${calorieTarget}, "protein_g": ${proteinTarget}, "carbs_g": ${carbTarget}, "fat_g": ${fatTarget}},
+    "active_rest_day_macros": {"calories": ${calorieTarget - 200}, "protein_g": ${proteinTarget}, "carbs_g": ${carbTarget - 40}, "fat_g": ${fatTarget}},
     "meal_plan": [
-      {"meal":"Meal 1 - Breakfast","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
-      {"meal":"Meal 2 - Lunch","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
-      {"meal":"Meal 3 - Snack","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
-      {"meal":"Meal 4 - Dinner","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"},
-      {"meal":"Meal 5 - Snack","name":"string","foods":["string"],"protein_g":"number","carbs_g":"number","fat_g":"number","calories":"number"}
+      {"meal":"Meal 1 - Breakfast","name":"Protein Oatmeal Bowl","foods":["string"],"protein_g":0,"carbs_g":0,"fat_g":0,"calories":0},
+      {"meal":"Meal 2 - Lunch","name":"Chicken and Rice Bowl","foods":["string"],"protein_g":0,"carbs_g":0,"fat_g":0,"calories":0},
+      {"meal":"Meal 3 - Snack","name":"Greek Yogurt and Berries","foods":["string"],"protein_g":0,"carbs_g":0,"fat_g":0,"calories":0},
+      {"meal":"Meal 4 - Dinner","name":"Salmon and Sweet Potato","foods":["string"],"protein_g":0,"carbs_g":0,"fat_g":0,"calories":0},
+      {"meal":"Meal 5 - Snack","name":"Protein Shake","foods":["string"],"protein_g":0,"carbs_g":0,"fat_g":0,"calories":0}
     ],
     "food_notes": "string"
   },
   "cardio_protocol": {
-    "daily": "30 min incline treadmill walk — 10-12% grade, 3.0-3.5 mph, fasted or post-workout",
-    "weekend": "30-60 min outdoor activity (walk, hike, bike)",
+    "daily": "30 min incline treadmill walk, 10-12 percent grade, 3.0-3.5 mph, fasted or post-workout",
+    "active_rest_day": "30-60 min outdoor activity such as walk hike bike or recreational sport",
     "notes": "string"
   },
   "supplement_protocol": [
@@ -3893,13 +3895,20 @@ Generate the program in this exact JSON structure:
     {"name":"Zinc","dose":"30mg","timing":"Before bed","notes":"string"},
     {"name":"Ashwagandha KSM-66","dose":"600mg","timing":"Morning","notes":"string"}
   ],
-  "metabolic_monitoring": {
-    "daily_temp": "Track oral body temp upon waking (before food/drink/movement). 97.8-98.6°F = optimal. 97.3-97.7°F = mild slowdown, add 50-75g carbs. Below 97.3°F 3+ days = mandatory refeed (+100-150g carbs 1-2 days).",
-    "track_daily": ["Weight","Body temperature","Sleep quality","Energy (1-10)","Mood (1-10)","Stress (1-10)"],
-    "check_in": "Daily check-in via FBF app — this is non-negotiable"
+  "peptide_recommendations": [
+    {"compound":"Retatrutide","recommendation":"string — why it fits this client","discuss_with":"physician"},
+    {"compound":"MoTS-C","recommendation":"string — why it fits this client","discuss_with":"physician"}
+  ],
+  "assessments": {
+    "inbody": "InBody scan at gym front desk. Baseline today, repeat monthly on same date.",
+    "progress_photos": "Before photo today. Monthly progress photos same day same lighting same position front side back."
   },
-  "recovery": "string",
-  "recovery": "string — recovery recommendations for this client"
+  "metabolic_monitoring": {
+    "daily_temp": "Oral temp upon waking before food drink or movement. 97.8-98.6F optimal. 97.3-97.7F add 50-75g carbs. Below 97.3F for 3 or more consecutive days triggers mandatory refeed adding 100-150g carbs for 1-2 days.",
+    "track_daily": ["Weight morning post-bathroom","Body temperature","Sleep quality 1-10","Energy 1-10","Mood 1-10","Stress 1-10"],
+    "check_in": "Daily FBF app check-in is non-negotiable."
+  },
+  "recovery": "string"
 }`;
 
   const response = await fetch("https://api.anthropic.com/v1/messages", {
