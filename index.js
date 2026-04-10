@@ -6162,8 +6162,6 @@ app.post("/api/garmin/import", async (req, res) => {
   }
 });
 
-// 404 + Error handler
-app.use((_, res) => res.status(404).json({ error: "Not found" }));
 // ─── LINKEDIN INTEGRATION ────────────────────────────────────
 // Step 1: Redirect user to LinkedIn OAuth consent screen
 app.get("/api/linkedin/auth", (req, res) => {
@@ -6387,6 +6385,9 @@ Help him with anything — writing, business decisions, code questions, scheduli
     await sendTelegram(chatId, "Sorry, something went wrong. Try again.");
   }
 });
+
+// 404 handler
+app.use((_, res) => res.status(404).json({ error: "Not found" }));
 
 app.use((err, _, res, __) => {
   console.error("[ERROR]", err);
