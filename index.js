@@ -6325,6 +6325,69 @@ app.get("/api/linkedin/status", async (req, res) => {
   res.json({ connected: !!linkedinAccessToken, person_urn: linkedinPersonUrn || null });
 });
 
+// ─── Telegram Bot ────────────────────────────────────────────
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const telegramSessions = new Map(); // chat_id → message history
+
+async function sendTelegram(chatId, text) {
+  await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text, parse_mode: "Markdown" }),
+  });
+}
+
+app.post("/telegram", async (req, res) => {
+  res.sendStatus(200); // ACK immediately so Telegram doesn't retry
+
+  if (!TELEGRAM_BOT_TOKEN) return;
+
+  const update = req.body;
+  const msg = update?.message || update?.edited_message;
+  if (!msg?.text) return;
+
+  const chatId = msg.chat.id;
+  const userText = msg.text;
+
+  // Build or retrieve conversation history for this chat
+  if (!telegramSessions.has(chatId)) {
+    telegramSessions.set(chatId, []);
+  }
+  const history = telegramSessions.get(chatId);
+  history.push({ role: "user", content: userText });
+
+  // Keep last 20 messages to stay within token limits
+  if (history.length > 20) history.splice(0, history.length - 20);
+
+  const messages = [
+    {
+      role: "system",
+      content: `You are Claude, Bryan Antonelli's personal AI assistant accessible via Telegram. Be concise and direct — this is a mobile chat interface.
+
+Bryan's businesses:
+- Forged by Freedom (FBF) — fitness coaching app, forgedbyfreedom.org
+- Tropics N Trails (TNT) — travel platform
+- Tropics After Dark (TAD) — adults-only travel
+- Lake Murray Navigator — free boating nav app for Lake Murray SC
+- SCDC Intel Tool — law enforcement link analysis tool
+
+Bryan is a 25-year federal corrections veteran (BOP Senior Deputy Regional Director). He's also writing a leadership book: "Leadership Field Manual for Correctional Professionals" (2nd Edition).
+
+Help him with anything — writing, business decisions, code questions, scheduling, analysis. Keep responses brief for mobile unless he asks for detail.`
+    },
+    ...history
+  ];
+
+  try {
+    const reply = await chat(messages, 0.7, 1500);
+    history.push({ role: "assistant", content: reply });
+    await sendTelegram(chatId, reply);
+  } catch (err) {
+    console.error("[Telegram] Error:", err.message);
+    await sendTelegram(chatId, "Sorry, something went wrong. Try again.");
+  }
+});
+
 app.use((err, _, res, __) => {
   console.error("[ERROR]", err);
   res.status(500).json({ error: "Internal server error" });
