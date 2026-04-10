@@ -6326,13 +6326,75 @@ app.get("/api/linkedin/status", async (req, res) => {
 // ─── Telegram Bot ────────────────────────────────────────────
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const telegramSessions = new Map(); // chat_id → message history
+let tgOffset = 0;
 
 async function sendTelegram(chatId, text) {
-  await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+  const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text, parse_mode: "Markdown" }),
+    body: JSON.stringify({ chat_id: chatId, text }),
   });
+  if (!res.ok) console.error("[Telegram] sendMessage failed:", await res.text());
+}
+
+async function handleTelegramMessage(msg) {
+  if (!msg?.text) return;
+  const chatId = msg.chat.id;
+  const userText = msg.text;
+
+  if (!telegramSessions.has(chatId)) telegramSessions.set(chatId, []);
+  const history = telegramSessions.get(chatId);
+  history.push({ role: "user", content: userText });
+  if (history.length > 20) history.splice(0, history.length - 20);
+
+  const messages = [
+    {
+      role: "system",
+      content: `You are Claude, Bryan Antonelli's personal AI assistant via Telegram. Be concise — this is mobile.
+
+Bryan's businesses: Forged by Freedom (FBF, fitness coaching), Tropics N Trails (travel), Tropics After Dark (adults-only travel), Lake Murray Navigator (boating app), SCDC Intel Tool (law enforcement).
+Bryan is a 25-year federal corrections veteran (BOP Senior Deputy Regional Director) and writing "Leadership Field Manual for Correctional Professionals" 2nd Edition.
+Help with anything. Keep responses brief unless he asks for detail.`
+    },
+    ...history
+  ];
+
+  try {
+    const reply = await chat(messages, 0.7, 1500);
+    history.push({ role: "assistant", content: reply });
+    await sendTelegram(chatId, reply);
+  } catch (err) {
+    console.error("[Telegram] chat error:", err.message);
+    await sendTelegram(chatId, "Sorry, something went wrong. Try again.");
+  }
+}
+
+// Long polling — no webhook needed, works on Render free tier
+async function startTelegramPolling() {
+  if (!TELEGRAM_BOT_TOKEN) return;
+  // Delete any existing webhook so polling works
+  await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/deleteWebhook`).catch(() => {});
+  console.log("[Telegram] Polling started");
+
+  const poll = async () => {
+    try {
+      const res = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?offset=${tgOffset}&timeout=30&allowed_updates=["message"]`
+      );
+      const data = await res.json();
+      if (data.ok && data.result.length > 0) {
+        for (const update of data.result) {
+          tgOffset = update.update_id + 1;
+          handleTelegramMessage(update.message || update.edited_message).catch(console.error);
+        }
+      }
+    } catch (err) {
+      console.error("[Telegram] Poll error:", err.message);
+    }
+    setTimeout(poll, 1000);
+  };
+
+  poll();
 }
 
 app.post("/telegram", async (req, res) => {
@@ -6408,12 +6470,5 @@ process.on("SIGINT", () => shutdown("SIGINT"));
 server = app.listen(PORT, () => {
   console.log(`[FBF] Coach Bryan API :${PORT} (${CONFIG.isProd ? "prod" : "dev"})`);
   console.log(`[FBF] Model: ${"claude-sonnet-4-6"}`);
-
-  // Keep Render free tier awake — ping self every 10 minutes
-  if (CONFIG.isProd) {
-    setInterval(() => {
-      fetch(`https://forged-by-freedom-api-nm4f.onrender.com/health`)
-        .catch(() => {});
-    }, 10 * 60 * 1000);
-  }
+  startTelegramPolling();
 });
