@@ -6408,4 +6408,12 @@ process.on("SIGINT", () => shutdown("SIGINT"));
 server = app.listen(PORT, () => {
   console.log(`[FBF] Coach Bryan API :${PORT} (${CONFIG.isProd ? "prod" : "dev"})`);
   console.log(`[FBF] Model: ${"claude-sonnet-4-6"}`);
+
+  // Keep Render free tier awake — ping self every 10 minutes
+  if (CONFIG.isProd) {
+    setInterval(() => {
+      fetch(`https://forged-by-freedom-api-nm4f.onrender.com/health`)
+        .catch(() => {});
+    }, 10 * 60 * 1000);
+  }
 });
