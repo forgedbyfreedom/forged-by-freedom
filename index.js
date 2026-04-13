@@ -149,21 +149,48 @@ async function chat(messages, temperature = 0.7, maxTokens = 2500) {
 }
 
 async function embed(text) {
+  const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+
+  // Try OpenAI direct first (if key present), fall back to OpenRouter on quota/auth errors
+  if (OPENAI_API_KEY) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 30000);
+      try {
+        const res = await fetch("https://api.openai.com/v1/embeddings", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
+          signal: controller.signal
+        });
+        const data = await res.json();
+        if (res.status === 429 || res.status === 401) throw new Error(`openai_quota:${res.status}`);
+        if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
+        if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
+        return data.data[0].embedding;
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (err) {
+      if (!err.message.startsWith("openai_quota:")) throw err;
+      console.warn(`[embed] OpenAI quota hit (${err.message}), falling back to OpenRouter`);
+    }
+  }
+
+  // OpenRouter fallback
+  if (!OPENROUTER_API_KEY) throw new Error("No embedding provider available (set OPENAI_API_KEY or OPENROUTER_API_KEY)");
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30000);
   try {
-    const res = await fetch("https://api.openai.com/v1/embeddings", {
+    const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-        "Content-Type": "application/json"
-      },
+      headers: { Authorization: `Bearer ${OPENROUTER_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
       signal: controller.signal
     });
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
-    if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
+    if (!res.ok) throw new Error(data.error?.message || `OpenRouter embedding error: ${res.status}`);
+    if (!data?.data?.[0]?.embedding) throw new Error("OpenRouter embedding failed");
     return data.data[0].embedding;
   } finally {
     clearTimeout(timer);
@@ -1257,7 +1284,7 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 34746, words: 126592085, channels: 179, vectors: 100622, lastUpdated: null };
+let cachedStats = { transcripts: 34746, words: 257000000, channels: 179, vectors: 170000, lastUpdated: null };
 
 app.get("/stats", async (_, res) => {
   try {
