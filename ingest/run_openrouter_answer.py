@@ -103,22 +103,15 @@ def compile_patterns(terms: List[str]) -> List[re.Pattern]:
 # ==========================
 
 def embed_query(query: str) -> List[float]:
-    api_key = os.environ["OPENROUTER_API_KEY"]
-    url = f"{OPENROUTER_BASE_URL}/embeddings"
+    # Use OpenAI directly — OpenRouter does not support text-embedding-3-large
+    api_key = os.environ["OPENAI_API_KEY"]
+    url = "https://api.openai.com/v1/embeddings"
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-
-    referer = os.getenv("OPENROUTER_SITE_URL") or os.getenv("OPENROUTER_HTTP_REFERER") or os.getenv("HTTP_REFERER")
-    title = os.getenv("OPENROUTER_APP_NAME") or os.getenv("OPENROUTER_X_TITLE")
-    if referer:
-        headers["HTTP-Referer"] = referer
-    if title:
-        headers["X-Title"] = title
-
-    r = requests.post(url, headers=headers, json={"model": OPENROUTER_EMBED_MODEL, "input": query}, timeout=45)
+    r = requests.post(url, headers=headers, json={"model": "text-embedding-3-large", "input": query}, timeout=45)
     r.raise_for_status()
     emb = r.json()["data"][0]["embedding"]
     if not emb:
-        raise RuntimeError("OpenRouter embeddings returned empty embedding")
+        raise RuntimeError("OpenAI embeddings returned empty embedding")
     return emb
 
 # ==========================

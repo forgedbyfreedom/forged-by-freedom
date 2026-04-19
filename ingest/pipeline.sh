@@ -19,8 +19,11 @@ set +e  # Don't exit on errors — pipeline should always reach ingestion step
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Use venv Python (has dotenv, tiktoken, openai, pinecone installed)
-PYTHON="$SCRIPT_DIR/.venv/bin/python3"
-[ -x "$PYTHON" ] || PYTHON="python3"
+# Allow PYTHON to be overridden from the environment (e.g. for mlx_whisper)
+if [ -z "$PYTHON" ]; then
+    PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+    [ -x "$PYTHON" ] || PYTHON="python3"
+fi
 
 CHANNELS_DIR="$SCRIPT_DIR/channels"
 LOG_DIR="$SCRIPT_DIR/logs"
@@ -45,6 +48,19 @@ export PATH="$HOME/Library/Python/3.12/bin:$PATH:/opt/homebrew/bin:/usr/local/bi
 YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
 [ -x "$YT_DLP" ] || YT_DLP="yt-dlp"
 command -v "$YT_DLP" >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
+
+# ─── YouTube Cookie Setup ─────────────────────────────────────
+# Refresh cookies from Chrome if it's running; fall back to saved cookies.txt
+COOKIES_FILE="$SCRIPT_DIR/youtube_cookies.txt"
+if pgrep -x "Google Chrome" > /dev/null 2>&1; then
+    log "Chrome running — refreshing YouTube cookies..."
+    $YT_DLP --cookies-from-browser chrome --cookies "$COOKIES_FILE" \
+        --skip-download "https://www.youtube.com/watch?v=dQw4w9WgXcQ" >> "$LOG_FILE" 2>&1 \
+        && log "  ✓ Cookies refreshed" || log "  ⚠ Cookie refresh failed — using existing file"
+else
+    log "Chrome not running — using saved cookies file"
+fi
+YT_COOKIES="--cookies $COOKIES_FILE"
 
 # ─── Channel Priority Tiers ──────────────────────────────────
 # Tier 1: Primary sources — your core content (max 50 downloads)
@@ -133,7 +149,7 @@ download_and_transcribe() {
         # Download audio files (with per-channel timeout)
         local dl_done=false
         timeout $CHANNEL_TIMEOUT $YT_DLP \
-            --cookies-from-browser chrome \
+            $YT_COOKIES \
             --extractor-args "youtubetab:skip=authcheck" \
             -x --audio-format mp3 --audio-quality 64K \
             --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
@@ -193,7 +209,7 @@ download_subtitles_only() {
         log "[$count] $channel_name"
 
         if $YT_DLP \
-            --cookies-from-browser chrome \
+            $YT_COOKIES \
             --skip-download \
             --write-subs --write-auto-subs \
             --sub-lang en \
@@ -216,7 +232,7 @@ download_subtitles_only() {
 
 # ─── Node 1b: Fetch Research Data ────────────────────────────
 fetch_research() {
-    header "NODE 1b: RESEARCH DATA (PubMed + ClinicalTrials)"
+    header "NODE 1b: RESEARCH DATA (PubMed + ClinicalTrials + Web Scrapers)"
     cd "$SCRIPT_DIR"
 
     log "Fetching PubMed abstracts..."
@@ -225,6 +241,14 @@ fetch_research() {
     log ""
     log "Fetching ClinicalTrials.gov data..."
     $PYTHON -u fetch_clinicaltrials.py --max 50 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ ClinicalTrials fetch had errors"
+
+    log ""
+    log "Scraping ThinkSteroids.com compound profiles..."
+    python3 -u scrape_thinksteroids.py 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ ThinkSteroids scraper had errors"
+
+    log ""
+    log "Scraping Ergo-Log.com research articles..."
+    python3 -u scrape_ergolog.py 2>&1 | tee -a "$LOG_FILE" || log "  ⚠ Ergo-Log scraper had errors"
 }
 
 # ─── Node 1c: Whisper Transcription (FREE — local MLX Whisper on Apple Silicon) ────
