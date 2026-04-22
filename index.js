@@ -6782,7 +6782,6 @@ Help him with anything — writing, business decisions, code questions, scheduli
 // VAPI PHONE AGENT — Ashley (FBF AI Call Answering)
 // ─────────────────────────────────────────────────────────────────────────────
 import { appendFileSync, existsSync, mkdirSync } from "fs";
-import { join } from "path";
 
 const CALL_LOG_DIR = join(process.cwd(), "call-logs");
 if (!existsSync(CALL_LOG_DIR)) mkdirSync(CALL_LOG_DIR, { recursive: true });
