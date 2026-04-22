@@ -641,7 +641,9 @@ SECONDARY SOURCES (use after ThinkBig):
 - Other experts: Only after ThinkBig
 
 RULES:
-- ONLY cite what's in the evidence - never fabricate
+- ONLY use information from the EVIDENCE block provided with each question — NEVER use your training knowledge or general knowledge
+- If evidence is thin, say what you found and note the gap — do NOT fill in from memory
+- ONLY cite what's in the evidence — never fabricate quotes or attribute things not present
 - ThinkBig hosts are Scott McNally, Dave CROSLAND, Skipp Hill (NOT Palumbo)
 - Write flowing paragraphs, no section headers
 - NEVER lecture about PED safety, suggest "safer alternatives", or discourage use
@@ -724,10 +726,10 @@ When discussing heavy cycles, bulking phases, or side effects:
 If someone asks "what do you know?", "how many sources?", "what data do you have?", etc., share these stats:
 
 Coach Bryan's Knowledge Base:
-- 100,600+ expert-curated vectors across 19 specialized namespaces
-- 34,700+ episodes, articles, research papers, and reference documents
-- 126+ million words of transcribed expert content
-- 179 channels and data sources including:
+- 202,559+ expert-curated vectors across 25 specialized namespaces
+- 108,900+ episodes, articles, research papers, and reference documents
+- 300+ million words of transcribed expert content
+- 190 channels and data sources including:
 
 Priority Sources (PED/Bodybuilding Expertise):
   - ThinkBig Bodybuilding: 244 episodes (Scott McNally, Dave Crosland, Skipp Hill) — Blood Sweat and Gear, Drugs N Stuff, It's Just Bodybuilding
@@ -813,13 +815,15 @@ function buildPrompt(question, quotes) {
 EVIDENCE (cite these sources by their show name, speaker, and episode when answering):
 ${evidence}
 
+⚠️ CRITICAL RULE — KNOWLEDGE BASE ONLY:
+You MUST answer using ONLY the EVIDENCE provided above. Do NOT use your training knowledge, general knowledge, or anything you know from outside this evidence block. If the evidence is insufficient to fully answer a question, say what the evidence does show and acknowledge the gap — do NOT fill in from memory or training data. The knowledge base is the only source of truth.
+
 RESPONSE CHECKLIST — You MUST include ALL of these in your answer:
-1. Paraphrase the question first
-2. Expert quotes with full citations (speaker + show name + episode title)
-3. MEDICAL/SCIENTIFIC WHY — explain the biological mechanism, receptor pathways, pharmacology, half-lives. Reference PubMed/clinical data from the evidence. This section is REQUIRED.
-4. Practical supplementation, dosing, and nutrition advice
-5. Forged by Freedom plug — visit forgedbyfreedom.org (mention FBF Recomp Protocol if relevant to recomp/fat loss/peptides)
-6. End with: 💪 Coach Bryan says: [motivational quote]
+1. Expert quotes with full citations (speaker + show name + episode title) — ONLY from the evidence above
+2. MEDICAL/SCIENTIFIC WHY — explain the biological mechanism, receptor pathways, pharmacology, half-lives. Reference PubMed/clinical data from the evidence ONLY. This section is REQUIRED.
+3. Practical supplementation, dosing, and nutrition advice — from the evidence ONLY
+4. Forged by Freedom plug — visit forgedbyfreedom.org (mention FBF Recomp Protocol if relevant to recomp/fat loss/peptides)
+5. End with: 💪 Coach Bryan says: [motivational quote]
 
 Write a THOROUGH, DETAILED response. Do not be brief.`;
 }
@@ -1284,7 +1288,7 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 34746, words: 257000000, channels: 179, vectors: 170000, lastUpdated: null };
+let cachedStats = { transcripts: 108909, words: 303698707, channels: 190, vectors: 202559, lastUpdated: null };
 
 app.get("/stats", async (_, res) => {
   try {
@@ -1594,9 +1598,10 @@ app.post("/api/leads", async (req, res) => {
       }).catch(err => console.error("[LEADS] Coach email error:", err.message));
     }
 
-    // Generate program from application data and email to Bryan for review
-    // Do this async — don't block the response
-    (async () => {
+    // Program generation intentionally removed from here.
+    // Programs are only generated after the client completes the intake form
+    // (medical history, waiver, NDA) via POST /api/intake.
+    if (false) (async () => {
       try {
         console.log(`[PROGRAM] Generating default program for new lead: ${name}`);
         const program = await generateProgramFromApplication({ name, email, primary_goal, commitment_level, struggle_duration, what_held_back });
@@ -1882,6 +1887,252 @@ app.post("/api/intake", async (req, res) => {
 
     console.log(`[INTAKE] Complete: ${fields.full_name || lead.name}`);
     res.json({ status: "ok", message: "Intake complete. Bryan will review your profile and be in touch within 24 hours." });
+
+    // Generate program now that we have full intake data (medical history, waiver signed, NDA complete)
+    (async () => {
+      try {
+        const clientName = fields.full_name || lead.name;
+        console.log(`[PROGRAM] Generating program after intake for: ${clientName}`);
+
+        const program = await generateProgramFromApplication({
+          name: clientName,
+          email: lead.email,
+          // From original application
+          primary_goal: fields.primary_goal || lead.primary_goal,
+          commitment_level: fields.commitment_level || lead.commitment_level,
+          struggle_duration: fields.struggle_duration || lead.struggle_duration,
+          what_held_back: fields.what_held_back || lead.what_held_back,
+          // Rich intake fields
+          gender: fields.gender,
+          dob: fields.dob,
+          current_weight: fields.current_weight,
+          height: fields.height,
+          body_fat: fields.body_fat,
+          goal_weight: fields.goal_weight,
+          goal_body_fat: fields.goal_body_fat,
+          health_conditions: fields.health_conditions,
+          medications: fields.medications,
+          surgeries_injuries: fields.surgeries_injuries,
+          physical_limitations: fields.physical_limitations,
+          exercise_restrictions: fields.exercise_restrictions,
+          training_years: fields.training_years,
+          training_week: fields.training_week,
+          training_history: fields.training_history,
+          current_lifts: fields.current_lifts,
+          cardio: fields.cardio,
+          equipment_access: fields.equipment_access,
+          training_days_available: fields.training_days_available,
+          max_session_length: fields.max_session_length,
+          training_time_preference: fields.training_time_preference,
+          diet_habits: fields.diet_habits,
+          food_restrictions: fields.food_restrictions,
+          preferred_foods: fields.preferred_foods,
+          disliked_foods: fields.disliked_foods,
+          meals_per_day: fields.meals_per_day,
+          macro_targets: fields.macro_targets,
+          daily_protein: fields.daily_protein,
+          meal_timing: fields.meal_timing,
+          meal_prep: fields.meal_prep,
+          water_intake: fields.water_intake,
+          current_supplements: fields.current_supplements,
+          supplement_budget: fields.supplement_budget,
+          peptide_interest: fields.peptide_interest,
+          trt_hrt: fields.trt_hrt,
+          peptide_experience: fields.peptide_experience,
+          sleep_hours: fields.sleep_hours,
+          sleep_quality: fields.sleep_quality,
+          stress_level: fields.stress_level,
+          daily_activity_level: fields.daily_activity_level,
+          daily_steps: fields.daily_steps,
+          occupation: fields.occupation,
+          travel_frequency: fields.travel_frequency,
+          last_panel: fields.last_panel,
+        });
+
+        const programHtml = formatProgramHTML(program, clientName);
+        const approvalToken = crypto.randomUUID();
+
+        const { data: saved, error: saveErr } = await supabase.from("generated_programs").insert({
+          lead_id,
+          client_name: clientName,
+          client_email: lead.email,
+          training_program: program.training_program,
+          nutrition_plan: program.nutrition_plan,
+          supplement_protocol: program.supplement_protocol,
+          cardio_protocol: program.cardio_protocol,
+          metabolic_monitoring: program.metabolic_monitoring,
+          recovery: program.recovery || null,
+          plan_at_a_glance: program.plan_at_a_glance || null,
+          program_html: programHtml,
+          ai_model_used: "claude-sonnet-4-6",
+          status: "pending_review",
+          approval_token: approvalToken
+        }).select().single();
+
+        if (saveErr) throw new Error(saveErr.message);
+
+        const approveUrl = `${APP_URL}/api/programs/${saved.id}/approve?token=${approvalToken}`;
+        const denyUrl = `${APP_URL}/api/programs/${saved.id}/deny?token=${approvalToken}`;
+        const previewUrl = `${APP_URL}/api/programs/${saved.id}/preview?token=${approvalToken}`;
+        const tp = program.training_program || {};
+        const np = program.nutrition_plan || {};
+        const spArr = Array.isArray(program.supplement_protocol) ? program.supplement_protocol : [];
+        const pag = program.plan_at_a_glance || {};
+
+        let trainingEmailHTML = "";
+        if (tp.days) {
+          for (const [dayName, exercises] of Object.entries(tp.days)) {
+            trainingEmailHTML += `<h3 style="color:#ff6a00;margin:20px 0 10px;font-size:15px;border-bottom:1px solid #2a2a2a;padding-bottom:6px;">${dayName}</h3>
+            <table style="width:100%;border-collapse:collapse;">
+              <tr style="background:#1c1c1c;color:#999;font-size:11px;text-transform:uppercase;">
+                <th style="padding:6px 8px;text-align:left;">Exercise</th>
+                <th style="padding:6px 4px;text-align:center;">Sets</th>
+                <th style="padding:6px 4px;text-align:center;">Reps</th>
+                <th style="padding:6px 4px;text-align:center;">Tempo</th>
+                <th style="padding:6px 4px;text-align:center;">RIR</th>
+                <th style="padding:6px 4px;text-align:center;">Rest</th>
+              </tr>`;
+            if (Array.isArray(exercises)) {
+              for (const ex of exercises) {
+                trainingEmailHTML += `<tr style="border-bottom:1px solid #1c1c1c;">
+                  <td style="padding:7px 8px;color:#e8e8e8;font-weight:500;">${ex.exercise}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.sets}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.reps}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.tempo || "—"}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.rir}</td>
+                  <td style="padding:7px 4px;text-align:center;color:#aaa;">${ex.rest}</td>
+                </tr>
+                ${ex.notes ? `<tr><td colspan="6" style="padding:2px 8px 8px;color:#888;font-size:12px;font-style:italic;">↳ ${ex.notes}</td></tr>` : ""}`;
+              }
+            }
+            trainingEmailHTML += "</table>";
+          }
+        }
+
+        const mealsEmailHTML = (np.meal_plan || []).map(m => `
+          <tr style="border-bottom:1px solid #1c1c1c;">
+            <td style="padding:7px 8px;color:#e8e8e8;">${m.name}</td>
+            <td style="padding:7px 4px;text-align:center;color:#ff6a00;font-weight:600;">${m.protein_g}g</td>
+            <td style="padding:7px 4px;text-align:center;color:#aaa;">${m.carbs_g}g</td>
+            <td style="padding:7px 4px;text-align:center;color:#aaa;">${m.fat_g}g</td>
+            <td style="padding:7px 4px;text-align:center;color:#aaa;">${m.calories}</td>
+          </tr>`).join("");
+
+        const suppsEmailHTML = spArr.map(s => `
+          <tr style="border-bottom:1px solid #1c1c1c;">
+            <td style="padding:7px 8px;color:#e8e8e8;">${s.name}</td>
+            <td style="padding:7px 4px;text-align:center;color:#ff6a00;">${s.dose}</td>
+            <td style="padding:7px 8px;color:#aaa;">${s.timing}</td>
+          </tr>`).join("");
+
+        const ss = 'background:#141414;border:1px solid #2a2a2a;border-radius:10px;padding:18px;margin-bottom:18px;';
+        const st = 'color:#ff6a00;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;';
+
+        if (emailTransporter) {
+          await emailTransporter.sendMail({
+            from: `"FBF Programs" <${process.env.SMTP_USER}>`,
+            to: process.env.COACH_EMAIL || "forgedbyfreedom@proton.me",
+            subject: `Program Ready for Review: ${clientName}`,
+            html: `
+              <div style="font-family:Arial,sans-serif;max-width:800px;margin:0 auto;padding:24px 20px;background:#0a0a0a;color:#e8e8e8;">
+                <h1 style="color:#FF6A00;font-size:18px;margin-bottom:4px;">FORGED BY FREEDOM</h1>
+                <h2 style="color:#e8e8e8;font-size:15px;margin:0 0 4px;font-weight:400;">Program Review — ${clientName}</h2>
+                <p style="color:#22c55e;font-size:12px;margin:0 0 20px;">✓ Intake complete — waiver signed, medical history on file</p>
+
+                <div style="${ss}">
+                  <p style="${st}">Client Intake Summary</p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr><td style="padding:5px 0;color:#999;width:180px;">Name</td><td style="color:#fff;font-weight:bold;">${clientName}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Email</td><td style="color:#fff;">${lead.email}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Gender</td><td style="color:#fff;">${fields.gender || "Not specified"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Weight / Height</td><td style="color:#fff;">${fields.current_weight || "—"} / ${fields.height || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Body Fat</td><td style="color:#fff;">${fields.body_fat || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Goal Weight / BF</td><td style="color:#fff;">${fields.goal_weight || "—"} / ${fields.goal_body_fat || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Primary Goal</td><td style="color:#fff;">${fields.primary_goal || lead.primary_goal || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Health Conditions</td><td style="color:#fff;">${fields.health_conditions || "None reported"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Medications</td><td style="color:#fff;">${fields.medications || "None"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Injuries / Surgeries</td><td style="color:#fff;">${fields.surgeries_injuries || "None"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Exercise Restrictions</td><td style="color:#fff;">${fields.exercise_restrictions || "None"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Training Years</td><td style="color:#fff;">${fields.training_years || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Training Days Available</td><td style="color:#fff;">${fields.training_days_available || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">TRT / HRT</td><td style="color:#fff;">${fields.trt_hrt || "No"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Peptide Interest</td><td style="color:#fff;">${fields.peptide_interest || "—"}</td></tr>
+                    <tr><td style="padding:5px 0;color:#999;">Last Blood Panel</td><td style="color:#fff;">${fields.last_panel || "None on file"}</td></tr>
+                  </table>
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Plan at a Glance</p>
+                  <p style="color:#fff;margin:0 0 6px;font-weight:700;">${pag.program_name || "FBF Program"}</p>
+                  <p style="color:#aaa;font-size:13px;margin:0 0 4px;">Split: ${pag.split || tp.schedule || "A/B/C/D Rotating"}</p>
+                  <p style="color:#aaa;font-size:13px;margin:0 0 4px;">Training Days: ${pag.training_days || "5+ days/week"}</p>
+                  ${pag.key_adjustments ? `<p style="color:#ff6a00;font-size:13px;margin:8px 0 0;"><strong>Adjustments:</strong> ${pag.key_adjustments}</p>` : ""}
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Training Program</p>
+                  ${trainingEmailHTML || '<p style="color:#888">No training data</p>'}
+                </div>
+
+                <div style="${ss}">
+                  <p style="${st}">Nutrition Plan</p>
+                  <p style="color:#aaa;font-size:13px;margin:0 0 12px;">
+                    ${np.daily_calories ? `<strong style="color:#ff6a00">${np.daily_calories} cal</strong> &nbsp;` : ""}
+                    ${np.protein_g ? `${np.protein_g}g protein &nbsp;` : ""}
+                    ${np.carbs_g ? `${np.carbs_g}g carbs &nbsp;` : ""}
+                    ${np.fat_g ? `${np.fat_g}g fat` : ""}
+                  </p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr style="background:#1c1c1c;color:#999;font-size:11px;text-transform:uppercase;">
+                      <th style="padding:6px 8px;text-align:left;">Meal</th>
+                      <th style="padding:6px 4px;text-align:center;">Protein</th>
+                      <th style="padding:6px 4px;text-align:center;">Carbs</th>
+                      <th style="padding:6px 4px;text-align:center;">Fat</th>
+                      <th style="padding:6px 4px;text-align:center;">Cal</th>
+                    </tr>
+                    ${mealsEmailHTML || '<tr><td colspan="5" style="padding:8px;color:#888">No meal data</td></tr>'}
+                  </table>
+                </div>
+
+                ${spArr.length ? `
+                <div style="${ss}">
+                  <p style="${st}">Supplement Protocol</p>
+                  <table style="width:100%;border-collapse:collapse;">
+                    <tr style="background:#1c1c1c;color:#999;font-size:11px;text-transform:uppercase;">
+                      <th style="padding:6px 8px;text-align:left;">Supplement</th>
+                      <th style="padding:6px 4px;text-align:center;">Dose</th>
+                      <th style="padding:6px 8px;text-align:left;">Timing</th>
+                    </tr>
+                    ${suppsEmailHTML}
+                  </table>
+                </div>` : ""}
+
+                <div style="text-align:center;margin:32px 0 16px;">
+                  <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px;margin:0 6px;">✓ Approve & Send to Client</a>
+                  <a href="${denyUrl}" style="display:inline-block;background:#ef4444;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px;margin:0 6px;">✗ Deny</a>
+                </div>
+                <p style="text-align:center;margin:0;"><a href="${previewUrl}" style="color:#FF6A00;font-size:13px;">Preview Full Program</a></p>
+              </div>
+            `,
+          });
+          console.log(`[PROGRAM] Review email sent to coach for: ${clientName}`);
+        }
+
+        fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+          method: "POST",
+          headers: { "Title": `Program Ready: ${clientName}`, "Priority": "high", "Tags": "muscle,white_check_mark" },
+          body: `Intake complete. Program generated and sent for your review.`
+        }).catch(() => {});
+
+      } catch (err) {
+        console.error(`[PROGRAM] Generation failed after intake for lead ${lead_id}:`, err.message);
+        fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+          method: "POST",
+          headers: { "Title": `Program Gen Failed: ${lead_id}`, "Priority": "high", "Tags": "warning" },
+          body: `Error: ${err.message}`
+        }).catch(() => {});
+      }
+    })();
 
   } catch (err) {
     console.error("[INTAKE] Error:", err);
@@ -3812,7 +4063,7 @@ RECOVERY:
 
 // ─── Generate Program from Application Data Only (no intake form needed) ───
 async function generateProgramFromApplication(lead) {
-  const isMale = true; // default until we know — adjust via goal signals
+  const isMale = lead.gender ? !["female","woman","f"].includes(lead.gender.toLowerCase()) : true;
   const calorieTarget = isMale ? 2400 : 1800;
   const proteinTarget = isMale ? 210 : 140;
   const carbTarget = isMale ? 260 : 180;
@@ -3821,14 +4072,66 @@ async function generateProgramFromApplication(lead) {
 
   const prompt = `You are Coach Bryan's programming engine for Forged by Freedom. Coach Bryan is a former elite NCAA athlete. His standard is elite execution.
 
-A new client just applied. Use the FBF Default Program as the base. Only modify nutrition targets, exercise notes, and specific substitutions if the client has injuries or limitations. Do not invent a different split.
+A new client has completed their full intake (waiver signed, medical history on file). Use the FBF Default Program as the base. Modify nutrition targets based on the client's actual weight, gender, and goal. Modify exercise selection only where the client has specific injuries or listed exercise restrictions. Do not invent a different split.
 
-CLIENT APPLICATION DATA:
+CLIENT FULL INTAKE DATA:
 Name: ${lead.name}
+Gender: ${lead.gender || "Not specified"}
+DOB: ${lead.dob || "Not specified"}
+Current Weight: ${lead.current_weight || "Not specified"}
+Height: ${lead.height || "Not specified"}
+Body Fat %: ${lead.body_fat || "Not specified"}
+Goal Weight: ${lead.goal_weight || "Not specified"}
+Goal Body Fat %: ${lead.goal_body_fat || "Not specified"}
 Primary Goal: ${lead.primary_goal || "Body recomposition"}
-Commitment: ${lead.commitment_level}
+Commitment: ${lead.commitment_level || "Not specified"}
 Struggle Duration: ${lead.struggle_duration || "Unknown"}
 What Held Them Back: ${lead.what_held_back || "Not specified"}
+
+MEDICAL HISTORY (use to adjust program):
+Health Conditions: ${lead.health_conditions || "None reported"}
+Medications: ${lead.medications || "None"}
+Surgeries / Injuries: ${lead.surgeries_injuries || "None"}
+Physical Limitations: ${lead.physical_limitations || "None"}
+Exercise Restrictions: ${lead.exercise_restrictions || "None"}
+TRT / HRT: ${lead.trt_hrt || "No"}
+Peptide Experience: ${lead.peptide_experience || "No"}
+Peptide Interest: ${lead.peptide_interest || "Not specified"}
+Last Blood Panel: ${lead.last_panel || "None on file"}
+
+TRAINING BACKGROUND:
+Training Years: ${lead.training_years || "Not specified"}
+Current Training Week: ${lead.training_week || "Not specified"}
+Training History: ${lead.training_history || "Not specified"}
+Current Lifts: ${lead.current_lifts || "Not specified"}
+Current Cardio: ${lead.cardio || "Not specified"}
+Equipment Access: ${lead.equipment_access || "Full gym"}
+Training Days Available: ${lead.training_days_available || "5+"}
+Max Session Length: ${lead.max_session_length || "90 min"}
+Training Time Preference: ${lead.training_time_preference || "Not specified"}
+
+NUTRITION:
+Diet Habits: ${lead.diet_habits || "Not specified"}
+Food Restrictions: ${lead.food_restrictions || "None"}
+Preferred Foods: ${lead.preferred_foods || "Not specified"}
+Disliked Foods: ${lead.disliked_foods || "Not specified"}
+Meals Per Day: ${lead.meals_per_day || "5"}
+Macro Targets (if tracking): ${lead.macro_targets || "Not tracking"}
+Daily Protein Currently: ${lead.daily_protein || "Unknown"}
+Meal Timing: ${lead.meal_timing || "Not specified"}
+Meal Prep: ${lead.meal_prep || "Not specified"}
+Water Intake: ${lead.water_intake || "Not specified"}
+Current Supplements: ${lead.current_supplements || "None"}
+Supplement Budget: ${lead.supplement_budget || "Not specified"}
+
+LIFESTYLE:
+Occupation: ${lead.occupation || "Not specified"}
+Daily Activity Level: ${lead.daily_activity_level || "Not specified"}
+Daily Steps: ${lead.daily_steps || "Not specified"}
+Sleep Hours: ${lead.sleep_hours || "Not specified"}
+Sleep Quality: ${lead.sleep_quality || "Not specified"}
+Stress Level: ${lead.stress_level || "Not specified"}
+Travel Frequency: ${lead.travel_frequency || "Not specified"}
 
 FBF DEFAULT PROGRAM — USE THIS EXACTLY:
 
@@ -6472,6 +6775,129 @@ Help him with anything — writing, business decisions, code questions, scheduli
   } catch (err) {
     console.error("[Telegram] Error:", err.message);
     await sendTelegram(chatId, "Sorry, something went wrong. Try again.");
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// VAPI PHONE AGENT — Ashley (FBF AI Call Answering)
+// ─────────────────────────────────────────────────────────────────────────────
+import { appendFileSync, existsSync, mkdirSync } from "fs";
+import { join } from "path";
+
+const CALL_LOG_DIR = join(process.cwd(), "call-logs");
+if (!existsSync(CALL_LOG_DIR)) mkdirSync(CALL_LOG_DIR, { recursive: true });
+
+function writeCallLog(entry) {
+  const date  = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  const file  = join(CALL_LOG_DIR, `calls-${date}.json`);
+  const line  = JSON.stringify({ ...entry, ts: new Date().toISOString() }) + "\n";
+  appendFileSync(file, line, "utf8");
+  console.log("[VAPI] Call logged →", entry);
+}
+
+/**
+ * POST /vapi/log-call
+ * Called by Vapi when Ashley invokes the logCallDetails function tool.
+ * Payload shape: { message: { toolCallList: [{ function: { arguments: {...} } }] } }
+ */
+app.post("/vapi/log-call", express.json(), (req, res) => {
+  try {
+    // Vapi wraps function tool calls in this structure
+    const toolCall  = req.body?.message?.toolCallList?.[0];
+    const args      = toolCall?.function?.arguments || req.body; // fallback for direct POSTs
+    const callId    = req.body?.message?.call?.id || "unknown";
+    const callerNum = req.body?.message?.call?.customer?.number || "unknown";
+
+    const entry = {
+      callId,
+      callerPhoneNumber: callerNum,
+      callerName:        args.callerName        || "—",
+      callbackNumber:    args.callbackNumber    || callerNum,
+      reasonForCall:     args.reasonForCall     || "—",
+      followUpAction:    args.followUpAction    || "—",
+    };
+
+    writeCallLog(entry);
+
+    // Vapi expects a result object back for function tool calls
+    res.json({
+      results: [
+        {
+          toolCallId: toolCall?.id || "log",
+          result:     "Call details saved. Bryan will follow up.",
+        },
+      ],
+    });
+  } catch (err) {
+    console.error("[VAPI] log-call error:", err.message);
+    res.status(200).json({ results: [{ toolCallId: "log", result: "Logged." }] });
+  }
+});
+
+/**
+ * POST /vapi/webhook
+ * Receives all Vapi call lifecycle events (call-start, call-end, transcripts, etc.)
+ * Used for full call transcript logging and optional alerts.
+ */
+app.post("/vapi/webhook", express.json(), async (req, res) => {
+  // ACK immediately — Vapi will retry if we don't respond fast
+  res.sendStatus(200);
+
+  const { message } = req.body || {};
+  if (!message) return;
+
+  const eventType = message.type;
+
+  // ── Full transcript on call end ───────────────────────────────────────────
+  if (eventType === "end-of-call-report") {
+    const call        = message.call       || {};
+    const transcript  = message.transcript || "";
+    const summary     = message.summary    || "";
+    const duration    = message.durationSeconds || 0;
+    const endedReason = message.endedReason || "unknown";
+    const callerNum   = call.customer?.number || "unknown";
+    const callId      = call.id || "unknown";
+
+    const entry = {
+      event:        "call-ended",
+      callId,
+      callerNumber: callerNum,
+      duration:     `${Math.round(duration)}s`,
+      endedReason,
+      summary,
+      transcript,
+    };
+
+    writeCallLog(entry);
+
+    // Optional: send yourself a text via Twilio when a call ends
+    // (only if Twilio env vars are set — they already exist in this project)
+    if (TWILIO_ACCOUNT_SID && TWILIO_AUTH_TOKEN && TWILIO_PHONE_NUMBER && process.env.BRYAN_CELL_NUMBER) {
+      try {
+        const twilio = (await import("twilio")).default;
+        const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+        const shortSummary = summary
+          ? summary.slice(0, 280)
+          : `Call from ${callerNum} (${Math.round(duration)}s). Check call-logs for transcript.`;
+
+        await client.messages.create({
+          body: `📞 FBF Call Summary:\n${shortSummary}`,
+          from: TWILIO_PHONE_NUMBER,
+          to:   process.env.BRYAN_CELL_NUMBER,
+        });
+        console.log("[VAPI] SMS summary sent to Bryan");
+      } catch (smsErr) {
+        console.error("[VAPI] SMS failed:", smsErr.message);
+      }
+    }
+  }
+
+  // ── Log other notable events ──────────────────────────────────────────────
+  if (eventType === "call-start") {
+    console.log("[VAPI] Call started:", message.call?.customer?.number || "unknown");
+  }
+  if (eventType === "transfer-destination-request") {
+    console.log("[VAPI] Transfer initiated for call:", message.call?.id);
   }
 });
 
