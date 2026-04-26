@@ -1150,7 +1150,12 @@ app.post("/analyze-bloodwork", async (req, res) => {
 
     // Search Pinecone with targeted queries — hit bloodwork-heavy namespaces hard
     const labSearchQuery = `bloodwork analysis interpretation intervention ladder enhanced athlete ranges ${markerKeywords.slice(0, 8).join(" ")}`;
-    const vector = await embed(labSearchQuery);
+    let vector;
+    try {
+      vector = await embed(labSearchQuery);
+    } catch (embedErr) {
+      throw new Error(`EMBED_FAILED: ${embedErr.message}`);
+    }
 
     // Parallel search: targeted bloodwork namespaces + general boost search
     const [guideResults, medicalResults, endoResults, researchResults, generalResults] = await Promise.all([
@@ -1241,10 +1246,15 @@ Finish with: 💪 Coach Bryan says: [motivational health-focused quote]
 THIS PERSON'S ACTUAL LAB RESULTS:
 ${labs.trim()}${evidenceBlock}`;
 
-    let answer = await chat([
-      { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: bloodworkPrompt }
-    ], 0.4, 4000);
+    let answer;
+    try {
+      answer = await chat([
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: bloodworkPrompt }
+      ], 0.4, 4000);
+    } catch (chatErr) {
+      throw new Error(`CHAT_FAILED: ${chatErr.message}`);
+    }
 
     // Strip leaked system prompt
     const leakPatterns = [
@@ -1273,11 +1283,13 @@ ${labs.trim()}${evidenceBlock}`;
     if (msg.includes("limit") || msg.includes("429") || msg.includes("quota") || msg.includes("exceeded")) {
       return res.status(503).json({
         error: "Our analysis service is temporarily at capacity. Please try again in a few minutes.",
+        debug_error: msg,
         answer: null
       });
     }
     res.status(500).json({
       error: "Bloodwork analysis is temporarily unavailable. Please try again shortly.",
+      debug_error: msg,
       answer: null
     });
   }
