@@ -68,16 +68,11 @@ const index = pinecone.Index(CONFIG.pineconeIndex);
 const app = express();
 
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false, frameguard: false }));
+// Open CORS — auth is token-based, not origin-based. Wix/embed components
+// come from unpredictable CDN origins (parastorage.com etc.) that can't be
+// pattern-matched. Sensitive routes are protected by admin keys and JWT, not CORS.
 app.use(cors({
-  origin: CONFIG.isProd ? [
-    "https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com",
-    "https://forgedbyfreedom.org", "https://www.forgedbyfreedom.org",
-    "https://fbf.robbieandrews.net",
-    "https://fbf-dashboard.vercel.app",
-    /\.vercel\.app$/,
-    /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/,
-    "http://localhost:8081"
-  ] : "*",
+  origin: true,
   methods: ["GET", "POST", "PATCH", "PUT"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -1010,14 +1005,7 @@ app.get("/status", async (_, res) => {
   }
 });
 
-app.options("/ask", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.sendStatus(204);
-});
 app.post("/ask", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
   const { question, mode = "synthesized", namespace = "" } = req.body;
   const start = Date.now();
 
@@ -1127,14 +1115,7 @@ His accolades include but are not limited to:
 });
 
 // ─── Bloodwork Analysis Endpoint ─────────────────────────────
-app.options("/analyze-bloodwork", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.sendStatus(204);
-});
 app.post("/analyze-bloodwork", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
   const { labs } = req.body;
   const start = Date.now();
 
