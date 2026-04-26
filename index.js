@@ -5204,21 +5204,26 @@ app.get("/api/programs/:id/approve", async (req, res) => {
 
           // Set nutrition targets from program
           const np = program.nutrition_plan;
-          const trainingMacros = np?.training_day || { calories: np?.calories, protein_g: np?.protein_g, carbs_g: np?.carbs_g, fats_g: np?.fats_g };
+          const pag = program.plan_at_a_glance;
+          // Macros can live in nutrition_plan.training_day OR plan_at_a_glance.training_day_macros
+          const trainingMacros = np?.training_day
+            || pag?.training_day_macros
+            || { calories: np?.calories, protein_g: np?.protein_g, carbs_g: np?.carbs_g, fats_g: np?.fats_g };
           if (trainingMacros?.calories) updatePayload.target_calories = trainingMacros.calories;
           if (trainingMacros?.protein_g) updatePayload.target_protein = trainingMacros.protein_g;
           if (trainingMacros?.carbs_g) updatePayload.target_carbs = trainingMacros.carbs_g;
-          if (trainingMacros?.fats_g) updatePayload.target_fat = trainingMacros.fats_g;
+          if (trainingMacros?.fats_g) updatePayload.target_fats = trainingMacros.fats_g;
 
-          // Set step goal from cardio
+          // Set step goal from cardio or plan_at_a_glance
           const cp = program.cardio_protocol;
           if (cp?.step_goal) updatePayload.target_steps = cp.step_goal;
+          else if (pag?.daily_steps) updatePayload.target_steps = pag.daily_steps;
 
-          // Set water target from nutrition
-          if (np?.water_target_oz) updatePayload.target_water = np.water_target_oz;
+          // Set water target from nutrition or plan_at_a_glance
+          const waterOz = np?.water_target_oz || np?.water_oz || pag?.daily_water_oz || pag?.water_oz;
+          if (waterOz) updatePayload.target_water_oz = waterOz;
 
           // Set program name
-          const pag = program.plan_at_a_glance;
           if (pag?.program_name) updatePayload.program_name = pag.program_name;
 
           if (Object.keys(updatePayload).length > 0) {
