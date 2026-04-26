@@ -4924,12 +4924,13 @@ function formatProgramHTML(program, clientName) {
 }
 
 // ─── Send Approval Email to Coach ────────────────────────
-async function sendApprovalEmail(programId, clientName, clientEmail, programHtml, approvalToken) {
+async function sendApprovalEmail(programId, clientName, clientEmail, programHtml, approvalToken, dashboardReviewId = null) {
   // Build URLs using per-program token (works regardless of which env generated it)
   const tokenParam = approvalToken ? `token=${approvalToken}` : `key=${process.env.ADMIN_KEY}`;
   const approveUrl = `${APP_URL}/api/programs/${programId}/approve?${tokenParam}`;
   const rejectUrl = `${APP_URL}/api/programs/${programId}/reject?${tokenParam}`;
   const reviewUrl = `${APP_URL}/api/programs/${programId}/client-view?${tokenParam}`;
+  const dashboardUrl = dashboardReviewId ? `https://fbf-dashboard.vercel.app/program-review/${dashboardReviewId}` : null;
 
   if (!emailTransporter) {
     console.log(`[PROGRAM] Email not configured. Program ${programId} ready for review.`);
@@ -4962,11 +4963,12 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
         <div style="margin:24px 0;text-align:center;">
           <a href="${reviewUrl}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Review Branded Program</a>
         </div>
-        <div style="display:flex;gap:12px;justify-content:center;margin:20px 0;">
-          <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send to Client</a>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0;">
+          <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send Payment Link</a>
+          ${dashboardUrl ? `<a href="${dashboardUrl}" style="display:inline-block;background:#1a3a5c;border:1px solid #3b82f6;color:#93c5fd;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Modify in Dashboard</a>` : ''}
           <a href="${rejectUrl}" style="display:inline-block;background:transparent;border:1px solid #ef4444;color:#ef4444;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Reject</a>
         </div>
-        <p style="color:#666;font-size:12px;text-align:center;">Once you approve, the client will receive an email with the branded program preview + payment button.</p>
+        <p style="color:#666;font-size:12px;text-align:center;">Once you approve, the client receives a payment link. Program is delivered after payment clears.</p>
       </div>
     `
   });
@@ -5098,7 +5100,7 @@ app.post("/api/intake/generate-program", async (req, res) => {
 
     // Notify Bryan for approval
     const programId = saved?.id || "dashboard";
-    try { await sendApprovalEmail(programId, intake.full_name, lead?.email || "", programHtml, saved?.approval_token || gpApprovalToken); } catch(e) { console.warn("[PROGRAM] Approval email failed:", e.message); }
+    try { await sendApprovalEmail(programId, intake.full_name, lead?.email || "", programHtml, saved?.approval_token || gpApprovalToken, reviewId || null); } catch(e) { console.warn("[PROGRAM] Approval email failed:", e.message); }
 
     // ntfy notification
     const ntfyTopic = process.env.NTFY_TOPIC || "fbf-leads-bryan";
@@ -5251,36 +5253,35 @@ app.get("/api/programs/:id/approve", async (req, res) => {
         .update({ stripe_checkout_session_id: session.id, payment_status: "pending" })
         .eq("id", req.params.id);
 
-      // Send program preview link to client (they see the full program + pay button)
-      const clientViewUrl = `${APP_URL}/api/programs/${req.params.id}/client-view`;
+      // Send ONLY the payment link to the client — full program delivered after payment clears
       if (emailTransporter) {
         await emailTransporter.sendMail({
           from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
           to: program.client_email,
-          subject: "Your FBF Program is Ready — Review & Approve",
+          subject: "Your FBF Program is Approved — Complete Your Payment",
           html: `
             <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 20px;background:#0a0a0a;color:#e8e8e8;">
               <div style="text-align:center;margin-bottom:24px;">
                 <h1 style="font-size:24px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;">FORGED BY FREEDOM</h1>
               </div>
-              <h2 style="color:#ff6a00;text-align:center;margin-bottom:16px;">Your Program is Ready</h2>
+              <h2 style="color:#ff6a00;text-align:center;margin-bottom:16px;">You're In — Let's Lock It In</h2>
               <p>Hey ${program.client_name.split(" ")[0]},</p>
-              <p>Coach Bryan has personally reviewed and approved your custom training, nutrition, and supplement program.</p>
-              <p><strong style="color:#ff6a00;">Click below to review your full program.</strong> You'll see everything — your training split, nutrition plan, supplement protocol, and cardio — before deciding to lock it in.</p>
+              <p>Coach Bryan has personally reviewed and approved your custom program. It's built specifically for your body, your goals, and your lifestyle.</p>
+              <p><strong style="color:#ff6a00;">Complete your payment below</strong> and your full program will be delivered to this email immediately.</p>
               <p style="text-align:center;margin:28px 0;">
-                <a href="${clientViewUrl}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 36px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Review Your Program</a>
+                <a href="${session.url}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 36px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Complete Payment & Get My Program</a>
               </p>
-              <p style="color:#666;font-size:13px;">If you have questions, reply to this email or reach out to Coach Bryan directly.</p>
+              <p style="color:#666;font-size:13px;">If you have questions before purchasing, reply to this email or reach out to Coach Bryan directly.</p>
               <p style="color:#ff6a00;font-weight:bold;margin-top:24px;">— Forged by Freedom Strength & Nutrition</p>
             </div>
           `
         });
       } else {
-        // Fallback: notify via ntfy with client view link
+        // Fallback: notify via ntfy with Stripe checkout link
         await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
           method: "POST",
           headers: { "Title": `Program Approved: ${program.client_name}`, "Tags": "white_check_mark" },
-          body: `Send this program review link to ${program.client_name} (${program.client_email}):\n\n${clientViewUrl}`
+          body: `Send this payment link to ${program.client_name} (${program.client_email}):\n\n${session.url}`
         }).catch(() => {});
       }
 
@@ -5288,8 +5289,9 @@ app.get("/api/programs/:id/approve", async (req, res) => {
         <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
           <h2 style="color:#22c55e;">Program Approved</h2>
           <p>${program.client_name}'s program has been approved.</p>
-          <p>Payment link sent to: <strong>${program.client_email}</strong></p>
-          <p style="color:#666;font-size:13px;margin-top:16px;">Checkout URL: <a href="${session.url}" style="color:#ff6a00;">${session.url}</a></p>
+          <p>Payment link emailed to: <strong>${program.client_email}</strong></p>
+          <p style="color:#aaa;font-size:13px;margin-top:8px;">Program will be delivered automatically once payment clears.</p>
+          <p style="color:#666;font-size:12px;margin-top:16px;">Stripe checkout: <a href="${session.url}" style="color:#ff6a00;">${session.url}</a></p>
         </div>
       `);
     } else {
@@ -5471,7 +5473,10 @@ app.get("/api/programs/:id/resend-review", async (req, res) => {
   if (error || !program) return res.status(404).json({ error: "Program not found" });
 
   try {
-    await sendApprovalEmail(program.id, program.client_name, program.client_email, program.program_html, program.approval_token);
+    const { data: dashReview } = program.intake_id
+      ? await supabase.from("program_reviews").select("id").eq("intake_id", program.intake_id).maybeSingle()
+      : { data: null };
+    await sendApprovalEmail(program.id, program.client_name, program.client_email, program.program_html, program.approval_token, dashReview?.id || null);
     res.json({ success: true, message: `Review email resent for ${program.client_name}` });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -5733,7 +5738,8 @@ app.post("/api/intake-with-program", async (req, res) => {
             : "") +
           (summary ? `\n\nSummary:\n${summary.slice(0, 500)}` : "");
 
-        await sendApprovalEmail(saved.id, intake.full_name || lead.name, lead.email, programHtml, saved.approval_token || savedApprovalToken);
+        const { data: dashReview } = await supabase.from("program_reviews").select("id").eq("intake_id", intake.id).maybeSingle().catch(() => ({ data: null }));
+        await sendApprovalEmail(saved.id, intake.full_name || lead.name, lead.email, programHtml, saved.approval_token || savedApprovalToken, dashReview?.id || null);
 
         // Also send risk + summary via ntfy
         fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
