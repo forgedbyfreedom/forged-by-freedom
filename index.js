@@ -1244,7 +1244,7 @@ ${labs.trim()}${evidenceBlock}`;
     let answer = await chat([
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: bloodworkPrompt }
-    ], 0.4, 8000);
+    ], 0.4, 4000);
 
     // Strip leaked system prompt
     const leakPatterns = [
