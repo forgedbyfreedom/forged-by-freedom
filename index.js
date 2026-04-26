@@ -5577,6 +5577,83 @@ app.get("/api/programs/:id/payment-cancelled", (req, res) => {
   `);
 });
 
+// ─── Send One-Off Payment Link (Admin) ──────────────────
+// POST /api/programs/:id/send-payment?key=ADMIN_KEY&amount=125000
+// amount is in cents (125000 = $1,250.00)
+app.post("/api/programs/:id/send-payment", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  const keyValid = req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY;
+  if (!keyValid) return res.status(401).json({ error: "Unauthorized" });
+
+  const amountCents = parseInt(req.query.amount || req.body?.amount);
+  if (!amountCents || amountCents < 100) return res.status(400).json({ error: "amount (cents) required and must be >= 100" });
+
+  const { data: program, error } = await supabase
+    .from("generated_programs").select("*").eq("id", req.params.id).single();
+  if (error || !program) return res.status(404).json({ error: "Program not found" });
+  if (!stripe) return res.status(503).json({ error: "Stripe not configured" });
+
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      customer_email: program.client_email,
+      line_items: [{
+        price_data: {
+          currency: "usd",
+          unit_amount: amountCents,
+          product_data: {
+            name: "FBF Custom Program",
+            description: `Forged by Freedom — Custom program for ${program.client_name}`,
+          },
+        },
+        quantity: 1,
+      }],
+      success_url: `${APP_URL}/api/programs/${req.params.id}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${APP_URL}/api/programs/${req.params.id}/payment-cancelled`,
+      metadata: { program_id: req.params.id, client_name: program.client_name },
+    });
+
+    await supabase.from("generated_programs")
+      .update({ stripe_checkout_session_id: session.id, payment_status: "pending" })
+      .eq("id", req.params.id);
+
+    if (emailTransporter) {
+      const dollars = (amountCents / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });
+      await emailTransporter.sendMail({
+        from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+        to: program.client_email,
+        subject: "Your FBF Program — Complete Your Payment",
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 20px;background:#0a0a0a;color:#e8e8e8;">
+            <div style="text-align:center;margin-bottom:24px;">
+              <h1 style="font-size:24px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;">FORGED BY FREEDOM</h1>
+            </div>
+            <h2 style="color:#ff6a00;text-align:center;margin-bottom:16px;">Complete Your Payment</h2>
+            <p>Hey ${program.client_name.split(" ")[0]},</p>
+            <p>Coach Bryan has built your custom program and it's ready to go. Complete your payment of <strong style="color:#ff6a00;">${dollars}</strong> below and your full program will be delivered to this email immediately.</p>
+            <p style="text-align:center;margin:28px 0;">
+              <a href="${session.url}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:18px 36px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;box-shadow:0 4px 20px rgba(255,106,0,.3);">Pay ${dollars} & Get My Program</a>
+            </p>
+            <p style="color:#666;font-size:13px;">If you have questions, reply to this email or reach out to Coach Bryan directly.</p>
+            <p style="color:#ff6a00;font-weight:bold;margin-top:24px;">— Forged by Freedom Strength &amp; Nutrition</p>
+          </div>
+        `
+      });
+    }
+
+    res.json({
+      success: true,
+      checkout_url: session.url,
+      client: program.client_name,
+      email: program.client_email,
+      amount: `$${(amountCents / 100).toFixed(2)}`
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ─── List Programs (Admin) ───────────────────────────────
 app.get("/api/programs", async (req, res) => {
   const validKey = req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY;
