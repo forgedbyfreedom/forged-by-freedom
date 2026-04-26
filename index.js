@@ -1010,7 +1010,14 @@ app.get("/status", async (_, res) => {
   }
 });
 
+app.options("/ask", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.sendStatus(204);
+});
 app.post("/ask", async (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   const { question, mode = "synthesized", namespace = "" } = req.body;
   const start = Date.now();
 
@@ -1120,7 +1127,14 @@ His accolades include but are not limited to:
 });
 
 // ─── Bloodwork Analysis Endpoint ─────────────────────────────
+app.options("/analyze-bloodwork", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.sendStatus(204);
+});
 app.post("/analyze-bloodwork", async (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   const { labs } = req.body;
   const start = Date.now();
 
