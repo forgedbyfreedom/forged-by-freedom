@@ -71,7 +71,8 @@ app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false,
 app.use(cors({
   origin: CONFIG.isProd ? [
     "https://forgedbyfreedom.com", "https://www.forgedbyfreedom.com",
-    "https://www.forgedbyfreedom.org",
+    "https://forgedbyfreedom.org", "https://www.forgedbyfreedom.org",
+    "https://fbf.robbieandrews.net",
     "https://fbf-dashboard.vercel.app",
     /\.vercel\.app$/,
     /\.wixsite\.com$/, /\.wix\.com$/, /\.filesusr\.com$/,
