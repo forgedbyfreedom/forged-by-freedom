@@ -4929,7 +4929,7 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
   // Build URLs using per-program token (works regardless of which env generated it)
   const tokenParam = approvalToken ? `token=${approvalToken}` : `key=${process.env.ADMIN_KEY}`;
   const approveUrl = `${APP_URL}/api/programs/${programId}/approve?${tokenParam}`;
-  const rejectUrl = `${APP_URL}/api/programs/${programId}/reject?${tokenParam}`;
+  const modifyUrl = `${APP_URL}/api/programs/${programId}/modify-request?${tokenParam}`;
   const reviewUrl = `${APP_URL}/api/programs/${programId}/client-view?${tokenParam}`;
   const dashboardUrl = dashboardReviewId ? `https://fbf-dashboard.vercel.app/program-review/${dashboardReviewId}` : null;
 
@@ -4966,8 +4966,8 @@ async function sendApprovalEmail(programId, clientName, clientEmail, programHtml
         </div>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0;">
           <a href="${approveUrl}" style="display:inline-block;background:#22c55e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Approve & Send Payment Link</a>
-          ${dashboardUrl ? `<a href="${dashboardUrl}" style="display:inline-block;background:#1a3a5c;border:1px solid #3b82f6;color:#93c5fd;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Modify in Dashboard</a>` : ''}
-          <a href="${rejectUrl}" style="display:inline-block;background:transparent;border:1px solid #ef4444;color:#ef4444;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Reject</a>
+          <a href="${modifyUrl}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e05500);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Request Changes</a>
+          ${dashboardUrl ? `<a href="${dashboardUrl}" style="display:inline-block;background:#1a3a5c;border:1px solid #3b82f6;color:#93c5fd;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Edit in Dashboard</a>` : ''}
         </div>
         <p style="color:#666;font-size:12px;text-align:center;">Once you approve, the client receives a payment link. Program is delivered after payment clears.</p>
       </div>
@@ -5489,25 +5489,196 @@ app.get("/api/programs/:id/resend-review", async (req, res) => {
   }
 });
 
-// ─── Reject Program ──────────────────────────────────────
-app.get("/api/programs/:id/reject", async (req, res) => {
+// ─── Modify Request: Show Form ───────────────────────────
+app.get("/api/programs/:id/modify-request", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
-  // Accept per-program token OR global key
-  const { data: prog } = await supabase.from("generated_programs").select("approval_token").eq("id", req.params.id).single();
+  const { data: prog } = await supabase.from("generated_programs").select("approval_token, client_name").eq("id", req.params.id).single();
   const tokenValid = req.query.token && prog?.approval_token && req.query.token === prog.approval_token;
   const keyValid = (req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY);
-  if (!tokenValid && !keyValid) return res.status(401).json({ error: "Unauthorized" });
+  if (!tokenValid && !keyValid) return res.status(401).send("Unauthorized");
 
-  await supabase.from("generated_programs")
-    .update({ status: "rejected", coach_notes: req.query.reason || "Needs revision" })
-    .eq("id", req.params.id);
+  const tokenParam = req.query.token ? `token=${req.query.token}` : `key=${req.query.key}`;
+  const postUrl = `/api/programs/${req.params.id}/modify-request?${tokenParam}`;
 
-  res.type("html").send(`
-    <div style="font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
-      <h2 style="color:#ef4444;">Program Rejected</h2>
-      <p>You can regenerate this program from the admin panel.</p>
-    </div>
-  `);
+  res.type("html").send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request Changes — ${prog.client_name}</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#e8e8e8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:#141414;border:1.5px solid #2a2a2a;border-radius:14px;padding:36px 32px;max-width:600px;width:100%}
+.logo{color:#ff6a00;font-size:18px;font-weight:900;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:6px}
+.sub{color:#555;font-size:10px;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:28px}
+.divider{height:2px;background:linear-gradient(90deg,transparent,#ff6a00,transparent);border-radius:1px;margin-bottom:28px}
+h2{font-size:20px;font-weight:700;color:#fff;margin-bottom:6px}
+.client{color:#ff6a00;font-size:14px;font-weight:600;margin-bottom:20px}
+label{display:block;font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px}
+textarea{width:100%;background:#1c1c1c;border:1.5px solid #2a2a2a;border-radius:8px;color:#e8e8e8;font-size:15px;padding:14px 16px;outline:none;resize:vertical;min-height:220px;font-family:inherit;line-height:1.6;transition:border-color .2s}
+textarea:focus{border-color:#ff6a00;box-shadow:0 0 0 3px rgba(255,106,0,.12)}
+textarea::placeholder{color:#444}
+.hint{font-size:12px;color:#555;margin-top:8px;line-height:1.5}
+.btn{display:block;width:100%;margin-top:24px;padding:16px;background:linear-gradient(135deg,#ff6a00,#e05500);color:#fff;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;border:none;border-radius:10px;cursor:pointer;transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(255,106,0,.35)}
+.btn:active{transform:none}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">FORGED BY FREEDOM</div>
+  <div class="sub">Coach Review Panel</div>
+  <div class="divider"></div>
+  <h2>Request Program Changes</h2>
+  <div class="client">Client: ${prog.client_name}</div>
+  <form method="POST" action="${postUrl}" onsubmit="document.getElementById('btn').disabled=true;document.getElementById('btn').textContent='Submitting...'">
+    <label for="notes">What needs to change?</label>
+    <textarea id="notes" name="notes" placeholder="Be specific. For example:&#10;&#10;• Switch from Tirzepatide to Retatrutide 2mg weekly&#10;• Add Cagrilintide 0.5mg weekly&#10;• Reduce daily calories to 1,400 on rest days&#10;• Replace barbell squats with leg press — client has bad knees&#10;• Increase protein target to 160g&#10;• Add more shoulder volume on Day C" required></textarea>
+    <div class="hint">The AI will apply your changes and generate an updated program. You'll receive a new review email when it's ready.</div>
+    <button type="submit" class="btn" id="btn">Submit Changes & Regenerate</button>
+  </form>
+</div>
+</body>
+</html>`);
+});
+
+// ─── Modify Request: Process & Regenerate ────────────────
+app.post("/api/programs/:id/modify-request", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  const { data: prog } = await supabase.from("generated_programs")
+    .select("*")
+    .eq("id", req.params.id).single();
+  const tokenValid = req.query.token && prog?.approval_token && req.query.token === prog.approval_token;
+  const keyValid = (req.query.key === process.env.ADMIN_KEY || req.query.key === process.env.COACH_KEY);
+  if (!tokenValid && !keyValid) return res.status(401).send("Unauthorized");
+
+  // Parse body (form POST sends urlencoded)
+  let notes = req.body?.notes || "";
+  if (!notes.trim()) return res.status(400).send("No changes provided.");
+
+  // Show immediate acknowledgement — regeneration can take 30-60s
+  res.type("html").send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regenerating — Forged by Freedom</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#e8e8e8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:#141414;border:1.5px solid #2a2a2a;border-radius:14px;padding:40px 32px;max-width:500px;width:100%;text-align:center}
+.logo{color:#ff6a00;font-size:18px;font-weight:900;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.divider{height:2px;background:linear-gradient(90deg,transparent,#ff6a00,transparent);border-radius:1px;margin:20px 0}
+.spinner{width:48px;height:48px;border:4px solid #2a2a2a;border-top-color:#ff6a00;border-radius:50%;animation:spin 1s linear infinite;margin:24px auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+h2{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px}
+p{color:#888;font-size:14px;line-height:1.6}
+.notes-box{background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px;margin-top:20px;text-align:left;font-size:13px;color:#aaa;white-space:pre-wrap;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">FORGED BY FREEDOM</div>
+  <div class="divider"></div>
+  <div class="spinner"></div>
+  <h2>Regenerating Program</h2>
+  <p>Your changes have been received. The AI is applying them now and will email you the updated program for review.</p>
+  <div class="notes-box">${notes.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+</div>
+</body>
+</html>`);
+
+  // Regenerate asynchronously after response is sent
+  setImmediate(async () => {
+    try {
+      const existingProgram = {
+        plan_at_a_glance: prog.plan_at_a_glance,
+        training_program: prog.training_program,
+        nutrition_plan: prog.nutrition_plan,
+        supplement_protocol: prog.supplement_protocol,
+        cardio_protocol: prog.cardio_protocol,
+        ped_protocol: prog.ped_protocol,
+        metabolic_monitoring: prog.metabolic_monitoring,
+        treadmill_progression: prog.treadmill_progression,
+        recovery: prog.recovery,
+        methodology: prog.methodology,
+      };
+
+      const modifyPrompt = `You are Coach Bryan's programming engine for Forged by Freedom.
+
+The coach has reviewed the following program and requested specific changes. Apply EVERY change listed. Do not invent changes beyond what is requested. Keep everything else exactly the same.
+
+COACH'S REQUESTED CHANGES:
+${notes}
+
+EXISTING PROGRAM (apply changes to this):
+${JSON.stringify(existingProgram, null, 2)}
+
+Return the complete updated program as valid JSON only. Same structure as the input. No markdown, no explanation.`;
+
+      const aiRes = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "x-api-key": process.env.ANTHROPIC_API_KEY,
+          "anthropic-version": "2023-06-01",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-6",
+          max_tokens: 8000,
+          messages: [{ role: "user", content: modifyPrompt }]
+        })
+      });
+
+      if (!aiRes.ok) throw new Error(`AI error: ${aiRes.status}`);
+      const aiData = await aiRes.json();
+      let raw = aiData.content?.[0]?.text || "";
+      const jsonMatch = raw.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error("No JSON in AI response");
+      const updatedProgram = JSON.parse(jsonMatch[0]);
+
+      // Re-format the HTML
+      const updatedHtml = formatProgramHTML(updatedProgram, prog.client_name);
+
+      // Save updated program
+      await supabase.from("generated_programs").update({
+        plan_at_a_glance: updatedProgram.plan_at_a_glance || prog.plan_at_a_glance,
+        training_program: updatedProgram.training_program || prog.training_program,
+        nutrition_plan: updatedProgram.nutrition_plan || prog.nutrition_plan,
+        supplement_protocol: updatedProgram.supplement_protocol || prog.supplement_protocol,
+        cardio_protocol: updatedProgram.cardio_protocol || prog.cardio_protocol,
+        ped_protocol: updatedProgram.ped_protocol || prog.ped_protocol,
+        metabolic_monitoring: updatedProgram.metabolic_monitoring || prog.metabolic_monitoring,
+        treadmill_progression: updatedProgram.treadmill_progression || prog.treadmill_progression,
+        recovery: updatedProgram.recovery || prog.recovery,
+        methodology: updatedProgram.methodology || prog.methodology,
+        program_html: updatedHtml,
+        coach_notes: `Coach requested changes: ${notes}`,
+        status: "pending_review",
+      }).eq("id", prog.id);
+
+      // Update program_reviews if linked
+      if (prog.intake_id) {
+        const { data: dashReview } = await supabase.from("program_reviews")
+          .select("id").eq("intake_id", prog.intake_id).maybeSingle();
+        if (dashReview?.id) {
+          await supabase.from("program_reviews").update({
+            status: "pending_review",
+            admin_notes: `Coach requested changes: ${notes}`,
+          }).eq("id", dashReview.id);
+        }
+      }
+
+      // Email Bryan the updated program for review
+      await sendApprovalEmail(prog.id, prog.client_name, prog.client_email, updatedHtml, prog.approval_token, null);
+
+      console.log(`[MODIFY] Program ${prog.id} regenerated with coach notes and sent for re-review.`);
+    } catch (err) {
+      console.error("[MODIFY] Regeneration failed:", err.message);
+    }
+  });
 });
 
 // ─── Payment Success ─────────────────────────────────────
