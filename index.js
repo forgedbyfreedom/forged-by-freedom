@@ -1283,13 +1283,11 @@ ${labs.trim()}${evidenceBlock}`;
     if (msg.includes("limit") || msg.includes("429") || msg.includes("quota") || msg.includes("exceeded")) {
       return res.status(503).json({
         error: "Our analysis service is temporarily at capacity. Please try again in a few minutes.",
-        debug_error: msg,
         answer: null
       });
     }
     res.status(500).json({
       error: "Bloodwork analysis is temporarily unavailable. Please try again shortly.",
-      debug_error: msg,
       answer: null
     });
   }
