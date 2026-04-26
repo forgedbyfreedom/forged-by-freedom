@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FBF Programming Rules — Forged by Freedom</title>
+<meta name="description" content="The core rules Coach Bryan uses to build every FBF custom program.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#141414;
+  --surface2:#1c1c1c;
+  --border:#2a2a2a;
+  --accent:#ff6a00;
+  --accent-glow:rgba(255,106,0,.12);
+  --accent-soft:#ff8c33;
+  --text:#e8e8e8;
+  --text-dim:#aaa;
+  --text-muted:#666;
+  --success:#22c55e;
+  --info:#3b82f6;
+  --warn:#eab308;
+  --radius:12px;
+  --radius-sm:8px;
+}
+html,body{min-height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+body{padding:0;display:flex;justify-content:center;align-items:flex-start}
+
+.container{width:100%;max-width:760px;padding:32px 20px 60px}
+
+/* Header */
+.header{text-align:center;margin-bottom:36px}
+.header h1{font-size:26px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
+.header p{font-size:14px;color:var(--text-dim);line-height:1.6;max-width:560px;margin:0 auto}
+.header-line{width:60px;height:3px;margin:18px auto 0;background:linear-gradient(90deg,transparent,var(--accent),transparent);border-radius:2px}
+
+/* Section cards */
+.section{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px 22px;margin-bottom:16px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.section-icon{font-size:20px;line-height:1}
+.section-title{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}
+
+/* Rule items */
+.rule-list{list-style:none}
+.rule-list li{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:13.5px;line-height:1.55;color:var(--text-dim)}
+.rule-list li:last-child{border-bottom:none;padding-bottom:0}
+.rule-list li::before{content:"—";color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px}
+.rule-list li strong{color:var(--text);font-weight:600}
+
+/* Highlight rule */
+.rule-highlight{background:var(--accent-glow);border:1px solid rgba(255,106,0,.25);border-radius:var(--radius-sm);padding:10px 14px;font-size:13px;color:var(--text);margin-bottom:12px;line-height:1.55}
+.rule-highlight strong{color:var(--accent)}
+
+/* Split grid */
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+@media(max-width:500px){.split-grid{grid-template-columns:1fr}}
+.split-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px}
+.split-card .day-label{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.split-card .day-exercises{font-size:12.5px;color:var(--text-dim);line-height:1.5}
+
+/* Supplement chips */
+.supp-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.supp-chip{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;color:var(--text-dim)}
+.supp-chip strong{color:var(--text)}
+
+/* Monitoring table */
+.mon-table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+.mon-table th{text-align:left;padding:8px 12px;background:var(--surface2);color:var(--accent);font-size:11px;letter-spacing:.7px;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.mon-table td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--text-dim);vertical-align:top}
+.mon-table tr:last-child td{border-bottom:none}
+.badge{display:inline-block;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700;text-transform:uppercase}
+.badge-green{background:rgba(34,197,94,.12);color:#22c55e;border:1px solid rgba(34,197,94,.25)}
+.badge-yellow{background:rgba(234,179,8,.12);color:#eab308;border:1px solid rgba(234,179,8,.25)}
+.badge-red{background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.25)}
+
+/* Disclaimer */
+.disclaimer{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-top:24px;font-size:12px;color:var(--text-muted);line-height:1.6}
+
+@media(max-width:480px){
+  .container{padding:20px 14px 40px}
+  .header h1{font-size:20px}
+  .section{padding:18px 14px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>FBF Programming Rules</h1>
+    <p>Every program Coach Bryan builds follows these rules without exception. This is the system behind Forged by Freedom.</p>
+    <div class="header-line"></div>
+  </div>
+
+  <!-- Training Split -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔄</span>
+      <span class="section-title">Training Split</span>
+    </div>
+    <div class="rule-highlight">
+      <strong>A/B/C/D Rotating Split</strong> — Minimum 5 business days per week. One optional weekend day. Active Rest on remaining day(s). Days rotate continuously and are NOT tied to specific weekdays.
+    </div>
+    <div class="split-grid">
+      <div class="split-card">
+        <div class="day-label">Day A</div>
+        <div class="day-exercises">Chest &amp; Triceps<br>DB Flat Bench · DB Incline Press · Cable Fly · Tricep Rope Pushdown · Overhead Tricep Extension</div>
+      </div>
+      <div class="split-card">
+        <div class="day-label">Day B</div>
+        <div class="day-exercises">Legs<br>Barbell Back Squat · Romanian Deadlift · Leg Extension · Leg Curl · DB Walking Lunge · Standing Calf Raise</div>
+      </div>
+      <div class="split-card">
+        <div class="day-label">Day C</div>
+        <div class="day-exercises">Shoulders<br>DB OHP (seated) · DB Lateral Raise · Cable Front Raise · Rear Delt Fly · Face Pull · DB Shrug</div>
+      </div>
+      <div class="split-card">
+        <div class="day-label">Day D</div>
+        <div class="day-exercises">Back &amp; Biceps<br>Barbell Row · Lat Pulldown · Seated Cable Row · DB Hammer Curl · DB Bicep Curl</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercise Selection -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🏋️</span>
+      <span class="section-title">Exercise Selection</span>
+    </div>
+    <ul class="rule-list">
+      <li><span><strong>All pressing movements (bench, OHP):</strong> Dumbbells only — allows natural joint tracking and unilateral balance. No barbell bench. No barbell OHP.</span></li>
+      <li><span><strong>Compound pulls &amp; legs:</strong> Barbells — deadlift, squat, RDL, barbell row. These movements load better with a bar.</span></li>
+      <li><span><strong>Isolation &amp; accessories:</strong> Cables and machines — cable fly, lat pulldown, leg press, cable curl, face pull.</span></li>
+      <li><span><strong>Never:</strong> dumbbell deadlifts. Use barbell or trap bar for all deadlift variations.</span></li>
+      <li><span><strong>Experience matching:</strong> Goblet squat before barbell squat for beginners. Scale to the athlete.</span></li>
+    </ul>
+  </div>
+
+  <!-- Volume & Intensity -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📊</span>
+      <span class="section-title">Volume &amp; Intensity</span>
+    </div>
+    <ul class="rule-list">
+      <li><span><strong>Max 5–6 exercises per training day.</strong> Quality over quantity.</span></li>
+      <li><span><strong>Compound movements:</strong> 3–4 sets. <strong>Isolation movements:</strong> 2–3 sets.</span></li>
+      <li><span><strong>Tempo:</strong> 3-1-1-0 on all pressing and pulling movements (3-sec eccentric).</span></li>
+      <li><span><strong>RIR targets:</strong> Most sets at RIR 1–3. Beginners: RIR 3–4. Advanced: RIR 0–2 on key lifts.</span></li>
+      <li><span><strong>Deload every 4–5 weeks.</strong> Reduce volume 40–50%, keep intensity moderate. Non-negotiable.</span></li>
+      <li><span><strong>Each muscle group hit 2× per week minimum</strong> for hypertrophy.</span></li>
+    </ul>
+  </div>
+
+  <!-- Progressive Overload -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📈</span>
+      <span class="section-title">Progressive Overload</span>
+    </div>
+    <div class="rule-highlight">
+      <strong>The #1 driver of growth.</strong> Every program must include a clear progression scheme. Log every session.
+    </div>
+    <ul class="rule-list">
+      <li><span>When client hits the top of rep range on all sets at RIR 2 or better → increase weight by 2.5–5 lbs next session.</span></li>
+      <li><span>Keep the same core movements for 4–8 weeks to accurately track progress.</span></li>
+      <li><span>Mind-muscle connection over ego weight. Full ROM every rep.</span></li>
+    </ul>
+  </div>
+
+  <!-- Nutrition Rules -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🥗</span>
+      <span class="section-title">Nutrition Rules</span>
+    </div>
+    <ul class="rule-list">
+      <li><span><strong>Protein:</strong> 0.9–1.1g per pound of body weight (up to 1.2g for cutting phases)</span></li>
+      <li><span><strong>Separate macros for training days vs. active rest days</strong> — training days get more carbs; rest days reduce carbs by ~40g</span></li>
+      <li><span><strong>Fat loss:</strong> 300–500 calorie deficit max. Never crash diet.</span></li>
+      <li><span><strong>Muscle gain:</strong> 200–400 calorie surplus. Lean bulk only.</span></li>
+      <li><span><strong>Dietary fats:</strong> 0.3–0.4g per pound minimum for hormone health</span></li>
+      <li><span><strong>Water:</strong> Minimum 0.5 oz per pound of body weight daily (Men ~100 oz / Women ~80 oz)</span></li>
+      <li><span><strong>5 meals per day:</strong> Protein Oatmeal Bowl · Chicken &amp; Rice Bowl · Greek Yogurt &amp; Berries · Salmon &amp; Sweet Potato · Protein Shake</span></li>
+      <li><span><strong>Meal timing:</strong> Specific nutrient timing around training windows required</span></li>
+    </ul>
+  </div>
+
+  <!-- Cardio -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🚶</span>
+      <span class="section-title">Cardio Protocol</span>
+    </div>
+    <ul class="rule-list">
+      <li><span><strong>Daily LISS:</strong> 30 min incline treadmill walk — 10–12% grade, 3.0–3.5 mph, fasted or post-workout</span></li>
+      <li><span><strong>Active Rest days:</strong> 30–60 min outdoor activity (walk, hike, bike, or recreational sport)</span></li>
+      <li><span><strong>LISS HR target formula:</strong> (220 − age) × 0.55–0.65. Stay in the zone, don't go harder.</span></li>
+      <li><span><strong>Progressive treadmill chart included:</strong> week-by-week speed, incline, duration, and HR target progression</span></li>
+      <li><span><strong>Step goal:</strong> 10,000 steps daily minimum, tracked via app</span></li>
+      <li><span><strong>Never say "Rest Day."</strong> It's always Active Rest.</span></li>
+    </ul>
+  </div>
+
+  <!-- Metabolic Monitoring -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🌡️</span>
+      <span class="section-title">Metabolic Monitoring</span>
+    </div>
+    <div class="rule-highlight">
+      <strong>Daily oral body temperature tracking upon waking</strong> — before food, drink, or movement. This is the metabolic throttle. Required in every program.
+    </div>
+    <table class="mon-table">
+      <thead>
+        <tr><th>Temperature</th><th>Status</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>97.8–98.6°F</td>
+          <td><span class="badge badge-green">Optimal</span></td>
+          <td>Stay the course</td>
+        </tr>
+        <tr>
+          <td>97.3–97.7°F</td>
+          <td><span class="badge badge-yellow">Mild Slowdown</span></td>
+          <td>Moderate refeed — add 50–75g carbs</td>
+        </tr>
+        <tr>
+          <td>&lt;97.3°F for 3+ days</td>
+          <td><span class="badge badge-red">High-Carb Refeed Required</span></td>
+          <td>Mandatory refeed — add 100–150g carbs for 1–2 days</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="rule-list" style="margin-top:14px">
+      <li><span><strong>Daily tracking required:</strong> weight (morning, post-bathroom), body temp, sleep quality (1–10), energy (1–10), mood (1–10), stress (1–10)</span></li>
+      <li><span><strong>Daily FBF app check-in is non-negotiable.</strong></span></li>
+    </ul>
+  </div>
+
+  <!-- Standard Supplements -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">💊</span>
+      <span class="section-title">Standard Supplement Protocol</span>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px">Included in every program. Adjusted for budget when needed.</p>
+    <div class="supp-list">
+      <div class="supp-chip"><strong>Creatine Monohydrate</strong> 5g · Morning</div>
+      <div class="supp-chip"><strong>Fish Oil EPA/DHA</strong> 2g · With breakfast</div>
+      <div class="supp-chip"><strong>Vitamin D3</strong> 5,000 IU · With a meal</div>
+      <div class="supp-chip"><strong>Magnesium Glycinate</strong> 400mg · Before bed</div>
+      <div class="supp-chip"><strong>Zinc</strong> 30mg · Before bed</div>
+      <div class="supp-chip"><strong>Ashwagandha KSM-66</strong> 600mg · Morning</div>
+    </div>
+  </div>
+
+  <!-- Peptide Recommendations -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🧬</span>
+      <span class="section-title">Peptide Recommendations</span>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px">Always discussed and documented when relevant. Presented as educational — client consults physician.</p>
+    <ul class="rule-list">
+      <li><span><strong>Retatrutide:</strong> Strongly recommended for body recomposition and performance. Multi-receptor GLP-1/GIP/Glucagon agonist. Discuss with physician.</span></li>
+      <li><span><strong>MoTS-C:</strong> Mitochondrial peptide for energy, fat metabolism, and performance. Stacks well with Reta. Discuss with physician.</span></li>
+      <li><span>If client reports any PEDs, peptides, GH, TRT, or GLP-1 agonists — each compound is listed with dose, frequency, timing, purpose, and what to monitor.</span></li>
+      <li><span>Bloodwork monitoring recommendations tailored to their specific stack.</span></li>
+      <li><span>Framed as "Your Current Protocol" — we document and monitor, we do not prescribe.</span></li>
+    </ul>
+  </div>
+
+  <!-- Assessments -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📸</span>
+      <span class="section-title">Baseline Assessments</span>
+    </div>
+    <ul class="rule-list">
+      <li><span><strong>InBody scan</strong> at gym front desk — baseline today, repeat monthly on the same date.</span></li>
+      <li><span><strong>Progress photos</strong> — before photo today; monthly progress photos same day, same lighting, same positions (front, side, back).</span></li>
+    </ul>
+  </div>
+
+  <!-- Recovery -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">😴</span>
+      <span class="section-title">Recovery Standards</span>
+    </div>
+    <ul class="rule-list">
+      <li><span><strong>Sleep:</strong> 7–9 hours. Non-negotiable for hormone production and recovery.</span></li>
+      <li><span><strong>Post-session stretching</strong> protocol included in every program.</span></li>
+      <li><span>Any recovery modalities the client already uses (sauna, cold plunge, etc.) are incorporated.</span></li>
+      <li><span><strong>Weekly self-assessment:</strong> energy, performance, soreness, and motivation tracked and reviewed.</span></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    All program rules and guidelines are for educational and research purposes only. Nothing herein constitutes medical advice, diagnosis, or treatment. No recommendations for human consumption of any substance are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, supplementation, or hormone-related protocol. Individual results vary. Coach Bryan Antonelli — NASM CPT | NASM Nutrition | NASM Meal Prep Made Easy | NASM Physique &amp; Bodybuilding | BJJ Black Belt | NPC Men's Physique | U.S. Veteran.
+  </div>
+
+</div>
+</body>
+</html>

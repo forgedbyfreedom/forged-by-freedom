@@ -2176,6 +2176,7 @@ app.get("/contact", (_, res) => res.sendFile(join(__dirname, "embed", "contact.h
 app.get("/store", (_, res) => res.sendFile(join(__dirname, "embed", "store.html")));
 app.get("/support", (_, res) => res.sendFile(join(__dirname, "embed", "support.html")));
 app.get("/programs", (_, res) => res.sendFile(join(__dirname, "embed", "programs.html")));
+app.get("/rules", (_, res) => res.sendFile(join(__dirname, "embed", "rules.html")));
 app.get("/blog", (_, res) => res.sendFile(join(__dirname, "embed", "blog.html")));
 
 // ─── Admin: Update Lead Status ───────────────────────────
