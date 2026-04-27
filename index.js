@@ -4616,7 +4616,7 @@ function formatProgramHTML(program, clientName) {
       </div>`;
     }
     pedHTML = `
-    <div style="${sectionStyle}">
+    <div class="pb ni" style="${sectionStyle}">
       <h2 style="${sectionTitle}">Your Current Protocol</h2>
       <p style="color:#ef4444;font-size:12px;font-style:italic;margin:0 0 16px;padding:10px;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;">${pedProto.disclaimer || "This section documents compounds the client has reported using. Forged by Freedom does not prescribe or recommend PEDs. All compounds should be used under physician supervision."}</p>
       ${compoundsRows}
@@ -4636,7 +4636,7 @@ function formatProgramHTML(program, clientName) {
   if (metMon.temperature_guide || metMon.daily_tracking) {
     const tempGuide = metMon.temperature_guide || {};
     metMonHTML = `
-    <div style="${sectionStyle}">
+    <div class="pb ni" style="${sectionStyle}">
       <h2 style="${sectionTitle}">Metabolic Monitoring</h2>
       ${metMon.daily_tracking ? `<div style="margin-bottom:16px;">
         <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Daily Tracking Checklist</strong>
@@ -4681,7 +4681,7 @@ function formatProgramHTML(program, clientName) {
       </tr>`;
     }
     treadmillHTML = `
-    <div style="${sectionStyle}">
+    <div class="pb ni" style="${sectionStyle}">
       <h2 style="${sectionTitle}">Treadmill Progression Chart</h2>
       <p style="color:#aaa;font-size:13px;margin:0 0 12px;"><strong style="color:#e8e8e8;">Target HR:</strong> ${treadmill.hr_target_low || 120}–${treadmill.hr_target_high || 145} bpm</p>
       <table style="width:100%;border-collapse:collapse;">
@@ -4702,7 +4702,7 @@ function formatProgramHTML(program, clientName) {
   let recoveryHTML = "";
   if (recovery.sleep || recovery.post_workout || recovery.weekly_assessment) {
     recoveryHTML = `
-    <div style="${sectionStyle}">
+    <div class="pb ni" style="${sectionStyle}">
       <h2 style="${sectionTitle}">Recovery Protocol</h2>
       ${recovery.sleep ? `<div style="background:#1c1c1c;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:10px;">
         <strong style="color:#e8e8e8;font-size:12px;text-transform:uppercase;">Sleep</strong>
@@ -4731,9 +4731,21 @@ function formatProgramHTML(program, clientName) {
 
   return `<!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  @media print {
+    @page { size: 8.5in 11in portrait; margin: 0.5in; }
+    body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; background: #0a0a0a !important; }
+    .wrap { max-width: 100% !important; padding: 0 !important; }
+    .pb { page-break-before: always; break-before: page; }
+    .ni { break-inside: avoid; page-break-inside: avoid; }
+    tr { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
+</head>
 <body style="margin:0;padding:0;background:#0a0a0a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
-<div style="max-width:700px;margin:0 auto;padding:32px 20px;">
+<div class="wrap" style="max-width:700px;margin:0 auto;padding:32px 20px;">
 
   <!-- Header -->
   <div style="text-align:center;margin-bottom:40px;">
@@ -4796,7 +4808,7 @@ function formatProgramHTML(program, clientName) {
   </div>` : ""}
 
   <!-- Training Program -->
-  <div style="${sectionStyle}">
+  <div class="pb ni" style="${sectionStyle}">
     <h2 style="${sectionTitle}">Training Program</h2>
     <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
       <div style="${statBox}"><div style="${statLabel}">Split</div><div style="${statValue}">${tp?.split_type || "—"}</div></div>
@@ -4809,7 +4821,7 @@ function formatProgramHTML(program, clientName) {
   </div>
 
   <!-- Nutrition Plan -->
-  <div style="${sectionStyle}">
+  <div class="pb ni" style="${sectionStyle}">
     <h2 style="${sectionTitle}">Nutrition Plan</h2>
 
     <!-- Training Day Macros -->
@@ -4867,7 +4879,7 @@ function formatProgramHTML(program, clientName) {
   </div>
 
   <!-- Supplements -->
-  <div style="${sectionStyle}">
+  <div class="pb ni" style="${sectionStyle}">
     <h2 style="${sectionTitle}">Supplement Protocol</h2>
     <table style="width:100%;border-collapse:collapse;">
       <tr style="background:#1c1c1c;color:#aaa;font-size:12px;text-transform:uppercase;">
@@ -4893,7 +4905,7 @@ function formatProgramHTML(program, clientName) {
   ${treadmillHTML}
 
   <!-- Cardio Protocol -->
-  <div style="${sectionStyle}">
+  <div class="pb ni" style="${sectionStyle}">
     <h2 style="${sectionTitle}">Cardio Protocol</h2>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
       <div style="${statBox}"><div style="${statLabel}">Sessions/Week</div><div style="${statValue}">${cp?.weekly_sessions || "—"}</div></div>
