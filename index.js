@@ -6,6 +6,7 @@ import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
 import nodemailer from "nodemailer";
 import multer from "multer";
+import { createHash } from "crypto";
 
 /* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
@@ -1475,6 +1476,110 @@ const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_
 // Alias for backwards compat with any code referencing supabaseAdmin
 const supabaseAdmin = supabase;
 
+// ─── Gated Program Delivery Helpers ──────────────────────
+// All program deliveries must go through public.mark_program_delivered() RPC,
+// which validates against the gate trigger (approved_at + program_reviews.status='approved').
+// Direct UPDATEs setting status='delivered' are blocked from syncing to clients
+// and write a CRITICAL row to reconciliation_findings.
+function getCoachActor() {
+  const id = process.env.COACH_USER_ID;
+  const name = process.env.COACH_USER_NAME || "Bryan Antonelli";
+  if (!id) {
+    throw new Error("COACH_USER_ID env var is required for program delivery (set to coach's auth.users.id UUID)");
+  }
+  return { id, name };
+}
+
+async function markProgramDelivered(programId) {
+  const actor = getCoachActor();
+  const { data, error } = await supabase.rpc("mark_program_delivered", {
+    p_program_id: programId,
+    p_actor_id: actor.id,
+    p_actor_name: actor.name,
+  });
+  if (error) {
+    throw new Error(`mark_program_delivered RPC failed: ${error.message}`);
+  }
+  const result = Array.isArray(data) ? data[0] : data;
+  if (!result?.success) {
+    const reasons = (result?.reasons || []).join(", ") || "unknown";
+    const err = new Error(`Delivery gate blocked: ${reasons}`);
+    err.gateBlocked = true;
+    err.reasons = result?.reasons || [];
+    throw err;
+  }
+  return result;
+}
+
+// ─── Archive Storage Uploads ────────────────────────────
+// Every Supabase Storage upload from the app must also write an archive_objects row,
+// so Drive sync + reconciliation can track it. Mirrors phase_2B_brief.md Priority 3.
+const ALLOWED_ARCHIVE_STAGES = new Set([
+  "lead_intake", "second_stage_intake", "nda", "waiver",
+  "program_pdf", "program_json",
+  "bloodwork", "body_scan", "progress_photo", "lab_pdf",
+  "other",
+]);
+
+/**
+ * Upload to Supabase Storage AND record an archive_objects row.
+ * Throws on either step failure. Caller is responsible for resolving client_id
+ * before invoking — this helper does not look up entities.
+ *
+ * @param {Object} args
+ * @param {string} args.bucket
+ * @param {string} args.path
+ * @param {Buffer} args.fileBuffer
+ * @param {string} args.contentType
+ * @param {number} args.sizeBytes
+ * @param {string} args.originalName
+ * @param {string} args.stage          - one of ALLOWED_ARCHIVE_STAGES
+ * @param {?string} args.clientId
+ * @param {?string} [args.leadId]
+ * @param {?string} [args.intakeId]
+ * @param {?string} [args.programId]
+ * @param {?string} [args.archivedBy]  - auth.users uuid
+ * @param {boolean} [args.upsert=false]
+ */
+async function uploadAndArchive(args) {
+  const {
+    bucket, path, fileBuffer, contentType, sizeBytes, originalName,
+    stage, clientId = null, leadId = null, intakeId = null, programId = null,
+    archivedBy = null, upsert = false,
+  } = args;
+
+  if (!ALLOWED_ARCHIVE_STAGES.has(stage)) {
+    throw new Error(`Invalid archive stage '${stage}'. Allowed: ${[...ALLOWED_ARCHIVE_STAGES].join(", ")}`);
+  }
+
+  const { error: uploadErr } = await supabase.storage
+    .from(bucket).upload(path, fileBuffer, { contentType, upsert });
+  if (uploadErr) throw new Error(`Storage upload failed: ${uploadErr.message}`);
+
+  const sha256 = createHash("sha256").update(fileBuffer).digest("hex");
+
+  const { error: archiveErr } = await supabase.from("archive_objects").insert({
+    client_id: clientId,
+    lead_id: leadId,
+    intake_id: intakeId,
+    program_id: programId,
+    stage,
+    bucket_id: bucket,
+    storage_path: path,
+    original_name: originalName,
+    mime_type: contentType,
+    size_bytes: sizeBytes,
+    sha256,
+    archived_by: archivedBy,
+  });
+  if (archiveErr) {
+    console.error(`[ARCHIVE] storage upload to ${bucket}/${path} succeeded but archive_objects insert failed:`, archiveErr.message);
+    throw new Error(`Archive insert failed: ${archiveErr.message}`);
+  }
+
+  return { path, sha256 };
+}
+
 // ─── File Upload (Supabase Storage) ──────────────────────
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
@@ -1482,34 +1587,66 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Storage not configured" });
   if (!req.file) return res.status(400).json({ error: "No file provided" });
 
-  const { lead_id, category } = req.body;
-  if (!lead_id) return res.status(400).json({ error: "lead_id required" });
+  const { lead_id, client_id: bodyClientId, category, stage: bodyStage, intake_id } = req.body;
+  if (!lead_id && !bodyClientId) {
+    return res.status(400).json({ error: "lead_id or client_id required" });
+  }
+
+  // Resolve client_id (P4: never file under lead_id; require a real client record).
+  let clientId = bodyClientId || null;
+  let leadId = lead_id || null;
+  let leadEmail = null;
+  if (!clientId && leadId) {
+    const { data: lead } = await supabase
+      .from("leads").select("id, email").eq("id", leadId).maybeSingle();
+    if (!lead) {
+      return res.status(404).json({ error: `lead ${leadId} not found` });
+    }
+    leadEmail = lead.email;
+    const { data: client } = await supabase
+      .from("clients").select("id").eq("email", lead.email).maybeSingle();
+    if (!client) {
+      return res.status(409).json({
+        error: "No client record exists yet for this lead — refusing to file under lead_id (per phase_2B_brief Priority 4). Create the client record first, then retry.",
+        lead_id: leadId,
+        email: lead.email,
+      });
+    }
+    clientId = client.id;
+  }
+
+  // Map category → archive stage. Front-end already passes 'bloodwork' and 'body_scan'
+  // which match the stage enum directly. Fall back to 'other' for unrecognized values.
+  const stage = (bodyStage && ALLOWED_ARCHIVE_STAGES.has(bodyStage))
+    ? bodyStage
+    : (ALLOWED_ARCHIVE_STAGES.has(category) ? category : "other");
 
   const ext = req.file.originalname.split(".").pop() || "bin";
-  const fileName = `${category || "uploads"}/${lead_id}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+  const fileName = `${stage}/${clientId}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
 
   try {
-    const { data, error } = await supabase.storage
-      .from("client-documents")
-      .upload(fileName, req.file.buffer, {
-        contentType: req.file.mimetype,
-        upsert: false,
-      });
-
-    if (error) {
-      console.error("[UPLOAD] Storage error:", error);
-      return res.status(500).json({ error: "Upload failed: " + error.message });
-    }
+    await uploadAndArchive({
+      bucket: "client-documents",
+      path: fileName,
+      fileBuffer: req.file.buffer,
+      contentType: req.file.mimetype,
+      sizeBytes: req.file.size,
+      originalName: req.file.originalname,
+      stage,
+      clientId,
+      leadId,
+      intakeId: intake_id || null,
+    });
 
     const { data: urlData } = supabase.storage
       .from("client-documents")
       .getPublicUrl(fileName);
 
-    console.log(`[UPLOAD] ${req.file.originalname} → ${fileName}`);
-    res.json({ url: urlData.publicUrl, path: fileName });
+    console.log(`[UPLOAD] ${req.file.originalname} → ${fileName} (stage=${stage}, client=${clientId})`);
+    res.json({ url: urlData.publicUrl, path: fileName, stage, client_id: clientId });
   } catch (err) {
-    console.error("[UPLOAD] Error:", err);
-    res.status(500).json({ error: "Upload failed" });
+    console.error("[UPLOAD] Error:", err.message);
+    res.status(500).json({ error: "Upload failed: " + err.message });
   }
 });
 
@@ -5010,48 +5147,65 @@ app.post("/api/intake/generate-program", async (req, res) => {
   }
 
   try {
-    // Check both intake tables (Render's client_intakes AND Dashboard's client_intake)
+    // Look up intake from the canonical client_intakes table (singular client_intake is deprecated post phase2a_04).
     let intake = null;
-    const { data: renderIntake } = await supabase
-      .from("client_intakes").select("*").eq("id", intake_id).single();
-    intake = renderIntake;
-
-    if (!intake) {
-      // Try dashboard table
-      const { data: dashIntake } = await supabase
-        .from("client_intake").select("*").eq("id", intake_id).single();
-      if (dashIntake) {
-        // Map dashboard fields to Render format
-        intake = {
-          ...dashIntake,
-          full_name: client_name || "Client",
-          lead_id: dashIntake.client_id,
-        };
-      }
+    if (intake_id) {
+      const { data } = await supabase
+        .from("client_intakes").select("*").eq("id", intake_id).maybeSingle();
+      intake = data;
+    }
+    if (!intake && client_id) {
+      // Fall back to most-recent intake for this client
+      const { data } = await supabase
+        .from("client_intakes")
+        .select("*")
+        .eq("client_id", client_id)
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      intake = data;
     }
 
     if (!intake) {
-      // Last resort: if client_id was provided, look up by that
-      if (client_id) {
-        const { data: byClient } = await supabase
-          .from("client_intake").select("*").eq("client_id", client_id).single();
-        if (byClient) {
-          intake = { ...byClient, full_name: client_name || "Client", lead_id: client_id };
-        }
-      }
+      return res.status(404).json({
+        error: "Intake not found in client_intakes",
+        intake_id: intake_id || null,
+        client_id: client_id || null,
+      });
     }
 
-    if (!intake) return res.status(404).json({ error: "Intake not found in either table" });
+    // Gate: refuse to generate until intake is fully completed + waivered.
+    // Mirrors phase_2B_brief.md Priority 2.
+    const missing = [];
+    if (!intake.completed_at) missing.push("completed_at");
+    if (intake.disclaimer_acknowledged !== true) missing.push("disclaimer_acknowledged");
+    if (!intake.waiver_signature && !intake.waiver_accepted_at) missing.push("waiver");
+    if (missing.length > 0) {
+      console.warn(`[PROGRAM] Refusing generation for intake ${intake.id}: missing ${missing.join(", ")}`);
+      return res.status(422).json({
+        error: "Intake is not eligible for program generation",
+        intake_id: intake.id,
+        missing,
+      });
+    }
 
-    // Try to get lead info
-    const { data: lead } = await supabase
-      .from("leads").select("*").eq("id", intake.lead_id).maybeSingle();
+    // Ensure full_name is set for downstream formatting (older rows may use first/last instead).
+    if (!intake.full_name) {
+      intake.full_name = client_name
+        || `${intake.first_name || ""} ${intake.last_name || ""}`.trim()
+        || "Client";
+    }
+
+    // Try to get lead info — only if intake actually has a lead_id (never synthesize from client_id).
+    const { data: lead } = intake.lead_id
+      ? await supabase.from("leads").select("*").eq("id", intake.lead_id).maybeSingle()
+      : { data: null };
 
     console.log(`[PROGRAM] Generating program for ${intake.full_name}...`);
     const program = await generateProgram(intake, lead || {});
     const programHtml = formatProgramHTML(program, intake.full_name);
 
-    // Try saving to Render's generated_programs table (may fail if intake is from dashboard table)
+    // Insert into generated_programs. Always passes a real intake.id (FK enforced by phase2a triggers).
     let saved = null;
     const gpApprovalToken = crypto.randomUUID();
     const { data: gpSaved, error: saveErr } = await supabase.from("generated_programs").insert({
@@ -5076,11 +5230,10 @@ app.post("/api/intake/generate-program", async (req, res) => {
     }).select().single();
 
     if (saveErr) {
-      console.warn("[PROGRAM] generated_programs save failed (likely dashboard intake):", saveErr.message);
-      // Not fatal — we still write to program_reviews below
-    } else {
-      saved = gpSaved;
+      console.error("[PROGRAM] generated_programs insert failed:", saveErr.message);
+      return res.status(500).json({ error: `Program insert failed: ${saveErr.message}` });
     }
+    saved = gpSaved;
 
     // Also update dashboard's program_reviews if review_id was passed
     const reviewId = req.body.review_id;
@@ -5108,14 +5261,14 @@ app.post("/api/intake/generate-program", async (req, res) => {
         generated_at: new Date().toISOString(),
       }).eq("id", reviewId);
 
-      // Update dashboard intake status
+      // Update intake status by client_id as well (covers cases where intake_id wasn't passed in originally).
       if (req.body.client_id) {
-        await supabase.from("client_intake").update({ program_status: "ready_for_review" }).eq("client_id", req.body.client_id);
+        await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("client_id", req.body.client_id);
       }
     }
 
-    // Update Render's client_intakes status too
-    try { await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake_id); } catch(e) { /* ignore */ }
+    // Update intake status by id (the precise/preferred path).
+    try { await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake.id); } catch(e) { /* ignore */ }
 
     // Notify Bryan for approval
     const programId = saved?.id || "dashboard";
@@ -5319,10 +5472,27 @@ app.get("/api/programs/:id/approve", async (req, res) => {
         </div>
       `);
     } else {
-      // No Stripe — just mark approved and deliver directly
-      await supabase.from("generated_programs")
-        .update({ payment_status: "paid", delivered_at: new Date().toISOString(), status: "delivered" })
-        .eq("id", req.params.id);
+      // No Stripe — gated delivery via mark_program_delivered RPC
+      try {
+        await supabase.from("generated_programs")
+          .update({ payment_status: "paid" })
+          .eq("id", req.params.id);
+
+        await markProgramDelivered(req.params.id);
+      } catch (deliveryErr) {
+        if (deliveryErr.gateBlocked) {
+          console.error(`[APPROVE] Gate blocked delivery for ${req.params.id}: ${(deliveryErr.reasons || []).join(", ")}`);
+          return res.type("html").send(`
+            <div style="font-family:sans-serif;max-width:560px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+              <h2 style="color:#ef4444;">Delivery Blocked by Gate</h2>
+              <p>The program for <strong>${program.client_name}</strong> was approved but cannot be delivered yet.</p>
+              <p style="color:#aaa;font-size:13px;margin-top:12px;">Reason(s): ${(deliveryErr.reasons || []).join(", ")}</p>
+              <p style="color:#666;font-size:12px;margin-top:16px;">Resolve the missing prerequisite (typically a <code>program_reviews</code> row with <code>status='approved'</code>) and try again.</p>
+            </div>
+          `);
+        }
+        throw deliveryErr;
+      }
 
       // Send program directly
       if (emailTransporter) {
@@ -5711,13 +5881,36 @@ app.get("/api/programs/:id/payment-success", async (req, res) => {
       const { data: program } = await supabase.from("generated_programs")
         .select("*").eq("id", req.params.id).single();
 
+      // Write payment metadata first (not gated)
       await supabase.from("generated_programs").update({
         payment_status: "paid",
         stripe_payment_intent_id: session.payment_intent,
         payment_amount: session.amount_total,
-        status: "delivered",
-        delivered_at: new Date().toISOString()
       }).eq("id", req.params.id);
+
+      // Gated delivery via mark_program_delivered RPC
+      try {
+        await markProgramDelivered(req.params.id);
+      } catch (deliveryErr) {
+        if (deliveryErr.gateBlocked) {
+          console.error(`[PAYMENT] Gate blocked delivery for ${req.params.id}: ${(deliveryErr.reasons || []).join(", ")}`);
+          // Notify coach so they can resolve the missing prerequisite
+          await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+            method: "POST",
+            headers: { "Title": `Payment received but delivery blocked: ${program?.client_name}`, "Tags": "warning" },
+            body: `Program ${req.params.id} for ${program?.client_name} — payment confirmed but gate blocked delivery.\nReasons: ${(deliveryErr.reasons || []).join(", ")}`
+          }).catch(() => {});
+          return res.type("html").send(`
+            <div style="font-family:sans-serif;max-width:560px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+              <h1 style="color:#ff6a00;">FORGED BY FREEDOM</h1>
+              <h2 style="color:#eab308;margin-top:24px;">Payment Received — Delivery in Review</h2>
+              <p>Your payment was successful. Coach Bryan was notified and will email your program shortly.</p>
+              <p style="color:#666;font-size:12px;margin-top:16px;">If you don't receive it within an hour, reply to your approval email or contact support.</p>
+            </div>
+          `);
+        }
+        throw deliveryErr;
+      }
 
       // Deliver program via email
       if (emailTransporter && program) {
@@ -5879,13 +6072,30 @@ app.post("/api/stripe/webhook", express.raw({ type: "application/json" }), async
     const session = event.data.object;
     const programId = session.metadata?.program_id;
     if (programId) {
+      // Write payment metadata first (not gated)
       await supabase.from("generated_programs").update({
         payment_status: "paid",
         stripe_payment_intent_id: session.payment_intent,
         payment_amount: session.amount_total,
-        status: "delivered",
-        delivered_at: new Date().toISOString()
       }).eq("id", programId);
+
+      // Gated delivery via mark_program_delivered RPC.
+      // Webhook must always ack 200 to Stripe (otherwise indefinite retries),
+      // so we catch+log gate failures instead of throwing.
+      try {
+        await markProgramDelivered(programId);
+      } catch (deliveryErr) {
+        if (deliveryErr.gateBlocked) {
+          console.error(`[STRIPE] Gate blocked delivery for ${programId}: ${(deliveryErr.reasons || []).join(", ")}`);
+          await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+            method: "POST",
+            headers: { "Title": `Stripe paid but delivery blocked: ${programId}`, "Tags": "warning" },
+            body: `Program ${programId} — payment confirmed via webhook but gate blocked delivery.\nReasons: ${(deliveryErr.reasons || []).join(", ")}`
+          }).catch(() => {});
+        } else {
+          console.error(`[STRIPE] Delivery error for ${programId}:`, deliveryErr.message);
+        }
+      }
 
       console.log(`[STRIPE] Payment confirmed for program ${programId}`);
     }
