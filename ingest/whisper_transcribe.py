@@ -16,15 +16,24 @@ Requirements:
 
 import os
 import sys
+import platform
 import argparse
 import tempfile
 import subprocess
 from pathlib import Path
-import mlx_whisper
 from anabolics_vocabulary import get_whisper_prompt, correct_transcript
 
-# MLX Whisper model — same architecture as OpenAI's API (large-v3)
-WHISPER_MODEL = "mlx-community/whisper-large-v3-turbo"
+# Auto-detect backend: MLX on Apple Silicon, faster-whisper everywhere else
+IS_APPLE_SILICON = platform.system() == "Darwin" and platform.machine() == "arm64"
+
+if IS_APPLE_SILICON:
+    import mlx_whisper
+    WHISPER_MODEL = "mlx-community/whisper-large-v3-turbo"
+    BACKEND = "mlx"
+else:
+    from faster_whisper import WhisperModel
+    WHISPER_MODEL = "large-v3"
+    BACKEND = "faster-whisper"
 
 
 def extract_audio(video_path, output_path=None):
@@ -75,18 +84,26 @@ def split_audio(audio_path, chunk_duration=600):
 
 
 def transcribe_audio(audio_path):
-    """Transcribe audio file using local MLX Whisper with domain prompting."""
+    """Transcribe audio file using the platform-appropriate Whisper backend."""
     prompt = get_whisper_prompt()
 
-    result = mlx_whisper.transcribe(
-        str(audio_path),
-        path_or_hf_repo=WHISPER_MODEL,
-        initial_prompt=prompt,
-        language="en",
-        verbose=False,
-    )
-
-    return result["text"]
+    if BACKEND == "mlx":
+        result = mlx_whisper.transcribe(
+            str(audio_path),
+            path_or_hf_repo=WHISPER_MODEL,
+            initial_prompt=prompt,
+            language="en",
+            verbose=False,
+        )
+        return result["text"]
+    else:
+        model = WhisperModel(WHISPER_MODEL, device="auto", compute_type="auto")
+        segments, _ = model.transcribe(
+            str(audio_path),
+            initial_prompt=prompt,
+            language="en",
+        )
+        return " ".join(seg.text for seg in segments)
 
 
 def download_youtube(url, output_dir):
@@ -177,8 +194,8 @@ def main():
 
     args = parser.parse_args()
 
-    print(f"🧠 Using local MLX Whisper model: {WHISPER_MODEL}")
-    print(f"💰 Cost: FREE (runs on your Apple Silicon)")
+    print(f"🧠 Backend: {BACKEND} | Model: {WHISPER_MODEL}")
+    print(f"💰 Cost: FREE (local inference)")
 
     if args.url:
         output_dir = Path(args.out) if args.out else Path(".")
