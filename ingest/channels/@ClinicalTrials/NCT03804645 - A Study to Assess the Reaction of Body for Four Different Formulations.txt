@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03804645
+Title: A Study to Assess the Reaction of Body for Four Different Formulations of AZD9977 (Part A) and Influence of Food and Lower Dose of a Selected Formulation (Part B) in Healthy Male Subjects
+Official Title: An Open-label, Randomized, Four-way Crossover Single Oral Dose Study Comparing the Pharmacokinetics of Four Different Formulations of AZD9977 (Part A) and Influence of Food and Lower Dose of a Selected Formulation (Part B) in Healthy Male Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: creatine supplementation
+
+SUMMARY:
+AZD9977 is an oral, selective mineralocorticoid receptor (MR) modulator. AZD9977 is a partial antagonist and partial agonist in reporter gene assays and has a different interaction pattern with the MR compared to eplerenone.
+
+This study will assess the pharmacokinetics (PK) of four different Formulations of AZD9977 (Part A) and influence of food and lower dose of a selected formulation (Part B) in healthy male subjects.
+
+DETAILED DESCRIPTION:
+This study will be a randomized, open-label, single-centre crossover study in healthy male subjects. The study is divided into 2 parts, Part A and Part B. The subjects will participate in both Part A and Part B.
+
+Part A will be a 4-way cross-over study comparing the PK of AZD9977 as a reference capsule and 2 different capsule formulations and a tablet formulation under fasting conditions.
+
+* Treatment A: Reference, AZD9977 capsule
+* Treatment B: AZD9977 HDL capsule
+* Treatment C: AZD9977 ODL capsule
+* Treatment D: AZD9977 tablet In Part B, based on the interim results in Part A, 1 of the formulations will be selected and evaluated at the 300 mg dose level under fed conditions. The same formulation will also be evaluated under fasting conditions at a lower dose level (50 mg). The first dose tested in Part B will be the 50 mg (fasted) dose, followed by the 300 mg (fed) dose.
+
+In Part A, subjects will be resident from 1 day before dosing (Day -1 of Treatment Period 1) with AZD9977 until 48 hours post-final-dose (Day 3 of Treatment Period 4). Subjects will return to the unit for Part B at least 48 hours (and up to 5 weeks) after completion of Part A.
+
+In Part B, subjects will be resident from 1 day before dosing (Day -1 of Treatment Period 1) with AZD9977 until 48 hours post-final-dose (Day 3 of Treatment Period 2).
+
+Subjects will return to the unit for a final study visit 5-7 days post-last-dose for a Follow up Visit.
+
+Each subject will be involved in the study for approximately 12 weeks (including approximately 4 to 5 weeks for the interim analysis).
+
+Twelve subjects will initially be randomized to ensure at least 8 and 6 evaluable subjects at the end of the last treatment period for Part A and Part B respectively.
+
+PRIMARY OUTCOMES:
+  - Area under plasma concentration-time curve from time zero to infinity (AUC)
+  - Area under the plasma concentration-time curve from time zero to time of last quantifiable concentration (AUClast)
+  - Area under the plasma concentration-time curve from time zero to 24 hours [AUC(0-24)]
+  - Maximum observed plasma concentration (Cmax)
+  - Observed AZD9977 concentration at 24 hours (C24)
+
+INTERVENTIONS:
+  - DRUG: Treatment A
+  - DRUG: Treatment B
+  - DRUG: Treatment C
+  - DRUG: Treatment D
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03804645

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07376564
+Title: Assessing the Impact of High Theacrine Doses on Hemodynamic Measures
+Official Title: Exploring the Power of Theacrine: Assessing the Impact of High Theacrine Doses on Hemodynamic Measures, Cognitive Measures, and Physiological Stress
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: caffeine exercise
+
+SUMMARY:
+This project measured physiological and cognitive variables to determine the effectiveness of Theacrine (TCR) as a stimulant at doses greater than those previously tested. The study will be the first TCR study to use doses relative to body weight and will investigate impacts on regular caffeine consumers. A secondary aim of the study is to determine the impact of acute TCR supplementation on salivary cortisol and sAA, two physiological measures of stress and sympathetic nervous system activation. The findings of the study will provide new insight into the effects of higher TCR dosages, contributing to the analysis of TCR as a caffeine alternative for individuals with hypertension, tachycardia, or healthy caffeine consumers wanting to avoid a stimulant with adverse or habitual effects
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in systolic blood and diastolic blood pressure post consumption of theacrine
+  - Change in heart rate post consumption of theacrine
+  - Changes in executive function as a measure of cognitive performance using the Trail Making Test
+  - Changes in attention as a measure of cognitive performance using the Flanker Inhibitory Control and Attention task
+  - Changes in focus as a measure of cognitive performance using the Flanker Inhibitory Control and Attention task
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Maltodextrin (Placebo)
+  - DIETARY_SUPPLEMENT: Low dose theacrine
+  - DIETARY_SUPPLEMENT: Medium dose theacrine
+  - DIETARY_SUPPLEMENT: High dose theacrine
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07376564

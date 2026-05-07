@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03026244
+Title: Effect of Milk Protein and Prebiotics in Combination With Vitamin D on Innate Immunity in Elderly People
+Official Title: A Nutritional Intervention Study to Evaluate the Effect of Milk Protein and Prebiotics in Combination With Vitamin D on Innate Immunity in Elderly People
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: protein supplementation
+
+SUMMARY:
+Rationale: The immune system in the ageing population becomes compromised with age (termed "Immunosenescence"). Therefore, elderly people have a decreased ability to respond to infection and vaccination. Furthermore, many of the health issues associated with ageing are linked to inflammation ("Inflammaging"). It has been suggested that this compromised immune function is in part due to reduced Toll-like receptor (TLR) function, which is part of the innate immune system. Milk and dairy based products have been shown to have beneficial effects on inflammation and immunity. This effect may be mediated via support of the innate immune response and promotes TLR7 signaling in in vitro assays (unpublished observation). Also prebiotics have been suggested to influence markers of innate immune function. Furthermore, TLR function has been suggested to be correlated to vitamin D status. Therefore, in the current pilot study, the potential of milk protein, prebiotics and vitamin D to support innate immune function in elderly will be investigated.
+
+Objective: Aim of the current study is to evaluate the effect of milk protein on the innate immune response in elderly in a pilot study. Furthermore, support of this effect by prebiotics and Vitamin D will be studied.
+
+Study design: The study will be a double-blind placebo-controlled pilot study. Study population: Healthy female elderly subjects of 65-85 years of age. Intervention: Period 1: Milk protein or placebo. Period 2: Milk protein + prebiotics or placebo. Period 3: Milk protein + prebiotics + Vitamin D or placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cmax of ex vivo IFN-a production by PBMCs, corrected for baseline
+  - Cmax of ex vivo IL-6 production by PBMCs, corrected for baseline
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Milk protein, prebiotics, vitamin D
+  - DIETARY_SUPPLEMENT: Placebo product
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03026244

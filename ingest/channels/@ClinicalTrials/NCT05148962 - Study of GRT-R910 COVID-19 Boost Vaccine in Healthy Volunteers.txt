@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05148962
+Title: Study of GRT-R910 COVID-19 Boost Vaccine in Healthy Volunteers
+Official Title: A Phase 1 Trial to Evaluate the Safety, Immunogenicity, and Reactogenicity of a Self-Amplifying mRNA Prophylactic Vaccine Boost Against SARS-CoV-2 in Previously Vaccinated Healthy Adults 18 Years and Older
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 45
+Topic: beta-alanine
+
+SUMMARY:
+The primary objective was to assess the safety and tolerability of 2 different doses (10 or 30 µg) of GRT-R910 when administered as a boost in healthy adults previously vaccinated with the AstraZeneca, Janssen/Johnson and Johnson, Moderna, or Pfizer/BioNTech Coronavirus disease 2019 (COVID-19) vaccines.
+
+DETAILED DESCRIPTION:
+This trial studied a self-amplifying messenger ribonucleic acid (samRNA) based vaccine (GRT-R910) in previously vaccinated adults (≥18 years). GRT-R910 uses a codon optimized, prefusion stabilized Spike (S) cassette with additional T cell epitopes (TCEs) covering multiple epitopes from non-spike proteins to safely drive strong, broad, and durable B and T cell immune responses to Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2).
+
+PRIMARY OUTCOMES:
+  - Number of Participants With at Least One Solicited Local Adverse Event (AE) Within 8 Days After the Injection of Prime Dose
+  - Number of Participants With at Least One Solicited Local AE Within 8 Days After the Injection of Booster Dose
+  - Number of Participants With at Least One Solicited Systemic AE Within 8 Days After the Injection of Prime Dose
+  - Number of Participants With at Least One Solicited Systemic AE Within 8 Days After the Injection of Booster Dose
+  - Number of Participants With at Least One Unsolicited Treatment-emergent AEs (TEAEs) Within 28 Days After the Injection of Prime Dose
+
+INTERVENTIONS:
+  - BIOLOGICAL: GRT-R910
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05148962

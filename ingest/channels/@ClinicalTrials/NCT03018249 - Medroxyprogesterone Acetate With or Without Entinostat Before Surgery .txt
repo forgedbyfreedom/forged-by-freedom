@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03018249
+Title: Medroxyprogesterone Acetate With or Without Entinostat Before Surgery in Treating Patients With Endometrioid Endometrial Cancer
+Official Title: A Randomized Surgical Window Pilot Investigation of the Relationship of Short Term Medroxyprogesterone Acetate (NSC #26386) Compared to Medroxyprogesterone Acetate Plus Entinostat (NSC #706995) on the Morphologic, Biochemical, and Molecular Changes in Primary Endometrioid Adenocarcinoma of the Uterine Corpus
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: growth hormone treatment
+
+SUMMARY:
+This randomized surgical window trial evaluates the effect of adding entinostat to medroxyprogesterone acetate before surgery works on progesterone receptors on endometrioid endometrial tumors. Medroxyprogesterone acetate is a progesterone, a hormone produced by body normally. Entinostat may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth. Giving medroxyprogesterone acetate with or without entinostat may effect tumors from endometrioid endometrial cancer.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To determine whether the addition of the histone deacetylase inhibitor, entinostat, in combination with medroxyprogesterone acetate in the pre-operative setting results in up-regulation of activated progesterone receptors (PR) compared to medroxyprogesterone acetate alone.
+
+SECONDARY OBJECTIVES:
+
+I. To assess the response rate (as measured by cellular morphology and proliferation) and change in activated receptor levels with the addition of entinostat at the time of hysterectomy.
+
+OUTLINE: Two arms were randomly allocated to eligible patients with equal probability.
+
+ARM I: Patients receive medroxyprogesterone acetate intramuscularly (IM) on day 1 and undergo hysterectomy between days 21-24.
+
+ARM II: Patients receive medroxyprogesterone acetate IM on day 1 and entinostat orally (PO) on days 1, 8, and 15. Patients undergo hysterectomy between days 21-24.
+
+PRIMARY OUTCOMES:
+  - Mean Post-treatment Tumor Progesterone Receptor H-score (Histology Score)
+
+INTERVENTIONS:
+  - DRUG: Entinostat
+  - PROCEDURE: Hysterectomy
+  - OTHER: Laboratory Biomarker Analysis
+  - DRUG: Medroxyprogesterone Acetate
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03018249

@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06204302
+Title: An Observational Study to Learn More About the Use of Androgen Receptor Inhibitors and How They Affect Men With Nonmetastatic Prostate Cancer in Routine Medical Care in the United States
+Official Title: ARI Treatment Use and Outcomes in Non-metastatic Prostate Cancer (nmPC) Patients in the US
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1800
+Topic: growth hormone treatment
+
+SUMMARY:
+This is an observational study in which data will be collected and studied from men with non-metastatic prostate cancer (nmPC) who received their usual treatment with 'androgen receptor inhibitors' (ARIs) including darolutamide, enzalutamide, and apalutamide.
+
+Prostate cancer is a common cancer in men that starts in the prostate gland, a male reproductive gland found below the bladder. Non-metastatic means that cancer has not yet spread to other parts of the body.
+
+Darolutamide, enzalutamide, and apalutamide are already approved ARIs for nmPC in the United States (US). They work by blocking androgens (male sex hormones including testosterone) from attaching to proteins in cancer cells in the prostate. This helps to slow down the growth of the cancer cells. The participants will receive their treatments as prescribed by their doctors during routine medical care according to the approved product information.
+
+Researchers want to know more about the use of ARIs and how they affect men with nmPC in the real world. Researchers will only include men who have not been treated with any new type of medication that blocks the action of male sex hormones.
+
+The main purpose of this study is to collect and study information from men with nmPC about:
+
+* the length of time they continued treatment with an ARI as prescribed by their doctors.
+* the length of time from the start of the treatment with an ARI until the cancer spreads to other parts of the body.
+
+Data will come from the participants' information stored in a database called Komodo Research Dataset (KRD) in the US.
+
+The data collected will be from May 2019 to June 2023.
+
+Researchers will only track data of eligible US men with nmPC and will follow them for a minimum of 6 months or until the end of the study.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Time to ARI discontinuation (days) for apalutamide, darolutamide, and enzalutamide
+  - Time to progression to metastatic prostate cancer (mPC) (days) for apalutamide, darolutamide, and enzalutamide
+
+INTERVENTIONS:
+  - DRUG: Darolutamide (Nubeqa, BAY1841788)
+  - DRUG: Enzalutamide
+  - DRUG: Apalutamide
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06204302

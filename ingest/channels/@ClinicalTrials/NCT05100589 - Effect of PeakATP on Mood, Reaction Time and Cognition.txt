@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05100589
+Title: Effect of PeakATP on Mood, Reaction Time and Cognition
+Official Title: The Effects of PeakATP (Adenosine 5' - Triphosphate Disodium) Supplementation vs. Placebo on Measures of Mood, Reaction Time and Cognitive Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: caffeine exercise
+
+SUMMARY:
+Oral ATP disodium (adenosine 5'- triphosphate disodium) is a commercially available product available alone and as a constituent in a number of sports supplements that is purported to maintain ATP levels and improve performance during high-intensity exercise. Acute deficits in cognitive performance have also been reported in both young adults and children following high-intensity exercise; however, the effects of supplemental ATP on cognitive performance has not been studied.
+
+Goals:
+
+1. To investigate the effect of ATP supplementation versus. placebo on mood, reaction time and cognitive performance before and after an acute bout of fatiguing exercise.
+2. To investigate the effect of ATP supplementation versus. placebo on anaerobic performance.
+
+DETAILED DESCRIPTION:
+Oral ATP disodium (adenosine 5'- triphosphate disodium) is a commercially available product available alone and as a constituent in a number of sports supplements that is purported to maintain ATP levels during high-intensity exercise. Initial studies providing oral enteric coated ATP disodium displayed no apparent efficacy toward enhancing ATP levels, and subsequent research questioned the bioavailability of enteric coated ATP following oral administration (1,2). However, a recent study demonstrated that ingestion of 400mg uncoated ATP disodium for 15 days prevented decreases in ATP, adenosine diphosphate (ADP), and adenosine monophosphate (AMP) in the bloodstream for up to 30 minutes following high-intensity exercise when compared to placebo (3). Consistent with this, when oral ATP was administered in the form of non-coated ATP disodium, beneficial effects including reduced fatigue (3), improved strength, power, and body composition (5), and enhanced recovery (6) were observed.
+
+Acute deficits in cognitive performance have also been reported in both young adults (6) and children (7) following high-intensity exercise. Cerebral activity is coupled to ATP metabolism, where energy flux is tightly correlated with energy demand (8). Thus, inadequate availability of metabolic resources may lead to acute or long-term cognitive impairments (9) and correspondingly, interventions that sustain ATP levels may have application for attenuating cognitive dysfunction in the face of an acute stressor that challenges brain energy metabolism. Notwithstanding, no study to date has examined the effect of uncoated ATP disodium supplementation on cognitive performance following high-intensity exercise.
+
+Goals:
+
+1. To investigate the the effects of uncoated ATP disodium (PeakATP) on mood (POMS - Profile of mood states questionnaire), psychological stress and cognition (ANAM - Automated Neuropsychological Assessment Metric), reaction time (RT - Dynavision D2 visuomotor tests), and multiple object tracking (MOT - Neurotracker)
+2. To examine the effects of uncoated ATP disodium (PeakATP) on end power (mean power during last 30 seconds of 3-minute test), anaerobic working capacity (work above end power), peak power, mean power, time to peak power, fatigue slope (W/sec), rate of fatigue (%), and total work (joules) during a 3-minute all-out cycle ergometer test.
+
+Method:
+
+Randomized, double-blind, placebo controlled cross-over trial comparing the effect of supplementation with Peak ATP versus placebo on mood, reaction time and cognitive performance.
+
+Supplementation will occur over a period of 14 days prior to completion of two separate experimental trials (randomly assigned), with a 14-day washout period in between. An acute dose will also be given during each experimental trial. POMS, RT, MOT and ANAM will be assessed pre- (0) immediately post- (IP) and 60-minutes (60P) post-completion of a 3-minute all-out cycle ergometer test. Anaerobic performance during the 3-minute t
+
+PRIMARY OUTCOMES:
+  - Mood
+  - Mood
+  - Mood
+  - Reaction Time
+  - Reaction Time
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: PeakATP
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05100589

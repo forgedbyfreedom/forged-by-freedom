@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02907918
+Title: Neoadjuvant Study of Palbociclib in Combination With Letrozole and Trastuzumab in Stage II-III ER+ HER2+ Breast Cancer
+Official Title: A Phase II Neoadjuvant Study of Palbociclib in Combination With Letrozole and Trastuzumab as Neoadjuvant Treatment of Stage II-III ER+ HER2+ Breast Cancer (PALTAN)
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: growth hormone treatment
+
+SUMMARY:
+The investigators propose to influence estrogen receptor (ER) signaling by combining endocrine therapy with CDK4/6 inhibition along with trastuzumab in ER+/ human epidermal growth factor receptor 2 (HER2)+ early stage breast cancer.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Pathologic Complete Response (pCR)
+
+INTERVENTIONS:
+  - DRUG: Palbociclib
+  - DRUG: Letrozole
+  - BIOLOGICAL: Trastuzumab
+  - DRUG: Goserelin
+  - PROCEDURE: Breast surgery
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02907918

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35478390
+Title: Performance enhancement of the photovoltaic system with different cooling methods.
+Authors: Tiwari, Swaminathan, S, Harender, Singh
+Journal: Environmental science and pollution research international
+Year: 2022
+Topic: cooling strategies performance
+
+ABSTRACT:
+Solar energy has been a vital renewable energy source for humanity for decades. Researchers have proposed many strategies to harness the same but solar photovoltaic (PV) is the only technology which has reached commercial scale and highly successful in meeting renewable energy goals of many countries. The major drawback of PV systems is that increase in the temperature of solar cell of the PV module beyond the threshold limit brings down its electrical efficiency (EE). Hence, this review paper discusses the different cooling techniques responsible for reducing the cell temperature, which in turn increases not only its EE, but also collection of the thermal energy that is otherwise considered to dampen the performance of the PV system. A brief study on PV with air cooling, photovoltaic thermal (PVT) with water cooling, PVT/PCM with and without fins, PVT integrated with nanofluids has been done in this review paper. PVT hybrid systems are the need of hour to get the optimum efficiency. Amongst the PVT systems, the performance analysis of PV integrated with the nanofluid is discussed and it is found to give the maximum cell temperature reduction. Since reduction in the cell temperature directly relates to better efficiency, PVT system using nanofluid as a cooling medium gives the best overall efficiency (OE) followed by PVT system incorporating water and air respectively. This review paper also gives spotlight to the real-time usages of PCM and nanofluids for the effective cooling ability especially in the case of PV module.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35478390/

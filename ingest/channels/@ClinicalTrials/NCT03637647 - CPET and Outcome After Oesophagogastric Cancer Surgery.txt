@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03637647
+Title: CPET and Outcome After Oesophagogastric Cancer Surgery
+Official Title: Cardiopulmonary Exercise Variables Are Associated With Postoperative Morbidity and Mortality After Major Oesophagogastric Cancer Surgery - A Multicentre Observational Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 611
+Topic: sarcopenia intervention
+
+SUMMARY:
+Primary Aim: The present study is a retrospective analysis of prospectively collected clinical data. Anonymized data from patients collected during routine clinical care from 9 units in the United Kingdom who undertake upper gastrointestinal (UGI) cancer surgery and perform pre-operative cardiopulmonary exercise testing will be interrogated. Data will be pooled at a central location (University Hospitals Southampton) and used to investigate the relationship between selected cardiopulmonary exercise testing (CPET) variables, in-hospital post-operative and survival outcomes after major UGI cancer surgery.
+
+Rationale: Our primary aim is to establish a reliable relationship between post-operative survival (1 and 3 -year) and oxygen uptake (VO2) at peak exercise (VO2 Peak); a secondary aim is to explore the multivariable relationship between selected CPET variables especially VO2 at the estimated lactate threshold/anaerobic threshold (AT), together with other selected CPET derived variables, and other important prognostic variables with post-operative complications (morbidity and mortality) in an attempt to risk stratify patients before major UGI surgery.
+
+Trial Design: Multicentre observational
+
+Inclusion Criteria: We aim to include all patients aged \>18 years considered eligible by the MDT for major curative UGI cancer surgery and undergoing an enhanced recovery programme after surgery. Patients undergoing neoadjuvant chemotherapy or chemoradiotherapies will also be included. Patients having a CPET and initially scheduled for curative surgery, but end up not having surgery due to disease progression or other clinical reasons will be included and analysed separately.
+
+Exclusion Criteria: Patients will be excluded if they are physically unable to perform a CPET on a cycle ergometer, patients having emergency surgery, patients lacking complete in-hospital morbidity or mortality data and patients undergoing preoperative exercise interventions.
+
+Primary Trial Endpoints: 3 year overall survival
+
+DETAILED DESCRIPTION:
+Study overview and background
+
+We hypothesise that reduced physical fitness (measured objectively using Cardiopulmonary Exercise Testing (CPET)) will result in worse post-operative surgical outcome (reduced overall survival, and increased in-hospital morbidity measured by Clavien-Dindo-Demartines Score). We propose multicentre patient recruitment and analyses of routinely collected clinical data, in an attempt interrogate this hypothesis in patients prior to upper gastrointestinal cancer surgery. Patients undergoing cancer therapies pre-operatively (neoadjuvant chemotherapy or chemoradiotherapy) will be included in the analyses. Patients that become ineligible for an operation, mainly due to metastasis or progression of their cancer on neoadjuvant cancer treatments will also be included but will be analysed separately.
+
+Despite advances in anti-cancer therapies, surgery remains the most important treatment for oesophageal and gastric cancer. Major UGI cancer surgery carries substantial morbidity and mortality, particularly in elderly patients and those with co-morbidities. Recent UK cancer audits show 30-day mortality of up to 3% for elective surgery and a 90-day mortality rate of 5.2%. Outcomes after major cancer surgery depend on modifiable factors such as peri-operative medical care and intra-operative technique and what were previously thought to be unmodifiable components, such as the ability of the patient to tolerate surgical trauma. Centralisation of services and optimisation of perioperative pathways have led to improved outcomes, but substantial gains may yet be achieved with accurate and objective preoperative risk prediction.
+
+Current approaches to risk prediction include a plethora of prediction scores and tests, but none have proven efficacy above experienced clinical acumen. More recently reduced physical fitness (objectively measured using CardioPulmonary Exercise Testing - CPET) has been associated with increased postoperative morbidity in a variety of major surgical cohorts. CPET provides an objective method of evaluating physical fitness under stress, partly mimicking the stress of a major surgical event. Accurate risk prediction methods prior to surgery or indeed other forms of 'trauma' like pre-operative cancer therapies might allow better patient selection, permit modification of the patients preoperative status, as well as improve the optimisation of intra- and postoperative management, and enhances shared decision-making. Furthermore CPET allows interrogation of the causes of exercise intolerance, when exercise capacity is reduced, with the exciting opportunity of intolerance modulation for therapeutic gain (Fit for Surgery).
+
+To date, 37 cohort studies (including over 7,800 patients) have reported the relationship between preoperative CPET-derived variables and postoperative outcome. These data have been brought together in several systematic reviews that, in summary, show a remarkably consistent positive correlation betw
+
+PRIMARY OUTCOMES:
+  - Fitness
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Cardiopulmonary exercise testing
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03637647

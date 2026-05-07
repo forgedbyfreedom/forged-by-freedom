@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 16207794
+Title: Potent block of inactivation-deficient Na+ channels by n-3 polyunsaturated fatty acids.
+Authors: Xiao, Ma, Wang, Josephson, Wang
+Journal: American journal of physiology. Cell physiology
+Year: 2006
+Topic: omega 3 fatty acids muscle recovery
+
+ABSTRACT:
+A voltage-gated, small, persistent Na(+) current (I(Na)) has been shown in mammalian cardiomyocytes. Hypoxia potentiates the persistent I(Na) that may cause arrhythmias. In the present study, we investigated the effects of n-3 polyunsaturated fatty acids (PUFAs) on I(Na) in HEK-293t cells transfected with an inactivation-deficient mutant (L409C/A410W) of the alpha-subunit (hH1(alpha)) of human cardiac Na(+) channels (hNav1.5) plus beta(1)-subunits. Extracellular application of 5 microM eicosapentaenoic acid (EPA; C20:5n-3) significantly inhibited I(Na). The late portion of I(Na) (I(Na late), measured near the end of each pulse) was almost completely suppressed. I(Na) returned to the pretreated level after washout of EPA. The inhibitory effect of EPA on I(Na) was concentration dependent, with IC(50) values of 4.0 +/- 0.4 microM for I(Na) peak (I(Na peak)) and 0.9 +/- 0.1 microM for I(Na late). EPA shifted the steady-state inactivation of I(Na peak) by -19 mV in the hyperpolarizing direction. EPA accelerated the process of resting inactivation of the mutant channel and delayed the recovery of the mutated Na(+) channel from resting inactivation. Other polyunsaturated fatty acids, docosahexaenoic acid, linolenic acid, arachidonic acid, and linoleic acid, all at 5 microM concentration, also significantly inhibited I(Na). In contrast, the monounsaturated fatty acid oleic acid or the saturated fatty acids stearic acid and palmitic acid at 5 microM concentration had no effect on I(Na). Our data demonstrate that the double mutations at the 409 and 410 sites in the D1-S6 region of hH1(alpha) induce inactivation-deficient I(Na) and that n-3 PUFAs inhibit mutant I(Na).
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/16207794/

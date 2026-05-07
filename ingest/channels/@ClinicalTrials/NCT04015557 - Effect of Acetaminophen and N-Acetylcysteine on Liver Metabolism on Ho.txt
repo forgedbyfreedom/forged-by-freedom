@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04015557
+Title: Effect of Acetaminophen and N-Acetylcysteine on Liver Metabolism on Homocystinuria
+Official Title: Functional Consequences and Therapeutic Intervention in Hampered Production of Cysteine, Glutathione and Taurine in Classical Homocystinuria
+Status: SUSPENDED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: beta-alanine
+
+SUMMARY:
+In homocystinuria due to cystathionine beta synthase (CBS) deficiency or classical homocystinuria, decreased blood cysteine levels are observed. Cysteine is essential for the synthesis of molecules such as glutathione and taurine. Main functions of glutathione are to detoxify drugs and to scavenge reactive oxygen species. N-acetylcysteine is a commercially available drug chemically similar to cysteine. In CBS deficient animal models, N-acetylcysteine supplementation improves cysteine and liver glutathione concentrations. N-acetylcysteine also acts directly as a scavenger of free radicals. In CBS deficiency, increased oxidative damage has been described and possibly contributes to the clinical manifestations of CBS deficiency. Acetaminophen (Paracetamol) is a common painkiller and its overdose (\>4 g/day) is a major cause of acute liver failure. Glutathione is required for Acetaminophen detoxification, and the preferred treatment for an overdose is the administration of N-acetylcysteine.
+
+The aim of this study is to demonstrate that CBS deficiency patients have glutathione depletion and to investigate if Acetaminophen can induce subclinical liver damage and if N-acetylcysteine supplementation could prevent the toxic-effects of acetaminophen.
+
+The investigators' hypothesis is that CBS deficiency patients have an inadequate supply of cysteine for the glutathione synthesis, which impairs antioxidants defenses and increases risk of intoxication of drugs that require glutathione, such as Acetaminophen. This potential increased liver toxicity induced by drugs or other xenobiotics that are detoxified by the glutathione pathway has not been explored in CBS deficiency patients. The experiments should provide answers about the functional role of cysteine and glutathione depletion in CBS deficiency and if N-acetylcysteine might have a place as an adjunct therapy for CBS deficiency.
+
+DETAILED DESCRIPTION:
+STUDY PROCEDURES
+
+A phase I-II clinical cross-over, not blinded, trial will be conducted. Adult patients with homocystinuria and paired-sex and age- healthy controls will be enrolled. Individuals with hepatic, renal or gastric disease; smokers, illicit drugs users or those who are hypersensitive to any of the components of the drugs tested (acetaminophen and N-acetylcysteine ) will be excluded.
+
+Patients will be submitted to two procedures:
+
+Step 1: In this stage, individuals will receive a single standard dose of Acetaminophen (1.5g) orally and blood samples will be drawn at time 0, 2, 4, 6 and 8 hours after the administration.
+
+Step 2: In this stage, individuals will receive again a normal dose of acetaminophen (1.5g) orally and one hour later a single dose of oral N-acetylcysteine (70 mg per kilogram of body weight)(. Blood samples will be drawn at the same points.
+
+In plasma we will measure methionine, homocysteine, cysteine and glutathione by LC-MS/MS. Taurine will also be determined by Biochrom 30 Amino Acid Analyser. Pyroglutamate will be determined as a marker for glutathione depletion.
+
+As markers of oxidative stress we will assay thiobarbituric acid-reactive substances, protein carbonyl content, thiol content, DNA damage 2',7'-dichlorofluorescein fluorescence assay, and activities of the antioxidant enzymes superoxide dismutase, catalase and glutathione peroxidase . Liver function parameters aspartate transaminase (AST) and alanine transaminase (ALT) activities will also be determined.
+
+All measurements will be performed at all 5 points of blood collection and in the two stages of the trial.
+
+PRIMARY OUTCOMES:
+  - Change in aspartate transaminase (AST) in 4 hours
+  - Change in aspartate transaminase (AST) in 6 hours
+  - Change in alanine transaminase (ALT) in 4 hours
+  - Change in alanine transaminase (ALT) in 6 hours
+
+INTERVENTIONS:
+  - DRUG: Acetaminophen
+  - DRUG: N-acetylcysteine
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04015557

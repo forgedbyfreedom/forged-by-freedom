@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07452029
+Title: Construction of a Comprehensive Health Management Platform for Patients With Cardiovascular-Kidney-Metabolic Syndrome
+Official Title: Construction of a Comprehensive Health Management Platform for Patients With Cardiovascular-Kidney-Metabolic Syndrome
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: caffeine exercise
+
+SUMMARY:
+Cardiovascular-Kidney-Metabolic (CKM) syndrome underscores the pathophysiologic interplay among metabolic risk factors, chronic kidney disease (CKD) and the cardiovascular system. This crosstalk precipitates multi-organ dysfunction, increases adverse cardiovascular events, and imposes heavy familial and socioeconomic burdens. Building a health-management platform within research wards is therefore urgent. Such a platform is the pivotal venue for assessment, monitoring, intervention and follow-up in continuous care.
+
+Leveraging the existing health-management system of the Health Screening Center at Peking University Third Hospital, the investigators will develop a comprehensive CKM platform that integrates systemic inflammatory biomarkers, cardiovascular early-warning algorithms, and personalized diet-and-exercise prescriptions. The system will provide cyclic management encompassing evaluation, guidance, monitoring, feedback and longitudinal follow-up.
+
+A randomized controlled trial with two-year prospective follow-up will enroll patients at CKM stages 0-2 to evaluate clinical improvement, quality of life, dietary behavior and physical activity after platform enrollment. The project will enable early identification of high-risk individuals, deliver precision management, maximize data utility, and offer a novel research-ward model that addresses mobile-health pain points and closes the CKM care loop.
+
+DETAILED DESCRIPTION:
+1.Construction of a Comprehensive CKM Health-Management Platform
+
+1. Needs analysis \& user research: Drawing on parallel work on CKM inflammatory biomarkers, cardiovascular early-warning algorithms and personalised exercise prescriptions, the investigators will use literature review, focus groups and expert panels to elicit needs of CKM patients and clinicians. The platform will provide screening, assessment, intervention and longitudinal follow-up-e.g. individual exercise/diet plans, tele-consultation and data analytics.
+2. Data integration \& governance: Health data from electronic health records, laboratory reports and wearables will be unified. Privacy, security and regulatory compliance will be ensured.
+3. Remote monitoring \& online consultation: Real-time monitoring and tele-consultation will improve access. Issues such as network latency, data security and service quality will be addressed.
+
+2\. Deployment and feasibility evaluation CKM stage 0-2 patients meeting diagnostic criteria will receive two-year comprehensive management via the platform. Clinical metrics and quality-of-life indices will be used to evaluate feasibility, early identification of high-risk individuals, improvement of composite CKM endpoints and patient-centred outcomes.
+
+3\. Innovation highlights This project will deliver the first Chinese integrated health-information platform dedicated to CKM syndrome. It unites systemic inflammatory biomarkers, cardiovascular (early-warning) algorithms and individualised diet/exercise modules into one (closed-loop) system that continuously monitors, profiles, analyses, risk-stratifies, manages and follows each patient. Multi-dimensional data (physiology, lifestyle, genetics) feed an individualised management cycle of "monitor-profile-analyse-risk-score-intervene-follow-up", offering a novel methodologic and theoretical framework for early risk detection and precision intervention in CKM.
+
+PRIMARY OUTCOMES:
+  - Height
+  - Weight
+  - Systolic Blood Pressure
+  - Diastolic Blood Pressure
+  - Heart Rate on 12-Lead Electrocardiogram
+
+INTERVENTIONS:
+  - BEHAVIORAL: Comprehensive Health Management Platform
+  - OTHER: Post-examination follow-up management
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07452029

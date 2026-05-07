@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03034707
+Title: Interference of Biotin Supplementation in Biotin-streptavidin Platforms for Hormone Testing
+Official Title: Interference of Biotin Supplementation in Biotin-streptavidin Platforms for Hormone Testing
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: protein supplementation
+
+SUMMARY:
+The B vitamin biotin is widely available as an over the counter supplement, often advertised and used to promote health of hair, skin and nails. Commercially available over the counter biotin supplements contain dose ranges up to 10 mg/day (ie 333 times higher than the recommended dietary allowance). The biotin molecule is also sometimes used as part of the lab technology to measure hormone and protein levels in the blood. It is possible that high doses of ingested biotin may interfere with accurate hormone or protein measurement using biotin related in vitro measurement systems. Such interference, if present, could lead to misdiagnosis. The study will analyze laboratory levels obtained with streptavidin-biotin assay systems while ingesting biotin in currently available high dose supplements. The data will be compared to measurements obtained prior to and one week after stopping the biotin supplement.
+
+DETAILED DESCRIPTION:
+Specimens will be collected by venipuncture at 3 time points, including baseline (time 0), after one week of biotin supplementation (time 1, day 7), and then one week later (time 2, day 14). The time 1 specimen will be drawn approximately 2 hours after the last ingested dose of biotin on day 7. Specimen collection will include three 10 ml red top (no gel) tubes at each timepoint.
+
+Specimens will be separated for isolation of serum using routine methods of the clinical chemistry laboratory. Serum will be stored at -80 degrees C until batch measurements as described Measurements Biotin levels will be measured on each sample. Hormone measurements will be performed using specific commercially available streptavidin-biotin assays and using different analyzers as indicated below. Immunoassay methods, not employing biotin-streptavidin methodology, will be used for negative assay controls.
+
+PRIMARY OUTCOMES:
+  - Hormone measurements TSH, PTH, Total T4, free T4, total T3, free T3, prolactin
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: biotin
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03034707

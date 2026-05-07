@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02561416
+Title: Cost-utility and Biological Underpinnings of MBSR in Fibromyalgia Syndrome
+Official Title: Cost-utility and Biological Underpinnings of Mindfulness-Based Stress Reduction (MBSR) in Fibromyalgia Syndrome: A Three-arm Randomized, Controlled Trial (EUDAIMON Project)
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 225
+Topic: aerobic exercise
+
+SUMMARY:
+Purpose:
+
+Fibromyalgia syndrome (FMS) is a disabling condition mainly characterized by chronic widespread pain, disturbed sleep, fatigue, and distress. The estimated overall prevalence of FMS in Europe is 2.9% and it incurs in high personal, social and healthcare costs. Available treatments in FMS are not curative and there is some evidence of positive effects of mindfulness-based stress reduction (MBSR) in patients with chronic pain and FMS. Nevertheless, although promising, the positive findings obtained in previous studies implementing mindfulness-based interventions in patients with FMS have to be interpreted with caution due to important methodological limitations (e.g. absence of randomization, high attrition rates, or small sample sizes). Therefore, further research in larger studies using more adequate methodologies is warranted. Furthermore, little is known about putative neurobiological processes underpinning the effects of mindfulness training in patients with chronic pain.
+
+Aims: The aim of this randomized, controlled trial (RCT) is two-fold: firstly, to assess the effectiveness and cost-utility of MBSR added to treatment as usual (TAU); and secondly, to evaluate the effects of the compared interventions on neurobiological parameters. Specifically, MBSR will be compared to an active control which was previously reported as a cost-effective intervention (TAU + FibroQol psycho-educational program; Luciano et al., 2013) and also vs. TAU alone (in a 12-month follow-up RCT). Brain structure and function of pain-relevant areas and levels of inflammation markers (cytokines) will be assessed pre-post interventions in half of the study participants.
+
+Methods:
+
+Design: RCT with three arms:
+
+1. TAU + MBSR,
+2. TAU + FibroQoL and
+3. TAU.
+
+Sample: 180 adults with FMS according to the ACR 1990 criteria (N=60 for each study arm) will be recruited from from the Parc Sanitari Sant Joan de Déu Rheumatology Service, Sant Boi de Llobregat, Spain. Half of the participants will be randomly selected to participate in the neurobiological pre-post evaluation (N= 30 each group). All patients will be assessed at baseline, post-intervention and 12-month follow-up for clinical variables, prep-post intervention for biomarkers study, and baseline and 12-month follow-up for cost-related variables.
+
+DETAILED DESCRIPTION:
+Detailed description of the study protocol has been published elsewhere (in an open-access journal):
+
+http://bmccomplementalternmed.biomedcentral.com/articles/10.1186/s12906-016-1068-2
+
+PRIMARY OUTCOMES:
+  - Effectiveness Evaluation: Revised Fibromyalgia Impact Questionnaire (FIQR)
+  - Cost-utility: Client Service Receipt Inventory (CSRI)
+  - Inflammatory markers: pro- and anti-inflammatory cytokines & hs-CRP
+  - EuroQoL questionnaire (EQ-5D-5L)
+  - Structural neuroimaging: Voxel-Based Morphometry (VBM)
+
+INTERVENTIONS:
+  - BEHAVIORAL: MBSR
+  - BEHAVIORAL: FibroQol
+  - DRUG: TAU
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02561416

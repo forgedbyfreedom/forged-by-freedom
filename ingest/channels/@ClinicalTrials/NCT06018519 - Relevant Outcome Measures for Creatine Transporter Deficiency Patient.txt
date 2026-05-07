@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06018519
+Title: Relevant Outcome Measures for Creatine Transporter Deficiency Patient
+Official Title: A Prospective Study in Creatine Transporter Deficiency (SLC6A8) Patients to Determine the Most Relevant Outcome Measures
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 197
+Topic: creatine supplementation
+
+SUMMARY:
+Creatine transport deficiency (CTD) is a rare genetic disorder related to pathogenic variants in the SLC6A8 gene, located on chromosome Xq28. Clinical diagnosis of CTD is based on clinical presentation, an increased urinary creatine/creatinine ratio and a severe decreased creatine peak on 1H-MRS magnetic resonance spectroscopy.
+
+A retrospective study with questionnaires identified that most CTD patients had moderate to severe intellectual disability. Less than one third of patients were able to speak in sentences. Seizures were present in 59% of the patients. 41% had autistic features. Motor dysfunction was mentioned in 58%, and gastrointestinal symptoms were reported in 35% of the patients.
+
+Several new therapeutic avenues are currently emerging in this disease for which no treatment has been available until now : cyclocreatine (interesting but unfortunately with very little clinical applicability due to its toxicity; dodecyl creatine ester incorporated into lipid nanocapsules with intranasal administration; pharmaco-chaperoning (for the folding-deficient creatine transporter variants, Ultragenyx pharmaceuticals new prodrug designed to deliver creatine to the brain (UX068). These new pharmacological treatment options may offer future opportunities to improve cognition in CTD patients.
+
+A key issue is to determine outcome measures that are accessible to these patients, despite the importance of their cognitive deficit. In a preliminary study (on 31 CTD patients), investigators showed for example, that 75% of patients were unable to perform a Wechsler scale, which is one of the most used neuropsychological test to determine patient IQ (intelligence quotient). Most of the existing cognitive tests were developed to distinguish typically developing persons and ID (intellectual disability) patients, leading to a floor effect in the latter who systematically fail these tests. Therefore, these tests are not adapted to capture the potential effect of a drug in ID patient group. The identification of reliable and sensitive outcome measures for use in clinical trials in ID patients was recognized as a priority in a meeting convened by the NIH. N-of-1 trials (also called Single-Case Experimental Designs or SCEDs) appear of great interest for rare diseases, statistical power coming from the number of repeated measures, which leads to choose outcome measures that can be repeated multiple times.
+
+This innovative study will allow to efficiently preparing future therapeutic trials, by specifying the phenotype of the patients, and by determining the most adapted outcome measures taking into account their cognitive deficiency and the type of experimental design to be used in the context of rare diseases.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Clinical endpoints : number of epileptic seizures
+  - Clinical endpoints : antiepileptic treatment
+  - Clinical endpoints : Visual analogical scale
+  - Clinical endpoints : actimetry
+  - Clinical endpoints : podometry
+
+INTERVENTIONS:
+  - OTHER: Clinical endpoints
+  - OTHER: Parental questionnaires
+  - OTHER: Quality of life scale
+  - OTHER: Cognitive assessments
+  - OTHER: Language assessments
+
+ELIGIBILITY:
+Age: 2 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06018519

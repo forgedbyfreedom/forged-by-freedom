@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05297383
+Title: Combining HIIT and n-3 PUFA Supplementation to Reduce Inflammation and Improve Metabolic Health (HIIT&PUFA)
+Official Title: Pilot: Combining Fish Oil and Exercise to Improve Obesity-Associated Inflammation
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: omega 3 exercise
+
+SUMMARY:
+The goal of this pilot study is to understand the combined effects of fish oil and exercise in obesity-associated inflammation acutely. The investigators hypothesize that fish oil will improve gut bacteria profiles, which will in turn potentiate the benefits of an exercise program and reduce inflammation and metabolic risk.
+
+DETAILED DESCRIPTION:
+Incidence of obesity continues to increase in the United States and worldwide, making its prevention or reduction a public health priority. Nutrition research that can lead to effective prevention strategies is greatly needed. Inflammation is a major underlying cause for obesity, and it is imperative that we understand how anti-inflammatory food sources, such as fish oil, could aid in reducing obesity. Moreover, exercise is effective at reducing systemic inflammation and improving insulin resistance. Both exercise and diet can influence health through changes in the gut microbiome; however, no studies have investigated how together these affect gut microbiome and overall metabolic health. The goal is to understand the combined effects of fish oil and exercise in obesity-associated inflammation. The investigators hypothesize that fish oil will improve gut bacteria profiles, which will in turn potentiate the benefits of an exercise program reduce inflammation and metabolic risk. This study will provide the foundation for development of novel strategies for obesity, inflammation, dyslipidemia and dysglycemia.
+
+Aim 1: Determine combined effects of n-3 PUFA and HIIT on improving metabolic risk:
+
+The investigators will test the hypothesis that n-3 PUFA in addition to HIIT will have beneficial effects on obesity-related markers of inflammation, dyslipidemia and insulin resistance in placebo, n-3 or exercise alone, and combined n-3 and exercise.
+
+Aim 1.1: Investigate the influence of n-3 PUFA and HIIT on body weight and composition:
+
+At baseline (week 0), anthropometric assessments will be performed, including: (1) height (m); (2) weight (kg); (3) waist circumference (cm); (4) hip circumference (cm); and body composition which will be assessed utilizing dual-energy X-ray absorptiometry (DXA) scanning. Anthropometric measures will be repeated at post-intervention (week 6).
+
+Aim 1.2: Investigate the influence of n-3 PUFA and HIIT on serum markers associated with obesity
+
+Fasting blood samples collected at weeks 1 and 6 will be analyzed for (1) markers of inflammation, including high sensitivity C-reactive protein (hs-CRP), IL-6, IL-10, MCP-1, and TNF-α; (2) adipokines, including adiponectin, resistin, and leptin; and (3) indices of systemic insulin resistance, including insulin and fasting blood glucose and (4) indices of dyslipidemia, including total cholesterol, high-density, lipoprotein (HDL), non-HDL, low- and very low-density lipoproteins (LDL and VLDL), total/HDL cholesterol, and triglycerides (TG) utilizing ELISA kits or Luminex analyzer \[1\] in the Nutrition, Exercise, \& Translational (NExT) Medicine Lab in the Department of Kinesiology \& Sport Management, TTU, Lubbock.
+
+Aim 2: Determine combined effects of n-3 PUFA and HIIT on improving gut dysbiosis:
+
+The investigators will test the hypothesis that n-3 PUFA supplementation will improve gut microbiota composition and related metabolites, which will result in reduced inflammation and ameliorate 
+
+PRIMARY OUTCOMES:
+  - Mean Change from Baseline in Serum high-sensitivity C-reactive protein at 6 weeks
+  - Mean Change from Baseline in Interleukin (IL)-6 at 6 weeks
+  - Mean Change from Baseline in Interleukin (IL)-10 at 6 weeks
+  - Mean Change from Baseline in Monocyte chemoattractant protein-1 at 6 weeks
+  - Mean Change from Baseline in Tumor necrosis factor at 6 weeks
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 Polyunsaturated Fatty Acid.
+  - DIETARY_SUPPLEMENT: Safflower Oil
+  - BEHAVIORAL: High-Intensity Interval Training
+  - BEHAVIORAL: Flexibility Training
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05297383

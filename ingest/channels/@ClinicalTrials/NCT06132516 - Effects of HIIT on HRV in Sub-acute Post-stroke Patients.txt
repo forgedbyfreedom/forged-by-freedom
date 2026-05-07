@@ -1,0 +1,79 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06132516
+Title: Effects of HIIT on HRV in Sub-acute Post-stroke Patients
+Official Title: Effect of a High-intensity Interval-training on "Heart Rate Variability" Prognostic Parameters in Early Post-stroke Patients: A Randomized Controlled Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: high intensity interval training
+
+SUMMARY:
+Objective. To assess the effect of innovative "High-Intensity Interval Training" (HIIT) on Heart Rate Variability, a strong biomarker of positive outcome after stroke.
+
+Design. A randomized controlled study with blinded assessment of the main criteria.
+
+Population. NIHSS\<20 post-stroke patients, hospitalized in secondary care stroke-units within the first 3 months (sub-acute phase).
+
+Selection. Eligibility test on a semi-recumbent cycloergometer Intervention. In addition to a standard neurorehabilitation program (3±1 sessions daily, including cognitive and occupational therapy, physiotherapy with strengthening-stretching exercises), the aerobic group will benefit from a HIIT procedure (HIIT group) with a semi-recumbent cycloergometer, for 6 weeks representing 16 sessions; while the non-aerobic group will undertake a "Low-Intensity Group-Gymnastic Training" (Control or LIGT Group) (=segmental strengthening-stretching and proprioceptive exercises mainly), with the same training volume and frequency for both groups.
+
+Main outcome measure. Standard Deviation of Normal-to-Normal RR intervals (SDNN) from 24h Holter-ECG recordings at W4, W8 and M6.
+
+Modifications in patients' medical management are expected, as generalization of AT in moderate to severe stroke patients at the sub-acute phase, with "Low volume HIIT" and simple devices.
+
+DETAILED DESCRIPTION:
+A randomized controlled 2-arms parallel study, comparing HRV in two groups of stroke patients.
+
+Post-acute stroke patients hospitalized in rehabilitation stroke¬-units, within secondary care hospitals, are screened for eligibility.
+
+* Inclusion criteria:
+
+  * first-ever hemispheric stroke, with consistent clinical and neuroimaging signs
+  * \<3 month
+  * NIHSS \<20 in acute care
+  * age\>18
+* Non-inclusion criteria:
+
+  * complicated diabetes mellitus with objective neuropathy and/or autonomic dysfunction
+  * other concomitant cardiac or pulmonary diseases possibly affecting HRV recordings, ie: acute myocardial infarction (\<6 month), myocardial dysfunction as severe dilated or hypertrophic cardiomyopathy, class 3 and 4 heart failure, arrhythmias including chronic atrial fibrillation, conduction abnormalities.
+  * beta-blockers with no alternative options
+  * severe cognitive impairment inconsistent with free, informed and written consent or questionnaire filling
+* Patients will benefit beforehand from a symptom-limited Graded Exercise Test (GXT), with ECG monitoring and using a semi recumbent cycle ergometer (Ergoline, Optibike MED600), mainly to exclude a CV risk and to accurately assess their exercise capacities for better individualized programs. Peak oxygen uptake, Peak Power , Peak Heart Rate, Respiratory Exchange Ratio (VO2peak, Power peak, HRpeak, RER respectively) will be measured, Ventilatory Threshold 1 (VT1) will be estimated, and oxygen uptake, power and heart rate at VT1 will be recorded (VO2vt1, Pvt1, HRvt1).
+* The standard-of-care neuro-rehabilitation program was carried out according to the international recommendations. It will consist daily in a mean of 3 sessions (2 to 4), five days a week: physiotherapy (with, among others, Strengthening-Stretching activity), occupational therapy, cognitive therapy (orthophonist or neuro-psychologist).
+
+In addition, either aerobic training (HIIT) or non-aerobic training (Control Group-CG by Low Intensity Group Training-LIGT).
+
+* HIIT and LIGT training volume and duration will be the same (16 sessions, 12 to 30' each, 6 weeks).
+
+The intervention-group (HIIT Group) will realize a 6-weeks Aerobic Training as follows:
+
+Among the FITT principle:
+
+* Frequency: 2-3 times a week
+* Intensity: long-HIIT: 4 to 5 four-minutes intervals at Pvt1(+/- 2 steps) interspersed with two-minutes interval at 50% Pvt1=(4-5 x (4':2')/(Pvt1 :50%Pvt1))
+
+  * short-HIIT: 8 to 10 forty-five seconds intervals at Pmax (+/- 2 steps) interspersed with forty-five seconds rest intervals = (8-10x(45":45")/Pmax :Rest))
+* Time: 12' to 30' per session (8 short-sessions of 12 to 15', 8 long-sessions of 24 to 30')
+* Type: cycling on a semirecumbent ergometer Depending on the patient's fatigue and progress, the intensity will be adjusted, with an HR target \>80% HRpeak during intervals.
+
+In the CG group, HIIT will be replaced by "LIGT" sessions, as follows:
+
+Among the FITT principle:
+
+* Frequency: 2-3 times a week
+* Intensity: Low HR c
+
+PRIMARY OUTCOMES:
+  - SDNN
+
+INTERVENTIONS:
+  - OTHER: HIIT
+  - OTHER: LIGT
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06132516

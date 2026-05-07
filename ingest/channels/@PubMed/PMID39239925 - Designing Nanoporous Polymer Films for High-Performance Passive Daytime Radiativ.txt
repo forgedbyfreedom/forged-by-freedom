@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39239925
+Title: Designing Nanoporous Polymer Films for High-Performance Passive Daytime Radiative Cooling.
+Authors: Huang, Hu, Yao, Chesman, Wang
+Journal: ACS applied materials &amp; interfaces
+Year: 2024
+Topic: cooling strategies performance
+
+ABSTRACT:
+Energy-free passive daytime radiative cooling (PDRC) technology makes it an attractive solution to both the building energy crisis and global warming. Spectrally selective porous polymers have great potential for practical PDRC applications owing to their cooling performance and scalability. A fundamental understanding of the relationship between the cooling performance and pore properties is crucial for guiding future structural designs of high-performance PDRC materials. However, one of the key challenges is achieving uniform nanopores and tailorable pore morphologies in the PDRC coating films. Here we demonstrate a strategy to use advanced metal-organic framework (MOF) nanocrystals as a sacrificial template creating a nanoporous poly(vinylidene fluoride) (PVDF) coating film with uniform-sized nanopores for highly daytime passive radiative cooling. The experimental evidence indicates that nanopores around 400 nm in size, comparable to the wavelength within the ultraviolet and visible spectra, along with an appropriate porosity of 37%, contribute to excellent solar reflectance (94.9 &#xb1; 0.8%) and high long-wave infrared emission (92.8 &#xb1; 1.4%) in the resulting porous PVDF films. This leads to subambient cooling of &#x2248;9.5 &#xb0;C and a promising net cooling power of 137 W/m2 at midday under solar intensities of &#x223c;1275 and &#x223c;1320 W/m2. The performance equals or exceeds that of state-of-the-art polymeric PDRC designs, and this general strategy of tailing nanostructures is expected to open a new avenue toward high-performance radiative cooling materials for PDRC applications.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39239925/

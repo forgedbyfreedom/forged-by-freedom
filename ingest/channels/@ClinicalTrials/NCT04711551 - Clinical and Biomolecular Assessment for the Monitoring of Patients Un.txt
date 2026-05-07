@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04711551
+Title: Clinical and Biomolecular Assessment for the Monitoring of Patients Undergoing Regenerative Medicine Treatments with Orthobiologics
+Official Title: Patients-reported Outcome Measures (PROMs), Clinical Objective and Biomolecular Assessment for the Monitoring of Patients Undergoing Regenerative Medicine Treatments with Orthobiologics
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 2000
+Topic: tendon injury
+
+SUMMARY:
+the aim is to improve the evaluation of the outcomes of regenerative medicine treatments performed in the regenerative medicine centers involved in the study.
+
+patients who undergo regenerative medicine treatments present acute and chronic pathologies of the musculoskeletal system, of the stomatological system and of the integuments.
+
+Objective pre, peri and post treatment evaluations are collected. A dedicated software collects the PROMs compiled by the patients, the objective clinical data and the biomolecular evaluations.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Visual Analog Scale
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: PRP and related devices to abtain platelet concentrate from whole blood, medullary and adipose tissue and related devices
+
+ELIGIBILITY:
+Age: 6 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04711551

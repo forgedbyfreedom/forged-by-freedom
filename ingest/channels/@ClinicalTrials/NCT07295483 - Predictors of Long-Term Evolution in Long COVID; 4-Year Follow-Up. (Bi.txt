@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07295483
+Title: Predictors of Long-Term Evolution in Long COVID; 4-Year Follow-Up. (BioICOPER Follow-up Study)
+Official Title: To Analyze the Determining Factors in the Evolution of Subjects Diagnosed With Long COVID at Four Years of Follow-up. BioICOPER Follow-up Study.
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 400
+Topic: exercise muscle mass
+
+SUMMARY:
+Long COVID (persistent COVID) represents a major global health challenge due to its high prevalence (approximately 7%), significant impact on quality of life, and socioeconomic burden. Despite extensive research, diagnostic tools to objectively identify or predict long COVID evolution are still lacking.
+
+The BioICOPER Follow-up Study aims to analyze the influence of biomarker evolution on clinical symptomatology (particularly chronic fatigue) and vascular health after four years of follow-up among 400 participants previously included in the original BioICOPER cohort.
+
+Advanced proteomic analysis, vascular function assessment, and machine-learning-based predictive modeling will be used to identify biomarkers associated with disease progression, stratified by sex. This project will contribute to personalized clinical management of long COVID and improved diagnostic and therapeutic strategies in primary care.
+
+DETAILED DESCRIPTION:
+The study includes a citizen participation component through the IBSAL Citizen Committee for review and dissemination of results. A prospective observational cohort study following 400 adults with a confirmed diagnosis of long COVID, previously enrolled in the BioICOPER baseline study.
+
+Participants will undergo reevaluation four years after their initial inclusion, assessing:
+
+* Clinical symptoms (fatigue, dyspnea, sleep, cognition, nutrition, frailty).
+* Lifestyle factors (physical activity, diet, alcohol and tobacco use).
+* Vascular structure and function using carotid ultrasound, pulse wave velocity (SphygmoCor®, Vasera®), and retinal imaging.
+* Proteomic profiling and quantification of SARS-CoV-2 N and S proteins using ELISA and mass spectrometry.
+* Predictive modeling using artificial intelligence (AI) and bioinformatics methods (ESALAB group).
+
+The study will identify biological, vascular, and behavioral determinants of long COVID progression, aiming to build predictive models to support personalized medicine.
+
+PRIMARY OUTCOMES:
+  - Progression of vascular stiffness measured by carotid-femoral pulse wave velocity (cfPWV)
+
+INTERVENTIONS:
+  - OTHER: BioICOPER Long COVID Cohort
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07295483

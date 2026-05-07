@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07238465
+Title: Exploring Sympathetic Nervous System Function in Individuals With Down Syndrome
+Official Title: Dysautonomia InVestigation in Individuals With Down SyndromE: DIVE Study
+Status: NOT_YET_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: caffeine exercise
+
+SUMMARY:
+Down syndrome (DS), the most common genetic cause of intellectual disability, is associated with widespread organ dysfunction, including abnormalities in the autonomic nervous system (ANS). The ANS regulates critical functions such as heart rate (HR) and blood pressure (BP), both essential for maintaining homeostasis and supporting physical activity. Individuals with DS often exhibit blunted HR responses to exercise-typically \~30 beats per minute below expected levels-suggesting reduced sympathetic nervous system (SNS) activity. The SNS governs rapid changes in HR and BP during stress by releasing catecholamines: epinephrine (from the adrenal medulla) and norepinephrine (from sympathetic nerve endings). Despite its importance, SNS function has not been comprehensively assessed among individuals with DS.
+
+This study addresses a critical knowledge gap by evaluating SNS responses to physiological stressors in individuals with DS. The investigators will measure beat-to-beat HR and BP, along with plasma catecholamine levels, in response to sympathetic activation, comparing individuals with DS to age- and sex-matched controls. Understanding the mechanisms of SNS dysfunction in DS is vital, as it likely underlies reduced exercise capacity and contributes to broader clinical challenges. These insights may guide targeted interventions to improve cardiovascular function, physical capacity, and overall quality of life in this understudied population.
+
+DETAILED DESCRIPTION:
+Evolution has equipped each species with instinctual defense mechanisms to cope with environmental stressors, ensuring survival. Many of these mechanisms are driven by activation of the sympathetic nervous system (SNS), which orchestrates the "fight or flight" response. Systemic SNS activation extends across all organ systems, triggering the release of catecholamines to elevate heart rate (HR) and increase blood pressure (BP) to meet the heightened metabolic demands of the stressor and ensure the delivery of oxygen-rich blood to active tissues. Exercise, a potent sympathoexcitatory stressor, poses a major challenge to the oxygen transport system, requiring coordinated organ system function to increase both HR and BP. Dysregulated SNS activation can impair oxygen delivery, leading to reduced work capacity, quality of life, and is an independent predictor of morbidity and premature mortality. Therefore, experimental approaches to understand SNS activation in populations with reduced work capacity and premature morbidity, mortality is of upmost importance for improving health outcomes and quality of life on a population level.
+
+Down syndrome (DS) is the most common chromosomal abnormality in the human population, with widespread effects across numerous tissues and organ systems, including accelerated biological aging. Individuals with DS exhibit reduced work capacity, with maximal HRs \~30 beats below normal, and face higher rates of premature morbidity and mortality than the general population. Notably, individuals with DS demonstrate blunted catecholamine response to the sympathetic stressor of maximal exercise, suggesting diminished SNS activation. Recent literature from this PI suggests altered peripheral blood flow and BP regulation among individuals with DS during large muscle mass exercise which immolates walking, or running- critical for survival. These findings align with recent evidence of hypoxic signaling, elevated heme metabolism, and stress erythropoiesis across the lifespan in this population. Together, these data suggest that impaired oxygen delivery, potentially linked to SNS dysregulation, may be more widespread in DS than previously recognized.
+
+However, the role of SNS activation in the context of daily stressors which elevate both HR and BP, remains unclear. Understanding the mechanisms underlying SNS dysfunction in DS is crucial, as it likely contributes to many clinical and developmental challenges, including the underlying reduced work capacity and suggested autonomic dysfunction observed in this population. Addressing this gap may enable targeted therapies to enhance survival, longevity, and quality of life for individuals with DS. The investigators aim to systematically evaluate SNS activation through six stressors which mimic common stressors faced to any individual over the course of a day or lifespan. Through evaluation of plasma catecholamines, the investigators hope to elucidate the mechanisms and impact of catecholami
+
+PRIMARY OUTCOMES:
+  - Seated Baseline Concentration of Plasma Catecholamines
+  - Concentration of Plasma Catecholamines During Cold Pressor Test
+  - Baseline Standing Concentration of Plasma Catecholamines
+  - First Fear Simulation, Concentration of Plasma Catecholamines
+  - Second Fear Simulation, Concentration of Plasma Catecholamines
+
+INTERVENTIONS:
+  - OTHER: Fear Response
+  - OTHER: Cold Stress
+  - OTHER: Pain Response
+  - OTHER: Caffeine
+  - OTHER: 12-Hour Fast
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07238465

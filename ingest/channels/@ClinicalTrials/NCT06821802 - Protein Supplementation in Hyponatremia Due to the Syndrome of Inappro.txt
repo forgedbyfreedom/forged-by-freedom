@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06821802
+Title: Protein Supplementation in Hyponatremia Due to the Syndrome of Inappropriate Antidiuresis
+Official Title: Effect of Protein Supplementation in Hospitalized Patients With Hyponatremia Due to the Syndrome of Inappropriate Antidiuresis - a Monocentric Randomized Open-label Pragmatic Active-controlled Trial - the TREASUREx Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: protein supplementation
+
+SUMMARY:
+The goal of this study is to assess the impact of protein supplementation on hyponatremia caused by the syndrome of inappropriate antidiuresis during hospitalization.
+
+DETAILED DESCRIPTION:
+Hyponatremia (plasma sodium \<135 mmol/L) is the most common electrolyte disorder, affecting up to 30% of hospitalized patients. Chronic hyponatremia (\>48 hours) is linked to longer hospital stays, higher costs, increased mortality, and morbidity (e.g., falls, fractures, cognitive deficits). The most common cause of euvolemic hyponatremia is syndrome of inappropriate antidiuresis (SIAD), characterized by excessive water retention due to dysregulated vasopressin activity. Treatment options include fluid restriction or increasing water excretion with AVP antagonists, SGLT2 inhibitors, or oral urea.
+
+A recent trial showed that protein supplementation can induce osmotic diuresis and raise sodium levels similarly to oral urea, with better tolerability. Since protein supplementation is often used in hospitalized patients with malnutrition, this study aims to compare its acceptability to fluid restriction in hospitalized SIAD patients. This head-to-head superiority trial will randomize patients to receive either 80 g of dietary protein daily or fluid restriction (1000 mL/day) for up to 5 days. The hypothesis is that protein supplementation is significantly more acceptable to patients than fluid restriction, ultimately improving treatment outcomes.
+
+PRIMARY OUTCOMES:
+  - Acceptability of Intervention Measure (AIM) questionnaire
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Moltein PURE Protein Powder
+  - BEHAVIORAL: Fluid restriction
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06821802

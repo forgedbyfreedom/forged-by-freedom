@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04831164
+Title: Genetic Epidemiology of Rotator Cuff Tears: The cuffGEN Study
+Official Title: Genetic Epidemiology of Rotator Cuff Tears: The cuffGEN Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 3500
+Topic: tendon injury
+
+SUMMARY:
+Rotator cuff tear is one of the most common reasons to seek musculoskeletal care, and cuff repair is one of the fastest growing ambulatory surgery procedures. However, the etiology of cuff tears, reasons for variability treatment success, and causes of FI are poorly understood. A large-scale genome-wide association studies (GWAS) using imaging-verified rotator cuff tear cases and controls can address limitations in rigor of prior research and assess the genetic basis of FI and functional outcomes of cuff tear treatments.
+
+Primary Objective: To conduct a case-control GWAS of imaging-verified symptomatic rotator cuff tear in approximately 3000-6000 individuals and replicate findings in an independent set of 3000-6000 or more imaging-verified individuals to identify common variants in several genetic loci that increase risk for rotator cuff tears.
+
+Hypothesis: Common variants in several genetic loci increase risk for rotator cuff tears.
+
+Secondary Objectives:
+
+1. To perform an imputed transcriptome-wide association study (TWAS) to identify and prioritize gene targets associated with rotator cuff tear by integrating GWAS summary statistics and gene-expression weights from muscle and adipose tissue available in the GTEx project.
+
+   Hypothesis: Genetically predicted gene expression of multiple genes in muscle and adipose tissue are associated with rotator cuff tear.
+2. To identify if single nucleotide polymorphisms (SNPs) associated with rotator cuff tear and their genetic risk score (GRS) predict improved pain and function as measured by American Shoulder and Elbow Surgeons Standardized Form (ASES) and other outcome measures.
+
+   Hypothesis: Select SNPs and GRS predict ASES outcome.
+3. To identify genetic variants associated with Fatty Infiltration (FI) in patients with cuff tears in a two stage GWAS of imaged rotator cuffs and to prioritize gene targets through an imputed-TWAS in muscle and adipose tissue.
+
+Hypothesis: Multiple genetic variants are associated with FI and some exert their influence by altering gene expression in the muscle and adipose tissue.
+
+DETAILED DESCRIPTION:
+Participants will complete a structured questionnaire (Appendix B) that includes medical and musculoskeletal comorbidities, Mental Health Inventory-5148, Fear Avoidance Beliefs Questionnaire (FABQ)149, and expectations of improvement from treatment. The primary patient-reported outcome (Aim 2) of our study is American Shoulder and Elbow Surgeons Standardized Form (ASES), which is a composite pain and function measure. ASES was chosen because it is widely used; is shoulder-specific and takes 2 minutes to complete; has an established minimally clinically important difference (MCID) of \>9 points151; and has good psychometric properties152-155. We will use the Shoulder Pain and Disability Index (SPADI)as a secondary outcome. SPADI has good psychometric properties and an established MCID of \>10 points.
+
+We will perform a genome-wide association meta-analysis (GWAMA) in approximately 10,000 imaging-verified rotator cuff tear cases and imaging-verified controls. Discovery meta-analysis will consist of samples from cuffGEN cohort with MRI imaging (N=1,250 cases and 1,250 controls) and samples from BioVU based on MRI report-confirmed cases and controls (N \~ 2400 with equal cases and controls). Targeted variants showing some evidence of association (P \< 5 x 10-6) will be replicated in an independent cohort of imaging confirmed cuff tear cases (N \> 2,500) and controls (N \> 2,500) from the GERA study. In addition to providing careful selection of cases via imaging confirmation, equal attention to the confirmation of lack of tears via imaging greatly reduces misclassification of cases and controls and allows for detection of effect estimates that are likely larger (away from the null). Adhering to the same stringent criteria for discovery and replication greatly improves our ability over previous studies to identify variants associated with cuff tears.
+
+PRIMARY OUTCOMES:
+  - Genome wide association meta-analysis of cases and controls
+
+INTERVENTIONS:
+  - OTHER: NA (not an interventional study)
+
+ELIGIBILITY:
+Age: 40 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04831164

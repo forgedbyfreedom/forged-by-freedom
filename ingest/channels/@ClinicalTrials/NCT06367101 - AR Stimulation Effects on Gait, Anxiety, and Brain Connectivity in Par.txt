@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06367101
+Title: AR Stimulation Effects on Gait, Anxiety, and Brain Connectivity in Parkinson's Disease
+Official Title: Investigate the Effect of AR Environment Stimulation on Gait, Anxiety and Brain Connectivity of Individuals With Parkinson Disease
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: high intensity interval training
+
+SUMMARY:
+A project aims at addressing gait impairments and non-motor symptoms such as anxiety and stress in Parkinson's disease (PD) patients through a novel approach involving heart rate variability (HRV) feedback and Augmented Reality (AR) training. The project is based on the premise that improving HRV, which reflects the adaptability of the autonomic nervous system, can enhance both motor functions like gait and non-motor symptoms.
+
+DETAILED DESCRIPTION:
+Gait impairments are prevalent among individuals diagnosed with Parkinson's disease (PD), presenting as shuffling steps, diminished stride length, increased cadence, freezing of gait, etc. Concurrently, non-motor symptoms, including anxiety, stress, and sleep disturbances, exert a substantial impact on the overall quality of life for PD patients.
+
+Improving heart rate variability (HRV) can positively improve both motor and non-motor symptoms in PD. HRV serves as a reflective measure of the adaptability of the autonomic nervous system, a critical regulator of bodily functions, including gait. Diminished HRV correlates with impaired autonomic function, contributing to the observed gait abnormalities in individuals with Parkinson's disease. Training with HRV feedback has been shown to improve gait performance, stress, and anxiety.
+
+The motor skill taxonomy proposed by Gentile seems to constitute just such a template for rehabilitation programs because it provides a two-dimensional basis for classifying a variety of motor skills. Meanwhile, AR offers a unique platform for creating intricate laboratory environments that facilitate non-invasive evaluation and rehabilitation, enabling the measurement of changes in the autonomic nervous system in response to environmental stimuli. Therefore, an Augmented Reality (AR) training program based on Gentile's theory, incorporating gait and HRV feedback and addressing PD-specific variables, will be developed.
+
+The overarching goal of this 3-year project is to establish an effective environmental stimulation paradigm capable of ameliorating both motor and non-motor symptoms. This paradigm aims to contribute to the creation of tailored rehabilitation programs for individuals with Parkinson's disease. The project's progression is outlined as follows:
+
+The first year: Design a standard AR environment based on Gentile's theory and establish test-retest reliability with 20 healthy subjects.
+
+The second year: Test 30 individuals with PD in both real and AR environments to establish the relationship between different environmental stimuli for PD patients.
+
+The third year: Randomize 30 individuals with PD into the AR training group and a control group. Evaluate the distinct training effects, with a focus on gait performance, gait initiation, freezing of gait, and anxiety levels.
+
+PRIMARY OUTCOMES:
+  - Walking Speed
+  - Step Length
+  - Step Time
+  - Time-Domain Index of Heart Rate Variability (HRV)：Standard deviation of RR intervals (SDRR)
+  - Time-Domain Index of HRV：pNN50
+
+INTERVENTIONS:
+  - OTHER: AR training with gait and HRV feedback
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06367101

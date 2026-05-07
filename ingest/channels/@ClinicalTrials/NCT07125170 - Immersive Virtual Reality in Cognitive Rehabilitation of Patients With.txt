@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07125170
+Title: Immersive Virtual Reality in Cognitive Rehabilitation of Patients With Post-Stroke Cognitive Impairment
+Official Title: Immersive Virtual Reality in Cognitive Rehabilitation of Patients With Post-Stroke Cognitive Impairment: A Pilot Study at the Department of Physical Medicine and Rehabilitation, Clinical Hospital of the University of Chile
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: physical activity intervention
+
+SUMMARY:
+This pilot study aims to evaluate the feasibility of implementing immersive virtual reality (VR) in cognitive rehabilitation for adults with post-stroke cognitive impairment receiving outpatient therapy. Participants will use a head-mounted display and interactive software to engage in gamified cognitive exercises that simulate memory, attention, and executive function tasks. The intervention consists of 10 sessions, delivered two to three times per week over a period of approximately four weeks. The study will assess multiple feasibility indicators, including the recruitment rate based on eligibility criteria, the safety and tolerability of VR sessions for participants, and the usability and satisfaction reported by occupational therapists administering the intervention. Additionally, exploratory outcomes include changes in global cognition and specific cognitive domains, as well as self-reported quality of life. Adverse effects related to VR use will be tracked. This pilot study will help inform the design and implementation of future, larger-scale clinical trials.
+
+DETAILED DESCRIPTION:
+This is a single-arm pilot study designed to evaluate the feasibility of implementing immersive virtual reality (VR) in cognitive rehabilitation for adults with post-stroke cognitive impairment. The study is conducted at the Occupational Therapy Unit of the Hospital Clínico Universidad de Chile and targets adult patients with documented cognitive impairment following a cerebrovascular accident (CVA).
+
+Participants will undergo ten individual VR-assisted cognitive rehabilitation sessions, scheduled at a frequency of two to three sessions per week. Each session lasts approximately one hour, with the first 30 minutes incorporating immersive VR using the Meta Quest 3 headset and the Hand Physics Lab application. This application provides interactive cognitive exercises in a motivating and safe virtual environment. All sessions are supervised by occupational therapists trained in VR therapy.
+
+The study aims to collect feasibility data, including recruitment rates based on inclusion and exclusion criteria, participant adherence to the intervention schedule, and reasons for withdrawal if any. Safety and tolerability will be assessed through patient-reported adverse effects (e.g., dizziness, nausea, or eye strain) using the Simulator Sickness Questionnaire (SSQ). Usability and satisfaction with the VR system will be evaluated from the perspective of the occupational therapists delivering the intervention.
+
+Exploratory outcomes include changes in cognitive function measured with the Montreal Cognitive Assessment (MoCA) and in quality of life using the NeuroQoL short form. These measurements are taken before and after the intervention period. No compensation is provided for participation, and patients continue receiving standard care.
+
+This pilot study does not aim to establish efficacy. Instead, it will provide essential data regarding the feasibility, safety, user experience, and preliminary clinical trends necessary to inform the development of future, larger-scale trials
+
+PRIMARY OUTCOMES:
+  - Proportion of participants who complete ≥80% of planned sessions.
+  - Incidence of VR-related adverse events requiring session interruption
+  - Therapist-reported usability and satisfaction with immersive virtual reality in cognitive rehabilitation
+
+INTERVENTIONS:
+  - DEVICE: Kinesix XR on Meta Quest 3
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07125170

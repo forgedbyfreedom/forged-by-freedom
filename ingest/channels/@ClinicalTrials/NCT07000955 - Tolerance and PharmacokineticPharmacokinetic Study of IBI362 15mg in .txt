@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07000955
+Title: Tolerance and Pharmacokinetic/Pharmacokinetic Study of IBI362 15mg in Patients With Moderate to Severe Obesity
+Official Title: Tolerance and Pharmacokinetic/Pharmacokinetic Study of IBI362 15mg Administered Multiple Times in Chinese Patients With Moderate to Severe Obesity
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 98
+Topic: creatine supplementation
+
+SUMMARY:
+This study is a multicenter, randomized, partially double-blind (double-blind in both the IBI362 group and the placebo group, with the tirbopeptide group open), placebo and active drug controlled design study
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The Incidence of adverse events and serious adverse events during the treatment period
+  - The suicidal ideation and behavior of subjects evaluated by Columbia-Suicide Severity Rating Scale (C-SSRS)
+  - The incidence rates of Adverse Event of Special Interest
+  - The value of systolic and diastolic pressures
+  - The RR interval, PR interval, heart rate, QT interval, Fridericia-corrected QT interval, and any abnormal reporting results of 12-lead electrocardiogram
+
+INTERVENTIONS:
+  - DRUG: Tirzepatide
+  - DRUG: Placebo
+  - DRUG: IBI362
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07000955

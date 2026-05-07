@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05793047
+Title: Use of Inertial Sensors to Characterize the Fatigability of Post-stroke Hemiplegic Patients
+Official Title: Characterization of Fatigue From Data From Inertial Units: Gait Analysis in Hemiplegic Post-stroke Patients
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: recovery exercise
+
+SUMMARY:
+This is an experimental, observational, prospective study designed to develop medical knowledge.
+
+The main objective of the study was to identify clinically significant, easily interpretable, quantitative indices of fatigue-related gait pattern changes in post-stroke hemiplegic patients.
+
+This study is part of a usual framework of management of post-stroke hemiplegic patients with additional data collection, via the use of inertial measurement units, considered here as non-interventional.
+
+To achieve this identification, 2 6-minute walk tests will be performed for each patient at the beginning and end of the same day. Patient-perceived fatigue will be recorded by the Borg scale every minute during the 6-minute test. The level of activity during the rehabilitation day is also part of the data collected (number of hours of physical and non-physical activity). At the end of the second 6-minute test, the patient's participation in the study ends.
+
+In addition to the inertial measurement, two scores will be collected to assess the correlation between fatigability and the level of anxiety/depression and stroke severity :
+
+* National Institutes of Health Stroke Scale (NIHSS)
+* Hospital Anxiety and Depression Scale (HAD)
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Relationships between fatigue measured by the Borg scale during 6-minute test and cadence (number of steps per minute)
+  - Relationships between fatigue measured by the Borg scale during 6-minute test and walk ratio (stride length / cadence (cm/(steps/min)))
+  - Relationships between fatigue measured by the Borg scale during 6-minute test and step length (cm)
+  - Relationships between fatigue measured by the Borg scale during 6-minute test and speed (meter per second)
+  - Relationships between fatigue measured by the Borg scale during 6-minute test and cycles phases: single and double support (second)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05793047

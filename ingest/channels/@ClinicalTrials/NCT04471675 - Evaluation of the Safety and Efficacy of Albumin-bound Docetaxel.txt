@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04471675
+Title: Evaluation of the Safety and Efficacy of Albumin-bound Docetaxel
+Official Title: Safety, Tolerability, Pharmacokinetics and Preliminary Antitumor Activity of Albumin-bound Formulation of Docetaxel for Intravenous Infusion in Patients With Advanced Solid Tumors: A Phase 1, Single-center, Open-label, Dose-escalation Study
+Status: UNKNOWN
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 208
+Topic: physical activity intervention
+
+SUMMARY:
+This trial is an open-label, single-center, dose-escalation and cohort-expansion Phase I clinical study in patients with advanced solid tumors. The aim of this study is designed to evaluate the safety, tolerability, pharmacokinetics and preliminary antitumor activity of albumin-bound formulation of docetaxel for intravenous infusion in patients with advanced solid tumors.
+
+DETAILED DESCRIPTION:
+This study was conducted in two stages. The first stage (Stage I) is a dose-escalation study. A classic 3+3 design will be used to determine the maximum tolerated dose (MTD) and the recommended Phase 2 dose (RP2D). Patients with advanced solid tumors will be assigned to receive sequentially higher doses of albumin-bound formulation of docetaxel once every three weeks (a Cycle) by intravenous infusion, starting at a dose of 50mg/m2. Patients will receive the albumin-bound formulation of docetaxel
+
+PRIMARY OUTCOMES:
+  - Number of participants who experienced AE during cycle1.
+  - Number of participants who experienced DLT during cycle1.
+  - Classic 3+3 design to determine the maximum tolerated dose (MTD) and the recommended Phase 2 dose (RP2D)
+
+INTERVENTIONS:
+  - DRUG: Albumin-bound docetaxel
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04471675

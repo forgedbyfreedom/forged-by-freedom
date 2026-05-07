@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00996892
+Title: Safety, Tolerability and Pharmacokinetics of Cobimetinib in Combination With Pictilisib in Patients With Locally Advanced or Metastatic Solid Tumors
+Official Title: A Phase Ib, Open-Label, Dose-Escalation Study Evaluating the Safety, Tolerability and Pharmacokinetics of GDC-0973 in Combination With GDC-0941 When Administered in Patients With Locally Advanced or Metastatic Solid Tumors
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 178
+Topic: creatine supplementation
+
+SUMMARY:
+This is an open-label, multicenter, Phase Ib dose-escalation study designed to assess the safety, tolerability and pharmacokinetics of oral dosing of cobimetinib and pictilisib administered in combination in patients with locally advanced or metastatic solid tumors.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Dose-Limiting Toxicities (DLTs) During Dose Escalation Stages 1, 1A and 1B
+  - Maximum Tolerated Combination Doses of Cobimetinib and Pictilisib During Dose-Escalation Stages 1, 1A and 1B
+  - Time of Maximum Concentration (Tmax) of Cobimetinib on Day 3 - Stage 1, Cohorts 1-3
+  - Maximum Plasma Concentration (Cmax) of Cobimetinib on Day 3 - Stage 1, Cohorts 1-3
+  - Area Under the Concentration-Time Curve From Time 0 to 24 Hours Post-Dose (AUC0-24) of Cobimetinib on Day 3 - Stage 1, Cohorts 1-3
+
+INTERVENTIONS:
+  - DRUG: Cobimetinib
+  - DRUG: Pictilisib
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00996892

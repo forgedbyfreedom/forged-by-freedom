@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07170891
+Title: Effects of Inspiratory Muscle Training Combined With Circadian Rhythm-based Running Programs in Children Male Football Players
+Official Title: Effects of Inspiratory Muscle Training Combined With Circadian Rhythm-based Running Programs in Children Male Football Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: athletic performance
+
+SUMMARY:
+In this study, a parallel two-group pre-test-post-test randomized controlled trial was conducted according to CONSORT guidelines. All participants and their parents were given detailed information about the study before it commenced, and written informed consent was obtained in accordance with the ethical principles described in the Declaration of Helsinki. Help was received from a third-level athletics coach for planning and implementing running exercises to be used in the project. The study was designed according to the rules of the Declaration of Helsinki and approved by the ethics committee for scientific research of Gümüşhane University (at its meeting on 20.09.2024 and number 2024/7; decision number E-95674917-108.99-282503). The aim of this study is to investigate the effects of additional inspiratory muscle training (IMT) on exercise tolerance, agility performance, and respiratory parameters in 10-12-year-old male football players who have been training regularly for at least two years, based on their chronotype. A power analysis was conducted using G\*Power 3.1 to determine the sample size of the study. The effect size (d) was found to be 1.12 (α = 0.05, 1-β = 0.95, η²p = 0.8). Based on this analysis, it was determined that a minimum of 20 participants per group was required. However, to mitigate potential issues, it was decided to include 25 participants, an additional 25%, in each group.
+
+Participants visited the laboratory three times. During the first visit, the familiarization procedure was performed; participants were administered the Morningness-Eveningness Scale for Children questionnaire and divided into 3 groups according to the results. Then, pulmonary function tests (PFT), maximum inspiratory pressure (MIP), expiratory pressure (MEP), six-minute walk test (6MWT), inspiratory muscle training (IMT), and running training procedures were applied. In the second visit, PFT and MIP-MEP tests, agility and 6MWT tests were performed and their performances were recorded. After the six-week training period, participants' final measurements were taken at the third and final visit. Subsequent to the completion of the six-week training period, the participants' final measurements were obtained during the final visit. The experimental trials were conducted at a consistent time each day, between 9:00 and 12:00. Prior to the commencement of the trials, participants were instructed to abstain from high-intensity physical activity.
+
+The inclusion criteria were as follows: a) Candidates must have at least two years of active football training, b) be between the ages of 10 and 13, c) be in good general health, d) have no known respiratory or cardiovascular conditions, e) provide written informed parental consent. The following criteria were used to determine exclusion from the study: The subject's medical history includes the following: a) A history of lung disease or a current upper respiratory tract infection, b) A history of current injury, c) Medication use that may affect breathing or performance, d)Individuals with FEV1/FVC\<70 e) Participation in similar studies within the last six months
+
+DETAILED DESCRIPTION:
+Body composition measurement The height of the participants was measured using a standard height meter (Seca 769, Seca, Hamburg, Germany) with an accuracy of 0.1 centimeter while leaning against a wall without shoes. Body weight was measured using a digital scale (Beurer, model GS27) with an accuracy of 0.1 kilograms before and after the IMT program, which was itself incorporated into the 6-week running program. The participants' body weight was measured in kilograms (kg) without shoes and wearing shorts and a T-shirt to avoid affecting the results.
+
+The Morningness-Eveningness Scale for Children (MESC) The Morningness-Eveningness Scale for Children (MESC), developed by Carskadon et al. (1993), is a tool designed to assess the daily preferences of school-age children. The scale under consideration consists of 10 items with four or five response options. Scores on the scale range from 10 to 43. Established 21 and 35 as the cut-off points for the scale. A positive correlation has been demonstrated between children's preference for mornings and their score on the scale. That is to say, as the score on the scale increases, the preference for mornings concomitantly increases. Scores ranging from 22 to 34 points are indicative of an intermediate type, while scores of 21 or below are associated with an evening type. Scores of 35 points and above are considered to indicate a morning type. The validity and reliability of the Turkish version of the scale were previously examined by Önder and Beşoluk (2013), who determined a Cronbach's alpha value of 0.72. In the context of the study, subjects who attained scores below 21 points were allocated to the evening group. Those who scored between 22 and 34 points were designated as the control group, which comprised individuals who engaged exclusively in jogging. Subjects who scored 35 points and above were assigned to the morning group.
+
+505 Agility test This test consists of measuring the time taken to complete the last 5 meters of a 15-meter track. The time within the first 10 m from the start of the test is not included in the test score. When the next 5 m distance is passed for the first time, the recording begins and stops when the same distance is covered in return.
+
+Six-Minute Walk Test (6MWT) Protocol The 6MWD test is a reliable and valid functional test that can be used to assess exercise tolerance and endurance in healthy children. The rationale behind our selection of this particular evaluation method stems from its status as the most pragmatic and ergonomic approach to appraising the submaximal extent of functional exercise capacity. The Six Minute Walk Test (6MWT) instructions were provided to all participants by an exercise physiologist. The participants were instructed to walk as fast as possible while maintaining a comfortable pace for the duration of six minutes along a pre-measured straight path. During the test, the assessor recorded the time and provided standardized encouragement at each minu
+
+PRIMARY OUTCOMES:
+  - Agility (505 Agility Test)
+  - 6-Minute Walk Test (6MWT)
+
+INTERVENTIONS:
+  - DEVICE: Morning Running and IMT
+  - DEVICE: Inspiratory muscle training and evening running
+  - OTHER: Control
+
+ELIGIBILITY:
+Age: 10 Years to 14 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07170891

@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06145542
+Title: Sequences of Aerobic and Resistance Exercise and Cardio-metabolic Functions in T2D
+Official Title: Sequences of Aerobic and Resistance Exercise in Training and Their Effects on Cardio-metabolic Functions Among Type 2 Diabetes Patients - a Randomized Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 56
+Topic: resistance training
+
+SUMMARY:
+Aerobic exercise and resistance exercise are two types of exercise commonly used in physical conditioning. Compared to aerobic exercise, a combination of aerobic and resistance exercise has been linked to a greater reduction in hemoglobin A1c (HbA1c) among patients with type 2 diabetes (T2D). However, it is not clear that in a concurrent aerobic-resistance training session, whether the orders of the two types of exercise could act differently in glucose metabolism. This randomized trial aims to investigate the effect of the sequence of exercise modalities (aerobic-resistance vs resistance-aerobic in a training session) on glycemic control among T2D patients following an 8-wk intervention period.
+
+DETAILED DESCRIPTION:
+Objectives:
+
+This randomized study aims to explore the effects of aerobic and resistance training sequences on glycemic control among type 2 diabetes (T2D) patients through an 8-wk combined aerobic and resistance exercise training program.
+
+Study Population:
+
+A total of 56 participants with T2D aged 50-70 years (sex ratio approximately 1:1) with a course of type 2 diabetes of more than one year are included. Participants are residents of Nanjing Municipality, Jiangsu Province, China. Participants are recruited from the outpatients at Maigaoqiao Community Health Service Center, Qixia District, Nanjing, China or through online advertisement published on the official social media (WeChat) channels of the Health Service Center.
+
+Randomization:
+
+Participants are stratified by baseline hemoglobin A1c (HbA1c) and age, they are randomly assigned into two groups with a block size of 4. The study groups are: 1) aerobic before resistance training (AR group, n=28); 2) resistance before aerobic training (RA group, n=28).
+
+Exercises intervention program:
+
+Exercised program is designed to take place three times a week for a total of eight weeks. Exercise intervention is scheduled for approximately 70 minutes per session (30 minutes of aerobic and 30 minutes of resistance, no break between two types, 5-min of preparation and 5-min relaxation stretching movements before and after each intervention), performed between 8:00 to 11:00 or between 14:00 to 16:30, Monday through Saturday.
+
+Target heart rate during aerobic exercise is set as resting heart rate (HR) + 40%-70% of heart rate reserve (HRR). Participants' HRR was calculated based on their resting HR and maximum heart rate (HRmax=208-0.7×age) as HRmax - HR. Heart rate monitors (OH1, Polar Oy, Oulu, Finland) are used during all exercise sessions to track exercise intensity and ensure that it remained within the specified range. Aerobic exercise is performed on bicycle ergometers for a continuous 30 minutes with a progressive intensity of 40%-70% HRR. Resistance level is set according to an adaptive training prior to the first intervention, pedal cadences are 50-60r/min.
+
+Resistance exercise is conducted using a set of equipment including chest press/ row, leg extension/ curl, abdominal/ back, biceps/ triceps, inner/ outer thigh, and push/ pull machines. Prior to conducting the 1 repetition maximum (RM) testing for the major muscles of the upper and lower limbs, all participants receive proper instructions on how to use the equipment. The Brzycki 1-RM prediction equation is used to estimate the 1RM based on the recorded resistance and repetitions. All participants performe resistance exercise with a weight of 60%-80% 1RM. Movements on each machine are repeated 10-12 times per unit for a total of 4 units, with a-30 second break between units.
+
+In all intervention sessions, participants in AR group complete aerobic exercise before starting resistance exercise, while participants in RA group performe two types of e
+
+PRIMARY OUTCOMES:
+  - Fasting Glucose at Baseline
+  - Fasting Glucose at Follow-up
+  - Hemoglobin A1c (HbA1c) at Baseline
+  - Hemoglobin A1c (HbA1c) at Follow-up
+  - Continuous Glucose Monitoring at Baseline (Mean, sd, Lage)
+
+INTERVENTIONS:
+  - BEHAVIORAL: AR group: aerobic training before resistance training
+  - BEHAVIORAL: RA group: resistance exercise before aerobic exercise
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06145542

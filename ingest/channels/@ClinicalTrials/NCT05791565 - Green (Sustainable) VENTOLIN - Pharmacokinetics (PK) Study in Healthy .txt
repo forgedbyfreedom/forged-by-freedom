@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05791565
+Title: Green (Sustainable) VENTOLIN - Pharmacokinetics (PK) Study in Healthy Participants
+Official Title: A Single Dose Two-way Cross-over Study in Healthy Participants to Compare the Pharmacokinetics (PK) of Salbutamol Administered Via Metered Dose Inhalers Containing Propellants HFA-152a and HFA-134a
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: creatine supplementation
+
+SUMMARY:
+This study will be conducted to compare the PK of salbutamol administered via metered dose inhalers (MDI) containing propellants 1,1-difluroethane (HFA-152a) and 1,1,1,2-tetrafluoroethane (HFA-134a) in healthy participants.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area Under the Plasma Concentration-time Curve up to 30 Minutes Post-dose (AUC (0-30 Min)) of Salbutamol
+  - AUC From Time 0 to Infinity (AUC[0-inf]) of Salbutamol
+  - AUC From Time 0 to Time t (AUC[0-t]) of Salbutamol
+  - Maximum Observed Plasma Concentration (Cmax) of Salbutamol
+
+INTERVENTIONS:
+  - DRUG: Salbutamol HFA-152a
+  - DRUG: Salbutamol HFA-134a
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05791565

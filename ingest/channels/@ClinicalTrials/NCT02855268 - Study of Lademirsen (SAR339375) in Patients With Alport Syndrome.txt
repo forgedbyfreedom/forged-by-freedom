@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02855268
+Title: Study of Lademirsen (SAR339375) in Patients With Alport Syndrome
+Official Title: A Phase 2, Randomized, Double-Blind, Placebo-Controlled Study to Evaluate the Safety, Efficacy, Pharmacodynamics, and Pharmacokinetics of Lademirsen (SAR339375) for Subcutaneous Injection Administered Every Week in Patients With Alport Syndrome
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 43
+Topic: beta-alanine
+
+SUMMARY:
+Primary Objectives:
+
+* To assess the efficacy of lademirsen (SAR339375) in reducing the decline in renal function.
+* To assess the safety and tolerability of lademirsen (SAR339375) in participants with Alport syndrome.
+
+Secondary Objectives:
+
+* To assess plasma pharmacokinetic (PK) parameters of the parent compound and its active major metabolite.
+* To assess the potential formation of anti-drug antibodies (ADAs) following administration of lademirsen (SAR339375).
+* To assess the pharmacodynamic effect of lademirsen (SAR339375) on miR-21 and on changes in renal injury and function biomarkers.
+
+DETAILED DESCRIPTION:
+The planned length of participation in the study for each participant was up to approximately 110 weeks (from screening through completion of follow-up). This included:
+
+* Screening/baseline period of up to 4 weeks
+* Double-blind, placebo-controlled treatment period of 48 weeks
+* Open-label extension treatment period of 48 weeks (all participant to enter a 48-week open label extension period and receive active treatment with lademirsen \[SAR339375\]).
+* Post-treatment follow-up period of 10 weeks.
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment-emergent Adverse Events (TEAEs) and Treatment-emergent Serious Adverse Events (TESAEs)
+  - DB Period: Annualized Change From Baseline in Estimated Glomerular Filtration Rate (eGFR) at Week 48
+
+INTERVENTIONS:
+  - DRUG: lademirsen (SAR339375)
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02855268

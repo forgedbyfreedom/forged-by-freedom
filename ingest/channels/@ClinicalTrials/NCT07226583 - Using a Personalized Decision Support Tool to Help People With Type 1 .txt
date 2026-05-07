@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07226583
+Title: Using a Personalized Decision Support Tool to Help People With Type 1 Diabetes Manage Exercise
+Official Title: Net-IOB & Exercise Toolkit Pilot Trial: Randomized, Crossover Evaluation of a Behavioral Decision Support Advisor to Improve Glycemic Safety During and After Exercise in Adults With Type 1 Diabetes (NEXT)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This study evaluates a clinician-facing decision-support toolkit designed to assist adults with type 1 diabetes in preparing for moderate-intensity exercise. The netIOB \& Exercise Toolkit (NEXT) integrates recent glucose data and insulin delivery history to provide individualized suggestions regarding exercise timing, insulin adjustments, and carbohydrate intake.
+
+Adults with type 1 diabetes will complete three supervised exercise sessions under different pre-exercise guidance approaches:
+
+(A) published consensus-based standard-of-care guidance, (B) usual personal care routines, and (C) guidance informed by the NEXT Toolkit.
+
+A healthy adult control group will complete a single supervised exercise session to provide comparative physiologic data.
+
+DETAILED DESCRIPTION:
+People with type 1 diabetes frequently experience variable glucose responses before, during, and after physical activity, including exercise-associated hypoglycemia and the need for unplanned carbohydrate intake. Although consensus-based recommendations exist to guide exercise preparation, many individuals continue to rely on trial-and-error strategies that can be burdensome or difficult to generalize across activities.
+
+This study evaluates the netIOB \& Exercise Toolkit (NEXT), a software-based, clinician-facing decision-support system intended to contextualize exercise preparation using recent continuous glucose monitoring (CGM) data and insulin delivery history. The Toolkit estimates net insulin-on-board relative to an individual's programmed basal insulin profile and presents structured, non-automated suggestions related to exercise timing, insulin target adjustments, and carbohydrate intake. All decisions remain under clinician and participant control.
+
+The primary study population consists of adults with type 1 diabetes who complete three supervised, moderate-intensity exercise sessions in a randomized, three-period crossover design. Each session is conducted under a different pre-exercise strategy: consensus standard-of-care guidance, usual personal care routines, or guidance informed by the NEXT Toolkit. Sessions are separated by washout periods to minimize physiologic carryover, and glycemic, insulin delivery, and behavioral outcomes are assessed during exercise and for up to 48 hours post-exercise.
+
+In addition, a healthy adult control group completes a single supervised exercise session without pre-exercise glucose or insulin management interventions. This group is included to provide comparative physiologic context for exploratory analyses.
+
+Exploratory analyses will examine relationships between pre-exercise net insulin-on-board (netIOB) strata and glycemic, insulin, and treatment outcomes across exercise sessions. These analyses are intended to characterize patterns of response rather than to test formal efficacy hypotheses.
+
+Participants in both the type 1 diabetes and healthy control groups will wear an investigational continuous ketone monitoring (CKM) sensor for exploratory data collection during exercise and defined post-exercise monitoring periods. Although the device is capable of measuring interstitial glucose, only ketone data will be collected and analyzed for this study; glucose data from this device will not be used. CKM data are collected solely for research purposes, are not used to guide clinical or study-related decisions, and are not intended to evaluate device performance.
+
+The NEXT Toolkit and CKM sensor are classified as non-significant risk, IDE-exempt investigational tools. Results from this pilot study are intended to inform future research design and the development of transparent, open-access methods for studying exercise physiology and glucose management in diabetes.
+
+PRIMARY OUTCOMES:
+  - Composite Score of Glycemic Safety and Carbohydrate Burden
+
+INTERVENTIONS:
+  - BEHAVIORAL: Standard-of-Care Guidance (SoC)
+  - BEHAVIORAL: Usual Care (UC)
+  - DEVICE: netIOB & Exercise Toolkit (NEXT)
+  - DEVICE: Continuous Glucose Monitoring
+  - DEVICE: Continuous Ketone Monitoring
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07226583

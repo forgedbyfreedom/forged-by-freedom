@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00184912
+Title: The Effect of Caffeine on Ischemic Preconditioning
+Official Title: Caffeine Reduces Acute Ischemic Preconditioning
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: caffeine exercise
+
+SUMMARY:
+Ischaemic preconditioning (IP) describes the phenomenon that brief periods of ischaemia render the (myocardial) muscle more resistant to a subsequent more prolonged period of ischaemia and reperfusion. Animal studies have provided evidence that adenosine receptor stimulation is an important mediator of IP. As caffeine is an effective adenosine receptor antagonist already at concentrations reached after regular coffee consumption, we aimed to assess whether caffeine impairs IP in humans in vivo. We used a novel and well-validated model to study IP in humans: 99m-Tc-annexin A5 scintigraphy in forearm skeletal muscle.
+
+24 healthy volunteers were randomly assigned to either caffeine (4 mg/kg/iv in 10 minutes) or saline before a protocol for IP.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Percentual difference in Annexin A5 targetting between the experimental and control arm one and four hours after intravenous injection.
+
+INTERVENTIONS:
+  - DRUG: caffeine
+  - DRUG: Technetium-TC99m-labeled Annexin A5
+  - PROCEDURE: ten minutes forearm ischemia
+  - PROCEDURE: ischemic forearm exercise
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00184912

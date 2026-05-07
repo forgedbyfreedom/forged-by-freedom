@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 31540377
+Title: Towards Optimization of Machining Performance and Sustainability Aspects when Turning AISI 1045 Steel under Different Cooling and Lubrication Strategies.
+Authors: Abbas, Benyahia, El Rayes, Pruncu, Taha
+Journal: Materials (Basel, Switzerland)
+Year: 2020
+Topic: cooling strategies performance
+
+ABSTRACT:
+In this work, an extensive analysis has been presented and discussed to study the effectiveness of using different cooling and lubrication techniques when turning AISI 1045 steel. Three different approaches have been employed, namely dry, flood, and minimum quantity lubrication based nanofluid (MQL-nanofluid). In addition, three multi-objective optimization models have been employed to select the optimal cutting conditions. These cases include machining performance, sustainability effectiveness, and an integrated model which covers both machining outputs (i.e., surface roughness and power consumption) and sustainability aspects (carbon dioxide emissions and total machining cost). The results provided in this work offer a clear guideline to select the optimal cutting conditions based on different scenarios. It should be stated that MQL-nanofluid offered promising results through the three studied cases compared to dry and flood approaches. When considering both sustainability aspects and machining outputs, it is found that the optimal cutting conditions are cutting speed of 147 m/min, depth of cut of 0.28 mm and feed rate of 0.06 mm/rev using MQL-nanofluid. The three studied multi-objective optimization models obtained in this work provide flexibility to the decision maker(s) to select the appropriate cooling/lubrication strategy based on the desired objectives and targets, whether these targets are focused on machining performance, sustainability effectiveness, or both. Thus, this work offers a promising attempt in the open literature to optimize the machining process from the performance-sustainability point of view.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/31540377/

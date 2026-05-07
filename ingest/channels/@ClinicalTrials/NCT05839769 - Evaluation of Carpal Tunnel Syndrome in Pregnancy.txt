@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05839769
+Title: Evaluation of Carpal Tunnel Syndrome in Pregnancy
+Official Title: Evaluation of Carpal Tunnel Syndrome in Pregnancy
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 60
+Topic: tendon injury
+
+SUMMARY:
+Carpal tunnel syndrome (CTS) is a condition that happens when the median nerve in the wrist gets compressed, causing pain, numbness, and tingling in the hand and fingers. It's a common condition that affects between 3% and 6% of people in the general population.
+
+During pregnancy, CTS can be a bigger problem because hormonal changes can cause swelling and put more pressure on the median nerve. Studies show that CTS can affect up to 45% of pregnant women, making it important to identify and manage.
+
+CTS can be diagnosed through a physical exam by a doctor, who will check for symptoms like pain, tingling, or weakness in the hand and fingers. Ultrasound can also be used to diagnose CTS by measuring the size of the median nerve in the wrist. This is a non-invasive imaging technique that is generally considered reliable for diagnosing CTS.
+
+In previous studies, ultrasound has been used to measure the size of the median nerve in pregnant women with carpal tunnel syndrome (CTS). However, a new ratio of median nerve cross-sectional area to flexor carpi radialis cross-sectional area (MN-CSA/FCR-CSA) has not been studied in pregnant women. This ratio may be a more sensitive diagnostic tool for CTS because it is not affected by swelling, which is a common symptom during pregnancy that can affect the size of the median nerve.
+
+DETAILED DESCRIPTION:
+Carpal tunnel syndrome (CTS) is a condition that arises due to the compression of the median nerve in the carpal tunnel of the wrist. The prevalence of CTS in the general population is estimated to be between 3% and 6%, with higher rates in certain occupations or activities that involve repetitive hand movements or vibrations.
+
+During pregnancy, CTS can be particularly important due to hormonal changes that can cause an increase in fluid retention and pressure on the median nerve. The prevalence of CTS during pregnancy varies widely in the literature, with some studies reporting rates as high as 45%.
+
+Ultrasound is a non-invasive imaging technique that can be used to diagnose CTS by measuring the cross-sectional area of the median nerve. While there is some debate regarding the normative values of median nerve cross-sectional area, ultrasound is generally considered a reliable diagnostic tool for CTS.
+
+Previous research has utilized ultrasound to measure the cross-sectional area of the median nerve (MN-CSA) in pregnant women diagnosed with carpal tunnel syndrome (CTS). However, the potential diagnostic value of the MN-CSA/flexor carpi radialis cross-sectional area (FCR-CSA) ratio has not been examined in this population. Given that edema, a common symptom of pregnancy, may affect MN-CSA but not MN-CSA/FCR-CSA ratio, this novel ultrasound parameter may offer superior sensitivity for diagnosing CTS in pregnant women.
+
+PRIMARY OUTCOMES:
+  - Ultrasound imaging of wrists
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Evaluation of median nerve with ultrasound
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05839769

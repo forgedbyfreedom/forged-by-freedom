@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03301350
+Title: Neoadjuvant Carbo/Paclitaxel Followed by Doxorubicin/Cyclophosphamide in Breast Cancer
+Official Title: A Phase II Study of Neoadjuvant Carboplatin/Paclitaxel Followed by Dose-Dense Doxorubicin/Cyclophosphamide in Patients With Hormone Receptor Negative, HER2 Receptor Negative Breast Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 29
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a phase II single-arm, open-label, prospective study to evaluate the efficacy of the low dose weekly Carboplatin/Paclitaxel followed by dose-dense Doxorubicin/Cyclophosphamide in subjects with triple-negative breast cancer in neoadjuvant settings.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number and Percentage of Participants With Pathologic Complete Response (pCR) Rate
+
+INTERVENTIONS:
+  - DRUG: Carboplatin
+  - DRUG: Paclitaxel
+  - DRUG: Doxorubicin
+  - DRUG: Cyclophosphamide
+  - DRUG: Pegfilgrastim
+
+ELIGIBILITY:
+Age: 18 Years to 74 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03301350

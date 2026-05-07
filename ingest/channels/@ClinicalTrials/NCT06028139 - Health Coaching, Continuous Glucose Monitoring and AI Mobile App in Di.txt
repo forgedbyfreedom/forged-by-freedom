@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06028139
+Title: Health Coaching, Continuous Glucose Monitoring and AI Mobile App in Diabetes
+Official Title: Continuous Assessment of Risk and Efficacy (CARE) Using Health Coaching, Continuous Glucose Monitoring and AI Mobile App in Diabetes
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 400
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Lifestyle change is key to diabetes management but there are limited resources and time to support patients in improving lifestyle behaviour in the current healthcare system. Currently, health coaching for behavioural chance guided by continuous glucose data, wearable and lifestyle data is not available in primary and tertiary care management of diabetes. This parallel-group randomised controlled trial (RCT) aims to investigate the effectiveness of a novel multi-component model of care comprising interventions including the mobile app EMPOWER and smartwatch, health coaching, and continuous glucose monitoring (CGM).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - HbA1c
+
+INTERVENTIONS:
+  - BEHAVIORAL: Continuous glucose monitoring and health coaching
+  - BEHAVIORAL: EMPOWER mobile app
+
+ELIGIBILITY:
+Age: 21 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06028139

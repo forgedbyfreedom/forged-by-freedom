@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41879062
+Title: Effects of a one-hour cycling trial on post-exercise plasma metabolomics after two-week supplementation with dairy-based, high-flavonoid exercise recovery drink: a randomized controlled crossover trial.
+Authors: Kung, Kim, Bressel, Lefevre, Ward
+Journal: The British journal of nutrition
+Year: 2026
+Topic: post-workout nutrition recovery
+
+ABSTRACT:
+Fruit-derived flavonoids may enhance exercise performance and/or improve recovery due to their antioxidant and anti-inflammatory activities. Evidence in humans suggests supplementation with &#x223c;300 mg of flavonoids before exercise may affect exercise performance and recovery. The aim of this study was to evaluate the plasma metabolomic response to a one hour cycling trial after twelve participants had consumed either a high or low dairy milk-based flavonoid (490 or 5 mg) pre-workout beverage for 15 days. A randomized, double blind, placebo-controlled design was used, and subjects completed a submaximal cycling trial (45m 70% VO2 max, 15 m time trial). Plasma was collected before and after the exercise trial, and at 1h and 4h post-exercise. No statistically significant difference was observed (p = 0.051), but a small effect size (d = 0.16) suggests a marginal trend toward increased power output during cycling with the treatment. Plasma samples were extracted, derivatized, and subjected to GC-MS-based metabolomics analysis. Sixty-two metabolites were measured, of which 42 were identified, and 20 are unknowns. A two-way repeated ANOVA with log-transformed and auto-scaled values indicated that 56 of the 62 features were significantly different with respect to time, but no significant treatment effects or treatment by time interactions were observed. Using Euclidean distance measure and Ward clustering algorithm, a heatmap was generated that divided the metabolite response into 8 groups and sixteen subgroups. Metabolites (carbohydrates, lipids, and amino acids) changed to varying degrees in response to exercise, suggesting that multiple fuel substrate pathways were activated throughout exercise and recovery.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41879062/

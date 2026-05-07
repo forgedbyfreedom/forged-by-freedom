@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05862779
+Title: Effects of Omega-3 and Whey Protein Supplementation on Lean Mass in Older Adults
+Official Title: Effects of Omega-3 and Whey Protein Supplementation on Lean Mass and Strength Gains in Older Adults Performing Resistance Exercise: A Randomized, Double-Blind and Placebo-Controlled Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: omega 3 exercise
+
+SUMMARY:
+To evaluate the effect of omega-3 supplementation combined with whey protein intake on lean mass and strength gains in older adults performing resistance exercise. Participants will be randomized into the 4 groups. The placebo group will receive 4 g per day of corn oil and 40 g per day of maltodextrin. The omega 3 + placebo group will receive 4 g per day of fish oil and 40 g per day of maltodextrin. The whey protein + placebo group will receive 40g per day of whey and 4g per day of corn oil. The omega 3 + whey group will receive 4g per day of fish oil and 40g per day of protein. All will perform the same exercise protocol for 12 weeks
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Changes in lean mass (kg) using ultrasound and electrical bioimpedance in postmenopausal women
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo Group
+  - DIETARY_SUPPLEMENT: Whey Protein + Placebo
+  - DIETARY_SUPPLEMENT: Omega 3 + Placebo
+  - DIETARY_SUPPLEMENT: Omega 3 + Whey Protein
+
+ELIGIBILITY:
+Age: 60 Years to 85 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05862779

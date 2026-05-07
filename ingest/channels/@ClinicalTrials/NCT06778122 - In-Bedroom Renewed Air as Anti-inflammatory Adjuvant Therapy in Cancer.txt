@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06778122
+Title: In-Bedroom Renewed Air as Anti-inflammatory Adjuvant Therapy in Cancer Survivors
+Official Title: A Series of N-of-1 Randomised, Adaptive, Blinded, Placebo-Controlled Trials of Overnight In-Bedroom Air Filtration as Adjuvant Treatment in Reducing Inflammatory Biomarkers Among Survivors of Adult-Onset Cancer With Elevated C-Reactive Protein
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: physical activity intervention
+
+SUMMARY:
+The BREATHS trial aims to investigate whether overnight in-bedroom air filtration reduces inflammation and cardiac biomarkers in adult survivors of cancer who are at high risk for cardiovascular complications.
+
+The study consists of individualized experiments (N-of-1 trials) conducted in the home settings of adults residing in densely populated urban areas with the most severe air quality levels in Valencia, Spain, where fine particulate matter (PM2.5) and nitrogen dioxide levels exceed the limits set by the World Health Organization (WHO) and EU Directive.
+
+Participants will be exposed to 3 treatment sets (blinded phase), each consisting of a 14-day period of filtered air using a portable air filtration unit ("true-HyperHepa) and a 14-day period of unfiltered air (using the same portable unit with "sham filters"). The intervention will be administered nightly for a minimum of 7 consecutive hours and will last between 4 and 12 weeks for each participant, contingent upon the demonstration of clinical benefit, defined by a reduction in the levels of the blood biomarker C-reactive protein. An unblinded phase will be implemented for participants who do not experience a clinically meaningful change in CRP. During this phase, they will undergo a 14-day period without treatment, followed by 14-day period of both nightly and daily filtered air therapy.
+
+The primary endpoint of this study is defined as the change in blood concentrations of CRP. The secondary endpoints include the changes in levels of three other noninvasive blood biomarkers associated with inflammation and cardiovascular health, and blood pressure.
+
+Both indoor and outdoor fine particulate matter (PM2.5) exposure concentrations will be continuously monitored in the study.
+
+DETAILED DESCRIPTION:
+Background. Inflammation, a common result of anticancer therapies, correlates with poor survival and cardiovascular issues in cancer survivors. High levels of C-reactive protein (CRP), D-dimer, and serum amyloid A (SAA) indicate cancer recurrence, mortality, and cardiotoxicity. CRP-lowering clinical trials have proven that the magnitude of the reduction in cardiac events in patients with residual inflammatory risk is directly proportional to the achieved reduction in CRP, with the greatest benefit in those achieving a threshold below than 2 milligrams per litre (mg/L).
+
+Cancer survivors may benefit from non-pharmacological anti-inflammatory treatments that do not exacerbate cardiotoxicity burden. Evidence suggests the air purifiers lower inflammatory biomarkers in high-risk cardiovascular groups. Air filtration presents a promising alternative to inflammation-inhibiting drugs, but its anti-inflammatory and cardioprotective effects in cancer survivors and interactions with medications remain unclear.
+
+Design, setting and participants. A series of N-of-1 randomised, adaptive, blinded, placebo-controlled trials will be conducted at the home sitting of community-dwelling cancer survivors who are registered in primary care practices of the city of Valencia, Spain. Participants eligible are aged 18 years or older, have a history of breast, colorectal, prostate, lung and haematologic cancer, completed curative cancer treatment with evidence of remission and screened blood CRP level of at least 3 mg/L (within individual SD CRP of \~0.20 mg/L at baseline is accepted).
+
+Screening for CRP levels. Up to two home visits could be carried out to collect a 5 microlitres (µl) blood microsample and analyse the CRP levels in real-time of the potentially eligible participants. These screening visits will be done no more than 28 and 7 days prior to blinded N-of-1 phase, respectively.
+
+Recruitment. Participants will be identified via 3 strategies: advertisements on social media, snowball sampling and in-primary care clinics referrals. Staff from local primary care setting participating in the study will identify eligible potentially participant. The selection criteria for primary care settings were based on neighborhood air quality, specifically urban areas with the highest index impact of pollutant on population \> 125 and NO2 levels exceeding WHO and EU Directive 2008/50/EC limits: Malilla, Russafa, and Arrancapins.
+
+Intervention. Each participant will be randomly allocated (1:1 ratio per cycle) to 3 treatment sets, each comprising a 14-day period of active therapy (portable air filtration unit \[PAFU\] at 275 m3/h) and a 14-day period of placebo (unit with sham filters - standard of care) in the bedroom. Active therapy and placebo will be nightly administered during at least 7-hours consecutive within a time window between 10:00 p.m. and 10:00 a.m. The blinded N-of-1 trial enrolment will be between 4 and 12 weeks per participant, depending on the treatment set(s) r
+
+PRIMARY OUTCOMES:
+  - C-reactive protein (CRP)
+
+INTERVENTIONS:
+  - DEVICE: High efficiency particulate air filtration system (nightly administration)
+  - DEVICE: High efficiency particulate air filtration system (nightly and daily administration)
+  - DEVICE: Air filtration system without filters (sham)
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06778122

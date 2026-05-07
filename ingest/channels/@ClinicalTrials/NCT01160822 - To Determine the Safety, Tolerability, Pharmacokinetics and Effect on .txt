@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01160822
+Title: To Determine the Safety, Tolerability, Pharmacokinetics and Effect on Pain of a Single Intra-articular Administration of Canakinumab in Patients With Osteoarthritis in the Knee
+Official Title: A Randomized, Double Blind, Placebo and Naproxen Controlled, Multi-center, Study to Determine the Safety, Tolerability, Pharmacokinetics and Effect on Pain of a Single Intra-articular Administration of Canakinumab in Patients With Osteoarthritis in the Knee
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 169
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+The purpose of this study was to determine whether, in patients with mild to moderate knee osteoarthritis, canakinumab is safe and tolerable when injected intra-articularly.
+
+DETAILED DESCRIPTION:
+This is a randomized, double-blind, parallel group, placebo controlled 18 weeks study, consisting of two parts:
+
+1. Part A: an ascending single dose part in which the safety and tolerability of up to 4 different canakinumab doses are studied (starting dose 150 mg, maximum dose 600 mg).
+2. Part B: a double-dummy, active-controlled, parallel design part in which the pain reduction of the canakinumab dose selected from part A is studied in comparison to Placebo and Naproxen.
+
+PRIMARY OUTCOMES:
+  - Part A: Number of Participants With Intolerance Events
+  - Part B: Change From Baseline to Day 4 in Pain Using 100 mm Visual Analog Scale (VAS)
+  - Part B: Change From Baseline to Week 4 in Western Ontario and McMaster Osteoarthritis Index (WOMAC) Pain Subscale
+
+INTERVENTIONS:
+  - BIOLOGICAL: Canakinumab
+  - DRUG: Placebo to canakinumab
+  - DRUG: Naproxen
+  - DRUG: Placebo to Naproxen
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01160822

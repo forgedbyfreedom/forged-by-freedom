@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06906588
+Title: Bilateral Robot-assisted Upper Extremity Rehabilitation on Motor Recovery in People With Subacute Stroke
+Official Title: Effects of Bilateral Upper Limb Robot-assisted Rehabilitation on Motor Recovery in Patients With Subacute Stroke: an Italian Multicenter Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: recovery exercise
+
+SUMMARY:
+The goal of this clinical trial is to study the clinical effects of a robotic rehabilitation treatment through a bilateral exoskeleton (Bilateral Robot-Assisted Therapy-BRAT) during standard rehabilitation, on motor recovery, compared to conventional arm re-education in people suffering from stroke in the subacute phase. The main question it aims to answer is what the effectiveness of Bilateral Robot-Assisted Therapy (BRAT) is in rehabilitating the upper limb in individuals with subacute stroke compared to conventional rehabilitation treatment in terms of motor function improvement as measured by the Fugl-Meyer Assessment - Upper Limb (FMA-UL), motor domain. Researchers will compare two groups (Experimental Group - EG and Control Group - CG) to see if the BRAT is more effective than conventional rehabilitation treatment in terms of motor recovery. Participants will be randomly assigned to one of the two treatment groups (EG or CG) and will be clinically and instrumentally evaluated at baseline (T0) and at the end of treatment (T1). EG, in addition to the standard rehabilitation treatment, will perform a 45-minute session of BRAT per day through the Arm Light Exoskeleton Hybrid (Alex RS - Wearable Robotics) robotic system. The CG, in addition to the standard routine rehabilitation treatment, will follow a conventional rehabilitation of the upper limbs without the use of technological devices. Finally, a telephone follow-up is scheduled three months after the end of the treatment.
+
+DETAILED DESCRIPTION:
+Cerebral stroke is one of the major causes of mortality and disability in the world. Upper limb disorders are evident up to 85% of stroke survivors and persist, even 6 months after the acute event, in 55-75% of patients. Recovery of upper limb ability represents a major challenge for neurorehabilitation. Among recent strategies and trends in stroke rehabilitation, robotic technologies are having more space and their application in clinical routine is increasing. The promising effects of robot-assisted therapy for upper limb rehabilitation (Robot-Assisted Therapy-RAT) have been demonstrated in terms of recovery of arm and hand range of motion, muscle strength, thus improving performance of activities of daily living (AVQ). In particular, the latest generation exoskeletal robots have demonstrated their effectiveness, promoting a three-dimensional rehabilitation activity. At the same time, bimanual therapy represents a different training modality which has its solid neuroscientific foundations to improve learning and positively address neuroplasticity phenomena. However, there is no information regarding the effectiveness of these robots on subjects suffering from stroke and in the subacute phase. The primary objective of this RCT is to study the clinical effects of upper limb rehabilitation through a bilateral exoskeleton (Bilateral Robot-Assisted Therapy-BRAT) within standard rehabilitation, on motor recovery, compared to conventional arm re-education in people suffering from stroke in the subacute phase. Secondary objectives of the study include: evaluation of the effectiveness of BRAT on bilateral recovery of arm motor skills and quality of life of study participants; the identification of the characteristics of patients who can benefit most from BRAT in terms of age, distance from the acute event and extent of the motor deficit of the upper limb. The effects of BRAT on motor recovery will also be studied from a neurophysiological (EEG and sEMG) and biomechanical (Inertial Measurement Units-IMU) point of view.The study will develop over 24 months, and includes 3 phases as follows: Phase 1- patient enrollment and screening; Phase 2 Treatment of participants; Phase 3 - Statistical analysis of the data. The study protocol will involve people diagnosed with stroke according to established inclusion and exclusion criteria who will be randomly assigned to one of the following groups: Experimental Group (EG) - robotic treatment for upper limb rehabilitation or Control Group (CG) - conventional treatment for upper limb rehabilitation. The experimental group (EG), in addition to the standard rehabilitation treatment, will perform one BRAT session per day through the Arm Light Exoskeleton Hybrid (Alex RS - Wearable Robotics) robotic system. Each participant will perform a total of 16+/-3 treatment sessions with a frequency of 4 times a week for 4 consecutive weeks. All the devices that will be used have the CE (European Conformity) marking. The control gr
+
+PRIMARY OUTCOMES:
+  - Upper Limb Fugle Meyer Assessment - Motor Part (score range: 0-66)
+
+INTERVENTIONS:
+  - DEVICE: Experimental
+  - OTHER: Control
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06906588

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06933108
+Title: Prediction of Peripheral Neuropathy With Functional Testing
+Official Title: Estimate the Risk of Diabetic and Uremic Peripheral Neuropathy Using Physical and Functional Testing
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 70
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Diabetes and chronic kidney disease (CKD) are two distinct pathologies. The former is defined as an impairment in insulin production and/or utilization, while the latter refers to structural or functional abnormalities of the kidneys. However, these two diseases share a common complication: peripheral neuropathy. This condition affects between 50% and 60% of patients with diabetes or CKD.
+
+Peripheral neuropathy involves the destruction of sensory and motor neurons, leading to a wide range of painful symptoms while also reducing force production capacity. Among the diagnostic tests used, the most accessible clinical tests suffer from high variability due to human subjectivity (e.g., the tuning fork test, which requires examiner expertise and verbal patient feedback), whereas laboratory electrophysiological tests can only detect the largest neurons, which are affected at later stages. Although composite clinical tests have been developed to improve neuropathy screening performance, they still inherit the limitations of their individual components. In other words, they remain subject to variability related to the examiner's experience and the patient's ability to understand instructions, while also being performed through various procedures that lack a standardized consensus. Moreover, these composite scores are particularly time-consuming and are therefore rarely used in clinical practice. As a result, no method currently allows for large-scale, early, and reliable screening of peripheral neuropathy.
+
+Our recent work and emerging studies suggest that assessing functional capacities could serve as an objective and early marker of neuropathic impairment, even before clinical diagnosis. Specifically, the quantification of postural balance performance using stabilometric methods (i.e., center of pressure displacement area) and unipedal balance time could predict the presence of diabetes-related peripheral neuropathy with over 95% accuracy compared to diagnosis with a composite clinical method (unpublished results).
+
+Therefore, the aim of this study is to evaluate physical and balance capacities assessed during routine care in adapted physical activity settings, in order to determine whether the development of a composite score could help estimate the risk of peripheral neuropathy in individuals with diabetes and CKD.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Composite score derived from the statistical model
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06933108

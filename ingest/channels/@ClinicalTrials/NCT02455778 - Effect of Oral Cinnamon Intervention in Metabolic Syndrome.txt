@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02455778
+Title: Effect of Oral Cinnamon Intervention in Metabolic Syndrome
+Official Title: Effect of Intervention With Oral Cinnamon on Metabolic Profile and Body Composition of Asian Indians With Metabolic Syndrome in North India: A 16 Week Double Blind Placebo Control Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 103
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This double blind placebo control study with supplementation of oral Cinnamon is being conducted to test the hypothesis that in subjects with Metabolic Syndrome oral cinnamon may lead to improvement in body composition and metabolic parameters.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Fasting Blood Glucose
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cinnamon
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 25 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02455778

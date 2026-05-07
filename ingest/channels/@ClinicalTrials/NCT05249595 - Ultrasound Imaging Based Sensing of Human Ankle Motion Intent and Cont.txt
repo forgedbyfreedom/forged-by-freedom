@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05249595
+Title: Ultrasound Imaging Based Sensing of Human Ankle Motion Intent and Control Strategies for Ankle Assistance
+Official Title: Ultrasound Imaging Based Sensing to Predict Human Ankle Movement Intent and Assist-As-Needed Control Using Functional Electrical Stimulation and Powered Ankle Exoskeleton
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: strength training
+
+SUMMARY:
+Robotic therapies aim to improve limb function in individuals with neurological injury. Modulation of robotic assistance in many of these therapies is achieved by measuring the extant volitional strength of limb muscles. However, current sensing techniques, such as electromyography, are often unable to correctly measure the voluntary strength of a targeted muscle. The difficulty is due to their inability to remove ambiguity caused by interference from activities of neighboring muscles. These discrepancies in the measurement can cause the robot to provide inadequate assistance or over-assistance. Improper robotic assistance slows function recovery, and can potentially lead to falls during robot-assisted walking. An ultrasound imaging approach is an alternative voluntary strength detection methodology, which can allow direct visualization and measurement of muscle contraction activities. The aim is to formulate an electromyography-ultrasound imaging-based technique to sense residual voluntary strength in ankle muscles for individuals with neuromuscular disorders. The estimated voluntary strength will be involved in the advanced controller's design of robotic rehabilitative devices, including powered ankle exoskeleton and functional electrical stimulation system.
+
+It is hypothesized that the ankle joint voluntary strength will be estimated more accurately by using the proposed electromyography-ultrasound imaging-based technique. And this will help the robotic rehabilitative devices achieve a more adaptive and efficient assistance control, and maximize the ankle joint rehabilitation training benefits.
+
+DETAILED DESCRIPTION:
+The study will recruit up to 20 persons without any neuromuscular diseases and 5 persons with incomplete spinal cord injury (iSCI) or transverse myelitis, who are 18-64 years old for experiments. Research activities include an average of 8 experimental sessions. The sessions can be more or less than 8 sessions depending on subject availability, sufficient data for analysis, or need to obtain more data for the analysis. The first aim is to investigate ultrasound measurements of muscle movements and muscle electrical activity (sEMG) to predict the voluntary motion or torque produced at the human ankle joint. Based on the voluntary motion or torque, functional electrical stimulation (FES) will be used to artificially stimulate the ankle muscles or a powered ankle exoskeleton will be used to provide additional assistance at the ankle joint. FES electrodes will be placed at appropriate locations at the skin surface of the lower limb such that the most optimal motion is obtained.
+
+Task Type 1: Voluntary sitting state tasks without and with external assistance.
+
+Session 1: Voluntary ankle up and ankle down motion without FES. A pair of sEMG sensors will be placed to the participant's lower leg front and back muscles through double-sided tapes. A pair of US imaging transducers will be attached to the same lower-leg front and back muscles to image the muscle's activities during the ankle joint's up and down motion. A pair of movement sensors will be attached to the shank and foot to measure the angular position and velocity of the ankle joint. A force sensor will be placed between the foot sole and a rigid flat platform to measure the interaction force during the ankle up and ankle down motion. US imaging measurements, the electrical signals from sEMG sensors, the contact force from the force sensor, and the movement sensor and camera measurements will be collected simultaneously. Data may be collected from one or both of a participant's legs.
+
+Session 2: Voluntary ankle side motion towards inside and outside without FES. During session 2, the participant will perform side-to-side ankle movements. A similar training procedure, as in session 1, will be prescribed before the actual experiments. Multiple measurements from the sensors (same as in session 1) attached to the participant's leg and foot will be obtained during the side-to-side ankle motion. Both in session 1 and session 2, for each motion direction (up, down, inside, and outside), 10 repeated trials will be run, and each trial will last for 10 mins including training, data collection, data saving, and rest period to avoid muscle fatigue. Each session may last approximately up to 4 hours.
+
+Session 3: Assistive ankle up and down motion with the FES. A similar configuration as mentioned in session 1 will be applied in this session. Additionally, the FES will be used to control the ankle up or down a motion by taking the US imaging-based measurements as feedback. In the FES system, for ankle up motio
+
+PRIMARY OUTCOMES:
+  - Human volitional effort
+  - Evaluate the controller performance of human ankle joint
+
+INTERVENTIONS:
+  - DEVICE: Surface electromypgraphy-based interface to predict human ankle joint motion intent and use in ankle assistive devices
+  - DEVICE: Ultrasound imaging-based interface to predict human ankle joint motion intent and use in ankle assistive devices
+  - DEVICE: Surface electromypgraphy and ultrasound imaging-based interface to predict human ankle joint motion intent and use in ankle assistive devices
+
+ELIGIBILITY:
+Age: 18 Years to 64 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05249595

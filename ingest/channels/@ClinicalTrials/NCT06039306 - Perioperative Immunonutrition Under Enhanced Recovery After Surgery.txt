@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06039306
+Title: Perioperative Immunonutrition Under Enhanced Recovery After Surgery
+Official Title: Perioperative Immunonutrition Among Gynecological Cancer Patients Under Enhanced Recovery After Surgery
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 106
+Topic: protein supplementation
+
+SUMMARY:
+The goal of this clinical trial is to compare the effect of perioperative immunonutrition supplement in gynecologic cancer patients. The main questions it aims to answer are:
+
+* is there any difference in the nutritional outcomes and functional outcomes between intervention and conventional groups?
+* is there any difference in the post-surgical outcomes between intervention and conventional groups?
+
+Participants (intervention) will be provided the immunonutrition supplement before and after operation.
+
+Researchers will compare intervention group with conventional group to see if there is any difference in postoperative outcomes.
+
+DETAILED DESCRIPTION:
+The clinical trial aims to determine the effectiveness of perioperative IMN intervention on postoperative outcomes among GC patients under Enhanced Recovery after Surgery (ERAS) setting. Patients will prescribed with immunonutrition supplement before and after surgery.
+
+PRIMARY OUTCOMES:
+  - daily energy and protein intake
+  - body composition
+  - immunoglobulin level
+  - C-reactive protein
+  - postoperative outcomes
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Immunonutrition oral nutrition supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06039306

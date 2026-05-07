@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06938126
+Title: Effects of L-Arginine and Citrulline Malate Supplementation on Sport Performance in Physically Active Men
+Official Title: Acute Effects of Combined Supplementation of L-Arginine and Citrulline Malate on Aerobic, Anaerobic, and CrossFit® Exercise Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 46
+Topic: high intensity interval training
+
+SUMMARY:
+In this randomized, double-blind, placebo-controlled trial we investigated the effects of combined L-arginine (Arg) and citrulline-malate (CM) supplementation on aerobic, anaerobic, and high-intensity interval training in healthy, physically active men. 46 healthy, physically active men were divided into three distinct exercise protocol groups: CrossFit group, the Wingate Anaerobic Test group, and the Harvard Step Test group. The CrossFit performance assessment involved the "Cindy" workout, a high-intensity protocol composed of bodyweight exercises organized in a set sequence: 5 pull-ups, 10 push-ups, and 15 squats. Participants were instructed to perform as many rounds as possible within 20 minutes. The Wingate Anaerobic test involved a 30-second all-out cycling test on a bike ergometer, while the Harvard Step Test The Harvard Step Test was conducted using a 51 cm high platform, with participants stepping at a rate of 30 steps per minute (one second up, one second down) for five minutes or until exhaustion. Each participant attended three separate laboratory sessions. The initial session served for familiarization with the test protocol to minimize learning effects. In the second and the third sessions, participants attended two measurement sessions, conducted in randomized order and under double-blind conditions, where they received either the dietary supplementation or a placebo. Each participant acted as their control, allowing for within-subject comparisons.
+
+DETAILED DESCRIPTION:
+Consumption of dietary supplements is a common strategy among athletes aiming to optimize recovery after training or competitions and enhance athletic performance. Amino acids L-arginine (Arg) and L-citrulline (Cit) are two of the most widely used supplements in recent times. Their use as nutritional supplements or dietary supplements to improve health and athletic performance has increased dramatically, as both Arg and Cit are essential for the body's synthesis of nitric oxide (NO) and elimination of waste products such as lactate during physical activity. Because it functions as an endogenous precursor to Arg, the primary substrate of nitric oxide, Cit, a non-protein, non-essential amino acid, has attracted a lot of attention lately for its potential to improve exercise performance. Commonly, citrulline is consumed as citrulline malate (CM), which is a mixture of Cit and malic acid in ratios ranging from 1:1 to 2:1. The combined intake of Arg and CM could potentially enhance athletic performance more effectively than using either supplement alone. This synergistic benefit is attributed to Cit's role in synthesizing additional Arg, which in turn elevates NO production, enhancing blood flow and possibly reducing muscle fatigue. Supporting this hypothesis, mixed supplementation of Arg and CM was examined in a previous study and significant increases in both force exertion and fatigue resistance during a 10-minute high-intensity cycling test was found. However, while initial evidence suggests potential ergogenic benefits of combined Arg and CM supplementation, further research is needed to confirm these effects across various exercise modalities. The aim of this study was to investigate the acute effects of combined Arg and CM supplementation on anaerobic performance, aerobic performance, or both through high-intensity interval training (i.e. CrossFit) outcomes in healthy, physically active men. Based on existing research, it was hypothesized that the supplementation would enhance performance by achieving higher peak power in the anaerobic protocol and CrossFit in the CrossFit training protocol, where rapid energy production and resistance to fatigue are critical.
+
+PRIMARY OUTCOMES:
+  - Mechanical Power
+  - Fitness Score
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-Arginine and Citrulline-Malate Supplementation
+  - DIETARY_SUPPLEMENT: Placebo consumption
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06938126

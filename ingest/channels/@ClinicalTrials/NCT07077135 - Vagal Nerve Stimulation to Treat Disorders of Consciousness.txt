@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07077135
+Title: Vagal Nerve Stimulation to Treat Disorders of Consciousness
+Official Title: Transcutaneous Vagal Nerve Stimulation to Treat Disorders of Consciousness
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 106
+Topic: physical activity intervention
+
+SUMMARY:
+This interventional study aims to assess the clinical efficacy of transcutaneous auricular vagal nerve stimulation (taVNS) against sham stimulation on the recovery of consciousness in patients with disorders of consciousness. The main question it aims to answer is: will taVNS improve patients' behavioral scores or will it produce an improvement in the diagnosed level of consciousness? Researchers will compare the results with non-stimulated unconscious patients to see if the re-gain of consciousness is faster in the treated group.
+
+Participants will undergo taVNS stimulation using the Parasym device or sham stimulation will be applied from the time of enrolment.
+
+Active stimulations will be carried out for 60 minutes twice daily during the acute phase and daily during the rehabilitation phase.
+
+DETAILED DESCRIPTION:
+This is a prospective, multicentric, double-blind, parallel, 2 arms, randomized controlled trial that compares active taVNS stimulation against sham stimulation.
+
+The primary objective of this study is to assess the clinical efficacy of transcutaneous auricular vagal nerve stimulation (taVNS) against sham stimulation on the recovery of consciousness in patients with disorders of consciousness (DoC), including comatose patients, unresponsive wakefulness syndrome (UWS) or minimally conscious state (MCS). The hypothesis is that taVNS will improve patients' behavioral scores compared to sham stimulation, as measured by an improvement of at least 3 points in the Coma Recovery Scale-Revised score (CRS-R) or an improvement in the diagnosed level of consciousness, measured at 3 months post-randomization, coinciding with the end of stimulation.
+
+As a secondary objective, we will investigate whether:
+
+1. taVNS is effective in achieving a faster time to recovery of consciousness in DoC patients compared to controls;
+2. the CRS-R score differs in the two groups at 3 and 6 months post-randomization;
+3. the persistence of improvements in the treated group also at 6 months post-randomization.
+
+taVNS stimulation using the Parasym device or sham stimulation will be applied from the time of enrolment (between 7 to 15 days since admission in ICU) un-til day 90 post-enrolment.
+
+Active stimulations will be carried out daily for 60 minutes twice daily during the acute phase and daily during the rehabilitation phase The stimulation waveform includes trains of pulses with widths of 200 µs and repetition rate of 20 Hz (Nurosym proprietary waveform); current delivery will be set at a prede-fined therapeutic level below 0.25 W/cm² (Watts per centimeter squared), that being the defined risk threshold for a thermal burn. The device adjusts stimulation intensity at 0.8 mA steps; the starting intensity will be set at 16 mA (level 20).
+
+Assuming a delta of response of 30% at 3 months between the experimental and the sham group and considering a 1:1 randomization ratio and a 20% drop-out rate, a sample of 53 patients per group (106 in total) is required to reach a power of 80% (alpha=5% and two-sided test on proportion).
+
+PRIMARY OUTCOMES:
+  - Rate of response to stimulation
+
+INTERVENTIONS:
+  - DEVICE: stimulated group
+  - DEVICE: Sham (No Treatment)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07077135

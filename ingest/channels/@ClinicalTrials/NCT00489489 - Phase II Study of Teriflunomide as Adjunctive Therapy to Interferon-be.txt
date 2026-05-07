@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00489489
+Title: Phase II Study of Teriflunomide as Adjunctive Therapy to Interferon-beta in Subjects With Multiple Sclerosis
+Official Title: A Randomized, Multinational, Double-Blind, Placebo-Controlled, Parallel-Group Design Pilot Study to Estimate the Tolerability, Safety, Pharmacokinetics, and Pharmacodynamic Effects of Teriflunomide for 24 Weeks When Added to Treatment With Interferon-beta in Subjects With Multiple Sclerosis.
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 118
+Topic: beta-alanine
+
+SUMMARY:
+The primary objective was to estimate the tolerability and safety of 2 doses of teriflunomide administered once daily for 24 weeks, compared with placebo, in patients with multiple sclerosis \[MS\] with relapses who were on a stable dose of interferon-β \[IFN-β\].
+
+Secondary objectives were:
+
+* to estimate the effects of the 2 doses of teriflunomide, compared to placebo, in combination with a stable dose of IFN-β on Magnetic Resonance Imaging \[MRI\] parameters, relapse rate and patient-reported fatigue;
+* to perform pharmacokinetic analyses of the 2 doses of teriflunomide in combination with a stable dose of IFN-β.
+
+DETAILED DESCRIPTION:
+The study period per participant was approximatively 44 weeks broken down as follows:
+
+* Screening period up to 4 weeks,
+* 24-week double-blind treatment period\*,
+* 16-week post-treatment elimination follow-up period.
+
+'\*' participants successfully completing the week 24 visit were offered the opportunity to enter the optional long-term extension study LTS6047 - NCT00811395.
+
+PRIMARY OUTCOMES:
+  - Overview of Adverse Events [AE]
+  - Overview of AE With Potential Risk of Occurrence
+  - Liver Function: Number of Participants With Potentially Clinically Significant Abnormalities (PCSA)
+
+INTERVENTIONS:
+  - DRUG: Teriflunomide
+  - DRUG: Placebo (for Teriflunomide)
+  - DRUG: Interferon-β
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00489489

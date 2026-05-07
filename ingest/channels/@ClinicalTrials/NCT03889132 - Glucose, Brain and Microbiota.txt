@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03889132
+Title: Glucose, Brain and Microbiota
+Official Title: Integrated Analysis of the Interactions Between Glycemia and Microbiota Composition, and Their Impact on Brain Iron Deposition and Cognition in Subjects With Obesity
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 128
+Topic: fat loss muscle
+
+SUMMARY:
+The accumulation of iron is known to affect the functions of the liver, adipose tissue and muscle. The brain is a well-known place of iron deposition, which is associated with cognitive parameters of subjects with obesity.
+
+The hypothesis is that certain parameters related to glucose metabolism (glycemic variability, the circulating concentration of AGE receptor agonists, pentosidine and HbA1c) are associated with cognitive function, brain iron content and gut microbiota composition in subjects with obesity.
+
+The study includes both a cross-sectional (comparison of subjects with and without obesity) and a longitudinal design (evaluation one year after weight loss induced by bariatric surgery or by diet in patient with obesity) to evaluate the associations between continuous glucose monitoring, brain iron content (by magnetic resonance), cognitive function (by means of cognitive tests), physical activity (measured by activity and sleep tracker device) and the composition of the microbiota, evaluated by metagenomics.
+
+DETAILED DESCRIPTION:
+Subjects and methods:
+
+A. Cross-sectional study:
+
+Patients with obesity previously scheduled at the Service of Endocrinology, Diabetes and Nutrition (UDEN) of the Hospital "Dr. Josep Trueta" of Girona (Spain) will be recruited and studied. Subjects without obesity will also be recruited through a public announcement.
+
+A blood glucose sensor will be implanted for ten days, as well as an activity and sleep tracker device to record physical activity during this period of time. Interstitial subcutaneous glucose concentrations will be monitored on an outpatient basis for a period of time of 10 consecutive days using a glucose sensor validated by the FDA (Dexcom G6 ®). The sensor will be implanted in on day 0 and will retire on day 10 midmorning. Glucose records will preferably be evaluated on days 2 to 9 to avoid the bias caused by the insertion and removal of the sensor, which prevents a sufficient stabilization of the monitoring system. The characteristic glycemic pattern of each patient will be calculated on average from the profiles obtained on days 2 to 9.
+
+At the end of the week an magnetic resonance imaging will be done to evaluate the iron content in the brain and parameters of "Diffusion Tensor Imaging" in different brain territories.
+
+Cognitive tests will be carried out and feces will be collected for the study of the microbiota.
+
+The project will be carried out in subjects with obesity (20 men, 20 premenopausal women and 20 women postmenopausal, BMI \> = 30kg/m2) and subjects without obesity, similar in age, sex and menopausal status (20 men, 20 premenopausal women and 20 postmenopausal women, BMI \<30kg/m2).
+
+B. Longitudinal study:
+
+After one year of follow-up, in which, subjects with obesity will undergo conventional treatment (hypocaloric diet and physical activity advise) or bariatric surgery for weight loss, a second visit will be carried out.
+
+For comparison, the same protocol of the cross-sectional study will be done again. See information above.
+
+Data collection of subjects of cross-sectional and longitudinal studies:
+
+* Subsidiary data: Age, sex and birth date.
+* Clinical variables: Weight, height, body mass index, waist and hip perimeters, waist-to-hip ratio, blood pressure (systolic and diastolic), fat mass and fat free-mass (bioelectric impedance and DEXA), smoking status, alcohol intake, registry of usual medicines and registry of antecedent relatives with obesity, diabetes and comorbidities.
+* Laboratory variables: 15cc of blood will be extracted from fasted subjects to determine the following variables using the usual routine techniques of the clinical laboratory (hemogram, glucose, bilirubin, aspartate aminotransferase (AST/GOT), alanine aminotransferase (ALT/GPT), gamma-glutamyl transpeptidase (GGT), urea, creatinine, uric acid, total proteins, albumin, total cholesterol, HDL cholesterol, LDL cholesterol, triglycerides, glycated haemoglobin (HbA1c), ferritin, soluble transferrin receptor, ultrasensitive C-reactive protein, 
+
+PRIMARY OUTCOMES:
+  - Concentration of advanced glycation end products (AGE) receptor agonists.
+  - Glycemic variability.
+  - The percentage of time in glucose target range (glucose level 100mg/dl-125mg/dl)
+  - The glycaemic risk measured with low blood glucose index (LBGI)
+  - The glycaemic risk measured with high blood glucose index (HBGI)
+
+INTERVENTIONS:
+  - PROCEDURE: Bariatric Surgery
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03889132

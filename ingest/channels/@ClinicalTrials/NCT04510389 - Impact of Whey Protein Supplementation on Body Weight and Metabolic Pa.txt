@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04510389
+Title: Impact of Whey Protein Supplementation on Body Weight and Metabolic Parameters of Bariatric Patients
+Official Title: Impact of Whey Protein Supplementation on Body Composition, Energy Expenditure and Biochemical Parameters of Patients Submitted to Bariatric Surgery
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: protein supplementation
+
+SUMMARY:
+Obesity is a metabolic disorder, characterized by an increase in the body's fat mass, which will reflect an increase in total body weight. In Brazil, overweight accounts for 53.8% of the population, and of these 18.9% are obese. Surgical treatment is currently the most successful method for weight loss in patients with Grade III obesity and reduced associated morbidities. The general objective is to evaluate genetic, inflammatory, and dietary factors that would influence weight loss and the appearance of protein deficiency or sarcopenia in patients undergoing bariatric surgery and to evaluate the effects of protein supplementation for 8 weeks after the 18th postoperative month in the parameters evaluated. The study has a randomized, placebo-controlled, double-masked model. The patients will be selected in two bariatric surgery services accredited by the Brazilian Health Unic System (SUS) in the city of Belo Horizonte, Brazil.
+
+The project has already been approved by the Brazilian Ethics committee CONEP/UFMG by nº. 75415317.8.0000.5149. Patients of both sexes over 20 years of age will be included, attending the hospitals of the project with regular follow-up in the postoperative period. Data on anthropometry, body composition, muscle strength, energy expenditure, and inflammatory profile will be collected. The data will be correlated with the evaluation of the presence of genetic polymorphisms.
+
+DETAILED DESCRIPTION:
+Specific objectives:
+
+It is also objective to evaluate:
+
+* To observe the food consumption between 18 and 24 months of surgery with respect to protein and caloric intake;
+* Evolution of weight loss, lean mass, fat mass and metabolic rate before and after supplementation with WP or placebo;
+* Changes in protein status (assessed by muscle strength and serum levels of total protein, albumin, prealbumin, ferritin, hemoglobin) before and after supplementation with WP or placebo
+* The inflammatory blood profile (assessed by cytokine levels and before and after supplementation with WP or placebo).
+* The influence of the rS9939609 polymorphism of the FTO gene on the nutritional status, biochemical and inflammatory parameters in the postoperative (after 18 months) of surgery;
+
+PRIMARY OUTCOMES:
+  - Body Weight variation
+  - Muscle mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Maltodextrin
+  - DIETARY_SUPPLEMENT: Whey
+
+ELIGIBILITY:
+Age: 20 Years to 60 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04510389

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37222436
+Title: Development of a Reactive Force Field for Simulating Photoinitiated Acrylate Polymerization.
+Authors: Huang, Karnes, Shusteff, Faller
+Journal: The journal of physical chemistry. B
+Year: 2023
+Topic: rate of force development training
+
+ABSTRACT:
+Light-driven and photocurable polymer-based additive manufacturing (AM) has enormous potential due to its excellent resolution and precision. Acrylated resins that undergo radical chain-growth polymerization are widely used in photopolymer AM due to their fast kinetics and often serve as a departure point for developing other resin materials for photopolymer-based AM technologies. For successful control of the photopolymer resins, the molecular basis of the acrylate free-radical polymerization has to be understood in detail. We present an optimized reactive force field (ReaxFF) for molecular dynamics (MD) simulations of acrylate polymer resins that captures radical polymerization thermodynamics and kinetics. The force field is trained against an extensive training set including density functional theory (DFT) calculations of reaction pathways along the radical polymerization from methyl acrylate to methyl butyrate, bond dissociation energies, and structures and partial charges of several molecules and radicals. We also found that it was critical to train the force field against an incorrect, nonphysical reaction pathway observed in simulations that used parameters not optimized for acrylate polymerization. The parameterization process utilizes a parallelized search algorithm, and the resulting model can describe polymer resin formation, crosslinking density, conversion rate, and residual monomers of the complex acrylate mixtures.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37222436/

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06901986
+Title: Health Benefits of Tart Cherry in Crohn's Disease
+Official Title: Health Benefits of Montmorency Tart Cherry Juice Supplementation in Adults with Mild to Moderate Crohn's Disease.
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 52
+Topic: protein supplementation
+
+SUMMARY:
+Crohn's disease (CD) is a long-term inflammatory condition of the digestive tract. People with CD often experience unpredictable and debilitating symptoms, including abdominal pain, diarrhea, and fatigue. Additionally, they require long-term treatment, which is often associated with frequent negative effects, the need for surgery, and hospitalizations. As a result, individuals with CD report a lower health-related quality of life (HRQOL) compared to healthy individuals.
+
+The most common medication for inflammatory bowel disease is a strong immunosuppressant, which was identified in 2017 as the most expensive medication prescribed in NHS hospitals. Unfortunately, biologics have significant side effects, and reducing the reliance on them could benefit both the NHS by lowering costs and patients by minimizing unwanted side effects.
+
+Supplementation with Montmorency tart cherry juice may offer a simple, safe, and cost-effective intervention for improving symptoms in individuals with CD. This is due to its potential to naturally reduce inflammation in the digestive system, thereby alleviating symptoms. Research in animal models has shown potential improvements in physiological responses with similar supplements, including blueberries, black raspberries, and Montmorency tart cherries, though only one study in human participants has explored bilberry supplementation.
+
+Despite Montmorency tart cherries having superior anthocyanin concentrations compared to other berries, dietary interventions using tart cherry supplementation for CD have not been explored in human participants. The primary aim of the proposed investigation is to conduct a placebo-controlled randomized trial to examine whether Montmorency tart cherry juice supplementation can provide symptom relief and improve health-related well-being in individuals with mild to moderately active CD, as well as to understand the biological mechanisms underlying any observed symptom changes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Inflammatory Bowel Disease Quality of Life Questionnaire
+  - Inflammatory Bowel Disease Quality of Life Questionnaire
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Montmorency tart cherry
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06901986

@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05765396
+Title: SARS-CoV-2/COVID-19 Study of Next Generation Non-Invasive Passive Detection Technologies
+Official Title: SARS-CoV-2/COVID-19 Study of Next Generation Non-Invasive Passive Detection Technologies
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 300
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this observational study is to evaluate new non-invasive passive surveillance technologies, Level 42 AI imPulse™ Una and TOR devices for the detection of COVID-19, Flu, and/or RSV in asymptomatic and symptomatic individuals over age of 18 undergoing COVID-19, Flu, and/or RSV screening and testing at BAMC Ft Sam Houston, TX; with and without COVID-19, Flu, and/or RSV.
+
+The hypotheses are:
+
+(H1) The imPulseTM Una and the imPulseTM TOR e-stethoscopes have at least a similar discriminative and detection ability among symptomatic and asymptomatic COVID-19 carrier versus those not infected compared to gold standard RT-PCR. We will operationalize and deploy both the imPulseTM Una and imPulseTM TOR e-stethoscope into DoD use-cases and compare their usability between the devices.
+
+(H2) Identify if the imPulseTM Una and the imPulseTM TOR e-stethoscopes have at least a similar discriminative and detection ability among symptomatic and asymptomatic Respiratory Syncytial Virus (RSV), Influenza and Long COVID carriers versus those not infected compared to gold standard Rapid RSV and Flu Antigen Tests, or RT-PCR and molecular assays. We will operationalize and deploy both the imPulseTM Una and imPulseTM TOR e-stethoscope into DoD use-cases and compare their captured traces in the early identification of disease/illness analyzed by the devices built in algorithms.
+
+(H3) In the mid to long-term, this approach will also be explored as a diagnostic system to explore pursue the physical (structural and mechanical) properties of cells and tissues that maintain normal cell behavior (motility, growth, apoptosis), and the critical importance of the ability of cells to sense and respond to mechanical stresses, which will be operationally critical for assessment of both traumatic and unconventional exposures in austere environments.
+
+Participants will:
+
+* Be consented;
+* Be screened for COVID-19, Flu, and/or RSV symptoms according to BAMC's current screening procedures;
+* Have study data collected;
+* Complete a symptoms questionnaire;
+* imPulseTM Una and TOR e-stethoscopes examination will be conducted;
+* Participants will be compensated for completing all study requirements. (Active-Duty personnel must complete the study procedures while off-duty in order to receive compensation.)
+
+DETAILED DESCRIPTION:
+Emerging acute respiratory diseases (ARDs) pose a significant threat for the US military, especially among those in training environments where crowded living conditions and demanding multi-factorial stresses exacerbate infection exposure and suppress immunity, respectively. Consequently, ARD rates are routinely reported higher in recruits than older military personnel, which have a detrimental effect on operational readiness. Although significant steps, such as surveillance and vaccine programs, have been taken to minimize the impact that ARDs have on military recruits and newly mobilized troops, hospitalizations among recruits still exceeds that of comparable civilian population in the United States by at least 3- to 4- folds, accounting for almost 30% of all infectious disease associated hospitalizations. In 2018, respiratory infections like respiratory syncytial virus (RSV), accounted for an estimated 50,000 medical encounters affecting about \~35,000 recruits that resulted in 1,000 hospital bed days leading to significant loss in training time and cost. In addition to annual respiratory infections such as influenza, on-going COVID-19, which has claimed the lives of 210,000 Americans, continues to threaten to further degrade operational readiness. Thus, inexpensive, rapid, and more reliable diagnostics are continually required to better treat and prevent ARDs to preserve military readiness and decrease disability adjusted life years.
+
+Regaining American technological supremacy will require a pivot from the large, exquisite, hardware- defined systems that won us the conflicts of last century to larger numbers of lower-cost, attritable,smaller, software-defined systems. This is particularly critical as the country reopens, and life returns to normal, thus long-term technological technology platforms must be able to secure entry to workplaces, airplanes, schools, stadiums, theaters, mass transit center, ports-of-entry, malls and restaurants.
+
+Current CLIA laboratory diagnostic procedures, such Enzyme Linked Immunosorbent Assay (ELISA), Reverse Transcriptase Polymerase Chain Reaction (RT-PCR), and bacterial cultures, are costly, time- consuming, and operator sensitive. It has become apparent that during the dynamic COVID-19 pandemic, these approaches are insufficient in meeting diagnostic needs as they are difficult to scale-up and lack logistical flexibility. Furthermore, due to the invasive nature of active clinical sampling, there is a critical need for accurate and rapid passive surveillance as to screen for SARS-CoV-19 as well as other hazardous chemical and biological agents. To address this capability gap, the current project will- modify and operationalize existing innovative passive surveillance systems that can be deployed in the near-term.
+
+The Level 42 AI imPulseTM UNA and TOR are both over-clothing e-stethoscope and stand-off systems which are intended to be used to identify characteristic and subtle changes in audible and inaudible 
+
+PRIMARY OUTCOMES:
+  - Digital vibroacoustic biomarker diagnostic performance characteristics specific to imPulse™ Una
+  - imPulse™ Una infrasound-to-ultrasound e-stethoscope device usability
+  - imPulse™ TOR infrasound-to-ultrasound e-stethoscope device usability
+  - Digital vibroacoustic biomarker diagnostic performance characteristics specific to imPulse™ TOR
+
+INTERVENTIONS:
+  - DEVICE: imPulse™ Systems (Una and TOR) infrasound-to-ultrasound e-stethoscope
+
+ELIGIBILITY:
+Age: 18 Years to 89 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05765396

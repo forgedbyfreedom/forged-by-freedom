@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05194397
+Title: Exercise Training and NR Supplementation Trial to Improve Fitness in AYA HCT Survivors
+Official Title: Intensive Tailored Exercise Training With NAD+ Precursor Supplementation to Improve Muscle Mass and Fitness in Adolescent and Young Adult Hematopoietic Cell Transplant Survivors
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: sarcopenia intervention
+
+SUMMARY:
+This will be a randomized, placebo-controlled trial with a 2x2 factorial design testing the effects of an NAD+ precursor (NR) and exercise on skeletal muscle quality and VO2max in AYA HCT survivors.
+
+The primary outcome is the change in muscle strength (isometric knee extension) from baseline to 16 weeks. Key secondary outcomes are the change in muscle strength (ankle plantarflexion) from baseline to 16 weeks, the change in grip strength from baseline to 16 weeks, the change in lower extremity muscle mass from baseline to 16 weeks, the change in muscle OXPHOS capacity from baseline to 16 weeks, and the change in aerobic capacity (VO2 max) from baseline to 16 weeks.
+
+DETAILED DESCRIPTION:
+Adolescents and young adults (AYAs) who undergo hematopoietic cell transplantation (HCT) are at an especially high risk of developing sarcopenia (loss of skeletal muscle mass), which occurs earlier than would be expected from advancing age alone. This is important as not only it doubles their risk for non-relapse mortality, but it also leads to premature cardiovascular disease. The investigators propose a mechanistic randomized controlled trial of home-based remotely supervised exercise (aerobic and resistance) training and supplementation with nicotinamide riboside, a precursor of NAD+, a metabolite that is critical for muscle metabolism, in AYA survivors of HCT. The findings will lay the critical groundwork for future trials to prevent or mitigate the myriad downstream adverse effects of low muscle mass in AYA HCT survivors.
+
+PRIMARY OUTCOMES:
+  - Within participant changes in muscle strength (Isometric knee extension, Z-score)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nicotinamide Riboside
+  - DIETARY_SUPPLEMENT: Placebo
+  - OTHER: Exercise Intervention
+
+ELIGIBILITY:
+Age: 10 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05194397

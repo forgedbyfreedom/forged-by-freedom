@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05821322
+Title: Blood Glucose Target Before and During Exercise in Adults With Type 1 Diabetes Using an Artificial Pancreas
+Official Title: Evaluating the Appropriate Blood Glucose Target Before and During Moderate Intensity Aerobic Exercise in Adults With Type 1 Diabetes Using Do-it-yourself Automated insulin Delivery (AID) Systems (the GUARDIA [GlUcose tARget DIY-AID] Trial)"
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: aerobic exercise
+
+SUMMARY:
+Despite major technological advances in type 1 diabetes (artificial pancreas), the management of hypoglycemia remains a major challenge, especially during and after physical activity. The primary outcome is to determine the temporary blood glucose (BG) target to be set 60 minutes before aerobic exercise in people with type 1 diabetes (PWT1D) using do-it-yourself automated insulin delivery (DIY-AID) systems. Three glycemic thresholds to be applied 60 minutes before physical activity will be tested in 32 people on AID-DIY: 8.3 (current target for commercial AID systems), 8.8, and 9.3 mmol/L. Each participant will perform 3 sessions of moderate aerobic physical activity (ergocycle) at 60% of vo2peak with a different glycemic target each time (random order). Plasma glucose will be measured every 20 minutes before and during physical activity, and blood glucose measured by continuous glucose reading (DEXCOM) for 24 hours post-intervention. Once the best glycemic target is selected, participants could come to the research center for 1 or 2 more voluntary interventions to test the threshold during 1) fasting exercise and 2) late luteal phase of the menstrual cycle.
+
+DETAILED DESCRIPTION:
+This study follows a randomized, cross-over design and aims to test tree temporary BG targets (8.3, 8.8 and 9.3 mmol/L), resulting in 3 intervention visits per participants. A total of 32 participants will be recruited and randomized for this study.
+
+Intervention visit:
+
+* Participants will be admitted at the research center (IRCM; Montréal or Alberta) at 15:30.
+* A venous catheter will be installed for plasma glucose and insulin measurements.
+* At 16:00, the temporary BG target will be set in the DIY-AID system and blood sampling will begin.
+* At 16:40, if glucose is \< 5.5 mmol/L, 16g carbohydrate (CHO; 4 Dex4®) will be provided.
+* At 16:55, a smaller sample will be taken only to verify glucose level. If glucose is \< 5.5 mmol/L, 16g CHO (4 Dex4®) will be provided and exercise start will be postponed by at least 15 minutes or until glucose level is \> 5.5 mmol/L. If more than three CHO intake are needed, the test will be canceled and rescheduled.
+* At 17:00, exercise will be started if glucose is \> 5.5 mmol/L. The exercise will consist of 60 minutes on the ergocycle at 60% of pre-determined VO2peak (moderate intensity).
+* At 18:00, exercise and temporary BG target will be stopped. Blood sampling will continue for 1-hr during recovery.
+* At 19:00, participant will be discharged. If glucose level is below 5.0 mmol/L, a snack of 16g CHO (4 Dex4®) will be offered. Participants will have the option to bring their dinner and eat it at the research facility before leaving if they prefer.
+
+PRIMARY OUTCOMES:
+  - Change in plasma glucose during exercise
+
+INTERVENTIONS:
+  - OTHER: Physical activity trial intervention
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05821322

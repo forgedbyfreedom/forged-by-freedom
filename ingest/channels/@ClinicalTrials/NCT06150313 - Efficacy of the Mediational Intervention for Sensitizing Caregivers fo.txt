@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06150313
+Title: Efficacy of the Mediational Intervention for Sensitizing Caregivers for Teachers and Self-Administered Versions
+Official Title: Efficacy of the Mediational Intervention for Sensitizing Caregivers - Teachers' Version (MISC-T) and Self-Administered Version (MISC-SA) to Improve the Quality of Caregivers' Interactions and Children Mental Health (MISC-SA/T Project)
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: strength training
+
+SUMMARY:
+OBJECTIVES: The goal of this parallel randomized controlled trial is to test the efficacy of 2 new modalities of the Mediational Intervention for Sensitizing Caregivers (MISC) in caregivers from general population, specifically, in teachers at primary school children who are also parents.
+
+The main QUESTIONS it aims to answer are:
+
+* Are the new versions of MISC (MISC-T for Teachers, and MISC-SA or Self-Administered) efficient to a) improve the quality of caregivers-child interaction, and b) benefit children mental health, compared with a control group defined as Treatment as Usual (TAU)?
+* Is there any effect-transference to the school-setting despite the MISC is trained out of the school setting? re the new versions of the MISC efficient to benefit teachers' well-being at work in terms of lower burn-out, higher perceived self-efficacy or better classroom climate?
+
+PARTICIPANTS will randomly receive one of the 3 versions of MISC: MISC-T (administered by videoconference in teams of 6-10 teachers), MISC-SA (self-administered by the participants in weekly sessions with Genially), and MISC-R (self-administered by the participants but mainly based in readings and cognitive exercises instead of video-feedback, the core element of MISC-T and MISC-SA).
+
+COMPARISONS: Researchers will compare all 3 groups among them to see to what extent:
+
+* MISC-T shows efficacy compared with MISC-R (TAU; control group)
+* MISC-SA shows efficacy compared with MISC-R (TAU; control group)
+* MISC-T is more efficient than MISC-SA
+
+DETAILED DESCRIPTION:
+CONTEXT: Mental health interventions are mostly provided once mental health is lost, that is, in context of psychopathology (clinical impairment). James Heckman's Equation suggests that investing in mental health before it is severely impaired would lead to high returns. We want to test: 1) to what extent is possible to transfer active ingredients for mental health from the clinical context to the community, and 2) to what extent an intervention aimed to enrich parents and teachers social-emotional skills (two of the main figures in child rearing) improves children mental health. Because this intervention aims to reach a wide community in non-clinical settings, it should be extensive (to ensure solid changes in the child environment) and cost-efficient, that is: cheaper than those individually transmitted in the classic therapist-client relationship.
+
+METHODOLOGY: 17-month multisite, Randomized, Controlled Trial (RCT).
+
+MEASURES OPERATIONALIZATION: It is expected that this translational intervention which aims to move factors for salutogenesis from the clinical setting to non-clinical points of the mental ill-health continuum could benefit both the caregivers who receive the intervention (who are parents and teachers as well) and the children who daily exposed to them (their own children and their school students). Caregivers' benefits are expected in terms of improved mentalizing capacities, lower stress, higher well-being and higher sense of self-efficacy both at home (parenting) and at work (school). Child's mental health is operationalized s multidimensional using: the number of symptoms, the level of role- and social functioning, and well-being. Child's benefits in terms of mentalization and pro-social behavior are also expected because of the long-term exposition to adults enriched with new social-emotional skills thanks to the intervention.
+
+STATISTICAL ANALYSES: The analysis under the Intention-To-Treat (ITT) approach will encompass all participants subjected to random allocation, with the utilization of multiple imputation techniques to address any missing data. Estimation of parameters, accounting for the specific statistical assumptions of each model and the data's characteristics, will be carried out through the implementation of Linear Mixed-Effect Models and Structural Equation Modeling (SEM). Various R packages will be employed to execute these models, primarily "lme4" and "nlme" for linear mixed-effect models, and "lavaan" for SEM models. Concerning statistical power, a sample size of 150 participants (50 per arm) has been proposed, which exceeds the minimum of 54 participants (18 per arm) required to detect a medium effect size (Cohen's d=0.25) in the design comprising 3 arms, 3 repeated measures (pre, post, and 1 follow-up), and a power level of .95. An empirical power close to 1.00 is anticipated. Effect size measures, including Cohen's d and squared Omega statistics, will be employed.
+
+PRIMARY OUTCOMES:
+  - OMI (Observing Mediational Interaction)
+  - Strengths and Difficulties Questionnaire (SDQ)
+  - Achenbach System for Empirically Assessment (ASEBA)
+  - Stirling Children's Wellbeing Scale (SCWBS)
+  - Child Well-Being Level (CWBL)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mediational Intervention for Sensitizing Caregivers, Teachers' version (MISC-T)
+  - BEHAVIORAL: Mediational Intervention for Sensitizing Caregivers, Self-Administered version (MISC-SA)
+  - OTHER: Mediational Intervention for Sensitizing Caregivers - Readings version (MISC-R): Treatment as Usual (TAU)
+
+ELIGIBILITY:
+Age: 22 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06150313

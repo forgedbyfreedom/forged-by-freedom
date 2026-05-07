@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02302768
+Title: Effect of Semet (80 and 160 mcg) Versus Placebo in Euthyroid Patients With AIT
+Official Title: Effect of Supplementation of Two Doses of L-selenomethionine (Semet; 80 and 160 mcg) Versus Placebo in Patients With Chronic Autoimmune Thyroiditis (AIT) With Normal Thyroid Function.
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+Over the past 10 years, several clinical studies have suggested that selenium supplementation may influence the natural history of AIT. Recently, Interferon gamma (IFNγ)-inducible chemokines (CXCL-9, -10 and -11) were shown to be elevated in the AIT patients. The aim of this prospective, randomized, controlled study is to evaluate the effect of two different doses of selenomethionine (80 or 160 mcg) versus placebo in euthyroid women with AIT, in terms of reduction of anti-thyroid antibodies and improvement of thyroid hypoechogenicity, over 24 months. Serum levels of selenium, CXCL-9, -10 and -11 and their regulators, Tumor necrosis factor alpha (TNFα) and INFγ, thyroid function and volume and the quality of life of AIT patients are also evaluated.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Reduction of anti-thyroid antibodies
+  - Improvement of thyroid echogenicity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Selenomethionine
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02302768

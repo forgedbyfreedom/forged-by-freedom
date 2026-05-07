@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07057063
+Title: Light Therapy on Pain and Synovitis
+Official Title: Effect of Light Therapy on Pain and Synovitis in Patients With Knee Synovitis: Study Protocol for a Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Background: Knee pain is a common complaint among middle-aged and older adults, often leading to reduced mobility and diminished quality of life. Synovitis is a major underlying cause, present in up to 80% of individuals with moderate knee pain. While light therapy has shown anti-inflammatory and analgesic effects in preclinical studies, our prior animal experiments revealed that light therapy at 810 nm significantly alleviated inflammation and pain-like behaviors. These findings suggest a potential wavelength-specific therapeutic effects. However, it remains unclear whether such effects can be replicated in humans. This study aims to evaluate the efficacy of 810 nm light therapy, compared to sham treatment, in reducing knee pain and synovitis in patients with chronic knee pain and knee synovitis.
+
+Methods/design:
+
+This is a randomized, placebo-controlled clinical trial involving 90 participants with chronic knee pain and ultrasound-detected synovitis. Participants will be randomized into two groups to receive 810 nm light therapy, or sham therapy, delivered twice weekly over five weeks. Primary outcomes include knee pain assessed by the Visual Analogue Scale (VAS) and synovitis assessed by ultrasound. Secondary outcomes include the Knee injury and Osteoarthritis Outcome Score (KOOS), the 30-second chair stand test, and the 40-meter fast-paced walk test. Outcome assessments will be performed at baseline, post-intervention (week 5), and at 1 month and 6 months after treatment completion. Linear mixed-effects models will be used to compare outcome changes between groups.
+
+Discussion:
+
+This trial will assess whether 810 nm light therapy provides clinically meaningful benefits for reducing knee pain and synovitis in humans, building on promising preclinical findings. Results from this study may support the use of near-infrared light as a safe, non-invasive, and effective intervention for synovitis-related knee pain.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Knee pain (Visual Analogue Scale, VAS)
+  - Knee synovitis grade (Ultrasound assessment)
+
+INTERVENTIONS:
+  - DEVICE: 810 nm Light Therapy
+  - DEVICE: Sham Light Therapy
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07057063

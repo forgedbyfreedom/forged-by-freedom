@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02622295
+Title: Musculoskeletal Plasticity After Spinal Cord Injury
+Official Title: Musculoskeletal Plasticity After Spinal Cord Injury
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 71
+Topic: exercise intervention obesity
+
+SUMMARY:
+Patients with spinal cord injury (SCI) experience metabolic syndrome, diabetes, obesity, pressure ulcers, and cardiovascular disease at far greater rates than the general population. A rehabilitation method to prevent or reverse the systemic metabolic consequences of SCI is a pressing need. The purpose of this study is to determine the dose of muscle activity that can enhance an oxidative muscle phenotype and improve clinical markers of metabolic health and bone turnover in patients with SCI. The long-term goal of this research is to develop exercise-based interventions to prevent secondary health conditions such as diabetes and to ultimately protect health-related quality of life (QOL). Specific Aim 1: To compare changes in skeletal muscle gene regulation in individuals who receive high frequency (HF) active-resisted stance and low frequency (LF) active-resisted stance for 3 years. Hypothesis 1: The expression of genes regulating skeletal muscle metabolism will support that HF and LF both instigate a shift toward an oxidative muscle phenotype. A novel finding will be that LF is a powerful regulator of oxidative pathways in skeletal muscle. Specific Aim 2: To compare changes in systemic markers of metabolic health and bone turnover in individuals with SCI who receive HF or LF for 3 years. Hypothesis 2: HF and LF will both reduce glucose/insulin levels and HOMA (homeostasis model assessment) score.
+
+Secondary Aim: To measure subject-reported QOL using the EQ-5D survey metric. Hypothesis 3: HF and LF subjects will show a trend toward improved self-reported QOL after 3 years. There will be an association between metabolic improvement and improved perception of QOL. These observations will support that this intervention has strong feasibility for future clinical translation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Acute Gene Regulation: MSTN
+  - Acute Gene Regulation: PGC1-alpha
+  - Acute Gene Regulation: PDK4
+  - Acute Gene Regulation: SDHB
+  - Post-training Gene Regulation: MSTN
+
+INTERVENTIONS:
+  - BEHAVIORAL: Single-session electrically induced exercise
+  - BEHAVIORAL: Electrically-induced exercise training
+
+ELIGIBILITY:
+Age: 21 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02622295

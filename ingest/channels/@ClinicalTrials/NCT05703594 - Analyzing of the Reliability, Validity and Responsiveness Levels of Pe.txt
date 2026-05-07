@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05703594
+Title: Analyzing of the Reliability, Validity and Responsiveness Levels of Performance Tests
+Official Title: Analyzing of the Reliability, Validity and Responsiveness Levels of Performance Tests Assessing Fall Risk and Balance in Patients Undergoing Total Knee Arthroplasty
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Purpose: To examine the validity, reliability and responsiveness of three performance tests evaluating fall risk and balance in patients undergoing total knee arthroplasty (TKA).
+
+Method: At least 50 patients with TKA will be included in the study. Participants will be voluntary individuals who meet the inclusion criteria. Within the scope of the evaluations, the duration of the patients to perform the 360° Turn Test (360°TT), Alternative Step Test (AST), and Pen Pickup Test (PPT) will be measured. These tests will be repeated after the patients rest for 1 hour. Hospital For Special Surgery (HSS) Knee Score to determine the functional level of patients, Timed Up and Go Test (TUGT) to determine fall risk and balance status, 5-Repeat Stand Up and Sit Test (5RSST) and 10-meter Walk Test (10MWT) will be used. In addition, the fall history of the patients will be questioned. For the construct validity of the 360°TT, AST and PPT tests, it will be investigated whether at least 75% of the predetermined hypotheses are met. For the discriminative validity of the 360°TT, AST and PPT tests, the values in the homogeneous demographic patient population with grade 3-4 knee osteoarthritis and the patient population undergoing knee arthroplasty will be compared and cut-off values will be calculated. In addition, sensitivity and specificity values will be calculated. In addition, test values will be compared and cut-off values will be calculated in patients who have undergone knee arthroplasty with and without a history of falling. In addition, sensitivity and specificity values will be calculated. Reliability will be examined by examining the test-retest intra-class correlation. In addition, in order to examine the responsiveness of the tests, patients will be taught lower extremity strengthening exercises and balance exercises in the form of a home program after the initial assessment. The second evaluation will be repeated between 6-8 weeks following the first evaluation, and the responsiveness of the tests will be determined according to the average change in the outcome measurements and the fulfillment of the hypotheses.
+
+DETAILED DESCRIPTION:
+Hospital For Special Surgery (HSS) Knee Scoring This scoring includes the parameters of pain (30 points), function (22 points), range of motion (18 points), muscle strength (10 points), knee joint flexion deformity (10 points), instability (10 points) and a total of 100 points. The HSS score is obtained by subtracting up to 3 points for walking aids, up to 5 points for loss of extension, and 1 point for each 5 degree varus/valgus angle from the total score. The score ranges obtained are classified as excellent for 85-100 points, good for 70-84 points, moderate for 60-69 points, and bad for less than 60 points.
+
+360° Turn Test In this test, which is used to measure dynamic balance, the participant rotates 360° all round. The time the participant completes the turn and the number of steps are recorded. If the cut-off value is \> 3.8 seconds in the elderly population, there is a risk of falling.
+
+Alternative Step Test It is a test used to test body weight transfer and lateral stability. The participant -height 18 cm, width 60 cm, width 40 cm- comes into contact with the sole of the foot in rows of right and left. A total of 8 step times, 4 right and 4 left, are recorded in seconds.
+
+Pen Pickup Test In this test, in which mobility, flexibility and dynamic balance are evaluated, the participant bends down and picks up a pencil 30 cm from the tip of the foot while standing and comes back to the upright position. The duration of the movement is recorded in seconds.
+
+Timed Get Up and Go Test It is a physical performance test often used to assess fall risk and balance. The participant gets up from a standard-height chair without support, returns after walking 3 meters, and sits down again without support. The time is saved. A value \> 14 sec is considered a fall risk. Its validity and reliability have been demonstrated in different populations.
+
+5 Repetitive Stand Up and Sit Test (5RSST) It is a performance test in which the dynamic balance is evaluated by recording the performance of people getting up and sitting in a standard chair 5 times in a series of time.
+
+10 Meter Walk Test (10MWT) It is a performance test in which dynamic balance is evaluated by recording the 10-meter walking performance of individuals in terms of time.
+
+PRIMARY OUTCOMES:
+  - 360° Turn Test
+  - Alternative Step Test
+  - Pen Pickup Test
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: performance based balance test
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05703594

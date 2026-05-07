@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07126210
+Title: Weight Management Program for Obese Preschool Children
+Official Title: Peking University-Family Engaged, Enhanced Diet, for Kids (PKU-FeeD)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: exercise intervention obesity
+
+SUMMARY:
+The PKU-FeeD trial is a cluster-randomized controlled trial conducted in Jinan, Shandong Province, China. This study aims to: 1) Develop and evaluate a digital health-assisted, multidisciplinary intervention for preschool children with obesity, assessing its effectiveness and cost-effectiveness. 2) Investigate how lifestyle-based interventions influence the composition and function of the gut microbiota in obese preschoolers, and elucidate the mechanisms by which these interventions may modulate gut microbiota to affect obesity-related metabolic phenotypes.
+
+DETAILED DESCRIPTION:
+Childhood obesity has become a global public health challenge, and early prevention and management are crucial to curbing its epidemic. However, compared to school-aged children, evidence on effective obesity interventions for preschoolers remains limited and inconsistent. While preventive approaches may have broader population-level implications, targeted management interventions may be more cost-effective in settings with lower obesity prevalence but rising trends, providing foundational evidence for future preventive strategies.
+
+The gut microbiota plays a key role in host energy metabolism and metabolic homeostasis, and its dysbiosis is strongly linked to obesity. Diet and physical activity, as core components of lifestyle interventions, may significantly shape gut microbial ecology, potentially influencing host metabolism and obesity-related outcomes. However, due to challenges in sample collection, existing studies on gut microbiota in children are scarce, with small sample sizes, and few intervention studies have established causal relationships. The interplay between healthy lifestyle interventions, gut microbiota, and childhood obesity remains understudied, and the underlying mechanisms require further exploration. Thus, this trial seeks to: 1) determine effectiveness of a digital health-supported, comprehensive intervention for preschool obesity management. 2) Elucidate causal relationships between dietary behaviors, gut microbiota, and obesity in preschoolers.
+
+PRIMARY OUTCOMES:
+  - children's BMI-Z change
+
+INTERVENTIONS:
+  - BEHAVIORAL: Family engaged, enhanced Diet intervention
+
+ELIGIBILITY:
+Age: 4 Years to 6 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07126210

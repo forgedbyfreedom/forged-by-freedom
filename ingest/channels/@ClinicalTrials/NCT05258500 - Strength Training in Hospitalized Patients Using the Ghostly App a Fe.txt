@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05258500
+Title: Strength Training in Hospitalized Patients Using the Ghostly App: a Feasibility Study
+Official Title: Strength Training in Hospitalized Patients Using the Ghostly App: a Feasibility Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: sarcopenia intervention
+
+SUMMARY:
+The goal of this feasibility study is to evaluate the use of the Ghostly app in rehabilitation of stroke patients, elderly and patients recovering from COVID-19 or ICU patients. In three randomized controlled trials, the effect of a strength training program incorporated in the Ghostly app will be assessed for 1) stroke patients suffering from weakness of the lower limb, 2) frail elderly with gait difficulties and 3) patients recovering from COVID-19 or ICU patients who suffer from muscle weakness. Additionally, the effect of BFR on strength gain in all these three populations will be tested.
+
+DETAILED DESCRIPTION:
+STUDY DESIGN: The focus of this study can be divided into two research questions. On the one hand, the effectiveness of the Ghostly app (as an additional training to conventional therapy) in relation to strength gain will be investigated. And on the other hand, the effect of BFR during isometric strength training compared to standard isometric strength training will be tested. For this study, a gaming app (Ghostly) was developed in which the main character is controlled through muscle contractions measured using electromyography (EMG). EMG-electrodes connected to the Ghostly app will be placed on the targeted muscles and register muscle contractions. The purpose of the app is to train the muscles in a stimulating and challenging environment by completing levels. These levels are adjusted to adhere to strength training guidelines based on literature. In total three single-blinded randomized controlled trials (RCT) will be organized in which one RCT investigates acute and subacute stroke patients, one RCT investigates hospitalized elderly and one RCT investigates patients recovering from COVID-19 and ICU patients. Each population will be randomized into three groups using sealed envelopes containing ten notes which will be marked with "Ghostly", followed by "A"(conventional therapy) or "B" (blood flow restriction), and five notes marked "leaflet". Every group will receive dose-matched conventional therapy, but the second experimental group will receive an adjusted version of their conventional therapy which includes isometric strength training using blood flow restriction. Each group will also receive instructions for an additional strength training program which participants will have to complete unsupervised. The first and second group will receive the strength training program incorporated in the Ghostly app. The control group on the other hand will be given a leaflet which includes instructions on performing exercises without the use of the Ghostly app. These exercises will be matched in terms of repetitions, sets and inter-set rest to match the intensity of the Ghostly app.
+
+ANALYSIS: After the data for the entire sample is collected, the analysis will be performed using SPSS 27 (IBM, New York). A significance level of 0.05 will be used throughout the entire analysis.
+
+Descriptive statistics of the baseline characteristics of all participants will be performed. A normal distribution of the data will be assessed using the Levene's test. Two-way repeated measures analysis of variance (ANOVA) will be used to assess the differences in dependent variables with respect to within-group variables and between-group variables. These differences will be expressed as mean differences. Additionally, a Tukey post hoc test will be done to compare mean differences for true significance.
+
+For the analysis of the USE questionnaire, percentage distribution of every item and mean scores for every subscale will be calculated using Microsoft Excel (Microsoft, Washi
+
+PRIMARY OUTCOMES:
+  - Change in muscle strength from baseline to 2 weeks of intervention
+  - Change in muscle strength from baseline to 6 weeks of intervention or when the participants is discharged from the hospital
+
+INTERVENTIONS:
+  - OTHER: Ghostly app
+  - OTHER: Blood flow restriction
+  - OTHER: Leaflet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05258500

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05085041
+Title: Healthy Online Parental Education Project to Increase Fruit and Vegetable Intake and Active Playtime Among Toddlers
+Official Title: Effectiveness of Multi-Component eHealth Intervention, Namely Healthy Online Parental Education (HOPE), to Increase Fruit and Vegetable Consumption and Active Playtime Among Toddlers at Home
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 73
+Topic: exercise intervention obesity
+
+SUMMARY:
+The research proposal will be an 8-week randomized control trial (RCT) to examine the efficacy of an eHealth intervention, namely Healthy Parental Online Education (HOPE), on fruit and vegetable intake and active playtime among toddlers enrolled in early head start programs in Lubbock, Texas. Parents with toddlers ages one to three years will be recruited from Early Head Start centers. Written consent forms will be obtained before baseline data collection. The participants will be then randomly assigned to the intervention or control group. The participants in the intervention group will receive a multi-component online nutrition intervention for eight weeks. While the control group will receive a copy of the booklet that includes the 2020 U.S. Department of Agriculture Dietary Guidelines (USDA) for toddlers and adults.
+
+The investigators will measure sociodemographic, parental nutritional knowledge, parental attitude related to healthy eating, parental self-efficacy, parental feeding practices, carotenoids in the skin of both parents and toddlers, three-day food photos, and physical activity and sedentary times of toddlers. This research proposal hypothesizes that there will be significant differences in fruit and vegetable intake and physically active time among toddlers between the intervention and control group from baseline to 3 months. The investigators also hypothesize that there will be significant differences in parental nutrition knowledge, attitude, self-efficacy, and feeding practice between the intervention and control group from baseline to 3 months.
+
+DETAILED DESCRIPTION:
+The investigators will examine the efficacy of an eHealth intervention, namely Healthy Parental Online Education (HOPE), to increase fruit and vegetable intake and active playtime among toddlers enrolled in Early Head Start programs in Lubbock. This study will be an 8-week randomized control trial (RCT). Participants will be randomly assigned to the intervention or control group via block randomization with randomly selected block sizes of 4. Randomization will be conducted by a researcher not involved in data management. The statistical software R version 3.5.1 will be used to determine to generate randomized arm allocation sequences through a fixed seed. The randomization will be stratified by centers. Those allocation sequences will be printed out and individually stored in serially numbered, opaque, sealed envelopes. Participants will be informed of group allocation via opaque and sealed envelopes after the collection of baseline data.
+
+Participants in the intervention group will receive 8 sessions of online multi-component HOPE nutrition intervention. While the control group will receive no intervention, the investigators will provide the control group with a copy of the booklet. This booklet will include basic nutrition recommendations for a healthy diet for adults and children, consistent with 2020 U.S. Department of Agriculture dietary guidelines.
+
+Pre- and post-assessment will be conducted to see changes in variables of interest from baseline (T1), post-intervention (T2), to 3 months (T3). Sociodemographic and anthropometrics of parents and toddlers will be measured at T1. The investigators will also measure carotenoids in the skin of both parents and children using the Veggie Meter (Longevity Link, Salt Lake City, UT) to assess fruit and vegetable intake. Parental nutritional knowledge, attitudes related to healthy eating and activity, feeding practices, and self-efficacy will be assessed using a self-administered questionnaire. The research team will also ask parents to recall the physical activity and sedentary times of toddlers using a self-report survey. Parents will take electronic food photos using their mobile devices for three days to capture the food and beverage intake of toddlers at home. The same measurements and survey will be used at T2 except for variables related to anthropometrics and sociodemographics. Finally, the investigators will only measure the food intake of toddlers, physically active and sedentary times of toddlers, and carotenoid levels of parents and toddlers at T3, using the same methods and procedures mentioned above.
+
+PRIMARY OUTCOMES:
+  - Changes in Fruit and Vegetable Intake (Unit: Servings)
+  - Changes in Skin Carotenoid Score (Unit: nm)
+  - Changes in Times Being Physically Active (Unit: Minutes)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Multi-Component eHealth Intervention, namely Healthy Online Parental Education (HOPE)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05085041

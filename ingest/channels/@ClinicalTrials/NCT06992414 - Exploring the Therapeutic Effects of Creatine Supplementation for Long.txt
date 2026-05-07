@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06992414
+Title: Exploring the Therapeutic Effects of Creatine Supplementation for Long COVID-19
+Official Title: Exploring Creatine Supplementation for Improved Exercise Capacity and Reduced Fatigue in Long COVID-19: A Randomized Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: creatine supplementation
+
+SUMMARY:
+Individuals living with Long COVID often experiencing a degree of undue fatigue after physical or cognitive exertion secondary to the condition, timed post-exertional malaise 9PEM). This trial aims to explore the efficacy of creatine monohydrate in managing PEM
+
+DETAILED DESCRIPTION:
+cognitive dysfunction, and post-exertional malaise are common complaints of those living with Post-COVID Condition (PCC), a sequelae of symptoms that persist beyond acute infection. Similar to other types of post-viral fatigue, the diagnosis and treatment of PCC are challenging due to the lack of a valid biomarker for the condition. Though the etiology of PCC is not well understood, recent research has found reduced skeletal muscle creatine concentration in those with PCC, which may contribute to fatigue. The objective of this study is to determine if eight weeks of creatine monohydrate supplementation (8g/day) improves symptoms of fatigue, cognition, exercise capacity, and PEM in individuals living with PCC.
+
+Participants will complete two cardiopulmonary exercise tests 24-hours apart on a cycle ergometer before and after an eight-week intervention period. Venous blood samples will be collected before and after exercise on both days to assess changes in mitochondrial function. During the intervention, participants will be randomly assigned to supplement with 8g/day of either creatine monohydrate or a control (maltodextrin). Cognition will be indirectly assessed via self-report of cognitive symptom frequency and severity at baseline, mid-intervention (i.e., 4 weeks) and post-intervention.
+
+PRIMARY OUTCOMES:
+  - Oxygen consumption at ventilatory threshold
+  - Heart rate at ventilatory threshold
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine monohydrate
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06992414

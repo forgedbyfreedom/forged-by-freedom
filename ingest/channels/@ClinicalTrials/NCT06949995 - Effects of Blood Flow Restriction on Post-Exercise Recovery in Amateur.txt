@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06949995
+Title: Effects of Blood Flow Restriction on Post-Exercise Recovery in Amateur Runners
+Official Title: Effects of Blood Flow Restriction on Post-Exercise Recovery in Amateur Runners: A Stratified Randomized Controlled Trial
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: recovery exercise
+
+SUMMARY:
+Street running has become an increasingly popular sport. As a result, effective recovery strategies after exercise are essential. In this context, two techniques stand out: one already validated, active recovery (AR), and another with potential, blood flow restriction (BFR). This study aims to investigate whether using both techniques simultaneously can benefit practitioners and improve outcomes compared to complete rest.
+
+DETAILED DESCRIPTION:
+This randomized clinical trial aims to evaluate the effects of combining active recovery (AR) and blood flow restriction (BFR) on post-exercise recovery in amateur runners. Thirty-four healthy male participants aged 18-40 years, who run at a pace faster than 5:30 min/km, will be stratified based on their performance in the 3-minute all-out running test and randomly assigned to one of three groups: AR with BFR, AR alone, or passive rest (control). All participants will undergo baseline assessments, followed by a muscle stress protocol, the assigned recovery strategy, and follow-up evaluations immediately, and at 24, 48, 72, and 96 hours post-exercise.
+
+Outcomes include heart rate variability (via RR intervals), muscle soreness (Numeric Rating Scale), recovery perception and discomfort (Likert scale), effort (Borg CR-10), cellular integrity (bioelectrical impedance), pain threshold (pressure algometer), muscle tone, stiffness, and elasticity (myotonometry), muscle power (Squat Jump test), plantar flexor strength (digital dynamometer), and maximal aerobic capacity (3-minute test). Data will be analyzed using descriptive statistics and repeated measures ANOVA, with significance set at p\<0.05.
+
+Participants will be duly informed about the procedures and objectives of this study, and after agreeing, they will sign an informed consent form, effectively becoming part of it. In the consent form, participants will be asked if they agree to the use of their data if they choose to withdraw from the study. Participants will also be asked for permission for the research team to share relevant data with people at universities participating in the research or regulatory authorities, where relevant. The study will be sent for consideration and approval to the Research Ethics Committee of FCT/UNESP, Presidente Prudente, SP, Brazil.
+
+PRIMARY OUTCOMES:
+  - Isometric strength of the triceps surae
+  - Aerobic capacity
+  - Lower limb muscle power
+  - Muscle soreness and pain threshold
+  - Perceived exertion, recovery, and discomfort
+
+INTERVENTIONS:
+  - DEVICE: Active Recovery with Blood Flow Restriction
+  - OTHER: Active Recovery
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06949995

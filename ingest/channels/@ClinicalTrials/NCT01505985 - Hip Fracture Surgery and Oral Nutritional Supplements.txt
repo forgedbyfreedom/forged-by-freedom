@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01505985
+Title: Hip Fracture Surgery and Oral Nutritional Supplements
+Official Title: Effect of a Nutritional Intervention on Hip Fracture Surgery Recovery
+Status: TERMINATED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: protein supplementation
+
+SUMMARY:
+Senior hip fracture patients are the most vulnerable to malnutrition and protein deficiency. Low protein intake, like vitamin D deficiency, contribute to an increased risk for hip fracture. Notably, several clinical trials with protein supplementation in senior hip fracture patients resulted in fewer deaths, shorter hospital stay, and a higher likelihood of return to independent living. The proposal is to test the effect of an oral nutritional supplement (ONS) which has been designed to meet the specific nutrient needs of senior bone and muscle health. The hypothesis is that this ONS will improve functional recovery after hip fracture (as measured by Short Physical Performance Battery (SPPB)), improve quality of life, improve muscle mass, and- decrease falls and hospital re-admission after hip fracture.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The Short Physical Performance Battery (SPPB)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral nutritional Supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 70 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01505985

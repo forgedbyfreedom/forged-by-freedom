@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07430280
+Title: Synbiotic Supplementation and Inflammation in Predialysis Chronic Kidney Disease
+Official Title: Effect of a Synbiotic Containing Lactobacillus Rhamnosus, Bifidobacterium Longum, and Agave Fructans on High-Sensitivity C-Reactive Protein Levels in Patients With Predialysis Chronic Kidney Disease: A Double-Blind, Placebo-Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: protein supplementation
+
+SUMMARY:
+Chronic kidney disease (CKD) is a long-term condition in which the kidneys gradually lose their ability to function properly. People with chronic kidney disease (CKD) often experience chronic inflammation and digestive symptoms that may affect their quality of life.
+
+This study aims to evaluate whether daily supplementation with a synbiotic (a combination of probiotics and prebiotics) can reduce inflammation and improve gastrointestinal symptoms in adults with chronic kidney disease (CKD) stages 3 to 5 who are not receiving dialysis.
+
+Participants will be randomly assigned to receive either a synbiotic containing Lactobacillus rhamnosus, Bifidobacterium longum, and agave fructans, or a placebo, for a total of 16 weeks. Blood tests will be performed to measure inflammation, and participants will complete questionnaires related to digestive symptoms, quality of life, and dietary habits.
+
+The information obtained from this study may help improve nutritional strategies and supportive care for people living with chronic kidney disease.
+
+DETAILED DESCRIPTION:
+Chronic kidney disease is associated with intestinal dysbiosis, increased intestinal permeability, endotoxemia, and chronic low-grade inflammation, which contribute to cardiovascular risk and reduced quality of life. Alterations in gut microbiota composition are influenced by uremia, dietary restrictions, reduced fiber intake, and medication use.
+
+Synbiotics, which combine probiotics and prebiotics, have shown potential benefits in modulating gut microbiota, strengthening the intestinal barrier, and reducing systemic inflammation. However, evidence in patients with predialysis chronic kidney disease (CKD) remains limited.
+
+This randomized, double-blind, parallel, placebo-controlled clinical trial will evaluate the effect of a synbiotic containing Lactobacillus rhamnosus, Bifidobacterium longum, and agave fructans on high-sensitivity C-reactive protein (hs-CRP) levels in adults with chronic kidney disease (CKD) stages 3 to 5 not receiving renal replacement therapy.
+
+Participants will be randomly assigned to receive either the synbiotic or a placebo for 16 weeks. Secondary outcomes include gastrointestinal symptoms, kidney function, quality of life, nutritional knowledge, and dietary adherence. All participants will receive standardized nutritional counseling based on kidney disease outcomes quality initiative (KDOQI) clinical practice guidelines to ensure consistency between study groups.
+
+PRIMARY OUTCOMES:
+  - Change in High-Sensitivity C-Reactive Protein (hs-CRP)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Synbiotic Supplement
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07430280

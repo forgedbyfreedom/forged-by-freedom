@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07134140
+Title: Omega-3 Fatty Acids in Muscle Function and Health
+Official Title: Effects of Omega-3 Fatty Acid Supplementation on Muscle Performance, Neuromuscular Function, and Inflammation at Rest and Following Eccentric Exercise.
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: omega 3 exercise
+
+SUMMARY:
+This study aims to investigate the effects of omega-3 fatty acid supplementation on muscle performance, neuromuscular function, inflammation, and oxidative stress at rest and after eccentric exercise. The findings may provide insights into the role of omega-3 fatty acids in muscle function, physiology, and metabolism following muscle-damaging exercise. Additionally, the effects of omega-3 fatty acids on cardiovascular health will be investigated.
+
+DETAILED DESCRIPTION:
+The study is a double-blind, randomized controlled trial. Two parallel groups of 16 healthy males and females each (sex counterbalanced, 20-45 years) will randomly take 3 g of fish oil \[1500 mg EPA (eicosapentaenoic acid) + 750 mg DHA (docosahexaenoic acid), Now Foods, USA\] or a placebo (3 g of olive oil) for 12 weeks. Before taking the supplement, participants will perform a unilateral isokinetic eccentric exercise session of maximal voluntary intensity (10 repetitions x 10 sets of knee extensions at a speed of 60 degrees per second). Dominant and non-dominant legs will be allocated equally and randomly across participants. Physiological assessments and blood samples will be collected immediately before exercise and 2 and 4 days after eccentric exercise (bout 1). Then, participants will start the supplementation for 12 weeks. At the end of the supplementation period, participants will perform the same eccentric exercise protocol (bout 2) with their opposite leg. The same assessments and blood sampling will be conducted at the same time points (i.e., immediately before and 2 and 4 days after eccentric exercise).
+
+PRIMARY OUTCOMES:
+  - Muscle Strength
+  - Maximal Oxygen Uptake (VO₂ max)
+  - Muscle Fatigue Index (MFI)
+  - Muscle Oxygenation
+  - Creatine Kinase
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3
+  - DIETARY_SUPPLEMENT: Placebo comparator
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07134140

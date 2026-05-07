@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05677646
+Title: Wearable Sensors for Delirium Detection at an Early Stage (WeSen_delirium)
+Official Title: Wearable Sensors for Delirium Detection at an Early Stage (WeSen_delirium) - an Exploratory Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 72
+Topic: physical activity intervention
+
+SUMMARY:
+Delirium is an acute brain-organic syndrome: its clinical manifestation and form are results of a highly complex pathophysiology. Delirium is a serious clinical problem in hospitalized adults. It is the most common neuropsychiatric complication of hospitalization and is associated with high patient burden, increased morbidity and mortality, prolonged length of stay, higher costs, and institutionalization.
+
+An early, accurate diagnosis as well as an adequate management are critical to the continued health and functional independence of the affected patients. Prevention strategies contain pharmacological and non-pharmacological interventions. However, their clinical success (effectiveness) is limited and the evidence for the use of pharmacological interventions for the prevention or management of delirium is scarce.
+
+The prediction of delirium has become a new promising topic in clinical research. New approaches like the implementation of wearable sensors, in particular wearable accelerometer devices to record movements related to delirium are promising.
+
+In this study, the study procedure only includes wearing a consumer-grade sensor on the wrist of the not-dominant hand.
+
+This way, vital parameters are measured in order to identify patterns.
+
+DETAILED DESCRIPTION:
+Hypothesis and primary objective The overarching aim of the planned study is to identify sensor-based activity and sleep indicators and patterns (using the sensor 'Fitbit Charge 5'), which precede a delirium and thereby may qualify as potential person-level predictors to inform a predictive algorithm to detect an evolving delirium at an early stage. In addition, clarifying the feasibility of using such data for the research purpose of this study is the second aim.
+
+Primary objectives pertain to:
+
+1. Sensor-based profiling of delirium: Determination of delirium onset and termination; determination of sensor profiles of delirious states in terms of key characteristics (e.g., frequency of transitions between rest and inactivity, movement), which are stable across individuals whereby taking into consideration discussions on clinical motor subtypes of delirium.
+2. Within-person level - forerunners and repercussions: Characterizing and comparing activity and sleep patterns (e.g., sleep deprivation, increased movement while asleep) derived from a wearable sensor preceding and following a delirium, delirium to delirium-unrelated time periods within persons who experienced a delirium (i.e., 'Can any such indicators / patterns distinguish between periods in time proximity to a delirium compared to delirium-unrelated time periods?').
+3. Between-person level - forerunners and repercussions: Comparing real-time activity and sleep patterns derived from a wearable sensor across persons who experienced a delirium to those who did not (i.e., 'Can any such indicators / patterns distinguish between persons who develop a delirium and those who do not?').
+4. Predictive algorithm development: Subsequently identification of activity and sleep indicators / patterns that qualify as potential forerunners of a delirium (i.e., distinct parameters or their patterns/interplay) to inform and develop a prediction algorithm for delirium detection at an early stage (to be validated in a follow-up study).
+5. Visual data analysis: The investigators will employ clustering techniques (e.g., Self-Organizing Maps, K-Means Clustering) for longitudinal data to identify similar sensor measurement trajectories across study participants (e.g., for hourly heart rate measurements, hourly step counts, etc.). Because these analyses are exploratory, they will be refined on the basis of available data.
+
+The predictions are based on a recent review summarizing state-of-the-art research. Evidence suggests the existence of clinical delirium subtypes (i.e., motor subtypes: hypoactive, hyperactive, mixed).
+
+However, research on subtype classification is still rare. Initial research suggests that the hypoactive and mixed type seems more distinguishable from delirium than the hyperactive type. The predictions might thus be more accurate for deliria of the hypoactive and mixed type. Specifically, the investigators anticipate that:
+
+1. Sensor-based profiling of delirium (daytime, nighttime): The investiga
+
+PRIMARY OUTCOMES:
+  - total sleep time
+  - time spend in different sleep stages (deep, light, REM, awake)
+  - heart rate
+  - resting heart rate
+  - heart rate variability
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05677646

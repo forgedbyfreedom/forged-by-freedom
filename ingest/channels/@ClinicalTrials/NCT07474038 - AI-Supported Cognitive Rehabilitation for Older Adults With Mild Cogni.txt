@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07474038
+Title: AI-Supported Cognitive Rehabilitation for Older Adults With Mild Cognitive Impairment
+Official Title: Evaluating the Efficacy of AI-Augmented Cognitive Rehabilitation in Mild Cognitive Impairment
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 130
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Mild cognitive impairment (MCI) is associated with increased risk of progression to dementia, highlighting the need for accessible interventions to support cognitive health.
+
+This randomized controlled trial will evaluate the safety and efficacy of a 12-month artificial intelligence (AI)-supported cognitive rehabilitation program for older adults with MCI. Participants will be recruited from an existing research study conducted within Kaiser Permanente Southern California and randomized 1:1 to either (1) AI-supported cognitive rehabilitation or (2) usual care alone.
+
+The intervention combines clinician-delivered telehealth cognitive rehabilitation sessions with daily AI-guided cognitive exercises and education. The primary outcome is change in global cognition at 6 months measured by the Montreal Cognitive Assessment (MoCA)-BLIND. Secondary outcomes at 6 and 12 months include additional measures of cognition, subjective memory, goal attainment, mood, and loneliness. Exploratory outcomes include engagement with the AI intervention and health-related behavioral outcomes derived from electronic health record data.
+
+Participant safety will be monitored throughout the study through adverse event tracking, review of AI interactions for safety concerns, and predefined procedures for responding to psychological or clinical risk.
+
+This study will determine whether integrating AI-guided cognitive exercises with clinician-delivered rehabilitation improves cognitive and related outcomes in older adults with MCI compared to usual care.
+
+DETAILED DESCRIPTION:
+Background and Rationale:
+
+Mild cognitive impairment (MCI) represents a transitional stage between normal aging and dementia and is associated with elevated risk of progression to Alzheimer's disease and related dementias. Individuals with MCI frequently report functional challenges, reduced confidence, and increased risk of mood symptoms. Although cognitive rehabilitation and cognitive stimulation interventions have demonstrated benefit, traditional models are resource-intensive and limited in frequency, personalization, and scalability.
+
+Advances in artificial intelligence (AI) allow delivery of adaptive, conversational, and personalized cognitive exercises at high frequency. However, AI-only approaches may lack the contextualization, goal-setting support, and therapeutic oversight provided by trained clinicians. A blended care model integrating AI-guided cognitive exercises with clinician-delivered telehealth rehabilitation may provide both scalability and clinical depth. This study evaluates the safety, engagement, and clinical efficacy of such an integrated model.
+
+Study Design:
+
+This is a prospective, randomized parallel controlled trial conducted within Kaiser Permanente Southern California. Participants diagnosed with MCI through an existing cognitive assessment research program will be randomized in a 1:1 ratio to:
+
+* AI-supported cognitive rehabilitation
+* Usual care alone
+
+The intervention period is 12 months, with primary outcome assessment at 6 months and follow-up through 12 months.
+
+Intervention:
+
+Participants randomized to the intervention will receive a structured cognitive rehabilitation program consisting of two integrated components:
+
+1. Clinician-Delivered Telehealth Rehabilitation Licensed clinical social workers trained in cognitive rehabilitation will deliver goal-directed sessions via telehealth every two weeks for the first six months and monthly for the remaining six months. Sessions are delivered within a reablement framework and may incorporate cognitive rehabilitation techniques, behavioral activation, compensatory strategy training, and elements of cognitive behavioral and mindfulness-based approaches, tailored to individual patient needs.
+2. AI-Guided Cognitive Sessions Participants will engage in daily AI-powered conversational sessions (approximately 10-30 minutes per session). These sessions provide structured cognitive stimulation, cognitive training exercises, and psychoeducation. Content delivery is guided by algorithms that adapt based on participant interaction patterns and clinician input. The AI system is not intended for diagnostic or autonomous clinical decision-making.
+
+Participants randomized to usual care will continue to receive standard health plan services and complete study assessments at scheduled time points. They will be offered the cognitive rehabilitation program at the end of the study if the intervention is determined to be safe and efficacious.
+
+Safety Oversight and Risk Monitoring:
+
+Give
+
+PRIMARY OUTCOMES:
+  - Change in MoCA-BLIND Score at 6 Months
+
+INTERVENTIONS:
+  - BEHAVIORAL: AI-Supported Cognitive Rehabilitation
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07474038

@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06499623
+Title: Early Detection of Malnutrition in Oncology Patients and Elderly Patients
+Official Title: Early Detection of Malnutrition in Oncology Patients and People Over 65 Years of Age
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 2000
+Topic: vitamin D muscle
+
+SUMMARY:
+The project is a national, prospective, multicenter, non-interventional pilot project of malnutrition screening in the Czech Republic.
+
+The main goal of the project is to methodically prepare, implement and evaluate a pilot project that will verify the suitability of the proposed procedure for the early detection of malnutrition in oncology patients and hospitalised patients patients 65 years of age and older, as this has a significant effect on the quality of life and the effectiveness of the services provided oncological treatment.
+
+DETAILED DESCRIPTION:
+The main goal of the project is the early detection of malnutrition in oncology patients and hospitalised patients 65 years of age and older, as this has a significant effect on the quality of life and the effectiveness of the services provided oncological treatment.
+
+Another goal of the project will be the creation of a unified diagnostic proposal process and methodological material for determining malnutrition. This process will then be designed as the standard of nursing practice for patients with an oncological diagnosis and for persons older than 65 years such that, so that an adequate nutritional intervention is started in time, which will lead to a higher tolerance of demanding treatment and thus to increase the quality of life.
+
+The project will include testing the procedure on a sample of approx. 1,500 oncological and 500 geriatric patients.
+
+The project is supported by the European Social Fund (Operational Program Employment plus) and the state budget of the Czech Republic and is registered by the Ministry of Labour and Social Affairs of the Czech Republic under ID: CZ.03.02.02/00/22\_005/0000282.
+
+PRIMARY OUTCOMES:
+  - Number of people with malnutrition according to the PSNPO questionnaire
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Blood test
+  - DIAGNOSTIC_TEST: Bioelectrical Impedance Analysis
+  - OTHER: Nutritional Risk Assessment Questionnaire
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06499623

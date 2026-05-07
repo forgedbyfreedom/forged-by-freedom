@@ -1,0 +1,79 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06570187
+Title: The Effect of Dexmedetomidine on the Renal Functions in Septic Critically Ill Patients
+Official Title: The Effect of Dexmedetomidine on the Renal Functions in Septic Critically Ill Patients
+Status: RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 128
+Topic: physical activity intervention
+
+SUMMARY:
+This clinical trial aims to evaluate the effect of dexmedetomidine in Sepsis-Associated Acute Kidney Injury in critically ill patients by answering the following questions:
+
+1. What is dexmedetomidine's effect on kidney functions?
+2. What is the safety and efficacy of dexmedetomidine in Sepsis-Associated Acute Kidney Injury?
+
+The investigator will compare dexmedetomidine to the standard sedative.
+
+The Participant will take either dexmedetomidine or the standard sedative during their hospitalization, with follow-up of the following:
+
+1. Vital signs including blood pressure, body temperature, respiratory rate, heart rate, and oxygen saturation.
+2. Laboratory data including kidney function tests, electrolytes, complete blood count, and liver function tests.
+3. An electrocardiogram will be followed to check the heart's electrical activity.
+4. The level of alertness or agitation to avoid over and under-sedation.
+5. The level of organ dysfunction and mortality risks.
+6. Duration of mechanical ventilation.
+7. Duration of hospitalization.
+
+DETAILED DESCRIPTION:
+Recently, it has been confirmed that dexmedetomidine has an organ protective effect, including the nervous system, heart, lungs, kidneys, liver, and small intestine. These properties allow dexmedetomidine to be a promising candidate for clinical multiorgan protection.
+
+Aim of the study: Evaluation of the effect of dexmedetomidine in Sepsis-Associated Acute Kidney Injury (SA-AKI).
+
+Objectives:
+
+1. Assessment of dexmedetomidine effect in SA-AKI through following serum creatinine (SCr) level, urinary output (UOP), and the need for renal replacement therapy (RRT).
+2. Assessment of dexmedetomidine safety in SA-AKI through following the incidence of new-onset bradycardia, and hypotension requiring intervention.
+3. Assessment of dexmedetomidine efficacy by determining the effect on hospital mortality, duration of mechanical ventilation (MV), days free of agitation, incidence of organ dysfunction other than AKI, and length of hospital and ICU stay.
+
+Study Design:
+
+The study will be a prospective, randomized, parallel, controlled, open-label clinical trial including 128 participants with SA-AKI. Participants will be recruited from the Critical Care Department at Cairo University Hospitals. Randomization will be carried out using Random Allocation Software. Patients will be randomly allocated into two groups after screening for inclusion and exclusion criteria.
+
+Written informed consent will be obtained from participants' legal caregivers.
+
+Ethical committee approval will be available.
+
+The primary investigator will be responsible for data collection. Each participant will be presented using a sequential number.
+
+Participants recruitment and concealment allocation, data collection, data management, and data analysis will all be subjected to supervision and on-site auditing by academic and medical supervisors. For data verification, medical records revision will be done, to ensure the accuracy and completeness of the collected data.
+
+Based on the pattern and percentage of missing data, the study investigator is expecting either missing completely at random (MCAR) or missing at random (MAR). Accordingly, multiple imputation (MI) will be implemented to handle missing data.
+
+Normal ranges for lab data will be available.
+
+Study outcomes will be assessed every 48 hours.
+
+Sample size calculation:
+
+Sample size calculation was performed using G power software. The sample size was based on an effect size of 0.5272. A total sample size of 116 patients (58 patients per group) is needed to reject the null hypothesis of equality of means between the control and treatment groups with an 80% power at a 5% significance level (α = 0.05) using two tails t-test.
+
+The effect size was calculated based on the difference in SCr between day 1 and day 3 in septic AKI patients (126.3µmol/L ± 27.6 in day 1 vs. 132.3 µmol/L ± 26.4 in day 3 in the control group vs. 113.2 µmol/L ± 28.9 in day 1 vs. 104.3 µmol/L ± 22.1 in day 3 in the dexmedetomidine group).
+
+Including a dropout ratio of
+
+PRIMARY OUTCOMES:
+  - Change in serum creatinine (SCr)
+
+INTERVENTIONS:
+  - DRUG: Dexmedetomidine
+  - DRUG: Propofol
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06570187

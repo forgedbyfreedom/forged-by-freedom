@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04514744
+Title: Dynamic Proteomics and Integrated Rates of Muscle Protein Synthesis During an Acute Period of Loading and Unloading
+Official Title: Dynamic Proteomics and Integrated Rates of Muscle Protein Synthesis During an Acute Period of Hypertrophy and Atrophy (HYPAT) in Young, Healthy Men
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: resistance training
+
+SUMMARY:
+Skeletal muscle plays several different roles in the promotion and maintenance of health and well-being. The loss of muscle mass that occurs with aging, chronic muscle wasting diseases, and physical inactivity puts people at an increased risk of frailty and becoming insulin resistant, and therefore imposes a significant burden on health care spending. Resistance exercise participation has proven particularly effective for increasing muscle mass and strength. This effectiveness can be used by health care practitioners in a rehabilitation setting to promote the recovery of individuals who have undergone involuntary periods of muscular unloading (i.e. limb immobilization caused by a sports injury or reconstructive surgery). However, there is large variability in the amount of muscle mass and strength that people gain following participation in resistance exercise. Some individuals fail to increase the size of their muscle (low responders) whereas others show vary large increases in muscle size (high responders) in response to the same resistance training program. People also show differences in the amount of muscle tissue they lose when they have a limb immobilized. To circumvent variability across individuals, the investigators utilized a within-person paired Hypertrophy and Atrophy ('HYPAT') strategy that reduced response heterogeneity by \~40% (Available at: https://ssrn.com/abstract=3445673). Specifically, one leg performed resistance training for 10 weeks to induce hypertrophy, whereas the other leg underwent single-leg immobilization for 2 weeks to induce atrophy. The primary goal of the study will be to gain insight into the molecular responses to an acute period of single-leg immobilization and resistance exercise (8 days). The investigators will use an integrated systems biology approach to monitor the individual rates of over one hundred different muscle proteins.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Dynamic Proteomics
+  - Change in Integrated Rates of Muscle Protein Synthesis
+
+INTERVENTIONS:
+  - PROCEDURE: Knee bracing
+  - OTHER: Unilateral Resistance Exercise Training
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04514744

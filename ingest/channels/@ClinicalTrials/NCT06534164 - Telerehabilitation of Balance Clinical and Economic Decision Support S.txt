@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06534164
+Title: Telerehabilitation of Balance Clinical and Economic Decision Support System
+Official Title: Telerehabilitation of Balance Clinical and Economic Decision Support System
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 460
+Topic: resistance training
+
+SUMMARY:
+This study follows the successfully completed HOLOBalance project which was funded by the EU Horizon 2020 scheme. TheHOLOBalance platform delivers exercises demonstrated via a hologram of the physiotherapist and corrected in real time by the hologram prompts based on performance monitoring via sensors. Further information is available at: https://holobalance.eu/. HOLOBalance was developed as a comprehensive rehabilitation protocol for individualised remote (tele)rehabilitation balance physiotherapy programme. It includes different multisensory balance and gait exercises, physical activity and memory training and exergames (video games which are also exercises) to improve balance function in older adults. The system can thus assess and remotely monitor how users are performing the exercises.
+
+This multisite randomised control trial (TeleRehab DSS, short for TeleRehabilitation Decision Support System) aims to (i) determine the system's safety, acceptability, and feasibility explore effectiveness of running such programme in comparison with the current standard care for middle-age/older adults with balance disorders/falls due to MCI, vestibular disorders, stroke or long Covid. This study also aims to (ii) assess if balance function, gait, cognitive function, balance confidence, and wellbeing can improve more compared to standard intervention and (iii) provide preliminary data for a definitive randomised controlled trial.
+
+This study involves human participants, and each clinical site has applied for appropriate ethical approval.
+
+DETAILED DESCRIPTION:
+This is an assessor-blinded (researchers assessing the participants will not know what study group participants will be in), randomised (participants will join different study groups randomly) controlled study. Participants will be randomised using an online platform to undergo a home-based exercise programmes, into either the intervention group (IG) or control group (CG). Participants will not be able to choose their preferred group and must be willing to participate in the assigned group.
+
+All study participants will attend two sessions at UCL. The first assessment will be within one week prior to starting the programme, and the second will be within one week of completing the programme. Participants will be asked to complete a questionnaire set, walking/balance tests and a cognitive test.
+
+Participants will receive telephone calls each week to monitor their progress. Participants will also receive remote program reviews at weeks 3, 6 and 9, from a member of the research team to assess and change exercises as required. Participants will be advised to contact the research team by email or by telephone during working hours if they have concerns or questions about their rehabilitation program or the TeleRehab DSS system. The research team will judge whether an additional home visit is required. If a patient does not complete their exercises for three consecutive days, a flag/warning will appear on the patients dashboard as a priority patient to follow up with, within 24 hours.
+
+Intervention Group (IG): TeleRehab DSS The intervention (TeleRehaB DSS) group participants will be visited by a research team member to install the TeleRehab DSS system in their home and taught how to use the system, with a practice session. The system comprises a depth camera, lightweight augmented reality headset that displays the hologram, body-worn sensors that record movements and a heart rate sensor. Participants will be required to wear all the equipment when performing the prescribed exercises. A demo-video (including equipment and hologram) is available at www.holobalance.eu. Exercise progressions will be suggested by the AI-supported TeleRehaB DSS and approved by the clinicians at weeks 3, 6, and 9, which will be loaded into the participant's programme. At the end of the study, participants will be invited to take part in an interview to discuss their experience with using the TeleRehab DSS system.
+
+The IG will receive the TeleRehaB DSS supported, prescribed, progressed and delivered intervention. In the TeleRehaB DSS IG, the platform will suggest two possible management strategies, on an individualized basis, based on patient profiles and expected benefit: 1)The high-tech, full TeleRehaB DSS with all components of the intervention consisting of TeleRehaB DSS AI-progressed multisensory balance exercises with the use of the AR avatar, real time feedback, AR gamified intervention, sensor monitored exercise performance and additional cognitive training, 2) the low-te
+
+PRIMARY OUTCOMES:
+  - Recruitment Rate (acceptability)
+  - Incidence of Treatment-Emergent Adverse Events (safety)
+  - Feasibility (protocol deviations/problems)
+  - Participants experience using the system (usability)
+  - Adherence to Intervention
+
+INTERVENTIONS:
+  - DEVICE: Full/High Tech Telerehabilitation decision support system
+  - DEVICE: Basic/Low Tech Telerehabilitation decision support system
+  - PROCEDURE: OTAGO Home exercise program
+  - PROCEDURE: Vestibular rehabilitation program
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06534164

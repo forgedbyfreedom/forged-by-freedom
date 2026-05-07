@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06477029
+Title: Examination of Transcranial Focused Ultrasound on Brain Activity in Adults
+Official Title: Modulating Ventral Striatal Activity and Connectivity With Transcranial Focused Ultrasound as a Putative Novel Intervention for Cocaine Use Disorder
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 31
+Topic: physical activity intervention
+
+SUMMARY:
+The investigators aim to examine the immediate effect of transcranial focused ultrasound (tFUS) on brain activity in healthy adults.
+
+DETAILED DESCRIPTION:
+The investigators will examine ventral striatum (VS) target engagement by tFUS in healthy adults using a reward processing task that reliably activates the VS.
+
+PRIMARY OUTCOMES:
+  - Ventral striatum (VS) activity to prediction error before receiving tFUS to the VS
+  - Ventral striatum (VS) activity to prediction error after receiving tFUS to the VS
+
+INTERVENTIONS:
+  - DEVICE: tFUS
+  - DEVICE: Sham tFUS
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06477029

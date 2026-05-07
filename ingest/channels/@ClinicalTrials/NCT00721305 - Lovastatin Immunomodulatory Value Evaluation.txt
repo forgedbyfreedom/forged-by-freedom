@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00721305
+Title: Lovastatin: Immunomodulatory Value Evaluation
+Official Title: Antiretroviral Effect of Lovastatin on HIV-1-infected Individuals Without Highly Active Antiretroviral Therapy (HAART): A Phase-II Randomized Clinical Trial (RCT)
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 112
+Topic: physical activity intervention
+
+SUMMARY:
+The purpose of this study is to determine whether the long-term administration of statins may benefit the clinical and immunological evolution in HIV-1-infected individuals before the use of antiretroviral therapy is required.
+
+DETAILED DESCRIPTION:
+Despite the fact that HAART produces a decrease in HIV-1 replication and plasma HIV-1 RNA levels, and allows an increase in the CD4 T-cell count that leads to a diminution in the incidence of opportunistic infections and mortality, the cost and complexity of HAART regimens, the growing list of long-term side effects, and the eventual development of resistance have underscored the immediate need for additional therapeutic approaches. Statins exert pleiotropic effects through a variety of mechanisms, among which there are several immunological effects that are related and unrelated to their cholesterol-lowering activity. HIV-1 requires cholesterol and lipid rafts for several key stages of its replication cycle; statins-mediated depletion of cholesterol alters the capacity of a cell to form lipid rafts and decreases the HIV-1 infectivity. On the other hand, statins may exert significant modulator effects in the balance of the cytokine network, and alter the activity of Rho GTPases and LFA-1 and ICAM-1 adhesion molecules. Preliminary studies showed that statins (Lovastatin) had anti HIV-1 activity, and that its administration was safe and efficient to control HIV-1 infection in chronically infected individuals who did not receive HAART (in terms of decreasing viral load and increasing CD4 T-cell count). Because very limited clinical data are available on this topic, this study will be conducted.
+
+PRIMARY OUTCOMES:
+  - 1. HIV-1 viral load measured as RNA copies per ml of peripheral blood 2. CD4 T-cell count measured as cells per ul of peripheral blood
+
+INTERVENTIONS:
+  - DRUG: Lovastatin
+  - OTHER: placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00721305

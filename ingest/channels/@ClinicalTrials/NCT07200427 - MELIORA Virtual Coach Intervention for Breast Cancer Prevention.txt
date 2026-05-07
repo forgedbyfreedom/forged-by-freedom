@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07200427
+Title: MELIORA Virtual Coach Intervention for Breast Cancer Prevention
+Official Title: Multimodal Engagement and Sustainable Lifestyle Interventions Optimizing Breast Cancer Risk Reduction Supported by Artificial Intelligence
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 2080
+Topic: aerobic exercise
+
+SUMMARY:
+Breast cancer (BC) is the most commonly diagnosed cancer in women worldwide, with early-onset cases increasing due to genetic and lifestyle factors. Traditional prevention strategies have shown limited effectiveness, creating the need for innovative approaches. The MELIORA project develops an AI-driven digital tool, the Virtual Coach (VC), to promote sustainable behaviour change in physical activity, diet, and alcohol use. Three randomized-controlled studies will be conducted: MELIORA-HEALTHY (women at risk, n=1080 in Greece, Lithuania, Spain), MELIORA-PATIENTS (women undergoing treatment, n=400 in Lithuania, Spain), and MELIORA-SURVIVORS (post-treatment survivors, n=600 in Lithuania, Spain, Sweden). Participants across diverse regions and backgrounds will be randomized to standard lifestyle advice or the same advice plus the MELIORA VC app. Each study lasts 12 months, with outcomes assessed at baseline, 6, and 12 months. The primary outcome is physical activity, with secondary outcomes including sedentary behaviour, diet, alcohol use, and quality of life. If effective, the MELIORA VC could offer a scalable, cost-effective model for BC prevention and survivorship care, providing valuable evidence to guide public health strategies.
+
+DETAILED DESCRIPTION:
+Breast cancer (BC) is the most commonly diagnosed cancer among women worldwide, with early-onset cases rising rapidly due to interactions between genetics and lifestyle behaviours. Traditional efforts to modify these behaviours have had limited success, highlighting the need for innovative, multifaceted approaches. The Multimodal Engagement and Sustainable Lifestyle Interventions Optimizing Breast Cancer Risk Reduction Supported by Artificial Intelligence (MELIORA) project addresses this gap by promoting sustainable behaviour change through an innovative intervention using artificial intelligence (AI). The project will develop and evaluate an AI-driven behaviour change digital solution, the MELIORA virtual coach (VC), designed to enhance awareness, motivation, and promote healthier lifestyle choices related to physical activity, diet, and alcohol consumption, while addressing potential implementation barriers.
+
+The MELIORA VC intervention consists of three separate studies: 1) the MELIORA-HEALTHY Study targeting healthy women at risk of BC (conducted in Greece, Lithuania, Spain), 2) the MELIORA-PATIENTS Study targeting BC patients (conducted in Lithuania, Spain), and 3) the MELIORA-SURVIVORS Study targeting BC survivors (conducted in Lithuania, Spain, Sweden), involving a total of 2,080 participants. The studies will encompass both urban and rural regions and will include participants across the socioeconomic spectrum and/or ethnic minority groups, allowing for the evaluation of how these factors moderate the effectiveness of the MELIORA behavioural change intervention. The studies will follow a randomized-controlled design. For the MELIORA-HEALTHY study, a total of 1080 adult women (360 per site), free of cancer and with at least one behavioural (i.e. low levels of physical activity, unhealthy diet, increased alcohol consumption) or metabolic (i.e. increased BMI) risk factor will be recruited. For the MELIORA-PATIENTS study, a total of 400 adult women diagnosed with BC and currently undergoing treatment (200 per site) will be recruited. For the MELIORA-SURVIVORS study, a total of 600 adult women diagnosed with BC and have completed primary therapy (200 per site) will be recruited.
+
+Participants at each site will be randomly assigned (1:1 allocation) to either the intervention group or the control group. The control group will receive the standard of care that is generic advice for a healthy lifestyle and BC prevention. The intervention group will receive the same generic advice along with the MELIORA VC intervention app. The total study duration for each participant will be 12 months, divided into two six-month periods: the intervention period and the follow-up period. Targeted behaviours will be assessed at three time points: baseline (0 months), end of the six-month intervention period (6 months), and end of the six-month follow-up period (12 months). The primary outcome that will be assessed is physical activity while secondary outcomes inclu
+
+PRIMARY OUTCOMES:
+  - Physical activity levels - MVPA minutes
+  - Physical activity levels - Step count
+
+INTERVENTIONS:
+  - BEHAVIORAL: MELIORA Virtual Coach Intervention
+  - OTHER: Control (generic advice)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07200427

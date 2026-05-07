@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00806741
+Title: Role of Nitric Oxide in Optic Nerve Head Blood Flow Regulation During Isometric Exercise in Healthy Humans
+Official Title: Role of Nitric Oxide in Optic Nerve Head Blood Flow Regulation During Isometric Exercise in Healthy Humans
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: omega 3 exercise
+
+SUMMARY:
+Autoregulation is defined as the ability of a vascular bed to adapt its vascular resistance to changes in perfusion pressure. In the eye, several studies have reported that retinal blood flow is autoregulated over a wide range of ocular perfusion pressures. The investigators recently showed that nitric oxide (NO) is a key metabolite in the regulation of vascular tone in the eye and plays an important role in the blood flow autoregulation of the choroidal circulation. However, no data is yet available for the optic nerve head. Thus, the present study is designed to test the hypothesis that NO plays also a role in optic nerve head blood flow autoregulation. Therefore, subjects will perform squatting to increase systemic perfusion pressure during administration of either a nitric oxide synthase inhibitor (L-NMMA), an α-receptor agonist (phenylephrine) or placebo. Optic nerve head blood flow will be continuously measured during the procedure to investigate optic nerve head autoregulation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Optic nerve head pressure-flow relationship
+
+INTERVENTIONS:
+  - DRUG: NG-monomethyl-L-arginine (L-NMMA)
+  - DRUG: Phenylephrine
+  - DRUG: Physiological saline solution (as placebo)
+  - DEVICE: Laser Doppler Flowmetry
+  - DEVICE: Goldmann applanation tonometer
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00806741

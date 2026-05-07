@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07218653
+Title: Sex-Specific Cerebrovascular Dysfunction in Metabolic Syndrome-Role of COX
+Official Title: Sex-Specific Cerebrovascular Dysfunction in Metabolic Syndrome-Role of COX
+Status: NOT_YET_RECRUITING
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 72
+Topic: aerobic exercise
+
+SUMMARY:
+This study tests the hypothesis that Metabolic Syndrome (MetSyn) decreases cerebral blood flow (CBF) more in females than males due in part to the sex-specific loss of COX vasodilation. Male and female participants will be enrolled in two groups: Health Controls versus participants with MetSyn.
+
+DETAILED DESCRIPTION:
+The central hypothesis is that MetSyn decreases CBF more in females than males due in part to the sex-specific loss of COX vasodilation. This hypothesis is based on extensive preliminary data demonstrating MetSyn induces: 1) 3-fold larger reductions in CBF in females that abolish sex differences, 2) region-specific CBF reduction patterns, and 3) a greater loss of COX-mediated vasodilation in females.
+
+This hypothesis is tested via three Specific Aims:
+
+* Aim 1: Determine the extent of sex differences in MetSyn-driven CBF reductions. The investigators hypothesize females with MetSyn will demonstrate larger decrements in global, grey matter and white matter CBF versus males.
+* Aim 2: Determine the sex-by-region interactions of MetSyn reductions in CBF. The investigators hypothesize females will demonstrate larger regional CBF declines-particularly in regions known to be impacted very early in brain pathologies and/or specifically impaired by insulin resistance.
+* Aim 3: Determine the role of COX signaling in mediating CBF changes in MetSyn. The investigators hypothesize COX vasodilation is reduced more in females than males with MetSyn.
+
+All consented participants will conduct a screening visit with a blood panel to identify control vs MetSyn eligibility.
+
+Once eligible, participants complete three laboratory visits (each lasting about 2 hours):
+
+1. Exercise Visit: VO2 Max, DEXA for adiposity quantification, NIH Toolbox to assess neurocognitive function
+2. MRI Visit 1: blinded to either Placebo or Indomethacin
+3. MRI Visit 2: blinded to either Placebo or Indomethacin
+
+PRIMARY OUTCOMES:
+  - Cerebral Blood Flow
+
+INTERVENTIONS:
+  - DRUG: Indomethacin
+  - DRUG: Placebo
+  - DIAGNOSTIC_TEST: MRI
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07218653

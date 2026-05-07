@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00121992
+Title: Docetaxel, Doxorubicin (A), Cyclophosphamide (C) (TAC) vs 5-Fluorouracil, A, C (5FAC) Breast Cancer Adjuvant Treatment
+Official Title: Phase III Randomized Comparing Docetaxel, Doxorubicin and Cyclophosphamide (TAC) vs 5-Fluorouracil, Doxorubicin and Cyclophosphamide (FAC) as Adjuvant Treatment of High Risk Operable Breast Cancer Patients With Negative Axillary Lymph Nodes
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1060
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a prospective, non-blinded randomized phase III trial. Patients will be post-surgically stratified at inclusion first according to the participating institution, then according to menopausal status and will be randomly assigned to receive either:
+
+* TAC: Docetaxel 75 mg/m2 as a 1 hour intravenous (i.v.) infusion on day 1 every 3 weeks (q3w) in combination with doxorubicin 50 mg/m2 as an i.v. bolus and cyclophosphamide 500 mg/m2 as an i.v. bolus on day 1 every 3 weeks.
+* FAC: 5-fluorouracil 500 mg/m2 as an i.v. bolus on day 1 every 3 weeks in combination with doxorubicin 50 mg/m2 as an i.v. bolus and cyclophosphamide 500 mg/m2 as an i.v. bolus on day 1 every 3 weeks.
+
+DETAILED DESCRIPTION:
+Primary objective:
+
+* To compare disease-free survival (DFS) after treatment with docetaxel in combination with doxorubicin and cyclophosphamide (TAC) to 5-Fluorouracil in combination with doxorubicin and cyclophosphamide (FAC) as adjuvant treatment of high risk operable breast cancer patients with negative axillary lymph nodes.
+
+Secondary objectives:
+
+* To compare overall survival (OS) between the 2 above mentioned arms.
+* To compare toxicity and quality of life between the 2 above mentioned arms.
+* To evaluate pathologic markers for predicting efficacy (hormonal receptors and human epidermal growth factor receptor 2 (HER2) protein expression).
+
+PRIMARY OUTCOMES:
+  - Disease-free Survival (DFS) Events
+
+INTERVENTIONS:
+  - DRUG: Docetaxel
+  - DRUG: 5-fluorouracil
+  - DRUG: Doxorubicin
+  - DRUG: Cyclophosphamide
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00121992

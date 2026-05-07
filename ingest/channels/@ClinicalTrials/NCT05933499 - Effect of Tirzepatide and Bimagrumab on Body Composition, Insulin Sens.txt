@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05933499
+Title: Effect of Tirzepatide and Bimagrumab on Body Composition, insulin Sensitivity, and Bone in Adults With Obesity
+Official Title: Effect of Tirzepatide and Bimagrumab on Body Composition, insulin Sensitivity, and Bone in Adults With Obesity
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 63
+Topic: vitamin D muscle
+
+SUMMARY:
+In adults with obesity seeking treatment, weight loss would ideally be composed almost exclusively of fat mass. However, loss of muscle mass and bone are unintentional consequences of weight loss, which may have negative effects on health by lessening improvements in glucose and insulin levels, reducing resting metabolic rate, and increasing the risk of falls and fractures. Data in animals and humans suggest that bimagrumab, an investigational new drug for obesity that inhibits the activin type II receptor (ActRII) inhibitor, may help maximize loss of fat mass while maintaining muscle mass when used in combination with a glucagon-like peptide 1 receptor agonist (GLP-1 RA). The investigators hypothesize that in a randomized, placebo-controlled trial of 63 adults with obesity randomized to tirzepatide (GLP-1/GIP RA) + bimagrumab, tirzepatide alone, or bimagrumab alone, the combination of tirzepatide + bimagrumab will result in improvements in muscle, fat, and bone compared to tirzepatide alone or bimagrumab alone when given in addition to a lifestyle intervention for weight loss over 52 weeks.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in number of kilograms of lean mass by dual-energy x-ray absorptiometry
+
+INTERVENTIONS:
+  - DRUG: Bimagrumab
+  - DRUG: Tirzepatide
+  - DIETARY_SUPPLEMENT: Calcium/Vitamin D
+  - BEHAVIORAL: Lifestyle and nutrition counseling
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05933499

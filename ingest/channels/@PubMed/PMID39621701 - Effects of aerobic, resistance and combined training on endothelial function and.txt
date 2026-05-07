@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39621701
+Title: Effects of aerobic, resistance and combined training on endothelial function and arterial stiffness in older adults: A systematic review and meta-analysis.
+Authors: da Silva, da Silva, de Oliveira, Waclawovsky, Schaun
+Journal: PloS one
+Year: 2024
+Topic: endothelial function exercise
+
+ABSTRACT:
+We conducted a systematic review of randomized clinical trials evaluating the effects of aerobic, resistance and/or combined training on flow-mediated dilation (FMD) and/or pulse wave velocity (PWV) in older adults. The studies were selected from the electronic databases PubMed, Cochrane, LILACS, EMBASE, Web of Science, and the gray literature. We assessed the studies using Cochrane risk of bias (RoB2) tool and the GRADE tool. The GRADE assessment showed moderate quality of evidence for aerobic training and resistance training and very low for combined training. The measures of effects are presented as mean differences of the intervention group versus the control group and related 95% confidence intervals (95% CIs) pooled by a random-effects model using an inverse variance method. Our analysis of 24 RCTs (Intervention group [n = 251]: 67.7 &#xb1; 5.6 years old; control group [n = 228]: 68.7 &#xb1; 5.9 years old) showed that aerobic training was effective to improve FMD (0.64% [95% CI 0.24 to 1.03], p = 0.002) and PWV (-1.21 m/s [95% CI -1.37 to -1.05], p&lt; 0.001) by compared to the control group. The subgroup analyses showed no FMD differences following aerobic training in healthy adults when compared to those with any health condition. Combined training was effective in improving FMD (0.60% [95% CI 0.50 to 0.71], p&lt; 0.001) and PWV (-0.79 m/s [95% CI -1.23 to -0.35], p = 0.002). But these same parameters did not show any improvement in response to resistance training. A major limitation of this study is that the analysis to evaluate the effect of resistance training on PWV include only one study, and no inferences could be made from the data. Aerobic and combined training, but not resistant training, improve flow-mediated dilation and pulse wave velocity in the elderly. PROSPERO: CRD42021275282.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39621701/

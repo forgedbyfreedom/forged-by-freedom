@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04210986
+Title: Senolytic Drugs Attenuate Osteoarthritis-Related Articular Cartilage Degeneration: A Clinical Trial
+Official Title: Senolytic Drugs Attenuate Osteoarthritis-Related Articular Cartilage Degeneration: A Clinical Trial
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Phase I/II randomized, double-blind, placebo-controlled clinical trial to test the safety and efficacy of Fisetin for treating mild to moderate osteoarthritis
+
+DETAILED DESCRIPTION:
+This is a Phase I/II randomized, double-blind, placebo-controlled clinical trial that will be conducted at The Steadman Clinic (TSC) and Steadman Philippon Research Institute (SPRI). The purpose of this study is to evaluate the clinical efficacy of Fisetin (FIS), a dietary supplement, in symptomatic knee osteoarthritis (OA) patients. Key aspects of this proposal include the investigator's well-developed methodologies to measure and compare systemic senescence-associated secretory phenotype (SASP) including inflammatory biomarkers and senescent cells, and collect magnetic resonance images, self-reported outcomes, physical performance and other objective clinical data. Given the drug FIS has been empirically demonstrated to reduce senescent cell burden, the main objective(s) are to determine 1) the safety of FIS during dosing and 2) whether FIS reduces senescent cells, pro-inflammatory and cartilage degenerating SASP markers, and reduces OA-symptoms leading to improved joint health and function.
+
+PRIMARY OUTCOMES:
+  - Number of Participants Experiencing One or More Treatment-Emergent Adverse Event
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fisetin
+  - DRUG: Placebo oral capsule
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04210986

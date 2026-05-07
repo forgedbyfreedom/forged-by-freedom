@@ -1,0 +1,53 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07075952
+Title: Training App for Inhibitory Control Towards Food
+Official Title: Testing FoodTraining (FoodT): A Mobile App to Train Inhibitory Control Towards Food and Augment Standard Treatment for People With Eating and Weight Disorders
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 113
+Topic: high intensity interval training
+
+SUMMARY:
+The aim of this project is to test the feasibility, acceptability and clinical impact of a mobile app-based intervention (FoodTraining) to strengthen food-related inhibitory control over 4 weeks, in a sample of people with eating or weight disorders (i.e. obesity, binge-eating disorder (BED), or bulimia nervosa (BN)) receiving standard outpatient treatment (i.e., treatment as usual (TAU) encompassing guided self-help or psychotherapy, pharmacological therapy or diet). The training will be offered in addition to TAU (experimental group) and compared to TAU alone (control group).
+
+Participants will complete questionnaires to measure eating behaviour, eating disorder psychopathology, symptoms of anxiety, depression and stress, social functioning and quality of life at baseline, 4 and 8 weeks. They will also complete momentary assessments using a mobile application (FoodTracker) to report on food intake along with related thoughts, emotions, and behaviours and will wear small, non-invasive sensors to track real-time fluctuations in glucose levels for 15 days.
+
+Participants will also perform a food-related go-no go task and a food-related temporal discounting task at baseline, 4 and 8 weeks.
+
+Finally, this study will pilot the use of a semi-structured interview to characterise the history of weight, the appetite system, eating-related habits in the family and learning of eating behaviours and attitudes in people with eating or weight disorders.
+
+DETAILED DESCRIPTION:
+The study aims:
+
+* To establish the feasibility, acceptability and clinical impact of a food-specific inhibitory control training delivered through a mobile App (i.e., FoodTraining) over 4 weeks in a sample of patients with obesity, bulimia nervosa or binge-eating disorder (N = 113) offered in addition to TAU, compared to TAU alone;
+* To test the acceptability and adherence to the ecological momentary assessments collected through the Food Tracker App and the sensors for glucose monitoring;
+* To characterise history of weight, appetite system, eating-related habits in the family and learning of eating behaviours and attitudes in people with obesity presenting for weight loss treatment.
+
+An a-priori power analysis performed on the G\*Power software, indicated that 93 participants would be needed to detect a significant 2 (group) x 3 (time) within-between interaction effect on the primary outcome measure (emotional eating and uncontrolled eating) with a small to medium effect size (Cohen's f = 0.15), a statistical power of 1-β = .80, and at a significant level α = .05, assuming a correlation among repeated measures of r = .5. To account for possible drop-out, the number will be exceeded by 20%. The final sample size that will be recruited is 113 participants.
+
+Patients will be recruited and assessed at baseline, 4 and 8 weeks follow-up from the University Hospital in Padova (i.e., Eating Disorders Unit and Obesity Management Unit).
+
+Assessment phase
+
+After providing written informed consent, participants will complete a questionnaire to collect demographic information, such as gender and age. Their weight and height will be measured by a clinician. Clinical information, such as diagnosis, psychiatric/medical comorbidities and ongoing treatment will be retrieved from hospital clinical records. Participants will complete the following self-report questionnaires, measures and computerised tasks:
+
+* The Three Factors Eating Questionnaire (TFEQ): a 51-item self-report questionnaire to assess eating-related feelings and behaviours. It comprises three subscales: cognitive restraint (i.e., efforts and worries to regulate food intake to control body weight and shape), uncontrolled eating (i.e., tendency to lose control and overeat), and emotional eating (i.e., tendency to eat in response to emotional urges, both positive and negative);
+* The Dutch Eating Behavior Questionnaire (DEBQ): a 33-item self-report questionnaire grouped in 3 subscales: emotional eating (i.e., eating in response to internal emotional factors like fear, anxiety and anger), external eating (eating in response to external stimuli such as the sight and smell of food) and restrained eating (eating less than desired to lose or maintain a particular body weight);
+* The Food Cravings Questionnaire-Trait (FCQ-T): a validated self-report instrument designed to assess the frequency and intensity of food cravings as a stable individual characteristic. Comprising 39 items, the FCQ-T evaluates mul
+
+PRIMARY OUTCOMES:
+  - Between-group differences (experimental vs. control group) in changes in tendency to eat in response to emotional eating
+  - Between-group differences (experimental vs. control group) in changes in uncontrolled eating behaviours
+
+INTERVENTIONS:
+  - BEHAVIORAL: Food-specific inhibitory control training delivered through the FoodTraining App
+  - BEHAVIORAL: Waiting list
+
+ELIGIBILITY:
+Age: 16 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07075952

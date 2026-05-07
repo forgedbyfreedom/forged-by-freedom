@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03629379
+Title: Response to Ustekinumab for Anti-tnf Induced Psoriasiform Skin Lesions
+Official Title: Response to Ustekinumab for Anti-tnf Induced Psoriasiform Skin Lesions
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: physical activity intervention
+
+SUMMARY:
+Using transcriptomics and proteomics to gain insights in the development of psoriasiform skin lesions under anti-tumor necrosis factor (TNF) therapy, and predicting response to ustekinumab.
+
+DETAILED DESCRIPTION:
+The investigators will prospectively include patients with Crohn's disease (CD) or ulcerative colitis (UC), who develop psoriasiform skin lesions (including psoriasiform eczema, psoriasis guttata, psoriasis inversa and pustulosis) under therapy with anti-TNF and refractory to at least 12 weeks of topical therapy. Since no scoring systems are available to describe (the severity of) anti-TNF induced skin lesions, the lesions will be followed up at different time points using 3 different methods. First, the Dermatology Life Quality Index (DLQI), which is a standardised questionnaire that is used in routine clinical practice to assess the impact of any type of skin lesion on the quality of life of the patient. Next a global visual analogue scale (VAS) to be filled out by the expert dermatologist based on the general appearance of the skin lesions, and finally a self-designed physician global assessment (PGA). Physician global assessment of paradoxical skin lesions will be based on the following:
+
+* Number of body regions that are affected: 1 region (1 point), 2 or 3 regions (2 points) and more than 3 regions (3 points). The 8 regions to consider are: scalp, face, both axilla, groins, genital (including pubis and perineal), trunk (front and back + neck and collar), arms (including hands), legs (including feet)
+* Location of skin lesions: face (1 point), palmoplantar (1 point), genital (1 point), flexural (1 point)
+* Affected body surface area \>10% (3 points)
+* Presence of itching (1 point)
+* Painful skin lesion (1 point)
+* Is the lesion wet including erosions, pustules and maceration (2 points) or dry (0 points)?
+* Is the lesion superinfected? Yes (1 point) or No (0 points)
+
+The investigators plan to include 20 patients, namely the first 10 patients who will be switched to ustekinumab (UST, n=10, only available for patients with CD) and the first 10 patients who will be switched to anti-integrin therapy (VDZ, n=10). The latter will be used as a control group to evaluate whether starting ustekinumab or discontinuing anti-TNF leads to improvement of the lesions. Patients will be included through our outpatient clinic or infusion unit. The decision to start ustekinumab or vedolizumab will be based on routine clinical practice, and not be influenced by this study.
+
+At the first evaluation (moment of treatment change), a blood draw (EDTA, serum, PAX gene) will be performed, the clinical CD or UC activity will be calculated by using patient reported outcome (PRO2) and Crohn's Disease Activity Index (CDAI) or Mayo score, and the patient will be asked to fill out a DLQI. Next, the patient will be send to one of two board certified dermatologists. The latter will document the skin lesions, take pictures of all lesions, state the clinical diagnosis and perform two punch biopsies of the affected skin ánd of unaffected skin at the contralateral sight. The dermatologist will also fill out the above mentioned VAS and PGA.
+
+Patients switched to ustekinumab will rec
+
+PRIMARY OUTCOMES:
+  - Transcriptomic features
+
+INTERVENTIONS:
+  - DRUG: Ustekinumab
+  - DRUG: Vedolizumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03629379

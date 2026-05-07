@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05870306
+Title: Triple Atria Extrastimuli vs Pulmonary Vein Isolation Alone in Persistent Atrial Fibrillation
+Official Title: Triple Atria Extrastimuli vs Pulmonary Vein Isolation Alone in Persistent Atrial Fibrillation
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: physical activity intervention
+
+SUMMARY:
+The problem addressed in this proposal is related to the success rate in treating one of the most common arrhythmias in the Western population, atrial fibrillation (AF). Specifically, the success rate is particularly low in persistent atrial fibrillation, being up to 40% lower than the success rate for paroxysmal atrial fibrillation.
+
+Atrial fibrillation is associated with increased mortality and morbidity (stroke, heart failure, dementia, etc.). The most effective treatment is electrical isolation of the pulmonary veins (PVI) by catheter ablation using radiofrequency or cryoablation of the atrial myocardial tissue. This ablation allows the elimination of the main initiators of the arrhythmia but may not address its maintainers, which play a significant role in persistent atrial fibrillation.
+
+This project proposes a new approach in studying the atrial myocardial substrate for persistent fibrillation ablation. Until now, maintainers of the arrhythmia have been sought by conducting studies during atrial fibrillation. In this project, we will use short-coupled stimulation techniques during sinus rhythm and analyze the response of the atrial myocardium, attempting to unmask areas where the impulse propagates abnormally/slowly. These areas of the atrial muscle with hidden slow conduction (HSC) could generate short circuits that maintain atrial fibrillation. It would be expected that these areas would show fragmented electrograms in response to rapid electrical stimuli not visible in basal rhythm.
+
+The study is divided into two sub-studies to be carried out over the 3-year project.
+
+1. This study aims to test the feasibility of this new arrhythmic substrate characterization strategy, as well as observe differences between patients with paroxysmal and persistent AF and compare it with conventional fragmented electrogram analysis during AF.
+2. The second sub-study will apply the knowledge acquired during the first phase regarding the characterization of electrograms-HSC, allowing for radiofrequency ablation procedures to be performed using a new substrate ablation technique consisting of the elimination of these electrograms and comparing the results with those patients who undergo conventional pulmonary vein ablation techniques.
+
+The ultimate goal, from a global point of view, is to demonstrate that it is possible to improve the results of arrhythmia treatment by identifying and eliminating these electrograms-HSC.
+
+DETAILED DESCRIPTION:
+STUDY PURPOSE The aims of the current study are
+
+* To investigate the presence, characteristics and location of complex electrograms suggestive of slow conduction zones elucidated by triple atria extrastimuli during sinus rhythm in paroxysmal and persistent Atrial Fibrillation (AF)
+* Correlate atrial HSC- electrograms during sinus with continuously fractionated electrograms during AF in patients with persistent AF
+* Test the hypothesis that elimination of atrial HSC-Electrograms(EGM) in addition to PVI would improve ablation outcomes in PersistentAF(PsAF) patients versus PVI alone in a randomized study.
+
+Sub-study 1 (ANALYSIS OF HIDDEN SLOW CONDUCTION ELECTROGRAMS IN PAROXISMAL AND PERSISTENT ATRIAL FIBRILLATION. HSC-AF STUDY):
+
+1.1. OBJETIVES HYPOTHESIS Left atrial EGM showing HSC elucidated by atria extrastimuli should be more manifest in persistent versus paroxysmal AF and should de more spatially and temporarily reproducible compared to fractionated EGM during AF STUDY OBJETIVES 1.1 Describe the method to elucidate HSC using a triple atrial extrastimuli 1.2 Analyze the characteristics and location of HSC-EGMs 1.3 Compare the presence, burden, characteristics and location of HSC-EGMs in paroxysmal versus persistent AF 1.4 Compare the presence and location of HSC-ECGs with fractionated EGM during AF
+
+1.2. METHODS Summary of methods: 10 patients with paroxysmal AF and 10 patients with PsAF who undergoing a first-time ablation procedure for AF will be consecutively included to describe the complex electrograms (presence, distribution, number of deflections, amplitude, duration, delta of EGM width) elucidated by triple atria extrastimuli during sinus rhythm.
+
+1.2.3 PREPROCEDURAL INTERVENTIONS The usual clinical protocol for preparation for AF ablation will be followed. This includes as complementary tests: blood tests, echocardiography and cardiac CT. CT images will be analyzed with ADAS-3TM (Galgo Medical, Barcelona, Spain) to obtain 3D wall thickness maps.
+
+1.2.4 ELECTROPHYSIOLOGIC STUDY High-density voltage mapping using a multipolar catheter (PentaRay, Biosense Webster, Diamond Bar, CA, USA) will be performed during sinus rhythm in ParoxysmalAF(PxAF) patients. During mapping, manual points after a triple extrastimulus from LA appendage will be acquired to fill all color gaps on the LA map using Carto3 with an interpolation of 6 mm for the color threshold. Triple extrastimulus will be delivered at atrial effective refractory period (AERP)+60ms plus AERP + 60 ms plus AERP +40-20ms. Adequate endocardial contact will be confirmed by stable electrograms, the distance to the geometry surface.
+
+In PsAF patients starting the procedure in AF, a high-density map will be acquired during AF. Visually detected Comlex Fractionated Atrial Electrograms(CFAE) will be annotated with pink dots. In this subgroup of patients (10 PsAF cases) a second map will be acquired to confirm the reproducibility of this methodology and compare the location and morphology of t
+
+PRIMARY OUTCOMES:
+  - Number of patients with lower burden of atrial fibrillation during follow-up comparing both arms
+
+INTERVENTIONS:
+  - PROCEDURE: pulmonary vein isolation and targeted radiofrequency ablation
+  - PROCEDURE: pulmonary vein isolation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05870306

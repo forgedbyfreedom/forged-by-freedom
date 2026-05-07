@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02519751
+Title: New Method Using Deuterium Labelled Creatine to Measure Total Body Skeletal Muscle Mass
+Official Title: Total Body Skeletal Muscle Mass Estimation by Creatine (Methyl-d3) Dilution in Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+Creatine (methyl-d3) dilution (D3-creatine) is a novel technique for the estimation of muscle mass. The method uses a dose of deuterium-labelled creatine to determine total skeletal muscle mass via estimation of total body creatine pool size.The aim of this study is to compare estimates of total body skeletal muscle mass by D3-creatine dilution method and whole body Magnetic Resonance Imaging (MRI) in an athletic population.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Correlation between muscle mass obtained by MRI method and D3-Creatine method
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: D3 Creatine
+  - DIETARY_SUPPLEMENT: Creatine
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02519751

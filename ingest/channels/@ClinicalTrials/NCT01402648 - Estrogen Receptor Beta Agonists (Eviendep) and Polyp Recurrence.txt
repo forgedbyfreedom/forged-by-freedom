@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01402648
+Title: Estrogen Receptor Beta Agonists (Eviendep) and Polyp Recurrence
+Official Title: Effects of the Dietary Supplementation With a Blend of ER Beta Agonists on the Expression of ER Beta and Related Biomarkers of Cell Proliferation and Apoptosis, in Sporadic Colon Adenopolyposis
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+The decreased Estrogen Receptor beta (ERβ) expression in the non adenomatous mucosa of ApcMin/+ mice favours intestinal neoproliferation. The dietary supplementation with a blend of ERβ agonists and lignin has been shown to recover ERβ to the healthy wild type levels, and a reduced polyp number and lower dysplasia was also observed in the adenomatous mucosa. In this randomised, double blind and placebo controlled study, we assessed if ERβ similarly guides the apoptotic control of cell proliferation in the non adenomatous colon mucosa of patients affected from sporadic adenopolyposis, prone to polyp recurrence. For 60 day in advance of the screening colonoscopy, patients were supplemented with a dietary blend of ERβ agonists and lignin (Eviendep, CM\&D Pharma Limited, London, UK) on top their common diet (left unchanged during the study period), to study if the pro-proliferative behavior of the non adenomatous mucosa was effected. Sixty patients naïve from previous and concomitant hormonal or anti-inflammatory CRC chemoprevention were sequentially 1:1 randomised to active or placebo supplementation. ERα and ERβ (mRNA, Western Blotting, Elisa, immunostaining), TUNEL, caspase-3 and Ki-67 (immunostaining) were assessed in bioptic normal colon mucosa samples. Study power: 80%, type 1 error: .05 (two-tails). Statistics: Non parametric Wilcoxon test for efficacy. MANOVA for proliferative and apoptotic biomarkers relationships to the common diet and to the 60 day supplementation.
+
+DETAILED DESCRIPTION:
+Enrolled patients were actively ongoing the surveillance program for the follow up of polyp recurrence and progression to CRC. Eligible patients should have undergone a polypectomy since 2003, affected by multiple polyps \< 10 mm or one-two adenomas \< 10 mm and/or with a grade of dysplasia to make them classified at intermediate risk for CRC, and scheduled to screening colonoscopy each 3-5 years. Patients were sequentially 1:1 randomly allocated to placebo or Eviendep at baseline (T0). The dietary supplements were administered twice a day for 60 days in advance of the screening colonoscopy, thus covering approximately eight complete colon epithelial turnover to occur. Five days in advance of T60 colonoscopy, patients refrained from fresh and cooked fruit and vegetable intake. Bowel cleansing was achieved by PEG 4000 oral administration (1120 g/4 L water solution). N=8 biopsy samples/patient were collected from the non adenomatous mucosa in the sigmoidal colon. Small polyps (diameter less or equal 0.5 cm) were topically electrocoagulated, whereas villous and tubulovillous polyps (diameter equal or higher than 0.5 cm) were submitted to the histological assessment.
+
+PRIMARY OUTCOMES:
+  - Expression of ERβ, ERα, TUNEL, Caspase-3, Ki-67 in bioptic samples of non adenomatous mucosa in sporadic adenopolyposis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Eviendep (CM&D Pharma Limited, UK)
+  - DIETARY_SUPPLEMENT: Maltodextrins
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01402648

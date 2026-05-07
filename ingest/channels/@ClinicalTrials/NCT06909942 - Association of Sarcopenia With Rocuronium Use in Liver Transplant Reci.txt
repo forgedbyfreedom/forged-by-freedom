@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06909942
+Title: Association of Sarcopenia With Rocuronium Use in Liver Transplant Recipients
+Official Title: Association of Sarcopenia With Rocuronium Use in Liver Transplant Recipients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: sarcopenia intervention
+
+SUMMARY:
+Patients will be informed by obtaining consent when they meet the inclusion criteria.
+
+Written consent will be obtained when the patient arrives in the operating room.
+
+The patient's characteristics (gender, age, liver disease) and the biochemistry, hemogram and coagulation values taken before the surgery will be written on the prepared follow-up form.
+
+After the hand grip strength is recorded in kg with a mechanical thenar muscle dynamometer, the SARC-F test questionnaire consisting of five questions will be administered to the patient and the SARC-F score will be calculated and recorded.
+
+Routine monitoring (ECG, pulse oximetry, non-invasive blood pressure cuff, TOF monitoring, BIS monitoring) will be performed for the liver transplant recipient.
+
+The routine anesthesia induction protocol will be applied to the patient for liver transplant recipients (thiopental (5-7 mg/kg), fentanyl (1-2 mcg/kg) and rocuronium (1mg /kg)), the time after rocuronium will be recorded and the reset time of the TOF device will be determined.The mRSI protocol was applied to all patients, taking into account the risk of aspiration: adequate preoxygenation was followed by short-duration, low-pressure (\<20 cmH₂O) mask ventilation. Intubation conditions were assessed using the Modified Helbo-Hansen Raulo Scoring System (5-20 points).
+
+During the case, the times when the TOF value exceeds 30% and the times when diaphragm activity is detected at -3 cmH2O on mechanical ventilation will be recorded, 0.1 mg/kg rocuronium will be added as required for routine anesthesia follow-up. The phase of the transplant operation (Dissection-Anhepatic-Neohepatic) in which the added rocuronium is added will be specified.
+
+The transfusion content and amounts within the case will be recorded on the follow-up form.
+
+The extubation times in hours, the transfer time to the ward, the discharge time from the hospital and the need for reintubation of patients who are routinely transferred to the intensive care unit in an intubated state at the end of the case will be recorded.
+
+DETAILED DESCRIPTION:
+This prospective observational study will investigate the effect of sarcopenia on rocuronium use in patients scheduled for liver transplantation. The study population will consist of ASA III-IV patients aged 18-65 years who are scheduled to undergo liver transplantation at İnönü University Liver Transplantation Institute. Sarcopenia assessment will be made with a three-stage algorithm: 1. SARC-F Questionnaire: A validated 5-question questionnaire evaluating muscle strength, walking aid, getting up from a chair, climbing stairs, and fall history will be applied. 2. Hand Grip Strength: Will be measured with a mechanical thenar muscle dynamometer and recorded in kg. Values will be compared with reference values determined according to gender. 3. Psoas Muscle Index (PMI): Psoas muscle area will be measured at the level of L3 vertebra on abdominal CT images taken preoperatively for the purpose of operation plan and liver volume evaluation. PMI will be calculated by dividing the total psoas muscle area (cm²) by the square of height (m²). PMI values will be classified according to cut-off values determined by gender. Patients will be informed by obtaining consent when they meet the inclusion criteria. Written consent will be obtained when the patient arrives in the operating room. The patient's characteristics (gender, age, liver disease) and the biochemistry, hemogram and coagulation values taken before the surgery will be written on the prepared follow-up form. After the hand grip strength is recorded in kg with a mechanical thenar muscle dynamometer, the SARC-F test questionnaire consisting of five questions will be applied to the patient and the SARC-F score will be calculated and recorded. Routine monitoring (ECG, pulse oximetry, non-invasive blood pressure cuff, TOF monitoring, BIS monitoring) will be performed for the liver transplant recipient. The patient will be administered the routine anesthesia induction protocol for liver transplant recipients (thiopental (5-7 mg/kg), fentanyl (1-2 mcg/kg) and rocuronium (1 mg/kg)), the time after rocuronium is administered will be recorded and the reset time of the TOF device, which is one of the routine anesthesia monitors, will be determined. After intubation, the intubation score will be written on the follow-up form as a value between 5 and 20. During the case, the times when the TOF value exceeds 30% and the times when diaphragm activity is detected at -3 cmH2O on the mechanical ventilator will be recorded, 0.1 mg/kg rocuronium will be added as required by routine anesthesia follow-up. The phase of the transplant operation (Dissection-Anhepatic-Neohepatic) in which the added rocuronium is added will be specified. The transfusion content and amounts in the case will be written on the follow-up form. The extubation times in hours, transfer times to the ward, discharge times from the hospital and the need for reintubation of patients who are routinely transferred to intensive care in an intubated state 
+
+PRIMARY OUTCOMES:
+  - Idealising Rocuronium Dosing in Sarcopenic Patients With Using Sarcopenia Diagnostic Tests in Preoperative Period
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Psoas Muscle Index
+  - DEVICE: Handgrip Dynamometer
+  - OTHER: SARC-F Score
+  - DEVICE: Train-of-Four(TOF)
+  - DEVICE: Bispectral Index(BIS)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06909942

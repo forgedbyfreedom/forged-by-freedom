@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02816411
+Title: Protein Supplementation and Skeletal Muscle Healing Process
+Official Title: Effects of Protein Supplementation on Skeletal Muscle Regeneration and Healing Process Following Exercise-induced Aseptic Injury
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: aerobic exercise
+
+SUMMARY:
+In this study the investigators utilized protein supplementation over an 8-day period following eccentric exercise-induced muscle damage in order to test the initial hypotheses : i) protein supplementation after exercise-induced muscle injury affects exercise-induced aseptic inflammation and muscle performance.
+
+DETAILED DESCRIPTION:
+The objective was to examine weather protein supplementation is able to affect the inflammatory response as well as recovery of muscle performance following an intense eccentric exercise protocol. In a double-blind, counterbalanced design, 14 men received either Placebo (PLA) or milk protein isolate (PRO) for 8 consecutive days following a single bout of exercise (300 eccentric contractions at 30 deg/sec). In both conditions, performance was assessed at baseline, immediately post-exercise, 2h post-exercise and daily for 8 consecutive days. Blood samples were collected at baseline, 2h post-exercise and daily for the remaining 8 days. Muscle biopsies from vastus lateralis were collected at baseline as well as at day 2 and day 8 of the post-exercise period.
+
+PRIMARY OUTCOMES:
+  - Change in reduced glutathione in blood
+  - Change in protein carbonyls in serum
+  - Change in protein carbonyls in muscle
+  - Change in thiobarbituric acid and reactive substances in serum
+  - Change in oxidized glutathione in blood
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Milk protein isolate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02816411

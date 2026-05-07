@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06967363
+Title: Multimodal Imaging and Biospecimen Collection for Low Back Pain (LBPB)
+Official Title: Multi-modality Imaging and Collection of Biospecimen Samples in Understanding Brain Function in Low Back Pain Patients: a Longitudinal Cohort Study
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 360
+Topic: strength training
+
+SUMMARY:
+This prospective cohort study investigates the neurobiological, genetic, and psychosocial mechanisms underlying acute and chronic low back pain (LBP). Core objectives include establishing a high-quality biobank to support future research in connectomics, genomics, and biomarker discovery, and identifying predictors of pain progression and treatment response.
+
+The study will also assess the impact of comorbid conditions such as anxiety, depression, and sleep disturbances on pain perception and clinical outcomes. Longitudinal analyses will explore the dynamic interplay between emotion, cognition, sleep, and pain to inform precision, mechanism-based interventions.
+
+Functional imaging will be used to examine brain responses to nociceptive modulation, aiming to identify neural circuits involved in pain chronification. By integrating multimodal data-including neuroimaging, neurophysiology, microbiota profiling, polysomnography, and molecular assays-the study will define LBP subtypes, with a particular focus on nociceptive, neuropathic, and nociplastic mechanisms. The ultimate goal is to establish prognostic biomarkers and advance personalized strategies for LBP prevention and treatment.
+
+DETAILED DESCRIPTION:
+Low back pain (LBP) is one of the leading causes of disability globally, yet its underlying mechanisms remain poorly understood. Clinical management is often challenging due to the heterogeneity in symptom presentation and treatment response. Current approaches range from self-management and pharmacological therapies to targeted interventions, including nerve blocks and surgery. To address these challenges, this prospective, longitudinal cohort study is designed to comprehensively investigate the neurobiological, genetic, microbiological, and psychosocial factors contributing to the onset, maintenance, and variability of LBP.
+
+The study includes individuals with both acute and chronic LBP to capture diverse clinical trajectories and identify determinants of recovery versus chronification. A central objective is to establish a well-curated biobank containing high-quality biospecimens (e.g., blood, stool) and multimodal datasets to facilitate future research in genomics, connectomics, microbiome science, and biomarker discovery.
+
+Following a one-week run-in period to confirm eligibility, participants undergo comprehensive, multidimensional phenotyping. This includes clinical evaluation, self-reported outcomes, quantitative sensory testing, polysomnography (PSG), structural and functional magnetic resonance imaging (fMRI), heart rate variability (HRV), and microbiota profiling. Treatments-including conservative care (e.g., medications, health education), interventional procedures (e.g., nerve blocks), or surgery (e.g., endoscopic lumbar discectomy)- will be administered based on individualized clinical assessment.
+
+All participants will undergo deep phenotyping at baseline, with follow-up assessments at 1 month, 3 months, 6 months and 1 year post-enrollment. Functional MRI scans will be conducted at baseline; 1 day before and after surgery or interventional procedures (if applicable); and at 1 month, 3 months, 6 months, and 1 year. If patients do not show significant improvement within 4 weeks or experience worsening symptoms, their treatment will be reassessed, and secondary interventions such as CBT, alternative medications, or further surgery will be considered based on their needs and progress.
+
+The study investigates key systems involved in pain processing and chronification, including brain networks, central and peripheral nervous system activity, immune and inflammatory pathways, autonomic regulation, and the gut-brain axis. Longitudinal tracking will be used to analyze changes in these biological systems and their associations with clinical outcomes such as pain persistence, sleep quality, emotional distress, and functional status. Ultimately, this research aims to identify mechanistic biomarkers and define LBP subtypes to support the development of personalized, mechanism-based interventions for more effective prevention and treatment.
+
+PRIMARY OUTCOMES:
+  - Pain Intensity (Brief Pain Inventory - Short Form)
+  - Pain Interference (Brief Pain Inventory - Short Form)
+
+INTERVENTIONS:
+  - PROCEDURE: Nerve Block
+  - PROCEDURE: endoscopic spinal disecetomy
+  - DRUG: Medication
+  - BEHAVIORAL: Psychotherapy
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06967363

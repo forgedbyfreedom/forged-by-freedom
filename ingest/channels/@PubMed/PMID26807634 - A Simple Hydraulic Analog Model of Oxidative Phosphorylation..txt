@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 26807634
+Title: A Simple Hydraulic Analog Model of Oxidative Phosphorylation.
+Authors: Willis, Jackman, Messer, Kuzmiak-Glancy, Glancy
+Journal: Medicine and science in sports and exercise
+Year: 2017
+Topic: flow state athletic performance
+
+ABSTRACT:
+Mitochondrial oxidative phosphorylation is the primary source of cellular energy transduction in mammals. This energy conversion involves dozens of enzymatic reactions, energetic intermediates, and the dynamic interactions among them. With the goal of providing greater insight into the complex thermodynamics and kinetics ("thermokinetics") of mitochondrial energy transduction, a simple hydraulic analog model of oxidative phosphorylation is presented. In the hydraulic model, water tanks represent the forward and back "pressures" exerted by thermodynamic driving forces: the matrix redox potential (&#x394;Gredox), the electrochemical potential for protons across the mitochondrial inner membrane (&#x394;GH), and the free energy of adenosine 5'-triphosphate (ATP) (&#x394;GATP). Net water flow proceeds from tanks with higher water pressure to tanks with lower pressure through "enzyme pipes" whose diameters represent the conductances (effective activities) of the proteins that catalyze the energy transfer. These enzyme pipes include the reactions of dehydrogenase enzymes, the electron transport chain (ETC), and the combined action of ATP synthase plus the ATP-adenosine 5'-diphosphate exchanger that spans the inner membrane. In addition, reactive oxygen species production is included in the model as a leak that is driven out of the ETC pipe by high pressure (high &#x394;Gredox) and a proton leak dependent on the &#x394;GH for both its driving force and the conductance of the leak pathway. Model water pressures and flows are shown to simulate thermodynamic forces and metabolic fluxes that have been experimentally observed in mammalian skeletal muscle in response to acute exercise, chronic endurance training, and reduced substrate availability, as well as account for the thermokinetic behavior of mitochondria from fast- and slow-twitch skeletal muscle and the metabolic capacitance of the creatine kinase reaction.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/26807634/

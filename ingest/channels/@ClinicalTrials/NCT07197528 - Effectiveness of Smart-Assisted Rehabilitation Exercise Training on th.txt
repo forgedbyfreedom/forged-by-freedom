@@ -1,0 +1,68 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07197528
+Title: Effectiveness of Smart-Assisted Rehabilitation Exercise Training on the Physical and Mental Health of Older Adults in Long-Term Care Facilities
+Official Title: Effectiveness of Precision Rehabilitative Exercise Training on Sarcopenia, Joint Range of Motion, Cognitive Function, Activities of Daily Living, Quality of Life, and Mood Status in Elderly Residents of Long-Term Care Facilities
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: sarcopenia intervention
+
+SUMMARY:
+The purpose of this clinical trial is to evaluate the effectiveness of a smart-assisted rehabilitation system on the physical and mental health of elderly residents in long-term care facilities through exercise training.
+
+The specific aim of this study is to investigate the effects of a 12-week exercise training program using a smart-assisted rehabilitation system on sarcopenia, joint range of motion, cognitive function, activities of daily living, functional status, quality of life, and emotional well-being among institutionalized older adults.
+
+Participants will be divided into an experimental group and a control group for comparison to assess whether the intervention improves outcomes such as sarcopenia, joint mobility, cognitive function, daily living abilities, overall functional status, quality of life, and emotional state.
+
+Participants in the experimental group will receive the "KNEESUP" smart medical rehabilitation system, provided by a co-investigator. A rehabilitation physician will design an individualized, progressive exercise program. The intervention is planned for 12 weeks, with a frequency of 3 days per week, 2 sessions per day, totaling 72 sessions.
+
+DETAILED DESCRIPTION:
+This clinical trial aims to evaluate the effectiveness of a 12-week exercise intervention using an intelligent rehabilitation assistance system (KNEESUP) in improving the physical and mental health of institutionalized older adults with sarcopenia in long-term care facilities.
+
+With the rapid aging of the population, long-term care institutions have become crucial in supporting the quality of life for older adults. Residents in these settings often face compounded challenges, including chronic illnesses, reduced physical function, cognitive decline, and psychosocial issues such as loneliness and depression. These conditions increase the burden on healthcare systems and care staff. While exercise interventions are known to be effective in promoting physical and mental well-being in older adults, traditional standardized programs may lack individualization and precision.
+
+This study introduces a smart rehabilitation system that combines wearable technology and personalized exercise prescriptions designed by a physical medicine and rehabilitation physician. The system allows real-time monitoring and feedback, which enhances safety, motivation, and adherence. The intervention aligns with trends in post-pandemic digital health solutions and aims to integrate medical technology into routine elder care.
+
+Study Design A randomized controlled trial will be conducted. Eligible participants (aged ≥65 with sarcopenia, able to stand with assistance or walk with/without aid, and cognitively intact) will be randomly assigned to either an intervention or control group in a 1:1 ratio. The sample size was calculated using G\*Power, estimating 42 participants to account for a 20% dropout rate.
+
+Intervention group: Receives a 12-week progressive resistance training program using the KNEESUP smart rehabilitation system. Training will occur 3 times per week, twice per day, totaling 72 sessions. Exercises include lower-limb strengthening through progressive stages (bed, seated, and standing), designed by a team of multidisciplinary experts and monitored via wearable sensors.
+
+Control group: Continues routine care and usual physical activity without additional intervention.
+
+Outcome Measures
+
+Participants will be assessed pre- and post-intervention on the following variables:
+
+Sarcopenia indicators: Grip strength, limb circumference
+
+Joint range of motion: Measured with goniometer (upper limbs) and the KNEESUP system (lower limbs)
+
+Cognitive function: Short Portable Mental Status Questionnaire (SPMSQ)
+
+Daily living function: Barthel Index
+
+Functional status: Comprehensive Geriatric Assessment (CGA)
+
+Quality of life: WHOQOL-BREF (Taiwan version)
+
+Emotional state: Geriatric Depression Scale (GDS-15)
+
+Basic demographic and lifestyle data: Age, sex, education, comorbidities, social support, and physical activity habits
+
+Statistical Analysis Data will be analyzed using SPSS. Descriptive statistics (mean, SD, percentage) and inferential statistics (independent t-tests, chi-sq
+
+PRIMARY OUTCOMES:
+  - Upper limb grip strength
+  - Calf and arm circumferences
+
+INTERVENTIONS:
+  - BEHAVIORAL: Experimental Arm：Smart-assisted rehabilitation exercise system Control Arm：Usual care or routine physical activity
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07197528

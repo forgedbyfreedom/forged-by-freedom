@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06807814
+Title: COMPERATIVE EFFECTS of CONSTRAINT- INDUCED MOVEMENT THERAPY and MIRROR THERAPY on FUNCTIONAL AMBULATION and QUALITY of LIFE in CHRONIC STROKE PATIENTS
+Official Title: COMPERATIVE EFFECTS of CONSTRAINT- INDUCED MOVEMENT THERAPY and MIRROR THERAPY on FUNCTIONAL AMBULATION and QUALITY of LIFE in CHRONIC STROKE PATIENTS
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 56
+Topic: weight loss exercise
+
+SUMMARY:
+Stroke is a global health issue as this happens when the blood flow to the brain is disrupted or reduced, depriving the brain tissue of sugar and oxygen. This interruption affects the brain cells hence leading to the loss of a cell Various physical, cognitive and emotional losses are experienced. Cerebrovascular accident or simply stroke, is the fifth cause of mortality and one of the most common causes of disability in the United States of America (Campbell et al., 2019). There are two main types of stroke: ischemic and hemorrhagic. An ischemic stroke is characterized by an occlusion of a cerebral artery by an embolus or thrombus while hemorrhagic stroke results from a hemorrhage in the brain due to rupture of a blood vessel. A TIA or so-called mini stroke occurs when the clot is not severe enough to result in lasting symptoms (Feigin et al., 2022; Strilciuc et al., 2023).
+
+Strokes substantially affect an individual mobility and overall quality of life, although few comparative studies comparing CIMT and MT exist in the literature. This research therefore seeks to systematically compare the effects of these two interventions on functional ambulation and quality of life of chronic stroke patients. Hereby, the research compares structured, task specific CIMT with the less structured, more general approach of MT in order to offer clinicians empirically founded recommendations on what course of action might prove effective for patients. This study also provides new insights to the field given that it not only describes the potential of CIMT within outpatient physiotherapy treatment but also provides an overview of the long-term effects for patients with stroke. These outcomes of this study will be useful in developing rehabilitative research, improving clinical practice protocols, and thereby improve the lifestyles of people living with chronic stroke.
+
+DETAILED DESCRIPTION:
+To compare the effects of MT and CIMT on functional ambulation and quality of life in chronic stroke patients.
+
+Study Design: This was a randomized controlled trial with two parallel groups:
+
+1. Group A (Constraint-Induced Movement Therapy (CIMT)):
+
+   A well-defined and structured rehabilitation program that restricts the use of the unaffected limb to promote the functional recovery of the affected limb in chronic stroke patients(Franck et al., 2019).
+2. Group B (Mirror Therapy):
+
+A specific intervention that uses a mirror to create a visual illusion of the affected limb, with the goal of improving motor function and quality of life in chronic stroke patients
+
+* Screening: Patients was screened to meet inclusion criteria. The consent form was taken from patients then patients was randomly allocated into two groups (33 in each group).
+* Randomization: Patients fulfilling the inclusion criteria will be randomly divided into experimental and control groups using the computer software.
+* Blinding: The study will be single blinded. The assessor, who has 5 years of experience in both clinical practice and research, will be unaware of the treatment given to both groups and will assess the participants objectively.
+* Allocation: Allocation of the participants will be concealed, and envelope concealment method will be used for it.
+* Outcome Measures:
+* Functional Ambulation Categories (FAC)
+* Tinetti gait and balance score (POMA)
+* Short Form Health Survey (SF-12) Ethical Considerations: This study has received ethical approval from the Institutional Review Board (IRB). Informed consent was obtained from all participants.
+
+Data Analysis: Statistical software was used to analyze the data, with appropriate tests employed based on data normality to compare outcomes between groups.
+
+PRIMARY OUTCOMES:
+  - Functional Ambulation Categories (FAC)
+  - Tinetti gait and balance score (POMA)
+  - Short Form Health Survey (SF-12)
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Constraint-Induced Movement Therapy (CIMT))
+  - BEHAVIORAL: Mirror Therapy
+
+ELIGIBILITY:
+Age: 21 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06807814

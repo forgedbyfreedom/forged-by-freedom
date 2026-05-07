@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02230501
+Title: Metabolic Activation With Protein-rich Formula Diet
+Official Title: Metabolic Activation With Protein-rich Formula Diet - a Randomized-controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 300
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Formerly, the investigators demonstrated in an uncontrolled proof-of principle study (NCT 01680926) that protein-rich meal replacement (PRMR) was successful in reducing daily insulin demand, HbA1c and weight in type 2 diabetes mellitus (T2DM) patients injecting \>100 IE insulin/day. The aim of the present study was to investigate in a randomized-controlled trial if PRMR is also effective in T2DM patients treated with oral antidiabetic medication or insulin.
+
+A second part of the study is an open-label registry for persons with type 2 diabetes, who will perform the lifestyle intervention with the stringent diet regime.
+
+DETAILED DESCRIPTION:
+Type 2 diabetes mellitus (T2DM) patients had been randomized into two groups. During the 1st week the intervention group with stringent diet regime replaced 3 main meals by 50 g PRMR (Almased-Vitalkost, Almased Wellness GmbH, Bienenbüttel, Germany) each (=1100 kcal/day). In 2nd-4th week 2 meals were replaced and a protein-rich lunch was allowed. In 5th-12th week only dinner was replaced. The control group with moderate diet regime replaced breakfast and dinner for 4 weeks and then only dinner during the next 8 weeks. Clinical parameters were determined at the study center at baseline, after 4, 8 and 12 weeks. Primary endpoint was reduction of HbA1c, secondary endpoints reduction of weight and antidiabetic medication.
+
+In the second part of the study type 2 diabetes patients are included in an open-label reistry and perform the lifestyle intervention with the stringent diet regime.
+
+PRIMARY OUTCOMES:
+  - HbA1c
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: stringent diet regimen
+  - DIETARY_SUPPLEMENT: moderate diet regimen
+
+ELIGIBILITY:
+Age: 25 Years to 79 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02230501

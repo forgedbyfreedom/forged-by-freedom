@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04524000
+Title: Study Assessing the Efficacy and Safety of Treatment With Alpelisib Plus Fulvestrant in Japanese Men and Postmenopausal Women With Advanced Breast Cancer
+Official Title: A Phase II Open-label, 2-Part, Multi-center Study of BYL719 (Alpelisib) in Combination With Fulvestrant for Men and Postmenopausal Women With PIK3CA Mutation Hormone Receptor (HR) Positive, HER2-negative, Advanced Breast Cancer Which Progressed on or After Aromatase Inhibitor (AI) Treatment in Japan
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: growth hormone treatment
+
+SUMMARY:
+The purpose of this study is to assess the safety and efficacy of alpelisib plus fulvestrant in men and postmenopausal women with hormone receptor (HR) positive, human epidermal growth factor 2 (HER2)-negative, advanced breast cancer harboring a PIK3CA mutation in Japan, whose disease has progressed on or after aromatase inhibitor (AI) treatment regardless of prior CDK4/6 inhibitor use.
+
+DETAILED DESCRIPTION:
+This is a Phase II open-label, 2-Part, multi-center study in Japan. The study will be conducted in two parts: Part 1 (Cohort 1) includes participants regardless of prior CDK4/6 inhibitor use and is designed to determine the recommended dose (RD), evaluate the tolerability and safety of alpelisib in combination with fulvestrant. Part 2 consists of 2 cohorts (the CDK4/6 inhibitor naive participants are in Cohort 2 and the CDK4/6 inhibitor pre-treated participants are in Cohort 3) which are designed to assess the efficacy and safety of alpelisib in combination with fulvestrant, will start once the RD of alpelisib is established.
+
+Participants will be treated until disease progression, unacceptable toxicity, death or discontinuation from the study treatment for any other reason and will be followed for survival regardless of treatment discontinuation reason (except if consent is withdrawn or participant is lost to follow up).
+
+PRIMARY OUTCOMES:
+  - [Part 1] The incidence of Dose Limiting Toxicities (DLTs) of alpelisib in combination with fulvestrant
+  - [Part 2] Overall Response Rate (ORR) in CDK4/6 inhibitor naive participants
+
+INTERVENTIONS:
+  - DRUG: Alpelisib
+  - DRUG: Fulvestrant
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04524000

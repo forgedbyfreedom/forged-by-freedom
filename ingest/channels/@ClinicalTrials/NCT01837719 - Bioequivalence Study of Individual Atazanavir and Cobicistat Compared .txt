@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01837719
+Title: Bioequivalence Study of Individual Atazanavir and Cobicistat Compared With Atazanavir in Fixed-dose Combination With Cobicistat
+Official Title: A Randomized, 5-Period, Crossover Study in Healthy Subjects to Assess the Bioequivalence of Atazanavir When Co-Administered With Cobicistat as a Fixed Dose Combination Relative to the Single Agents Following a Light Meal, the Relative Bioavailability of Atazanavir When Co-Administered With Cobicistat as a Fixed Dose Combination Relative to the Single Agents Under Fasted Conditions, and the Effect of Food on the Bioavailability of Atazanavir in the Fixed Dose Combination
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of the study is to compare the pharmacokinetics and bioequivalence of atazanavir in a fixed-dose combination with cobicistat with that of atazanavir coadministered with cobicistat as single agents.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximum Observed Plasma Concentration (Cmax) of Atazanavir
+  - Area Under the Plasma Concentration-time Curve (AUC) From Time 0 to Time of Last Quantifiable Concentration (AUC[0-T]) and From Time 0 to Infinity (AUC[INF]) for Atazanavir
+
+INTERVENTIONS:
+  - DRUG: Atazanavir
+  - DRUG: Cobicistat
+  - DRUG: Atazanavir/Cobicistat FDC
+
+ELIGIBILITY:
+Age: 18 Years to 49 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01837719

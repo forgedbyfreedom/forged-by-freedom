@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37113693
+Title: Effects of internal cooling on physical performance, physiological and perceptional parameters when exercising in the heat: A systematic review with meta-analyses.
+Authors: Heydenreich, Koehler, Braun, Grosshauser, Heseker
+Journal: Frontiers in physiology
+Year: 2023
+Topic: cooling strategies performance
+
+ABSTRACT:
+Background: An elevated core temperature (Tcore) increases the risk of performance impairments and heat-related illness. Internal cooling (IC) has the potential to lower Tcore when exercising in the heat. The aim of the review was to systematically analyze the effects of IC on performance, physiological, and perceptional parameters. Methods: A systematic literature search was performed in the PubMed database on 17 December 2021. Intervention studies were included assessing the effects of IC on performance, physiological, or perceptional outcomes. Data extraction and quality assessment were conducted for the included literature. The standardized mean differences (SMD) and 95% Confidence Intervals (CI) were calculated using the inverse-variance method and a random-effects model. Results: 47 intervention studies involving 486 active subjects (13.7% female; mean age 20-42 years) were included in the meta-analysis. IC resulted in significant positive effects on time to exhaustion [SMD (95% CI) 0.40 (0.13; 0.67), p &lt; 0.01]. IC significantly reduced Tcore [-0.19 (22120.34; -0.05), p &lt; 0.05], sweat rate [-0.20 (-0.34; -0.06), p &lt; 0.01], thermal sensation [-0.17 (-0.33; -0.01), p &lt; 0.05], whereas no effects were found on skin temperature, blood lactate, and thermal comfort (p &gt; 0.05). IC resulted in a borderline significant reduction in time trial performance [0.31 (-0.60; -0.02), p = 0.06], heart rate [-0.13 (-0.27; 0.01), p = 0.06], rate of perceived exertion [-0.16 (-0.31; -0.00), p = 0.05] and borderline increased mean power output [0.22 (0.00; 0.44), p = 0.05]. Discussion: IC has the potential to affect endurance performance and selected physiological and perceptional parameters positively. However, its effectiveness depends on the method used and the time point of administration. Future research should confirm the laboratory-based results in the field setting and involve non-endurance activities and female athletes. Systematic review registration: https://www.crd.york.ac.uk/PROSPERO/, identifier: CRD42022336623.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37113693/

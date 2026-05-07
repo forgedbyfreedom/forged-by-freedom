@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02215083
+Title: L-glutamine Supplementation to Alleviate Symptoms of Taxane-Induced Neuropathy in Patients With Breast Cancer
+Official Title: L-glutamine Supplementation to Alleviate Symptoms of Taxane-Induced Neuropathy in Patients With Breast Cancer
+Status: WITHDRAWN
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of the study is to determine whether daily, high-dose administration of l-glutamine can reduce numbness and tingling caused by a taxane chemotherapy in patients with breast cancer.
+
+DETAILED DESCRIPTION:
+L-glutamine has previously been shown to help reduce the incidence of numbness and tingling in patients with breast cancer who are receiving taxane chemotherapies. However, no study to date looks at the effect of l-glutamine given after this numbness and tingling (called 'perihperhal neuropathy') has already occurred. We hypothesize that administration of this amino acid in l-glutamine naïve patients will result in a measureable reduction of their taxane-induced neuropathy.
+
+PRIMARY OUTCOMES:
+  - Total sensory neuropathy (area under the curve [AUC]) as measured by the EORTC QLQ-CIPN20 at baseline and week 9
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-glutamine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02215083

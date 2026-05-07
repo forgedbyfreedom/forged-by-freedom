@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05109039
+Title: Creatine Supplementation in Female Collegiate Dancers
+Official Title: Effects of Creatine Supplementation on Performance, Body Composition and Mental Health in Female Collegiate Dancers
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: strength training
+
+SUMMARY:
+This study will be a 6 week creatine supplementation intervention with performance familiarization and pre and post testing. Participants will report to the human performance laboratory (HPL) for baseline to read and sign an informed consent explaining the procedures and potential risks and benefits of participation. Participants will then complete a physical activity readiness questionnaire (PAR-Q) prior to performing any physical tasks. Participants will also be asked to complete testing below in the order described. Participants will become familiar with the pre/post performance tests, which include isokinetic testing, medicine ball throw, vertical jump, and Wingate testing. Twenty-four hours following visit 1, participants will return to the HPL for visit 2 where they will undergo a second familiarization session for the isokinetic testing and Wingate testing only - these two tests require individuals to provide maximal physical efforts and research suggests that participants should perform multiple familiarization trials before beginning experimental trials. At least 72 hours following visit 2, participants will return to the HPL for visit 3 to perform the baseline performance assessments. Following the baseline assessments, participants will be divided into two supplementation groups: creatine and placebo (maltodextrin). These groups will be randomized and matched based on body mass, hours of dance training per week, meat intake, and menstrual cycle phase. Participants will be asked to consume one of the two supplements daily for 42 consecutive days and maintain their regular dance training and eating behaviors. Participants will report to the HPL daily to receive their supplement between the hours of 12pm and 2pm. Following the last day of supplement consumption, participants will report to the HPL to perform post-testing assessments which will be identical to pre testing.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in fat mass from baseline after 42 days
+  - Change in lean mass from baseline after 42 days
+  - Change in visceral adipose tissue from baseline after 42 days
+  - Change in peak muscular strength from baseline after 42 days
+  - Change in peak vertical jump height from baseline after 42 days
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 24 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05109039

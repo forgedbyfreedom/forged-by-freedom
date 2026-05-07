@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06704711
+Title: Caffeine Mouth Rinse on Salivary Immunoglobulin A, Lactoferrin and A-Amylase Levels
+Official Title: The Effect of Incremental Exercise After Caffeine Mouth Rinse on Salivary Immunoglobulin A, Lactoferrin and A-Amylase Levels
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: caffeine exercise
+
+SUMMARY:
+The goal of this clinical trial is to investigate the effects of the mouth rinse form of caffeine (400 mg) on salivary lactoferrin, α-amylase and secretory immunoglobulin-a levels after incremental exercise in young amateur football players. The main questions it aims to answer are:
+
+* Caffeine in mouth rinse form increases salivary immunoglobulin a after incremental exercise
+* Caffeine in mouth rinse form increases salivary lactoferrin after incremental exercise
+* Caffeine in mouth rinse form increases salivary a-amylase after incremental exercise.
+
+This 3-session study will use a double-blind, randomized, placebo-controlled crossover experimental design. participants will complete three different treatments \[caffeine (CAF), control (C) and placebo (PLA)\] separated by at least 1 week. Baseline saliva samples will be collected while sitting in a chair and then:
+
+* CAF Group: They will rinse a solution containing a total of 400 mg caffeine (20 mL, 2% concentration) in the mouth for 20 seconds and try to continue the exercise against increasing resistance until exhaustion.
+* Control Group: Only rinse a solution containing a total of 400 caffeine (20 mL, 2% concentration) in the mouth for 20 seconds and receive no exercise treatment.
+* Placebo Group: They will rinse 20 mL of distilled water in the mouth for 20 s and try to continue the exercise against increasing resistance until exhaustion.
+
+Saliva samples will be collected at 6 different time points: 5 minutes before exercise (or caffeine mouth rinse) (T0-reference), immediately after caffeine mouth rinse (or immediately before exercise) (T1), 5 minutes/midway through exercise (T2), and immediately after exercise (T3), 60 minutes after the end of exercise (T4) and 120 minutes after the end of exercise (T5).All data will be statistically analyzed using SPSS 25.0 software (Chicago, IL, USA) and expressed as mean ± standard deviation. Shapiro-Wilk and Levene tests will be used to determine whether the data are normally distributed and whether the variance is homogeneous. Repeated measures ANOVA test will be used to compare group means. If there is a difference between the groups as a result of the analysis, post-hoc tests will be used to find out from which group this difference originates. In cases where the data are not normally distributed, nonparametric test methods will be used. The significance level of the tests will be accepted as p\<0.05
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Salivary antimicrobial proteins (Salivary a-amylase, lactoferrin and Ig-A)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine 300 MG
+  - COMBINATION_PRODUCT: Exercise
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 19 Years to 26 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06704711

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02178150
+Title: Effect of Magnesium Supplementation on Polycystic Ovary Syndrome
+Official Title: Effect of Magnesium Supplementation on Metabolic Profile and Sex Hormone Levels in Overweight Women With Polycystic Ovary Syndrome.
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: protein supplementation
+
+SUMMARY:
+This is a double-blind randomized clinical trial which will start at June 2014 and end on June 2015 in Isfahan city. Serum insulin level is considered as a key variable and the sample size calculated 70 persons (35 persons for control group and 35 persons for patient group). Patient group will receive magnesium supplement (250 milligram) and the other group will receive placebo which is similar to the magnesium tablets in color, odor and appearance both for 8 weeks. All subjects will complete 4 physical activity and 4 dietary records. Outcome measurements including sex hormone levels, metabolic and inflammatory profiles will be measured at the beginning and end of the study as well as anthropetric measurements.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Serum insulin level
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Magnesium Oxide
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02178150

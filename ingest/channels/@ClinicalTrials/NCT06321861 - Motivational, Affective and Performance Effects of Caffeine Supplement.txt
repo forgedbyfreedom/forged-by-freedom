@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06321861
+Title: Motivational, Affective and Performance Effects of Caffeine Supplementation
+Official Title: The Effects of Caffeine Supplementation on Motivation, Affect and Performance in Physical Exercise Tests: An Intervention Study
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: strength training
+
+SUMMARY:
+The main objective of the study is to evaluate the influence of caffeine intake on participants' energetic arousal, affect, motivation to achieve a training goal, satisfaction with training, and the sense of agency during training. Consequently, participants will engage in three sessions: caffeine, placebo, and no substance (in counterbalanced order). During each session, their affective and motivational states will be assessed, along with the performance of a standardized physical exercise test. The investigators hypothesize that participants who consume caffeine (caffeine condition) will exhibit higher levels of energy and motivation compared to the other two groups. Additionally, they are expected to experience greater optimism and expectancy regarding their training goals and achieve better results in the physical exercise test.
+
+A secondary aim of the study is to examine the impact of genetic variability on motivational and affective states of participants, as well as their performance in the physical exercise test after caffeine. The investigators will assess the CYP1A2 (-163C \> A, rs762551; characterized such as "fast" (AA genotype) and "slow" caffeine metabolizers (C-carriers)) and ADORA2A (1976T \> C; rs5751876; characterized by "high" (TT genotype) or "low" sensitivity to caffeine (C-carriers)).
+
+DETAILED DESCRIPTION:
+Before participating in the study, participants will answer questions regarding their consumption of caffeinated beverages and the frequency of their workouts. They will also complete the Extreme Personality Scale measuring the tendency to pursue goals single-mindedly. Subsequently, they will be qualified for the study based on the questionnaire results and a brief interview.
+
+The study will involve the manipulation of energization through the administration of caffeine. Participants will take part in a randomized, crossover, double-blind study, where they will perform three identical training sessions after consuming: a) caffeine at a dose of 3 mg/kg of body weight; b) a placebo; and c) under control conditions (i.e., without substance administration). Capsule consumption will occur 60 minutes before the start of the training. Caffeine and placebo capsules will not differ in size, shape, color, and taste.
+
+As the effectiveness of caffeine use depends on the CYP1A2 (rs762551) and ADORA2 (rs5751876) gene polymorphisms, the study will also genotype these genes. The first gene is responsible for the rate of caffeine metabolism, determining whether people metabolize caffeine "fast" or "slow." The ADORA2A gene, encoding the adenosine A2A receptor, influences how "sensitive" people are to caffeine. DNA isolates obtained from oral epithelial cells collected from participants by qualified medical personnel will constitute the research material. Oral epithelial swabs will be collected directly from the participants into sterile tubes.
+
+Before and after substance intake (and additionally after the exercise test) participants will assess their arousal using the University of Wales Institute of Science and Technology Mood Adjective Checklist. Additionally, after substance intake and before exercise, participants will answer questions about motivation, affect and expectancy regarding training. Subsequently, participants will undergo training, taking the form of a supervised standardized exercise test. After exercise, participants will assess their satisfaction and feelings after completing the training.
+
+PRIMARY OUTCOMES:
+  - Energetic arousal pre-test
+  - Energetic arousal post-test
+  - Optimism
+  - Motivation
+  - Determination
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Placebo
+  - OTHER: No substance
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06321861

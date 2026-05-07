@@ -1,0 +1,69 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02443077
+Title: Ibrutinib Before and After Stem Cell Transplant in Treating Patients With Relapsed or Refractory Diffuse Large B-cell Lymphoma
+Official Title: A Randomized Double-Blind Phase III Study of Ibrutinib During and Following Autologous Stem Cell Transplantation Versus Placebo in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma of the Activated B-Cell Subtype
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 94
+Topic: beta-alanine
+
+SUMMARY:
+This randomized phase III trial studies ibrutinib to see how well it works compared to placebo when given before and after stem cell transplant in treating patients with diffuse large B-cell lymphoma that has returned after a period of improvement (relapsed) or does not respond to treatment (refractory). Before transplant, stem cells are taken from patients and stored. Patients then receive high doses of chemotherapy to kill cancer cells and make room for healthy cells. After treatment, the stem cells are then returned to the patient to replace the blood-forming cells that were destroyed by the chemotherapy. Ibrutinib is a drug that may stop the growth of cancer cells by blocking a protein that is needed for cell growth. It is not yet known whether adding ibrutinib to chemotherapy before and after stem cell transplant may help the transplant work better in patients with relapsed or refractory diffuse large B-cell lymphoma.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To evaluate the ability of ibrutinib to improve 24-month progression free survival (PFS) compared to placebo in patients with non-germinal center B-cell-like (GCB) diffuse large B-cell lymphoma (DLBCL) as determined by immunohistochemistry (IHC).
+
+SECONDARY OBJECTIVES:
+
+I. To evaluate the ability of ibrutinib to improve overall survival (OS) compared to placebo.
+
+II. To evaluate the ability of ibrutinib to improve progression free survival (PFS) compared to placebo.
+
+III. To evaluate the ability of ibrutinib to improve post-transplant response rates compared to placebo.
+
+IV. To evaluate time to hematopoietic recovery in the two arms. V. To evaluate the safety and tolerability of ibrutinib compared to placebo. VI. To evaluate the incidence of secondary malignancies in the two arms. VII. To evaluate immune reconstitution in the two arms.
+
+CORRELATIVE SCIENCE OBJECTIVES:
+
+I. To assess whether pre-autologous hematopoietic stem cell transplantation (AutoHCT) positive fludeoxyglucose F-18 (FDG)-positron emission tomography (PET) is associated with inferior 24-month PFS as well as PFS and OS.
+
+II. To assess whether pre-AutoHCT FDG-PET results are differentially associated with 24-month PFS, PFS and OS in the ibrutinib versus placebo arms.
+
+III. To evaluate the application of the Lugano criteria and change in quantitative measurements between pre-AutoHCT and post AutoHCT (e.g. delta standard uptake variable \[SUV\], %SUV decline and %metabolic tumor volume \[MTV\] decline, and other available applicable quantitative measurements) to assess the association between changes in these variables and outcomes, such as PFS and OS.
+
+IV. To assess whether the GSTT1 null polymorphism is correlated with pulmonary toxicity after BCNU (carmustine)-containing conditioning regimens as part of autologous stem cell transplantation.
+
+V. To assess whether other polymorphisms in the BCNU metabolism pathway or BCNU damage repair pathway(s) are associated with pulmonary toxicity after BCNU-containing conditioning regimens as part of autologous stem cell transplantation.
+
+VI. To evaluate whether any of the proposed deoxyribonucleic acid (DNA) polymorphisms are associated with other toxicities.
+
+VII. To assess whether DLBCL subtype based on the lymphoma subtyping test (LST) is associated with 24-month PFS, PFS, and OS with ibrutinib compared to placebo in patients treated on this protocol.
+
+VIII. To assess whether activating mutations in the BCR pathway are associated with response to ibrutinib and with clinical outcomes in patients treated on this protocol.
+
+IX. To assess whether there are any phenotypic associations with IHC markers (particularly MYC protein expression level) and presence of these mutations.
+
+X. To assess whether BCL2, MYC, and Ki67 expression by IHC affect clinical outcomes in patients treated on this protocol.
+
+XI. To assess whether translocations in MYC with or without BCL2 and BC6 have poor outcomes in patients treated on this protoc
+
+PRIMARY OUTCOMES:
+  - 24-month Progression-free Survival (PFS), Defined as the Proportion of Patients Who Are Alive and Progression-free 2 Years From Randomization
+
+INTERVENTIONS:
+  - PROCEDURE: Autologous Bone Marrow Transplantation
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Carmustine
+  - DRUG: Cyclophosphamide
+  - DRUG: Cytarabine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02443077

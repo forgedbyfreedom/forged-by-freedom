@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02015611
+Title: Vitamin D Supplementation and Muscle Function in Older Adults
+Official Title: Trial of Vitamin D Supplementation and Neuromuscular Function in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 136
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of this study is to see if vitamin D supplementation improves muscle function in older adults.
+
+DETAILED DESCRIPTION:
+This study is a 12-month, double-blind randomized placebo controlled trial in older (65-89 yrs) men and women with initial 25(OH)D concentrations of 18-\<30 ng/mL to determine the effect of increasing 25(OH)D concentrations to ≥30 ng/mL through vitamin D3 supplementation on 1) change in neuromuscular functions that are established risk-factors for falls in older adults; and 2) changes in the underlying physiological mechanisms over 4 months in a subset of randomly selected participants. Participants will be randomized to 2000 IU/d of vitamin D3 or placebo. Lower extremity muscle strength and power, physical performance, and postural sway will be assessed at baseline, 4 months and 12 months and falls assessed monthly. Muscle biopsies of the vastus lateralis will be taken at baseline and 4 months to assess muscle fiber type, contractility, and denervation, and number and differentiation stage of satellite cells.
+
+PRIMARY OUTCOMES:
+  - Change in Lower Extremity Muscle Power Over 12 Months
+  - Change in Percentage of Type II (Fast-twitch) Muscle Fibers Over 4 Months
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 89 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02015611

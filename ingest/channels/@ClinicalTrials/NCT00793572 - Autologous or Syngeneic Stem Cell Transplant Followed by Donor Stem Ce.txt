@@ -1,0 +1,60 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00793572
+Title: Autologous or Syngeneic Stem Cell Transplant Followed by Donor Stem Cell Transplant and Bortezomib in Treating Patients With Newly Diagnosed High-Risk, Relapsed, or Refractory Multiple Myeloma
+Official Title: Tandem Autologous HCT/Nonmyeloablative Allogeneic HCT From HLA-Matched Related and Unrelated Donors Followed by Bortezomib maintenance Therapy for Patients With High-Risk Multiple Myeloma
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: beta-alanine
+
+SUMMARY:
+This phase II trial studies the side-effects and anti-cancer effects of giving an autologous or syngeneic stem cell transplant followed by an allogeneic donor stem cell transplant and bortezomib. Patients treated on this trial have newly diagnosed high-risk, relapsed, or refractory multiple myeloma (MM). Giving chemotherapy before an autologous stem cell transplant slows or stops the growth of cancer cells by preventing them from dividing or killing them. Stem cells that were harvested earlier from the patient's blood and frozen are then returned to the patient to replace the blood-forming cells that were destroyed by chemotherapy. Giving chemotherapy and total-body irradiation before an allogeneic donor stem cell transplant also prevents the patient's immune system from rejecting the donor's stem cells. Undergoing an autologous or syngeneic stem cell transplantation followed by an allogeneic donor stem cell transplant and bortezomib may be overall more effective in killing cancer cells.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Progression-free survival (PFS) at 2 years after the autograft (=\< 50% in historic controls).
+
+SECONDARY OBJECTIVES:
+
+I. Overall survival (OS) at 2 years after the autograft.
+
+II. Non-relapse mortality (NRM) at 200 days and 1 year after allograft.
+
+III. Incidence of grades II-IV acute graft-versus-host-disease (GVHD) and chronic extensive GVHD.
+
+IV. Safety of bortezomib maintenance therapy after stem cell transplantation.
+
+OUTLINE:
+
+PERIPHERAL BLOOD STEM CELL (PBSC) MOBILIZATION: Patients undergo PBSC mobilization and collection using the preferred regimens at the participating institution.
+
+CONDITIONING CHEMOTHERAPY AND AUTOLOGOUS OR SYNGENEIC HEMATOPOIETIC STEM CELL TRANSPLANTATION (HSCT): Patients receive high-dose melphalan intravenously (IV) on day -2 followed by an autologous or syngeneic HSCT on day 0.
+
+NON-MYELOABLATIVE ALLOGENEIC HSCT: Beginning 40-180 days after autologous HSCT, patients receive 1 of the following regimens:
+
+1. HLA-IDENTICAL RELATED DONOR: Patients receive cyclosporine IV or orally (PO) twice daily (BID) starting on days -3 to 56, and taper until day 180. Patients then undergo total-body irradiation (TBI) and non-myeloablative allogeneic HSCT on day 0. Four to six hours after completion of allogeneic HSCT, patients receive mycophenolate mofetil (MMF) PO BID on days 0-27.
+2. HLA-UNRELATED DONOR: Patients receive fludarabine phosphate IV on days -4 to -2. Patients also receive cyclosporine IV or PO BID starting on days -3 to 100 and taper until day 180. Patients then undergo TBI and non-myeloablative allogeneic HSCT on day 0. Four to six hours after completion of allogeneic HSCT, patients receive MMF PO thrice daily (TID) on days 0-27 and then BID on days 27-40 with taper of MMF on days 40-96.
+
+maintenance THERAPY: Beginning 60-120 days after allogeneic HSCT, patients receive bortezomib subcutaneously (SC) on days 1 and 4 of 14-day cycles for 9 months or for up to 18 cycles in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed up every 3 months for 1 year and then annually for up to 5 years.
+
+PRIMARY OUTCOMES:
+  - Number of Patients Surviving Progression-free
+
+INTERVENTIONS:
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Bortezomib
+  - DRUG: Cyclosporine
+  - DRUG: Cyclosporine
+  - DRUG: Fludarabine Phosphate
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00793572

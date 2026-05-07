@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07298564
+Title: Effect of Magnesium and Levocarnitine on Metabolic and Clinical Outcomes in Women With Polycystic Ovarian Syndrome (PCOS)
+Official Title: Assessment of the Effect of Magnesium and Levocarnitine Co-supplementation on Lipid Profile, Glycemic Control Indicators and Hirsutism in Women With Polycystic Ovarian Syndrome
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 84
+Topic: protein supplementation
+
+SUMMARY:
+Polycystic Ovary Syndrome (PCOS) is one of the most common endocrine disorders among women of reproductive age and is associated with metabolic abnormalities such as insulin resistance, dyslipidemia, and hormonal imbalance, which may lead to infertility and hirsutism. Despite the availability of several pharmacological treatments, many therapies fail to effectively address the underlying metabolic and endocrine dysfunctions of PCOS. Magnesium and L-carnitine are two essential nutrients that may play a synergistic role in improving insulin sensitivity, glucose metabolism, and lipid profile, as well as reducing oxidative stress and androgen production in women with PCOS. This randomized, triple-blind, placebo-controlled clinical trial aims to evaluate the effects of co-supplementation with magnesium and L-carnitine on glycemic control indices, lipid profile, and hirsutism in women with PCOS. A total of 84 eligible women aged 19-65 years diagnosed with PCOS according to the Rotterdam criteria will be recruited from Shohada Tajrish Hospital, Tehran, Iran. Participants will be randomly assigned to one of three groups: (1) magnesium supplementation (500 mg/day, in two 250 mg doses) plus L-carnitine placebo, (2) L-carnitine supplementation (1000 mg/day) plus magnesium (500 mg/day), or (3) placebo control group. The intervention period will last 12 weeks. Physical activity information will be collected using short form of International Physical Activity Questionnaire (IPAQ) and demographic information through a general information questionnaire. In order to evaluate dietary intake of patients in terms of energy(kcal/(day), carbohydrate(gr/day), protein(gr/day), fat intake(gr/day), saturated fatty acids (SFA) (gr/day), monounsaturated fatty acids (MUFA) (gr/day), polyunsaturated fatty acids (PUFA)(gr/day), Vitamin E (mg/day), Vitamin C (mg/day), Beta-carotene (mg/day) and Vitamin A (mg/day), cupper intake (mg/day), selenium intake (mg/day), and zink intake (mg/day), 24-hr recalls will be completed by interviewing the patient for 3 days (two normal days and a weekend day). Weight will be measured with the minimum dress and without shoes by using a digital balance scale of 100 grams and height will be measured without shoes by meters mounted to the wall with an accuracy of 0.5 centimeters. Then the body mass index will be calculated by dividing the weight (kg) by the square of the height (m), waist circumference will be measured in the narrowest area between the lowest lumbar spine and the iliac bone (cm), systolic and diastolic blood pressure will be measured after 15 minutes of rest, twice using the mercuric barometric measure and the mean will be reported as individual blood pressure. The blood sample will be taken after 12 hours of overnight fasting in three groups for measuring Fasting Blood Sugar (FBS) (mg/dL), lipid profile (mg/dL), Hemoglobin A1c (HbA1c) (percentage), serum insulin concentration (µIU/ml) and insulin resistance. insulin resistance will be calculated using the Homeostatic Model Assessment of insulin Resistance (HOMA-IR) formula, and hirsutism score (using the modified Ferriman-Gallwey method) will be assessed at baseline and post-intervention. At the end of the study, counting the remaining capsules, the patient's compliance rate will be evaluated, and patients who have consumed less than 90% of their capsules will be excluded from the analysis.
+
+DETAILED DESCRIPTION:
+This is a randomized, triple-blind, parallel clinical trial evaluates the effects of co-supplementation with Magnesium and Levocarnitine on metabolic and hormonal outcomes in women with Polycystic Ovary Syndrome (PCOS). Patients are randomly assigned into three groups and received magnesium supplementation (500 mg/day, in two 250 mg doses), L-carnitine supplementation (1000 mg/day), and placebo for 12 weeks. Then the body mass index, waist circumference, systolic and diastolic blood pressure, Fasting Blood Sugar (FBS), lipid profile, Hemoglobin A1c (HbA1c), serum insulin concentration and insulin resistance are measured; All assessments will be performed at baseline and at the end of the study.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline of FBS
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Magnesium 500 mg
+  - DIETARY_SUPPLEMENT: Levocarnitine 1000 mg
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Magnesium 500 mg
+  - DIETARY_SUPPLEMENT: Placebo Levocarnitine
+
+ELIGIBILITY:
+Age: 19 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07298564

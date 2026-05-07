@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00870077
+Title: A Pilot Study on Whey Protein Supplementation in Non Alcoholic Fatty Liver Disease
+Official Title: Effect of a Whey Protein Supplementation on Intrahepatic Lipids in Obese Patients With Non-alcoholic Fatty Liver Disease
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: protein supplementation
+
+SUMMARY:
+An increase in dietary protein intake has been shown to blunt the increase in intrahepatic fat induced by high fat feeding in healthy individuals. The purpose of this study is to determine if a protein supplementation decreases intrahepatic fat in obese patients with non-alcoholic fatty liver disease.
+
+DETAILED DESCRIPTION:
+12 obese patients will be be treated with a dietary whey protein supplementation over 4 weeks. Their intrahepatic fat content, glucose tolerance, and body weight will be evaluated before and after 4 weeks of supplementation.
+
+PRIMARY OUTCOMES:
+  - intrahepatic fat
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: ProWHEY 94 CFM, SponserR
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00870077

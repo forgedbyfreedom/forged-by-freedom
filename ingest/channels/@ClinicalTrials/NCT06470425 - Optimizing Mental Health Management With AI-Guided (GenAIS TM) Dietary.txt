@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06470425
+Title: Optimizing Mental Health Management With AI-Guided (GenAIS TM) Dietary Supplementation
+Official Title: Optimizing Mental Health Management With AI-Guided (GenAIS TM) Dietary Supplementation: A Randomized Controlled Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: protein supplementation
+
+SUMMARY:
+The study "Optimizing Mental Health Management with AI-Guided (GenAIS TM) Dietary Supplementation" aimed to compare the effectiveness of AI-guided dietary supplement (DS) prescriptions versus standard physician-guided prescriptions in managing mental health disorders, specifically depression and anxiety. This 6-month randomized controlled trial included 160 participants diagnosed with major depressive disorder or generalized anxiety disorder. Participants were divided into two groups: one received DS based on physician judgment, and the other based on GenAIS AI system analysis. Primary outcomes focused on changes in mental health scores, while secondary outcomes included quality of life, metabolic markers, and DS adherence. Data collection involved genetic, metabolic, and clinical profiling, with ethical considerations ensuring participant confidentiality and informed consent.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The primary endpoint is the percent change in mental health scores (Hamilton Depression Rating Scale, Generalized Anxiety Disorder 7-item scale) for the AI-Guided group compared with the Control group.
+
+INTERVENTIONS:
+  - OTHER: Standard therapy group
+  - OTHER: AI-Guided group
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06470425

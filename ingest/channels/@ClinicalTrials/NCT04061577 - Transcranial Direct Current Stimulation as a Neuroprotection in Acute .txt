@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04061577
+Title: Transcranial Direct Current Stimulation as a Neuroprotection in Acute Stroke Before and After Thrombectomy
+Official Title: Transcranial Electrical Stimulation in Stroke EaRly After Onset Clinical Trial_ bridging and Adjunctive Neuroprotection
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1
+Topic: physical activity intervention
+
+SUMMARY:
+This proposal is a prospective, single-center, dose-escalation safety, tolerability, feasibility and potential efficacy study of transcranial direct current stimulation (tDCS) in acute stroke patients with substantial salvageable penumbra due to a large vessel occlusion before and after endovascular therapy.
+
+DETAILED DESCRIPTION:
+This is a single-center, sham-controlled, dose-escalation study where cathodal tDCS is delivered to threatened but not yet irreversibly damaged (penumbral) tissue in patients with large vessel occlusion who are undergoing recanalization procedure. Patients will be randomized in a 3:1 design, to cathodal versus sham (control) stimulation, at each six designed dose tiers. The dose tiers will be increasing in both intensity and duration of the stimulation. All patients will be receiving the first dose (stimulation cycle) after the recanalization procedure and patients at dose tiers 5-6 will also be receiving stimulation cycles before the recanalization procedure begins.
+
+The occurrence of symptomatic intracranial hemorrhage will determine the pace of the escalation through the dose tiers.
+
+PRIMARY OUTCOMES:
+  - Primary Safety Outcome- Number of Participants With Symptomatic Intracranial Hemorrhage (SICH)
+  - Primary Tolerability Outcome-Number of Participants Completing the Protocol-assigned Stimulation
+  - Primary Feasibility Outcome- Assessing the Speed of Stimulation Implementation From Randomization.
+
+INTERVENTIONS:
+  - DEVICE: Transcranial Direct Current Stimulation (tDCS)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04061577

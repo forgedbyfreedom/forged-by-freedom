@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07080762
+Title: Photodynamic Therapy in Non-surgical Periodontal Therapy
+Official Title: Microbiological and Clinical Efficacy of Photodynamic Therapy in Combination With Non-surgical Periodontal Therapy: a Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: physical activity intervention
+
+SUMMARY:
+Non-surgical periodontal therapy is a widely adopted procedure for the treatment of periodontitis, particularly in its moderate to severe stages. The approach involves the mechanical and manual debridement of subgingival biofilm and calculus through the use of ultrasonic scalers and hand curettes. This method aims to disrupt the pathogenic bacterial load within periodontal pockets and promote clinical attachment gain while reducing inflammation. However, the mechanical removal of biofilm alone may not always ensure complete bacterial eradication, especially in deep or anatomically complex sites.
+
+To enhance bacterial disinfection and optimize clinical outcomes, adjunctive use of antimicrobial photodynamic therapy (aPDT) has been introduced. aPDT is a non-invasive technique that involves the activation of a photosensitizing agent by light at a specific wavelength, leading to the production of reactive oxygen species capable of selectively damaging microbial cells. This reaction occurs without affecting surrounding healthy tissues and has been shown to be effective against a broad spectrum of periodontal pathogens.
+
+The synergistic effect of combining conventional non-surgical periodontal therapy with aPDT allows for a more comprehensive decontamination of periodontal pockets. In particular, aPDT contributes to the disruption of residual bacterial biofilm that may persist after mechanical instrumentation, thereby potentially improving both short- and long-term periodontal stability. In addition to its antimicrobial action, aPDT may exert a biostimulatory effect, enhancing tissue healing through increased local microcirculation and cellular activity.
+
+This study aims to evaluate the clinical efficacy of adjunctive antimicrobial photodynamic therapy following non-surgical periodontal treatment in patients with severe periodontitis. The protocol involves initial subgingival instrumentation using ultrasonic and manual tools, followed by the application of a photosensitizer and subsequent laser activation within the periodontal pockets. The hypothesis of this study is that the addition of aPDT provides superior bacterial reduction and improved clinical outcomes compared to mechanical therapy alone.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Probing Pocket Depth PPD Index
+  - Microbiological analysis
+
+INTERVENTIONS:
+  - DEVICE: antimicrobial photodynamic therapy (aPDT) after non-surgical therapy
+
+ELIGIBILITY:
+Age: 18 Years to 84 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07080762

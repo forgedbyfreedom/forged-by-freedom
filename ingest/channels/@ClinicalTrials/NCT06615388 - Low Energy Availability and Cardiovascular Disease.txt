@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06615388
+Title: Low Energy Availability and Cardiovascular Disease
+Official Title: Low Energy Availability and Cardiovascular Disease
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 126
+Topic: athletic performance
+
+SUMMARY:
+Low energy availability (LEA) signifies a condition where the body lacks sufficient energy to support essential physiological functions crucial for maintaining optimal health (1). This energy insufficiency can be exacerbated by the demands of sports and exercise, resulting in negative impacts on various physiological, psychological, and sports performance (11, 8, 2). While LEA is commonly associated with cardiovascular abnormalities, such as early atherosclerosis, endothelial dysfunction, and lower blood pressure, the existing body of research faces limitations, including small sample sizes and primarily exploratory approaches (2). Additionally, despite a growing body of evidence suggesting a strong link between DNA methylation (an epigenetic modification influencing gene expression by tagging specific parts of the DNA code) and cardiovascular disease (9, 6), there has been no prior investigation exploring the interplay between DNA methylation, cardiovascular disease, and LEA. To better understand LEA and its effects on cardiovascular health, it is imperative to address these limitations through further research. Utilising more comprehensive markers of cardiovascular disease and expanding the scope of investigations will contribute to a great understanding of LEA and its implications on cardiovascular health (10).
+
+DETAILED DESCRIPTION:
+The team plans to include 126 trained to elite female athletes from local sports clubs near the Liverpool area to participate in the study.
+
+Following ethical approval and informed consent from the participants, data will be collected during a one-time visit at Liverpool Hope University in one of the laboratories in the Health Science building.
+
+Following a single laboratory visit, the following will be collected:
+
+1. Demographic data such as age, sports participation (training, competition duration, frequency etc.) and competitive level.
+2. Anthropometric data including height, body mass and DEXA scans.
+3. Genetic material (DNA) in cells collected from a buccal cheek smear swab test. Methylation analysis (study of cell function) on the buccal cells will be performed.
+4. Venous blood samples to determine hormonal profile. For example, measuring for Cholesterol, Lipids, C-reactive protein (CRP), full blood count , BNP (Natriuretic Peptide), Troponin, Oestrogen, GH (growth hormone), Ferritin, Iron studies, B12 and Folate, urea and electrolytes, Liver Function Tests, Calcium, Magnesium, Luteinising hormone, follicle stimulating hormone and sex hormone binding globulin, Prolactin, Cortisol, Progesterone, Testosterone, insulin, insulin-like Growth Factor, Thyroid-stimulating hormone, Thyroxine, Triiodothyronine, Creatine kinase and Vitamin D levels.
+5. Cardiovascular assessment to test heart and blood vessel health. For example, blood pressure, the stiffness of their arteries, and the thickness of blood vessel walls. Using assessments such as pulse wave velocity (PWV), Carotid Intima-Media Thickness Test (CIMT), Flow-mediated Dilation (FMD) and electrocardiogram (ECG). Pearson r correlation will be performed between Cardiovascular health and Low energy availability variables.
+6. Nutritional assessment via 5-day photographic food diaries, weighed food records along with a short interview to ensure accurate readings.
+7. Physical activity assessment with accelerometers for seven days to determine physical activity levels. The accelerometers will be dropped off and picked up after one week by the lead researcher, Mr Liam Pope.
+8. Eating behaviour and mood tests using the Eating Disorder Examination Questionnaire (EDE-Q) and the Clinical Impairment Assessment (CIA) (12) to assess their eating behaviours.
+9. Low energy availability test via the LEAF-Q (5) and calculation of LEA to check if participants are getting enough energy
+10. A questionnaire to assess menstrual cycle health, status, and hormonal contraception use
+11. Energy expenditure and resting metabolic rate assessment via indirect calorimetry to measure how much energy their bodies use and how much they burn at rest.
+
+In addition, metabolomic analysis, lipoprotein subclass analysis and methylation analysis on blood cells will be performed.
+
+Machine learning models will also be used to detect novel patterns of lipids/metabolites in the data. Multivariate analysis will be performed before the machi
+
+PRIMARY OUTCOMES:
+  - The primary outcome is to measure the cardiovascular risk factors associated with LEA in trained to elite female athletes.
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06615388

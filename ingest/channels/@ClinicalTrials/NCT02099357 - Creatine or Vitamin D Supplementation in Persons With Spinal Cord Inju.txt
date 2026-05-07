@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02099357
+Title: Creatine or Vitamin D Supplementation in Persons With Spinal Cord Injury Undergoing Resistance Training
+Official Title: Creatine or Vitamin D Supplementation in Persons With Spinal Cord Injury Undergoing Resistance Training
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: resistance training
+
+SUMMARY:
+The purpose of this study is to determine the effects of creatine monohydrate or vitamin D supplementation on strength gains following a traditional resistance training program for adults with spinal cord injury.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body Mass Index
+  - Sum of 4 skinfold
+  - Corrected Arm Muscle Area
+  - Seated Medicinal Ball Throw
+  - Handgrip Strength with Hand Dynamometer
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Vitamin D
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02099357

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05826379
+Title: Daily Goal Setting to Increase Everyday Physical Activity and Promote Cognitive Health in Midlife
+Official Title: Mechanisms of Adherence to Light Intensity Physical Activity to Prevent Alzheimer's Disease and Related Dementias (ADRD)
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: exercise intervention obesity
+
+SUMMARY:
+The purpose of this study is to determine whether interaction with an adaptive Fitbit-based goal setting application can increase levels of everyday light intensity physical activity in middle-aged adults.
+
+DETAILED DESCRIPTION:
+The study is designed to examine the efficacy of a Fitbit-based, goal setting, mHealth intervention to increase light intensity physical activity. The study design is a 2-arm randomized controlled trial. Both groups will receive the underlying goal-setting intervention (adaptive daily step goals). The study involves 3 phases: a run-in ("calibration") phase, the intervention ("training") phase, and follow-up (1- and 12-months post-intervention).
+
+To support goal maintenance our team has developed a Fitbit application designed to operate on the Fitbit Versa series watch as a 'clockface'. The application will first calibrate participants' average level of physical activity by recording daily step counts for a period of 14 days (calibration phase). After this period (and following a health education session) the application will begin delivering the underlying intervention to both treatment and control groups for a period of 1 month. The intervention is composed of daily step goals presented via the Fitbit clockface. Each day the application will suggest a daily step goal. The algorithm used to make these suggestions relies on the participant's own activity during the calibration period and is updated each day in study, ensuring all proposed step goals are within their existing repertoire. Follow-up assessments will be completed at 1- and 12-monts post-intervention.
+
+Outcomes and moderators will be measured via activity monitors (the Fitbit application and activPals), surveys, and ecological momentary assessments (self-ratings and performance-based ambulatory cognitive assessments) conducted via the Mobile Monitoring of Cognitive Change ("M2C2") platform.
+
+Some of the details of the intervention, algorithm, experimental manipulations, and outcomes have been omitted to preserve the scientific integrity of the study. These details will be added after the study is closed.
+
+PRIMARY OUTCOMES:
+  - Short-term adherence
+  - Long-term adherence
+
+INTERVENTIONS:
+  - BEHAVIORAL: Adaptive Daily Goal Setting
+  - BEHAVIORAL: Interim Goal Prompt
+
+ELIGIBILITY:
+Age: 30 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05826379

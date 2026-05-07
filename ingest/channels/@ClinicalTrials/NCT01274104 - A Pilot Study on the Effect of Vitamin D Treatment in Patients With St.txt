@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01274104
+Title: A Pilot Study on the Effect of Vitamin D Treatment in Patients With Statin-Associated Myalgia
+Official Title: A Pilot Study on the Effect of Vitamin D Treatment in Patients With Statin-Associated Myalgia
+Status: WITHDRAWN
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of this study is to measure the effect vitamin D has in alleviating muscle pain or aches that may be caused by taking certain medications for treating high cholesterol.
+
+DETAILED DESCRIPTION:
+Participation in this study will consist of at least two study visits, expected to occur over a period of up to four weeks. Study-related medication will be provided at no cost to participants. Participants will receive either Vitamin D or placebo (sugar pill).
+
+PRIMARY OUTCOMES:
+  - Brief Pain Inventory value
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D3
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 88 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01274104

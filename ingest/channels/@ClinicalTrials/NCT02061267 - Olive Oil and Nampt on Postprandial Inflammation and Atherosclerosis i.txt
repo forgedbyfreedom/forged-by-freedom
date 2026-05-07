@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02061267
+Title: Olive Oil and Nampt on Postprandial Inflammation and Atherosclerosis in the Setting of Metabolic Syndrome
+Official Title: OLIVE OIL ON NAMPT AND ITS RELATION WITH POSTPRANDIAL INFLAMMATION AND ATHEROSCLEROSIS IN THE SETTING OF METABOLIC SYNDROME. The OLNAMS Project
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: omega 3 exercise
+
+SUMMARY:
+The metabolic syndrome may be defined as the constellation of cardiovascular disease (CVD) risk factors that comprises obesity, type 2 diabetes, dyslipidemia, and hypertension. Lack of habitual physical activity and certain dietary patterns, including high-saturated fatty acids (SFA) intake, contribute to increase the risk of CVD, whereas the greatest risk reduction is related with monounsaturated fatty acids (MUFA), mainly from olive oil, and omega-3 polyunsaturated fatty acids (PUFA). Vitamin B3, as a major substrate for nicotinamide phosphoribosyltransferase (NAMPT), has also emerged as a nutritional intervention strategy for prevention of CVD.
+
+NAMPT has been shown to exert activities of central importance to cellular energetics and innate immunity. Within the cell, NAMPT is the rate-limiting step in a salvage pathway of nicotinamide adenine dinucleotide (NAD+) biosynthesis. By virtue of this role, it can regulate cellular levels of NAD+ and thereby NAD+-consuming enzymes. NAMPT is also released by a variety of cells, and elevated levels can be found in the systemic circulation of subjects with a range of inflammatory disorders.
+
+Recent evidences suggest that, primarily due to its high MUFA content, olive oil is useful as an optimal fat for the modulation of CVD risk factors in the postprandial state. In addition, NAMPT has been shown to correlate with triglycerides in the fasting plasma, and a potential regulatory role for fatty acids on NAMPT expression has been proposed.
+
+The global aim of the project is to assess whether olive oil (MUFA), compared to other dietary fatty acids (SFA and omega-3 PUFA) and in association with vitamin B3 could have benefits on NAMPT-related inflammation and atherosclerosis. We hope to provide important novel insights on the relationship among dietary fatty acids, NAD+ metabolism, and metabolic syndrome. This aim is expected to be achieved in one principal objective:
+
+To elucidate the influence of olive oil (MUFA), butter (SFA) or fish oil (omega-3 PUFA) meals supplemented by vitamin B3 on postprandial NAMPT modulation and its involvement on leukocyte inflammatory response in subjects with metabolic syndrome.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Evolution of Metabolic parameters in postprandial state
+  - Evolution of Inflammatory markers in postprandial state
+  - Pharmacokinetic of Niacin and its metabolites
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Niacin
+  - DIETARY_SUPPLEMENT: Saturated meal
+  - DIETARY_SUPPLEMENT: Monounsaturated meal
+  - DIETARY_SUPPLEMENT: Polyunsaturated meal
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02061267

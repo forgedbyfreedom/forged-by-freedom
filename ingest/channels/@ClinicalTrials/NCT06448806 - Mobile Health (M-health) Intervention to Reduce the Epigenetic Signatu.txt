@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06448806
+Title: Mobile Health (M-health) Intervention to Reduce the Epigenetic Signature in Metabolic Syndrome (MetS)
+Official Title: Epigenetic Signature of Advance Glycation End Products (AGE) and Skin Autofluorescence As a Risk Predictor in Metabolically Healthy and Unhealthy Obese Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: exercise intervention obesity
+
+SUMMARY:
+The goal of this interventional study is to learn about the improvement in body composition effects of lifestyle intervention in subjects with metabolic syndrome. The main question it aims to answer is:
+
+Does life style intervention lower body fat% and gene methylation levels in subjects with metabolic syndrome? Participants will answer survey questions and get blood and body composition testing done at day 0, and 12 months. Keep a diary of their food and activity and the number of times they use mobile health application.
+
+DETAILED DESCRIPTION:
+This is same as above.
+
+PRIMARY OUTCOMES:
+  - Weight in kilograms, height in meter (will be combined to report BMI in kg/m^2)
+  - Advance glycation end product (U/mL) from serum
+  - Body fat percentage
+
+INTERVENTIONS:
+  - OTHER: mobile health lifestyle intervention
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06448806

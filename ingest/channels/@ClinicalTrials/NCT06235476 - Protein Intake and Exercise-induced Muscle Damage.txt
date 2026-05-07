@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06235476
+Title: Protein Intake and Exercise-induced Muscle Damage
+Official Title: Comparing the Effects of Three PROtein-enhancement Strategies on Exercise-induced Muscle Damage in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 199
+Topic: sarcopenia intervention
+
+SUMMARY:
+The goal of this clinical trial is to test the effect of different protein-enhancement strategies versus carbohydrate control on exercise-induced muscle damage in physically active older adults. The main question it aims to answer is:
+
+What is the effect of three different protein-enhancement strategies (whey protein (WP), mixed plant-based protein (MPP), and use of protein-rich food products (PFP) on exercise-induced muscle damage in older adults compared to isocaloric carbohydrate control?
+
+Participants will:
+
+* Use a protein-enhancement strategy (WP, MPP or PFP) or carbohydrate control for a total of 5 weeks;
+* Participate in a single walking bound (30/40/50 km) two weeks after the start of the study;
+* Participate in a consecutive walking bound (4 days of 30/40/50 km) in the last week of the study period;
+* Complete different questionnaires and give blood samples to test for muscle damage.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - serum creatine kinase (CK) levels
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: whey protein supplement
+  - DIETARY_SUPPLEMENT: mixed plant-based protein supplement
+  - OTHER: e-health application
+  - DIETARY_SUPPLEMENT: isocaloric carbohydrate control
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06235476

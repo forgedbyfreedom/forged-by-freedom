@@ -1,0 +1,65 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06873984
+Title: Compression Stockings for Lymphedema Prevention in Gynecologic Cancer Patients
+Official Title: Compression Stockings for Preventing Lower Limb Lymphedema in Women Treated for Gynecological Malignancies
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: weight loss exercise
+
+SUMMARY:
+The goal of this clinical trial was to evaluate whether compression stockings (23-32 mmHg) reduce the incidence of postoperative lymphedema and accompanying symptoms, as well as to assess the comfort of using compression in women undergoing treatment for gynecological malignancies up to one year after surgery.
+
+The main objectives were to determine:
+
+Whether compression stockings applied immediately after radical surgery, in combination with physical activity, reduce the risk of developing lymphedema.
+
+Whether the use of compression stockings affects the quality of life. Whether compression stockings influence specific physical complaints related to the lower limbs.
+
+Patients were assessed preoperatively and at 3, 6, and 12 months postoperatively. Limb circumferences were measured at predefined anatomical points to calculate limb volume changes over time. Additionally, subjective symptoms, quality of life, and adherence to compression therapy were evaluated.
+
+Researchers compared a group using compression stockings with a control group without compression to analyze potential benefits and complications.
+
+DETAILED DESCRIPTION:
+Background and Rationale Lymphedema is a frequent and debilitating complication following radical surgery for gynecological malignancies. It affects patients' quality of life, contributing to discomfort, impaired mobility, and an increased risk of infections. Despite the widespread use of compression therapy in managing lymphedema, there is limited evidence on its preventive role when applied immediately after surgery.
+
+This study investigates the effectiveness of compression stockings (23-32 mmHg) in reducing the incidence of postoperative lower limb lymphedema and associated symptoms in women undergoing treatment for gynecological cancers. Additionally, it evaluates the impact of compression on patients' quality of life and physical complaints up to one year postoperatively.
+
+A total of 75 eligible women consented to participate and were preoperatively randomized (simple randomization using a random number generator) into two groups:
+
+Compression Group (CG): Patients received individually fitted round-knit compression stockings (23-32 mmHg, RAL-GZG standard) and were instructed to wear them for approximately 9 hours per day.
+
+No Compression Group (NCG): Patients did not receive compression therapy.
+
+Descriptive statistics were used to summarize the collected data, including mean (x̄), standard deviation (SD), median (Me), and percentage distributions.
+
+For sociodemographic and clinical data, comparisons between groups were performed using the chi-square test for categorical variables and the independent t-test for continuous variables.
+
+The effects of physiotherapeutic interventions were analyzed to determine statistically significant differences between groups. To assess the normality of data distribution, the Shapiro-Wilk test was applied.
+
+For quantitative variables related to limb volume and WAC (Water-Assisted Circumference), comparisons between two groups were conducted using the Mann-Whitney U test. Comparisons of quantitative variables across three or more groups were performed using the Kruskal-Wallis test, followed by Dunn's post-hoc test when significant differences were detected.
+
+Correlations between quantitative variables (e.g., limb volume and WAC) were assessed using Spearman's correlation coefficient.
+
+For repeated measurements of quantitative variables (e.g., limb volume and WAC at multiple time points), comparisons were conducted using the Friedman test, and when significant differences were found, Wilcoxon signed-rank tests with Bonferroni correction were used for post-hoc analysis.
+
+Qualitative variables were analyzed by calculating the number and percentage of occurrences for each category. Comparisons of categorical variables between groups were performed using the chi-square test (with Yates' correction for 2x2 tables) or Fisher's exact test for small expected frequencies.
+
+For comparisons of continuous variables across two time points, the Wilcoxon signed-rank test for paired samples was used.
+
+A significance level of p
+
+PRIMARY OUTCOMES:
+  - Change in Lower Limb Volume (%)
+
+INTERVENTIONS:
+  - OTHER: compression products
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06873984

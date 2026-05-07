@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01155791
+Title: Phase I Sodium Selenite in Combination With Docetaxel in Castration-resistant Prostate Cancer
+Official Title: A Phase I Study Evaluating the Efficacy and Safety of Sodium Selenite in Combination With Docetaxel in Castration-resistant Prostate Cancer
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 2
+Topic: growth hormone treatment
+
+SUMMARY:
+Selenium, in the form of inorganic Sodium Selenite, may be useful for treating existing prostate cancer. This idea is based on data from our laboratory showing that 1) prostate cancer cells are more sensitive to Selenium (Sodium Selenite)-induced apoptosis than normal prostate epithelial cells, 2) Selenite induces significant growth inhibition of well established prostate cancer tumors in mice at doses that have no detectable toxicity, and 3) Selenite disrupts AR signaling, and that the inhibition of AR expression and activity by Selenite occurs via a redox mechanism involving GSH, superoxide, and Sp1. Altogether, these findings suggest that Selenium may be useful in a variety of potential indications in the natural history of prostate cancer, including both hormone sensitive and castrate resistant prostate cancer, as a single agent, or in combination with radiation, chemotherapy or conventional hormone therapy. Selenite is a potential novel inhibitor of AR expression and function in prostate cancer.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - To determine the safety and tolerability of the combination sodium selenite and docetaxel after 4 cycles of combination therapy using the NCI Common Toxicity Criteria v3.0 grading system for adverse events
+  - To determine the maximum tolerated dose (MTD)
+
+INTERVENTIONS:
+  - DRUG: Docetaxel
+  - DRUG: Biosyn
+  - DRUG: Prednisone
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01155791

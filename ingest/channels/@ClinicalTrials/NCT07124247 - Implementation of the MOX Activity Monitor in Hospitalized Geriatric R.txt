@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07124247
+Title: Implementation of the MOX Activity Monitor in Hospitalized Geriatric Rehabilitation
+Official Title: Implementation of the MOX Activity Monitor in Hospitalized Geriatric Rehabilitation
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: recovery exercise
+
+SUMMARY:
+Staying active is essential for healthy aging, but hospitalized older adults in rehabilitation often move very little. This study explores how much physical activity these patients actually get and how it relates to their recovery. Using the MOX activity monitor-a device that accurately tracks walking, standing, and sedentary time-the study aims to better understand daily activity patterns during rehabilitation.
+
+Researchers will test the best way to use the MOX monitor, develop a standard protocol for its use, and integrate its data into patients' electronic health records. By comparing MOX activity data with standard measures of physical performance, the study will determine how useful activity monitoring is for tracking recovery in older patients. This could lead to improved care and more personalized rehabilitation plans in the future.
+
+DETAILED DESCRIPTION:
+Prolonged sitting is a growing public health concern. Adults now spend up to 85% of their day sedentary, and older adults are the most inactive group. Research shows that the negative health effects of prolonged sitting persist even in individuals who engage in regular physical activity. Excessive sedentary behavior is associated with loss of independence, cardiovascular issues, and reduced mental well-being. Recommendations from public health institutions suggest minimizing uninterrupted sitting to no longer than 30 minutes.
+
+In hospitalized geriatric patients, particularly during the acute phase of illness, physical activity often drops drastically. This sudden decline in movement can lead to rapid deconditioning, muscle loss, and reduced ability to perform basic daily activities. As a result, these patients face longer hospital stays and a higher risk of admission to long-term care facilities.
+
+Despite widespread recognition of the importance of daily activity for healthy aging, promoting and monitoring movement in the hospital environment remains a challenge. One key question remains: how active are geriatric rehabilitation patients during their hospital stay?
+
+A previous study (S64932) validated the MOX activity monitor as a reliable tool for measuring daily activity-including time spent walking, standing, and sitting-in hospitalized older adults. However, several important questions remain unanswered:
+
+What is the most effective and reliable way to use the MOX monitor in clinical practice?
+
+How do daily activity levels relate to functional recovery during rehabilitation?
+
+Can advanced parameters from the monitor, such as the number and intensity of sit-to-stand transitions or stair-climbing activity, offer additional insight into lower-limb function?
+
+This study aims to fill these gaps by developing a standardized protocol for implementing the MOX monitor in geriatric rehabilitation wards. It also aims to integrate activity monitor data into existing electronic health systems, including the Interprofessional Dossier (IPD) within the Clinical Work System (KWS). The reliability and usability of this integration will be assessed.
+
+Furthermore, the study will explore the validity of an open-source algorithm-previously validated in community-dwelling older adults-for detecting sit-to-stand transitions in hospitalized geriatric patients. By correlating MOX-derived activity data with established functional outcome measures, the study seeks to determine the clinical value of activity monitoring in rehabilitation settings.
+
+Ultimately, this research supports the functional integration of innovative activity monitoring tools into standard geriatric care, with the goal of improving patient outcomes through better understanding and promotion of physical activity during hospitalization.
+
+PRIMARY OUTCOMES:
+  - Total minutes of active behaviour (walking/ standing) during one day
+
+INTERVENTIONS:
+  - DEVICE: Activity registration for one week with an activity monitor (MOX1)
+
+ELIGIBILITY:
+Age: 70 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07124247

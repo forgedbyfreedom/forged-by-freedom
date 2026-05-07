@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07294339
+Title: A Randomized Controlled Trial of Acupuncture for the Management of Hot Flashes in Patients With Hormone Receptor-Positive Breast Cancer
+Official Title: 针刺治疗激素受体阳性乳腺癌患者潮热的随机对照试验研究，A Randomized Controlled Trial of Acupuncture for the Management of Hot Flashes in Patients With Hormone Receptor-Positive Breast Cancer
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: testosterone replacement
+
+SUMMARY:
+Hot flashes are among the most common and distressing adverse effects experienced by patients receiving endocrine therapy for hormone receptor-positive breast cancer. Hormone replacement therapy (HRT) and non-hormonal medications can alleviate symptoms but are limited by side effects and safety concerns, leading to poor adherence. Acupuncture, a traditional Chinese medical therapy involving percutaneous stimulation of specific acupoints, has shown potential to reduce the frequency and severity of hot flashes with minimal adverse events.
+
+This randomized, parallel-controlled clinical trial aims to evaluate the efficacy and safety of acupuncture in managing hot flashes in postoperative breast cancer patients undergoing endocrine therapy. Sixty eligible patients with stage I-III hormone receptor-positive breast cancer will be randomly assigned in a 1:1 ratio to receive either true acupuncture or sham acupuncture, three times per week for eight weeks, followed by a 16-week follow-up period without acupuncture. Functional magnetic resonance imaging (fMRI) will be employed to explore neural mechanisms underlying acupuncture's effects, alongside assessments of hot flash frequency, quality of life (FACT-B+ES), sleep quality (PSQI), and serum biomarkers related to endocrine and neuropeptide regulation. The results are expected to provide evidence for the efficacy and central mechanisms of acupuncture in managing hot flashes in breast cancer patients.
+
+DETAILED DESCRIPTION:
+Background Breast cancer is the most prevalent malignancy among women. Advances in multimodal therapy-including surgery, chemotherapy, radiotherapy, endocrine therapy, and targeted therapy-have significantly improved prognosis and survival. However, endocrine therapy frequently induces vasomotor symptoms such as hot flashes, which severely impair quality of life.
+
+Although hormone replacement therapy (HRT) and non-hormonal pharmacologic agents (e.g., SSRIs, anticonvulsants) can alleviate hot flashes, their safety and tolerability remain major limitations. Therefore, there is an urgent clinical need for safe and effective complementary interventions. Acupuncture has been widely used for symptom management in cancer patients due to its convenience, affordability, and safety. Multiple randomized controlled trials (RCTs) have demonstrated its effectiveness in reducing hot flashes and improving quality of life, with few adverse effects.
+
+Functional magnetic resonance imaging (fMRI) studies further indicate that acupuncture can modulate brain regions related to thermoregulation and endocrine function. However, standardized clinical protocols and neuroimaging-based mechanistic studies for tumor-related hot flashes are still limited.
+
+Study Design
+
+This study adopts a single-center, randomized, parallel-controlled design. A total of 60 eligible patients will be randomly allocated (1:1) into two groups:
+
+Group A (Treatment group): Endocrine therapy + True acupuncture Group B (Control group): Endocrine therapy + Sham acupuncture Randomization will be conducted using SAS 9.4 software (SAS Institute, Cary, NC, USA) with a sealed-envelope method. Allocation will be concealed from researchers responsible for recruitment and treatment. The study duration includes 8 weeks of treatment and 16 weeks of follow-up.
+
+Participants Eligible participants are female patients aged 18-75 years with stage I-III hormone receptor-positive breast cancer, currently undergoing endocrine therapy (e.g., selective estrogen receptor modulators, aromatase inhibitors, CDK4/6 inhibitors, with or without ovarian suppression). Participants must have experienced hot flashes for at least 4 weeks, with ≥14 episodes per week and a mean Hot Flash Composite Score (HFCS) of 3-4.
+
+Other key inclusion criteria include ECOG performance status 0-1 and a life expectancy \>6 months.
+
+Exclusion criteria include evidence of metastasis, concurrent chemotherapy or radiotherapy, recent use of medications affecting hot flashes (SSRIs, anticonvulsants), unstable cardiac disease, seizure history, MRI contraindications, recent acupuncture for hot flashes, active infection, pregnancy/lactation, or psychiatric/neurological disorders.
+
+Interventions Group A (True Acupuncture) Acupoints: Sanyinjiao (SP6), Taixi (KI3), Taichong (LR3), Zusanli (ST36) Frequency: 3 sessions per week, for 8 consecutive weeks (24 sessions total) Procedure: Needles inserted to a depth of 0.5 cun, electrical stimulation at 2 Hz, even rei
+
+PRIMARY OUTCOMES:
+  - Cranial fMRI Imaging Evaluation and Data Analysis
+
+INTERVENTIONS:
+  - OTHER: True Acupuncture
+  - OTHER: Sham Acupuncture
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07294339

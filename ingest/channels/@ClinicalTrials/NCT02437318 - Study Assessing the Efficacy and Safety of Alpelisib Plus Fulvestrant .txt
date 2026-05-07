@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02437318
+Title: Study Assessing the Efficacy and Safety of Alpelisib Plus Fulvestrant in Men and Postmenopausal Women With Advanced Breast Cancer Which Progressed on or After Aromatase Inhibitor Treatment.
+Official Title: A Phase III Randomized Double-blind, Placebo Controlled Study of Alpelisib in Combination With Fulvestrant for Men and Postmenopausal Women With Hormone Receptor Positive, HER2-negative Advanced Breast Cancer Which Progressed on or After Aromatase Inhibitor Treatment
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 572
+Topic: growth hormone treatment
+
+SUMMARY:
+To determine whether treatment with alpelisib plus fulvestrant prolonged progression-free survival (PFS) compared to fulvestrant and placebo in men and postmenopausal women with hormone receptor positive (HR+), human epidermal growth factor receptor-2 (HER2)-negative advanced breast cancer, who received prior treatment with an aromatase Inhibitor (AI) either as (neo)adjuvant or for advanced disease.
+
+DETAILED DESCRIPTION:
+This was a randomized, double-blind, placebo-controlled, international multicenter Phase III study that evaluated the efficacy and safety of treatment with alpelisib plus fulvestrant versus placebo plus fulvestrant in men and postmenopausal women with HR-positive, HER2-negative advanced breast cancer which had progressed on or after AI treatment.
+
+Subjects were allocated to either the PIK3CA mutant or PIK3CA non-mutant cohort, based on central testing of hotspot-mutations in tumor tissue. Subjects with unknown results were not eligible. Within each cohort, subjects were randomized in a 1:1 ratio to receive either alpelisib 300 mg orally once daily (q.d.), in combination with fulvestrant 500 mg intramuscular (i.m.) on Days 1 and 15 of Cycle 1 and Day 1 of a 28-day cycle thereafter, or placebo daily in combination with fulvestrant 500 mg following the same treatment regimen.
+
+Subjects were treated until disease progression, unacceptable toxicity, death, or discontinuation from the study treatment for any other reason. All subjects who discontinued study treatment were followed for safety, until 30 days after last study treatment administration, except in the case of death, loss to follow-up, or withdrawal of consent.
+
+Subjects who discontinued study treatment for reasons other than disease progression or withdrawal of consent, were followed until disease progression, death, withdrawal of consent, loss to follow-up, or subject/guardian decision (post-treatment efficacy follow-up).
+
+Finally, all subjects were followed for survival after discontinuation of study treatment and tumor evaluations until the subject's death, loss to follow-up, or withdrawal of consent for survival follow-up (post-treatment survival follow-up)
+
+PRIMARY OUTCOMES:
+  - Progression-free Survival (PFS) Per Investigator Assessment in the PIK3CA Mutant Cohort
+
+INTERVENTIONS:
+  - DRUG: Fulvestrant
+  - DRUG: Alpelisib
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02437318

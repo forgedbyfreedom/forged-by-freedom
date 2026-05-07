@@ -1,0 +1,72 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06939660
+Title: BCI-Assisted SCS-EXS for Gait Optimization
+Official Title: Spatiotemporal Spinal Cord Stimulation Based on Implantable Brain-machine Interfaces and Exoskeletons for Spinal Cord Injury (BASEGO)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to evaluate the safety and technical feasibility of a novel brain-machine interface (BCI)-assisted spinal cord stimulation (SCS) and exoskeleton (EXS) system in patients with spinal cord injury (SCI). The primary aim is to determine whether the BCI-SCS-EXS system can safely and effectively improve lower limb motor function and quality of life in individuals with chronic SCI.
+
+Participant Population:
+
+Adults aged 14-65 years (sex/gender not limited). Patients with chronic SCI (≥6 months post-injury) classified as ASIA A, B, or C.
+
+Individuals with stable health status, MMSE ≥22, and secondary education or above.
+
+Primary Questions:
+
+1. Is the BCI-SCS-EXS system safe and technically feasible for SCI rehabilitation?
+2. Does the system improve lower limb motor function and quality of life in SCI patients?
+
+Interventions:
+
+Participants will undergo the following procedures:
+
+Phase I (Implantation):
+
+BCI implantation: ECoG electrodes placed over the motor cortex to decode lower limb movement intent.
+
+SCS electrode implantation: 5-6-5 paddle electrodes at T11-L2 for targeted spinal cord stimulation.
+
+Phase II (System Calibration):
+
+BCI-SCS synchronization: Calibration of decoded motor intent to trigger SCS parameters.
+
+SCS-EXO synchronization: Integration of SCS pulses with exoskeleton-assisted gait training.
+
+Phase III (Rehabilitation):
+
+Daily BCI-SCS-EXS training sessions (60 minutes, 5 times/week for 1 year). Adaptive adjustments to stimulation parameters and exoskeleton support based on performance.
+
+Remote monitoring of device performance and emergency intervention for technical issues.
+
+Outcome Measures:
+
+Primary: Safety (adverse events, device performance, synchronization metrics). Secondary: Efficacy (motor function, neurophysiological function, quality of life).
+
+Ethics and Safety:
+
+Informed consent will be obtained from all participants. Adverse events will be monitored and reported according to CTCAE 5.0 guidelines.
+
+Participant confidentiality will be strictly maintained. This study will provide foundational evidence for the safety and feasibility of the BCI-SCS-EXO system, paving the way for future randomized controlled trials in SCI rehabilitation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The content and number of AEs as well as their severity according to CTCAE v6.0
+
+INTERVENTIONS:
+  - DEVICE: BCI-SCS-EXS
+
+ELIGIBILITY:
+Age: 14 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06939660

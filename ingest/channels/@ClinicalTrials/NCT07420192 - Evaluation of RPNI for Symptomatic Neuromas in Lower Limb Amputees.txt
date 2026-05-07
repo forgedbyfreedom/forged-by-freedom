@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07420192
+Title: Evaluation of RPNI for Symptomatic Neuromas in Lower Limb Amputees
+Official Title: The Effect of Regenerative Peripheral Nerve Interface (RPNI) Surgery on Neuropathic Pain and Functional Outcomes in Major Lower Extremity Amputations
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 20
+Topic: physical activity intervention
+
+SUMMARY:
+This prospective, observational cohort study evaluates the long-term outcomes of Regenerative Peripheral Nerve Interface (RPNI) surgery in patients with major lower extremity amputations suffering from symptomatic neuromas. RPNI is a surgical technique where the transected nerve end is implanted into a free autologous muscle graft to serve as a physiological target for reinnervation. The study aims to objectively assess the reduction in mechanical hypersensitivity using Pressure Pain Threshold (PPT) measurements via a digital algometer. Additionally, it monitors subjective neuropathic pain levels, functional mobility, and prosthesis satisfaction over a 24-month follow-up period compared to pre-operative baselines.
+
+DETAILED DESCRIPTION:
+Scientific Rationale and Background Traditional "passive" nerve management techniques (e.g., traction neurectomy, burying in muscle/bone) often fail to prevent neuroma recurrence due to the lack of a physiological target for regenerating axons. This study investigates the long-term efficacy of the "Regenerative Peripheral Nerve Interface (RPNI)" technique. RPNI is an "active" surgical approach where the transected nerve end is implanted into a free autologous muscle graft to promote physiological reinnervation, thereby preventing chaotic axonal sprouting and neuroma formation.
+
+Diagnostic Protocol (The Clinical Triad) To ensure accurate participant selection and strictly exclude non-neuroma pathologies such as Complex Regional Pain Syndrome (CRPS), the study employs a standardized "Clinical Triad" protocol for all potential candidates:
+
+1. Neuropathic Validation: Confirmation of neuropathic pain character via validated questionnaires.
+2. Anatomical Localization: Identification of a specific trigger point with a positive Tinel's sign triggering radiating paresthesia.
+3. Radiological Confirmation: Visualization of the neuroma bulb at the symptomatic site using high-resolution Diagnostic Ultrasound.
+
+Surgical Methodology (Standard of Care) Participants undergo the standard RPNI procedure as per the clinic's routine protocol.
+
+* Graft Harvesting: A free autologous muscle graft (approx. 30x15x5 mm) is harvested. To minimize donor site morbidity, graft selection is standardized based on the amputation level: Vastus Lateralis for transtibial amputees and Biceps Femoris for transfemoral amputees.
+* Inlay Technique: The neuroma bulb is excised, and the fresh nerve end is implanted into the center of the muscle graft using the "Inlay Technique" to maximize neurotization interface and minimize axonal escape.
+
+Investigational Modules
+
+* Viscero-Somatic Convergence: The study uniquely investigates the potential "cross-talk" mechanism between pelvic autonomic nerves (parasympathetic S2-S4) and somatic nerves. Participants are monitored for "Viscero-Somatic Symptoms," defined as stump pain triggered specifically by micturition, defecation, or sexual activity.
+* Phantom Motor Execution (PME): As a functional indicator of reinnervation, patients are assessed for the ability to voluntarily execute movements with their phantom limb.
+
+Sample Size and Power Analysis Based on a priori power analysis using G\*Power 3.1 software, the sample size was calculated referencing the pressure pain threshold (PPT) effect sizes reported in comparable literature (Kubiak et al., 2022). Assuming a large effect size (Cohen's d = 1.5), an alpha error of 0.05, and a power of 90% (1-beta), a minimum of 13 participants is required to detect statistical significance. To account for a potential 20% dropout rate over the 24-month follow-up, the target enrollment is set at 20 patients.
+
+Statistical Analysis Plan Data analysis will be performed using IBM SPSS Statistics 26.0.
+
+* Normality Tes
+
+PRIMARY OUTCOMES:
+  - Change in Pressure Pain Threshold (PPT)
+
+INTERVENTIONS:
+  - PROCEDURE: Regenerative Peripheral Nerve Interface (RPNI) Surgery
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07420192

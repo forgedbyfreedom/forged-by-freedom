@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07147153
+Title: Functional Capacity, Sleep Quality, and Cognitive Function in Obesity Hypoventilation Syndrome
+Official Title: Investigation of the Relationship Between Functional Capacity, Sleep Quality, and Cognitive Functions in Individuals With Obesity Hypoventilation Syndrome
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 36
+Topic: body composition exercise
+
+SUMMARY:
+Introduction:
+
+Obesity Hypoventilation Syndrome (OHS) is defined as the coexistence of obesity (BMI ≥ 30 kg/m²), daytime hypercapnia (PaCO₂ \> 45 mmHg) in the absence of other causes of hypoventilation, and sleep-disordered breathing. OHS represents the most severe form of obesity-related respiratory failure and leads to serious consequences such as increased mortality rates, chronic heart failure, pulmonary hypertension, and hospitalisations due to acute or chronic hypercapnic respiratory failure.
+
+Aim:
+
+The aim of this study is to evaluate cognitive functions in individuals with OHS and to investigate the relationship between cognitive functions, sleep quality, and functional capacity. A review of the literature indicates that cognitive functions in OHS have not been sufficiently examined, and existing studies mainly focus on cognitive impairment in individuals with obstructive sleep apnea syndrome (OSAS). However, OHS may also cause cognitive deficits, and therefore, patients should be assessed from this perspective. Cognitive impairment may negatively affect participation in pulmonary rehabilitation programs and reduce the benefits gained from such programs. Moreover, psychological conditions such as depression and anxiety may also influence the success of pulmonary rehabilitation. Thus, identifying cognitive impairment and its association with parameters such as functional capacity and sleep quality is of great importance. Early detection of cognitive deficits may provide positive outcomes for both patients and the healthcare system.
+
+Methods:
+
+The study will include 18 individuals with OHS diagnosed by a pulmonologist through polysomnographic evaluation at the Department of Pulmonology, Istanbul University, Istanbul Faculty of Medicine, along with 18 age- and sex-matched individuals with simple obesity (BMI \>30 kg/m²). All participants will be evaluated at the Department of Pulmonology, Istanbul University, Istanbul Faculty of Medicine. Body composition will be assessed using bioelectrical impedance analysis with the "Tanita BC-545N Body Composition Monitor." Functional exercise capacity will be evaluated with the Incremental Shuttle Walk Test (ISWT) and the Six-Minute Walk Test (6MWT). Cognitive functions and attention will be assessed using the Montreal Cognitive Assessment (MoCA) and the Visual Reaction Time Test. Daytime sleepiness will be measured with the Epworth Sleepiness Scale (ESS), while sleep quality will be evaluated with the Pittsburgh Sleep Quality Index (PSQI). Psychological status will be assessed using the Depression Anxiety Stress Scale (DASS-21).
+
+Statistical analyses will be conducted using the Statistical Package for Social Sciences (SPSS, version 21.0). Arithmetic mean, standard deviation (SD), and confidence intervals (CI) will be presented in tables and figures. The Shapiro-Wilk test will be applied to assess the normality of data distribution. For comparisons between the OHS and simple obesity groups, the Independent Samples T-Test will be used for normally distributed data, while the Mann-Whitney U test will be used for non-normally distributed data. Pearson or Spearman correlation analyses will be performed to investigate the relationship between functional capacity, sleep quality, and cognitive functions.
+
+DETAILED DESCRIPTION:
+Obesity Hypoventilation Syndrome (OHS) is defined as the combination of obesity (BMI ≥ 30 kg/m²), daytime hypercapnia (PaCO₂ \> 45 mmHg) in the absence of other pathologies causing hypoventilation, and sleep-disordered breathing. OHS represents the most severe form of obesity-related respiratory failure and is associated with serious consequences, including increased mortality rates, chronic heart failure, pulmonary hypertension, and hospitalizations due to acute-on-chronic hypercapnic respiratory failure. The pathophysiology of OHS is multifactorial. Factors include reduced lung compliance; decreased lung volumes resulting from impaired respiratory mechanics; increased CO₂ production and respiratory workload; and hormonal influences such as decreased leptin and insulin-like growth factor-1 (IGF-I) levels. Reduced lung compliance and increased airway resistance lead to a higher respiratory workload, which contributes to respiratory muscle fatigue. Impaired respiratory mechanics and reduced respiratory muscle strength result in diminished functional capacity.
+
+Sleep quality is known to be highly important for the maintenance of cognitive functions, and poor sleep quality is considered a risk factor for cognitive decline. In pulmonary diseases such as obstructive sleep apnea syndrome (OSAS), chronic obstructive pulmonary disease (COPD), and asthma, sleep quality is adversely affected for various reasons. Previous studies have reported that in these conditions-where sleep quality is compromised-cognitive functions are also impaired, with concurrent problems such as anxiety and depression, and that there is a correlation between disease severity and the degree of cognitive impairment. Cognitive impairment in these patients, especially marked cognitive decline, can negatively affect participation in pulmonary rehabilitation programs, self-management of treatment, adherence to medications/devices, and overall independence, thereby reducing the potential benefits of rehabilitation. Furthermore, psychological conditions such as depression and anxiety may also influence pulmonary rehabilitation outcomes, and it has been reported that identifying and managing these problems can enhance treatment efficacy. Components such as psychosocial support and patient education are considered important for minimizing the negative effects of cognitive or emotional factors on treatment outcomes.
+
+In both OHS and OSAS, similar symptoms-including intermittent nocturnal hypoxemia, sleep fragmentation, excessive daytime sleepiness, and snoring-negatively affect sleep quality, increase daytime somnolence, and reduce quality of life. While sleep quality is impacted in both disorders due to similar pathophysiological mechanisms, numerous studies have examined the role of OSAS or obesity in cognitive functions and psychiatric disorders, yet no studies have been found that specifically investigate cognitive functions in patients with OHS. It has been suggested that intermittent 
+
+PRIMARY OUTCOMES:
+  - Incremental Shuttle Walk Test (ISWT)
+  - Montreal Cognitive Assessment (MoCA)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07147153

@@ -1,0 +1,62 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06593015
+Title: Protocol for Muscle Attenuation Cut-offs in Cirrhosis
+Official Title: Study Protocol to Redefine Muscle Attenuation Cut-offs for Better Prediction of Mortality in Patients With Cirrhosis: a Comprehensive Post-hoc Validation Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1296
+Topic: fat loss muscle
+
+SUMMARY:
+The goal of this observational study is to learn if new muscle attenuation cut-offs for the definition of myosteatosis can better predict survival in patients with cirrhosis. The main questions it aims to answer are:
+
+* Can these new muscle attenuation cut-offs more accurately diagnose myosteatosis (fat infiltration in muscle mass ) in cirrhosis?
+* Do these cut-offs work effectively across different patient groups, including men and women, those with obesity, and those with fluid retention in the abdomen?
+
+Researchers will compare patients with cirrhosis from a retrospective Canadian cohort to those from a prospective Italian cohort to see if the new cut-offs predict survival better than existing ones\*\*.
+
+Due to the retrospective nature of the study, no action is required from participants.
+
+DETAILED DESCRIPTION:
+Detailed Description This observational study seeks to redefine muscle attenuation cut-offs to better predict mortality in patients with cirrhosis, particularly focusing on myosteatosis-a condition characterized by the pathological accumulation of fat within skeletal muscles. Myosteatosis is a critical factor in cirrhosis, associated with poor outcomes, including increased risk of overt hepatic encephalopathy, prolonged hospitalization, post-transplant complications, and reduced survival. The current cut-offs for diagnosing myosteatosis are derived from studies in oncology populations, which may not be appropriate for cirrhosis patients due to specific complications like fluid retention (ascites) and differences in fat and muscle distribution between genders.
+
+Background and Rationale Cirrhosis patients often experience muscle changes due to chronic inflammation and metabolic disturbances, leading to muscle fat infiltration or myosteatosis. This study builds on previous research by Ebadi et al., who proposed sex-specific cut-offs (\&lt;33 HU for men and \&lt;28 HU for women) for diagnosing myosteatosis based on muscle attenuation values measured via CT scans. However, these cut-offs were derived from a retrospective cohort and have not been validated externally. There is a clear need for liver-specific cut-offs that account for the unique characteristics of cirrhosis, including the impact of fluid retention on BMI and muscle attenuation measurements.
+
+Study Objectives
+
+The primary objective is to validate new muscle mass attenuation cut-offs for the diagnosis of myosteatosis using L3 CT scan evaluations to predict survival and outcomes in patients with cirrhosis. Secondary objectives include:
+
+* Assessing the accuracy of these cut-offs across different patient groups (e.g., by gender, obesity status, and presence of ascites).
+* Evaluating the prognostic significance of redefined myosteatosis when combined with sarcopenia (muscle wasting).
+
+Study Design
+
+The study involves a post-hoc analysis of data from two large cohorts:
+
+1. Retrospective Cohort (Canada): This cohort consists of 1,104 patients evaluated for liver transplantation (LT) at the University of Alberta Hospital between January 2000 and August 2021. After applying exclusion criteria (e.g., absence of cirrhosis, multi-organ transplantation), 863 patients were included in the final analysis.
+2. Prospective Cohort (Italy): This cohort includes 447 patients from 26 Italian centers, prospectively enrolled between January 2019 and January 2020, with cirrhosis who underwent abdominal CT scans. After excluding patients with incomplete data, 433 patients were included in the analysis.
+
+Data Collection
+
+Data were collected at the time of enrollment and included:
+
+* Demographic characteristics: Age, sex
+* Anthropometric measurements: Height, weight, BMI
+* Cirrhosis etiology: Hepatitis C, alcohol-related liver disease, non-alcoholic steatohepatitis (NASH), etc.
+* Comorbidities: Diabetes, hypertens
+
+PRIMARY OUTCOMES:
+  - Definition of new L3/L3-L4 muscle attenuation cut-offs to define myosteatosis in relation to risk of death in patients with cirrhosis
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Radiological tool for the diagnosis of myosteatosis
+  - DIAGNOSTIC_TEST: Radiological tool for the diagnosis of myosteatosis
+
+ELIGIBILITY:
+Age: 40 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06593015

@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07511868
+Title: Digital Application for Stroke Health
+Official Title: Evaluating a Digital Health Application for Post-stroke Care and Vascular Risk Factor Management - a Multicenter Randomized Controlled Clinical Investigation
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 500
+Topic: recovery exercise
+
+SUMMARY:
+Stroke is a leading cause of death and long-term disability worldwide. Despite substantial advances in acute stroke care, there remains a lack of evidence-based digital solutions to support patients after hospital discharge. This study evaluates the effectiveness of a digital health application (StrokeApp) designed to support patients with ischemic or hemorrhagic stroke or transient ischemic attack (TIA) in secondary prevention and recovery.
+
+In this multicenter, randomized, controlled, open-label trial, 500 patients will be assigned in a 1:1 ratio to receive either standard care alone or standard care in combination with StrokeApp. The primary objective is to assess the impact of the application on health-related quality of life three months after discharge. Secondary and exploratory outcomes include health literacy, medication adherence, vascular risk factors, health-related behaviors, psychosocial outcomes, long-term recovery up to twelve months, as well as safety and user experience.
+
+DETAILED DESCRIPTION:
+This study evaluates the clinical effectiveness, usability, and safety of a digital health application (StrokeApp) designed to support patients following ischemic stroke, hemorrhagic stroke, or transient ischemic attack (TIA) during the post-acute phase of care.
+
+The StrokeApp is a mobile medical application classified as a Class IIa medical device and is currently in the pivotal phase of clinical development. It is intended to complement standard care by supporting secondary prevention and self-management. Core functionalities include the provision of structured educational content, medication and appointment reminders, tools for documenting health-related parameters, and the collection of electronic patient-reported outcomes (ePROs). In addition, the application offers optional tracking features and automated feedback to support adherence to recommended health behaviors.
+
+The study is conducted as a multicenter, randomized, controlled, open-label clinical trial. Participants are enrolled during hospitalization for the index event and randomized in a 1:1 ratio to receive either standard care alone or standard care in combination with StrokeApp. The application is installed on the participant's personal mobile device during the hospital stay. Participants receive structured onboarding, including training on core functionalities and data entry. A reinforcement session is conducted prior to discharge to ensure independent use.
+
+Following discharge, participants in the intervention group use the application over a period of up to twelve months. During this time, they are prompted to complete ePROs at predefined intervals and may optionally use daily tracking functions. The application delivers reminders, educational material, and automated feedback based on user input. Technical support is available throughout the study period if needed.
+
+Study procedures and follow-up assessments are aligned with routine clinical practice. Data are collected through a combination of on-site visits, remote contacts, and electronic questionnaires. Participants in the control group follow the same visit schedule but complete patient-reported outcomes using web-based tools rather than the application.
+
+The study includes both short-term and long-term follow-up. Data collected during the study include patient-reported outcomes, clinical parameters obtained as part of routine care, and application usage data in the intervention group. Usage data include frequency of access, completion of questionnaires, and interaction with app features, enabling assessment of engagement and adherence.
+
+Safety is evaluated throughout the study by systematic documentation of adverse events and serious adverse events. Although the application is considered low risk, monitoring is performed to identify any potential unintended effects associated with its use, including issues related to usability, misunderstanding of content, or changes in healthcare utilization.
+
+In addition to patient-cen
+
+PRIMARY OUTCOMES:
+  - Health-related quality of life (EQ VAS)
+
+INTERVENTIONS:
+  - DEVICE: StrokeApp
+  - OTHER: Standard care
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07511868

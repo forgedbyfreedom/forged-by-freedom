@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06486571
+Title: Strategies to Control Robotic Hand Prosthesis Via HD-sEMG and to Restore Sensory Feedback Via TENS
+Official Title: Development of Innovative Strategies for the Control of Robotic Hand Prostheses Based on High-density Electromyography and Restitution of Sensory Feedback Via Trans-cutaneous Electrical Stimulation
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: muscle rehabilitation
+
+SUMMARY:
+Upper limb amputation still causes severe disability today; prostheses currently on the market are able to restore partially to the amputee the lost functionality. In addition to the motor capacity of the limb, prosthetic systems should also aim to restore to the sensory information from the surrounding environment during contact with objects. Therefore, it is important to develop bidirectional prostheses. It is thus apparent that the development of new techniques for decoding the efferent channel, such as high-density surface electromyography, and for encoding of the afferent channel afferent, to return multimodal somatosensory sensations of mechanoception, nociception, and thermoception using TENS, isimportant to improve the patient's use of the prosthesis.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Improve gestures decoding by means of HD-sEMG decoding algorithms
+  - Elicit somatic sensations in amputees
+
+INTERVENTIONS:
+  - OTHER: Electromyography recording with HD-sEMG
+  - OTHER: Transcutaneous Electrical Nerve Stimulation (TENS)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06486571

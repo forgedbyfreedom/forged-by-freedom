@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01100840
+Title: A Retrospective Study of Biomarkers in Non-Small Cell Lung Cancer
+Official Title: A Retrospective Study of Biomarkers in Non-small Cell Lung Cancer
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 
+Topic: growth hormone treatment
+
+SUMMARY:
+The purpose of this study is:
+
+1. To characterize the types and frequency of molecular alterations to the epidermal growth factor receptor (eGFR) pathway, FGFR4 and EML-ALK in Asian patients with non-small cell lung cancer
+2. To identify candidate biomarkers of importance in the eGFR and estrogen pathways
+
+Most, if not all, human malignancies including lung cancer are caused by somatic alterations of the genome, leading to activation of oncogenes or inactivation of tumor suppressor genes and their resultant oncogenic effects. In addition to mutations, increased chromosomal copy number (by amplification or polysomy) and DNA methylation are other mechanisms of oncogene activation and tumour suppressor gene inactivation respectively.
+
+Little is known about the relationship between these oncogenes of the eGFR family and the recently described oncogenes FGFR4 and fusion gene EML4-ALK. Recent data suggests molecularly defined subgroups of non-small cell lung cancer (NSCLC) exist and can be used to predict for sensitivity to targeted agents (erlotinib or gefitinib) or cytotoxic chemotherapy (pemetrexate, gemcitabine, platinum agents). The findings that estrogen receptors are present in lung tumours and that estrogen can stimulate growth and proliferation of lung cancers in vitro and in vivo are provocative. Further studies to evaluate the role of estrogens and other sex hormones in lung cancer are warranted.
+
+A further understanding of the molecular indicators of lung cancer prognosis and treatment prediction would improve drug development and patient treatment selection.
+
+Archived paraffin-embedded and fresh frozen NSCLC tumor tissue will be obtained via the Department of Pathology and the National University Tissue Repository respectively. Clinico-pathological characteristics will be obtained from the case records, Pathology and Tissue Repository. DNA will be isolated using standard techniques. Sequencing of genes in the eGFR signaling pathway: eGFR, KRAS, ErbB2, ErbB3, MET, PI3K, and BRAF as well as FGFR4. Unstained slides from the paraffin-embedded tissue will be obtained and subjected to fluoresce in vitro hybridization (FISH) for breakpoints in the EML4 and ALK genes as previously described. For cases that have been snap-frozen, RNA will be extracted and EML4-ALK fusions will be confirmed using RT-PCR and pre-specified primers. To analyse the expression of proteins of putative relevance to eGFR function (such as eGFR, ErbB2, ErbB3, AKT, MET, STAT, ERK, MAPK, cyclin D1, C/EBPa), downstream effects of eGFR: cell proliferation (Ki-67), angiogenesis (CD34, VEGF-A), apoptosis (bcl-2), metastasis, and hormonal influence (oestrogen and progesterone receptors, aromatase), TMA technology will be utilised. The status of the tumor suppressor genes PTEN and C/EBPa will be analysed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  Not specified
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01100840

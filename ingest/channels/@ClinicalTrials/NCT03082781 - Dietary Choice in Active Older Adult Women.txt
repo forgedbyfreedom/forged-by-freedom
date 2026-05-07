@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03082781
+Title: Dietary Choice in Active Older Adult Women
+Official Title: A Comparative Assessment of Weight Loss and Anti-lipid Effects of Negative Calorie Diet and Low-calorie Diet in Overweight/Obese Middle-aged and Older Women Under Exercise Condition
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 66
+Topic: weight loss exercise
+
+SUMMARY:
+The present study aimed to determine the effects of negative-calorie diet supplemented with exercise, on weight loss and lipid profile, and to compare its efficiency with low-calorie diet with exercise among elderly adult women with abnormal weight gain.
+
+DETAILED DESCRIPTION:
+Background: Negative-calorie diet is among the popular dieting guides for weight loss; however, there is still little knowledge about this method.
+
+Objectives: The present study aimed to determine the effects of negative-calorie diet supplemented with exercise, on weight loss and lipid profile, and to compare its efficiency with low-calorie diet with exercise among elderly adult women with abnormal weight gain.
+
+Material and Methods: Participants included sedentary women (age 45-75 years) with overweight or obesity (n=111). They were randomly divided into two groups including negative calorie diet with exercise, and low-calorie diet with exercise. Of all 111 participants, 90 persons completed the treatment. The weight assessment parameters including change in weight and body composition, blood sample tests were performed pre- and three month post-intervention.
+
+PRIMARY OUTCOMES:
+  - Weight
+  - Total cholesterol (Total-C)
+  - High-density lipoprotein -cholesterol (HDL-C)
+  - Low-density lipoprotein -cholesterol (LDL-C)
+  - Triglycerides (TG)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: NCDsport
+  - DIETARY_SUPPLEMENT: LCDsport
+
+ELIGIBILITY:
+Age: 45 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03082781

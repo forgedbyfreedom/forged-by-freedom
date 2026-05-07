@@ -1,0 +1,64 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07555795
+Title: Motivating Core-muscle Exercises With Wearable Sensors, Haptics and Interactive Gaming
+Official Title: Motivating Core-muscle Exercises With Wearable Sensors, Haptics and Interactive Gaming
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: strength training
+
+SUMMARY:
+The goal of this clinical trial is to evaluate whether a wearable biofeedback smartbelt system can improve pain and disability in adults with chronic lower back pain. The intervention combines a wearable belt that measures muscle activity with a mobile application that provides real-time feedback during exercise.
+
+The main questions it aims to answer are:
+
+* Does the MMG-biofeedback system improve disability, as measured by the Oswestry Disability Index (ODI), compared to standard care alone over an 8-week period?
+* Does the system reduce perceived pain levels and improve exercise adherence in individuals with lower back pain over an 8-week period?
+
+Researchers will compare participants receiving the MMG-biofeedback belt alongside standard care to those receiving standard care alone to determine whether the addition of real-time muscle activation feedback leads to improved outcomes.
+
+Participants will:
+
+* Be randomly assigned to either the intervention group (biofeedback system + standard care) or control group (standard care only)
+* Complete an 8-week home-based exercise programme, all participants are asked to complete the programme at least 5 times a week
+* Use the wearable belt and mobile application during exercise sessions (intervention group only)
+* Receive a booklet with the exercise programme and video links (control group only)
+* Complete questionnaires on pain, disability, and usability at baseline and after 8 weeks, and at a 3-month follow-up
+* Have their exercise adherence and engagement monitored throughout the study
+
+The study includes an initial pilot phase to assess feasibility, followed by a larger randomised controlled phase to evaluate early clinical effectiveness.
+
+DETAILED DESCRIPTION:
+BACKGROUND
+
+Lower back pain is the leading cause of chronic disability in the UK and entails direct treatment costs to the NHS of \>£1.5 billion p.a. Evidence-based guidelines recommend back exercises and/or physiotherapy as the principle treatment. However, since long-term, intensive physiotherapy is unrealistic on the NHS given limited resources, professional bodies increasingly advocate self-management.
+
+While self-led back exercise may be cost-efficient, its effectiveness is diminished by poor patient motivation and compliance. The current standard of care: a short course of training by a physiotherapist, followed by provision of a visual guide, are met with exercise adherence rates as low as 30%. This results in persistent pain, depression, unemployment and analgesic dependency.
+
+The approach we shall take is to devise a practical sensor-feedback system that can detect appropriate back exercises, thereby encouraging self-motivation and automated supervision of exercise. The system is unique in using a patented sensor system - mechanomyography (MMG) - that wirelessly measures trunk and limb muscle contraction (in addition to movement), which is key to assessing core-strengthening exercises.
+
+Our team have pioneered clinical applications of wearable mechanomyography (MMG) for purposes such as: remote assessment and exercises in stroke, and foetal movement detection via maternal abdomen. In one study, MMGs worn on stroke patients' arms predicted expert 3-class classifications of arm function with accuracies of up to 80%. Our ability to detect muscular contraction with MMG, rather than joint movement, will be important for monitoring back exercises since many of these involve isometric trunk muscle contraction, i.e. without spinal or limb movements.
+
+RATIONALE FOR CURRENT STUDY
+
+Lower back pain (LBP) is a leading cause of disability worldwide. Although exercise-based rehabilitation is recommended as a first-line treatment, adherence to prescribed exercises is often poor, and many patients struggle to activate key stabilising muscles effectively. The MMG-biofeedback belt has been developed to address these limitations by providing real-time feedback on core muscle activation, with the aim of improving exercise quality, motivation, and consistency.
+
+Meaningful improvements in disability over an 8-week period have been demonstrated in previous rehabilitation studies, including a large cohort showing clinically significant reductions in Oswestry Disability Index (ODI) scores following standard physiotherapy programmes. Research also shows a clear dose-response relationship between exercise frequency and improvements in pain and disability, with greater adherence producing substantially larger effects. The MMG-biofeedback system is specifically designed to support this behavioural change by increasing engagement and encouraging regular, correctly performed exercises during unsupervised home practice.
+
+Our proof-of-concept work has already shown that 
+
+PRIMARY OUTCOMES:
+  - Oswestry Disability Index
+  - Pain Visual Analogue Scale
+
+INTERVENTIONS:
+  - DEVICE: MMG-biofeedback belt
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07555795

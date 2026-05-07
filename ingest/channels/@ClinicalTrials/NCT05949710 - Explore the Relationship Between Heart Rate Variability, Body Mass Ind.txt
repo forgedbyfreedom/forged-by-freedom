@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05949710
+Title: Explore the Relationship Between Heart Rate Variability, Body Mass Index, Inflammation, and insulin Resistance.
+Official Title: Explore the Relationship Between Heart Rate Variability, Body Mass Index, Inflammation, and insulin Resistance: From a Population-based Survey to Multi-arms of Aerobic Exercise Intervention.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: exercise intervention obesity
+
+SUMMARY:
+The findings will serve as a reference for clinical professionals to promote exercise among the general population for improving HRV.
+
+DETAILED DESCRIPTION:
+Background: Heart rate variability (HRV) measurement is widely used to assess the function of cardiac autonomic modulation. Aerobic exercise (AE) has been proven to improve HRV. However, because HRV is highly associated with visceral fat, inflammatory status, and insulin resistance, whether baseline body inflammation status can explain the heterogeneous response to AE remains unknown.
+
+Purposes: We will compare the effects of AE training in improving HRV, inflammatory markers, and insulin resistance between community residents with normal weight and overweight/obesity.
+
+Methods: A quasi-experimental study with purposive sampling will be used to recruit community residents aged 40-64 years with inactive habits in southern Taiwan. The minimum targeted sample size is 43 participants. The participants will be grouped into normal weight and overweight/obese groups. All participants will receive AE training with at least moderate intensity three times per week. HRV parameters, blood samples, and visceral fat will be evaluated. The blood samples will be evaluated for C-reactive protein and markers of insulin resistance (fasting glucose, insulin). All participants will be evaluated at baseline (T0) and after a 16-week intervention (T1). In addition to these time points, HRV will be measured during every exercise session for participants in exercise groups. Generalized estimating equations will be used to determine whether baseline BMI is the key factor influencing the effects of AE.
+
+Relevance to clinical practice: The findings will serve as a reference for clinical professionals to promote exercise among the general population for improving HRV.
+
+PRIMARY OUTCOMES:
+  - Heart rate variability
+  - insulin resistance
+  - Visceral fat
+  - fasting glucose
+  - C-reactive protein
+
+INTERVENTIONS:
+  - BEHAVIORAL: aerobic exercise(AE)
+
+ELIGIBILITY:
+Age: 40 Years to 64 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05949710

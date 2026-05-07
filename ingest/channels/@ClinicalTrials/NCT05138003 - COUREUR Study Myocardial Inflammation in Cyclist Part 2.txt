@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05138003
+Title: COUREUR Study Myocardial Inflammation in Cyclist Part 2
+Official Title: Detection of Myocardial Inflammation in Cyclists After Strenuous Exercise: a Pilot Study Part 2
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: creatine supplementation
+
+SUMMARY:
+The study will evaluate myocardial inflammation in cyclists after high intense and sustained exercise. Our hypothesis is that strenuous exercise in recreational cyclists may be associated with myocardial inflammation. Myocardial fibrosis in asymptomatic athletes is associated with life-threatening arrhythmic events and sudden death. Although myocarditis seems to be the most likely underlying cause, it remains unclear if strenuous and sustained physical exercise can cause myocardial inflammation with development of myocyte necrosis and possibly myocardial fibrosis in athletes.
+
+Nineteen recreational cyclists performing "L'ETAPE DU TOUR (EDT) de France" a cycling ride (175 km, 3600 m of positive altitude difference) on July 4 2021 will be included in this study. Each participant will complete a detailed questionnaire detailing their training history. All participants will have exercise testing approximately 1 week before the EDT stage to set aerobic and anaerobic gas exchange thresholds, as well as VO2max.
+
+In part 2 of the study cardiac MRI will be performed at rest before the EDT cycling ride completion. An ECG registration using a RootiRx will be realized during and up to 6 hours after the cycling ride. An echocardiography and cardiac MRI will be repeated in each cyclist between 3 and 6 hours after EDT cycling ride completion. A blood sample will be obtained at that time after the ride. This time point is chosen based on the highest troponin release that 3 to 6 hours post-exercise would allow a sufficient amount of time for inflammation to develop and be detectable, corresponding with the time when cardiac Troponin T is typically detectable and representing the liberation of enzymes from damaged myocytes.
+
+Finally, a third cardiac MRI will be repeated 24 hours after start of the cycling ride to verify the evolution of possible inflammation over this time period.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Myocardial inflammation will be evaluated by T1/T2 mapping cardiac MRI in cyclists after a strenuous exercise
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: cardiac MRI
+  - DIAGNOSTIC_TEST: Echocardiography
+  - DIAGNOSTIC_TEST: RootiRx for the ECG monitoring during the cycling ride
+  - DIAGNOSTIC_TEST: Blood sample
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05138003

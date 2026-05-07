@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05572177
+Title: Feasibility of a Smartphone Application for Asthma Self-management
+Official Title: Feasibility of MHealth Technology for Improving Self-Management and Adherence Among Asthmatic Adolescents
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: physical activity intervention
+
+SUMMARY:
+The primary goal of this project is to determine the feasibility, acceptability, and adherence of a smartphone application for improving asthma self-management in a pilot randomized controlled trial (RCT). The app is specifically designed to appeal to adolescents. Adolescents with persistent asthma will be randomized to receive: 1) standard-of-care or 2) the self-management app in addition to standard-of-care. Feasibility will be assessed by the ability to recruit and retain subjects, technical barriers to implementation, and the appropriateness of the intervention among adolescents and providers. The acceptability of the intervention will be determined by appraising perceived usefulness, entertainment, and ease of use of the app. Adherence to usage of the app over a 6-month period will be assessed by examining the frequency of app usage and the features that were used, and the extent of data regarding self-management that was entered. A secondary objective is to obtain preliminary estimates of effectiveness of the app on clinical outcomes (ACT score, spirometry, CHSA-C, exacerbations, and medication adherence) relative to standard-of-care. It is hypothesized that the app will result in a high level of adherence and will be a feasible and acceptable intervention to improve self-management among adolescents with persistent asthma.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Recruitment rate (number recruited per month)
+  - Retention rate (proportion that complete the 6-month trial)
+  - Technical feasibility (percentage of screened population)
+  - Mean overall usability score obtained from the Health-ITUES
+  - Average app usage per day
+
+INTERVENTIONS:
+  - DEVICE: Asthma SMART
+
+ELIGIBILITY:
+Age: 12 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05572177

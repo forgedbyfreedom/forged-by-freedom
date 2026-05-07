@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04072146
+Title: Evaluating Relative Bioavailability of OC-01 (Varenicline) Nasal Spray as Compared to Orally Administered Varenicline
+Official Title: Open-Label, Single-Center, Randomized, 2-way Crossover Study Evaluating Relative Bioavailability of OC-01 (Varenicline) Nasal Spray as Compared to Orally Administered Varenicline (the Zen Study)
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: creatine supplementation
+
+SUMMARY:
+To assess the relative bioavailability of varenicline administered intranasally at its highest intended clinical strength compared to varenicline administered orally at its highest oral tablet strength.
+
+DETAILED DESCRIPTION:
+This study was a Phase 1, open-label, randomized, 2-way crossover study to evaluate the relative bioavailability of OC-01 (varenicline) Nasal Spray compared to varenicline administered orally as varenicline oral tablet. Approximately 22 healthy volunteer subjects between 18-65 years of age meeting all other study eligibility criteria were randomized (Treatment Period 1) to receive an intranasal dose of 0.12 mg OC-01 (50 µL spray of 0.06 mg into each nostril) or a single 1 mg oral dose of varenicline oral tablet. Both administrations were delivered while subject is in an overnight fasted state. Subjects then returned at least 14 days later (Treatment Period 2) to receive the alternate dose of varenicline that was delivered at Treatment Period 1. Again, this delivery was performed while subject was in an overnight fasted state.
+
+Participants who terminated early during the application period were asked to complete safety assessments (if the participants agree) prior to study exit. Participants who were terminated early from the study were not replaced.
+
+PRIMARY OUTCOMES:
+  - AUC0-t
+  - AUC0-inf
+  - Cmax
+  - Tmax
+
+INTERVENTIONS:
+  - DRUG: Vaenicline oral tablet 1 mg, then OC-01 (varenicline solution) nasal spray 0.12 mg
+  - DRUG: OC-01 (varenicline solution) nasal spray 0.12 mg then Varenicline oral tablet 1 mg
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04072146

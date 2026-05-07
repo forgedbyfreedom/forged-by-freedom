@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05316194
+Title: Minimal Clinically Important Changes in Osteoarthritis Treatment
+Official Title: Minimal Clinically Important Changes in Digitally Delivered Osteoarthritis Treatment
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 11708
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+To assess minimal clinically important change, cut-offs for treatment failure and patient acceptable symptom state for pain and patient-reported function and quality of life in persons with hip or knee osteoarthritis, participating in digitally delivered first-line education and exercise treatment.
+
+DETAILED DESCRIPTION:
+Patient-reported outcome measures (PROMs) are consistently recommended as the primary end-point in clinical trials evaluating treatment effects in different medical conditions. For a meaningful interpretation of the PROMs used, three different approaches have been proposed; The Minimal Important Change (MIC), which is the smallest change in scores that represents an important improvement for the patient, i.e., the patient is feeling better, the Patient Acceptable Symptom State (PASS), which represents patients that consider their current status as acceptable, i.e., the patient is feeling good and Treatment Failure (TF), which represents patients that consider their state so unsatisfactory that they think the treatment has failed, all based on relevant anchor questions. Previous research in patients with anterior cruciate ligament (ACL) injury and femoroacetabular impingement reveals that feeling better is not necessarily the same as feeling good and reporting only the MIC (or mean change) may overestimate the results, stressing the need for including different measures of improvement to evaluate treatment effects on PROMs. The MIC, PASS and TF for persons undergoing digital treatment for hip or knee osteoarthritis are not yet determined. In this retrospective register-based study we will define MIC, PASS and TF in pain and patient-reported function and quality of life, using anchor-based questions, for persons participating in digital first-line treatment for hip and knee OA. In addition, we will use these thresholds to establish the proportion of patients reaching MIC and/or PASS or reporting TF, separate for persons with hip and knee OA.
+
+Statistical analysis:
+
+For MIC calculations, participants will be categorized as "importantly improved" if they answered "Better an important improvement" or "Somewhat better but enough to be an important improvement" to the anchor questions for KOOS/HOOS and NRS. MIC for an important improvement will then be calculated using the predictive modeling method (MICpred), adjusting for the proportion of improved patients.
+
+The MICpred method will also be used to calculate the post score (i.e., 3, 6, 9 and 12 months) for KOOS/HOOS-scores and NRS-scores for participants that have responded "Yes" to the PASS or TF anchor question, respectively. The proportion of participants reaching the cut-offs of MIC, PASS and TF for the KOOS/HOOS and NRS, will then be calculated separately for participants with knee and hip OA.
+
+Subgroup analyses on the effect of sex, age and baseline symptoms (depending on data distribution to ensure we will have an adequated sample size also in subgroups) on MIC, PASS and TF will also be performed using the MICpred method
+
+PRIMARY OUTCOMES:
+  - Joint pain
+  - KOOS/HOOS-12
+  - MIC
+  - Patient acceptable symtom state (PASS)
+  - Treatment failed (TF)
+
+INTERVENTIONS:
+  - OTHER: Digital treatment for hip and knee osteoarthritis
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05316194

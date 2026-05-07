@@ -1,0 +1,65 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07053241
+Title: The Effect of the Web-Based Gamified Application on Functional Results and Recovery Conditions
+Official Title: The Effect of the Web-Based Gamified Application Developed for Post-Total Knee Replacement Surgery Care on Functional Results and Recovery Conditions
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+The aim of this clinical trial is to determine the effect of a mobile-compatible web-based gamified application (Game-App-KNEE) developed for post-operative care of total knee replacement (TKA) surgery on functional outcomes and recovery status.
+
+Based on this, the hypotheses of our project are; In the intervention group where the mobile-compatible web-based gamified application to be developed for the home care of individuals undergoing TKA due to osteoarthritis is applied, compared to the control group; Hypothesis 1 (H1): After the application of Game-App-KNEE, the functional levels of individuals in the intervention group are higher than the control group.
+
+Hypothesis 2 (H1): After the application of Game-App-KNEE, the post-operative recovery levels of individuals in the intervention group are higher than the control group.
+
+Participants:
+
+Receive the game module application (intervention group) or only the educational booklet (control group) every day for 3 months after discharge Visit the clinic every 1st and 3rd month for check-ups and tests.
+
+DETAILED DESCRIPTION:
+METHOD This project is planned in two phases. In the first phase, the development of the Game-App-KNEE is intended to enable individuals undergoing Total Knee Prostheses (TDP) to manage their postoperative process. Additionally, it aims to evaluate the content of the educational program to be integrated into the application, as well as the design of the sections that will be included in the application, and to assess the technical suitability and usability of the application.
+
+In the second phase, a randomized controlled study is planned to determine the effect of the mobile-compatible web-based gamified application, which integrates the educational program, on individuals' functional outcomes and recovery status.
+
+FIRST PHASE Creation of the Mobile-Compatible Web-Based Gamified Application The design process of the mobile-compatible web-based gamified application consists of specific stages. These stages are presented in Table 1.
+
+Table 1. Design Process of a Mobile-Compatible Web-Based Gamified Application Creation of the Educational Program Content to be Included in a Mobile-Compatible Web-Based Gamified Application
+
+* Literature Review
+* Preparation of Educational Content to be Implemented
+* Obtaining Expert Opinions Using the Lawshe Technique
+* Evaluation of Educational Content Using the Readability Formula
+* Updating Educational Content Based on Expert and Patient Opinions and the Readability Formula
+* Finalizing the Content Template Design of a Mobile-Compatible Web-Based Gamified Application
+* Conducting Player Analyses for 6 Patients from the Target Patient Group Planned for the Application
+* Preparing the Gamification Template Based on the Results of the Player Analyses Development of a Mobile-Compatible Web-Based Gamified Application and Conducting a Pilot Study
+* Design of the Application Logo
+* Design of the Application Interfaces
+* Integration of the Gamification Template into the Program
+* Transfer of Interfaces to the Mobile Application and Testing of the Application
+* Evaluation of the System Using the System Usability Scale (SUS) in Three Patients Who Underwent Total Knee Prosthesis Surgery
+
+Preparation of a Mobile-Compatible Web-Based Gamified Application for Use -Updating the Application Based on Feedback from Patients and Issues Experienced
+
+IP 1. Development of the Educational Program to be included in the Mobile-Compatible Web-Based Gamified Application In the preparation phase of the educational program for the mobile-compatible web-based gamified application, the educational content will first be created, and then this prepared educational content will be evaluated.
+
+IP 1.1 Creation of the Educational Program Content to be included in the Mobile-Compatible Web-Based Gamified Application During the creation of the educational content, various databases such as PubMed, Web of Science, Cochrane Library, Science Direct, and EBSCO, as well as the websites and guidelines of national/international scientific associations, will b
+
+PRIMARY OUTCOMES:
+  - Functional Results
+  - Postoperative Recovery Status
+
+INTERVENTIONS:
+  - DEVICE: Game-App-KNEE
+  - OTHER: Control group (standart care)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07053241

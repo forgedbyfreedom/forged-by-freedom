@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02981602
+Title: Safety, Tolerability, Pharmacokinetics and Antiviral Activity of IONIS-HBVRx in Treatment-Naïve Patients With Chronic HBV Infection
+Official Title: A Phase 2, Double-Blinded, Randomized, Placebo-Controlled, Dose-Escalation Study to Examine the Safety, Tolerability, Pharmacokinetics and Antiviral Activity of ISIS 505358 in Treatment-Naïve Patients With Chronic HBV Infection
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 31
+Topic: creatine supplementation
+
+SUMMARY:
+To examine the safety and tolerability of IONIS-HBVRx administration to treatment-naive patients with chronic hepatitis B virus infection
+
+DETAILED DESCRIPTION:
+This study examines the effects of IONIS-HBVRx or placebo (3:1 randomization) administered subcutaneously to treatment-naïve patients who are chronically infected with HBV and the effects of subsequent nucleos(t)ide analogue treatment on these patients.
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Serious Adverse Events (SAEs) and Non-Serious Adverse Events (Non-SAEs >=5%)
+  - Change From Baseline in Clinical Chemistry Parameters: Alanine Aminotransferase (ALT), Alkaline Phosphatase (ALP), Aspartate Amino Transferase (AST), Creatine Kinase (CK), Gamma-glutamyl Transferase (GGT) and Lactate Dehydrogenase (LDH) Over Time
+  - Change From Baseline in Clinical Chemistry Parameters : Albumin and Total Protein Over Time
+  - Change From Baseline Values in Clinical Chemistry Parameters: Sodium, Potassium, Chloride, Bicarbonate, Calcium, Magnesium, Phosphate, Glucose, Blood Urea Nitrogen, Cholesterol and Urate
+  - Change From Baseline Values in Clinical Chemistry Parameters: Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, and Creatinine
+
+INTERVENTIONS:
+  - DRUG: IONIS-HBVRx
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02981602

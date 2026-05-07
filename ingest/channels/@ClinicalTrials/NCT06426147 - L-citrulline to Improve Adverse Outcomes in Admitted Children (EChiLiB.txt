@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06426147
+Title: L-citrulline to Improve Adverse Outcomes in Admitted Children (EChiLiBRiST, Clinical Trial 2, Inpatients)
+Official Title: A Randomised, Double-blind, Placebo-controlled Trial of L-Citrulline Oral Supplementation to Improve Short and Long-term Outcomes of Admitted Febrile Paediatric Patients With Biomarker-determined High-risk of Adverse Outcomes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 2200
+Topic: protein supplementation
+
+SUMMARY:
+In low and middle-income countries, children admitted to hospital are not similarly ill, and do not all have a comparable prognosis. In fact, understanding at first encounter their risk of developing adverse outcomes (including mortality) could allow a more focused management and the tailoring of specific interventions to decrease in hospital mortality, and post discharge adverse longer-term outcomes. This clinical trial, part of the EChiLiBRiST larger project ("Development and validation of a quantitative point-of-care test for the measurement of severity biomarkers to improve risk stratification of fever syndromes and enhance child survival") has the two-fold objective of:
+
+1. Assessing whether a POINT-OF-CARE rapid triaging test (PoC RTT) based on the quantitative measurement at the bedside of the "prognostic" biomarker sTREM-1 (soluble-triggering receptor expressed on myeloid cells 1) can reliably identify those admitted children with a higher risk of adverse outcomes; and
+2. Assessing whether the therapeutic intervention (the L-arginine precursor, L-Citrulline, key in the nitric oxide biosynthesis), administered orally for 28 days to those children aged 1-\<60 months identified as "moderate-to-high risk" by the prognostic biomarker can improve outcomes as compared to those receiving an indistinguishable placebo.
+
+This second objective will be assessed in a prospective multi-country, multi-site, individually randomised, two-arm, placebo-controlled, double blind clinical trial involving \~888 children 1-\<60m of age admitted to hospital and determined to be at high risk of adverse outcomes by their baseline sTREM-1 levels. The trial will compare the efficacy of a twice-daily dose of L-citrulline syrup vs placebo (200-300mg/kg/day depending on weight-band; for 28 days) in reducing adverse outcomes in children with severe disease. The trial will be running independently but in parallel in two high-mortality settings in Mozambique and in Ethiopia.
+
+DETAILED DESCRIPTION:
+Children admitted to hospital and meeting the study eligibility criteria who are 0-\<60 months of age will be eligible for study inclusion, and for initial biomarker screening using the study-designed rapid triaging PoC test, based on the measurement of sTREM-1. Study participants aged 1m-\<5 years of age with sTREM-1 values classified as moderate (i.e., "yellow") or high-risk (i.e., "red") in the traffic light risk-stratification system will be randomly allocated (1:1) to receive L-Cit intervention or placebo. All study participants will be followed for 6 months, with study visits at the study hospitals or at home or via phone communication after discharge at day 3, day 5, day 7, day 28, and month 6. The study primary outcome will be "adverse disease outcome", defined as a composite of mortality, incident neurological sequelae, major adverse kidney event at discharge, need for organ support, clinical shock, coma, severe respiratory distress or need for readmission within 28 days after recruitment.
+
+PRIMARY OUTCOMES:
+  - Adverse disease outcome
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-citrulline
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 0 Months to 60 Months
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06426147

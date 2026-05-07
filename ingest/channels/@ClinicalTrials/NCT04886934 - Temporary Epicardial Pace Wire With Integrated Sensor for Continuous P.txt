@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04886934
+Title: Temporary Epicardial Pace Wire With Integrated Sensor for Continuous Postoperative Monitoring of Myocardial Function
+Official Title: Open Clinical Investigation to Assess Performance of a Temporary Epicardial Pace Wire With Integrated Sensor for Continuous Postoperative Monitoring of Myocardial Function After Heart Surgery Compared to Ultrasound
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: physical activity intervention
+
+SUMMARY:
+Transesophageal echocardiography is used to monitor cardiac wall motion at various time points during open-heart surgery. After surgery, the measurements are made at various time points by transthoracic echocardiography.
+
+The CS1 system enables continuous, direct measurement of cardiac wall motion. This is achieved through use of temporary pacemaker wires incorporating a motion detector called an accelerometer. Use of TMEs during and after open-heart surgery is part of the normal clinical routine. Continuous monitoring of cardiac wall motion during and after surgery can quickly highlight the need for medical intervention with cardiac drugs and allow very early detection of potentially serious complications leading to abnormal cardiac wall motion.
+
+Cardiac wall motion activity registered by the CS1 system and echocardiography at specific time points during and after surgery will be analyzed to see how well they compare.
+
+DETAILED DESCRIPTION:
+Echocardiography is currently the most important and most widely used tool in cardiology besides electrocardiography (ECG). It is reliable for assessing all stages of cardiovascular disease, and it is commonly used to detect heart (cardiac) wall motion dysfunction during and after open-heart surgery.
+
+During open-heart surgery, transesophageal echocardiography (when the echocardiography sensor is introduced into the esophagus) is used to monitor cardiac wall motion at various time points during surgery. After surgery, the measurements are made at various time points by transthoracic echocardiography (when the echocardiography sensor is placed on the chest wall).
+
+Use of the CS1 system enables continuous, direct measurements of cardiac wall motion. This is achieved through use of temporary pacemaker wires (also called temporary myocardial electrodes or TMEs) incorporating a motion detector called an accelerometer. Use of TMEs during and after open-heart surgery is part of the normal clinical routine. Continuous monitoring of cardiac wall motion during the surgery and the post-surgical recovery period can, for example, quickly highlight the need for medical intervention with cardiac drugs and allow very early detection of potentially serious complications such as ischemia (heart muscle is not receiving enough oxygen) and myocardial dysfunction (cardiac wall motion appears abnormal).
+
+The key feature of the CS1 system is that the cardiac wall motion activity registered by the novel TMEs incorporating the accelerometer are displayed visually on a standard medical monitor and synchronized with the patient's ECG data. These data can easily be viewed by medical staff to check if the patient's condition is satisfactory or whether medical intervention is needed.
+
+In the study, the CS1 system will be used in addition to the standard monitoring procedures that include ECG, blood pressures and intermittent echocardiography. Cardiac wall motion activity registered by the CS1 system and echocardiography at specific time points during and after surgery will be analyzed to see how well they compare.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline Peak Systolic Velocity (PSV) after increasing heart rate by 25 percent
+  - Change from Baseline PSV after increasing heart rate by 25 percent
+
+INTERVENTIONS:
+  - DEVICE: CS1 System
+
+ELIGIBILITY:
+Age: 19 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04886934

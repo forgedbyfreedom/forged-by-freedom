@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03066882
+Title: Dietary Effects on Weight Loss and Lipid Profile in Sedentary Women
+Official Title: Comparison Effects of Negative Calorie Diet and Low-calorie Diet on Weight Loss and Lipid Profile in Sedentary Overweight/Obese Middle-aged and Older Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 37
+Topic: sports nutrition
+
+SUMMARY:
+Negative-calorie diet is among the popular dieting guides for weight loss; however, there is still little knowledge about this method. The present study aimed to determine the effects of negative-calorie diet on weight loss and lipid profile, and to compare its efficiency with low-calorie diet.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Weight
+  - Total cholesterol (Total-C)
+  - High-density lipoprotein -cholesterol (HDL-C)
+  - Low-density lipoprotein -cholesterol (LDL-C)
+  - Triglycerides (TG)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: NCD
+  - DIETARY_SUPPLEMENT: LCD
+
+ELIGIBILITY:
+Age: 45 Years to 75 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03066882

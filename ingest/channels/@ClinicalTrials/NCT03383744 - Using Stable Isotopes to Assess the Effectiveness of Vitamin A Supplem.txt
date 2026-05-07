@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03383744
+Title: Using Stable Isotopes to Assess the Effectiveness of Vitamin A Supplementation in Cameroon
+Official Title: Using Stable Isotope Techniques to Monitor and Assess the Vitamin A Status of Children Susceptible to Infection
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 104
+Topic: protein supplementation
+
+SUMMARY:
+This is a study to evaluate the effects of vitamin A supplementation program on the vitamin A status of preschool children. All children aged 3-5 years who do not have severe illness and are not planning to move from the study area are eligible. Children whose caregivers agree to sign the consent form will be enrolled in their community and submitted to a longitudinal evaluation of vitamin A status before and after vitamin A supplementation campaign.
+
+Vitamin A status will be assessed by measuring serum retinol, retinol binding protein and vitamin A total body pool size using stable isotope dilution methodology.
+
+DETAILED DESCRIPTION:
+Five months after the last supplementation (day 0), an oral dose (2 mg retinol equivalents) of label vitamin A (\[2H8\]-retinyl acetate) in oil will be administered to 80 eligible children together with a low vitamin A high-fat snack. Fasting venous blood samples (about 7 ml) will be collected into evacuated foil-wrapped blood collection tubes specifically designed for the collection of serum (containing no anticoagulant and metal free) on the mornings of days 0 before the administration of the dose and on day 14 for quantitative estimation of initial vitamin A pool size and determination of potential confounding parameters (CRP, AGP, iron, zinc, malaria, carotenoids and retinoids). About six months after the last supplementation (day 30), each child will received the vitamin A supplement. After 30 days and 90 days, two groups of 40 children (Grp1, Grp2) will respectively received a second dose of labeled vitamin A (\[2H4\]-retinyl acetate); fasting venous blood samples will be obtained before the administration of the dose and 14 days after dosing for quantitative estimation of final vitamin A pool size and determination of potential confounding parameters.
+
+PRIMARY OUTCOMES:
+  - Change in vitamin A status at one month
+  - Change in vitamin A status at 3 months
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: vitamin A supplementation
+
+ELIGIBILITY:
+Age: 3 Years to 5 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03383744

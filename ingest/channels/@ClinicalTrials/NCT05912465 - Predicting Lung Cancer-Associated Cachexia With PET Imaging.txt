@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05912465
+Title: Predicting Lung Cancer-Associated Cachexia With PET Imaging
+Official Title: The Role of 18F-FDG PET/CT in the Early Prediction of Cachexia in Lung Cancer Patients
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: fat loss muscle
+
+SUMMARY:
+This prospective observational study aims to investigate the relationship between cancer cachexia, stress levels, and metabolic changes in 150 lung cancer patients. Cancer cachexia, characterized by weight loss and muscle wasting, significantly impacts patient outcomes. Psychological stress is thought to contribute to cachexia development. Assessments will include medical history, physical examinations, laboratory tests, and imaging. Cancer cachexia will be diagnosed based on weight loss, reduced food intake, and inflammation markers. Psychological stress will be evaluated using questionnaires and biomarkers. Metabolic changes will be assessed using positron emission tomography-computed tomography (PET-CT) scans. The primary objective is to determine differences in metabolic activity between cachectic and non-cachectic patients. Secondary objectives include evaluating changes in brain activity and exploring the relationship between stress, inflammation, and metabolism.
+
+DETAILED DESCRIPTION:
+Title: Investigation of the Relationship Between Cancer Cachexia, Stress, and Metabolic Changes in Lung Cancer Patients
+
+Background: Cancer cachexia is a debilitating syndrome characterized by progressive weight loss, muscle wasting, and metabolic abnormalities. It significantly impacts patients' quality of life and survival outcomes. Psychological stress has been suggested as a potential contributor to cachexia development and progression. This study aims to investigate the association between cancer cachexia, stress levels, and metabolic changes in lung cancer patients.
+
+Methods: This multicenter, prospective observational study will enroll 150 lung cancer patients. Eligible participants will undergo comprehensive assessments, including medical history review, physical examinations, laboratory tests, and diagnostic imaging. Cancer cachexia will be diagnosed based on established criteria, including weight loss, reduced food intake, and systemic inflammation markers. Psychological stress will be evaluated using validated questionnaires and stress biomarkers. Metabolic changes will be assessed through positron emission tomography-computed tomography (PET-CT) scans to measure fluorodeoxyglucose (FDG) uptake in organs and lesions.
+
+Primary Objectives: The primary objective is to determine differences in FDG uptake between cachectic and non-cachectic lung cancer patients in various organs and lesions. Secondary objectives include evaluating changes in amygdalar FDG uptake after stress intervention and exploring the relationship between stress, inflammatory markers, and metabolic changes.
+
+Statistical Analysis: Student's t-test will be used to compare FDG uptake between groups, and descriptive statistics will be calculated for each brain region. Sample size calculations indicate a need for approximately 30 subjects per group to detect significant differences. Data will be analyzed using appropriate statistical software.
+
+Ethical Considerations: Informed consent will be obtained from all participants, and the study will adhere to the principles outlined in the Declaration of Helsinki and Good Clinical Practice guidelines. The study protocol has been submitted to the Ethics Committee and regulatory authorities for approval.
+
+Conclusion: This study aims to provide insights into the relationship between cancer cachexia, stress, and metabolic changes in lung cancer patients. By investigating FDG uptake in different organs and lesions, as well as amygdalar FDG uptake before and after stress intervention, this research may contribute to the development of targeted interventions for cachexia management and improve patient outcomes.
+
+PRIMARY OUTCOMES:
+  - Differences in FDG uptake (measured as SUVmean, max, min, peak) in organs, muscle, fat tissue between Cachectic and Non-Cachectic Lung Cancer Patients
+
+INTERVENTIONS:
+  - OTHER: Stress Reduction Training
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05912465

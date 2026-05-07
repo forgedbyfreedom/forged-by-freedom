@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04003935
+Title: Juice Plus Inflammaging and Cardiovascular Disease Prevention Study
+Official Title: Effects of Long-term Consumption of Two Plant-based Dietary Supplements on Low-grade Inflammation, Cardiovascular Disease Prevention and Circulating Micronutrients in a Cohort of Elderly Volunteers
+Status: TERMINATED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 22
+Topic: vitamin D muscle
+
+SUMMARY:
+Low- grade inflammation is a pathological feature of a wide range of chronic conditions, including the metabolic syndrome, cardiovascular diseases (CVD) and the accelerated reduction in bone density. Previous research shows that diets rich in fruits and vegetables can reduce chronic inflammation. To date there is no data on multiyear clinical interventions assessing the effect of plant-based dietary supplements on low-grade inflammation, cardiovascular disease prevention and indicators of biological aging, including individuals' cognitive function. In this study, the investigators are thus exploring whether separate ingestions of two plant-based nutritional products over 2 years, are able to modulate low-grade inflammation, parameters of CVD prevention, circulating micronutrients, upper respiratory tract- and gastro-intestinal symptoms, quality of life, indicators of biological aging, and cognitive function in overweight seniors.
+
+DETAILED DESCRIPTION:
+Inflammation is a central component of innate (non-specific) immunity. The termination of inflammation is an active process involving cytokines and anti-inflammatory mediators like lipids and micronutrients. Inflammation acts as both, 'friend and foe'; it is an essential component of immunosurveillance and host defense, but a chronic low-grade inflammatory state is a pathological feature of a wide range of chronic conditions, such as the metabolic syndrome or cardiovascular diseases (CVD). In addition, low-grade inflammation and oxidative stress are often associated with increased body fat mass, obesity but also accelerated reduction in bone density.
+
+There is a substantial amount of evidence to suggest that many foods, nutrients and non-nutrient food components modulate inflammation both acutely and chronically. Nutritional regimens with adequate intake of micronutrients, vegetables, and fruits, low in sugar and saturated fats, like the Mediterranean diet or a vegetarian dietary regimen, can reduce chronic inflammation and oxidative stress.
+
+To date there is no data on multiyear clinical interventions assessing the effect of plant-based dietary supplements on low-grade inflammation, cardiovascular disease prevention and indicators of biological aging, including individuals' cognitive function. In this study, the investigators are thus exploring whether separate ingestions of two plant-based nutritional products over 2 years, are able to modulate biomarkers of low-grade inflammation and CVD prevention, plasma concentrations of micronutrients, upper respiratory tract- and gastro-intestinal symptoms, quality of life, indicators of biological aging, and cognitive function in an overweight/obese cohort of middle-aged, elderly people.
+
+Volunteers expressing interest to take part in the study, will need to attend a screening visit where their eligibility will be assessed. For participants with confirmed eligibility, they will need to attend a baseline visit and consecutive study visits at 6, 12, 18 and 24 months. Markers of low-grade inflammation and CVD, micronutrients status, respiratory tract symptoms, gastrointestinal symptoms and quality of life will be assessed at baseline, 6, 12, 18 and 24 months. Bone quality and telomere length will be assessed at baseline, 12 and 24 months.
+
+Propensity score approach:
+
+Since this is a long-term trial and in order to maximize adherence to the ingestion of the products, volunteers will be allowed to choose their preferred nutritional product. Instead of using randomization, the investigators have chosen a propensity score (PS) approach which helps to reduce bias with regards to random significances. More specifically, for each participant an individual score based on certain parameters, likely to affect the primary outcomes, will be calculated and will be matched with another participant with the same PS across the three groups. PS matching will be implemented without replacement and setting the caliper equal t
+
+PRIMARY OUTCOMES:
+  - Concentration changes in biomarkers of low-grade inflammation
+  - Plasma concentration changes in biomarkers of CVD
+  - Efficacy of micronutrients' absorption
+
+INTERVENTIONS:
+  - OTHER: Juice Plus+ Complete
+  - DIETARY_SUPPLEMENT: Juice Plus+ Premium
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04003935

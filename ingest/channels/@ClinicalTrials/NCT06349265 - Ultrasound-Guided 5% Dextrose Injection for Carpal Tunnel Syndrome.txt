@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06349265
+Title: Ultrasound-Guided 5% Dextrose Injection for Carpal Tunnel Syndrome
+Official Title: A Comparative Analysis of the Efficacy of Ultrasound-Guided Injection of 5% Dextrose in Water for the Treatment of Mild to Severe Carpal Tunnel Syndrome
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: tendon injury
+
+SUMMARY:
+This study was a prospective randomized double-blind clinical trial conducted at the Physical Medicine and Rehabilitation Clinic of a local research and training hospital in Turkey from October 2023 and May 2024. Patients diagnosed with CTS were classified into three groups: severe, mild, and moderate CTS, based on the results of electrophysiological tests. An ultrasound-guided 5% Dextrose in Water injection was performed. The primary outcome measurement was the Visual Analog Scale (VAS), while secondary measurements were the Boston Carpal Tunnel Syndrome Questionnaire (BCTQ) and the Dolour Neuropathic en 4 Questions (DN4) questionnaire. The measurements were performed before the injection and at the first week, first month and third month follow-up times. The distribution of data within groups was examined using the Shapiro-Wilk test and Q-Q plots. The study also analyzed temporal changes, group differences, and intergroup changes using repeated measures ANOVA models.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Visual Analogue Scale(VAS)
+
+INTERVENTIONS:
+  - DRUG: Carpal Tunnel Hydrodissection with %5 dextrose in water injection
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06349265

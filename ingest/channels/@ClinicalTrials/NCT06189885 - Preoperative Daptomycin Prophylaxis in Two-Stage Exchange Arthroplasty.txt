@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06189885
+Title: Preoperative Daptomycin Prophylaxis in Two-Stage Exchange Arthroplasty: A Prospective, Randomized, Double-Blinded Trial
+Official Title: Preoperative Daptomycin Prophylaxis for Preventing Gram-Positive or Methicillin-Resistant Staphylococcus Aureus Infection in Two-Stage Exchange Arthroplasty: A Prospective, Randomized, Double-Blinded Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 184
+Topic: creatine supplementation
+
+SUMMARY:
+The gold standard for treating prosthetic joint infection (PJI) is two-stage exchange arthroplasty. This includes the first stage of debridement and removal of the artificial joint, and the second stage of reimplantation of the artificial joint. Methicillin-resistant staphylococcus aureus (MRSA) infection is one of the factors leading to the failure of artificial joint infection treatment. Before the second stage of the joint surgery, the surgeon will prescribe prophylactic antibiotics based on previous bacterial cultures. The usual preoperative antibiotic is a first-generation cephalosporin antibiotic. If it is MRSA, vancomycin will be given. Increasingly, literature reports link prosthetic joint infections to MRSA, but no changes have been made to the routine recommendation for MRSA prophylactic antibiotic use.
+
+Daptomycin is a cyclic lipopeptide antibiotic that can rapidly penetrate biofilms and bones, and its safety and tolerability have been confirmed. Therefore, it can effectively combat Gram-positive organisms, including MRSA. Daptomycin has many characteristics of an ideal prophylactic: short infusion time, low adverse events during administration, and a range limited to Gram-positive organisms. We aim to assess whether adding antibiotics that cover MRSA would reduce prosthetic joint infections and increase surgical success rates, in addition to the standard recommended prophylactic antibiotics. Thus, this prospective randomized trial is designed to assess, besides using the first-generation cephalosporin antibiotic, the effects of adding an antibiotic with MRSA coverage (Daptomycin vs. Vancomycin).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Infection
+
+INTERVENTIONS:
+  - DRUG: Cefazolin with Daptomycin
+  - DRUG: Cefazolin with vancomycin
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06189885

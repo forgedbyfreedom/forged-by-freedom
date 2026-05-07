@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06971601
+Title: Diagnostic Validity Ofclinical Tests for Infrapatellar Fat Pad Impingement Syndrome
+Official Title: Diagnostic Validity of Infrapatellar Fat Pad Impingement Syndrome: Performance of Clinical Tests Compared to MRI Imaging
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+The ETICHOFFA study is a clinical research project aiming to improve the diagnosis of Infrapatellar fat pad impingement syndrome, a common source of anterior knee pain. Although MRI remains the gold standard for diagnosis, clinical testing strategies lack validation. This observational study has two main objectives: to assess the diagnostic accuracy of a cluster of standardized clinical provocation tests for IFP impingement compared to MRI findings, and to identify clinical and subjective characteristics associated with IFP involvement confirmed by imaging.
+
+This observational study will recruit 50 patients aged 18 to 70 years with anterior knee pain rated at least 3 out of 10 in intensity. Participants will complete a secure online questionnaire documenting symptoms, pain distribution, aggravating and relieving factors, and pain intensity at rest, during activity, and daily life. They will also complete three validated scales: the Anterior Knee Pain Scale (AKPS), the Knee injury and Osteoarthritis Outcome Score (KOOS), and the Tampa Scale for Kinesiophobia (TSK).
+
+A standardized clinical examination will be performed, including subpatellar skin temperature measurement, knee swelling assessment, passive range of motion testing, and a series of provocation tests targeting Hoffa's fat pad. Tests will be randomized to reduce bias and considered positive if they reproduce the patient's typical pain with an intensity of at least 2/10. Each participant must also undergo a standardized MRI of the knee within two weeks of the clinical assessment, interpreted blindly by an independent musculoskeletal radiologist.
+
+All data will be anonymized, stored securely, and analyzed using SPSS software. Diagnostic accuracy of clinical tests will be evaluated through sensitivity, specificity, predictive values, and likelihood ratios. Functional outcomes related to taping will also be analyzed.
+
+The study has received ethical approval and adheres to GDPR standards for data protection. Participation is voluntary, with the right to withdraw at any time. The ETICHOFFA study is expected to enhance clinical diagnostic pathways for anterior knee pain associated with Infrapatellar fat pad involvement.
+
+DETAILED DESCRIPTION:
+Study Protocol Description The ETICHOFFA study is a clinical research project aiming to improve the diagnosis of infrapatellar fat pad (IFP) impingement syndrome, a common but under-recognized source of anterior knee pain. Although magnetic resonance imaging (MRI) remains the diagnostic gold standard, clinical testing strategies for IFP involvement are poorly standardized and lack validated diagnostic performance.
+
+This observational study has two main objectives: (1) to assess the diagnostic accuracy of a cluster of standardized clinical provocation tests for IFP impingement compared to MRI findings, and (2) to identify clinical and subjective characteristics associated with IFP involvement confirmed by imaging.
+
+The sample size of 50 participants was determined by an a priori power calculation. The primary hypothesis is that a composite score based on five clinical provocation tests will yield an area under the ROC curve (AUC) of at least 0.80, a threshold commonly considered indicative of good diagnostic discrimination. The null hypothesis is set at an AUC of 0.50, representing no discriminative ability. Using a two-sided alpha level of 0.05 and a statistical power of 80% (1-β), and assuming a prevalence of positive MRI findings of approximately 33% (i.e., a 2:1 ratio of test negatives to positives), the number of positive cases required was estimated at 11, corresponding to a total of 33 participants (11 positives and 22 negatives). Accounting for a 10% anticipated loss or exclusion rate, the total sample size was increased to 37 participants. However, this calculation is based on idealized assumptions and does not fully capture the uncertainties inherent to clinical research under real-world conditions. Variability in actual IFP prevalence, incomplete or uninterpretable MRI data, and interindividual variability in clinical test responses may all affect the study's effective statistical power. Therefore, a sample size of 50 participants was ultimately planned to ensure robust analysis and compensate for such contingencies.
+
+The study will proceed in the following steps:
+
+Step 1: Patient Inclusion Patients will be eligible if they are aged between 18 and 70 years and experience anterior knee pain with an intensity of ≥ 3/10 on a numerical pain scale on most days over the past month.
+
+Certain medical conditions will be exclusion criteria, including: recent corticosteroid injections (within 12 months), hip or back surgery, specific neurological conditions, and any contraindications to MRI.
+
+Prior to enrollment, each patient will receive detailed information and have the opportunity to ask any questions. Informed written consent will be obtained.
+
+Step 2: Clinical Evaluation Each participant will complete a secured online questionnaire (GDPR-compliant platform) to record symptoms, painful areas (via bodychart), aggravating and relieving factors, and pain intensity (via visual analogue scale \[VAS\]/100) at rest, during physical activity, and in e
+
+PRIMARY OUTCOMES:
+  - The primary endpoint of this study is the diagnostic value of the five clinical tests targeting the infrapatellar fat pad, considered collectively as a test cluster.
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Provocative test
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06971601

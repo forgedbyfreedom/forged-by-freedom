@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05412420
+Title: Artificial Intelligence to Search for Abnormalities in Ambulatory Cancer Patients
+Official Title: Artificial Intelligence to Search for Abnormalities in Ambulatory Cancer Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 500
+Topic: sarcopenia intervention
+
+SUMMARY:
+During treatment, cancer patients may experience side effects related to their disease but also to the different treatments they receive.
+
+Currently, adverse effects and toxicities are well codified in the oncology community, notably via the NCI CTCAE criteria.
+
+Unlike objective data such as a blood sample or a CTscan, a major bias in patient assessment is the subjective assessment of the physician or its team at a given time, which may not reflect the overall situation (for better or worse). Several studies had already highlighted the discrepancies between medical and patient data collection.
+
+Self-assessment of symptoms is one way to overcome this bias. Moreover, there are now a large number of solutions that allow to perform these self-assessments at home.
+
+Thanks to these tools, there are now two situations, the scheduled evaluation (before a chemotherapy treatment, or after a surgical procedure for instance) and the unscheduled situations, where it is the patient himself who can trigger an evaluation form.
+
+These new evaluation methods also allow to take a quality of life approach. Patient-reported outcomes (PROs) is now a valid evidence-based assay to detect patient's symptoms and therefore provide helpful clinical information to healthcare providers.
+
+The goal of this study is to go one step further than the previous PROs studies and evaluate the ability to train a machine learning algorithm to detect at-risk situations and lay the foundation for a viable solution for future prospective and randomized trials.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of unscheduled medical consultations or re-hospitalisations
+
+INTERVENTIONS:
+  - OTHER: Patient Self-Reporting of Symptoms
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05412420

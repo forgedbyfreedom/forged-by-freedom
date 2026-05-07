@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07130045
+Title: Hybrid Exercise Program for Heart Disease: Effect on Health and Quality of Life
+Official Title: Effect of Hybrid Endurance and Strength Training (HyBEST) on Health-Related Outcomes and Quality of Life in Patients With Coronary Artery Disease During Phase II Cardiac Rehabilitation Program
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 84
+Topic: resistance training
+
+SUMMARY:
+Cardiac rehabilitation (CR) participation remains suboptimal, partly due to logistical challenges and limited access to center-based programs. Hybrid Endurance-Strength Training (HybEST) offers an alternative model by combining supervised endurance and strength exercises with home-based components. The main questions it aims to answer are:
+
+* Does a hybrid exercise program significantly improve a patient's body function and structures \[exercise capacity, body composition, and muscle strength\] compared to usual care?
+* Does a hybrid exercise program significantly improve a patient's activity \[functional capacity, physical activity, and total energy expenditure\] compared to usual care?
+* Does a hybrid exercise program significantly improve a patient's participation \[health-related quality of life\] compared to usual care?
+
+This single-center, two-arm parallel randomized clinical trial aims to evaluate the effects of HybEST on health-related outcomes and quality of life among patients with coronary artery disease in Phase II CR. Eligible participants will be randomly assigned in a 1:1 ratio to either the HybEST intervention group or the standard CR control group using a lottery method, specifically the sealed envelope approach. Assessments will be conducted at baseline (T0), Week 5 (T2), and Week 9 (T3) to measure changes in health-related outcomes and quality of life.
+
+DETAILED DESCRIPTION:
+In recent years, models for delivering cardiac rehabilitation (CR) have advanced by incorporating structured exercise methods and technology into routine practice. Hybrid Endurance-Strength Training (HybEST) combines supervised center-based sessions with home-based elements, supported by digital tools such as remote monitoring and virtual consultations. This hybrid approach may help overcome common barriers to CR participation, including travel distance, scheduling conflicts, and work commitments. This single-centre, two-arm parallel randomized controlled trial aims to evaluate the effects of a hybrid exercise program in patients with coronary heart disease. The objectives are;
+
+* To evaluate the effects of a hybrid exercise program on patients' body function and structures, including exercise capacity, body composition, and muscle strength, compared to usual care.
+* To determine the effects of a hybrid exercise program on patients' activity, including functional capacity, physical activity, and total energy expenditure, compared to usual care.
+* To assess the effects of a hybrid exercise program on patients' participation, specifically health-related quality of life, compared to usual care.
+
+A total of 84 eligible participants (42 per group, accounting for 14% attrition) will be randomized into either the intervention or control group. The usual care group will follow a standard exercise program consisting of endurance and strength components. This program includes supervised exercise sessions at the center once a week for eight weeks, along with educational materials on exercising at home. The intervention group will participate in a hybrid training program that combines endurance and strength training over eight weeks. Their program includes two supervised sessions at the center and 22 unsupervised sessions at home. Participants will receive exercise educational videos via WhatsApp (Weeks 1-8) and a fitness tracker to support unsupervised sessions. Weekly virtual follow-ups will be conducted from Week 1 to Week 8. Outcome measures include Exercise Capacity, Body Composition, Muscle Strength, Physical Activity and METs, Barrier Scales, and Health-Related Quality of Life. Data will be analyzed using IBM SPSS version 26.0, with statistical significance set at p \< 0.05.
+
+PRIMARY OUTCOMES:
+  - Treadmill stress test
+
+INTERVENTIONS:
+  - OTHER: Hybrid Endurance Strength Training
+  - OTHER: Usual Care
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07130045

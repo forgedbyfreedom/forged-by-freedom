@@ -1,0 +1,67 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06099470
+Title: Investigation of the Effects of Telerehabilitation Groups for Chronic Non-specific Low Back Pain.
+Official Title: Investigation of the Effects of Synchronized and Non-synchronized Telerehabilitation Programs in the Management of Chronic Non-specific Low Back Pain.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 72
+Topic: low back pain exercise
+
+SUMMARY:
+The goal of this study is to investigate the efficacy of different internet based delivery methods for patients with chronic non-specific low back pain.
+
+The parameters we want to study is pain, disability, fear of movement, and quality of life.
+
+DETAILED DESCRIPTION:
+This study is a randomized control trial with two intervention groups and one control group with total sample size of 72:
+
+1. Real-time synchronized telerehabilitation program (STP). (n=24)
+2. Pre-recording non-synchronized telerehabilitation program (NSTP). (n=24)
+3. Home non-supervised control group (HCG). (n=24)
+
+Sample Size Calculation:
+
+An adequate sample size was calculated using G\*power 3.1.9.7. Statistical test fixed effects one-way ANOVA, the probability for alpha error (α) at 0.05, large effect size f = 0.4, power = 0.8, and three groups. A total of 66 subjects was calculated as the minimum required sample size. In addition, based on previous studies a dropout rate was set at 10%. Hence, the total sample size was increased to 72. Therefore, each group will have 24 subjects (n=24).
+
+Method:
+
+Intervention:
+
+The three groups received a video conference education session. The content of the session was anatomy and physiology of the musculoskeletal structure, and kinesiology of the lumbar region. In addition, they were educated about the principles of pain, possible causes for the CNLBP, and how to manage CNLBP (correct posture and life modifications).
+
+Subjects in the STP and NSTP received the same exercises based on core stabilization and stretching but with different method.
+
+1. STP group will benefit from individual exercise session through real-time video calls, where the therapist demonstrates the exercises, and monitor the patient throughout the session.
+2. NSTP group will benefit from thoroughly instructional videos that describe every step of each exercise and will be followed up weekly through a video call to monitor compliance and answer questions.
+3. HCG group will receive a PDF file that includes the same exercises with written instructions. However, no further interventions nor follow-ups will be available for the HCG.
+
+Protocol:
+
+The exercise protocol (table1) will be as follow with total duration of 44 minutes:
+
+Warm-up (5 minutes): Head tilt, head rotation, shoulder circles, chest stretch, side bend, hip circles, torso twist, forward bend, Cat-cow.
+
+Stabilization exercises (25 minutes):
+
+1. Level one: Tabletop with single knee and hip flexion. 4-point kneeling with single leg stretch. Bridge. One leg stretch. Straight leg side lifts. Sit-ups with lumbar region fixed on the floor.
+2. Level two: Tabletop with step knee and hip flexion. 4-point kneeling with single-leg rise. Bridge with leg stretch. One leg stretch with knee extension. Straight leg side lifts with contralateral adduction. Sit-ups reach wrists to the knees.
+3. Level three: Tabletop with double knee and hip flexion. 4-point kneeling with contralateral arm and leg raise. Bridge with leg stretch and hold. One leg stretch hold and alternate knee extension. Straight leg side lifts adduct and hold. Sit-ups arms crossed over the chest.
+
+   * 10 repetitions, 10 seconds rest intervals, 3 sets. Cooldown and stretching exercises (14 minutes): quadriceps stretch, kneeling 
+
+PRIMARY OUTCOMES:
+  - Visual Analog Scale
+
+INTERVENTIONS:
+  - OTHER: Real-time synchronized telerehabilitation program (STP).
+  - OTHER: Pre-recording non-synchronized telerehabilitation program (NSTP)
+  - OTHER: Home non-supervised control group (HCG)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06099470

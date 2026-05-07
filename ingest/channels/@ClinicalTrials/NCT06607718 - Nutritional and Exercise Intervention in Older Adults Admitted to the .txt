@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06607718
+Title: Nutritional and Exercise Intervention in Older Adults Admitted to the Acute Care Unit (SERIA)
+Official Title: Hyperproteic Oral Supplementation With Vitamin D and Resistance Training in Older Patients Admitted to the Acute Unit (SERIA)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: vitamin D muscle
+
+SUMMARY:
+This is a randomised, parallel, single-blind clinical trial. Objectives: to evaluate: the impact of the intervention on nutritional status, body composition, strength, the prevalence of sarcopenia and physical performance at discharge and three months later..
+
+DETAILED DESCRIPTION:
+Design: A randomised controlled clinical trial with four parallel groups is being conducted with older adults admitted to an acute geriatric unit at risk of malnutrition or with malnutrition. The participants are randomly assigned to one of the groups. Three assessment visits are being conducted: at admission, discharge, and three months later.
+
+Setting: The study is being conducted in the Unidad de Agudos del Servicio de Geriatría at Hospital Universitario Ramón y Cajal, by the Servicio Madrileño de Salud (SERMAS).
+
+Interventions: four groups: 1) a resistance training group (RT); 2) an oral nutritional supplementation group (ONS); 3) a combination of RT and ONS (RT+ONS); and a control group (CG). The patients in the RT group follow individualized RT sessions with a physiotherapist daily during the hospitalization and three weekly home sessions on their own after discharge. The sessions are structured according to the recommendations of the American College of Sports Medicine (ACSM), mainly RT.
+
+Study population: A study of malnourished or at-risk outpatients in our setting was used to calculate the sample size. In that study, with an alpha error of 0.05 and a beta of 0.80, the minimum sample size was 14 participants per group. Our objective is to include, at least, 21 participants per group, resulting in a total of 84 participants.
+
+Sociodemographic and clinical variables are being collected (e.g., age, sex, living situation, number of drugs, falls). Information about nutritional and functional status (e.g., MNA, gait speed, Barthel, Lawton, and FAC), body composition (e.g., weight, height, body mass index, appendicular muscle mass index measured by bioimpedanciometry (BIA)), ultrasound measurements of the anterior rectus (area, thickness, and penation angle), and muscle strength (hand grip test) is also collected.
+
+The first descriptive analysis of the variables will include frequencies and percentages for categorical variables and means and standard deviations for continuous variables. Changes in nutritional status will be analysed as well as the interaction between nutrition and exercise by repeated measures ANOVA. The prevalence of sarcopenia and the influence of each component of the sarcopenia definition on physical performance, ADLs, emergency room visits, and new admissions. Additionally, a survival analysis will be performed to compare the four groups. To assess the quality of ultrasound measurement, the relationship between each ultrasound variable and the bioimpedance score, as well as the diagnostic criteria for malnutrition and sarcopenia, will be analysed. Furthermore, ultrasound measurements will be correlated with the estimation of muscle mass using bioimpedance analysis. A p-value less than 0.05 will be considered statistically significant.
+
+The study is being conducted under the ethical standards set forth by the Comité de Ética de Investigación con Medicamentos (CEIm) of the Hospital Universitario Ramón y Cajal. Each participa
+
+PRIMARY OUTCOMES:
+  - Mini Nutritional Assessment (MNA)
+
+INTERVENTIONS:
+  - OTHER: Resistance Training
+  - DIETARY_SUPPLEMENT: Oral Nutritional Supplementation
+  - OTHER: Control Group
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06607718

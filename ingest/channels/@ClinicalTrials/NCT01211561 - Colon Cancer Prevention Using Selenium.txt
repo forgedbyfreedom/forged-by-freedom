@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01211561
+Title: Colon Cancer Prevention Using Selenium
+Official Title: 
+Status: UNKNOWN
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: protein supplementation
+
+SUMMARY:
+Selenium's ability to prevent colorectal cancer (CRC) has been suspected for nearly 30 years, but has never been directly studied in humans. The investigators will directly assess selenium's ability to prevent CRC by measuring alterations in aberrant crypt foci (ACF), an accepted surrogate marker for CRC.
+
+ACF's are very small (i.e., microscopic) collections of abnormally shaped cells that are a commonly used marker of CRC risk. Screening colonoscopy at UIC routinely uses methods that allow ACF counting to be done as a part of standard practice. ACF's are not fixed, like polyps or cancers, but can disappear as a person's risk for developing CRC decreases.
+
+The investigators propose giving patient's with 6 or more ACF's 200 mcg selenized yeast or placebo, and determining if there is a drug-dependant decrease in ACF number. The primary objective is to determine whether selenized yeast supplementation, compared to placebo, causes significant reduction of ACF number from baseline levels. The primary endpoint will be change in ACF number
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Reduction in ACF biomarkers
+
+INTERVENTIONS:
+  - DRUG: Selenium, selenomethionine
+  - DRUG: placebo
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01211561

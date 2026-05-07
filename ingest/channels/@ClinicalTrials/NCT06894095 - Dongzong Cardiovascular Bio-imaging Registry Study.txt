@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06894095
+Title: Dongzong Cardiovascular Bio-imaging Registry Study
+Official Title: Dongzong Cardiovascular Bio-imaging Registry Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50000
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The DAILY project is a large-scale, multicenter, prospective initiative designed to establish a comprehensive bio-imaging database that integrates multidimensional data, including living environments, psychosocial and cognitive assessments, advanced lung and cardiovascular imaging, multi-omics profiles, clinical medication and surgical records, and health outcomes. Leveraging this extensive, multiscale dataset, the project aims to elucidate the intricate interplay between genetic biology and environmental factors in driving downstream biological alterations, thereby shaping lung and cardiovascular structural and functional phenotypes, and ultimately influencing the onset and progression of cardiovascular diseases (CVD). Through a systematic exploration and understanding of this complex network, the project seeks to identify critical intervention points and develop innovative strategies for the prevention and management of CVD.
+
+DETAILED DESCRIPTION:
+Cardiovascular diseases (CVD) are the leading cause of global mortality, representing a major public health challenge that threatens life and health both presently and in the foreseeable future. The reduction of modifiable risk factors remains a powerful and essential strategy, however, the application of clinical risk scores has demonstrated limited efficacy in significantly reducing cardiovascular events. In recent years, the emergence of multi-omics has provided novel insights into the prevention and management of CVD, offering opportunities to deeply understand its drivers at the genetic and biological levels. Nevertheless, the clinical utility and widespread adoption of these approaches face significant challenges, primarily due to two critical factors: First, multi-omics datasets, particularly GWAS datasets, exhibit a pronounced Eurocentric bias; second, the vast array of multi-omics indicators cannot be effectively integrated with living environments and diseases to construct a comprehensive biological network, thereby hindering the deciphering of key biological pathways and biomarkers for clinical translation. To address these limitations, we propose leveraging modern imaging technologies as an "intermediate bridge", because when critical biological pathways are triggered by genes, environmental factors, or their interactions, the earliest manifestations are impairments in cardiac and pulmonary structure and function (intermediate phenotypes). Accordingly, the DAILY project aims to enroll 50,000 participants across China, stratified by economic levels, geography, and living environments, to establish a high-quality bio-imaging database. This database will encompass: (1) advanced imaging-derived anatomical and functional phenotypes, along with precise hemodynamic measurements; (2) extensive multi-omics indicators, particularly genomics and downstream transcriptomics, proteomics, and metabolomics; (3) comprehensive living environments, psychological and cognitive date, and longitudinal health outcome; and (4) clinical medication and surgical records, along with other detailed clinical information.
+
+Currently, there is a lack of a high-quality bio-imaging data platform based on the Chinese population to construct a complete pathway from genes/environment to disease, thereby enabling the development of promising strategies for CVD prevention and management.
+
+PRIMARY OUTCOMES:
+  - Major adverse cardiovascular events
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06894095

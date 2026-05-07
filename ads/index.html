@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FBF Ad Series</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;--surface:#141414;--surface2:#1c1c1c;
+  --border:#2a2a2a;--accent:#ff6a00;--text:#e8e8e8;
+  --text-dim:#aaa;--radius:10px;
+}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:32px 20px}
+h1{font-size:28px;font-weight:800;text-transform:uppercase;letter-spacing:1px;
+  background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:6px}
+.subtitle{color:var(--text-dim);font-size:14px;margin-bottom:32px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px}
+.nav-btn{
+  padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);
+  background:var(--surface);color:var(--text-dim);font-size:12px;font-weight:600;
+  cursor:pointer;text-transform:uppercase;letter-spacing:.5px;transition:all .2s;
+  text-decoration:none;display:inline-block;
+}
+.nav-btn:hover,.nav-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(255,106,0,.1)}
+.persona{display:none}
+.persona.active{display:block}
+.persona-header{margin-bottom:28px}
+.persona-header h2{font-size:22px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.5px}
+.persona-header p{color:var(--text-dim);font-size:13px;margin-top:4px}
+.channel-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:700px){.channel-grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:22px;position:relative}
+.card-label{
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+  color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:6px
+}
+.card-label::before{content:'';width:16px;height:2px;background:var(--accent);border-radius:1px}
+.card h3{font-size:15px;font-weight:700;margin-bottom:10px;color:#fff}
+.card p{font-size:13px;color:var(--text-dim);line-height:1.7;margin-bottom:10px}
+.card p:last-child{margin-bottom:0}
+.card ul{padding-left:18px;margin:8px 0}
+.card ul li{font-size:13px;color:var(--text-dim);line-height:1.7;margin-bottom:4px}
+.card strong{color:var(--text)}
+.card .cta{color:var(--accent);font-weight:700;font-size:13px;margin-top:12px;display:block}
+.card .subject{background:var(--surface2);border:1px solid var(--border);border-radius:6px;
+  padding:10px 12px;font-size:12px;margin-bottom:12px}
+.card .subject span{color:var(--text-dim);font-size:11px;display:block;margin-bottom:2px}
+.full-width{grid-column:1/-1}
+.tweet-card{background:rgba(255,106,0,.06);border-color:rgba(255,106,0,.25)}
+.copy-btn{
+  position:absolute;top:12px;right:12px;
+  background:var(--surface2);border:1px solid var(--border);border-radius:6px;
+  color:var(--text-dim);font-size:11px;padding:4px 10px;cursor:pointer;
+  transition:all .2s;
+}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+.copy-btn.copied{color:#22c55e;border-color:#22c55e}
+</style>
+</head>
+<body>
+<h1>FBF Ad Series</h1>
+<p class="subtitle">8 personas × 4 channels — production-ready copy</p>
+
+<div class="nav">
+  <a class="nav-btn active" onclick="show('p1',this)">Former Athlete</a>
+  <a class="nav-btn" onclick="show('p2',this)">Busy Dad</a>
+  <a class="nav-btn" onclick="show('p3',this)">Combat Sports</a>
+  <a class="nav-btn" onclick="show('p4',this)">Vet / First Responder</a>
+  <a class="nav-btn" onclick="show('p5',this)">Women's Recomp</a>
+  <a class="nav-btn" onclick="show('p6',this)">Beginner</a>
+  <a class="nav-btn" onclick="show('p7',this)">Plateau Buster</a>
+  <a class="nav-btn" onclick="show('p8',this)">Event / Comp Prep</a>
+</div>
+
+<!-- PERSONA 1 -->
+<div class="persona active" id="p1">
+  <div class="persona-header">
+    <h2>The Former Athlete</h2>
+    <p>College/HS athlete, now 30s–40s, desk job, lost the physique, wants it back</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>Your body remembers what it was. Time to rebuild it.</h3>
+      <p>You played ball. You were strong. Now life happened—desk, kids, routine. The thing is, your muscle memory is still there. Your discipline is still there. You just need a roadmap that respects your intelligence and your schedule.</p>
+      <p>That's FBF Recomp Protocol. Not complicated. Not soft. Custom training, nutrition, supplementation built for someone who's done this before and knows shortcuts don't work.</p>
+      <p>You already know discipline. Now apply it.</p>
+      <span class="cta">Apply now. Limited spots. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You played college ball. You were jacked. Now you're carrying an extra 30 pounds and wondering where it went."</p>
+      <p><strong>Body (3–25s):</strong> "Your discipline didn't disappear. Your muscle memory is still there. You just need a program built for guys like you—people who know training, who respect nutrition science, who don't have time for BS. That's FBF Recomp Protocol. Real coaches. Real results. Guys your age are dropping 20+ pounds of fat and adding 10–15 pounds of quality muscle in 16 weeks."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Limited spots. Link in bio."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>The athlete in you isn't gone—just dormant
+        <span style="margin-top:6px">Preview Text</span>Remember what your body used to do? Time to remind it.
+      </div>
+      <p>Hey,</p>
+      <p>I was looking through some old photos from my college days the other day. Different guy. Not just the physique—the mindset. Everything was about performance, progression, earning every rep.</p>
+      <p>Then life happens. Job demands more. Family demands more. You wake up one day and don't recognize yourself in the mirror.</p>
+      <p>Here's what I know: guys like you don't fail because you lack discipline. You fail because you're running a program designed for someone else—someone with unlimited time, or someone starting from zero.</p>
+      <p>The FBF Recomp Protocol was built for you. For the guy who was an athlete. For the guy who knows what discipline feels like but needs a system that doesn't ask for 2 hours in the gym.</p>
+      <p>In the last 6 months, we've recomped:</p>
+      <ul>
+        <li>34-year-old former football player: lost 22 lbs of fat, gained 14 lbs of muscle, back in his college jeans</li>
+        <li>41-year-old ex-baseball player: went from 28% to 16% body fat, added visible abs and shoulder size</li>
+        <li>38-year-old former swimmer: 30-pound fat loss, 12-pound muscle gain, crushed his first physique competition</li>
+      </ul>
+      <p>You already know discipline. Now apply it to the right target.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Limited coaching spots.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You were an athlete. You were strong. Then life got in the way. Your discipline didn't go anywhere—your programming did. Time to apply it right. FBF Recomp Protocol. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 2 -->
+<div class="persona" id="p2">
+  <div class="persona-header">
+    <h2>The Busy Dad</h2>
+    <p>35–50, limited time, training for his family, tried things half-heartedly</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>Your kids want a dad who can move.</h3>
+      <p>You're not training for a six-pack. You're training because you want to carry your son on your shoulders without thinking about it. Because you want to keep up when they ask you to play. Because you want them to see what discipline looks like.</p>
+      <p>The FBF Recomp Protocol isn't built on 90-minute gym sessions. It's built for 45 minutes, 4 days a week, with a nutrition system that doesn't require 14 containers prepped on Sunday.</p>
+      <p>Real results. Real time. No compromises.</p>
+      <span class="cta">Apply today. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "Your 7-year-old asks you to play and you need 20 minutes to recover."</p>
+      <p><strong>Body (3–25s):</strong> "You're not training to look good on Instagram. You're training to be the dad your kids actually want. Stronger. More energy. Here's the reality: most programs aren't designed for guys with families and 45 minutes max. FBF is different. Clients are losing 15–20 pounds of fat, building real muscle, in the time they actually have. Custom programming, nutrition that fits your life, no BS."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Limited coaching spots. Link in bio."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>The kind of strong your kids need you to be
+        <span style="margin-top:6px">Preview Text</span>Being a fit dad isn't vanity—it's duty.
+      </div>
+      <p>Hey,</p>
+      <p>Last weekend my nephew asked me to lift him up. Held him for five minutes straight. Zero struggle. He looked at me like I was a superhero.</p>
+      <p>That hits different when you're a parent.</p>
+      <p>Your kids don't care about your abs. They care that you can move. That you have energy. That you're not winded after playing with them for 20 minutes. That you're still here, strong and present, for the long game.</p>
+      <p>I built FBF Recomp Protocol for guys exactly like you. Not to turn dads into bodybuilders. Because I know what matters to you—real strength, real energy, and a program that doesn't demand you abandon your life to achieve it.</p>
+      <p>Here's what's actually possible:</p>
+      <ul>
+        <li>Lose 15–22 pounds of fat without living in the gym (45 min/day, 4 days/week)</li>
+        <li>Build visible muscle and strength in 12–16 weeks</li>
+        <li>Eat food that fits your family meals</li>
+        <li>Feel genuinely better—stronger, more energy, better sleep, better mood</li>
+      </ul>
+      <p>You already know how to commit. You've got kids. Apply that same energy to yourself, and everything changes.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You're training so you can keep up with your kids. Not Instagram. Not ego. Real strength, real energy. 45 min/day, real results. FBF Recomp Protocol. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 3 -->
+<div class="persona" id="p3">
+  <div class="persona-header">
+    <h2>The Combat Sports Guy</h2>
+    <p>BJJ, MMA, boxing — wants better body comp without losing performance</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>Build the physique. Keep the power.</h3>
+      <p>Your sport demands strength AND aesthetic. Most programs pick one. You need both.</p>
+      <p>FBF Recomp Protocol is built for combat athletes—guys who can't afford to lose strength while dropping body fat. Custom periodization. Nutrition that supports your mat time. Supplementation that supports recovery and performance.</p>
+      <p>You've earned the discipline. Now earn the physique.</p>
+      <span class="cta">Apply. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You're strong. You're fast. But your body composition doesn't match what you can do."</p>
+      <p><strong>Body (3–25s):</strong> "Combat sports demand two things: strength and presence. Most programs make you choose. FBF doesn't. Periodized around your sport, not against it. Nutrition that supports mat time, training that builds strength while dropping fat. BJJ, MMA, boxing—clients are coming in stronger, sharper, leaner without losing what got them there."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply now. Performance athletes only. Limited spots."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>Your sport demands both. Your program should too.
+        <span style="margin-top:6px">Preview Text</span>Strong AND aesthetic. Not one or the other.
+      </div>
+      <p>Hey,</p>
+      <p>One of my clients is a purple belt in BJJ. Strong. Could submit most training partners. But his body composition was hiding it. He looked like a guy who could be trained, not a guy who trained.</p>
+      <p>Twelve weeks later? Same strength. Faster. Leaner. Different presence entirely.</p>
+      <p>Combat athletes operate on a different timeline than general fitness guys. Your nutrition needs to support high-intensity grappling or striking—not some generic deficit that ends with you gasping on the mat.</p>
+      <p>Here's what I understand that most coaches don't:</p>
+      <ul>
+        <li>Strength loss during recomp = career disaster for you</li>
+        <li>Your sport's intensity is non-negotiable</li>
+        <li>You need periodization that works <em>with</em> your training, not against it</li>
+        <li>Performance on the mat matters as much as how you look</li>
+      </ul>
+      <p>Real example: 28-year-old boxer, 18% body fat, wanted to drop to 12%. Worried about losing hand speed. Eight weeks in—leaner, and his trainer said his combinations were sharper. Legs were faster. No strength loss. Better presence.</p>
+      <p>That's science applied with someone who understands what your sport actually demands.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Combat athletes only. Limited slots.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You're strong. Your body should show it. BJJ, MMA, boxing—FBF builds recomp without sacrificing performance. Keep the power, add the physique. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 4 -->
+<div class="persona" id="p4">
+  <div class="persona-header">
+    <h2>The Veteran / First Responder</h2>
+    <p>Mission-oriented, disciplined, wants to reclaim physical standards</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>Standards don't lower. You rise to meet them.</h3>
+      <p>You know what discipline looks like. You've lived it. Now apply it.</p>
+      <p>The FBF Recomp Protocol isn't motivational speaker nonsense. It's a mission briefing. Clear objectives. Measurable progress. Accountability. You know what that means. You've done harder things.</p>
+      <p>Real coaching. Real results. No excuses.</p>
+      <span class="cta">Apply. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You passed PT tests. You met standards. Now those standards are slipping."</p>
+      <p><strong>Body (3–25s):</strong> "Discipline isn't inspiration—it's a choice you make every single day. The FBF Recomp Protocol is built for people who understand that. Custom mission plan. Weekly accountability. Real coaching, no fluff. Veterans and first responders are dropping 20–30 pounds of fat, building strength that matters, passing tests they thought they failed."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Mission-oriented coaching. Veteran-owned. Link in bio."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>You've met harder standards. Time to meet this one.
+        <span style="margin-top:6px">Preview Text</span>Discipline didn't retire. It just needs direction.
+      </div>
+      <p>Hey,</p>
+      <p>You know what I respect? Discipline. Not the Instagram kind. The kind you show up for even when nobody's watching. The kind that's become automatic because you know what's at stake.</p>
+      <p>That's the person I want to work with.</p>
+      <p>I'm a vet. I understand what you already know—that discipline is a choice you make every single day, that standards exist for a reason, and that once you drop below them, they don't get easier to meet again.</p>
+      <p>The FBF Recomp Protocol is built like a mission briefing, not a fitness fad. Clear objective. Measurable milestones. Weekly accountability. Real coaching that doesn't waste your time with motivation fluff. You've got discipline. You don't need inspiration. You need direction.</p>
+      <p>Real client: A firefighter. Came to me at 32% body fat, failing PT tests. After 12 weeks: 18% body fat, passing everything, stronger than he's been in a decade. Not because he's a genetics freak. Because he applied discipline to training and nutrition with someone who actually knew what they were doing.</p>
+      <p>Your standards didn't lower. You rise to meet them.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Veteran-owned. Mission-oriented.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You met the standard. Then life happened. Time to apply the same discipline. FBF Recomp: no fluff, real results. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 5 -->
+<div class="persona" id="p5">
+  <div class="persona-header">
+    <h2>The Women's Recomp Client</h2>
+    <p>30s–50s, frustrated with cardio culture, wants to build muscle and lose fat simultaneously</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>Muscle looks good. Muscle feels better.</h3>
+      <p>You've done cardio. You've done "toning." You're still not where you want to be because nobody's giving you what your body actually needs: real strength training, real nutrition, real results.</p>
+      <p>FBF Recomp Protocol builds the physique you want—leaner, stronger, more capable. Custom training + nutrition + accountability from someone who understands what women actually need to recomp effectively.</p>
+      <p>Earn it. Own it.</p>
+      <span class="cta">Apply. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You've done cardio classes. Yoga. Spin. You're leaner but not stronger. Not the physique you want."</p>
+      <p><strong>Body (3–25s):</strong> "Muscle is what actually changes your shape. Real strength training, real nutrition science—not 'toning' mythology. FBF Recomp Protocol is built for women who want to build muscle while losing fat, without bulking, without the BS. Clients are dropping 12–18 pounds of fat, building visible strength and shape in 12–16 weeks."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Limited coaching spots. Real recomp, real results."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>You've earned the strength. Time to show it.
+        <span style="margin-top:6px">Preview Text</span>Muscle doesn't make you bulky. It makes you powerful.
+      </div>
+      <p>Hey,</p>
+      <p>I'm going to say something different from what you've heard: muscle is what changes your body shape. Not cardio. Not "toning." Muscle.</p>
+      <p>Most programs fail women because they're either built on aggressive calorie deficits that strip muscle with fat, or so vague ("do some weights and eat healthy") that you spin your wheels for two years without real progress.</p>
+      <p>The FBF Recomp Protocol is neither of those.</p>
+      <p>Real client: 38-year-old woman, had been doing cardio + light weights for 3 years, frustrated with her progress. Started the protocol. Twelve weeks later: 16 pounds of fat loss, 8 pounds of muscle gain. Different posture. Different presence. Stronger than she'd ever been. And yes, smaller—but the right kind. Built on strength, not just calorie deficit.</p>
+      <p>What changes:</p>
+      <ul>
+        <li>You actually see your abs, shoulders, legs (muscle definition matters)</li>
+        <li>You're stronger—genuinely stronger—in and out of the gym</li>
+        <li>You move differently (posture, confidence, capability)</li>
+        <li>You look like you work, because you do</li>
+      </ul>
+      <p>You know what you're not interested in anymore? Generic. You're ready for real.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Women's recomp coaching. Built on real science.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You want to look stronger because you <em>are</em> stronger. Muscle is the answer, not cardio. FBF builds the recomp you actually want. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 6 -->
+<div class="persona" id="p6">
+  <div class="persona-header">
+    <h2>The Beginner Who's Serious</h2>
+    <p>Never had a real program, intimidated but motivated, ready to commit for the first time</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>You don't need perfect. You need to start.</h3>
+      <p>Never lifted seriously. No nutrition protocol. No idea where to begin. That's not disqualifying—that's your edge. You don't have bad habits to break. You just need clarity.</p>
+      <p>FBF starts with a real assessment, then builds a mission plan for your starting point. Not for Instagram influencers. For you. Custom training, custom nutrition, real coaching from someone who's taken people from zero to results.</p>
+      <p>You're ready. You just needed permission.</p>
+      <span class="cta">Apply. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You've never done this before. You're intimidated. That's actually perfect."</p>
+      <p><strong>Body (3–25s):</strong> "Starting from zero means no bad habits to break. You're not behind—you're at the beginning. FBF is built for people who are serious about starting. Clear program. Real nutrition science explained simply. Weekly coaching. Beginner clients are gaining 15–20 pounds of muscle, losing 10–15 pounds of fat in their first 16 weeks because they're doing the fundamentals right from day one."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Beginner-friendly. Expert coaching. Real results."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>You're not starting from behind. You're starting from smart.
+        <span style="margin-top:6px">Preview Text</span>Never trained before? That's actually an advantage.
+      </div>
+      <p>Hey,</p>
+      <p>You know what I see when someone says "I've never done a real training program before"?</p>
+      <p>Potential.</p>
+      <p>Most people spend 2–5 years training wrong before they wise up. They do garbage programs. Chase trends. Do endless cardio. Then when they finally get serious, they have to unlearn everything and start over.</p>
+      <p>You're not doing that. You're starting right.</p>
+      <p>Real client: 31-year-old guy, zero lifting experience, 25% body fat, no confidence. Four months on the protocol: 18% body fat, PRing lifts every week, different person in the mirror. Not because he's special. Because he started right and didn't waste time with nonsense.</p>
+      <p>This is what you're getting:</p>
+      <ul>
+        <li>Custom program scaled to your actual fitness level (no embarrassment, just appropriate)</li>
+        <li>Nutrition that you can actually follow (real food, real portions, real life)</li>
+        <li>Weekly check-ins and adjustments (so you're not guessing)</li>
+        <li>Real accountability (which is why most people actually stick to this)</li>
+      </ul>
+      <p>No experience required. Seriousness required.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Beginner-friendly coaching. Expert guidance.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>Never trained? That's not a problem—that's an advantage. Start right this time. No wasted years. FBF Recomp. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 7 -->
+<div class="persona" id="p7">
+  <div class="persona-header">
+    <h2>The Plateau Buster</h2>
+    <p>Been lifting 2–5 years, stopped seeing results, needs expert-level programming and nutrition</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>You've hit a wall because you're running the wrong map.</h3>
+      <p>Two years ago, everything worked. Now? Spinning wheels. Same strength. Same physique. Same frustration.</p>
+      <p>That's not bad genetics. That's advanced training demanding advanced programming.</p>
+      <p>FBF is built for lifters who outgrew generic routines. Real periodization. Real nutrition science beyond "calories in, out." Real coaching that knows why you're stuck and how to break through.</p>
+      <p>You've earned the experience. Time to earn the results again.</p>
+      <span class="cta">Apply. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You've been lifting 3 years. Everything worked. Now nothing does."</p>
+      <p><strong>Body (3–25s):</strong> "That's not genetics. That's adaptation. Your body adapted to your generic program. You need advanced periodization, real autoregulation, nutrition science that moves beyond basic math. Plateau clients are breaking through—gaining 5–10 pounds of quality muscle, dropping 8–12 pounds of fat in 12 weeks—because they finally have a program designed for their actual training level."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Expert-level coaching. Experienced lifters only."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>You didn't plateau. Your program did.
+        <span style="margin-top:6px">Preview Text</span>The routine that built your first 20 pounds won't build the next 10.
+      </div>
+      <p>Hey,</p>
+      <p>Year one of lifting is magical. Everything works. PRs come constantly. You feel like a genetic marvel.</p>
+      <p>Year three? Plateau.</p>
+      <p>That's not your fault. Your body adapted to whatever got you there. And most coaches don't have the tools to push past it.</p>
+      <p>I do.</p>
+      <p>The FBF Recomp Protocol for advanced lifters operates on a completely different level. Real periodization. Autoregulation based on your actual data. Nutrition tailored to your metabolic state. Real coaching that adjusts weekly based on how your body responds.</p>
+      <p>Real client: 33-year-old lifter, four years of solid training, stuck for 8 months. Hadn't gained muscle or strength. Custom periodization, real nutrition periodization, weekly data tracking. Twelve weeks later: 8 pounds of muscle, 12 pounds of fat loss, PRs on everything. His old program was running him in circles. Smart programming freed him.</p>
+      <p>You've earned the base. Time to earn the advanced.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Advanced lifting coaching. Expert periodization.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You've been lifting 3 years. Stopped making gains. That program worked for year one. You've evolved. Time for expert-level coaching. FBF. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONA 8 -->
+<div class="persona" id="p8">
+  <div class="persona-header">
+    <h2>The Event / Competition Prep Client</h2>
+    <p>NPC bikini/physique, Spartan race, summer deadline — specific goal with a date</p>
+  </div>
+  <div class="channel-grid">
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Instagram / Facebook</div>
+      <h3>You have a deadline. You need a real plan.</h3>
+      <p>Bikini competition. Physique show. Spartan race. Summer deadline. This isn't "get in shape sometime." It's a mission with a date on it.</p>
+      <p>FBF is built specifically for event prep—proven programming, real nutrition science, weekly accountability. Not guessing. Not hoping. Following a system that's already delivered results on stage and at the finish line.</p>
+      <p>You know what you want. Now earn it.</p>
+      <span class="cta">Apply. → forged-by-freedom-api-nm4f.onrender.com/apply</span>
+    </div>
+    <div class="card">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">30-Second Reel / TikTok Script</div>
+      <p><strong>Hook (0–3s):</strong> "You have 16 weeks until the show. Generic programs won't cut it."</p>
+      <p><strong>Body (3–25s):</strong> "Event prep is different. Everything is on a timeline. Calories. Macros. Cardio. Peaking protocol. You need a real plan, not a guess. FBF builds competition-specific programming. Physique clients are hitting stage lean and full. Bikini clients are conditioned and peaked on time. Real coaching, real timelines, real results."</p>
+      <p><strong>CTA (25–30s):</strong> "Apply. Event-specific coaching. Deadline-driven results. Limited spots."</p>
+    </div>
+    <div class="card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Email</div>
+      <div class="subject">
+        <span>Subject Line</span>16 weeks to the stage. Here's your real plan.
+        <span style="margin-top:6px">Preview Text</span>Deadlines separate planning from wishing.
+      </div>
+      <p>Hey,</p>
+      <p>You have a date circled on the calendar. That date isn't negotiable. So your plan can't be either.</p>
+      <p>Generic "eat less, train hard" doesn't cut it for event prep. You need real peaking protocol. You need to know exactly when to drop volume, when to adjust calories, how to peak for maximum conditioning at the right moment.</p>
+      <p>Real client: First-time physique competitor, 18 weeks out. Real progression plan, weekly photo assessments, macro adjustments based on progress. Hit the stage at 7% body fat, full muscle, best conditioning he'd ever seen. Not luck—strategy.</p>
+      <p>Another: Spartan athlete, 12 weeks out. Faster times, better conditioning, zero strength loss. Peaked for race day exactly when it mattered.</p>
+      <p>Here's what you're getting:</p>
+      <ul>
+        <li>Week-by-week periodization built backwards from your event date</li>
+        <li>Nutrition management that gets you conditioned without losing performance</li>
+        <li>Peak week protocol that actually works</li>
+        <li>Real confidence—you'll know you're dialed in</li>
+      </ul>
+      <p>You have the discipline to show up. You just need the right roadmap.</p>
+      <span class="cta">Apply → forged-by-freedom-api-nm4f.onrender.com/apply — Competition and event prep. Limited coaching spots.</span>
+      <p style="margin-top:10px;font-size:13px;color:var(--text-dim)">—Bryan</p>
+    </div>
+    <div class="card tweet-card full-width">
+      <button class="copy-btn" onclick="copyCard(this)">Copy</button>
+      <div class="card-label">Twitter / X</div>
+      <p>You have a deadline. Stage debut, Spartan race, summer goal. Generic programs won't cut it. Real peaking protocol. FBF event prep. Apply: forged-by-freedom-api-nm4f.onrender.com/apply</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.persona').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function copyCard(btn) {
+  const card = btn.closest('.card');
+  const text = card.innerText.replace('Copy\n','').replace('Copied\n','').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

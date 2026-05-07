@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06264921
+Title: A Study With NKT3447 for Adults With Advanced/Metastatic Solid Tumors
+Official Title: A Phase 1, First-in-Human, Open-Label Study to Evaluate the Safety, Tolerability, PK, and Preliminary Anti-tumor Activity of the Novel Orally Available CDK2 Inhibitor NKT3447 in Adults With Advanced/Metastatic Solid Tumors
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: growth hormone treatment
+
+SUMMARY:
+The goal of the Dose Escalation phase of the study is to evaluate the safety, tolerability, and pharmacokinetics (PK) to determine the maximum tolerated dose (MTD) and/or preliminary recommended dose for expansion (RDE) of NKT3447 in adults with advanced or metastatic solid tumors. The goal of the Expansion phase of the study is to evaluate the safety, tolerability, pharmacokinetics (PK), and the preliminary antitumor activity of NKT3447 in adult subjects with cyclin E1 (CCNE1) amplified ovarian cancer at the RDEs selected in Dose Escalation and to determine the preliminary recommended phase 2 dose (RP2D).
+
+DETAILED DESCRIPTION:
+This is a Phase 1/1b, first-in-human, open-label, multicenter study of NKT3447 in adults with advanced/ metastatic solid tumors. The study consists of 2 parts, a Dose Escalation phase and a Dose Expansion phase. Eligible patients must have confirmed advanced/metastatic solid tumors (as outlined below) with disease progression on prior standard treatment, intolerance to or ineligibility for standard treatment, or no available standard treatment likely to improve the disease outcome in the judgment of the investigator.
+
+Dose Escalation:
+
+1. Ovarian cancer
+2. Endometrial cancer
+3. Gastric cancer or gastroesophageal junction cancer
+4. Small cell lung cancer
+5. Triple-negative breast cancer (human epidermal growth factor receptor 2, estrogen receptor, progesterone receptor negative)
+6. Estrogen receptor/progesterone-receptor positive (ER+/PR+), human epidermal growth factor receptor 2 negative (HER2-) breast cancer (must have progressed following treatment with a CDK4/6 inhibitor, and not suitable for endocrine therapy)
+7. Other solid tumors with CCNE1 amplification as determined by next generation sequencing by local liquid or tissue biopsy.
+
+Dose Expansion:
+
+a. Platinum resistant or refractory ovarian cancer (defined as recurrence ≤6 months after completing platinum-based regimen) with progression on at least 1 platinum containing therapy with cyclin E amplification as determined by fluorescence in situ hybridization, quantitative polymerase chain reaction, or next-generation sequencing by local liquid or tissue biopsy.
+
+The Dose Escalation phase will evaluate the safety, tolerability, and pharmacokinetics (PK) to determine the maximum tolerated dose (MTD) and/or preliminary recommended dose for expansion (RDE) of NKT3447 in adults with advanced or metastatic solid tumors.
+
+The Dose Expansion phase will evaluate the safety, tolerability, pharmacokinetics (PK), and the preliminary antitumor activity of NKT3447 in adult subjects with CCNE1 amplified ovarian cancer at the RDEs selected in Dose Escalation and to determine the preliminary recommended RP2D.
+
+PRIMARY OUTCOMES:
+  - Number of Participants with Dose Limiting Toxicity (DLT) events
+  - Objective Response Rate (ORR)
+
+INTERVENTIONS:
+  - DRUG: NKT3447
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06264921

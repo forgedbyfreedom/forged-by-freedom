@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03437408
+Title: Late Potentials and Ablation Index in Ventricular Tachycardia Ablation
+Official Title: Influence of Ventricular Pacing on Automated Ventricular Substrate Mapping and Relationship Between Ablation Index and Impedance Drop in the Human Ventricle
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: physical activity intervention
+
+SUMMARY:
+There is an increasing evidence regarding the efficacy of a substrate-based ablation approach to ventricular tachycardia (VT). This approach involves identifying regions of scar and also areas displaying late potentials and fractionated activity. Automated mapping systems are now available which may be able to generate high density maps displaying regions containing both late potentials and ventricular scar. Such an automated approach has not been validated. Furthermore, most patients presenting for VT ablation have pacing devices in situ. It is not known how the pacing modality affect the substrate maps generated for these procedures. Once an area felt to be important to ablate has been identified, the next key step is to perform effective ablation. An algorithm has now been made available (Ablation index - Biosense Webster Inc.,) which in preclinical studies is an effective predictor of radiofrequency lesion depth. This algorithm has been studied extensively in the atrium but not in the ventricle. This study would also seek to collect ablation index data during ablation to assess the algorithm during ventricular ablation.
+
+DETAILED DESCRIPTION:
+The study would propose to use the Carto3 mapping system with the Confidense automated tagging module (Biosense Webster Inc.,) and a high density mapping catheter to generate substrate maps of the ventricle, with maps generated with varying pacing modes. A SmartTouch catheter (Biosense Webster Inc.,) would then be used for ablation with data collected during each ablation.
+
+The study hypotheses are:
+
+* High density automated mapping systems can be used to generate accurate ventricular substrate maps.
+* There will be a significant change in the late potential maps based on the presence and type of ventricular pacing.
+* The relationship between impedance drop and ablation index during ablation will be stronger than FTI and will allow formulation of an upper limit for clinical ventricular ablation.
+* The relationship between FTI and AI with impedance drop will be stronger than with electrogram attenuation.
+
+Protocol:
+
+15 patients, listed on clinical grounds for a left ventricular VT ablation in the context of structural heart disease (including redo ablation) would be recruited for the trial. All patients would need to have a pacing device in situ and have underlying sensed ventricular rhythm (with or without atrial pacing), or in the absence of a sensed ventricular rhythm, a biventricular pacing device. As part of their clinical work-up for the procedure, patients will have cardiac MRI scans wherever possible.
+
+All procedures would be undertaken with Carto3, using a PentaRay catheter for mapping in concert with the Confidense module, and a SmartTouch or SmartTouch SF catheter for ablation (Biosense Webster).
+
+Procedures would be conducted under moderate ('conscious') sedation or general anaesthetic.
+
+Mapping Phase Mapping would be performed antegrade, retrograde or a combination of both. The first map taken would be without ventricular pacing using the PentaRay catheter and Confidense. Confidense maps would be displayed showing bipolar voltage and late potentials in Carto3. The aim would be for maximal coverage of the ventricle. A remap would then be undertaken with pacing from the patient's right ventricular pacing lead. In patients with an additional left ventricular lead, maps would also be made with left ventricular only and biventricular pacing. In those patient without underlying ventricular sensed rhythm, maps would be taken with right ventricular only, left ventricular only and biventricular pacing.
+
+The automatically collected maps would then be validated. The PentaRay would be moved over to 2 areas where there is agreement between the maps over the presence of late potentials and, while the PentaRay was kept in the same place, manual points would be taken with one pacing mode and then with the pacing mode changed. This would also be repeated for 2 areas where there is disagreement over the presence of late potentials. This process would also be repeated for areas identified as showing scar. All points would be taken with respiratory gatin
+
+PRIMARY OUTCOMES:
+  - Areas with ventricular tachycardia substrate
+
+INTERVENTIONS:
+  - DEVICE: Mapping and ablation
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03437408

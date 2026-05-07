@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05914857
+Title: Evaluation of the Safety and Efficacy of SGLT2 Inhibitors in Pre-diabetic Patients
+Official Title: Evaluation of the Safety and Efficacy of SGLT2 Inhibitors in Pre-diabetic Patients: A Randomized Trial
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Pre-diabetes is a state characterized by subclinical impairment in glycemic variables that is intermediate between normal glucose tolerance (NGT) and diabetes. There are two frequently used definitions for pre-diabetes, one from the American Diabetes Association (ADA) and another from the World Health Organization (WHO), and both include impaired glucose tolerance (IGT), impaired fasting glucose (IFG), and a calibrated hemoglobin A1c (HbA1c) of between 5.7 and 6.4%. More than 30 % of the global population demonstrated one or more forms of prediabetic dysglycaemia. In general, approximately 70 % of individuals with IFG and/or IGT can expect to go on to develop clinical type 2 diabetes at some time in the future, and the risk increases with higher HbA1c levels and with higher BMI. Worse still, the prevalence of pre-diabetes is increasing worldwide, with a growing number of patients progressing to diabetes. Identification and treatment of pre-diabetic individuals is therefore crucial. Recent evidence suggested that preventing progression of pre-diabetes to diabetes is possible, and thus efficacious interventions for pre-diabetic individuals are the cornerstone of diabetes prevention.
+
+The current paradigm for diabetes prevention in high-risk individuals focuses on achieving moderate weight loss via dietary change and increasing physical activity. However, lifestyle-based weight-loss strategies may initially be successful, but difficult to achieve or maintain.
+
+In many cases, pharmacologic treatments may be needed to regulate blood glucose. Randomized clinical trials (RCTs) have verified the efficacy of metformin in preventing insulin resistance syndrome, along with the progression of microvascular diseases and heart attacks. Meanwhile, clinical experience and trial data have yielded almost no significant safety concerns for metformin. Nonetheless, it may cause discomfort for up to 25% of patients who experience diarrhea and nausea subsequent to its administration. For patients with a contraindication or intolerable adverse effects to metformin, Sodium Glucose Cotransporter 2 (SGLT-2) inhibitors with novel mode of action may be another alternative.
+
+Large clinical trials have not yet identified a substantial elevation in the frequency of adverse reactions related to SGLT-2 inhibitors when compared to the placebo group. Inhibition of SGLT-2 has some extra advantages for diabetes management over other therapeutic approaches. Firstly, the SGLT-2 is exclusively expressed in renal proximal tubules, and thus selective inhibitors will exert a glucose-lowering effect, independently of insulin secretion. Therefore, SGLT-2 inhibitors can cause weight loss without inducing major hypoglycemic events. Secondly, the cardiovascular benefits of SGLT-2 inhibitors was supported by large clinical trials in the modern context of antiplatelet, statin, and blood pressure management, which may match many of the advantages of metformin. Thirdly, SGLT-2 inhibitors have also been proven to prevent nephropathy for its restriction on albuminuria and inflammatory processes, and to subsequently dampen the deterioration in renal function. Overall, SGLT-2 inhibitors have demonstrated safety in non-diabetic patients, particularly in those afflicted with heart or kidney failure, and have shown to provide additional benefits.
+
+At present, the overall effectiveness and safety of SGLT-2 inhibitors in improving metabolism of pre-diabetic patients are still unclear. The purpose of this experiment is to evaluate the effect of SGLT-2 inhibitor on pre-diabetic patients.
+
+DETAILED DESCRIPTION:
+1. Study design
+
+   This study is a prospective, single-center parallel-group trial conducted at the Third Hospital of Peking University. Pre-diabetic patients will be included in the study if they meet the inclusion and exclusion criteria. The participants will be stratified by gender (male: female =1:1) and then randomly allocated to the intervention and control groups using a random number table. Patients in the intervention group will be administered Dapagliflozin 10 mg/day in addition to lifestyle intervention, while patients in the control group will be given lifestyle intervention only. Recommended lifestyle interventions include 30 minutes of moderate intensity exercise per day, with a total calorie reduction of 300 calories, according to Intervention for Adults with Pre-diabetes: A Chinese Expert Consensus.
+
+   The specific goals of lifestyle intervention include achieving or approaching a BMI of 24 kg/m2 for overweight or obese individuals, or at least a 5% initial weight loss within 3-6 months. Patients should not initiate during the study an organized diet and/or exercise weight reduction program other than the lifestyle and dietary measures for diabetes treatment. Study participants should be instructed not to donate blood or blood products during the study.
+
+   Physical activity: For optimal physical fitness, it is highly recommended to incorporate a combination of aerobic and resistance exercises daily for a minimum of 30 minutes. Aerobic exercises, including brisk walking, jogging, cycling, and swimming, should be performed at least three times weekly. Resistance exercises, which entail the utilization of resistance training equipment or free weights (such as dumbbells and barbells), should be integrated into the exercise regimen at least twice a week, in conjunction with regular aerobic exercise.
+
+   Dietary intervention: It is recommended that the daily total energy requirement comprises of 45%-60% from carbohydrates, 25%-35% from fats, and 15%-20% from protein. Additionally, it is advised that the daily dietary energy intake be reduced by a minimum of 300 kCal. Furthermore, it is crucial to limit the intake of saturated fatty acids to less than 30% of the total fat intake, and restrict daily salt intake to no more than 6g. Lastly, it is not advisable to consume alcohol, or if consumed, it must be included in the total energy intake.
+
+   A sample size estimation is implemented for this trial based on the comparison of the intervention and control groups with respect to the primary efficacy end point, the change from baseline at 12 weeks in 2h plasma glucose on an oral glucose tolerance test (OGTT) (2h-PG). The estimated decrease of 2hPG in the intervention and the control group is 2% and 1%, respectively. Additionally, participants will be stratified according to gender, as one purpose of this study is to explore whether and to what extent the drug has adverse effects on various genitourinary system. After a careful search of th
+
+PRIMARY OUTCOMES:
+  - 2h plasma glucose on an oral glucose tolerance test (OGTT)
+
+INTERVENTIONS:
+  - DRUG: Dapagliflozin 10mg Tab
+  - BEHAVIORAL: lifestyle interventions
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05914857

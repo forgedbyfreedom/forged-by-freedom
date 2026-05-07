@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05439720
+Title: Acute Effect of Exogenous Ketosis on Sleep Architecture Following Strenuous Exercise
+Official Title: Acute Effect of Exogenous Ketosis on Sleep Architecture Following Morning and Evening Strenuous Exercise
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: high intensity interval training
+
+SUMMARY:
+The aim of this study is to investigate the effect of oral ketone ester administration on sleep architecture. To investigate this, the investigators use a randomised, placebo-controlled, cross-over research design. The study comprises three experimental sessions, each separated by a one-week washout period. Two of the three experimental sessions consist of a 120 minutes cycling endurance training session (ET) two hours after breakfast and an evening high-intensity-interval training (HIIT) ending one hour before bedtime. After each training session, and 30 minutes before sleeptime, subjects receive a ketone ester or a control drink . To investigate the effects of strenuous exercise on sleep alone, an additional experimental session without exercise is added.
+
+Before bedtime, a venous blood sample is taken to evaluate hormones playing an important role in sleep regulation. During the experimental sessions, the subjects sleep in a sleep facility to evaluate quality of sleep. Time spent in different sleep phases is measured via polysomnography (PSG). Urine output throughout the day and night will be collected for measurement of urinary excretion of adrenaline and noradrenaline as an index of intrinsic sympathetic activity.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Total sleep time
+  - Urinary nocturnal adrenaline excretion
+  - Urinary nocturnal noradrenaline excretion
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Ketone ester
+  - DIETARY_SUPPLEMENT: Placebo
+  - BEHAVIORAL: Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05439720

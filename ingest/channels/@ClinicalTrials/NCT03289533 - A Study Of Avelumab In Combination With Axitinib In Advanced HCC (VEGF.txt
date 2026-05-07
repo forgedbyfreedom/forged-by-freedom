@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03289533
+Title: A Study Of Avelumab In Combination With Axitinib In Advanced HCC (VEGF Liver 100)
+Official Title: AN OPEN LABEL, SINGLE ARM PHASE 1B STUDY OF AVELUMAB PLUS AXITINIB AS FIRST LINE TREATMENT IN PATIENTS WITH ADVANCED HEPATOCELLULAR CARCINOMA
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: creatine supplementation
+
+SUMMARY:
+To evaluate the safety, efficacy and PK of avelumab in combination with axitinib as first line treatment in patients with advanced HCC
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment Emergent Adverse Events (TEAEs) by Severity as Graded by National Cancer Institute (NCI) Common Terminology Criteria for Adverse Events (CTCAE) Version (v.) 4.03
+  - Number of Participants With Abnormal Laboratory Parameter Values (Hematology) as Graded by National Cancer Institute (NCI) Common Terminology Criteria for Adverse Event (CTCAE) Version 4.03
+  - Number of Participants With Abnormal Laboratory Parameter Values (Chemistry) as Graded by National Cancer Institute (NCI) Common Terminology Criteria for Adverse Event (CTCAE) Version (v) 4.03
+
+INTERVENTIONS:
+  - DRUG: Avelumab (MSB0010718C)
+  - DRUG: Axitinib (AG-013736)
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03289533

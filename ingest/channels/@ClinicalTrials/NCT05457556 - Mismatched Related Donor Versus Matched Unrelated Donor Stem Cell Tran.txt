@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05457556
+Title: Mismatched Related Donor Versus Matched Unrelated Donor Stem Cell Transplantation for Children, Adolescents, and Young Adults With Acute Leukemia or Myelodysplastic Syndrome
+Official Title: A Multi-Center, Phase 3, Randomized Trial of Matched Unrelated Donor (MUD) Versus HLA-Haploidentical Related (Haplo) Myeloablative Hematopoietic Cell Transplantation for Children, Adolescents, and Young Adults (AYA) With Acute Leukemia or Myelodysplastic Syndrome (MDS)
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 435
+Topic: beta-alanine
+
+SUMMARY:
+This phase III trial compares hematopoietic (stem) cell transplantation (HCT) using mismatched related donors (haploidentical \[haplo\]) versus matched unrelated donors (MUD) in treating children, adolescents, and young adults with acute leukemia or myelodysplastic syndrome (MDS). HCT is considered standard of care treatment for patients with high-risk acute leukemia and MDS. In HCT, patients are given very high doses of chemotherapy and/or radiation therapy, which is intended to kill cancer cells that may be resistant to more standard doses of chemotherapy; unfortunately, this also destroys the normal cells in the bone marrow, including stem cells. After the treatment, patients must have a healthy supply of stem cells reintroduced or transplanted. The transplanted cells then reestablish the blood cell production process in the bone marrow. The healthy stem cells may come from the blood or bone marrow of a related or unrelated donor. If patients do not have a matched related donor, doctors do not know what the next best donor choice is. This trial may help researchers understand whether a haplo related donor or a MUD HCT for children with acute leukemia or MDS is better or if there is no difference at all.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To compare the 1-year cumulative incidence of severe Graft Versus Host Disease (GVHD) (from day of HCT) defined as grade III-IV acute GVHD (aGVHD) and/or chronic GVHD (cGVHD) that requires systemic immunosuppression and to compare the disease free survival (DFS) (from time of randomization) in children and young adults (AYA) with acute myeloid leukemia (AML), acute lymphoid leukemia (ALL), mixed phenotype acute leukemia (MPAL), and myelodysplastic syndrome (MDS) who are randomly assigned to haploHCT or to an 8/8 adult MUD-HCT.
+
+SECONDARY OBJECTIVES:
+
+I. To compare overall survival (OS) between children and AYA with AML/ALL/MPAL/MDS randomly assigned to haploHCT and MUD HCT.
+
+II. To compare differences in health-related quality of life (HRQOL) between haploHCT and MUD HCT from baseline (pre-transplant), at 6 months, 1 year and 2 years post-transplant.
+
+EXPLORATORY OBJECTIVES:
+
+I. To compare the median time to engraftment and cumulative incidences of neutrophil engraftment at 30 and 100 days post transplant and platelet engraftment at 60 and 100 days post transplant, primary graft failure by 60 days, secondary graft failure at 1 year post transplant, Grade II-IV and III-IV acute graft versus host disease (aGVHD) requiring systemic immunosuppression at 100 days and 6 months, and cumulative incidences of transplant-related mortality (TRM), relapse, and moderate and severe chronic graft versus host disease (cGVHD) at 6 months, 1 and 2 years after haploHCT and MUD HCT.
+
+II. To estimate 1 year, 18-month and 2-year cumulative incidence of graft-versus-host disease (GVHD)-free relapse-free survival (GRFS) with events defined as occurrence of any of the following from Day 0 of HCT: Grade III-IV acute GVHD, chronic GVHD requiring systemic immunosuppressive treatment, disease relapse or progression, and death from any cause.
+
+IIa. To compare "chronic GVHD" (GRFS) after haploHCT and MUD HCT using landmark definitions.
+
+IIb. To compare "current" GRFS is defined as the time to onset of any of the following events from Day 0 of HCT: Grade III-IV acute GVHD, chronic GVHD that is STILL requiring systemic immunosuppressive treatment, disease relapse or progression, death from any cause at 18 months and 2 years.
+
+III. To evaluate the influence of key clinical variables: age (\<13 years and 13-21.99 years), disease (ALL/MPAL versus \[vs.\] AML/MDS), haploHCT approach (TCR alpha beta + T cell depletion vs. post-transplant cyclophosphamide \[PTCy\]); donor age (by ten-year increments), donor sex (maternal vs. paternal for parental donation), pre-HCT minimal residual disease status (MRD + vs MRD -); pediatric disease risk index (low, intermediate, and high, impact on OS and DFS only), conditioning regimen (chemotherapy based versus total-body irradiation \[TBI\] based), immunosuppressive regimen (anti-thymocyte globulin \[ATG\] exposure according to the weight and absolute lymphocyte count \[ALC\] dependent dosing approach vs no ATG exposure) time
+
+PRIMARY OUTCOMES:
+  - Severe GVHD (Grade III-IV acute GVHD or chronic GVHD requiring systemic immunosuppressive therapy)
+  - Disease free survival (DFS) (where an event is the occurrence of death from any cause or relapse)
+
+INTERVENTIONS:
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Bone Marrow Aspiration
+  - DRUG: Busulfan
+  - DRUG: Cyclophosphamide
+  - PROCEDURE: Echocardiography Test
+
+ELIGIBILITY:
+Age: 6 Months to 21 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05457556

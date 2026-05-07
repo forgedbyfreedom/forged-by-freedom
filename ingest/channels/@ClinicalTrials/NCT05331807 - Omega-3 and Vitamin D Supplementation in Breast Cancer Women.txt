@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05331807
+Title: Omega-3 and Vitamin D Supplementation in Breast Cancer Women
+Official Title: The Effects of Combined Omega-3 and Vitamin D Supplementation on Nutritional Status, Quality of Life and Inflammatory Markers Among the Breast Cancer Women in Gaza Strip
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 88
+Topic: vitamin D muscle
+
+SUMMARY:
+Breast cancer (BC) is the most common malignant disease, which is fifth leading cause of cancer mortality worldwide. Poor nutritional status is one of the common physical symptoms found among cancer patients, in which it is caused by both cancer disease state and its oncology treatment regimens used. Cancer patients develop a tumor-associated malnutrition characterized by an insufficient supply of macro- and micronutrients and systemic chemotherapy treatment that could significantly affecting the nutritional status of these patients by its side effects associated with chemotherapy that may lead to many medical complications that often requires hospitalization and death. An adequate nutritional intervention can have a beneficial impact on the disease condition and also the progress of the disease, as an integral part of adjuvant therapy on cancer care. Numerous studies had shown that the use of EPA and DHA are safe (absence of cardiotoxic effects) and effective in reducing the common chemotherapy-related side effects, such as bone density loss, peripheral neuropathy and weight gain. The question remains arises to whether administration of both vitamin D and omega-3 fatty acids supplementations could be used as important nutritional strategy during the active oncology treatment in breast cancer patients. In Palestine, nutritional intervention strategies are poorly evaluated in the oncology setting especially among patients undergoing chemotherapy. Suitable and proper nutritional interventions among breast cancer patients during active oncology treatments could help to improve nutritional status, decrease mortality and improve quality of life among these subjects. Hence, the present study is formulated to assess the effect of combined omega-3 fatty acid and vitamin D supplementation on the nutritional status, quality of life and blood inflammatory markers among breast cancer women undergoing chemotherapy treatment in the Gaza Strip, Palestine.
+
+DETAILED DESCRIPTION:
+An adequate nutritional intervention can have a beneficial impacts on the disease condition and also the progress of the disease, as an integral part of adjuvant therapy on cancer care. Numerous clinical and epidemiological studies had found that vitamin D deficiency is common nutritional disorder in BC patients and that significantly associated with a negative prognostic factor, in which some have reported a positive effect of combining vitamin D or its analogues as an adjuvant therapy, together with a variety of chemotherapeutic factors used during oncology treatments. Moreover, combination of vitamin D and omega-3 fatty acids may provide a new complementary treatment by decreasing inflammatory biomarkers and resistance to cancer treatment in patients with BC. The question remains whether vitamin D and omega-3 fatty acids co-supplementation would actually be useful after diagnosis of BC. So, the aim of this study is to investigate the effects of vitamin D and omega-3 fatty acids co-supplementation on inflammatory biomarkers, and nutritional status in patients with BC.
+
+PRIMARY OUTCOMES:
+  - Change of Nutritional status, as assessed by Body Mass Index
+  - Change of body weight
+  - Change of Muscle Mass Status
+  - Change of Nutritional Status Condition, as assessed by the Patient-Generated Subjective Global Assessment PG-SGA
+  - Change of Total Scale and Single-item measures Scores derived from the Quality of life questionnaire (QLQ C-30) assessment
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 FA
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - COMBINATION_PRODUCT: Combined Omega-3 and Vitamin D Supplementation
+
+ELIGIBILITY:
+Age: 19 Years to 64 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05331807

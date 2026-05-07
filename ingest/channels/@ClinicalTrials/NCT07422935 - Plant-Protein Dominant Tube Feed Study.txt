@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07422935
+Title: Plant-Protein Dominant Tube Feed Study
+Official Title: Exploratory Randomised, Controlled Trial To Evaluate The Impact Of Four Nutritionally Complete, Plant-Protein Dominant, Enteral Tube Feeds On Long Term Outcomes In Community-Based Adults
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: sarcopenia intervention
+
+SUMMARY:
+This study aims to determine whether a reformulated plant-protein dominant protein blend in four existing enteral tube feeds is as effective as animal-protein dominant formulations in patients who are tube fed at home. This is an exploratory randomised, controlled, trial with a 3-day baseline period. Adult home tube feeding patients will be randomised to receive either a plant-protein dominant formulation or a control product (an animal-protein dominant formulation) for a 3-month intervention period followed by a 6-month and 12-month follow-up. The outcomes include gastrointestinal tolerance, compliance, acceptability, anthropometry, nutrient intake, and physical function
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in gastrointestinal tolerance
+  - Acceptability
+  - Compliance
+  - Nutritional intake
+  - Body weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Plant-protein dominant enteral feed
+  - DIETARY_SUPPLEMENT: Animal-protein dominant enteral feed
+
+ELIGIBILITY:
+Age: 16 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07422935

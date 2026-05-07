@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04874389
+Title: Multidimensional Classification of Mild Traumatic Brain Injury (mTBI)
+Official Title: Multimodal Screening and Diagnostic Approaches to Brain Trauma in Performance Populations
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: resistance training
+
+SUMMARY:
+This study aims to explore possible solutions needed for valid and reliable multidimensional objective assessment tools to use in screening performers for concussions, as well as, for use postinjury assessment and management of the mild traumatic brain injury, regardless of time since injury occurrence. These mobile tools would also enable clinicians to test the effectiveness of the interventions used post-concussion, prior to fully releasing the performer back into full performance/active status.
+
+DETAILED DESCRIPTION:
+Participants will have study benefits and risks explained to them and after consent has been obtained each participant will be assigned an Identification number and attend their assigned testing day.
+
+Testing day will consist of completing a seven page clinician-created medical-health questionnaire to determine that they are free of cardiovascular, metabolic, psychiatric or neurologic disease, do not have cognitive or substance-abuse problems or are taking any medications that may impair cognition, balance or functional mobility such as gait.
+
+Participants will also complete the Brain Injury Screening Questionnaire (BISQ, Mount Sinai School of Medicine, New York, NY) to additionally screen for lifetime history of traumatic brain injury (TBI) and reduce consequences of undiagnosed mTBI.
+
+Tests will then be conducted in three parts. First, to evaluate neuromotor and neurocognitive abilities, participants will complete a modified balance error test and a modified version of the dynamic gait index without and with additional cognitive tasks. These tests will be performed while wearing external sensors recording kinematic data and a (wearable) functional near-infrared spectroscopy cap system (NIRSport1) unit monitoring brain tissue oxygenation and perfusion.
+
+Second test that the above multimodal test will be compared to is the sport concussion assessment tool (SCAT 5).
+
+The third test conducted and used to compare the multimodal approach to will be the Immediate post-concussion and cognitive testing (ImPACT).
+
+Participants will be allotted a 15-minute break period between each test.
+
+PRIMARY OUTCOMES:
+  - Proof of concept for the use of multimodal objective measures for mTBI assessment & treatment guide
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Multimodal Assessment
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04874389

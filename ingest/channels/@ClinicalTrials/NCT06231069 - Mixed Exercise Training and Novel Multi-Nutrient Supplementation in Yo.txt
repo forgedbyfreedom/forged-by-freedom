@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06231069
+Title: Mixed Exercise Training and Novel Multi-Nutrient Supplementation in Young Adults
+Official Title: Effects of Mixed Exercise Training and a Novel Multi-Nutrient Supplement on Muscle Fitness in Young Adults
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: vitamin D muscle
+
+SUMMARY:
+This study aims to elucidate the effects of 12 weeks of novel multi-nutrient supplementation combined with mixed aerobic/resistance exercise training on skeletal muscle function in young adults.
+
+It is hypothesized that multi-nutrient supplementation and mixed aerobic/resistance exercise training (AET/RET) will have interactive effects on muscle fitness.
+
+DETAILED DESCRIPTION:
+Sedentarism is highly prevalent, world-wide, and predisposes for chronic disease and premature death. Conversely, regular physical activity (PA) protects against cardiovascular disease (CVD), deterioration of the musculoskeletal system, cancer, obesity, type 2 diabetes, depression, anxiety, and neurodegeneration. Similar to most adults in the world, the majority of Canadians are not meeting the minimal PA guidelines, with total health care cost attributed to physical inactivity estimated to be $6.8 billion. Therefore, it is imperative to develop strategies to increase PA rates across the general population (young to old) to alleviate the global burden of chronic disease. These strategies may include large-scale, societal interventions that incentivize daily PA/sports participation (mainly access and affordability), educational efforts, and continued support of exercise science research. Specifically, research on exercise modes that are time-saving but equally (or more) effective as traditional training modes is warranted. More studies are also needed on nutritional supplementation (safety and efficacy), particularly in conjunction with various exercise modes for optimization of health and performance.
+
+In this randomized, double-blind, placebo-controlled clinical trial, the aim is to elucidate the effects of 12 weeks of novel multi-nutrient supplementation combined with mixed aerobic/resistance exercise training on skeletal muscle function in young adults. Following recruitment, participants will be stratified and randomized into one of four groups:
+
+1. Healthy, recreationally active young males, placebo, n = 15
+2. Healthy, recreationally active young males, multi-nutrient supplement, n = 15
+3. Healthy, recreationally active young females, placebo, n = 15
+4. Healthy, recreationally active young females, multi-nutrient supplement, n = 15
+
+Thereafter, subjects will undergo 12 weeks of a mixed AET and RET, three days per week, approximately 1 hour per training session. The AET will consist of cycle ergometry for 20 min at 75% HRmax, corresponding to \~65% VO2max (Monark cardio care 827E). As the aerobic fitness of the subjects are progressively enhanced, the cadence RPM and/or resistance of the bike will be increased to elicit 65% VO2max. This work rate, corresponding to \~75% HRmax, will be monitored by the subjects wearing a heart rate monitor around their chests (Polar). Immediately following the AET, the subjects will perform a lower body resistance exercise program consisting of four traditional resistance exercises starting at 65% of 1-RM (Cybex Eagle). Specifically, the RET program will consist of leg press, seated calf extension, knee extension, and hamstring curls, to be performed at 65% 1-RM for 4 x 15 repetitions initially, and thereafter progressively increased throughout the 12-week intervention period to 85% 1-RM for 4 x 8 repetitions. Resistance will be increased with \~2-10% in load when the individual can perform the current workloa
+
+PRIMARY OUTCOMES:
+  - Percent change in DXA-obtained muscle mass
+  - Percent change in DXA-obtained fat mass
+  - Percent change in DXA-obtained muscle mass to fat mass ratio
+  - Percent change in bodyweight
+  - Percent change in body mass index
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Multi-nutrient supplement
+  - OTHER: Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06231069

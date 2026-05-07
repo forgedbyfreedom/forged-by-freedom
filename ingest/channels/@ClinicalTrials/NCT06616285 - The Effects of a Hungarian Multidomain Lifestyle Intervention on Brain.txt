@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06616285
+Title: The Effects of a Hungarian Multidomain Lifestyle Intervention on Brain Health in Older Adults
+Official Title: The Effects of a Hungarian Multidomain Lifestyle Intervention on Brain Health in Older Adults
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: sarcopenia intervention
+
+SUMMARY:
+Maintaining brain health in older adults is a critical social and economic challenge given the rising prevalence of neurodegenerative disorders. Despite extensive research, effective pharmacological treatments for dementia remain limited, emphasising the need for early diagnosis and prevention of cognitive decline. Research suggests that lifestyle and modifiable factors account for approximately 40% of dementia risk, highlighting the potential of personalised lifestyle interventions to delay or prevent the onset of dementia. The original FINGER study demonstrated that a multi-domain lifestyle intervention simultaneously targeting dietary habits, physical and cognitive activity, as well as social interactions can effectively prevent cognitive decline and dementia.
+
+The HUN-MLI-BRAIN trial investigates the impact of a Hungarian lifestyle intervention on brain health in older adults and is based on the FINGER multi-domain intervention. This randomised controlled study aims to maintain and enhance neurocognitive function and prevent cognitive decline in older adults through a multi-domain lifestyle program, which simultaneously targets dietary habits, physical and cognitive activity, and social engagement.
+
+The primary goal of the HUN-MLI-BRAIN trial is to evaluate the impact of the intervention programme on neurocognitive functions and adaptive changes in large-scale brain networks at the individual level using the precision structural and functional MRI methods as well as resting-state EEG frequency-domain analyses. In addition, the influence of the intervention will be assessed in a wide range of cognitive and personal domains. The potential relationship between brain structure and function, cognitive performance, lifestyle factors, and dementia risk factors will be evaluated.
+
+80 people without substantial cognitive impairment or dementia will be recruited into the programme in Budapest, Hungary. Participants will be randomly allocated 1:1 either to the multi-domain, folk dancing lifestyle intervention group or the self-guided, multi-domain lifestyle intervention group. The self-guided intervention encompasses multi-domain lifestyle recommendations on diet, physical and mental training, and health checks via the Polar Pacer smart watch. The folk dancing intervention includes structured, one-hour folk dancing sessions three times per week, which were specifically developed to foster physical and cognitive function whilst facilitating social interaction. Participants in this group will also receive intensive and tailored lifestyle recommendations aimed at improving physical and mental functioning. The duration of the intervention programme is 6 months. Participants will complete assessment visits before and after the intervention.
+
+The HUN-MLI-BRAIN trial holds significant potential for advancing our understanding of how lifestyle interventions may impact brain function. The use of advanced, precision neuroimaging techniques will offer novel insights into the adaptive changes in brain networks and potentially lead to more effective, personalised interventions for maintaining brain health in older adults.
+
+DETAILED DESCRIPTION:
+Participants will first complete a short phone call designed to screen for eligibility and exclusion criteria. Selected participants will be invited for an in-house assessment, during which they will be further screened for cognitive, physical, and lifestyle risk factors as well as MRI scanning compatibility. Using the Mini-Mental State Examination, a board-certified neurologist will also screen participants for cognitive impairment.
+
+Participants will be invited for several baseline and post-intervention assessments on separate days. First, eligible participants will complete a complex cognitive assessment. Next, EEG and pupillometry data will be collected from participants during rest and the completion of a probabilistic reversal learning task, which evaluates reinforcement learning behaviour and related neural mechanisms. Crucially, participants will also complete structural and functional MRI assessments. Using precision resting-state functional MRI, the study will examine large-scale brain network segregation as well as network-specific within and cross-network connectivity changes, which are known to be affected by ageing and neuropsychiatric diseases. A novel multi-echo multiband sequence, with enhanced BOLD signal sensitivity and reduced image artefacts, will be employed to improve test-retest reliability. During data collection, special care will be taken to ensure the availability of a sufficient amount of clean resting-state fMRI data, which is essential to ensure the accuracy and validity of the findings. Finally, blood samples will be collected from each participant.
+
+Following all baseline assessments, participants will be randomised into the folk dancing or self-guided lifestyle intervention groups. Block-randomisation will be computerised with a targeted assignment ratio of 1:1 and stratification for age and sex.
+
+PRIMARY OUTCOMES:
+  - Changes in Brain Functional Connectivity Measured with Resting-State fMRI
+  - Changes in Brain Function Measured with Resting-State EEG
+
+INTERVENTIONS:
+  - BEHAVIORAL: Self-Guided Multidomain Lifestyle Intervention
+  - BEHAVIORAL: Folk Dance Multidomain Lifestyle Intervention
+
+ELIGIBILITY:
+Age: 65 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06616285

@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07421648
+Title: BandPass: A Remote Monitoring System for Sarcopenia and Functional Decline Phase II Aim 4
+Official Title: BandPass: A Remote Monitoring System for Sarcopenia and Functional Decline Phase II Aim 4
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: sarcopenia intervention
+
+SUMMARY:
+This study evaluates a home-based strengthening program supported by the BandPass system, which includes a Bluetooth-enabled resistance exercise band, a mobile app that provides real-time feedback, and a clinician dashboard for remote monitoring. The goal of this clinical trial is to determine whether older adults living independently can feasibly use the BandPass system and whether participation in a BandPass-guided strengthening program improves functional performance.
+
+The main questions this study seeks to answer are:
+
+Whether older adults can independently and consistently use the BandPass system as part of a structured home-based strengthening program (feasibility and acceptability).
+
+Whether the BandPass-guided program improves functional outcomes, including lower-extremity strength, mobility, and gait performance.
+
+Participants will complete a 12-week home strengthening program using the BandPass system, attend in-person and virtual assessment visits to measure strength and mobility, and complete questionnaires related to usability, safety, and overall experience. If successful, this study will provide preliminary evidence supporting the use of remote monitoring technologies to promote strength, mobility, and independence in aging adults and inform the design of future larger-scale trials.
+
+DETAILED DESCRIPTION:
+Purpose: Consistent with the research priorities of the National Institute on Aging to support mobility, strength, and functional independence in older adults, this protocol will evaluate the feasibility, acceptability, and preliminary efficacy of the BandPass system, a remote monitoring platform consisting of a Bluetooth-enabled resistance exercise band, a mobile application providing real-time feedback, and a clinician dashboard for remote oversight. This Phase II Aim 4 trial examines whether a home-based strengthening intervention supported by BandPass can be feasibly implemented in older adults at risk for sarcopenia or functional decline, and whether participation leads to improvements in physical function, including lower-extremity strength, gait speed, and mobility.
+
+Procedures (Methods): This is an 8-week, single-arm, pre/post intervention trial enrolling 39 older adults aged 65 years and older who are at risk for sarcopenia, frailty, or functional decline. Participants will complete a structured home-based strengthening program using the BandPass system three times per week. Baseline in-person assessments will include strength testing, gait assessment, mobility measures, body composition, and device training. At Week 4, participants will complete a virtual visit for interim assessment of functional status. At Week 8, they will return for repeat functional testing and usability surveys. Throughout the intervention, participants will use the BandPass resistance band and mobile app for all strengthening sessions, with real-time feedback on effort, tempo, and repetitions. Exercise data will be automatically transmitted to the clinician dashboard, allowing the study team to monitor adherence, performance, and safety. Participants will complete weekly surveys regarding usability, comfort, and perceived exertion, and may contact study staff with questions or concerns at any point. Safety monitoring, adverse event tracking, and protocol fidelity procedures will be conducted throughout the study.
+
+Aim 1: Evaluate the feasibility and acceptability of deploying the BandPass system in older adults at risk for sarcopenia or frailty. We hypothesize that BandPass will be feasible and acceptable, with at least 80% of participants reporting satisfaction with the system and at least 75% of prescribed sessions completed.
+
+Aim 2: Examine the preliminary efficacy of the 8-week BandPass-guided strengthening program on physical function. Improvements are expected in measures including grip strength, Short Physical Performance Battery scores, gait speed, and chair stand performance from baseline to Week 8.
+
+Aim 3: Characterize patterns of engagement with the BandPass system, including exercise frequency, duration, force output, tempo, and repetition quality. These metrics will be used to inform optimization of future technology-supported strengthening interventions and to guide development of larger-scale trials.
+
+PRIMARY OUTCOMES:
+  - Exercise Session Adherence to the Bandpass System
+
+INTERVENTIONS:
+  - DEVICE: BandPass System
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07421648

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02402608
+Title: Efficacy of Dietary Supplementation and Physical Activity in Sarcopenic Elderly
+Official Title: Whey Protein, Amino Acids and Vitamin D Supplementation With Physical Activity Increases Muscle Mass and Strength, Functionality and Quality of Life and Decreases Inflammation in Sarcopenic Elderly
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 130
+Topic: protein supplementation
+
+SUMMARY:
+This 3 months randomized, double-blind, placebo-controlled supplementation trial tested the hypothesis that nutritional supplementation with whey protein, essential amino acids and vitamin D concurrent with regular, controlled physical activity would increase muscle mass, strength, physical functional, quality of life, and decrease the risk of malnutrition and inflammation in sarcopenic elderly.
+
+DETAILED DESCRIPTION:
+This 3 months randomized, double-blind, placebo-controlled supplementation trial tested the hypothesis that nutritional supplementation (32 g) with whey protein, essential amino acids and vitamin D concurrent with regular, controlled physical activity would increase muscle mass (assessed by DXA), strength (assessed by handgrip dynamometer), physical functional (assessed by ADL), quality of life (assessed by SF-36), and decrease the risk of malnutrition (assessed by MNA and IGF-I) and inflammation (assessed by C-reactive protein) in sarcopenic elderly.
+
+PRIMARY OUTCOMES:
+  - muscle mass assessed by dual x-ray absorptiometry
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: dietary supplement
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 65 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02402608

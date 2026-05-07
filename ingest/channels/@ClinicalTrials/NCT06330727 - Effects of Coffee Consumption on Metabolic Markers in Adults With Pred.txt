@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06330727
+Title: Effects of Coffee Consumption on Metabolic Markers in Adults With Prediabetes and Obesity
+Official Title: Effects of Three-Month Coffee Consumption on Metabolic Biomarkers in Adults With Prediabetes and Obesity: a Randomized, Double-blind, Placebo-controlled Clinical Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: exercise intervention obesity
+
+SUMMARY:
+Epidemiological studies have shown an inverse association between coffee consumption and risk of type 2 diabetes. However, the randomized controlled trials in prediabetes are limited to evaluate the effects of coffee. The purpose of this study is to investigate the effects of coffee on metabolic factors and inflammation in individuals with prediabetes and obesity. A double-blind, randomized controlled trial is designed to explore the effects of coffee consumption on participants with prediabetes and obesity. A total of 100 eligible participants with prediabetes and obesity will be recruited from the Health Management Center of Nanjing First Hospital. These participants are randomly assigned in a 1:1 ratio to either the coffee capsule group or the control group. The coffee capsule group will be instructed to consume 3.6 g of coffee capsules per day (0.3 g per capsule, 6 capsules per serving, twice a day, once in the morning and once in the middle of the day). The control group will be asked to consume 3.6 g of cornstarch capsules (0.3 g per capsule, 6 capsules per serving, twice a day, once in the morning and once in the middle of the day). 75 g oral glucose tolerance test, 2-week blinded continuous glucose measurement and others will be performed before and after the 3-month intervention. During the three months of intervention, the information on dietary intake, physical activity and sleep of participants will be systematically collected. To comprehensively assess the impact of coffee intake on prediabetes and obesity, we will analyze the effects of coffee capsules on various metabolic and inflammatory markers, including glucose metabolism, lipid profiles, blood pressure, adiponectin, high sensitivity C-reactive protein, interleukin-6, body mass index, body composition, the degree of hepatic steatosis and so on. We will further adjust for potential confounding factors such as lifestyle factors to better understand the underlying biological mechanisms driving this association.
+
+DETAILED DESCRIPTION:
+Participants with both prediabetes and obesity who undergo physical examinations at the Health Management Center of Nanjing First Hospital will be recruited for this study. The details of this study design are as follows:
+
+1\. Inclusion and exclusion criteria for participants. Inclusion criteria are as follows: 1) Age between 18 and 59 years old; 2) Body mass index (BMI) ≥ 28 kg/m2; 3) No consumption of coffee in the past month; 4) Provide written informed consent; 5) Abnormal glucose tolerance, as per the 1999 WHO diagnostic criteria for prediabetes, includes impaired fasting glucose (IFG), impaired glucose tolerance (IGT) or a combination of both, with blood glucose fluctuations within an abnormal range (fasting blood glucose ≥6.1 mmol/L but \<7.0 mmol/L, and/or 2-hour glucose tolerance blood glucose ≥7.8 mmol/L but \<11.1 mmol/L). The exclusion criteria for participants include individuals who 1) have been diagnosed with diabetes or are taking anti-diabetic drugs; 2) have a history of diseases such as cancer, liver and kidney dysfunction, existing cardiovascular and cerebrovascular diseases, and other diseases that may affect glucose and lipid metabolism; 3) self-report gastrointestinal reaction or intolerance to coffee and reject coffee consumption; 4) are pregnant or planning to become pregnant in the near future; 5) are deemed unsuitable to participate in this study by researcher believes that they are not to participate in this study.
+
+2\. Sample size calculation: Based on the estimation of research purpose, research design, expected effect size, and statistical analysis method, the sample size is determined to be 100 cases, including fifty cases in the intervention group and fifty cases in the control group.
+
+3\. Definition of the intervention group and placebo group: the intervention group serves as the coffee capsule group, and will receive 3.6 g of coffee capsules per day (0.3 g/capsule, 6 capsules/time, 2 times/day, once in the morning and once in the middle of the day). The placebo group (control group) is required to consume 3.6 g of cornstarch capsules per day (0.3 g/capsule, 6 capsules/time, 2 times/day, once in the morning and once in the middle of the day).
+
+4\. Follow-up and data collection: this follow-up period will span three months. Before and after the 3-month intervention the participants will partake in:
+
+1. regular assessments. Demographic characteristics and medical information will be collected, including age, gender, occupation, education level, income, medication history (hormones, contraceptives, etc.), and family history of chronic diseases. Besides, using questionnaires, we also collect lifestyle information such as smoking, drinking, diet intake, physical activity, and sleep of participants. Specifically, the Simplified Food Frequency Questionnaire (FFQ25) and 24-hour Diet Record Questionnaire (DR) are employed to assess the dietary intake of participants in the past six months and the previous 24 hours (one day
+
+PRIMARY OUTCOMES:
+  - Continuous glucose monitoring parameters
+  - glucose from a 75 g-oral glucose tolerance test （mmol/L）
+  - insulin from a 75 g-oral glucose tolerance test （pmol/L）
+  - C-peptide from a 75 g-oral glucose tolerance test (ng/ml)
+  - glucagon from a 75 g-oral glucose tolerance test（pmol/L）
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Coffee capsule
+  - DIETARY_SUPPLEMENT: Corn starch capsule
+
+ELIGIBILITY:
+Age: 18 Years to 59 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06330727

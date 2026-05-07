@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05995314
+Title: Effects Of Caffeine On Cognitive Performance
+Official Title: Effects Of Different Doses Of Caffeine On Cognitive Performance In Healthy Physically Active Individuals
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: athletic performance
+
+SUMMARY:
+Caffeine is a potent central nervous system stimulant that increases the activity in the prefrontal cortex and can improve cognitive skills. An improvement in these cognitive skills can lead to further benefits in athletic performance. Therefore, it is necessary to clarify the dose-response of caffeine on cognitive performance.The aim of this research will be to determine the effects of different doses of caffeine on sport-related cognitive aspects.
+
+DETAILED DESCRIPTION:
+The investigators will require healthy, physically active young adults to complete three trials under the conditions: a) placebo, b) 3 mg/kg, or c) 6 mg/kg body mass of caffeine. In each trial, different cognitive abilities will be assessed using the following test batteries: reaction time (DynavisionTM D2), anticipation (Bassin Anticipation Timer), sustained attention (Go/No-Go and Eriksen Flanker Test) and memory tests. In addition, side effects and the perceived sensation index will be recorded 24 h after each test.
+
+PRIMARY OUTCOMES:
+  - Reaction Time
+  - Anticipation
+  - Sustained attention
+  - Memory
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: PLACEBO
+  - DIETARY_SUPPLEMENT: 3 mg/kg of caffeine
+  - DIETARY_SUPPLEMENT: 6 mg/kg of caffeine
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05995314

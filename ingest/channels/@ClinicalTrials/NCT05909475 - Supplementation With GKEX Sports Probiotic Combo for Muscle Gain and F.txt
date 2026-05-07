@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05909475
+Title: Supplementation With GKEX Sports Probiotic Combo for Muscle Gain and Fat Loss Assessment
+Official Title: Supplementation With GKEX Sports Probiotic Combo for Muscle Gain and Fat Loss Assessment
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 52
+Topic: weight loss exercise
+
+SUMMARY:
+Objective: To discuss the "GKEX Sports Probiotics Combination (hereinafter referred to as GKEX)", a product commissioned by Grape King Biotechnology Co., Ltd., and its effects on increasing muscle mass, muscle strength, physical performance and improving body composition when combined with resistance exercise training. Method: The experiment adopts a double-blind design. After screening, 52 subjects (20 males and 32 females) were randomly divided into two groups, each with 10 males and 16 females: (1) placebo without GKEX probiotics Capsule group (Placebo) (2 capsules/day), (2) GKEX group (GKEX) (1x1010 CFU/capsule, 2 capsules/day). All subjects received daily supplementation samples for 6 weeks and received resistance exercise training three times a week. Before the intervention and 6 weeks after the intervention, the diet evaluation, systemic and resistive body composition, muscle ultrasound, muscle strength, maximum oxygen uptake, explosive power, anaerobic power, etc. were detected respectively.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Isometric Mid-Thigh Pull (IMTP_RFD
+  - Isometric Mid-Thigh Pull (IMTP)_relative peak force
+  - Wingate Anaerobic Test (WAnT)_relative peak power
+  - Wingate Anaerobic Test (WAnT)_relative mean power
+  - Wingate Anaerobic Test (WAnT)_fatigue index
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: GKEX
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 39 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05909475

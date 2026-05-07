@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04183153
+Title: Neuroendocrine Mapping of the Cerebral Cortex
+Official Title: Endo-Connectome Study
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: growth hormone treatment
+
+SUMMARY:
+This study is investigating brain regions that share functional connectivity with the hypothalamus and the stimulation of those regions using repetitive transcranial magnetic stimulation (rTMS) to activate the hypothalamus indirectly. The goal of this study is to determine the effectiveness of rTMS in influencing the hypothalamus to better understand the mechanisms between it and the neuroendocrine processes it controls.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma GnRH levels resulting from hypothalamus activation via LC-MS
+  - Plasma vasopressin levels via LC-MS
+  - Plasma oxytocin levels via LC-MS
+  - Plasma TRH levels via LC-MS
+  - Plasma CRH levels via LC-MS
+
+INTERVENTIONS:
+  - DEVICE: Repetitive Transcranial Magnetic Stimulation
+
+ELIGIBILITY:
+Age: 21 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04183153

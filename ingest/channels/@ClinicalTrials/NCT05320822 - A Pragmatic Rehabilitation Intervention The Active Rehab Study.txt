@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05320822
+Title: A Pragmatic Rehabilitation Intervention: The Active Rehab Study
+Official Title: A Pragmatic Rehabilitation Intervention to Supplement Progressive Return to Activity Following Mild Traumatic Brain Injury in Service Members (SMs): The Active Rehab Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 130
+Topic: aerobic exercise
+
+SUMMARY:
+The strategic objective of this research line is to examine improving short- and long-term outcomes for soldiers following mild traumatic brain injury (mTBI). The technical objectives are to: 1) conduct a Phase 1 quasi-experimental pragmatic trial testing the potential benefit of provider directed active rehabilitation therapies ("Active Rehab") in accelerating return of injured soldiers back to active duty and improving cognitive and functional limitations following mTBI, and 2) operationalize and disseminate a clinical active rehabilitation algorithm for use in military settings. The central hypothesis is that an active rehabilitation algorithm in the context of the progressive return to activity will improve clinical and functional outcomes, including time to return to duty.
+
+The Active Rehab intervention expands on progressive return to activity guidelines by providing activities that can be completed and progressed during Stage 1 of the progressive return to activity protocol, when the participant is at least 24 hours postinjury. Active Rehab includes an adaptive paradigm based on personal characteristics, symptom presentation, and duty requirements that integrate with current progressive return to activity guidelines. Activity progressions consider the initial presentation and changes in participant status during treatment, with the goal of safely accelerating recovery. Severity and presence of symptoms will guide progression: worse, same or better as reported by the participant.
+
+DETAILED DESCRIPTION:
+The study population will be soldiers stationed at Fort Bragg, North Carolina. Allocation to arm will be determined by time (preintervention/current practice (Group 1) vs. intervention/Active Rehab (Group 2)). The study will enroll and follow mild traumatic brain injuries in the study population, presenting to study targeted providers within 2 weeks following mild traumatic brain injury/concussion, over two 9 month periods (n=65 in each period for a total n=130 completing the protocol). Post-injury patient outcomes include military performance, physiological, clinical and psychological health outcomes. Study assessment timepoints include initial post-injury intake, 2-weeks post enrollment (as possible), asymptomatic, and clearance to return to duty. In the first 9-month period (Study Phase 1), the study will evaluate current progressive return to activity practices and patient outcomes following mild traumatic brain injury.
+
+In the second 9-month period (Study Phase 2), soldier participants will complete the Active Rehab protocol. Active Rehab activities will be progressed based on participants' reported symptoms and duty profiles. The intervention will be delivered through provider and study staff education to participants. Outcomes will be compared between the two study phases (current practice vs. Active Rehab). Following data acquisition, investigators will utilize Machine Learning techniques to develop an adaptive clinical Active Rehab protocol for military settings (Study Phase 3). The algorithm will use serial measures of military performance, physiological function, clinical recovery, and psychological health status obtained at acutely and sequentially throughout treatment to direct best options for an individual's Active Rehab protocol progression.
+
+PRIMARY OUTCOMES:
+  - Average days to full return to duty clearance
+
+INTERVENTIONS:
+  - OTHER: Active Rehab (Group 2)
+  - OTHER: Progressive Return to Activity (Group 1)
+
+ELIGIBILITY:
+Age: 18 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05320822

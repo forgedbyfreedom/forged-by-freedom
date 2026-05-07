@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06917131
+Title: Royal Jelly as a Strategy to Modulate Inflammation and Oxidative Stress in Patients With Systemic Arterial Hypertension
+Official Title: Royal Jelly as a Strategy to Modulate Inflammation and Oxidative Stress in Patients With Systemic Arterial Hypertension
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: protein supplementation
+
+SUMMARY:
+The study aims to evaluate the effect of the royal jelly on inflammation and oxidative stress in participants with systemic arterial hypertension. A longitudinal double-blind randomized clinical trial will be carried out, involving hypertensive participants for two months.
+
+DETAILED DESCRIPTION:
+Royal jelly (RG) is considered a superfood that has been used in traditional medicine and dietary supplementation due to its antioxidant, anti-inflammatory, immunomodulatory, and regenerative properties. The antioxidant and anti-inflammatory effects of GR highlight its potential as a natural supplement for the prevention and management of several health conditions. Although in vitro and animal model data are promising, clinical studies are still needed to validate the effects of royal jelly in human populations.
+
+PRIMARY OUTCOMES:
+  - Change of inflammatory status in the participants
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Royal Jelly
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06917131

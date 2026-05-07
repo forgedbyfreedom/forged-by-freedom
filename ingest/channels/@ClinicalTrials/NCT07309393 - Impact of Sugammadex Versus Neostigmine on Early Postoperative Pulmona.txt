@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07309393
+Title: Impact of Sugammadex Versus Neostigmine on Early Postoperative Pulmonary Function
+Official Title: Impact of Sugammadex Versus Neostigmine on Early Postoperative Pulmonary Function After Thoracoscopic Lung Resection: A Multicenter, Randomized, Double-Blind, Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 240
+Topic: physical activity intervention
+
+SUMMARY:
+Residual neuromuscular blockade (NMB) after general anesthesia increases the risk of postoperative respiratory complications (atelectasis, pneumonia, re-intubation) and delays pulmonary function recovery. Sugammadex, a γ-cyclodextrin that directly encapsulates rocuronium, reverses NMB rapidly and completely without cholinergic side effects, whereas neostigmine requires co-administration of an antimuscarinic and may leave residual blockade. In this multicenter, randomized, double-blind, controlled trial, 240 adult patients (ASA I-III) undergoing elective thoracoscopic lung resection (≤ 1 segment) will be randomized 1:1 to receive sugammadex (2 mg/kg) or neostigmine (0.03 mg/kg) + atropine (0.015 mg/kg) at the end of surgery. The primary endpoint is the percent decline in forced expiratory volume in 1 second (FEV₁) at 1 hour post-extubation compared to preoperative baseline; a ≥ 5% improvement with sugammadex is hypothesized. Secondary endpoints include FEV₁ at days 1-3, pain scores, opioid consumption, gastrointestinal recovery, quality of recovery (QoR-15), neuromuscular monitoring (TOF ratio), and incidence of postoperative pulmonary and surgical complications.
+
+DETAILED DESCRIPTION:
+Detailed Description:
+
+Background: Thoracoscopic lung surgery requires general anesthesia with double-lumen endotracheal intubation and muscle relaxants to facilitate lung isolation and surgical exposure. Residual neuromuscular blockade after surgery can cause complications such as airway obstruction, atelectasis, pneumonia, prolonged PACU stay, and reduced patient satisfaction. Neostigmine, a commonly used acetylcholinesterase inhibitor, reverses neuromuscular blockade by increasing acetylcholine but may cause cholinergic side effects, requiring atropine co-administration. Sugammadex, a γ-cyclodextrin compound, encapsulates and inactivates rocuronium directly, reversing blockade without affecting cholinergic receptors and avoiding related adverse events. Sugammadex can also shorten operation time and improve turnover efficiency in thoracoscopic surgery.
+
+Purpose: This study aims to compare the effects of sugammadex and neostigmine on early postoperative pulmonary function recovery in patients undergoing thoracoscopic lung resection, providing reliable clinical data to improve surgical management and enhance recovery.
+
+Design: Patients planned for unilateral thoracoscopic lung segmentectomy will be randomized 1:1 to receive either sugammadex or neostigmine plus atropine for reversal of rocuronium-induced neuromuscular blockade at the end of surgery. Pulmonary function will be assessed using a portable spirometer before surgery and at postoperative 1 hour, 1 to 3 days, or before discharge. Other outcomes including postoperative pain, opioid consumption, gastrointestinal recovery, incidence of nausea/vomiting, quality of recovery (QoR-15 scale) will be evaluated.
+
+PRIMARY OUTCOMES:
+  - Change in Forced Expiratory Volume in 1 Second (FEV1) from Baseline to 1 Hour Postoperatively
+
+INTERVENTIONS:
+  - DRUG: Sugammadex
+  - DRUG: Neostigmine
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07309393

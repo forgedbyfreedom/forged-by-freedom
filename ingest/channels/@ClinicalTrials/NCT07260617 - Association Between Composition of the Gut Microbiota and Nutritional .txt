@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07260617
+Title: Association Between Composition of the Gut Microbiota and Nutritional Status in Digestive Oncology
+Official Title: Study of the Association Between the Composition of the Gut Microbiota and Nutritional Status in Patients Treated With Chemotherapy in Digestive Oncology
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 150
+Topic: sarcopenia intervention
+
+SUMMARY:
+Nutritional status represents a crucial issue in the management of cancer patients, as between 40% and 60% of them suffer from malnutrition at the time of diagnosis. This condition worsens morbidity, increases treatment-related adverse effects, infections, and hospitalizations, and can lead to death in 10% to 20% of cases, independently of tumor progression. Anticancer treatments often exacerbate malnutrition due to their side effects, such as loss of appetite or taste alterations.
+
+Although international guidelines (ESPEN, ESMO, ASCO) recommend a multimodal nutritional intervention combining nutritional support and physical activity. The effectiveness of these approaches varies among patients. This variability can be explained by several factors, including individual differences in dietary intake response, metabolic status, and digestive tolerance to treatments.
+
+The intestinal and oral microbiota appear to be key cofactors in regulating these various parameters, influencing appetite, host metabolism, and intestinal absorption. Alterations in the microbiota-particularly a decrease in bacterial diversity and an increase in Candida albicans-have been associated with appetite loss and taste perception disorders, especially in patients with digestive cancers. Therefore, the intestinal microbiota constitutes a potential therapeutic and diagnostic target to improve nutritional strategies in oncology.
+
+Interventions targeting the microbiota (such as probiotic supplementation or fecal microbiota transplantation) have already demonstrated an impact on nutritional parameters in preclinical models of malnourished cancer-bearing mice; however, clinical data remain scarce and limited.
+
+The ONCONUTRIBIOTA-cohort study aims to characterize and investigate the oral and intestinal microbiota of patients initiating chemotherapy for digestive cancer, in relation to their nutritional status clinical characteristics and food preferences, in order to identify potential biomarkers or therapeutic targets to optimize their nutritional management.
+
+Patients will be followed during two of their routine care visits: on the day of the first chemotherapy treatment and at the end of the first cycle of chemotherapy. During these visits, stool and saliva samples will be collected, completed by additional assessments including global quality of life and nutritional quality of life questionnaires, olfactory and gustatory tests, and measurements of parameters used to determine the presence of malnutrition, general health status and oncological evaluation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Difference in fecal microbiota composition, assessed by beta-diversity (Weighted UniFrac and Bray-Curtis) based on shotgun metagenomic data, between patients with severe, moderate, or no malnutrition evaluated at V1 and V2.
+
+INTERVENTIONS:
+  - OTHER: Not applicable- observational study
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07260617

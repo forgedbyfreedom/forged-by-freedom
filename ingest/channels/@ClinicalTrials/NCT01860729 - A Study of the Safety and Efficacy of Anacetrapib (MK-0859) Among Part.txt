@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01860729
+Title: A Study of the Safety and Efficacy of Anacetrapib (MK-0859) Among Participants With Hypercholesterolemia When Added to Ongoing Statin Therapy (MK-0859-022)
+Official Title: A 24-Week, Worldwide, Multicenter, Double-Blind, Randomized, Parallel, Placebo- Controlled Study to Assess the Efficacy and Tolerability of Anacetrapib When Added to Ongoing Statin Therapy With or Without Other Lipid Modifying Medication(s) in Patients With Hypercholesterolemia or Low HDL-C
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 589
+Topic: beta-alanine
+
+SUMMARY:
+This study will evaluate the effects of anacetrapib on low-density lipoprotein-cholesterol (LDL-C) and high-density lipoprotein cholesterol (HDL-C) in participants with hypercholesterolemia when added to an existing statin therapy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Percent Change from Baseline in LDL-C (beta-quantification [BQ] method)
+  - Percent Change from Baseline in HDL-C
+  - Number of Participants with Alanine Transaminase (ALT) or Aspartate Aminotransferase (AST) Consecutive Elevations ≥3x Upper Limit of Normal (ULN)
+  - Number of Participants with Creatine Phosphokinase Elevations ≥10xULN with or without Muscle Symptoms
+  - Number of Participants with Sodium, Chloride, or Bicarbonate Elevations >ULN or Potassium Levels <Lower Limit of Normal (LLN)
+
+INTERVENTIONS:
+  - DRUG: Anacetrapib
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01860729

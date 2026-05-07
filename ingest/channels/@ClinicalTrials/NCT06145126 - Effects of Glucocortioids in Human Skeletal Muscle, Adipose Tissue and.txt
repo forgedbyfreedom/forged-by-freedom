@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06145126
+Title: Effects of Glucocortioids in Human Skeletal Muscle, Adipose Tissue and Skin
+Official Title: Effects of Glucocortioids in Human Skeletal Muscle, Adipose Tissue and Skin
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: exercise muscle mass
+
+SUMMARY:
+BACKGROUND: A notorious and dreaded adverse effect of glucocorticoids (GC) is redistribution of muscle and fat mass towards muscle wasting and visceral obesity. Fibroadipogenic progenitors (FAPs) are hypothesized to mediate this process.
+
+AIM: Utilizing human data, the investigators study the effects of GC exposure on skeletal muscle structure and function, adipose tissue and skin in healthy older subjects.
+
+METHODS: FAPs will be analyzed in biopsies from skeletal muscles, adipose tissue and skin and further characterized using scRNA-sequencing and Fluorescence-Activated Cell Sorting. Body composition including muscle mass (DXA scan), muscle strength, spontaneous physical activity and glucose homeostasis are recorded.
+
+PERSPECTIVES: The investigators combine translational research with multidisciplinary and international collaboration to elucidate the pathophysiology of GC excess, which is of significant clinical interest since 3% of the Danish population receive GC treatment.
+
+DETAILED DESCRIPTION:
+Design: randomized, double blind, placebo-controlled trial. The aim is to study the effect of short-term GC exposure on skeletal muscle, skin , adipose tissue in 12 healthy adults above the age of 50 years. This age group is close to that of patients receiving short-term, high dose anti-inflammatory prednisolone treatment and thus provides a bridge between a clinically observered problem. The participants will be randomized to receive either prednisolone (37,5mg/d) or placebo treatment for five consecutive days. In addition to muscle, skin, and adipose tissue biopsies and body composition measurement (DXA), each participant will undergo the following measurements before and after the intervention: spontaneous physical activity (actigraphy), ambulatory 24-hour blood pressure, continuous glucose monitoring (CGM), pulse wave velocity (PWV), and muscle strength. Each participant is studied before and after the 5-day treatment period.
+
+Outcomes:
+
+* FAPs expression in skeletal muscle and adipose tissue:
+
+  * Fluorescence Activated Cell Sorting (FACS) mediated quantification, isolation and transcriptomic profiling at population and single-cell level of FAPs, and immunological cells
+  * Time-to-first division of isolation FAPs
+  * In vitro fibro- and adipogenic differentiation of FAPs
+  * Single cell transcriptome analysis (scRNA-seq) to profile cell types in a hypothesis-generating perspective.
+* Functional outcomes: Muscle mass and strength (DXA scan and isometric quadriceps strength) and spontaneous physical activity (actigraphy)
+* Metabolic outcomes: circadian blood glucose and blood pressure, and basal insulin sensitivity.
+
+PRIMARY OUTCOMES:
+  - FAPs expression in skeletal muscle, adipose tissue, and skin
+
+INTERVENTIONS:
+  - OTHER: Prednisolone
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 55 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06145126

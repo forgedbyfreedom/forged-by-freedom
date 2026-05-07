@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00951639
+Title: Cassia Cinnamon for Glucose Uptake in Young Women
+Official Title: Cassia Cinnamon and Acute Endurance Exercise for the Enhancement of Glucose Uptake in Healthy Young Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: exercise intervention obesity
+
+SUMMARY:
+The purpose of this study was to compare the acute effects of 5g of Cassia cinnamon, 50 minutes of endurance exercise performed at 70% of the heart rate reserve (correlated to VO2max), and 5g of cellulose placebo on blood glucose, serum insulin and insulin sensitivity following an oral glucose tolerance test 3 hours after administration of each intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Blood Glucose
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cassia cinnamon
+  - PROCEDURE: 50 minutes exercise
+  - DIETARY_SUPPLEMENT: Cellulose Powder
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00951639

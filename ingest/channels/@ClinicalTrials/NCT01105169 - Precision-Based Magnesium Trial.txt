@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01105169
+Title: Precision-Based Magnesium Trial
+Official Title: Personalized Prevention of Colorectal Cancer Trial (PPCCT)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 250
+Topic: protein supplementation
+
+SUMMARY:
+Colorectal cancer is the fourth most common incident cancer and the second most common cause of cancer death in the United States, with approximately 150,000 new cases and 57,000 deaths per year. High calcium intake and magnesium may protect against colorectal cancer and adenoma, however, results have been inconsistent. We found that genetic makeup, associated with magnesium absorption and re-absorption, significantly interacted with the calcium and magnesium ratio in relation to the both adenomatous and hyperplastic polyps. Participants who carried at least one 1482Ile allele (G-\>A)of TRPM7 and who consumed diets with a high calcium/magnesium ratio were at a higher risk of adenoma and hyperplastic polyps than were participants who did not carry the polymorphism. We hypothesize that the reduction in the dietary Ca/Mg ratio may change the markers directly related to tumorigenesis. The primary aims of this study are to conduct a randomized placebo-controlled intervention trial to test whether reducing the Ca/mg intake ratio through magnesium supplementation has effects on the related biomarkers. We will also examine whether the effect of modulating Ca/Mg intake ratio may be more pronounced among those who carry the 1482Ile allele compared those who don't carry the 1482Ile allele. Results from our study will help to identify people at a high risk of colorectal adenoma and to develop personalized strategies to prevent occurrence of colorectal adenoma, and thus, colorectal cancer through dietary change or nutritional fortification.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - TRPM7 Expression Level in Colorectal Mucosa by Mg Treatment Compared With Placebo
+  - COX2 Expression Level in Colorectal Mucosa by Mg Treatment Compared With Placebo
+  - TUNEL Expression in Colorectal Mucosa by Mg Treatment Compared With Placebo
+  - BAX Expression in Colorectal Mucosa by Mg Treatment Compared With Placebo
+  - pMLKL Expression in Colorectal Mucosa by Mg Treatment Compared With Placebo
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Magnesium glycinate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 40 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01105169

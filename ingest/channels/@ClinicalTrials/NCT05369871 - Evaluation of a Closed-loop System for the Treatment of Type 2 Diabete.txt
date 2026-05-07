@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05369871
+Title: Evaluation of a Closed-loop System for the Treatment of Type 2 Diabetes at Home (DT2_2)
+Official Title: Evaluation of a Closed-loop System for the Treatment of Type 2 Diabetes at Home (DT2_2)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The objective of this clinical trial is to study the feasibility of using a closed loop and its impact on glycemic control, in patients with type 2 diabetes (T2D) treated with insulin pumps.
+
+DETAILED DESCRIPTION:
+T2D is a condition that combines insulin resistance and relative insulin deficiency. T2D naturally evolves into an increasingly marked insulin deficiency that leads to the need for pancreatic replacement, by administering insulin.
+
+Type 1 diabetes (T1D) requires an integral and immediate substitution of pancreatic insulin secretion. Artificial intelligence, through a self-learning algorithm, enables the automation and personalization of insulin delivery. These devices, called "closed loops" bring a real benefit for the patients included in the studies, by improving the glycemic balance, by reducing the number of hypo- and hyperglycemias but also by reducing the mental load associated with the disease, improving their quality of life.
+
+The objective of this clinical trial is to study the feasibility of using a closed loop and its impact on glycemic control, in patients with T2D treated with insulin pumps.
+
+A 13-week interventional, randomized, controlled, crossover, open-label, multicenter main study, followed by an optional, open-label, additional 4-week study is proposed to patients.
+
+Main objective: study of the impact of the closed loop for 6 weeks, compared to 6 weeks in an open loop, on glycemic balance (evaluated by the time in range 70-180 mg/dL).
+
+Secondary objectives: study of the impact of the closed loop for 6 weeks, compared to 6 weeks in an open loop, on:
+
+* glycemic balance (others parameters)
+* daily physical activity
+* quality of sleep
+* satisfaction with diabetes treatment
+* quality of life
+* treatment safety
+
+Evaluation of the satisfaction of the use (usability) of the system at the end of the closed loop period.
+
+PRIMARY OUTCOMES:
+  - Glycemic control evaluation for the 12-week main study
+
+INTERVENTIONS:
+  - DEVICE: Closed-loop system
+  - DEVICE: Open-loop system
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05369871

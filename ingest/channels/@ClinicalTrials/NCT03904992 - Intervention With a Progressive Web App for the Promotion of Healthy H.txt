@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03904992
+Title: Intervention With a Progressive Web App for the Promotion of Healthy Habits in Preschoolers
+Official Title: Intervention With a Progressive Web App for the Promotion of Healthy Habits in Preschoolers
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: exercise intervention obesity
+
+SUMMARY:
+The preschool stage has been identified as an important moment for the study of factors associated with obesity. The worrying national situation of overweight in children from 3 to 5 years old, the increase in consumption of ultra-processed foods nationwide that is associated with the increase of the body mass index at the national level, the reduced national scientific evidence regarding the effectiveness of interventions in promoting healthy habits, as well as the lack of tools for mothers of preschool children in nutrition and physical activity, make interventions necessary in this area. On the other hand, currently, users worldwide are installing fewer applications and, although they spend more time using mobile applications, they are limited to a handful. Therefore, developing a native mobile application that is highly consumed is very difficult and expensive. For this reason, progressive web apps emerge as an attractive alternative for users given its attractive features, cross-platform interface, lower development cost and a growing demand for such applications. Thus, this research seeks to explore a novel way to promote healthy habits in preschoolers and check their effectiveness. In this way, a precedent could be set in the use of technologies in health promotion that could be extended to other age groups.
+
+DETAILED DESCRIPTION:
+SAMPLE SIZE The sample size was calculated using OpenEpi (www.openepi.com), with the sample size formula to compare two means, considering a confidence interval of 95%, power of 80%, ratio of sample size (group 2 / group 1) equal to 1, a minimum expected mean difference of 5 points and a standard deviation of 9.5 points for both groups. Thus, the required sample size is 114 participants (57 intervened and 57 not intervened).
+
+TECHNIQUES AND PROCEDURES FOR DATA COLLECTION
+
+First stage: Design of the progressive web app
+
+In this phase, the profile of the users will be defined through a focus group. Among the information gathered is socio-demographic data, use of technology, current situation of the feeding and physical activity of the preschool, and expectations of the functions of the computer tool. In addition, a complementary bibliographic search will be carried out on the subject to expand the information necessary for the design of the PWA.
+
+Based on the information collected, the alpha version of the application will be developed. It will undergo a validation process and based on the feedback, the application will be improved until a beta version is developed.
+
+Second stage: intervention with the progressive web app (PWA)
+
+ANALYSIS PLAN
+
+The data was collected using the Magpi software. To verify the comparability of the two randomization groups based on the sociodemographic covariates through a descriptive analysis, a frequency and percentage table was constructed, which were compared by statistical tests.
+
+In addition, the variation of the ration consumption of the food groups, the score in each component of the feeding behavior and the activity of the preschool was analyzed; the variation of the nutritional status and quality of the components of the lunch box in the control and intervention group was identified; and the variation of the Z score for the indicator of BMI for age and the consumption of the lunch box was plotted through a chart of boxes.
+
+To determine the effect of the intervention, the differences of the measurements (post-pre) of the control and intervention groups were compared. For this, the Student t test was used for independent samples. The variables analyzed were:
+
+* Variation of the dietetic quality of the preschool
+* Variation in the nutritional status of children
+* Variation of preschool feeding behavior
+* Variation of the composition of the lunchbox
+* Variation of the consumption of the lunchbox
+* Variation of physical activity Finally, a satisfaction survey was applied to the intervention group and the results were presented using descriptive statistics.
+
+PRIMARY OUTCOMES:
+  - Variation of the dietary diversity of the preescholer
+
+INTERVENTIONS:
+  - OTHER: Progressive web app
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03904992

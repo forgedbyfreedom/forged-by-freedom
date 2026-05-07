@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07501546
+Title: Enhancing Childhood Obesity Interventions Through Digital Media Tools
+Official Title: An Experimental Study on Enhancing Childhood Obesity Interventions Through Digital Media Tools: A Case Study of Taipei City Hospital
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 567
+Topic: exercise intervention obesity
+
+SUMMARY:
+This study evaluated the effectiveness of a LINE Official Account (a mobile messaging platform) as a digital health education tool to enhance parental engagement with childhood obesity-related health literacy content.
+
+Parents of school-aged children (grades 1, 4, and 7) identified as obese through school health screenings in Taipei, Taiwan, who declined face-to-face clinic participation, were invited to join the LINE Official Account platform.
+
+Participants were allocated to either an immediate push notification group (receiving automated educational messages for 24 weeks from enrollment) or a delayed push notification group (receiving no push notifications for the first 12 weeks, followed by 12 weeks of push notifications).
+
+The study compared parental engagement behaviors between the two groups, including the proportion of users clicking interactive educational content and the click frequency per user, to determine whether the timing of push notification initiation affects parental engagement with digital health education content related to childhood obesity.
+
+DETAILED DESCRIPTION:
+Background: Childhood obesity is a growing public health concern in Taiwan. A hospital-based childhood obesity intervention program in Taipei faced consistently low parental participation rates (6-10%), despite school-based screening identifying eligible children. To address this gap, a digital health education platform was developed using the LINE Official Account messaging application to deliver health literacy content to parents who declined face-to-face clinic visits.
+
+Intervention: The LINE Official Account platform incorporated six functional modules: Understanding Obesity, Dietary Guidance, Exercise Guidance, Family Lifestyle Habits, Course Resources, and Healthy Weight Clinic Introduction. Educational content was designed based on the Health Belief Model (addressing perceived susceptibility, severity, benefits, barriers, cues to action, and self-efficacy) and Nudge theory (employing reminders, imagery, simplification, rewards, defaults, and social norms).
+
+Study Design: This was a quasi-randomized trial using systematic allocation. Parents were allocated to two groups based on the sequential order of consent form returns during telephone contact. Since the team could not predict which parents would decline clinic participation during phone calls, this systematic alternating allocation achieved a quasi-random distribution. The experimental group (Channel 1) received automated push notifications from week 1 through week 24. The control group (Channel 2) received no push notifications during weeks 1-12, with notifications beginning at week 13 through week 24. Both groups had identical educational content available on the platform at all times; the intervention variable was the timing of automated push notification delivery.
+
+Outcomes: Daily user activity data were collected from the LINE Official Account backend system over the 24-week study period. Primary outcome measures included the daily proportion of users clicking interactive educational messages and the daily click rate per user. Secondary outcomes included page view rates, system operation rates, and click differences across educational topic categories.
+
+Statistical Analysis: Descriptive statistics, Mann-Whitney U tests, Chi-square tests, Spearman correlation analysis, and hierarchical regression analysis were employed. Significance level was set at p\<0.05. All analyses were performed using IBM SPSS.
+
+PRIMARY OUTCOMES:
+  - Proportion of Children Re-enrolling in the Face-to-face Healthy Weight Clinic Program
+
+INTERVENTIONS:
+  - BEHAVIORAL: Immediate Automated Push Notifications
+  - BEHAVIORAL: Delayed Automated Push Notifications
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07501546

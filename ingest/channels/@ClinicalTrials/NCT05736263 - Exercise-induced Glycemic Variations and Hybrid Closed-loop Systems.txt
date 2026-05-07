@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05736263
+Title: Exercise-induced Glycemic Variations and Hybrid Closed-loop Systems
+Official Title: Setting a New Algorithm For the Management of Exercise-induced Glycemic Variations in Patients With Type 1 Diabetes in Intensive Therapy With Hybrid Closed-loop Systems
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: high intensity interval training
+
+SUMMARY:
+Type 1 diabetes is characterized by high risk of hypoglycemia and associated fear of hypoglycemia. Hypoglycemia risk is higher during and after physical activity, especially aerobic activity of long duration. Fear of hypoglycemia can result in avoidance of exercise or overcompensatory eating, both related to worse metabolic control and increased cardiometabolic risk. Hybrid closed-loop (HCL)systems have significantly improved risk of hypoglycemia. They also offer the possibility to set a temporary target for physical activity, further reducing the risk of hypoglycemia during physical activity. Although temporary target seems to work rather well with moderate-intensity aerobic exercise, little data is available for other types of exercise, like resistance exercise, high-intensity interval exercise, combined modalities of exercise, in which the temporary target seems to perform less well. The present study aims to test the performance of current HCL systems under different exercise conditions and evaluate the relationship between different exercise variables (recorded during exercise), physical activity variables (measured by accelerometry) and glycemic variations in HCL system users.
+
+DETAILED DESCRIPTION:
+People with type 1 diabetes mellitus (T1DM) are continuously at risk of hypoglycemia, which is one of the main barriers to achieving optimal glycemic control.
+
+Physical activity (PA) in T1DM is characterized by an imbalance between hepatic glucose production and glucose disposal agent agent agent agent agent agent agent agent agent agent agent agent agent into the muscle, increased insulin sensitivity and impaired counterregulatory hormonal response. Thus, PA could increase the risk of hypoglycemia in T1DM. Hypoglycemia can occur during exercise, as well as during recovery, and fear of hypoglycemia often results in either avoidance of exercise or overcompensatory treatment behaviors, which in turn result in worsened metabolic control and increased cardiometabolic risk.
+
+Complexity of glucose homeostasis and an insufficient level of technology prevents tight blood glucose (BG) control regulation. Closed-loop artificial pancreas studies have shown reduction in the risk of hypoglycemia and increase in time in range (70-180 mg/dl) in T1DM patients. Although these systems work fairly well on overnight hypoglycemia, preventing low BG during and immediately after exercise remains a problem, due to the combination of a dramatic increase in insulin sensitivity with the delayed onset of subcutaneous insulin. Informing insulin dosing of PA could decrease this risk. Glycemic response to exercise varies based on type of exercise (aerobic or resistance), but also based on intensity and duration of exercise. Most existing hybrid closed-loop (HCL) systems use the Dexcom G6 glucose sensor, which has demonstrated good accuracy during aerobic, resistance and high intensity interval training (HIIT) exercise.
+
+Current HCL systems offer the possibility to announce exercise to the system and this information is accounted for in the insulin dosing calculation. As a result, the system sets a higher glycemic target, increases the insulin sensitivity factor and/or avoids correction boluses during exercise. These systems perform well in preventing hypoglycemia, but compensatory hyperglycemia, due to higher carbohydrate intake and lower insulin delivery, often follows. One of the major issues with existing HCL systems is that exercise is considered a binomial entity, either present or absent, and factors like intensity, duration or type of exercise are not taken into consideration. However, these exercise variables can contribute to elicit completely different glycemic responses to exercise. Even more, these systems do not account for the delayed effect of exercise, i.e. the so-called activity-on-board (AOB), a quantitative representation of the previously performed PA that is still affecting the BG levels, and which is responsible for the post-exercise hypoglycemia, sometimes several hours after an exercise session. Current recommendations on how to manage BG levels in exercise have not yet been fully tested in the context of a closed-loop system.
+
+The present study aims to develop a new and improved algorithm that uses information on exercise/physic
+
+PRIMARY OUTCOMES:
+  - CGM-derived percentage time in range (TIR) during and after exercise trials
+  - Comparison of CGM-derived percentage time in range (TIR) when temporary target is enabled or disabled during exercise
+
+INTERVENTIONS:
+  - BEHAVIORAL: Moderate intensity exercise
+  - BEHAVIORAL: High intensity interval exercise
+  - BEHAVIORAL: Combined exercise
+  - BEHAVIORAL: Resistance exercise
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05736263

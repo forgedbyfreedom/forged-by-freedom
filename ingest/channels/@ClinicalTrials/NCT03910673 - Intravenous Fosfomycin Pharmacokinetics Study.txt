@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03910673
+Title: Intravenous Fosfomycin Pharmacokinetics Study
+Official Title: A Phase 1 Safety and Intrapulmonary Pharmacokinetics Study of ZTI-01 (Intravenous Fosfomycin Disodium) in Healthy Adult Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: creatine supplementation
+
+SUMMARY:
+This is a Phase 1, open-label, multiple-dose trial conducted at a single center. The treatment period will consist of three 6 g doses (18 g) of ZTI-01 as a 1-hour intravenous (IV) infusion (+10 minute window). A total of 30 enrolled subjects will be randomized to undergo a single standardized bronchoscopy with bronchoalveolar lavage (BAL) at one of five sampling times. A total of 6 subjects will be assigned to each BAL-sampling time. Up to ten additional enrolled subjects will act as alternates to obtain 30 evaluable subjects. An evaluable subject is defined as a subject who receives all doses of ZTI-01, undergoes BAL at the randomized sampling timepoint with BAL return volume adequate for testing, and undergoes at least the one blood sampling timepoint that is concurrent with the assigned BAL sampling timepoint, with blood sampling volume that is adequate for testing. The objectives of the study are to assess safety and pharmacokinetics (PK) for a multiple dose regimen of IV-infused ZTI-01.
+
+DETAILED DESCRIPTION:
+This is a Phase 1, open-label, multiple-dose trial conducted at a single center. The treatment period will consist of three 6 g doses (18 g) of ZTI-01 as a 1-hour intravenous (IV) infusion (+10 minute window). A total of 30 enrolled subjects will be randomized to undergo a single standardized bronchoscopy with bronchoalveolar lavage (BAL) at one of five sampling times. A total of 6 subjects will be assigned to each BAL-sampling time. Up to ten additional enrolled subjects will act as alternates to obtain 30 evaluable subjects. An evaluable subject is defined as a subject who receives all doses of ZTI-01, undergoes BAL at the randomized sampling timepoint with BAL return volume adequate for testing, and undergoes at least the one blood sampling timepoint that is concurrent with the assigned BAL sampling timepoint, with blood sampling volume that is adequate for testing. The objectives of the study are to assess safety and pharmacokinetics (PK) for a multiple dose regimen of IV-infused ZTI-01.
+
+PRIMARY OUTCOMES:
+  - Area Under the Concentration-time Curve (AUC 0-8 and AUC 0-inf ) of ZTI-01
+  - Clearance (CL) of ZTI-01
+  - Intrapulmonary Pharmacokinetics of ZTI-01
+  - Maximum Measured Plasma Concentration (Cmax) of ZTI-01
+  - Number of Participants Experiencing Abnormal Clinical Chemistry Laboratory Assessments
+
+INTERVENTIONS:
+  - DRUG: Fosfomycin disodium
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03910673

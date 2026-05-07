@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07264777
+Title: Strategic Daytime Napping Enhances Agility and Lowers Perceived Exertion
+Official Title: Strategic Daytime Napping Enhances Agility and Lowers Perceived Exertion But Does Not Improve Fatigue Resistance in Adolescent Soccer Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: sleep athletes
+
+SUMMARY:
+This study investigates how short daytime naps affect physical performance and perceived exertion in competitive male soccer players. Using a repeated-measures crossover design, sixteen athletes from the U17 and U19 teams of Yeni Malatyaspor completed three experimental sessions separated by 48 hours. Each session involved one of three conditions: no nap (N0), a 25-minute nap (N25), or a 45-minute nap (N45). Participants' agility, repeated-sprint ability, and exertion levels were tested after each condition. Objective sleep data were collected with Fitbit Charge 6 devices, and subjective measures included the Hooper Index, Profile of Mood States, and sleep quality scales.
+
+The study aimed to determine whether strategic napping could acutely improve agility and reduce fatigue during anaerobic performance tasks in soccer players. It was hypothesized that longer naps would enhance agility and lower perceived exertion but would not significantly affect repeated-sprint performance.
+
+DETAILED DESCRIPTION:
+repeated-measures crossover design was conducted to examine the acute effects of strategic daytime naps on anaerobic performance in competitive male soccer players. Sixteen players from the Yeni Malatyaspor U17 and U19 teams participated voluntarily. Each participant completed three test sessions under randomized conditions: no nap (N0), 25-minute nap (N25), and 45-minute nap (N45), with a 48-hour recovery period between sessions.
+
+Before testing, all participants underwent familiarization sessions to adapt to nap protocols and performance tests. The nap sessions were held in dark, quiet rooms maintained at \~22°C. Fitbit Charge 6 devices objectively verified nap compliance and duration. Participants abstained from caffeine, alcohol, and strenuous activity for at least 24 hours before testing.
+
+To minimize sleep inertia, physical performance testing began 60 minutes after awakening. The test battery included the Pro Agility Test (to assess change-of-direction speed) and the Repeated-Sprint Ability (RSA) Test (6 × 30 m sprints with 20-second recovery). Heart rate during warm-up and ratings of perceived exertion (RPE) were recorded for standardization and subjective effort assessment.
+
+Subjective measures included the Morningness-Eveningness Questionnaire (MEQ), Hooper Index, Pittsburgh Sleep Quality Index (PSQI), Profile of Mood States (POMS), and Visual Analogue Scales (VAS) for sleep quality and alertness. All players were identified as intermediate chronotypes according to the MEQ.
+
+Anthropometric measurements (height, weight, BMI) were obtained using standardized equipment. Statistical analyses were conducted with SPSS v29, using repeated-measures ANOVA with Bonferroni correction to compare conditions. Effect sizes (ηp², Cohen's dz) and correlations between psychological and performance variables were calculated.
+
+The study hypothesized that short daytime naps would enhance agility and reduce perceived exertion, with longer naps (45 min) providing greater benefits. However, due to the multifactorial nature of repeated-sprint performance, no significant improvements were expected in RSA results. The findings contribute to understanding individualized recovery strategies for soccer players and optimizing nap duration for performance enhancement.
+
+PRIMARY OUTCOMES:
+  - Change in Agility Performance (Pro Agility Test Time)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Strategic Napping Protocol
+  - BEHAVIORAL: No Nap Condition (N0)
+
+ELIGIBILITY:
+Age: 16 Years to 19 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07264777

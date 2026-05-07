@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07127692
+Title: Prevalence of Sarcopenia-Promoting Medicines in Patients With Sarcopenia and Falls
+Official Title: Exploratory Study on the Prevalence of Sarcopenia-Promoting Medicines in Patients With Sarcopenia and Falls
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 323
+Topic: exercise muscle mass
+
+SUMMARY:
+Sarcopenia, characterised by the loss of muscle mass and function, is a common condition among the elderly and is often associated with increased risk of falls. Certain medications, such as glucocorticoids, statins, and some antipsychotics, may exacerbate sarcopenia, leading to a higher incidence of falls. This study aims to explore the prevalence of such medicines in patients diagnosed with sarcopenia who have experienced falls. Understanding the impact of these medications on sarcopenia and fall risk can inform clinical guidelines and improve patient outcomes.
+
+DETAILED DESCRIPTION:
+Sarcopenia, the age-related loss of muscle mass and strength, is a recognised contributor to frailty, disability, and increased fall risk in older adults. While physical inactivity and comorbidities are known risk factors, increasing evidence suggests that certain medications - including corticosteroids, sedatives and statins - may also contribute to muscle decline. These medicines are frequently prescribed to older adults, but the extent of their use in patients with sarcopenia and falls remains poorly defined.
+
+Falls clinics manage high-risk patients, yet there is currently limited research examining the prevalence of sarcopenia-promoting medications in this specific setting. This study addresses an important knowledge gap by estimating the prevalence of these medicines in older adults attending a secondary care falls clinic, and by exploring associations with sarcopenia and fall history.
+
+The findings will support a better understanding of medication-related risk factors for sarcopenia and may help guide future deprescribing and medication review strategies. This aligns with current priorities in geriatric medicine to reduce inappropriate polypharmacy and improve outcomes for older adults through targeted, evidence-based prescribing.
+
+PRIMARY OUTCOMES:
+  - Prevalence of exposure to one or more sarcopenia-promoting medication
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Strength, Assistance with walking, Rise from a chair, Climb stairs, and Falls (SARC-F) questionnaire
+  - DIAGNOSTIC_TEST: Hand grip strength
+  - DIAGNOSTIC_TEST: Timed Up and Go test
+  - DIAGNOSTIC_TEST: Gait speed
+  - DIAGNOSTIC_TEST: Clinical Frailty Scale (CFS)
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07127692

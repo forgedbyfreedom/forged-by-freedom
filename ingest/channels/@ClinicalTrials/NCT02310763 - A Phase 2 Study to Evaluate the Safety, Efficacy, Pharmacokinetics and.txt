@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02310763
+Title: A Phase 2 Study to Evaluate the Safety, Efficacy, Pharmacokinetics and Pharmacodynamics of PF-06252616 in Duchenne Muscular Dystrophy
+Official Title: A PHASE 2 RANDOMIZED, DOUBLE-BLIND, PLACEBO-CONTROLLED, MULTIPLE ASCENDING DOSE STUDY TO EVALUATE THE SAFETY, EFFICACY, PHARMACOKINETICS AND PHARMACODYNAMICS OF PF-06252616 IN AMBULATORY BOYS WITH DUCHENNE MUSCULAR DYSTROPHY
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 121
+Topic: beta-alanine
+
+SUMMARY:
+This is a Phase 2 randomized, 2-period, double-blind, placebo-controlled, multiple ascending dose study to evaluate the safety, efficacy, PK and PD of PF-06252616 administered to ambulatory boys diagnosed with Duchenne Muscular Dystrophy. Three intravenous (IV) dose levels will be investigated in a within subject dose escalating fashion. Subjects will be randomly assigned to 1 of 3 sequence groups for approximately 96 weeks (2 periods of 48 weeks each). In period 1, two of the sequence groups will receive PF-06252616 and one sequence group will receive placebo. In period 2, the placebo group will switch to PF-06252616 and the two remaining sequence groups will either receive placebo or PF-06252616. Efficacy will be based on an observed mean change from baseline on function (4 stair climb) of PF-06252616 as compared to the placebo at the end of period 1. Period 2 provides an opportunity to evaluate PK. Subjects will receive monthly IV infused doses of either PF-06252616 or placebo and will undergo safety evaluations (Laboratory, cardiac monitoring, physical exams, x-ray, MRI), functional evaluations (pulmonary function testing, 4 stair climb, range of motion, strength testing, Northstar Ambulatory Assessment, upper limb functional testing and the six minute walk test), pharmacokinetic testing and pharmacodynamic testing to evaluate changes in muscle volume (MRI).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment-emergent Adverse Events (TEAEs) by Week 49
+  - Number of Participants Who Discontinued From the Study Due to TEAEs by Week 49
+  - Number of Participants With Dose Reduced or Temporary Discontinuation Due to TEAEs by Week 49
+  - Number of Participants With Laboratory Test Abnormalities (Without Regard to Baseline Abnormality) by Week 49 - Hematology
+  - Number of Participants With Laboratory Test Abnormalities (Without Regard to Baseline Abnormality) by Week 49 - Coagulation
+
+INTERVENTIONS:
+  - BIOLOGICAL: PF-06252616
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 6 Years to 15 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02310763

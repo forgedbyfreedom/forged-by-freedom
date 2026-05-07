@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07501806
+Title: Effect of the Combination of Nitrate and Caffeine on Critical Power In Trained Male Cyclists
+Official Title: Effect of the Combination of Nitrate and Caffeine on Critical Power In Trained Male Cyclists
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: caffeine exercise
+
+SUMMARY:
+This study is investigating the independent and combined effects of acute dietary nitrate and caffeine supplementation on performance during a 3-minute all-out cycling test in trained male cyclists. In a randomized, double-blind, placebo-controlled, crossover design, participants will complete four experimental conditions: nitrate, caffeine, nitrate plus caffeine, and placebo. Primary outcomes include end power (EP) and work done above end power (WEP), surrogate measures of critical power and W'. The study aims to determine whether combined supplementation provides additive benefits for severe-intensity exercise performance.
+
+DETAILED DESCRIPTION:
+Dietary nitrate and caffeine are among the most commonly used ergogenic aids in endurance and high-intensity exercise. Nitrate supplementation has been shown to improve exercise efficiency and tolerance to severe-intensity work, potentially through enhanced nitric oxide availability and improved oxygen delivery and utilization. Caffeine, primarily acting through central nervous system stimulation, has been associated with reduced perceived exertion and enhanced performance across a range of exercise modalities. Despite substantial evidence supporting their independent effects, limited research has examined the combined impact of nitrate and caffeine supplementation on exercise performance.
+
+The present study aims to investigate both the independent and combined effects of acute dietary nitrate and caffeine supplementation on performance outcomes derived from a 3-minute all-out cycling test (3MT), a validated method for estimating critical power and W'. Trained male cyclists will complete four experimental trials in a randomized, double-blind, placebo-controlled, crossover design. Experimental conditions include nitrate-rich beetroot juice with caffeine (BR + CAF), nitrate-rich beetroot juice with placebo (BR), nitrate-depleted beetroot juice with caffeine (CAF), and nitrate-depleted beetroot juice with placebo (PLA).
+
+Participants will consume dietary nitrate 3 hours prior to exercise and caffeine (5 mg/kg body mass) 60 minutes prior to testing. Following a standardized protocol, participants will perform a 3-minute all-out cycling test on an electronically braked cycle ergometer. Primary outcome measures include end power (EP) and work performed above end power (WEP), with secondary outcomes including peak power, mean power, and time-specific power output.
+
+This study aims to determine whether co-ingestion of nitrate and caffeine produces additive or synergistic effects on severe-intensity exercise performance, and to evaluate the extent to which these commonly used ergogenic aids influence performance outcomes associated with critical power in trained individuals.
+
+PRIMARY OUTCOMES:
+  - End Power
+  - Work Above End Power
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary Nitrate
+  - DIETARY_SUPPLEMENT: Caffeine
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07501806

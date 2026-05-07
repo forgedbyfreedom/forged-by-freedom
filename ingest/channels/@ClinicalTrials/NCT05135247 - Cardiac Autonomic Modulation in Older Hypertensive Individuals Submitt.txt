@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05135247
+Title: Cardiac Autonomic Modulation in Older Hypertensive Individuals Submitted to Different Types of Physical Training
+Official Title: Cardiac Autonomic Modulation in Older Hypertensive Individuals Submitted to Different Types of Physical Training
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 61
+Topic: high intensity interval training
+
+SUMMARY:
+Sixty-one sedentary older hypertensive individuals were randomized to four groups: continuous aerobic training (CA), interval aerobic training (IA), resistance training (R), and control (C) group. The protocol included 3 sessions of training by week for 12 weeks. C individuals were instructed to continue their usual activities. They were submitted to the passive tilt test before and after the research protocol, evaluating the heart rate (HR), low frequency (LF) and high frequency (HF) bands, detrended fluctuation analysis (DFAα1) and entropy
+
+DETAILED DESCRIPTION:
+The individuals were randomized into four groups: continuous aerobic training (CA), interval aerobic training (IA), resistance training (R), and control (C), which performed physical exercises three times a week for twelve weeks, with a total of 36 sessions. The tilt test was performed before and after the research protocol. Individuals in the control group were only encouraged to maintain their usual activities.
+
+For the analysis of HRV, the baseline conditions (resting in the supine position) were determined, followed by the passive postural maneuver, which characterizes the tilt test (table til tat 70 °) in order to determine the following variables:
+
+* HR: heart rate (sympathetic action)
+* LF: Low frequency band (Modulated predominantly by the sympathetic system)
+* HF: High frequency band (Modulated predominantly by the parasympathetic system)
+* Entropy: data complexity or irregularity index showing that, the higher the values, the better the HRV.
+* DFAα1 (short term detrended fluctuation analysis)
+
+PRIMARY OUTCOMES:
+  - Heart rate
+  - Low frequency band
+  - High frequency band
+  - Entropy
+  - Short term detrended fluctuation analysis
+
+INTERVENTIONS:
+  - OTHER: Exercise
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05135247

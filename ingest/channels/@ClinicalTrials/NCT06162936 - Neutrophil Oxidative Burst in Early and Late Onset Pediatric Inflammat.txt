@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06162936
+Title: Neutrophil Oxidative Burst in Early and Late Onset Pediatric Inflammatory Bowel Disease
+Official Title: Neutrophil Oxidative Burst in Early and Late Onset Pediatric Inflammatory Bowel Disease
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 150
+Topic: physical activity intervention
+
+SUMMARY:
+ABSTRACT Introduction Residual or absent oxidase function in peripheral neutrophils may point to an inborn defect of neutrophil function - chronic granulomatous disease (CGD) - whereas low to normal oxidative burst capacity has been linked to variants in various members of the NADPH-complex.
+
+Aims To assess the clinical value of routinely measuring oxidative burst activity of granulocytes in pediatric patients diagnosed with very early onset IBD (VEO-IBD) and late onset IBD.
+
+Objectives To investigate possible correlations between neutrophil function and IBD disease activity and to inquire the presence of genetic variants in those with low to absent oxidative burst. To identify the rate of monogenic VEO-IBD in our cohort.
+
+Materials and Methods The proposal constitutes a collaborative effort among Romanian pediatric tertiary care centers to examine the value of assessing neutrophil function in all pediatric IBD patients. Children aged \<18 years diagnosed with Crohn's disease, ulcerative colitis or IBD-undetermined and age-matched healthy controls are recruited. A DHR flow cytometry assay is performed in included subjects and controls. Reduced or absent burst activity will lead to genetic testing in search of overt immunodeficiency or susceptibility variants. All VEO-IBD patients will have an immunological work-up in search of a primary immunodeficiency.
+
+Expected Results We anticipate to include a number of 150 pediatric patients with IBD over 12 months from the three pediatric gastroenterology units in Bucharest, Romania. We expect to identify an overall diminished neutrophil function in IBD patients versus controls and possible variants in the NADPH-complex genes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Oxidative burst activity in IBD patients
+  - Genetic testing in patients with suspicion of IEI
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Phagoburst
+  - DIAGNOSTIC_TEST: Lymphocytes subsets
+  - DIAGNOSTIC_TEST: Genetic testing
+
+ELIGIBILITY:
+Age:  to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06162936

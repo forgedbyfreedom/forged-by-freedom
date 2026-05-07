@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05103033
+Title: Systems Analysis and Improvement Approach to Optimize the Task-shared Mental Health Treatment Cascade (SAIA-MH)
+Official Title: Systems Analysis and Improvement Approach to Optimize the Task-shared Mental Health Treatment Cascade (SAIA-MH): A Cluster Randomized Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 155
+Topic: physical activity intervention
+
+SUMMARY:
+The purpose of this study is to test the effectiveness of a multicomponent implementation strategy entitled the Systems Analysis and Improvement Approach for mental health (SAIA-M) using a cluster randomized trial at the health facility level. SAIA-MH focuses on improving the mental health treatment cascade in primary outpatient mental healthcare. The mental health treatment cascade is a model that outlines the sequential, linked treatment steps that people with mental illness must navigate, from initial diagnosis to symptom/function improvement.
+
+This study will also assess the potential mechanisms by which the SAIA-MH implementation strategy works, or does not work, along with the cost and effectiveness of scaling-up SAIA-MH in Mozambique.
+
+DETAILED DESCRIPTION:
+Due to a shortage of 1.2 million mental health (MH) workers across low- and middle-income countries (LMICs), academic and policy leaders have advocated scaling-up task-sharing to lower-level providers to close the mental health care gap, which exceeds 90% in many LMICs. While task-sharing may increase access to care, limited attention has been paid to quality of care provided by lower-level providers. Task-shared outpatient management of mental health in Mozambique has shown low rates of retention in care (40%), medication adherence (\<15%), and proportion of patients achieving function improvement (\<5%). Similarly high rates of loss-to-follow-up, poor adherence, and poor patient outcomes have been reported across other LMICs. To our knowledge, there are no evidence-based implementation strategies targeting optimization of the MH treatment cascade in low-resource settings. This is an urgent need for the field of MH care delivery globally.
+
+The MH treatment cascade is a model that outlines the sequential, linked treatment steps that people with mental illness must navigate, from initial diagnosis to symptom/function improvement. Quality problems in one step of a treatment cascade can have non-linear and compounding impacts across the larger complex care system. Implementation strategies focused on only one step in a cascade can potentially contribute to unintended system bottlenecks and quality of care issues. By contrast, the "Systems Analysis and Improvement Approach (SAIA)" is a multicomponent implementation strategy focused on optimizing an entire treatment cascade. SAIA blends facilitation, enhanced local clinical consultation, and the creation of facility-level learning collaboratives with systems-engineering tools in a 5-step approach specifically developed for task-shared providers, which include: (1) cascade analysis to visualize treatment cascade drop-offs and prioritize areas for system improvements; (2) process mapping to identify modifiable facility-level bottlenecks; (3) identification and implementation of modifications to improve system performance; (4) assessment of modification effects on the cascade; and (5) repeated analysis and improvement cycles. A previous cluster RCT established effectiveness of SAIA for HIV treatment cascade improvement (R01HD075057; PI: Sherr). However, no effectiveness data exist on SAIA applied to other complex treatment cascades - such as task-shared MH care. Preliminary data suggest that applying SAIA to MH treatment cascade optimization (SAIA-MH; R21MH113691; PI: Wagenaar) is feasible, acceptable, and can result in clinically-significant treatment cascade improvements; Five months of SAIA-MH implementation resulted in a 1.5-fold increase in medication adherence (aOR: 1.5; CI: 1.2, 1.9) and a 3.7-fold increase in function improvement (aOR: 3.7; CI: 2.5, 5.4). These data suggest that SAIA-MH is a promising strategy for task-shared MH systems improvement globally. Our specific aims are to:
+
+Primary Aim
+
+PRIMARY OUTCOMES:
+  - Patient Function Improvement
+
+INTERVENTIONS:
+  - BEHAVIORAL: Systems Analysis and Improvement Approach for Mental Health (SAIA-MH)
+  - BEHAVIORAL: Attentional Placebo Control
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05103033

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05971563
+Title: Amino Acid Kinetics of GMP-AA in Healthy Human Volunteers
+Official Title: Amino Acid Kinetics of GMP-AA Vs. Phenylalanine-free Amino Acids Compared with Natural Protein in Healthy Adults Volunteers
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: protein supplementation
+
+SUMMARY:
+Children with phenylketonuria (PKU) are treated with a special diet supplemented with a synthetic protein based on amino acids. These have a poor taste and are inefficiently used by the body. A different type of synthetic protein, called glycomacropeptide is being tried in PKU. It tastes better than amino acids but it requires the addition of some extra amino acids which may worsen how well it is absorbed compared with traditional amino acid supplements. We will perform a 3-part trial in healthy adult volunteers to compare amino acids vs glycomacropeptide protein with a 'normal protein' (casein) to examine the absorption properties of these proteins. Volunteers will take one dose of each of the protein sources on 3 different days. Blood and urine samples will be collected examining the rate of absorption of amino acids over 5 hours on each study day.
+
+DETAILED DESCRIPTION:
+In the USA, casein glycomacropeptide (CGMP), a low phenylalanine (Phe) 64-amino acid peptide derived from cheese whey, is widely promoted as a low Phe protein substitute in phenylketonuria (PKU). Protein substitute is composed of non-essential and essential amino acids which replace natural protein in the diet in order to enable normal growth and suppression of blood Phe levels.
+
+It is suggested that CGMP has a slower absorption than usual protein substitute based on amino acids only (amino acids-AA). This compositional change may enhance protein utilization leading to improved blood Phe control. In PKU, any protein substitute that has its absorption closer to the normal 'physiological state' should be advantageous but pure CGMP is lacking in several essential and conditionally essential amino acids (e.g. tyrosine, leucine, tryptophan, histidine). To ensure that CGMP is safe for PKU, it is supplemented with deficient AA (CGMP-AA). Evidence from 'normal' nutritional research suggests that adding AA to natural protein (similar to CGMP-AA), worsens rather than improves efficiency of protein absorption. It is essential to ascertain if CGMP-AA enhances, worsens or has the same absorption when compared with traditional AA substitutes, particularly when prescribing CGMP-AA for children and maternal PKU. The investigators aim to perform a three-part, randomized, controlled, trial in healthy adult volunteers comparing absorption of CGMP-AA (study product 1) vs. AA (study product 2) vs. normal protein (casein) (study product 3). After overnight fasting, healthy volunteers will consume a standard dose of each of the study products. Over the course of 4 hours, plasma AA will be monitored 8 times and this will provide greater insight into the kinetic absorption of CGMP-AA in PKU. The investigators hope these results will add to existing safety and efficacy data about using CGMP-AA in PKU.
+
+PRIMARY OUTCOMES:
+  - Total EAAsconcentrations
+  - Mean CMAX
+  - AUC of EAAs's
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Casein
+  - DIETARY_SUPPLEMENT: L-amino acids
+  - DIETARY_SUPPLEMENT: CGMP-AA
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05971563

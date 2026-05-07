@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06198725
+Title: Intervention for Children With Type 1 Diabetes Targeting Gut Microbes
+Official Title: Intervention for Children With Type 1 Diabetes Targeting Gut Microbes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: beta-alanine
+
+SUMMARY:
+The goal of this clinical study is to evaluate the effect of nutritional intervention program based on dietary products in the clinical treatment of newly diagnosed children with type 1 diabetes. The main question aims to answer is: whether high fiber diet can protect beta-cell function in children with newly onset type 1 diabetes.
+
+Participants will take 12 weeks of high fiber diet intervention and beta-cell function and gut microbiota structure will be analyzed.
+
+DETAILED DESCRIPTION:
+The purpose of this project is to establish an early adjuvant treatment program for children with type 1 diabetes targeting gut microbiome, and to evaluate the clinical effect and safety of a dietary product to protect the beta-cell function of newly diagnosed type 1 diabetes children and improve blood sugar control.
+
+Plan to adopt the parallel randomized controlled clinical trial method to select newly-diagnosed type 1 diabetes children, and randomly divide them into Usual care group and High fiber diet group at a ratio of 1:1. To comprehensively evaluate the clinical effect and long-term effect of a high fiber dietary intervention product, the changes of beta-cell function, glucose metabolism, and the structure and function of gut microbiota will be compared before and after treatment.
+
+PRIMARY OUTCOMES:
+  - The 2h C-peptide level of the MMTT test
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Trimtab
+
+ELIGIBILITY:
+Age: 6 Years to 12 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06198725

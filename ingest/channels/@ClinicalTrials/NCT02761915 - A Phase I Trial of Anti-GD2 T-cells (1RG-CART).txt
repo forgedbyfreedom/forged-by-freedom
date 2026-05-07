@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02761915
+Title: A Phase I Trial of Anti-GD2 T-cells (1RG-CART)
+Official Title: A Cancer Research UK Phase I Trial of Anti-GD2 Chimeric Antigen Receptor (CAR) Transduced T-cells (1RG-CART) in Patients With Relapsed or Refractory Neuroblastoma
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 17
+Topic: physical activity intervention
+
+SUMMARY:
+The purpose of this first in human study is to determine the safety and feasibility of 1RG-CART therapy in patients with relapsed or refractory neuroblastoma. 1RG-CART therapy is a novel immunotherapy under investigation in which patients have their T-cells (a type of white blood cell) collected and modified in the laboratory, before they are given back to the patient. The T-cells are modified to express a chimeric antigen receptor (CAR) which targets disialoganglioside (GD2), a marker expressed on the surface of neuroblastoma cells.
+
+DETAILED DESCRIPTION:
+The purpose of this trial is to explore the safety and feasibility of deploying autologous anti-GD2 CAR T-cells for the immunotherapy of neuroblastoma. The CAR T-cell trials employing second generation receptors and lymphodepleting conditioning regimes have produced objective clinical responses in patients with relapsed leukaemias. The trial aims to evaluate similar CAR T-cells but directed against the antigen GD2. Neuroblastoma is well suited to this form of targeted therapy because of the homogeneous and almost universal expression of GD2 on the surface of neuroblastoma cells, and because of the poor prognosis of eligible patients.
+
+1RG-CART will be administered intravenously. As the CAR T-cells are designed to survive and proliferate on encountering antigen, no direct relationship is anticipated between cell dose and either efficacy or toxicity. Rather, clinical benefit is more likely to be observed in those patients in whom in vivo expansion successfully occurs. A possible key determinant of expansion will be prior lymphodepletion of the patients. For this reason this trial is designed to evaluate a phased introduction of lymphodepletion in successive patient cohorts, rather than T-cell dose escalation. Only if there is insufficient expansion of T-cells following full lymphodepletion will the T-cell dose be escalated. Rituximab (MabThera®) will be used as a rescue medication only when necessary, and will be considered a non-investigational medicinal product (NIMP) in this trial.
+
+PRIMARY OUTCOMES:
+  - To Evaluate the Feasibility of 1RG-CART Therapy in Patients With Relapsed or Refractory Neuroblastoma
+  - Safety and Tolerability of 1RG-CART Therapy
+  - To Determine Recommended Phase II Regimen by Assessing the Number of DLTs at Each Dose Level
+
+INTERVENTIONS:
+  - OTHER: Leukapheresis
+  - DRUG: Cyclophosphamide
+  - DRUG: Fludarabine
+  - GENETIC: 1RG-CART
+
+ELIGIBILITY:
+Age: 1 Year to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02761915

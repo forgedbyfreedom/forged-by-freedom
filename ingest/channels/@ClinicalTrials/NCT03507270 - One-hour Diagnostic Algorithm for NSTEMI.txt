@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03507270
+Title: One-hour Diagnostic Algorithm for NSTEMI
+Official Title: One-hour Diagnostic Algorithm for Non-ST Elevation Myocardial Infarction Based on Determination of Fatty-acid-binding Protein Concentration
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+Predictable values of the 1-hour algorithm for estimating the concentration of troponin using highly sensitive reagents are 98-100% for excluding myocardial infarction (MI) and 75-80% for identifying this pathology. Such algorithms are developed for the rapid confirmation or exclusion of myocardial infarction without ST-segment elevation and, when combined with clinical data and electrocardiogram, are used to assess the risk of adverse course of disease and to contribute to decision making about expediency of stay in the intensive therapy unit and early discharge.
+
+In mid-1980s, a new marker of myocardial damage was proposed, namely: fatty-acid-binding protein (FABP). However, the diagnostic value of FABP cannot be interpreted unambiguously because of insufficient number of studies determining the sensitivity and specificity of the test in various manifestations of acute coronary syndrome (ACS).
+
+Available literature presents a wide range of reference values of FABP for MI diagnosis. Reference value ranges are proposed by manufacturers of diagnostic kits based on previous studies. In addition, there is no information about the FABP changes during the first three hours of the disease, as well as there are no data on diagnostic value of changes in this indicator ("∆") in patients with ACS without ST-segment elevation. These considerations provide rationale and support novelty of the planned pilot study.
+
+DETAILED DESCRIPTION:
+After enrollment in the study, patients will undergo the following procedures:
+
+1. Physical examination (at baseline) and monitoring of vital signs (blood pressure, heart rate, breathing rate) at hours 1, 2, and 3 after admission to hospital.
+2. Registration of 12-lead electrocardiogram (ECG) (at baseline, after 24 hours, and at the day of discharge).
+3. At baseline (at the time of admission to hospital), venous blood will be obtained to perform blood tests for determination of troponin I, FABP, and CPK-MB levels. At the same time, venous blood will be sampled for routine clinical laboratory blood tests. At hours 1, 2, and 3 after admission to hospital, venous blood will be sampled for assessment of the troponin I and FABP levels.
+4. Echocardiography will be performed 24 hours after admission (LVEDV, LVESV, and EF). At day 3, standard echocardiography will be performed.
+
+PRIMARY OUTCOMES:
+  - Fatty acid-binding protein (h-FABP) measure
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: FABP
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03507270

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03763656
+Title: Pharmacokinetics of Oral Hydroxyurea Solution
+Official Title: A Prospective Open Label, Pharmacokinetic Study of an Oral Hydroxyurea Solution in Children With Sickle Cell Anemia.
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: beta-alanine
+
+SUMMARY:
+An open label, safety and pharmacokinetic study of oral hydroxyurea solution administered to children from 6 months to 17.99 years (i.e. to the day before 18th birthday), with a 12 to 15 month treatment period for each participant. The study treatment duration will be for 6 months at the maximum tolerated dose \[MTD\], which is usually reached by 6 months after initiation of treatment. For patients in whom time to MTD is longer than 6 months or not achieved at all, the maximum duration of study treatment will be 15 months.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Clearance (CL/F)
+  - Volume of Distribution (V/F)
+  - Time to Maximum Concentration (Tmax)
+  - Maximum Plasma Concentration Cmax (ug/mL)
+  - Area Under Plasma Concentration Time Curve (AUC 0-Inf)
+
+INTERVENTIONS:
+  - DRUG: Oral Hydroxyurea (100 mg/mL) Solution
+
+ELIGIBILITY:
+Age: 6 Months to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03763656

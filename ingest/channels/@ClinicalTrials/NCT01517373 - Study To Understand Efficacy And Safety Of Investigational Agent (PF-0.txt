@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01517373
+Title: Study To Understand Efficacy And Safety Of Investigational Agent (PF-04937319) Compared To Approved Agent (Glimepiride) In Patients With Diabetes On Metformin
+Official Title: A Phase 2, Randomized, Double-blinded, Placebo-controlled, Dose-ranging, Parallel Group Study To Evaluate Safety And Efficacy Of Pf-04937319 And Glimepiride In Adult Patients With Type 2 Diabetes Mellitus Inadequately Controlled On Metformin
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 304
+Topic: creatine supplementation
+
+SUMMARY:
+This is a study to understand efficacy and safety of investigational agent (PF-04937319) compared to approved agent (glimepiride) in patients with diabetes on metformin
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Baseline in Glycosylated Hemoglobin (HbA1c) at Week 12
+
+INTERVENTIONS:
+  - DRUG: Placebo
+  - DRUG: PF-04937319 10 mg
+  - DRUG: PF-04937319 50 mg
+  - DRUG: PF-04937319 100 mg
+  - DRUG: Glimepiride
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01517373

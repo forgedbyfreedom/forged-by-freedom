@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03115775
+Title: CLA and Vitamin D on Protein Turnover
+Official Title: Randomized Controlled Trial to Evaluate the Independent and Combined Effects of Conjugated Linoleic Acids and Vitamin D on Muscle Protein Turnover in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: vitamin D muscle
+
+SUMMARY:
+To conduct a randomized, double-blind, controlled clinical trial to determine the independent and combined effects of dietary conjugated linoleic acid (CLA) and vitamin D supplementation on anabolic signaling, the expression of growth regulatory factors, and muscle protein turnover in older adults.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in post-absorptive muscle protein synthesis
+  - Change in combined amino acid and insulin stimulated muscle protein synthesis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Conjugated linoleic acid
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Conjugated linoleic acid and Vitamin D
+  - OTHER: Corn oil (placebo)
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03115775

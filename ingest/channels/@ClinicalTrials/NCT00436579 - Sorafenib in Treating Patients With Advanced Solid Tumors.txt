@@ -1,0 +1,64 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00436579
+Title: Sorafenib in Treating Patients With Advanced Solid Tumors
+Official Title: A Dose Escalation Study of Sorafenib (BAY 43-9006, NSC 724772) in Nomotensive Patients With Advanced Malignancies
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: growth hormone treatment
+
+SUMMARY:
+This randomized phase I trial is studying the side effects, such as high blood pressure, and best dose of sorafenib in treating patients with advanced solid tumors. Sorafenib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth and by blocking blood flow to the tumor.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Determine whether increasing the dose of sorafenib tosylate increases the plasma steady-state concentration in patients with advanced solid tumors.
+
+II. Determine whether increasing the dose of this drug affects blood pressure in these patients.
+
+SECONDARY OBJECTIVES:
+
+I. Determine whether the variability in blood pressure elevation is due to pharmacokinetic or pharmacodynamic variability.
+
+II. Compare the toxicity and differences in pharmacokinetics of delivering a higher dose of this drug per day (using two different schedules) vs delivering the currently recommended dose of this drug.
+
+III. Investigate mechanisms of sorafenib tosylate-induced hypophosphatemia with serial measurements of phosphate metabolism (no longer assessed as of 4/29/2009) in these patients, detailed baseline measurements in all patients, and detailed evaluations of patients developing grade 3 or greater hypophosphatemia.
+
+IV. Detect subclinical effects of this drug on measures of thyroid function. V. Identify biomarkers predicting the categorization of patient response.
+
+OUTLINE: This is a randomized, dose-escalation study.
+
+Patients receive oral sorafenib tosylate twice daily on days 1-7 and once on day 8. Patients not experiencing at least one grade 2 or higher toxicity during the initial sorafenib treatment are randomized to 1 of 3 dose-escalated treatment arms.
+
+ARM I: Patients receive higher-dose oral sorafenib tosylate twice daily on days 15-36.
+
+ARM II: Patients receive standard-dose oral sorafenib tosylate three times daily on days 15-36.
+
+ARM III: (closed to accrual as of 4/29/2009) Patients receive standard-dose oral sorafenib tosylate twice daily on days 15-36.
+
+In all arms, treatment repeats every 3 weeks in the absence of disease progression or unacceptable toxicity.
+
+Patients undergo ambulatory blood pressure monitoring at baseline, on days 7, 14, and 21, and at 6 and 12 months. Blood samples are collected periodically throughout study and evaluated for pharmacokinetic studies, thyroid function, serum markers, and phosphate metabolism\*. CT perfusion imaging is performed at baseline, week 6, week 12, and then every 8-12 weeks thereafter.
+
+NOTE: \* Phosphate metabolism no longer assessed as of 4/29/2009.
+
+After completion of study treatment, patients are followed every 4 weeks for 1 year and then every 3 months thereafter.
+
+PRIMARY OUTCOMES:
+  - Changes in BP
+
+INTERVENTIONS:
+  - DRUG: sorafenib tosylate
+  - OTHER: pharmacological study
+  - PROCEDURE: assessment of therapy complications
+  - OTHER: laboratory biomarker analysis
+
+ELIGIBILITY:
+Age: 14 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00436579

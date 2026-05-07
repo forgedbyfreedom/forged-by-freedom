@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04561557
+Title: Safety and Efficacy of CT103A Cells for Relapsed/Refractory Antibody-associated Inflammatory Diseases of the Nervous System
+Official Title: An Open Label Clinical Trial to Evaluate the Safety and Efficacy of CT103A Cells for the Treatment of Relapsed/Refractory Antibody-associated Inflammatory Diseases of the Nervous System
+Status: RECRUITING
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: creatine supplementation
+
+SUMMARY:
+Antibody-mediated inflammatory diseases of the nervous system (also known as autoimmune diseases of the nervous system) are autoimmune diseases in which autoimmune cells and immune molecules attack the nervous system as the main pathogenic mechanism. In the immune response, pathogenic antibodies acting on autoantigens of the nervous system are collectively referred to as autoantibodies of the nervous system, and antibody-mediated inflammatory diseases of the nervous system can occur in the central nervous system, peripheral nervous system, and neuromuscular junctions, and muscles. In this study, we will recruit eight kinds of autoimmune diseases of nervous system including Neuromyelitis Optica Spectrum Disorder (NMOSD), Myasthenia Gravis (MG), Chronic Inflammatory Demyelinating Polyradiculoneuropathy (CIDP), idiopathic inflammatory myopathyand (IIM), multiple sclerosis (MS), autoimmune encephalitis (AE), Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) and POEMS Syndrome. B-cell maturation antigen (BCMA) is expressed on the surface of plasma cells, thus making it an ideal target for targeted therapies. Chimeric antigen receptor (CAR) T cells against BCMA offers another potential therapeutic option to eliminate plasma cells in patients with neurological autoimmune diseases driven by abnormal antibody who still suffer recurrent attacks from conventional treatments. In the current study, the safety and efficacy of a novel CAR-T cell therapy using CT103A cells, are evaluated in patients with relapsed/refractory antibody-mediated idiopathic inflammatory diseases.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Types and incidence of dose-limiting toxicity (DLT) after CT103A cells infusion
+  - Incidence and severity of AEs, including changes in vital signs, physical examination, laboratory parameters, Electrocardiograms and Echocardiograms.
+
+INTERVENTIONS:
+  - BIOLOGICAL: CT103A cells
+  - DRUG: Cyclophosphamide and fludarabine
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04561557

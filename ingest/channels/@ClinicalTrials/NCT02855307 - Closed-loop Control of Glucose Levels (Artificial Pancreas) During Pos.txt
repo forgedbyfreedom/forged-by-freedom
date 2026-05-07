@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02855307
+Title: Closed-loop Control of Glucose Levels (Artificial Pancreas) During Postprandial Exercise in Adults With Type 1 Diabetes
+Official Title: A Single-blind, Randomized, Cross-over Study to Assess the Efficacy of Single-hormone Closed-loop Strategy at Preventing Hypoglycemia During Unannounced and Announced Exercise in Adults With Type 1 Diabetes
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 37
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Regular physical activity is associated with many health benefits for individuals with type 1 diabetes including improved cardiovascular fitness and vascular health, decreased insulin requirements, improved body composition and quality of life. However, exercise-induced hypoglycemia is very frequent and thus is the main limiting factor for physical activity practice in this population.
+
+The artificial pancreas is composed of three components: glucose sensor to read glucose levels, insulin pump to infuse insulin and a dosing mathematical algorithm to decide on the required insulin dosages based on the sensor's readings. The artificial pancreas has the potential to reduce the risk of exercise-induced hypoglycemia but the importance of announcing exercise to the artificial pancreas is yet to be explored.
+
+The objective of this study is to investigate 1) if announcing postprandial exercise to the artificial pancreas is beneficial in reducing the risk of hypoglycemia and 2) if an insulin bolus reduction is necessary when announcing the exercise to the artificial pancreas.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Percentage of time of plasma glucose levels spent below 3.9 mmol/L
+
+INTERVENTIONS:
+  - OTHER: 60-minute exercise
+  - DEVICE: insulin pump
+  - DEVICE: Dexcom G4 Platinum glucose sensor
+  - DRUG: insulin
+  - OTHER: Single-hormone closed-loop strategy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02855307

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05027984
+Title: Interventional Strategy for Non-culprit Lesions With Major Vulnerability Criteria at OCT in Patients With ACS
+Official Title: An Interventional Strategy for Non-culprit Lesions With Major Vulnerability Criteria Identified by Optical Coherence Tomography in Patients With Acute Coronary Syndrome (the INTER-CLIMA Trial)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1420
+Topic: creatine supplementation
+
+SUMMARY:
+The INTERCLIMA (Interventional Strategy for Non-culprit Lesions With Major Vulnerability Criteria Identified by Optical Coherence Tomography in Patients With Acute Coronary Syndrome) is a multi-center, prospective, randomized trial of optical coherence tomography (OCT)-based versus physiology-based (i.e. fractional flow reserve\[FFR\]/instantaneous Wave-Free Ratio\[iFR\]/resting full-cycle ratio\[RFR\]) treatment of intermediate (40-70% diameter stenosis), non-culprit coronary lesions in acute coronary syndrome (ACS) patients undergoing coronary angiography. About 1420 patients with ACS will be randomized into the study at approximately 40 sites worldwide.
+
+DETAILED DESCRIPTION:
+The optimal strategy in patients with intermediated stenosis (40-70% diameter stenosis) at coronary angiography is currently under debate. Pure angiographic stenosis evaluation is often inadequate and alternative assessments of coronary plaques entered the clinical practice, such as functional assessment (FFR/iFR/RFR) and intravascular imaging (OCT and intravascular ultrasound \[IVUS\]). Based on preliminary data, current American College of Cardiology (ACC) and American Heart Association (AHA) revascularization guidelines recommend the use of flow fractional reserve (FFR, class IIa of evidence) to assess angiographic intermediate coronary lesions in patients with stable ischemic heart disease and guide intervention. However, controversial data has recently emerged on the role of functional assessment of intermediate coronary lesions in both acute and chronic settings. On the other hand, in recent studies, the presence of coronary plaques with vulnerability criteria at OCT identified patients at high risk of cardiac mortality and target vessel MI. This study aims to assess the clinical effectiveness of an OCT-based strategy to guide revascularization in non-culprit intermediate coronary stenosis in patients with acute coronary syndrome (ACS), on the basis of the presence of morphological markers of plaque vulnerability. Patients with intermediate coronary lesions in non-culprit intervention-naïve major coronary segments (diameter ≥2.5 mm) and fulfilling all inclusion/exclusion criteria will be eligible. Enrolled patients will be randomized 1:1 to either OCT or FFR/RFR/iFR based treatment. In the OCT-guided arm, non-culprit intermediate lesions will be treated with PCI with implantation of a second-generation drug eluting stent (DES) when a FCT \<75 µm plus at least 2 of 3 other OCT criteria of plaque vulnerability (i.e., MLA \<3.5 mm2, lipid arc with circumferential extension \>180°, and the presence of clusters of macrophages) and/or an MLA \<2 mm2 are detected by OCT. In the absence of the above-mentioned 4 vulnerability criteria, interventional procedures will be performed at discretion of the operator if a luminal thrombus is detected by OCT. In the physiology-guided arm, non-culprit intermediate lesions will be treated with PCI with implantation of a second-generation DES when an iFR or RFR ≤0.89 or an FFR ≤0.80 are measured, otherwise interventional procedures will be deferred. The primary endpoint, a composite of cardiac death and target vessel spontaneous myocardial infarction, will be assessed after 2 and 5 years.
+
+PRIMARY OUTCOMES:
+  - Number of patients with cardiac death or non-fatal spontaneous target-vessel myocardial infarction
+
+INTERVENTIONS:
+  - DEVICE: Optical coherence tomography
+  - DEVICE: iFR/FFR/RFR
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05027984

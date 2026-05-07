@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01004588
+Title: The Effects of Resistance Training and Protein Supplementation in Healthy Elderly Men and Women.
+Official Title: The Effects of Resistance Type Exercise Training and Protein Supplementation on Skeletal Muscle Mass, Strength, and Muscle Characteristics in Healthy Elderly Men and Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: sarcopenia intervention
+
+SUMMARY:
+The main objective of this study is to examine the effects of resistance type exercise training combined with nutritional support on body composition and muscle characteristics in healthy elderly men and women. For a comprehensive insight into the potential underlying mechanisms of the intervention effects on whole body-, muscle- and myocellular level, a broad range of tests will be performed before, during, and after the intervention period.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in muscle mass measured by DXA-scan and CT-scan
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protein drink
+  - DIETARY_SUPPLEMENT: placebo drink
+
+ELIGIBILITY:
+Age: 65 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01004588

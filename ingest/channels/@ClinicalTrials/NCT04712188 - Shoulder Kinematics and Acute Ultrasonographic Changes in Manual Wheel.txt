@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04712188
+Title: Shoulder Kinematics and Acute Ultrasonographic Changes in Manual Wheelchair Users With Spinal Cord Injury
+Official Title: Shoulder Kinematics and Acute Ultrasonographic Changes in Four Different Stroke Patterns in Manual Wheelchair Users With Spinal Cord Injury
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 40
+Topic: tendon injury
+
+SUMMARY:
+People who lose function of the lower limb due to spinal cord injury (SCI) need to use their arms for activities of daily life especially during weight-bearing tasks, such as transfers, and manual wheelchair (MWC) propulsion in order to maintain mobility. Persistent use of the upper limbs constitutes biomechanical difficulties, especially in the shoulder joint. The most commonly affected area in the shoulder is supraspinatus and biceps tendon. Four different stoke patterns have been classified in MWC users. Distinct amounts of force may be applied to the shoulder joint during propulsion with different stroke patterns and this can affect the shoulder tendons in different rates. In this study, investigators aimed to evaluate and compare the acute sonographic changes in supraspinatus and biceps tendons after a wheelchair propelling test in MWC users with SCI with different stroke patterns. Also, it is intended to determine the risk factors related to the stroke patterns that may be associated with these sonographic changes.
+
+DETAILED DESCRIPTION:
+Fourty male MWC users with SCI were will be divided into 4 groups according to their stroke patterns (arcing, semicirculer, single loop, and double loop). Participants will use their own wheelchairs with their preferred stroke pattern for 20 minutes at a speed of 1 m / s on a motorized treadmill for a wheelchair propelling test. Wheelchair propelling videos will be recorded during the test. Shoulder kinematics will be analyzed using Kinovea motion analysis software and stoke pattern will be confirmed. Ultrasonographic assesment of participants' nondominant shoulder will be performed before and after testing procedure.
+
+PRIMARY OUTCOMES:
+  - Supraspinatus tendon thickness
+  - Long head of the biceps tendon thickness
+  - Acromio-humeral distance
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Musculoskeletal ultrasonography
+  - OTHER: Wheelchair propelling test
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04712188

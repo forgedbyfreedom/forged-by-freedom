@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02975089
+Title: A Pilot Study Comparing Effects of Nutrients Supplements and Dietary Approach in Frailty Management
+Official Title: A Pilot Study Comparing Effects of Nutrients Supplements and Dietary Approach in Frailty Management
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: protein supplementation
+
+SUMMARY:
+The proportion of the elderly population has increased rapidly worldwide. Frailty is a common geriatric syndrome. Comprehensive dietary management strategy may have beneficial effects on frailty prevention and reversal. We compared the effects between micronutrients and/or protein supplement, and balanced diet on frailty status in elderly individuals who were at either pre-frail or frail stage. A total of 37 subjects completed a 3-month paralleled, single-blind, randomized control trial on (1) multiple nutrients supplementations, (2) multiple nutrients plus isolated soy protein supplementation, and (3) individualized nutrition education with designed dishware for balanced diet as well as food supplementations (mixed nuts and milk powder). Intervention effects on dietary intakes, biomarkers, frailty score and geriatric depression score (GDS) were assessed. The nutrition education intervention with designed dishware and milk powder/nuts supplement significantly increased the intake of vegetables, dairy, and nuts, along with increased concentration of urinary urea nitrogen of the pre-frail/frail elders. It yielded a significant reduction in frailty score (p\<0.05) and a borderline decrease (p=0.063) in GDS-SF. Our study indicated that the dietary approach with easy-to-comprehend dishware and food supplements to optimize the distribution of multiple dietary components showed its potential to improve not only frail status but also psychological condition in elderly.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Changed dietary intake
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: "multi-nutrient" supplement
+  - DIETARY_SUPPLEMENT: "multi-nutrient & soy protein" supplement
+  - DIETARY_SUPPLEMENT: Nutrition education on balanced diet & food supplement
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02975089

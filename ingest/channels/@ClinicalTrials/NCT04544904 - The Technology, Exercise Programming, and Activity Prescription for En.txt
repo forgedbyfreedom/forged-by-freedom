@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04544904
+Title: The Technology, Exercise Programming, and Activity Prescription for Enhanced Mobility (TEAM) Study
+Official Title: Novel Uses of Technology for Individuals With Mild to Moderate Hip or Knee Osteoarthritis: The Technology, Exercise Programming, and Activity Prescription for Enhanced Mobility (TEAM) Study
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 192
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Many individuals with osteoarthritis (OA) (up to 45%) are referred to an orthopaedic surgeon for a joint replacement prematurely or will not be candidates for surgery. These individuals need appropriate (non-operative) care to help reduce their pain and enhance their mobility. We are studying the use of innovative technology to help physicians give physical activity advice for patients to become more active and provide free online resources to help patients understand OA self-management and exercise, especially when they have barriers to accessing formal care. Individuals with OA that are referred to a specialized clinic will receive one of three interventions: usual care (handout on resources), a physical activity prescription by a doctor, or the prescription and a link to a free web-based platform (website) on non-operative management of OA with patient education and exercise videos. Our goal is to help with non-operative management strategies to improve quality of life, reduce pain, improve mobility, and possibly delay or prevent a joint replacement.
+
+Osteoarthritis is a condition where people feel joint pain or stiffness. Joints are the body parts where two bones join together with softer material (cartilage) between them. In osteoarthritis, this cartilage wears down. It is the biggest cause for disability worldwide. Helping people with osteoarthritis starts with education, physical activity, and physiotherapy. Doctors can also prescribe braces, injections or medications. For severe osteoarthritis when nothing else helps, surgery can be done to replace the joint.
+
+Doctors often refer patients for surgery too soon. Skipping steps of care may mean unnecessary surgery and longer wait times. The Musculoskeletal Rapid Access Clinic (now called Clinic) in London was set up to solve these problems. They screen patients before referring them to a surgeon, and do not refer almost half of patients. Our goal is to support these patients with new ways to make their non-surgical treatment better.
+
+The first way is through physical activity 'prescription'. It works well for other chronic conditions and patients say it helps. We don't know how well it works for people with osteoarthritis. Most doctors have little time, training or experience for prescribing physical activity. Technology can make it easier for doctors and patients. We have designed a tool to help doctors prescribe physical activity and a smartphone app to track patient activity. We have also created a free website. This includes patient education, exercise videos, and virtual physiotherapy. This can be important for individuals who can't access in-person care.
+
+DETAILED DESCRIPTION:
+Osteoarthritis (OA) is the leading cause of disability worldwide and affects more than 4.4 million Canadians. Current evidence-based guidelines for OA management recommend weight management, patient education, physical activity, physiotherapy (PT), bracing, viscosupplementation, and anti-inflammatory/pain medications prior to joint replacement surgery. Unfortunately, current practice trends are not consistent with these guidelines, as nearly half of patients with OA referred to orthopedic surgeons do not require total joint arthroplasty (TJA) at the time of initial consultation. Through the Southwest Musculoskeletal Rapid Access Clinic (RAC), approximately ten referrals (20%) are rejected each day due to OA criteria not met, and a further 20% are assessed as non-operative.
+
+We aim to identify individuals with 'mild to moderate' OA and optimize their first-line non-operative management, starting with physical activity and education.
+
+Physical activity prescriptions are effective in increasing patient levels of physical activity, and 93% of patients surveyed want advice on physical activity from their physicians; but it is underused.
+
+Physicians cite lack of time and inadequate training as barriers. Electronic screening of physical activity behaviours can save time for physicians, and the use of digital health tools can improve physical activity levels.
+
+Patient education and physiotherapist-led group exercise therapy programs have shown to delay progression of knee OA symptoms and improve pain and function; however, two of the most significant barriers to accessing exercise programming is the cost (\~approximate $425-475 per 6-8-week session) and accessibility to attend the exercise session (proximity to facility, remote/rural communities, etc.).
+
+The Need for a Solution that targets both Providers and Patients Screening for baseline physical activity levels and including educational components significantly increase intervention effectiveness.
+
+We have previously tested the feasibility of implementing an e-health tool to support physical activity counselling by physicians during patients' periodic health review. We will adapt and implement this tool, Physical Activity and App Prescription (PARx) to screen and provide tailored resources for physical activity in the setting of OA. We will use tablet computers and email, directly linked with the electronic medical record (EMR), to engage patients in contemplating their own physical activity levels, start conversations with their healthcare providers (in this case, primary care physicians with additional training in sport and exercise medicine), and support customized, patient-centered health care. After patients enter their information, they will receive evidence-based behavioural change supports to help them meet their goals.
+
+The automated algorithm assesses current activity level, risk factors/comorbidities and readiness for change. Based on the answers provided, patients are risk-stratified and 
+
+PRIMARY OUTCOMES:
+  - height
+  - height
+  - height
+  - height
+  - body mass index (derived)
+
+INTERVENTIONS:
+  - DEVICE: PAARx
+  - DEVICE: JM
+
+ELIGIBILITY:
+Age: 40 Years to 74 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04544904

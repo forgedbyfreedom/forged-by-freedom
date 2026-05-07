@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07520864
+Title: Effects of Caffeine on Elite Weightlifting Performance
+Official Title: Is Caffeine the Secret Ingredient for Elite Weightlifting Performance? It Helps-But Don't Expect Miracles
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: sleep athletes
+
+SUMMARY:
+Weightlifting is a high-intensity strength-power sport where performance depends on maximal force, power output, and technical execution in the snatch and clean and jerk. Due to the sport's short-duration efforts, the ATP-PCr system predominates, with glycolysis supporting recovery between attempts. Given these demands, ergogenic aids are commonly used. While some supplements show limited or inconsistent evidence, caffeine stands out as one of the most well-supported for enhancing strength and power, mainly through central nervous system stimulation. Although its benefits are well documented in other strength sports, research specifically in Olympic weightlifting is scarce. Therefore, this study aimed to examine the effects of caffeine on neuromuscular and competition performance in elite weightlifters, hypothesizing a positive effect.
+
+DETAILED DESCRIPTION:
+Olympic weightlifting is a strength-power sport in which athletes aim to lift maximal loads in two highly technical movements: the snatch and the clean and jerk. Performance is determined by the Olympic Total, which combines the best successful attempts in both lifts. These movements are executed in very short durations (2-5 seconds) and require exceptionally high levels of force, power, neuromuscular coordination, and technical proficiency. Because athletes compete within bodyweight categories, relative strength and power are more critical than absolute values. The strength sport is characterized by extremely high mechanical outputs, with barbell velocities exceeding \~1.65 m/s in the snatch and \~0.88 m/s in the clean and jerk. These conditions generate some of the highest power outputs recorded in sport science, particularly during the second pull phase. From a physiological perspective, the ATP-PCr system predominates due to the explosive and brief nature of the efforts, although the glycolytic system contributes to recovery between attempts and supports repeated efforts in training.
+
+Given these demands, ergogenic aids are often used to optimize performance. While some supplements such as pomegranate juice, BCAAs, and creatine have been associated with benefits in recovery, fatigue reduction, and strength, the supporting evidence is not always robust. In contrast, caffeine is one of the most evidence-based ergogenic aids, primarily acting through antagonism of adenosine receptors (A1 and A2A), which enhances neurotransmitter release (e.g., dopamine and acetylcholine) and improves central nervous system activation. Research has consistently shown that caffeine can enhance muscular strength, including improvements in one-repetition maximum, handgrip strength, and jump performance. Meta-analyses further support its role in increasing maximal strength and power output. Additionally, studies in related strength sports such as powerlifting have reported improvements in power output, movement velocity, velocity loss, and perceived exertion following caffeine ingestion. However, despite this strong body of evidence, research specifically focused on Olympic weightlifting remains limited, and there is a lack of direct evidence regarding both performance outcomes and potential side effects in this population.
+
+Therefore, this study was designed to address this gap by examining the effects of caffeine ingestion on neuromuscular performance and simulated competition outcomes in elite weightlifters. The authors hypothesized that caffeine would enhance both neuromuscular and competitive performance in this population.
+
+PRIMARY OUTCOMES:
+  - Weightlifting competition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Caffeine
+
+ELIGIBILITY:
+Age: 16 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07520864

@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05592288
+Title: The Impact of a Mobile Application Designed for Adults at Risk of Developing Diabetes
+Official Title: The Impact of a Mobile Application Designed for Adults at Risk of Developing Diabetes on Following the Mediterranean Diet Plan, Physical Activity and Metabolic Parameters: a Study Protocol for a Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 61
+Topic: exercise intervention obesity
+
+SUMMARY:
+Aim: The aim of this study is to determine whether a prediabetes mobile application (PREDIABE-TR) designed in Turkish to inform and advise individuals at risk of developing diabetes about healthy eating and physical exercise can make a difference in the participants' eating according to the Mediterranean Diet Plan, or in their physical activity and other diabetes-related metabolic parameters.
+
+Methods: A total of 120 adults at risk of developing diabetes will be assigned into an experimental and a control group by means of Stratified Permuted Block Randomization. The adults in the experimental group will be using the PREDIABE-TR mobile application for a period of 6 months. Over the same period, the control group will use the Turkish Nutrition Guide and the Diabetes Checklists mobile application distributed by the Turkish Ministry of Health. At the end of the six-month period, a review will be made of the diabetes metabolic data, physical activity levels and the Mediterranean Diet eating behaviors. At the same time, an assessment will be made of the control group's use of the mobile application with the help of the Mobile Application Usability Scale. Statistical data will be analyzed using the Statistical Package for the Social Sciences program.
+
+Discussion: The benefits of interventions to promote a healthy lifestyle are evident in terms of preventing a transition from prediabetes to diabetes and maintaining present status. The current novel coronavirus pandemic has clearly shown the advantages of and necessity for remote interventions. In this study, we will attempt to determine whether or not the use of the PREDIABE-TR mobile application can promote a healthy lifestyle and achieve a reduced risk of diabetes.
+
+Impact: This study will serve to provide evidence of the practicality, acceptability and cost effectiveness of various applications (such as mobile apps) that can be an alternative to face-to-face consultation and other medical practices. This alternative can be suggested to policy- and decision-makers. Such applications can also be considered preventive strategies.
+
+DETAILED DESCRIPTION:
+Hypotheses
+
+Our hypotheses were formulated in line with Population-Intervention-Comparison-Outcome-Study; significance was set at 0.05 (Higgins et al., 2019). In addition to standard applications, the intervention group will be using the PREDIABE-TR mobile app. The control group will only use standard applications. In this context, our research hypotheses are the following:
+
+H1a: When compared with the control group, the eating behaviors with regard to adopting the Mediterranean Diet of prediabetic adults using the PREDIABE-TR app will be at a higher level.
+
+H1b: When compared with the control group, the physical activity (MET, number of steps) of prediabetic adults using the PREDIABE-TR app will be at a higher level.
+
+H1c: When compared with the control group, the metabolic parameters (A1c, Impaired Fasting Glucose, Impaired Glucose Tolerance of prediabetic adults using the PREDIABE-TR app will be at lower levels.
+
+H1d: When compared with the control group, prediabetic adults using the PREDIABE-TR app will lose more weight.
+
+PRIMARY OUTCOMES:
+  - Mediterranean Diet Adherence Screener-MEDAS)
+  - International Physical Activity Questionnaire (IPAQ)
+  - Metabolic Measurements
+  - Blood Glucose Measurement
+
+INTERVENTIONS:
+  - OTHER: PREDIABE-TR mobile app.
+
+ELIGIBILITY:
+Age: 45 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05592288

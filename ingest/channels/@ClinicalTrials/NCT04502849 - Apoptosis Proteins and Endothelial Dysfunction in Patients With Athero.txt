@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04502849
+Title: Apoptosis Proteins and Endothelial Dysfunction in Patients With Atherosclerosis of Peripheral Arteries
+Official Title: Comprehensive Assessment of Indices of Apoptosis and Endothelial Dysfunction and Methods of Their Correction in Patients With Atherosclerosis of Peripheral Arteries
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 250
+Topic: vitamin D muscle
+
+SUMMARY:
+Modern vascular surgery has various options for open and endovascular surgical methods aimed at treating patients with peripheral arterial diseases. Despite the achievements of vascular surgery, the occurrence of postoperative complications levels out the success of surgical interventions and requires repeated surgical interventions. The most common complication is stenosis of the reconstruction zone, which develops in approximately 50% of operated patients.
+
+At present, the apoptosis system plays an equally important role in the development of restenosis of the intervention zone. It has been recognized as a central component in the pathogenesis of atherosclerosis, in which the Bcl-2 family of proteins is activated. It is a group of cellular proteins that are important regulators of the apoptosis system in cells located in the mitochondrial membrane. In experimental animal models, it was shown that apoptosis after angioplasty of the coronary arteries proceeds in the form of two waves. After injury to the vascular wall, during the first hours, it is activated in the smooth muscle cells (SMC) of media, and after two weeks in the cells of the neointima, by the 28th day it almost completely stops. A decrease in the apoptosis index in the postoperative period may cause the development of restenosis of the reconstruction zone. The use of antioxidants, for example, alpha-tocopherol acetate, in the first month of the postoperative period, at the time of activation of apoptosis, inhibits the latter and reduces the proliferative activity of the SMC media and neointima. One month after surgery, delayed apoptosis of vascular wall cells can lead to the development of neointima and restenosis. In this case, the use of drugs that enhance apoptosis, for example, lipophilic statins, calcium channel blockers, will be relevant.
+
+Nitric oxide metabolites, depending on the concentration, can act as both an inducer and an inhibitor of apoptosis. The mechanism of NO-induced apoptosis in SMC includes an increase in the Bax / Bcl-2 expression ratio, which leads to the release of cytochrome C from mitochondria, activation of caspase-3 and -9. In patients with atherosclerosis of the peripheral arteries, proteins of the Bcl-2 family and their relationship with markers of endothelial dysfunction have not been sufficiently studied, the results obtained are contradictory.
+
+DETAILED DESCRIPTION:
+250 patients will be divided into 5 groups with follow-up period of 2 years. Blood sampling for apoptosis and proliferation (Bcl-2, Bax, Fas, p53, PDGF-BB (platelet derived growth factor BB), VEGF (vascular endothelial growth factor) and endothelial dysfunction (NO metabolites) markers will be performed before,1 day after, 1 and 6 month after surgery for groups A-C and for groups D, E when included into study.
+
+Arterial wall sampling for apoptosis and proliferation (Bcl-2, Bax, Fas, p53, PDGF-BB, VEGF) during surgery in group A-C patients.
+
+Duplex ultrasound of lower limbs arteries will be performed before,1, 6, 12, 18 and 24 month after surgery for groups A-D and for group E when included into study.
+
+100 mg per os of Vitamin E 1 per day during 1 month after surgery will be prescribed to half of groups A-C patients.
+
+PRIMARY OUTCOMES:
+  - Restenosis of the reconstruction zone after surgery (detection of narrowing of the lumen of an artery or prosthesis in the reconstruction area using instrumental methods (ultrasound, angiography)).
+  - Thrombosis of the reconstruction zone after surgery (detection of thrombosis in arteries or prosthesis in the reconstruction area using instrumental methods (ultrasound, angiography)).
+  - Progression of atherosclerosis (detection of narrowing of the lumen of an arteries by atherosclerotic plaque using instrumental methods (ultrasound, angiography)).
+
+INTERVENTIONS:
+  - PROCEDURE: Bypass surgery
+  - PROCEDURE: Endovascular angioplasty/stenting
+  - PROCEDURE: Hybrid surgery
+  - DRUG: Vitamin E
+  - DIAGNOSTIC_TEST: Duplex ultrasound
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04502849

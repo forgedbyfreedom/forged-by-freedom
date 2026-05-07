@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06619353
+Title: RCVR (Residual CardioVascular Risk) Prospective Study
+Official Title: Residual CardioVascular Risk (RCVR) After Percutaneous Coronary Intervention: A Prospective Study
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 500
+Topic: creatine supplementation
+
+SUMMARY:
+The goal of this observational study is to evaluate whether residual cardiovascular risk assessed at 1 month after percutaneous coronary intervention (PCI) is associated with long-term clinical outcomes in adult patients with coronary artery disease who are free from major adverse clinical events at 1 month after PCI. The main questions it aims to answer are:
+
+* Does residual cardiovascular risk at 1 month after PCI predict long-term net adverse clinical events?
+* Which components of residual cardiovascular risk are associated with subsequent adverse clinical outcomes?
+
+Participants will:
+
+* Undergo comprehensive laboratory testing at 1 month after PCI and annually thereafter.
+* Undergo artificial intelligence-based quantitative coronary angiographic analysis using DICOM datasets after PCI.
+* Be followed annually for up to 3 years after the 1-month assessment to evaluate clinical outcomes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Net adverse clinical event
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Blood Sample
+  - OTHER: DICOM Dataset
+
+ELIGIBILITY:
+Age: 20 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06619353

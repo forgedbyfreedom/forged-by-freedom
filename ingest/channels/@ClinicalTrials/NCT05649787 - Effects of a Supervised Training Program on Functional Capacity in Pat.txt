@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05649787
+Title: Effects of a Supervised Training Program on Functional Capacity in Patients With HFpEF and Chronotropic Incompetence
+Official Title: Effects of a Supervised Training Program on Functional Capacity in Patients With Heart Failure and Preserved Ejection Function and Chronotropic Incompetence
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: high intensity interval training
+
+SUMMARY:
+This is a prospective study, blinded for the evaluator, randomized (1:1:1:1) to receive standard management alone or combined with a program of training (aerobic alone or combined with strength exercises) that will be carried out in a single centre. After randomization, patients will be clinically evaluated. The primary endpoint (peakVO2) will be assessed by cardiopulmonary exercise testing (CPET) at 12 weeks. Patients with heart failure with preserved ejection fraction, functional class NYHA II-III, and chronotropic incompetence criteria will be enrolled. A sample size estimation \[alfa: 0.05, power: 80%, a 15% loss rate, and at least a delta change of mean peakVO2: +2,4 mL/kg/min (SD±2)\] of 80 patients (20 per arm) would be necessary to test our hypothesis.
+
+DETAILED DESCRIPTION:
+Heart failure with preserved ejection fraction (HFpEF) is a highly prevalent clinical entity that predominantly affects women \>60 years old, whose incidence has increased in the last decade and has a complex and multifactorial pathophysiology. Chronotropic incompetence (CrI) has emerged as a crucial mechanism, particularly in patients older than 60 years, and is associated with more significant functional impairment. Supervised training programs in patients with heart failure and reduced ejection fraction and CrI have improved functional capacity and chronotropic response. However, we do not have evidence about the effects of a supervised training program on patients with HFpEF and CrI. This work aims to evaluate the effect of a supervised exercise program for 12 weeks in patients with HFpEF and CrI on peak oxygen consumption (peakVO2) and chronotropic response.
+
+This is a prospective study, blinded for the evaluator, randomized (1:1:1:1) to receive standard management alone or combined with a program of training (aerobic alone or combined with strength exercises) that will be carried out in a single centre. After randomization, patients will be clinically evaluated. The primary endpoint (peakVO2) will be assessed by cardiopulmonary exercise testing (CPET) at 12 weeks. Patients with HFpEF, functional class NYHA II-III, and CrI criteria will be enrolled. A sample size estimation \[alfa: 0.05, power: 80%, a 15% loss rate, and at least a delta change of mean peakVO2: +2,4 mL/kg/min (SD±2)\] of 80 patients (20 per arm) would be necessary to test our hypothesis.
+
+PRIMARY OUTCOMES:
+  - Peak oxygen consumption
+
+INTERVENTIONS:
+  - BEHAVIORAL: Supervised aerobic training
+  - BEHAVIORAL: Supervised aerobic plus low to moderate-intensity strength training
+  - BEHAVIORAL: Supervised aerobic plus moderate to high-intensity strength training
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05649787

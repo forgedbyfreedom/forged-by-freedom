@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03767673
+Title: Cardiorespiratory Performance and Pulmonary Microbiome in Patients After Repair of Esophageal Atresia
+Official Title: Examination of the Cardiorespiratory Performance Capacity and Pulmonary Microbiome in Patients Following Surgical Repair of Esophageal Atresia
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: body composition exercise
+
+SUMMARY:
+The majority of the clinical research on esophageal atresia focuses on the upper gastrointestinal tract. However, the trachea and the lung are also affected in many of these children, so that a lifelong pulmonary impairment may result. The importance of respiratory function in the context of follow-up of these patients has therefore been increasingly recognized in recent years. Scientific work has shown significantly, that patients following esophageal atresia repair develop respiratory symptoms more frequently than the normal population. Mild impairment of the pulmonary function in adolescence and adulthood was demonstrated in some studies, but to date, there is no exact idea about the relationship between early childhood disease progression and later pulmonary impairment. Only a few scientific papers have dealt with the effect of impaired pulmonary function on the physical capacity of these adolescents and adults. Most of these studies show small case numbers, inconclusive stress tests, and divergent results.
+
+The aim of this prospective study is to investigate the cardiopulmonary performance capacity and the pulmonary microbiome of adolescent and adult patients with corrected esophageal atresia and to compare the results with a control group. Another focus of the investigators is on the composition of the pulmonary microbiome of the participants. Changes of the pulmonary microbiome and the influence on the cardio-pulmonary performance capacity have not yet been investigated. Furthermore, it should be investigated whether the treatment measures and a complicated disease course in the neonatal period have long-term effects on lung function, exercise capacity and composition of the microbiome in the lungs.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Pulmonary microbiome (16S rDNA profiling) - Alpha diversity
+  - Pulmonary microbiome (16S rDNA profiling) - Beta diversity
+  - Pulmonary microbiome (16S rDNA profiling) - relative bacterial abundance
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Initial Spirometry
+  - DIAGNOSTIC_TEST: Final Spirometry
+  - DIAGNOSTIC_TEST: Pulmonary microbiome (16S rDNA profiling)
+  - DIAGNOSTIC_TEST: Maximum oxygen uptake
+  - DIAGNOSTIC_TEST: Maximum performance
+
+ELIGIBILITY:
+Age: 12 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03767673

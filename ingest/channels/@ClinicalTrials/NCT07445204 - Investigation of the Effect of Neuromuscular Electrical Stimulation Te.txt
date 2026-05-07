@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07445204
+Title: Investigation of the Effect of Neuromuscular Electrical Stimulation Techniques on Suprahyoid Muscles and Swallowing Function in Acute Hemiparetic Stroke Patients
+Official Title: Investigation of the Effect of Neuromuscular Electrical Stimulation Techniques on Suprahyoid Muscles and Swallowing Function in Acute Hemiparetic Stroke Patients
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: muscle rehabilitation
+
+SUMMARY:
+This randomized controlled trial aims to investigate the effects of sensory, motor, and modified combined neuromuscular electrical stimulation (NMES) protocols on swallowing function in patients with acute stroke-related dysphagia. The study compares traditional swallowing rehabilitation alone with three NMES-assisted intervention protocols to determine their impact on swallowing safety, efficiency, and rehabilitation outcomes. Ultrasonographic assessment of hyoid-laryngeal motion will be used as the primary instrumental outcome.
+
+DETAILED DESCRIPTION:
+This randomized controlled, double-blind clinical trial aims to investigate the effects of different neuromuscular electrical stimulation (NMES) protocols-sensory, motor, and modified combined-on the swallowing function and suprahyoid muscle morphology in patients with acute hemiparetic stroke. Dysphagia is one of the most common and serious complications following stroke, leading to nutritional deficiencies, aspiration risk, and reduced quality of life. NMES has been increasingly used in dysphagia rehabilitation as a noninvasive technique that facilitates both peripheral muscle activation and central neuroplasticity.
+
+A total of 40 acute hemiparetic stroke patients diagnosed with dysphagia will be recruited from the Acute Stroke Center of Istinye University Liv Hospital and randomly assigned to four groups:
+
+Group 1: Sensory stimulation (submotor level, below contraction threshold) Group 2: Motor stimulation (supramotor level, visible contraction) Group 3: Modified combined stimulation (motor stimulation on the paretic side and sensory stimulation on the contralateral side) Group 4: Control group (conventional swallowing rehabilitation only) All intervention groups will receive NMES in addition to conventional dysphagia therapy for 10 sessions (40 minutes each). NMES parameters will be standardized as follows: channel mode co-contraction, frequency 80 Hz, pulse duration 180 μs, on-time 3 seconds, and off-time 20 seconds. Electrodes will be placed bilaterally, with the upper pair located above the hyoid bone and the lower pair over the thyrohyoid muscle.
+
+The primary outcome measures will include ultrasonographic assessment of the suprahyoid muscles (muscle thickness, cross-sectional area, echo intensity, and shear-wave elasticity) and dynamic analysis of hyoid-laryngeal movement during swallowing of 5 mL boluses with standardized viscosity levels (IDDSI Level 0 and 4). Measurements will be performed using a LOGIQ P8 ultrasound system with B- and M-mode imaging according to Matsuo's hyoid-laryngeal motion index method.
+
+The secondary outcome measures include videofluoroscopic swallowing study (VFSS) parameters such as the Penetration-Aspiration Scale (PAS), Bolus Residue Scale (BRS), and DIGEST scale, as well as clinical assessments like the Functional Oral Intake Scale (FOIS) and a Nurse Evaluation Form assessing perceived functional improvement via a visual analog scale.
+
+Randomization will be computer-generated (randomizer.org), and all outcome assessments will be conducted by blinded evaluators. The intervention will be delivered by an experienced physiotherapist specialized in dysphagia management.
+
+This study aims to provide comparative evidence on how different NMES stimulation types influence swallowing safety, efficiency, and muscle adaptation in acute stroke. By integrating instrumental (ultrasound and VFSS) and clinical outcomes, the findings will help identify the most effective NMES protocol and contribute to the development of indiv
+
+PRIMARY OUTCOMES:
+  - Change in Suprahyoid Muscle Thickness
+  - Change in Suprahyoid Muscle Cross-Sectional Area
+  - Change in Suprahyoid Muscle Echogenicity
+  - Change in Suprahyoid Muscle Stiffness
+  - Change in Penetration-Aspiration Scale (PAS) Score
+
+INTERVENTIONS:
+  - BEHAVIORAL: Conventional Swallowing Therapy
+  - DEVICE: Vitalstim-Sensory NMES
+  - DEVICE: Vitalstim-Motor NMES
+  - DEVICE: Vitalstim-Combine NMES
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07445204

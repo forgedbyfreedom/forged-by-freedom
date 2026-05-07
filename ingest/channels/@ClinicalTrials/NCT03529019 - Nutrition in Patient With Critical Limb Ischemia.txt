@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03529019
+Title: Nutrition in Patient With Critical Limb Ischemia
+Official Title: Perioperative Nutritional Optimization in Patients With Critical Limb Ischemia
+Status: RECRUITING
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: protein supplementation
+
+SUMMARY:
+A prospective pilot study examining nutritional supplements among vascular surgery patients with Critical Limb Ischemia (CLI). CLI patients have a high rate of malnutrition and has the potential to benefit greatly from nutritional intervention. The investigators plan to evaluate nutrition and functional status of patients by assessing objective lab values and the use of the hand grip strength test. Providing perioperative nutritional supplements to patients has potentially improved their nutritional status, which in turn may improve the patient's clinical status after surgery.
+
+DETAILED DESCRIPTION:
+Malnutrition continues to be a considerable public health issue in the United States and is known to be associated with negative health outcomes. Surgeons and hospitals have adopted preoperative nutritional screening and perioperative nutritional supplementation as best practice for modern treatment of general surgery patients. Nutritional optimization has been shown to improve outcomes in these patients and has become integrated as a key component of the Enhanced Recovery After Surgery (ERAS) protocol. Although much progress has been made towards optimizing perioperative nutritional status for general surgery patients in an effort to improve surgical outcomes, there remains a dearth of information on the association between nutritional status and health outcomes after vascular surgery interventions. Recent research has found that up to 50% of general and gastrointestinal surgical patients suffered from malnutrition in the preoperative phase. This finding has led to efforts to optimize the nutritional status of general and gastrointestinal surgery patients in the perioperative phase. Perioperative nutritional supplementation has been shown to reduce morbidity and mortality in various subsets of surgical patients. This research has fallen short of examining nutritional status and outcomes among vascular surgery patients. Published data in this area has been limited to analyses of existing retrospective datasets. Additionally, nutritional research that includes data from vascular surgery patients has been limited to an examination of pre- and post-operative albumin levels in an attempt to find a correlation between these levels and outcomes. Though this research is limited, it has shown that vascular surgery patients with low (\<3.5 g/dl) pre-operative albumin levels and critical limb ischemia (CLI) are at increased risk for perioperative morbidity and mortality after lower extremity bypass than vascular surgery patients with high pre-operative albumin levels (\>3.5 g/dl). As serum albumin levels can be altered in the acute phase due to inflammation, this research, while valuable, only represents a single component required for the assessment of nutritional status.
+
+Approximately 45.5% patients with CLI have been shown to have signs of preoperative malnutrition when undergoing infrainguinal bypass. Malnutrition remains an underrepresented area of perioperative management for vascular surgery patients. Research on the association between nutritional supplementation and improved vascular surgery outcomes has the potential to enhance the success of lower extremity interventions by validating an optimal adjunctive medical therapy. Patients with CLI in general are at significantly higher risk for perioperative morbidity and resource utilization when compared to other hospitalized patients. Unlike many gastrointestinal surgery patients, these patients often do not have a primary gastrointestinal pathology contributing to their malnutrition; more likely, 
+
+PRIMARY OUTCOMES:
+  - Change in serum albumin levels
+  - Change in prealbumin levels
+  - Change in transferrin levels
+  - Change in C-reactive protein levels
+
+INTERVENTIONS:
+  - DRUG: Ensure Surgery Immunonutrition Shake
+  - DRUG: Ensure Enlive Advanced Nutrition Shake
+
+ELIGIBILITY:
+Age: 18 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03529019

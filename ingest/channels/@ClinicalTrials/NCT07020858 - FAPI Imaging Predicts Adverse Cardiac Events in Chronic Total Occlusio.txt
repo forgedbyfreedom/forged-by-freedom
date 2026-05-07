@@ -1,0 +1,71 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07020858
+Title: FAPI Imaging Predicts Adverse Cardiac Events in Chronic Total Occlusion
+Official Title: The Value of FAPI Imaging for the Prediction of Adverse Cardiovascular Events in Chronic Total Occlusion of Coronary Artery Disease (FACT-2 Trial)
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 470
+Topic: physical activity intervention
+
+SUMMARY:
+Prospective, observational, single-center cohort study
+
+Hypothesis Higher myocardial FAPI uptake in CTO patients predicts a greater incidence of major adverse cardiovascular events (MACE) within 12 months after PCI. FAPI PET/CT imaging is associated with plaque vulnerability features and may serve as a non-invasive marker for fibrotic activity and adverse cardiac remodeling.
+
+Inclusion Criteria
+
+* Age ≥ 18 years
+* Presence of at least one untreated chronic total occlusion (CTO) lesion in a major coronary artery (diameter ≥ 2.5 mm, TIMI 0 flow for ≥ 3 months) confirmed by coronary angiography or CTCA
+* Patient eligible for PCI and undergoing FAPI PET/CT imaging prior to intervention
+* Written informed consent provided
+
+Exclusion Criteria
+
+* Allergy or contraindication to antiplatelet agents (aspirin, clopidogrel, or ticagrelor)
+* Severe liver dysfunction (liver enzymes \>3× upper limit of normal)
+* Severe chronic kidney disease (eGFR \< 30 mL/min/1.73 m²)
+* Estimated life expectancy \< 1 year
+* Pregnancy or potential for pregnancy
+
+Primary Endpoint Incidence of 1-year MACE, defined as a composite of: Cardiac death, Myocardial infarction, Stroke, Urgent revascularization
+
+Secondary Endpoints
+
+* All-Cause Mortality
+* Death from any cause within 12 months
+* Quality of Life Change: Measured by Seattle Angina Questionnaire (SAQ): changes in angina frequency, physical limitation, and treatment satisfaction
+* Repeat PCI Events: Incidence of: In-stent restenosis (ISR): ≥50% luminal loss in previously stented segment; Target lesion revascularization (TLR): at original PCI lesion; Target vessel revascularization (TVR): other sites in same vessel; De novo lesions: new lesions not previously treated
+
+Sample Size Estimated 470 patients
+
+Follow-Up Duration 12 months post-PCI, One follow-up visit including clinical exam, SAQ questionnaire, imaging (PET/CT, echocardiography), and laboratory testing.
+
+DETAILED DESCRIPTION:
+Chronic total occlusion (CTO) of coronary arteries represents one of the most complex and challenging subsets of coronary artery disease and is associated with increased cardiovascular risk. While percutaneous coronary intervention (PCI) for CTO lesions has evolved substantially due to advances in imaging, devices, and operator experience, long-term prognostic evaluation remains suboptimal. In particular, no imaging biomarker currently allows non-invasive prediction of major adverse cardiovascular events (MACE) following CTO PCI.
+
+Fibroblast activation plays a central role in myocardial fibrosis and atherosclerotic plaque instability, both of which contribute to adverse cardiovascular outcomes.
+
+The fibroblast activation protein inhibitor (FAPI), labeled with radionuclides for PET/CT imaging, has recently emerged as a promising tool for quantifying fibrotic activity both in the myocardium and within coronary plaques. Preliminary data from the original FACT study showed that FAPI imaging may predict ventricular remodeling 6 months post-PCI. However, its long-term prognostic value and its role in detecting plaque vulnerability have not been fully evaluated in prospective studies.
+
+The FACT-2 study is a prospective observational cohort study designed to evaluate whether FAPI PET/CT imaging can predict 1-year MACE in patients with CTO undergoing PCI. All enrolled patients will undergo baseline 18F-FAPI PET/CT scans prior to PCI and will be followed for 12 months post-intervention. The study aims to establish a FAPI-based risk stratification model, integrating FAPI uptake parameters with plaque morphology (via OCT and histopathology), serological fibrosis markers, and patient-reported quality of life scores.
+
+The primary endpoint of the study is the incidence of MACE, defined as a composite of cardiac death, myocardial infarction, stroke, and urgent revascularization within one year of PCI. Secondary endpoints include all-cause mortality, repeat PCI events (including in-stent restenosis, target lesion/vessel revascularization, and de novo lesion intervention), and quality of life changes assessed by the Seattle Angina Questionnaire (SAQ).
+
+In this study, FAPI uptake will be quantified by multiple parameters including total uptake volume (FAPI%), standardized uptake values (SUVmax, SUVmean), and target-to-background ratio (TBR). These parameters will be analyzed for correlation with clinical outcomes and histopathological features of plaque vulnerability (e.g., positive remodeling, microcalcification, lipid-rich necrotic core). The goal is to determine whether FAPI PET/CT can serve as a novel imaging biomarker for both myocardial and systemic fibrotic activity and stratify future cardiovascular risk.
+
+By addressing the current evidence gaps in CTO prognosis and risk stratification, the FACT-2 study aims to provide scientific and clinical justification for incorporating molecular imaging into routine management of complex coronary artery disease. This s
+
+PRIMARY OUTCOMES:
+  - Incidence of Major Adverse Cardiovascular Events (MACE)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: FAPl lmaging
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07020858

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41379541
+Title: Association between visceral adiposity index and chronic obstructive pulmonary disease: A cross-sectional analysis.
+Authors: Zhang, Lin, Fang, Wu, Jiang
+Journal: Science progress
+Year: 2025
+Topic: visceral fat health outcomes
+
+ABSTRACT:
+BackgroundPrevious studies suggest that obesity may exacerbate clinical manifestations of chronic obstructive pulmonary disease (COPD). Early detection of COPD could improve therapeutic outcomes. This study investigates the relationship between a novel metabolic biomarker, the Visceral Adiposity Index (VAI), and COPD risk. We hypothesized that higher VAI levels would be independently associated with an increased prevalence of COPD.MethodsThis study is a cross-sectional analysis of data from the National Health and Nutrition Examination Survey (NHANES) spanning the periods 1999-2018 and 2021-2023. Multivariable logistic regression was employed to assess the association between VAI and COPD, supplemented by subgroup stratification, smoothed curve fitting, and threshold effect analyses.ResultsAmong 16,167 participants, 1397 were diagnosed with COPD. Multivariable logistic regression revealed a positive correlation between VAI levels and COPD prevalence, independent of confounding factors. Subgroup analyses indicated stronger associations in hypertensive patients and females. Smoothed curve fitting identified a threshold effect for VAI, with an inflection point at 2.55 (P&#x2009;=&#x2009;0.002).ConclusionThe findings of this study indicate a significant positive correlation between VAI levels and the prevalence of COPD. Maybe incorporating visceral adipose function assessment into the initial risk stratification system for high-risk populations with COPD holds certain clinical value.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41379541/

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02068144
+Title: The Effect of Cranberry Extract Supplementation on Cardiovascular Risk Factors in Obese, insulin Resistant Humans
+Official Title: The Effect of Daily Dietary Supplementation With Cranberry Extract on Modulation of Cardiovascular Risk Factors in Obese, insulin Resistant Human Subjects
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to determine the health benefits of cranberry extract in people who are at risk for diabetes and heart problems.
+
+DETAILED DESCRIPTION:
+This study will be a double-blinded, randomized, placebo-controlled, pilot study in which subjects with pre-diabetes will be randomized to receive either placebo or Cranberry extract for a total of 8 weeks of treatment. Each subject will continue on the same dosage of cranberry extract or matching placebo for the entire duration of treatment. Comparisons for insulin sensitivity, endothelial function, and markers of inflmmation and oxidative stress will be made between the 2 groups pre and post intervention.
+
+PRIMARY OUTCOMES:
+  - Change from baseline Hyperinsulinemic-Euglycemic clamp at week 8
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cranberry Extract
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02068144

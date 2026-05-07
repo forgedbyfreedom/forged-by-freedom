@@ -1,0 +1,59 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06361914
+Title: Digital CBT-I for Patients With Chronic Pain and Insomnia
+Official Title: Digital CBT-I for Patients With Chronic Pain and Insomnia (The Back2Sleep Trial). A Randomized Controlled Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 140
+Topic: caffeine exercise
+
+SUMMARY:
+Chronic pain constitutes an increasing health and social burden. More than 50% of patients with chronic pain report insomnia, and patients with comorbid insomnia often report stronger and widespread pain, compared to those who are sleeping well. Sleep disturbances are often considered a consequence to chronic pain. This means that insomnia is often overlooked or ineffectively managed with hypnotics or advice on sleep hygiene. Therefore, efficacious, easily accessible, and safe alternatives to the current pharmacological treatments for patients with chronic pain and insomnia are needed. Cognitive behavioral therapy for insomnia (CBT-I) is a cost-effective and safe treatment for insomnia and is recommended as first-line treatment. While highly efficacious, the challenge is to deliver CBT-I to those in need. The main barriers of face-to-face delivered CBT-I are availability of trained therapists, costs, as well as physical and geographical constraints.
+
+The primary aim of this randomized controlled clinical superiority trial is to investigate whether digitally-delivered CBT-I has a greater effect on insomnia and pain than digitally-delivered sleep hygiene education in patients with chronic pain and comorbid insomnia.
+
+Secondary objectives are to a) explore whether the pain-relieving effect is mediated by a change in physiological markers of sleep quality, b) whether health care cost and use of medications at 12 months are reduced after digital CBT-I, and c) to explore the effectiveness of digital CBT-I compared with sleep hygiene education on:
+
+1. Physiological sleep metrics (recorded with ear EEG in subsample of 60 patients).
+2. Self-reported sleep quality.
+3. Quality of life.
+4. Physical and mental health.
+5. Thoughts and beliefs about sleep and pain.
+
+DETAILED DESCRIPTION:
+This study aims to investigate the efficacy of digital CBT-I for improving sleep (i.e. reducing insomnia severity) and reducing pain intensity in patients with chronic pain and comorbid insomnia. To achieve this goal, the investigators will perform a randomized controlled single-blind clinical superiority trial. Participants will be randomized with an allocation 1:1 ratio into a digital CBT-I group and a sleep hygiene education group. Both groups will use the Hvil® app, but the amount of content will be different. Using a data manager not affiliated with the project through the Open Patients data Exploratory Network (OPEN) at Odense University Hospital, the randomization will be implemented in the program REDCap. The data manager will prepare the randomization list in REDCap. The computer algorithm will use permuted-block randomization of 2, 4 and 6 individuals. No stratifications will be applied to the randomization.
+
+After inclusion, participants will receive an unique randomization key to impute in the Hvil® app according to the abovementioned procedure to receive either digital CBT-I or sleep hygiene education for 9 weeks. This Hvil® App platform is used for both treatments to ensure that only the contents is different, but the form of delivery is the same. All patient reported data will be filled in directly to the eCRF via an online questionnaire using REDCap. Statistical analyses will be blinded to treatment allocation.
+
+Sample size estimation:
+
+Minimal clinical important difference for insomnia severity is 5 point. With an estimated SD for change of 2 times the minimal clinical important difference (SD=10) for patients with chronic pain and insomnia, power of 80%, an alpha value of 0.05, a minimum of 63 participants in each group is required.
+
+Minimal clinical important difference for pain intensity is 15% corresponding to a change of 1.0 points in this population. With a SD for change of 2.0 for patients with chronic pain and insomnia, power of 80%, an alpha value of 0.05, a minimum of 63 participants in each group is required.
+
+With an expected drop-out of 30% the investigators plan to recruit 160 participants (80 for each group).
+
+Stopping rules: This trial has two stopping rules. Inclusion will stop December 31st 2025. In the event that 130 patients have completed the 9 weeks follow-up before 160 patients have been recruited the investigators will stop recruitment of further participants.
+
+All participants that are withdrawn from the study will be encouraged to complete all visits as scheduled. Participants that are withdrawn from the treatment will not be replaced and will be included in the intention-to-treat population. According to the sample size calculation, the investigators will include participants enough to tolerate a drop-out rate of up to 30%. Both intention-to-treat and per protocol analysis will be performed and compared to assess the robustness of the primary analysis.
+
+Statistical methods:
+
+Difference in change from ba
+
+PRIMARY OUTCOMES:
+  - Insomnia severity
+  - Average pain intensity during the last 7 days
+
+INTERVENTIONS:
+  - BEHAVIORAL: Digital CBT-I
+  - BEHAVIORAL: Digital Sleep hygiene education
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06361914

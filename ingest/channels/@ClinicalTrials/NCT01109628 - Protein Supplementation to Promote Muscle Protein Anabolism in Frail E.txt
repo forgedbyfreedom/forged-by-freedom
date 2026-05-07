@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01109628
+Title: Protein Supplementation to Promote Muscle Protein Anabolism in Frail Elderly People
+Official Title: Protein Supplementation to Promote Muscle Protein Anabolism in Frail Elderly People
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 65
+Topic: exercise muscle mass
+
+SUMMARY:
+The present study is designed to investigate whether timed protein supplementation will increase skeletal muscle mass in the frail elderly population.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in skeletal muscle mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protein drink
+  - DIETARY_SUPPLEMENT: Placebo drink
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01109628

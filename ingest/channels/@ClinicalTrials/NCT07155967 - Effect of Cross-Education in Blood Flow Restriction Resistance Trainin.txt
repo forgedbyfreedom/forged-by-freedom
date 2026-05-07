@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07155967
+Title: Effect of Cross-Education in Blood Flow Restriction Resistance Training on Lower Limbs in Older Women
+Official Title: Effect of Cross-Education in Blood Flow Restriction Resistance Training on Lower Limbs in Older Women: A Randomized Controlled Clinical Trial
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: high intensity interval training
+
+SUMMARY:
+Unilateral resistance training has been shown to promote strength adaptations in the directly trained limb and also improve strength in the contralateral limb, a phenomenon known as cross-education (CE), with more pronounced effects observed in high-load training. However, high-load resistance training may be unfeasible for older adults. Blood flow restriction (BFR) training emerges as a low-load alternative that reduces joint stress, is easy to apply, and has low cost. Although there is already evidence showing significant effects of CE during resistance training with BFR, gaps remain regarding its applicability in older adults. This study aims to evaluate the effects of CE in resistance training with BFR on the lower limbs of older women.
+
+DETAILED DESCRIPTION:
+A randomized controlled clinical trial will be conducted with 32 older women aged 60 years or older. Participants will be randomly assigned to one of two groups: a low-intensity unilateral resistance training group with blood flow restriction (BFR) (experimental group) and a low-intensity unilateral resistance training group without BFR (control group). Baseline assessments will include the following: pain using the Visual Analog Scale (VAS); perception of recovery and discomfort using the Likert scale; perceived exertion using the Borg CR-10 scale; systolic and diastolic blood pressure measured via the auscultatory method; heart rate using a Polar portable heart rate monitor; oxygen saturation via pulse oximetry; quadriceps circumference using a measuring tape; muscle mass assessed by ultrasound; muscle tone, stiffness, and elasticity evaluated by myotonometry; cellular health and integrity using bioelectrical impedance analysis (BIA); functional performance through the Timed Up and Go test (TUG), the Short Physical Performance Battery (SPPB), and a test of agility and dynamic balance (AGIL); and muscle strength measured by the one-repetition maximum test (1RM). Following the baseline assessment, participants will undergo the training protocol according to their group assignment. Hemodynamic parameters-heart rate (HR), systolic blood pressure (SBP), diastolic blood pressure (DBP), and oxygen saturation (SpO₂)-as well as perceptual measures (VAS, Likert scale, and CR-10) will be collected before and immediately after each training session. After three weeks of training, an intermediate evaluation of all outcomes will be performed, along with load adjustment. Following this, participants will complete an additional three weeks of training. One week after the conclusion of the intervention, a final evaluation of all outcomes will be conducted. Descriptive statistics and repeated-measures ANOVA will be used for data analysis, with a significance level set at p \< 0.05.
+
+Participants will be duly informed about the procedures and objectives of this study, and after agreeing, they will sign an informed consent form, effectively becoming part of it. In the consent form, participants will be asked if they agree to the use of their data if they choose to withdraw from the study. Participants will also be asked for permission for the research team to share relevant data with people at universities participating in the research or regulatory authorities, where relevant. The study were approved to the Research Ethics Committee of FCT/UNESP, Presidente Prudente, SP, Brazil.
+
+PRIMARY OUTCOMES:
+  - Muscle strength assessment
+  - Ultrasound
+  - Quadriceps circumference
+  - Arterial pressure
+  - Heart rate
+
+INTERVENTIONS:
+  - DEVICE: Blood Flow Restriction Cuff
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07155967

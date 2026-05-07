@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06869382
+Title: ICS+LABA Vs. ICS+LABA+Omalizumab: Impact on Asthma Control and Gene Expression
+Official Title: Comparative Analysis of ICS Combined with LABA Versus Addition of Omalizumab on Transcriptomic Expression Profiles in Patients with Allergic Asthma
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: beta-alanine
+
+SUMMARY:
+Asthma is a chronic respiratory disease characterized by airway inflammation and obstruction, leading to wheezing, breathlessness, chest tightness, and coughing. Uncontrolled asthma impairs daily activities and reduces quality of life, making it a significant global health concern affecting 334 million people worldwide. Proper management is essential to minimize its impact.
+
+The Global Initiative for Asthma (GINA) recommends inhaled corticosteroids (ICS) combined with long-acting beta-agonists (LABA) as a cornerstone therapy for moderate to severe asthma, reducing inflammation and providing sustained bronchodilation. This combination improves symptom control and prevents exacerbations more effectively than ICS alone.
+
+For severe asthma inadequately controlled with ICS+LABA, biologics such as omalizumab (Xolair®) may be added. Omalizumab, a monoclonal antibody targeting immunoglobulin E (IgE), inhibits allergic inflammation by preventing IgE binding to mast cells and basophils. Clinical studies show it reduces asthma attacks, improves lung function, and decreases corticosteroid dependence.
+
+While ICS+LABA is the primary treatment, omalizumab is often introduced when control remains insufficient. However, transcriptomic differences between these treatments remain unclear. Investigating mRNA expression changes may provide insights for optimizing asthma management.
+
+Research purposes:
+
+This study aims to compare transcriptomic expression profiles in patients with allergic asthma treated with ICS+LABA versus those receiving ICS+LABA with the addition of omalizumab. By analyzing RNA expression differences, the investigators seek to identify key molecular pathways influenced by these treatments, investigate omalizumab's impact on airway inflammation and immune regulation, and explore potential biomarkers for predicting treatment response. Understanding these transcriptomic changes may provide insights into optimizing therapeutic strategies and improving personalized asthma management.
+
+The main inclusion and exclusion conditions of the study:
+
+Participants were adults over 18 years old with a confirmed asthma diagnosis via a provocation test, receiving treatment according to GINA guidelines. The ICS+LABA group included asthma patients classified as stage III, while the ICS+LABA+omalizumab group consisted of patients with poor asthma control despite ICS+LABA therapy and elevated IgE levels. Exclusion criteria included current smokers, individuals with other lung diseases (e.g., lung cancer, COPD, bronchiectasis, ILD), or systemic conditions such as diabetes, hypertension, myocardial infarction, or heart failure. Those who declined participation were also excluded. Healthy controls had no history of asthma, systemic diseases, or medication use.
+
+Research Methods and Procedures:
+
+Pulmonary Function Tests PFTs followed American Thoracic Society guidelines using a Medical Graphics Corporation spirometer. Measured parameters included forced vital capacity (FVC), forced expiratory volume in one second (FEV1), mid-maximum expiratory flow (MMEF), and peak expiratory flow rate (PEFR).
+
+Blood Tests Comprehensive blood tests included RNA transcriptome analysis, allergen panel, IgE levels, complete blood count with differentials, hemoglobin, liver and kidney function tests, C-reactive protein (CRP), electrolytes, and chest X-rays.
+
+Asthma Control Assessment The Chinese-language Asthma Control Test (ACT) was used to evaluate asthma control, with scores ranging from 0 to 25, where higher scores indicate better management.
+
+Library Preparation and Sequencing RNA libraries were prepared using the TruSeq Stranded mRNA Library Prep Kit (Illumina), followed by mRNA extraction, fragmentation, cDNA synthesis, adapter ligation, and purification. Library quality was assessed using the Agilent Bioanalyzer 2100 system and real-time PCR. Sequencing was performed on the Illumina NovaSeq 6000 platform, generating 150 bp paired-end reads.
+
+Bioinformatics Analysis Raw sequence data were processed using Fastp for quality control, aligned to reference genomes using STAR, and quantified with RSEM. Differential gene expression was analyzed with edgeR, while Gene Ontology (GO) and KEGG pathway enrichment were performed using clusterProfiler and ShinyGO. RNA sequencing data are available at the National Center for Biotechnology Information (NCBI).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Gene Expression Profiles and Differentially Expressed Genes (DEGs) Identified by RNA Sequencing
+
+INTERVENTIONS:
+  - DRUG: Foster BDP/Formoterol
+  - DRUG: Omalizimab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06869382

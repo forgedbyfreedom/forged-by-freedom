@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05941000
+Title: Continuous Glucose Monitoring and Behavioral Change Intervention for People With Type 2 Diabetes and Diabetes Distress
+Official Title: Continuous Glucose Monitoring Paired With Remotely Delivered Behavior Change Technique Interventions for Glycemic Management and Diabetes Distress Among Adults With Type 2 Diabetes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The purpose of this study is to use a Personalized Trial (N-of-1) design to test the effect of an intervention that pairs continuous glucose monitoring (CGM) with text message-delivered behavior change interventions for physical activity and mood on outcomes of glycemic regulation and diabetes distress among adults with type 2 diabetes and diabetes distress. Participants (n=60) will be given CGM sensors and a FitBit watch to wear during the 10-week study. Participants will complete a two-week baseline/run-in period, during which the participants usual blood glucose and physical activity will be monitored. After successful completion of the run-in period, participants will enter an eight-week intervention period, during which the participant will be randomized to either of two arms, which will both receive two interventions in alternating order - 1) CGM paired with behavioral intervention for physical activity and 2) CGM paired with behavioral intervention for mood. Every two weeks, participants will complete self-report measures assessing mood and health-related behavior and a hemoglobin A1c test. At the end of the trial, participants will receive a summary of the data to help the participants learn more about the responses to the two interventions and to inform investigators about the feasibility of an N-of-1 study design for future research and clinical applications.
+
+DETAILED DESCRIPTION:
+The purpose of this study is to use a Personalized Trial (N-of-1) design to test the effect of an intervention that pairs continuous glucose monitoring (CGM) with text message-delivered behavior change interventions for physical activity and mood on outcomes of glycemic regulation and diabetes distress among adults aged ≥45 years with type 2 diabetes and diabetes distress. This study will explore the feasibility of using a Personalized Trial (n-of-1) design for widespread use in future research and clinical practice in populations with type 2 diabetes.
+
+Participants (n=60) will be recruited into a 10-week Personalized Trial consisting of a two-week baseline/run-in period and an eight-week intervention period. Two interventions will be delivered to each participant: 1) CGM paired with behavioral intervention for physical activity and 2) CGM paired with behavioral intervention for mood. Both interventions will include the use of CGM paired with a behavioral intervention delivered via mobile technology using behavior change techniques of self-monitoring and action planning. After completing the two-week baseline/run-in period, participants will be randomly assigned into one of two arms. In one arm, participants will receive CGM plus the physical activity behavior change technique intervention in weeks 1-2 and 7-8 and the mood intervention during weeks 3-6 of the intervention period. In the second arm, participants will receive the opposite interventions to the first arm.
+
+Participants will be provided and asked to use Freestyle Libre CGM sensors that will monitor the participants blood glucose levels and a Fitbit watch that will track the participants physical activity. The participant will complete measures assessing diabetes distress, diabetes self-management behavior frequency, depressive symptom severity, and health-related problem-solving once every two weeks. The participant will be sent and asked to return a self-administered hemoglobin A1c test every two weeks. At the end of the participants participation, participants will receive a summary of the data to help the participant learn more about the responses to the two interventions and to inform investigators about the feasibility of an N-of-1 study design for future research and clinical applications.
+
+PRIMARY OUTCOMES:
+  - Change in Glucose Time in Range
+  - Change in Diabetes Distress
+
+INTERVENTIONS:
+  - BEHAVIORAL: Self-Monitoring of Behavior for Physical Activity
+  - BEHAVIORAL: Action Planning for Physical Activity
+  - BEHAVIORAL: Self-Monitoring of Behavior for Mood
+  - BEHAVIORAL: Action Planning for Mood
+
+ELIGIBILITY:
+Age: 45 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05941000

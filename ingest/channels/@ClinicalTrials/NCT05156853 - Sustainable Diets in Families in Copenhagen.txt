@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05156853
+Title: Sustainable Diets in Families in Copenhagen
+Official Title: Sustainable Diets in Families in Copenhagen - Menus With Alternative Proteins Meals
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: sports nutrition
+
+SUMMARY:
+SUSINCHAIN investigates the impact of exposing families (an adult and a child) to meals with alternative proteins (insect-based or plant-based products) on dietary pattern, intake of meat and total protein.
+
+DETAILED DESCRIPTION:
+The overall objective of this study is to investigate the impact of exposing paired participants (an adult and a child) to dinner menus of meals with alternative proteins (insect-based or plant-based products) on dietary pattern, intake of meat, and protein over a six-week intervention period. The insect-based menu is the experimental exposure and the plant-based menu is the positive control menu.
+
+The hypothesis is that test menus of meals with alternative proteins will replace the meat consumed during dinner, resulting in maintaining the total protein intake while replacing 20% of the meat protein with alternative protein on a weekly basis.
+
+The assumption is that the insect-based menus will replace meat protein similarly or to a larger extend than the positive control group receiving the comparable plant-based menu. The inclusion of the positive control group allows us to isolate the specific impact of exposure to insect-based menu from the exposure to dietary change of more familiar plant-based products.
+
+The study is a randomized intervention trial recruiting 80 paired participants of an adult and a child age 8-10 year living together in a family, alone or with other family members. The paired participants are randomized to receive one of two menus of meals with alternative proteins, either plant-based or insect-based. Measurements (dietary records, questionnaires) as well as biological samples (urine collection) are taken primarily at baseline (week 0) and endline (week 6).
+
+PRIMARY OUTCOMES:
+  - Change in intake of total daily amount of meat protein at baseline and endline
+  - Change in proportion of meat protein of the total protein intake
+  - Counts of main meals with meat and alternative protein products
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Insect menus
+  - DIETARY_SUPPLEMENT: Plant menus
+
+ELIGIBILITY:
+Age: 8 Years to 10 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05156853

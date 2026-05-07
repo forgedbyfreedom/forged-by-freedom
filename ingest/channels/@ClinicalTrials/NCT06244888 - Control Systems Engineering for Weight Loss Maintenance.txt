@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06244888
+Title: Control Systems Engineering for Weight Loss maintenance
+Official Title: Control Systems Engineering to Address the Problem of Weight Loss maintenance: A System Identification Experiment to Model Behavioral & Psychosocial Factors Measured by Ecological Momentary Assessment
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 180
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This project capitalizes on principles of control systems engineering to build a dynamical model that predicts weight change during weight loss maintenance using behavioral, psychosocial, and environmental indicators evaluated in a system identification experiment. A 6-month behavioral obesity treatment will be administered to produce weight loss. Participants losing at least 3% of initial body weight will be followed for an additional 12 months via daily smartphone surveys that incorporates passive sensing to objectively monitor key behaviors. Survey data pertaining to behavioral, psychosocial, and environmental indicators will be used to develop a controller algorithm that can predict when an individual is entering a heightened period of risk for regain and why risk is elevated. Interventions targeting key risk indicators will be randomly administered during the system ID experiment. Survey and passive sensing data documenting the effects of the interventions will likewise drive development of the controller algorithm, allowing it to determine which interventions are most likely to counter risk of regain.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Weight change
+
+INTERVENTIONS:
+  - BEHAVIORAL: Intervention Targeting Stress and Emotion Regulation
+  - BEHAVIORAL: Intervention Targeting Motivation and Self-efficacy for Weight Management
+  - BEHAVIORAL: Intervention for Normalization of Eating
+  - BEHAVIORAL: Intervention Targeting Physical Activity and Sleep
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06244888

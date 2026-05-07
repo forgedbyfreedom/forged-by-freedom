@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06984978
+Title: EXpress Prevent Rural oldEr Adults' fallS, fractureS and Dependency (EXPRESS)
+Official Title: AI-assisted, Village Doctors and Express Services-Involved, Community-Based Multicenter Cluster Randomized Controlled Trial for Fall Prevention Among Rural Older Adults
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1881
+Topic: sarcopenia intervention
+
+SUMMARY:
+Falls are the leading cause of injury-related death among individuals aged 65 and above in China. The incidence of falls shows a significant urban-rural disparity in China, with rural areas experiencing a markedly higher rate than urban regions. However, a systematic fall prevention strategy tailored to the needs of older people in rural China has not yet been established.
+
+The EXPRESS study is a multicenter, cluster-randomized controlled trial designed to explore the effectiveness and health economic evaluation of an AI-assisted, village doctors and express services-involved, personalized fall screening and prevention strategy based on multidimensional risk profiling in reducing the incidence of falls and fall-related injuries among older people in rural China.
+
+A total of 1,881 older individuals from 16 villages across four provinces in China (with four villages per province) will be recruited. These 16 rural areas will be randomly assigned to either the intervention group or the control group. The intervention group will receive the AI-assisted, village doctors and express services-involved personalized fall prevention strategy based on multidimensional fall risk screening and assessment, while the control group will follow routine primary health management practices.
+
+The intervention period will last for one year, with randomization taking place after the baseline survey. The primary outcomes are the incidence of falls and fall-related injuries (including falls resulting in hospitalization and fractures, etc). Secondary outcomes include activity of daily living, quality of life, fall-related health literacy, depressive symptoms, cognitive function, dementia, physical function and performance, incidence of chronic non-communicable diseases, frailty, and sleep quality.
+
+DETAILED DESCRIPTION:
+The overall goal of EXPRESS is to develop an effective and sustainable fall prevention strategy suitable for rural China (AI-assisted, village doctors and express services-involved, personalized fall prevention strategy based on multidimensional risk profiling) to reduce the incidence of falls and fall-related injuries among older people in rural areas. The intervention strategy for the EXPRESS project is grounded in high-level evidence recommended by the guidelines, including the Technical Guidelines for Fall Prevention and Control in Community-Dwelling Older Adults published by China's National Health Commission. It aims to overcome the shortage of medical and human resources in rural China, leveraging social infrastructure to implement coherent interventions.
+
+EXPRESS adopts a cluster-randomized multicenter design, recruiting older adults aged 65 and above from four provinces-Beijing, Hubei, Shanxi, and Anhui-selecting four villages from each province. The 16 villages are randomly assigned to the intervention or control group. The EXPRESS intervention is structured around five key components-SAFER, each designed to address rural health resource limitations, enhance accessibility, and provide personalized fall prevention services through AI technology and community integration.
+
+S - Screening: Fall risk screening and assessment tailored to rural older adults. All participants undergo comprehensive fall risk assessments through a dual approach. First, village doctors administer a 10-item rural-adapted fall risk scale, developed by the research team for ease of use and specificity to the rural aging population. The scale captures key indicators such as mobility, balance, and prior fall history, offering a structured yet practical tool for frontline healthcare workers in resource-limited settings. Second, participants are instructed to complete sit-to-stand and 6-meter walking task (3 meters out and back) at their natural pace on a marked 3-meter mat. The smartphone is mounted on a specialized tripod on the opposite side, 2 meters from the endpoint of the mat, with a 30° downward angle to optimize the motion capture field of view. These recordings are analyzed using deep learning model and AI-powered motion analysis to extract five objective dimensions associated with fall risk: (1) balance (via sway and bilateral symmetry), (2) gait speed, (3) stride length, (4) trunk rotation (via turning motion), and (5) lower limb strength (via sit-to-stand movement). This combined subjective-objective assessment ensures accurate risk assessment and supports tailored interventions. Importantly, this risk screening and tailored health counseling process has been designed to be embedded within China's National Essential Public Health Service (EPHS) framework, particularly under the older adult health management program, which requires village doctors to conduct an annual physical examination for all residents aged 65 and above. As part of this initiative, the EX
+
+PRIMARY OUTCOMES:
+  - Fall incidence within 12 months (rate of falls per person-year)
+  - Proportion of participants with ≥1 fall within 12 months
+  - Fall-related injuries incidence within 12 months
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: AI-assisted, village doctors and express services-involved personalized fall prevention strategy
+
+ELIGIBILITY:
+Age: 65 Years to 95 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06984978

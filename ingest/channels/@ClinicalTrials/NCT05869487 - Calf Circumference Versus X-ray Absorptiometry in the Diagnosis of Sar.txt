@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05869487
+Title: Calf Circumference Versus X-ray Absorptiometry in the Diagnosis of Sarcopenia in Elderly Hospitalized Patients
+Official Title: Evaluation of a Diagnostic Method: Calf Circumference Versus X-ray Absorptiometry in the Diagnosis of Sarcopenia in Elderly Hospitalized Participants
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 298
+Topic: sarcopenia intervention
+
+SUMMARY:
+This is a prospective single-center study to evaluate a diagnostic method. The main objective of the study is to evaluate the performance of calf circumference as a diagnostic method for sarcopenia in hospitalized elderly people, compared to a gold standard method which is X-ray absorptiometry. The study population are hospitalizing participants aged 75 years and older with an indication to search for sarcopenia.
+
+DETAILED DESCRIPTION:
+Sarcopenia is a loss of muscle mass associated with a loss of muscle strength. Sarcopenia is associated with an increase of mortality, risk of falling and hospitalization. The gold standard for assessing loss of muscle mass is X-ray absorptiometry. However, this exam is not systematically performed. The calf circumference (cutoff less than 31 centimeters) is preferentially used. However, this cutoff was defined from a population of women with a mean age of 80 years and a unfrail phenotypic profile that does not allow this result to be applied to elderly hospitalized patients.
+
+The main objective of this study is to evaluate the performance of calf circumference as a diagnostic method for sarcopenia in hospitalized elderly people, compared to a gold standard method which is X-ray absorptiometry.
+
+This is a single-center prospective study to evaluate a diagnostic method. The participants in the study will be hospitalized patients aged 75 years and over, with an indication to search for sarcopenia in the context of screening for protein-energy undernutrition under the recommendations of the French National Authority for Health. Participants will be included after being informed about the protocol and after obtaining their free and informed oral consent. Measurement of calf circumference will be performed before absorptiometry, the results of which will be analyzed in a blinded. The number of subjects to be included with a expected prevalence of 75%, specificity of 95% and an accuracy of 2% is 298 participants according to the literature. A sensitivity and specificity analysis will be performed using the ROC curve. A linear regression analysis will be performed with a significance threshold for the alpha risk of 5%.
+
+PRIMARY OUTCOMES:
+  - Measurement of muscle mass using calf circumference
+  - Measurement of muscle mass using X-ray absorptiometry
+
+INTERVENTIONS:
+  - RADIATION: Dual-energy X-ray absorptiometry
+
+ELIGIBILITY:
+Age: 75 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05869487

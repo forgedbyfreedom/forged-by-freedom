@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 31630947
+Title: Adaptive Regulation of Motor Variability.
+Authors: Dhawale, Miyamoto, Smith, &#xd6;lveczky
+Journal: Current biology : CB
+Year: 2020
+Topic: ballistic training performance
+
+ABSTRACT:
+Trial-to-trial movement variability can both drive motor learning and interfere with expert performance, suggesting benefits of regulating it in context-specific ways. Here we address whether and how the brain regulates motor variability as a function of performance by training rats to execute ballistic forelimb movements for reward. Behavioral datasets comprising millions of trials revealed that motor variability is regulated by two distinct processes. A fast process modulates variability as a function of recent trial outcomes, increasing it when performance is poor and vice versa. A slower process tunes the gain of the fast process based on the uncertainty in the task's reward landscape. Simulations demonstrated that this regulation strategy optimizes reward accumulation over a wide range of time horizons, while also promoting learning. Our results uncover a sophisticated algorithm implemented by the brain to adaptively regulate motor variability to improve task performance. VIDEO ABSTRACT.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/31630947/

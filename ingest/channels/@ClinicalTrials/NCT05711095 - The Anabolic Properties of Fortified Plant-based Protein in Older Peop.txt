@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05711095
+Title: The Anabolic Properties of Fortified Plant-based Protein in Older People
+Official Title: The Effect of Ingesting a Novel Fortified Plant-based Protein Mix on Acute Muscle Protein Synthesis in Older People
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 45
+Topic: sarcopenia intervention
+
+SUMMARY:
+Rationale: Consumption of sufficient dietary protein is fundamental to skeletal muscle mass maintenance and overall health. Conventional animal-based protein sources such as meat, poultry, fish, eggs, and dairy are considered high-quality sources of dietary protein. However, the production of sufficient amounts of these conventional animal-based proteins to meet future global food demands will be challenging. Consequently, there is a great interest in more sustainable alternatives for these high-quality protein sources. Plant-derived proteins can be produced on a more sustainable scale, but are generally considered lower quality protein sources compared to animal-based sources because of incomplete essential amino acid profiles, resulting in lower anabolic properties for skeletal muscle building. Blending different plant-derived proteins can be a solution, but will never match the profile of other high-quality animal-derived proteins, likely necessitating the fortification of such plant-based protein blends with essential amino acids such as leucine.
+
+Objective: To assess post-prandial muscle protein synthesis rates in older males in response to ingesting a blend of plant protein fortified with free leucine compared to (gold standard) whey protein and compared to the plant protein blend without additional leucine.
+
+Study design: randomized, parallel-group, double-blind, combined superiority non-inferiority, intervention trial.
+
+Study population: 45 healthy (BMI 18.5-35 kg/m2) older males (age: 60-85 y inclusive).
+
+Intervention: Subjects will consume a beverage containing 20g whey protein isolate, 20g of a plant protein blend or the same plant protein blend fortified with 2g leucine. Continuous intravenous stable isotope amino acid tracer infusions will be applied, with plasma and muscle samples collected at different time points throughout the experimental test day.
+
+Main study parameters/endpoints: The primary outcome will be postprandial (0-4h) muscle protein synthesis rates following beverage ingestion.
+
+DETAILED DESCRIPTION:
+Aging is accompanied by a loss of skeletal muscle mass and muscle strength. Besides physical activity, the consumption of sufficient dietary protein is fundamental to skeletal muscle mass maintenance and overall health. As older individuals express anabolic resistance to protein intake, it is thought that older people can improve the anabolic response by ingesting higher protein doses. However, ingesting large protein doses is not always feasible. Alternatively, protein quality represents an important factor affecting the anabolic response to food intake.
+
+Conventional animal-based protein sources such as meat and dairy are generally considered high-quality sources of dietary protein because they meet all of the indispensable amino acid requirements for humans and are highly digestible. However, the production of sufficient amounts of these conventional animal-based proteins to meet future global food demands represents a massive challenge. Presently, there is a great interest in plant-based proteins as a more sustainable alternative for animal-based proteins. Current data shows that plant-based proteins are generally of a lesser quality when compared to animal-based protein, like whey protein, as evidenced by a lower indispensable amino acid content and deficiencies in one or more specific amino acids (i.e. lysine, leucine and/or methionine). This also translates to a compromised bioavailability and lesser anabolic properties. Studies show that ingestion of a single bolus of a plant protein increases muscle protein synthesis rates to a lesser extent when compared to animal-based proteins.
+
+Combining different types of plant-derived proteins to overcome the amino acid deficiencies has been proposed as a strategy to increase the anabolic properties of plant-derived proteins. However, it is not possible to match the amino acid composition to that of the gold standard, whey protein. Another strategy to improve the anabolic properties of plant-derived proteins is fortification with free essential amino acids. Previously, ingestion of 40g of protein as a lysine fortified meat substitute was shown to increase muscle protein synthesis rates to a similar level as the ingestion of chicken. However, it is unclear whether this similarity was caused by the lysine enrichment or by the ingestion of a really high dose of protein that could have maximized muscle protein synthesis rates. Therefore, the principle of fortification is still to be investigated with the ingestion of a much lower (submaximal, but more realistic) dose of 20g protein.
+
+Therefore, the aim of the current study is to assess postprandial muscle protein synthesis rates in older males in response to ingestion of a blend of plant protein (20g) fortified with free leucine, as compared to the blend of plant protein without additional leucine, and compared to whey protein as the gold standard.
+
+Two primary hypotheses will be tested:
+
+1. it is hypothesized that postprandial muscle protein synthesis
+
+PRIMARY OUTCOMES:
+  - Postprandial muscle protein fractional synthesic rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fortified plant-based protein blend
+  - DIETARY_SUPPLEMENT: Plant-based protein blend
+  - DIETARY_SUPPLEMENT: Whey protein
+
+ELIGIBILITY:
+Age: 60 Years to 85 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05711095

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03074019
+Title: Pilot Study on the Effect of a XOS95 on the Human Gut Microbiome
+Official Title: A Randomized, Double-blind, Placebo-controlled, Parallel Group, Pilot Study on the Effect of a Novel Prebiotic, XOS95, on the Human Gut Microbiome
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this clinical trial is to assess the efficacy of a novel prebiotic, XOS95, at two different dosages, in comparison to a placebo by assessing shifts in microbial populations after 8 weeks of supplementation, assessed as changes in abundance of microbial populations.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Effect of XOS95 on abundance of microbial populations by 16S RNA sequencing of feces
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Xylooligosaccacharide
+  - DIETARY_SUPPLEMENT: Maltodextrin
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03074019

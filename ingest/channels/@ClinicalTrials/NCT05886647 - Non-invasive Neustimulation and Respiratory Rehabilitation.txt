@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05886647
+Title: Non-invasive Neustimulation and Respiratory Rehabilitation
+Official Title: Non-invasive Neurostimulation and Rehabilitation in the Treatment of Patients With Respiratory Disorders: Randomized Controlled Clinical Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: high intensity interval training
+
+SUMMARY:
+Introduction: Respiratory diseases are associated with high rate of morbidity and mortality in Brazil. Cardiopulmonary rehabilitation through respiratory muscle training, aerobic training and strengthening of upper and lower limbs emerges as one of the resources available for the treatment and monitoring of patients with respiratory diseases. To add in this perspective, the application of HD-tDCS induces significant neurophysiological and clinical effects in several body systems.
+
+Objective: To identify the chronic effects of non-invasive neurostimulation associated with the rehabilitation of patients with respiratory disorders. Material and methods: This is a pilot study, quantitative, clinical trial type, randomized and controlled, double blind. The sample will be composed by patients with respiratory diseases, aged above 18 years old. The study will consist of two groups: (1) HD-tDCS will be applied - anodic current + respiratory rehabilitation with respiratory muscle training (RMT) and (2) Sham - Only respiratory rehabilitation with RMT without any type of cortical stimulation. The chronic effects of neurostimulation by HD-tDCS associated with cardiopulmonary rehabilitation, with TMR, during 12 sessions will be evaluated. Patients will be evaluated, before and after the protocol, in relation to cortical activation function, pulmonary function, subjective perception of effort, respiratory muscle function, functional capacity, sensation of dyspnea and quality of life. For statistical analysis, intention-to-treat analysis will be used and groups will be compared using Student's t-test, for continuous variables, or chi-square, for categorical variables. ANOVA split-plot, repeated measures for primary outcomes. Analyzes of covariance to identify differences between groups using baseline scores as covariates. Effect sizes and confidence intervals will be calculated using eta squared (η²). Expected results: Neurostimulation would enhance the effects of respiratory rehabilitation and reduce the symptoms of patients with these diseases.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Lung function
+
+INTERVENTIONS:
+  - OTHER: Active non-invasive stimulation and inspiratory muscle training
+  - OTHER: Sham compatorator and inspiratory muscle training
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05886647

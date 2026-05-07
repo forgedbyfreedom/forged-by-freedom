@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06590558
+Title: Testing the Addition of an Investigational Anti-Cancer Drug, ASTX660 (Tolinapant), to a Usual Chemotherapy Treatment (Eribulin) for Treatment of Advanced Triple Negative Breast Cancer
+Official Title: Phase I/Ib Study of Eribulin in Combination With ASTX660 (Tolinapant) in Metastatic Triple Negative Breast Cancer (TNBC)
+Status: WITHDRAWN
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase I/Ib trial tests the safety, side effects, best dose, and effectiveness of ASTX660 (tolinapant) in combination with eribulin mesylate (eribulin) in treating patients with triple negative breast cancer that cannot be removed by surgery (unresectable) or that has spread to nearby tissues or lymph nodes (locally advanced) or to other places in the body (metastatic). Tolinapant may stop the growth of tumor cells by blocking proteins, such as XIAP and cIAP1, needed for tumor cell survival. Chemotherapy drugs, such as eribulin, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving tolinapant in combination with eribulin may be safe, tolerable, and/or effective in treating patients with unresectable, locally advanced, or metastatic triple negative breast cancer.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Determine the safety and tolerability of ASTX660 (tolinapant) in combination with eribulin in patients with metastatic breast cancer.
+
+II. Determine the maximum tolerated dose (MTD) of ASTX660 (tolinapant) in combination with eribulin.
+
+SECONDARY OBJECTIVES:
+
+I. To observe and record anti-tumor activity. II. Determine the pharmacokinetic parameters of ASTX660 (tolinapant) and eribulin when used in combination.
+
+III. Determine the pharmacodynamic parameters of antitumor activity of ASTX660 (tolinapant) and eribulin combination.
+
+EXPLORATORY OBJECTIVES:
+
+I. Develop biomarkers predictive of response and resistance to ASTX660 (tolinapant) in combination with eribulin in metastatic triple negative breast cancer.
+
+II. Investigate biomarkers and mechanisms of primary and secondary resistance to ASTX660 (tolinapant) in combination with eribulin in metastatic triple negative breast cancer.
+
+OUTLINE: This is a dose-escalation study of tolinapant in combination with eribulin followed by a dose-expansion study.
+
+Patients receive tolinapant orally (PO) once daily (QD) on days 1-7 and 15-21 and eribulin intravenously (IV) over 2-5 minutes on days 1 and 15 of each cycle. Cycles repeat every 28 days in the absence of disease progression or unacceptable toxicity. Patients also undergo blood sample collection, tissue biopsy, chest X-ray, and computed tomography (CT) or magnetic resonance imaging (MRI) throughout the study.
+
+After completion of study treatment, patients are followed for up to 3 months.
+
+PRIMARY OUTCOMES:
+  - Incidence of adverse events (AEs)
+  - Dose-limiting toxicities (DLT)
+  - Maximum tolerated dose (MTD)
+
+INTERVENTIONS:
+  - PROCEDURE: Biopsy Procedure
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Computed Tomography
+  - DRUG: Eribulin Mesylate
+  - PROCEDURE: Magnetic Resonance Imaging
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06590558

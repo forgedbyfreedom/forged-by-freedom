@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06788275
+Title: Aerobic Exercise-induced Effect on Endothelial Function in Patients With Ischaemic Heart Disease
+Official Title: Effect of Different Aerobic Exercise Methods in Cardiac Rehabilitation on Endothelial Function in Patients With Ischaemic Heart Disease and Study of the Associated Physiological Mechanisms (ENDO-R)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 132
+Topic: high intensity interval training
+
+SUMMARY:
+Endothelial dysfunction is one of the aetiological factors in ischaemic heart disease (IHD). Aerobic exercise is effective in improving endothelial function, as measured by flow-mediated dilation (FMD), in patients with IHD. Within the aerobic exercise methods, there is evidence showing that high-intensity interval training (HIIT) increases FMD to a greater extent than moderate-intensity training (MIT) in these patients. Notably, in a recent review, our research group found that only studies performing long bouts of HIIT (long HIIT: higher than 1 min) found a greater effect on FMD, while no differences were found in those studies using short bouts of HIIT (short HIIT: ≤ 1 min) and MIT. However, no experimental studies comparing the effect of long HIIT, short HIIT, and MIT on endothelial function, as well as other predictors of mortality, such as cardiorespiratory fitness, brain-derived neurotrophic factor (BDNF) levels or parasympathetic branch activity, have been performed. Therefore, the main objective of this project will be to compare the effect of the three aerobic exercise methods on endothelial function, as measured by FMD, in patients with IHD. Complementarily, the effect of aerobic exercise, depending on the exercise method, on different mortality predictors will be compared. For this purpose, a multicentre randomised study will be carried out (2 hospitals in Elche and one in Alicante). Assessors will be blinded to the patients allocation. Participants will be aware about their allocation in the experimental groups due to the nature of the study. A total of 132 men and women with IHD (66 per sex), diagnosed between three and 12 months before the start of the intervention, aged between 45 and 75 years, and without limitations for the practice of exercise training, will be recruited. All patients will train 3 days a week for 12 weeks. Participants will be assessed before the intervention (i.e., pre), at 6 weeks of training (i.e., mid) and after the intervention (i.e., post). Physiological and psychological variables will be registered in the assessment periods. Training intensity will be individually prescribed based on the cardiopulmonary exercise test (CPET). Intensity exercise will be adapted after the first part of the intervention. Analysis of covariance will be used to compare the values of the three groups after the intervention for the continuous variables, including the pre-intervention value as a covariate, while a logistic regression model will be used for the categorical variables.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from baseline in endothelial function at 7 weeks
+  - Change from baseline in endothelial function at 14 weeks
+  - Change from baseline in endothelial-independent dilation at 7 weeks
+  - Change from baseline in endothelial-independent dilation at 14 weeks
+  - Change from baseline in peak cardiopulmonary parameters at 7 weeks
+
+INTERVENTIONS:
+  - BEHAVIORAL: Aerobic exercise (MIT)
+  - BEHAVIORAL: Aerobic exercise (Short HIIT)
+  - BEHAVIORAL: Aerobic exercise (Long HIIT)
+
+ELIGIBILITY:
+Age: 45 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06788275

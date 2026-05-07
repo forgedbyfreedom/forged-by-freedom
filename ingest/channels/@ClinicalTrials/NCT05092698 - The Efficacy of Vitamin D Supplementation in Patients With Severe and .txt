@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05092698
+Title: The Efficacy of Vitamin D Supplementation in Patients With Severe and Extremely Severe COVID-19
+Official Title: The Efficacy of Vitamin D Supplementation in Patients With Severe and Extremely Severe COVID-19
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: protein supplementation
+
+SUMMARY:
+Despite the successful treatment of patients with moderate coronavirus disease 2019 (COVID-19), outcomes for patients with severe disease remain unsatisfactory. In this category of patients, the course of the disease is complicated by the development of acute respiratory distress syndrome (ARDS) and the need for mechanical ventilation in the intensive care unit (ICU). Mortality in this category of patients reaches 85%. The lack of effective treatment for COVID-19 has prompted scientists to look for new strategies to reduce the incidence and severity of COVID-19, disease progression, and mortality.
+
+Disease severity and mortality rates due to COVID-19 infection are greater in the elderly and chronically ill patients, populations at high risk for vitamin D deficiency. Vitamin D plays an important role in immune function and inflammation.
+
+A number of experimental studies have shown that stimulation of vitamin D receptors can improve the course of ARDS due to inhibition of the hyperimmune inflammatory response, regulation of the renin-angiotensin system, modulation of neutrophil activity, maintenance of the integrity of the pulmonary epithelial barrier and stimulation of epithelial repair, as well as by reducing hypercoagulation.
+
+Several studies on ICU patients have reported that low vitamin D (25(OH)D) concentrations are associated with a higher risk of negative outcomes such as death, organ failure, prolonged mechanical ventilation, a higher rate of ventilation-associated pneumonia, and sepsis.
+
+While the available evidence to-date, from largely poor-quality observational studies, may be viewed as showing a trend for an association between low serum 25(OH)D levels and COVID-19 related health outcomes, this relationship was not found to be statistically significant. Calcifediol supplementation may have a protective effect on COVID-19 related ICU admissions.
+
+DETAILED DESCRIPTION:
+The aim of the study is to evaluate the efficacy of vitamin D (cholecalciferol) supplementation in patients with severe and extremely severe disease caused by the SARS-CoV-2 virus, admitted to an ICU of the COVID-center on the first day and in dynamics until discharge from the hospital or death. Patients with vitamin D deficiency \[25-hydroxyvitamin D (25(OH)D) ≤ 30 ng/ml\] will be randomized to two groups: 1 - patients will receive 60,000 IU of cholecalciferol supplementation; 2 - patients will receive matched placebo.
+
+The demographic and clinical data will be collected. Laboratory data (hemoglobin, lymphocytes, neutrophil to lymphocyte ratio, D-dimer level, Interleukin-6, procalcitonin, ferritin, glucose level, high-sensitive troponin Т, vitamin D level (25(OH)D), acid-base balance, signs of a secondary bacterial infection, immunogram, Von Willebrand factor antigen and Instrumental data (CT-scan, Electrocardiography, echocardiography, arterial and venous ultrasound investigation) will be analysed. The frequency of complications, duration of mechanical ventilation, length of stay in the ICU and in the hospital, and mortality will be evaluated.
+
+This study is single-centre prospective randomized placebo-controlled trial.
+
+PRIMARY OUTCOMES:
+  - Сomplete blood count
+  - Сomplete blood count dynamics 1
+  - Сomplete blood count dynamics 2
+  - Сomplete blood count dynamics 3
+  - C-reactive protein
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D (cholecalciferol)
+  - DIETARY_SUPPLEMENT: Herbal oil
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05092698

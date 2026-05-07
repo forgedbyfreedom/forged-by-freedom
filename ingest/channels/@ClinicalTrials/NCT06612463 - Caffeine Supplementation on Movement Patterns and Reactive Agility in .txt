@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06612463
+Title: Caffeine Supplementation on Movement Patterns and Reactive Agility in Rugby Sevens Matches
+Official Title: Effect of Caffeine Supplementation on Movement Patterns and Reactive Agility in Rugby Sevens Matches
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 8
+Topic: caffeine exercise
+
+SUMMARY:
+Caffeine is widely used by rugby players for its performance-enhancing effects. The main questions it aims to answer are: (1) the impact of caffeine supplementation on various performance metrics, including distance covered at different speeds, acceleration, deceleration, collisions, and repeated high-intensity efforts; and (2) reactive agility, across four matches over two consecutive days in collegiate male rugby sevens players.A position-matched, double-blind, randomized crossover design was employed, with six male collegiate rugby players (mean height: 1.78 ± 0.09 m, mean weight: 81.3 ± 9.2 kg) participating in two trials. Each trial consisted of a two-day tournament, with two matches per day. Movement was monitored using global positioning system units.
+
+DETAILED DESCRIPTION:
+This study employed a position-matched, double-blind, randomized crossover design. Pairs of participants with similar playing positions, specifically forwards or backs/scrum halves, were randomly assigned to either the caffeine or placebo trial. Each trial comprised a two-day rugby sevens tournament, with participants playing two matches per day. Following a 13-day washout period, participants switched to the alternate trial. Both the participants and the research personnel were blinded to the supplementation condition throughout the study period, with the assignment of supplements disclosed to research personnel only after all data analyses were completed.
+
+PRIMARY OUTCOMES:
+  - Total Distance and Distance Covered in Speed Zones
+  - Acceleration and Deceleration
+  - collision
+  - Repeated High-Intensity Effort
+  - Reactive Agility
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine 6mg/kg
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06612463

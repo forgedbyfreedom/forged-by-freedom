@@ -1,0 +1,60 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06249958
+Title: Transforming Rehabilitation: Personalised Care for a Better Quality of Life
+Official Title: Transforming Rehabilitation: Personalised Care for a Better Quality of Life (PREPARE, 1st Part)
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 2000
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+General aim of the project: building and validating an Artificial Intelligence (AI)-based prediction model on rehabilitation outcomes (total joint replacement - TJR - of the hip and knee for primary and secondary osteoarthritis)
+
+Purpose of this specific approval request: identifying data from patients admitted for total joint replacement surgery (hip and knee) at Istituto di Ricerca e Cura a Carattere Scientifico (IRCCS) Istituto Ortopedico Galeazzi (IOG) in 2019 and subsequently discharged to inpatient rehabilitation in the same institution.
+
+DETAILED DESCRIPTION:
+The aim is to collect data from patients undergoing elective TJR (baseline, intervention, outcomes) in order to generate and train an AI algorithm.
+
+Patient characteristics (diagnosis, sex, age, American Society of Anesthesiologists (ASA) score, profession, haemoglobin levels, pain, functional autonomy, care giver presence at home), intervention characteristics (surgical procedure, day of surgery, duration of surgery, infection occurrence, need of transfusion, length of hospital stay, verticalization day, rehabilitation program) and outcomes (Barthel Index, functional independence measures, care burden, Patient Reported Outcomes - PROs - when available ) are collected by the Principal Investigator in a dedicated Excel sheet.
+
+The dataset includes information from the entire perioperative care:
+
+* Pre-surgery
+* Surgical procedure
+* Inpatient rehabilitation
+* Post discharge, if available, at 3,6,12,24,60 months.
+
+Such new dataset will by employed to enable a software whose goal is to provide a predictive model for rehabilitation outcomes, which future application would be helping clinicians design evidence-based, personalized rehabilitation programs. The software will be developed by dedicated data science partners within the European Health and Digital Executive Agency (HADEA) research Project n. 101080288, PREPARE.
+
+The study will include elective prosthetic surgery (TJR of the hip and knee) performed in 2019 (January-December) and the subsequent inpatient rehabilitation program.
+
+Data collection will start after approval from the Ethical Committee (EC) and the new dataset must be available before spring 2024. However, retrieving further data may result necessary by general project needs which are currently not entirely foreseeable, therefore we ask authorization for the entire study duration of four years.
+
+Inclusion criteria:
+
+* Patients admitted for inpatient surgery at IOG in 2019 (January-December) and subsequently discharged to inpatient rehabilitation in the same structure.
+* Ages ≥18 years
+* International Classification of Disease, Ninth Revision, Clinical Modification (ICD-9CM) Diagnoses: 715.15, 16, 25, 26 (primary and secondary osteoarthritis of the hip and knee)
+* ICD-9CM Surgical procedures: 81.51, 81.54 (total joint replacement of the hip and knee).
+
+No exclusion criteria.
+
+PRIMARY OUTCOMES:
+  - Barthel Index Total score
+  - Functional autonomy measure (total score)
+  - Standard hospital evaluation of patient gait
+  - Standard hospital evaluation of walking aids needed by the patient
+  - Standard hospital evaluation of place of discharge
+
+INTERVENTIONS:
+  - OTHER: Rehabilitation
+  - OTHER: Verticalisation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06249958

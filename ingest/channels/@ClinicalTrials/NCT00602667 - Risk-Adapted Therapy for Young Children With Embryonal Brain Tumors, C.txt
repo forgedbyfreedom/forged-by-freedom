@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00602667
+Title: Risk-Adapted Therapy for Young Children With Embryonal Brain Tumors, Choroid Plexus Carcinoma, High Grade Glioma or Ependymoma
+Official Title: Risk-Adapted Therapy for Young Children With Embryonal Brain Tumors, Choroid Plexus Carcinoma, High Grade Glioma or Ependymoma
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 293
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: In this study a combination of anti-cancer drugs (chemotherapy) is used to treat brain tumors in young children. Using chemotherapy gives the brain more time to develop before radiation is given. The chemotherapy in this study includes the drug methotrexate. This drug was an important part of the two clinical trials which resulted in the best survival results for children less than 3 years of age with medulloblastoma. Most patients treated on this trial will also receive radiation which is carefully targeted to the area of the tumor. This type of radiation (focal conformal or proton beam radiotherapy) may result in fewer problems with thinking and learning than radiation to the whole brain and spinal cord.
+
+PURPOSE: This clinical trial is studying how well giving combination chemotherapy together with radiation therapy works in treating young patients with newly diagnosed central nervous system tumors.
+
+DETAILED DESCRIPTION:
+All patients with medulloblastoma who were diagnosed prior to their 3rd birthday will contribute to both the biology and therapeutic primary objectives of this protocol. Furthermore patients who were ≥3 and \<5 years old at the time of diagnosis will also be included in the cohort for these primary objectives as long as they meet the eligibility criteria as outlined in Amendment 8.0 of this protocol. Patients in the 3-5 year old age cohort who enrolled on previous versions of this protocol and who do not meet the criteria as outlined in Amendment 8.0 of this protocol will be excluded from the outcome analyses of the biology and therapeutic primary objectives of the protocol.
+
+OBJECTIVES:
+
+Primary
+
+* To identify patterns of methylation profiling that are associated with progression-free survival among young pediatric patients with medulloblastoma treated with risk-adapted therapy.
+* To estimate the event-free survival distribution of young medulloblastoma patients treated with risk-adapted therapy.
+
+Secondary
+
+* To perform high-resolution genome-wide analyses of chromosomal abnormalities and gene expression patterns, and evaluate the relationship of these to other clinicopathological variables.
+* To evaluate specific tumor types for molecular abnormalities with suspected prognostic or therapeutic significance.
+* To evaluate the feasibility of collecting frozen and fixed tumor samples for analysis using high-resolution molecular biology tools.
+* To estimate the event-free and overall survival of patients treated with the proposed risk-adapted therapy regimen, and to descriptively compare these survival rates to historical controls.
+* To estimate the rates of local and distant disease progression in patients treated with focal radiotherapy (RT) to the post-operative tumor bed using a 5 mm clinical target volume margin.
+* To estimate the objective response rate (sustained for 8 weeks) to induction chemotherapy including high-dose intravenous methotrexate for patients with residual or metastatic disease.
+* To evaluate the feasibility and toxicity of administering low-dose intravenous vinblastine in conjunction with induction chemotherapy to patients with metastatic disease.
+* To evaluate the feasibility and toxicity of administering consolidation therapy including cyclophosphamide and pharmacokinetically targeted topotecan to patients with metastatic disease, and to estimate the sustained (for 8 weeks) objective response rate (complete response and partial response) to such therapy in patients with measurable residual disease after induction.
+* To evaluate the feasibility and toxicity of administering oral maintenance therapy in young children.
+* To use quantitative magnetic resonance (MR) measures (volumetric, diffusion, and perfusion) of young brain tumor patients receiving chemotherapy including high-dose intravenous methotrexate to assess impact of treatment on developing brain.
+* To investigate the feasibility of using PET as an in-vivo dosimetri
+
+PRIMARY OUTCOMES:
+  - Percent Probability of Progression-free Survival (PFS) for Medulloblastoma Patients
+  - Percent Probability of Progression-free Survival (PFS) for Medulloblastoma Patients by DNA Methylation Subgroup
+  - Percent Probability of Event-free Survival (EFS) for Medulloblastoma Patients
+
+INTERVENTIONS:
+  - DRUG: Induction Chemotherapy
+  - DRUG: Low-Risk Therapy
+  - DRUG: High-Risk Therapy
+  - DRUG: Intermediate-Risk Therapy
+
+ELIGIBILITY:
+Age:  to 5 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00602667

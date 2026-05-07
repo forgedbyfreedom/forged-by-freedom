@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00826566
+Title: Anti-inflammatory Effects of Caffeine in Chronic Obstructive Pulmonary Disease (COPD) Subjects
+Official Title: Pilot Study to Investigate the Anti-inflammatory Effects of Caffeine in Subjects With Chronic Obstructive Pulmonary Disease (COPD)
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: caffeine exercise
+
+SUMMARY:
+Nowadays it has become evident that a chronic systemic inflammation is present in patients suffering from chronic obstructive pulmonary disease (COPD).
+
+The role of the nuclear enzyme poly(adenosine diphosphate-ribose)polymerase (PARP) as a key mediator within these systemic inflammatory processes as well as in COPD associated exercise intolerance and muscle weakness could recently been identified. The attenuating effect of dietary ingredients with PARP inhibiting activity on systemic inflammation was supported by data from in vitro and in vivo studies, from other groups as well as from our own lab. We identified several caffeine metabolites as potent inhibitors of the most abundant PARP-isoform PARP-1 in-vitro, in animal models as well as in ex-vivo experiments with whole blood from COPD patients.
+
+However, clinical data with respect to their anti-inflammatory effects in COPD patients are currently not available for none of these substances. Therefore, the current clinical pilot study is intended to establish for the first time clinical data (proof of principle) on the anti-inflammatory potential of caffeine metabolites.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma concentrations of C-reactive protein (CRP) and the cytokines TNF-a, IL-6, IL-8 and IL-10.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 40 Years to 70 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00826566

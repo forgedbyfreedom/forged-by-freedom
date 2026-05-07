@@ -1,0 +1,67 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07016399
+Title: Neoadjuvant Darolutamide Alone or in Combination With Standard Therapy for Stage II-IIIA, AR+, TNBC
+Official Title: A Phase II Neoadjuvant Clinical Trial of the Androgen Receptor Inhibitor Darolutamide in Early-Stage Androgen Receptor Positive (AR+) Triple-Negative Breast Cancer
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase II trial compares the effect of adding darolutamide to standard therapy versus standard therapy alone before surgery for the treatment of patients with stage II-IIIA androgen receptor positive triple-negative breast carcinoma. Standard therapy before surgery for triple-negative breast cancer typically consists of a combination of chemotherapy and immunotherapy drugs. Chemotherapy drugs, such as carboplatin, paclitaxel, doxorubicin and cyclophosphamide, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Immunotherapy with monoclonal antibodies, such as pembrolizumab, may help the body's immune system attack the cancer, and may interfere with the ability of tumor cells to grow and spread. Darolutamide is in a class of medications called androgen receptor inhibitors. It works by blocking the effects of androgen (a male reproductive hormone) to stop the growth and spread of tumor cells. Giving darolutamide in combination with standard therapy before surgery may make the tumor smaller and may reduce the amount of normal tissue that needs to be removed.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To compare the mean ΔKi-67 level between the darolutamide therapy arm and the control arm.
+
+SECONDARY OBJECTIVES:
+
+I. To determine the pathologic complete response rate (pCR) and overall response rate (ORR) in patients on the darolutamide and control arms.
+
+II. To determine event-free survival (EFS) in patients with androgen receptor positive (AR+) breast cancer in both arms.
+
+III. To correlate the change in Ki-67 at 2 weeks and 6 months with pCR rates and EFS in patients with AR+ breast cancer in both arms.
+
+IV. To monitor circulating tumor deoxyribonucleic acid (ctDNA) throughout treatment and correlate with response in both arms.
+
+V. To correlate percent of nuclear AR positivity with pCR and EFS in both arms.
+
+EXPLORATORY OBJECTIVES:
+
+I. To determine if patients with triple-negative breast cancer (TNBC) experience changes in ctDNA levels while undergoing neoadjuvant therapy.
+
+II. To assess if changes in ctDNA levels correlate with response to neoadjuvant therapy observed in breast cancer tissue biopsies/surgical specimens.
+
+III. To identify AR amplification and ligand binding mutations by whole exome sequencing and evaluate AR transcription targets and AR splice variants by ribonucleic acid sequencing (RNAseq) in baseline, week 2 and residual disease of patients on the darolutamide arm.
+
+IV. To evaluate cell populations and AR transcriptional activity by single-cell RNAseq (scRNAseq) using baseline, week-2 biopsies and residual disease from patients on the darolutamide arm.
+
+V. To assess tumor microenvironment changes in hormone receptors and immune cell populations by multiple immunofluorescences using the CO-Detection by indEXing (CODEX) platform.
+
+VI. To evaluate AR-independent mechanisms of resistance to AR inhibitors using in vitro models for the discovery phase and human tissue for validation studies.
+
+OUTLINE: Patients are randomized to 1 of 2 arms.
+
+ARM A: Patients receive pembrolizumab intravenously (IV) over 30 minutes on day 1 of each cycle, paclitaxel IV on days 1, 8, and 15 of each cycle, and carboplatin IV on days 1, 8, and 15 of each cycle. Cycles repeat every 21 days for up to 4 cycles (cycles 1-4) in the absence of disease progression or unacceptable toxicity. Then, patients receive pembrolizumab IV over 30 minutes, cyclophosphamide IV, and doxorubicin IV or epirubicin IV on day 1 of subsequent cycles. Cycles repeat every 21 days for up to an additional 4 cycles (cycles 5-8) in the absence of disease progression or unacceptable toxicity. Additionally, patients undergo surgery on study, as well as ultrasound (US) or magnetic resonance imaging (MRI), blood sample collection, and breast biopsies throughout the study.
+
+ARM B: Patients receive darolutamide orally (PO) twice daily (BID) for 14 days in the absence of disease progression or unacceptable toxicity. Patients then receive darolutamide PO BID, pembrolizumab IV over 30 minutes on day 1 of each cycle, and paclitaxel IV on days 1, 8, and 15 of each cycl
+
+PRIMARY OUTCOMES:
+  - Mean ΔKi-67 level
+
+INTERVENTIONS:
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Breast Biopsy Procedure
+  - DRUG: Carboplatin
+  - DRUG: Cyclophosphamide
+  - DRUG: Darolutamide
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07016399

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06888869
+Title: Interactive Home-based Rehabilitation Exercise Assessment Platform and Exploration of Clinical Effects in Patients with Parkinson's Disease
+Official Title: The Development and Verification of an Interactive Home-based Rehabilitation Exercise Assessment Platform and Exploration of Technology Acceptance and Clinical Effects in Patients with Parkinson's Disease
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 92
+Topic: resistance training
+
+SUMMARY:
+This study aims to develop an "Interactive Home-based Rehabilitation Exercise Assessment Platform" that incorporates visual feedback similar to virtual reality into rehabilitation machines and aerobic cycling programs. In the clinical research part, 92 Parkinson's disease patients will be randomly assigned to three groups: the clinical rehabilitation group, the home-based rehabilitation group, and the control group. Each group will undergo the intervention twice a week, with each session lasting about 30-45 minutes over a period of 12 weeks for a total of 24 combined resistance and aerobic rehabilitation training sessions. The effectiveness evaluation will include measurements of upper limb grip strength, lower limb muscle strength, the 3-meter sit-to-stand test, the 6-minute walk test, the Parkinson's Disease Severity Scale, the Quality of Life Scale, the 10-meter walk test, and technology acceptance forms.
+
+DETAILED DESCRIPTION:
+Background and Purpose: Previous research on technological interventions in exercise therapy for Parkinson's disease has shown that incorporating visual feedback through virtual reality into rehabilitation exercise programs can improve patients' balance, muscle strength, gait, and other functional performances. This study aims to develop an "Interactive Home-based Rehabilitation Exercise Assessment Platform" that incorporates visual feedback similar to virtual reality into rehabilitation machines and aerobic cycling programs. The platform uses sensors and interactive games to guide correct rehabilitation movements. The effectiveness of the platform will be validated through engineering-related tests and clinical trials further to investigate its clinical benefits for Parkinson's disease patients.
+
+Methods: This study consists of two parts: platform development and validation and clinical research. The platform will be implemented for use in medical institutions and at home, specifically at Taipei Veterans General Hospital, utilizing six rehabilitation machines and aerobic bicycles, as well as home-based cycling combined with resistance band training. Interactive game software and laser sensors will be developed. Sensors will collect patients' physiological parameters during the rehabilitation process to ensure safety and provide real-time feedback on movements and time control during the sessions. The collected data, including angle values, cycling revolutions, and physiological parameters, will be verified for usability using commercially available products.
+
+In the clinical research part, 92 Parkinson's disease patients will be randomly assigned to three groups: the clinical rehabilitation group, the home-based rehabilitation group, and the control group. Each group will undergo the intervention twice a week, with each session lasting about 30-45 minutes over a period of 12 weeks for a total of 24 combined resistance and aerobic rehabilitation training sessions. The effectiveness evaluation will include measurements of upper limb grip strength, lower limb muscle strength, the 3-meter sit-to-stand test, the 6-minute walk test, the Parkinson's Disease Severity Scale, the Quality of Life Scale, the 10-meter walk test, and technology acceptance forms. Statistical analysis will be performed using one-way ANOVA and chi-square tests to analyze personal data characteristics. For clinical effectiveness analysis, a two-way (group by time) ANOVA with repeated measures will be used to examine differences between groups and over time, with Bonferroni tests for post-hoc comparisons. All data will be analyzed using SPSS version 24, with a p-value of less than 0.05, which is considered statistically significant.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline Timed Up and Go test (TUG) at 12 weeks
+  - Change from Baseline muscle strength of upper limbs at 12 weeks
+  - Change from Baseline muscle strength of lower limbs at 12 weeks
+  - Change from Baseline gait Speed at 12 weeks
+  - Change from Baseline the Mini-Mental State Exam (MMSE) at 12 weeks
+
+INTERVENTIONS:
+  - OTHER: Other: Clinical rehabilitation group
+  - OTHER: Other: Home-based rehabilitation group
+
+ELIGIBILITY:
+Age: 45 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06888869

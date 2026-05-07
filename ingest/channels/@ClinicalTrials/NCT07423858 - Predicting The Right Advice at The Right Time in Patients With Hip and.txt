@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07423858
+Title: Predicting The Right Advice at The Right Time in Patients With Hip and Knee OsteoArthritis: the e-cOAch Cross-over.
+Official Title: Developing Data Driven Algorithms for Predicting The Right Advice at The Right Time in Patients With Hip and Knee OsteoArthritis: The e-cOAch Cross-over Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 600
+Topic: caffeine exercise
+
+SUMMARY:
+This study aims to learn how symptoms and daily functioning change over time in people with hip or knee osteoarthritis (OA). The goal is to use this information to build computer models that can predict these changes. In the future, these models may help give people with OA the right self-care advice at the right time through a web application called ArtroseCoach.
+
+People with OA will take part in this study for one year. Every two weeks, they will fill in online questionnaires covering various aspects of their health and daily functioning, such as pain, daily activities, and participation in life. During the year, participants will be randomly assigned to one of several self-care programs in the ArtroseCoach web app. These programs focus on physical activity, weight management, or sleep. Each program lasts 12 weeks. At four points during the year (weeks 3, 15, 27, and 39), participants will receive one of these programs or no program at all. No one will receive the same program twice.
+
+The ArtroseCoach web app provides education about OA, lifestyle advice, and tips to support behavior change. The study will help researchers understand which factors are linked to changes in pain and physical functioning over time. This knowledge will be used to improve the ArtroseCoach and other future tools that support people with OA in managing their condition on their own.
+
+DETAILED DESCRIPTION:
+Objectives of this study include the following:
+
+The primary objective is to develop and evaluate data-driven models to support personalised recommendations regarding the optimal timing of self-management strategies (physical activity promotion, sleep optimization and weight management) in individuals with hip and/or knee OA.
+
+Other objectives with data from this study:
+
+To distinguish subgroups of people with hip/knee OA based on determinants of behavior.
+
+To describe the course and predictive factors of flare-ups in patients with knee and hip osteoarthritis.
+
+To describe how people with knee and/or hip osteoarthritis score on participation, and what factors influence participation.
+
+To describe how people in the e-cOAch cross-over sleep and the association between weight, physical activity, pain and quality of sleep in people with osteoarthritis.
+
+PRIMARY OUTCOMES:
+  - Physical functioning
+
+INTERVENTIONS:
+  - BEHAVIORAL: Physical Activity program
+  - BEHAVIORAL: Sleep program
+  - BEHAVIORAL: Weight management program
+  - OTHER: Control: no intervention
+
+ELIGIBILITY:
+Age: 45 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07423858

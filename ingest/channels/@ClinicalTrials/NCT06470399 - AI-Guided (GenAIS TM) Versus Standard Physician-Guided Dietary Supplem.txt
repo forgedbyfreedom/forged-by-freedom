@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06470399
+Title: AI-Guided (GenAIS TM) Versus Standard Physician-Guided Dietary Supplementation for Managing Metabolic Syndrome
+Official Title: AI-Guided (GenAIS TM) Versus Standard Physician-Guided Dietary Supplementation for Managing Metabolic Syndrome: A Randomized Controlled Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: protein supplementation
+
+SUMMARY:
+The study "AI-Guided (GenAIS TM) Versus Standard Physician-Guided Dietary Supplementation for Managing Metabolic Syndrome" aimed to compare the effectiveness of AI-guided dietary supplement (DS) prescriptions versus standard physician-guided prescriptions in managing metabolic syndrome. This 6-month randomized controlled trial included 160 participants diagnosed with metabolic syndrome. Participants were divided into two groups: one received DS based on physician judgment, and the other based on GenAIS AI system analysis. Primary outcomes focused on changes in metabolic parameters, while secondary outcomes included individual components of metabolic syndrome, inflammation levels, body weight, and adherence to the DS regimen. Data collection involved genetic, metabolic, and clinical profiling, with ethical considerations ensuring participant confidentiality and informed consent.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Composite Metabolic Syndrome Score
+
+INTERVENTIONS:
+  - OTHER: Standard therapy group
+  - OTHER: AI-Guided Group
+
+ELIGIBILITY:
+Age: 40 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06470399

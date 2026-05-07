@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03811756
+Title: The Effect of 12-week Dietary Intake of Syrup Containing CoQ10 and Collagen on Dermis Density and Other Skin Parameters
+Official Title: The Effect of 12-week Dietary Intake of Syrup Containing CoQ10 and Collagen on Dermis Density and Other Skin Parameters: Randomised Double-blind Placebo-controlled Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: protein supplementation
+
+SUMMARY:
+Placebo controlled double-blind multi-dose comparative study of the effects of coenzyme Q10 and collagen formulation with improved water-solubility in healthy adults.
+
+One group (test group) will receive investigational product - test syrup (daily dose 10 mL: fish collagen: 4000 mg, water soluble CoQ10 (Q10Vital®): 50 mg, vitamin C: 80 mg, vitamin A: 920 μg, biotin: 150 μg) and the other (placebo group) placebo syrup without those active ingredients. Participants will test continuous administration of placebo or investigational product for 12 weeks in order to demonstrate and assess multiple-dose effects on skin condition and signs of skin aging.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Influence of investigational product in relation to placebo product on dermis density assessed through dermis intensity measurement
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Test syrup containing CoQ10 and collagen
+  - DIETARY_SUPPLEMENT: Placebo syrup
+
+ELIGIBILITY:
+Age: 40 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03811756

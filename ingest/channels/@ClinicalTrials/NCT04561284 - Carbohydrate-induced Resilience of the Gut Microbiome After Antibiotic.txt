@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04561284
+Title: Carbohydrate-induced Resilience of the Gut Microbiome After Antibiotics Use
+Official Title: Carbohydrate-induced Resilience of the Gut Microbiome After Antibiotics Use
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: protein supplementation
+
+SUMMARY:
+The gut microbiome is a complex ecosystem with a wide range of functions, and it is thought that it can influence multiple processes in the human body. In turn, the composition and activity of the gut microbiome is affected by many factors as well.
+
+Antibiotics can be very effective in treating bacterial infections, but they are also associated with detrimental health effects. Previous studies have already shown that antibiotics disturb the human gut microbiome composition by destroying commensal bacteria. As it is well known that the microbiome influences host metabolism, perturbation of the healthy microbiome (dysbiosis) is thought to be disease causing.
+
+Prebiotics, on the other hand, are beneficial for the gut microbiome. These so-called indigestible fibers are naturally present in our foods, but cannot be metabolised by the human body. Many bacteria in the human gut are able to ferment these fibers and they subsequently produce beneficial products for the rest of the body. Besides this, fiber intake stimulates growth of commensal bacteria in the human gut.
+
+Although it has become increasingly clear that prebiotics have a beneficial effect on the gut microbiome and general health, it is still unclear to which extent the beneficial effects of prebiotics supplementation occur after the gut microbiome is disturbed by antibiotics. We hypothesize that prebiotic supplementation after antibiotics use will improve restoration of the gut microbiome to a healthy state compared to placebo.
+
+DETAILED DESCRIPTION:
+In this double-blind, randomized placebo-controlled study, 40 overweight, but otherwise healthy adults will first receive vancomycin for 7 days (3x 500mg per day) to disturb the gut microbiome. They will then receive either indigestible fiber supplementation (classified) ór a placebo for the following 8 weeks. All study parameters will be assessed in two parallel groups, to which subjects will be assigned using minimization.
+
+After initial screening, participants will be asked to visit the university for a total of 6 times during a period of 11 weeks. A clinical investigation day will take place at baseline, after antibiotics use and after the supplementation period. The remaining 3 visits will be short visits during the supplementation period (week 2, 4 \& 6 of supplementation). Participants will be asked to collect feces every day before the university visits.
+
+During the clinical investigation days, an abdominal subcutaneous adipose tissue will be taken under fasting conditions. Participants will also perform a 7-point oral glucose tolerance test to assess their insulin sensitivity. Furthermore, blood samples will be taken in the fasted state to assess markers of fat metabolism, short-chain fatty acids, gut hormones and inflammatory markers. Participants will be asked to hand in collected feces and to fill in questionnaires regarding stool consistency, stool frequency and physical activity. Lastly, they will be asked to hand in filled-in 3-day food diaries.
+
+On the 3 remaining visits during the supplementation period, participants will hand in collected feces and food diaries, and fill in the questionnaires.
+
+For these 6 visits, participants will have to invest approximately 14 hours.
+
+PRIMARY OUTCOMES:
+  - Gut microbiota composition
+  - Gut microbiota activity
+  - Fecal Short-Chain Fatty Acids (SCFA)
+  - Resistome analysis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Indigestible fiber (classified)
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04561284

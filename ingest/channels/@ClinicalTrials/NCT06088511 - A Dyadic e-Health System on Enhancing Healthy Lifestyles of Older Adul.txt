@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06088511
+Title: A Dyadic e-Health System on Enhancing Healthy Lifestyles of Older Adults With Sarcopenia
+Official Title: Effectiveness of a Dyadic e-Health System on Enhancing Healthy Lifestyles of Older Adults With Sarcopenia: A Randomized Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 88
+Topic: fat loss muscle
+
+SUMMARY:
+Sarcopenia is defined as a reduction in muscle mass, muscle strength, and physical performance. Without proper management, sarcopenia may result in adverse health outcomes. Continuously maintain healthy lifestyle, such as being physically active, taking adequate protein in daily diet, are effective in preventing and managing sarcopenia. e-Health has been used successfully to translate evidence-based lifestyle interventions into daily practice by enhancing self-awareness, promoting self-monitor and sustaining self-management for other populations with different health problems.
+
+This project aims to develop, implement and evaluate the preliminary effects of an e-Health System to encourage older adults with sarcopenia to maintain healthy lifestyles (i.e. regular exercise and adequate intake of high-quality protein). Combining the concepts of smart health, the System aims to enhance users' self-monitoring (Level 1) and self-management (Level 2) of sarcopenia.
+
+Level 1 aims to enhance participants' and their family members' awareness of the risks of sarcopenia through continued monitoring. The System will perform baseline and regular subjective (such as self-administered questionnaires) and objective (such as activity levels by an embedded accelerometer) assessments on the participants. The embedded risk calculator in the System will analyze the scores obtained from different assessments and then recommend participants to follow the healthy lifestyle interventions in Level 2.
+
+Level 2 aims to enhance participants' and their family members' ability to manage the health problems related sarcopenia. The System will recommend two major evidence-based lifestyle interventions, including physical exercise and nutritional advice, based on the analysis of the assessment data in Level 1. These interventions will be conducted during the four face-to-face sessions and continuously self-practised at home. The interventions will provide interactive, immediate feedback to the participants and their family members to improve their involvement. The participants and their family members can monitor their progress via the System.
+
+The investigators hypothesize that the experimental group who has adopted the e-Health system in their daily life to manage sarcopenia will exhibit milder symptoms of sarcopenia and more sustainable self-management ability than participants in the control group who has received usual care.
+
+DETAILED DESCRIPTION:
+Sarcopenia is defined as a reduction in appendicular skeletal muscle mass, muscle strength, and physical performance. The prevalence of sarcopenia is high, and it appears in about 25% of local older adults. Without proper management, sarcopenia may result in adverse health outcomes leading to poor quality of life and premature institutionalization. It also causes a burden on their family members. The current evidence shows that preventing and managing sarcopenia with healthy lifestyle interventions, which include maintaining a physically active lifestyle, ideal body weight, adequate protein intake and social participation, tend to produce positive outcomes if older adults can continuously maintain these healthy lifestyles.
+
+e-Health was defined as "the cost-effective and secure use of information and communications technologies in support of health". e-Health has been used successfully to translate evidence-based lifestyle interventions into daily practice by enhancing self-awareness, promoting self-monitor and sustaining self-management for addressing obesity in young people, smoking cessation in adults and promoting physical activities in older adults with sedentary lifestyle. For example, a systematic review of 15 papers with 1967 participants compared the e-Health based interventions with the control groups to reduce sedentary behaviour and increase physical activity levels. The results showed that the group that received e-Health based interventions had a significantly increased level of physical activity compared with the control groups.
+
+Despite all these potential benefits of using e-Health to manage health, studies indicated that older adults tend to be reluctant to use new technologies due to the inability to integrate them into their daily lives. Consequently, it has been posited that older adults may be less capable or willing to adopt e-Health strategies to manage their health. One possible explanation for this low adaptation rate is that older adults cannot integrate the technologies into their daily lives. Studies have argued that the motivation of participants to sustain the use of the new technologies depends on the extent to which the participants feel that the technologies can fulfil their needs, align with their goals, and meet their expectations. In addition, older adults often attempt to adopt new habits, such as using a new electronic device, maintaining a physically active lifestyle, while being embedded in social networks comprising, amongst others, friends and family. However, current e-Health-based interventions are usually focused on individuals. Given that empirical evidence highlights the role of family members in influencing older adults' behaviour, including an adaptation of technologies and healthy lifestyles, there is a need to consider the potential benefits of involving family support when delivering an e-Health based intervention to older adults.
+
+The World Health Organization's global strategy for digital hea
+
+PRIMARY OUTCOMES:
+  - Changes of muscle strength
+  - Changes of muscle mass
+  - Changes of body mass index
+  - Changes of waist circumference
+  - Changes of fat mass
+
+INTERVENTIONS:
+  - BEHAVIORAL: e-Health System with nutritional advice
+  - BEHAVIORAL: The Exercise Training
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06088511

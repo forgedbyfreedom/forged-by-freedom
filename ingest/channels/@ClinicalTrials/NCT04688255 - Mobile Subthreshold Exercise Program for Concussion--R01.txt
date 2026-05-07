@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04688255
+Title: Mobile Subthreshold Exercise Program for Concussion--R01
+Official Title: Randomized Controlled Trial Using Telehealth-delivered Rehabilitative Exercise to Treat Youth With Prolonged Concussion Recovery (Mobile Subthreshold Exercise Program, MSTEP-R01)
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: aerobic exercise
+
+SUMMARY:
+Approximately 1.9 million youth sustain a concussion each year, and up to 30% experience persistent post-concussive symptoms (PPCS) such as headache, dizziness, and difficulty focusing that continue for weeks or months. PPCS results in greater utilization of sub-specialty care and can impact immediate and long-term social development, cognitive function and academic success. Previous recommendations for treating PPCS have focused on cognitive and physical rest, but more recently guidelines have shifted based on new research suggesting the benefit of rehabilitative exercise for PPCS. The rationale behind using exercise to treat youth with concussion is that gradually increasing physical activity facilitates return to full function. Rehabilitative exercise has since become one of the most common approaches to treating youth with PPCS, but access is challenging since most programs require weekly centralized visits with a concussion specialist. To bridge this gap, the investigators developed a telehealth-delivered approach to treat PPCS, utilizing physical activity trackers (Fitbits) and weekly video conferences with trained research staff. They then conducted a series of pilot studies with this approach, finding excellent feasibility, acceptability, and evidence for more rapid declines in concussive symptoms compared to controls. The investigators also found preliminary evidence that mechanisms behind this intervention may stem from both physiologic processes due to increased moderate-to-vigorous physical activity (MVPA) and psychologic processes such as reducing fear- avoidance of concussive symptoms. They now propose a fully-powered randomized controlled trial (RCT) to asses the efficacy of the "Mobile Subthreshold Exercise Program" (M-STEP) for treating youth with PPCS.
+
+DETAILED DESCRIPTION:
+The investigators will recruit n=200 youth 11-18 years old with PPCS. Youth will be randomized to 6 weeks of either usual care plus M-STEP (intervention) or usual care plus stretching (control). Youth in M-STEP will be coached through gradual increases in intensity and duration of rehabilitative exercise via weekly video conferencing (Zoom) and will use Fitbits to guide their progress. Youth in the stretching group will act as attention controls. All youth will complete research-grade measures at multiple time points. Youth will be followed for a total of 6 months. Data will be analyzed using mixed effects models to examine differences between experimental groups in the primary outcome, trajectory of concussive symptoms, and the secondary outcome, changes over time in health-related quality of life, on an intention-to-treat basis. Potential mediators of the treatment effect will also be examined, including fear-avoidance of concussive symptoms and MVPA, and explore the impact of factors such as patient sex and parental protective behaviors.
+
+The investigators thus assert the following hypotheses:
+
+Hypothesis 1: M-STEP youth will have more rapid declines in HBI and improvement in PedsQL compared to control youth
+
+Hypothesis 2: M-STEP youth will have greater increases in MVPA over time than control youth, and these increases will predict more rapid improvement in HBI and PedsQL.
+
+Hypothesis 3: M-STEP youth will have steeper declines in fear-avoidance compared to control youth, and these declines will predict more rapid improvement in HBI and PedsQL.
+
+IMPACT: The proposed study will definitively answer the question of whether a mobile sub-threshold exercise program (M-STEP) improves outcomes for youth with PPCS. It will also provide essential information about both the long-term impact of this intervention and potential mediators as well as biopsychosocial factors that influence treatment response. The study design uses a rigorous protocolized smartphone administered mHealth intervention that will be readily reproducible and generalizable to the majority of youth with PPCS. If successful, this will be one of the few evidenced-based interventions available to treat youth with PPCS.
+
+PRIMARY OUTCOMES:
+  - Concussive symptoms (Health Behavior Inventory, HBI)--youth, a 21 item 0-3 likert scale with higher scores indicating more severe symptoms
+  - Pediatric Quality of Life (PEDsQL, parent and youth), a 23 item 0-4 likert scale that is scaled to 0-100 with higher scores indicating better function
+
+INTERVENTIONS:
+  - BEHAVIORAL: MSTEP
+  - BEHAVIORAL: Stretching
+
+ELIGIBILITY:
+Age: 11 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04688255

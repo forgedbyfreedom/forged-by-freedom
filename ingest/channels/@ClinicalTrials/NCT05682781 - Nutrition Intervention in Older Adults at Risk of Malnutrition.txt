@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05682781
+Title: Nutrition Intervention in Older Adults at Risk of Malnutrition
+Official Title: Effects of Oral Nutritional Supplement With Dietary Counseling in Community Dwelling Older Adults at Risk of Malnutrition
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 196
+Topic: sarcopenia intervention
+
+SUMMARY:
+Thailand is one of the fastest aging countries and older adults are at greater risk of having inadequate nutrient intake and malnutrition (undernutrition). In the community setting, malnutrition has been linked to low muscle mass, sarcopenia, increased incidence of disability and functional impairments. The objective of this prospective, multicenter, randomized controlled, open-label, parallel-design study is to determine the effects of an oral nutritional supplement with dietary counseling on body weight, in comparison with dietary counseling alone, in community dwelling older adults at risk of malnutrition.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in body weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral Nutritional Supplement
+  - OTHER: Dietary Counseling
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05682781

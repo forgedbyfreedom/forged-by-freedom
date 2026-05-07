@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02150434
+Title: Evaluation of Automatic Oxygen Flow Titration During Walking in Patients With COPD
+Official Title: Evaluation of Automatic Oxygen Flow Titration During Walking in Patients With COPD
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: recovery exercise
+
+SUMMARY:
+The aim of the current study was to evaluate a new system (FreeO2) that automatically titrates oxygen flow to maintain stable SpO2, in patients with moderate or severe chronic obstructive pulmonary disease during exercise. The investigators hypothesized that continuous automatic adjustment of the oxygen flows during exercise would better maintain patients within the oxygenation target, reduce episodes of desaturation and hyperoxia and would improve walking exercise tolerance in comparison with fixed levels of low-flow oxygen and with compressed air breathing.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Time within predefined SpO2 target
+
+INTERVENTIONS:
+  - DEVICE: Automated oxygen titration
+  - DRUG: Compressed air
+  - DRUG: Oxygen constant flow
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02150434

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37837108
+Title: Learning-Based Seismic Velocity Inversion with Synthetic and Field Data.
+Authors: Farris, Clapp, Araya-Polo
+Journal: Sensors (Basel, Switzerland)
+Year: 2023
+Topic: velocity based training
+
+ABSTRACT:
+Building accurate acoustic subsurface velocity models is essential for successful industrial exploration projects. Traditional inversion methods from field-recorded seismograms struggle in regions with complex geology. While deep learning (DL) presents a promising alternative, its robustness using field data in these complicated regions has not been sufficiently explored. In this study, we present a thorough analysis of DL's capability to harness labeled seismograms, whether field-recorded or synthetically generated, for accurate velocity model recovery in a challenging region of the Gulf of Mexico. Our evaluation centers on the impact of training data selection and data augmentation techniques on the DL model's ability to recover velocity profiles. Models trained on field data produced superior results to data obtained using quantitative metrics like Mean Squared Error (MSE), Structural Similarity Index Measure (SSIM), and R2 (R-squared). They also yielded more geologically plausible predictions and sharper geophysical migration images. Conversely, models trained on synthetic data, while less precise, highlighted the potential utility of synthetic training data, especially when labeled field data are scarce. Our work shows that the efficacy of synthetic data-driven models largely depends on bridging the domain gap between training and test data through the use of advanced wave equation solvers and geologic priors. Our results underscore DL's potential to advance velocity model-building workflows in industrial settings using previously labeled field-recorded seismograms. They also highlight the indispensable role of earth scientists' domain expertise in curating synthetic data when field data are lacking.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37837108/

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06304233
+Title: The Protein Disrupted in Schizophrenia 1 (DISC1) as a Novel Biomarker for Cardiac Disease
+Official Title: The Protein Disrupted in Schizophrenia 1 (DISC1) as a Novel Biomarker for Cardiac Disease - The Link Between DISC1 and Cardiac Function in Patients With Schizophrenia
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 120
+Topic: vitamin D muscle
+
+SUMMARY:
+To study the association between DISC1 RNA expression levels and cardiac function in patients with schizophrenia.
+
+DETAILED DESCRIPTION:
+Potential participants interested in the study will be screened for eligibility. Those who meet the eligibility criteria will be informed about the study, the expected investigations and its potential risks. All participants giving written informed consent will be enrolled into the study. Participants will be interviewed, given questionnaires, have blood and/or skin samples and clinical parameters taken. Cardiac function parameters will be measured using electrocardiography, echocardiography and magnetic resonance imaging.
+
+PRIMARY OUTCOMES:
+  - Left Ventricular Ejection Fraction (LVEF) measured by 2D Echocardiography
+  - Left Ventricular Ejection Fraction (LVEF) measured by 3D Echocardiography
+  - DISC1 mRNA quantification
+  - Levels of high sensitive-CRP
+  - Levels of CK-MB
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Echocardiography
+  - DIAGNOSTIC_TEST: Cardiac Magnetic Resonance Imaging
+  - DIAGNOSTIC_TEST: Electrocardiography
+  - OTHER: Blood sampling
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06304233

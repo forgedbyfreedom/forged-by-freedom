@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06443593
+Title: Effect of Micronutrient Supplementation on Nerve Conduction Velocity in T1D- RCT
+Official Title: Vitamin B12, Vitamin D and Iron Supplementation for Improvement of Nerve Conduction Velocities in Children and Youth With Type 1 Diabetes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: vitamin D muscle
+
+SUMMARY:
+Type 1 diabetes can complicate to peripheral neuropathy due to preferential involvement of small unmyelinated nerve fibers (pain and temperature sensation) followed by myelinated nerve fibers (vibration and proprioception). The SEARCH for diabetes in youth study found diabetic neuropathy in 7% of T1D youth. The clinical form of peripheral neuropathy is rare in childhood and pathophysiological changes begin during childhood and accelerate in puberty. Adolescents with these changes can be picked up more reliably by electrophysiological studies than by clinical examination. Nerve conduction studies are the gold standard diagnostic tests for detection of peripheral neuropathy. Role of vitamin B12 in nerve regeneration is well known while causal association of vitamin D deficiency in type 1 diabetes and its role in axonal degeneration is also reported. The previous ongoing studies from authors' group have shown relationship between poor oral iron intake and subclinical neuropathy in children with type 1 diabetes (manuscript in submission). The present randomised clinical trial is aimed at assessing vitamin B12, vitamin D and iron supplementation for improvement of nerve conduction velocities in children and youth with type 1 diabetes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Nerve conduction velocity
+  - Serum vitamin B12, serum ferritin, serum vitamin D3
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Tablet VitaBliss vitamin B12 (2.2 mcg)
+  - DIETARY_SUPPLEMENT: Tablet VitaBliss vitamin B12 (2.2 mcg) and Syrup Orofer (5 ml = 50 mg)
+  - DIETARY_SUPPLEMENT: Tablet VitaBliss vitamin B12 (2.2 mcg) and Tablet Tayo (60000 IU)
+
+ELIGIBILITY:
+Age: 10 Years to 22 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06443593

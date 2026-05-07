@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05369585
+Title: Mode of Action (MoA) Study of TOTUM-63 in Individuals at Increased Cardio-metabolic Risk
+Official Title: An Open-label, Single Arm, Clinical Trial to Explore the Consumption Effects of TOTUM-63 on Metabolic Signatures, Microbiome, Energy Metabolism and Post-prandial Nutrient Processing in Individuals at Increased Cardio-metabolic Risk
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: protein supplementation
+
+SUMMARY:
+This clinical study aims to investigate the effects of TOTUM-63, a mix of 5 plant extracts, consumed at the daily regimen of three times per day, on cardiometabolic health and gut microbiota profile in overweight-obese individuals.
+
+DETAILED DESCRIPTION:
+In 2019, over 460 million adults had diabetes worldwide. Moreover, it was estimated by the International Diabetes Federation that about 700 million adults will have type 2 diabetes (T2D) by 2045. Valbiotis is a research \& development company dedicated to scientific innovation for preventing and reducing the risk of metabolic and cardiovascular disease (CVD) using specific combinations of plant-based molecules. Valbiotis developed a formula (TOTUM-63) which is composed by the association of five plant extracts.
+
+Given the results obtained in pre-clinical studies, as well as the good tolerance and first efficacy results of TOTUM-63 in two clinical trials on human subjects, this research aims to investigate the effects of TOTUM-63 on cardiometabolic health and gut microbiota profile in overweight-obese individuals. TOTUM-63 will be tested (5g acutely and 5g/d over 8 weeks of supplementation) on energy metabolism, post-prandial nutrients metabolism and hepatic health in overweight and obese subjects. Blood and feces samples collected before, and after the supplementation will allow to perform metabolomic, transcriptomic and metagenomics analyses to further explore the potential mechanisms of action of TOTUM-63.
+
+PRIMARY OUTCOMES:
+  - Evolution of blood pressure
+  - Evolution of heart rate
+  - Evolution of weight
+  - Evolution of waist circumference
+  - Evolution of body mass index
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: TOTUM-63
+
+ELIGIBILITY:
+Age: 30 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05369585

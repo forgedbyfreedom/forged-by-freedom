@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06595719
+Title: Multi-Strain Probiotics Supplementation With Standard Care in Mild to Moderate Ulcerative Colitis
+Official Title: Assessing Gut Microbiota, Mucosal Healing Markers, and Metabolites in Mild to Moderate Ulcerative Colitis Treated With Multi-Strain Probiotics
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 124
+Topic: physical activity intervention
+
+SUMMARY:
+Probiotics are one of the adjunctive treatments that have been extensively explored for Ulcerative colitis (UC) disease management. Probiotics, a group of beneficial bacteria, can bring various health benefits when adequately supplied to the body, especially for gut wellness. In particular, for UC patients, gut dysbiosis is one of the contributing factors in their pathogenesis. Thus, the supplementation of probiotics in combination with standard treatment can potentially help in relieving symptoms as well as promoting mucosal healing for long-term remission.
+
+DETAILED DESCRIPTION:
+Inflammatory bowel disease (IBD) has progressively risen globally, becoming more prevalent in recent years. Crohn's disease (CD) and UC are classified as two of IBD variations resulting in range of symptoms that can negatively impact patients' quality of life. The underlying cause of UC is complicated, encompassing genetic, environmental, and immunological factors. Despite breakthroughs in medical treatment, obtaining and maintaining remission in UC remains a substantial challenge, especially for people with mild to moderate disease severity. Standard treatment for UC consists of anti-inflammatory drugs, antibiotics, immunosuppressants, and, in severe instances, biologic therapy and possibly surgery. While these procedures have proven effective, a significant proportion of patients endure ongoing symptoms or undesirable consequences, emphasizing the need for alternative or supplementary therapeutic options.
+
+In recent years, studies have focused on the gut microbiota as an important contributor in the pathophysiology of UC. Individuals with UC frequently exhibit altered microbial composition and dysbiosis, implying a possible role for gut microbiome-modulating therapies. Probiotics, which are live microorganisms that provide health advantages have emerged as a viable area for research in UC management. The rationale for using probiotics in UC lies in their potential to restore microbial balance, strengthen the intestinal barrier, and modulate the immune response. Previous studies have shown varying degrees of success with probiotics administration in terms of clinical and laboratory outcomes.
+
+This proposed research seeks to contribute to the growing body of knowledge on the role of probiotics in UC by evaluating the efficacy of a multi-strain probiotic supplement. By combining these probiotics with standard care, we aim to explore the synergistic effects that may lead to improved clinical outcomes, endoscopic remission, and enhanced quality of life in individuals with mild to moderate UC. Understanding the impact of multi-strain probiotics on UC could provide clinicians with a valuable adjunctive tool for UC treatment strategies. Furthermore, elucidating the underlying mechanisms by which probiotics exert their effects enable better knowledge regarding the interplay between the gut microbiota and UC management. Thus, it can bring benefits to both patients and health institutions which helped in reducing the cost and maintaining long term remission.
+
+PRIMARY OUTCOMES:
+  - Gut microbiome analysis
+  - Faecal Calprotectin Level
+  - C-reactive Protein (CRP) Level
+  - Erythrocyte Sedimentation Rate (ESR) Level
+  - Change in White Blood Cell (WBC) Count
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Multi-Strain Probiotics
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06595719

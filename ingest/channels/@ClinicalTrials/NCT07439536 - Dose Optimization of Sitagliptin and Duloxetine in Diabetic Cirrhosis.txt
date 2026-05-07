@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07439536
+Title: Dose Optimization of Sitagliptin and Duloxetine in Diabetic Cirrhosis
+Official Title: Evaluation of Model-Guided Dose Adjustment of Sitagliptin and Duloxetine Across Child-Pugh Classes Compared to Non-Cirrhotic Diabetic Patients
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This study was a prospective, interventional, two-part pilot clinical study conducted over 3 months on cirrhotic patients with diabetes mellitus and diabetic neuropathy, evaluating the real-world applicability of selected PBPK-guided dosing regimens. Patients were stratified according to Child-Pugh class (CP-A , CP-B, and CP-C) in case of sitagliptin and CP-A in duloxetine at doses corresponding to the closest commercially available strengths to Simcyp®-optimized doses.
+
+Clinical evaluation included glycemic parameters(HbA1c,fasting blood glucose,2-hr post prandial glucose level) and pain reduction. Routine laboratory investigations were conducted to assess efficacy and safety and included liver function tests (serum albumin, total bilirubin, alanine aminotransferase \[ALT\],and aspartate aminotransferase \[AST\]), kidney function tests (serum creatinine and blood urea nitrogen \[BUN\]),and CBC.
+
+DETAILED DESCRIPTION:
+This study was a prospective, interventional, two-part pilot clinical study conducted over 3 months on Egyptian cirrhotic patients with diabetes mellitus and diabetic neuropathy. Adult patients aged \>18 years with confirmed liver cirrhosis, concomitant diabetes mellitus and diabetic neuropathy were eligible for inclusion. Patients were experienced acute episodes of disease associated with deterioration of hepatic function within 2 months prior to screening, and received concomitant medications known to strongly interact with the study drugs were excluded. In part 1: Sitagliptin dosing was determined based on Simcyp -generated predictions and clinical assessment. 100mg,100 mg, 50 mg, and 50 mg received by control, CP-A, CP-B, and CP-C cirrhosis patients, respectively, orally once daily. In part 2: Duloxetine dosing was determined based on Simcyp-generated predictions and clinical assessment. 60 mg ,30 mg received by control, and CP-A cirrhotic patients orally once daily, respectively. Clinical evaluation included glycemic parameters(HbA1c,fasting blood glucose,2-hr post prandial glucose level) and pain reduction. Routine laboratory investigations were conducted to assess efficacy and safety and included liver function tests (serum albumin, total bilirubin, alanine aminotransferase \[ALT\],and aspartate aminotransferase \[AST\]), kidney function tests (serum creatinine and blood urea nitrogen \[BUN\]),and CBC.
+
+PRIMARY OUTCOMES:
+  - Management of diabetes mellitus and diabetic neuropathy
+
+INTERVENTIONS:
+  - DRUG: Sitagliptin (Januvia)
+  - DRUG: Sitagliptin (JANUVIA®)
+  - DRUG: Sitagliptin (JANUVIA®)
+  - DRUG: Sitagliptin (JANUVIA®)
+  - DRUG: Duloxetine (60 mg) once daily
+
+ELIGIBILITY:
+Age: 18 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07439536

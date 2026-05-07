@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07400198
+Title: Gait and Bone Health in SMA
+Official Title: Identification of Gait-related Digital Biomarkers of Bone Health in Spinal Muscular Atrophy
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 22
+Topic: vitamin D muscle
+
+SUMMARY:
+The objective of this study is to understand how spatiotemporal and kinetic gait parameters are associated with bone health in pwSMA who are receiving DMT. We hypothesize that gait parameters are associated with BMD and can determine fracture risk in pwSMA. This is an observational study that involves one in-clinic visit (approximately 3 hours) with remote follow-up visits (approximately 15 minutes) every 3 months for 1 year to collect fracture and medical history. Each of the assessments included in this study are non-interventional and are not intended as a treatment nor are they at the level of standard of care.
+
+DETAILED DESCRIPTION:
+Addressing bone health is a high priority and remains a concern for the SMA community despite the availability of DMTs. Fractures often have devastating, irrecoverable impacts on function, especially in ambulatory pwSMA. While the most recent standards of care for SMA recommend annual screening, supportive treatments are not recommended until there has been a fracture, a reactive approach which may not be enough to mitigate LBM. Implementing novel, wearable technology and machine learning (ML) models to identify fracture risk will lead to a proactive approach to manage bone health and attenuate the negative sequalae of fractures. This is an observational cross-sectional study of ambulatory children and adults with SMA. The aims of this study are to (1) Identify gait-related digital biomarkers of bone health in ambulatory pwSMA, (2) Determine the ability of digital biomarkers to differentiate between pwSMA with and without a history of fractures, and (3) Investigate the ability of risk profiles derived from the digital biomarkers to predict prospective fractures over one year.
+
+PRIMARY OUTCOMES:
+  - Dual X-Ray Absorptiometry (DXA)
+  - Blood collection
+  - Fracture history
+  - Fall history
+  - Collection of spatiotempoal and kinetic gait parameters using instrumented insoles (AI-Sole)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 8 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07400198

@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05866107
+Title: App and Body Fat Scale in the Management of Overweight Patients
+Official Title: Effectiveness and Feasibility of Self-Monitoring for Weight Management in Individuals With Mental Disorders Using Digital Intervention ("SWIM" Trial)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 204
+Topic: resistance training
+
+SUMMARY:
+This study tests whether using a health app (Huawei Health) and a smart body fat scale can help overweight patients with schizophrenia or bipolar disorder lose weight and stay engaged in their health.
+
+What We're Testing:
+
+1. Patients who use the app and scale for 4 months (Group 1) will lose more weight than those who use them for 2 months (Group 2).
+2. Patients who track their weight, diet, and exercise regularly (≥3 times/week) will lose more weight than those who don't.
+3. Seeing weight loss results may motivate patients to keep using the app and scale.
+
+How It Works:
+
+Patients weigh themselves weekly with the scale (auto-syncs to the app) and upload dietary log in Huawei Health app. The app will gives personalized diet/exercise tips and tracks progress. Doctors and nutritionists provide extra support through messages.
+
+Goal:
+
+To see if this digital tool + professional support combo works better for long-term weight management.
+
+DETAILED DESCRIPTION:
+The investigators will recruit the patients diagnosed with schizophrenia or bipolar disorder from Beijing Anding Hospital. Participants will use a mobile phone app (Huawei Health) to collect data on daily activities and calorie consumption. The smart body fat scale with high-precision weighing chip (Huawei Scale 2pro) will be used to collect heart rate, weight, BMI, body type, basal metabolic rate, fat rate, fat free body weight, skeletal muscle mass, bone salt content, visceral fat grade, body water (%), body protein rate and body composition, and all data will be uploaded to the app. Participants could also record their daily dietary intake (for calculation of calorie intake) in the health app. This is a 6-month, single-center, stepped wedge-shaped cluster randomized study. It is planned to recruit 204 overweight subjects from 6 units from Beijing Anding Hospital. The six clinical units comprise four inpatient wards, one day rehabilitation unit, and one outpatient department. All units (clusters) were randomly allocated to two batches (3 units each) using a computer-generated sequence. Batch 1 received the intervention from Month 3 to Month 6, while Batch 2 started from Month 5 to Month 6 (total study duration: 6 months). All units underwent baseline observation during Months 1-2, followed by a 2-week transition period for training. All clusters follow usual care prior to their assigned intervention period, with months 1-2 serving as baseline control and months 7-8 for full-intervention observation across all units. Each unit operates as an independent intervention cluster with dedicated staff teams and unit-specific WeChat-based communication groups. Intervention materials, reinforcement messages, counseling content, and technical support are synchronized with each cluster's assigned timeline. Clinical staff will be trained on intervention delivery, digital tool usage, and adherence protocols and are required to adhere strictly to the scheduled rollout sequence. Monitoring and supervision mechanisms will be implemented to track adherence, engagement, and protocol compliance in real-time. Each cluster undergoes a two-week pre-implementation transition period for device distribution, app installation, and training. The intervention combines self-weighing using using smart body fat scale, dietary logging, exercise management, and behavioral reinforcement. Behavioral reinforcement includes weekly personalized feedback messages and real-time alerts for missed self-monitoring via WeChat messages. We assess clinical, functional, and subjective outcomes at baseline and monthly intervals. Socio-demographic and clinical characteristics (age, sex, education, income, medical history) are extracted from EHRs. Body composition metrics (BMI, body fat percentage, etc.) are automatically recorded during weigh-ins. Subjective outcomes will be collected using validated scales at Month 1,2,3 and 6. Smart scale pairing success rate and weekly weigh-in adherence wi
+
+PRIMARY OUTCOMES:
+  - Percent weight loss
+  - Adherence to self-monitoring
+
+INTERVENTIONS:
+  - DEVICE: Effectiveness and Feasibility of Self-Monitoring for Weight Management in Individuals with Mental Disorders Using Digital Intervention ("SWIM" trial)
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05866107

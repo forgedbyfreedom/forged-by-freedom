@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00680901
+Title: LOGiC - Lapatinib Optimization Study in ErbB2 (HER2) Positive Gastric Cancer: A Phase III Global, Blinded Study Designed to Evaluate Clinical Endpoints and Safety of Chemotherapy Plus Lapatinib
+Official Title: A Phase III Study for ErbB2 Positive Advanced or Metastatic Gastric, Esophageal, or Gastroesophageal Junction Adenocarcinoma Treated With Capecitabine Plus Oxaliplatin With or Without Lapatinib
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 545
+Topic: creatine supplementation
+
+SUMMARY:
+This was an international multi-center trial that enrolled patients with locally advanced, unresectable, or metastatic gastric, esophageal, or gastro-esophageal junction cancer whose tumors had amplification of the ErbB2 (HER2) gene. The trial investigated whether lapatinib, when added to the chemotherapy regimen, capecitabine plus oxaliplatin (CapeOx), extended the time to progression and overall survival. Tumor ErbB2 (HER2) status had to be known before trial entry. CapeOx was administered to all patients, and patients were randomly assigned to receive either lapatinib or placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Overall Survival at the Time of Primary Analysis
+  - Overall Survival in All Randomized Participants at the Time of Primary Analysis
+
+INTERVENTIONS:
+  - DRUG: Lapatinib
+  - DRUG: Placebo
+  - DRUG: Capecitabine
+  - DRUG: Oxaliplatin
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00680901

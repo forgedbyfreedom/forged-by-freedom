@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04229407
+Title: Evaluate the Effect of Dietary Supplement on Muscle Mass and Physical Performance for Over 50 Years Old People
+Official Title: A Post-marketing, Double-blind, Placebo-controlled, Randomized, Parallel Study to Evaluate the Effect of Dietary Supplement on Muscle Mass and Physical Performance Among People Aged 50 Years and Older
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: fat loss muscle
+
+SUMMARY:
+To assess the ability and safety profile of dietary supplement to augment lean body mass, muscle strength, and physical performance among people aged 50 years and older
+
+DETAILED DESCRIPTION:
+In light of the rapidly expanding aging population, sarcopenia and related disorders are emerging as a major public health problem of the 21st century.Sponsor has produced a dietary supplement, which has been on market in Taiwan. The proposed study is conducted to confirm whether the amino acid supplementation is able to enhance the magnitude of gain in lean body mass and muscle strength in middle-aged and older adults with muscle loss or sarcopenia undergoing exercise training.
+
+PRIMARY OUTCOMES:
+  - The proportion of subjects achieving clinically meaningful improvement in Increment ≥ 3% in bone-free lean body mass (unit: kilogram) at 12 weeks after baseline
+  - The proportion of subjects achieving clinically meaningful improvement in Increment ≥ 3% in 30-sec chair stand test (unit: number of stand) at 12 weeks after baseline
+  - The proportion of subjects achieving clinically meaningful improvement in Increment ≥ 3% in strength of hand grip (unit: kilogram) at 12 weeks after baseline
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary supplement
+  - DIETARY_SUPPLEMENT: vitamin B
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04229407

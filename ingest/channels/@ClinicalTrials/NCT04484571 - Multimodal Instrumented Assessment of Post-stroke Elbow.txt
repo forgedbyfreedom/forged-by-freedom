@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04484571
+Title: Multimodal Instrumented Assessment of Post-stroke Elbow
+Official Title: Robotic Rehabilitation and Multimodal Instrumented Assessment of Post-stroke Elbow Motor Functions - a Randomized Controlled Trial Protocol
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: resistance training
+
+SUMMARY:
+The proposed clinical trial will employ the NEUROExos Elbow Module (NEEM), an active robotic exoskeleton, for the passive mobilization and active training of elbow flexion and extension in 60 sub-acute and chronic stroke patients with motor impairments (hemiparesis and/or spasticity) of the right arm. The study protocol is a randomized controlled trial consisting of a 4-week functional rehabilitation program, with both clinical and robotically instrumented assessments to be conducted at baseline and post-treatment.
+
+DETAILED DESCRIPTION:
+The reliable assessment, attribution, and alleviation of upper-limb joint stiffness are essential clinical objectives in the early rehabilitation from stroke and other neurological disorders, to prevent the progression of neuromuscular pathology and enable proactive physiotherapy towards functional recovery. However, the current clinical evaluation and treatment of this stiffness (and underlying muscle spasticity) are severely limited by their dependence on subjective evaluation and manual limb mobilization, thus rendering the evaluation imprecise and the treatment insufficiently tailored to the specific pathologies and residual capabilities of individual patients. To address these needs, the proposed clinical trial will employ the NEUROExos Elbow Module (NEEM), an active robotic exoskeleton, for the passive mobilization and active training of elbow flexion and extension in stroke patients with motor impairments (hemiparesis and/or spasticity) of the right arm. The study protocol provide a functional rehabilitation program, with both clinical and robotically instrumented assessments to be conducted at baseline and post-treatment.
+
+PRIMARY OUTCOMES:
+  - Change in the score of the upper-extremity section of Fugl-Meyer assessment scale (FM 0-66) higher score means better
+  - Change in the score of Modified Ashworth Scale (MAS 0-5 scoring 1+ as 2 for statistical analysis) higher score means worse
+
+INTERVENTIONS:
+  - DEVICE: Neuroexsos elbow module
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04484571

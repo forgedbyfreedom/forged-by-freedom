@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06539650
+Title: Neural Adaptations to a Single Session of Metronome-Paced Strength Training
+Official Title: Neural Adaptations to a Single Session Metronome-Paced Strength Training: Insights From Neuroscience and Human Movement Variability
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: resistance training
+
+SUMMARY:
+The aim of the study is to investigate the effects of incorporating variability within a single session of Resistance Training (RT) methods on the neural adaptations along the corticospinal tract and on neuromuscular function. The literature suggests that RTis one of the most common modalities to enhance and restore muscle function and its practice results in adaptation in neural and morphological adaptations. Moreover, it is also known that muscle contraction relies on the coordination and regulation of the descending neural drive from the motor cortex to the motoneurons and from the motoneurons to the muscles. However, traditional RT programs tend not to address this motor control dimension. Recent approaches such as metronome paced strength training have been used to cover this motor control dimension through a greater control and consciousness of movement. However, this methodology tends not to incorporate the inherent variability and complex, fractal-like fluctuations that characterize human movement. The investigators propose that incorporating variability through a fractal-like metronome approach will speed up the neural adaptations which will be useful in injury rehab
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Corticospinal Excitability (CSE) changes Pre-to-Post intervention both within and between Fractal paced, Isochronus Paced and Self paced conditions
+  - Short-Interval Intracortical Inhibition (SICI) changes Pre-to-Post intervention both within and between Fractal paced, Isochronus Paced and Self paced conditions
+  - Corticospinal Silent Period (CSP) changes Pre-to-Post intervention both within and between Fractal paced, Isochronus Paced and Self paced conditions
+  - Intracortical Facilitation (ICF) changes Pre-to-Post intervention both within and between Fractal paced, Isochronus Paced and Self paced conditions
+  - Lumbar Evoked Potentials (LEP) changes Pre-to-Post intervention both within and between Fractal paced, Isochronus Paced and Self paced conditions
+
+INTERVENTIONS:
+  - OTHER: Fractal Paced
+  - OTHER: Isochronus Paced
+  - OTHER: Self Paced
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06539650

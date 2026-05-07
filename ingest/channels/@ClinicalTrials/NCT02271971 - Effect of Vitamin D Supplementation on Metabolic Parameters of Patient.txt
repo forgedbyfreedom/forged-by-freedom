@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02271971
+Title: Effect of Vitamin D Supplementation on Metabolic Parameters of Patients With Psoriasis
+Official Title: Effect of Vitamin D Supplementation on Metabolic Parameters of Patients With Moderate to Severe Psoriasis
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to determine whether supplementation with oral vitamin D (cholecalciferol) improves metabolic parameters in patients with moderate to severe psoriasis.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Total Cholesterol Levels
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D3
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02271971

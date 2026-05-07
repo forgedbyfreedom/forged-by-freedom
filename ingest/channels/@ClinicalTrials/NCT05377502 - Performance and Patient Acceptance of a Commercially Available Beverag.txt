@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05377502
+Title: Performance and Patient Acceptance of a Commercially Available Beverage as Compared to an Oral Glucose Solution for Oral Glucose Tolerance Tests in Cystic Fibrosis (CF) Patients Who Are Screened for CF-related Diabetes.
+Official Title: Performance and Patient Acceptance of a Commercially Available Beverage as Compared to an Oral Glucose Solution for Oral Glucose Tolerance Tests in Cystic Fibrosis (CF) Patients Who Are Screened for CF-related Diabetes.
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 20
+Topic: sports nutrition
+
+SUMMARY:
+Rationale: Cystic fibrosis (CF) is an incurable genetic disease that affects the pulmonary system, digestive system, reproductive system and the sweat glands. 85 percent of patients with cystic fibrosis have pancreatic insufficiency, more than half of whom will develop CFRD. CFRD affects patients nutritional state and is associated with a decline in lung function and decreased longevity. Because early treatment with insulin can reverse some of this decline and mortality, CF patients are screened yearly for CFRD using an oral glucose tolerance test (OGTT). During an OGTT patients have to drink a solution of 75 grams of glucose in water and blood glucose levels are measured after 0 minutes and 120 minutes.
+
+Drinking the glucose solutions is experienced by patients as uncomfortable, as it causes nausea and sometimes even leads to vomiting. Therefore, some patients do not want to undergo the OGTT which results in patients getting diagnosed in a later stadium.
+
+Objective: To compare the performance of a glucose tolerance test ("AATT") with a commercially available beverage to the results of the conventional OGTT with respect to diagnosing IGT and CFRD in patients with CF.
+
+Study design: Randomized crossover trial Study population: Adult cystic fibrosis patients from the outpatient of CF-centre Amsterdam; 10 patients with CFRD who are not fully insulin dependent and 10 patients who have exocrine pancreatic insufficiency but no known CFRD.
+
+Intervention (if applicable): The groups will be undergoing both the oral glucose tolerance test with the standard glucose solution (OGTT), as the oral glucose tolerance test where the glucose solution is replaced by commercially available beverage (AATT).
+
+Main study parameters/endpoints: Serum glucose levels at 120 minutes after ingestion of either the standard glucose solution or the commercially available beverage.
+
+Nature and extent of the burden and risks associated with participation, benefit and group relatedness: Patients who have no known CFRD will be asked to undergo one additional glucose tolerance test, which involves a visit to the outpatient clinic, during which patients need to be fasting since 22:00 the evening before. CF patients already diagnosed with CFRD will be asked to visit the outpatient clinic two times. Patients who use short-acting insulin need to have stopped this as well from 23:59 the evening before the test. These patients may become hyperglycaemic, but since they are not fully insulin dependent there is no risk of keto-acidosis. During the test an I.V. cannula will be placed so blood samples can be taken at baseline, after 30 minutes, 60 minutes, 90 minutes and 120 minutes. There is a minor risk the I.V. cannula will lead to phlebitis.
+
+The overall risk for participation in the study is considered low given the fact that patients who are insulin dependent (i.e. also in need of long-acting insulin) are excluded, so the possibility on hyperglycaemia and ketosis seems remote. The commercially available beverage (AA-drink) used is already determined as a safe sports drink by the Food and Consumer Product Safety Authority (NVWA) in the EU.
+
+DETAILED DESCRIPTION:
+Cystic fibrosis (CF) is an incurable, genetic disorder that is caused by a defect in the cystic fibrosis transmembrane conductance regulator gene (CFTR-gene). The CFTR-gene synthesises the CFTR-proteins that form the channel responsible for the transportation of chloride ions at the cell membrane. The CFTR protein is present at the epithelium of the lungs, digestive system, reproductive system and the sweat glands. The life expectancy of a patient diagnosed with CF is 40-45 years and in the Netherlands about 1550 people have CF. Among caucasians it is the most common genetically inherited disease.
+
+One of the common comorbidities in CF is pancreatic insufficiency (PI), it affects 85% of the CF population. Pancreatic insufficiency expresses itself in enzymatic deficiencies (exocrine insufficiency) and insulin deficiency (endocrine insufficiency). The insulin deficiency in its turn can cause cystic fibrosis related diabetes (CFRD) after a pre-diabetic state called impaired glucose tolerance (IGT). CFRD is a unique form of diabetes and is extremely common in CF patients, it is occurring in 40-50% of adult CF patients. CFRD does not only affect patients nutritional status, it also leads to pulmonary decline and earlier mortality as compared to patients without CFRD. Early insulin therapy appears to revers some of the decline found with CFRD. Therefore it is recommended to screen for CFRD yearly so it is caught at an early stadium. For screening the oral glucose tolerance test (OGTT) or the glucose challenge test is used. During the OGTT fasting patients have to drink a 300 ml solution that contains 75 grams of glucose following an overnight fast. The solution has to be finished in 15 minutes. Then the blood glucose level is measured at 0 minutes and 120 minutes. CFRD is diagnosed when the fasting glucose level is \> 7mmol/L or the 120 minutes glucose level is \> 11.1 mmol/L. Impaired Glucose Tolerance, or IGT, is diagnosed when the glucose level after 120 minutes is \> 7.8 mmol/L and \<11.1 mmol/L.
+
+The OGTT is perceived as uncomfortable by patients. The glucose solution makes patients nauseous and can even cause vomiting. This leads to patients refusing to undergo the OGTT and being diagnosed with CFRD in a later stadium. The current AMC database for CF patients consisted in 2020 of 127 patients. Of 127 adult CF patients in Amsterdam UMC, 42 patients have known CFRD. Of the remaining 85, 50 patients have exocrine pancreatic insufficiency for which they take pancreatic enzyme suppletion. This group is most at risk to develop CFRD or a disturbance in their glucose metabolism, so they would have the most benefit from a yearly OGTT. However, only 19 (38%) of these patients underwent an OGTT in 2020 and -although the reason for abstaining from this test is not recorded, we know by experience that a percentage of these patients refuses to be tested because they feel aversion against taking the glucose solution. In 2019 the database consisted of 121 patien
+
+PRIMARY OUTCOMES:
+  - Serum glucose levels
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: OGTT
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05377502

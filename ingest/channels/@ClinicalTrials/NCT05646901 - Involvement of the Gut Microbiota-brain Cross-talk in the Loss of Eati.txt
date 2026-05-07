@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05646901
+Title: Involvement of the Gut Microbiota-brain Cross-talk in the Loss of Eating Control
+Official Title: Involvement of the Gut Microbiota-brain Cross-talk in the Loss of Eating Control (GMBCrossTalkFood)
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 116
+Topic: weight loss exercise
+
+SUMMARY:
+Overweight and obesity are increasingly prevalent worldwide. These bodyweight disorders are closely related to deficiencies in the control of food intake. A potential yet unexplored mechanism to explain the loss of eating control is the interaction between the gut microbiota and the brain. The mechanisms underlying the communication between the gut microbiome and the host remain largely unexplored. These mechanisms could occur in part through small non-coding RNAs, called microRNAs (miRNAs). miRNAs regulate epigenetic mechanisms to control gene expression.
+
+Two hypotheses have been proposed:
+
+I. The interaction between the gut microbiota and the brain and its associated epigenetic changes play an important role in the overweight-related loss of eating control and metabolic imbalance.
+
+II.The composition and functionality of the gut microbiota are associated with circulating microRNAs and glycemic variability and modify the effect of physical activity on cognitive parameters and brain microstructure (R2\*).
+
+The study includes a cross-sectional design (comparison of subjects with and without obesity) to evaluate parameters associated with food addiction through validated questionnaires. The metabolic and behavioral profiles of the cohort will be characterized. The medial prefrontal cortex connectivity will be studied using functional magnetic resonance imaging (fMRI). The composition and functionality of the gut metagenome of the subjects will be analyzed in association with metabolic and behavioral parameters and imaging data. miRNAs can act as mediators of epigenomics of the effects of the metagenome that impact the brain, therefore it will be analyzed a broad profile of miRNAs circulating in plasma.
+
+DETAILED DESCRIPTION:
+The study includes a cross-sectional design (comparison of subjects with and without obesity) to assess parameters associated with food addiction through validated questionnaires. The metabolic and behavioral profile of the cohort and medial prefrontal cortex (mPFC) connectivity using fMRI will be characterized. The composition and functionality of the gut metagenome of these subjects will be analyzed in terms of its links to metabolic and behavioral parameters and imaging data. Since miRNAs may act as epigenomic mediators of metagenome effects impacting the brain, a broad profile of miRNAs circulating in plasma will also be analyzed.
+
+Subjects and methods:
+
+A cohort of subjects (n=100, 50% with obesity) will be recruited in whom parameters of food addiction (reward sensitivity, punishment sensitivity, and Yale Food Addiction Scale (YFAS 2.0 score) will be collected. The project will be carried out in subjects with obesity (25 men, 25 women, Body mass index (BMI) \> = 30kg/m2) and subjects without obesity, similar in age and sex (25 men, 25 women, BMI \<30kg/m2). A comprehensive metabolic profile (body weight, glucose and lipid profile, insulin resistance, blood pressure, and plasma and fecal metabolomics) will be analyzed.
+
+A. Cross-sectional study:
+
+Patients with obesity previously scheduled at the Service of Endocrinology, Diabetes, and Nutrition (UDEN) of the Hospital "Dr. Josep Trueta" of Girona (Spain) will be recruited and studied. Subjects without obesity will also be recruited through a public announcement.
+
+A glycemia sensor will be implanted for ten days, as well as an activity and sleep tracker device to record physical activity during this period of time. Interstitial subcutaneous glucose concentrations will be monitored on an outpatient basis for a period of time of 10 consecutive days using a glucose sensor validated by the FDA (Dexcom G6 ®). The sensor will be implanted on day 0 and will retire on day 10 mid-morning. Glucose records will preferably be evaluated on days 2 to 9 to avoid the bias caused by the insertion and removal of the sensor, which prevents a sufficient stabilization of the monitoring system. The characteristic glycemic pattern of each patient will be calculated on average from the profiles obtained on days 2 to 9.
+
+After 10 days, urine and feces will be collected for the study of the gut microbiota. Subjects will undergo a fasting blood test and after eating, neuropsychological testing will be performed. Subsequently, the sensor and the device for monitoring physical activity/sleep will be removed. Lastly, fMRI will be done to evaluate the iron content in the brain (R2\*) and the parameters of "Diffusion Tensor Imaging" in different brain territories. We will characterize mPFC connectivity in subjects in this cohort by resting-state functional MRI and structural connectivity by MRI.
+
+The gut metagenomic composition and functionality associated with these cognitive traits, miRNA, and metabolites in plasma and bra
+
+PRIMARY OUTCOMES:
+  - Concentration of advanced glycation end products (AGE) receptor agonists.
+  - Glycemic variability.
+  - The percentage of time in glucose target range (glucose level 100mg/dl-125mg/dl)
+  - The glycaemic risk measured with low blood glucose index (LBGI)
+  - The glycaemic risk measured with high blood glucose index (HBGI).
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05646901

@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04821557
+Title: Effect of Microbial Protease Supplementation on Postprandial Amino Acid Levels
+Official Title: Effect of Microbial Protease Supplementation on Postprandial Amino Acid Levels in Healthy Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: exercise muscle mass
+
+SUMMARY:
+Dietary protein is digested in the stomach and intestines to smaller peptides and 20 individual amino acids which, when absorbed by the gut into circulation and taken up by skeletal muscle, help stimulate muscle protein synthesis (MPS). Amino acids also provide the building blocks for muscle proteins that contribute to lean mass gains and increased strength following resistance exercise. Therefore, strategies to efficiently maximize amino acid exposure without overconsumption are warranted.
+
+Oral enzyme supplementation is a candidate approach to optimize amino acid absorption from dietary protein and protein supplements. Microbial proteases, approved for dietary supplement use, can theoretically speed up the conversion of protein and peptides to amino acids. Protease supplements have been marketed to promote muscle strength by optimizing amino acid absorption, however the clinical evidence is limited. This work will support that ingestion of protease supplements with a meal can allow individuals to more efficiently increase amino acid levels from a given amount of dietary protein.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Total plasma branched chain amino acid(BCAAs) area under the curve(AUC)
+  - Plasma BCAAstime-to-peak
+  - Plasma BCAAsC(MAX)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protease + Protein
+  - DIETARY_SUPPLEMENT: Placebo + Protein
+
+ELIGIBILITY:
+Age: 20 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04821557

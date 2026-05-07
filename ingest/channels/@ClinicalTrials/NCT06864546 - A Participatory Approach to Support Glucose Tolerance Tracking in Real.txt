@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06864546
+Title: A Participatory Approach to Support Glucose Tolerance Tracking in Real-Life of Patients With Type 2 Diabetes
+Official Title: A Participatory Approach to Support Glucose Tolerance Tracking in Real-Life of Patients With Type 2 Diabetes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Recent studies show that lifestyle interventions, such as exercise, healthy diet, and education, can help prevent type 2 diabetes in high-risk individuals, and even reverse the disease in its early stages. However, not many methods have been developed to use modern technology to help people manage their diabetes in a more active way, in line with participatory medicine, where patients play a key role in their treatment.
+
+In this study, the investigators propose an e-health approach to automatically collect health data from patients, including information from continuous glucose monitor (CGM) and other health tracking devices, in real-life conditions. The investigators will also develop a simple and easy-to-understand tool to track patient's metabolic status and will analyze how it relates to lifestyle changes using the data collected during the study.
+
+Twenty sedentary individuals with type 2 diabetes, not on insulin treatment, will take part in the trial. All patients will be monitored for two weeks using a CGM device and an activity tracker. During the first week, participants will follow their normal daily routine, while in the second week, subjects will be asked to engage in moderate physical activity every day, consisting of walking. At the end of each week, patients will take a meal tolerance test.
+
+The main goal of the study is to measure how blood sugar levels change over the two weeks, also evaluating the impact of individuals' daily activities like exercise on it. The research team will develop and use mathematical models to measure this change. A secondary goal is to evaluate the ease of use of the e-health system for data collection.
+
+DETAILED DESCRIPTION:
+Diabetes Mellitus (DM) represents one of the major and fastest growing global health emergencies. Approximately 90% of the individuals with DM are affected by type 2 diabetes (T2D), whose management usually begins with lifestyle interventions, then progressing to one or more antihyperglycemic, while only ultimately moving to insulin therapy. Focusing on non-insulin treated T2D, evidence has shown lifestyle modifications, including exercise, healthy diet and education, to be effective in reversibility of the disease, but also in preventing the transition to T2D in high-risk (healthy) individuals. This would call for the improvement of participatory medicine, exploiting the increase in smartphone use over the past decade. In this framework, technological platforms would be key for the development of personalized, patient-centered interventions that integrate patient-reported data, tailored education, and individualized feedback. A fundamental component of these technological platforms for participatory medicine in diabetes is represented by continuous glucose monitoring (CGM) devices. These devices, usable in real-life conditions, provide prompt information on glucose trends and variability, warnings for out of-range glucose values as well as the ability for physicians to remotely review glucose profiles. Numerous studies have shown benefits of using CGM devices mainly in T1D but recently also in advanced T2D, while only limited data is available in non insulin treated T2D. The increasing accuracy of these devices paved the way for the development of tools assessing glucose tolerance in real-life conditions. The development of these tools would be highly beneficial for patients with T2D, allowing to provide information on therapy effectiveness and, possibly, disease progression. Moreover, incorporation of these tools into technological platforms, empowering participatory interventions and supporting self-management, would be fundamental for both the patients and the healthcare system.
+
+The aim of the GluToTrack project is to combine bioengineering mathematical models and a data collection platform based on m-health solutions to develop a tool for glucose tolerance tracking, as well as evaluating the impact of individuals' daily activities like exercise on it, from PGHD and CGM data collected in real-life conditions. Data, required for the mathematical model validation phase, will be gathered, exploiting an e-health approach combining medical informatics and medical device wearables, running an in vivo clinical trial in a population of 20 patients with non-insulin treated T2D.
+
+The clinical trial is an interrupted time series analysis. The trial seeks to enroll 20 participants with non-insulin treated T2D, 40 to 70 years old and physically inactive (less than 150 min/week of moderate physical activity).
+
+During the first visit (visit 1, day 0) routine vital signs will be registered, and wearables (a CGM device and an activity tracker) and smartphone
+
+PRIMARY OUTCOMES:
+  - Change in Blood Glucose Control Over the Two Study Weeks
+
+INTERVENTIONS:
+  - BEHAVIORAL: Physical activity intervention
+
+ELIGIBILITY:
+Age: 40 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06864546

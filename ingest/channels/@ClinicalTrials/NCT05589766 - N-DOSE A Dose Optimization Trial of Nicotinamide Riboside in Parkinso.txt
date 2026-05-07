@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05589766
+Title: N-DOSE: A Dose Optimization Trial of Nicotinamide Riboside in Parkinson's Disease
+Official Title: N-DOSE: A Dose Optimization Trial of Nicotinamide Riboside in Parkinson's Disease
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 81
+Topic: protein supplementation
+
+SUMMARY:
+N-DOSE is a double-blinded placebo-controlled randomized trial aiming to determine the optimal biological dose (OBD) of nicotinamide riboside (NR), in individuals with Parkinson's disease (PD).
+
+The investigators recently reported the NADPARK study (ClinicalTrials.gov: NCT03816020), a phase I randomized, double-blinded trial, assessing the tolerability, cerebral bioavailability and molecular effects of NR therapy, 1000mg daily, in PD. The NADPARK study showed that NR 1000mg daily was well tolerated and led to a significant, but variable, increase in cerebral NAD (nicotinamide adenine dinucleotide) levels (measured by 31phosphorous magnetic resonance spectroscopy, 31P-MRS) and related metabolites in the cerebrospinal fluid (CSF). NR recipients showing increased brain NAD levels exhibited altered cerebral metabolism, measured by 18fluoro-deoxyglucose positron emission tomography (FDG-PET), and this was associated with mild clinical improvement. The results of the NADPARK trial nominate NR as a potential neuroprotective therapy for PD, warranting further investigation in larger trials. The investigators recently conducted the NR-SAFE safety trial comparing 3000mg NR to placebo in 20 participants with PD over 4 weeks (NCT: NCT05344404) which showed no moderate or severe adverse events, and no signs of acute toxicity.
+
+Due to the variability in response to NR in the NADPARK trial, the N-DOSE study will investigate the response to escalating doses of NR from 1000 mg to 3000 mg over 12 weeks, in order to ascertain if NR dose escalation beyond 1000 mg per day is biologically meaningful in Parkinson's disease.
+
+DETAILED DESCRIPTION:
+N-DOSE is a double-blinded placebo-controlled randomized trial aiming to determine the optimal biological dose (OBD) of nicotinamide riboside (NR), in individuals with Parkinson's disease (PD).
+
+Individuals with PD (n = 80) will be recruited starting November 2022. Participants will be randomized 1:1:2 to either placebo group (PL-group; n = 20) or NR 1000mg daily (DS-group; n = 20) for 12 weeks or to a dose-escalation group (DE-group) where NR 1000mg daily will be administered week 1-4, NR 2000mg daily week 5-8 and NR 3000mg daily week 9-12 (n =40). Both the participants and the investigators will be blinded.
+
+\- Primary Objective: To compare the effect of orally administered nicotinamide riboside (NR), escalated to 1500 mg twice per day (3000 mg/day) in the dose escalation group (DE-group) - versus stable dosing of 500 mg twice per day (1000 mg/day) in the dose-stable group (DS-group) on cerebral NAD levels, at week 12.
+
+* Secondary Objectives:
+
+  * To assess the dose-response relationship between NR dose (1000 mg, 2000 mg, 3000 mg per day) and changes in cerebral NAD levels from baseline to weeks 4, 8 and 12.
+  * To compare the effectiveness of orally administered nicotinamide riboside (NR) 1500 mg twice per day versus 500 mg twice per day in augmenting the NAD-metabolome in the central nervous system (CNS) at week 12.
+* Safety Objectives
+
+  \-- Determine the safety and tolerability of NR doses 2000 mg and 3000 mg daily in PD, measured by the frequency and severity of adverse events.
+* Exploratory Objectives:
+
+  * Neuroimaging
+
+    * To compare the effect of orally administered NR in the DE-group versus DS-group on the NR related metabolic pattern (NRRP) expression at week 12.
+    * To assess the dose-response relationship between NR dose (1000 mg, 2000 mg, 3000 mg per day) and changes in NRRP expression from baseline to weeks 4, 8 and 12.
+    * To compare the effect of orally administered NR DE-group versus DS-group on the PD-related pattern (PDRP) expression at week 12.
+    * To assess the dose-response relationship between NR dose (1000 mg, 2000 mg, 3000 mg per day) and changes in PDRP expression from baseline to weeks 4, 8 and 12.
+  * Metabolism \& molecular markers
+
+    * To compare the effect of orally administered NR in the DE-group versus DS-group on the NAD metabolome\* in the blood, urine and central nervous system (CNS) at week 12.
+    * To assess the dose-response relationship between NR dose (1000 mg, 2000 mg, 3000 mg per day) and changes in the NAD metabolome\* in blood and urine from baseline to weeks 4, 8 and 12.
+    * To compare the effect of orally administered NR in the DE-group versus DS-group on serum and CSF inflammatory markers at week 12.
+    * To assess the dose-response relationship between NR dose (1000 mg, 2000 mg, 3000 mg per day) and changes in serum inflammatory markers from baseline to weeks 4, 8 and 12.
+  * Clinical - motor \& non motor symptom severity, quality of life
+
+    * To compare the effect of orally adm
+
+PRIMARY OUTCOMES:
+  - Cerebral NAD levels measured by 31P-MRS
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nicotinamide Riboside
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 40 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05589766

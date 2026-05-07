@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03655223
+Title: Early Check: Expanded Screening in Newborns
+Official Title: Early Check: A Collaborative Innovation to Facilitate Pre-Symptomatic Clinical Trials in Newborns
+Status: ENROLLING_BY_INVITATION
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30000
+Topic: creatine supplementation
+
+SUMMARY:
+Early Check provides voluntary screening of newborns for a selected panel of conditions. The study has three main objectives: 1) develop and implement an approach to identify affected infants, 2) address the impact on infants and families who screen positive, and 3) evaluate the Early Check program. The Early Check screening will lead to earlier identification of newborns with rare health conditions in addition to providing important data on the implementation of this model program. Early diagnosis may result in health and development benefits for the newborns. Infants who have newborn screening in North Carolina will be eligible to participate, equating to over 120,000 eligible infants a year. Over 95% of participants are expected to screen negative. Newborns who screen positive and their parents are invited to additional research activities and services. Parents can enroll eligible newborns on the Early Check electronic Research Portal. Screening tests are conducted on residual blood from existing newborn screening dried blood spots. Confirmatory testing is provided free-of-charge for infants who screen positive, and carrier testing is provided to mothers of infants with fragile X. Affected newborns have a physical and developmental evaluation. Their parents have genetic counseling and are invited to participate in surveys and interviews. Ongoing evaluation of the program includes additional parent interviews.
+
+DETAILED DESCRIPTION:
+"Background" Newborn screening (NBS) is a state-based public health program that screens babies for a panel of over 30 conditions. It is estimated that about 12,500 newborns each year in the United States are identified with one of the conditions screened in NBS, with each child receiving the benefit of early treatment. For inclusion in newborn screening there must be evidence that pre-symptomatic treatment is more effective than treatment after clinical presentation. Most conditions proposed for newborn screening are rare, however, and researchers have difficulty identifying sufficient numbers of babies to test the benefits of pre-symptomatic identification and treatment. This lack of data is central to challenges that the U.S. Department of Health and Human Services Advisory Committee on Heritable Disorders in Newborns and Children (ACHDNC) faces when making federal recommendations to states on which conditions should be included in newborn screening programs. ACHDNC is often asked to consider conditions for inclusion in newborn screening for which there is limited evidence of the natural history, prevalence, and especially about the benefit of early treatment.
+
+"Rationale" That evidence gap, especially in the rare disease context, makes it important to develop and test a system to efficiently generate high-quality data about conditions that have the potential to be candidates for state newborn screening. The Early Check program will address this gap through screening newborns for a carefully selected panel of conditions, offered under a research protocol with biological maternal permission, except in cases where there is a transfer or loss of custody. In cases with a transfer/loss of custody, a legal guardian can grant permission for the infant to join Early Check. Early Check will identify pre-symptomatic infants with rare disorders, accelerate the acquisition of data on the early natural history of rare disorders, and demonstrate the feasibility of a statewide program to offer voluntary opt-in newborn screening for a panel of conditions not currently included in states' standard newborn screening. Further, Early Check will facilitate the public health 'on-boarding' of conditions that are ultimately recommended for state newborn screening programs.
+
+The initial panel of conditions screened in the Early Check program will change over the course of the study. Previously screened conditions have included spinal muscular dystrophy (SMA), fragile X syndrome (FXS), and Duchenne muscular dystrophy (DMD) and related neuromuscular conditions that result in increased levels of creatine kinase (CK-MM). SMA has an approved treatment, nusinersen, which has been demonstrated to improve outcomes in infants with infantile-onset SMA. In addition, infants with a shorter disease duration compared to a longer disease duration had improved outcomes after the start of treatment with nusinersen, suggesting that earlier identification of SMA would benefit affected i
+
+PRIMARY OUTCOMES:
+  - Incidence Rates: Number of newborns who screen positive comparative to the whole sample
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Confirmatory Testing
+
+ELIGIBILITY:
+Age: 1 Day to 31 Days
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03655223

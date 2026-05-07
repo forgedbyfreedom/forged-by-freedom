@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06130228
+Title: Nutritional Therapy in Late-onset Pompe Disease
+Official Title: Multi-ingredient Supplementation as an Adjunctive Therapy in Late-onset Pompe Disease
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: vitamin D muscle
+
+SUMMARY:
+RATIONALE: Pompe disease (PD) is a recessive genetic disorder wherein the body cannot break down glycogen due to a mutation in the acid alpha glucosidase (GAA) gene, which encodes for acid alpha-glucosidase. The adult/late onset form (LOPD) leads to glycogen accumulation and autophagic buildup, causing progressive muscle weakness that leads to wheelchair dependence, reduced quality of life and premature death due to cardiorespiratory insufficiency. While nutritional strategies, such as the low carbohydrate/high protein and ketogenic diets, have been used clinically, they are difficult to maintain and have limited benefits. Multi-ingredient supplementation (MIS) allows for targeting of several underlying pathogenic pathways and may be more convenient than traditional dietary strategies, thereby improving both adherence and LOPD pathology.
+
+DETAILED DESCRIPTION:
+DESIGN AND INTERVENTION: The present study is a 4-month randomized, double-blind, placebo-controlled clinical trial (RCT) with sampling pre and post intervention in late onset Pompe disease patients undergoing enzyme replacement therapy (ERT) (21-90 years of age). Each patient will be randomized into either a Pompe-Targeted Multi-Ingredient Supplement (PDT-MIS; high-quality proteins, antioxidants, plant extracts, vitamins, and omega-3 fatty acids,) or placebo (PLA; collagen, safflower, and cellulose) group and then undergo four months of daily supplementation with concurrent rehabilitative exercise training (mixed cardio and strength four days/week) and respiratory muscle training (four days/week).
+
+GENERAL RESEARCH AIMS AND HYPOTHESIS: The purpose of this study is to investigate the benefits of PDT-MIS on muscle and blood pathology, muscle function, respiratory capacity, and health-related quality of life (HRQOL) in LOPD patients on enzyme replacement therapy (ERT). It is generally hypothesized that PTD-MIS will mitigate mitochondrial dysfunction, oxidative damage, inflammation and alleviate 'autophagic block' in skeletal muscle of LOPD patients. PDT-MIS may therefore improve muscle pathology by affecting several cell pathways simultaneously, and thereby enhance muscle function, respiratory capacity, and HRQOL of LOPD patients.
+
+PRIMARY OUTCOMES:
+  - Percent change in the body composition index by DEXA analyses
+  - Percent change in seated pulmonary function by spirometry
+  - Percent change in supine pulmonary function by spirometry
+  - Percent change in 6-minute walking test distance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Multi-ingredient supplement (PDT-MIS)
+  - DIETARY_SUPPLEMENT: Placebo (PLA)
+
+ELIGIBILITY:
+Age: 21 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06130228

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07539948
+Title: A Feasibility Study on an Advanced Rehabilitative Prototype of KNEE-LOCOBOT on Knee Osteoarthritis Patients
+Official Title: A Feasibility Study on an Advanced Rehabilitative Prototype of KNEE-LOCOBOT on Knee Osteoarthritis Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Problem: Total knee replacement (TKR) surgeries are increasing due to ageing populations. Current rehabilitation has a gap - patients do unsupervised exercises at home for 2-3 weeks between hospital discharge and outpatient appointments, leading to poor compliance and complications.
+
+Current Issues: 25% of patients don't achieve meaningful functional improvement for 6+ months, and 20% still have significant limitations after 2 years.
+
+Proposed Solution: Deploy a robot-aided device for intensive, self-paced home rehabilitation exercises to help patients return to near-normal function within 1 month.
+
+Goals: Improve early functional recovery, increase exercise compliance, reduce costs, and enhance long-term quality of life for knee osteoarthritis patients.
+
+DETAILED DESCRIPTION:
+Total knee replacement (TKR) has proven to be an effective treatment modality for end-stage kneeosteoarthritis (OA), relieving pain and improving patients' functional abilities. With an ageing and increasingly obese population, the number of people with end-stage osteoarthritis requiring TKR is expected to rise. In North America for example, conservative estimates suggest that the incidence rate of TKR is expected to increaseby 429 procedures/100,000 to 725/100,000 by 2050, a 143% projected increase in TKR volume. In 2019, more than 2,000 TKR surgeries were performed in Singapore General Hospital, and over800 TKR surgeries in Tan Tock Seng Hospital. With population aging and increasingly affluent lifestyle trends,these numbers expected to rise. Post-surgical rehabilitation contributes significantly to successful outcomes following knee replacement surgery. A systematic review reported patients receiving physiotherapy exercises had improved physical function and pain up to 6 months.
+
+Current post-operative TKR care in TTSH includes a 4-day inpatient hospitalization stay with daily rehabilitation including early mobilization surgery day itself. Patients undergoing immediate inpatient post-TKR rehabilitation in TTSH had shorter inpatient stays and a higher discharge rate home. However, rehabilitation is far from complete, as immediate post-TKR rehabilitation phase has to be followed up by post-discharge exercises. Currently, TTSH outpatient TKR patients undergo 5 outpatient physiotherapy sessions over a 3 month period and machines include inpatient Continuous Passive Motion (CPM) and outpatient Motomed. As yet, no robotic aided devices have been employed for this population of patients. The transition from hospital to home has given rise to rehabilitation service gap whereby patients are mostly doing unsupervised self-directed exercises at home setting. Patient progress, exercises intensity and technique will be not supervised and corrected until they consult physiotherapist at outpatient clinic with could take up to 2-3 weeks later. Our local experience shows that there is a high level of poor post-operative exercise compliance, predisposing patients to complications of weakness, knee stiffness, scarring and pain, resulting in reduced long term function post-TKR. In fact, it has been demonstrated that 25% of patients fail to achieve minimum clinically important improvement in function for 6 or more months after TKR and 20% of them still report moderate to severe activity limitations 2 years after TKR. Several rehabilitation methods and modalities are available for patients received TKR, however optimal rehabilitation strategy and protocols have yet to be determined. Studies had demonstrated that continuous passive motion (CPM) and inpatient rehabilitation programme may not provide additional benefit to the patient or healthcare system. Rather, early rehabilitation, telerehabilitation, outpatient therapy and consistent, high intensity, high velocity
+
+PRIMARY OUTCOMES:
+  - Mean change in quadricep strength from baseline to 1 month (unit: KgF)
+
+INTERVENTIONS:
+  - DEVICE: Knee Locobot
+
+ELIGIBILITY:
+Age: 21 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07539948

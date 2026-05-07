@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 34241807
+Title: Learning from machine learning: prediction of age-related athletic performance decline trajectories.
+Authors: Hoog Antink, Braczynski, Ganse
+Journal: GeroScience
+Year: 2022
+Topic: visualization athletic performance
+
+ABSTRACT:
+Factors that determine individual age-related decline rates in physical performance are poorly understood and prediction poses a challenge. Linear and quadratic regression models are usually applied, but often show high prediction errors for individual athletes. Machine learning approaches may deliver more accurate predictions and help to identify factors that determine performance decline rates. We hypothesized that it is possible to predict the performance development of a master athlete from a single measurement, that prediction by a machine learning approach is superior to prediction by the average decline curve or an individually shifted decline curve, and that athletes with a higher starting performance show a slower performance decline than those with a lower performance. The machine learning&#xa0;approach was implemented using a multilayer neuronal network. Results showed that performance prediction from a single measurement is possible and that the prediction by a machine learning approach was superior to the other models. The estimated performance decline rate was highest in athletes with a high starting performance and a low starting age, as well as in those with a low starting performance and high starting age, while the lowest decline rate was found for athletes with a high starting performance and a high starting age. Machine learning was superior and predicted trajectories with significantly lower prediction errors compared to conventional approaches. New insights into factors determining decline trajectories were identified by visualization of the model outputs. Machine learning models may be useful in revealing unknown factors that determine the age-related performance decline.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/34241807/

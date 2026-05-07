@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06354257
+Title: A Study to Investigate the Pharmacokinetics of a Combined Oral Contraceptive When Given Alone and in Combination With GSK3036656 in Female Participants of Non-childbearing Potential Aged 18 to 65 Years of Age
+Official Title: A Phase 1, Open-label, Fixed Sequence, 1-way Drug-drug Interaction Study to Investigate the Pharmacokinetics of GSK3036656 and an Oral Contraceptive Containing Ethinyl Estradiol and Levonorgestrel When the Oral Contraceptive is Administered Alone and in Combination With GSK3036656 in Healthy Female Participants of Nonchildbearing Potential Aged 18-65 Years of Age
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to provide data showing if there are any effects of GSK3036656 on a combined oral contraceptive containing Ethinyl Estradiol (EE) and Levonorgestrel (LNG), which will help inform future studies on suitable contraceptive measures to be used.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area Under the Plasma Drug Concentration (AUC) From Time Zero Extrapolated to Infinity (AUC[0-inf]) After a Single Dose of EE and LNG
+  - Maximum Observed Plasma Concentration (Cmax) After a Single Dose of EE and LNG
+
+INTERVENTIONS:
+  - DRUG: Microgynon
+  - DRUG: GSK3036656
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06354257

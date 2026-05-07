@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04827134
+Title: A Food-effect Study of the Pediatric Dispersible Tablet Formulations of TRIUMEQ® and DOVATO® in Healthy Adult Participants
+Official Title: A Randomized, 2-Cohort, 2-Period, Single Dose, Crossover Clinical Study to Assess the Effect of Food on the Pediatric Dispersible Tablet Formulations of TRIUMEQ (Dolutegravir/Abacavir/Lamivudine) and DOVATO (Dolutegravir/Lamivudine) in Healthy Adult Participants
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: creatine supplementation
+
+SUMMARY:
+This study will assess the effect of food on the pharmacokinetics (PK) of pediatric formulations of TRIUMEQ (dolutegravir \[DTG\] 5 milligrams \[mg\]/abacavir \[ABC\] 60 mg/lamivudine \[3TC\] 30 mg) dispersible tablets and DOVATO (DTG 5 mg/3TC 30 mg) dispersible tablets in healthy adult participants. Additionally, safety and tolerability of these formulations will also be assessed. TRIUMEQ and DOVATO are registered trademarks of GlaxoSmithKline group of companies.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cohort 1: Area Under the Plasma Concentration-time Curve (AUC) From Time Zero Extrapolated to Infinity (AUC [0-inf]) of DTG, ABC and 3TC Following Administration of TRIUMEQ Under Fed and Fasted Conditions
+  - Cohort 1: AUC From Time Zero to Time of Last Observed Quantifiable Concentration (AUC [0-t]) of DTG, ABC and 3TC Following Administration of TRIUMEQ Under Fed and Fasted Conditions
+  - Cohort 1: Maximum Observed Concentration (Cmax) of DTG, ABC and 3TC Following Administration of TRIUMEQ Under Fed and Fasted Conditions
+  - Cohort 2: AUC (0-inf) of DTG and 3TC Following Administration of DOVATO Under Fed and Fasted Conditions
+  - Cohort 2: AUC (0-t) of DTG and 3TC Following Administration of DOVATO Under Fed and Fasted Conditions
+
+INTERVENTIONS:
+  - DRUG: TRIUMEQ
+  - DRUG: DOVATO
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04827134

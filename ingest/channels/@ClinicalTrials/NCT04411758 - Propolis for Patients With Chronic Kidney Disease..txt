@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04411758
+Title: Propolis for Patients With Chronic Kidney Disease.
+Official Title: Propolis as a New Strategy in Modulating Inflammation in Patients With Chronic Kidney Disease.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: protein supplementation
+
+SUMMARY:
+To evaluate the effects of propolis extract on inflammation in participants with chronic kidney disease.
+
+Specific objectives
+
+To assess before and after the intervention period:
+
+* The expression of transcription factors (nuclear factor-kB), antioxidant enzymes (heme-oxygenase-1), inflammasome receptor, peroxisome proliferator-activated receptor-γ, as well as the levels of inflammatory cytokines (IL-6, Tumor nuclear factor-α, C-reactive protein, interleukin 1) and E-selectin adhesion molecules;
+* The levels of protein expression of inflammatory markers and antioxidant enzymes;
+* The profile of the intestinal microbiota of stool samples from the research participants;
+* Plasma levels of substances reactive to thiobarbituric acid and oxidized low density lipoprotein as a marker of oxidative stress;
+* Routine and anthropometric laboratory variables, indicative of the metabolic profile of the research participants;
+* Assess blood pressure, 6-minute walk test, recovery heart rate and chair lift test to assess the functional capacity of the research participants;
+* Assess atherogenic risk;
+* Food intake and nutritional status; Compare data between the intervention and control groups.
+
+DETAILED DESCRIPTION:
+Chronic kidney disease (CKD) has chronic systemic inflammation as an important component of multifactorial origin, a factor related to both the progression and outcomes of CKD, being involved in all causes of mortality in these patients, such as cardiovascular disease. In this context, some nutritional strategies have been proposed as an adjuvant therapeutic alternative to modulate inflammation, starting from the consolidated knowledge of the role of nutrients and bioactive compounds on the expression of genes related to inflammation and oxidative stress, factors that feed on each other. In view of this scenario, propolis, a substance made up of a combination of several chemical components with broad potential biological activity, appears as a promising alternative to modulate inflammation in patients with CKD. However, clinical evidence to assess the effects of propolis in patients with CKD is scarce, and there are no studies that have investigated its effects on gene expression and markers related to inflammation in these patients. Thus, the present project proposes a longitudinal study of the clinical trial type that aims to evaluate the effects of propolis alcoholic extract on transcription factors and inflammatory markers in patients with CKD.
+
+PRIMARY OUTCOMES:
+  - Change in cytokines plasma levels measured by ELISA after supplementation with propolis.
+  - Change the expression of transcription factors (nuclear factor-kB), antioxidant enzymes (heme-oxygenase-1), inflammasome, peroxisome proliferator-activated receptor-γ
+  - Change the profile of the intestinal microbiota of stool samples
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Propolis
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04411758

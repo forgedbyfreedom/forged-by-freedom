@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07451041
+Title: Absolute vs Normalized Acceleration and Deceleration Load in Football Microcycles
+Official Title: Comparison of Absolute and Individualized Normalized Acceleration and Deceleration Thresholds Across the Football Microcycle
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 27
+Topic: athletic performance
+
+SUMMARY:
+This observational repeated-measures study investigates differences between absolute and individualized normalized acceleration and deceleration thresholds across the football microcycle. Match-derived locomotor metrics are commonly used to guide training prescription, although match performance may not reflect each player's maximal physical capacity. Therefore, this study monitored under-23 male football players across a full competitive season using 10-Hz GPS technology during training sessions and matches. High-intensity normalized thresholds were defined as 75-100% of individual maximum acceleration and deceleration, and were compared with conventional absolute thresholds (\>3 m/s² and \<-3 m/s²). The study aims to determine whether normalized approaches provide a more accurate representation of high-intensity locomotor demands across microcycle sessions relative to match load.
+
+DETAILED DESCRIPTION:
+This season-long observational cohort study examined the distribution of acceleration and deceleration external load across the football microcycle using both absolute and individualized normalized thresholds. Twenty-seven under-23 male football players competing at the national level were monitored throughout one competitive season using 10-Hz GPS devices during all training sessions and official matches.
+
+Individual maximum acceleration and deceleration were determined using the average of the three highest values recorded across the season while excluding potential measurement artefacts. High-intensity normalized thresholds were defined as 75-100% of these individual maxima and compared with conventional absolute thresholds (\>3 m/s² and \<-3 m/s²). Outcome measures included counts and distances of acceleration and deceleration efforts across microcycle days relative to match load, adjusted for playing position.
+
+Generalized linear mixed models were used to evaluate differences between threshold definitions and temporal patterns across the microcycle. The primary objective was to determine whether normalized thresholds provide a more sensitive and ecologically valid characterization of high-intensity locomotor demands compared with fixed absolute thresholds, with implications for training load monitoring and prescription in football.
+
+PRIMARY OUTCOMES:
+  - Counts of High-Intensity Accelerations and Decelerations (Absolute vs Normalized Thresholds)
+
+INTERVENTIONS:
+  - OTHER: External Load Monitoring
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07451041

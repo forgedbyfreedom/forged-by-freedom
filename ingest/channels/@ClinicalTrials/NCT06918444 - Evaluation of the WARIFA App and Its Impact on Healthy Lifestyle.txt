@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06918444
+Title: Evaluation of the WARIFA App and Its Impact on Healthy Lifestyle
+Official Title: Effect of the WARIFA App on User-defined Objectives, Healthy Lifestyles and Management of Type 1 Diabetes: a Pilot Randomised Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 104
+Topic: exercise muscle mass
+
+SUMMARY:
+The goal of this study is to assess the effect of the WARIFA app on the adoption of healthy lifestyle behaviours related to Non-communicable diseases (NCDs), as well as in the management of Type 1 Diabetes (T1D). This is done using user-generated data analysis, artificial intelligence (AI) and risk estimation to provide personalised recommendations on lifestyle-related behaviours through a mobile app.
+
+* Primary objective: the objective of this study is to assess the impact of using the WARIFA app on a series of outcomes, related to the promotion of healthy lifestyles and prevention of NCDs, as well as on the management of T1D.
+* Secondary objectives: to assess the feasibility of implementation of a complex health app (WARIFA), and to explore which outcomes are more relevant in this context for users.
+
+The study will evaluate the app in two different populations:
+
+* Population 1: Citizens living in Europe of either sex aged \> 18 years diagnosed with no more than one NCD (of the following: CVD, any type of cancer, chronic respiratory disease and T2D) and current owners of a smartphone with internet access.
+* Population 2: European adult individuals of either sex aged \>18 years with T1D currently using multiple daily insulin injections or an insulin pump and current owners of a smartphone with internet access.
+
+The study will be carried out in three centres in three different countries: the Instituto Universitario de Investigaciones Biomédicas y Sanitarias (iUIBS) in Spain, the Norwegian Centre for E-health Research (NSE) in Norway, and in Romania.
+
+Participants in each population will be randomised to an intervention or control arm on a 1:1 ratio:
+
+* Intervention arm: the Warifa app will be used by the participants throughout the study. The app will provide personalised risk estimations and recommendations through user-generated data analysis and artificial intelligence.
+* Control arm: The control group will use a Warifa app with the same functionalities than the intervention arm, but without artificial intelligence.
+
+At baseline, information will be collected by questionnaires and a physical examination, including anthropometry and a lipid profile. These measurements will be repeated in 12 weeks and will be compared between the treatment arms.
+
+The study will last 3 months in total, start of recruitment on 10 February 2025, end of study after the last visit of the last participant, on 12 May 2025. Each user will participate in the study for 12 weeks.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Self-defined goal by the participants
+
+INTERVENTIONS:
+  - DEVICE: WARIFA app with AI
+  - DEVICE: WARIFA app without AI
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06918444

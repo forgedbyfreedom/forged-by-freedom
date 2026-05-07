@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00963196
+Title: Study of Supplementation of Antidepressants With Fish Oil to Improve Time to Clinical Response
+Official Title: Supplementation of Antidepressants With Fatty Acid Therapy
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 78
+Topic: omega 3 exercise
+
+SUMMARY:
+This study will be a randomized controlled trial set in an outpatient clinic, involving patients with major depressive disorder, who will be treated with antidepressant therapy, which will be individually agreed upon by the subject and his or her physician. Patients will be randomized to receive either placebo or fish oil capsules containing eicosapentaenoic acid (EHA) and docosahexaenoic acid (DHA) in addition to their antidepressant medication. Subjects will complete a brief dietary and exercise habits survey at the beginning of the trial to take into account lifestyle factors that may be significant in symptom resolution. Their progress will be monitored over a period of twelve weeks, with standardized rating scales completed by subjects and treating physicians. At the end of the study, scores will be compared between groups to look for differences in timing and degree of symptom improvement to analyze whether improvement occurred faster in the group receiving essential fatty acids (EFAs) than in the one receiving placebo. The primary hypothesis is that supplementation of antidepressant therapy with omega-3 fatty acids will decrease the lag period between the start of therapy and the time of clinically significant symptom improvement. A secondary hypothesis is that the results of this study will be consistent with numerous previous studies showing improvement in symptom control in major depressive disorder when antidepressants are supplemented with omega-3 fatty acids.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Improvement in MADRS and PHQ-9 scores occurs in a shorter period of time in the intervention group versus the placebo group.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 fatty acid
+  - DRUG: Bovine gelatin capsules
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00963196

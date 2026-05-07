@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06458296
+Title: Evaluating the Efficacy of AI-Guided (GenAIS TM) vs. Standard Physician-Guided Dietary Supplement Prescriptions for Weight Loss in Obese Patients
+Official Title: Evaluating the Efficacy of AI-Guided vs. Standard Physician-Guided Dietary Supplement Prescriptions for Weight Loss in Obese Patients: A Randomized Controlled Pilot Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: weight loss exercise
+
+SUMMARY:
+Obesity, a chronic disease characterized by excessive fat accumulation, significantly impacts health. Genetic factors influence the development of obesity by affecting behavioral, dietary habits, and metabolic processes. This study investigated whether dietary supplements (DS), personalized through genetic and metabolic profiling, could enhance weight loss when combined with physical activity and dietary changes. The objective was to compare the efficacy of standard physician-guided DS prescriptions with AI-guided DS prescriptions in promoting weight loss in obese patients. The hypothesis was that AI-guided DS prescriptions, utilizing detailed genetic and metabolic data, would be more effective in promoting weight loss than standard physician-guided DS prescriptions. This was a 6-month randomized, controlled pilot clinical trial with an additional 6-month follow-up. Participants were healthy individuals aged 40-60 years with a BMI of 25 or greater. Participants were excluded if they had significant medical conditions or recent changes in medication or supplements. They were randomly assigned to either the control group (physician-guided DS prescriptions) or the AI-guided group (AI-determined DS prescriptions). The AI system developed by Triangel Scientific analyzed genetic, metabolic, and biochemical data to personalize treatment. Baseline measurements included comprehensive metabolic panels, genetic testing, metabolomic profiling, and detailed patient history
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - percentage change in body weigh
+
+INTERVENTIONS:
+  - OTHER: Control Group
+  - OTHER: AI-Guided Group
+
+ELIGIBILITY:
+Age: 40 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06458296

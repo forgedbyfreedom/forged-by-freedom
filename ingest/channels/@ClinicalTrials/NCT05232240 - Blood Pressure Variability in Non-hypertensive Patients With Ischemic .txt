@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05232240
+Title: Blood Pressure Variability in Non-hypertensive Patients With Ischemic Cerebrovascular Disease
+Official Title: Blood Pressure Variability in Non-hypertensive Patients With Ischemic Cerebrovascular Disease
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 300
+Topic: caffeine exercise
+
+SUMMARY:
+This study is a single-center prospective cohort of patients with ischemic cerebrovascular disease (ICVD) who have not met the diagnostic criteria for hypertension. Ambulatory 24-hour blood pressure monitoring (ABPM) will be performed at baseline and one year after the enrollment. The primary purpose of the study is to delineate the relationship of blood pressure variability (BPV) with the risk of composite vascular events in non-hypertensive patients with ICVD. The factors related to BPV, as well as the potential modulators of the associations between BPV and vascular risk, will be further explored among these patients.
+
+DETAILED DESCRIPTION:
+Hypertension is one of the most important risk factors of ischemic cerebrovascular disease (ICVD), while various blood pressure variability (BPV) indices are immerging as novel prognostic indicators independent of the blood pressure level. However, the BPV profiles without hypertension have not been specifically observed. Considering the great importance of blood pressure management in ICVD, more research is needed to clarify whether and how BPV will increase the vascular risk in non-hypertensive patients with ICVD. This prospective cohort study will be helpful to invoke an early management of blood pressure in patients with ICVD before the clinical establishment of hypertension.
+
+All eligible non-hypertensive patients hospitalized for ICVD will be consecutively enrolled in this cohort. Blood pressure measurements are obtained with ambulatory 24-hour blood pressure monitoring (ABPM) every 20 minutes during day-time (6:00-22:00) and every 30 minutes during night-time (22:00-6:00) at baseline and one year after the enrollment. The clinical, imaging and laboratory information will be collected at baseline. During an estimated 3-year follow-up, the vessel-related diagnostic or monitoring procedures, treatment, functional status and new vascular events will be recorded by web-based patients' self-reports and investigators' regular telephone visits.
+
+PRIMARY OUTCOMES:
+  - 3-year risk of Major Adverse Cardiovascular Event
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: blood pressure variability measured by ambulatory 24-hour blood pressure monitoring
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05232240

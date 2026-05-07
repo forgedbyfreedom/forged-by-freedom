@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06644898
+Title: The Effect of Gait Training Using Different Slope Types on Balance in COPD Patients
+Official Title: The Effect of Aerobic Exercise Training at Different Slope Types on Balance in COPD Patients
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: aerobic exercise
+
+SUMMARY:
+Although COPD is basically a respiratory system disease, its effects are not limited to the respiratory system. In this context, one parameter affected in COPD patients is balance. Recent studies have highlighted the importance of assessing balance and incorporating it into treatment options such as pulmonary rehabilitation. In this context, we aim to diversify the training by using different slope types (downhill, level, uphill) in aerobic exercise training, which is a strong component of pulmonary rehabilitation, and to evaluate the effect of slope type on balance. Testing different types of inclines in aerobic exercise training has the potential to result in different muscular gains. We anticipate that this may result in different balance gains.
+
+DETAILED DESCRIPTION:
+The convenience sampling method will be used as the sampling method in the research.
+
+In this study, sample size was calculated by a priori power analysis using G\*Power 3.1.9.4 software. In the analysis for analysis of variance (ANOVA: repeated measures, between factors) with two factors and repeated measures; effect size f = 0.62 (based on data obtained from previous study, Borghi-Silva et al, 2009), significance level α = 0.05, statistical power (1 - β) = 0.80, number of groups 3, number of measures 2 and correlation coefficient between measures r = 0.5. According to the calculation, it was predicted that the study would reach sufficient statistical power with a total of 24 participants, 8 participants in each group.
+
+There will be three groups in the study: downhill walking, uphill walking, and level walking. The downhill walking and uphill walking groups will be included as the study group and the level walking group will be included as the control group. Participants will be distributed equally to the three groups. Patients will be assigned to these groups by block randomization method using https://www.randomizer.org/ website.
+
+All three groups will be administered a 6-minute walking test at baseline, and participants will be subjected to a common 8-week, twice-weekly treadmill walking training program in which the speed is determined and increased according to the average speed they walk in this test, and in addition to this, the duration is also increased. One session of the training program will consist of warming up, loading, and cooling down on the treadmill.
+
+During the training, the slope of the treadmill will be adjusted to +10 degrees for uphill walking, -10 degrees for downhill walking, and 0 degrees for level walking and will be kept constant for 8 weeks. A special wooden wedge apparatus will be made under the normal treadmill to give -10 downhill slope.
+
+Primary outcome measurements will be made at baseline and at the end of week 8.
+
+PRIMARY OUTCOMES:
+  - Postural stability test
+  - Limits of Stability (LOS) Test
+  - Clinical Test of Sensory Integration of Balance (CTSIB)
+
+INTERVENTIONS:
+  - OTHER: Level walking training
+  - OTHER: Downhill walking training
+  - OTHER: Uphill walking training
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06644898

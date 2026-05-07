@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07198204
+Title: Different Hold Durations in Isometric Exercises
+Official Title: Effect of Isometric Exercise Duration on Muscle Strength, Pain, and Function in Patients With Knee Osteoarthritis: A Randomized Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: recovery exercise
+
+SUMMARY:
+this stuy tries to evaulate the best contraction (hold time) during isometric effort that can provide the best therapeutic effects on muscular performance in patients with knee osteoarthritis
+
+DETAILED DESCRIPTION:
+Knee osteoarthritis (KOA) is a common degenerative disease characterized by the gradual degeneration and loss of joint cartilage, accompanied by bone proliferation. These pathological changes lead to joint pain, stiffness, and limited mobility in affected individuals (Sharma, 2021). The development of KOA, usually associated with various risk factors including age, gender, obesity, genetics, and joint injuries, severely affects patients' quality of life and imposes a heavy economic burden on society (Katz et al., 2021). Research indicates that the global prevalence of KOA has increased significantly since 1990 and is expected to continue rising until 2050, posing a major challenge to global public health.(Steinmetz et al., 2023) Currently, there are various treatment methods for KOA, including pharmacotherapy, surgical treatment, and physical therapy (Duong et al., 2023). Although pharmacotherapy can effectively alleviate symptoms, long-term use may lead to a series of side effects.
+
+Due to its low impact and reduced joint stress, isometric exercise may be more suitable for patients sensitive to joint stress or at higher risk; however, the optimal duration for isometric exercises remains controversial and varies. For instance, Folland et al. compared the strength gains produced by isometric training (with contraction duration of 2 seconds) at four joint angles with conventional dynamic training(Folland et al., 2005). In another study, Kubo et al. investigated the effects of static and dynamic training on the stiffness and blood volume of the human tendon, using a training regimen of 10 contractions of 15-s duration for isometric knee extensions (Kubo et al., 2009). Additionally, Anwer \& Alghadir utilized a 5-second duration for isometric quadriceps contractions and hip adduction exercises. In contrast, the Straight Leg Raising (SLR) exercise was maintained for a contraction time of 10 seconds to assess the effects of isometric quadriceps exercises on individuals with knee osteoarthritis.
+
+Understanding the isometric exercise parameters, such as duration, that achieve a desired adaptive response in muscle and tendon would benefit optimizing results. Therefore, the purpose of this study is to compare the effect of isometric exercise duration on muscle strength, pain, and function in patients with KOA.
+
+PRIMARY OUTCOMES:
+  - pain by numeric pain rating scale
+  - Function using Western Ontario and McMaster Universities Osteoarthritis
+  - function using Five Times Sit to Stand Test
+  - muscle strength using the one-repetition maximum (1RM) test for knee extension
+
+INTERVENTIONS:
+  - OTHER: isometric exercises
+  - OTHER: therapeutic ultrasound
+  - OTHER: Transcutanous electrical nerve stimulation
+
+ELIGIBILITY:
+Age: 40 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07198204

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41544581
+Title: Small-molecule modulators of the androgen receptor N-terminal domain: Advances in medicinal chemistry for prostate cancer.
+Authors: Sekhon, Ashong, Chen, Chen
+Journal: European journal of medicinal chemistry
+Year: 2026
+Topic: selective androgen receptor modulators
+
+ABSTRACT:
+Resistance to androgen receptor (AR) therapies in prostate cancer frequently arises from ligand-binding domain (LBD) mutations or the expression of LBD-truncated splice variants such as AR-V7. As these variants retain a functional N-terminal domain (NTD) essential for transcriptional activity, the intrinsically disordered NTD has become an attractive therapeutic target. This review integrates recent advances in targeting the AR NTD, emphasizing both classical antagonists and emerging mechanistic strategies. The pioneering EPI compounds established proof of concept for small-molecule inhibition of the AR NTD, with two analogues progressing to clinical trials. Subsequent discovery efforts have yielded structurally diverse NTD antagonists from natural products and synthetic libraries. Mechanism-focused approaches have garnered increasing interest; small molecules such as UT-143 and ET-516 disrupt AR-driven condensates formed via liquid-liquid phase separation, impairing oncogenic transcription. To complement these approaches, other innovative modalities are also being developed, including bispecific antibodies delivering intracellular anti-NTD fragments, NTD-targeting degraders (e.g., PROTACs), and urea-based antagonists selective for AR splice variants. Disrupting critical protein-protein interactions, such as those between the AR NTD and coactivators, offers an additional strategy to suppress AR activity. Advances in screening platforms and the optimization of structure-activity relationships are beginning to address the challenges of targeting disordered protein domains. With agents like EPI-7386 entering clinical evaluation and others advancing through preclinical development, AR NTD-targeted therapies represent a promising avenue to overcome resistance in castration-resistant prostate cancer (CRPC), potentially in combination with existing LBD-directed treatments to achieve more durable disease control.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41544581/

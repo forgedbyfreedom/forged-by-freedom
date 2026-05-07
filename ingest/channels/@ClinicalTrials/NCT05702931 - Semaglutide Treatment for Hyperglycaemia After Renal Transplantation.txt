@@ -1,0 +1,67 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05702931
+Title: Semaglutide Treatment for Hyperglycaemia After Renal Transplantation
+Official Title: Safety and Efficacy of Oral Semaglutide in Hyperglycaemic Patients After Renal Transplantation
+Status: RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 104
+Topic: beta-alanine
+
+SUMMARY:
+Background: Post-transplant hyperglycaemia occurs frequently in renal transplant recipients within the first two weeks after transplantation. Standard-of-care is primarily based on insulin treatment with the adherent risk of hypoglycaemia and weight gain. Semaglutide produces an effective lowering of plasma glucose in diabetes patients with chronic kidney disease (CKD) and leads to a reduction in weight and the incidence of hypoglycaemia. The efficacy of semaglutide is untested in renal transplant recipients, and safety concerns remain, primarily on renal graft function.
+
+Objectives: The primary objective is to establish whether tablet semaglutide (Rybelsus) compared with placebo, both as add-on to standard-of-care, is non-inferior in regulating plasma glucose in patients with hyperglycaemia after renal transplantation. Secondary objectives aim to evaluate the effect of tablet semaglutide on renal graft function, weight, use of insulin, cardiovascular parameters and safety parameters (plasma semaglutide concentration, gastrointestinal side effects, dose of immunosuppressants).
+
+Design: An investigator-initiated, placebo-controlled, double-blinded, parallel-group, randomised trial.
+
+Population: Patients (n = 104) with post-transplant hyperglycaemia or type 2 diabetes and an estimated glomerular filtration rate (eGFR) \> 15 ml/min/1.73 m2.
+
+Methods: Participants diagnosed with post-transplant hyperglycaemia or type 2 diabetes, 10 to 40 days post-transplant, will be randomised 1:1 to either 14 weeks of tablet semaglutide once daily or placebo both as add-on to standard glucose-lowering therapy. Participants will maintain weekly contact with the clinic during the first five weeks and at two to four weeks intervals during the remaining study period. During the trial, each patient will be monitored according to blood laboratory values with safety assessed at every visit by a nephrologist. Pre-prandial plasma glucose will be measured in the morning and evening to adjust glucose-lowering therapy after consultation with an endocrinologist. Double blinded continuous glucose monitoring (CGM) will be performed for 10-14 days from baseline and at weeks 5, 9, and 13.
+
+Primary endpoint:
+
+\- Mean sensor glucose (mmol/L) evaluated by CGM
+
+Key secondary endpoints:
+
+* Incidence of hypoglycaemia
+* Body weight (kg)
+* Creatinine (μmol/L)
+* Daily insulin dose (IE per day)
+* Plasma concentration of semaglutide (nmol/L)
+* Blood concentrations of cyclosporine and tacrolimus (μg/L)
+
+DETAILED DESCRIPTION:
+Introduction:
+
+In renal transplant recipients, hyperglycaemia develops frequently in the immediate period after renal transplantation. insulin is the primary choice of treatment but carries the adherent risk of hypoglycaemia and weight gain. Tablet semaglutide is a potent glucose-lowering agent that can reduce weight and the incidence of hypoglycaemia. It also has the ability to delay progression of chronic kidney disease (CKD). However, semaglutide is not recommended for renal transplant recipients, as safety and efficacy has yet to be established. The aim of this study is to prove that semaglutide is safe in renal transplant recipients and potentially just as effective as insulin-treatment. We expect that semaglutide can reduce daily insulin-usage and, for a large number of patients, even completely replace insulin as treatment, thereby avoiding the harmful side-effects of this drug.
+
+Objectives:
+
+The primary aim is to establish if tablet semaglutide (Rybelsus) compared with placebo, both as add-on to standard-of-care, is non-inferior in regulating plasma glucose in patients with hyperglycaemia in the immediate weeks after renal transplantation.
+
+Secondary objectives aim to evaluate the effect of tablet semaglutide on renal allograft function, weight, daily use of insulin and safety parameters (plasma semaglutide concentration, gastrointestinal side effects, dose of immunosuppressants).
+
+Background:
+
+Patients developing end-stage renal disease require renal replacement therapy by either haemodialysis, peritoneal dialysis, or renal transplantation. Renal transplantation is considered the best option for renal replacement therapy in terms of both quality of life and cost-effectiveness. However, in the immediate weeks after renal transplantation hyperglycaemia can develop - a condition termed post-transplant hyperglycaemia that is defined by a plasma glucose ≥ 7.0 mmol/L, or 2-h plasma glucose ≥ 11.1 mmol/L after an oral glucose tolerance test. A cohort study of renal transplant recipients (n=319), without pre-transplant diabetes, found that 66% required glucose-lowering treatment when discharge after renal transplantation. The primary reason for hyperglycaemia is high-dose prednisone in combination with surgical stress and other immunosuppressants. The condition post-transplant diabetes mellitus can be diagnosed once the patient is on stable and minimum immune suppressive treatment.
+
+Current guidelines recommend that oral glucose-lowering agents are used for mild hyperglycaemia and insulin for more pronounced hyperglycaemia. Only oral sulfonylureas and dipeptidyl peptidase-4 (DPP-4) inhibitors are permitted for use shortly after renal transplantation. However, sulfonylureas, as with insulin, carry the risk of hypoglycaemia, and DPP-4 inhibitors have only a modest glucose-lowering effect. Therefor insulin treatment is primarily used with the adherent risk of hypoglycaemia, weight gain and the discomfort of daily subcutaneous injections.
+
+Glucagon-
+
+PRIMARY OUTCOMES:
+  - Mean sensor glucose (mmol/L)
+
+INTERVENTIONS:
+  - DRUG: Semaglutide 14 MG [Rybelsus]
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05702931

@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06874309
+Title: Non-invasive Brain Stimulation to Prepare the Patient for Bariatric Surgery (REBAS)
+Official Title: Non-invasive Brain Stimulation to Prepare the Patient for Bariatric Surgery
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 65
+Topic: fat loss muscle
+
+SUMMARY:
+Obesity is a chronic metabolic condition characterized by excessive accumulation of body fat, which triggers physiological mechanisms that increase the risk of a wide range of health problems. The most effective treatment for severe obesity is metabolic-bariatric surgery, which can lead to a 15-20% weight reduction, significantly lowering the risks of illness and death. However, the success of this surgery can be threatened by poor eating habits after the procedure. The main goal of this study is to enhance the long-term effectiveness of bariatric surgery by combining it with non-invasive brain stimulation (tDCS) targeting inhibitory centers before the operation. Additionally, the investigators aim to comprehensively monitor patients before and after surgery, focusing on investigating changes in brain function associated with the achieved weight loss.
+
+DETAILED DESCRIPTION:
+Obesity, defined as a body mass index (BMI) above 30 kg/m² or through other body composition measurements like waist circumference or body fat percentage, is a major risk factor for cardiovascular, neurological, and oncological diseases. It is one of the leading causes of mortality in both men and women. The prevalence of obesity is increasing globally, particularly among younger populations, surpassing undernutrition and posing significant health and socio-economic challenges.
+
+Excess fat accumulation, a hallmark of obesity, impacts the structure and function of nearly all organ systems. This occurs through both physical mechanisms, such as fat deposition around organs, and functional mechanisms, including chronic low-grade inflammation, insulin resistance, dyslipidemia, and altered hormone production and regulation by adipose tissue.
+
+While various therapies have been developed to address the negative effects of obesity on body structure and function, early interventions like lifestyle changes and pharmacotherapy have shown only mild and often temporary weight reduction. These approaches frequently lead to cyclical weight changes, which have been linked to increased cardiovascular risk.
+
+Bariatric surgery has emerged as the most effective treatment for severe obesity, delivering significant and long-lasting weight reduction compared to lifestyle modifications. While lifestyle interventions typically achieve a weight loss of 5-10%, bariatric surgery can result in reductions of 15-20%. However, a notable challenge is the risk of failure, primarily due to noncompliant eating behaviors after surgery. Approximately 40% of individuals with extreme obesity are at high risk of experiencing suboptimal outcomes following bariatric surgery.
+
+To address this issue, our project aims to improve the sustainability of bariatric surgery outcomes by incorporating neuromodulation before the procedure. Specifically, the investigators propose using transcranial direct current stimulation (tDCS) to enhance prefrontal inhibitory control by targeting the left dorsolateral prefrontal cortex (lDLPFC). This home-based, non-invasive brain stimulation method seeks to improve behavioral regulation, potentially reducing the likelihood of postoperative complications related to eating habits.
+
+Additionally, researchers aim to identify neural, cognitive, and behavioral predictors of successful bariatric surgery outcomes. By examining these factors, investigators plan to optimize treatment strategies, ensuring more effective and sustainable results for individuals undergoing bariatric surgery.
+
+PRIMARY OUTCOMES:
+  - Cognitive impulse control measured via food-modified Go/No-Go task
+
+INTERVENTIONS:
+  - DEVICE: home-based tDCS stimulation
+  - DEVICE: home-based tDCS stimulation - sham
+  - PROCEDURE: Bariatric surgery
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06874309

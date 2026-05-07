@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 34029340
+Title: Collective states and their transitions in football.
+Authors: Welch, Schaerf, Murphy
+Journal: PloS one
+Year: 2021
+Topic: visualization athletic performance
+
+ABSTRACT:
+Movement, positioning and coordination of player formations is a key aspect for the performance of teams within field-based sports. The increased availability of player tracking data has given rise to numerous studies that focus on the relationship between simple descriptive statistics surrounding team formation and performance. While these existing approaches have provided a high-level a view of team-based spatial formations, there is limited research on the nature of collective movement across players within teams and the establishment of stable collective states within game play. This study draws inspiration from the analysis of collective movement in nature, such as that observed within schools of fish and flocking birds, to explore the existence of collective states within the phases of play in soccer. Order parameters and metrics describing group motion and shape are derived from player movement tracks to uncover the nature of the team's collective states and transitions. This represents a unique addition to the current body of work around the analysis of player movement in team sports. The results from this study demonstrate that sequences of ordered collective behaviours exist with relatively rapid transitions between highly aligned polar and un-ordered swarm behaviours (and vice-versa). Defensive phases of play have a higher proportion of ordered team movement than attacking phases, indicating that movements linked with attacking tactics, such as player dispersion to generate passing and shooting opportunities leads to lower overall collective order. Exploration within this study suggests that defensive tactics, such as reducing the depth or width to close passing opportunities, allows for higher team movement speeds and increased levels of collective order. This study provides a novel view of player movement by visualising the collective states present across the phases of play in football.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/34029340/

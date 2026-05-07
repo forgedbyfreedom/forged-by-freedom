@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07342543
+Title: Guided Physical Activity Counseling for Hypertension in Primary Care
+Official Title: Guided Physical Activity Counseling for Hypertension in Primary Care
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 330
+Topic: caffeine exercise
+
+SUMMARY:
+The goal of this study is to create easy-to-read physical activity reports and counseling guides for primary care doctors. These tools will use activity data collected over time from wearable fitness trackers. The study will also test how helpful and easy the system is for doctors when talking with patients who have high blood pressure. This approach uses technology that already exists and helps solve problems that make it hard to use in medical care. It also has the potential to reach many people and be low-cost for clinics to use.
+
+DETAILED DESCRIPTION:
+There is robust evidence that adopting regular moderate-to-vigorous physical activity (MVPA) can improve blood pressure and reduce CVD risk in patients with hypertension. Accordingly, MVPA counseling is considered first line treatment for patients with pre- and stage 1 hypertension, though rates of counseling in ambulatory care visits for hypertension management remain low. Some health systems have begun incorporating data from wearable activity trackers (e.g., Fitbits) into electronic health records (EHR) to facilitate MVPA counseling, but it is unclear whether sharing these data with providers will change ambulatory care visits or patient behavior. Clinicians have reported myriad barriers to incorporating this technology into clinical care, including that reviewing data takes too much time, is not standardized, takes expertise they do not have, and there is often too much data to be useful. In addition to summarized data, providers may need guidance in how to interpret it, use evidence-based counseling practices, and suggest behavior change strategies based on patients' unique barriers. In the current proposal, investigators will conduct a 3-arm randomized trial to test the efficacy of an expert software system to interpret data from wearables for providers and generate tailored counseling scripts for them incorporating evidence-based communication strategies for primary care. The study team will recruit N=30 primary care providers from UC San Diego primary care clinics and N=300 of their patients with pre- and stage 1 hypertension (PS1H). All patients will receive a wearable Fitbit activity tracker to wear in the 4-6 weeks preceding an ambulatory care visit for PS1H management. Providers will be randomized to receive 1) algorithm-driven counseling guides in EHR with summarize data and tailored counseling scripts based on patient activity levels and barriers (intervention), 2) only summarized data from wearables integrated into EHR (comparison), or 3) no access to patient Fitbit data (control). Patients will continue to wear trackers continuously for 3 months following their ambulatory care visit, and will take at-home blood pressure readings monthly. Investigators hypothesize that patients whose providers are randomized to receive the expert system summary reports will show greater increases in MVPA following ambulatory care visits than those whose providers receive only summarized data and patients in the control group. The study team will also evaluate effects of the counseling guides on blood pressure, doctor-patient communication, and clinical workflow by using time stamps in EHR to estimate visit length. Investigators will also evaluate provider satisfaction with the system through questionnaires and interviews. This study will advance intervention science by creating an intervention tool for providers that has potential for low-cost implementation across a wide range of clinical settings. This will capitalize on the rich data that are in
+
+PRIMARY OUTCOMES:
+  - Change in Physical Activity Minutes Measured by Fitbit
+
+INTERVENTIONS:
+  - BEHAVIORAL: Physical activity counseling
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07342543

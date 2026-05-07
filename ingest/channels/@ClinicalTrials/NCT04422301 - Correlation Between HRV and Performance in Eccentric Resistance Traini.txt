@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04422301
+Title: Correlation Between HRV and Performance in Eccentric Resistance Training Associated With Partial Blood Flow Restriction
+Official Title: Correlation Between Heart Rate Variability and Performance in Eccentric Resistance Training Associated With Partial Blood Flow Restriction: a Randomized Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: resistance training
+
+SUMMARY:
+Studies on resistance training (RT) associated with blood flow restriction (BFR) is an alternative method of gaining strength and hypertrophy muscle. However, there is a gap correlated to autonomic repercussion of BFR and performance. Thus, it becomes relevant to investigate this type of training in post-exercise. Objective: investigate and compare autonomic and performance responses of 6 weeks of eccentric RT with different intensities associated or not to BFR in healthy youngsters. Method: This is a randomized clinical trial including 60 healthy men aged 18-35 years, divided into four groups according to exercise intensity and BFR: 80% without BFR, 40% without BFR, 80% with BFR and 40% with BFR. Exercise intensity will be determined by the peak of excentric torque on the isokinetic dynamometry method and by the BFR, as being 40% of the intensity required for the complete examination of the blood flow evaluated by Doppler. Participants will do an eccentric femoral quadriceps muscle exercise session on the isokinetic dynamometer according to the previously randomized group. For recovery analyzes, it will be used: the root-mean-square of the successive normal sinus RR interval difference (rMSSD); high frequency (HF) ms²; HF(nu) and the standard deviation of instantaneous beat-to-beat interval variability (SD1). For performance, it will be used the single leg hop test.
+
+For data analysis of the population profile, the descriptive statistical method will be used and the results will be presented with values of means, standard deviations, median and confidence interval. Initially, participants from all study groups will be dichotomized at each performance outcome (muscle strength test on the isokinetic dynamometer and vertical jump test) as "improvement" or "without improvement" in order to demonstrate the behavior of the responses obtained during the training, that is, whether the individual responded to the RT or not. It is worth mentioning that this qualitative analysis will be performed considering the data obtained from the initial, intermediate and final evaluation.
+
+The dichotomization of the results of the functional tests will be performed by the typical error of the sample measurement for each test. It will be considered as "improvement" if the participant presents gains in tests above the typical error of the measure. The values obtained from the initial, intermediate and final evaluation will be analyzed independently.
+
+Subsequently, the weekly average of the vagal indices (rMSSD, HF and SD1) will be performed in the baseline moment and after 6 weeks of RT moment of each study group. In the sequence, the performance parameters will be correlated with the autonomic parameters in the respective groups. Pearson or Spearman correlation test will be used according to the normality of the data. The level of significance will be p \<0.05 for all tests. The statistical program SPSS (Statistical Package for the Social Sciences) will be used for the analyzes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Performance
+  - Performance
+  - Performance
+  - HRV - rMSSD
+  - HRV - SD1
+
+INTERVENTIONS:
+  - OTHER: Blood flow restriction
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04422301

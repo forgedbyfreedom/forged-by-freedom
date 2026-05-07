@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04672447
+Title: Effect of 4 Weeks of Citrulline and Glutathione Supplementation on Arterial Function
+Official Title: Effects of 4 Weeks Supplementation With L-Citrulline and Glutathione on Arterial Function and Cardiovascular Responses in Postmenopausal Healthy Women: A Pilot Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: protein supplementation
+
+SUMMARY:
+Examining the effects of 4 weeks of Citrulline alone or in combination with glutathione on the arterial function of postmenopausal women.
+
+DETAILED DESCRIPTION:
+L-Citrulline is a non-protein amino acid and an efficient precursor of L-arginine, the substrate for endothelial nitric oxide synthesis. Glutathione is a tripeptide with antioxidant effects. Postmenopausal women will ingest 6g/d of L-Citrulline or 2g of L-Citrulline plus 200mg/d of glutathione or placebo (maltodextrin) for 4 weeks with vascular function testing prior to and after the intervention.
+
+PRIMARY OUTCOMES:
+  - Change in endothelial function
+  - Change in arterial stiffness
+  - Blood pressure control during the cold pressor test
+  - L-Arginine bioavailability
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-Citrulline
+  - DIETARY_SUPPLEMENT: L-Citrulline
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Glutathione
+
+ELIGIBILITY:
+Age: 50 Years to 79 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04672447

@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06913985
+Title: Trajectory Study: Predicting Cardiometabolic Health in Adolescents and Young Adults Based on Childhood Fitness, Sleep, and Diet
+Official Title: Trajectory Study: Predicting Cardiometabolic Health in Adolescents and Young Adults Based on Childhood Fitness, Sleep, and Diet
+Status: ENROLLING_BY_INVITATION
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 250
+Topic: aerobic exercise
+
+SUMMARY:
+The Trajectory study aims to determine whether childhood aerobic fitness, sleep quality, and diet quality predict cardiometabolic health during puberty and early adulthood, independently of adiposity.
+
+DETAILED DESCRIPTION:
+The Trajectory study is a longitudinal observational study. Participants will be recalled from two existing pediatric cohorts: the Arkansas Active Kids study (ClinicalTrials.gov ID: NCT03221673; IRB #206217) and the MI Energy study (ClinicalTrials.gov ID: NCT04427462; IRB #260376). Both were cross-sectional studies with comparable designs, recruiting children between ages 7 and 10 years, regardless of sex, BMI, or ethnicity. The Trajectory study serves as the follow-up component during adolescence or early adulthood (ages 13-21). It is anticipated that approximately 250 participants will complete the follow-up visit.
+
+During the follow-up visit at the Arkansas Children's Nutrition Center (ACNC), the following key measurements will be conducted:
+
+* Body Composition: Dual-Energy X-ray Absorptiometry (DXA)
+* Metabolic Profile: Fasting blood markers, including glucose, lipid profile, and insulin resistance
+* Continuous Glucose Monitoring: Interstitial sensor-based glucose
+* Vascular Function: Ultrasound (brachial artery flow-mediated dilation)
+* Liver Examination: Ultrasound (liver steatosis and stiffness)
+* Resting Metabolic Rate: Indirect calorimetry
+* Aerobic Capacity: Cardiopulmonary exercise test (spirometry)
+* Muscle Strength: Dynamometry
+* Physical Activity \& Sleep: Accelerometry
+* Dietary Intake: Food frequency questionary
+
+PRIMARY OUTCOMES:
+  - Composite score of cardiometabolic health status.
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 13 Years to 21 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06913985

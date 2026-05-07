@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06465810
+Title: Non-interventional Study of Patients With Transthyretin (ATTR) Amyloidosis
+Official Title: A Non-interventional, Prospective, Multi-country Study Collecting Real-world Data on the Characteristics, Treatment Patterns, and Outcomes of Patients With Transthyretin (ATTR) Amyloidosis
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1850
+Topic: beta-alanine
+
+SUMMARY:
+The MaesTTRo study aims to enroll a global cohort of patients with transthyretin (ATTR) amyloidosis to longitudinally observe the natural course of the disease and describe real-world treatment patterns and outcomes. In addition, information on the effectiveness of ATTR amyloidosis treatments, including eplontersen, which is a ligand-conjugated antisense oligonucleotide gene silencing treatment targeting activity against both the mutant and wild-type TTR protein, will be collected.
+
+DETAILED DESCRIPTION:
+MaesTTRo is an international, longitudinal, non-interventional study of adult patients with transthyretin (ATTR) amyloidosis.
+
+The study plans to enroll a minimum of 1850 patients with ATTR amyloidosis, including a minimum of 850 patients with ATTR cardiomyopathy (ATTR-CM), and a minimum of 100 patients with ATTRv-PN hereditary polyneuropathy.
+
+The enrollment period is expected to last approximately 4 years. The duration of follow-up for each patient will be at least 3 years and up to 7 years depending on the date when the patient is enrolled.
+
+This study design will include both primary and secondary data. Primary data will consist of patient-reported outcome (PRO) questionnaires. Patients will be asked to complete electronic PRO questionnaires at enrollment and every 6 months (±3 months) only during routine visits. Secondary data will consist of demographic, clinical, and treatment information, and will be collected as per routine clinical practice. These data will be abstracted directly from the electronic health record or review of paper charts for each patient and entered in the electronic data capture system. No site visits are required for this study, and patients will not be contacted for data collection outside of routine clinic visits.
+
+For patients enrolled in the United States, a tokenization process (creation of a unique, encrypted identifier called a token, in place of personal identifiable information) will be used to collect additional de-identified data (e.g., healthcare resource use, healthcare costs) from other sources that are part of patients' routine medical care (electronic medical, hospital, or pharmacy records). Only de-identified data will be analyzed. Patients will be given a choice within the informed consent form to opt in or opt out of participating in the tokenization process.
+
+PRIMARY OUTCOMES:
+  - Demographic characteristics (overall and in patients initiating a treatment with eplontersen)
+  - Treatment patterns (overall and in patients initiating a treatment with eplontersen)
+  - Clinical characteristics (overall and in patients initiating a treatment with eplontersen)
+  - Findings from biopsy (overall and in patients initiating a treatment with eplontersen)
+  - Findings from Cardiovascular magnetic resonance imaging (CMR) (overall and in patients initiating a treatment with eplontersen)
+
+INTERVENTIONS:
+  - DRUG: Treatment of transthyretin (ATTR) amyloidosis in observational study setting
+
+ELIGIBILITY:
+Age: 18 Years to 130 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06465810

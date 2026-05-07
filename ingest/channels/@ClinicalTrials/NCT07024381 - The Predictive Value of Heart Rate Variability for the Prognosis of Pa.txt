@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07024381
+Title: The Predictive Value of Heart Rate Variability for the Prognosis of Patients With Mild to Moderate Traumatic Brain Injury
+Official Title: The Predictive Value of Heart Rate Variability for the Prognosis of Patients With Mild to Moderate Traumatic Brain Injury
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 172
+Topic: creatine supplementation
+
+SUMMARY:
+This study adopts a retrospective design, continuously including patients with TBI treated at the Emergency Trauma Center of the First Affiliated Hospital of Suzhou University from May 2017 to September 2024. Investigators used the hospital's electronic medical record system to collect clinical data. The patients' age, gender, history of diabetes, history of hypertension, medication history, mechanism of injury, mean arterial pressure, Glasgow Coma Scale, and other information were recorded upon emergency admission. Laboratory indicators included white blood cell count, hemoglobin (HB) levels, platelet count, C-reactive protein, international normalized ratio (INR), and albumin. Myocardial injury markers included alpha-hydroxybutyrate dehydrogenase, creatine kinase, lactate dehydrogenase, aspartate aminotransferase, creatine kinase-MB (CK-MB), myoglobin, NT-proBNP, and high-sensitivity troponin T. Additionally, continuous ECG monitoring was conducted for 24 hours after admission.
+
+DETAILED DESCRIPTION:
+This study adopts a retrospective design, continuously including patients with TBI treated at the Emergency Trauma Center of the First Affiliated Hospital of Suzhou University from May 2017 to September 2024. Investigators used the hospital's electronic medical record system to collect clinical data. The patients' age, gender, history of diabetes, history of hypertension, medication history, mechanism of injury, mean arterial pressure, Glasgow Coma Scale, and other information were recorded upon emergency admission. Laboratory indicators included white blood cell count, hemoglobin (HB) levels, platelet count, C-reactive protein, international normalized ratio (INR), and albumin. Myocardial injury markers included alpha-hydroxybutyrate dehydrogenase, creatine kinase, lactate dehydrogenase, aspartate aminotransferase, creatine kinase-MB (CK-MB), myoglobin, NT-proBNP, and high-sensitivity troponin T. Additionally, continuous ECG monitoring was conducted for 24 hours after admission.
+
+PRIMARY OUTCOMES:
+  - Glasgow Outcome Score
+  - Standard deviation of all NN intervals（SDNN）
+  - The average of all 5-minute standard deviations of NN intervals across a 24-hour period (SDNN index)
+  - The root mean square of successive differences between NN intervals (RMSSD)
+  - The proportion of consecutive NN intervals differing by over 50 ms, relative to the total number of NN intervals (pNN50)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07024381

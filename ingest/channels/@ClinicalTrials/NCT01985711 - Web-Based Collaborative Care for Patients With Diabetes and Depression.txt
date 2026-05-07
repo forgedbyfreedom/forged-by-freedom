@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01985711
+Title: Web-Based Collaborative Care for Patients With Diabetes and Depression
+Official Title: Effects of a Web-Based Collaborative Care Management System (WBCCMS) on Psychosocial Outcomes and Biochemical Outcomes Among Patients With Diabetes and Depression
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 300
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The goal of this proposal is to integrate depression services and diabetes care methods into a web-based collaborative care system so that a single program can assist patients with diabetes and co-morbid depression. The investigators hypothesized that the effect of the intervention program on (a) decreasing depressive symptomatology; (b) improving biomedical outcomes (e.g., blood lipid profiles,blood glucose, glycosylated hemoglobin, and blood pressure). (c) Increasing healthful behavior (medicine compliance, physical activity, diabetic diet);(d)decreasing unhealthful behavior( sedentary activities, smoking, alcohol addiction); (e) improving quality of life.
+
+DETAILED DESCRIPTION:
+Recent study shows that the overall prevalence of diabetes was estimated to be 11.6% (95% confidence interval, 11.3%-11.8%) in the Chinese adult population\[1\]. Depression is a common comorbidities in patients with diabetes with prevalence rates more than 30%\[2, 3\]. Co-morbid depression portends worse health outcomes (such as glycemic control, medication adherence, quality of life, physical activity, and blood pressure control，diabetic complication) and increases health care costs\[4-6\]. But the rate of diabetes-depression recognition and treatment is low. Collaborative primary care model, which involves a multidisciplinary health care team guiding patient-centered care , has been tested in the US and showed a significant reduction of depressive symptoms, improved diabetes care and patient-reported outcomes, and saved money. We aim to developing a web-based collaborative care system and compare the effectiveness of this new collaborative care model with usual diabetes outpatient care for patients with type 2 diabetes and depression in China.
+
+The web-based collaborative care system integrates usual management plan of diabetes and established theories for treating depression and diabetes specific behaviors or affective disorders. Diabetes management plan consists of a meal plan, exercise guidance, oral medications or insulin guidance, health education, supervision and regular blood glucose monitoring. Three main established theories of psychology as follows: 1) Cognitive Behavioral Therapy (CBT); 2) Transtheoretical Model（TTM）of Behavior Change\[7\]; and 3) Motivational interviewing(MI)\[8\]. Cognitive behavioral therapy helps people learn to change inappropriate or negative thought patterns and behaviors associated with the illness. Web-based CBT is generally viewed as a very effective form of psychotherapy for treating depression\[9-12\], which is also effective to manage diabetic stress\[13\]. Transtheoretical Model of Behavior Change and Motivational interviewing are both evidence-based behavior change techniques to improve diabetes and depression associated healthy behavior (such as taking medicine, physical activity, diabetic diet, drug therapy compliance) and to decrease unhealthy behavior(such as sedentary activities, smoking, alcohol addiction).The intervention will be conducted in a safety-net health system primary care setting.
+
+A randomized controlled trial (RCT) will be conducted to evaluate the effectiveness of culturally adapted diabetes and depression collaborative treatment for reducing depressive symptoms, activating diabetes healthy behaviors, decreasing unhealthy behaviors and improving adherence to diabetes self-care regimens in Chinese with depression and diabetes. Participation in this study will last 12 months. All participants will firstly undergo baseline assessments that will include a 40-minute interview about personal health and feelings. Eligible participants will then be assigned randomly to receive either web-ba
+
+PRIMARY OUTCOMES:
+  - Change in Patient Health Questionnaire-9 items (PHQ-9) score
+
+INTERVENTIONS:
+  - DEVICE: web-based collaborative care
+  - OTHER: wait-list
+  - BEHAVIORAL: usual diabetes outpatient care
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01985711

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03189225
+Title: Capillary And Venous Accuracy: LifeScan Products vs Hospital Reference and YSI
+Official Title: Capillary And Venous Accuracy: LifeScan Products vs Hospital Reference and YSI
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: creatine supplementation
+
+SUMMARY:
+This study is to evaluate accuracy between product platforms in the hands of users, comparing capillary to venous response vs YSI reference instrument as well as the local hospital analyser.
+
+DETAILED DESCRIPTION:
+This study will gather data to:
+
+* Determine if extreme bias can be observed between 3 candidate products for user accuracy.
+* Assess the offset between venous blood samples versus capillary blood samples.
+* Determine if there are measurable donor factors which influence the product bias.
+* Assess any offset between YSI 2300 reference instruments and hospital laboratory analyser and impact on bias difference between BGM product types.
+
+PRIMARY OUTCOMES:
+  - Comparison of blood glucose ( BG) results between 3 LifeScan blood glucose monitoring systems ( BGMS).
+  - BG results of 3 BGMSs vs hospital's laboratory biochemistry analyser.
+  - BG results of 3 BGMSs vs LifeScan reference instrument ( YSI 2300)
+  - Venous blood collected for impact assessment of Biochemistry parameters on 3 LifeScan Blood Glucose Monitoring Systems (OneTouch Ultra 2, OneTouch Verio, OneTouch SelectPlus).
+  - Venous blood collected for impact assessment of Biochemistry parameters on 3 LifeScan Blood Glucose Monitoring Systems (OneTouch Ultra 2, OneTouch Verio, OneTouch SelectPlus).
+
+INTERVENTIONS:
+  - OTHER: Capillary And Venous Accuracy
+
+ELIGIBILITY:
+Age: 16 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03189225

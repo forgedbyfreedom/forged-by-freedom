@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06743841
+Title: Study of a Nutritional Supplement for Healthy Aging
+Official Title: Study of the Efficacy of a New Nutritional Supplement, Compared with Placebo, in Promoting Active and Healthy Aging from the Age of 65
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: vitamin D muscle
+
+SUMMARY:
+The main aim of this clinical trial is to learn if a nutritional supplement improves health status from a nutritional point of view in an active and healthy elderly population. It will also study about the improvement of anthropometric variables, vitality, quality of life and mood, as well as biochemical and metabolic changes produced after the intervention.
+
+The main questions it aims to answer are:
+
+* Does a nutritional supplement improve the general nutritional status?
+* What health parameters improve most clearly after taking the supplement? Researchers will compare a nutritional supplement to a placebo (a look-alike substance that contains no interest nutrients) to see if the nutritional supplement works to improve health status from a nutritional point of view.
+
+Participants will:
+
+* Take a nutritional supplement or a placebo every day for 8 weeks.
+* Visit the clinic once every 4 weeks for checkups and tests
+* Keep a diary of their symptoms and the degree of adherence to taking the nutritional supplement.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Nutritional score.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nutritional supplement
+  - DIETARY_SUPPLEMENT: Control supplement
+
+ELIGIBILITY:
+Age: 65 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06743841

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06081114
+Title: Micronutrient Dose Response Study in Bangladesh
+Official Title: Micronutrient Dose Response (MiNDR) Study in Bangladesh
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 643
+Topic: protein supplementation
+
+SUMMARY:
+The recommended daily amounts of vitamins and minerals, referred to as micronutrients, are based on data from high income settings and for healthy populations do not fully correct nutritional deficiencies in undernourished settings. This study will determine the minimum acceptable doses across a range of nutrients at which sufficiency is achieved with supplementation using biochemical indicators of nutritional status in non-pregnant (non-lactating) women of reproductive age and pregnant women in Bangladesh. In this double-masked randomized controlled trial, a dose response study will be undertaken using increasing levels of doses provided as supplements to women (pregnant or non-pregnant) with nutritional indicators as outcomes.
+
+DETAILED DESCRIPTION:
+The primary aims of the study are to:
+
+1. To characterize the time-course of in vivo exposures (dose response) of several micronutrients in pregnant and non-pregnant and non-lactating women of reproductive age (WRA) in a real-life situation.
+2. To characterize any clinically meaningful prognostic factors that can explain the between-subject variability.
+3. To investigate whether the micronutrients follow dose-proportional pharmacokinetics.
+
+PRIMARY OUTCOMES:
+  - Change in vitamin A status
+  - Change in vitamin D status
+  - Change in vitamin E status
+  - Change in B-vitamin static indicators
+  - Change in B-vitamin enzymatic activity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Micronutrient Supplement
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06081114

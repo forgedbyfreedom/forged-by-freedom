@@ -1,0 +1,71 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07041814
+Title: A Study Comparing Different Treatment Approaches for the Initiation of Puberty in Girls With Turner Syndrome Using a TRIFECTA-DARED Approach for Rare Diseases
+Official Title: Bayesian Pragmatic Trial for Pubertal Induction in Turner Syndrome: TRansformation Initiative For Efficient Clinical TriAl Design Advancement in RarE Diseases (TRIFECTA-DARED Framework)
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: growth hormone treatment
+
+SUMMARY:
+Turner syndrome is a condition in which a girl's body does not make enough estrogen on its own, so doctors give estrogen to help start breast and uterine (womb) development. Hence, the goal of this clinical trial is to learn whether two different ways of giving estrogen help girls and young women with Turner syndrome go through puberty normally, and to compare how well each method works and how safe they are.
+
+The main questions the trial aims to answer are:
+
+1. Does taking an oral estrogen tablet (Progynova) or applying an estrogen gel (Oestrogel) lead to better breast development?
+2. Does one method lead to a larger uterine size as seen on ultrasound?
+3. Do participants start menstrual-like (withdrawal) bleeding, and does one method cause it sooner?
+4. What side effects (for example, headaches, nausea, changes in blood tests) happen with each method?
+
+Who can take part?
+
+* Girls and young women aged 11-30 years with a confirmed diagnosis of Turner syndrome and no previous estrogen treatment.
+* They have not yet begun puberty (no breast growth, and a small uterus on ultrasound).
+* They agree to adhere to the study schedule and keep a diary of any bleeding or side effects
+
+What will happen to the participants during the clinical trial?
+
+* Get assigned at random to one of two groups (1:1 ratio):
+
+  1. Gel group: Apply Oestrogel (17β-estradiol) to the skin, starting twice a week, then daily with increasing doses over 19 months.
+  2. Tablet group: Swallow Progynova (estradiol valerate) tablets, starting twice a week, then daily with increasing doses over 19 months.
+* Visit the clinic at the start of study (baseline), month 1, 7, 13, and 19 for:
+
+  1. A physical exam (including breast staging).
+  2. An ultrasound to measure uterine length and thickness.
+  3. A blood test for safety checks (triglycerides and other markers).
+  4. Keep a diary noting any spotting or bleeding (called withdrawal bleeding) and any side effects.
+
+Why does this matter?
+
+Girls and young women with Turner syndrome often need estrogen to begin puberty safely. This trial will show which method-gel or tablets-best mimics natural puberty (breast and uterine growth), how quickly menstrual-like bleeding begins, and which has fewer unwanted effects. The findings will help doctors choose the most effective and safe treatment for people with Turner syndrome.
+
+DETAILED DESCRIPTION:
+Turner syndrome (TS) is a chromosomal condition in which the loss of one X chromosome leads to ovarian failure, absent or delayed natural puberty, reduced bone density, and elevated cardiovascular and metabolic risk. This interventional, Bayesian Phase II pragmatic trial is being undertaken within the TRIFECTA-DARED framework to address a critical gap in the management of pubertal induction for adolescent and young adult females with TS. While estrogen replacement therapies are standard, there remains uncertainty about which regimen best approximates natural pubertal development, optimizes uterine growth, and minimizes adverse metabolic or thromboembolic risks. Our trial arises from the need for robust, locally generated evidence in Malaysia to inform clinical practice in this rare-disease context.
+
+This single-centre study, conducted at Hospital Canselor Tuanku Muhriz (HCTM) and Hospital Pakar Kanak-Kanak at the Cheras Campus of Universiti Kebangsaan Malaysia, received ethics approval from the Universiti Kebangsaan Malaysia Research Ethics Committee (UKMREC). The trial design uses an open-label, randomized,1:1 ratio design, augmented by matched historical control data. After providing informed consent, participants are allocated by a central, computer-generated sequence (stratified by age category and body mass index) to receive either oral estradiol valerate (Progynova) or transdermal 17β-estradiol gel (Oestrogel). Treating clinicians and participants remain unblinded, while the trial statistician is masked until the database lock.
+
+Both regimens begin with twice-weekly dosing for the first four weeks, followed by once-daily administration for the remaining 18 months. Incremental dose doubling at month 7 and again at month 13 is designed to mimic the gradual rise in endogenous estradiol characteristic of normal puberty. Doses are dispensed and tracked through an electronic case report form (eCRF) with real-time logging of medication issuance and returns, and participants maintain a daily diary to record dosing adherence, any spotting or bleeding episodes, and all adverse experiences.
+
+Scheduled study visits occur at baseline and at months 7, 13, and 19, with quarterly safety check-ins during the first year. At each visit, a pediatric or adolescent gynecologist performs a comprehensive physical examination-including growth measurements, vital signs, and breast development staging-and obtains a transabdominal ultrasound to document uterine dimensions. Blood samples are drawn for routine safety laboratories (liver function, lipid profile, complete blood count) and hormone assays.
+
+Safety oversight is provided by an independent Data Monitoring Committee (DMC), which reviews periodic safety reports prepared by an external statistician. Adverse events are graded per the Common Terminology Criteria for Adverse Events (CTCAE) version 5.0. Any life-threatening or disabling event associated with the study drug triggers immediate notification to the ethic
+
+PRIMARY OUTCOMES:
+  - Proportions of Turner Syndrome with Satisfactory Breast Development (defined as Turner Breast Stage 3 (B3) and above)
+  - Median time to achieving Tanner Breast Stage 4 (B4) and above (in days)
+  - Uterine length (in cm)
+  - Anteroposterior uterine fundal diameter (in cm)
+
+INTERVENTIONS:
+  - DRUG: Oral estradiol valerate
+  - DRUG: Transdermal 17β estradiol
+
+ELIGIBILITY:
+Age: 11 Years to 30 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07041814

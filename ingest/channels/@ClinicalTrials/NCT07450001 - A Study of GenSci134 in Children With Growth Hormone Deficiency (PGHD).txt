@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07450001
+Title: A Study of GenSci134 in Children With Growth Hormone Deficiency (PGHD)
+Official Title: A Phase Ib/II Multicenter, Randomized, Open-label, Active-controlled, Single/Multiple-dose, Dose-finding, Clinical Study of GenSci134 in Children With Growth Hormone Deficiency
+Status: NOT_YET_RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 128
+Topic: growth hormone treatment
+
+SUMMARY:
+This study comprises two phases: Phase Ib and Phase II. Phase Ib is a multicenter, randomized, open-label, active-controlled, single-dose, dose-escalation to assess safety, tolerability, PK/PD profile, and immunogenicity of GenSci134 in children with GHD.
+
+Phase II is a multicenter, randomized, open-label, active-controlled, multiple-dose, parallel-group study to assess the efficacy and safety of multiple subcutaneous doses of GenSci134 at different levels versus Norditropin® in children with GHD. It will also evaluate PK/PD profile and immunogenicity to support dose selection for Phase III.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Phase Ib: Treatment Emergent Adverse Events （TEAEs）
+  - Phase II: Annualized height velocity (AHV) at Week 24 of treatment
+
+INTERVENTIONS:
+  - DRUG: GenSci134 Injection
+  - DRUG: Recombinant Human Growth Hormone Injection(Norditropin® FlexPro®)
+
+ELIGIBILITY:
+Age: 3 Years to 12 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07450001

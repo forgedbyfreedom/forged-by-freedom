@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03868748
+Title: Safety Evaluation of β-arbutin in Healthy Human Subjects
+Official Title: Safety Evaluation of β-arbutin in Healthy Human Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: beta-alanine
+
+SUMMARY:
+The purpose of this study is to determine the safety of synthetic beta-arbutin, a dietary supplement that aids in the prevention and treatment of calcium oxalate kidney stones, when administered to healthy human subjects.
+
+DETAILED DESCRIPTION:
+The objective and purpose of this Phase I study is to investigate the safety of synthetic beta-arbutin, administered to healthy human subjects for: i) 12 weeks, at a dose of 150 mg/day, and ii) 4 weeks, at a dose of 400mg/day. Safety will be determined by assessing adverse event rates between treatment groups and mean changes relative to baseline in serum biochemical, hematological and urinary markers.
+
+PRIMARY OUTCOMES:
+  - Incidence and severity of Adverse Events (AE)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beta-arbutin
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03868748

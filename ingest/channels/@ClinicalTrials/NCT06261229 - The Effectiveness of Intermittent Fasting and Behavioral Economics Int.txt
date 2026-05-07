@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06261229
+Title: The Effectiveness of Intermittent Fasting and Behavioral Economics Intervention on Weight Control in Obese Patients
+Official Title: The Effectiveness of Intermittent Fasting and Behavioral Economics Intervention on Weight Control in Obese Patients
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 123
+Topic: exercise intervention obesity
+
+SUMMARY:
+This study is a parallel randomized controlled trial (RCT). To determine the effect of intermittent fasting, intermittent fasting with behavioral economics, and intensive lifestyle modification on nutritional status; the differences between HOMA-IR, body weight change, and body composition in obese people.
+
+Each participant will be randomized to receive the intervention (intermittent fasting, intermittent fasting with behavioral economics, or intensive lifestyle modification.
+
+The study protocol will be explained to the eligible participant and informed written consent will be obtained.
+
+The total sample size will be 123 participants. Blood and urine samples will be collected at baseline and each follow-up visit including 1-month, 2-months, 6-month, and 12-months, respectively for further study to find out the mechanisms of weight loss, weight regain, and the improvement in the metabolic disease.
+
+DETAILED DESCRIPTION:
+The investigators will collect the participant characteristics (age, gender, smoking history, comorbid diseases including history of previous stroke, myocardial infarction, angina, hypertension, dyslipidemia, T2DM, risk of osteoporosis, and all medication lists) at the first visit.
+
+* Physiological parameters:
+
+  1. Body composition will be assessed by the Bioelectrical Impedance at the first visit and at each follow-up visit (1 month, 2 months, 4 months, 6 months, 9 months, and 12 months).
+  2. Peripheral venous blood sample (15mL: clotted blood 9mL and EDTA blood 6 mL) and urinalysis will be collected from all participants at baseline and each follow-up visit (1-month, 2-months, 6-month, and 12 months). Blood samples will be immediately centrifuged and plasma/serum will be placed in a -80 Celsius freezer until analysis (glucose, HbA1c, insulin, albumin, creatinine, uric acid, lipid profile, liver function test, kidney function test, thyroid function test, and other biochemical).
+* Three questionnaires will be collected:
+
+  1\) Global physical activity questionnaire, sleep questionnaire, and satiety visual analog score questionnaire will be obtained at the first visit and at each follow-up visit (1 month, 2 months, 4 months, 6 months, 9 months, and 12 months).
+* Nutritional status will be assessed by history, 24-hour dietary recall, 3days food record, and physical examinations at the first visit and at each follow-up visit (1 month, 2 months, 4 months, 6 months, 9 months, and 12 months).
+
+Regarding the descriptive statistical analysis, all the data will be tested for normality. Data will be presented as Mean ± standard deviation or Median (interquartile ranges) for continuous variables and frequency (%) for binary and categorical variables. The continuous variables will be compared by using Independent samples T-test or Analysis of variance (ANOVA) followed by multiple comparisons with the Bonferroni method. Test results of categorical variables will be evaluated by Chi-square or Fisher exact test as appropriate. Results will be deemed statistically significant at a P-value \< 0.05.
+
+PRIMARY OUTCOMES:
+  - HOMR-IR (index)
+  - Body mass index (kg/m^2)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Intermittent fasting
+  - BEHAVIORAL: Intermittent fasting + Behavioral economic
+  - BEHAVIORAL: Intensive Lifestyle Modification
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06261229

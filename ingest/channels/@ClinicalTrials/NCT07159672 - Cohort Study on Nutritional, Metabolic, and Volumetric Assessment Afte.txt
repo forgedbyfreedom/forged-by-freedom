@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07159672
+Title: Cohort Study on Nutritional, Metabolic, and Volumetric Assessment After Pancreaticoduodenectomy
+Official Title: Prospective Cohort Study of Nutritional, Metabolic, Molecular, and Volumetric Assessment of the Remnant Pancreas in Patients With Periampullary Malignancies Undergoing Pancreaticoduodenectomy
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 44
+Topic: beta-alanine
+
+SUMMARY:
+Periampullary malignant neoplasms are among the most lethal gastrointestinal tumors. They are usually diagnosed at advanced stages and require complex surgical treatment. Pancreaticoduodenectomy, the standard procedure for resectable cases, significantly impacts nutritional status, pancreatic function, and the structural integrity of the remaining pancreas. However, there are still significant knowledge gaps regarding the volumetric and molecular changes that occur postoperatively and how these changes interact with body composition, resting energy expenditure, and biochemical markers.
+
+This prospective, controlled, cohort study aims to integrate clinical, nutritional, metabolic, molecular, and imaging data to investigate changes in the remnant pancreas and their associations with postoperative outcomes. The study is expected to provide novel insights to support personalized, evidence-based nutritional and metabolic care for patients undergoing pancreaticoduodenectomy.
+
+DETAILED DESCRIPTION:
+Periampullary malignant neoplasms are lethal gastrointestinal tumors that are often diagnosed at advanced stages and require complex surgical intervention. Pancreaticoduodenectomy, the gold standard for resectable disease, has profound effects on nutritional status, exocrine pancreatic function, and the structural integrity of the remaining pancreas. Despite recent advances, significant gaps remain in our understanding of the volumetric and molecular alterations that occur postoperatively and how these alterations interact with body composition, resting energy expenditure, and biochemical markers.
+
+This is a prospective, longitudinal, controlled, clinical-translational cohort study. Data on clinical, nutritional, biochemical, and plasma parameters will be collected at three time points for the experimental group (preoperatively and 3 and 6 months after hospital discharge) and one time point for the control group. Plasma samples will be stored at -80 °C and analyzed using validated techniques, including multiplex assays, spectrophotometry, ELISA, and tandem mass spectrometry (LC-MS/MS) to detect inflammatory biomarkers (IL-1β, , IL-6, TNF-α, and MCP-1; oxidative markers (MDA, GSH, TAC, and FRAP); proteomic targets (HSP70, fibronectin, and laminin); and lipidomic profiles (ceramides, sphingolipids, and cardiolipins). Abdominal imaging (CT and/or MRI) will be processed using 3D Slicer software to estimate the volume of the remnant pancreas via three-dimensional segmentation.
+
+Statistical analyses will be conducted in RStudio. We will apply mixed linear models (MLM and MLMG), incorporating fixed and random effects to account for intra- and inter-individual variability. Missing not-at-random data will be addressed using multiple imputation by chained equations (MICE), and pooled estimates will be calculated according to Rubin's rules. We will set statistical significance at p \< 0.05 with Holm-Bonferroni correction for multiple comparisons.
+
+This integrative approach ensures methodological rigor, bias control, and robust inference. It has the potential to guide personalized, evidence-based nutritional strategies in the context of pancreatic cancer.
+
+PRIMARY OUTCOMES:
+  - Resting Energy Expenditure (REE) in kcal/day
+
+INTERVENTIONS:
+  - PROCEDURE: Pancreaticoduodenectomy
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07159672

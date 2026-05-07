@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06199856
+Title: Assessment System for Sarcopenia Based on Ultrasonographic Data
+Official Title: An Artificial Intelligence Assessment System for Risk Grading of Sarcopenia Based on Ultrasonographic Multidimensional Data
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1500
+Topic: sarcopenia intervention
+
+SUMMARY:
+1. To develop an artificial intelligence assisted diagnostic model for sarcopenia based on ultrasound images;
+2. To develop artificial intelligence classification and regression models for auxiliary diagnosis of sarcopenia, patient strength estimation, and other functions based on ultrasound image data.
+
+DETAILED DESCRIPTION:
+Sarcopenia is a syndrome of age-related muscle mass loss and muscle function decrease, which can be comorbid with a variety of diseases and interacts extensively with various disease states to influence disease prognosis. Diseases such as cancer, diabetes, chronic kidney disease, and rheumatoid arthritis can accelerate the process of muscle loss by affecting myogenic cell regeneration, interfering with protein synthesis, increasing protein consumption, and enhancing protein degradation by the ubiquitination pathway, and the decline in motor function will, in turn, further worsen the prognosis of the disease. Despite some regional differences, the prevalence of sarcopenia has been found to exceed 10%. Early identification of the potential risk of sarcopenia and early intervention in the early stages of muscle mass and function impairment is one of the most important steps to improve the quality of life of older adults.
+
+Currently, the diagnosis of sarcopenia relies on three features: loss of muscle mass, loss of muscle strength, and loss of physical performance. At present, physicians usually use bioelectrical impedance analysis (BIA) or dual-energy X-ray absorptiometry (DXA) to determine skeletal muscle mass index SMI to measure muscle mass, grip strength test to measure muscle strength, gait speed or tools such as SPPB scores to assess physical performance. A diagnosis of sarcopenia can be made when a subject experiences a decrease in SMI combined with a decrease in grip strength or a decrease in gait speed.
+
+In the field of medical imaging, researchers have been working to explore and validate appropriate imaging tools and markers to diagnose and evaluate sarcopenia. The common methods for deep mining of medical imaging include radiomics and machine learning, usually by analyzing the texture features of muscles at specific sites to quantify muscle function or segmenting skeletal muscles accurately in two dimensions or three dimensions to quantify muscle mass. Compared to computed tomography (CT) or magnetic resonance imaging (MRI), ultrasound is a more accessible and less costly medical imaging technique, especially in low- and middle-income regions. Ultrasound can be used to conveniently scan local muscles and obtain muscle characteristics such as muscle thickness, cross-sectional area, and pennation angle. Our previous studies have demonstrated that SMI in older adults can be accurately estimated by using muscle thickness at four sites together with basic information such as age and body mass index (BMI), and have found in cross-regional validation that the stability of estimates can be maintained across communities with very different ethnic proportions. However, several existing large studies on ultrasound in sarcopenia are currently focusing only on muscle morphological measurements, ignoring the large amount of hidden ultrasound image information. At the same time, the flexibility of the scanning process has led to greater resistance from
+
+PRIMARY OUTCOMES:
+  - Death
+  - Diagnosed sarcopenia
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: ultrasound scan
+
+ELIGIBILITY:
+Age:  to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06199856

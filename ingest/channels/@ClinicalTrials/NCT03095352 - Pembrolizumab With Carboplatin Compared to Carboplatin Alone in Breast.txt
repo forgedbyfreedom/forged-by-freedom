@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03095352
+Title: Pembrolizumab With Carboplatin Compared to Carboplatin Alone in Breast Cancer Patients With Chest Wall Disease
+Official Title: A Randomized Phase II Study of Pembrolizumab, an Anti-Programmed Cell Death (PD)-1 Antibody, in Combination With Carboplatin Compared to Carboplatin Alone in Breast Cancer Patients With Chest Wall Disease
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 76
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a phase II multicenter study including breast cancer patients with chest wall disease that is hormone resistant (estrogen receptor (ER) positive/progesterone receptor (PR) positive/human epidermal growth factor receptor 2 (HER2) negative breast cancer with progressive disease on 2 prior lines of hormonal therapy) or triple negative (ER negative/PR negative/HER2 negative, TNBC).
+
+A companion translational study is operating concurrently with the study described above. In this study, biomarker research to be performed on tumor biopsies and peripheral blood samples will be performed to explore the immunologic and genomic mechanism of action underlying treatment with pembrolizumab and carboplatin versus carboplatin alone. This protocol includes tissue and blood correlative exploratory endpoints including changes in tumor PD-L1 (programmed death ligand 1) gene expression, tumor and peripheral blood immune composition and cytokine expression, plasma tumor DNA, circulating tumor cells, and tumor myelocytomatosis (MYC) oncogene expression using tumor biopsy and peripheral blood testing before and after treatment; correlations with these markers and disease control rate will be assessed.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To determine the disease control rate (including complete response (CR), partial response (PR) and stable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 at 18 weeks of treatment in breast cancer patients with chest wall disease treated with pembrolizumab and carboplatin or carboplatin alone.
+
+SECONDARY OBJECTIVES:
+
+I. To determine the disease control rate (including CR, PR and stable disease as defined by Immune-related Response Evaluation Criteria In Solid Tumors (irRECIST) at 18 weeks of treatment in breast cancer participants with chest wall disease treated with pembrolizumab and carboplatin or carboplatin alone.
+
+II. To determine progression free survival (PFS) in participants treated with pembrolizumab and carboplatin vs. carboplatin alone.
+
+III. To determine the toxicity of pembrolizumab and carboplatin vs. carboplatin alone.
+
+IV. To determine 18 week disease control rate (DCR) based on tumor programmed death-ligand 1 (PD-L1) expression via immunohistochemistry.
+
+V. To determine the overall response rate (ORR) of participants treated with pembrolizumab and carboplatin vs. carboplatin alone.
+
+OUTLINE:
+
+Participants will be enrolled at Translational Breast Cancer Research Consortium (TBCRC) sites and will be randomized 2:1 to receive treatment with pembrolizumab and carboplatin (n=56, Arm A) or carboplatin alone (n=28, Arm B) until documented disease progression.
+
+Participants randomized to Arm B may cross-over after documented disease progression to pembrolizumab with or without carboplatin at investigator's discretion. Participants in Arm A will be treated with combination pembrolizumab and carboplatin followed by maintenance pembrolizumab if stable or responding disease.
+
+Participants in Arm B will be treated with carboplatin only until disease progression, whereupon they may crossover to receive pembrolizumab with or without carboplatin at investigator's discretion (Arm Bx). After the end of treatment, each subject will be followed for 30 days for adverse event monitoring (serious adverse events will be collected for 90 days after the end of treatment. Participants who discontinue for reasons other than progressive disease will have post-treatment follow-up for disease status until disease progression, initiating a non-study cancer treatment, withdrawing consent, becoming lost to follow-up, or death.
+
+PRIMARY OUTCOMES:
+  - Disease Control Rate (DCR) at 18 Weeks
+  - Median Progression Free Survival (PFS) at 18 Weeks
+
+INTERVENTIONS:
+  - BIOLOGICAL: Pembrolizumab
+  - DRUG: Carboplatin
+  - BIOLOGICAL: Trastuzumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03095352

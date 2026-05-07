@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04491175
+Title: Impact of DuoTherm on Opioid Use and Low Back Pain
+Official Title: Addressing Opioid Use Disorder With an External Multimodal Neuromodulation Device: Development and Clinical Evaluation of DuoTherm for Opioid-Sparing Pain Relief in Acute and Chronic Low Back Pain
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: muscle rehabilitation
+
+SUMMARY:
+Evaluate the difference in opioid use, pain intensity and pain interference in patients with moderate to severe low back pain using DuoTherm multimodal harmonic mechanical stimulation (M-Stim) unit compared to Transcutaneous Electrical Nerve Stimulation (TENS)
+
+DETAILED DESCRIPTION:
+160 patients with acute or exacerbations of chronic low back pain (LBP) presenting for chiropractic and rehabilitation care will be randomized to one of two conditions: an M-Stim pain relief belt device incorporating 8 patterns of vibration motors (and optional heat, cold, and pressure) delivered through a sculpted metal plate; or a 4-lead TENS unit with 8 channels of stimulation and adjustable intensity. Patients will be blinded to the hypothesis-driving intervention. They will be prompted daily by a Qualtrics text link to a secure data recording site collecting analgesic use and treatments, including opioid brand, dose, pill number, and source, and pain data, then weekly for 3 months (acute pain) or 6 months (chronic).
+
+PRIMARY OUTCOMES:
+  - Opioid initiation in the opioid-naive
+  - Opioid use in prior users
+
+INTERVENTIONS:
+  - DEVICE: M-Stim
+  - DEVICE: TENS
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04491175

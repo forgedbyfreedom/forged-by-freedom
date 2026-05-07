@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04032678
+Title: Comparison of Efficacy and Safety of Two Biphasic Defibrillators in Cardioversion of Atrial Fibrillation
+Official Title: A Comparison of Biphasic Truncated Exponential and Pulsed Waveforms for Cardioversion of Atrial Fibrillation
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: creatine supplementation
+
+SUMMARY:
+Background: Biphasic truncated exponential (BTE) waveforms are standard for cardiac defibrillation and synchronized cardioversion up to date. BTE waveforms differ by design characteristics and technologies for pulse commutation (rectilinear, standard truncated exponential, pulsed). Clinical evaluation of BTE waveforms can be planned during cardioversion (CVS) as a well-established procedure of atrial fibrillation patients who are able to give consent and also present a more controlled population.
+
+Scarce studies have been found to present the relative efficacy and safety of different BTE waveforms during CVS. The validity of significantly deviating results of the pulsed waveform in one CVS study is questionable.
+
+Objective: To compare the CVS efficacy and safety two different biphasic defibrillators - a standard truncated exponential waveform and a pulsed biphasic waveform.
+
+Experimental design: Patients will be recruited at the Intensive Cardiology Care Unit (ICCU), Cardiology Clinic, University National Heart Hospital (NHH), Sofia, Bulgaria, underwent the pre-CVS medical exams and check for eligibility. All eligible patients will sign a written informed consent prior to the CVS and will receive the standard hospital procedures during CVS, accepted in the NHH, and approved by the NHH Local Ethic Committee.
+
+Atrial fibrillation patients will be alternatively randomized to CVS using one of the two defibrillators, following the same energy selection protocol in both defibrillators. The statistical power analysis will consider a non-inferiority comparison between the cumulative energy actually delivered by both defibrillators.
+
+The secondary CVS outcome measures are: the cumulative success rate (measured at 1 minute post-shock) and number of delivered shocks. Delivered energy will be measured during each shock with a dedicated pulse recording device (approved by the NHH Local Ethic Committee). Heart rhythm will be monitoring in continuously recorded peripheral ECG.
+
+The secondary CVS safety outcome measures: Biochemical markers for myocardial necrosis (high sensitive troponin I - hsTnI, creatine kinase MB fraction - CK-MB) will be evaluated on blood samples taken before and 12 hours after cardioversion; ST-segment changes will be measured in lead II (baseline and 10 s post-shock) and 12-lead ECG; Complications after cardioversion will be measured during 2 hours follow-up period in the ICCU.
+
+DETAILED DESCRIPTION:
+Background:
+
+External defibrillators are routinely used for treatment of lethal ventricular arrhythmias (defibrillation) as well as atrial and non-lethal ventricular arrhythmias (synchronized CVS). Commercially available defibrillators generate direct current (DC) shock with various waveforms using distinct technologies. These waveforms are suggested to have different efficacy and safety, aiming at a positive effect with lower cumulative energy, smaller number of shocks, and less post-shock complications and myocardial injury. Therefore, the efficacy and safety of different waveforms has been an object of continuous interest and clinical investigations over the last years. Although the superiority of biphasic over monophasic waveforms is well established, the relative efficacy and safety of the available biphasic waveforms is not clear.
+
+Most defibrillator manufacturers use the biphasic truncated exponential (BTE) waveform. Almost all BTE defibrillators are embedding the impedance compensation technology, which adapts the pulse duration for proper delivery of the selected energy. However, various pulse commutation concepts produce differently shaped waveforms:
+
+* rectilinear (impedance compensation with constant pulse duration);
+* standard truncated exponential (impedance compensation with constant tilt);
+* pulsed (impedance compensation with constant duty cycle and constant tilt). Clinical studies with patients presenting with shockable life-threatening arrhythmias are difficult to perform for ethical and practical reasons. Several studies have therefore included patients requiring elective CVS for atrial arrhythmias, who are able to give consent and also present a more controlled population. Elective CVS is a standard treatment for patients with atrial arrhythmias and is performed as a day case procedure under general anesthesia. The investigator's bibliographic research found 6 studies from which the dose-response curves of 4 rectilinear, 7 standard truncated exponential and 3 pulsed waveforms have been drawn. Although the major disparities between the studies (success accounted at different delays after CVS, rhythm inhomogeneity, different population sizes, different selected energy levels, etc.) the dose-response curves concentrate within 85-95% success rate and 300-500 joules (J) cumulative energy. More data on the efficacy of the pulsed waveform during CVS are needed.
+
+Various BTE waveforms apply different potential gradients on the thorax that might produce various defibrillation effects. Apart from efficacy, the most important aspect is the patient safety, considering that larger potential gradients in the myocardium lasting longer could potentially induce an electroporation and then a fibrillation. A frequently observed effect of electroporation are the post-shock ST-segment deviations in the surface ECG, representing the potential difference between the normal tissue and sustained depolarized critical mass of myocardium closest to the 
+
+PRIMARY OUTCOMES:
+  - Defibrillator Efficacy - The cumulative delivered energy
+
+INTERVENTIONS:
+  - DEVICE: Schiller Defigard Touch 7 - DGT7, Schiller Medical, France
+  - DEVICE: LIFEPAK 15, Physio-Control Inc., Redmond, WA, USA
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04032678

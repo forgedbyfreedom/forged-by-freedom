@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05183100
+Title: Effects of Neurodynamics on Lower Extremity Spasticity - a Study in Chronic Stroke
+Official Title: Effects of Neurodynamics on Lower Extremity Spasticity - a Study in Chronic Stroke
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: muscle rehabilitation
+
+SUMMARY:
+Post-stroke spasticity in the lower extremity affects balance and gait, leading to decreased mobility and functional independence. Therefore, effective intervention for reducing spasticity is crucial in stroke rehabilitation. Recently, neurodynamics, though originally designed for pain management in orthopedic patients, has also been applied for treating spasticity in patients with neurological disorders. However, previous studies focused mainly on treating the upper extremity spasticity, but not on lower extremity spasticity, and not on possible neurophysiological changes. The present study aims to investigate the immediate effects of neurodynamics in reducing lower limb spasticity and neurophysiological changes in people with chronic stroke.
+
+DETAILED DESCRIPTION:
+Sample size calculation: There was no reference for the effect size of neurodymanics on reducing lower extremity spasticity, and the effect size of neurodynamics treatment for improving knee range of motion was between 0.89 to 2.55. We set the effect size of 0.6 (moderate effect size) with an alpha level of 5%, power at 80%, and a paired t-test model to calculate the sample size.
+
+Statistical analysis: Paired t-test will be used for within condition (experimental or control condition) comparisons. The change values between pre and post in each condition will be calculated and compared by paired t-test for between condition comparisons. The significance is set at p\< 0.05.
+
+PRIMARY OUTCOMES:
+  - Change in Spasticity: Clinical measurement
+  - Change in Spasticity: Neurophysiological measurement
+
+INTERVENTIONS:
+  - PROCEDURE: Tibial Nerve Neurodynamics
+  - PROCEDURE: Lying in supine
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05183100

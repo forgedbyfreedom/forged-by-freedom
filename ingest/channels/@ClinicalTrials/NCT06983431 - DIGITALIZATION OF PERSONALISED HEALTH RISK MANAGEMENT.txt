@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06983431
+Title: DIGITALIZATION OF PERSONALISED HEALTH RISK MANAGEMENT
+Official Title: DIGITALIZATION OF PERSONALISED HEALTH RISK MANAGEMENT IN AT-RISK GROUPS TO IMPROVE HEALTH OUTCOMES THROUGH INTEGRATION OF TECHNOLOGICAL AND SOCIAL INNOVATION
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 320
+Topic: exercise intervention obesity
+
+SUMMARY:
+The principal objective of the project is:
+
+* to bring together academic and business research organisations in a joint partnership integrating technological and social innovation,
+* in order to develop proof-of-concept of a scalable and cost effective personalised digital health program for (pre)obesity patients,
+* by integrating, in an ethical manner, adaptive AI components aimed at personalisation of the program as well as its cost management,
+* with the ultimate objective to support sustained behavioural change leading to adoption and internalisation of healthy lifestyle choices.
+
+DETAILED DESCRIPTION:
+This research project is aimed at leveraging digital tools to personalise preventive healthcare interventions for at-risk populations in ways that address the above-mentioned challenges. At risk populations, in the context of this project, generally means: Younger to middle aged (aged 30-50) sedentary individuals with (pre)obesity expressing behavioural, clinical, biochemical and anamnestic indicators of increased risk for accelerated decline of cardio-metabolic and cognitive health.
+
+Primary outcomes will be the rate of wearable adoption/use, individualised behavioural change persistence and elicited health benefit
+
+Secondary outcomes will include step count, activity of medium \& vigorous intensity, sleep duration/efficiency, heart rate, quality of life, body weight, body composition, blood pressure, and level of fitness as determined by the wearable or validated questionaires available on the landing page.
+
+Participants will be randomly assigned into one of the three intervention groups and a control group. The three intervention groups:
+
+1. Self-health coaching will be conducted using wearable and technology provided nudges allowing personalised technology-assisted real-time feedback. With this approach, on-line intervention with minimal human resource costs and high technology involvement with a potential to deliver sustainable and cost-effective behavioural change to a large at-risk population will be tested.
+
+   This intervention approx. 80 participants will be examined for the duration of 14 weeks. Long term follow up examination is envisaged, but it is beyond this study duration and will be supported by subsequent funding.
+2. Health coaching (online health-coach community based) intervention will be based on applying wearable providing the most effective impact on health-related outcomes as evidenced in the exploratory study in combination with the online supervised intervention by the professional health-coach in an online group (community setting). Within this intervention the efficacy of an online supervised health coaching applied in community settings will be tested. Professional health coaching strategy using wearable-related outcomes will be provided as a golden standard of the behavioural intervention with proven efficiency. This intervention will be tested on approx. 80 participants for the duration of 14 weeks.
+3. Peer coaching: Peers will be identified from the study population based on their response to specific community challenges. Natural leader characteristics will be deciphered from knowledge provided by the past supervised community-based behavioural interventions at BMC SAS and the other open sources subjected to AI driven prediction modelling. Within this intervention the efficacy of an online health coaching led by peers will be tested in an online community based setting. Peer-based health coach will lead participants through health training based on the "protocol" defining minimal coaching criteria but imposing no 
+
+PRIMARY OUTCOMES:
+  - Rate of wearable adoption/use
+  - Effect of intervention on Quality of life
+  - Effect of intervention on health
+
+INTERVENTIONS:
+  - BEHAVIORAL: technology driven self coaching
+  - BEHAVIORAL: Health coaching
+  - BEHAVIORAL: Peer coaching
+  - BEHAVIORAL: Active Control
+
+ELIGIBILITY:
+Age: 25 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06983431

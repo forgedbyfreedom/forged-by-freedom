@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04914169
+Title: The Intelligent Cardiopulmonary Rehabilitation System: A Feasibility Study
+Official Title: The Intelligent Cardiopulmonary Rehabilitation System: A Feasibility Study in Healthy Subjects
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 8
+Topic: resistance training
+
+SUMMARY:
+The Intelligent Cardiopulmonary Rehabilitation System (ICRS) was developed to automatically control the resistance of pedaling in combination with the conventional stationary bike by monitoring the user's heart rate for clinical use. To test its feasibility, 8 healthy participants were recruited to complete 12 sessions (3 times per week for 4 weeks) of indoor cycling on the stationary bicycle with ICRS. Subjects were received cardiopulmonary exercise testing (CPET) before and after the biking sessions.The 60-80% of heart rate reserve (HRR) of each participant was determined according to their first CPET results. The algorithm of ICRS was designed to enable the bicycle to adjust its training intensity in accordance with the subject's 60-80% HRR which was detected by wearing a wristband heart rate monitor during cycling. With ICRS, the participants' heart rates during training were expected to fall in the 60-80% HRR, increasing their cardiopulmonary fitness after 12 sessions of indoor cycling.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Peak oxygen consumption (VO2-peak)
+
+INTERVENTIONS:
+  - DEVICE: ICRS
+
+ELIGIBILITY:
+Age: 20 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04914169

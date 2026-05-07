@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07467382
+Title: GOAT (Gait Observation of Achilles Tendon)
+Official Title: Characterization of Mechanical Properties of Achilles Tendon During Gait in Spastic Paresis Syndrome
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 60
+Topic: tendon injury
+
+SUMMARY:
+The purpose of this study is to evaluate the mechanical properties of the Achilles tendon (stiffness, length, volume) and the force production capacities of the gastrocnemius medialis muscle in patients with spastic paresis (post-stroke or incomplete spinal cord injury) compared to healthy subjects, during gait.
+
+DETAILED DESCRIPTION:
+Spastic paresis alters the physiological muscle-tendon interaction during gait. Previous observations suggest that specific gait deviations, such as equinus and non-equinus patterns, are primarily driven by adaptations in the Achilles tendon behavior rather than the muscle belly structure. This observational, prospective study aims to characterize the determinants of these gait patterns by specifically investigating the mechanical properties of the Achilles tendon (stiffness, length, volume) relative to the force production capacities of the gastrocnemius medialis (GM) muscle (voluntary activation, volume).
+
+A total of 60 participants will be recruited: 20 patients with post-stroke hemiparesis, 20 patients with incomplete spinal cord injury, and 20 age-, gender-, and morphologically matched healthy controls. Neurological participants will be stratified into "equinus" or "non-equinus" cohorts based on their ankle kinematics during the terminal stance phase of gait.
+
+The study protocol consists of a single evaluation session per participant, comprising three main assessments:
+
+Force and Tendon Mechanics Evaluation: Conducted on an isokinetic dynamometer. Passive mobilization and isometric plantar flexion contractions (submaximal and maximal) will be performed. The twitch interpolation technique, using superimposed electrical stimulation of the tibial nerve, will be applied to assess the voluntary activation level of the GM. Concurrently, an ultrasound probe placed on the GM myotendinous junction will track tissue displacement to calculate Achilles tendon stiffness.
+
+Synchronized 3D Gait Analysis: Participants will perform several walking trials in a motion analysis laboratory. Three-dimensional kinematics (reflective markers), muscle activity (surface electromyography on lower limb muscles), and real-time muscle-tendon behavior (ultrasound imaging of the calf) will be recorded synchronously to evaluate the in vivo behavior of the muscle-tendon unit.
+
+3D Ultrasound Acquisition: A free-hand 3D ultrasound sweep of the GM muscle and Achilles tendon will be performed with the participant in a prone position to reconstruct and measure tissue volumes and lengths.
+
+The primary outcome is the Young's modulus of the Achilles tendon. Secondary outcomes include structural parameters (length and volume) and maximal voluntary activation. Statistical analyses will compare these parameters across the equinus, non-equinus, and healthy control groups.
+
+PRIMARY OUTCOMES:
+  - Achilles Tendon Young's Modulus
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: 3D Gait Analysis
+  - DIAGNOSTIC_TEST: Ultrasound
+  - DIAGNOSTIC_TEST: Dynamometry
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07467382

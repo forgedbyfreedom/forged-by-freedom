@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00765544
+Title: Targeted Lower Extremity Joint Training
+Official Title: Robot-assisted Ankle Rehabilitation for Multiple Sclerosis (Anklebot)
+Status: TERMINATED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: strength training
+
+SUMMARY:
+The presence of foot drop limits normal gait. Our prior data has suggested that approximately 30% of MS patients have foot drop. Although we have observed that "task-specific" rehabilitation using the Lokomat can improve ambulation in chronic MS patients, subjects with "foot drop" have difficulty translating task-specific training to normative gait patterns over ground, despite improving speed and endurance.
+
+One of the key limitations of the Lokomat is a lack of robot-assisted training for the ankle joint. The Anklebot, an MIT-developed rehabilitation robot for the ankle, has the potential to address this. The device can move throughout three planes and train ankle flexion, extension, inversion and eversion; however, therapy with the Anklebot alone does not train the knee or hip.
+
+We plan to test whether subject foot drop and overall gait benefit more from Anklebot therapy alone or a combination of Anklebot and Lokomat.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Strength and Gait
+
+INTERVENTIONS:
+  - DEVICE: Anklebot
+  - DEVICE: Lokomat
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00765544

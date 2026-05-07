@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01496768
+Title: Effects of Chronic Leucine Supplemetion on Glucose Homeostasis, Body Compositin, Muscle Mass and Strength of Healthy and Young Subjects
+Official Title: Effects of Chronic Leucine Supplemetion on Glucose Homeostasis, Body Compositin, Muscle Mass and Strength of Healthy and Young Subjects: a Randomized, Double-blind, and Placebo Controlled Trial
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: protein supplementation
+
+SUMMARY:
+This study aims to evaluate the effects of chronic leucine supplemetion on glucose homeostasis, body compositin, muscle mass and strength of healthy and young subjects
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle strenght
+  - Body composition
+  - Muscle cross-sectional area
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Leucine
+  - DIETARY_SUPPLEMENT: Alanine
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01496768

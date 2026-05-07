@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00655525
+Title: Omega-3 Fatty Acid Administration in Dialysis Patients
+Official Title: Omega-3 Fatty Acid Administration in Dialysis Patients
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: protein supplementation
+
+SUMMARY:
+The overall goal of this study is to examine the role of fish oil supplementation in ameliorating the inflammatory state of uremia and the related muscle protein catabolism associated with this disease state. We hypothesize that if administered for a period of 3 months, fish oil will improve the chronic uremic inflammation. We further hypothesize that fish oil administration will improve the muscle protein breakdown associated with uremia and inflammation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - A decrease in pro-inflammatory cytokine production (TNF-alpha) by peripheral blood mononuclear cells (PBMC)
+  - A decrease in muscle protein breakdown
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: fish oil
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00655525

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06215625
+Title: A Feasible Smart Upper Limb Rehabilitation Model for Patients With Stroke and Spinal Cord Injuries
+Official Title: Establishment of a Feasible Smart Upper Limb Rehabilitation Model in Post-pandemic Era: Examples for Patients With Stroke and Spinal Cord Injuries
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: strength training
+
+SUMMARY:
+The goal of this clinical trial is to investigate the effectiveness of the developed application and exoskeleton robot devices for home-based training in stroke patients and patients with spinal cord injuries. The application that uses an Internet of Things (IoT) platform to enable remote monitoring of rehabilitation progress by clinical practitioners. Simultaneously, it seeks to assist the execution of patient movements through devices.
+
+In patients with stroke, half of the participants will be assigned to experimental group, receiving a smart upper limb motor rehabilitation system for home program. The other half will be assigned to control group, receiving a traditional home program. In patients with spinal cord injuries. Participants will follow the same allocation method for home-based intervention.
+
+Researchers will conduct an analysis before and after intervention, examining progress in motor function, activities of daily living, and quality of life.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer Assessment - Upper Extremity -Stroke Group - Baseline
+  - Fugl-Meyer Assessment - Upper Extremity -Stroke Group - 4 weeks after baseline
+  - Motor Activity Log -Stroke Group - Baseline
+  - Motor Activity Log -Stroke Group - 4 weeks after baseline
+  - Range of Motion -Stroke Group - Baseline
+
+INTERVENTIONS:
+  - OTHER: Robot-assisted therapy
+  - OTHER: Task-oriented training
+
+ELIGIBILITY:
+Age: 20 Years to 79 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06215625

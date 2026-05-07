@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06025565
+Title: Measuring Pain Experience in Individuals With Lateral Elbow Tendinopathy
+Official Title: Measuring Pain Experience in Individuals With Lateral Elbow Tendinopathy
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 70
+Topic: exercise muscle mass
+
+SUMMARY:
+The study will address the gaps in the pain experience measurement in those with lateral elbow tendinopathy (LET) by building on the current body of literature, as well as applying modern pain science measures. The comprehensive measurement of various biomedical, psychological, and psychosocial constructs will provide pain profiles that will allow for the subclassification of LET to better inform loading prescriptions based on the systemic effects from LET.
+
+DETAILED DESCRIPTION:
+Methods: Subjects complete the eight patient reported questionnaires as well as go through 4 clinical examination procedures. Through this cross-sectional design and single session of testing, the investigator seeks to identify associations amongst constructs and variables in order to sub classify patients with LET based on their pain experience.
+
+Study aim 1: The goal of this study is to determine the associations among the various measurements of the pain experience, psychological, psychosocial, and biomedical domains in those with LET.
+
+Research Questions
+
+1. How is the pain experience in individuals with LET associated with chance locus of control (LOC)?
+2. What is the impact of fear avoidance on the pain experience in those with LET?
+3. How does central sensitization alter the pain experience in those with LET?
+4. Which pain experience measures are associated with functional ability in LET?
+
+Hypotheses
+
+1. Individuals with chance locus of control (LOC) will exhibit an increase in pain experience measures.
+2. Individuals with fear avoidance will have an increase in pain experience measures.
+3. Individuals with central sensitization (central sensitization inventory (CSI) \> 40) will have an increase in pain experience measures.
+4. Pain-free grip strength will have the largest positive correlation with patient-specific functional scale.
+
+Background and Significance
+
+Lateral elbow tendinopathy (LET) is a condition characterized by pain limiting upper extremity function that is not always easily managed, underscoring limits in the understanding and application of pain science. The problems with conservative management of LET appear to be rooted in the understudied and underutilized measurement of pain experience. This lack of research in the application of pain science in those with LET presents an opportunity when determining the appropriate loading of an injured tendon based on different subclassifications.
+
+The complexity of tendinopathy pathogenesis and individual factors influencing the pain experience in those with LET requires a comprehensive series of measures to investigate what is unknown in this area. The use of novel or minimally investigated pain classification and psychological measures will provide insight into their influence on the pain experience to assist with subclassification. Quantitative sensory test (QST) gold standard tests (PPT and PFGS), as well as emerging tests (TPD and laterality), will provide clinical tests that may impact the pain experience and further support the current systematic theoretical mechanisms of tendinopathy. Using a cross-sectional study design will allow for higher recruitment numbers and improve the feasibility of the study. The investigator will investigate the known challenges in the pain measurement of LET and explore how they contribute to the lack of optimal loading in those with LET with respect to the biomedical, psychological, and psychosocial domains.
+
+Subjects will be recruited from clin
+
+PRIMARY OUTCOMES:
+  - Short Form-McGill Pain Questionnaire-2
+  - Patient Specific Functional Scale
+  - Central Sensitization Inventory
+  - Multidimensional health locus of control scale form C
+  - Pain Catastrophizing Scale
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Pain Experience Measures
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06025565

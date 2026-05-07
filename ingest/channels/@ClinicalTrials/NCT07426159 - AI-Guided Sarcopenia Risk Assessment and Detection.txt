@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07426159
+Title: AI-Guided Sarcopenia Risk Assessment and Detection
+Official Title: AI-Driven Integration of Muscle Mass and Muscle Function: A Novel Approach to Sarcopenia Risk Assessment and Intervention
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia, the age-related decline in muscle mass and function, is a major contributor to frailty, disability, and mortality in older adults. Current diagnostic tools assess muscle quantity or function separately and lack predictive biomarkers, limiting early detection and personalized management. This study proposes an AI-driven framework that integrates multimodal physiological, metabolic, and functional data with wearable sensor monitoring to improve sarcopenia risk assessment and guide individualized interventions.
+
+In Phase 1, we will analyze a large retrospective dataset of 3,500 adults to identify early predictors of sarcopenia and develop a machine learning-based risk stratification model. Phase 2 will test a 12-week personalized exercise and nutrition intervention in 120 participants, using real-time sensor data and AI-guided adjustments to optimize outcomes. This integrative approach aims to advance early detection, precision intervention, and long-term muscle health in aging populations.
+
+DETAILED DESCRIPTION:
+Background:
+
+Sarcopenia, defined by the progressive loss of skeletal muscle mass and function, poses significant risks for falls, disability, metabolic dysfunction, and mortality in older adults. Current clinical diagnostics rely on static measures of muscle strength or mass, often missing early-stage or subclinical decline. Moreover, conventional interventions, such as resistance training and increased protein intake, show high inter-individual variability in outcomes due to factors like baseline muscle phenotype, metabolic status, genetics, and gut microbiome composition. Emerging technologies, including wearable sensors, high-throughput metabolic profiling, and AI/ML approaches, provide an opportunity to create predictive, individualized frameworks for sarcopenia risk assessment and management.
+
+Objectives:
+
+* Develop and validate an AI-driven model integrating muscle composition, functional performance, and metabolic biomarkers to predict sarcopenia risk.
+* Implement a personalized, adaptive intervention combining exercise and nutrition, guided by AI predictions and real-time monitoring.
+* Evaluate the effectiveness of this intervention on muscle mass, functional performance, and metabolic health in older adults.
+
+Methods:
+
+Phase 1: Retrospective analysis of multimodal data from 3,500 adults, including muscle composition (DXA, MRI), functional tests (grip strength, chair rise), metabolic markers, and microbiome profiles. AI/ML models will be trained to predict sarcopenia risk and identify key predictive features. Validation will occur using a subset of newly recruited participants under standard care.
+
+Phase 2: A 12-week prospective intervention in 120 adults aged 50-70, stratified into sarcopenia risk groups based on Phase 1 predictions. Participants will receive AI-guided personalized exercise (resistance and aerobic) and nutrition plans, monitored via wearable sensors and a mobile app. Data collection includes MRI and DXA for muscle composition, functional performance tests, metabolic and inflammatory biomarkers, microbiome profiling, and self-reported outcomes. Intervention response will be analyzed using mixed-effects models and ML to identify predictors of efficacy.
+
+Significance and Innovation:
+
+This study integrates AI-driven risk prediction with personalized, real-time adaptive interventions, addressing current diagnostic and therapeutic gaps in sarcopenia care. By combining muscle structure, function, metabolic, behavioral, and microbiome data, it enables early detection of muscle decline, individualized management, and improved adherence. The framework has potential for broad clinical translation, digital health integration, and future commercialization as a scalable AI-based sarcopenia platform.
+
+Anticipated Outcomes:
+
+* AI-based sarcopenia screening tools for early detection and risk stratification.
+* Personalized exercise and nutrition protocols tailored to individual risk and physiology.
+* A scalable, data-driven intervention f
+
+PRIMARY OUTCOMES:
+  - Accuracy of AI-Based Sarcopenia Risk Prediction Model
+  - Change in MRI-Derived Thigh Muscle Volume
+  - Change in Handgrip Strength (kg)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Personalized AI-Guided Exercise and Nutrition
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07426159

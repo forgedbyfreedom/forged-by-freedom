@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02092584
+Title: Effect of Omega-3 Supplementation on Serum Level and Gene Expression of IGF-1and IGFBP-3 in Men With CVD.
+Official Title: Effect of Omega-3 Supplementation on Serum Level and Gene Expression of IGF-1and IGFBP-3 in Men With Cardiovascular Disease.
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 31
+Topic: protein supplementation
+
+SUMMARY:
+The aim of this study is the comparison between the effects of supplementation with omega 3 or placebo for 8 weeks in serum level of IGF-1 and IGFBP-3 and gene expression of IGF-1 in patients with cardiovascular disease.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Serum Total Cholesterol
+  - Serum HDL-C
+  - Serum LDL-C
+  - Serum TG
+  - Serum Fasting Blood Sugar(FBS)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 45 Years to 65 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02092584

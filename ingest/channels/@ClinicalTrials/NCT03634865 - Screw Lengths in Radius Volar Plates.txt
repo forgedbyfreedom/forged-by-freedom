@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03634865
+Title: Screw Lengths in Radius Volar Plates
+Official Title: Volar Plates for Distal Radius : Can Epiphyseal Screw Length be Predicted
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 41
+Topic: tendon injury
+
+SUMMARY:
+Background Fractures of the distal radius are among the most common. Major complications, including irritation and rupture of the extensor tendons, may occur if epiphyseal screws of inappropriate length are used.
+
+Questions/Purposes The main objective of the present study was to determine whether the optimal epiphyseal screw length can be determined by reference to the diaphyseal screw length.
+
+Methods Forty CT scans were semi-automatically segmented. A 3D model of the volar plate was affixed to each distal radius with simulation. The maximum lengths of the diaphyseal screws, as well as the four distal epiphyseal screws, were measured. Linear regression analysis was performed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Main objective
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 17 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03634865

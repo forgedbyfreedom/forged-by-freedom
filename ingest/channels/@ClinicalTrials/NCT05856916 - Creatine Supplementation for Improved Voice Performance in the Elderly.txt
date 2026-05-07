@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05856916
+Title: Creatine Supplementation for Improved Voice Performance in the Elderly
+Official Title: Creatine Supplementation for Improved Voice Performance in the Elderly
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+The primary objective of this study is to determine if creatine supplementation improves acoustic, auditory perceptual, physiologic, and patient-reported outcome measures in patients over 65 years of age. In the study, 20 participants will be enrolled and randomly assigned to receive either creatine or placebo.
+
+DETAILED DESCRIPTION:
+This will be a double-blinded, placebo-controlled interventional trial. Participants will be 65 years or older who present to the NYU voice center for voice complaints and desired voice therapy for improved vocal performance. Upon enrollment, participants will undergo evaluation for measures of vocal function (acoustic and aerodynamic measures of voice production), laryngeal physiology (electroglottography, videostroboscopy), and voice-associated quality of life (voice handicap index 10 , OMNI vocal effort scale, aging voice index). Participants will be randomized to receive either daily oral creatine supplementation or placebo. After 4 weeks, repeat measures will be taken. At this time, participants will initiate a standard-of-care course of voice therapy directed at improved vocal strength and endurance. The duration of therapy will be approximately 6 weeks. Participants will continue creatine supplementation or placebo through the course of therapy and repeat measures will be assessed at the conclusion of voice therapy. This will mark the end of the study period for each subject.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline in Voice Handicap Index (VHI)-10 Scores
+  - Average Expert Rating of Change in Mucosal Wave
+  - Average Expert Rating of Change in Vocal Fold Atrophy
+  - Average Expert Rating of Change in Glottal Closure
+  - Average Phonatory Pressure during Aerodynamic Analysis of Voice
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine monohydrate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05856916

@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06213597
+Title: Effects of Repetitive Transcranial Magnetic Stimulation on Patients With Dysphagia in Stroke Observed Based on Functional Near-infrared Spectroscopic
+Official Title: Effects of Healthy-side High-frequency Repetitive Transcranial Magnetic Stimulation in Patients With Post Stroke Dysphagia: a Prospective Study Based on Functional Near-infrared Spectroscopic
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: high intensity interval training
+
+SUMMARY:
+This trial was a randomized, double-blind, sham-controlled trial.Thirty patients with post-stroke dysphagia were randomly assigned to the repetitive transcranial magnetic stimulation(rTMS) group (n=15) or sham rTMS group (n=15). Both groups received conventional swallowing rehabilitation, and in addition, the rTMS group received 5hz repetitive transcranial magnetic stimulation on the healthy side. Swallowing function was assessed at admission and after two weeks of treatment using the the Standardized Swallowing Assessment (SSA), the Penetration-Aspiration Scale (PAS), the Fiberoptic Endoscopic Dysphagia Severity Scale(FEDSS), the Functional Oral Intake Scale (FOIS), and the functional near-infrared spectroscopic(fNIRS).
+
+DETAILED DESCRIPTION:
+Stroke is the leading cause of death and disability worldwide, and dysphagia is one of the common complications of stroke.Dysphagia after stroke can lead to serious complications such as aspiration, pneumonia, and malnutrition, which greatly reduces the quality of life of patients.Transcranial magnetic stimulation(TMS), a non-invasive central nervous system stimulation that is safe, non-invasive, and does not require active patient participation, has been gradually applied to stroke rehabilitation in recent years.Although there have been studies on the improvement of post stroke dysphagia(PSD) by healthy-side high-frequency rTMS, there have been no studies assessing the activation of relevant brain regions before and after its treatment by fNIRS and exploring the possible mechanisms involved. The aim of this study was to observe the effect of high-frequency rTMS stimulation of the healthy mandibular hyoid cortical area at 5 hz on PSD, and to explore the possible mechanisms by assessing it with fNIRS, so as to provide a theoretical basis for the clinical use of rTMS in the treatment of patients with PSD.
+
+PRIMARY OUTCOMES:
+  - Standardized Swallowing Assessment
+
+INTERVENTIONS:
+  - OTHER: routine swallowing rehabilitation
+  - DEVICE: real repetitive transcranial magnetic stimulation
+  - DEVICE: sham repetitive transcranial magnetic stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06213597

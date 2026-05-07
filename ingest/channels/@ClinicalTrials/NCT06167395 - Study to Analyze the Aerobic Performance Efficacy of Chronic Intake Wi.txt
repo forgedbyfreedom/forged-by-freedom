@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06167395
+Title: Study to Analyze the Aerobic Performance Efficacy of Chronic Intake With a β-alanine Supplement in Recreational Cyclists
+Official Title: Randomized Clinical Trial to Analyze the Efficacy of Chronic Intake of Different Doses of a β-alanine Supplement on Aerobic Performance in Recreational Long-Distance Road Cyclists
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: beta-alanine
+
+SUMMARY:
+Randomized, controlled, double-blind, double-blind clinical trial, with three parallel arms depending on the product consumed (experimental product dose 1 and dose 2 and placebo product) and single-center, to measure the efficacy of a sustained release beta-alanine on the aerobic performance efficacy in recreational cyclist
+
+DETAILED DESCRIPTION:
+Subjects meeting the selection criteria will be randomly assigned to each of the study groups (investigational product dose 1 or dose 2, or placebo, depending on the group to which they have been assigned).
+
+The product to be consumed is beta-alanine. Participants will consume the product for 30 days. They will have to take 4 intakes every three hours, being the first intake two hours after waking up.
+
+The study subjects will have to make 2 visits to the laboratory. At the first and last visit, their aerobic performance will be evaluated by an incremental test to exhaustion with gas analysis.
+
+PRIMARY OUTCOMES:
+  - Power
+  - Distance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: beta-alanine high dose
+  - DIETARY_SUPPLEMENT: beta-alanine low dose
+  - DIETARY_SUPPLEMENT: Control product
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06167395

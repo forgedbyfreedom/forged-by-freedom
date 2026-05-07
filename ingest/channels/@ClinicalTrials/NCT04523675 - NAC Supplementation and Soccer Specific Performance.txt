@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04523675
+Title: NAC Supplementation and Soccer Specific Performance
+Official Title: Effects of NAC Supplementation on Immune Function, Inflammatory and Performance Responses of Elite Soccer Players Participated in Three Repetitive Games.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: creatine supplementation
+
+SUMMARY:
+In this investigation the investigators utilized NAC supplementation to boost GSH availability during an one-week-microcycle consisting of three soccer games, in order to test the hypotheses that: i) antioxidant supplementation may enhance the recovery of performance and physiological stress variables following multiple match-plays and ii) redox status perturbations are critical in regulating the inflammatory response and repair in skeletal muscle, following repetitive exercise-induced muscle injuries.
+
+DETAILED DESCRIPTION:
+After exercise-induced muscle microtrauma the thiol/disulfide couple of reduced (GSH) and oxidized glutathione (GSSG) is a key regulator of important transcriptional pathways that control the inflammatory response and recovery of skeletal muscle.
+
+The objective was to examine how thiol-based antioxidant supplementation affects the muscle damage, oxidative stress, inflammatory and immune responses, as well as the level of post-game fatigue and muscle's recovery kinetics in response to three soccer games within a week. Participants were randomly assigned to one of four groups: i) Experimental-NAC \[EXP-NAC, N=10, participated in daily training sessions and three games and received NAC (20 mg/kg/day)\], ii) Experimental-Placebo (EXP-Pla, N=10, participated in daily training sessions and three games and received Placebo), iii) Control-NAC \[CON-NAC, N=10, participated in daily training sessions only and received NAC(20 mg/kg/day)\] and iv) Control-Placebo (CON-Pla, N=10, participated in daily training sessions only and received Placebo). Blood samples were collected at baseline, post-games and daily during recovery. Performance was assessed at baseline and daily during recovery.
+
+PRIMARY OUTCOMES:
+  - Change in total antioxidant capacity in serum
+  - Change in protein carbonyls in serum
+  - Change in thiobarbituric acid reactive substances in serum
+  - Change in reduced glutathione in red blood cells
+  - Change in oxidized glutathione in red blood cells
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: N-acetylcysteine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 28 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04523675

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06030960
+Title: Effects of Virtual Reality Stabilization Training in Patients With Low Back Pain
+Official Title: The Effects of Virtual Reality Stabilization Training on Postural Stability and Proprioception in Patients With Low Back Pain
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: low back pain exercise
+
+SUMMARY:
+To our knowledge, no studies have better investigated the effect of Core Stabilization Exercises using VR on ankle and trunk proprioception in patients with CLBP and in turn on postural stability.
+
+DETAILED DESCRIPTION:
+Background: Low Back Pain (LBP), one of the most critical disability causatives, has been associated with neuromuscular and biomechanical manifestations related to the deficiency of postural control and stability. Virtual reality (VR) core stabilization exercises (CSE) has proven previously to be effective in improving postural control among conditions with different proprioceptive damage mechanisms other than those affected with LBP. The Aim of this study is to explore the differing effects of this treatment regimen on postural stability in relation to lumbar and ankle proprioception in a population of participants with LBP. Design and Methods: a randomized clinical trial encompassing 44 participants of both genders. Participants with Chronic Low Back Pain (CLBP) will be randomized to one of two treatment groups: an Experimental group receiving VR stabilization exercises and a Control group receiving CSE only without VR simulations inaddition to patient instructions and education of both groups. Parameters of postural stability, ankle and trunk proprioception, pain intensity, balance interference with activity and psychological aspects of pain interference with activity will be measured by a force plate, iPhone applications, visual analog scale (VAS), the Activities-specific Balance Confidence (ABC) scale, Pain Catastrophizing Scale (PCS) and the Pain Self-Efficacy Questionnaire (PSEQ-Ar) respectively. Outcome measures will be collected at baseline, immediately after 1st treatment and after the last treatment session. Treatment regimens will consist of 12 sessions in 3 weeks using virtual reality glasses. Statistical Analysis: A linear mixed model will be used to analyze within- and between-group differences at the baseline, 6th session and twelfth sessions (repeated measures will be set as GROUP with two levels and TIME with three levels). Bonferroni post-hoc procedures will be used for multiple comparisons of the differences over time. Intention-to-treat analysis shall be utilized. Statistical significance was set at P \< 0.05.
+
+PRIMARY OUTCOMES:
+  - Postural stability
+  - Proprioception
+
+INTERVENTIONS:
+  - DEVICE: Virtual Reality (VR)
+  - OTHER: Regular Exercises
+  - OTHER: patient instructions and education
+
+ELIGIBILITY:
+Age: 25 Years to 59 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06030960

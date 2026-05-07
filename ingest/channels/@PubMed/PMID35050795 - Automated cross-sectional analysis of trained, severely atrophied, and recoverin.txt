@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35050795
+Title: Automated cross-sectional analysis of trained, severely atrophied, and recovering rat skeletal muscles using MyoVision 2.0.
+Authors: Viggars, Wen, Peterson, Jarvis
+Journal: Journal of applied physiology (Bethesda, Md. : 1985)
+Year: 2022
+Topic: detraining muscle loss
+
+ABSTRACT:
+The number of myonuclei within a muscle fiber is an important factor in muscle growth, but its regulation during muscle adaptation is not well understood. We aimed to elucidate the time course of myonuclear dynamics during endurance training, loaded and concentric resistance training, and nerve silencing-induced disuse atrophy with subsequent recovery. We modified tibialis anterior muscle activity in free-living rats with electrical stimulation from implantable pulse generators, or with implantable osmotic pumps delivering tetrodotoxin (TTX) to silence the motor nerve without transection. We used the updated, automated software MyoVision to measure fiber-type-specific responses in whole tibialis anterior cross sections (&#x223c;8,000 fibers each). Seven days of continuous low-frequency stimulation (CLFS) reduced muscle mass (-12%), increased slower myosin isoforms and reduced IIX/IIB fibers (-32%), and substantially increased myonuclei especially in IIX/IIB fibers (55.5%). High-load resistance training (spillover) produced greater hypertrophy (&#x223c;16%) in muscle mass and fiber cross-sectional area (CSA) than low-load resistance training (concentric, &#x223c;6%) and was associated with myonuclear addition in all fiber types (35%-46%). TTX-induced nerve silencing resulted in progressive loss in muscle mass, fiber CSA, and myonuclei per fiber cross section (-50.7%, -53.7%, and -40.7%, respectively, at 14 days). Myonuclear loss occurred in a fiber-type-independent manner, but subsequent recovery during voluntary habitual activity suggested that type IIX/IIB fibers contained more new myonuclei during recovery from severe atrophy. This study demonstrates the power and accuracy provided by the updated MyoVision software and introduces new models for studying myonuclear dynamics in training, detraining, retraining, repeated disuse, and recovery.NEW &amp; NOTEWORTHY We introduce new models for studying fiber-type-specific myonuclear dynamics in muscle training, detraining, retraining, disuse, and recovery. We show that the various fiber types do not respond identically and that myonuclear number changes during adaptation. We also critically assess an updated version of MyoVision automated image analysis software to quantify whole muscle immunofluorescent microscopical images in a faster and less computer intensive manner. MyoVision remains open source and freely available with more user-controlled features.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35050795/

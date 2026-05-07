@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05738252
+Title: Frailty Assessments for Risk Assessment in Gynecologic Oncology Patients
+Official Title: Frailty Assessments for Risk Assessment in Gynecologic Oncology Patients Undergoing Surgery and Chemotherapy
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 280
+Topic: weight loss exercise
+
+SUMMARY:
+FARGO is a prospective cohort study that aims to determine the performance of preoperative frailty assessment based on the Frailty Phenotype (FP), compared to a perioperative cardiovascular risk assessment based on the combination of preoperative Revised Cardiac Risk Index (RCRI), age and occurrence of myocardial injury after noncardiac surgery (MINS), in predicting the composite of all-cause death or new disability at 6 months after surgery in patients aged 55 or older. Patients will have confirmed or suspected gynecologic cancer, undergoing cytoreductive or high-risk surgery with or without chemotherapy.
+
+DETAILED DESCRIPTION:
+Little is known about how to best predict postoperative outcomes, recovery from complications, and chemotherapy tolerance in an increasingly older and medically complex GO population. Measuring frailty may represent a comprehensive tool for risk prediction. The study 1) will help fill the current gap in knowledge; 2) will translate into clinical practice changes both locally, and when replicated in a larger multi-centre study, elsewhere in Canada and worldwide; and 3) will inform future studies on shared decision-making strategies and interventions.
+
+By evaluating the role of frailty as a static or dynamic predictor of patient important outcomes, and by considering the complexity of these patients and also of their treatment trajectories, the study has the potential to fill those gaps and influence how care is delivered. By involving stakeholders in the evaluation of feasibility and acceptability of frailty assessment, this will inform a change in care that is sustainable, innovative, and patient-centred.
+
+There have been substantial knowledge advancements about perioperative risk factors and the long-term impact of postoperative complications; however, oncology patients and patient-reported outcomes have been insufficiently studied. There is increased literature on frailty assessment in noncardiac surgery; however, studies that included GO patients are few and of low-quality. The study will overcome the limitations of the current knowledge and practice, and will potentially change healthcare delivery.
+
+PRIMARY OUTCOMES:
+  - All-cause death or new disability at 6 months
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Clinical Frailty Scale
+  - DIAGNOSTIC_TEST: Frailty Phenotype
+
+ELIGIBILITY:
+Age: 55 Years to 110 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05738252

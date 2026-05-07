@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02065726
+Title: Whey Protein Supplementation in Cancer Patients
+Official Title: Whey Protein Supplementation in Malnourished Cancer Patients: a Randomized, Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 166
+Topic: protein supplementation
+
+SUMMARY:
+Nutritional derangements are very common in cancer patients and negatively affect survival, morbidity and quality of life. Intervention trials have demonstrated that nutritional counseling can improve energy balance, nutritional status and quality of life in patients undergoing chemo-radiotherapy. Oxidative stress plays a role in the tumor-cytotoxic effect of cancer chemotherapy and radiotherapy but may also play a role therapy-related adverse events such as an impairment of nutritional status and quality of life. The nutritional properties of whey protein have recently raised attention. In view of the high content in cysteine these proteins can positively stimulate the synthesis of glutathione which, in turn, could contribute to the modulation of whole-body and cellular redox state. However, evidence on the role of this dietary intervention in cancer patients is limited.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body composition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey protein
+  - OTHER: Nutritional counseling
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02065726

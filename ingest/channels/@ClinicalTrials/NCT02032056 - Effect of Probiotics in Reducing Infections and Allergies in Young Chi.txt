@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02032056
+Title: Effect of Probiotics in Reducing Infections and Allergies in Young Children During the Complementary Feeding Period
+Official Title: The Effect of Probiotics in Reducing Infections and Allergic Manifestations in Young Children During the Complementary Feeding Period
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: sports nutrition
+
+SUMMARY:
+The aim of the intervention is to examine the effect of the bacterial strain BB-12, provided for 6 mo, on the prevalence of infections and allergic manifestations in small children, and how BB-12 affects the immune system, the gastrointestinal tract and the microbiota. Children are enrolled during 2 winter seasons.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of days absent from day care due to respiratory and gastrointestinal infections
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic (10^9 CFU/day)
+  - DIETARY_SUPPLEMENT: Probiotic (10^8 CFU/day)
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 9 Months to 13 Months
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02032056

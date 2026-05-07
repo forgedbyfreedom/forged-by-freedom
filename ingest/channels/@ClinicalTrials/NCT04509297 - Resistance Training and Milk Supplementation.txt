@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04509297
+Title: Resistance Training and Milk Supplementation
+Official Title: Effects of High-protein Milk Supplementation on Muscular Strength and Power, Body Composition, and Skeletal Muscle Regulatory Markers Following Heavy Resistance Training in Resistance-trained Men
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: exercise muscle mass
+
+SUMMARY:
+Post-resistance training high protein milk supplementation may be a viable method to elicit muscular gains.
+
+The investigators hypothesis is that high protein milk supplementation would improve skeletal regulatory markers, hormonal responses and body composition in resistance-trained men.
+
+DETAILED DESCRIPTION:
+The aim of this investigation was to compare the effects of high protein milk supplementation (daily and after training sessions) during 6 weeks of resistance training on skeletal muscle regulatory markers, hormonal responses and body composition in resistance-trained men. Specific aims of the study are to:
+
+To investigate the extent to which high protein milk supplementation will improve anabolic factors, lean body mass, fat mass and decrease catabolic markers after 6 weeks of resistance training in resistance-trained men.
+
+PRIMARY OUTCOMES:
+  - Circulatory Myokines levels
+  - Circulatory hormone levels
+  - Body composition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: high protein milk
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04509297

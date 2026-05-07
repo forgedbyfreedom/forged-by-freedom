@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05206253
+Title: Effectiveness of Egg Versus Whey Protein Powder During Resistance Training
+Official Title: Egg Versus Whey Protein as the Optimal Supplement for Fitness-conscious People
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 115
+Topic: fat loss muscle
+
+SUMMARY:
+Consumption of whole eggs has recently been shown to stimulate muscle protein synthesis to a greater degree than consumption of egg whites after a resistance training session. It is theorized that the egg yoke contains bio-active nutrients that enhance the protein provided by egg whites. The study will evaluate the effect of whole egg powder compared to whey protein powder and placebo over 12 weeks of resistance training in men and women who are participating in resistance training programs.
+
+DETAILED DESCRIPTION:
+Consuming whole eggs after resistance training sessions appears to be more effective for simulating muscle protein synthesis that simply consuming egg whites. The egg yolks might enhance the effect of protein derived from egg whites. The study will compare post-exercise supplementation with about 30 grams of protein derived from whole egg powder versus whey protein powder and placebo (maltodextrin) over a 12-week resistance training program. Resistance-trained men and women (n=120) will be randomized to consume either the whole-egg powder, whey protein powder or maltodextrin after resistance training 6 times per week for 12 weeks. The primary outcome measure is change in lean tissue mass. Secondary measures include change in fat mass, change in arm and leg muscle thickness, change in bench press, squat, and knee extension strength, and change in fasting blood glucose.
+
+PRIMARY OUTCOMES:
+  - Change in lean tissue mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whole egg powder
+  - DIETARY_SUPPLEMENT: Whey protein powder
+  - DIETARY_SUPPLEMENT: Maltodextrin placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05206253

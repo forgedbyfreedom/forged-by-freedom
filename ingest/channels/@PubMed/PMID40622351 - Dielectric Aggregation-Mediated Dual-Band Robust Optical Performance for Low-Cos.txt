@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40622351
+Title: Dielectric Aggregation-Mediated Dual-Band Robust Optical Performance for Low-Cost Radiative Cooling.
+Authors: Xiong, Chen, Tian, Zhang, Wen
+Journal: Advanced materials (Deerfield Beach, Fla.)
+Year: 2025
+Topic: cooling strategies performance
+
+ABSTRACT:
+Radiative cooling belongs to passively enhanced heat dissipation that reflects sunlight and emits infrared radiation. However, conflicting reflectivity and emissivity across the two bands present challenges to reach 95% performance simultaneously, while a few available photonic reports have shortcomings in terms of scalability and environmental stability. The decoupling optimization of scattering and absorption is demonstrated by modulating the aggregation state of merely 4 vol% dielectrics in the porous skeleton. It allows Mie scattering and resonant absorption to function in their respective bands, resulting in a double 95% optical performance. Such a broad spectral response enables high-throughput heat dissipation of 8&#xa0;&#xb0;C and supports subambient cooling of 5&#xa0;&#xb0;C outdoors. This one-step strategy extends to the manufacture of a range of metamaterials as required for strength, heat resistance, and degradation, combined with robust environmental stability, including resistance to fouling and peeling.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40622351/

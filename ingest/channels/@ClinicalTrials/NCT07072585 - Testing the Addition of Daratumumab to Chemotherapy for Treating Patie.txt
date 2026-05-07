@@ -1,0 +1,68 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07072585
+Title: Testing the Addition of Daratumumab to Chemotherapy for Treating Patients With Newly-Diagnosed T-Cell Lymphoblastic Leukemia (T-ALL) and T-Cell Lymphoblastic Lymphoma (T-LL)
+Official Title: A Phase 2/3 Randomized Trial Investigating Daratumumab on a Modified Augmented BFM (aBFM) Backbone in Newly Diagnosed T-Lymphoblastic Leukemia (T-ALL) and T-Lymphoblastic Lymphoma (T-LL)
+Status: NOT_YET_RECRUITING
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1708
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase II/III trial tests the addition of daratumumab to chemotherapy for treating patients with newly-diagnosed T-ALL and T-LL. Daratumumab is in a class of medications called monoclonal antibodies. It binds to a protein called CD38, which is found on some types of immune cells and cancer cells. Daratumumab may block CD38 and help the immune system kill cancer cells. Chemotherapy drugs work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving chemotherapy with daratumumab may kill more cancer cells.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To compare the event-free survival (EFS) from the end of induction (EOI) in patients with newly diagnosed T-ALL who are randomized to either receive a modified augmented Berlin-Frankfurt-Münster (aBFM) chemotherapy backbone or a modified aBFM backbone with the addition of daratumumab.
+
+II. To compare the EFS from the EOI in patients with newly diagnosed T-LL who are randomized to a modified aBFM chemotherapy backbone with bortezomib or to a modified aBFM backbone with bortezomib and the addition of daratumumab.
+
+SECONDARY OBJECTIVES:
+
+I. To compare health-related quality of life (HRQoL) and therapy-related toxicity and tolerability between patients with T-ALL or T-LL randomized to a modified aBFM backbone or to a modified aBFM backbone with the addition of daratumumab.
+
+II. To compare overall survival (OS) from date of randomization in patients with newly diagnosed T-ALL who are randomized to either receive a modified aBFM chemotherapy backbone or a modified aBFM backbone with the addition of daratumumab.
+
+III. To compare OS from date of randomization in patients with newly diagnosed T-LL who are randomized to a modified aBFM chemotherapy backbone with bortezomib or to a modified aBFM backbone with bortezomib and the addition of daratumumab.
+
+EXPLORATORY OBJECTIVES:
+
+I. In patients with newly diagnosed T-LL, to determine if minimal residual disease (MRD) testing at EOI can predict EFS and/or OS.
+
+II. In T-ALL patients, to describe changes in the immunophenotype (specifically CD38 surface expression on T-ALL/T-LL blasts) and for the development of anti-daratumumab antibodies over the course of treatment and correlate changes with clinical outcomes and demographic variables.
+
+III. To explore the associations between family-reported social determinants of health and both clinical outcomes (including incidence of treatment-related toxicities, EFS, OS), and leukemia/lymphoma and host biology.
+
+IV. To describe outcome differences (EFS and OS) in patients with T-LL who differ in degrees of positron emission tomography (PET)-imaging avid disease at the EOI.
+
+V. To explore potential imaging findings and biomarkers of significant/severe nelarabine-induced central nervous system toxicities by central review of magnetic resonance imaging (MRI) and to investigate possible clinical features in patients experiencing such toxicities.
+
+VI. To bank peripheral blood specimens for future correlative studies in patients with T-LL.
+
+VII. To compare EFS and OS from the EOI in patients with newly diagnosed T-ALL who are MRD positive (≥ 0.01%) at the EOI to those who are MRD negative at the EOI.
+
+OUTLINE: This is a phase II study, followed by a phase III study. Patients are assigned to 1 of 2 groups.
+
+GROUP I T-ALL:
+
+INDUCTION: Patients receive cytarabine intrathecally (IT) once at the time of lumbar puncture, or day 1, daunorubicin intravenously (IV) over 1 - 15 minutes on days 1, 8, 15 and 22, dexamethasone orally (PO) or IV twice a day (BID) on
+
+PRIMARY OUTCOMES:
+  - Event-free survival (EFS) in patients with newly diagnosed T-cell lymphoblastic leukemia (T-ALL)
+  - EFS in patients with newly diagnosed T-cell lymphoblastic lymphoma (T-LL)
+
+INTERVENTIONS:
+  - PROCEDURE: Biopsy Procedure
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Bone Marrow Aspiration
+  - PROCEDURE: Bone Marrow Biopsy
+  - PROCEDURE: Bone Scan
+
+ELIGIBILITY:
+Age: 365 Days to 21 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07072585

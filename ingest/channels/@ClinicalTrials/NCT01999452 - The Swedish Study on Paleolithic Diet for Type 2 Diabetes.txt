@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01999452
+Title: The Swedish Study on Paleolithic Diet for Type 2 Diabetes
+Official Title: The Swedish Study on Paleolithic Diet for Type 2 Diabetes
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Background Paleolithic diet is a modern dietary regimen based on food eaten during the Paleolithic (2.5 million-10.000 years before present); lean meats, fish, shellfish, fruits, vegetables, root vegetables, eggs and nuts. Food that was not eaten during the Paleolithic is avoided; cereals, dairy products, salt, refined sugar and fat. The rationale for Paleolithic diet is based on the lack of type 2 diabetes and associated diseases among hunter-gatherer populations. Our group have previously studied effects of Paleolithic diet in an observational study in humans, an intervention study in animals and two intervention studies in patients with type 2 diabetes or lowered glucose tolerance and ischaemic heart disease. Our intervention studies showed significant improvement of glucose tolerance, HbA1c, blood lipids, blood pressure, weight, waist circumference and satiety on Paleolithic diet compared with a Mediterranean-type diet and diabetes diet. Studies by other research groups on healthy individuals found that Paleolithic diet lowered weight, waist circumference, blood pressure, PAI-1, blood lipids and ectopic lipid deposition, and also improved glucose tolerance and insulin sensitivity.
+
+Purpose and aims Our goal is to study effects of Paleolithic diet compared to recommended diet on risk factors, morbidity and mortality from type 2 diabetes and associated diseases in a sufficiently large and well executed study to be included in basis for future dietary recommendations.
+
+Project descriptions SwePaD is a study with an initial 18 month long randomized cross-over dietary intervention on 150 patients with type 2 diabetes where the whole study population upon finishing the initial dietary intervention is studied as a cohort for another 5 years. The initial 18 month long dietary intervention compares 6 months on Paleolithic diet with 6 months on recommended diabetes diet separated by 6 months wash-out period. After the initial 18 month long dietary intervention the study participants are recommended to follow recommended diabetes diet with implementation of optional elements from a Paleolithic diet for the remaining 5 years of the study.
+
+The intervention, in the form of diet information, will be given orally and written by the study participant's own diabetes nurse or doctor, based on similarly designed written information on the two diets. The same intervention was successfully used in our pilot study. The study participants will otherwise receive usual treatment.
+
+Power calculations show that 126 participants are needed to obtain significant results with 80% power at the 95% significance level for the primary outcome HbA1c. The pilot study with the same intervention but slightly healthier participants than the average patient in Diabetesregistret showed significant results on HbA1c with only 13 participants.
+
+Secondary outcomes are fasting glucose levels, weight, waist circumference, blood pressure, blood lipids, urinary albumin, diabetes retinopathy, smoking, physical activity, monofilaments (detection of peripheral neuropathy) and health related quality of life assessed by the health survey questionnaire SF-36. Primary and secondary outcomes as well as medication will be registered before and after each intervention diet. Data on primary and secondary outcomes, morbidity and mortality from type 2 diabetes and associated diseases will be retrieved for up to five years after participants' completion of the dietary intervention from the Diabetes register, Cause of Death Register (Dödsorsaksregistret) and the Hospital Discharge Register (Patientregistret) and compared to expected outcome from a statistical model based on the Diabetes register (A new model for 5-year risk of cardiovascular disease Cederholm et al 2011) and/or a matched control group from the Diabetes register.
+
+Participants will be recruited nationwide through information to health care personnel in primary health care and hospital diabetes clinics and to patient organisations. Participants' registration, intervention and data gathering will be administered by the participants' own diabetes nurse or doctor via REDCap, a web based tool for secure electronic data capture hosted on secure servers with daily back-up by the Library and IKT department of the medical faculty at Lund University.
+
+Dietary evaluation will be made using four day weighed food records on paperforms before and after each intervention diet and 6 months after the last intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change of HbA1c
+
+INTERVENTIONS:
+  - BEHAVIORAL: Paleolithic diet
+  - BEHAVIORAL: Diabetes diet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01999452

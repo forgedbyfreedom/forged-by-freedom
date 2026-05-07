@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00760474
+Title: An fMRI Study Of Brain Response In Patients With Fibromyalgia
+Official Title: A Double-Blind, Placebo-Controlled Cross-Over Study In Fibromyalgia Subjects To Examine Effects Of Pregabalin On Brain Response To Mechanical Pain As Assessed By Functional Magnetic Resonance Imaging, Proton Magnetic Resonance Spectroscopy And Subjective Ratings
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 27
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to explore how pregabalin works in patients with fibromyalgia by evaluating brain imaging signals. To find out whether fMRI (functional magnetic resonance imaging) is an efficient way to show whether new pain medications are effective in treating fibromyalgia.
+
+DETAILED DESCRIPTION:
+Methodology study
+
+PRIMARY OUTCOMES:
+  - Glutamine/Creatine (Gln/Cr) and Glutamate/Creatine (Glu/Cr) Ratios Measured by Proton Magnetic Resonance Spectroscopy (1H-MRS)
+  - Voxel-wise Blood Oxygen Level Dependent (BOLD) Using Functional Magnetic Resonance Imaging (fMRI) of Brain Activation Signals in Response to Blunt Pressure Pain: Percent Change in BOLD Activations Including Outliers
+
+INTERVENTIONS:
+  - DRUG: Pregabalin, then placebo
+  - DRUG: Placebo, then pregabalin
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00760474

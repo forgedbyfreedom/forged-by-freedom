@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05183191
+Title: The HEADWIND Study - Part 3
+Official Title: Non-randomised, Controlled, Interventional Single-centre Study for the Design and Evaluation of an in Vehicle Hypoglycaemia Warning System in Diabetes - The HEADWIND Study Part 3
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: growth hormone treatment
+
+SUMMARY:
+To analyse driving behavior of individuals with type 1 diabetes in eu- and mild hypoglycaemia using a validated research driving simulator. Based on the driving variables provided by the simulator the investigators aim at establishing algorithms capable of discriminating eu- and hypoglycemic driving patterns using machine learning classifiers.
+
+DETAILED DESCRIPTION:
+Hypoglycaemia is among the most relevant acute complications of diabetes mellitus. During hypoglycaemia physical, psychomotor, executive and cognitive function significantly deteriorate. These are important prerequisites for safe driving. Accordingly, hypoglycaemia has consistently been shown to be associated with an increased risk of driving accidents and is, therefore, regarded as one of the relevant factors in traffic safety. Therefore, this study aims at evaluating a machine-learning based approach using in-vehicle data to detect hypoglycemia during driving at an early stage.
+
+During controlled eu- and hypoglycemia, participants with type 1 diabetes mellitus drive in a validated driving simulator while in-vehicle data are recorded. Based on this data, the investigators aim at building machine learning classifiers to detect hypoglycemia during driving.
+
+PRIMARY OUTCOMES:
+  - Diagnostic accuracy of the hypoglycemia warning system using in-vehicle data to detect hypoglycemia (blood glucose <3.9mmol/L) quantified as the area under the receiver operator characteristics curve (AUC ROC).
+
+INTERVENTIONS:
+  - OTHER: Controlled hypoglycaemic state while driving with a driving simulator
+
+ELIGIBILITY:
+Age: 21 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05183191

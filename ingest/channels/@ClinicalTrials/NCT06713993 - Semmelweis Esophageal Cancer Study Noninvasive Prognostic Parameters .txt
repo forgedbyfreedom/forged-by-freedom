@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06713993
+Title: Semmelweis Esophageal Cancer Study: Noninvasive Prognostic Parameters in Patients With Oesophageal and Esophagogastric Junction Cancer
+Official Title: Noninvasive Testing Procedures, Role of Biomarkers and Anticancer Treatments in Esophageal and Esophagogastric Cancer Survival and Quality of Life of Patients With Cancer of the Esophageopharyngeal and Oesophageophageophageal Junction
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: sarcopenia intervention
+
+SUMMARY:
+The objective of this observational study was to gain a deeper understanding of the epidemiology of the disease in Hungary through a broad analysis of patients with new-onset esophageal-oesophageal-stomach junction tumors, and to identify key parameters that could potentially influence the outcome of the disease and are closely correlated with morbidity and mortality. The investigators' primary objective is to identify potential factors and conditions that could be influenced and modified to enhance the disease outcome.
+
+Main questions:
+
+1. What are the measurable changes in performance, workload, nutritional status, cardiac function, mental status in the patients studied?
+2. What is the time course of the changes during and after treatment?
+3. Which pathological parameters are associated with disease outcome and which are potential points of intervention to improve the course of the disease?
+
+Patients will undergo a detailed physical and nutritional assessment, non-invasive imaging tests and several questionnaires in addition to the usual pre- and post-operative examinations.
+
+DETAILED DESCRIPTION:
+Detailed assessment of the baseline cardiovascular risk and status (anthropometric data, physical status assessment, psychological and quality-of-life questionnaire, questionnaires on morbidity and cancer-related fatigue, 12-lead ECG, laboratory parameters, body composition, coronary CT, echocardiography and cardiac MR scan).
+
+In addition to the conventional echocardiographic and cardiac MR parameters, the investigators also aimed to determine myocardial deformation, i.e. strain (Medis Suite QStrain) and T1 and T2 mapping values and late-type contrast enhancement and to investigate their prognostic role. To determine late-type contrast accumulation and to determine ECV (extracellular volume), patients will be given Gadovis contrast media.
+
+At the same time as the cardiac MR scan (V0 and V4), a serum blood sample will be taken from the patients, from which the markers below will be measured. These markers are proteins or molecules that potentially play an important role in the development of tumour cachexia. The investigators aim to determine the prognostic significance of these parameters. (Myostatin, IGF-1 (insulin-like Growth Factor 1), GDF-15 (Growth Differentiation Factor 15), IL-6 (Interleukin-6).
+
+Patients are followed up for cardiovascular complications during anti-tumour treatment and are taken into care.
+
+Patients will be assessed at first presentation, after neoadjuvant treatment, immediately before surgery, in the third week after surgery and in the 3rd, 6th, 9th, 12th postoperative months. Further follow-up is done by outpatient examination, by telephone or e-mail and through the eHealth system of Hungary (EESZT) until the end of the 3rd year.
+
+Patient education:
+
+The detailed patient information leaflet was prepared by the doctors involved in the development of the protocol at Semmelweis University.
+
+Data storage and data protection:
+
+Patients enrolled in the study will be given a unique identifier after enrolment. Only this unique identifier will be used in the research record, so the record will not be directly linked to the patient. No unique identifier (name, place and date of birth, clinical triage number, social security number, ID card number, etc.) will be included in the research form. A separate, locked document will be used to link the unique identifier to the patient. The system-generated unique identifier code is recorded by the clinician on paper, complete with name, social security number and patient´s social security number, prior to the first data entry. The same document contains the patient´s informed consent for the use of the data for scientific purposes. The database and the information and consent forms, including the patient´s signature, are stored by the institute coordinators.
+
+Statistical methods:
+
+Using TIBCO Statistica™ 13.4 software, the normality of continuous variables is tested using the Kolmogorov-Szmirnov test. A two-sample t-test is used for normal distribution assuming a two-tailed distribution an
+
+PRIMARY OUTCOMES:
+  - Changes in cardiac function: cardiac MR scan
+  - Changes in coronary status: coronary CT scan
+  - Morbidity (early and long term) classified after Clavien-Dindo.
+  - Early and late mortality
+  - Length of hospital stay
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06713993

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06908941
+Title: The Cardiovascular Benefits of Resistance Training and Dark Chocolate in Female Adults
+Official Title: The Cardiovascular Benefits of Dark Chocolate Supplementation Before High-intensity Resistance Exercise in the Early Follicular and Mid-luteal Phases of the Menstrual Cycle
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 31
+Topic: high intensity interval training
+
+SUMMARY:
+This study investigates the effects of 85% dark chocolate supplementation on vascular function and nitric oxide (NO) levels during high-intensity resistance exercise in healthy women across menstrual phases. Using a randomized crossover design, 31 women consumed either dark chocolate or milk chocolate before exercising during the early follicular and mid-luteal phases. Vascular markers, including pulse wave velocity (ftPWV), arterial stiffness, blood pressure, and plasma NO levels, were measured at multiple time points.
+
+DETAILED DESCRIPTION:
+Background:
+
+Dark chocolate, rich in flavanols, may support vascular health by reducing arterial stiffness and blood pressure across menstrual phases. This study examined the effects of 85% dark chocolate on nitric oxide (NO) levels and vascular function during high-intensity resistance exercise in healthy women across the early follicular and mid-luteal phases.
+
+Methods:
+
+Thirty-one healthy women (aged 20-30 years) with regular menstrual cycles completed a randomized, crossover study (conducted at National Chung Cheng University, Sep-Dec 2023). Participants consumed either 85% dark chocolate or milk chocolate (1g/kg body weight) before high-intensity resistance exercise during the early follicular (days 2-5) and mid-luteal (days 18-24) phases of two menstrual cycles. Finger-toe pulse wave velocity (ftPWV), arterial stiffness, blood pressure, and plasma NO levels were measured at rest, 2 hours after chocolate consumption (baseline), immediately post-exercise (T0), and at 60 (T60) and 120 (T120) minutes post-exercise.
+
+PRIMARY OUTCOMES:
+  - Finger-Toe Pulse Wave Velocity (ftPWV)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: dark chocolate
+  - DIETARY_SUPPLEMENT: milk chocolate
+  - BEHAVIORAL: high-intensity resistance exercise
+
+ELIGIBILITY:
+Age: 20 Years to 30 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06908941

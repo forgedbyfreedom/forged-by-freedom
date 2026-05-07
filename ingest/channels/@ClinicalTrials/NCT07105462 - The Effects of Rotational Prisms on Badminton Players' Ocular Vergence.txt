@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07105462
+Title: The Effects of Rotational Prisms on Badminton Players' Ocular Vergence Training and Enhancement of Shot Accuracy
+Official Title: Application of Intelligent Visual Training in the Sports Industry: The Effects of Rotational Prisms on Badminton Players' Ocular Vergence Training and Enhancement of Shot Accuracy
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: recovery exercise
+
+SUMMARY:
+This randomized controlled trial is designed to investigate whether a novel visual training system can improve eye coordination, reaction time, and hitting accuracy in competitive badminton players. The training utilizes a device called the Automatic Dual Rotational Risley Prisms (ADRRPs), which presents alternating base-in and base-out prism demands to stimulate vergence eye movements. This type of training aims to enhance the eyes' ability to converge and diverge quickly and accurately-a function that is important for visual clarity and motor performance during fast-paced sports.
+
+A total of 26 collegiate badminton athletes aged 18 to 25 years will be recruited from two universities in Taiwan. Participants will be randomly assigned to one of two groups: a visual training group using the active ADRRPs system, and a control group using a sham version of the same device containing plano lenses (with no prism effect). Training will be delivered twice per week for four weeks, with each session lasting 15 minutes. During each session, participants will view a video while the device applies alternating prism stimulation based on each individual's pre-measured fusional vergence capacity.
+
+Outcome measures will be assessed at baseline and after the four-week training period. These include vergence facility (cycles per minute), accommodative facility (flipper test), near point of convergence, and positive fusional vergence at near. Reaction time will be measured using a light-based agility task with BlazePod sensors, and hitting performance will be evaluated using a shuttlecock launcher that delivers randomized targets to various court zones.
+
+All participants will be monitored for any adverse events, and any symptoms such as diplopia, dizziness, or discomfort will be documented. Data will be analyzed as described in the Statistical Analysis Plan.
+
+DETAILED DESCRIPTION:
+This randomized controlled trial explores the application of vergence eye movement training in enhancing visuomotor performance in competitive badminton athletes. The intervention utilizes a device known as the Automatic Dual Rotational Risley Prisms (ADRRPs), which delivers alternating base-out and base-in prism stimulation in an automated manner to engage binocular vergence mechanisms.
+
+The study targets young adult badminton players with at least two years of consistent training. Participants are randomly allocated to either an experimental group, which receives active prism training using the ADRRPs, or a control group using an identical headset without prism rotation. Both groups undergo training sessions twice a week for four weeks, with each session lasting 15 minutes. Visual stimuli are standardized across groups and delivered at a fixed near working distance of 40 cm.
+
+The prism rotation parameters are set to simulate dynamic vergence demands based on pre-measured individual capabilities. This approach aims to create a structured vergence load while minimizing visual discomfort. The control condition serves to control for placebo and attentional effects.
+
+Outcome measures are selected to assess both oculomotor and performance domains. These include vergence facility, accommodative facility, near point of convergence, and positive fusional vergence-all measured using standardized optometric tools. Reaction time is assessed via a BlazePod light stimulus test, and hitting accuracy is evaluated through a shuttlecock launcher delivering randomized trajectories to simulate game-like performance.
+
+The trial design incorporates single-blinding and concealed allocation procedures. Data analysis will follow a pre-specified statistical analysis plan, and participants will be closely monitored for any adverse symptoms during the course of the intervention. Ethics approval has been obtained from the relevant institutional review board.
+
+PRIMARY OUTCOMES:
+  - Reaction Time Measured by BlazePod Test
+
+INTERVENTIONS:
+  - DEVICE: Arm 1 - Experimental Group Intervention Name: ADRRPs Vergence Training Intervention Description: Participants wore an Automatic Dual Rotational Risley Prism (ADRRPs) headset to perform vergence eye
+  - DEVICE: 1. Experimental Group Intervention Name: ADRRPs-Based Vergence Training; 2. Control Group Intervention Name: Sham Training with Plano Lenses.
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07105462

@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05278767
+Title: The Effects of E-Mobile Education and Counselling Services on Bariatric Surgery Patients
+Official Title: The Effects of E-Mobile Education and Counselling Services on Self-Care, Body Image and Quality of Life of Bariatric Surgery Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: strength training
+
+SUMMARY:
+This study was conducted as a randomized controlled trial to determine the effects of e-mobile education and counselling service on self-care agency, body image, and quality of life in patients undergoing bariatric surgery.
+
+The sample of the study was determined using power analysis after making preliminary tests with the patients who met the sample selection criteria in Isparta City Hospital Obesity Center, and consisted of 51 (26 experiment, 25 control) patients. The patients in the experimental group received e-mobile training and consultancy services with the mobile application developed specifically for bariatric surgery that started before the operation and lasted for 3 months. The data of the study were collected using the Personal Information Form, Self-Care Agency, Body Image, and Moorehead Ardelt Quality of Life II (MA-II) Scales prepared in accordance with the literature. In addition to descriptive statistics, Chi-Square, Independent Samples t-test, Repeated Measures, Mann-Whitney U and Friedman tests were used to evaluate the data.
+
+A statistically significant difference was found in the mean scores of Self-Care Strength, Body Image, MA-II and BMI of the patients in the experimental and control groups according to the processes (p\>0.05). There was no statistically significant difference between the groups in terms of preoperative, 1st, 2nd, and 3rd month Self-Care Power, Body Image and MA-II scale mean scores (p\>0.05). There was a statistically significant difference between the groups in favour of the experimental group in terms of the 1st, 2nd, and 3rd month BMI averages (p\<0.05).
+
+DETAILED DESCRIPTION:
+This research was carried out as a randomized controlled interventional study to determine the effect of e-mobile education and counseling service on self-care power, body image and quality of life in patients undergoing bariatric surgery. The population of the study consisted of patients who underwent bariatric surgery in Isparta City Hospital, Obesity Center between July 2020 and July 2021. The sample consisted of patients who met the sample selection criteria in Isparta City Hospital Obesity Center and agreed to participate in the research verbally and in writing.
+
+Considering that the education and counseling services provided to the patients who met the inclusion criteria of the study and accepted to participate, might affect the effectiveness of the education level, the education level was determined as a criterion, and the patients were divided into the application and control groups using a simple random and stratified randomization method. The first patient included in the study in randomization was determined by the simple randomization method (coin-toss), and when a patient with the same education level came, he was necessarily included in the other group. Thus, the sampled individuals in the research group were divided into strata according to their education level. Five patients were excluded from follow-up due to the fact that one patient (n=1) wanted to withdraw from the study, three patients (n=3) could not be contacted, and one patient (n=1) developed complications. It was completed with 51 patients.The data of the study were collected using the Personal Information Form, Self-Care Strength Scale, Body Image Scale, Moorehead Ardelt Quality of Life Scale II (MA-II) prepared in line with the literature. In addition, the Quality Criteria Questionnaire for Health Information User (DISCERN) was used to evaluate the reliability and quality of the written educational material that will form the content of the mobile application, and the System Usability Scale was used to evaluate the functionality and usability of the mobile application.
+
+The data of the study were carried out with 2 groups as control (standard care) and application (mobile application). Randomization was carried out after meeting the patients who were planned to undergo bariatric surgery, treated in the obesity clinic, who met the sampling criteria and agreed to participate in the study, and were informed about the purpose of the study.
+
+The study was conducted in 4 stages with patients undergoing bariatric surgery.
+
+PRIMARY OUTCOMES:
+  - Self Care Agency and E-Mobile Training and Consultancy
+  - Body Image and E-Mobile Training and Consultancy
+  - Quality of Life and E-Mobile Training and Consultancy
+
+INTERVENTIONS:
+  - OTHER: E-Mobile Education and Counselling
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05278767

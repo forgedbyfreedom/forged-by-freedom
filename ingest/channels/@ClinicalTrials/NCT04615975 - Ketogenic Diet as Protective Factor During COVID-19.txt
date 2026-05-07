@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04615975
+Title: Ketogenic Diet as Protective Factor During COVID-19
+Official Title: Pilot Study: Ketogenic Diet as Protective Factor During SARS-CoV-2 Infection
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: beta-alanine
+
+SUMMARY:
+The novel coronavirus disease (COVID-19) is posing a serious challenge to the health-care systems worldwide, with an enormous impact on health conditions and loss of lives. More than 30 millions of recoveries worldwide were registered at the end of October 2020 with more than 1 million of deaths. As the disease continues to spread, strategies aimed to reduce hospitalization time in sub intensive unit care, thus reducing pressure on health system, but also to reduce some of the pathological features of COVID-19 such as inflammation and the "cytokines storm".
+
+The ketogenic diet is a high fat, low carbohydrate, adequate-protein diet that promotes a physiological ketosis (due to an increase of liver ketone bodies production). High fat, low carbohydrate diets have been shown to reduce duration of ventilator support and partial pressure carbon dioxide in patients with acute respiratory failure. Moreover, the physiological increase in plasma levels of ketone bodies exerts important anti-inflammatory and immunomodulating effects, which may reveal as precious tools to reduce potential adverse outcomes of COVID-19 disease.
+
+The hypothesis of this study is that the administration of a ketogenic diet will improve gas exchange, reduce inflammation, and the duration of hospitalization. The plan is to enrol 28 patients with diagnosis of COVID-19 hospitalized but not in ICU with SPO2 higher than 88%.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - inflammation panel: interleukine 6 (IL-6)
+  - inflammation panel: tumor necrosis factor alfa (TNFα)
+  - inflammation panel: C-reactive Protein (CRP)
+  - inflammation panel: Erythrocyte sedimentation rate (ESR)
+  - coagulation panel: D-Dimer
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Ketogenic diet with phytoextracts
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04615975

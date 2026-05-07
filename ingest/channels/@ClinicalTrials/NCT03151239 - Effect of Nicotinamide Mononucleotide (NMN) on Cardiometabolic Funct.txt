@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03151239
+Title: Effect of "Nicotinamide Mononucleotide" (NMN) on Cardiometabolic Function
+Official Title: Effect of NMN (Nicotinomide Mononucleotide) Supplementation on Cardiometabolic Function
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of the study is to understand the effect of the dietary supplement "Nicotinamide mononucleotide" on metabolic health in people.
+
+DETAILED DESCRIPTION:
+This study is is looking at the effect of the dietary supplement "Nicotinamide mononucleotide" (NMN) on key cardiovascular and metabolic functions, specifically those that are important risk factors for diabetes and cardiovascular disease. Accordingly, the investigators will evaluate the effect of NMN on how well the hormone insulin works to control blood sugar. The investigators will also look at the effects of NMN on blood lipids; body fat and liver fat; and other blood, fat tissue and muscle tissue markers of cardiovascular (heart) and metabolic health. Data from studies conducted in rodents have shown that NMN supplementation has beneficial effects on cardiovascular and metabolic health, but this has not yet been studied in people.
+
+PRIMARY OUTCOMES:
+  - Change in muscle insulin sensitivity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: NMN supplement
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 55 Years to 75 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03151239

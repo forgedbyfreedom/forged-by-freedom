@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07288619
+Title: Therapeutic Efficacy of Nutritional Supplementation in Cachexia Associated With Chronic Pulmonary Disease
+Official Title: Evaluation of the Clinical Effectiveness of Nutritional Supplements in Pulmonary Cachexia: A Quasi-Experimental Trial of n-3 PUFAs and Vitamin D
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 45
+Topic: vitamin D muscle
+
+SUMMARY:
+Pulmonary cachexia, observed in individuals with chronic obstructive pulmonary disease (COPD) is a multifactorial syndrome characterized by disruptions in energy metabolism, increased protein degradation, and an impaired capacity to preserve muscle mass. These metabolic disturbances not only exacerbate the underlying respiratory condition but also significantly contribute to elevated mortality rates among affected individuals.
+
+Current therapeutic strategies for managing cachexia primarily emphasize pharmacological treatments, nutritional interventions, and multimodal approaches. Among the nutritional interventions, various supplements have shown potential in mitigating the catabolic processes associated with cachexia. Notably, supplementation with n-3 polyunsaturated fatty acids (n-3 PUFAs) and vitamin D has emerged as a promising intervention, likely due to their involvement in key pathological mechanisms underlying the disease.
+
+While previous studies have investigated the combined effects of these supplements through oral nutritional supplementation, this study aims to evaluate and compare the clinical effectiveness of n-3 PUFAs and vitamin D as distinct therapeutic interventions for managing pulmonary cachexia.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Body Mass Index (BMI)
+  - Fat-Free Mass Index (FFMI)
+  - Fat Mass Index (FMI)
+  - Handgrip Strength (HGS)
+  - Mid-Arm Muscle Circumference (MAMC)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: N-3 Polyunsaturated Fatty Acids (PUFA)
+  - DIETARY_SUPPLEMENT: Vitamin D
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07288619

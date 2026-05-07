@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04876482
+Title: Myofunctional Training for Obstructive Sleep Apnea Patients After Transoral Robotic Surgery
+Official Title: Efficacy of Oropharyngeal Myofunctional Therapeutic Training for Obstructive Sleep Apnea Patients After Transoral Robotic Surgery
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 81
+Topic: weight loss exercise
+
+SUMMARY:
+Background: Obstructive Sleep Apnea Syndrome (OSA) is a kind of sleep disorder. The symptoms are intermittent, partial or complete upper airway collapse, seriously impacting oxygen saturation and oxidative stress. Some patients choose to do upper airway surgeries, but the success rate is only 60-70%. The symptoms might relapse because of aging and gaining weights. The purpose of our study is to compare the effect of transoral robotic surgery (TORS) and oropharyngeal rehabilitation (OPR) on patients after TORS. Methods: Participants above 20 years old who are newly diagnosed with mild to severe OSA (Apnea-hypopnea Index \>5/h), and the physician will explain the treatment programs to every subject in clinic. Expected results: The hypothesis of this study is the success rate of surgery will be enhance by increasing tongue and jaw-opening muscle strength after OPR. The biomarkers of cardiovascular disease may decrease and both the collapse of upper airway and sleep quality may be improved after TORS and OPR.
+
+DETAILED DESCRIPTION:
+The participants above 20 years old who are newly diagnosed with mild to severe OSA (Apnea-hypopnea Index \>5/h), and the physician will explain the treatment programs to every subject. By their willingness to choose the therapeutic method, the participants who select the surgery interventions will be assign to TORS or TORS+OPR group. The matched controls as well as age-, sex-, and body mass index-matched OSA participants will be selected from the patients who are waiting for oral appliance, losing weight and using continuous positive airway pressure. Before surgery, 6 week and 18 week after surgery, the investiagters will compare the polysomnography data, questionnaires of sleep quality, drug-induced sleep endoscopy and computed tomography as primary outcomes. The investigators will also compare the tongue and jaw-opening muscle strength and biomarkers of oxidative stress, anti-oxidative stress, inflammatory cytokines and matrix metalloproteinases 9 as secondary outcomes. The OPR would begin at 6 week after surgery, and participants will undergo three months of the home-based oropharyngeal myofunctional therapeutic training. During the training intervention period, participants will be interviewed one time per week for adjusting the treatment intensity.
+
+PRIMARY OUTCOMES:
+  - Apnea Hypopnea Index (AHI)
+  - Computer Tomography (CT)_Volume
+  - Computer Tomography (CT)_minimal Area
+  - Computer Tomography (CT)_AP Distance
+  - Computer Tomography (CT)_Lateral Distance
+
+INTERVENTIONS:
+  - PROCEDURE: transoral robotic surgery
+  - DEVICE: oral appliance
+  - DEVICE: using continuous positive airway pressure
+  - BEHAVIORAL: losing weights
+  - COMBINATION_PRODUCT: oropharyngeal rehabilitation
+
+ELIGIBILITY:
+Age: 20 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04876482

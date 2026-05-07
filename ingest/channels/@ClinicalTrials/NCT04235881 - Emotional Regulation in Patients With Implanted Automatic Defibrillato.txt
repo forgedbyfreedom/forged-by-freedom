@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04235881
+Title: Emotional Regulation in Patients With Implanted Automatic Defibrillator
+Official Title: Efficacy of Mindfulness Training on the Quality of Life of Patients With Implantable Automatic Defibrillator
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 96
+Topic: physical activity intervention
+
+SUMMARY:
+The general objective of the study was to evaluate the impact of two emotional regulation programs, one standardized and face-to-face (MBSR: Mindfulness Based Stress Reduction) and, another, implemented through a mobile phone application (REM\_Volver a casa; ERBM\_Back home: Emotional Regulation Based on Mindfulness), on the quality of life, the state emotional and psychological and biological variables associated with stress, in a sample of patients with ICD (implantable cardioverter defibrillator).
+
+The working hypotheses were that after training in emotional regulation, patients with ICD would have better quality of life, lower symptoms of anxiety, depression and hostility, and lower incidence of ventricular arrhythmias than patients in the control group, as well as that there would be no differences between the two tools used for training.
+
+DETAILED DESCRIPTION:
+The recruitment process of the participants was carried out by telephone, by the medical staff of the arrhythmia's section, who informed the patients the characteristics and objectives of the study.
+
+The sample size was estimated considering an alpha risk of 0.05 and a beta risk of 0.2, in a bilateral contrast, to detect a difference equal to or greater than 10 units in the Quality of life variable. A standard deviation of 20 points and a 20% loss rate were assumed. The estimated n was 237 patients, to distribute in three branches of 79 patients each.
+
+Before beginning the intervention, participants were informed about the research, and were offered the opportunity to ask questions in order to clarify any doubts about it. Next, they were given a Participant Data Collection Notebook. The Notebook included the information on the investigation and the Informed Consent, to be completed and signed; the request for demographic data (age, gender, educational level, etc.); and, the four questionnaires used to assess the psychological variables of study: SF-36 (quality of life), HADS (anxiety and depression), STAXI (hostility) and FFMQ (Mindfulness) For the descriptive analysis, the number of subjects and the corresponding percentage was used in the qualitative variables. In the quantitative variables the mean and standard deviation were used when the variables adjusted to the normal distribution; otherwise, the median and interquartile range (first and third quartile) were used. The normality test used was the Shapiro-Wilk.
+
+In the hypothesis contrast of the pre-post values, of the variables with distribution adjusted to normal, the Student´s t statistic was used for paired data; For the variables whose distribution did not conform to normal, the Wilcoxon Test was chosen.
+
+For the contrast of inter-group hypothesis (independent samples with distribution not adjusted to normal), the Mann Whitney test was used.
+
+For the statistical analysis of data, the SPSS program, version 20, was used.
+
+PRIMARY OUTCOMES:
+  - Health Related Quality of Life
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mindfulness-based stress reduction program
+  - BEHAVIORAL: App REM volver a casa
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04235881

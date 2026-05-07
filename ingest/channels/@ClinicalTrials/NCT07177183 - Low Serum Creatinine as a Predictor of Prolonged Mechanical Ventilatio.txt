@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07177183
+Title: Low Serum Creatinine as a Predictor of Prolonged Mechanical Ventilation and Weaning Failure
+Official Title: Low Serum Creatinine as a Predictor of Prolonged Mechanical Ventilation and Weaning Failure
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 492
+Topic: creatine supplementation
+
+SUMMARY:
+The main objective of the study is to determine whether a subnormal serum creatinine value upon admission to the Post-ICU Care Unit predicts the need for prolonged ventilatory support. A parallel objective of the study is to determine whether exogenous in-take of the dietary supplement creatine in patients with subnormal serum creatinine value is associated with a shortened duration of ventilatory support and improved patients outcome.
+
+DETAILED DESCRIPTION:
+More than 95% of serum creatinine comes from skeletal muscles, where it is formed by non-enzymatic degradation of creatine. Therefore, in patients with normal kidney function, the serum creatinine value closely correlates with muscle mass volume. It is well documented that critically ill patients lose almost 20% of their muscle mass volume during the first 10 days of their stay in the intensive care unit (ICU). At the same time, it is clear that it is from this group of "longer-stay" patients that those who need subsequent intensive care come. From the above, it can be assumed that in some patients admitted to the post-ICU care unit, the admission serum creatinine value may be subnormal due to muscle devastation caused during the stay in the ICU. This assumption was verified by analysing the admission creatinine values in a group of chronically ventilated adult patients admitted to the post-ICU care unit on CHRONICARE GROUP a.s. over five consecutive months. Of the total number of 264 patients, 123 (47%) patients had an admission serum creatinine value in the subnormal range.
+
+Subnormal serum creatinine levels in patients admitted to the post-ICU care unit may have a number of causes, most of which are related to the patient's pre-existing illness, medical interventions in the ICU, or the critical illness itself. It may be related to chronic liver disease (suppressed creatine synthesis) or kidney disease (suppressed creatine synthesis). It may also be a falsely low serum creatinine level caused by fluid overload. Critical illness itself leads to sarcopenia, as a result of which the total amount of creatinine produced in the muscles decreases, and therefore the serum creatinine concentration. Unfortunately, the development of sarcopenia induced by critical illness cannot be influenced therapeutically. Similarly, mitochondrial dysfunction in muscle cells induced by critical illness cannot be influenced therapeutically. This abnormality leads to a decrease in Adenosine Triphosphate (ATP) production and therefore to a decrease in the formation of creatine phosphate, which is the main source for creatinine formation (the conversion of creatine phosphate to creatinine is 3 times faster than the conversion of creatine to creatinine). It is also possible that the subnormal value of serum creatinine is a consequence of an insufficient supply of creatine during nutritional support of critically ill patients in the ICU. Parenteral nutrition does not contain creatine at all, and enteral nutrition are mostly made from milk, which contains only minimal amounts of creatine. This fact creates an environment for the transformation of critically ill patients into the "position of vegetarians", who have demonstrably lower serum creatinine concentrations and also lower muscle strength than "omnivores".
+
+A number of clinical studies have shown that low serum creatinine on admission are associated with higher mortality in patients admitted to the ICU. However, it is n
+
+PRIMARY OUTCOMES:
+  - Ventilator-free hours
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary supplement creatine
+  - DIETARY_SUPPLEMENT: Dietary supplement - placebo
+  - OTHER: No intervention
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07177183

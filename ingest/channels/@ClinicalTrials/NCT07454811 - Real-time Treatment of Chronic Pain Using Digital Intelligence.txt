@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07454811
+Title: Real-time Treatment of Chronic Pain Using Digital Intelligence
+Official Title: Effectiveness of Digital Intelligence-Supported Real-Time Management in Adults With Chronic Pain: A Randomised Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: low back pain exercise
+
+SUMMARY:
+This randomized controlled study will evaluate the effectiveness of real-time digital intelligence in the treatment of chronic pain. A total of 80 adult patients enrolled in a four-week multidisciplinary chronic pain programme will be randomly assigned to either standard treatment alone or standard treatment supported by a smartwatch and a mobile application for real-time monitoring of pain intensity, analgesic use, physical activity, and heart rate.
+
+Both groups will complete validated questionnaires assessing pain intensity, disability, quality of life, sleep, anxiety, depression, and treatment satisfaction at baseline, two weeks, and four weeks. The intervention group will additionally record daily pain scores and medication use via a mobile application and wear a smartwatch for continuous activity and heart rate monitoring.
+
+The study aims to determine whether real-time digital monitoring and physician availability improve clinical outcomes compared with standard multidisciplinary care alone.
+
+DETAILED DESCRIPTION:
+\*\*Detailed Description\*\*
+
+This study is a prospective, randomized controlled trial designed to evaluate the added value of real-time digital intelligence in a structured, four-week multidisciplinary chronic pain programme.
+
+Eligible adult patients with chronic pain who are enrolled in the programme will be randomly assigned (1:1) to either standard multidisciplinary treatment or standard treatment supplemented with digital monitoring tools. Randomisation will be performed using computer-generated allocation.
+
+The control group will receive the usual four-week multidisciplinary intervention and complete validated outcome measures at baseline, week 2, and week 4. These measures will assess pain intensity, pain-related disability, quality of life, sleep quality, anxiety, depression, and treatment satisfaction.
+
+The intervention group will receive the same multidisciplinary treatment and assessment schedule. In addition, participants will use a smartwatch to continuously monitor physical activity and heart rate and a mobile application to record daily pain intensity, timing of regular analgesic therapy, and use of rescue medication. Study questionnaires will also be completed through the mobile application. Physicians will have continuous access to patient-reported data during the study period.
+
+The primary objective is to determine whether real-time digital monitoring improves clinical outcomes compared with standard multidisciplinary care alone. Secondary objectives include evaluating patient engagement, feasibility of implementation, and satisfaction with digitally supported pain management.
+
+Exclusion criteria include refusal to participate and inability to use a smartphone.
+
+PRIMARY OUTCOMES:
+  - Change in pain intensity measured at baseline, Week 2, and Week 4 using the Numeric Rating Scale (0-10).
+
+INTERVENTIONS:
+  - BEHAVIORAL: tandard Treatment + Digital Monitoring (Intervention Group)
+  - BEHAVIORAL: Standard Multidisciplinary Treatment (Control Group)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07454811

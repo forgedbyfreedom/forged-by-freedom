@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05021341
+Title: Bioavailability of Berberine and Dihydroberberine and Their Impact on Glycemia
+Official Title: Bioavailability of Berberine and Dihydroberberine and Their Impact on Glycemia
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 5
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to determine the bioavailability of berberine and dihydroberberine and their impact on changes in plasma concentrations of glucose and insulin.
+
+DETAILED DESCRIPTION:
+Once determined eligible and provided consent, participants will be assigned in a randomized, double-blind, placebo-controlled, crossover fashion. Eligible study participants will complete one of four testing conditions. For each testing condition, study participants will arrive in the lab after observing an overnight fast. Upon arrival, participants will donate the first of six venous blood samples. Follow-up blood samples will be collected at 20, 40, 60, 90, and 120 minutes. All collected samples will be collected into two, 4mL EDTA tubes and have aliquots of 600 ul of plasma isolated and frozen at -80 degrees celsius. Collected plasma will be analyzed for changes in berberine, glucose, and insulin. Participants will observe a minimum of 72 hours washout between conditions
+
+PRIMARY OUTCOMES:
+  - Berberine
+  - Dihydroberberine 200
+  - Dihydroberberine 100
+  - Glucose
+  - insulin
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Berberine
+  - DIETARY_SUPPLEMENT: Dihydroberberine 200
+  - DIETARY_SUPPLEMENT: Dihydroberberine 100
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05021341

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05451498
+Title: Creatine Timing on Resistance Training Adaptations in College Athletes
+Official Title: Effects of Creatine Monohydrate Timing on Resistance Training Adaptations in Male and Female Collegiate Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 47
+Topic: creatine supplementation
+
+SUMMARY:
+While the use of creatine monohydrate supplementation and its associated benefits are well researched and supported, the impact of the timing of when creatine is ingested is a highly nuanced topic. The potential for the timing of administration to make an impact on observed outcomes is an established and appreciated factor and limited research to date has examined the impact of creatine timing. Of the literature that has been published, one study was very short in duration (4 weeks) that possessed a study design that undermined its practicality, two other studies used older individuals, and one study utilized a unilateral training model which may not be an adequate exercise protocol to allow for the ergogenic potential of creatine to mediate any enhancement of training adaptations. Therefore, based on the limited number of studies in young and previously trained populations, future studies examining the effects of pre vs post-training creatine monohydrate supplementation on resistance training adaptations are warranted.
+
+DETAILED DESCRIPTION:
+In a randomized, double-blind, placebo-controlled, parallel design, eligible study participants were provided a daily dose of creatine monohydrate (pre-or post-workout) or placebo (no creatine delivered) for an 8-week supplementation period. Based upon their baseline fat-free mass, participants were randomized into one of three groups: pre-workout creatine supplementation (PRE), post-workout creatine supplementation (POST), or placebo (PLA). Each group consumed their assigned dose or placebo within one hour before exercise and within one hour following exercise. Each assigned supplement was consumed with 12-16 ounces of fluid along with a 25-gram dose of whey protein isolate and a 25-gram dose of carbohydrate powder This additional supplementation was provided to aid in blinding and to help ensure adequate dietary protein intake was provided to promote increases in lean body mass and strength. Providing daily doses of carbohydrates and protein also helped with recruitment efforts as all study participants received some efficacious nutrients.
+
+All participants completed a twelve-week resistance training and conditioning program. The first four weeks of resistance training (12 workouts) occurred before supplementation began and were completed to acclimate participants to the program and to initiate early neuromuscular adaptations commonly seen with starting a new resistance training program. In addition, this initial 4-week period allowed for some study participants to wash out from ongoing supplementation prior to beginning the supplementation protocol. After completion of this run-in period, participants then completed baseline testing as described and began the supplementation protocol while continuing to follow the resistance training program for an additional eight weeks. Before and after the 8-week supplementation and resistance training period, body mass, body water, and body composition were assessed in addition to changes in muscular strength, muscular endurance, and lower-body power. All statistical analysis was completed on data collected starting at the beginning and end of the supplementation period. Participants were provided nutritional recommendations in order to ensure adequate energy and protein consumption to facilitate positive training adaptations and reduce the potential influence of differing dietary intakes.
+
+PRIMARY OUTCOMES:
+  - Fat-Free Mass
+  - Lower Body Strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine
+  - DIETARY_SUPPLEMENT: Maltodextrin
+
+ELIGIBILITY:
+Age: 19 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05451498

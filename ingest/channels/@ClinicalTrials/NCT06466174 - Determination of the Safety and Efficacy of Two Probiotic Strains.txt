@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06466174
+Title: Determination of the Safety and Efficacy of Two Probiotic Strains
+Official Title: Determination of the Safety and Efficacy of Two Probiotic Strains in Adults With Mild to Moderate Gastrointestinal Discomfort
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: beta-alanine
+
+SUMMARY:
+The goal of this study is to determine the safety and efficacy of two probiotic strains in adults with mild to moderate gastrointestinal discomfort. The main questions it aims to answer is whether 6-week administration of a probiotic can improve how the participant feels regarding their gut health. This is done by completing a weekly questionnaire and the results are compared between the 6 weeks the participants are on a placebo and the 6 weeks the participants are on the probiotic. Participants will also provide a blood sample, and stool sample at the start and end of each treatment. Similarly, the results from the blood samples and stool samples will be analysed to determine if there is any improvement in markers related to gut health.
+
+DETAILED DESCRIPTION:
+In this randomized, crossover, double-blind, prospective, placebo controlled study we aim to determine the safety and efficacy of two probiotic strains in adults with mild to moderate gastrointestinal discomfort. 100 healthy adults with subclinical mild to moderate gastrointestinal complaints (GSRS-IBS score 20-45 inclusive), 50 subjects per strain (test sequence). The GSRS-IBS (gastrointestinal symptom rating scale - irritable bowel syndrome) questionnaire ranges from 0-78 with a greater score indicating a higher occurrence of gastrointestinal symptoms. Safety: To evaluate adverse events that occur during the probiotic treatment period as compared to the placebo period. Incidence and duration of upper respiratory tract symptoms, urinary tract symptoms, gastrointestinal symptoms as primary outputs. Efficacy: To evaluate the effect of 6-week probiotic administration on gastrointestinal homeostasis using GSRS-IBS score as an index as compared to placebo. Following a screening period, participants will provide stool, urine (safety) and blood samples prior to commencing a 6 week course of either placebo or one of the probiotics. At this time participants will again provide blood and stool samples. Throughout the study participants will maintain a daily diary to note any unusual events and to report stool consistency using Bristol stool chart. The participants will also complete a once-weekly questionnaire (GSRS-IBS questionnaire) relating to gut health. There will then be a 3-week washout period where they will take no products. After these 3 weeks the participants will again provide a stool and blood samples, and as before maintain their daily diary and weekly questionnaire for 6 weeks while on the probiotic or placebo (they will have swapped at this point). After these 6 weeks the participants will again provide stool and blood samples.
+
+PRIMARY OUTCOMES:
+  - Change in GSRS-IBS score
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo 1 to Probiotic A
+  - DIETARY_SUPPLEMENT: Probiotic A to Placebo 1
+  - DIETARY_SUPPLEMENT: Placebo 2 to Probiotic B
+  - DIETARY_SUPPLEMENT: Probiotic B to Placebo 2
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06466174

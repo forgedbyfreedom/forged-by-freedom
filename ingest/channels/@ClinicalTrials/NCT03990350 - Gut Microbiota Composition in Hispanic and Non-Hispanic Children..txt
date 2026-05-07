@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03990350
+Title: Gut Microbiota Composition in Hispanic and Non-Hispanic Children.
+Official Title: Comparison of the Gut Microbiota Composition in Caucasian Hispanic and Caucasian Non-Hispanic Children With and Without Obesity
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 17
+Topic: body composition exercise
+
+SUMMARY:
+The human gastrointestinal (GI) tract is filled with millions of bacteria that can affect our health. These bacteria are linked with our overall health including obesity risk. In the United States the Hispanic population is one of the ethnic groups at higher risk of developing obesity. In this study the team will investigate differences in the GI bacterial composition between Hispanic and Caucasian children, and potentially demonstrate a correlation between the composition of metagenome and a higher risk to develop obesity. This will be done by collecting stool samples and comparing the bacteria found in the stool of Hispanic children (with and without obesity) and Caucasian children (with and without obesity.
+
+DETAILED DESCRIPTION:
+I. SPECIFIC AIMS There are a vast number of microbes in the human gastrointestinal tract (GI) including bacterial, fungal and protozoal microorganisms which all together make our microbiome. Over the last years evidence has shown that the GI microbiome is linked with our overall health including obesity risk. The GI microbiota can influence both sides of the energy balance that includes factors influencing energy utilization from the diet and factors that play a role in the regulation of energy expenditure and storage by influencing host genes (1, 2). Studies of demonstrated that overweight and obesity rates are among the highest for Hispanic children in the United States. It is estimated that in the US 47% of Hispanic children are overweight and 31% have obesity, compared to 35% and 21% respectively for Caucasian non-Hispanic children. Literature has shown environment factors are associated with childhood obesity in Hispanic children including: parental influences, screen time, physical activity behavior, socioeconomic status/food security, and sleep duration (3,4). Thus far there have been no studies having investigated if there are significant differences in the gut microbiome of Hispanic children; moreover, whether these differences (taxonomy or gene expression) puts them at higher risk to develop obesity compared other ethnic groups.
+
+The investigators predict there are significant GI microbiome differences between Caucasian non-Hispanic children and Hispanic Children.
+
+Aim: Confirm differences in microbiome between Caucasian non-Hispanic children (with and without obesity) and Hispanic children (with and without obesity) in this pilot study.
+
+Hypothesis: Hispanic children will have a lower fecal bacterial diversity compared to Caucasian non-Hispanic children that is associated with more overall adiposity and impaired glucose homeostasis determined by:
+
+A) Next generation metagenomic "whole genome/shotgun" sequencing of DNA from fecal samples of cohorts which includes Hispanic children with obesity, Hispanic children without obesity, Caucasian non-Hispanic children with obesity and Caucasian non-Hispanic children without obesity.
+
+B) Bioinformatics computational analysis comparing the four groups to determine beta diversity (relative taxonomic) abundance.
+
+II. BACKGROUND AND SIGNIFICANCE Obesity is a serious health risk in the United States. The prevalence of childhood obesity has increased over the last two decades. According the U.S. Department of health and Human Services, recent date showed that the prevalence of obesity higher among youth aged 6-11 year and adolescents aged 12-19 years compared with children aged 2-5 years of age. The Hispanic population is among the most affected ethnic groups in the United States. Approximately 47% of Hispanic children are overweight and 31% have obesity. Multiple factors have been found to play a role in the development of childhood obesity in Hispanic children, including: parental influences, screen
+
+PRIMARY OUTCOMES:
+  - Metagenome of each patient's fecal sample
+  - Physical Activity
+  - Food frequency questionnaire
+
+INTERVENTIONS:
+  - OTHER: Fecal Sample Collection
+  - OTHER: Physical Activity Questionnaire
+  - OTHER: Food Frequency Questionnaire
+  - OTHER: 24-hour dietary recall diary
+
+ELIGIBILITY:
+Age: 6 Years to 12 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03990350

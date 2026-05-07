@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01399151
+Title: Assessment of Vitamin D Supplementation and Immune Function
+Official Title: Assessment of Vitamin D Supplementation and Immune Function
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: protein supplementation
+
+SUMMARY:
+Hypothesis:
+
+Volunteers with vitamin D insufficiency (serum 25(OH)D 25-50 nmol/L) given intermediate or high dose vitamin D supplements (2,000 or 5,000 IU per day) will have increased production of anti-bacterial peptides and interleukin-1, decreased production of other pro-inflammatory cytokines, increased production of regulatory cytokines and an enhanced T- and B-cell response to a tetanus vaccine compared to vitamin D insufficient subjects given low dose vitamin D supplements (400 IU per day).
+
+DETAILED DESCRIPTION:
+Specific Aim 1:
+
+Determine if high dose vitamin D supplements decrease the production of proinflammatory and increase the production of regulatory cytokines and chemokines by innate immune cells stimulated ex vivo.
+
+Specific Aim 2:
+
+Determine if high dose vitamin D supplements decrease serum markers of inflammation and increase serum and cellular levels of defensive molecules (e.g., cathelicidin).
+
+Specific Aim 3:
+
+Determine if high dose vitamin D supplements decrease blood levels of proinflammatory T-helper type 1 (Th1) and Th17 cells and increase levels of anti-inflammatory T-regulatory (Treg) and Th2 cells.
+
+Specific Aim 4:
+
+Determine if high dose vitamin D supplements increase antigen specific T cell and B cell responses after tetanus vaccination.
+
+PRIMARY OUTCOMES:
+  - Change in Cathelicidin levels in granulocytes
+  - Change in cytokine levels from stimulated Periferal Blood Mononuclear Cells
+  - Change in serum cytokines and acute phase proteins
+  - Change in markers of response to tetanus vaccination
+  - Change in serum 25OH Vitamin D
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D - Treatment 1
+  - DIETARY_SUPPLEMENT: Vitamin D - Treatment 2
+  - DIETARY_SUPPLEMENT: Vitamin D - Treatment 3
+
+ELIGIBILITY:
+Age: 20 Years to 49 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01399151

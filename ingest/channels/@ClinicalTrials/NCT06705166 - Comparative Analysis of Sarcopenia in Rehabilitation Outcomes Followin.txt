@@ -1,0 +1,104 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06705166
+Title: Comparative Analysis of Sarcopenia in Rehabilitation Outcomes Following Femoral Neck Fracture: a Study in Normal Weight and Obese Study Cohort
+Official Title: Comparative Analysis of Sarcopenia in Rehabilitation Outcomes Following Femoral Neck Fracture: a Study in Normal Weight and Obese Study Cohort
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 300
+Topic: vitamin D muscle
+
+SUMMARY:
+Impact of Obesity on Sarcopenia Prevalence and Severity in Elderly Adults Recovering from Femoral Neck Fractures: A Prospective Study
+
+Introduction Age-related muscle loss, or sarcopenia, which includes reductions in both muscle mass and function, is increasingly recognized as a critical health issue in the elderly. Sarcopenia is associated with frailty, disability, and increased mortality. With its rising prevalence, obesity further complicates aging, leading to a condition termed "sarcopenic obesity" (SO), where sarcopenia coexists with obesity. This combination amplifies risks for physical disability, falls, and fractures in older adults. Although sarcopenia and obesity individually contribute to adverse health outcomes, their combined impact on recovery from hip fractures, particularly femoral neck fractures, is under-researched. Hip fractures severely impact the elderly, with over 40% failing to regain pre-fracture functionality and a mortality rate above 35% within three years post-fracture.
+
+This study aims to assess the impact of obesity on sarcopenia prevalence and severity in older adults recovering from femoral neck fractures, addressing an essential gap in understanding SO's role in post-fracture rehabilitation outcomes.
+
+Objectives
+
+* To evaluate the prevalence and severity of sarcopenia among normal-weight versus obese elderly adults post-femoral neck fracture.
+* To investigate the association between sarcopenic obesity and functional recovery.
+* To determine whether obesity modifies sarcopenia's impact on rehabilitation outcomes.
+
+Risk-Benefit Statement The study entails minimal risk, as all procedures are non-invasive and consistent with routine rehabilitation practices. The potential benefits include enhanced understanding of sarcopenia's effect on hip fracture recovery, which may inform improved rehabilitation practices. Comprehensive health assessments may also benefit participants' post-fracture care.
+
+Study Design Overview This prospective observational study includes hospitalized elderly patients undergoing rehabilitation post-femoral neck fracture. After obtaining informed consent, participants will complete an initial assessment, including demographic information, medical history, cognitive status, and anthropometric measurements. Blood samples will be collected for biochemical markers.
+
+Stratification and Assessment:
+
+Patients will be categorized into normal-weight and obese groups. Comprehensive assessments, including cognitive function, mobility, frailty, muscle strength, and nutritional status, will establish a baseline for studying sarcopenia and obesity's impact on rehabilitation outcomes.
+
+Population and Criteria:
+
+Sample Size: Up to 300 participants
+
+Inclusion Criteria:
+
+* Age 60-85
+* Recent femoral neck fracture (within the past year)
+* Ability to provide informed consent
+
+Exclusion Criteria:
+
+* Inability to comply with study requirements
+* History of neurodegenerative or psychiatric conditions, recent major surgeries (excluding femoral neck fracture), or conditions affecting muscle metabolism
+
+Procedures:
+
+Baseline Evaluation:
+
+* Cognitive Function: Mini-Mental State Examination (MMSE)
+* Anthropometric Measurements: BMI from height and weight
+* Functional Independence (FIM): Level of independence in daily activities
+* Mobility (Up \& Go Test): Indicator of balance and mobility
+* Frailty and Muscle Strength: Handgrip strength, SARC-F questionnaire, Muscle Strength and Reflex Assessment (MSRA)
+* Nutritional Status: Mini Nutritional Assessment (MNA)
+* Laboratory Tests: CRP, calcium, vitamin D, CBC
+
+Post-Rehabilitation Evaluation:
+
+After rehabilitation, participants will repeat baseline assessments to determine changes in sarcopenia severity and functional status.
+
+Unscheduled Visits:
+
+Participants may request evaluations outside the scheduled timeline, documented by the investigator as necessary.
+
+Statistical Analysis
+
+* Descriptive Analysis: Mean and standard deviations for continuous data, frequencies for categorical data.
+* Comparative Analysis: Independent t-tests to compare normal-weight and obese groups, dependent t-tests for within-group changes.
+* Univariate Analysis: Chi-square or Fisher's exact tests with a significance level of P \< 0.05.
+
+Ethics and Confidentiality This study will adhere to the Declaration of Helsinki, ICH-GCP guidelines, and applicable regulations. Informed consent will be obtained from all participants, and confidentiality measures will protect patient privacy, with data limited to authorized personnel and anonymized in reports.
+
+Institutional Review Board (IRB) Approval
+
+IRB approval will be obtained from the Israeli Ministry of Health, following ICH-GCP guidelines. The IRB will oversee the study protocol, consent forms, and all participant materials.
+
+Data Storage and Study Termination
+
+Data will be securely stored, with
+
+DETAILED DESCRIPTION:
+INTRODUCTION
+
+The global population of older adults (aged 65 and above) is on the rise. In 2017, this demographic constituted 13% of the world's population, and projections indicate that by 2050, it is expected to reach 2.1 billion people. A significant aspect of human aging involves the gradual reduction of skeletal muscle mass. Numerous prospective studies indicate that muscle mass tends to decrease by around 6% per decade after reaching mid-life. Sarcopenia was considered to be purely loss of muscle (lean) mass of the extremities. In 2010, the European consensus redefined sarcopenia by incorporating the loss of function, specifically in walking speed or grip strength, along with the loss of muscle mass. Since then, several consensus groups have adopted similar definitions, now characterizing sarcopenia as the combination of both functional decline and loss of muscle mass. Sarcopenia is closely associated with frailty, physical disability, hospitalization, osteoporosis, osteoarthritis, and even mortality. Handgrip strength is a frequently employed method for assessing muscle strength, offering a straightforward, reliable, and cost-effective means to identify elderly adults who may be at risk for disability.
+
+Older adults will represent the 20% of the population by 2030 and half of them will suffer from obesity. The prevalence of obesity has reached 30-40% of the population, and there are expectations for its incidence to continue rising in the coming decades. Obesity is linked to over 200 medical complications and poses an elevated risk of morbidity and mortality. It stands as the fifth leading cause of death globally. Obesity is marked by the excessive accumulation of white adipose tissue, not only within typical fat depots but also ectopically, a phenomenon that notably compromises physical function. The human body undergoes substantial changes in composition as age advances. Notably, muscle and bone mass show a progressive decline from the third decade of life, while fat mass tends to increase until around the age of 70. People who suffer from obesity experience weight gain and loss throughout their lives on the background of different diets, it is important to underline that diet-induced weight loss is associated with not only fat, but also muscle and bone losses and may further exacerbate age-related sarcopenia and frailty in older adults. The decline in muscle mass and strength, known as sarcopenia, is very common among older adults with obesity (sarcopenic obesity) and is closely associated with frailty. Sarcopenic obesity emerges as a significant factor contributing to physical disability.
+
+Sarcopenia shares common physio-pathological mechanisms and is frequently linked with a high prevalence of osteoporosis. The introduction of the osteo-sarcopenia concept reflects the intersection of sarcopenia and osteoporosis, contributing to notable functional consequences, including an elevated risk of falls and hip fractures. Hip fractures have a
+
+PRIMARY OUTCOMES:
+  - Sarcopenia screening using the SARC-F questioner
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06705166

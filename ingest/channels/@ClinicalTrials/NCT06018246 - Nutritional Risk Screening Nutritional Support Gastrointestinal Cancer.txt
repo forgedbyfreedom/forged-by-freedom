@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06018246
+Title: Nutritional Risk Screening Nutritional Support Gastrointestinal Cancer
+Official Title: Effects of Different Nutritional Support Modes Based on Nutritional Risk Screening on Postoperative Nutritional Status of Patients With Gastrointestinal Cancer
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 624
+Topic: fat loss muscle
+
+SUMMARY:
+The goal of this clinical trial was to compare the effects of different nutritional support methods based on nutritional risk screening on postoperative nutritional status in patients with gastrointestinal tumors.The main question it aims to answer is that different types of nutrition can improve the nutritional status of patients with different nutritional status;Long-term dietary interventions for patients with poor nutrition can make cancer patients better able to tolerate surgery and chemotherapy and improve their quality of life.The intervention group received nutrition + exercise + psychological intervention upon admission, routine parenteral and enteral nutrition support after operation, and continued nutrition + exercise + psychological intervention after discharge.The control group received routine parenteral nutrition support in the department after surgery, and the patients and their families were given diet education during hospitalization.
+
+DETAILED DESCRIPTION:
+Purpose: The investigators conducted nutritional risk screening for patients with gastrointestinal tumors, gave different nutritional support methods to patients with different nutritional status, and analyzed the changes of various nutritional indexes of patients before and after nutritional intervention.
+
+Methods: A total of 302 patients with gastrointestinal tumors admitted to the First Hospital of Shanxi Medical University from July 2021 to June 2023 were selected.All patients underwent nutritional risk screening after admission and were divided into intervention group (NRS2002≥3 and PG=SGA≥4, n=204) and control group (NRS2002 \< 3 or PG=SGA \< 4 , n=98) according to the screening results.Different nutritional interventions were given to analyze the changes of NRS-2002 and PG-SGA scores between the two groups before and after propensity score matching, and compare the changes of dietary energy, dietary protein, total energy, total protein, body mass index (BMI), fat-free weight, walking time, grip strength and other nutritional indicators (hemoglobin, albumin, prealbumin) between the two groups.The effects of disease type and age on the results were compared by stratified analysis.
+
+PRIMARY OUTCOMES:
+  - Nutritional risk screening 2002
+  - Patient-generated subjective nutrition assessment
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Malnutrition five-step treatment model + conventional nutritional intervention
+  - OTHER: Conventional nutritional intervention
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06018246

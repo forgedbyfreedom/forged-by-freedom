@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07543900
+Title: Immersive Virtual Reality and Exercise Programs in Multiple Sclerosis
+Official Title: Benefits of a High-Intensity Exercise Program With Immersive Virtual Reality in Multiple Sclerosis: Exploratory Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 5
+Topic: strength training
+
+SUMMARY:
+TITLE: Immersive Virtual Reality and Exercise Programs in Multiple Sclerosis
+
+INTRODUCTION: Multiple sclerosis (MS) is a chronic neuroimmunological and degenerative disease characterized by demyelination within the central nervous system. Its clinical course involves motor impairment, sensory disturbances, cognitive dysfunction, and a progressive decline in functional independence. MS is one of the leading causes of non-traumatic disability in young adults. This highlights the considerable impact of the disease, both in terms of healthcare burden and healthcare expenditure. Within this context, therapeutic exercise has evolved from being considered potentially harmful to being recognized as a safe and effective intervention capable of improving gait, balance, cardiorespiratory fitness, fatigue, and quality of life in people with MS. A model has been proposed for prescribing and progressing exercise at different stages of MS: passive range-of-motion exercises designed for patients with the most severe symptoms, a second stage incorporating active muscle-strengthening exercises, and finally, integrated exercise programs that incorporate strength, endurance, balance, and coordination training. Evidence from systematic reviews and meta-analyses shows that structured exercise (including high-intensity protocols when performed under supervision) is safe and can improve functional outcomes. Our ExeRVIEM II project (High-Intensity Exercise Program with Immersive Virtual Reality in Multiple Sclerosis) represents a novel strategy to facilitate rehabilitation exercise programs using head-mounted virtual reality displays.
+
+HYPOTHESIS: The ExeRVIEM II project, based on training physical function in people with MS, is feasible and safe, and could have a potential clinical impact in the motor and cognitive domains, as well as applicability in community settings, such as patient associations.
+
+GENERAL OBJECTIVES:
+
+1.1 To design and implement an ExeRVIEM II exercise program/protocol for people with MS.
+
+1.2 To evaluate the feasibility and safety of the high-intensity virtual reality exercise program.
+
+SPECIFIC OBJECTIVES:
+
+2.1 To analyze the possible changes in disability, functional variables, cognitive domains and biomarkers in the short and medium term in people who attend a patient association and carry out the ExeRVIEM II exercise program/protocol for people with MS.
+
+METHODOLOGY: An exploratory, pre-feasibility, single-arm, single-cohort study will be conducted at the AVEMPO patient association (Vigo, Spain). The intervention will consist of an 8-week supervised virtual rehabilitation program, with two weekly sessions on alternate days, in addition to the standard rehabilitation prescribed by the AVEMPO clinical team (physiotherapy, occupational therapy, and cognitive training sessions). An inmersive virtual reality (IVR) boxing exercise videogame will be used, administered via a virtual reality headset. In accordance with clinical guidelines for IVR, and given the exploratory nature of the study, sessions will be intentionally brief (10 minutes) to minimize cybersickness and excessive fatigue. Assessments will be conducted at baseline (week 0) and immediately after the intervention (week 8). Demographic and clinical data will also be collected, including sex, age, comorbidities, disease duration, MS subtype, and pharmacological treatment. Assessments will be conducted at the patient association and in the Neurology Department of the referral hospital. Feasibility and safety assessments will be performed at the patient association by the supervising physiotherapist, while the remaining assessments will be completed at the hospital by a neurologist specializing in MS (without blinding due to the single-group design and small setting). The content of the assessments will be:
+
+Patient characteristics: an ad hoc registration form that will include data on age, sex, years since diagnosis, MS subtype, and pharmacological treatment.
+
+Feasibility: Number of virtual sessions attended by each participant (adherence rate via registration sheet). Rate Perceived Effort using the modified Borg scale, which measures the level of perceived exertion on a scale of 0 to 10 from no effort to maximum effort. Usability of the virtual tool using the Sistem Usability Scale (SUS) range 0-100.
+
+Safety: adverse events (side effects related to virtual reality exposure) using the Simulator Sickness Questionnaire (SSQ).
+
+Level o disability: using the Expanded Disability Status Scale (EDSS). Gait will be evaluated using the 25Foot Walk Test (25FWT). Manual dexterity will be assessed using by 9-Hole Peg Test (9HPT). Cognitive domains evaluated by the Symbol Digit Modalities Test (SDMT) Axonal injury biomarker evaluated by Neurofilament light chain (sNfL) concentrations
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Adverse events linked to virtual reality exposure assessed by the Simulator Sickness Questionnaire (SSQ).
+  - Usability of the virtual tool assessed by System Usability Scale (SUS).
+  - Number of virtual sessions attended by each participant
+  - Rate perceived effort (RPE) evaluated by the modified Borg scale.
+
+INTERVENTIONS:
+  - OTHER: Virtual exercise based program
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07543900

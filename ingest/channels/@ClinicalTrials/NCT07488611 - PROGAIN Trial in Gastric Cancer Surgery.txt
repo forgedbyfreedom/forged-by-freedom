@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07488611
+Title: PROGAIN Trial in Gastric Cancer Surgery
+Official Title: The PROGAIN Trial : A Randomized Study of Protein-enriched Parenteral Nutrition on Nitrogen Balance and Recovery in Perioperative Gastric Cancer Surgery
+Status: RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: sarcopenia intervention
+
+SUMMARY:
+This randomized study will evaluate whether protein-enriched parenteral nutrition improves early postoperative recovery in patients undergoing gastrectomy for gastric cancer. Participants will be assigned to receive either protein-enriched parenteral nutrition or standard parenteral nutrition during the perioperative period. The primary outcome is nitrogen balance on postoperative day 5. Secondary outcomes include postoperative complications, recovery of oral intake, and short-term changes in nutritional status and body composition.
+
+DETAILED DESCRIPTION:
+Gastrectomy for gastric cancer induces a significant postoperative catabolic state, making adequate protein delivery crucial for optimal tissue healing and recovery. In the modern era of Enhanced Recovery After Surgery (ERAS) protocols, the routine use of central venous catheters for total parenteral nutrition (CPN) is heavily discouraged due to its invasiveness, infection risks, and hindrance to early mobilization. Consequently, Supplemental Parenteral Nutrition (SPN) via a peripheral route has emerged as the preferred strategy to bridge the nutritional gap when early oral intake is insufficient.
+
+However, traditional standard peripheral parenteral nutrition (PPN) is inherently limited by osmolarity constraints to prevent peripheral phlebitis. This physical restriction often results in a critically inadequate supply of amino acids, failing to meet the heightened protein demands required to reverse acute postoperative catabolism and prevent rapid muscle depletion.
+
+Recently, novel protein-enriched peripheral parenteral formulations have been developed to overcome this exact limitation, allowing for a higher, optimal amino acid load to be delivered safely via peripheral veins. The PROGAIN trial aims to evaluate the clinical impact of these advanced formulations. The investigators hypothesize that utilizing protein-enriched PPN, compared to standard PPN, will effectively blunt the catabolic response, significantly improve postoperative nitrogen balance, and facilitate earlier functional recovery in gastric cancer patients without compromising the principles of the ERAS pathway.
+
+PRIMARY OUTCOMES:
+  - Nitrogen Balance
+
+INTERVENTIONS:
+  - DRUG: Protein-enriched peripheral parenteral nutrition (Winuf A+ injection)
+  - DRUG: Standard peripheral parenteral nutrition (Winuf injection)
+
+ELIGIBILITY:
+Age: 19 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07488611

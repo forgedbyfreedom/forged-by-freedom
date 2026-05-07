@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06618352
+Title: Physiological Strain in Young Adults During a Simulated Heat Wave
+Official Title: The Effects of Indoor Overheating on Physiological Strain in Young Adults During a Simulated Multi-day Heat Event
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise muscle mass
+
+SUMMARY:
+The likelihood of exposure to overheated indoor environments is increasing as climate change is exacerbating the frequency and severity of hot weather and extreme heat events. Prolonged exposure to excessive heat stress can result in a deterioration in physiological function leading to a myriad of pathophysiological conditions (e.g., heat exhaustion, acute kidney injury, adverse cardiovascular events, heat stroke) that if left untreated can lead to death. While the relationship between extreme heat events and human health has been assessed in relation to outdoor exposure to high heat conditions, relatively little is known about the effects of daylong exposures to indoor overheating on the body's physiology.
+
+In this study, investigators will examine the change in physiological responses (i.e., thermal, cardiovascular) in young (18-35 years) adults exposed to successive days and nights of high indoor temperatures typical of conditions recording in dwellings without air conditioning during the 2021 Western Heat Dome. Specifically, study participants will be housed in a large environmental chamber (outfitted with bed, work space, sitting area, kitchen and bathroom) for three successive days (three days and two nights) while exposed to indoor overheating where daytime temperatures will be maintained at 36°C (45% relative humidity; note: 36°C, temperatures experienced in homes without air-conditioning) for a 10-hour daytime exposure period (DAYTIME: defined as the time period from 9:00 to 19:00). For the nighttime exposure period (NIGHTTIME: defined as the time period from 19:00 to 9:00), participants will be exposed to nighttime temperatures fixed at 31°C (45% relative humidity; note: reductions in indoor temperatures during the nighttime in large urban centers range between 4-6°C). Participants will be permitted to move freely throughout the day in the chamber, but will be restricted from performing any physical activity except for the completion of a battery of tests (cardiovascular, cognitive and posture assessments performed prior to (as performed between 7:00 and 9:00) and the end (as performed between 17:00 and 19:00) of the daytime exposure). During the nighttime period, participants will be permitted to move freely until they decide to go to bed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Core temperature (Peak) during daytime
+  - Core temperature (AUC) during daytime
+  - Core temperature end of daytime exposure
+  - Heat rate peak during daytime
+  - Heat rate AUC during daytime
+
+INTERVENTIONS:
+  - OTHER: Simulated indoor overheating exposure
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06618352

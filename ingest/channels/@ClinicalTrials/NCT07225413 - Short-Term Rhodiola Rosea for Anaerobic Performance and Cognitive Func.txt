@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07225413
+Title: Short-Term Rhodiola Rosea for Anaerobic Performance and Cognitive Function in Resistance-Trained Adults
+Official Title: Dose-Response Effects of Short-Term *Rhodiola Rosea* on Anaerobic Performance and Cognitive Function in Resistance-Trained Adults: A Randomized, Double-Blind, Placebo-Controlled Crossover Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 27
+Topic: athletic performance
+
+SUMMARY:
+This study will evaluate whether 7 days of Rhodiola rosea (golden root) supplementation can improve resistance-exercise performance and cognitive function in resistance-trained men and women. Participants will complete four 7-day periods in a randomized, double-blind, crossover order: (1) no-capsule control, (2) placebo, (3) low-dose Rhodiola rosea, and (4) high-dose Rhodiola rosea. On day 7 of each period, they will report to the laboratory for performance testing that includes bench press and leg press 1-repetition maximum (1RM), a third set to failure at 60% 1RM, Tendo-derived mean and peak power, a 30-second Wingate test, and the paper-and-pencil Stroop Color-Word Test for executive function. Secondary outcomes include ratings of perceived exertion, readiness to perform (visual analog scale), and heart rate and blood pressure measured at rest and 1 minute after exercise. The central hypothesis is that short-term Rhodiola rosea, compared with control and placebo, will produce small but measurable improvements in strength, set-to-failure volume, and Stroop performance, with minimal changes in hemodynamics.
+
+DETAILED DESCRIPTION:
+Rationale: Rhodiola rosea is an adaptogenic plant extract that has shown modest, context-dependent effects on perception of effort, cognition, and exercise performance. Prior studies suggest that benefits may be more evident with acute or short-term administration; however, the results are heterogeneous. This study employs a within-subject approach in resistance-trained adults to minimize between-person variability and investigate potential dose-response effects over a short time frame.
+
+Design overview: After screening and a familiarization visit, each participant completes four 7-day periods: (1) no-capsule control, (2) placebo, (3) low-dose RR, and (4) high-dose RR. Capsule periods are randomized and double-blind; the no-capsule control precedes capsule periods to avoid carryover of expectancy. Study staff, participants, and outcome assessors are blinded during capsule periods. On day 7 of each period, participants attend a single testing visit conducted under standardized conditions (time of day, pre-test instructions). Short-latency effects are targeted by scheduling capsule ingestion approximately 60 minutes before testing during capsule periods.
+
+Intervention: Low- and high-dose RR are provided in identical-appearing capsules. Placebo capsules contain inert filler. Product identity, dose, and lot information are recorded in the Intervention section of the record. Capsule count and participant logs monitor adherence.
+
+Standardization and compliance: Participants are asked to maintain their habitual training and diet and to refrain from using additional ergogenic aids for a period of 7 days. They record total energy and macronutrients for the three days before each testing day. Testing sessions follow a consistent order of tasks established during the familiarization phase. Resting vital signs are obtained after a seated rest; post-exercise measures are obtained 1 minute after completion of designated tasks.
+
+Population: Resistance-trained adults (men and women) who meet eligibility criteria and provide informed consent. Additional eligibility details are specified in the Eligibility section of the record. The female hormonal status/menstrual phases are documented when available to aid in interpretation.
+
+Data handling and analysis (overview): The primary analyses compare conditions within participants using linear mixed-effects models, with participant as a random effect and fixed terms for condition and period. Additional prespecified covariates (e.g., sex, pre-visit dietary intake) may also be included. Order and carryover are evaluated as appropriate. Missing data are handled using model-based methods consistent with the statistical plan.
+
+Safety: Adverse events are monitored throughout each period, with procedures for reporting to the IRB per institutional policy.
+
+PRIMARY OUTCOMES:
+  - Load volume (kg) during 3rd set to failure at 60% 1RM
+  - Wingate anaerobic test peak power
+  - Executive function (Stroop Color-Word Test)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Rhodiola rosea (low dose)
+  - DIETARY_SUPPLEMENT: Rhodiola rosea (high dose)
+  - DIETARY_SUPPLEMENT: Placebo capsules
+
+ELIGIBILITY:
+Age: 18 Weeks to 40 Weeks
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07225413

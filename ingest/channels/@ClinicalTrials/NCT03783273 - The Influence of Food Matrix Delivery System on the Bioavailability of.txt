@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03783273
+Title: The Influence of Food Matrix Delivery System on the Bioavailability of Vitamin D3
+Official Title: The Influence of Food Matrix Delivery System on the Bioavailability of Vitamin D3
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: protein supplementation
+
+SUMMARY:
+This study investigates the influence of different food matrices on the bioavailability of vitamin D.
+
+Although most vitamin D comes from skin synthesis in response to sun exposure, dietary intake is also important - especially during winter time where there is no endogenous production of vitamin D in Denmark. A way to maintain an adequate vitamin D status is to supplement either as tablets/droplets or as fortified food. However, there seems to be an inter-individual variation in response to supplementation.
+
+This study aims to investigate whether this variation in absorption of vitamin D may depend on delivery system.
+
+DETAILED DESCRIPTION:
+BACKGROUND The current project is a part of the vitamin D fortification with enhanced bioavailability study program (acronym: DFORT) which is an interdisciplinary project including research groups from Denmark, Spain, and the Netherlands supported by the Danish Innovation Foundation. The overall aim of DFORT is to develop more efficient strategies for vitamin D fortification by studying the influence of the delivery matrix on the bioavailability of vitamin D. DFORT is organized into four scientific work packages (WP).
+
+The first two WPs have aimed to study whether complex formation (nano-encapsulation) of vitamin D with different proteins may enhance the stability of vitamin D (WP 1 lead by prof. Daniel Otzen, AU-iNANO) and the effect of complex formation in real food systems including investigations on the stability during storage, light- and heat-exposure (WP 2 lead by associate professor Trine Kastrup Dalsgaard, AU-FOOD). WP 1+2 have shown that vitamin D can be stabilized by complex formation with whey protein and that the encapsulation may cause less oxidative degradation thereby improving the stability of vitamin D in different food systems.
+
+In the current study (WP 3 lead by prof. Lars Rejnmark, AU-Health), the bioavailability of vitamin D in different food matrices (including complex formation with whey protein) will be studied in humans. Biological samples will be collected in WP 3 allowing for metabolomics studies on possible associations between vitamin D supplementation through different food matrices and metabolic phenotype (WP 4 lead by prof. Hanne C. Bertram, AU-FOOD).
+
+Although most of the total body vitamin D is synthesized in the skin after exposure to UV light (wavelength of 290-315 nm), most individuals require at least some dietary vitamin D to maintain a replete vitamin D status. This is especially true during wintertime. With a latitude of 56°N in Denmark, there is no endogenous synthesis of vitamin D in the months extending from October to April, which means that the inhabitants have to rely on food sources in order to maintain a replete vitamin D status. Cholecalciferol (vitamin D3 \[D3\]) is the main dietary source of vitamin D, but it is only present in a limited number of food items (such as fatty fish) making it difficult to achieve the recommended intake of 10 µg D3 per day.
+
+Vitamin D status may be improved in response to an increased intake of vitamin D in terms of either supplementation with tablets or food fortification. Numerous studies have shown increased 25-hydroxy vitamin D (25OHD) levels in response to an increased intake of vitamin D. It is generally assumed that mean 25OHD concentrations increase by 0.7 nmol/L in response to an increased long-term intake of 1 µg vitamin D per day although the relative increase per microgram supplemented may be higher if baseline levels are low. Despite this well-known dose-response relationship in groups of people, several studies have documented that the change in serum 
+
+PRIMARY OUTCOMES:
+  - Cmax of vitamin D3
+  - AUC of vitamin D3
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D3
+  - COMBINATION_PRODUCT: Whey protein-complex
+  - OTHER: Water
+  - OTHER: Milk
+  - OTHER: Juice
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03783273

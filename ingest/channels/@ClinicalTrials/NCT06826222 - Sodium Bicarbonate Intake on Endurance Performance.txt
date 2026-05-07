@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06826222
+Title: Sodium Bicarbonate Intake on Endurance Performance
+Official Title: The Effect of Sodium Bicarbonate Intake on Endurance Performance in Recreational Female Runners
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: athletic performance
+
+SUMMARY:
+Sodium bicarbonate (SB) is one of the ergogenic aids that enhance short-duration, high-intensity sports performance by improving the buffering system. However, studies suggest that SB may also be beneficial for prolonged high-intensity endurance exercises, where anaerobic glycolysis plays a role. The commonly used SB dose in these studies (0.3 g/kg) often leads to gastrointestinal (GI) discomfort, necessitating alternative approaches. Among various protocols, consuming SB with a carbohydrate-rich meal has been identified as an effective strategy to mitigate GI distress. Although some studies indicate a positive effect of SB on performance, research involving female athletes remains limited, comprising only 7.4% of the total studies. Given that women generally have lower muscle mass and fewer type II muscle fibers, their glycolytic capacity might be lower, and SB could have distinct physiological effects on them. While SB has been shown to enhance anaerobic performance in female athletes, its impact on high-intensity endurance exercise performance has not yet been investigated. This study aims to examine the effects of acute sodium bicarbonate ingestion, consumed with a carbohydrate-rich meal, on prolonged high-intensity running performance, acid-base balance, and GI response in female runners. In this double-blind, crossover-designed study, 19 recreational female runners will be randomly assigned to either a bicarbonate or a placebo group. The bicarbonate group will ingest 0.3 g/kg SB, while the placebo group will consume 0.03 g/kg salt, both 90 minutes before exercise, alongside a carbohydrate-rich meal. Participants will then complete a 10 km time-trial run, aiming for their best performance. Throughout the study, GI symptoms, exercise completion time, blood lactate, pH, bicarbonate levels, heart rate, and perceived exertion during exercise will be assessed. Performance tests will be conducted twice during the follicular phase of the menstrual cycle, with a 3-7 days washout period between trials. A two-way repeated measures ANOVA will be used to compare the effects of the interventions.
+
+DETAILED DESCRIPTION:
+Introduction Buffering Agents in Exercise Performance During high-intensity exercise, muscle fatigue occurs, negatively impacting both anaerobic and aerobic (endurance) exercise performance. One primary cause of muscle fatigue is metabolic acidosis, which arises from the accumulation of intracellular lactate and H+ ions (Freis et al., 2017; Krustrup et al., 2015). Since muscle acidity is regulated by intracellular and extracellular buffering systems, enhancing these systems is essential to sustain effective muscle contraction, delay fatigue, and thereby optimize performance in both anaerobic and high-intensity endurance exercises (Durkalec-Michalski et al., 2018a; 2018b).
+
+Various ergogenic aids are utilized to boost intracellular and extracellular buffering capacity, with beta-alanine and sodium bicarbonate (SB) being two well-supported agents: Beta-alanine enhances intracellular buffering by increasing muscle carnosine levels, thereby preventing acidosis and improving performance (Trexler et al., 2015). SB primarily acts as an extracellular buffer, clearing H+ ions from the blood. This mechanism indirectly reduces H+ accumulation in muscles during intense exercise (Durkalec-Michalski et al., 2018a; 2018b). By preserving ATP production via glycolysis, this buffering action delays the onset of muscle fatigue during high-intensity exercises (Lancha Junior et al., 2015; Lopes-Silva et al., 2019).
+
+Due to its ability to reduce lactate and H+ accumulation, research has predominantly focused on SB's effects on high-intensity, short-duration exercise (1-10 minutes) performance reliant on glycolytic metabolism (Delextrat et al., 2018; Driller et al., 2012; Gough et al., 2017). For example, 0.3 g/kg dose of SB intake improved total work output by enhancing buffering capacity in a 10 x 6-second sprint protocol (Miller et al., 2016). SB is thus commonly used for sports reliant on glycolytic metabolism, such as sprinting, middle-distance running, and combat sports. Additionally, SB may also be beneficial for longer endurance events (30-60 minutes) at the anaerobic threshold (AT), such as high-intensity interval training or long-distance endurance events concluding with a final sprint (Burke, 2013).
+
+SB and Endurance Performance While long-duration endurance exercise (\>30 minutes) is primarily driven by aerobic metabolism, anaerobic glycolysis also significantly contributes to energy production, leading to elevated blood lactate levels (Egger et al., 2014; Jones et al., 1977; McNaughton et al., 1999). Consequently, SB can help maintain optimal pH levels during endurance exercise, enhancing high-intensity performance at or near the aerobic threshold (Egger et al., 2014; Freis et al., 2017).
+
+Studies have examined the effects of 0.2-0.3 g/kg SB intake on endurance performance near the lactate threshold in cycling and running, often comparing it to neutral (sodium chloride) or acidic (ammonium chloride) supplements. Findings indicate that while SB improves tim
+
+PRIMARY OUTCOMES:
+  - 10 km time-trial run
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Sodium Bicarbonate (NaHCO3)
+  - DIETARY_SUPPLEMENT: Sodium Chloride
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06826222

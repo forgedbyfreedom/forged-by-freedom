@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04974606
+Title: Effect of Coffeeberry on Mood, Motivation and Cognitive Performance
+Official Title: Effect of Coffeeberry on Mood, Motivation and Cognitive Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: caffeine exercise
+
+SUMMARY:
+The primary purpose is to test the short-term effects of the acute consumption of two novel beverages made from coffeeberries, the fruit of the coffee plant (Coffea arabica) benchmarked against caffeine on several aspects of cognitive performance.
+
+Preliminary studies suggest that flavanols and chlorogenic acids can enhance cognitive performance. It is unknown if drinks formulated with flavanols and chlorogenic acids (without high sugar or caffeine) improve cognition or mood to a similar extent as caffeine. Coffeeberry beverage comparisons will be made to a flavored positive control beverage containing caffeine and a flavored placebo beverage.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cognition score
+  - Fatigue score
+  - Alertness score
+  - Calmness score
+  - Contentedness score
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cherry-flavored still beverage
+  - OTHER: Placebo cherry-flavored still beverage
+
+ELIGIBILITY:
+Age: 17 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04974606

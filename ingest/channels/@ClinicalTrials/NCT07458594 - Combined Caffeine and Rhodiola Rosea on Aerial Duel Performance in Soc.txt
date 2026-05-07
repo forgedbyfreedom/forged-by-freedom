@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07458594
+Title: Combined Caffeine and Rhodiola Rosea on Aerial Duel Performance in Soccer
+Official Title: Effects of Combined Caffeine and Rhodiola Rosea Supplementation on Aerial Duel Performance Under Fatigue in Soccer Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 96
+Topic: caffeine exercise
+
+SUMMARY:
+This study will examine whether caffeine (CAF) and Rhodiola rosea (RHO) supplementation, taken alone or in combination, can improve explosive performance and soccer-specific aerial duel performance in trained male soccer players. In a randomized, double-blind, placebo-controlled, parallel design, participants will be assigned to placebo, RHO, CAF, or RHO+CAF for 4 weeks. Performance outcomes will be assessed before and after the intervention using countermovement jump measures (including early take-off impulse) and standardized heading tests (heading reach height, ball exit velocity, and heading duel success rate), with additional measures of neck isometric strength and perceived exertion.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Early takeoff impulse (Impulse₀-₂₀₀)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Rhodiola rosea extract
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07458594

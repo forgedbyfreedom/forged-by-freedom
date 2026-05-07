@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07452263
+Title: Modified Essential Frailty Toolset in Older Adults Undergoing Major Elective Surgery
+Official Title: Modified Essential Frailty Toolset for Predicting Postoperative Complications and Readmission in Older Adults Undergoing Major Elective Surgery
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 250
+Topic: sarcopenia intervention
+
+SUMMARY:
+Frailty is a common geriatric syndrome associated with reduced physiological reserve and increased vulnerability to surgical stress. As the population ages, more older adults undergo major elective surgery, yet frailty is often insufficiently assessed in routine practice and no universally accepted screening tool exists.
+
+The Essential Frailty Toolset (EFT) is a simple validated frailty assessments and has demonstrated strong predictive value for mortality and major postoperative complications, particularly in cardiac surgery populations. EFT incorporates four key domains of cognition, anemia, serum albumin, and physical function capturing both physical and cognitive vulnerability. A modified version (mEFT) has been developed to improve feasibility and applicability in broader surgical settings, requiring minimal training and only a few minutes to administer. Despite its promise, mEFT has not been evaluated in elderly patients undergoing major elective non-cardiac surgery, representing an important gap in the current literature and motivating the present study.
+
+We therefore propose a modified and simplified frailty screening tool tailored for elderly patients undergoing major elective non-cardiac surgery at our institution. The modified Essential Frailty Toolset (mEFT) is a multi-dimensional assessment designed to address this gap by evaluating physical function, cognition, nutrition, and anemia in just a few minutes. In this version, the tool assigns points based on specific clinical markers: the Timed Up and Go (TUG) test provides one point for a time ≥11.0 seconds and two points for ≥15.0 seconds; the Clock Drawing Test (CDT) provides one point for a score of ≤2 on a 3-point scale; nutritional risk is captured with one point for a BMI \<22.0 or unintentional weight loss of 5% over the last six months; and anemia provides one point based on hemoglobin levels (below 130g/L for men and 120 g/L for women). These modifications were made to enhance feasibility and clinical relevance in our population. Low serum albumin was rare in our cohort and therefore demonstrated limited discriminatory value as a screening marker. In contrast, low BMI and recent weight loss are well-established risk factors for malnutrition and sarcopenia and are readily obtainable in routine preoperative assessment. Similarly, both the TUG and CDT are quick, inexpensive, and require minimal training, making them well suited for large-scale screening in preoperative clinics.Importantly, the proposed components have been evaluated in a pilot study conducted in our institution.
+
+This study will evaluate whether a high mEFT score (≥3) is associated with increased postoperative complications and 90-day readmissions among patients aged ≥70 years undergoing major elective surgery. Patients presenting for admission will be included. If mEFT accurately identifies high-risk patients, it may improve preoperative risk stratification, inform shared decision-making, and help identify individuals who could benefit from targeted prehabilitation, supporting broader implementation of frailty screening in surgical care.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - 90-day Readmission
+  - Surgical Complications
+
+INTERVENTIONS:
+  - PROCEDURE: Major elective surgery
+
+ELIGIBILITY:
+Age: 70 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07452263

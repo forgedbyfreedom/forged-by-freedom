@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00053339
+Title: Trastuzumab With or Without Tamoxifen in Treating Women With Progressive Stage IV Breast Cancer
+Official Title: Phase III Randomized Study of Trastuzumab (Herceptin) With or Without Tamoxifen in Women With Progressive, Stage IV, Estrogen or Progesterone Receptor- and HER2/Neu-Positive Breast Cancer
+Status: WITHDRAWN
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: Monoclonal antibodies such as trastuzumab can locate tumor cells and either kill them or deliver tumor-killing substances to them without harming normal cells. Estrogen can stimulate the growth of breast cancer cells. Hormone therapy using tamoxifen may fight breast cancer by blocking the uptake of estrogen. Combining trastuzumab with tamoxifen may kill more tumor cells.
+
+PURPOSE: Randomized phase III trial to compare the effectiveness of trastuzumab with or without trastuzumab in treating women who have invasive stage IV breast cancer.
+
+DETAILED DESCRIPTION:
+OBJECTIVES:
+
+* Compare time to progression in women with progressive, stage IV, estrogen or progesterone receptor- and HER2/neu-positive breast cancer treated with trastuzumab (Herceptin) with or without tamoxifen.
+* Correlate response with type of measurement (immunohistochemistry or fluorescent in situ hybridization) of HER2/neu expression in patients treated with these regimens.
+* Compare objective response rate (complete or partial response) in patients treated with these regimens.
+
+OUTLINE: This is a randomized study. Patients are stratified according to prior adjuvant treatment (yes vs no), ECOG performance status (0-1 vs 2), and prior aromatase inhibitor treatment (yes vs no). Patients are randomized to 1 of 2 treatment arms.
+
+* Arm I: Patients receive trastuzumab (Herceptin) IV over 60-90 minutes on day 1.
+* Arm II: Patients receive trastuzumab as in arm I and oral tamoxifen once daily on days 1-21.
+
+In both arms, treatment repeats every 3 weeks for at least 2 courses in the absence of disease progression or unacceptable toxicity.
+
+Patients are followed every 3 months for 5 years.
+
+PROJECTED ACCRUAL: A total of 280 patients (140 per treatment arm) will be accrued for this study within 28 months.
+
+PRIMARY OUTCOMES:
+  - Time to progression
+
+INTERVENTIONS:
+  - DRUG: tamoxifen
+  - DRUG: trastuzumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00053339

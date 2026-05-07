@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06408168
+Title: Phase II Study of REPotrectinib With or Without Fulvestrant in Patients With Hormone Receptor-positive Human Epidermal Growth Factor 2-negative Metastatic Invasive LObular Carcinoma Who Received a Prior Endocrine Therapy in Combination With Cyclin-dependent Kinase 4 and 6 Inhibitor (REPLOT Trial)
+Official Title: Phase II Study of REPotrectinib With or Without Fulvestrant in Patients With Hormone Receptor-positive Human Epidermal Growth Factor 2-negative Metastatic Invasive LObular Carcinoma Who Received a Prior Endocrine Therapy in Combination With Cyclin-dependent Kinase 4 and 6 Inhibitor (REPLOT Trial)
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: growth hormone treatment
+
+SUMMARY:
+To find out if the combination of repotrectinib and fulvestrant can control the disease in participants with metastatic invasive lobular carcinoma.
+
+DETAILED DESCRIPTION:
+Primary Objectives
+
+• To evaluate the 6-month progression free survival (PFS) of repotrectinib with or without fulvestrant in HR+ HER2- mILC patients who received a prior ET in combination with CDK4/6i
+
+Secondary Objectives
+
+* To evaluate the 12-month PFS and median PFS (mPFS) of repotrectinib with or without fulvestrant in HR+ HER2- mILC patients who received a prior ET in combination with CDK4/6i
+* To evaluate the overall response rate (ORR) of reporectinib with or without fulvestrant in HR+ HER2- mILC patients who received a prior ET in combination with CDK4/6i
+* To assess the clinical benefit rate (CBR), median duration of response (mDOR), and median overall survival (mOS).
+* To evaluate the safety and tolerability of repotrectinib alone and in combination with fulvestrant, as assessed by the National Cancer Institute Common Terminology Criteria for Adverse Events v5.0
+
+Exploratory/Correlative Objectives
+
+* To explore response to repotrectinib based on ROS1 and P120 expression by IHC
+* To explore if changes in serum thymidine kinase 1 activity (TKa) between baseline and C1D15 correlates with response
+* To explore whether changes in circulating tumor DNA (ctDNA) levels between baseline and C1D15 predict response to repotrectinib
+* To correlate whole exome sequencing (WES) and RNA sequencing (RNAseq) findings with response (or lack of) to repotrectinib
+* To explore changes in the tumor microenvironment (TME) composition using mIF in response to repotrectinib
+
+PRIMARY OUTCOMES:
+  - Safety and adverse events (AEs)
+
+INTERVENTIONS:
+  - DRUG: Fulvestrant
+  - DRUG: Repotrectinib
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06408168

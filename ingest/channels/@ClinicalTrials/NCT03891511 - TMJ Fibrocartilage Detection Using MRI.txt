@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03891511
+Title: TMJ Fibrocartilage Detection Using MRI
+Official Title: TMJ Fibrocartilage Detection Using 3D Fat-Suppressed Spoiled Gradient-Echo Magnetic Resonance Imaging
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 59
+Topic: muscle rehabilitation
+
+SUMMARY:
+Objective: The aims of this study will be to detect the fibrocartilage layer (FC) of the human temporomandibular joint (TMJ) using 3D SPGR (Spoiled GRASS sequence) (T1 WATS) sequence and to compare these results with those of conventional magnetic resonance imaging (DP, T2 MRI) sequences in patients with temporomandibular disorders (TMD).
+
+DETAILED DESCRIPTION:
+This prospective and observational study will focused on analyzing morphological characteristics of the fibrocartilage layer of the TMJ based on the MRI scans of 59 patients. All 118 TMJs of these patients will be suitable for analysis, (range: 18-60 years old), females and males affected by TMD and did not undergo previous TMJ treatment.
+
+PRIMARY OUTCOMES:
+  - Presence of the TMJ Fibrocartilage layer
+  - Discontinuity of the TMJ FC layer
+  - Fibrocartilage Signal Intensity
+  - Thickness of the TMJ fibrocartilage layer
+  - Length of the TMJ fibrocartilage layer
+
+INTERVENTIONS:
+  - DEVICE: MRI scann
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03891511

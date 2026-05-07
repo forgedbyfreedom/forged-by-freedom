@@ -1,0 +1,68 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06741956
+Title: Development of a Wearable Device for Osteoporosis Prevention and Fracture Risk Reduction in Women
+Official Title: Design, Validation and Implementation of a Wearable Device for the Primary Prevention of Osteoporosis and Distal Radius Fractures in Women
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: sports nutrition
+
+SUMMARY:
+This project aims to determine the impact on bone health of:
+
+A lifestyle intervention promoting impact-based activities and physical activity for nine months.
+
+The same program enhanced with home-based strength training. A control group without supervision, continuing with standard care. The study will evaluate the persistence of changes after these interventions during a 12-week follow-up. By employing diverse strategies, the project seeks to identify barriers and facilitators to using technology for promoting healthy lifestyles in this demographic. Additionally, it will, for the first time in Spain, establish predictive models to assess the efficacy of non-pharmacological interventions in osteoporosis prevention, in collaboration with the public health system. These models will also predict adherence to technology-based behavioral interventions.
+
+ELIGIBILITY CRITERIA
+
+Eligible Participants:
+
+Postmenopausal women aged \>40 years, within 8 years post-menopause. Sedentary lifestyle. Willingness to provide informed consent.
+
+Exclusion Criteria:
+
+Surgically induced menopause or cancer treatment. Low BMI (\<18 kg/m²). Excessive alcohol consumption (≥3 drinks/day). Smoking. Unstable cardiovascular disease, rheumatoid arthritis, chronic kidney disease. Diagnosed conditions altering bone metabolism (e.g., hyperthyroidism). Recent fractures or mobility limitations. Recent engagement in structured physical activity programs. Recent use of glucocorticoids or hormone replacement therapy. VARIABLES TO BE MONITORED Body Composition: Lean mass, fat mass, bone mass, and waist circumference. Bone Health: Bone density of lumbar vertebrae and femur via densitometry and microarchitecture evaluation using quantitative CT.
+
+Biomarkers: Assessment of bone resorption and remodeling markers. Physical Function: Functional assessments (e.g., gait speed, jumping ability, lower limb strength).
+
+Physical Activity: Objectively monitored with accelerometers, analyzing sedentary, light, and moderate-to-vigorous activities.
+
+Nutritional Intake: Monitored using dietary recall tools. Quality of Life: Assessed using the Menopause Rating Scale (MRS). TRAINING PROTOCOL
+
+A. Impact-Based Physical Activity Program:
+
+Participants will utilize a validated biosensor (Muvone®) to track steps and impacts, targeting 50 multidirectional jumps and 10,000 steps per day, emphasizing brisk walking.
+
+B. Home-Based Strength Training Program:
+
+Two weekly sessions, progressing from 20 to 42 minutes, targeting major muscle groups (e.g., squats, hip extensions). Sessions include warm-ups, multi-joint exercises, and recovery periods.
+
+C. Control Group:
+
+Participants receive general advice on physical activity and nutrition without supervised programs or app access.
+
+FOLLOW-UP After 36 weeks, participants will resume daily routines without app feedback. At the 12-week follow-up, they will return for questionnaires and physical assessments.
+
+This structured approach ensures rigorous evaluation and facilitates integration of findings into public health strategies.
+
+DETAILED DESCRIPTION:
+CURRENT STATUS AND JUSTIFICATION OF THE PROPOSAL Osteoporosis is an important public health problem and it is characterized by the deterioration of the microarchitecture of bone tissue and a low bone mineral density (BMD) that leads to a reduction in bone strength and the consequent increased risk of skeletal fractures 1. One in three women will suffer an osteoporotic fracture in their lifetime 2. In fact, it is estimated that more than 200 million people suffer from osteoporosis and these figures are increasing due to the aging of the population and the change in lifestyles 3. A recent systematic review gathered epidemiological information on selected musculoskeletal injuries and provided pooled injury-specific incidence rates. Authors reported that the most common fractures in the whole adult population based on the pooled incidence rates were distal radius fractures (212 per 100,000 person-years)4. Distal radius fractures account for one in five bony injuries in both primary and secondary care5. According to data from the International Osteoporosis Foundation (IOF), in Spain there would be more than 2.8 million women over the age of 50 with osteoporosis, with more than 330,000 fragility fractures per year and projections suggest that by 2030 these figures will increase 28.8%1. Consequently, there is a significant economic burden on the healthcare system for patients who experience an osteoporosis-related fracture. Direct costs for osteoporosis, such as medications, occupational therapies, and inpatient and outpatient visits, are expected to increase to $25 billion by 2025 as the population ages 6. Together with the indirect costs, such as loss of productivity, are expected to rise to more than $95 billion in 2040 6. Osteoporosis, and the 4.3 million fragility fractures that it causes, cost the health care systems of Europe over €56 billion each year based on data for 2019 7. Only in our country it is estimated that the cost associated with sick days due to fragility fractures amounts to €355,000 each year. Only the direct and indirect costs associated with these fractures would exceed €4.2 billion, with a projected increase of 30.6% by 2030 1. It should not surprise us, therefore, that in postmenopausal women, osteoporotic fracture costs exceed the annual costs for breast cancer, myocardial infarction (MI), and stroke 6.
+
+The loss of the protective effect of estrogens on the skeletal structure after menopause intensifies the decrease in bone density as a result of a sudden imbalance between bone formation and bone resorption. This decrease in estrogens (e.g., estradiol) leads to an increase in the rate of bone remodeling due to an increase in the number of osteoblasts and osteoclasts; although osteoclast-mediated removal of bone matrix is much greater than osteoblast bone formation8. Therefore, the loss of BMD is very evident, especially in the 3-5 years following the last menstrual period 9, in a 2% loss rate per year 10. Parallel to this dec
+
+PRIMARY OUTCOMES:
+  - Bone density
+  - Bone biomarkers
+
+INTERVENTIONS:
+  - BEHAVIORAL: Weapom Lifestyle Intervention to measure bone impacts using a Fitbit Versa wearable device and the Weapom App.
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06741956

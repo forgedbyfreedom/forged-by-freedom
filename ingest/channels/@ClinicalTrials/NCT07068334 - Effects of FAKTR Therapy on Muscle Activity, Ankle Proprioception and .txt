@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07068334
+Title: Effects of FAKTR Therapy on Muscle Activity, Ankle Proprioception and Foot Biomechanics in OP With Low Back Pain
+Official Title: Effects of Functional and Kinetic Treatment With Rehabilitation (FAKTR) Therapy on Muscle Activity, Ankle Proprioception and Foot Biomechanics in Over Pronated Patients With Chronic Non-specific Low Back Pain
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: low back pain exercise
+
+SUMMARY:
+Low back pain is sometimes non-specific, leading to pain and spasm due to muscle imbalance causing changes in biomechanical properties, back and limb muscles, leading to dictating a significant association between low back pain and overpronation. FAKTR (functional and kinetic treatment with rehabilitation) Therapy employs this mobilization with proprioception and resistance treating these biomechanical changes.
+
+DETAILED DESCRIPTION:
+This study aims to determine the effects of FAKTR (functional and kinetic treatment with rehabilitation) therapy on muscle activity, ankle proprioception and foot biomechanics on over-pronated foot in patients with chronic non-specific low back pain. This study will be a Randomized Controlled trial and will be conducted on sample size of 60 patients, will be taken by consecutive sampling techniques. Patients will be randomly assigned into two groups.
+
+PRIMARY OUTCOMES:
+  - Numerical Pain Rating Scale (NPRS)
+  - Balance of the Error Scoring System (BESS)
+  - Oswestry Disability Index (ODI)
+  - Valgus angle by goniometer
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Traditional Physical Therapy
+  - COMBINATION_PRODUCT: Traditional Physical Therapy + FAKTR
+
+ELIGIBILITY:
+Age: 25 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07068334

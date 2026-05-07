@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03989674
+Title: Glycaemic Index (GI) Evaluation of Carbohydrate-based Food with Functional Ingredients Derived from Food Sources
+Official Title: Glycaemic Index (GI) Evaluation of Carbohydrate-based Food with Functional Ingredients Derived from Food Sources
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: physical activity intervention
+
+SUMMARY:
+In Singapore, the Ministry of Health has declared a "War on Diabetes" and major efforts will be made to develop and deploy programs to prevent diabetes. One of the cornerstones of diabetes management involves dietary modifications to reduce postprandial hyperglycaemia. However, implementation of a low GI diet is highly complex requiring the individual to choose foods from a long list which are primarily based on western consumption patterns. Many foods in the Asian diet, which largely consist of carbohydrates such as white rice, noodles and other flour based products, are not represented. An alternative solution will require innovative ways to alter commonly available food products that will not only help reduce postprandial glycaemia but also preserve the sensory characteristics of the foods to create a new generation of food products both functional and palatable. One such approach is the incorporation of plant compounds that lower the glucose absorption from foods. The aim of the project is to measure the GI of carbohydrate-based food with edible plant derived molecules. Natural, plant-derived anthocyanin will be incorporated into bread to produce low GI bread. Anthocyanins are well known for its anti-oxidant activity and recent studies reported that anthocyanins also had an inhibitory activity against digestive enzymes that break down carbohydrates. It can potentially inhibit amylase, and suppress the increase in postprandial glucose level from starch. Bread is a carbohydrate-rich product, which contains a high amount of rapidly digestible starch, and therefore many of them have a high GI. This study aims to determine the glycaemic effects of anthocyanin fortified bread. The effort is designed to enable and inform population interventions that will have an impact on the health of the population in a sustainable manner by introducing innovative foods into the food supply that are 'health promoting' based on rigorous human experiments and are acceptable to the public and other major stakeholders.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Glycemic index
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Anthocyanin
+
+ELIGIBILITY:
+Age: 21 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03989674

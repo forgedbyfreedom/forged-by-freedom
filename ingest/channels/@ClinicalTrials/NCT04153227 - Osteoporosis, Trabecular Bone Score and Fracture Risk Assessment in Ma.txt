@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04153227
+Title: Osteoporosis, Trabecular Bone Score and Fracture Risk Assessment in Male Patients After Radical Cystectomy
+Official Title: Impact on Bone Health in Patients Undergoing Radical Cystectomy: Prevalence of Osteoporosis, Trabecular Bone Score (TBS) Assessment and Fracture Risk by FRAX in Male Patients After One Year of Radical Cystectomy
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 112
+Topic: vitamin D muscle
+
+SUMMARY:
+Radical cystectomy (RC) with ileal urinary diversion (UD) is a standard treatment for muscle-invasive bladder cancer. However, emerging evidence indicates that this procedure may significantly impact bone health. Patients with UDs have a 21-48% higher risk of experiencing a fragility fracture compared to the general population. The underlying mechanisms are not entirely understood, but one prevailing hypothesis implicates substantial bone mineral density (BMD) loss due to the metabolic changes induced by UD, particularly driven by metabolic acidosis.
+
+Dual-energy X-ray absorptiometry (DXA) remains the gold standard for measuring BMD and provides an indirect assessment of fracture risk. However, the trabecular bone score (TBS), a non-invasive imaging technique that evaluates bone microarchitecture, offers additional insights into bone quality that are independent of BMD and enhances the understanding of bone strength and fracture resistance. Furthermore, the use of tools such as the FRAX® (Fracture Risk Assessment Tool) helps in identifying patients at higher risk of osteoporotic fractures by estimating the 10-year probability of major fractures (MOF) (spine, forearm, hip, or shoulder) and hip fractures (HIP) based on various clinical risk factors. The predictive accuracy of FRAX® can be further refined by incorporating femoral neck BMD and adjusting for TBS.
+
+Osteoporosis in men is a frequently underdiagnosed and undertreated condition. This underdiagnosis is also evident in patients with UDs. This study aims to evaluate the prevalence of bone alterations in men post-RC, employing both BMD and TBS measurements. Additionally, it seeks to identify key risk factors and critically assess the utility of FRAX® as a screening tool for pinpointing patients at elevated fracture risk.
+
+To the best of the investigator's knowledge it will be the first study assessing the bone health after RC evaluating BMD, TBS and the fracture risk using the FRAX algorithm.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Bone mineral Density (BMD)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Bone mineral density (BMD)
+  - DIAGNOSTIC_TEST: Trabecular bone score (TBS)
+  - DIAGNOSTIC_TEST: Fracture risk Assessment Tool (FRAX)
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04153227

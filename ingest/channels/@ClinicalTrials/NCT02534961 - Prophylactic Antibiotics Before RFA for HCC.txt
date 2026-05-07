@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02534961
+Title: Prophylactic Antibiotics Before RFA for HCC
+Official Title: Prophylactic Administration of Antibiotics Before Radiofrequency Ablation for Hepatocellular Carcinoma: A Randomized Trial
+Status: UNKNOWN
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 600
+Topic: beta-alanine
+
+SUMMARY:
+This randomized prospective study aims to investigate whether prophylactic administration of antibiotics has an influence on inflammatory markers, liver function test results, or the incidence of post-procedural infection in patients with hepatocellular carcinoma (HCC) undergoing radiofrequency ablation (RFA).
+
+DETAILED DESCRIPTION:
+Patients
+
+1. This cohort study will prospectively enroll HCC patients undergoing RFA in Taipei Veterans General Hospital and Taipei Medical University Hospital.
+2. The diagnosis of HCC is established by histology or on the basis of the findings of typical radiologic features in a 4-phase multidetector computed tomography (CT)scan or dynamic contrast-enhanced magnetic resonance imaging (MRI).
+3. Inclusion criteria: tumor size less than 5 cm without extra-hepatic metastasis; the number of tumor was 3 or less; Child Pugh classification of liver function are grade A or B; and the absence of other major diseases that might complicate RFA.
+4. Patients will be excluded from the study if they meet the following criteria. First, the patient's age is younger than 20 years or older than 80 years. Second, the patients have a terminal illness of any major organ system, like heart failure, uremia, chronic obstructive pulmonary disease, or non-hepatic malignancy. Third, the patients have received antibiotics within the last 2 weeks. Patients will be subsequently excluded when initial bacteriological sampling turned out positive (occult infection).
+5. After disinfection of the skin surface and induction of local anesthesia with 1% lidocaine, RFA will be performed with real-time ultrasonography guidance, and the RF electrode will be advanced into the tumor. RFA device will be used the Cool-Tip Radiofrequency System (Radionics, Burlington, MA). With the Cool-Tip device, treatment will be performed with a single (2- or 3-cm active tip) needle electrode. Each tumor has 1-4 ablations per session, depending on the tumor size. If the tumor is adjacent to hollow viscera and can not be displaced with a safe margin of at least 2 cm by positioning the patient in an oblique or lateral position, 5% dextrose will be intraperitoneally instilled around the liver to displace the hollow viscera.
+6. After RFA, all patients will undergo immediate follow-up ultrasonography to evaluate the possibility of bleeding or fluid accumulation. Dynamic CT scan or MRI will be done one month after all of the tumors ablated by RFA. When these will be confirmed residual tumors by showing contrast enhancement during the arterial phase and wash out in venous phase, a second session of RFA will be conducted. If viable tumors persist after two sessions of RFA therapy, treatment will be considered a failure. If no viable tumor is detected, the patient will be regularly followed-up with abdominal sonography every 3 months.
+7. Tumor recurrence is suspected if there is elevated serum AFP level or new lesion detected by surveillance ultrasonography. These would be confirmed by dynamic CT or MRI. Local recurrence is defined as tumor recurrence at the same segment of a previous tumor site, while intra-hepatic distant recurrence is diagnosed when a new lesion occurs in a different segment of a previously treated tumor.
+
+Randomization Patients who fulfilled the inclusion criteria will be immediately randomize
+
+PRIMARY OUTCOMES:
+  - Infection after radiofrequency ablation
+
+INTERVENTIONS:
+  - DRUG: Cefazolin
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02534961

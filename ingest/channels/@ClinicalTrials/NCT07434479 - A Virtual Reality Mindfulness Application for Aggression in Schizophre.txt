@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07434479
+Title: A Virtual Reality Mindfulness Application for Aggression in Schizophrenia
+Official Title: A Virtual Reality Mindfulness Application for Aggression in Schizophrenia
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 58
+Topic: recovery exercise
+
+SUMMARY:
+The study investigates whether a virtual reality-based mindfulness based intervention can reduce impulsive aggression in individuals with schizophrenia or schizoaffective disorder. The primary goal is to evaluate whether mindfulness delivered via VR (MBI-VR) improves emotion regulation and engages the dorsomedial prefrontal cortex (dmPFC), a brain region involved in cognitive control and regulation of emotional responses. The study also examines whether these effects show a dose-related relationship.
+
+Participants will be randomized to receive different doses of MBI-VR intervention or distraction tasks and will complete repeated mindfulness VR sessions. Brain activity will be measured using functional magnetic resonance imaging (fMRI) during an emotion regulation task, along with clinical assessments of impulsive aggression related symptoms.
+
+DETAILED DESCRIPTION:
+This is a randomized, parallel-group, multicenter clinical trial designed to evaluate the effects of a mindfulness-based virtual reality intervention (MBI VR) on impulsive aggression and associated neural target engagement in individuals with schizophrenia or schizoaffective disorder. The study compares two different doses of MBI VR (16 sessions vs. 24 sessions) to a non-immersive Distraction Techniques control condition. Neural target engagement is assessed via functional magnetic resonance imaging (fMRI), with a focus on activation of the dorsomedial prefrontal cortex (dmPFC) during an emotion regulation task.
+
+Screening and Baseline Procedures
+
+Potential participants are identified through a structured pre-screening process involving review of electronic and paper medical records to assess demographic eligibility, psychiatric diagnosis, aggression history, medication adherence, and medical suitability for MRI procedures. Individuals meeting preliminary eligibility criteria are approached for informed consent.
+
+At the Screening Visit, participants undergo diagnostic confirmation using the SCID-5-RV, assessment of suicide risk using the Columbia-Suicide Severity Rating Scale (C-SSRS Baseline), review of medication adherence, and evaluation of impulsive aggression history using the Impulsive-Premeditated Aggression Scale (IPAS). Inclusion and exclusion criteria are confirmed through clinical interview, collateral information, and medical record review.
+
+Eligible participants complete baseline clinical and behavioral assessments, including measures of aggression, impulsivity, psychopathology, mood, anxiety, quality of life, and mindfulness (as applicable). Baseline plasma antipsychotic levels are obtained to assess medication adherence and reduce pharmacologic confounding. Participants also complete a baseline fMRI scan at the Nathan S. Kline Institute for Psychiatric Research.
+
+Randomization and Study Arms
+
+Following completion of baseline procedures, participants are randomized using a stratified randomization approach to ensure balance across treatment arms and study sites. Participants are assigned to one of the following groups:
+
+Mindfulness-Based Intervention Virtual Reality (MBI VR) Distraction Techniques Control
+
+All participants receive up to 24 sessions of their assigned intervention. Neuroimaging and clinical assessments are conducted at baseline, after completion of 16 sessions, and after completion of 24 sessions.
+
+Mindfulness-Based Intervention Virtual Reality (MBI VR)
+
+Participants randomized to the MBI VR group engage in guided mindfulness sessions delivered via the TRIPP™ virtual reality platform using a head-mounted display (Meta Quest 3). Each session lasts approximately 10 minutes and is conducted under supervision of trained research staff.
+
+At the beginning of each session, participants rate their current mood and anxiety using the Oxford Daily Mood Scale (OMS) and State-Trait Anxiety Inventory (STAI). These assessments are a
+
+PRIMARY OUTCOMES:
+  - Short UPPS-P Impulsive Behavior Scale
+  - Impulsive-Premeditated Aggression Scale
+  - Positive and Negative Syndrome Scale
+
+INTERVENTIONS:
+  - OTHER: Mindfulness-Based Virtual Reality Intervention
+
+ELIGIBILITY:
+Age: 18 Years to 64 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07434479

@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07418632
+Title: Kinematic Training in Patients With Neck Pain Based on Machine Learning Classification Approach
+Official Title: What is the Ability of Datamining Approaches to Cluster Patients With Idiopathic Neck Pain and Can Machine Learning Algorithms Provide More Efficient Rehabilitation and Less Recurrence Based on Kinaesthetic Training Protocols
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to study if kinematic training based on novel kinematic assessment clasification approach can decrease chronic neck pain and prevent its reoccurance better than conventional kinematic training in adults. The main question\[s\] it aims to answer \[is/are\]:
+
+Does clustering patients with neck pain based on head and neck movement characteristics lead to more efficient kinematic rehabilitation training and improved clinical outcomes
+
+Researchers will compare effects of cluster specific kinematic training to see if it effects pain levels and its reoccurance.
+
+Participants will \[describe the main tasks participants will be asked to do, interventions they'll be given and use bullets if it is more than 2 items\].
+
+DETAILED DESCRIPTION:
+Chronic idiopathic neck pain represents one of the most prevalent musculoskeletal conditions worldwide and is characterized by recurrent episodes, fluctuating symptom intensity, and frequent transition to persistent disability. While clinical management commonly focuses on short-term pain reduction, the more substantial societal burden arises from recurrence and chronicity rather than isolated acute episodes. Recurrent neck pain contributes to repeated healthcare consultations, prolonged work absenteeism, reduced productivity, and increasing healthcare expenditure. Despite the widespread use of exercise-based rehabilitation, recurrence rates remain high, suggesting that prevailing treatment approaches may insufficiently address the mechanisms underlying persistent dysfunction. As the prevalence of neck pain continues to rise across working-age populations, it is reasonable to question whether current rehabilitation models adequately target the neuromuscular and sensorimotor contributors to chronicity and repeated symptom exacerbations.
+
+Most individuals presenting for physical therapy are diagnosed with non-specific or idiopathic neck pain, a broad category encompassing heterogeneous clinical presentations with variable combinations of pain, stiffness, dizziness, visual disturbances, and impaired movement control. Patients may differ substantially in movement strategies, proprioceptive acuity, neuromuscular coordination, and adaptive motor patterns, yet they are frequently managed using standardized exercise protocols. Conventional clinical assessment tools are effective in distinguishing patients from asymptomatic individuals but provide limited resolution for identifying meaningful subgroups within the idiopathic neck pain population. Over the last decade, patient-centered evaluation in spinal disorders has frequently relied on numerical pain rating scales and disability questionnaires, while comparatively less emphasis has been placed on objective assessment of neuromuscular control mechanisms that may drive chronicity. Emerging evidence demonstrates that individuals with a history of neck pain exhibit persistent alterations in sensorimotor function even during symptom remission, implying that underlying neuromuscular adaptations may predispose individuals to recurrence and reduced resilience to mechanical or psychosocial stressors.
+
+Cervical sensorimotor control, often conceptualized as cervicocephalic kinaesthetic awareness, integrates proprioceptive input from cervical musculature and joint mechanoreceptors with visual and vestibular information to coordinate accurate head positioning and smooth eye-head movements. Altered cervical afferent input can disrupt this integration, leading to inaccurate movement perception, impaired position sense, and maladaptive motor output strategies. Prolonged proprioceptive disturbances may induce central neural plasticity changes within brainstem and cortical sensorimotor networks, potentially sustaining d
+
+PRIMARY OUTCOMES:
+  - Vas score (Visual analogue scale - pain intensity level)
+  - NDI score
+
+INTERVENTIONS:
+  - OTHER: Smallest movement deficit training protocol
+  - OTHER: Smaller movement deficit training protocol
+  - OTHER: Larger movement deficit training group
+  - OTHER: Largest movement deficit training protocol
+  - OTHER: Control group intervention protocol
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07418632

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04985292
+Title: Does Probiotic Supplementation Prevent Kidney Injury During Strenuous Physical Exercise?
+Official Title: Does Probiotic Supplementation Prevent Kidney Injury During Strenuous Physical Exercise?
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 43
+Topic: protein supplementation
+
+SUMMARY:
+Severe heat strain arising from intense physical work under climate conditions that does not allow sufficient heat dissipation may lead to heat stroke. This severe conditions is hypothesized to be secondary to increased gut permeability and leakage of bacterial toxins across the gut membrane, stimulating a systematic inflammatory response and associated organ injury. Repeated such sub-clinical increases in gut permeability has been suggested to contribute to the high burden of chronic kidney disease among heat-stressed workers. Many marathon runners experience a transient increase in kidney injury biomarkers while running. Probiotics have been studied as a way to decrease gut permeability and reduce systemic inflammation in many settings, including in athletes . However, no study has measured renal outcomes among workers or athletes performing strenuous activity. This is of interest as it could test the hypothesis that gut-induced inflammation is a driver of kidney injury during heat stress, and could point to a possible intervention to add on to efforts to relieve heat strain.
+
+In the present study, recreational or professional runners will be randomized to take a probiotic supplement or placebo during a 4 week period preceding a strenuous physical exercise (minimum 21 km run). Urine samples will be taken before and after the run, and analyzed for markers of renal injury and inflammation.
+
+DETAILED DESCRIPTION:
+Participants registered to run in organised half-marathons, marathons and ultramarathons in Southern Sweden will be recruited. They will be asked to abstain from probiotic supplementation (including functional foods with probiotics) for 2 weeks, and then commence a 4-week period of probiotic or placebo supplementation.
+
+At the end of the 4 week treatment period, the participants run the race. Urine samples are taken before and after the race and analysed for kidney injury markers.
+
+Stool samples are taken by participants at the initiation of the treatment period, last stool before the race, and first stool after the race.
+
+PRIMARY OUTCOMES:
+  - Urine tubular kidney injury marker (Kidney Injury Molecule 1 (KIM-1), monocyte chemotactic protein 1 (MCP-1), insulin Growth Factor Binding Protein 7 (IGFBP-7)) composite variable aggregated using structural equations modelling.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic, Lactobacillus
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04985292

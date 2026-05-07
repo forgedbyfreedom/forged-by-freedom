@@ -1,0 +1,70 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05447936
+Title: Dose Estimation of Jarlsberg Cheese in Young, Active Norwegian Cross-country Skiers (XCS)
+Official Title: Estimation of Daily Optimal Efficacy Dose (OED) of Jarlsberg Cheese in Order to Increase the Osteocalcin Level in Young, Active Norwegian Cross-country Skiers (XCS)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: vitamin D muscle
+
+SUMMARY:
+The main aim was to estimate the daily OED of Jarlsberg cheese related to increased total serum Osteocalcin (tOC) level in young, active female and male Cross-country skiers (XCS).
+
+The study population consists of active Cross-country Skiers (XCS) of both genders above 18 years of age.
+
+The optimal daily intake of Jarlsberg cheese is assumed to have a dose window of \[20 - 100\] gram/day and a starting dose of 47 gram/day for both female and male.
+
+The study was performed equally as an open, two-armed within-patient Response Surface Pathway (RSP) trial with three design level and skewed starting dose.
+
+The main response variable will be the change in the tOC level after four weeks from baseline of the given design level.
+
+Participants, who fulfil the inclusion criteria, do not meet any of the exclusion criteria and willing to give informed consent to participate will receive an appointment for starting the study. All demographic data, social factors, history of disease and vital signs will be recorded at screening.
+
+Blood samples was taken at screening and every four weeks. Muscle strength, Peak VO2 and BMD recorded at screening and at the end of the clinical part week12.
+
+Ten female and 10 male XCS divided was be included, perform and completed the study.
+
+DETAILED DESCRIPTION:
+Aim
+
+* To estimate the daily OED of Jarlsberg cheese related to increased total serum Osteocalcin (tOC) level in young, active female and male Cross-country skiers (XCS).
+* To estimate the effect of daily Jarlsberg cheese intake on increased, muscle strength, peak VO2 and bone mineral density.
+
+Study population: The study population consists of active Cross-country Skiers (XCS) of both genders above 18 years of age. The study is separated in one female and one male XCS study arm.
+
+Trial treatment:The optimal daily intake of Jarlsberg cheese is assumed to have a dose window of \[20 - 100\] gram/day and a starting dose of 47 gram/day for both female and male. The cheese is received in package of 250 gram divided in 16 slices of 15.625 gram. 47 gram represents 3 slices of cheese.
+
+Design and randomization: The female and the male arms of the study will be performed equally as an open, two-armed within-patient Response Surface Pathway (RSP) study with three design level and skewed starting dose. The two parts will be performed separately in parallel with identical RSP-design.
+
+The main outcome variable will be categorized in the following four categories:
+
+1. Low to moderate increase in the tOC level: \[0- 10%\> the last 4 weeks
+2. High increase in the tOC level: ≥10% the last 4 weeks
+3. Low to moderate decrease in the tOC level: \<0 - 10% \> the last 4 weeks
+4. High decrease in the tOC level: ≥ 10% the last 4 weeks
+
+Ten XCS in both arms will be included in the first design level and all receiving the starting dose of Jarlsberg cheese every day in four weeks. The individual increase in tOC from baseline to four weeks will be used to calculate the doses for the XCS in the second design level. The individual increase tOC in the second design will decide the daily doses of cheese to be used in the third design level.
+
+The OED for healthy women in pre-menopausal age was previously estimated to 57-gram Jarlsberg cheese per day. It is unknown if this OED will be different from active XCS and dependent of gender and age.1 The initial dose window in this study was set to \[20 - 100\] gram based on the previous dose-response study in healthy pre-menopausal women.
+
+Based on prior knowledge, the tOC follows a quadratic function in Jarlsberg cheese dose.1 The Osteocalcin seem to increase with increasing dose until a maximum (OED) and reduces for higher intake of the cheese. OED might be below the midpoint of the initial dose window of 60 gr/day. In order to optimize the estimation procedure with the skewed starting dose of 47g/day or 3 slices of Jarlsberg cheese will be chosen.
+
+This gives an adjusted starting dose window of \[20 - 74\] gr/day. In case the results from all the five XCS of equal gender in the first design level reports an increase \< 10% in the tOC level, the RSP-procedure recommend a maximum escalation in the daily intake of Jarlsberg cheese in the second design level. The new starting dose-window will then be change with the previously used sta
+
+PRIMARY OUTCOMES:
+  - tOC
+  - tOC
+  - tOC
+  - tOC
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Jarlsberg cheese
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05447936

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02152956
+Title: Flotetuzumab in Primary Induction Failure (PIF) or Early Relapse (ER) Acute Myeloid Leukemia (AML)
+Official Title: A Phase 1/2, First in Human, Dose Escalation Study of MGD006, a CD123 x CD3 DART® Bi-Specific Antibody Based Molecule, in Patients With Relapsed or Refractory AML or Intermediate-2/High Risk Myelodysplastic Syndrome (MDS)
+Status: TERMINATED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 244
+Topic: physical activity intervention
+
+SUMMARY:
+Open-label, multi-dose, single-arm, multi-center, Phase 1/2 study conducted in three segments: the Single Patient Dose Escalation Segment (complete), followed by the Multi-Patient Dose Escalation Segment (complete) and the Maximum Tolerated Dose and Schedule (MTDS) Expansion Cohort Segment (closed). Having characterized safety and determined the maximum tolerated dose and schedule, the primary objective of this study now is to assess the anti-neoplastic activity of flotetuzumab in patients with PIF/ER AML, as determined by the proportion of patients who achieve CR or CRh. Starting with Cycle 2, patients who are benefiting from flotetuzumab may receive up to a maximum of 8 cycles of treatment.
+
+Patients will receive daily increasing doses of flotetuzumab for the first week of Cycle 1 (Lead-In Dosing) followed by 3 weeks of continuous intravenous infusion at a the assigned dose. Subsequent cycles are each 4 weeks of continuous infusion at the assigned dose. Dosing may continue for up to 8 cycles. Follow up visits may continue for 6 months after treatment is discontinued.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Efficacy Based on CR or CRh Rate
+
+INTERVENTIONS:
+  - BIOLOGICAL: Flotetuzumab 3 ng/kg/day, 4 days on and 3 days off
+  - BIOLOGICAL: Flotetuzumab 10 ng/kg/day, 4 days on and 3 days off
+  - BIOLOGICAL: Flotetuzumab 30 ng/kg/day, 4 days on and 3 days off
+  - BIOLOGICAL: Flotetuzumab 100 ng/kg/day, 4 days on and 3 days off
+  - BIOLOGICAL: Flotetuzumab 300 ng/kg/day, 4 days on 3 days off, after one-step lead-in dose
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02152956

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01966445
+Title: Dose Escalation Study to Investigate the Safety, Pharmacokinetics, and Pharmacodynamics of GSK2849330 in Subjects With Advanced Her3-Positive Solid Tumors
+Official Title: A Phase I, First Time in Human, Open-Label, Dose Escalation Study to Investigate the Safety, Pharmacokinetics, and Pharmacodynamics of Anti-Her3 Monoclonal Antibody GSK2849330 in Subjects With Advanced Her3-Positive Solid Tumors
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 29
+Topic: growth hormone treatment
+
+SUMMARY:
+Human Epidermal Growth Factor Receptor 3 (HER3) expression is seen across a wide variety of solid malignancies and is associated with poor prognosis. Up-regulation of HER3 expression and activity is also associated with resistance to multiple pathway inhibitors. GSK2849330, a monoclonal antibody targeting HER3, is a new agent for subjects whose tumors express HER3. This study is a phase I, first time in human, open-label, dose escalation study. The purpose of this study is to investigate the safety, pharmacokinetics (PK), and pharmacodynamics (PD) of GSK2849330 in subjects with advanced HER3-positive solid tumors. The study will be conducted in two parts. Part 1 (Dose-Escalation Phase) will include dose escalation and PK/PD cohorts to evaluate safety, PK, and PD to guide selection of dose regimen(s) for Part 2. In Part 2 (Expansion Cohorts), up to 3 cohorts will be enrolled at the dose regimen(s) selected based on Part 1 data, to evaluate safety in a larger cohort of subjects at the recommended dose regimen and also to evaluate preliminary evidence of clinical benefit.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Adverse Events (AEs) and Serious Adverse Events (SAEs)-Parts 1 and 2
+  - Number of Participants With Dose-limiting Toxicities (DLTs)-Parts 1 and 2
+  - Number of Participants With Grade Change From Baseline in Clinical Chemistry Data-Parts 1 and 2
+  - Number of Participants With Change From Baseline in Clinical Chemistry Data With Respect to Normal Range-Parts 1 and 2
+  - Number of Participants With Grade Change From Baseline in Hematology Data-Parts 1 and 2
+
+INTERVENTIONS:
+  - BIOLOGICAL: GSK2849330
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01966445

@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07448519
+Title: Colonic Delivery of DIM and Perilla Oil on Gut Hormones and Food Intake in Obesity
+Official Title: The Effect of Targeted Food Supplements on Gut Hormone Levels
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this clinical trial is to learn whether targeted food supplement capsules that release nutrients in the lower gut can increase appetite-regulating gut hormones and reduce food intake in adults with obesity.
+
+The main questions it aims to answer are:
+
+* Does the targeted supplement increase blood levels of appetite-related gut hormones such as PYY and GLP-1?
+* Does the supplement reduce calorie intake at a standardised test meal compared with placebo? Researchers will compare active supplement capsules with placebo capsules (inactive look-alike capsules) to see whether the supplement changes hormone levels and food intake.
+
+Participants will:
+
+* Attend two study visits after an overnight fast
+* Take supplement capsules or placebo capsules in random order
+* Provide repeated blood samples during each study visit
+* Complete hunger and appetite rating questionnaires
+* Eat standardised breakfast and lunch meals so that calorie intake can be measured
+
+DETAILED DESCRIPTION:
+This study evaluates whether a targeted combination of naturally derived food supplements delivered to the lower gut can stimulate the release of appetite-regulating hormones and reduce food intake in adults with obesity. Specialised nutrient receptors in the colon can trigger the release of hormones involved in appetite control when activated by specific nutrients. This study tests a new capsule formulation designed to deliver selected nutrients to the lower intestine to activate these receptors.
+
+The study uses a randomised, double-blind, placebo-controlled crossover design. Twenty adults with obesity (BMI 30-40 kg/m²) will complete two study visits separated by a washout period. At each visit, participants will receive either the active supplement formulation or matched placebo capsules.
+
+At each visit, participants attend after an overnight fast. Blood samples are collected at regular intervals to measure circulating gut hormones including PYY, GLP-1, and ghrelin. Standardised breakfast and lunch meals with known calorie content are provided, and food intake is measured. Participants also complete repeated visual analogue scale questionnaires to assess hunger, fullness, and desire to eat.
+
+The active formulation contains diindolylmethane (DIM) and perilla oil and is delivered using coated capsules designed for lower-gut release. The placebo capsules are visually identical and contain inactive material (methylcellulose). The crossover design allows each participant to receive both treatments for within-subject comparison.
+
+The results will help determine whether targeted nutrient delivery to the colon can safely enhance appetite-regulating hormone responses and reduce food intake, supporting the development of non-drug approaches for appetite control in obesity.
+
+PRIMARY OUTCOMES:
+  - Change in circulating levels of appetite-regulating gut hormones (PYY, GLP-1, ghrelin)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Colonic-delivered DIM + Perilla oil
+  - DIETARY_SUPPLEMENT: Dietary Supplement: Colonic-delivered Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07448519

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04923971
+Title: Safety and Performance Monitoring During Occupational Work II
+Official Title: Safety and Performance Monitoring During Occupational Work II
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: caffeine exercise
+
+SUMMARY:
+BHSAI is developing a computational system that provides early alerts of a rise and fall in core body temperature to help reduce the risk of thermal injury in the field and during training. The goal of the body temperature alerting system is to use it during rest, exercise in the heat and cold. Therefore, the primary purpose of this investigation is to validate a body temperature alerting system using physiological responses that occur during rest and exercise in different cold environments. Multiple cold ambient temperatures will be validated.
+
+DETAILED DESCRIPTION:
+This study will employ a randomized, cross-over design to assess the effect of three different cold ambient temperatures on skin temperature at peripheral regions, core temperature (rectal), metabolic heat production, hand dexterity measures at rest, and athletic performance assessment after rest in cold ambient temperatures. The three different trials for this study will include ambient temperatures at: A. 0°C (32°F), B. -10°C (14°F), and C. Surrogate -20°C (-10°C + 3 m/s wind speed \[14°F + 6 mph\]). This will be accomplished by use of a environmental chamber.
+
+Participants will be assigned after medical clearance is granted. Visit specific information is described below, however, specific data collection protocols for dependent variables and procedures are included below the description of the study design. Participants will be asked to sign a photo/video release form to be used in research projects, scientific publications/conferences and for educational purposes. Participants may be videoed or photographed while exercising or resting in the environmental chamber.
+
+During the 0°C (32°F) and -10°C (14°F) trials, participants will wear cold weather gear as described by BHSAI. All cold weather gear will be machine-washable, provided to the participants and properly fitted to each individual. Clothing will be kept in the laboratory, machine-washed by manufacturer recommendations. Participants will not be able to keep clothing used upon completion of the study. These trials will also have a wind speed of 1 m/s. For the surrogate -20°C (-4°F) experiment, ambient temperature will be -10°C (14°F) with wind speed approximately at 3 m/s (6 mph) to serve as an aggregate for -20°C (-4°F). Wind will not be facing the participant. Participants will wear all cold weather gear listed above with the exception of the microfleece cap and shell layer for hand (Figure 2). For all trials, participants will rest upright on a chair with feet above the ground and hands on the arms of the chair (exposed to air). The participant will remain seated for 120 minutes. For additional safety of the participants, the experiment will be terminated if the core body temperature falls below 35°C (95°F) and/or the skin temperature in any of the peripheral regions falls below 8°C (46°F). During the three testing sessions, the participants will wear a Samsung Gear S3 smartwatch on their non-dominant arm and a Polar chest strap. These devices would be paired with a Samsung Galaxy Note 4 smartphone that runs the 2B-Cool algorithm for core temperature estimation using data from the smartwatch. These devices will be used in conjunction with data from the rectal and skin temperature sensors to validate the sponsors' temperature prediction algorithm. All devices will be cleaned prior to and after participant use per manufacturer instructions. These devices would be provided by BHSAI to the University of Connecticut. During the three testing sessions, in addition to the BHSAI-provided devi
+
+PRIMARY OUTCOMES:
+  - Change in Rectal Temperature
+  - Change in Heart Rate
+  - Change in Mean Skin temperature
+
+INTERVENTIONS:
+  - OTHER: Purdue Pegboard
+
+ELIGIBILITY:
+Age: 18 Years to 28 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04923971

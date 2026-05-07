@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04109482
+Title: Trial to Evaluate the Safety and Efficacy of MB-102 in Patients With BPDCN.
+Official Title: A Phase 1/2, Open Label, Multicenter Trial to Assess the Safety and Efficacy of MB-102 in Patients With Relapsed or Refractory Blastic Plasmacytoid Dendritic Cell Neoplasm
+Status: TERMINATED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: creatine supplementation
+
+SUMMARY:
+A phase 1/2 study to assess the safety and efficacy of MB-102 in patients with relapsed or refractory BPDCN
+
+DETAILED DESCRIPTION:
+The Phase 1 portion of the study will determine the maximum tolerated dose of MB-102.
+
+The Phase 2 portion of the trial will evaluate the efficacy of MB-102 in relapsed or refractory BPDCN.
+
+PRIMARY OUTCOMES:
+  - Phase 1: Safety and Tolerability as measured by the number of patients with treatment related adverse events
+  - Phase 1: Maximum Tolerated Dose (MTD) and recommended Phase 2 dose
+  - Phase 2: Response Rate of patients with BPDCN
+
+INTERVENTIONS:
+  - BIOLOGICAL: MB-102
+  - DRUG: Fludarabine
+  - DRUG: Cyclophosphamide
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04109482

@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07068347
+Title: Comparison Of VR & CPT, With And Without Lifestyle Modification, On ULD In Breast Cancer Survivors
+Official Title: Comparison Of Virtual Reality And Conventional Physical Therapy, With And Without Life Style Modification, On Upper Limb Dysfunction In Post-Surgical Breast Cancer Survivors
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: caffeine exercise
+
+SUMMARY:
+The proposed study will compare the effect of an application of non-immersive virtual reality (VR) and conventional physical therapy (CPT) with and without lifestyle changes on upper limb dysfunction in breast cancer survivors, post-surgery. The purpose of this proposed RCT is to compare the effect of VR alone/in conjunction with lifestyle changes to that of CPT alone/in conjunction with lifestyle changes for the physical rehabilitation of female breast cancer survivors. Research will be conducted on 60 patients. This research employs parallel, randomized clinical trial design, which shall be conducted in NORI hospital, Shifa International Hospital and Kinifit physiotherapy in Islamabad/Rawalpindi over a period of 18 months. Thus, the type of sampling done in this study is purposive sampling.
+
+DETAILED DESCRIPTION:
+Primary Objectives:
+
+1. To compare the effects of immersive virtual reality and conventional physical therapy, with and without lifestyle modification, on upper limb functional disability in post-surgical breast cancer survivors.
+
+   Secondary Objectives:
+2. To assess the effects of immersive virtual reality compared to conventional physical therapy, with and without lifestyle modification, on improving pain, shoulder range of motion and muscle strength in post-surgical breast cancer survivors.
+3. To determine the effects of immersive virtual reality compared to conventional physical therapy with and without lifestyle modification on quality of life and psychological wellbeing in post-surgical breast cancer survivors.
+4. To evaluate self-reported adherence to the life style modification program among post-surgical breast cancer survivors.
+
+PRIMARY OUTCOMES:
+  - Visual Analog Scale (VAS)
+  - Goniometer (shoulder flexion, abduction, external rotation)
+  - Handheld dynamometer
+  - Disabilities of the Arm, Shoulder, and Hand (DASH) Questionnaire
+  - European Organisation for Research and Treatment of Cancer Quality of Life Questionnaire (EORTC QLQ-C30)
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: VR + lifestyle modification
+  - COMBINATION_PRODUCT: VR only
+  - COMBINATION_PRODUCT: Conventional physical therapy + lifestyle modification
+  - COMBINATION_PRODUCT: Conventional physical therapy only
+
+ELIGIBILITY:
+Age: 30 Years to 60 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07068347

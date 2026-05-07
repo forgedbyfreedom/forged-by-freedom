@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06480695
+Title: Exercise Training Intensity and Nitrate Supplementation in Post-Menopausal Females
+Official Title: Effects of Exercise Training Intensity and Inorganic Nitrate Supplementation on Vascular Health and Fitness in Post-Menopausal Females
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: high intensity interval training
+
+SUMMARY:
+Menopause greatly increases cardiovascular disease risk (CVD). Current exercise guidelines are inadequate to ameliorate this risk and higher intensity exercise may be necessary for cardiovascular benefits in postmenopausal females. Oral nitrate supplementation enhances exercise performance and CVD risk profile in several clinical conditions. The investigators recently reported that 3-days of nitrate supplementation in postmenopausal females enhances acute post-exercise vascular function, in an intensity dependent manner. The effects of nitrate supplementation and exercise training over a longer training program remains unexplored. This investigation will examine the impact of exercise training intensity with and without inorganic nitrate supplementation, on CVD and fitness outcomes. Postmenopausal females will be tested for maximal oxygen uptake and lactate threshold before randomization to one of four groups: that inorganic nitrate-rich beetroot juice, or beetroot juice with nitrate extracted; and assigned to one-month of calorie matched high-intensity or moderate-intensity exercise training. Vascular function and fitness will be evaluated before and after training.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Vascular Endothelial Function (Flow-Mediated Dilation [FMD])
+  - Cardiorespiratory Fitness
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nitrate-Rich Beetroot Juice
+  - BEHAVIORAL: High Intensity Exercise
+  - BEHAVIORAL: Moderate Intensity Exercise
+  - DIETARY_SUPPLEMENT: Nitrate-Depleted Placebo Beetroot Juice
+
+ELIGIBILITY:
+Age: 45 Years to 75 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06480695

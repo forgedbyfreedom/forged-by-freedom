@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36166529
+Title: OBTracker: Visual Analytics of Off-ball Movements in Basketball.
+Authors: Wu, Deng, Xie, He, Xu
+Journal: IEEE transactions on visualization and computer graphics
+Year: 2023
+Topic: visualization athletic performance
+
+ABSTRACT:
+In a basketball play, players who are not in possession of the ball (i.e., off-ball players) can still effectively contribute to the team's offense, such as making a sudden move to create scoring opportunities. Analyzing the movements of off-ball players can thus facilitate the development of effective strategies for coaches. However, common basketball statistics (e.g., points and assists) primarily focus on what happens around the ball and are mostly result-oriented, making it challenging to objectively assess and fully understand the contributions of off-ball movements. To address these challenges, we collaborate closely with domain experts and summarize the multi-level requirements for off-ball movement analysis in basketball. We first establish an assessment model to quantitatively evaluate the offensive contribution of an off-ball movement considering both the position of players and the team cooperation. Based on the model, we design and develop a visual analytics system called OBTracker to support the multifaceted analysis of off-ball movements. OBTracker enables users to identify the frequency and effectiveness of off-ball movement patterns and learn the performance of different off-ball players. A tailored visualization based on the Voronoi diagram is proposed to help users interpret the contribution of off-ball movements from a temporal perspective. We conduct two case studies based on the tracking data from NBA games and demonstrate the effectiveness and usability of OBTracker through expert feedback.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36166529/

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03995693
+Title: Fuel Selection During Eccentric Cycling With Glucose Ingestion
+Official Title: Fuel Selection During Eccentric Cycling: Comparison With Concentric Cycling and the Effect of Glucose Ingestion During Exercise
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: fat loss muscle
+
+SUMMARY:
+This study compares fuel selection during eccentric and concentric cycling, with (placebo) or without glucose ingestion during exercise. After a 2-week familiarization and habituation with the ergometers, subjects will complete four experimental conditions in a randomized order: concentric with placebo, eccentric with placebo, concentric with glucose, eccentric with glucose.
+
+DETAILED DESCRIPTION:
+Cycling on a cycle ergometer typically requires repeated concentric muscle contractions to push on the pedals and produce mechanical work. An eccentric cycling ergometer has a motor that rotates the cranks with a predetermined torque, the cyclist needs to resist to the movement of the cranks. This leads to eccentric muscle contractions, the work is thus produced while the muscle is lengthening (negative work). This mode of exercise is known to produce a lower oxygen consumption (energy cost) for the same mechanical power output and also leads to muscle damage which can interfere with fuel selection.
+
+PRIMARY OUTCOMES:
+  - Exogenous glucose oxidation
+  - Maximal voluntary force production
+  - Central and skin temperature
+  - Perceived exertion
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Solution ingestion
+  - BEHAVIORAL: Constant load arm cranking
+  - PROCEDURE: Expired gas sampling
+  - PROCEDURE: Indirect respiratory calorimetry
+  - PROCEDURE: Blood sampling
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03995693

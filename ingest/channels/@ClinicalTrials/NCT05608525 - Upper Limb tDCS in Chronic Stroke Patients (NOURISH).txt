@@ -1,0 +1,85 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05608525
+Title: Upper Limb tDCS in Chronic Stroke Patients (NOURISH)
+Official Title: Effects of Transcranial Direct Current Stimulation on Upper Limb Motor Rehabilitation in Chronic Stroke Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: resistance training
+
+SUMMARY:
+This study is a randomized double-blinded trial investigating the effect of Transcranial Direct Current stimulation (tDCS) on upper limb motor function rehabilitation in chronic stroke patients.
+
+51 subjects will be recruited from National University Hospital (NUH) and be randomized to receive one of the followings:
+
+* Group 1 will receive 1 mA anodal tDCS stimulation to the ipsilesional M1 of cortical representation of the affected upper limb;
+* Group 2 to receive 1mA anodal tDCS to the contralesional premotor cortex;
+* Group 3 to receive sham tDCS stimulation with anode placed over the scalp area corresponding to ipsilesional M1.
+
+tDCS will be performed once a day together with standardized occupational therapy (GRASP) for 20 sessions within 30 days. Group 1 and Group 2 will receive tDCS for 20 minutes during each session, while Group 3 only receives the current stimulation for 20 seconds. GRASP will be performed daily together with tDCS, either concurrently with or immediately after tDCS stimulation.
+
+The outcome measures will be measured at baseline, after intervention and 1 month after intervention, including:
+
+1. TMS measurement of corticospinal excitability;
+2. functional MRI scan;
+3. High density EEG (HD-EEG) evaluation;
+4. Clinical measures on upper limb motor function;
+5. Cognitive tests.
+
+DETAILED DESCRIPTION:
+This study is a randomized double-blinded trial investigating the effect of Transcranial Direct Current stimulation (tDCS) on upper limb motor function rehabilitation in chronic stroke patients.
+
+51 subjects will be recruited from National University Hospital (NUH). Once subject is identified to be eligible for the study and is agreeable to participate into the study, the following will be measured/performed:
+
+1. TMS measurement of corticospinal excitability: resting motor threshold and/or active motor threshold, intracortical facilitation, short interval intracortical inhibition, silent period.
+2. MRI scan: Participants will go through the following image acquisition procedures at NUS TMR (Centre for Translational MR Research): 1) a functional MRI scans for brain activity together with motor task. 2) a 3D MPRAGE sequence for brain structure. 3) an advanced multishell high-resolution diffusion MRI for characterizing brain microstructure and extracellular space. 4) a FLAIR scan to measure white matter hyperintensity. Both functional and anatomical image acquisition will be undertaken using but not limited to gradient echo EPI sequence or its modified version (Feinberg \& Setsompop, 2013). Signal stability during imaging is assured by a daily prescan QC routine. Contrast MRI will not be performed in this study. The MRI scan will take about 1 hours. The whole procedure including briefing and preparation will be about 1.5 hours.
+3. High density EEG (HD-EEG) evaluation of the electrical activity of the brain.
+4. Clinical measures on upper limb motor function:
+
+   * upper extremity portion of Fugl-Meyer Assessment (UE-FMA)
+   * Action Research Arm test (ARAT)
+   * Modified Ashworth scale for spasticity (MAS)
+   * Isometric elbow flexion strength
+   * Handgrip strength
+5. Cognitive tests:
+
+   * Digit Span Task
+   * Digit Symbol Modalities Task
+   * Trail-making test (TMT)-A \&B
+   * Clock-Drawing Test (CDT)
+   * Controlled Oral Word Association Test (COWAT) -animals \& FAS
+   * Mini-Mental State Exam (MMSE)
+   * Rey Auditory Verbal Learning Test (RAVL)
+   * Spatial span forward/backward test
+   * Visuospatial Paired Associate Learning (VPA)
+6. Randomization: Subject will be randomized into 3 groups using Microsoft Excel, to receive different types of stimulation:
+
+   * Group 1 will receive 1 mA anodal tDCS stimulation to the ipsilesional M1 of cortical representation of the affected upper limb;
+   * Group 2 to receive 1mA anodal tDCS to the contralesional premotor cortex;
+   * Group 3 to receive sham tDCS stimulation with anode placed over the scalp area corresponding to ipsilesional M1.
+
+The assessor of the outcome measures and subject will be blinded to the tDCS intervention that subject will be receiving.
+
+After the outcome measures (Pre Assessment) are done, tDCS will be performed once a day together with standardized occupational therapy (GRASP) for 20 sessions within 30 days.
+
+Direct current will be delivered by a battery-operated, constant curren
+
+PRIMARY OUTCOMES:
+  - Cortical excitability measured by Transcranial Magnetic Stimulation (TMS)
+  - Cortical excitability measured by Transcranial Magnetic Stimulation (TMS)
+  - Cortical excitability measured by Transcranial Magnetic Stimulation (TMS)
+  - neural excitability measured by Magnetic resonance imaging (MRI) scan
+  - neural excitability measured by Magnetic resonance imaging (MRI) scan
+
+INTERVENTIONS:
+  - DEVICE: transcranial current stimulation
+  - BEHAVIORAL: GRASP
+
+ELIGIBILITY:
+Age: 21 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05608525

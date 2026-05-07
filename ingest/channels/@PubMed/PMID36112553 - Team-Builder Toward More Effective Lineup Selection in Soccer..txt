@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36112553
+Title: Team-Builder: Toward More Effective Lineup Selection in Soccer.
+Authors: Cao, Lan, Xie, Chen, Zhang
+Journal: IEEE transactions on visualization and computer graphics
+Year: 2023
+Topic: visualization athletic performance
+
+ABSTRACT:
+Lineup selection is an essential and important task in soccer matches. To win a match, coaches must consider various factors and select appropriate players for a planned formation. Computation-based tools have been proposed to help coaches on this complex task, but they are usually based on over-simplified models on player performances, do not support interactive analysis, and overlook the inputs by coaches. In this article, we propose a method for visual analytics of soccer lineup selection by tackling two challenges: characterizing essential factors involved in generating optimal lineup, and supporting coach-driven visual analytics of lineup selection. We develop a lineup selection model that integrates such important factors, such as spatial regions of player actions and defensive interactions with opponent players. A visualization system, Team-Builder, is developed to help coaches control the process of lineup generation, explanation, and comparison through multiple coordinated views. The usefulness and effectiveness of our system are demonstrated by two case studies on a real-world soccer event dataset.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36112553/

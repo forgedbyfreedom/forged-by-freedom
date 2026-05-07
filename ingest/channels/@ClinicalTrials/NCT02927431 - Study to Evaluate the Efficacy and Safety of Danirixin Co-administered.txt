@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02927431
+Title: Study to Evaluate the Efficacy and Safety of Danirixin Co-administered With Oseltamivir in the Treatment of Adults Hospitalized With Influenza
+Official Title: A Phase II, Global, Randomized Study to Evaluate the Efficacy and Safety of Danirixin (GSK1325756) Co-administered With a Standard-of-care Antiviral (Oseltamivir), in the Treatment of Adults Hospitalized With Influenza
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: beta-alanine
+
+SUMMARY:
+Danirixin (DNX) is a novel, selective, and reversible antagonist of the C-X-C chemokine receptor (CXCR) 2 and has been shown to decrease neutrophil transmigration and activation to areas of inflammation. An intravenous (IV) formulation of DNX hydrobromide (HBr) is being developed as an anti-inflammatory agent for treatment of adults hospitalized with influenza (IFV). While early therapy with antivirals decreases severity and duration of symptoms of influenza, there are no drugs that have demonstrated clinical efficacy in randomized clinical trials in this population. Current treatment guidelines for hospitalized IFV recommend neuraminidase inhibitors as standard of care therapy. IFV studies in animals have demonstrated that therapeutic treatment with the combination of a CXCR2 antagonist and a neuraminidase inhibitor reduced lung neutrophils and showed trends for improvements in clinical scores, lung function and pathology with no evidence of worsening outcomes, including viral load. This Phase 2, randomized, double-blind (for IV DNX), placebo-controlled (for IV DNX) 3-arm study will be the first study to determine the efficacy and safety of IV DNX when co-administered (in all groups) with standard of care antiviral treatment (open-label oral oseltamivir \[OSV\]) in subjects hospitalized with IFV. The primary objective of the study is to assess the efficacy of treatment with IV DNX twice daily given with oral OSV compared to oral OSV twice daily on time to clinical response (TTCR). In this study, subjects will be randomized in a 2:2:1 ratio to 15 milligram (mg) free base equivalent (FBE) IV DNX, 50 mg FBE IV DNX, or matching placebo twice daily. All subjects will also receive open-label 75 mg oral OSV, twice daily (given as standard of care). The study treatment duration will be for up to 5 days. The investigator may elect to continue treatment with OSV after 5 days of study treatment. Follow up will continue until Day 45 for all subjects. The study will begin with enhanced safety monitoring in sentinel cohorts, leading to stepwise enrollment of subjects. Subjects will be enrolled based on increasing levels of renal impairment, and less severe hospitalized subjects will be enrolled prior to enrollment of critically ill subjects, as this is the first study conducted in the hospitalized population with severe IFV. Approximately 300 subjects are targeted to be enrolled in the study.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Time to Clinical Response (TTCR)
+
+INTERVENTIONS:
+  - DRUG: Danirixin 15 mg FBE
+  - DRUG: Danirixin 50 mg FBE
+  - DRUG: Placebo
+  - DRUG: Oseltamivir 75 mg
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02927431

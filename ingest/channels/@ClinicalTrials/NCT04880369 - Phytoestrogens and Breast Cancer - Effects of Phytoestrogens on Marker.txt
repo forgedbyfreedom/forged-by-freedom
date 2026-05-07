@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04880369
+Title: Phytoestrogens and Breast Cancer - Effects of Phytoestrogens on Markers of Disease Progression and Gene Expression
+Official Title: DAGMAR: Phytoestrogens and Breast Cancer - Effects of Phytoestrogens on Markers of Disease Progression and Gene Expression
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: protein supplementation
+
+SUMMARY:
+The aim is to investigate if soy isoflavones and lignans affect markers of disease progression and gene expression among breast cancer patients receiving neo-adjuvant treatment in a three arm, double-blinded, randomized placebo-controlled trial (RCT) comparing: soy isoflavone supplementation, lignan supplementation, and placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Ki-67
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Soy isoflavones
+  - DIETARY_SUPPLEMENT: Lignans
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 99 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04880369

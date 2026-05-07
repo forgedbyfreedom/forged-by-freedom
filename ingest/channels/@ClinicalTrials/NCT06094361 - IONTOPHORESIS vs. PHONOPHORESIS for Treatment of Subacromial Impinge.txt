@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06094361
+Title: "IONTOPHORESIS vs. PHONOPHORESIS" for Treatment of Subacromial Impingement Syndrome
+Official Title: "IONTOPHORESIS vs. PHONOPHORESIS": WHICH IS A BEST WAY TO TREAT SUBACROMIAL IMPINGEMENT SYNDROME? A RANDOMIZED STUDY
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 43
+Topic: physical activity intervention
+
+SUMMARY:
+The aim of this study was to compare the effects of iontophoresis and phonophoresis applications added to conventional treatment on pain, range of motion, disability, and functional status in the shoulder region in patients with subacromial impingement syndrome.
+
+DETAILED DESCRIPTION:
+Randomization: Forty-seven patients were assessed, and 43 completed the study in this randomized trial. The participants were divided into two groups (Iontophoresis:22 and Phonophoresis:21) using the online randomization software (www.randomizer.org). All patients gave written informed consent after being verbally informed about the study.
+
+Assessment Period: Assessments were conducted twice, at the start and after completion of the 10-session treatment program.
+
+Session Period: All treatment programs were delivered five days per week for two weeks. The total number of sessions was ten.
+
+Analysis: The statistical analysis was performed using version 21 of the Statistical Package for the Social Sciences (SPSS).To verify normal distribution, the Shapiro-Wilk test and histogram curves were utilized. Descriptive statistics for parametric variables included mean, standard deviation, and percentage. Since the data exhibited normal distribution, independent sample T-tests were used for group comparison while paired sample T-tests were used to detect changes within the group. The significance level of p\<0.05 was deemed acceptable for all analyses. For variables with nominal assessments, data were analyzed utilizing Yates Continuity Correction and Fisher's exact chi-square test.
+
+The post hoc power of the study was calculated using Gpower 3.1.9.1 software. The resting VAS scores was taken as reference. In this context, Cohen's effect size was calculated as 1.00. When the alpha error was accepted as 5%, and effect size was 1.00, the post hoc power was found to be 94.27%.
+
+PRIMARY OUTCOMES:
+  - Visual Analog Scale
+  - Visual Analog Scale
+
+INTERVENTIONS:
+  - PROCEDURE: Iontophoresis Intervention
+  - PROCEDURE: Phonophoresis
+  - PROCEDURE: Conventional Therapy
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06094361

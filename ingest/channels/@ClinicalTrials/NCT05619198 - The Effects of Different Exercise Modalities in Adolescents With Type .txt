@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05619198
+Title: The Effects of Different Exercise Modalities in Adolescents With Type 1 Diabetes Using AID Systems
+Official Title: The Effects of Different Exercise Modalities in Adolescents With Type 1 Diabetes Using AID Systems
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: high intensity interval training
+
+SUMMARY:
+Objective:
+
+The overall objective of this study is to assess the efficacy of the current recommended guidelines for physical activity (PA) in response to acute moderate intensity continous exercise (MICE) and high intensity interval exercise (HIIE) among adolescents with type 1 diabetes (T1D) using automated insulin delivery (AID) systems (MiniMed 780G and Tandem Control-IQ).
+
+Methods:
+
+This study will be a two-period, cross-over, clinical trial with between and within cohort comparisons of two different exercise modalities among a total of 24 age-, sex-, and insulin-dose-matched adolescents with T1D (12 using MiniMed 780G and 12 using Tandem Control-IQ).
+
+Endpoint:
+
+The primary endpoint is sensor-derived time in range (3.9 mmol/L-10.0 mmol/L) around exercise
+
+DETAILED DESCRIPTION:
+Participants included in the study will perform a cardiopulmonary exercise testing (CPET) before the exercise study visits, to prescribe subsequent exercise intensity thresholds. Participants will have a canula placed in a antecubital vein for plasma sampling during the test.
+
+Participants will undertake two exercise visits each including a bout of exercise on a stationary bicycle of either one of two exercise modalities; i.) high-intensity interval exercise with sprints at \~85% of VO2max (HIIE); ii.) moderate intensity continuous exercise at \~60% of VO2max (MICE).
+
+Participants will arrive at the research facility, Steno Diabetes Center Copenhagen, in the afternoon. As per the current recommended guidelines, the MICE-session will be announced to the AID systems 60 minutes in advance, whereas the HIIE-session will not be announced. Participants will have a canula placed in a antecubital vein for plasma sampling.
+
+Participants will rest for 60 minutes, exercise for 45 minutes and rest again for 75 minutes before leaving the research facility. During exercise participants will be fitted with a spirometry face mask to compute ventilatory thresholds and indirect calorimetry (Vyaire Vyntus® CPX, Intramedic A/S) and a telemetry chest strap (Polar H10) for integrated HR heart rate (HR) measurements with the spirometry device.
+
+In the MICE session: After 15 minutes post-exercise rest the temporary target/exercise mode is turned off.
+
+Around each study visit (24 hours prior until 24 hours after), sensor glucose as well as sleep and physical activity will be recorded. Sensor glucose will be measured by participants' own devices. Sleep and physical activity level will be assessed with a wrist-worn accelerometer, ActiGraph wGT3X-BT (ActiGraph, Pensacola, FL).
+
+Study days will be separated by at least three days.
+
+PRIMARY OUTCOMES:
+  - Percentage of time spent in sensor-derived time in range (3.9-10.0 mmol/L) during and after a bout of exercise
+
+INTERVENTIONS:
+  - BEHAVIORAL: High Intensity Interval Exercise
+  - BEHAVIORAL: Moderate Intensity Continous Exercise
+
+ELIGIBILITY:
+Age: 13 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05619198

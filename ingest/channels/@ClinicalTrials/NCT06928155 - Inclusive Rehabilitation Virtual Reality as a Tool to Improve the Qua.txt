@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06928155
+Title: Inclusive Rehabilitation: Virtual Reality as a Tool to Improve the Quality of Life of Dependent Persons
+Official Title: Feasibility and Usability of Immersive Virtual Reality for People With Dependency
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 172
+Topic: resistance training
+
+SUMMARY:
+The project explores the use of virtual reality (VR) as a tool to improve the quality of life of people with dependence, providing immersive and personalized environments that support physical, neurological and psychological rehabilitation. VR makes it possible to practice complex movements, improve strength and coordination, reduce stress and anxiety, and enhance brain plasticity through adapted simulations that are also motivating and safe for users. This approach facilitates more effective rehabilitation than traditional therapies by allowing repetition and visualization of movements that are difficult to perform in real life. The El Saliente Association, in collaboration with the University of Almeria, leads this initiative that seeks to promote the autonomy, inclusion and emotional well-being of people with dependence. With specific objectives such as improving motor function, stimulating neuroplasticity, reducing pain through immersive distraction and enhancing independence, the project uses VR sessions in controlled environments. In addition, activities that simulate everyday situations will be designed to facilitate the transfer of acquired skills to the real environment. The work plan is divided into design, development, implementation and analysis phases, including participant selection, software development, pilot testing and evaluation of results. At each stage, data will be collected to measure the effectiveness of the intervention, with the ultimate goal of publishing the findings in scientific forums and replicating the experience in other contexts. Day center facilities and a residential complex will provide the necessary spaces and materials to carry out the interventions. Expected outcomes include increased motivation and adherence to therapy, faster functional recovery and an overall improvement in quality of life, including increased self-esteem and reduced anxiety. This project promises a significant advance in the use of technology for inclusive rehabilitation, with benefits not only for patients but also for the advancement of innovative therapeutic solutions in the field of dependency.
+
+DETAILED DESCRIPTION:
+The world's population is aging rapidly. Globally, the number of people aged 80 years and older is projected to more than triple between 2017 and 2050, from 137 million to 425 million (1). Various studies have shown that the four most common health conditions in older adults are decreased motor skills, increased obesity, cognitive impairment, and psychological disorders, leading to lower quality of life (2, 3).
+
+To combat this challenge, several emerging assistive technologies that improve quality of life in older populations have been explored, including Internet-based physical activity programs, gamification to improve physical activity \[4\], etc. Virtual reality (VR) is also an emerging technology with the potential to improve well-being and quality of life \[5\], muscle activity and balance, and physical activity \[6\], with evidence of beneficial effects on social, emotional states, and cognition \[7\].
+
+VR offers a highly personalized virtual environment that allows exercises to be tailored to the specific needs of each patient. Users can practice movements in realistic and motivating scenarios, which increases their engagement and motivation during rehabilitation sessions. By allowing complex, customized movements to be simulated, VR facilitates the visualization and repeated practice of actions that, in the physical world, would be difficult or impossible to execute. This constant repetition stimulates the neural pathways associated with movements, promoting neuroplasticity and improving coordination and muscle strength.
+
+Therefore, the purpose of this study is to describe the impact of the application of Immersive Virtual Reality on the mobility and anxiety levels of the participants, as well as to explain adherence, the presence of adverse effects and the usability of this tool.
+
+PRIMARY OUTCOMES:
+  - Anxiety levels
+
+INTERVENTIONS:
+  - DEVICE: Immersive Virtual Reality with Head Mounted Display
+  - OTHER: Aerobic exercise and strength training
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06928155

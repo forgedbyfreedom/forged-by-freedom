@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01771458
+Title: A Randomized Phase II Trial Comparing Therapy Based on Tumor Molecular Profiling Versus Conventional Therapy in Patients With Refractory Cancer
+Official Title: A Randomized Proof-of-concept Phase II Trial Comparing Therapy Based on Tumor Molecular Profiling Versus Conventional Therapy in Patients With Refractory Cancer.
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 742
+Topic: growth hormone treatment
+
+SUMMARY:
+SHIVA is a proof of concept randomized phase II trial which compares two treatment strategies for patients with refractory cancer.
+
+From a tumor biopsy, a molecular profile of the disease is established (mutations, amplifications, hormone receptor status). If a molecular abnormality is identified for which an approved targeted agent is available, patients are randomized randomized between two arms:
+
+* Targeted therapy based on the molecular profile
+* Conventional therapy based on investigator's choice.
+
+A cross-over is proposed at disease progression.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Patient's progression free survival (according RECIST 1.1) of targeted therapy based on molecular profiling versus conventional chemotherapy.
+
+INTERVENTIONS:
+  - DRUG: Targeted therapy based on molecular profiling : Imatinib
+  - PROCEDURE: Tumor biopsy
+  - DRUG: Standard Chemotherapy
+  - DRUG: Targeted therapy based on molecular profiling : Everolimus
+  - DRUG: Targeted therapy based on molecular profiling : Vemurafenib
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01771458

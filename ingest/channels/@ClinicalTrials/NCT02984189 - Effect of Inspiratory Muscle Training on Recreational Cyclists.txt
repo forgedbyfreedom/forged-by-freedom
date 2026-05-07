@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02984189
+Title: Effect of Inspiratory Muscle Training on Recreational Cyclists
+Official Title: Effect of Inspiratory Muscle Training Using the Critical Pressure on Recreational Cyclists: A Randomized Controlled Trial
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: resistance training
+
+SUMMARY:
+Introduction: The inspiratory muscle training (IMT) has showed great benefits to the respiratory, autonomic system, and mainly to the improvement of physical performance in healthy subjects. The latter is related to the improvement of respiratory muscle strength, decreased of dyspnoea, peripheral fatigue and delay in activation of muscle metaboreflex during exercise. However, there is no consensus about the best training load to IMT, because the prescription has been done only using percentage of the maximal inspiratory pressure (MIP), and 60% of MIP has been the most used. Therefore, the IMT prescription protocol that takes into account the respiratory muscle strength and endurance can provide additional benefits to protocols commonly applied, once that respiratory muscle differs from the other muscles due to its greater muscle endurance. In the sense, the IMT using inspiratory critical pressure (PThC) comes up with an alternative, since the PThC calculation considers these characteristics. Objective:To evaluate the effect of the IMT, using PThC, on cardiovascular, respiratory, metabolic and autonomic responses in recreational cyclists and compare it to a IMT using 60% of MIP. Methods: Thirty men recreational cyclists (20-40 years), will be randomized to placebo group (PG, n = 10), PThC group (PTHCG, n = 10) and 60% of MIP group (60G, n = 10), taking into account the age and functional aerobic capacity. All subjects will perform the following evaluations: cardiovascular autonomic tests \[heart rate variability (HRV) and blood pressure variability (BPV) at rest and after active postural change\], pulmonary function testing, respiratory muscle strength (RMS) test, cardiopulmonary exercise testing (CPET), incremental respiratory muscle endurance test (iRME) \[maximum respiratory pressure sustained for 1 minute (PThMAX)\] and constant respiratory loads test (95%, 100% and 105% of PThMAX), both using an linear inspiratory load resistor (PowerBreathe K5). The PThC will be obtained from the linear regression using the time(TLIM) of and load of each constant test (95%, 100% and 105% PThMAX). During evaluations, the ECG (BioAmp FE132), blood pressure (BP), using Finometer Pro (Finapress Medical Systems) and respiration (Marazza) signals will be acquired. The signals will be coupled by data acquisition and analysis device (Power Lab 8/35) and sampled at 1000 Hz. Moreover, the oxyhemoglobin, deoxyhemoglobin and total hemoglobin responses will be measured by near-infrared spectroscopy (NIRS) (Oxymon MKIII), sampled at 250Hz. The IMT will be performed for 11 weeks (3 times/week, 1-hour duration). The session will consist of 5-min warm-up (50% of the training load) and 3 sets of 15 minutes (breathing against 100% of the training load) with 1-min interval between them. Heart rate and BP will be monitored in all training sessions. The RMS, iRME, respiratory constant load tests and CPET will be performed before and after the training, and in the 3rd and 7th week (for training load adjustment). The pulmonary function testing and the cardiovascular autonomic tests will be performed only before and after training. The data will be analyzed by specific statistical tests (parametric and nonparametric) according to the data distribution and their respective variances. Significance will be set at p\<0.05. Expected results: It is expected that the training performed by PTHCG, when compared to training performed by 60G and PG, promotes: greater improvementin workload (Watts) and peak oxygen uptake (VO2peak); increasing in MIP and iRME; decreasing of dyspnoea and peripheral fatigue; delay in activation of muscle metaboreflex in the CPET and iRME; improvement incardiac parasympathetic autonomic modulation and reducing cardiac and peripheral sympathetic modulation. Moreover, it is expected that the results can provide information for a better understanding of the responses obtained by the PThC training in the different evaluated systems. In addition, these results will allow the use of this method by health professionals as a new assessment tool and IMT prescription.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Performance in exercise evaluated by measurement the maximal or peak comsumption the oxygen (VO2max or peak)
+  - Performance in exercise evaluated by measurement the work load (W)
+
+INTERVENTIONS:
+  - OTHER: Inspiratory muscle training
+
+ELIGIBILITY:
+Age: 20 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02984189

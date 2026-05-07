@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02033499
+Title: Three Approaches to Glucose Monitoring in Non-insulin Treated Diabetes
+Official Title: Effect of Glucose Monitoring on Patient and Provider Outcomes in Non-insulin Treated Diabetes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 450
+Topic: exercise intervention diabetes
+
+SUMMARY:
+For the nearly 75% of patients living with type 2 diabetes (T2DM) that do not use insulin, decisions regarding self-monitoring of blood glucose (SMBG) are unclear. SMBG testing is a resource intensive activity without firmly established patient benefits. While SMBG holds great promise for sparking favorable behavior change, the potential for no benefit or even patient harm must be acknowledged. Possible negative effects on patient quality of life must be more closely examined along with the speculative benefits of SMBG in non-insulin treated T2DM. Among studies examining this issue a general consensus is evolving; while SMBG may or may not be useful, its value can only be fully appreciated when the SMBG results are provided to patients in a useful manner. The overarching goal of this proposal is to assess the impact of three different SMBG testing approaches on patient-centered outcomes in patients with non-insulin treated T2DM within the real-world, clinic setting. In this pragmatic trial, 450 patients will be randomized to one of the following three SMBG testing regimens: 1) no SMBG testing, 2) once daily SMBG testing with standard patient feedback consisting of glucose values being immediately reported to the patient through the glucose meter, and 3) once daily SMBG testing with enhanced patient feedback consisting of glucose values being immediately reported to the patient plus automated, tailored feedback messaging. The first two arms represent common SMBG testing approaches. The third arm is an enhanced, patient-centered approach to SMBG testing. SMBG values will be evaluated at routine clinic visits over 52 weeks.
+
+DETAILED DESCRIPTION:
+Within the context of a controlled and randomized but pragmatic trial, we seek to answer the following question: does SMBG testing make sense for Non-insulin treated (NIT) diabetes mellitus (DM) patients in terms of either A1c values or Health-related Quality of Life (QOL). We will also examine whether or not patients with different baseline characteristics might see different outcomes from three SMBG testing approaches. To achieve our goal of testing SMBG options in community-based primary care practices, the study has been designed to minimize as much as possible any interruptions in or alterations to standard daily patient care. We will recruit 450 patients from five primary care practices. Patients will be followed for one year. During routine clinic visits, their health care providers will be guided to modify therapies based on American Diabetes Association (ADA) guidelines, which focus on A1c values and SMBG values if available.
+
+Study Arms Two of the three study arms were chosen to reflect existing, widely used options for patients with NIT DM. Arm 3, described below, of this trial is particularly novel in that it tests the potential benefit of new technology now available to these patients; namely, wireless transmission of blood glucose test results accompanied by instantaneous tailored feedback. While this option may hold great promise for patients and their providers, data supporting this are lacking. The results of this study will inform consumers and providers about whether this new technology can support efforts to alter behaviors in a way that results in improved A1c values or better quality of life. Particularly appealing is that this approach employs technology that supports more efficient use of SMBG values by both patients and their providers. In terms of their pragmatic 'fit', all three groups fit easily into current practice at the participating practices. For example, they do not require extra clinic visits (other than possibly the initial recruitment assessment), and while staff will need to download glucose reports for patients in Arms 2 and 3, this will be a very simple, streamlined procedure. In terms of risks to patients, none of the three groups puts patients at any additional risk, because all three are versions of 'standard practice' for this patient population and doctors are free to alter therapies and testing schedules as they normally would.
+
+* Arm 1: No SMBG Testing This group represents an approach to SMBG that is supported by research and followed by many primary care providers. Patients randomized to this group will not be provided a meter, but will receive standardized education detailing the signs and symptoms of hyper- and hypoglycemia and information regarding lifestyle approaches for the maintenance of normoglycemia. If they have previously been obtaining SMBG values, they will be asked to discontinue. Healthcare providers and staff will be alerted that these patients are in the no testing arm and will be
+
+PRIMARY OUTCOMES:
+  - Absolute Change in % Hemoglobin A1c From Baseline at 52 Weeks
+  - Mean Difference in Health-related Quality of Life Scores From Baseline to 52 Weeks
+
+INTERVENTIONS:
+  - BEHAVIORAL: SMBG
+
+ELIGIBILITY:
+Age: 30 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02033499

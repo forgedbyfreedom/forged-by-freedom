@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00002579
+Title: Tamoxifen Following Combination Chemotherapy in Treating Women With Operable Invasive Breast Cancer
+Official Title: PROTOCOL FOR THE SCOTTISH CHEMO-ENDOCRINE TRIAL D
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 2000
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: Estrogen can stimulate the growth of breast cancer cells. Hormone therapy using tamoxifen may fight breast cancer by blocking the uptake of estrogen. Combining combination chemotherapy with hormone therapy may kill more tumor cells.
+
+PURPOSE: Randomized phase III trial to compare the effectiveness of combination chemotherapy with or without tamoxifen in treating women with stage I or stage II breast cancer that can be surgically removed.
+
+DETAILED DESCRIPTION:
+OBJECTIVES: I. Assess the disease-free and overall survival produced by adjuvant tamoxifen given after postoperative chemotherapy with cyclophosphamide/methotrexate/fluorouracil (CMF) vs. adjuvant CMF alone in women with primary breast cancer.
+
+OUTLINE: This is a randomized study. Patients are stratified by age and by participating institution. All patients undergo surgical resection with local radiation therapy, as appropriate. Within 4 weeks of surgery, patients receive cyclophosphamide, methotrexate, and fluorouracil (CMF) every 3 weeks for 6 courses. Radiotherapy is given within 4 weeks of completion of CMF. Before beginning the last course of CMF, patients are randomized to receive either oral tamoxifen daily for 5 years or no further therapy. Patients are followed every 6 months for 5 years, then yearly. Hormone therapy is prohibited except as specified above and except for short-term hormone replacement therapy for severe unresponsive menopausal symptoms.
+
+PROJECTED ACCRUAL: Approximately 2,000 patients will be required. Data on patients entered in Scotland as part of this study will be pooled with data from the EORTC-10901 study.
+
+PRIMARY OUTCOMES:
+  Not specified
+
+INTERVENTIONS:
+  - DRUG: CMF regimen
+  - DRUG: cyclophosphamide
+  - DRUG: fluorouracil
+  - DRUG: methotrexate
+  - DRUG: tamoxifen citrate
+
+ELIGIBILITY:
+Age:  to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00002579

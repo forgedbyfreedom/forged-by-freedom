@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04827173
+Title: Transcutaneous Electrical Nerve Inhibition Using Medium-frequency Alternating Current
+Official Title: Transcutaneous Electrical Nerve Inhibition Using Medium-frequency Alternating Current
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: muscle rehabilitation
+
+SUMMARY:
+Patients suffering from neurological disorders often exhibit unwanted sensorimotor activities e.g. spasticity, hypersensitisation, hyper- and dystonia and motor disabilities. Currently, several therapeutic interventions are developed and implemented to overcome these unwanted activities e.g. transcutaneous electrical stimulation (TES), oral medication, botulinum neurotoxin injections, local anaesthetics, rehabilitation robotic training and surgery. However, these therapies offer varying results. Compared to analgesic drugs, TES is associated with fewer side effects and has therefore become a popular therapeutic strategy to treat these unwanted sensorimotor activities. To enable this TES strategy, surface electrodes are attached to the skin overlying the site of pain. Next, a low-frequency electrical current (LFC; 1-100 Hz) is applied. However, this low-frequency current acts as an excitatory agent and results in muscle contraction. Therefore, this technique cannot be used to treat unwanted motor activities.
+
+Electrical stimulation with medium-frequency alternating electrical currents (MFAEC; 2-50 kHz) can inhibit peripheral motor nerve activities and force production, when implanted directly on top of the peripheral nerve of interest. However, this strategy is rather invasive. Thus, the administration of transcutaneous medium-frequency alternating electrical currents (tMFAEC), i.e. administration of electrical currents through the skin, might offer a solution. However, the effects of tMFAEC on motor nerve inhibition remains largely unknown. Theoretically, the administration of tMFAEC on the sensory nerve may even result in partial or complete (reversible) nerve block thereby serving as an anesthesia in order to perform surgical or painful procedures.
+
+DETAILED DESCRIPTION:
+1\. INTRODUCTION AND RATIONALE
+
+Patients suffering from neurological disorders often experience undesired sensorimotor activities e.g. hypersensitisation, spasticity and hyper- and dystonia. To overcome these disabilities, various therapeutic interventions e.g. oral medications, botulinum neurotoxin injections, local anaesthetics, transcutaneous electrical stimulation and surgeries are implemented. However, these often do not offer permanent solutions. Electrical stimulation with medium-frequency alternating electrical currents (MFAEC; 2-50 kHz) can inhibit peripheral motor nerve activities and force production, when implanted directly on top of the peripheral nerve of interest. The administration of transcutaneous medium-frequency alternating electrical currents (tMFAEC), i.e. administration of electrical currents through the skin, might offer a less-invasive alternative. Theoretically, the administration of tMFAEC on the sensory nerve may even result in partial or complete (reversible) nerve block thereby serving as an anesthesia in order to perform surgical or painful procedures. A promising pre-clinical study of Kim et al.1 already demonstrated that tMFAEC stimulation at 10 kHz can partially inhibit both sensory perception and motor activity.
+
+1. AIM AND HYPOTHESIS
+
+   The primary aim of this study is to confirm the previous results in literature.
+
+   It is hypothesized that tMFAEC stimulation on the distal median nerve would:
+   * Reduce sensory perception in the index and middle fingers
+   * Inhibit force production by the index and middle fingers
+2. OUTCOME MEASURES 2.1 Primary outcome measure
+
+   Assessment of peripheral sensory perception and force production in the index and middle finger when tMFAEC is applied with a fixed current intensity of 31.5mA at a frequency of 10kHz to the distal median nerve. The peripheral sensory perception will be measured with the Semmes-Weinstein monofilament examination and pressure algometry that measures tactile and pressure sensation, respectively. The assessment of force production will be measured with an electronic handheld dynamometer (CompuFet 2).
+
+   2.2 Secondary outcome measures I. Confirmation of participant's safety of tMFAEC by determining the maximum capacity tolerable for a participant. Determination is assessed by gradually increasing the tMFAEC to individual pain threshold with a maximum current intensity of 35mA.
+
+   II. Evaluation of the effect of a different frequency i.e. 2kHz with a fixed current intensity of 31.5mA on the level of sensorimotor inhibition.
+
+   III. Evaluation of the effect of two substantially different electrodes (i.e. PALS Platinum Electrodes 50x50mm and 3M™ Red Dot™ Elektrode foam basis klevende gel, 2228) on the level of sensorimotor inhibition.
+
+   IV. Evaluation of the level of impedance in relation with frequency and the effect of impedance on the level of sensorimotor inhibition.
+
+   V. Evaluation of effect of the depth of the median nerve at mid-forearm le
+
+PRIMARY OUTCOMES:
+  - Sensory perception: tactile sensation
+  - Force Production
+  - Sensory perception: pressure sensation
+
+INTERVENTIONS:
+  - PROCEDURE: transcutaneous medium-frequency alternating current
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04827173

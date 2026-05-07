@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07463092
+Title: Creatine Supplementation and Resistance Training to Improve Sarcopenia Parameters in Patients With Prostate Cancer After Androgen Deprivation Therapy
+Official Title: The Effect of Creatine Supplementation Associated With Resistance Training on Sarcopenia Parameters and Muscle Density in Prostate Cancer Patients After Androgen Deprivation Therapy
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: resistance training
+
+SUMMARY:
+This randomized, double-blind, placebo-controlled clinical trial will investigate the effects of creatine supplementation combined with a 12-week supervised resistance training program on muscle mass, muscle strength, physical performance (e.g., parameters of sarcopenia), and muscle density in men with prostate cancer undergoing androgen deprivation therapy (ADT). ADT often causes loss of lean mass, reduced muscle strength, functional impairment, and increased fat mass. Eligible male patients will be randomly assigned to receive either creatine monohydrate or a placebo (maltodextrin) in a double-blind manner, in addition to participating in the resistance exercise program. Assessments will be performed at baseline and after the 12-week intervention period and will include:
+
+* Muscle density and architecture assessed by ultrasound
+* Body composition (lean mass and fat mass)
+* Muscle strength
+* Physical performance (functional performance tests)
+* Inflammatory biomarkers
+* Vascular function parameters
+
+The primary goal is to assess whether creatine supplementation combined with resistance training can safely improve muscle quality and quantity, strength, and physical function in these patients. If effective and safe, the intervention could help reduce muscle loss and improve quality of life in men undergoing ADT.
+
+DETAILED DESCRIPTION:
+Men receiving androgen-deprivation therapy (ADT) for prostate cancer often experience significant loss of muscle mass, reduction in muscle strength, and increased fat mass. These changes can lead to sarcopenia, poorer physical function, and lower quality of life. Resistance training is known to improve muscle mass and strength in this population, but it is not clear whether adding creatine supplementation can further enhance these benefits. This study will investigate whether combining creatine monohydrate supplementation with a 12-week supervised resistance training program leads to greater improvements in muscle health compared to resistance training alone. Creatine is a nutritional supplement that may help increase muscle energy availability and support muscle growth and function, but its effects in men undergoing ADT have not been fully established. Participants will be randomly assigned to receive either creatine monohydrate or a placebo (maltodextrin) once daily throughout the 12-week resistance training program. All patients will follow the same structured resistance exercise protocol, supervised by trained professionals. The study will evaluate changes in muscle mass, muscle strength, physical performance, muscle density measured by ultrasound, inflammatory markers, vascular function, and other indicators of muscle health. The goal of this study is to determine whether creatine supplementation is a safe and effective strategy to improve muscle quality, physical function, and overall health for men receiving ADT. Findings from this trial may help guide future recommendations for exercise and nutritional support in this population.
+
+PRIMARY OUTCOMES:
+  - Muscle Density (Ultrasound-derived Echo Intensity and Thickness)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine Monohydrate
+  - DIETARY_SUPPLEMENT: Maltodextrin
+  - BEHAVIORAL: Resistance training
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07463092

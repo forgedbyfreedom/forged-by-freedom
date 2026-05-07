@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07474753
+Title: Coffee Increases Physical and Cognitive Performance Both in Men and Women
+Official Title: Habitual Caffeine Intake Affects the Ergogenicity of Dosing Regimens on Muscular Endurance But Not on Sprint and Cognitive Performance in Men and Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 69
+Topic: caffeine exercise
+
+SUMMARY:
+The impact of caffeine habituation on acute responses to different doses of caffeinated coffee has received minimal attention. This study aimed to investigate the effects of different doses of coffee on physical and cognitive performance in men and women with different levels of daily caffeine consumption. Sixty-nine (35 women) athletes participated in this study, attending 4 experimental visits in a double-blind, randomized, crossover fashion: decaffeinated coffee (PLA), 1.5 mg·kg-1 (LCOF), 3 mg·kg-1 (MCOF) and 6 mg·kg-1 of caffeine (HCOF) from coffee ingestion. Sixty min after coffee consumption, participants performed squat and bench press exercises (1 repetition maximum, 1RM), 60% of 1RM muscular endurance (ME), maximal sprinting, and cognitive performance (CP) was assessed. Participants were allocated into low (LGROUP), moderate (MGROUP), and high (HGROUP) caffeine consumption groups.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Upper- and Lower-boy muscular endurance
+  - Upper- and lower-body strenght
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Low Dose Caffeine (LCOF)
+  - DIETARY_SUPPLEMENT: Moderate Dose Caffeine (MCOF)
+  - DIETARY_SUPPLEMENT: High Dose Caffeine (HCOF)
+  - DIETARY_SUPPLEMENT: Placebo (PLA)
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07474753

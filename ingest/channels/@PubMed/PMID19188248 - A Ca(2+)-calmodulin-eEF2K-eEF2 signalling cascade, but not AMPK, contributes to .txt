@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 19188248
+Title: A Ca(2+)-calmodulin-eEF2K-eEF2 signalling cascade, but not AMPK, contributes to the suppression of skeletal muscle protein synthesis during contractions.
+Authors: Rose, Alsted, Jensen, Kobber&#xf8;, Maarbjerg
+Journal: The Journal of physiology
+Year: 2009
+Topic: protein distribution muscle synthesis
+
+ABSTRACT:
+Skeletal muscle protein synthesis rate decreases during contractions but the underlying regulatory mechanisms are poorly understood. It was hypothesized that there would be a coordinated regulation of eukaryotic elongation factor 2 (eEF2) and eukaryotic initiation factor 4E-binding protein 1 (4EBP1) phosphorylation by signalling cascades downstream of rises in intracellular [Ca(2+)] and decreased energy charge via AMP-activated protein kinase (AMPK) in contracting skeletal muscle. When fast-twitch skeletal muscles were contracted ex vivo using different protocols, the suppression of protein synthesis correlated more closely with changes in eEF2 than 4EBP1 phosphorylation. Using a combination of Ca(2+) release agents and ATPase inhibitors it was shown that the 60-70% suppression of fast-twitch skeletal muscle protein synthesis during contraction was equally distributed between Ca(2+) and energy turnover-related mechanisms. Furthermore, eEF2 kinase (eEF2K) inhibition completely blunted increases in eEF2 phosphorylation and partially blunted (i.e. 30-40%) the suppression of protein synthesis during contractions. The 3- to 5-fold increase in skeletal muscle eEF2 phosphorylation during contractions in situ was rapid and sustained and restricted to working muscle. The increase in eEF2 phosphorylation and eEF2K activation were downstream of Ca(2+)-calmodulin (CaM) but not other putative activating factors such as a fall in intracellular pH or phosphorylation by protein kinases. Furthermore, blunted protein synthesis and 4EBP1 dephosphorylation were unrelated to AMPK activity during contractions, which was exemplified by normal blunting of protein synthesis during contractions in muscles overexpressing kinase-dead AMPK. In summary, in fast-twitch skeletal muscle, the inhibition of eEF2 activity by phosphorylation downstream of Ca(2+)-CaM-eEF2K signalling partially contributes to the suppression of protein synthesis during exercise/contractions.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/19188248/

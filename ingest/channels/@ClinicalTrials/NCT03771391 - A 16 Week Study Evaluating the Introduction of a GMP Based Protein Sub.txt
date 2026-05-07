@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03771391
+Title: A 16 Week Study Evaluating the Introduction of a GMP Based Protein Substitute in Participants With PKU
+Official Title: Multicentre Study Project to Evaluate the New Generation of Protein Supplements With Glycomacropeptide (GMP) in Patients With Phenylketonuria (PKU) Aged 10 Years and Older Over a 16 Week Period.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: protein supplementation
+
+SUMMARY:
+This study aims to measure changes in participants' blood phenylalanine (Phe) levels in participants with PKU when switching from a conventional amino acid based protein substitute to a GMP based protein substitute (PKU Sphere) over a 16 week period.
+
+DETAILED DESCRIPTION:
+This is a stepped wedge, open-label study of PKU Sphere for the dietary management of participants with Phenylketonuria. It will be carried out with 33 participants who will be randomised into one of three clusters. The total study length per patient is 16 weeks. Each cluster transitions from taking their standard amino acid product alone to incorporating PKU Sphere (at least 50% of their protein substitue requirement) at different timepoints: week 5, 9 or 13.
+
+Participants will have a face-to-face clinical review at the time of recruitment (week 0) and at 16 weeks (completion of the study). They will also have an additional telephone review when they switch onto PKU Sphere.
+
+Blood samples will be taken at baseline, and then every two weeks for the duration of the study.
+
+In addition to these study visits and procedures, routine clinical care will continue in line with local guidelines.
+
+PRIMARY OUTCOMES:
+  - Change in blood Phe
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: PKU Sphere
+
+ELIGIBILITY:
+Age: 10 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03771391

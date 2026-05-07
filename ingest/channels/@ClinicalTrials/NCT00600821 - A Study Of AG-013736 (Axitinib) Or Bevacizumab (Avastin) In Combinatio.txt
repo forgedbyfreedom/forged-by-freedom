@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00600821
+Title: A Study Of AG-013736 (Axitinib) Or Bevacizumab (Avastin) In Combination With Paclitaxel And Carboplatin In Patients With Advanced Lung Cancer.
+Official Title: Randomized Phase 2 Trial Of AG013736 Or Bevacizumab In Combination With Paclitaxel And Carboplatin As First Line Treatment For Patients With Advanced Non Small Cell Lung Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 118
+Topic: growth hormone treatment
+
+SUMMARY:
+To determine if the addition of AG-013736 to chemotherapy is beneficial in patients with advanced lung cancer who have not been previously treated.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Progression Free Survival (PFS)
+
+INTERVENTIONS:
+  - DRUG: Bevacizumab
+  - DRUG: Carboplatin
+  - DRUG: Paclitaxel
+  - DRUG: AG-013736 (axitinib)
+  - DRUG: Carboplatin
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00600821

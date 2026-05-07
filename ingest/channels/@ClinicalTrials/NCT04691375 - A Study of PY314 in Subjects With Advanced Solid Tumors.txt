@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04691375
+Title: A Study of PY314 in Subjects With Advanced Solid Tumors
+Official Title: A Phase 1a/1b Open-Label Study to Evaluate the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of PY314 as a Single Agent and In Combination With Pembrolizumab in Subjects With Advanced Solid Tumors
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 86
+Topic: growth hormone treatment
+
+SUMMARY:
+This is an open-label, multicenter, first in human, Phase 1a/1b study of PY314 in subjects with locally advanced (unresectable) and/or metastatic solid tumors that are refractory or relapsed to standard of care (including pembrolizumab, if approved for that indication).
+
+DETAILED DESCRIPTION:
+Part A: Dose escalation of PY314 alone and in combination with pembrolizumab in a standard 3+3 design Part B: Dose expansion of one or more dose levels of PY314 administered alone and in combination with pembrolizumab for predefined tumor histology
+
+PRIMARY OUTCOMES:
+  - Incidence of Adverse Events (AE)
+  - (Part A only) Dose Limiting Toxicity of PY314
+
+INTERVENTIONS:
+  - DRUG: PY314
+  - DRUG: Combination Therapy: PY314 + Pembrolizumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04691375

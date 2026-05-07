@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02793973
+Title: The Development and Clinical Verification of Intelligent Rehabilitation System for Leg Length Discrepancy Patients
+Official Title: 
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: muscle rehabilitation
+
+SUMMARY:
+A structural leg length discrepancy (SLLD) is a common clinical problem. Its prevalence has been estimated at 40-70%. Those who have been suffered from limping for a long time may lead to follow-up low back pain and lower limb musculoskeletal disorders. Although lower limb triple view of x-ray is considered to be the current technique for determining LLD, it is costly and time consuming that not every hospital can afford it, and in case of radiograph, the patient is exposed to radiation. Therefore, it is necessary to develop a rapid clinical assessment method by gathering exterior parameters to build up a Regression model for measuring the discrepancy and determining LLD accurately.
+
+While using shoe lifts to correct discrepancy is the easiest conservative intervention for LLD, there are still many controversies on how much height should be added clinically and academically. The optimal height should be added depends on feedbacks from users and gait performance. The best gait performance can be measured from kinematic performance of center mass of body during walking. Therefore, this project wants to compare treatment responses between two kinds of shoe lift height correction methods for LLD: given 80% discrepancy in shoe lift height correction through triple view of x-ray and given optimal shoe lift height correction through analyzing kinematic performance of center mass of body.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Visual analogue scale, VAS
+
+INTERVENTIONS:
+  - DEVICE: shoe lifts
+
+ELIGIBILITY:
+Age: 20 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02793973

@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05493410
+Title: EFFECTS OF INSPIRATORY MUSCLE TRAINING IN POST-COVID-19 PATIENTS
+Official Title: EFFECTS OF INSPIRATORY MUSCLE TRAINING ON INSPIRATORY MUSCLE STRENGTH AND ENDURANCE AND FUNCTIONAL CAPACITY OF POST-COVID-19 PATIENTS
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: resistance training
+
+SUMMARY:
+COVID-19 is an infectious disease caused by the SARS-CoV-2 virus, which had its first case identified in December 2019 in Wuhan, China. The disease can cause death and collapse in health systems, in addition to increasingly prevalent sequelae. Among the persistent symptoms presented by patients in the post-COVID-19 phase, we highlight the respiratory ones. The diaphragm - the main muscle of respiration - can also undergo structural and functional changes resulting from SARS-CoV-2 infection. This finding is related to some respiratory sequelae of the disease, such as severe myopathy of the diaphragm with weakness and decreased endurance of the inspiratory muscles, dyspnea, fatigue, and failure in ventilatory weaning. Considering that COVID-19 can affect the respiratory muscles of afflicted individuals, it is reasonable to assume that inspiratory muscle training should improve inspiratory muscle weakness and endurance, and the functional capacity of individuals who had symptomatic COVID-19. Objective: To evaluate the effect of inspiratory muscle training on inspiratory muscle strength and endurance and on the functional capacity of individuals afflicted by COVID-19. Methods: This controlled and randomized clinical trial will be conducted according to the guidelines of the Vila Velha University Ethics Committee (CEP-UVV). The sample will consist of individuals with a positive diagnosis for SARS-CoV-2 infection assessed by means of the reverse transcriptase reaction followed by the polymerase chain reaction (RT-PCR) and who have already undergone the period of active infection. These individuals will be invited to participate in the study as soon as they are evaluated by the cardiopulmonary rehabilitation service. Those who meet all the inclusion criteria, agree to participate, and sign the free and informed consent form (FICF), will be randomly assigned to two groups, the control group (CG, n = 21) and the treatment group (TG, n = 21). The initial evaluation will consist of anamnesis, measurement of indirect blood pressure, heart rate, and peripheral oxygen saturation by portable pulse oximeter, analysis of maximum inspiratory pressure (MIP), dynamic inspiratory muscle strength index (S-Index), and endurance of the inspiratory muscles - which will be collected using a digital training device (PowerBreathe KH2), in addition to functional assessment through the 1-minute sit-to-stand test. The reassessment will take place six weeks after the start of the program and the same data will be collected at the participants' homes. Both groups will undergo the rehabilitation protocol, consisting of muscle strengthening and aerobic training, with individual assessment of exercise intensity. The treated group will undergo inspiratory muscle training through linear pressure load, using the POWERbreathe Classic Medic® device to perform two sets of 30 repetitions daily for six weeks. The same physical therapist will oversee the training sessions of all patients. Statistical analysis: Data normality will be tested using the Shapiro-Wilk test. To analyze the differences between groups, we will use the t-test for parametric data and the Wilcoxon test for non-parametric data. The level of significance will be set at 5% (p \< 0.05). Data will be analyzed using the SPSS 8.0 software and the results expressed as mean ± standard deviation or median and interquartile range.
+
+DETAILED DESCRIPTION:
+This randomized controlled clinical trial will be carried out according to the ethical standards for research with human beings and shall be previously approved by the human research ethics committee (CEP-UVV); participants will have to sign the free and informed consent form (FICF).
+
+The sample will consist of individuals with a positive diagnosis for SARS-CoV-2 infection assessed by means of the reverse transcriptase reaction followed by the polymerase chain reaction (RT-PCR) and who have already undergone the period of active infection. The active infection period comprises 14 days from the onset of symptoms for those who have not been hospitalized and 21 days for those who have been hospitalized. These individuals will be invited to participate in the research as soon as they are evaluated by the cardiopulmonary rehabilitation service. Those who meet all the inclusion criteria, agree to participate, and sign the FICF will be randomly assigned to two groups, the control group (CG) and the treatment group (TG). The block randomization scheme will be generated using the randomization.com website (http://www.randomization.com). The allocation of participants will be carried out by a different researcher from the one who will treat the patients, thus ensuring blinding. In addition, the researchers who will collect and analyze the data will be different and both blind to the experimental groups and types of intervention.
+
+Regarding the sample size, as the study was designed to detect a mean difference of 20 cmH2O in MIP between groups, with a standard deviation of 15 (Newall; Stockley, 2005), a 95% confidence level, and a significance level of 0.05 (two-tailed α), we calculated that each group should contain 15 subjects. Considering the possibility of a sample loss of 20-25%, 42 individuals will be recruited (21 per group). (Newall, 2005).
+
+The initial assessment will be carried out by the cardiopulmonary rehabilitation service at home, in which the following data will be collected: anamnesis; blood pressure (BP) measurement by digital sphygmomanometer (Omron® HEM 705CP, Tokyo, Japão); heart rate (HR) and peripheral oxygen saturation (SpO2) by the portable pulse oximeter G-Tech Oled Graph® (Beijing Choice Electronic Technology Co., Ltd., Beijing, China); MIP, dynamic inspiratory muscle strength (S-Index), and inspiratory muscle endurance analyses using the POWERbreathe K-series KH2® (POWERbreathe International Ltd., Warwickshire, United Kingdom); and functional assessment through the 1-minute sit-to-stand test (1-min STS).
+
+The reassessment will take place six weeks after the start of the program and the same data will be collected at the participants' homes.
+
+The primary outcome of the study to evaluate inspiratory muscles will be MIP, while S-Index, endurance, and functional capacity will be secondary outcomes.
+
+EVALUATION PROCEDURES:
+
+1-MINUTE SIT-TO-STAND TEST This test assesses the functional capacity of individuals with different types of dis
+
+PRIMARY OUTCOMES:
+  - MIP assessment
+
+INTERVENTIONS:
+  - OTHER: TREATMENT GROUP (TG)
+  - OTHER: CONTROL GROUP (CG)
+
+ELIGIBILITY:
+Age: 30 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05493410

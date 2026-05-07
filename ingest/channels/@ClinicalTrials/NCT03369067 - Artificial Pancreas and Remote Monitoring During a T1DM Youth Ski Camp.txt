@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03369067
+Title: Artificial Pancreas and Remote Monitoring During a T1DM Youth Ski Camp
+Official Title: Real-Time Monitoring and Glucose Control During Winter-Sport Exercise in Youth With Type 1 Diabetes: The AP Ski Camp Continued
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: exercise intervention diabetes
+
+SUMMARY:
+An early feasibility study that will test the efficacy of the Tandem t:slim X2 with Control-IQ and Dexcom Continuous Glucose System G6 in a winter/ski camp environment.
+
+DETAILED DESCRIPTION:
+This proposal aims to demonstrate the superiority of the Closed-Loop Control (CLC), also known as Artificial Pancreas (AP) named Tandem t:slim X2 with Control-IQ Technology and assess usability in a supervised setting in a controlled environment compared with state-of-the-art Sensor-Augmented Pump (SAP) therapy for the treatment of type 1 diabetes (T1D) in adolescents. Phase 1 participants (13-18 years old) and Phase 2 participants (6-12 years old) will be assessed during a \~48 hour ski camp; Upon completion of the ski camp, Phase 2 participants (6-12 years old) will also be assessed during a \~78 hour home use.
+
+PRIMARY OUTCOMES:
+  - Percent Time Spent Between 70 and 180 mg/dL
+  - Percent Time Spent Between 70 and 180 mg/dL
+  - Percent Time Spent Between 70 and 180 mg/dL
+  - Percent Time Spent Between 70 and 180 mg/dL
+
+INTERVENTIONS:
+  - DEVICE: Tandem t:slim X2 with Control-IQ Technology + Dexcom G6
+  - DEVICE: Dexcom CGM G5
+  - DEVICE: Continuous Subcutaneous insulin Infusion
+
+ELIGIBILITY:
+Age: 6 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03369067

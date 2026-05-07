@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07415720
+Title: Artichoke By-products Rich in Hydroxycinnamic Acids and Mediterranean Diet for Type 2 Diabetes Prevention.
+Official Title: Multiomic Evaluation of the Effect of Artichoke By-products Supplementation Rich in Hydroxycinnamic Acids, Integrated Into an Energy-restricted Mediterranean Diet, on the Prevention of Type 2 Diabetes.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: beta-alanine
+
+SUMMARY:
+The ARTI-UP study evaluates whether daily consumption of a supplement made from artichoke by-products, rich in hydroxycinnamic acids (HCAs), in combination with an energy-restricted Mediterranean diet (erMeDiet), can improve glycaemic control, reduce insulin resistance and contribute to weight loss in subjects with overweight or obesity. In addition, it seeks to understand the biological mechanisms involved using omic techniques and to establish predictive biomarkers that will enable progress towards personalised nutrition strategies.
+
+DETAILED DESCRIPTION:
+Type 2 diabetes (T2D) and obesity represent major global public health challenges, largely driven by insulin resistance and excess body weight. Lifestyle interventions based on energy-restricted Mediterranean dietary patterns have demonstrated beneficial effects on glycemic control and body weight; however, substantial interindividual variability in response persists. Emerging evidence suggests that specific dietary bioactive compounds, such as hydroxycinnamic acids (HCAs), may play a relevant role in improving insulin sensitivity, yet their contribution within structured dietary interventions remains insufficiently explored.
+
+In this context, the hypothesis of the present study is that daily supplementation with an artichoke by-product powder rich in bioavailable HCAs, administered within an energy-restricted Mediterranean diet (erMeDiet), will lead to greater improvements in insulin resistance and body weight compared with an erMeDiet alone in overweight and obese adults with insulin resistance. Furthermore, interindividual variability in response to HCAs is hypothesized to be partially explained by differences in metabolic, microbiota-related, and epigenetic profiles.
+
+Following recruitment and screening, the study will consist of a 16-week randomized, controlled, double-blind, parallel-group lifestyle intervention. Participants will be randomly assigned (1:1) to one of two intervention arms:
+
+Intervention group: Energy-restricted Mediterranean diet (approximately -500 kcal/day) combined with physical activity counselling and daily supplementation with an artichoke by-product powder providing a minimum of 600 mg/day of bioavailable hydroxycinnamic acids.
+
+Control group: Energy-restricted Mediterranean diet and identical physical activity counselling, supplemented with an isocaloric placebo powder matched for macronutrient composition but devoid of HCAs.
+
+All participants will receive individualized dietary counselling and guidance to achieve at least 150 minutes per week of moderate-intensity physical activity. Clinical visits will be conducted at baseline and throughout the intervention to monitor adherence, collect biological samples, and assess outcomes.
+
+The primary outcomes of the study are changes in insulin resistance, assessed by the Homeostatic Model Assessment of insulin Resistance (HOMA-IR), and changes in body weight after 16 weeks of intervention. Secondary outcomes include changes in anthropometric parameters, glucose metabolism markers, lipid profile, inflammatory and oxidative stress markers, dietary intake, physical activity, and continuous glucose monitoring metrics.
+
+In addition, a comprehensive multi-omics approach will be applied to investigate the biological mechanisms underlying the effects of HCAs. This includes targeted and untargeted metabolomics, gut microbiota metagenomics, and genome-wide DNA methylation analyses. Machine learning methods will be used to integrate clinical and omics data in order to identify biomar
+
+PRIMARY OUTCOMES:
+  - Change in HOMA-IR and body weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Artichoke by-product capsules
+  - BEHAVIORAL: Energy-restricted Mediterranean diet (erMeDiet)
+  - DIETARY_SUPPLEMENT: Placebo capsules
+  - BEHAVIORAL: Physical activity
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07415720

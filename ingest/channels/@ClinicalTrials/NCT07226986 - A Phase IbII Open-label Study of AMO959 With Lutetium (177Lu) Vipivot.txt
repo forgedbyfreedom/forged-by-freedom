@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07226986
+Title: A Phase Ib/II Open-label Study of AMO959 With Lutetium (177Lu) Vipivotide Tetraxetan (AAA617) in Combination With ARPI in Adult Participants With PSMA-positive mCRPC
+Official Title: A Phase Ib/II Open-label, Multi-center Study of AMO959 With Lutetium (177Lu) Vipivotide Tetraxetan (AAA617) in Combination With an Androgen Receptor Pathway Inhibitor (ARPI) in Adult Participants With PSMA-positive Metastatic Castration Resistant Prostate Cancer (mCRPC)
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 123
+Topic: physical activity intervention
+
+SUMMARY:
+The purpose of this phase Ib/II study is to (a) in Phase Ib evaluate the safety, tolerability, and pharmacokinetics (PK) of AMO959 when given in combination with lutetium (177Lu) vipivotide tetraxetan (also known as \[177Lu\]Lu-PSMA-617 or 177Lu-PSMA-617 and hereafter referred to as AAA617) with an androgen receptor pathway inhibitor (ARPI) in participants with metastatic castration resistant prostate cancer (mCRPC) who have failed one prior ARPI and with or without prior taxane exposure, and (b) in Phase II evaluate the preliminary efficacy of AMO959 in combination with AAA617 and ARPI in participants with mCRPC who have failed one prior ARPI, but who have not yet been exposed to taxane treatment.
+
+DETAILED DESCRIPTION:
+This study will consist of two phases:
+
+1. The escalation phase (Ib) will consist of provisionally three dose level cohorts of 3-6 participants investigating the safety, tolerability, and to determine the recommended dose for expansion (RDE) of AMO959 with standard dose of AAA617 +/- ARPI (abiraterone or enzalutamide). Initially AMO959 monotherapy will be administered, and then AMO959 will be given along with AAA617 in the same participants. Dose escalation meetings (DEMs) will occur when all participants in a dose level cohort have completed the DLT evaluation period or have experienced a DLT prior to the end of the evaluation period.
+2. The Phase II will follow with 25 participants per arm randomized in a 1:1:1 ratio treated at the RDE(s) of AMO959 along with AAA617 and ARPI (abiraterone or enzalutamide) and AAA617 and ARPI (abiraterone or enzalutamide).
+
+PRIMARY OUTCOMES:
+  - Phase Ib: Incidence rate of Dose-limiting toxicities (DLTs)
+  - Phase Ib: Incidence rate of Adverse Events (AEs) and Serious Adverse Events (SAEs)
+  - Phase Ib: Number of Participants with dose adjustments
+  - Phase Ib: Dose Intensity
+  - Phase Ib: Duration of exposure to each study drug
+
+INTERVENTIONS:
+  - DRUG: AMO959
+  - RADIATION: AAA617
+  - DRUG: Enzalutamide
+  - DRUG: Abiraterone
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07226986

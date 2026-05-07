@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01074047
+Title: Study of Vidaza Versus Conventional Care Regimens for the Treatment of Acute Myeloid Leukemia (AML)
+Official Title: A Phase 3, Multicenter, Randomized, Open-Label, Study of Azacitidine (Vidaza®) Versus Conventional Care Regimens for the Treatment of Older Subjects With Newly Diagnosed Acute Myeloid Leukemia
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 488
+Topic: physical activity intervention
+
+SUMMARY:
+The purpose of this study is to compare the effect of azacitidine (Vidaza) to conventional care regimens on overall survival in elderly AML patients.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Kaplan-Meier Estimates for Overall Survival
+
+INTERVENTIONS:
+  - DRUG: Azacitidine
+  - DRUG: Conventional Care Regimen
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01074047

@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06327594
+Title: Assessment System of Sarcopenia in Lung Cancer Patients
+Official Title: Study on the Value of Musculoskeletal Cross-modal Imaging Assessment System in the Diagnosis and Prognosis of Sarcopenia in Lung Cancer Patients
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1500
+Topic: fat loss muscle
+
+SUMMARY:
+1. To explore the diagnostic value of musculoskeletal cross-modal imaging assessment system of ultrasound combined with abdominal CT/MRI for sarcopenia in patients with lung cancer.
+2. To explore the value of musculoskeletal cross-modal imaging assessment system of ultrasound combined with abdominal CT/MRI in evaluating the prognosis and the effect of nutritional support in patients with lung cancer during perioperative period.
+3. To explore the value of musculoskeletal cross-modal imaging assessment system of ultrasound combined with abdominal CT/MRI in evaluating the long-term prognosis of patients with lung cancer.
+
+DETAILED DESCRIPTION:
+Sarcopenia is a progressive and systemic skeletal muscle disease that involves accelerated loss of muscle mass and function and is associated with increased adverse outcomes in older adults such as falls, functional decline, weakness, and death. It can be comorbid with a variety of diseases and interacts extensively with various disease states to influence disease prognosis. According to literature reports, the prevalence of sarcopenia in lung cancer patients is 42.8%-45.0%, and many studies have confirmed that sarcopenia is associated with a variety of poor prognosis of lung cancer. Early identification of sarcopenia in lung cancer patients and early intervention before the surgery are very important steps to improve the prognosis of lung patients.
+
+However, at present, the evaluation methods of sarcopenia are very complicated, which rely on three features: loss of muscle mass, loss of muscle strength, and loss of physical performance. At present, physicians usually use bioelectrical impedance analysis (BIA) or dual-energy X-ray absorptiometry (DXA) to determine skeletal muscle mass index SMI to measure muscle mass, grip strength test to measure muscle strength, gait speed or tools such as SPPB scores to assess physical performance. A diagnosis of sarcopenia can be made when a subject experiences a decrease in SMI combined with a decrease in grip strength or a decrease in gait speed. The above evaluation methods are difficult to be used as routine preoperative evaluation items.
+
+Previous studies have demonstrated that SMI in older adults can be accurately estimated by using muscle thickness acquired from ultrasound examination with basic information such as age and body mass index (BMI). And it has been shown that the cross-sectional area of the psoas major muscle at L3-level assessed by CT/MRI can also preliminarily diagnose sarcopenia. However, existing alternatives for assessing sarcopenia with ultrasound or CT/MRI alone are incomplete and lack stability.
+
+Fronted with such a dilemma, we attempted to establish a musculoskeletal cross-modal imaging evaluation system of ultrasound combined with abdominal CT/MRI images, which can diagnose sarcopenia more comprehensively and accurately, and evaluate the perioperative prognosis, nutritional support effect and long-term prognosis of patients.
+
+PRIMARY OUTCOMES:
+  - Death
+  - Perioperative complications
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: ultrasound scan
+  - DIAGNOSTIC_TEST: CT/MRI scan
+
+ELIGIBILITY:
+Age: 40 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06327594

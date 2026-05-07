@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02499640
+Title: The Effects of Cold Water Immersion With Different Dosages (Duration and Temperature Variations) on Heart Rate Variability Post-exercise Recovery
+Official Title: The Effects of Cold Water Immersion With Different Dosages (Duration and Temperature Variations) on Heart Rate Variability Post-exercise Recovery
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: physical activity intervention
+
+SUMMARY:
+The aim of the present study was to investigate the effects of cold water immersion (CWI) during post-exercise recovery with different durations and temperatures on heart rate variability (HRV) indices. 100 participants performed a protocol of jumps and a Wingate test, and immediately afterwards were immersed in cold water, according to the characteristics of each group (CG: control; G1: 5' at 9±1°C; G2: 5' at 14±1°C; G3: 15' at 9±1°C; G4: 15' at 14±1°C). Analyses were performed at baseline, during the recuperative technique (TRec) by CWI and 20, 30, 40, 50 and 60 minutes post-exercise. The HRV indices average of all RR intervals in each analysis period (Mean RR), standard deviation of normal R-R intervals (SDNN), square root of the mean of the sum of the squares of differences between adjacent R-R intervals (RMSSD), spectral components of very low frequency (VLF), low frequency (LF) and high frequency (HF), scatter of points perpendicular to the line of identity of the Poincaré Plot (SD1) and scatter points along the line of identity (SD2) were assessed. Comparisons between groups and moments were performed using the technique of analysis of variance for repeated measures in two scheme factors. A significance level of p\<0.05 was considered.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from Baseline in indices of heart rate variability at 60 minutes
+
+INTERVENTIONS:
+  - OTHER: immersion cold water
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02499640

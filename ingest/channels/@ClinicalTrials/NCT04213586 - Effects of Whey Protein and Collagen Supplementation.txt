@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04213586
+Title: Effects of Whey Protein and Collagen Supplementation
+Official Title: Effects of Whey Protein and Collagen Supplementation on Muscle Mass and Function During Training in Young Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: resistance training
+
+SUMMARY:
+The present project aims to investigate the effects of high-quality protein (whey protein) vs. low-quality protein (collagen) on muscle mass and function (e.g., strength and power) during a 10-wk resistance training program in young adults. It will be tested the hypothesis that leucine-matched collagen should promote similar gains on muscle function and mass compared to whey protein supplementation.
+
+DETAILED DESCRIPTION:
+The purpose of this study will be to investigate the effects of whey protein vs. leucine-matched collagen supplementation on muscle mass and function after a 10-wk resistance training program. Initially, all participants will be submitted for a 2-wk familiarization period, and then randomized into two groups (N = 11 / group): whey protein group and leucine-matched collagen group. The following variables will be assessed from pre-to post-training: anthropometric, muscle thickness from vastus lateralis and biceps brachii muscles using ultrasound, training load, mean power and peak torque for unilateral arm flexion exercise using a isokinetic dynamometer, countermovement vertical jump, nutritional intake, and testosterone-to-cortisol ratio . Shapiro-Wilk and Levine tests will be used to test the normality and homogeneity of the measurements, respectively. Two-way ANOVA (group x time) tests for repeated measures will be performed to assess changes over time and between groups for all dependent variables. Violation of sphericity will adjust using Greenhouse- Geyser correction. The Bonferroni post-hoc test will detect specific differences between groups. When appropriate, the percentage of change (∆%) will be reported according to the following equation: ∆% = \[(pre-average post average) / pre-average mean\] × 100. Values will be express as mean ± standard deviation. O significance level α will be 0.05.
+
+PRIMARY OUTCOMES:
+  - Change in biceps brachii thickness
+  - Change in muscle strength by training load
+  - Change in vertical jump
+  - Change in mean power
+  - Change in peak torque
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey protein supplementation
+  - DIETARY_SUPPLEMENT: Collagen supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04213586

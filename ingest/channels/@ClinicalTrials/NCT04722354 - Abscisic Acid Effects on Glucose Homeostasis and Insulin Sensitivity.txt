@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04722354
+Title: Abscisic Acid Effects on Glucose Homeostasis and insulin Sensitivity
+Official Title: Abscisic Acid Effects on Glucose Homeostasis and insulin Sensitivity
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 5
+Topic: caffeine exercise
+
+SUMMARY:
+The purpose of this study is to determine the effects of oral abscisic acid (ABA) on glucose metabolism in subjects with defined prediabetes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Monitoring Adverse Events
+  - insulin Sensitivity
+
+INTERVENTIONS:
+  - OTHER: Hyperinsulemic euglycemic clamp
+  - PROCEDURE: Muscle Biopsy
+  - DIETARY_SUPPLEMENT: Oral abscisic acid (ABA)
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04722354

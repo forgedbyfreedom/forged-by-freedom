@@ -1,0 +1,64 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04071236
+Title: Radiation Medication (Radium-223 Dichloride) Versus Radium-223 Dichloride Plus Radiation Enhancing Medication (M3814) Versus Radium-223 Dichloride Plus M3814 Plus Avelumab (a Type of Immunotherapy) for Advanced Prostate Cancer Not Responsive to Hormonal Therapy
+Official Title: A Phase I and Randomized Phase II Trial of Radium-223 Dichloride, M3814, &Amp; Avelumab in Advanced Metastatic Castrate-Resistant Prostate Cancer (mCRPC)
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase I/II trial studies the best dose of M3814 when given together with radium-223 dichloride or with radium-223 dichloride and avelumab and to see how well they work in treating patients with castrate-resistant prostate cancer that had spread to other places in the body (metastatic). M3814 may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth. Radioactive drugs, such as radium-223 dichloride, may carry radiation directly to tumor cells and not harm normal cells. Immunotherapy with monoclonal antibodies, such as avelumab, may help the body's immune system attack the cancer, and may interfere with the ability of tumor cells to grow and spread. This study is being done to find out the better treatment between radium-223 dichloride alone, radium-223 dichloride in combination with M3814, or radium-223 dichloride in combination with both M3814 and avelumab, to lower the chance of prostate cancer growing or spreading in the bone, and if this approach is better or worse than the usual approach for advanced prostate cancer not responsive to hormonal therapy.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To determine the maximum tolerated dose (MTD) of peposertib (M3814) in combination with radium-223 dichloride or in combination with radium-223 dichloride and avelumab in patients with advanced metastatic castrate-resistant prostate cancer (mCRPC) based on dose limiting toxicities (DLTs) in the doublet or triplet combinations. (Phase 1) II. Radiographic progression free survival (rPFS) will be evaluated based on both skeletal and extraskeletal progression following Prostate Cancer Working Group 3 (PCWG3) methodology. (Phase 2)
+
+SECONDARY OBJECTIVES:
+
+I. To determine the time to the first symptomatic skeletal event \[SSE\]. II. To determine the safety of radium-223 dichloride, M3814, and avelumab combination treatment.
+
+III. To observe and record anti-tumor activity. IV. To evaluate progression free survival (PFS) and overall survival (OS). V. To evaluate symptomatic skeletal events (SSE) per standardized case report form (CRF) distinguishing between pathologic and non-pathogenic fractures.
+
+VI. To explore patient-reported symptomatic adverse events (AE) for tolerability of each treatment arm.
+
+VII. To examine the radium-223 dichloride bio-distribution and absorbed dose in each bone metastatic lesions as well as elsewhere in the body including critical organs using dosimetry.
+
+EXPLORATORY OBJECTIVES:
+
+I. To perform molecular profiling assays on malignant and normal tissues, including, but not limited to, whole exome sequencing (WES), and messenger ribonucleic acid (RNA) sequencing (RNAseq), in order to:
+
+Ia. Identify potential predictive and prognostic biomarkers beyond any genomic alteration by which treatment may be assigned, and Ib. Identify resistance mechanisms using genomic deoxyribonucleic acid (DNA)- and RNA-based assessment platforms.
+
+II. To contribute genetic analysis data from de-identified biospecimens to Genomic Data Commons (GDC), a well annotated cancer molecular and clinical data repository, for current and future research; specimens will be annotated with key clinical data, including presentation, diagnosis, staging, summary treatment, and if possible, outcome.
+
+III. To bank plasma and peripheral immune cells from patients to assess predictive biomarkers of response at the Experimental Therapeutics Clinical Trials Network (ETCTN) biorepository at Nationwide Children's Hospital.
+
+IV. To correlate change in level of total alkaline phosphatase, bone-specific alkaline phosphatase, and serum osteocalcin to rPFS and OS.
+
+OUTLINE: This is a phase I, dose-escalation study of peposertib, followed by a phase II study. Patients are randomized to 1 of 3 arms.
+
+ARM A: Patients receive radium-223 dichloride intravenously (IV) over 1 minute on day 1. Treatment repeats every 28 days for up to 6 cycles in the absence of disease progression or unacceptable toxicity. Patients undergo blood sample collection, bone scan, and computed tomography (CT) or magnetic resonance imaging (MRI) throughout the study.
+
+ARM B: Patients rec
+
+PRIMARY OUTCOMES:
+  - Dose-limiting toxicity (Phase 1)
+  - Radiographic progression free survival (rPFS) (Phase 2)
+
+INTERVENTIONS:
+  - DRUG: Avelumab
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Bone Scan
+  - PROCEDURE: Computed Tomography
+  - PROCEDURE: Magnetic Resonance Imaging
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04071236

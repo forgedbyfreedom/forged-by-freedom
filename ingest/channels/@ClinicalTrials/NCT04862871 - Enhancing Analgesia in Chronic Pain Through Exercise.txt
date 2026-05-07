@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04862871
+Title: Enhancing Analgesia in Chronic Pain Through Exercise
+Official Title: Enhancing Analgesia in Chronic Pain Through Exercise: Responsivity of Sensory-Motor Networks and Factors That Moderate the Analgesic Response
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: aerobic exercise
+
+SUMMARY:
+Background: Current pain management strategies for pediatric patients are not integrating the analgesic potential of movement-based therapies. To date, experiencing a painful stimulus has been known to disrupt motor activity in an attempt to minimize injury. However, physical activity, even when it increases ongoing pain initially, has been shown to significantly reduce pain symptoms eventually through neuromodulation. In both acute and chronic pain cohorts, exercise protocols and neuromodulation paradigms have produced exercise-related analgesia. Problem: It is not currently understood which brain regions are implicated in exercise-based analgesia and what brain regions moderate this response.
+
+Approach: The investigators intend to provide a physical activity intervention designed to promote exercise-induced analgesia. This intervention will be performed in a group of pediatric subjects with Chronic Widespread Pain Disorder. An exercise (n=10), no exercise (n=10) and healthy control (n=10) group will be recruited. Aims: This study has three aims: (1) To understand how thermal pain sensitivity, pain symptoms and motor performance are impacted in patients with chronic pain after an exercise-based intervention. (2) To evaluate the brain regions involved in a simple motor task as well as how motor activity influences activity in pain regions of the brain. (3) To evaluate the network structure of the brain, with special emphasis on motor and pain regions, in youth with a pain disorder who have undergone an exercise-based intervention. Exercise-based therapy in pediatric subjects with a chronic pain condition is predicted to reduce pain symptom reporting through biasing activity in pain regions during motor performance. Significance: Findings from this investigation will address the clinical side of pain management strategies and provide potential therapeutic targets and feasibility data. The investigators anticipate that findings will show how pain and motor regions of the brain interact at the network level and if this interaction can be modulated through exercise. Findings will also evaluate the brain regions that mediate the analgesic properties of an exercise-based pain therapy and provide future therapeutic targets.
+
+DETAILED DESCRIPTION:
+This investigation is aimed at understanding how an exercise program currently performed at the Pediatric Pain Rehabilitation Center (PPRC) at Boston Children's Hospital, designed for individuals with chronic widespread pain is associated with pain relief and how this pain relief relates to changes in the brain. The specific aims/objectives are to explore the following:
+
+Aim 1 - Pain and sensorimotor behavior: To understand how thermal pain sensitivity, pain symptoms and motor performance are impacted in children with chronic pain after an exercise-based intervention. Sensory testing (for Hot \& Cold) will be collected using Quantitative Sensory Testing (QST) to establish pain thresholds. To address motor performance, we will perform the Bruininks-Oseretsky Test (BOT) 1 of motor proficiency (examining muscle power, strength, endurance). Pain symptom levels will be evaluated using self-report questionnaires that address fear of pain, pain catastrophizing, and pain symptom load.
+
+Aim 2 - Defining hierarchies during motor performance: To evaluate the brain regions involved in a simple motor task as well as how motor activity influences activity in pain regions. Participants will perform a tapping task within the MRI scanner to evaluate the brain regions that are active during motor control. 2 Functional magnetic resonance images will be processed using dynamic causal modeling (DCM) to evaluate effective connectivity (Figure 2) during task performance. Brain regions evaluated in DCM will be defined by the healthy control cohort.
+
+Aim 3 - Network structure: To evaluate the network structure of the brain, with emphasis on motor and pain regions, in persons with a pain disorder who have undergone an exercise intervention. Graph theory analyses implemented using resting-state functional magnetic resonance imaging will be performed to extract metrics reflecting network efficiency, nodal degree, and nodal centrality. Structural metrics (e.g., cortical thickness and white matter connectivity) will be collected as nuisance variables. Correlation analyses will be performed between network metrics and behavior (fear of pain, pain catastrophizing, motor performance) to evaluate their influence over network reorganization observed from the exercise intervention. Brain regions that define canonical pain and motor networks will be indexed from the healthy control group.
+
+PRIMARY OUTCOMES:
+  - Change in effective connectivity
+
+INTERVENTIONS:
+  - BEHAVIORAL: Physical Activity - Pediatric Pain Rehabilitation Center
+
+ELIGIBILITY:
+Age: 10 Years to 24 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04862871

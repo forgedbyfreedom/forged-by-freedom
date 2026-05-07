@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00718276
+Title: Pharmacokinetic Study: Effect of 25(OH)D and Vitamin D3 on Serum 25(OH)D
+Official Title: Pharmacokinetic Study in Healthy Postmenopausal Women to Compare Supplementation of Vitamin D3 to 25(OH)D
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: vitamin D muscle
+
+SUMMARY:
+We compare the effect of HyD (25-hydroxyvitamin D) and vitamin D3 in their effect on 25-hydroxyvitamin D plasma levels over a course of 4 month. This is a pharmacokinetic study including 35 postmenopausal women.
+
+* Trial with medicinal product
+
+DETAILED DESCRIPTION:
+We include postmenopausal women age 50 to 75, race/ethnicity: Caucasian, serum 25(OH)D at baseline between 20 to 60 nmol/l, body mass index: \< 30 kg/m2
+
+to compare 25(OH)D and vitamin D3 in equimolar doses over a 4 month pharmacokinetic trial. The dosing arms are daily, weekly, and bolus
+
+PRIMARY OUTCOMES:
+  - serum 25(OH)D levels
+
+INTERVENTIONS:
+  - DRUG: 25(OH)D
+  - DIETARY_SUPPLEMENT: vitamin D3
+
+ELIGIBILITY:
+Age: 50 Years to 75 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00718276

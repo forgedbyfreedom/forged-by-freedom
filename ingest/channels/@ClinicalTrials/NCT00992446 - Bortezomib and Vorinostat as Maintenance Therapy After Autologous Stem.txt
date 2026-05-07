@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00992446
+Title: Bortezomib and Vorinostat as maintenance Therapy After Autologous Stem Cell Transplant in Treating Patients With Non-Hodgkin Lymphoma
+Official Title: Bortezomib* and Vorinostat as maintenance Therapy After Autologous Transplant for Non-Hodgkin Lymphoma Using R-BEAM or BEAM Conditioning Transplant Regimen
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 27
+Topic: beta-alanine
+
+SUMMARY:
+This phase II trial studies the side effects and how well bortezomib and vorinostat work in treating patients with non-Hodgkin lymphoma (NHL) after patients' own stem cell (autologous) transplant. Bortezomib and vorinostat in the laboratory may stop the growth of lymphoma cells and make them more likely to die by blocking some of the enzymes needed for cell growth. Giving bortezomib together with vorinostat after an autologous stem cell transplant may thus kill lymphoma cells that remain after transplant.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Assess toxicities of combining vorinostat and bortezomib as maintenance therapy after autologous stem cell transplant (ASCT) for NHL.
+
+SECONDARY OBJECTIVES:
+
+I. Ability to complete planned therapy.
+
+II. Time to disease progression, event-free survival.
+
+III. Overall survival.
+
+OUTLINE:
+
+All patients receive carmustine intravenously (IV) over 3 hours on day -7; cytarabine IV twice daily (BID) over 3 hours and etoposide IV BID over 2 hours on days -6 to -3; and melphalan IV over 30 minutes on day -2. Only patients with history of cluster of differentiation (CD)20+ NHL receive additional rituximab IV on days -19 and -12. Patients undergo ASCT on day 0. Patients then receive bortezomib IV on days 2 and 8, and vorinostat orally (PO) once daily (QD) on days 1-14. Treatment with bortezomib and vorinostat repeats for total of 12 courses in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed for at least 2 years.
+
+PRIMARY OUTCOMES:
+  - Toxicity of Vorinostat Bortezomib maintenance Therapy After Autologous Transplant
+
+INTERVENTIONS:
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Bortezomib
+  - DRUG: Carmustine
+  - DRUG: Cytarabine
+  - DRUG: Etoposide
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00992446

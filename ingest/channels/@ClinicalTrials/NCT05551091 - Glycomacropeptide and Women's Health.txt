@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05551091
+Title: Glycomacropeptide and Women's Health
+Official Title: Glycomacropeptide as a Protein Supplement to Curb Hunger
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 13
+Topic: protein supplementation
+
+SUMMARY:
+This is a study about how a dietary supplement containing a whey protein affects hormones controlling hunger and satiety (leptin and ghrelin) in postmenopausal women with a body mass index between 28 and 35 kg/m2. Participants can expect to be in study for 4 weeks.
+
+DETAILED DESCRIPTION:
+The purpose of this research study is to understand how a dietary supplement containing glycomacropeptide (GMP) affects blood sugar levels and hormones that regulate hunger and satiety. This study is being conducted to find new ways to help women lose weight and reduce their chance of getting diabetes.
+
+PRIMARY OUTCOMES:
+  - Glucose homeostasis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: glycomacropeptide (GMP)
+
+ELIGIBILITY:
+Age:  to 90 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05551091

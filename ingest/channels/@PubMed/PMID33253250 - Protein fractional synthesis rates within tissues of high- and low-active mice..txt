@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 33253250
+Title: Protein fractional synthesis rates within tissues of high- and low-active mice.
+Authors: Cross, Granados, Ten Have, Thaden, Engelen
+Journal: PloS one
+Year: 2021
+Topic: protein distribution muscle synthesis
+
+ABSTRACT:
+With the rise in physical inactivity and its related diseases, it is necessary to understand the mechanisms involved in physical activity regulation. Biological factors regulating physical activity are studied to establish a possible target for improving the physical activity level. However, little is known about the role metabolism plays in physical activity regulation. Therefore, we studied protein fractional synthesis rate (FSR) of multiple organ tissues of 12-week-old male mice that were previously established as inherently low-active (n = 15, C3H/HeJ strain) and high-active (n = 15, C57L/J strain). Total body water of each mouse was enriched to 5% deuterium oxide (D2O) via intraperitoneal injection and maintained with D2O enriched drinking water for about 24 h. Blood samples from the jugular vein and tissues (kidney, heart, lung, muscle, fat, jejunum, ileum, liver, brain, skin, and bone) were collected for enrichment analysis of alanine by LC-MS/MS. Protein FSR was calculated as -ln(1-enrichment). Data are mean&#xb1;SE as fraction/day (unpaired t-test). Kidney protein FSR in the low-active mice was 7.82% higher than in high-active mice (low-active: 0.1863&#xb1;0.0018, high-active: 0.1754&#xb1;0.0028, p = 0.0030). No differences were found in any of the other measured organ tissues. However, all tissues resulted in a generally higher protein FSR in the low-activity mice compared to the high-activity mice (e.g. lung LA: 0.0711&#xb1;0.0015, HA: 0.0643&#xb1;0.0020, heart LA: 0.0649&#xb1; 0.0013 HA: 0.0712&#xb1;0.0073). Our observations suggest that high-active mice in most organ tissues are no more inherently equipped for metabolic adaptation than low-active mice, but there may be a connection between protein metabolism of kidney tissue and physical activity level. In addition, low-active mice have higher organ-specific baseline protein FSR possibly contributing to the inability to achieve higher physical activity levels.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/33253250/

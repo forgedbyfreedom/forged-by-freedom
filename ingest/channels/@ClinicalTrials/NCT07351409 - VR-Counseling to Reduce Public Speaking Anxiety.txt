@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07351409
+Title: VR-Counseling to Reduce Public Speaking Anxiety
+Official Title: Immersive Virtual Reality as a Tool for Reducing Public Speaking Anxiety in Students Accessing the University Psychological Counseling Service: A Randomized Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 72
+Topic: recovery exercise
+
+SUMMARY:
+Public Speaking Anxiety (PSA) is a common manifestation of social anxiety among university students that can negatively impact academic performance and psychological well-being. Virtual Reality (VR) based interventions combined with Cognitive Behavioral Therapy (CBT) represent a promising approach to address PSA by enabling controlled, gradual exposure to feared social situations through realistic simulations of audiences and settings. This randomized controlled trial will evaluate whether integrating VR sessions into standard psychological counseling provided by the University Psychological Counseling Service (UPCS) improves anxiety and PSA outcomes in university students compared with counseling alone.
+
+Participants will be randomized to one of two groups: (1) a control group receiving standard psychological counseling intervention, or (2) an experimental group receiving psychological counseling supplemented with VR interventions delivered via immersive 360° video scenarios. The VR-based intervention includes a VR-Exposure and Response Prevention (ERP) module offering graded exposure to anxiety-provoking public speaking contexts, and a VR-Acceptance and Commitment Training (ACT) module aimed at enhancing mindfulness and psychological flexibility through guided experiential exercises. Psychological outcomes and physiological responses recorded during sessions will be analyzed to compare the effectiveness of VR-integrated counseling versus standard counseling alone. This study addresses the limited evidence on CBT combined with 360° video-based VR exposure for PSA in university students and introduces a novel VR-based ERP and ACT protocol tailored to a university counseling setting.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Baseline in Public Speaking Anxiety at VR Post-Treatment
+
+INTERVENTIONS:
+  - DEVICE: Exposure and Response Prevention (ERP)
+  - DEVICE: Acceptance and Commitment Therapy (ACT) training
+  - BEHAVIORAL: Counseling program
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07351409

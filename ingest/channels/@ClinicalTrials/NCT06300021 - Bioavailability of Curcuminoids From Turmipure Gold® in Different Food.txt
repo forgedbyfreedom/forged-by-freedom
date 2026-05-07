@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06300021
+Title: Bioavailability of Curcuminoids From Turmipure Gold® in Different Food Matrices
+Official Title: A Randomized, Cross-over Clinical Trial to Study the Bioavailability of Curcuminoids From Turmipure Gold® in Different Food Matrices
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: sports nutrition
+
+SUMMARY:
+The goal of this clinical trial is to learn about the extent to which turmeric compounds in different food matrices becomes available to the body in healthy volunteers. The main question it aims to answer is:
+
+* Is the availability to the body of a turmeric dietary supplement altered when consumed in fruit nectar, oat milk, yogurt drink, or gummies in comparison to a dietary supplement capsule?
+
+Participants will ingest a turmeric dietary supplement as a capsule or in different food matrices on six testing days (separated by at least one week). The day before testing day, a standardized dinner will be provided to the participants in the evening and participants will be instructed to not consume any foods or beverages (except water) and to arrive fasted (12 hours) at the investigation site. Participants will ingest turmeric dietary supplement formulations one by one in random order in the morning of testing days. Regular blood and urine samples will be collected before and up to 24 hours after the turmeric dietary supplement ingestion. Standardized meals will be provided during the entire testing day (lunch, mid-afternoon snack, dinner).
+
+DETAILED DESCRIPTION:
+Curcumin has been studied as the main bioactive component of the rhizome of the herb Curcuma longa, known as turmeric, and is associated to potential health effects and benefits. Other bioactive components have also been identified, called the curcuminoid group. Curcuminoids are natural yellow-orange pigments and hydrophobic polyphenols derived from. Extracts of turmeric generally contain 75-80% curcumin, 15-20% demethoxycurcumin (DMC), and 0-10% bisdemethoxycurcumin (BDMC). Curcumin and curcuminoids have been extensively investigated due to their antioxidant and anti-inflammatory properties, notably regarding their potential efficacy in modulating various health conditions.
+
+In the present trial, the aim is to assess the bioavailability of curcuminoids in different food matrix formulations, the capsule format being the reference matrix, with a hypothesis of equivalence. The primary objective of the study is to assess the plasmatic concentration profile of total curcuminoids (curcumin, DMC, BDMC and their metabolites) on a 24-hour period after consumption of five different food matrix formulations containing TPG in comparison to the dietary supplement capsule formulation.
+
+PRIMARY OUTCOMES:
+  - Dose-normalized AUC0-24h of total curcuminoids
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: TPG capsule
+  - DIETARY_SUPPLEMENT: TPG ready to drink
+  - DIETARY_SUPPLEMENT: TPG dairy analog
+  - DIETARY_SUPPLEMENT: TPG probiotic drink
+  - DIETARY_SUPPLEMENT: TPG gummies
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06300021

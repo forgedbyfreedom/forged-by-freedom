@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06235788
+Title: Effect of Intelligent Tutor Induced Pausing on Learning Simulated Surgical Skills
+Official Title: Effect of Intelligent Tutor Induced Pausing on Learning Simulated Surgical Skills Among Medical Students: A Randomized Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 129
+Topic: strength training
+
+SUMMARY:
+Traditional training of surgical technical skills relies on mentorship from experienced surgeons, who continuously evaluate and change trainee performance to prevent errors and potential patient harm by providing verbal instructions. These educators may also pause the procedure, explaining the risks associated with the trainee's actions, and may personally demonstrate proper techniques to the students. Studies examining pausing while providing medical care outline that these approaches allow for learning.
+
+An artificial intelligent (AI) tutoring system, the Intelligent Continuous Expertise Monitoring System (ICEMS), improves learning in a surgical simulated operation by providing trainees with verbal instructions upon error identification. However, the effect of including a pause during this AI teaching has not been studied. Therefore, the ICEMS post-error identification methodology has been altered to include a pause with the intelligent tutor voice instruction.
+
+The aim of this study is to determine the effect of pausing on surgical skill acquisition and transfer among pre-medical and medical students. This will be done by comparing their performance in repeated simulated tumour resection tasks.
+
+DETAILED DESCRIPTION:
+Background: Surgical skill assessment is shifting from a quantitative, time-based approach towards a qualitative evaluation of a trainee's competency. During surgical procedures, instructors continuously monitor trainee performance and utilize various teaching methods focused on enhancing acquisition of surgical skills. One such method includes pausing the operation, either to outline the risks associated with the trainee's performance or to personally demonstrate the best practice technique(s). Pausing in such situations has been shown to allow learners to re-assess best practice, interrupt negative momentum, and allow for learning. Specifically, pausing after an error can prevent introduction of new information that may affect one's ability to reflect on their error and reduce stress before continuing.
+
+Rationale: The ICEMS, an AI tutoring system, was developed by our group using a Long-Short Term Memory deep learning algorithm to assess surgical performance and provide guidance. This was then integrated with the NeuroVR simulation platform. Using this AI system, the provision of verbal feedback on error identification demonstrated the potential of intelligent tutoring to improve learning in two previous randomized control trials (RCTs). However, these RCTs did not incorporate pausing methodology post-error identification. To further emulate the mentorship of an experienced surgeon in a clinical setting, the ICEMS platform has been modified to both initiate pausing when learner error is identified and provide a video demonstrating expert performance.
+
+Research aims: To compare the effect of incorporating a pause after intelligent tutor instruction to intelligent tutor instruction alone on medical and pre-medical students' surgical skill acquisition and skill transfer.
+
+Hypotheses:
+
+1. The pause with video group will significantly improve the composite score between the first and sixth repetition of the practice scenario.
+2. The pause with video group will have a composite score statistically higher than the control group in the sixth repetition of the practice scenario.
+3. The pause with video group will have a composite score statistically non-inferior to the pause without video group in the sixth repetition of the practice scenario.
+4. The pause with video group will have a global OSATS score statistically higher than the control group in the realistic scenario.
+5. The pause with video group will have a global OSATS score statistically non-inferior to the pause without video group in the realistic scenario.
+6. The pause with video group will not elect a difference in emotional stress or cognitive load compared to the control group.
+
+Specific objectives:
+
+1. To assess if the efficacy of AI mediated real-time tailored feedback combined with pausing methodology is statistically superior to AI mediated real-time tailored feedback alone in improving medical students' surgical skills on two virtual reality surgery tasks.
+2. To determine if differen
+
+PRIMARY OUTCOMES:
+  - Change in performance
+  - Transfer of learning
+  - Objective Structured Assessment of Technical Skills (OSATS) global rating scale
+
+INTERVENTIONS:
+  - BEHAVIORAL: Experimental Group ICEMS verbal feedback with pause group
+  - BEHAVIORAL: Experimental Group ICEMS audio feedback with pause and expert video
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06235788

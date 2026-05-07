@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05333185
+Title: The Effect of Mobile Application on the Pediatric Diabetes Management
+Official Title: The Effect of Mobile Application Robot Developed for Pediatric Diabetes Management on Children With Diabetes Mellitus (DM)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Type 1 DM; It is a chronic metabolic disease that develops as a result of the destruction of pancreatic ß cells, which are responsible for insulin production.
+
+Although type 1 DM can occur at any age, the highest incidence is seen between the ages of 10-14. Especially in this age group (7-15 years), who are more social than the previous period with the emergence of diabetes symptoms, both physical restrictions and limitations in their emotional and social functionality permanently change the lives of children with diabetes. According to the International Diabetes Federation (IDF) 2019 data, it is estimated that the patients with Type 1 diabetes in the world are 1,110,100 children/adolescents. This number is increasing each year, and it is estimated that approximately 98,200 children and adolescents under the age of 15 are diagnosed with Type
+
+1 diabetes each year. It is seen that there is an increase in the number of cases in young children in high-risk groups. Therefore, early diagnosis and initiation of treatment is a necessary step. The basic elements of type 1 diabetes treatment are; diabetes education, nutrition, exercise, insulin, blood sugar monitoring and psychosocial counseling. Recently; It is seen that the use of technology in children with diabetes has increased thanks to the opportunity to access information at any time, to choose the information according to one's own needs, to receive service when it is ready, to reduce costs in health, and to be educated at home due to limitations. Taking measures to prevent worsening of glycemic regulation and weight gain in patients with diabetes, especially in situations that cause social isolation such as pandemics, monitoring and management of patients with diabetes during the social isolation process, and enabling patients to access the information they need in a short time are of great importance in terms of diabetes tables. When the literature is examined, it is seen that there are many pages and mobile applications related to this. In this study, it is aimed to improve the self-management of children/adolescents with a mobile application that can be accessed from any device suitable for today. For this, it is aimed to create a mobile application that includes all sub-dimensions of diabetes self-management and contains content that other applications do not have.
+
+DETAILED DESCRIPTION:
+Type 1 DM; It is a chronic metabolic disease that develops as a result of the destruction of pancreatic ß cells, which are responsible for insulin production.
+
+Although type 1 DM can occur at any age, the highest incidence is seen between the ages of 10-14. Especially in this age group (7-15 years), who are more social than the previous period with the emergence of diabetes symptoms, both physical restrictions and limitations in their emotional and social functionality permanently change the lives of children with diabetes. According to the International Diabetes Federation (IDF) 2019 data, it is estimated that the patients with Type 1 diabetes in the world are 1,110,100 children/adolescents. This number is increasing each year, and it is estimated that approximately 98,200 children and adolescents under the age of 15 are diagnosed with Type
+
+1 diabetes each year. It is seen that there is an increase in the number of cases in young children in high-risk groups. Therefore, early diagnosis and initiation of treatment is a necessary step. The basic elements of type 1 diabetes treatment are; diabetes education, nutrition, exercise, insulin, blood sugar monitoring and psychosocial counseling. Recently; It is seen that the use of technology in children with diabetes has increased thanks to the opportunity to access information at any time, to choose the information according to one's own needs, to receive service when it is ready, to reduce costs in health, and to be educated at home due to limitations. Taking measures to prevent worsening of glycemic regulation and weight gain in patients with diabetes, especially in situations that cause social isolation such as pandemics, monitoring and management of patients with diabetes during the social isolation process, and enabling patients to access the information they need in a short time are of great importance in terms of diabetes tables. When the literature is examined, itis seen that there are many pages and mobile applications related to this. In this study, it is aimed to improve the self-management of children/adolescents with a mobile application that can be accessed from any device suitable for today. For this, it is aimed to create a mobile application that includes all sub-dimensions of diabetes self-management and contains content that other applications do not have. When the previously developed mobile application programs and their features were investigated for this study, a search was made with the keywords "Diabetes", "Type 1 DM", "T1DM" in the Play Store and App Store, and a total of 70 applications were reached. When participants look at the features of these applications, it is seen that the educational contents are specially designed for adults and most of them are in foreign languages. Blood sugar monitoring, exercise duration and type, carbohydrate levels and blood pressure values can be followed through programs, only 9 of which are in Turkish. When these applications are compared w
+
+PRIMARY OUTCOMES:
+  - Diabetes Self-Management Scale for Children and parents mean score
+  - Quality of life Scale for Children With Diabetes Mellitus Mean Score
+  - HbA1c Levels
+  - Blood Glucose Levels
+
+INTERVENTIONS:
+  - BEHAVIORAL: DİABOT (mobile application robot )
+
+ELIGIBILITY:
+Age: 7 Years to 12 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05333185

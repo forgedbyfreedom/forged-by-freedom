@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04420819
+Title: Effects of Ischemic Preconditioning on Muscle Damage Induced by Excentric Exercise
+Official Title: Effects of Ischemic Preconditioning on Muscle Damage Induced by Excentric Exercise: Randomized Clinical Trial Placebo Controlled
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: creatine supplementation
+
+SUMMARY:
+Introduction: eccentric exercise (EE) has been widely used in rehabilitation and in improving physical fitness due to its mechanical advantage and less metabolic demand, however, EE can induce muscle damage providing structural changes and reduced muscle function, therefore, it is necessary to look for alternatives to reduce this damage caused by stress. Thus, ischemic preconditioning (PCI) can be seen as an aid in reducing the damage caused by EE, as it can attenuate the ischemia-reperfusion injury, and can be used to accelerate the post-exercise recovery process. Objectives: to compare the effects of PCI, using different occlusion pressures, on acute and late responses to perceptual outcomes and muscle injury markers, in addition to checking whether the technique causes deleterious effects on performance in post-exercise recovery. Methods: a randomized placebo controlled clinical trial will be conducted with 80 healthy men aged 18 to 35 years who will be randomly divided into four groups: PCI using total occlusion pressure (POT), PCI with 40% more than POT, placebo (10 mmHg) and control. The PCI protocol will consist of four cycles of ischemia and reperfusion of five minutes each. All groups will perform an EE protocol, initial assessments, immediately after the end of the EE, 24, 48, 72 and 96 hours after exercise, with the maximum isometric voluntary contraction (CVIM) assessed by the isokinetic dynamometer, vectors of cell integrity by by means of electrical bioimpedance (BIA), creatine kinase (CK), blood lactate, pain on the visual analog scale (VAS), pain threshold by the pressure algometer, and tone, muscle rigidity and elasticity by myotonometry. The descriptive statistical method and analysis of variance will be used for the repeated measures model. The level of significance will be p \<0.05.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle damage
+  - Blood lactate concentration
+  - Muscle strength in isokinetic
+
+INTERVENTIONS:
+  - DEVICE: Ischemic Preconditioning
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04420819

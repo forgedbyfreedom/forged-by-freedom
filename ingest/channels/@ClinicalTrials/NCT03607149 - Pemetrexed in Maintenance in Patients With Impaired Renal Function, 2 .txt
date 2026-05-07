@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03607149
+Title: Pemetrexed in maintenance in Patients With Impaired Renal Function, 2 Dose Calculation Strategies
+Official Title: Pemetrexed in maintenance in Patients With Impaired Renal Function: Randomized Phase 4 Multicenter Study Comparing 2 Dose Calculation Strategies (PKAPIR)
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: creatine supplementation
+
+SUMMARY:
+Pemetrexed is used in the treatment of non-small cell lung cancer (NSCLC). Its elimination is mainly renal and its nephrotoxicity requires an interruption of treatment when the CrCLCG falls below 45 mL / min. Patients with NSCLC frequently have impaired renal function by other cytotoxic drugs.
+
+The dose adjustment of pemetrexed is performed as a function of body surface area (SC) without any pharmacokinetic rational. The challenge is to treat patients with renal insufficiency (RR) with a safe dose, based on CRCL, providing equivalent biological exposure to patients with preserved renal function.
+
+DETAILED DESCRIPTION:
+* Primary objective: Evaluate the impact of calculating the dose of pemetrexed to be administered versus creatine clearance according to Cockcroft-Gault (CrCLCG) versus body surface area (SC) on median time before discontinuation of treatment for renal function ≤ 45mL / min in patients treated for non-small cell lung cancer predominantly non-squamous in maintenance.
+* Secondary objective: To evaluate the impact of calculating the dose of pemetrexed to be administered versus CRCLCG versus SC over time to treatment discontinuation, progression-free survival (PFS), and patient overall survival.
+
+PRIMARY OUTCOMES:
+  - Median time until treatment is stopped due to renal function ≤ 45mL / min
+
+INTERVENTIONS:
+  - DRUG: Pemetrexed
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03607149

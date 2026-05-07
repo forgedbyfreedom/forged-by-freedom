@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07273175
+Title: Effects of Transcranial Direct Current Stimulation on Cognitive Rehabilitation in Schizophrenia
+Official Title: Evaluation of the Effects of Transcranial Direct Current Stimulation on the Effectiveness of Cognitive Function Rehabilitation Using the RehaCom System in Patients With Schizophrenia (Study Protocol)
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: high intensity interval training
+
+SUMMARY:
+The aim of this prospective, randomized, double-blind, placebo-controlled study is to assess whether transcranial direct current stimulation (tDCS) applied prior to RehaCom cognitive training can improve cognitive functioning in individuals diagnosed with schizophrenia.
+
+The study is designed to answer the following main questions:
+
+* Does the combination of active tDCS and RehaCom cognitive training lead to better performance on CANTAB tests compared to training preceded by sham stimulation?
+* Does tDCS enhance the effectiveness of cognitive rehabilitation by strengthening neuroplasticity mechanisms? Researchers will compare the group receiving active tDCS + RehaCom with the group undergoing sham stimulation + RehaCom to determine whether active stimulation produces greater improvements in cognitive functioning.
+
+Participants will receive tDCS targeting the DLPFC, which was selected due to its key involvement in executive cognitive functions. These include working memory, planning, decision-making, inhibitory control, and the regulation of attention, all of which are relevant for modulating cognitive dysfunction in schizophrenia.
+
+The tDCS will be administered using a battery-powered direct current stimulator (DC-Stimulator PLUS, neuroCare, Germany) through two saline-soaked sponge electrodes (5 cm × 7 cm). According to the International 10-20 system, the anodal electrodes will be positioned over the left DLPFC on the sites corresponding to F3, whereas the cathodal electrode will be placed above the right DLPFC, corresponding to F4. The electrode locations were verified using a computational brain model. All sessions will be conducted over five consecutive days (from Monday to Friday), with a 24-hour interval between sessions. Each participant will complete a total of 15 treatment sessions within a three-week period. Stimulation will be administered using the fixed parameters according to the established literature. For the active tDCS condition, a direct current of 2.0 mA will be applied (corresponding to a total charge of 2.4 C, a current density of 0.57 A/m2, and a charge density of 685.7 C/m2), for 20 minutes with ramp-up and ramp-down periods of 20 seconds each. For sham tDCS, the stimulation will utilize the same active tDCS arrangement, with an intensity of 2.0 mA. However, the current will be applied only for the 20 s ramp-up phase at the beginning and the 20 s ramp-down phase at the end of the stimulation. This protocol preserves blinding by mimicking the initial somatosensory sensations typically associated with active tDCS.
+
+The selection of these parameters is grounded in prior evidence which demonstrates their functional specificity and efficacy in modulating cognitive processes in individuals diagnosed with schizophrenia.
+
+All sessions will be conducted by trained personnel, and adverse events will be regularly monitored throughout the study.
+
+Immediately after each tDCS stimulation, patients will undergo a 30-minute cognitive rehabilitation training session using the RehaCom computer system (HASOMED GmbH, Germany). Previous studies show that the time for which changes in neuronal excitability remain are proportional to the duration of stimulation and current used (Nitsche and Paulus, 2000). Based on these data, the authors assume that following a 20-minute tDCS session, the after-effects should last for at least 30 min (and hence the duration of neurocognitive training will be set at 30 min per session). The following programs will be used each week: day 1 (Monday), 3 (Wednesday) and 5 (Friday): EINK - shopping (different memory functions and selective attention), SUSA - selection of items (sustained attention), WOME - card games (working memory); day 2 (Tuesday) and 4 (Thursday): GEAU - maintaining the set vehicle speed (divided attention), LODE - creating logical sequences (logical reasoning); WOME - card games (working memory). During every session, each program will be applied for ten minutes, using a 17-inch laptop and a dedicated control panel. The following parameters will be set for SUSA: level up 85% and level down 70%; for LODE: upper threshold 90%, bottom threshold 60%, number of tasks per level 10; for WOME: number of tasks 10, repetitions 1, card display time 2000 ms; for GEAU: upper threshold 95%, bottom threshold 80%; for EINK: upper threshold 90%, bottom threshold 80%, repetitions 1, max time 90/300 s.
+
+Participants will:
+
+* Undergo assessments at three time points (V1 - baseline, V2 - after 3 weeks of intervention, V3 - after 8 weeks).
+* Be evaluated using CANTAB tests, the PANSS and CGI-S scales, and resting-state EEG.
+
+The goal of the study is to determine whether applying tDCS before cognitive training improves executive function rehabilitation outcomes and supports the maintenance of these effects over time compared to cognitive training alone.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - parameters in the Cambridge Neuropsychological Test Automated Battery (CANTAB): DMS; ERT; MTT; OTS; PAL; RTI; RVP; SWM.
+
+INTERVENTIONS:
+  - PROCEDURE: active tDCS
+  - PROCEDURE: sham tDCS
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07273175

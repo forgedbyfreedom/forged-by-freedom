@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05770063
+Title: Effect of Compound Amino Acid Tablets on Nutritional Status of Patients With Lung Cancer
+Official Title: Effect of Compound Amino Acid Tablets on Nutritional Status of Patients With Lung Cancer
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 86
+Topic: protein supplementation
+
+SUMMARY:
+To investigate whether compound amino acid supplementation can further promote protein synthesis and improve nutritional status for lung cancer patients.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Concentration of albumin
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: amino acid tablet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05770063

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04383509
+Title: Electroconvulsive Treatment Followed by Cognitive Control Training
+Official Title: Cognitive Remediation Following Electroconvulsive Therapy in Patients With Treatment Resistant Depression: Randomized Controlled Trail of an Intervention for Relapse Prevention
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 21
+Topic: high intensity interval training
+
+SUMMARY:
+Major depressive disorder (MDD) is worldwide one of the most prevalent and disabling mental health conditions. Electroconvulsive therapy (ECT) is a safe and effective treatment even though 6-month relapse rates are high. Cognitive side effects of ECT, such as reduced cognitive control, might trigger mechanisms that increase relapse in patients. As such, cognitive control training (CCT) holds promise as a non-pharmacological strategy to improve long-term effects of ECT (i.e., increase remission, and reduce depression relapse).
+
+DETAILED DESCRIPTION:
+Eighty-eight participants aged between 18-70 years with major depressive disorder who start electroconvulsive treatment (ECT) will be included in this randomized controlled trial (RCT). Following (partial) response to ECT treatment (at least a 25% reduction of clinical symptoms), participants will be randomly assigned to a computer based CCT or active placebo control. A first aim of this RCT is to assess the effects of CCT compared to an active placebo condition on depression symptomatology, cognitive complaints, and quality of life. Secondly, participants will be monitored every two weeks for a period of six months following CCT/active placebo, allowing the detection of potential relapse of depression. Thirdly, the investigators will assess participant evaluation of the addition of cognitive remediation to ECT using qualitative interview methods (satisfaction, acceptability and appropriateness). Finally, in order to further advance the understanding of the mechanisms underlying effects of CCT, exploratory analyses may be conducted using facial video footage collected during the CCT/active control phase of the study.
+
+PRIMARY OUTCOMES:
+  - Change in severity of depressive symptoms, clinician-rated (HAM-D)
+  - Change in severity of depressive symptoms, self-reported (BDI-II)
+  - Change in depressive symptoms and quality of life, self-reported (RDQ)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cognitive Control Training
+  - BEHAVIORAL: Active Control
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04383509

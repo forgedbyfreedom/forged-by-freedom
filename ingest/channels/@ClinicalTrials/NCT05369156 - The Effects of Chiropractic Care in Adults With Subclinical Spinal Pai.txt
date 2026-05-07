@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05369156
+Title: The Effects of Chiropractic Care in Adults With Subclinical Spinal Pain
+Official Title: The Effects of Chiropractic Care on Neurophysiological Function, Immune Markers and Health-Related Quality of Life in Adults With Subclinical Spinal Pain Using AI Modelling
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: physical activity intervention
+
+SUMMARY:
+This study aims to investigate long term and retention (in a subgroup) effects of Chiropractic care (CC) on neurological, behavioral, immunological functions and health-related quality of life in adults with subclinical pain.
+
+DETAILED DESCRIPTION:
+There is growing evidence that chiropractic care positively impacts various aspects of central and autonomic nervous system function. A single session of chiropractic adjustment has shown to alter pre-frontal cortex (PFC) activity, but there is a lack of robust research investigating the long-term benefits of such PFC changes. This study aims to investigate long term and retention (in a subgroup) effects of Chiropractic care (CC) on neurological, behavioral, immunological functions and health-related quality of life in adults with subclinical pain. In these parallel-group randomized controlled trials, participants aged 18-60 years with subclinical spinal pain will be randomly allocated to receive either 12 weeks of CC intervention or control intervention. Primary outcomes include functional near-infrared spectroscopy, heart rate variability (HRV), serum Brain-Derived Neurotrophic Factors (BDNF) levels and resting-state electroencephalography (EEG). The secondary outcomes include PFC activity (measured by cognitive and behavioral testing), immune and inflammatory markers and health-related quality of life. As data collected in the project is a combination of extrinsic (sociodemographic, clinical questionnaires etc.) and intrinsic physiological data (physiological measures like EEG, HRV etc.), the machine learning or artificial intelligence (AI) will be used to help the development of optimal chiropractic care plans in future.
+
+PRIMARY OUTCOMES:
+  - Functional near-infrared spectroscopy (fNIRS)
+  - Functional near-infrared spectroscopy (fNIRS)
+  - Functional near-infrared spectroscopy (fNIRS)
+  - Functional near-infrared spectroscopy (fNIRS)
+  - Heart rate variability (HRV)
+
+INTERVENTIONS:
+  - OTHER: Chiropractic Care
+  - OTHER: Control Group
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05369156

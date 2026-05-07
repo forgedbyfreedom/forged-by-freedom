@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07457476
+Title: Sleep Hygiene Education on the Sleep of Young Male Soccer Players
+Official Title: Effects of a Sleep Education and Hygiene Program on Sleep of Young High-level Male Soccer Players
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 52
+Topic: sleep athletes
+
+SUMMARY:
+This will be a longitudinal study that aims to assess the effects of a sleep education and hygiene intervention on the sleep of young soccer players.
+
+The primary outcome of interest is the difference-in-differences in objectively measured sleep duration from baseline to post-intervention between the intervention and control groups.
+
+DETAILED DESCRIPTION:
+METHODS Study Design This is an experimental study that aims to evaluate the impact of a sleep hygiene program on the sleep patterns of high-level adolescent male soccer players. Before the beginning of the study, subjects will fill out standardized sleep questionnaires. Then, subjects' sleep will be monitored using actigraphy and sleep diaries for 6 consecutive weeks (Weeks 1-2 Baseline; Weeks 3-4 Intervention; Weeks 5-6 Post-Intervention) and another 2 weeks, 6 weeks after the conclusion of the post-intervention period. The sleep diaries will be completed every morning, and information regarding bedtime and waketime will be combined with actigraphy data. After the baseline period, sleep data will be analyzed, and a tailored a sleep hygiene and education program will be built, tailored around the specific needs of the group of participants. At the same time, subjects will be randomly assigned to either control or intervention group.
+
+Sample Size Calculation and Participant Recruitment Sample size was determined using simulation-based power analyses focused on the primary intervention effect, defined as the difference-in-differences (DiD) in sleep duration from baseline to post-intervention between the intervention and control groups. This effect reflects whether the change in sleep duration over time differs between groups and constitutes the primary outcome of interest. Although sleep was monitored across multiple periods, the power analysis focused on the pre-specified baseline to post-intervention contrast, as this corresponds to the primary causal effect of interest.
+
+Expected effect sizes were informed by preliminary internal actigraphy data and recent sleep hygiene intervention literature. Specifically, the intervention group was expected to increase sleep duration by approximately 25 minutes from baseline to post-intervention, while the control group was expected to increase by approximately 5 minutes over the same period, resulting in an anticipated DiD of 20 minutes. Within-subject variability in sleep duration was estimated at 35-45 minutes and between-subject variability at 60-70 minutes, based on internal pilot data.
+
+Power simulations were conducted assuming a 2 × 2 mixed design (group × time: pre- vs post-intervention), a common within-condition standard deviation of 35 minutes, and a within-subject correlation of 0.5. The required sample to achieve 80% power at an alpha level of 0.05, based on 2000 simulations runs using the ANOVA\_power shiny app was tested. This was achieved using 50 participants (25 per group), with the group × time interaction corresponding to the DiD effect, for an approximate power of 81%.
+
+Considering possible dropouts, missing data, available equipment and logistical constraints, 52 subjects will be recruited to participate in the study. According to the participant classification framework, recruited participants will be high-level male soccer players, competing in the Portuguese U17 and U19 national cham
+
+PRIMARY OUTCOMES:
+  - Sleep duration
+  - Sleep efficiency
+
+INTERVENTIONS:
+  - BEHAVIORAL: Sleep enhancement intervention
+
+ELIGIBILITY:
+Age: 16 Years to 19 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07457476

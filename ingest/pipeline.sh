@@ -253,8 +253,8 @@ fetch_research() {
 
 # ─── Node 1c: Whisper Transcription (FREE — local MLX Whisper on Apple Silicon) ────
 transcribe_pending() {
-    header "NODE 1c: LOCAL WHISPER TRANSCRIPTION (FREE — MLX Whisper)"
-    local MAX_PARALLEL=1  # Local GPU — run one at a time for stability
+    header "NODE 1c: LOCAL WHISPER TRANSCRIPTION (FREE — MLX/faster-whisper)"
+    local MAX_PARALLEL=1  # GPU inference is serial — model handles batching internally
     local count=0 transcribed=0
 
     # Count pending mp3s

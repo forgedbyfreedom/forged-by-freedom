@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05901038
+Title: Development of Artefact Removal and Physical Activity Algorithm
+Official Title: Development of Artefact Removal and Physical Activity Algorithm for Continuous Activity Monitoring by Heart Rate Monitors in Cardiac Patients
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 138
+Topic: physical activity intervention
+
+SUMMARY:
+This clinical trial will collect heart rate (HR) data with the Fitbit Inspire 2 fitness tracker and Polar H10 chest strap with the aim of:
+
+* Goal 1. Optimising and validating our artefact removal procedure.
+* Goal 2. Developing a physical activity (PA) algorithm to follow and quantify day-to-day PA based on HR measurements.
+
+A pilot study will be conducted with a total of 46 cardiac patients (group 1), 46 coached sporters with 12-week training schedule (group 2) and 46 sporters without 12-week training schedule (group 3). The three groups all engage in controlled activities.
+
+The participants' HR will be monitored continuously for an average period of 13 weeks using 2 HR monitors, i.e. the Fitbit Inspire 2 fitness tracker and the Polar H10 chest strap. They will wear the Fitbit device continuously for the whole monitoring period, while they will wear the Polar chest strap continuously for the first 24 hours and after that only during exercise.
+
+To determine participants' exercise capacity (e.g. VO2max), cardiopulmonary exercise tests (CPETS) will be carried out. For group 1, 3 CPETS will take place during the CR programme: at the start, in the middle and at the end. For group 2 and group 3, 2 CPETS will be carried out at the start and the end of the study. The monitoring period with Fitbit and Polar will end at the last CPET.
+
+All participants will record their daily efforts in an activity diary during the first week of study. Moreover, two questionnaires will be conducted at the end of the study to evaluates usability and experiences with the HR monitors.
+
+DETAILED DESCRIPTION:
+Sufficient physical activity (PA) is becoming more and more important in the prevention, onset and treatment of several cardiovascular diseases. Heart rate (HR) monitors are of interest to researchers and various healthcare providers because of their ability to use HR to indicate PA levels of individual cardiac patients in an objective, accurate and continuous way.
+
+However, artefacts such as over- and underestimation may affect the accuracy of these HR monitors in daily living conditions of specific cardio populations. Moreover, reliable parameters and algorithms to objectively map, calculate and monitor PA are still lacking.
+
+The research group has been able to improve the accuracy of HR monitors by detecting and correcting artefacts and is further exploring the technical possibilities of developing an artefact removal procedure, aiming for an improved and automatic way to continuously monitor HR in cardiac patients. However, more data is needed to optimise and validate the procedure. In addition, more HR data of controlled activities are needed because the investigators aim to develop an innovative PA algorithm that calculates a daily score to quantify PA levels based on HR measurements and focused on the prediction of VO2max data (i.e. the gold standard indicator for determining exercise capacity).
+
+PRIMARY OUTCOMES:
+  - A physical activity algorithm with accompanying score
+
+INTERVENTIONS:
+  - DEVICE: Wearing heart rate monitors
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05901038

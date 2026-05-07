@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06675708
+Title: Effectiveness of Creatine on Pain, Fatigue, and Muscle Architectural Variables in Patients Witg Fibromyalgia.
+Official Title: Study of the Effectiveness of Creatine on Pain, Fatigue, and Muscle Architectural Variables in Patients Witg Fibromyalgia.
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: creatine supplementation
+
+SUMMARY:
+Creatine, a non-protein organic amino acid, is synthesized from arginine, glycine, and methionine. The use of creatine has been shown to be effective in healthy subjects, providing benefits primarily in terms of strength, which has been the main factor studied. In patients with various conditions, including pain, creatine supplementation has demonstrated a reduction in pain and even cognitive improvements.
+
+Due to creatine's general improvement in muscular endurance and fatigue.
+
+DETAILED DESCRIPTION:
+Through this study, we aim to analyze whether creatine supplementation can be beneficial in reducing symptoms in patients with Fibromyalgia. Previous studies have demonstrated its benefits, and therefore, we want to evaluate if these benefits can manifest in a shorter time compared to previous studies in patients with Fibromyalgia.
+
+PRIMARY OUTCOMES:
+  - Algometer
+  - VAS
+  - Circometry
+  - Dynamometer
+  - Chair test
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine
+  - DIETARY_SUPPLEMENT: Dextrose
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06675708

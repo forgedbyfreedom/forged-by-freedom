@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03591367
+Title: The Potential Role Of MicroRNA-155 And Telomerase Reverse Transcriptase In Diagnosis Of Non-Muscle Invasive Bladder Cancer And Their Pathological Correlation
+Official Title: The Potential Role Of MicroRNA-155 And Telomerase Reverse Transcriptase In Diagnosis Of Non-Muscle Invasive Bladder Cancer And Their Pathological Correlation
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 115
+Topic: vitamin D muscle
+
+SUMMARY:
+We try to assess the potential role of telomerase reverse transcriptase and MicroRNA (miR-155) in diagnosis of non-muscle-invasive bladder cancer and their correlation with stage and grade of the tumor.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - sensitivity, specificity and positive and negative predictive values of combined MicroRNA-155 And Telomerase Reverse Transcriptase In diagnosis Of Non-Muscle Invasive Bladder Cancer
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: MicroRNAs-155
+  - DIAGNOSTIC_TEST: Human telomerase reverse transcriptase
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03591367

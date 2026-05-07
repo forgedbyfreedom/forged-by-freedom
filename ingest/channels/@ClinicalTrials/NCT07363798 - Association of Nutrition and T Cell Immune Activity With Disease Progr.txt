@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07363798
+Title: Association of Nutrition and T Cell Immune Activity With Disease Progression in Nontuberculous Mycobacterial Pulmonary Disease
+Official Title: Association of Nutrition and T Cell Immune Activity With Disease Progression in Nontuberculous Mycobacterial Pulmonary Disease
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: fat loss muscle
+
+SUMMARY:
+Nontuberculous mycobacterial pulmonary disease (NTM-PD) is a chronic lung infection caused by environmental mycobacteria. The clinical course of NTM-PD varies widely among patients. Some individuals remain stable for long periods without treatment, while others experience worsening lung disease that requires antibiotic therapy or may lead to death. Currently available clinical tools are limited in their ability to predict which patients will experience disease progression.
+
+This observational study aims to better understand how the body's immune response and nutritional status are related to disease progression in adults with confirmed or suspected NTM-PD. In particular, the study focuses on T cells, a type of immune cell that plays an important role in controlling mycobacterial infections. Prior research suggests that impaired T-cell function may contribute to disease progression in NTM-PD, but most studies have relied on blood samples rather than immune cells from the lung, where the infection occurs.
+
+In this study, immune cells obtained from bronchoalveolar lavage fluid during clinically indicated bronchoscopy will be analyzed to assess inhibitory and exhausted T-cell profiles in the lung. In addition, systemic T-cell function will be evaluated using the mitogen response from the QuantiFERON-TB Gold Plus blood test. Nutritional status and body composition will also be assessed, as poor nutrition is known to affect immune function and disease outcomes.
+
+Participants will be followed over time as part of routine clinical care. The primary outcome of the study is the time from enrollment to the initiation of antibiotic treatment due to clinical disease progression. Secondary outcomes include identifying immune predictors of treatment initiation, examining the relationship between nutritional status and immune activity, evaluating changes in body composition and immune markers with disease progression, and determining whether immune and nutritional measures improve prediction of mortality beyond established clinical risk scores.
+
+By integrating lung immune profiling, blood-based immune testing, nutritional assessment, and clinical data, this study seeks to improve risk stratification in NTM-PD. The results may help identify patients at higher risk for disease progression and poor outcomes, support more personalized monitoring strategies, and inform future studies targeting immune and nutritional pathways in NTM-PD.
+
+DETAILED DESCRIPTION:
+Nontuberculous mycobacterial pulmonary disease (NTM-PD) is a chronic and heterogeneous infectious lung disease caused by a variety of environmental mycobacteria, including Mycobacterium avium complex (MAC), Mycobacterium abscessus subspecies, Mycobacterium kansasii, and other rapidly or slowly growing species. Despite increasing global prevalence, the clinical course of NTM-PD remains highly variable. Some patients experience long-term stability without treatment, whereas others develop progressive lung destruction, recurrent exacerbations, treatment failure, or death. This heterogeneity highlights limitations in current prognostic tools and underscores the need for biologically informed risk stratification.
+
+The BACES score (Body mass index \<18.5 kg/m², Age ≥65 years, Cavitary disease, Elevated erythrocyte sedimentation rate, and male Sex) is a validated clinical scoring system for mortality prediction in NTM-PD. While clinically practical, BACES relies exclusively on demographic, nutritional, inflammatory, and radiographic variables and does not incorporate direct measures of host immune function. Increasing evidence suggests that host immune dysregulation-particularly impairment of adaptive T-cell-mediated immunity-plays a central role in disease progression and may explain outcome differences among patients with similar clinical features.
+
+Recent translational studies using lung tissue, spatial transcriptomics, and peripheral blood immunophenotyping have demonstrated a characteristic immune imbalance in NTM-PD. These studies consistently show hyperactivation of innate immune pathways (e.g., macrophage and monocyte inflammatory signaling) alongside functional suppression of T-cell-mediated adaptive immunity. This T-cell dysfunction is characterized by reduced antigen-specific interferon-gamma (IFN-γ) production, decreased co-stimulatory signaling (such as CD28 downregulation), and increased expression of inhibitory immune checkpoint receptors, including programmed death-1 (PD-1) and T-cell immunoglobulin and mucin-domain containing-3 (TIM-3). Additionally, CD39-expressing T cells-associated with adenosine-mediated immunosuppression and terminal exhaustion-have been implicated in chronic infectious and inflammatory states.
+
+Importantly, increased frequencies of PD-1-positive or TIM-3-positive CD4+ T cells have been associated with higher mycobacterial burden, cavitary disease, low body mass index, and adverse clinical outcomes in NTM-PD. These inhibitory and exhausted T-cell phenotypes appear to reflect chronic antigenic stimulation and impaired immune control of infection. However, most prior studies have relied on peripheral blood samples, which may not accurately represent the immune microenvironment within the lung, the primary site of disease activity.
+
+Bronchoalveolar lavage (BAL) fluid provides direct access to immune cells within affected lung segments and offers a unique opportunity to characterize local pulmonary immune responses. BA
+
+PRIMARY OUTCOMES:
+  - Time to initiation of treatment due to disease progression in nontuberculous mycobacterial pulmonary disease
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07363798

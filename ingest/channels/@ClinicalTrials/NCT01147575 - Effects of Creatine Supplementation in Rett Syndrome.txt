@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01147575
+Title: Effects of Creatine Supplementation in Rett Syndrome
+Official Title: Effects of Creatine Supplementation in Rett Syndrome: A Randomized, Placebo-controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 21
+Topic: creatine supplementation
+
+SUMMARY:
+Creatine supplementation in RTT: a randomized controlled trial
+
+Rett Syndrome (RTT) is a neurodevelopmental disorder characterised by apparently normal early development (stage 1 of RTT) followed by loss of purposeful hand use, distinctive hand stereotypes, slow brain growth, loss of language, respiratory irregularities, gastrointestinal disturbances, gait abnormalities, seizures, and mental retardation. These symptoms typically appear between 6 and 18 months of age (stage 2). Subsequently, there is gradual stabilisation of severe mental retardation and motor compromise (stage 3). The majority (70% to 80%) of patients show mutations in the methyl-CpG-binding-protein-2 (MeCP2) gene, located on chromosome Xq28. MeCP2 encodes a transcription repressor protein that is ubiquitously expressed in all tissues.
+
+As RTT primarily affects females, only very few males with mutations in MeCP2 have been identified. Mutations in MeCP2 have also been identified in children with X-linked mental retardation, autism and a clinical phenotype that resembles Angelman Syndrome.
+
+The aim of this study is to investigate the effects of a dietary supplement on the biochemical and clinical parameter of RTT. About 80 % of labile methyl groups generated through the re-methylation cycle are used for the synthesis of creatine within the human organism. Supplementation of creatine will therefore increase the availability of labile methyl groups for different methylation reactions including methylation of DNA.
+
+The study will be double blind and cross-over. The patients will get creatine monophosphate (200 mg/kg/d in three dosages per day) or placebo. After 6 months and a wash-out period of 4 weeks the groups are changed for the next 6 months.
+
+All participants with RTT and mutations in MeCP2 will undergo physical and neurological exam, quantitative EEG, behavioral assessment, laboratory testing, and neuropsychological evaluations. Participants will have a follow-up after 3, 6, 10, 13 and 16 months (3 months after finishing the study), which will include similar assessments.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Global DNA Methylation in serum
+  - Rett Syndrome Motor and Behavioral Assessment (RSMBA)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine monohydrate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 3 Years to 24 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01147575

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 37094145
+Title: Machine learning estimation of human body time using metabolomic profiling.
+Authors: Woelders, Revell, Middleton, Ackermann, Kayser
+Journal: Proceedings of the National Academy of Sciences of the United States of America
+Year: 2023
+Topic: melatonin sleep athletes
+
+ABSTRACT:
+Circadian rhythms influence physiology, metabolism, and molecular processes in the human body. Estimation of individual body time (circadian phase) is therefore highly relevant for individual optimization of behavior (sleep, meals, sports), diagnostic sampling, medical treatment, and for treatment of circadian rhythm disorders. Here, we provide a partial least squares regression (PLSR) machine learning approach that uses plasma-derived metabolomics data in one or more samples to estimate dim light melatonin onset (DLMO) as a proxy for circadian phase of the human body. For this purpose, our protocol was aimed to stay close to real-life conditions. We found that a metabolomics approach optimized for either women or men under entrained conditions performed equally well or better than existing approaches using more labor-intensive RNA sequencing-based methods. Although estimation of circadian body time using blood-targeted metabolomics requires further validation in shift work and other real-world conditions, it currently may offer a robust, feasible technique with relatively high accuracy to aid personalized optimization of behavior and clinical treatment after appropriate validation in patient populations.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/37094145/

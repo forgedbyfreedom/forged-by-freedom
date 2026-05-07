@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04927676
+Title: Hormones in Hypogonadotropic Hypogonadism
+Official Title: Hormone Profile in Women With Hypogonadotropic Hypogonadism - a Prospective Pilot Study
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: testosterone replacement
+
+SUMMARY:
+Therefore, the main objective of this prospective pilot study is to evaluate a complete hormonal profile in women with hypogonadotropic hypogonadism, including anti-mullerian hormone (AMH) and antral follicle count. Changes in this regard will be evaluated after 2 months of individual treatment.
+
+DETAILED DESCRIPTION:
+The objective of this prospective cohort pilot study is to evaluate a complete hormonal profile including AMH and antral follicle count in women with hypogonadotropic hypogonadism (HH). As a secondary study objective, changes in these two parameters will be examined after 2 months of individual treatment. The data collected will be used to plan future studies in the field.
+
+The primary hypothesis is, that AMH levels which range from 0.5 ng/mL to 7.0 ng/mL and antral follicular counts which range from 2 to 20 can be found in women with HH.
+
+As secondary hypothesis the investigators assume that the AMH levels and the antral follicular counts of women with HH do not change within two months of treatment with estrogen-/gestagen-replacement therapy or no treatment, whereas AMH levels and antral follicular counts will increase significantly after two months of pulsatile gonadotropin-releasing hormone (GnRH) treatment.
+
+Primary outcome parameters are serum level of AMH and the antral follicular count. Secondary outcome parameters as for the descriptive analysis are: follicle stimulating hormone (FSH), luteinizing hormone (LH), estradiol (either during amenorrhea or on cycle day 2-5 in the course of treatment), sexual hormone binding globulin (SHBG), testosterone, dehydroepiandrosterone-sulfate (DHEAS), results of a Dual Energy X-ray Absorptiometry (DEXA; if performed), duration since last normal menstruation, patient's age and body mass index (BMI).
+
+The following parameters will be collected and included in the database. They do not require additional effort on behalf of the patients. All data will be obtained using the study-specific case report form and will be entered into a SPSS (IBM SPSS Statistics Software) database in a semi-anonymized manner: Patient's age, Body mass index, duration since last normal menstruation, FSH, LH, Estradiol, SHBG, Testosterone, DHEAS, DEXA results, AMH, Antral follicular count. Data acquisition will be conducted to give an exact characterization of the patient population to allow a comparison with the published literature. All taken blood samples are performed as part of the clinical routine at the Clinical Institute of Laboratory Medicine at Vienna General Hospital.
+
+The study is designed as a pilot study. This is due to the lack of sufficient literature on this topic. Fifty women with HH and secondary amenorrhea will be included.
+
+Potential participants are informed about the procedure, clinical relevance and the balance of risk and benefits incurred through study participation. Patients willing to participate will express this through written affirmation (a "consent form").
+
+All above mentioned data are numerical data and will be reported as mean and standard deviations. Differences between different treatment groups will be tested using unpaired t-tests, whereas differences within groups (baseline to follow-up examinations) will be tested using paired t-tests. Statistical analyses were performed with SPSS 26.0. P-v
+
+PRIMARY OUTCOMES:
+  - AMH
+  - antral follicle count
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Blood sample
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04927676

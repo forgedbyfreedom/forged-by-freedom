@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07495475
+Title: Mobile App-Supported Exercise Program For Mechanical Low Back Pain
+Official Title: Effect of a Mobile Application-Supported Home Exercise Program on Posture, Balance, Pain and Functionality in Individuals With Mechanical Low Back Pain
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: low back pain exercise
+
+SUMMARY:
+Mechanical low back pain is one of the most common musculoskeletal disorders affecting daily activities and quality of life. Home exercise programs are frequently recommended in the management of low back pain; however, adherence to these programs is often limited. Mobile health applications may enhance adherence by providing exercise demonstrations, reminders, and monitoring tools.
+
+The aim of this study is to investigate the effects of a mobile application-supported home exercise program on posture, balance, pain, and functional status in individuals with mechanical low back pain. Participants with chronic mechanical low back pain will be randomly assigned to two groups. Both groups will receive the same home exercise program. The control group will receive the exercises in printed format, while the experimental group will follow the program through the E-Exercise mobile application that includes exercise videos, reminders, and progress tracking.
+
+Participants will be evaluated before the intervention and after six weeks of exercise training. Outcome measures will include flexibility, posture, balance, pain intensity, and functional disability. The results of this study may contribute to improving adherence to home exercise programs and promoting the use of digital health technologies in physiotherapy practice.
+
+DETAILED DESCRIPTION:
+Mechanical low back pain is a common musculoskeletal condition that may negatively affect posture, balance, pain perception, physical function, and quality of life. Home exercise programs are widely used in physiotherapy for the management of mechanical low back pain because they are practical, accessible, and cost-effective. However, poor adherence to home exercise programs and difficulties in performing exercises correctly may reduce treatment effectiveness.
+
+This study is designed to investigate whether a mobile application-supported home exercise program provides additional benefits compared with a conventional printed home exercise program in individuals with chronic mechanical low back pain. The mobile application developed for this study, called E-Exercise, includes video-based exercise instructions, reminder notifications, and an exercise tracking component that allows participants to mark completed exercises. These features are intended to improve exercise adherence and support correct exercise performance at home.
+
+A total of 50 participants with chronic mechanical low back pain will be randomly assigned to either the experimental group or the control group. Both groups will receive the same exercise content prepared by a physiotherapist and will perform the exercises 3 days per week for 6 weeks. The control group will receive the exercise program in printed form, whereas the experimental group will use the mobile application.
+
+Participants will be evaluated before the intervention and at the end of the 6-week program. Outcome measures will include flexibility assessed by the Sit and Reach Test, Straight Leg Raise Test, and Modified Schober Test; posture assessed by PostureScreenLite; postural balance assessed by the Bertec Balance Legacy System; pain assessed by the Visual Analog Scale and Pain Catastrophizing Scale; functional disability assessed by the Oswestry Disability Index; and health-related quality of life assessed by the SF-12. This study is expected to provide evidence on whether mobile health support can improve adherence and clinical outcomes in home-based physiotherapy programs for individuals with mechanical low back pain.
+
+PRIMARY OUTCOMES:
+  - Pain Intensity Measured by Visual Analog Scale (VAS)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mobile Application-Supported Home Exercise Program
+  - BEHAVIORAL: Printed Home Exercise Program
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07495475

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07285226
+Title: Creatine HCl Supplementation in Sarcopenia: A Randomized Controlled Study
+Official Title: Impact of 12-Week Creatine HCl Supplementation on Body Composition, Functional Muscle and Brain Performance, Blood Biomarkers, and Tissue Creatine Levels in Older Adults With Sarcopenia
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: creatine supplementation
+
+SUMMARY:
+The CONCRET-SARCOPA trial is a 12-week, double-blind, randomized controlled study designed to evaluate the efficacy of creatine HCl supplementation in older adults with sarcopenia. The trial investigates whether daily creatine HCl improves body composition, enhances functional muscle and cognitive performance, and favorably alters key blood biomarkers associated with muscle health and metabolic status. Additionally, the study assesses changes in tissue creatine levels using non-invasive and biochemical methods to clarify mechanistic responses to supplementation. Findings from this trial will provide critical evidence on the therapeutic potential of creatine HCl as a targeted nutritional strategy for managing sarcopenia in the geriatric population.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Hand-grip strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Experimental 1
+  - DIETARY_SUPPLEMENT: Experimental 2
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07285226

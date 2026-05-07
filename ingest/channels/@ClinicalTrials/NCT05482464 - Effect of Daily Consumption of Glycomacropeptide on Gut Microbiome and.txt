@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05482464
+Title: Effect of Daily Consumption of Glycomacropeptide on Gut Microbiome and Blood Functional Proteome of Subjects With Irritable Bowel Syndrome
+Official Title: Effect of Daily Consumption of Glycomacropeptide on Gut Microbiome and Blood Functional Proteome of Subjects With Irritable Bowel Syndrome
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: protein supplementation
+
+SUMMARY:
+This study investigates the use of glycomacropeptide (GMP) as a means to manipulate the gut microbiome, metabolome and protein profile of subjects with irritable bowel syndrome (IBS).
+
+DETAILED DESCRIPTION:
+In vitro assays show that GMP strongly promotes the growth of beneficial bacteria including Bifidobacterium breve, B. bifidum, B. infantis and Lactococcus lactis. GMP also binds to pathogenic bacteria and prevents their adhesion to intestinal cells, which could prevent enteric infection. GMP also modulates the inflammatory response of key gut immune cells called macrophages. However, the extent to which daily consumption of GMP alters the gut microbiome, metabolome and protein profile of subjects with IBS remains unknown.
+
+This study will investigate how daily GMP consumption can alter the gut microbiome, metabolome and protein profile of subjects with IBS.
+
+PRIMARY OUTCOMES:
+  - Measure the inflammatory markers in stool and blood using immunology multiplex assay
+  - Stool sample based gut microbiome composition using 16S rRNA gene sequencing
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Casein glycomacropeptide (CGMP)
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05482464

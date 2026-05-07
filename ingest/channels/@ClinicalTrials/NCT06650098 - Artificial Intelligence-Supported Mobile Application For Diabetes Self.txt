@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06650098
+Title: Artificial Intelligence-Supported Mobile Application For Diabetes Self-Management
+Official Title: The Effect of Web-Based and Artificial Intelligence-Assisted Personalized Applications on Knowledge Levels Compliance With Treatment and Self-Management Among Diabetic Individuals
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 156
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Patients in the AI-supported mobile application group will be able to log in with a username and password that will be defined specifically for them. Patients will be informed about how the application is used during their first interview. They will enter their personal and disease characteristics (age, gender, height, weight, HbA1c, HDL, LDL) into the application at the entrance. Other sections of the application will include exercise, nutrition, medication tracking, complication tracking and diabetic foot care sections. The person will be asked to enter relevant information in these fields according to their own life and condition (for example; how many times do you use insulin per day, what are your medication times, how do you spend your day in terms of exercise, how many meals do you eat, what is your diet, do you urinate frequently, are you extremely thirsty, are you hungry often, do you have numbness in your hands and feet, etc.). After the patient enters the necessary information, they will also be asked to enter their daily blood sugar measurement values into the system. Thus, the individual\&amp;#39;s hypo/hyperglycemia risk, risk analysis, nutrition recommendations, medication reminder system, exercise reminder and incentive warnings will be communicated to the individual thanks to the AI-based mobile application. The aim of this application is to reduce the risk of complications and improve the individual\&amp;#39;s quality of life by providing personalized recommendations for all the needs of the individual, including alarms and reminders, and to support patients to continue their diabetes education and disease management more actively.
+
+DETAILED DESCRIPTION:
+pre-test post-test control group design
+
+PRIMARY OUTCOMES:
+  - Diabetes Self-Management Scale (DSMS)
+
+INTERVENTIONS:
+  - OTHER: artificial intelligence-supported mobile application
+  - OTHER: WEB based application
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06650098

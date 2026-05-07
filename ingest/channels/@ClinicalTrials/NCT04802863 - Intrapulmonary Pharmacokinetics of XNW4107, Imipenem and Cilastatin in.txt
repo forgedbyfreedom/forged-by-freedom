@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04802863
+Title: Intrapulmonary Pharmacokinetics of XNW4107, Imipenem and Cilastatin in Healthy Subjects
+Official Title: A Phase 1, Open-label Study to Evaluate the Safety and Intrapulmonary Pharmacokinetics of XNW4107, Imipenem and Cilastatin in Healthy Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 21
+Topic: creatine supplementation
+
+SUMMARY:
+This is a Phase 1, open-label, single-center study of XNW4107 and imipenem/cilastatin administered intravenously.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area under the concentration curve (AUC) from time zero to the last quantifiable sample (AUC0-t) of plasma PK and lung penetration of XNW4107, imipenem and cilastatine in healthy adult volunteers.
+  - AUC extrapolated to infinity (AUC0-∞) of plasma PK and lung penetration of XNW4107, imipenem and cilastatin in healthy adult volunteers.
+  - AUC from time zero to 6 hours after start of the infusion (AUC0-6) of plasma PK and lung penetration of XNW4107, imipenem and cilastatin in healthy adult volunteers.
+  - Maximum concentration (Cmax) of plasma PK and lung penetration of XNW4107, imipenem and cilastatin in healthy adult volunteers.
+  - Minimum concentration (Cmin) of plasma PK and lung penetration of XNW4107, imipenem and cilastatin in healthy adult volunteers.
+
+INTERVENTIONS:
+  - DRUG: XNW4107, Imipenem/Cilastatin
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04802863

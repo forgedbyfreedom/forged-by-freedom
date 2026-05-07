@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05064332
+Title: A Study To Estimate The Effect of PF-06650833 On The Pharmacokinetics (PK) of Oral Contraceptive (OC)
+Official Title: A PHASE 1, OPEN LABEL, FIXED SEQUENCE STUDY TO ESTIMATE THE EFFECT OF MULTIPLE DOSE PF-06650833 ON THE PHARMACOKINETICS OF SINGLE DOSE ORAL CONTRACEPTIVE STEROIDS IN HEALTHY FEMALE PARTICIPANTS
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: creatine supplementation
+
+SUMMARY:
+This is a Phase 1, open label, fixed sequence study of the effect of multiple dose PF-06650833 on single dose OC PK in healthy female subjects.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area Under the Plasma Concentration-Time Profile From Time 0 to the Time of the Last Quantifiable Concentration (AUClast) for Ethinyl Estradiol
+  - Area Under the Plasma Concentration-Time Profile From Time 0 to the Time of the Last Quantifiable Concentration for Levonorgestrel
+  - Maximum Plasma Concentration (Cmax) for Ethinyl Estradiol
+  - Maximum Plasma Concentration for Levonorgestrel
+
+INTERVENTIONS:
+  - DRUG: PF-06650833
+  - DRUG: Ethinyl estradiol (EE) and levonogestrel (LN)
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05064332

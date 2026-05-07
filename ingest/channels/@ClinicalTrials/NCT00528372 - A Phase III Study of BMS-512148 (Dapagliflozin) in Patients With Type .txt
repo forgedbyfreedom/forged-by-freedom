@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00528372
+Title: A Phase III Study of BMS-512148 (Dapagliflozin) in Patients With Type 2 Diabetes Who Are Not Well Controlled With Diet and Exercise
+Official Title: A Multicenter, Randomized, Double-Blind, Placebo-Controlled, Parallel Group, Phase 3 Trial to Evaluate the Safety and Efficacy of Dapagliflozin as Monotherapy in Subjects With Type 2 Diabetes Who Have Inadequate Glycemic Control With Diet and Exercise
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1067
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The purpose of this clinical research study is to determine whether dapagliflozin can improve (decrease) blood glucose values in patients with Type 2 diabetes who have never been treated with medication or have been taking medication for less than 24 weeks since their original diabetes diagnosis. The safety of this treatment will also be studied.
+
+DETAILED DESCRIPTION:
+All eligible participants will receive single-blind placebo medication during the 2-week lead-in period. All participants may receive additional open-label treatment with metformin, 500-2000 mg, as needed for rescue, based on protocol specific criteria.
+
+PRIMARY OUTCOMES:
+  - Adjusted Mean Change From Baseline to Week 24 in Hemoglobin A1c (HbA1c) (Last Observation Carried Forward [LOCF]): Group 1
+  - Adjusted Mean Change From Baseline to Week 24 in Hemoglobin A1c (HbA1c) (Last Observation Carried Forward [LOCF]): Group 2
+
+INTERVENTIONS:
+  - DRUG: Dapagliflozin
+  - DRUG: Dapagliflozin placebo
+  - DRUG: Metformin
+
+ELIGIBILITY:
+Age: 18 Years to 77 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00528372

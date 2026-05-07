@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06508957
+Title: Sarcopenia and Bone Mineral Density Relation in Hip Fracture Patients
+Official Title: Assessment of Sarcopenia and Bone Mineral Density Relation in Hip Fracture Patients: A Cross-Sectional Study by Using STAR Value
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 35
+Topic: vitamin D muscle
+
+SUMMARY:
+The study aims to investigate the relationship between sarcopenia and bone mineral density (BMD) in patients with hip fractures using sonographic thigh adjustment ratio (STAR) and dual-energy X-ray absorptiometry (DXA), as well as the relationship of sociodemographic factors, laboratory results, and comorbidities to these measurements.
+
+Cross-sectional research was undertaken on patients with hip fractures in Kastamonu, Turkey. Sarcopenia was identified based on the ISarcoPRM algorithm, which utilizes poor grip strength (\<22 kg for females and \< 32 kg for males) along with low STAR values (\< 1 for females and \<1.4 for males). Sociodemographic data of the patients and levels of total protein, albumin, and 25-OH-vitamin D3 (25\[OH\]D) were obtained from all the patients. The BMD (bone mineral density) and T-scores of the proximal femur were measured using DXA (dual-energy X-ray absorptiometry).
+
+DETAILED DESCRIPTION:
+Introduction
+
+Sarcopenia is a progressive and common skeletal muscle disorder, that causes progressive loss of age-related muscle strength and mass, associated with an increased likelihood of outcomes such as falls, fractures, physical disability, and death. Estimates place the overall prevalence of sarcopenia in older adults at approximately 10-40%. Osteoporosis and sarcopenia, prevalent conditions of advanced age, have comparable etiologies and risk factors. The co-occurrence of these illnesses amplifies the incidence of falls, fractures, and mortality. While EWGSOP2 and AWGS guidelines recommend using validated technologies like bioimpedance analysis, dual X-ray absorptiometry (DXA), computed tomography and magnetic resonance imaging for evaluating sarcopenia, these may not be feasible in certain clinical situations. The International Society of Physical and Rehabilitation Medicine (ISPRM) has suggested a different algorithm to diagnose sarcopenia by measuring anterior thigh muscle thickness using ultrasound (US). This method is easy to obtain, does not involve radiation, and is less expensive.
+
+The study uses the sonographic thigh adjustment ratio (STAR) to look into the link between sarcopenia and bone mineral density (BMD) in people who have had a hip fracture. Additionally, the study explores the association between sociodemographic factors, laboratory results, comorbidities, and these measurements.
+
+2\. Material and Method
+
+2.1. Study Design and Population
+
+An observational cross-sectional study was conducted on hip fracture patients attending the orthopedic clinics of a tertiary hospital in Kastamonu, Turkey. The study was approved by the local Institutional Review Board (2024-KAEK-26- 01, February 7th, 2024). Written informed consent was obtained from all participants. Subjects were consecutively recruited during the first 24 hours of hospital stay from May to November 2023. Sarcopenia was diagnosed using the ISarcoPRM algorithm, which considers low grip strength and low STAR values. Inclusion criteria included the detection of low muscle strength with a hand dynamometer and patients scheduled for hip fracture surgery. Exclusion criteria included terminal disease, acute or chronic neuromuscular disease, and traumatic or pathological hip fracture.
+
+2.2 Handgrip strength
+
+Handgrip strength was measured using a Jamar dynamometer (Baseline Hydraulic Hand dynamometer, Irvington, NY) with participants performing two trials with both hands. The highest value obtained was used for analysis. Cut-off values for Turkish people were \<22 kg for women and \<32 kg for men.
+
+2.3. Laboratory Data
+
+The Kastamonu Research and Training Hospital Laboratory Service, a medical laboratory service with Turkey Accreditation System accreditation, performed laboratory analyses on-site. Total protein, albumin, and 25-OH-vitamin D3 (25\[OH\]D) levels were collected. The normal range for total protein is 6.6-8.3 g/dl, for albumin, it is 3.5-5.2 g/dl, and for 25\[OH\
+
+PRIMARY OUTCOMES:
+  - Bone Mineral Density (g/cm2)
+  - Sonographic Thigh Adjustment Ratio (STAR) value
+  - T-scores
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 58 Years to 95 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06508957

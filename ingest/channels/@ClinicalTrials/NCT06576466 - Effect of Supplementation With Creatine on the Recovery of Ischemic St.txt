@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06576466
+Title: Effect of Supplementation With Creatine on the Recovery of Ischemic Stroke
+Official Title: Effect of Supplementation With Creatine on the Early Recovery of Ischemic Stroke: A Randomized Clinical Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 92
+Topic: creatine supplementation
+
+SUMMARY:
+Stroke is a leading cause of disability and the second leading cause of death worldwide. Most strokes are ischemic, caused by acute arterial occlusion. Post-stroke treatment focuses on secondary prevention and rehabilitation, but few treatments address functional recovery. Creatine, a supplement known for improving physical performance, may aid in the recovery of stroke patients, reducing sarcopenia and improving strength among other effects. This pilot study will investigate the effectiveness of creatine supplementation in enhancing physical and functional recovery in ischemic stroke patients. The study will involve a randomized, double-blind clinical trial comparing creatine monohydrate to a placebo.
+
+DETAILED DESCRIPTION:
+Stroke is one of the most impactful health conditions worldwide, currently being the leading cause of disability and the second leading cause of death globally. Approximately 85-90% of strokes are ischemic, primarily caused by acute arterial occlusion, leading to an area of cerebral, spinal, or retinal infarction. The size of the lesion depends on the affected blood vessel and the duration of the occlusion, as well as cerebral autoregulation, blood pressure, blood sugar levels, and many other factors. After the acute phase, treatment is based on secondary prevention and rehabilitation, with few treatments currently available that focus on functional recovery once the infarction has occurred. Stroke survivors experience a loss of functionality, a decline in physical capacity associated with a decrease in muscle mass, sarcopenia, cognitive impairment, and an increase in anxiety and depressive symptoms.
+
+Creatine is a widely studied nutritional supplement, mainly in athletes, where it has been shown to improve training adaptation and physical performance. Its effects on energy metabolism, as an anti-inflammatory, and on calcium homeostasis have been described. There are also studies indicating possible musculoskeletal benefits in the elderly population. Given its role in improving physical performance and muscle mass, considering the significant impact of these conditions on patients who have suffered an ischemic stroke, and considering its antioxidant and anti-inflammatory effects, we propose a pilot study to determine the effectiveness of creatine supplementation in stroke patients. This supplementation could potentially lead to greater physical and functional recovery following an ischemic stroke.
+
+A randomized, double-blind clinical trial will be conducted. The trial will include a group supplemented with creatine monohydrate at a dose of 0.3 g/kg/day for 7 days, followed by 0.1 g/kg/day for 12 weeks, alongside standard clinical practice; and a control group supplemented with a placebo (corn starch maltodextrin), following the same protocol and doses.
+
+PRIMARY OUTCOMES:
+  - Physical performance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine monohydrate
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06576466

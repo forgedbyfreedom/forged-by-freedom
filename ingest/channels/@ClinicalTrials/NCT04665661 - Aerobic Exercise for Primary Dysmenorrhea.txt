@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04665661
+Title: Aerobic Exercise for Primary Dysmenorrhea
+Official Title: Aerobic Exercise for Primary Dysmenorrhea: A Mixed-methods Study and Economic Evaluation
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 130
+Topic: aerobic exercise
+
+SUMMARY:
+Primary dysmenorrhea is common and can result in significant disability for many women, causing a high degree of discomfort and reduced quality of life (QoL). Our preliminary studies suggested that high-intensity aerobic training (HIAT) for 30 minutes, three times a week at 70%-85% of maximum heart rate was effective for decreasing pain and improving QoL in women suffering from primary dysmenorrhea. However, to date, no studies have evaluated the beneficial effects of HIAT on academic performance and absenteeism or the cost-effectiveness of HIAT for women with primary dysmenorrhea. Furthermore, the mechanisms underlying aerobic exercise-induced analgesia in primary dysmenorrhea remain unclear.
+
+Here, we propose a study to address this important knowledge gap by investigating the effects of HIAT on absenteeism and academic performance among university students with primary dysmenorrhea and examine the physiological mechanisms underlying aerobic exercise-induced analgesia by conducting a fully powered, randomised, controlled crossover trial. We also propose to conduct an economic evaluation to determine the cost-effectiveness of HIAT compared with a wait-listed control group receiving usual care, according to the societal and healthcare perspectives of Hong Kong. The results of this cutting-edge research will be important for clinicians, researchers, policymakers, and women with primary dysmenorrhea. The knowledge gained from the proposed study will be useful for researchers when designing future studies to identify the mediators of pain interventions for clinical improvements, which could themselves be the target of future interventions. The findings of the proposed study will inform decision-makers regarding the extent to which existing or standard and potential interventions can improve population health (effectiveness) and the resources required to implement these interventions (costs).
+
+DETAILED DESCRIPTION:
+Objectives: (1): To evaluate the effectiveness of high-intensity aerobic training (HIAT) on pain intensity, absenteeism, and academic performance among university students with primary dysmenorrhea. (2): To investigate the physiological mechanism(s) underlying aerobic exercise-induced analgesia in women with primary dysmenorrhea. (3) Compare the cost-effectiveness of HIAT against that for usual care to treat pain associated with primary dysmenorrhea.
+
+Design and subjects: A mixed-methods study, including a cross-over RCT, and semi-structured focus groups, alongside economic evaluation, will be conducted using 130 women with primary dysmenorrhea.
+
+Interventions: Women will randomly allocated into high-intensity aerobic training (HIAT) or wait-list control (WLC) groups. Participants in the HIAT group will receive supervised treadmill training for the first 12 weeks of the trial. Following a four-week washout period the cross-over period will begin during Week 16, and the participants initially randomised to the WLC group will receive the HIAT regimen from Weeks 14-28. Participants initially randomized to HIAT group will be instructed not to engage in exercise during the remainder of the study period (i.e. Weeks 14-28).
+
+Outcome measures: Pain intensity, absenteeism from university, academic performance, concentration, dysmenorrhea daily diary, and salivary progesterone and prostaglandin F2-alpha levels in saliva. The EQ-5D-3L will be used to determine the QoL for the HIAT and WLC groups.
+
+Data analysis plan: A preliminary test using the independent samples t-test and a two-sided Student's unpaired t-test will be performed to rule out carryover effects and identify the within-participant differences in outcome variables between the study periods, respectively. Treatment effects will be evaluated using an ANOVA with a mixed-effects model considering the longitudinal repeated measures, including the effects of time within each study group and the interaction between time and intervention. The mediation effects will be assessed using the Sobel test. The EQ-5D responses will be converted into utility scores to estimate the gain or loss of quality-adjusted life-years (QUALYs). The seemingly unrelated regression (SUR) analyses will be used to estimate the total cost differences (ΔC) and effect differences (ΔE). Qualitative data will be analysed using the process of thematic analysis.
+
+PRIMARY OUTCOMES:
+  - Pain intensity
+  - Pain intensity
+  - Pain intensity
+  - Absenteeism from university
+  - Absenteeism from university
+
+INTERVENTIONS:
+  - BEHAVIORAL: High-intensity aerobic training
+  - BEHAVIORAL: Wait-list control
+
+ELIGIBILITY:
+Age: 18 Years to 24 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04665661

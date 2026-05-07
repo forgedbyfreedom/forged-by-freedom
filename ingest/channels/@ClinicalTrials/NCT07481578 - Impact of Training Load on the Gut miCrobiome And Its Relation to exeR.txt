@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07481578
+Title: Impact of Training Load on the Gut miCrobiome And Its Relation to exeRcise Performance, mUscle Phenotype, and markerS of Overreaching in Healthy Men
+Official Title: ICARUS: Impact of Training Load on the Gut Microbiome and Its Relation to Exercise Performance, Muscle Phenotype, and Markers of Overreaching in Healthy Men: Phase A - Human Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 45
+Topic: sleep athletes
+
+SUMMARY:
+The goal of this study is to learn how different amounts of supervised indoor cycling training change gut health (gut bacteria, the substances gut bacteria make, and the gut barrier integrity), and how these changes relate to changes in fitness, muscle health, and signs of doing too much training (a state called 'overreaching'). The study includes healthy, recreationally active men aged 18 to 45 years.
+
+The primary questions, for which the study is powered (sufficient participants included), are:
+
+1. Does moderate load training change blood and faecal levels of butyrate (a short-chain fatty acid made by gut bacteria) after eight weeks compared with a control group?
+2. Compared to moderate load training, do higher training loads lead to different responses in blood and faecal levels of butyrate?
+
+Researchers will compare:
+
+* A control group that does not complete structured training;
+* A moderate-load training group that completes eight weeks of supervised cycling (4x/week);
+* A high-load training group that completes four weeks of moderate-load training followed by four weeks of higher training load (twice the number of training sessions).
+
+Participants will:
+
+* Be randomly assigned to one of the three groups;
+* Complete 8 weeks of supervised indoor cycling sessions if assigned to a training group;
+* Complete four study assessment periods (baseline, after week four, after week eight, and after a short taper (rest period);
+* Provide blood, stool, skeletal muscle, urine, saliva, and breath samples during the assessment periods;
+* Complete fitness and performance tests and questionnaires during the assessment periods.
+
+DETAILED DESCRIPTION:
+ICARUS is a monocentric, randomized, controlled, three-arm, parallel-group trial designed to determine whether exercise training load (moderate versus high) modulates the human gut ecosystem, with a primary focus on gut microbial short-chain fatty acid (SCFA) production, and to test whether interindividual gut responses relate to physiological adaptations and potential maladaptations (i.e., overreaching).
+
+STUDY DESIGN: 45 healthy, recreationally active men will be randomized in a 1:1:1 allocation ratio to: (i) a non-training control group, (ii) a moderate-load cycling training group, or (iii) a high-load cycling training group. The intervention lasts 8 weeks and is followed by a 10-day taper period. Outcomes are assessed at four time points: baseline (T1), mid-intervention after 4 weeks (T2), post-intervention after 8 weeks (T3), and post-taper 10 days later (T4).
+
+RANDOMIZATION: Randomization will be stratified by baseline habitual training volume (\>3.5 hours versus ≤3.5 hours of exercise per week) using permuted blocks of varying size and a computer-generated allocation sequence. Allocation will be implemented using a secure REDCap web application to support allocation concealment from personnel involved in data collection and analysis.
+
+SETTING AND RECRUITMENT: The trial is conducted at the Exercise and Muscle Physiology Research Group, Department of Movement Sciences, KU Leuven (Leuven, Belgium). Recruitment uses multiple channels, including email invitations, classroom announcements, posters/flyers, and social media.
+
+FAMILIARIZATION AND STANDARDIZATION PROCEDURES: Approximately one week before the intervention starts, participants attend one familiarization session to minimize learning effects and standardize procedures across subsequent assessments. Familiarization includes key performance and physiological testing procedures and instruction on study devices and diaries. A personalized, standardized dietary plan is developed for the three days preceding each assessment period and the assessment days to improve within-participant dietary consistency across time points and to align with specific test requirements (e.g., fiber intake, carbohydrate loading, lactose/mannitol restriction where applicable).
+
+INTERVENTION ARMS - CONTROL GROUP: Participants do not perform a structured training program. To control for expectancy effects, they receive a supervised weekly placebo capsule (1 g granulated sugar) presented as a 'novel plant extract' purported to support gut health and performance. Participants are asked to maintain their habitual exercise patterns and to monitor relevant behaviors as instructed.
+
+INTERVENTION ARMS - MODERATE-LOAD TRAINING GROUP: Participants complete 8 weeks of supervised indoor cycling followed by a 10-day taper. Training is performed on an electromagnetically braked cycle trainer, supervised at the study center. The weekly structure comprises four sessions per week with a fixed sequence of session types (moderate-int
+
+PRIMARY OUTCOMES:
+  - Serum butyrate concentrations
+  - Fecal butyrate concentrations
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement
+  - BEHAVIORAL: Moderate load exercise training
+  - BEHAVIORAL: High load exercise training
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07481578

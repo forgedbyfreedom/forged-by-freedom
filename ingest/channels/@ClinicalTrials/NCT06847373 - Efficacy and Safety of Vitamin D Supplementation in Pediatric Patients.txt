@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06847373
+Title: Efficacy and Safety of Vitamin D Supplementation in Pediatric Patients with Obesity
+Official Title: Efecto De La Suplementación De Vitamina D En La Resistencia a La Insulina En Escolares Y Adolescentes Con Obesidad
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: protein supplementation
+
+SUMMARY:
+Introduction: Vitamin D deficiency is commonly observed in patients with obesity, primarily due to sequestration by adipose tissue. Recent research highlights the importance of this deficiency, showing a correlation between low vitamin D levels and mechanisms contributing to insulin resistance.
+
+Objectives: This study aims to compare the effects of supplementing with 4,000 IU of vitamin D versus 1,000 IU over six months on insulin resistance and the leptin/adiponectin ratio in school-aged children and adolescents with obesity.
+
+Materials and Methods: A controlled clinical trial will be conducted involving 40 children with obesity aged 10 to 18 years (BMI \>95th percentile). Participating children and their parents will undergo measurements such as weight, height, BMI, body fat, and Tanner stage. All participants will receive dietary and physical activity recommendations based on WHO guidelines. After initial assessments, participants will be randomly assigned to receive either 4,000 IU or 1,000 IU of vitamin D. They will be monitored monthly for capsule intake and adverse effects, with follow-up measurements of anthropometry, leptin, adiponectin, insulin \& lipid profile.
+
+Statistical Analysis: Baseline characteristics will be compared using t-Student or U-Mann Whitney tests, depending on variable distribution. The intervention's impact will be assessed by calculating deltas for body fat and biochemical measurements, with significance tested using paired t-tests or Wilcoxon tests. Covariance analysis (ANCOVA) will be used to adjust for confounding variables.
+
+DETAILED DESCRIPTION:
+Materials and Methods The study will compare the effect of 4000 IU vitamin D supplementation over six months on adipokines (leptin/adiponectin ratio) and insulin resistance (HOMA index) in school-aged children and adolescents with obesity, against a similar group receiving 1000 IU of vitamin D. The study will be conducted at the Hospital Infantil de México Federico Gómez and UMAE Hospital de Pediatría, Centro Médico Nacional Siglo XXI. This controlled clinical trial features an experimental, randomized, double-blind design. The study population includes schoolchildren with obesity attending the Adolescent Clinic at Hospital Infantil de México and outpatient services at UMAE Hospital de Pediatría.
+
+Sampling and Selection Criteria A non-probabilistic sampling will select children identified with obesity. Selection criteria include both male and female patients aged 10 to 18 with obesity as per BMI (\>95th percentile according to WHO age and sex tables), who agree to participate, and reside in Mexico City. Exclusion criteria exclude patients with comorbidities unrelated to obesity, genetic syndromes, those currently receiving vitamin supplements or pharmacological treatments for obesity, and those with pre-existing insulin resistance requiring pharmacological treatment.
+
+Treatment Arms Group A will receive 4000 IU of vitamin D daily for six months. Group B, the control group, will receive 1000 IU daily. Randomization is managed using a software tool, with treatment assignments sealed in opaque envelopes and administered according to randomized allocation.
+
+Sample Size and Statistical Analysis Sample size calculations for unpaired group comparisons anticipate 20 participants per group, adjusting for a 20% dropout rate, based on differences in the leptin/adiponectin ratio and HOMA index. Statistical analyses will be performed on both an intention-to-treat and per-protocol basis. Descriptive analysis will evaluate quantitative variables' distribution using the Kolmogorov-Smirnov test to determine appropriate statistical tests. Comparative analyses will utilize t-tests or U-Mann Whitney tests for quantitative variables, and chi-squared or Fisher's exact tests for categorical data. Mixed-effects regression models will assess changes in dependent variables over time. Analyses will be conducted using Stata version 14.0, with a confidence level of ≤0.05.
+
+Procedures and Follow-Up Prior to the intervention, patients will undergo comprehensive assessments including anthropometry and blood tests. Dietary and physical activity plans will be provided, tailored to each patient's caloric needs and physical capabilities. Monthly follow-ups will ensure adherence to the supplementation regimen and monitor any adverse effects. The final assessment will repeat all initial evaluations to assess changes after six months of treatment.
+
+Blinding and Data Integrity The study ensures blinding for medical staff, patients, families, and data collectors. The treatment capsules 
+
+PRIMARY OUTCOMES:
+  - Change from Baseline in 25 hydroxi vitamin D at 6 Months.
+  - Change from Baseline in leptin at 6 Months.
+  - Change from Baseline in adiponectin at 6 Months.
+  - Change from Baseline in insulin at 6 Months.
+  - Change from Baseline in HOMA-IR at 6 Months.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cholecalciferol
+
+ELIGIBILITY:
+Age: 10 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06847373

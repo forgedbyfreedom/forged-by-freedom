@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00379769
+Title: RECORD: Rosiglitazone Evaluated for Cardiac Outcomes and Regulation of Glycaemia in Diabetes
+Official Title: A Long Term, Open Label, Randomised Study in Patients With Type 2 Diabetes, Comparing the Combination of Rosiglitazone and Either Metformin or Sulfonylurea With Metformin Plus Sulfonylurea on Cardiovascular Endpoints and Glycaemia
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 4447
+Topic: beta-alanine
+
+SUMMARY:
+This study is a phase 3b, multicentre, randomised, open label, parallel group study. A 4-week run-in period will be followed by a median of 6 years of treatment with study medication in addition to continuation of background glucose lowering therapy. Patients inadequately controlled on background metformin will be randomised to receive, in addition to metformin, either rosiglitazone or a sulfonylurea(glibenclamide, gliclazide or glimepiride) in a ratio of 1:1. Patients inadequately controlled on background SU will be randomised to receive, in addition to SU, either rosiglitazone or metformin in a ratio of 1:1. Equal numbers of patients receiving background metformin and SU at entry will be entered into the study.
+
+DETAILED DESCRIPTION:
+A RECORD follow-up study is being performed to monitor the incidence of cancer and bone fractures in RECORD patients for a period of 4 years after the end of the main RECORD study (2008 - 2012).
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Cardiovascular Death/Cardiovascular Hospitalisation Events
+  - Independent Re-adjudication Outcome: Number of Participants Who Died Due to Any Cause
+  - Independent Re-adjudication (IR) Outcome: Number of Participants With a First Occurrence of a Major Adverse Cardiovascular Event (MACE) Defined as CV (or Unknown) Death, Non-fatal MI, and Non-fatal Stroke Based on Original RECORD Endpoint Definitions
+  - Independent Re-adjudication Outcome: Number of Participants With a First Occurrence of a Major Adverse Cardiovascular Event (MACE) Defined as CV (or Unknown) Death, Non-fatal MI, and Non-fatal Stroke Based on Contemporary Endpoint Definitions
+  - Independent Re-adjudication Outcome: Number of Participants With a CV (or Unknown) Death, Based on Original RECORD Endpoint Definitions
+
+INTERVENTIONS:
+  - DRUG: Rosiglitazone
+  - DRUG: Sulfonylurea
+  - DRUG: Metformin
+
+ELIGIBILITY:
+Age: 40 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00379769

@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04390347
+Title: The Effect of Probiotic Supplementation
+Official Title: Daily Intake of Lactobacillus Casei Shirota (LcS) Modulates Intestinal Permeability and Decreases Circulating Levels of Endotoxin That Associate With Both Cardiovascular and All-cause Mortality in Haemodialysis Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: sarcopenia intervention
+
+SUMMARY:
+This is a double-blind randomised controlled trial where participants will be randomised to either twice daily 65ml of Lactobacillus casei Shirota for six months or a matched placebo.
+
+DETAILED DESCRIPTION:
+Intervention
+
+The intervention product (Yakult) (supplied as fermented milk) and placebo will be delivered in sealed pots of 65 mL with date stamped expiry. Yakult contains Lactobacillus casei Shirota (a minimum of 6.5 × 10 9 live cells of Lactobacillus casei Shirota are contained in each pot). The pots will be stored at 4-7 °C (domestic refrigerator) on premises at University Hospital of Leicester and the University of Leicester until provided to participants. These products have a shelf life of four weeks but fresh deliveries will be sent every two weeks. They will be stored at approximately seven degrees Celsius (refrigerated at the University and subsequently, after delivery to participants, in domestic refrigerators) in a restricted area where only members of the research team will have access to them. Participants will have supplies provided to them in person every two-weeks and will be required to ingest two pots of Yakult, every day for six months. Participants will be instructed to ingest one 65ml pot in the morning (prior to breakfast) and one bottle in the evening (prior to an evening meal). They will also be instructed to avoid any other dietary supplement aimed at modulating the gut microbiota during the six month intervention period. Researchers will keep a log of the amount of pots supplied to participants and will visit the participants at the haemodialysis unit to supply more pots.
+
+Placebo
+
+The placebo will be indistinguishable (identical in taste and colour but will not contain Lactobacillus casei Shirota) to both participants and trial investigators. It will be stored and provided in exactly the same manner as the intervention product.
+
+Compliance
+
+A record of compliance for supplement ingestion will be completed by all participants (including days where they may have missed taking the supplement). Following feedback from a research patient group, all participants will be offered any or all of the following steps in any combination to aid adherence to the product:
+
+* Phone call reminders (daily or weekly)
+* Text or email alerts at any preferred schedule
+* Regular visits / reminders in person on the dialysis units
+
+Patient Numbers - Feasibility and Statistical Power Patients will be recruited from within the Leicester Renal Network, which includes ten dialysis units treating over 800 haemodialysis patients. The number of participants required is therefore readily attainable. Based on a previously reported (Wang et al., 2015), post-intervention change (compared to pre-intervention) in serum endotoxin following probiotic supplementation in peritoneal dialysis patients (-1.11 ± 1.5 EU/mL for probiotic and 0.86 ± 2.3 endotoxin units/mL for placebo), it was calculated (Stata IC version 15.1, StataCorp, Texa, USA) that n=44 (n=50 accounting for 10% dropout for death and transplantation over 6 months) was required to detect a significant difference between probiotic and placebo groups with 90% power and alpha 0.05.
+
+Dropout rate A dro
+
+PRIMARY OUTCOMES:
+  - Blood circulating endotoxin concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Yakult
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04390347

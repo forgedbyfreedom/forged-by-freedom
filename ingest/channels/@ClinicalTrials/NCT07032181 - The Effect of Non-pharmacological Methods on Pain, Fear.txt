@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07032181
+Title: The Effect of Non-pharmacological Methods on Pain, Fear
+Official Title: The Effect of Virtual Reality and Guided Imagery Method Used During Blood Sampling on Pain, Fear
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 93
+Topic: physical activity intervention
+
+SUMMARY:
+This randomized controlled experimental study aims to evaluate the effectiveness of guided imagery and virtual reality (VR) in reducing pain and fear in children during blood draw procedures. The sample will consist of children aged 8-14 who meet the inclusion criteria and present to the Koç Hospital Pediatric Clinic Blood Drawing Room. After informing the children and their parents about the study, written and verbal consents will be obtained. Participants will then be randomly assigned into one of three groups-two experimental (guided imagery and VR) and one control-using a random number list generated via Excel.
+
+Pre-procedure: Prior to the intervention, children and parents will be informed using consent forms. Demographic and baseline data will be collected using the Child Patient Introductory Information Form. Pain will be assessed with the Faces Pain Scale-Revised (FPS-R) by the child and the Visual Analog Scale (VAS) by the parent and observer. Fear will be evaluated using the Children's Fear Scale (CFS), self-rated by the child and assessed by the parent/observer. A pulse oximeter will be attached to measure baseline pulse and oxygen saturation (SpO2) levels starting 1 minute before the procedure.
+
+Guided Imagery Group: Children will listen to an audio recording titled "A Walk in the Forest" using headphones. They will be instructed to close their eyes and imagine the scene described, focusing on the sound to facilitate distraction. The audio will start 1 minute prior to the procedure.
+
+Virtual Reality Group: Children in this group will wear VR glasses and watch an immersive AI-generated video of "A Walk in the Forest." This aims to provide a more interactive distraction during the blood draw.
+
+Control Group: Children will undergo routine blood draw procedures with no additional distraction techniques. The procedure will be explained as usual.
+
+Procedure: A trained nurse will perform all blood draws. During the procedure, SpO2 and pulse data will be recorded. Post-procedure, these will also be documented immediately and 1 minute after the intervention.
+
+Post-procedure: After the procedure, FPS-R and CFS will be used again by children to assess pain and fear. Parents and observers will complete VAS and CFS to evaluate observed pain and fear. Headphones or VR glasses will be removed following the final measurement.
+
+DETAILED DESCRIPTION:
+Randomization: Children aged 8 to 14, who meet the sample selection criteria and visit the blood collection room of the Koç Hospital Pediatric Clinic, will be introduced to the research. Information about the study will be provided, and written and verbal consent will be obtained from the children and their parents who volunteer to participate. Subsequently, the researcher will perform the randomization, assigning the children into three different groups: two experimental groups and one control group. A random number set generated using the Excel program will be used for randomization.
+
+Pre-Procedure: Before the procedure, children will be informed about the study through the 'Child Consent Form,' and parents will be informed via the 'Informed Consent Form.' Both verbal and written consents will be obtained. Data for children and parents who agree to participate will be recorded by the researcher in the 'Child Patient Introductory Information Form.' The FPS-R (Faces Pain Scale-Revised) will be explained to the child, and they will be asked if they have any pain before the procedure. The child will be asked to mark their pain on the scale. The VAS (Visual Analog Scale) will be explained to the parents, and both the parent and the observer will evaluate the child's pain level before the procedure using the Visual Analog Scale. The Child Fear Scale will also be explained to both the child and the parent. The child will mark the level of fear they are feeling at that moment related to the blood collection procedure on the Child Fear scale. The parent and the observer will also rate the child's observed fear level. Afterward, a pulse oximeter will be placed on the child's finger, and their SpO2 and pulse will be recorded starting 1 minute before the procedure.
+
+Guided Imagery Group: Children in the Guided Imagery group will be instructed to listen to an audio recording titled 'A Walk in the Forest' before the blood collection. It will be explained that the injection will take place while they are listening to the recording. The child will also be instructed to close their eyes, imagine the content of the recording, and focus on the sound, thus helping to distract their attention from the procedure. One minute before the blood collection, the child will wear headphones, and the audio recording will start.
+
+Virtual Reality Glasses Group: In the Virtual Reality group, unlike the Guided Imagery group, the child will wear virtual reality glasses and watch a 'Walk in the Forest' video created with artificial intelligence.
+
+Control Group: Children in the control group will only receive a routine blood collection procedure, and they will only be given an explanation related to the blood collection procedure.
+
+Blood Collection Procedure: The blood collection for all children included in the study will be performed by an experienced clinical nurse. Immediately after the procedure begins, the pulse and oxygen saturation levels of children in all groups will be r
+
+PRIMARY OUTCOMES:
+  - Pain
+  - Fear
+
+INTERVENTIONS:
+  - PROCEDURE: Virtual reality, guided imagery
+
+ELIGIBILITY:
+Age: 8 Years to 14 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07032181

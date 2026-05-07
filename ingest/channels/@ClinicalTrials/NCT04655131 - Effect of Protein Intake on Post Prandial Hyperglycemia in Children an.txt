@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04655131
+Title: Effect of Protein Intake on Post Prandial Hyperglycemia in Children and Adolescents With Type1 Diabetes Mellitus
+Official Title: Effect of Protein Intake on Post Prandial Hyperglycemia in Children and Adolescents With Type1 Diabetes Mellitus
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: protein supplementation
+
+SUMMARY:
+In type 1 Diabetes Mellitus, patients receive insulin doses if they consume specific amounts of carbohydrates. Currently, insulin is not being administered for consumption of protein although studies in adults show that consuming about 75 grams of protein causes elevation in post prandial glucose levels and might need insulin coverage. We are proposing that this amount is different for kids and it might vary based on weight, age, pubertal stage, HbA1c or other factors.
+
+This has not been studied in children before, and it will provide information about the amount of protein in the diet that can cause elevation in post prandial glucose.
+
+DETAILED DESCRIPTION:
+In target glycemic control in children with type 1 diabetes (T1D) continues to be a challenge despite advances in methods of insulin delivery and medical knowledge in this area. One of the major aspects is controlling postprandial glycemia (PPG). The relationship between dietary intake of carbohydrates and PPG is well established, and the use of insulin coverage for carbohydrate intake is standard of care. insulin dose for carbohydrate coverage increases with body weight and progression through puberty. Multiple researchers have attempted to study the effect of dietary intake of protein and fat on PPG as well, but this relationship is not well established in the pediatric age group and there are not clear guidelines for patients on when and how to give insulin for protein intake.
+
+Meals with high protein content have been shown to cause higher glucose excursions in patients with T1D, and lower glycemic response in healthy individuals which suggests that physiologic response to protein intake involves higher insulin secretion. This has also been demonstrated by Sun et al, where they showed an increase in insulinemic index in healthy individuals when consuming chicken with rice compared to rice alone.
+
+The effect of dietary protein in individuals with T1D has been studied in mixed meals several times. Smart et al demonstrated that the greatest glucose excursions after high protein low fat meal occurred most significantly form min 150 to 300 after the meal, when insulin is given to cover carbohydrates only. In 2013, Borie-Swinburne et al measured interstitial glucose levels by CGM in 28 c-peptide negative T1D patients, on two consecutive nights, with and without addition of 21.5 grams of protein to dinner (40 g vs 61.5 g). They concluded that no additional insulin is needed to cover for the added protein. Neu et al studied 15 adolescents with T1D on two consecutive nights. They used CGM monitoring for 12 hours, and they compared the area under the curve (AUC) between regular meals and fat/ protein rich meal. They found a significant difference and they recommended additional insulin for fat /protein rich meals.
+
+Investigating the effect of protein-only intake is also an area of research focus. Paterson et al studied 27 patients with TID , aged 7-40 yrs, where they were given 6 test meals of varying amounts (0g, 12.5g, 25g, 50g, 75g and 100g) of pure protein without giving insulin. Postprandial glycemia was found to be significantly higher only for 75 and 100 grams of protein compared to the lower quantities. Glucose levels were slower to rise when compared to consumption of 20 grams of carbohydrates. Paterson et al also conducted another study with slightly different design: 27 participants with T1D \[aged 10-40 years, HbA1c ≤ 64 mmol/mol (8%), BMI ≤ 91st percentile\] received a 30-g carbohydrate (negligible fat) test drink with a variable amount of protein daily over 5 days in randomized order. Protein (whey isolate 0 g/kg carbohydrate, 0 g/kg lipi
+
+PRIMARY OUTCOMES:
+  - Number of positive events for each protein amount.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey protein isolate
+
+ELIGIBILITY:
+Age: 5 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04655131

@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03628144
+Title: Immunonutrition to Reduce Toxicities in Non-Small Cell Lung Cancer
+Official Title: The Use of Immunonutrition to Reduce Toxicities From Concurrent Chemotherapy and Radiotherapy for Treatment of Unresectable Stage IIIA-B Non-Small Cell Lung Cancer (NSCLC)
+Status: WITHDRAWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to assess whether either or both nutrition supplements (Impact® Advanced Recovery or Boost® High Protein) ingested prior to and during concurrent chemoradiotherapy decreases toxic side effects of treatment in Stage IIIA-B non-small cell lung cancer.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Incidence of Treatment Related Adverse Events Per Study Arm
+  - Change in Plasma Levels of IL-6 Per Study Arm
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Impact® Advanced Recovery
+  - DIETARY_SUPPLEMENT: Boost® High Protein
+  - RADIATION: Radiation Therapy
+  - DRUG: Chemotherapy
+  - OTHER: Quality of life (EORTC-QLQ-30)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03628144

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07406932
+Title: A Study on the Efficacy and Safety of JAK Inhibitors Versus Calcineurin Inhibitors as Initial Therapy for Interstitial Lung Disease Associated With Antisynthetase Syndrome
+Official Title: A Study on the Efficacy and Safety of JAK Inhibitors Versus Calcineurin Inhibitors as Initial Therapy for Interstitial Lung Disease Associated With Antisynthetase Syndrome
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: creatine supplementation
+
+SUMMARY:
+This study is a prospective investigation comparing the efficacy and safety of Janus kinase inhibitors versus calcineurin inhibitors as initial therapy for interstitial lung disease associated with antisynthetase syndrome. The goal is to determine which treatment is more effective at improving lung function and preventing disease progression, while comparing their safety profiles. The findings will help provide clearer treatment guidance for doctors and patients.
+
+DETAILED DESCRIPTION:
+This is a single-center, randomized, open-label, prospective study. Eligible adults with interstitial lung disease associated with antisynthetase syndrome (ASS-ILD) who are treatment-naïve will be randomly assigned to receive either a JAK inhibitor (tofacitinib 5 mg twice daily, or baricitinib 4 mg once daily, or upadacitinib 15 mg once daily) or a calcineurin inhibitor (tacrolimus 0.075 mg/kg/day in two divided doses, or cyclosporine 2-5 mg/kg/day in two divided doses), both in combination with a standard glucocorticoid regimen. The primary endpoint is the 12-month survival rate. Secondary endpoints include changes in lung function, high-resolution CT (HRCT) scores, glucocorticoid dosage reduction, and the proportion of patients achieving low disease activity. Safety and laboratory parameters will be closely monitored throughout the 12-month treatment and follow-up period. Statistical analyses will compare the efficacy and safety profiles between the two treatment arms, and subgroup analyses will be performed to explore potential predictors of treatment response.
+
+PRIMARY OUTCOMES:
+  - 12-month survival rate
+
+INTERVENTIONS:
+  - DRUG: JAK Inhibitor
+  - DRUG: Calcineurin Inhibitors (CNI)
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07406932

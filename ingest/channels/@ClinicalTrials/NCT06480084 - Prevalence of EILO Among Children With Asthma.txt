@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06480084
+Title: Prevalence of EILO Among Children With Asthma
+Official Title: The Prevalence of Exercise-Induced Laryngeal Obstruction (EILO) Amongst Children With Asthma' - a Prospective Cross-sectional Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: athletic performance
+
+SUMMARY:
+The goal of this cross-sectional study is to investigate the prevalence of Exercise Induced Laryngeal Obstruction (EILO) in children with asthma.
+
+The hypothesis is that the prevalence will be around 15%, which is higher than the prevalence of 5-8% among the general adolescent population. This is based on the increased prevalence of EILO among adult asthmatics.
+
+Participants who are referred for an Exercise Challenge Test will perform an additional Continuous Laryngoscopy during Exercise Test with expiratory FEV1 curves, and fill in the Borg scale for dyspnea, Asthma Control Test, EILODI questionnaire and DISCO-RC questionnaire.
+
+DETAILED DESCRIPTION:
+Background:Exertional dyspnoea is a common and limiting symptom within the paediatric population. Regular physical activity is paramount for the development of children since it not only promotes cardiorespiratory fitness and muscle strength, but also offers opportunities for self-expression, building confidence and social interaction and integration. It is therefore important to identify the correct cause(s) of exertional dyspnea and reverse them to enable children to be active without symptoms.
+
+Exercise induced bronchoconstriction (EIB) is a well-known cause of exertional dyspnoea and is highly specific of childhood asthma. Another less recognized cause of exertional dyspnoea is exercise induced laryngeal obstruction (EILO). EILO is an inappropriate closure of the larynx during strenuous physical activity with no obvious laryngeal pathology at rest, limiting airflow and causing inspiratory stridor. It can co-exist with and mimic symptoms of EIB.
+
+Previous studies showed a prevalence of 6% in adolescent populations). However, recent studies revealed a much higher prevalence ofEILO in adults with asthma, up to 25-47%. The prevalence of EILO amongst children with asthma has not yet been investigated. In this study, the aim is to investigate the prevalence of EILO in children with asthma.
+
+If EILO is a significant comorbidity of childhood asthma this would implicate that EILO screening should be considered when exercise is a persistent trigger of symptoms in asthmatic children. Correct EILO diagnosis and treatment can lead to adequate treatment of EILO, and to prevention of overtreatment of asthma.
+
+Methods: Participants who are referred for an Exercise Challenge Test will perform an additional Continuous Laryngoscopy during Exercise Test with expiratory FEV1 curves, and fill in the Borg scale for dyspnea, Asthma Control Test, EILODI questionnaire and DISCO-RC questionnaire.
+
+Power analysis: The sample size is calculated based on an estimated prevalence and confidence interval, with a power of 80% and alpha of 0.05. When estimating a prevalence of 15% (CI 10-20%), which is 2 times higher than in the general population (30), this results in a sample size of 196 participants. This was rounded to 200 participants. Dropouts will be replaced until a total number of 200 participants completed both the ECT and CLE test.
+
+Statistical analysis for primary outcome: The prevalence of EILO in the study population of adolescents with asthma will be calculated as a percentage with a 95% confidence interval. Baseline characteristics will be compared between participants and non-participants of the CLE test. If there are no significant differences between these groups, it can be assumed that participants represent the studied population. If there are significant differences in baseline characteristics, we will examine the correlation of these characteristics with EILO. An estimated prevalence of EILO will be calculated among the non-participants based on these co
+
+PRIMARY OUTCOMES:
+  - Prevalence of EILO
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Continuous Laryngoscopy during Exercise Test (CLE test)
+
+ELIGIBILITY:
+Age: 12 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06480084

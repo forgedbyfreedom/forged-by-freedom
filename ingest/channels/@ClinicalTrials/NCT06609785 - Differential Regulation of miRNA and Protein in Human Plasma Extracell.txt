@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06609785
+Title: Differential Regulation of miRNA and Protein in Human Plasma Extracellular Vesicles by Different Types of Exercise.
+Official Title: The Relationship Between Exercise-drived Exosomes and Diabetes Mellitus.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 5
+Topic: high intensity interval training
+
+SUMMARY:
+Aims/hypothesis: Both continuous aerobic training (CAT) and high intensity interval training (HIIT) are recommended to promote health and prevent diseases. Exercise-induced circulating extracellular vesicles (EX-EVs) have been suggested to play essential roles in mediating organ crosstalk, but corresponding molecular mechanisms remain largely unexplored. We aimed to assess and compare the systemic effects of CAT and HIIT via multi-omics integration analysis of EX-EVs.
+
+Methods: Five healthy male volunteers were assigned to HIIT (20 minutes of cycling with periods of 2 minutes at 80-95% HRmax separated by 2 minutes of active recovery) and CAT (20 minutes of cycling at 60-80% of HRmax), with a 7-day interval between sessions. Plasma EVs were collected at rest or immediately after each training section, prior to proteomics and miRNA profile analysis.
+
+DETAILED DESCRIPTION:
+Before the formal experiment, the volunteers were undergoing a thorough physical examination and proper training to ensure that they were able to complete the experiment. The participants refrained from exercise 24 hours prior to the test to ensure the integrity and accuracy of the results. All volunteers had a standardized breakfast, and all tests started at 9:00 a.m. The volunteers successively completed both HIIT and CAT under the supervision of a professional coach, and the interval between each type of exercise was 7 days. Each training session was initiated with a brief 2-minute standardized warm-up, followed by 20 minutes of cycling consisting of periods of 2 minutes at 80-95% maximal heart rate (HRmax) separated by 2 minutes of active recovery for the HIIT group or 20 minutes of cycling at 60-80% of HRmax for the CAT group. A real-time heart rate monitoring system was continuously used during each training session. The participants were instructed to continue their regular physical activities and eating habits throughout the intervention period. Blood samples were collected at rest or immediately after each training session for further analysis.
+
+PRIMARY OUTCOMES:
+  - miRNA and proteins in human plasma-derived extracellular vesicles
+
+INTERVENTIONS:
+  - BEHAVIORAL: Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06609785

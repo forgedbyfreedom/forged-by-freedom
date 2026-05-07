@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04370353
+Title: Impact of Cocoa Flavanols on Pulmonary Oxygen Uptake Kinetics and Exercise Tolerance in Sedentary Middle-aged Adults
+Official Title: Investigating the Impact of Cocoa Flavanol Supplementation on Pulmonary Oxygen Uptake Kinetics and Exercise Tolerance in Sedentary Middle-aged Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: caffeine exercise
+
+SUMMARY:
+In recent years, there has been significant interest in dietary flavonoids (biologically active plant-derived compounds) as potential therapeutics. This is due to the capacity of flavonoids to enhance processes related to energy metabolism and cardiovascular health. We are interested in implementing a short-term supplementation regime (daily cocoa-flavanoid ingestion), in order to explore the possible beneficial effects of flavonoid-based interventions on responses to exercise. Hence, the objective of our study is to examine the impact of short term cocoa-flavanoid supplementation on processes related to energy use (oxygen utilisation). Our aim is to develop a novel intervention which improves cardiovascular health and enhances exercise tolerance.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Oxygen uptake kinetics
+  - Exercise tolerance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cocoa flavanols
+  - DIETARY_SUPPLEMENT: Placebo supplement
+
+ELIGIBILITY:
+Age: 35 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04370353

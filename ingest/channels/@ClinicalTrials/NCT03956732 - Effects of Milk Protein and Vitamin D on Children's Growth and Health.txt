@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03956732
+Title: Effects of Milk Protein and Vitamin D on Children's Growth and Health
+Official Title: Effects of Milk Protein and Vitamin D on Children's Growth and Health (D-pro)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of D-pro is to investigate the combined and separate effects of milk protein and vitamin D on bone health, growth, muscle function, body composition and cardiometabolic health in 6-8-year-old children.
+
+DETAILED DESCRIPTION:
+The D-pro study investigates the effects of high or medium intakes of milk protein, and vitamin D supplements or placebo, in healthy 6-8 year-old Danish children. The study is a 2×2-factorial randomized controlled trial with 4 study arms. The subjects will be randomly allocated to receive yoghurt products with either high or medium protein content (300g/day, 6 days/week) and to receive tablets with either vitamin D (20 μg/day) or placebo for 24 weeks. Measurements and biological sampling will be performed at baseline and at the end of the intervention.
+
+The primary outcome will be bone mineral density (BMD). The investigators will also measure effects on children's muscle function, cardiometabolic health, body composition, growth and growth factors, nutrient status, immune defence and risk of acute respiratory tract infections, as well as appetite hormones. The investigators will also assess potential sex-specific effects and the potential modifying effect of genotype.
+
+PRIMARY OUTCOMES:
+  - Bone Mineral Density (BMD)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Milk Protein (high)
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Milk Protein (medium)
+
+ELIGIBILITY:
+Age: 6 Years to 8 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03956732

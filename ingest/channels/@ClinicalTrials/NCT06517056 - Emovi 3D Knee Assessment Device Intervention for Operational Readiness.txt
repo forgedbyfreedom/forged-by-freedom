@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06517056
+Title: Emovi 3D Knee Assessment Device Intervention for Operational Readiness
+Official Title: Objective Dynamic and 3D Knee Assessment Medical Device to Improve Recovery and Accelerate Return to Readiness in Service Members With Knee Pain
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 180
+Topic: recovery exercise
+
+SUMMARY:
+This is a randomized clinical trial investigating the use of the Emovi Knee Kinesiography information in the treatment of anterior knee pain in physical therapy.
+
+DETAILED DESCRIPTION:
+The purpose of this study is to assess the effectiveness of using a 3D medical assessment device versus usual care to help guide clinical decisions about the management of PFP. The objective is to determine if gathering objective biomechanical data from a three-dimensional (3D) motion capture device leads to more precise and optimal care, ultimately improving physical function and other outcomes compared to participants who receive routine care that is not guided by information from this device.
+
+Participants will be recruited from primary care and physical therapy clinics at participating sites. Authorized study personnel will search electronic medical records (Genesis) to identify potential study participants diagnosed with knee pain.
+
+After consent and enrollment, participants will complete baseline measures and then receive a Knee Kinesiography exam. The participant will be entered into the KneeKG system using a unique participant identifier. After the knee kinesiography exam with the KneeKG, participants will be randomized 1:1 into one of two different treatment arms: 1) KneeKG informed care or 2) usual care without any information from the KneeKG.
+
+Knee mechanics during gait is assessed with a Knee Kinesiography exam. The participant will walk for 5 minutes on a commercial treadmill at their comfortable speed. Three-dimensional (3D) knee kinematics are captured on each leg using the KneeKG system (Emovi, Canada). With this validated FDA cleared medical device, there is an accurate quantification of specific knee biomechanical markers during gait in a clinical setting. There will be two 45-second trials to electronically capture the data which is immediately accessible through automatic reports. Biomechanical markers captured include but are not limited to varus/valgus alignment at stance, varus/valgus alignment at heel strike, knee flexion angle at heel strike, total knee excursion in sagittal plane, tibial rotation at heel strike and throughout gait cycle. The entire procedure will take approximately 15-20 minutes. This procedure will occur at baseline and also again at 12 weeks.
+
+PRIMARY OUTCOMES:
+  - Patient-Reported Outcomes Measurement Information System (PROMIS) Physical Function
+
+INTERVENTIONS:
+  - DEVICE: Emovi Knee Kinesiography
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06517056

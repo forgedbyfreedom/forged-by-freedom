@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01749189
+Title: Effect of Protein Blend Supplementation During Exercise Training on Muscle Growth and Strength
+Official Title: A Randomized, Controlled Double Blind Longitudinal Study: Effect of Protein Blend Supplementation During Exercise Training on Muscle Growth and Strength
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 58
+Topic: resistance training
+
+SUMMARY:
+This study will investigate the effects of a soy/dairy protein blend on muscle growth and strength. In sports nutrition and in aging it is important to have healthy muscles. This can be achieved with exercise and nutrition. Consumption of protein following resistance exercise can promote healthy muscle growth and help improve strength. Young healthy men will be studied during a 12 week resistance exercise training program and be given protein supplements every day during the study. The hypothesis is that a blend of soy, whey and casein will induce a greater muscle gain and strength increase than the control.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Muscle Mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Blend
+  - DIETARY_SUPPLEMENT: Whey
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01749189

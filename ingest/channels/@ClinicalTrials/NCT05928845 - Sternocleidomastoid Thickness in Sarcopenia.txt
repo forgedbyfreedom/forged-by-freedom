@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05928845
+Title: Sternocleidomastoid Thickness in Sarcopenia
+Official Title: Could Changes in Sternocleidomastoid Muscle Thickness be a Predictor of Sarcopenia in Intensive Care Patients?
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 80
+Topic: sarcopenia intervention
+
+SUMMARY:
+In order to prevent sarcopenia in intensive care patients and to guide nutritional therapy, evaluation of muscle thickness with ultrasonography is a modern, simple and non-invasive procedure routinely performed by Anesthesiology and Reanimation specialists. Sarcopenia in intensive care patients has been demonstrated in many studies. It has been studied that routine examination of changes in rectus femoris muscle thickness by ultrasonography is a predictor of sarcopenia. However, the muscles in the neck region, such as the sternocleidomastoid muscle, which are easy to examine, have not been studied very well. There is no study in the literature with the sternocleidomastoid muscle. For this reason, we decided to examine the relationship of sternocleidomastoid muscle thickness with patient characteristics, treatments, feeding route and type, feeding time, length of stay in intensive care unit, as in routine measurements of rectus femoris muscle thickness by ultrasonography.
+
+DETAILED DESCRIPTION:
+Sarcopenia is an important clinical condition, characterized by a decrease in muscle mass and function that increases with age, especially in elderly patients. Studies have shown that sarcopenic patients have higher morbidity and mortality rates than non-sarcopenic patients. Along with the increased risk of muscle wasting in intensive care patients, there is an increase in both hospital mortality rates and the frequency of post-hospital mobilization problems.
+
+Intensive care patients are a group of patients who are very prone to protein-energy malnutrition, and this leads to complications such as nosocomial infection and multiple organ failure, leading to prolongation of the stay in the intensive care unit, as well as an increase in morbidity and mortality. Therefore, nutritional support is a routine requirement of intensive care treatment and has a vital role in the prevention and treatment of nutritional deficiencies in intensive care patients.
+
+The first point that should be evaluated in terms of the follow-up of a patient on whom nutritional support is maintained is to know for what reason, when, and what kind of treatment is planned in terms of quality and quantity. This is a starting point for monitoring. Knowing the patient's clinical and laboratory values when nutritional therapy is initiated allows the evaluation of how these data have changed during follow-up. The purpose of assessment of nutritional status is to identify the type and degree of malnutrition in order to make a rational treatment approach. However, there is no test that is both sensitive and specific to determine malnutrition in intensive care patients.
+
+PRIMARY OUTCOMES:
+  - Muscle thickness
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Muscle thickness measurement
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05928845

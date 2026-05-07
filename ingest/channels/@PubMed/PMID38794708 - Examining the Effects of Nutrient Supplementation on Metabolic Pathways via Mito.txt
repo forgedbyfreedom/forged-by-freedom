@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38794708
+Title: Examining the Effects of Nutrient Supplementation on Metabolic Pathways via Mitochondrial Ferredoxin in Aging Ovaries.
+Authors: Wu, Li, Lin, Wen, Cheng
+Journal: Nutrients
+Year: 2024
+Topic: DHEA supplementation performance
+
+ABSTRACT:
+As women age, oocytes are susceptible to a myriad of dysfunctions, including mitochondrial dysfunction, impaired DNA repair mechanisms, epigenetic alterations, and metabolic disturbances, culminating in reduced fertility rates among older individuals. Ferredoxin (FDX) represents a highly conserved iron-sulfur (Fe-S) protein essential for electron transport across multiple metabolic pathways. Mammalian mitochondria house two distinct ferredoxins, FDX1 and FDX2, which share structural similarities and yet perform unique functions. In our investigation into the regulatory mechanisms governing ovarian aging, we employed a comprehensive multi-omics analysis approach, integrating spatial transcriptomics, single-cell RNA sequencing, human ovarian pathology, and clinical biopsy data. Previous studies have highlighted intricate interactions involving excessive lipid peroxide accumulation, redox-induced metal ion buildup, and alterations in cellular energy metabolism observed in aging cells. Through a multi-omics analysis, we observed a notable decline in the expression of the critical gene FDX1 as ovarian age progressed. This observation prompted speculation regarding FDX1's potential as a promising biomarker for ovarian aging. Following this, we initiated a clinical trial involving 70 patients with aging ovaries. These patients were administered oral nutritional supplements consisting of DHEA, ubiquinol CoQ10, and Cleo-20 T3 for a period of two months to evaluate alterations in energy metabolism regulated by FDX1. Our results demonstrated a significant elevation in FDX1 levels among participants receiving nutritional supplementation. We hypothesize that these nutrients potentiate mitochondrial tricarboxylic acid cycle (TCA) activity or electron transport chain (ETC) efficiency, thereby augmenting FDX1 expression, an essential electron carrier in metabolic pathways, while concurrently mitigating lipid peroxide accumulation and cellular apoptosis. In summary, our findings underscore the potential of nutritional intervention to enhance in vitro fertilization outcomes in senescent cells by bolstering electron transport proteins, thus optimizing energy metabolism and improving oocyte quality in aging women.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38794708/

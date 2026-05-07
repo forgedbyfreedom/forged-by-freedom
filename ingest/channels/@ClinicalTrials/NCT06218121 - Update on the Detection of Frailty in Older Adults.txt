@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06218121
+Title: Update on the Detection of Frailty in Older Adults
+Official Title: Update on the Detection of Frailty in Older Adults: A Multicenter Cohort Machine Learning-Based Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 500
+Topic: sarcopenia intervention
+
+SUMMARY:
+The main objective is to update the diagnostic assessment of frailty by correlating several variables with the ultrasound image of the frail elderly patient.
+
+Secondarily, the investigators intend to collect and analyze data on functional capacity and quality of life variables on the evolution of musculoskeletal symptoms, as well as on pain and psychological variables. Similarly, it is intended to make a record of different profiles and subtypes of frail older adult patients to be stored in Machine Learning in order to establish therapeutic intervention plans that allow both the evaluation and treatment of patients.
+
+DETAILED DESCRIPTION:
+The present cohort study will be conducted in 500 older adults diagnosed with frailty.
+
+The correlation of the demographic variables, physical functionality tests and psychoemotional constructs that will be analyzed in this study with the ultrasound image obtained from the patients will improve the ultrasound diagnosis of frailty, providing new information that will facilitate the work of healthcare personnel in the diagnosis and management of frailty.
+
+Similarly, the use of Machine Learning will allow institutions to extract data on different patient profiles, signs and symptoms of frailty and the different risk factors that affect frailty patients, which will improve treatments and favor the development of educational programs tailored to the patient's needs.
+
+PRIMARY OUTCOMES:
+  - Manual Grip Strength
+  - Quality of Life (EQ-5D-5L)
+  - Basic Activities in Daily Life
+  - Balance
+  - Visual Analog Scale (VAS)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Instrumental and Functional Tests that Assess Functional Capacity
+
+ELIGIBILITY:
+Age: 62 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06218121

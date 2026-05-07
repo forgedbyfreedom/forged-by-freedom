@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06591767
+Title: Quercetin as Possible Supportive Therapy for Mild to Moderate Hyperuricemia
+Official Title: Potential Pharmacological Effects of Supplemental Quercetin in the Management of Mild to Moderate Hyperuricemia
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: creatine supplementation
+
+SUMMARY:
+Uric acid, a metabolic byproduct of purine degradation in humans, is a known risk factor for conditions such as gout and type 2 diabetes. Research has shown that supplementation with quercetin can significantly reduce plasma uric acid levels in individuals with mild hyperuricemia, potentially mitigating these associated risks.
+
+DETAILED DESCRIPTION:
+Uric acid, a metabolic byproduct of purine degradation in humans, is a significant risk factor for the development of gout and type 2 diabetes. Supplementation with quercetin, a flavonol not naturally produced by the human body, has been shown to significantly reduce plasma uric acid levels in individuals with mild hyperuricemia. This effect is primarily achieved through the inhibition of xanthine oxidoreductase, an enzyme crucial to uric acid production.
+
+Quercetin is the most abundant polyphenol found in fruits and vegetables and is widely used as a dietary supplement to boost the immune system and promote overall health. It is characterized by three key properties: antioxidant, anti-inflammatory, and immunomodulatory. These combined actions make quercetin a promising candidate for supporting various health conditions where oxidative stress, inflammation, and immune function play a role, including cardiovascular health, healthy aging, bone and joint health, sports and physical activity, gut health, and respiratory well-being.
+
+The above-described properties of quercetin prompted investigators to explore its potential uricosuric therapeutic effect in two clinical studies. The first study will assess this effect in a retrospective cohort of COVID-19 patients who received quercetin as a supplemental therapy. In the second study, its potential uricosuric therapeutic effect will be assessed in a randomized controlled prospective clinical trial involving patients with mild to moderate hyperuricemia.
+
+PRIMARY OUTCOMES:
+  - Effect on circulatory uric acid
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Quercetin
+  - COMBINATION_PRODUCT: Berberol K®
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06591767

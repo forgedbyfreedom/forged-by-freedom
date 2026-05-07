@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06297317
+Title: Longitudinal Changes in Achilles Tendon and Medial Gastrocnemius Muscle Architecture During a 156-km Ultradistance Trail Running Event
+Official Title: Longitudinal Changes in Achilles Tendon and Medial Gastrocnemius Muscle Architecture During a 156-km Ultradistance Trail Running Event
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 55
+Topic: tendon injury
+
+SUMMARY:
+This study aimed to assess the longitudinal changes in triceps surae muscle-tendon architecture to an ultra distance trail running. Experienced trail runners (N=55, 78% men, age: 45.2 \[13.5\] years) participated in a 156-km trail run (6000m climbing) consisting in six 26-km laps. The resting architectural properties of triceps surae muscle-tendon were measured using ultrasound imaging for Achille tendon cross-sectional area (AT CSA), medial gastrocnemius muscle pennation angle, thickness, length and fiber length. Measurements were performed the day before the race (Baseline), at 52-km (T1), at 104-km (T2), at 156-km (T3) and 12 hours after the race (H12).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Achille tendon cross sectional area
+  - Medial gastrocnemius thickness
+  - Medial gastrocnemius pennation angle
+  - Medial gastrocnemius fascicle length
+  - Medial gastrocnemius muscle length
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Ultrasound measurement of triceps surae muscle-tendon architecture
+
+ELIGIBILITY:
+Age: 25 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06297317

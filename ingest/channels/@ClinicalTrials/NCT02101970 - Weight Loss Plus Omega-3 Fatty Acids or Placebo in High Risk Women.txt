@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02101970
+Title: Weight Loss Plus Omega-3 Fatty Acids or Placebo in High Risk Women
+Official Title: Randomized Pilot Trial of Omega-3 Fatty Acids or Placebo in Peri- or Post-Menopausal Women at High Risk for Breast Cancer Undergoing a Weight Loss Intervention
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 46
+Topic: omega 3 exercise
+
+SUMMARY:
+The purpose of this study is to determine if high dose supplementation with the omega-3 fatty acids EPA and DHA, when added to a weight loss program, is well tolerated in the study population and if there is an increase in the favorable change in blood and tissue breast cancer risk factors when compared to weight loss alone.
+
+DETAILED DESCRIPTION:
+Subjects will all participate in a 6-month weight loss intervention. Subjects will be randomized to receive either blinded placebo or omega-3 fatty acids for 6 months.
+
+PRIMARY OUTCOMES:
+  - Dropout rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 Fatty Acids
+  - OTHER: Placebo Capsule
+  - OTHER: Diet and Exercise
+
+ELIGIBILITY:
+Age: 45 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02101970

@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04083690
+Title: Multi-lead ECG to Effectively Optimize Resynchronization Devices: New CRT Recipients
+Official Title: Multi-lead ECG to Effectively Optimize Resynchronization Devices: New CRT Recipients
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: aerobic exercise
+
+SUMMARY:
+Cardiac resynchronization therapy (CRT), or atrial-synchronized biventricular (BiV) pacing, is an FDA-approved device therapy option for heart failure (HF) patients with reduced left ventricular ejection fraction and electrical dyssynchrony. A traditional CRT device has pacing leads implanted within the right atrium (RA), the right ventricle (RV), and within a coronary vein overlying the lateral or posterior left ventricle (LV). Within the past decade, various multi-center randomized controlled trials have reported improved quality of life, aerobic exercise capacity, LV systolic function and structure, as well as decreased hospitalization rates and mortality among patients with HF. Despite improvements in CRT technology with multipoint pacing, quadripolar leads, and adaptive pacing algorithms, approximately 30% of patients do not clinically benefit and are considered non-responders. This study looks to optimize new CRT device recipients using information obtained from standard ECG machines.
+
+DETAILED DESCRIPTION:
+This is a prospective, randomized study designed to evaluate if CRT device optimization, guided by electrocardiography, improves echocardiographic and clinical outcomes among HF patients with a CRT device implanted for standard indications. All patients will have measurement of electrocardiograms at a range of device settings. Patients will be randomized in a 1:1 ratio to either the active comparator arm (standard CRT programming), or the experimental arm (CRT device programmed by the information obtained by ECGs). Standard CRT programming used in this study is simultaneous biventricular (BiV) pacing with a fixed atrioventricular delay. At 6 months, control patients who were initially randomized to standard programming will have programming changed based on the ECG optimization information. Patients will be blinded to randomization. Change of LV size and function will be performed prior to randomization, and again \~6 and \~12 months following CRT implant in both subgroups.
+
+PRIMARY OUTCOMES:
+  - Change in left ventricular size
+
+INTERVENTIONS:
+  - DEVICE: Reprogramming of CRT Device Settings to Optimal Electrical Synchrony
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04083690

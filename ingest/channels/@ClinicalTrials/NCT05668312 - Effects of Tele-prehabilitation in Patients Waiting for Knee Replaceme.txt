@@ -1,0 +1,76 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05668312
+Title: Effects of Tele-prehabilitation in Patients Waiting for Knee Replacement
+Official Title: Effects of Tele-prehabilitation on Clinical and Muscular Recover in Patients Waiting for Knee Replacement: a Randomized Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+After knee arthroplasty rehabilitation is fundamental to patient's functional recovery, but in recent years there has been a growing interest in the possibility to prepare patients for surgery through a "prehabilitation" program. This two-parallel groups randomized clinical trial aims at evaluating the effects of a preoperative rehabilitation programme carried out at patient's home using advanced technologies, on subjects waiting for knee replacement. In particular, the primary objective of this study is to assess the superiority of a tele-prehabilitation programme compared to standard prehabilitation (remotely delivered with a booklet) in determining an improvement in lower limb function, as measured by the Western Ontario and McMaster Universities Osteoarthritis Index questionnaire, at the end of the programme. This study also aims at assessing possible differences between groups in muscle function, pain, autonomy in the activity of daily living, adherence to treatment and patients' satisfaction with the prehabilitation modality. Through the analysis of quadriceps muscle and blood samples, we will also evaluate possible changes in the expression of specific markers that the prehabilitation programme may be able to determine at muscle level. Both the intervention and the control groups will perform a prehabilitation program in the 6 weeks just before surgery. The program will include therapeutic exercises and educational contents. Subjects in the tele-prehabilitation group will receive a tablet with two accelerometers and a balance board for the remote execution of the program, while the control group will receive the same intervention through a booklet. Subjects recruited will be assessed at 5 timepoints: before starting the prehabilitation program, the day of surgery, 7± 2 and 15 ± 2 days after surgery, 3 months ± 7 days after surgery.
+
+DETAILED DESCRIPTION:
+Based on the existing literature, we expected to observe an effect size of 0.8 in WOMAC (primary outcome) between groups at the end of the tele-prehabilitation program. Therefore, considering a test power of 80% and an alpha error of 5%, we have computed a sample size of 48 subjects, 24 for each group (taking into account a possible drop-out rate of 15-20%).
+
+Twenty healthy young subjects (10 males and 10 females) will be also recruited only for muscle and blood samples collection, that will be used as benchmarks for the intervention and control groups analyses (they will no undergo any prehabilitation program).
+
+The recruited subjects will be randomly allocated (with a 1:1 ratio randomization list) in the tele-prehabilitation or in the control groups. During the 6 weeks just before surgery, both groups will perform 5 sessions a week of the same home-based prehabilitation program. Each session is planned as follow: 5 minutes of warm-up, 30 minutes of work (mobility, strengthening and balance exercises) and 5 minutes of cool-down.
+
+In details, for each session subjects will perform the following exercises:
+
+1. Warm-up (about 5 minutes)
+
+   1. Knee bending and extension in lying position;
+   2. Knee extensions while sitting;
+   3. Get on tiptoes in standing position;
+   4. March on site.
+2. Working phase (about 30 minutes)
+
+   1. Hip bending keeping the knee extended in lying position;
+   2. Hip motion in space planes (imagining of drawing numbers with the tiptoe);
+   3. Hip abduction keeping the knee extended side lying;
+   4. Knee bending and hip extension in standing position;
+   5. Half squat;
+   6. Half lateral lunge;
+   7. Monopodalic standing;
+   8. Tandem walking;
+   9. Weight shifting on unstable surface.
+3. Cool-down (about 5 minutes)
+
+   1. Free walk;
+   2. Leg swings while sitting.
+
+Subjects of both groups will also have to read, once a week, an educational content (digital for the tele-prehabilitation group, printed for the control one) dealing with:
+
+* Information about knee osteoarthritis and replacement;
+* Post-operative symptoms, what to expect;
+* Advices for home organization after surgery;
+* Healthy life style: physical activity, nutrition and sleep;
+* Advices for maintaining progresses;
+* Motivational intervention.
+
+The tele-prehabilitation program will be delivered using the following devices (Khymeia, Padova, Italy -Khymeia - e-health innovation):
+
+* TeleCockpit, a workstation used by the clinician to manage remotely patient's home device, interact real-time or check the adherence to treatment;
+* VRRS Home Tablet, with an uploaded mobile application for the exercises execution at home;
+* VRRS Khymu, two accelerometers for patient's interaction with the virtual reality system during knee motion;
+* VRRS Balance, a balance board for patient's interaction with the virtual reality system during centre-of-mass motion.
+
+The exercise volume of the "work" section of the prehabilitative session will increase during the 6 weeks according
+
+PRIMARY OUTCOMES:
+  - Change in Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC) at 6/7 weeks
+
+INTERVENTIONS:
+  - OTHER: Tele-prehabilitation
+  - OTHER: Standard prehabilitation
+
+ELIGIBILITY:
+Age: 65 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05668312

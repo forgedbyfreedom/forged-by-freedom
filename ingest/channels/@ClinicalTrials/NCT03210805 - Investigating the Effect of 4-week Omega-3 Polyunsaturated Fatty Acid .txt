@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03210805
+Title: Investigating the Effect of 4-week Omega-3 Polyunsaturated Fatty Acid Supplementation on Inflammation
+Official Title: Investigating the Effect of 4-week Omega-3 Polyunsaturated Fatty Acid Supplementation on Inflammation
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 17
+Topic: omega 3 exercise
+
+SUMMARY:
+Investigate the in vivo effects of n-3 PUFA supplementation on inflammation, gene expression and epigenetic signatures.
+
+Ex vivo stimulation of peripheral blood mononuclear cells (PBMCs) collected pre and post n-3 supplementation and measurement of it's effect on inflammation, gene expression and epigenetic signatures.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Epigenetic regulation of Cytokine Genes
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3 Polyunsaturated Fatty Acids Supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03210805

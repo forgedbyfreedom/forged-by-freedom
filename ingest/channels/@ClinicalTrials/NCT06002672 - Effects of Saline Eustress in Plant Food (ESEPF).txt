@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06002672
+Title: Effects of Saline Eustress in Plant Food (ESEPF)
+Official Title: Analysis of the Potential Health Effects of Saline Eustress in Plant Food
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+The aim of the project is to study if supplementation with eustress plant food like lettuce grown in mild salinity condition affects health in a healthy population.
+
+DETAILED DESCRIPTION:
+Salinity can affect the levels of bioactive compounds in leafy vegetables. The aim of the project is to verify the impact, if any, of the changing of bioactive compounds in the physiology of the study population. The participants will be randomly assigned to the control group that will eat 100 gr of untreated (control) lettuce and the intervention group that will consume 100gr of eustress lettuce. Blood samples and urine samples will be collected at time zero (start) after 12 days. Each subject will be subjected to two venous blood samples taken at the beginning of the observation and at the end. The samples obtained will be transported in certified containers for the safe transport of biological samples, and, subsequently, processed by the experimenters at the laboratories of the Molecular Biology section of the University of Palermo. Serum and plasma will be obtained from each blood sample. All information thus obtained will be recorded in a database in which each person will be identified with a numerical code, in order to comply with current privacy regulations. Body weight, Barefoot standing height, Body mass index, Body composition will be measured in the different groups of study. Samples will be analyzed and compared for glucose, insulin, albumin, total cholesterol, HDL-cholesterol, LDL-cholesterol, triglycerides, AST, ALT, GGT, ALP, Ferritin, free Iron, transferrin, total proteins, magnesium, calcium, insulin, osteocalcin, calcitonin, parathyroid hormone, c terminal peptide of collagen (CTX), Vitamin D, Phosphate, Potassium.
+
+PRIMARY OUTCOMES:
+  - anthropometric measurement
+  - Bone metabolism markers
+  - Vitamin D
+  - blood markers
+  - Potassium
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo comparator: Control group. To the control group was assigned lettuce without any change in salinity but with the same characteristic of eustress lettuce (soil, water, harvesting time).
+  - DIETARY_SUPPLEMENT: Experimental: Eustress group. To the intervention Eustress group was assigned the eustress lettuce.
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06002672

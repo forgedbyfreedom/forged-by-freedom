@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04521829
+Title: The Effect of Optic Flow Speed Manipulation and the Level of Immersion on the Gait Pattern in People Post-stroke
+Official Title: WALKING WITH VIRTUAL REALITY: How Does Optic Flow Speed and Level of Immersion Influence the Gait Pattern in People Post-stroke?
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: muscle rehabilitation
+
+SUMMARY:
+The aim of this study is to investigate the effect of manipulating the optic flow speed in the virtual environment on the gait pattern during virtual reality (VR) - enhanced treadmill walking in people post-stroke. Furthermore, the study will also investigate if the level of immersion has an effect on the rehabilitation outcomes by manipulating the optic flow speed in two different VR devices: the semi-immersive GRAIL system and the fully-immersive 'Oculus Rift S' HMD.
+
+To properly understand the results of the people with a stroke, we will also investigate the effect of manipulating the optic flow speed and the level of immersion on the gait pattern in healthy people. That way, we can investigate whether virtual reality has a different influence on the gait pattern of people with a stroke than in healthy people.
+
+DETAILED DESCRIPTION:
+STUDY DESIGN
+
+This study is an experimental, 2-group, multicenter trial in which people post-stroke and healthy people will perform 2 different sessions of treadmill walking. The 2 sessions will be carried out on 2 separate days within 10 days. Both sessions will be identical, only the VR system used to manipulate the optic flow speed will differ. The order of the 2 sessions and the optic flow speed manipulation will be randomized.
+
+MATERIALS
+
+GRAIL system: The Gait Real-time Interactive Lab (GRAIL) is an integrative motion capture system consisting of 10 optical motion cameras (Vicon Inc., Oxford, UK), a dual belt treadmill with integrated force plates, a 180-degree cylindrical projection screen system, and D-Flow software (Motekforce Link, Amsterdam, Netherlands). The treadmill of the GRAIL system has two modes: fixed walking speed or self-paced. For this study, the treadmill will be self-paced, meaning that the patient is in control and can choose the walking speed. The treadmill will follow the walking speed of the patient, which allow the patient to start, stop and change speed at will. The projection screen of the GRAIL system will assure a semi-immersive virtual environment. The GRAIL system is located in the Smart Space lab (UZ Gent) and will be made available at the researchers of the VUB/UZ Brussel.
+
+Head-mounted display (HMD): The HMD VR system 'Oculus Rift S' (Oculus, LLS, US) is a low-cost HMD that fully integrates the user into the virtual environment by blocking out perception of the real-world. The "Oculus Rift S" will assure a fully immersive virtual environment. The researchers of the VUB/UZ Brussel have the HMD 'Oculus Rift S' in their possession and will make it available for the study.
+
+PROCEDURE
+
+Both sessions will be carried out in the Smart Space lab at the University Hospital of Ghent (Corneel Heymanslaan 10, 9000 Gent) where the GRAIL system is located.
+
+Prior to the start of both sessions, some preparations will have to be done with regard to the outcome measures:
+
+* Patients will be asked to fill in a questionnaire (the Simulator Sickness Questionnaire-Pre).
+* Surface electrodes will be placed bilateral on the M. rectus femoris, M. vastus lateralis, M. biceps femoris, M. tibialis anterior, M. gastrocnemius medialis, M. deltoideus anterior part, M. deltoideus posterior part, M. latissimus dorsi. Electrode placement will follow the SENIAM guidelines. The skin underlying the electrode will be shaved and cleaned with alcohol to improve electrode-skin contact and reduce impedance.
+* Reflective markers will be placed on fixed points of the lower and upper limbs of the patient. Marker placement will follow the Plug-in Gait full body model (VICON). For this model, the investigator will have to measure the following things in advance: body length, body weight, leg length, knee width, ankle width, shoulder offset, elbow width, wrist width, hand thickness.
+
+After these preparations, patients will start to walk on the self-paced t
+
+PRIMARY OUTCOMES:
+  - 3D kinematic measurements lower limb
+  - 3D kinematic measurements upper limb (arm swing)
+  - 3D kinetic measurements lower limb
+  - Walking speed
+  - Cadence
+
+INTERVENTIONS:
+  - OTHER: Walking with different optic flow speeds with 2 different VR devices
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04521829

@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06218407
+Title: Development and Evaluation of Computerized Chemosensory Based Orbitofrontal Networks Training for Treatment of Pain
+Official Title: Development and Evaluation of Computerized Chemosensory Based Orbitofrontal Networks Training for Treatment of Pain (CBOT-P)
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 86
+Topic: low back pain exercise
+
+SUMMARY:
+The overarching goal of this study phase, Phase I component is to configure Computerized Chemosensory-Based Orbitofrontal Networks Training (CBOT) into Computerized Chemosensory-Based Orbitofrontal Networks Training for Treatment of Pain CBOT-Pain (or CBOT-P) for rapid and sustained reduction of Pain, Negative Affect (NA) and Cognitive Impairments. The investigators aimed at first establishing if stimulation parameters targeting key olfactory regions, and their associated networks, paired with tasks that synergistically activate the orbitofrontal cortex (OFC) would have significantly different acute (\< 7 days) effects in pain and NA intensity reductions. The hypothesis is that the short burst paradigm will more effectively activate the medial OFC and its functional connectivity with medial temporal affective networks, and result in greater reduction of affect and pain severity ratings after 7 days. The investigators will further examine if enhancing the odor regimen with beta-caryophyllene (BCP) content would have more dramatic effects in acute relief of pain, NA, and cognition.
+
+Aim 1.1: To optimize CBOT-P stimulation parameters and olfactory stimulants for pain, affect and cognition in CP with and without high NA. This is a 14-day prospective study, in which fMRI and rs-fMRI will be acquired at baseline and day 7 during exposure to short vs long-burst CBOT stimulations. This is followed by daily treatment with short-burst versus long-burst CBOT paradigm over 14 days, during which pain and NA measures will be recorded daily by the subjects, and assessed by train research staff at baseline, day 7 and day 14.
+
+Aim 1.2: To determine if CBOT regimen optimized with BCP content produces stronger and faster pain and affective response. This is a 14-day prospective study design, in which daily treatment of CBOT-PLUS (i.e., CBOT with BCP) will be compared against daily treatment with CBOT without BCP enhancement (CBOT). Subjects and clinicians are blinded to the assigned arms. Pain and NA measures will be recorded daily by the subjects and assessed by trained research staff at baseline and day 14.
+
+DETAILED DESCRIPTION:
+The Development and Evaluation of Computerized Chemosensory-Based Orbitofrontal Networks Training for Treatment of Pain (CBOT-P) is a project to develop an effective, scalable, user-friendly, and homebased neuromodulatory platform for broad-spectrum treatment of chronic pain conditions with associated negative affect and cognitive impairments.
+
+The small business, Evon Medics created the olfactory pulsing technology called Computerized Chemosensory-Based Orbitofrontal Cortex Training (CBOT-P) to enable home-based modulation of the OFC and subcortical limbic structures for treatment of pain and negative affect. In a stakeholder value canvassing exercise CP sufferers and pain doctors unanimously desire new non-invasive, home-based, safe, and effective interventions that can reduce pain severity by more than 10%, suggesting that current treatments have limitations. Anterograde and retrograde anatomical tracings have been used to demonstrate direct (monosynaptic) anatomical connection between the OFC and the descending inhibitory pain nodes at the midbrain periaqueductal gray matter (PAG). Transition to CP is marked by weakened modulation of the PAG-descending inhibition.
+
+In this study phase, Phase I of this Fast-Track SBIR application, the investigators will (a) configure CBOT-P regimen and stimulation parameters for faster onset of mood elevating and analgesic effects, focusing on Chronic Low Back Pain populations and (b) establish its neural mechanism of action through target-engagement studies of OFC activity and functional connectivity with other pain regulating regions at baseline.
+
+PRIMARY OUTCOMES:
+  - Relative changes in blood oxygen level dependent (BOLD) signals from fMRI of orbitofrontal brain regions in response to short durations (i.e., short-bursts) and to long durations (i.e., long-bursts) of repetitive odor stimulations. Aim 1.1
+  - Changes in the resting-state functional connectivity between midbrain and corticolimbic brain regions Aim 1.1
+  - Patient Reported Outcomes Measurement Information System (PROMIS) Numeric Rating Scale v1.0 - Pain Intensity Aim 1.1
+  - Positive and Negative Affect Schedule (PANAS) rating scale Aim 1.1
+  - Relative changes in blood oxygen level dependent (BOLD) signals from fMRI of orbitofrontal brain regions in response to short durations (i.e., short-bursts) and to long durations (i.e., long-bursts) of repetitive odor stimulations. Aim 1.1
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Computerized Chemosensory-Based Orbitofrontal Cortex Training (CBOT) short burst paradigm
+  - COMBINATION_PRODUCT: Computerized Chemosensory-Based Orbitofrontal Cortex Training (CBOT) long burst paradigm
+  - COMBINATION_PRODUCT: Computerized Chemosensory-Based Orbitofrontal Cortex Training plus beta caryophyllene (CBOT-Plus)
+  - COMBINATION_PRODUCT: Computerized Chemosensory-Based Orbitofrontal Cortex Training (CBOT)
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06218407

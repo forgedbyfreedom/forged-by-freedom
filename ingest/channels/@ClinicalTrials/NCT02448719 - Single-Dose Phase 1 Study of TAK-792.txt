@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02448719
+Title: Single-Dose Phase 1 Study of TAK-792
+Official Title: A Randomized, Single-Center, Double-Blind, Placebo-Controlled, Phase 1 Study to Evaluate the Safety, Tolerability, and Pharmacokinetics of a Single Oral Dose of TAK-792 in Healthy Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 72
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to characterize the safety and tolerability profile of TAK-792 when administered as a single oral dose in healthy Japanese and Caucasian male participants.
+
+DETAILED DESCRIPTION:
+This study will be double-blind and placebo-controlled to avoid subjective bias in the assessment of safety and tolerability of TAK-792. Sentinel dosing will be used in the first cohort (cohort 1) to ensure adequate safety and tolerability evaluation prior to administering TAK-792 to the remainder of participants within the cohort. The dose escalation to the next cohort for Cohorts 2 to 6 will occur after full review of safety and tolerability of the current cohort, and available pharmacokinetic data up to 24 hours in the preceding cohorts. The planned dose levels are 30, 100, 250, 500, 750 and 1250 mg, to be administered in the morning after a fast of at least 10 hours.
+
+PRIMARY OUTCOMES:
+  - Percentage of Participants Who Experience at Least One Treatment Emergent Adverse Event (TEAE)
+  - Number of Participants With TEAE Related to Vital Signs
+  - Number of Participants With TEAE Related to Body Weight
+  - Number of Participants With TEAE Related to Electrocardiograms (ECG)
+  - Number of Participants With TEAEs Related to Laboratory Tests
+
+INTERVENTIONS:
+  - DRUG: TAK-792 30 mg
+  - DRUG: TAK-792 30 mg placebo
+  - DRUG: TAK-792 100 mg
+  - DRUG: TAK-792 100 mg placebo
+  - DRUG: TAK-792 250 mg
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02448719

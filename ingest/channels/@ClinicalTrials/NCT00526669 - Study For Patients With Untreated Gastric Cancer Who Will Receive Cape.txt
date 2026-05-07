@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00526669
+Title: Study For Patients With Untreated Gastric Cancer Who Will Receive Capecitabine And Lapatinib
+Official Title: An Exploratory, Phase II Trial to Determine the Association of Lapatinib Induced Fluoropyrimidine Gene Changes With Efficacy Parameters of Lapatinib and Capecitabine in First Line Gastric Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: beta-alanine
+
+SUMMARY:
+The study will determine if changes in expression of markers involved in the 5-FU pathways are associated with response to treatment with the combination of lapatinib and capecitabine independent of tumor erbB2 status.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Start of Run-in Period in Biomarker Expression Levels at Day 0
+  - Response Rate (Measured as the Percentage of Participants With Response [Complete Response or Partial Response])
+  - Percentage of Participants (Par.) With 5-month Progression-free Survival (PFS)
+
+INTERVENTIONS:
+  - DRUG: Lapatinib and Capecitabine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00526669

@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03426969
+Title: Combination Chemotherapy, Total Body Irradiation, and Donor Blood Stem Cell Transplant in Treating Patients With Primary or Secondary Myelofibrosis
+Official Title: A Pilot Study of Reduced Intensity HLA-Haploidentical Hematopoietic Cell Transplantation With Post-Transplant Cyclophosphamide in Patients With Advanced Myelofibrosis
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: beta-alanine
+
+SUMMARY:
+This early phase I trial studies the side effects of combination chemotherapy, total body irradiation, and donor blood stem cell transplant in treating patients with primary or secondary myelofibrosis. Drugs used in chemotherapy, such as melphalan, fludarabine phosphate, cyclophosphamide, tacrolimus, mycophenolate mofetil, and filgrastim work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Radiation therapy uses high energy x-rays to kill cancer cells and shrink tumors. Giving combination chemotherapy and total body irradiation before a donor blood stem cell transplant helps to stop the growth of cells in the bone marrow, including normal blood-forming cells (stem cells) and cancer cells. When the healthy stem cells from a donor are infused into the patient they may help the patient's bone marrow make stem cells, red blood cells, white blood cells, and platelets.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To evaluate the safety and tolerability of reduced-intensity (FM) haploidentical hematopoietic cell transplantation (Haplo-HCT) followed by post-transplant cyclophosphamide (PTCy) in patients with advanced myelofibrosis (MF), as assessed by the evaluation of toxicities, including type, frequency, severity, attribution, time course and duration.
+
+SECONDARY OBJECTIVES:
+
+I. To summarize and evaluate hematologic (neutrophil and platelet) recovery. II. To estimate graft failure-free survival (GFS) at 100-days post-transplant. III. To estimate overall survival (OS), progression-free survival (PFS) and cumulative incidence (CI) of relapse/progression, and non-relapse mortality (NRM) at 100-days, 1-year, and 2-year post transplant.
+
+IV. To estimate the cumulative incidence of acute graft-versus-host disease (GvHD), grade II-IV, at 100-days post-transplant (per Keystone Consensus modification of the Glucksberg criteria).
+
+V. To estimate the cumulative incidence of chronic GvHD at 1-year and 2-year post transplant (per National Institute of Health \[NIH\] Consensus Criteria).
+
+VI. To characterize the severity and extent of acute and chronic GvHD.
+
+OUTLINE:
+
+Patients receive melphalan intravenously (IV) over 30 minutes on days -5, fludarabine phosphate IV over 1 hour on days -5 to -2. Patients undergo total body irradiation (TBI) on day -1 and hematopoietic stem cell transplant (HCT) on day 0. Patients then receive cyclophosphamide IV over 1-2 hours on days 3 and 4. Beginning on day 5, patients receive tacrolimus IV continuously for approximately 2 weeks, then orally (PO) for 6 months followed by a taper, mycophenolate mofetil PO thrice daily (TID) until day 100, and filgrastim subcutaneously (SC) daily from day 7 until continued until absolute neutrophil count (ANC) \> 1,500/mm\^3 for 3 consecutive days. Treatment continues in the absence of disease progression or unexpected toxicity.
+
+After completion of study treatment, patients are followed up at 1, 3, 6, 9, 12 and 24 months.
+
+PRIMARY OUTCOMES:
+  - Incidence of adverse events
+
+INTERVENTIONS:
+  - DRUG: Cyclophosphamide
+  - BIOLOGICAL: Filgrastim
+  - DRUG: Fludarabine Phosphate
+  - PROCEDURE: Hematopoietic Cell Transplantation
+  - DRUG: Melphalan
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03426969

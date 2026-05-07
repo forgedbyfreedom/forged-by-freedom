@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04768738
+Title: The Effect Of Transcutaneous Auricular Vagus Nerve Stimulation On Sports Performance And Physiological Parameters
+Official Title: The Effect Of Transcutaneous Auricular Vagus Nerve Stimulation On Sports Performance And Physiological Parameters In Healthy Young Individuals: Randomized, Double-Blind Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 46
+Topic: athletic performance
+
+SUMMARY:
+OBJECTIVE: The aim of this study is to investigate the effect of non-invasive auricular VNS (Vagus Nerve Stimulation) on sportive performance and physiological parameters in healthy individuals.
+
+MATERIAL AND METHOD: 46 healthy young individuals aged 19.2(±1.5) years participated in the study. The participants were randomly divided into 3 groups as Above Threshold Group (n:15; 10 females, 5 males), Under Threshold Group (n:15; 10 females, 5 males) and Control Group (no stimulation) (n:16; 11 females, 5 males) according to the sensation of electrical current on ears. The participants were evaluated 3 times; before the application, after the first and second bicycle exercises. Numerical pain scale (NPS), pulse rate, blood pressure, respiratory rate, and distance travelled during exercise for sportive performance were recorded in kilometers as the evaluation method. The stimulation was done during the first bicycle exercise with 5 minutes of duration. The Kruskal-wallis, mann-whitney u test were used for the quantitative independent data obtained. In the analysis of qualitative independent data, chi-squared test was used.
+
+DETAILED DESCRIPTION:
+This study included 46 individuals aged 18-35 years in the home patient care laboratory at Sinop University Vocational School of Turkeli. Priorities were explained and the permission of the individuals was obtained. The number of females and males was divided into 3 groups as randomized. Participants were evaluated by Numerical pain scale (NPS), pulse rate, blood pressure, respiratory rate, and saturation measurement. In addition, the distance travelled during the exercise for sportive performance was recorded in kilometers. In the study, evaluation was conducted 3 times before the application, after the first and second bicycle exercises.
+
+The study was double-blind randomized. Participants in the whole group were asked to perform bicycle exercise with maximum performance under 50 watts for 5 minutes. In all groups Vagustim device was used for stimulation. In the above threshold group, biphasic current was applied as follows; frequency 10 Hz, in Modulation mode (Modulation mode is a combination of pulse rate and pulse width modulation. The pulse rate and width are automatically varied in a cycle pattern. The pulse width is reduced by 50% from its original setting in 0.5 second, then the pulse rate is reduced by 50% from its original setting in 0.5 second. Total cycle time is 1 second.), the pulse width was 300 μs. The current intensity was kept constant where the participant felt the current comfortably and applied for 5 minutes. VNS was applied bilaterally to transmit current from the tragus and concha parts of the ear. After the first bicycle exercise, the participants were re-evaluated. In the second bicycle exercise, it was asked to perform for 5 minutes under the same load without any application. The study was evaluated for the third time and the study was completed.
+
+In the subthreshold group, the parameters were the same but the current was reduced to where the participant did not feel the current after the threshold value was reached and again applied for 5 minutes. It was re-evaluated after the first bicycle exercise. In the second bicycle exercise, he was asked to perform bicycle exercise with maximum performance for 5 minutes under the same load without any application. The study was evaluated for the third time and the study was completed.
+
+In the control group, bicycle exercise was performed under the same load with the current-free headset produced for sham applications for 5 minutes. Participants were shown that the device was working, but no current was given. It was re-evaluated after the first bicycle exercise. In the second bicycle exercise, the device was removed and asked to perform bicycle exercise with maximum performance for 5 minutes under the same load. The study was evaluated for the third time and the study was completed.
+
+PRIMARY OUTCOMES:
+  - Sportive performance
+
+INTERVENTIONS:
+  - DEVICE: Auricular Vagus Nerve Stimulation Level Of Above Threshold
+  - DEVICE: Auricular Vagus Nerve Stimulation Level Of Subthreshold
+  - DEVICE: Auricular Vagus Nerve Stimulation Sham Method
+  - DIAGNOSTIC_TEST: 5 Minutes Bicycle Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 27 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04768738

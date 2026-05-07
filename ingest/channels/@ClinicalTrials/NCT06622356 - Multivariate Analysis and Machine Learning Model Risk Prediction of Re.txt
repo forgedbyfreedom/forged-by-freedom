@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06622356
+Title: Multivariate Analysis and Machine Learning Model Risk Prediction of Recurrent Pain After PLIF Surgery for Degenerative Lumbar Spine Disease At Long-term Follow-up
+Official Title: Multivariate Analysis and Machine Learning Model Risk Prediction of Recurrent Pain After PLIF Surgery for Degenerative Lumbar Spine Disease At Long-term Follow-up
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 452
+Topic: sarcopenia intervention
+
+SUMMARY:
+The study was a clinical retrospective study designed to investigate risk factors for long-term recurrent pain after PLIF in patients with lumbar degenerative disease and to improve patient outcomes
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - SAS（Pain rating scale）
+
+INTERVENTIONS:
+  - OTHER: MRI with Eovist
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06622356

@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06953648
+Title: Remotely Monitored, Mobile Health-supported, High Intensity Interval Training Before Hematopoietic Stem Cell Transplant
+Official Title: Remotely Monitored, Mobile Health-supported, High Intensity Interval Training Before Hematopoietic Stem Cell Transplantation (REMM-HIIT-HCT)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 126
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to learn how a remotely monitored high-intensity interval training (REMM-HIIT) affects the cardiorespiratory fitness and physical function for patients planning to undergo stem cell transplantation. The main questions it aims to answer are:
+
+Is there a change in the participant's cardiorespiratory fitness level? Is there a change in the participant's physical function?
+
+Researchers will compare the REMM-HIIT program to a control group of participants who do not take part in the training program to see if REMM-HIIT helps improve stem cell transplantation outcomes.
+
+Participants will:
+
+* Complete cardiopulmonary exercise testing (CPET) 4 times during the study
+* Do basic tests to measure physical function 6 times during the study
+* Answer questions about their life and how they are feeling 6 times during the study
+* Wear a device to keep track of step counts and heart rate daily
+* Keep a log of every time they exercise throughout the study
+* Optionally, provide blood and stool samples 6 times during the study
+
+DETAILED DESCRIPTION:
+Each year in the U.S., approximately 8,000 patients undergo allogeneic hematopoietic stem cell transplantation (HCT) as a potentially curative therapy for leukemias, lymphomas, and other hematologic malignancies. However, treatment-related mortality (TRM) is significant, ranging from 10-30%. Moreover, survivors of HCT often face significant physical, psychological, and social challenges post-treatment, leading to a substantial decrease in quality of life (QOL). Outcomes are closely linked to pre-HCT physical activity and function. For example, patients with worse pre-HCT physical function and capacity have markedly lower one-year survival rates (50% vs. 83%). In contrast, every 50-meter increase in pre-HCT six-minute walk distance (6MWD) correlates with a 9% reduction in relative risk for mortality.
+
+Cardiorespiratory fitness (CRF) is a crucial indicator of physical capacity, reflecting the integrated functioning of the heart, lungs, skeletal muscle, adipose tissue, pancreas, liver and adrenal tissues. While CRF naturally declines with age, this decline is notably accelerated by cancer and its treatments, with cancer patients' average CRF levels comparable to individuals 20-30 years older. Importantly, patients with low pre-HCT CRF (VO2peak \<16 mL/kg/min) are at much higher risk of TRM (hazard ratio 6.70), even after accounting for other risk factors. This underscores the critical need for interventions to improve CRF prior to HCT to enhance survival and post-treatment quality of life.
+
+It is well established that patients with better pre-HCT physical function tend to have better post-HCT outcomes. The critical question, however, is whether enhancing fitness pre-HCT can improve post-HCT outcomes. Animal studies provide optimism: exercise training in a murine model pre-HCT associated with improved survival, possibly through immune-mediated pathways. Yet, research exploring the impact of pre-HCT exercise on human post-HCT outcomes remains limited. Small studies have linked pre-HCT improvements in physical function with better survival, and preliminary results from a randomized controlled trial suggest that exercise during HCT may reduce mortality. However, a recent large (n=711) randomized Blood and Marrow Transplant Clinical Trials Network study of self-directed exercise and stress management during HCT did not show a significant benefit in outcomes. Study investigators suggested several reasons for this lack of effect, including timing of intervention (peri-HCT rather than pre-HCT), low intensity rather than high intensity exercise, and low engagement in the self-directed program.
+
+To address prior study limitations, the investigators developed the REMM-HIIT program, focusing on pre-HCT intervention, high-intensity interval training (HIIT), and a mobile health (mHealth) platform to support participant engagement. This program, supported by the National Institute of Aging and the Duke Claude D. Pepper Older Americans Independence Center, was pilo
+
+PRIMARY OUTCOMES:
+  - Change in Cardiorespiratory Fitness
+  - Change in Physical Function (Six Minute Walk Test Distance)
+
+INTERVENTIONS:
+  - BEHAVIORAL: High Intensity Interval Training
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06953648

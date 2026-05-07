@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06835777
+Title: Neurophysiological Mechanisms of Placebo and Nocebo Effects in Sports - a Protocol Paper
+Official Title: Neurophysiological Mechanisms of Placebo and Nocebo Effects in Sports - Protocol Paper of a Randomised Controlled Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 56
+Topic: athletic performance
+
+SUMMARY:
+This clinical trial aims to investigate the neurophysiological mechanisms of placebo and nocebo effects on sports performance, using Electroencephalography (EEG) and isometric strength testing of the lower extremities.
+
+The primary objective of this trial is to identify temporal mechanisms and cortical regions and networks involved in generating placebo and nocebo effects before (expectation) and at onset of athletic performance (perception).
+
+The trial will include four groups, two of them experimental, one an active control and one natural history, meaning participants in this group will receive no intervention and won't be EEG controlled. Data will be collected on two occasions with baseline data for EEG, expectations and performance as well as key participant characteristics being collected on day one. On day two, in a deceptive process, participants in the two experimental groups will take an inert substance presented as either performance enhancing or inhibiting and subsequently experience a reinforcement of beliefs via exposure to explicit adjectives. EEG data will be collected during reinforcement of beliefs. In the active control group, participants will receive no substance, but this group will follow the same procedure as the experimental groups with neutral adjectives. Participants will then perform isometric strength and fatigue resistance tests on an isometric dynamometer. EEG data as well as subjective data on expectations and rating of perceived exhaustion will be collected.
+
+DETAILED DESCRIPTION:
+This trial will examine temporal and spatial aspects of neurophysiological mechanisms behind nocebo and placebo effects before (expectation) and at exercise onset (perception) using high-density EEG. It will further investigate possible predictors of responsiveness and non-responsiveness to acute placebo and nocebo stimuli in the context of sports, notably interpretating psychological mechanisms (e.g. personality, beliefs, expectations) as well as temporal neurophysiological measures.
+
+This study is designed as a randomized, controlled clinical trial (RCT) with data collection on two different occasions and four parallel groups: 1) positive-expectations, 2) negative-expectations, 3) control, and 4) natural history.
+
+The first three groups will be addressed as intervention groups. On the first visit, participants' baseline data, specifically performance measures (all groups) and EEG data (all but natural history), as well as key characteristics will be collected. On the second visit, in the belief groups, participants will receive an in-person manipulation of beliefs and two placebo pills and will be informed that they are expected to positively (positive-expectations) or negatively (negative-expectations) affect their isometric strength and fatigue resistance measured using a Biodex System 4 Isokinetic Dynamometer in a 5x5sec test protocol with a minimum of 1 minute rest in between sets. In addition, after a resting period of three minutes, they will perform an isometric knee extension hold to failure at 60% MVC. The control group and the natural history group will receive no pills, with the control group receiving a neutral explanation of EEG data, its relevance and general information about isometric strength testing and the natural history group not receiving EEG at all, but serving as a control to the potential influence of experiencing an EEG set up on performance measures. The primary endpoints of this trial are placebo and nocebo induced changes in EEG signaling via Event Related Potentials (ERPs) during administration of reinforcements of beliefs through words as well as during expectancy and perception phases of physical performance.
+
+The key question of this trial is whether participants exposed to placebo or nocebo stimuli will exhibit distinct neural activity pattern (temporal and spatial) in the context of sports performance. The second major question is, whether individual differences in character traits and states as well as motivation and beliefs can significantly predict the magnitude or likeliness of placebo and nocebo responses in participants' performance in an isometric strength and fatigue resistance task. In addition, EEG data to better understand the valence of and emotional response to words will be used to further investigate how semantics and our choice of words influence susceptibility to placebo and nocebo effects in other people. Several elements that were not adequately addressed in previous studies will be incorpor
+
+PRIMARY OUTCOMES:
+  - EEG data - performance
+  - EEG data - reinforcement of beliefs
+  - EEG, exploratory source analysis
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Positive Expectation
+  - COMBINATION_PRODUCT: Negative Expectation
+  - OTHER: Control
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06835777

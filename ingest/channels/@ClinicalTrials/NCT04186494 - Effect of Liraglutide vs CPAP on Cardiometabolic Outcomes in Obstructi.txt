@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04186494
+Title: Effect of Liraglutide vs CPAP on Cardiometabolic Outcomes in Obstructive Sleep Apnea
+Official Title: The Benefit of a Liraglutide-based Weight Management Alone or in Addition to Standard CPAP Therapy on Metabolic Function in Patients With Obstructive Sleep Apnoea (OSA) - an Explorative, Proof-of-concept Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: weight loss exercise
+
+SUMMARY:
+This is an explorative, proof-of-concept study exploring the potential therapeutic role of a Liraglutide-based weight loss regimen versus standard CPAP or the combination of both on metabolic parameters, blood pressure, endothelial function, coronary artery calcification, vascular inflammation and apnea/hypopnea index in non-diabetic patients with moderate to severe obstructive sleep apnea
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - insulin resistance
+
+INTERVENTIONS:
+  - DRUG: Liraglutide (Saxenda) 6Mg/Ml Inj Pen 3Ml
+  - DEVICE: Continuous positive airway pressure treatment
+  - COMBINATION_PRODUCT: Liraglutide and CPAP
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04186494

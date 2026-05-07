@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07064668
+Title: Tauroursodeoxycholic Acid Combined With PD-1/PD-L1 Immunotherapy in Advanced Hepatocellular Carcinoma: A Prospective Study
+Official Title: Prospective Study on the Synergistic Effect of Tauroursodeoxycholic Acid Combined With Immunotherapy in Hepatocellular Carcinoma
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 300
+Topic: protein supplementation
+
+SUMMARY:
+This is a clinical trial that aims to evaluate whether adding a bile acid called tauroursodeoxycholic acid (TUDCA) can improve the effects of immunotherapy in patients with advanced liver cancer (hepatocellular carcinoma).
+
+Immunotherapy has shown promise in treating this type of cancer, but not all patients respond well. TUDCA is known to help protect liver cells and may improve the liver's immune environment, potentially making immunotherapy more effective.
+
+In this study, 300 patients with advanced liver cancer will be randomly assigned to receive either immunotherapy alone or immunotherapy combined with TUDCA.
+
+Researchers will look at how well the cancer responds, whether the treatment helps more patients become eligible for surgery, and how safe the combination is.
+
+The goal is to find a more effective and better tolerated treatment for patients with liver cancer.
+
+DETAILED DESCRIPTION:
+This prospective, randomized, controlled clinical trial investigates the efficacy and safety of combining tauroursodeoxycholic acid (TUDCA) with immune checkpoint inhibitors (ICIs) in patients with advanced hepatocellular carcinoma (HCC).
+
+Immunotherapy using PD-1 or PD-L1 inhibitors has become a cornerstone in treating advanced HCC. However, a significant proportion of patients exhibit limited response or develop resistance. One contributing factor may be the immunosuppressive liver tumor microenvironment, which impairs T cell activation and infiltration. TUDCA is a hydrophilic bile acid that exhibits cytoprotective and anti-inflammatory effects, and may enhance the immune response by improving liver immune homeostasis.
+
+In this study, 300 patients with Barcelona Clinic Liver Cancer (BCLC) stage C HCC will be enrolled and randomly assigned to receive either PD-1/PD-L1 inhibitor monotherapy or combination therapy with TUDCA. The treatment cycle will last for 6 months, with a follow-up period of at least 6 months after treatment completion.
+
+The primary outcome is objective response rate (ORR) as measured by RECIST 1.1 and mRECIST criteria. Secondary endpoints include progression-free survival (PFS), overall survival (OS), conversion to surgical eligibility, and biomarker dynamics.
+
+Safety and tolerability will be closely monitored throughout the study. Dose-limiting toxicities, adverse events, and liver function parameters will be assessed regularly. The trial will also explore immune and inflammatory biomarkers associated with response to treatment.
+
+This study aims to determine whether the addition of TUDCA can enhance the efficacy of ICIs in HCC and provide a novel treatment strategy for patients with advanced disease.
+
+PRIMARY OUTCOMES:
+  - Overall Survival (OS)
+  - Progression-Free Survival (PFS)
+
+INTERVENTIONS:
+  - DRUG: TUDCA (Tauroursodeoxycholic Acid) Supplementation
+  - DRUG: Immune checkpoint inhibitor (ICI)
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07064668

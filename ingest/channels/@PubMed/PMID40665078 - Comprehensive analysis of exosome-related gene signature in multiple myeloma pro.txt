@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40665078
+Title: Comprehensive analysis of exosome-related gene signature in multiple myeloma prognosis and immune microenvironment evaluation.
+Authors: Zheng, Zhang, Wang, Zheng, Xia
+Journal: Cancer immunology, immunotherapy : CII
+Year: 2025
+Topic: cluster sets resistance training
+
+ABSTRACT:
+Multiple myeloma (MM) is a genetically complicated plasma cell malignancy characterized by malignant plasma cell proliferation and monoclonal immunoglobulin synthesis. As a disease that remains incurable, enhancing prognostic accuracy is of paramount importance. Tumor-derived exosomes (TDEs) play key roles in modulating the tumor microenvironment, angiogenesis and immune system. Exosomes are involved in multiple processes contributing to cancer progression, including in MM. However, the connection between myeloma and exosome-related genes (ERGs) has not been explored. Therefore, we aim to establish a more accurate model to evaluate the prognosis of MM patients based on the exosome-related genes. This study established an ERG-based prognostic model for MM and investigated its association with the immune microenvironment. Using transcriptomic data from GSE136337 (training set) and GSE24080 (validation set), we identified six prognostic ERGs (BIRC5, LDHA, MRPS30, MRPL15, RPL26L1, and S1PR2) through Cox and LASSO regression analyses, constructing a risk-scoring model. The model demonstrated robust predictive performance for 3-year survival (AUC&#x2009;=&#x2009;0.74 in training set; AUC&#x2009;=&#x2009;0.69 in both validation sets). A nomogram integrating age, ISS stage, and risk score significantly improved prognostic accuracy (3-year survival AUC&#x2009;=&#x2009;0.77). Functional enrichment analysis revealed that high-risk patients exhibited activation of oncogenic pathways, including cell cycle regulation and DNA replication (P&#x2009;&lt;&#x2009;0.01). Immune profiling identified an immunosuppressive microenvironment in the high-risk group, characterized by reduced CD8&#x2009;+&#x2009;T cell infiltration (P&#x2009;=&#x2009;0.004) and elevated TIDE scores (P&#x2009;=&#x2009;0.012), indicating increased resistance to immunotherapy. TCGA database validation and in vitro experiments confirmed the critical role of these ERGs in tumor microenvironment remodeling. To our knowledge, this represents the first ERG-based prognostic system for MM, providing a biologically insightful and clinically applicable tool for personalized treatment strategies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40665078/

@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06978023
+Title: Novel Chinese Medicine Formula for Diabetes
+Official Title: Clinical Safety, Efficacy and Multiomic Evaluation of a Novel Chinese Medicine Formula in Type 2 Diabetes: Effects on Beta-cell Function and insulin Resistance
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 162
+Topic: beta-alanine
+
+SUMMARY:
+Diabetes is a leading cause of heart disease, stroke, kidney failure, cancer and premature death. One in 10 adults are affected by diabetes. Early control of high blood gluocse prevents progressive deterioration and treatment escalation. People with diabetes have impaired insulin secretion, the only hormone that can lower blood glucose, or resistance to insulin action. There are trillions of microrganisms (tiny living things including bacteria) in the gut that can interact with foods and medicine to alter bodily functions including insulin secretion and its actions. Studies in animals and human suggested that a Traditional Chinese Medicine (TCM) containing a combination of four herbs (Jinmai, abbreviated as JM) reduced blood glucose by increasing insulin secretion accompanied by favorable changes in gut bacteria and expression of genetic information that regulate bodily functions.
+
+In this study, people with type 2 diabetes diagnosed for less than 6 years and not treated with any glucose lowering drugs are assigned randomly to recieve 1) high dose JM (JM-HD) or 2) low dose JM (JM-LD) or 3) look-alike dummy (placebo) given in powder form to be dissolved in water taken twice daily for 24 weeks. We shall compare the abilities of these 3 combination products to lower blood glucose over a 2-hour period after taking a nutritional drink at 0, 12 and 24 weeks. The assigned treatment will then be discontinued for 12 weeks and the test will be repeated to see if improvement is sustained. Samples will be collected at week 0 and 24 (on-treatment) and week 36 (12 weeks off-treament) to compare changes in gut bacteria in faeces and expression of genetic information that make proteins which regulate blood glucose amongst these 3 groups.
+
+DETAILED DESCRIPTION:
+People with impaired insulin secretion from the pancreatic beta-cells is the main cause of type 2 diabetes (T2D). This can be demonstrated by measuring insulin secretion following an 75 gram oral glucose tolerance test (OGTT) or a mixed meal tolerance test (MMTT). Other pathophysiological processes underlying diabetes include non-suppression of glucagon from pancreatic alpha-cells with increased fasting blood glucose, abnormal incretin (e.g. glucagon like peptide GLP-1) secretion from gut which augment insulin secretion during food intake as well as changes in gut microbiota which can interact with foods and medicine to alter hormonal secretion and metabolic milieu. Obesity, hyperglycaemia and dyslipidemia can alter inflammatory pathways, transcription factors and oxidative stress resulting in further impairment of insulin secretion and its actions. Early attainment of glycemic control can break these vicious cycles, improve glycemic durability and reduce progressive treatment escalation.
+
+Several randomized controlled trials (RCTs) and meta-analyses indicate that TCM containing multiple active components may prevent and control diabetes in human. In animal studies, our group first reported that a combination of extracts from 3 herbs (Coptidis Rhizoma; Astragali Radix; Lonicerae Japonicae Flos, abbreviated as CAL) lowered blood glucose in diabetic rats with sustained improvement in insulin resistance and beta-cell function accompanied by resolution of fatty liver. These effects persisted for weeks or months after treatment discontinuation depending on treatment duration. These improvements were accompanied by changes in gene expression (RNA and microRNA) implicated in energy metabolism. In another animal study, we first reported that extracts from Ophiopogonis (Oph) increased insulin secretion, reduced inflammation and expanded islet mass with lowering of blood glucose.
+
+Based on these mechanistic studies, we designed a proprietary formula consisting of CAL plus Oph (referred as Jinmai, JM). We randomized people with prediabetes to recieve 12-week treatment with 1) CAL only, 2) CAL+Oph low dose (JM-LD), 3) CAL+Oph very low dose (JM-VLD) and 4) consultation with CM practitioners (control), followed by treatment discontinuation for 12 weeks. Amongst these 4 groups, participants treated with JM-LD had signficant reduction in blood glucose and increased insulin secretion during 75 gram OGTT. This effect was sustained after discontinuation of JM-LD for 3 months. Microbiota and RNA analysis indicated that JM-LD caused favorable changes in microbiota and gene expression which correlated with these metabolic changes.
+
+Based on these consistent evidence, we produced a proprietary JM formula consisting of a fixed combination of extracts of CAL with low dose (JM-LD) or high dose extracts of Oph (JM-HD) under good manufacturing practice. The study was approved by the Hong Kong Department of Health for investigational use aimed at registering JM as a novel CM 
+
+PRIMARY OUTCOMES:
+  - Difference-difference in glycemic excursion during MMTT after 24 weeks of JM treatment
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: JM-LD
+  - COMBINATION_PRODUCT: JM-HD
+  - COMBINATION_PRODUCT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06978023

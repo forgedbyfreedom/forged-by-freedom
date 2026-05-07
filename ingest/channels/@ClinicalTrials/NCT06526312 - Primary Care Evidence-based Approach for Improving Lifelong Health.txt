@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06526312
+Title: Primary Care Evidence-based Approach for Improving Lifelong Health
+Official Title: Testing Technology-Based Implementation Strategies for a Family-Based Pediatric Health Behavior Intervention in Community-Based Primary Care: A Cluster Randomized Factorial Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 840
+Topic: sports nutrition
+
+SUMMARY:
+This study investigates the implementation and effectiveness of the Family Check-Up 4 Health (FCU4Health) intervention in primary care settings for reducing cardiovascular disease risk in children. Through a hybrid type 3 cluster randomized factorial trial and innovative technology-based strategies integrated with Electronic Health Records, the study aims to enhance intervention fidelity and engagement. Results will inform scalable approaches to promote child and family health behaviors, improve parenting skills, and potentially reduce child BMI, contributing to significant public health impacts in addressing cardiovascular health disparities.
+
+DETAILED DESCRIPTION:
+The proposed implementation trial is a hybrid effectiveness-implementation type III design, with a primary focus on implementation strategies and outcomes. Eligible families include children aged 2-17 who are patients at Denova Integrated Healthcare. All families (n = 900-1200) will receive FCU4Health services from a Denova staff member trained in the intervention and supervised by FCU4Health experts. Following guidance from the ongoing Community Advisory Board, investigator's previous trials, and Reach, Effectiveness, Adoption, Implementation, and maintenance (RE-AIM) framework, implementation barriers were identified to scale-up and implementation strategies adopted for the trial: Lyssn fidelity support and Short Message Service (SMS) text messaging to promote program engagement.
+
+Randomization to these strategies will occur at the care team level (n = 11-12) using a factorial design. Parent/caregivers and children at least 6 years of age will complete assessments at baseline, 6 months, 12 months, and 18 months.
+
+Primary outcomes are fidelity and engagement (Aim 1a) and child health behaviors (Aim 1b). Investigators will also examine secondary outcomes including family health routines and parenting; conduct economic analyses (Aim 2); and examine the link between trajectories of improvement in health behaviors and improvements in BMI for subgroups related to baseline BMI, child developmental age group, race/ethnicity, language, and gender (Aim 3).
+
+PRIMARY OUTCOMES:
+  - Lyssn Fidelity Ratings
+  - Engagement in Family Check Up 4 Health (FCU4Health) (in-session caregiver engagement)
+  - Budget impact of implementation
+  - Cost-effectiveness of FCU4Health
+  - Child Health Behaviors: Dietary Screener Questionnaire
+
+INTERVENTIONS:
+  - BEHAVIORAL: SMS/Text (CAMPI)
+  - BEHAVIORAL: Fidelity Monitoring (Lyssn and COACH)
+  - BEHAVIORAL: Family Check-Up 4 Health (FCU4Health)
+
+ELIGIBILITY:
+Age: 2 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06526312

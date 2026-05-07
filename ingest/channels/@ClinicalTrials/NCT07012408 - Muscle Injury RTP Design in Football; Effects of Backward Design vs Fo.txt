@@ -1,0 +1,90 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07012408
+Title: Muscle Injury RTP Design in Football; Effects of Backward Design vs Forward Design.
+Official Title: Muscle Injury Return To Play Design in Football; Effects of Backward Design Versus Forward Design . A Randomized Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 74
+Topic: sleep athletes
+
+SUMMARY:
+Introduction
+
+"Return-to-play" (RTP) is an English term that corresponds to "return to competition". It is important to understand that this return is a constant, dynamic, and personalized decision-making process . The main objective of RTP is not to predict the exact moment of an athlete's return; rather, it is to prevent new injuries. For this, adequate decision-making is necessary. There are several important steps in the process, including correct diagnosis, strict control of workloads, and intelligent management of modifiers intrinsic to the sport that can lead to anxiety and stress
+
+How are the pieces of the RTP puzzle arranged and managed?
+
+How are RTP processes evaluated today?
+
+How should RTP be understood? Should it be understood statically, as a checklist, or as a constant decision-making process involving the player?
+
+Main objective: Evaluate the design of the RTP process for muscle injuries in sports.
+
+Specific objectives:
+
+* To compare two RTP designs and evaluate how their design influences the anxiety experienced by the player.
+* Identify variables that may be altered when choosing a regressive or progressive RTP design, such as sleep quality and cortisol level.
+* To establish direction in the design of the RTP process.
+* Create complete clinical guidelines on muscle injuries in sports with a focus on RTP design.
+
+Material and Methods
+
+Definition of the Study Subjects
+
+The subjects of the study will be all players belonging to the first or B team who suffer a muscle injury diagnosed by magnetic resonance imaging. At the time of injury, they will be randomly assigned to either the control group (following a regressive RTP design) or the intervention group (following a progressive RTP design). Masking will be double-blind. The sample size will be N=74.
+
+The secondary variables will be recorded in the database after diagnosis by MRI. Subsequently, the primary variables will be measured and recorded at the beginning, middle, and end of the RTP period.
+
+It is estimated that approximately half of the necessary sample size has been reached: about 37 subjects with muscle injury. The first statistical analysis will then be carried out to observe the preliminary results.
+
+After three years, once the analysis has been completed, the results and conclusions will be written up for publication in a journal.
+
+DETAILED DESCRIPTION:
+Capturing and Recruiting Participants
+
+Since the players are from the same club and suffer muscle injuries, they will be included in the control and intervention groups for three years. The following section will explain that the sampling technique is consecutive and that participants can take part in the study several times, as long as they have a muscle injury diagnosed by resonance. Relapses of the same injury or injuries in the same or different muscle groups will also be included in the sample. The head of the club's medical service and collaborating researcher, Dr. José María Villalón Alonso, will recruit the participants. After the diagnostic test (MRI) is performed and the diagnosis and prognosis are established, the participants will be handed over to the recovery specialists, who will design the RTP. The specialists and the participants (players) will be blinded in the same way.
+
+Allocation Procedure/Randomization
+
+Subjects (muscle injuries) have the same probability (50%) of being allocated to the control or intervention group, regardless of previous allocations.
+
+Justification of Sample Size
+
+A type of consecutive sampling will be carried out based on the average probability that a soccer player will suffer a muscular injury. On average, each player will suffer 0.6 muscular injuries per season. In a team of 25 soccer players, this translates to an average of 15 muscular injuries per season. By contrasting this data with the club's database, we can verify the accuracy of this estimate. According to this statistical data, the population from which we will extract the sample will be the total number of muscle injuries suffered by the two teams of Club Atlético Madrid over three years:
+
+0.6 (injuries) x 50 (players) x 3 years = 90 muscle injuries. Using the Grammo sample calculator with a relative error of 5% and a 95% confidence interval, we will calculate the necessary sample size for the sample to be representative, which will be N = 74.
+
+Statistical Analysis Plan:
+
+Phase 1: Use Levene's test to check if the variances of the control and intervention groups are equal.
+
+Phase 2: Use a t-test to determine if there is a significant difference between the means of the control and intervention groups, and to establish whether the null hypothesis (H0) or the alternative hypothesis (HA) is true.
+
+Phase 3: Perform a bivariate study of the relationship between anxiety (dependent variable) and estimated prognosis (independent variable) using Pearson's correlation coefficient.
+
+Phase 4: Conduct a multivariate study through multiple regression between the dependent variable, sleep quality, and the independent variables, age, type of affected tissue, and cortisol level.
+
+Phase 5: Perform a multivariate study through simple linear regression between the dependent variable, anxiety, and the independent variable, previous injuries in the same musculature.
+
+Ethical and Legal Aspects:
+
+Compliance with the standards of Good Clinical Practice, the Declarat
+
+PRIMARY OUTCOMES:
+  - Anxiety
+  - Sleep quality
+  - Stress (cortisol)
+  - Heart Rate Variability
+
+INTERVENTIONS:
+  - OTHER: Return to play program with progressive design
+  - OTHER: Return to play program with regressive design
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07012408

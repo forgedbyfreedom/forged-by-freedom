@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06610110
+Title: Caffeine, CYPA12 and Resistance Exercise
+Official Title: Influence of CYP1A2 on the Acute Effect of Caffeine Intake on Resistance Exercise
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: caffeine exercise
+
+SUMMARY:
+Introduction: Several studies have evaluated and confirmed the ergogenic effect of acute caffeine intake on sports performance, specifically on strength and power performance. However, it remains to be elucidated how CYP1A2 polymorphism influences the acute effects of caffeine on this type of exercise.
+
+Objectives: The present study aims to analyze the effects of acute caffeine intake on muscular strength, power, and endurance performance according to CYP1A2 polymorphism in men and women.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - cyp1a2 polymorphism
+  - Mean velocity at different %1RM
+  - Peak velocity at different %1RM
+  - Mean power output at different %1RM
+  - Peak power output and time to reach peak power output at different %1RM
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06610110

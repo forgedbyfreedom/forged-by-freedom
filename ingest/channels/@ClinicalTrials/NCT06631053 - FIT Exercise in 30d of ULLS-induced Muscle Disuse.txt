@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06631053
+Title: FIT Exercise in 30d of ULLS-induced Muscle Disuse
+Official Title: Use of Velocity Monitoring to Prescribe Appropriate Flywheel-based Inertial Training (FIT) Workloads for Exercise in Space Flight
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: resistance training
+
+SUMMARY:
+This study aims to determine how flywheel-based inertial training (FIT) implemented according to principles of velocity-based training (VBT) and High-Intensity Interval Training (HIIT) affects disuse-induced physical de-conditioning including loss of voluntary muscle strength, aerobic capacity, and balance regulation.
+
+DETAILED DESCRIPTION:
+The primary objectives of this project are:
+
+1. To assess how 30d of unilateral lower limb suspension (ULLS) with and without FIT exercise affects voluntary and electrically-evoked twitch force, motor unit recruitment, and anisotropic measures.
+2. To determine how muscle anisotropy (assessed through diffusion tensor imaging) and motor unit action potential train (MUAPT) characteristics relate to contractile function in loaded and unloaded limbs
+
+Secondary objectives include:
+
+1. To assess impact of ULLS with and without FIT on aerobic capacity
+2. To assess impact of ULLS with and without FIT on balance regulation during single-leg stance
+
+This study aims to recruit 10 healthy, physically active participants (both male and female). Participants will undergo 30d of ULLS to unload the left limb during daily living activities. Subjects will wear a specially modified shoe with a 5cm rocker-style stack on the right leg and ambulate using crutches. Participants will be randomly assigned to either a control or exercise group. Those in the exercise group will perform Flywheel-based Inertial Training (FIT) leg press three times per week. Moment of inertia of the flywheel will be adjusted to elicit movement speeds of 0.4 m/s for resistance training (four sets of 10 repetitions). For High Intensity Interval Training, flywheel moment of inertia will be adjusted to elicit movement speed of 1.0m/s during upright squats (four sets of 3 min).
+
+Before and after the intervention, subjects will complete a series of tests including:
+
+1. Body Composition - height, weight, waist circumference, and tetrapolar bioelectrical impedance analysis will be conducted.
+2. Balance assessment - center of pressure will be assessed using portable force decks during single leg stance with eyes open and closed. This test will be repeated in the shod and unshod conditions. MUAPT data (high density surface electromyography) will be collected for the soleus and tibialis anterior during this test.
+3. Aerobic capacity test - VO2max will be determined during a graded exercise test on a cycle ergometer (3 min per stage). Gas exchange and heart rate data will be collected continuously throughout the test. Pedal force will also be assessed. Additional outcomes such as ventilatory threshold and substrate utilization will be assessed.
+4. Muscle Imaging - Diffusion tensor imaging (DTI), a magnetic resonance technique will be used to assess anisotropic measures, muscle volume, fascicle length, and fascicle orientation of the mid-thigh.
+5. Muscle strength testing - Maximal voluntary isometric and isokinetic strength of the knee extensors, flexors, and ankle plantar- and dorsi-flexors will be assessed. Interpolated twitch (electrical stimulation of the femoral nerve) will be used to assess twitch characteristics and voluntary activation of the quadriceps
+
+PRIMARY OUTCOMES:
+  - Voluntary activation
+  - Twitch Properties-Electromechanical Delay
+  - Twitch Properties-Rate of Torque Development
+  - Twitch Properties-Time to peak Tension
+  - Twitch Properties-Peak Twitch Torque
+
+INTERVENTIONS:
+  - OTHER: velocity-based FIT (VBFIT)
+  - OTHER: No Exercise
+
+ELIGIBILITY:
+Age: 35 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06631053

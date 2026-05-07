@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05166083
+Title: Investigation of the Perceptual and Acoustic Voice in Trans Man
+Official Title: Investigation of the Perceptual and Acoustic Characteristic of Voice in Trans Man
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 26
+Topic: testosterone replacement
+
+SUMMARY:
+The aim of the study is to follow acoustic and perceptual voice changes in trans men during hormone therapy and to examine the relationship between psychosocial and vocal characteristics and testosterone measured in routine follow-up in accordance with international follow-up guidelines.
+
+DETAILED DESCRIPTION:
+Trans men who have completed the evaluation and follow-up procedure and decided to use sex hormones will be included in the study. Participants will be followed for 8 doses of sex hormone use. Acoustic and perceptual changes in voice will be monitored at baseline (before hormone use), 4th dose, and 8th dose. The relationship between testosterone and psychosocial and vocal characteristics will be examined. At the baseline of the study, participants will be evaluated with Videolaryngostroboscopy (VLS). As a result of VLS, perceptual and acoustic voice evaluation will be made to the participants who are determined to have healthy vocal folds. During routine psychiatric visits, participants will be asked to fill in self-report scales. Endocrinological routine evaluations will be applied to the participants and the data of these routine evaluations will be used in the study. All of these evaluations (perceptual and acoustic voice evaluation, endocrinological and psychiatric evaluations) will be repeated at the 4. and 8. doses of the hormone therapy, except for the VLS evaluation.
+
+IBM SPSS Statistics 26.0 and Microsoft Excel 365 programs will be used for statistical analysis. The number of participants to be included in the study was calculated using the G Power 3.1 program. In the analysis, the number of participants was determined as 28 (G power=0.80, α =0.05). The normal distribution of the data will be examined by visual and analytical methods (Shapiro-Wilk test, Kolmogorov-Smirnov test).The analysis of each variable measured at three time points will be evaluated using ANOVA if the assumptions of parametric tests are met, and using the Friedman test if the assumptions of parametric tests are not met. When the parametric conditions are met Paired t test will be used to compare the measurement values, and when the parametric conditions are not met, the Wilcoxon signed-rank test will be used. Multiple Regression Analysis will be used to determine the factors affecting the person's own perception of voince. Finally, statistical significance level was accepted as p\<0.05.
+
+PRIMARY OUTCOMES:
+  - Change in Self-perception of voice
+  - Change in Self-perception of voice
+  - Change in Self-perception of voice
+
+INTERVENTIONS:
+  - OTHER: Testosterone Hormon Therapy
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05166083

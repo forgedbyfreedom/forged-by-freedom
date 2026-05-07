@@ -1,0 +1,67 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02483000
+Title: Anti-CD20 Radioimmunotherapy Before Chemotherapy and Stem Cell Transplant in Treating Patients With High-Risk B-Cell Malignancies
+Official Title: Evaluation of Pretargeted Anti-CD20 Radioimmunotherapy Combined With BEAM Chemotherapy and Autologous Stem Cell Transplantation for High-Risk B-Cell Malignancies
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 3
+Topic: beta-alanine
+
+SUMMARY:
+This phase I/II trial studies the side effects and best dose of anti-cluster of differentiation (CD)20 radioimmunotherapy (RIT), and to see how well it works when given before chemotherapy and stem cell transplant in treating patients with B-cell malignancies that have not responded to treatment or have come back after responding to treatment. CD20 is a protein found on the cells of a type of cancer cell called B-cells. Anti-CD20 RIT attaches radioactive material to a drug that is designed to target CD20, which brings radioactive material to the cancer cells to kill the cells. This may kill more tumor cells while causing fewer side effects to healthy tissue. Adding anti-CD20 to standard chemotherapy and stem cell transplant may be more effective in treating patients with B-cell malignancies.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To estimate the maximum tolerated dose (MTD) of 90Y activity that can be delivered via pretargeted radioimmunotherapy (PRIT) using B9E9-fusion protein (B9E9-FP), clearing agent (CA), and radiolabeled tetraazacyclododecane-1,4,7,10-tetraacetic acid (DOTA)-biotin when followed by carmustine, etoposide, cytarabine, and melphalan (BEAM) chemotherapy and autologous stem cell transplantation.
+
+SECONDARY OBJECTIVES:
+
+I. To assess the overall and progression-free survival of the above regimen in such patients.
+
+II. To evaluate the response rates of the above therapy.
+
+III. To evaluate the toxicity and tolerability of the above therapy.
+
+IV. To evaluate the feasibility of delivering sequential high-dose PRIT and chemotherapy.
+
+TERTIARY OBJECTIVES:
+
+I. Assess biodistribution and pharmacokinetics of B9E9-FP and radiolabeled DOTA-Biotin.
+
+II. Assess ability of the clearing agent (CA) to remove excess B9E9-FP from the serum.
+
+III. Evaluate the impact, if any, of circulating rituximab on biodistributions.
+
+OUTLINE: This is a phase I, dose-escalation study of yttrium Y 90 DOTA-biotin followed by a phase II study.
+
+B9E9-FP INFUSION: Patients receive B9E9-fusion protein intravenously (IV) over a minimum of 2 hours on day -17.
+
+CLEARING AGENT INFUSION: Patients receive clearing agent IV over a minimum of 30 minutes on day -15.
+
+RADIOBIOTIN INFUSION: Patients receive indium In 111-DOTA-biotin IV and yttrium Y 90 DOTA-biotin IV over 2-5 minutes on day -14.
+
+BEAM CHEMOTHERAPY: Patients receive BEAM chemotherapy comprising carmustine IV over 3 hours on day -7; etoposide IV over 2 hours twice daily (BID) and cytarabine IV over 4 hours BID on days -6 to -3; and melphalan IV over 30 minutes on day -2.
+
+STEM CELL INFUSION: Patients undergo autologous peripheral blood stem cell transplant (PBSCT) on day 0 per standard of care.
+
+After completion of study treatment, patients are followed up at 1, 3, 6, and 12 months, and then annually thereafter.
+
+PRIMARY OUTCOMES:
+  - Maximum Tolerated Dose (MTD) of Yttrium Y 90 DOTA-biotin Defined as the Dose That is Associated With a True Dose Limiting Toxicity (DLT) Rate of 25%, Where a DLT is Defined as a Therapy-related Grade III or IV Bearman (Transplant) Toxicity
+
+INTERVENTIONS:
+  - BIOLOGICAL: Anti-CD20 B9E9 scFv-Streptavidin Fusion Protein
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Carmustine
+  - DRUG: Clearing Agent
+  - DRUG: Cytarabine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02483000

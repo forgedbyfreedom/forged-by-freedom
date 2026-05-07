@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01931722
+Title: Exercise and Branched Chain Amino Acids (BCAAs)Requirements in Older Men
+Official Title: Can Branched Chained Amino Acid Supplementation Combined With Strength-Training Minimize Sarcopenia in Older Men?
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: sarcopenia intervention
+
+SUMMARY:
+Likely, branched chain amino acid (BCAAs) requirements are increased in older strength-trained (ST) individuals. If so, supplementation in this group will maximize muscle protein synthesis (MPS) and minimize loss of muscle with age (sarcopenia).
+
+DETAILED DESCRIPTION:
+We hypothesize that the dietary requirement for the branched chain amino acids (BCAAs) in an older strength-trained (ST) population will be greater than the current recommendation (RDA). If so, a greater intake of BCAAstogether with ST is necessary if one aims to maximize muscle protein synthesis (MPS). Currently, the BCAAsrequirement in the ST older population (55-65 y) is unknown. This is critical information especially given the value of ST for overall health.
+
+PRIMARY OUTCOMES:
+  - Required Branched chain amino acid of older strength trained men
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Branched chain amino acid
+  - BEHAVIORAL: Strength training
+
+ELIGIBILITY:
+Age: 55 Years to 65 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01931722

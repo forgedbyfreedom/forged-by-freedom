@@ -1,0 +1,104 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04841785
+Title: RECOVAC - Long Term Efficacy and Safety of COVID-19 (SARS-CoV-2) Vaccination in Kidney Disease Patients
+Official Title: The RECOVAC LESS CoV-2 Study - Long Term Efficacy and Safety of SARS-CoV-2 Vaccination in Patients in Patients With Chronic Kidney Disease Stage G4-G5, on Dialysis or After Kidney Transplantation
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 4868
+Topic: physical activity intervention
+
+SUMMARY:
+Rationale: COVID-19 is associated with severely increased morbidity and mortality in patients with chronic kidney disease stage G4-G5 and patients on dialysis or after kidney transplantation. Therefore, effective SARS-CoV-2 vaccination would be of great clinical importance in these patients. However, SARS-CoV-2 vaccination studies have excluded these patients so-far. Literature data indicate that vaccination may be less effective in these patient groups.
+
+Objective: To assess the efficacy and safety of SARS-CoV-2 vaccination in patients with chronic kidney disease stage G4-G5, patients on dialysis or after kidney transplantation during two years follow-up after vaccination.
+
+Study design: prospective single center observational cohort study.
+
+Study population:
+
+* all Dutch patients on dialysis with data registered in the Dutch Dialysis registry (RENINE)
+* all Dutch patients after kidney transplantation with data registered in the Dutch national kidney transplant registry (NOTR).
+* All Dutch patients with chronic kidney disease stage G4-G5 registered in the Santeon hospitals.
+
+Intervention: After SARS-CoV-2 vaccination according to standard of care, blood will be drawn for antibody response measurements at day 28 and month 6 after 2nd vaccination at by mailer-based finger-prick in 3400 hemodialysis patients, 600 peritoneal dialysis patients, 4000 patients after kidney transplantation and 4000 patients with chronic kidney disease stage G4-G5. Patients who will undergo a 3rd SARS-CoV-2 vaccination via the national vaccination program for immunocompromised patients will be asked to carry out the mailer-based finger-prick 28 days after the 3rd SARS-CoV-2 vaccination, instead of the antibody measurement 6 months after the 2nd SARS-CoV-2 vaccination.
+
+Main study parameters/endpoints:
+
+The primary endpoint is efficacy of SARS-CoV-2 vaccination determined as:
+
+\- the incidence of COVID-19 after vaccination.
+
+Secondary endpoints are
+
+* mortality
+* adverse events of specific interest according to (inter)national authorities in collaboration with LAREB
+* presence of HLA-antibodies in dialysis patients on the waiting list for a first kidney transplantation
+* acute rejection and graft failure in patients after kidney transplantation In a subset of patients additional secondary endpoints will be assessed
+* the antibody based immune response at 28 days after completion of SARS-CoV-2 vaccination.
+* the durability of antibody based immune response at 6 months compared to at 28 days after having received two subsequent SARS-CoV-2 vaccinations, in patients that have not received a 3rd SARS-CoV-2 vaccine.
+* the antibody based immune response at 28 days after having received the 3rd SARS-CoV-2 vaccination.
+
+The incidence of these endpoints will be compared, if applicable, to those:
+
+* in the general population who are vaccinated
+* in patients on dialysis or after kidney transplant who are not vaccinated Within these patient groups endpoints will be compared between recipients of different vaccines.
+
+DETAILED DESCRIPTION:
+1. OBJECTIVES
+
+   Primary objective:
+
+   To assess the efficacy of SARS-CoV-2 vaccination by the incidence of COVID-19 in patients with chronic kidney disease stage G4-G5, on dialysis and patients after kidney transplantation who received SARS-CoV-2 vaccination
+
+   Secondary Objectives:
+
+   \- To assess the safety of vaccination
+
+   In a subgroup of participants:
+   * To assess the level of antibody response at 28 days and 6 months after SARS-CoV-2 vaccination
+   * To assess durability of the antibody response at 6 months after having received two subsequent SARS-CoV-2 vaccinations, in a subset of patients that have not received a 3rd SARS-CoV-2 vaccine
+   * the antibody based immune response at 28 days after having received the 3rd SARS-CoV-2 vaccination.
+
+   Exploratory Objectives:
+   * The vaccination coverage rate
+   * The severity of COVID-19 in case of infection
+   * The influence of vaccination on health-related quality of life by patient reported outcome measures (PROMs) in patients on dialysis.
+   * The SARS-CoV-2 genotype in patients with COVID-19
+
+   In a subgroup of participants:
+   * To assess the level of antibody response after vaccination between patients with COVID-19 and without COVID-19 at:
+
+     * 28 days after the 2nd SARS-CoV-2 vaccination
+     * 28 days after the 3rd SARS-CoV-2 vaccination
+     * 6 months after the 2nd SARS-CoV-2 vaccination in patients who have not received a 3rd vaccine.
+   * To assess change in behaviour towards measures against COVID-19 before and after vaccination
+
+   If data are available and applicable, outcomes in vaccinated patients on dialysis or after kidney transplantation will be compared:
+   * with outcomes in the general population
+   * with outcomes in patients with severely impaired kidney function (CKD stages G4/5), on dialysis or with a kidney transplant who are not vaccinated.
+   * according to the type of vaccination they received
+2. STUDY DESIGN
+
+   This is a prospective observational registry-based cohort study to evaluate the long-term efficacy and safety after SARS-CoV-2 vaccination on clinically important outcomes in patients with chronic kidney disease stage G4-G5, on dialysis or after kidney transplantation.
+
+   All participants will receive vaccination against COVID-19 via the national vaccination program and according to the manufacturer's instructions. To assess the immune response after vaccination, blood samples will be collected at 28 days after the 2nd SARS-CoV-2 vaccination, 28 days after the 3rd SARS-CoV-2 vaccination, and 6 months after the 2nd SARS-CoV-2 vaccination in patients who have not received a 3rd vaccination. In total a maximum of 1 ml blood will be drawn.
+
+   Data of the following cohorts will be analyzed in this study.
+   * Patiens with chronic kidney disease stage G4-G5, data to be derived from the Santeon hospitals.
+   * Patients on hemodialysis and peritoneal dialysis, data to be derived from the existing national registry RENINE
+   * Kidney transplant re
+
+PRIMARY OUTCOMES:
+  - The incidence of COVID-19
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: mailer-based finger-prick
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04841785

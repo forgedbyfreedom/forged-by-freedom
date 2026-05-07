@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06377111
+Title: A Study to Test the Benefit of Vitamin B5 in Patients With Melanoma
+Official Title: Phase 1 Trial of PANtoTHEnic Acid in Patient With Metastatic or Unresectable Melanoma ON ImmunOtherapy (PANTHEON-IO)
+Status: RECRUITING
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: beta-alanine
+
+SUMMARY:
+This study is open to patients with a type of cancer called melanoma. Patients can join the study if their tumor cannot be removed by surgery or has spread to other organs, and are planned to receive immunotherapy as treatment for their cancer. This study is looking at whether taking calcium pantothenate supplement (a type of Vitamin B5) can increase its levels in the blood and have an effect in the immune system, when its used in combination with the immunotherapy.
+
+DETAILED DESCRIPTION:
+This single-center, single-cohort study aims to investigate the effectiveness of oral calcium pantothenate (C-PAN) in raising plasma pantothenic acid levels in melanoma patients. Conducted at Princess Margaret Cancer Centre, the study will enroll 12 eligible subjects with locally unresectable or metastatic melanoma undergoing first-line standard of care (SOC) with combined immune checkpoint inhibitor (ICI) therapy, Nivolumab and Ipilimumab. Additionally, the study will explore changes in immune cell subsets, metabolomics, and gut microbiome to understand the impact of pantothenate/CoA pathway manipulation on ICI efficacy and immune-mediated colitis prevention.
+
+Patients will initially receive a run-in period of C-PAN at a dose of 2000 mg daily for 3 to 7 days, alongside approved SOC drugs. Subsequently, patients will continue with the maintenance dose of 2000 mg daily, starting on the same day as the first cycle of combined ICI. This maintenance dose will be continued until the occurrence of unacceptable toxicity, disease progression by iRECIST criteria, or for a maximum duration of 1 year, whichever comes first, unless there are specific criteria indicating the discontinuation of C-PAN.
+
+For all subjects, radiologic imaging to assess response to treatment will be performed as per standard practice (ideally every 8 to 12 weeks, with first assessment at week 9). Fecal samples will be collected from all subjects at baseline (1st sample), at week 9 following the start of ICI, and at study completion or discontinuation. An additional fecal sample will be collected in case of development of immune-related colitis or immune-related diarrhea.
+
+Standard laboratory investigations for immunotherapy will be collected as per institutional practice. Blood samples for biomarkers will be collected at various time points.
+
+PRIMARY OUTCOMES:
+  - To determine if the dose of 2000 mg daily of pantothenic acid achieves an increase in plasmatic concentration of pantothenic acid by at least A-50% between baseline and week 9, in 9 or more of the patients treated with combined ICI.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: C-PAN
+  - BIOLOGICAL: Nivolumab
+  - BIOLOGICAL: Ipilimumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06377111

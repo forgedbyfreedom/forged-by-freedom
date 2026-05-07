@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06997510
+Title: Better4All Personalized Intervention
+Official Title: Better4All Personalized Intervention
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1022
+Topic: body composition exercise
+
+SUMMARY:
+The BETTER4U (Preventing obesity through Biologically and bEhaviorally Tailored inTERventions for you) project, funded by the European Union, aims to address obesity through biologically and behaviourally tailored interventions. Obesity is a major public health issue influenced by genetic, metabolic, and lifestyle factors. Despite current weight management interventions, many individuals face challenges due to these varied influences. The BETTER4U project seeks to improve weight management by incorporating artificial intelligence (AI) and polygenic risk scores (PRS) to personalize interventions. The goal is to test the effectiveness of these personalized interventions in improving weight loss compared to standard care, using advanced monitoring tools and AI models.
+
+The BETTER4ALL personalized intervention is a multicentre, open-label, parallel-group randomized controlled trial (RCT) involving seven study sites across Cyprus, France, Greece, Poland, Portugal, Spain, and Sweden. A total of 1,022 participants with overweight or obesity (BMI ≥ 25 kg/m²), aged 18-65 years, will be enrolled. Participants will be randomized into two groups: an intervention group receiving personalized lifestyle recommendations based on AI and PRS, and a control group receiving standard care recommendations. The intervention will last six months, followed by a six-month follow-up assessment.
+
+The intervention's key aspects include wearable devices and a mobile application to monitor participants' behaviour, including physical activity, sleep, and eating habits. The intervention also integrates genetic, metabolic, and environmental data to provide tailored recommendations for weight loss. Participants' outcomes will be assessed regarding BMI, weight loss maintenance, changes in clinical biomarkers, body composition, and other lifestyle parameters.
+
+This RCT will provide valuable insights into the effectiveness of personalized weight management strategies. AI-driven personalized recommendations and real-time monitoring represent a significant shift from traditional, one-size-fits-all approaches. The results of this study could offer a more effective and sustainable model for obesity management, particularly by accounting for individual genetic predispositions and lifestyle factors. Furthermore, by evaluating the impact of the intervention on a wide range of health outcomes, including biomarkers and psychosocial factors, the study will provide a comprehensive understanding of how personalized interventions can improve overall health and weight management.
+
+In addition to contributing to the scientific understanding of obesity and its management, this project has the potential to influence public health strategies, offering a more personalized, data-driven approach to obesity prevention and treatment. By integrating genetic, environmental, and lifestyle factors, the BETTER4U intervention could pave the way for future innovations in digital health and obesity management.
+
+DETAILED DESCRIPTION:
+Obesity is a major global public health issue with significant physical, psychosocial, and financial implications, especially in vulnerable populations. It results from complex interactions between genetic, metabolic, lifestyle (e.g., diet, physical activity, sleep), psychological, and sociodemographic factors. Individual responses to weight management interventions vary considerably, necessitating personalized strategies to prevent and treat obesity. Data from clinical trials have demonstrated that response to weight loss treatments is considerably characterized by an inter-individual variation, resulting from a combination of multiple genetic and phenotypic factors, interacting in a non-linear manner. Thus, a tailor-made, evidence-based weight loss intervention is considered to be the optimal solution for obesity management. Modern technology and the use of artificial intelligence (AI) models provide the potential to individualize weight management by including more information about an individual before delivering a treatment plan, in a way that has not been possible before.
+
+Recently, the European Commission (EC) funded the large-scale BETTER4U project (Preventing obesity through Biologically and bEhaviorally Tailored inTERventions for you) to improve weight management through a tailor-made intervention using AI. The project consortium consists of 28 partners across Europe, Israel, and Australia, including health and technology scientists, legal and communication experts, and representatives from the European Association for the Study of obesity, EASO.
+
+The BETTER4U project started in November 2023 and will run until October 2027, having the potential to produce new knowledge on weight management in an adult population. In addition, the envisioned privacy-respecting BETTER4U platform will be capable for detailed behavioural monitoring, will provide an infrastructure for continued and widespread use of real-world data beyond the end of the project, using real-world data for understanding the contextual circumstances and health status, as a valuable clinical research and patient management tool.
+
+The BETTER4U work plan is broken down into 9 work packages (WPs) and its methodology is orchestrated in 4 phases, namely: Phase 1: identification of all weight-gain related determinants; Phase 2: creation of an AI-based causal model; Phase 3: pilot and randomized controlled trials (RCT) for the creation of the BETTER4U integrated methodology; and Phase 4: communication and dissemination of the methodology.
+
+The study will be implemented in seven intervention sites (Cyprus, France, Greece, Poland, Portugal, Spain, Sweden). The overall aim of this study is to assess the effectiveness of the personalized intervention on weight loss over six months, as well as evaluate its impact on other lifestyle parameters, clinical indices, and biomarkers, while also assessing the maintenance of weight loss over a follow-up period of another six months.
+
+The interventi
+
+PRIMARY OUTCOMES:
+  - Mean change in BMI
+
+INTERVENTIONS:
+  - BEHAVIORAL: Personalized lifestyle recommendations based on artificial intelligence (AI) and polygenic risk scores (PRS)
+  - BEHAVIORAL: Standard care: lifestyle counselling, healthy eating leaflet, and hyocaloric diet targeting ≥5% weight loss in 6 months.
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06997510

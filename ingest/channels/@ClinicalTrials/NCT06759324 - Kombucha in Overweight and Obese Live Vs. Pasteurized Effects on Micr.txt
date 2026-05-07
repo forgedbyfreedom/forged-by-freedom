@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06759324
+Title: Kombucha in Overweight and Obese: Live Vs. Pasteurized Effects on Microbiota, Metabolism, and Liver Function
+Official Title: Randomized Controlled Pilot Clinical Study Including Kombucha in the Diet of Individuals with Overweight and Class 1 Obesity: Comparative Assessment Between Live and Pasteurized Kombucha and Its Effects on Gut Microbiota, Metabolic Parameters, and Liver Function [FUSILLI Project -H2020]
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: protein supplementation
+
+SUMMARY:
+Kombucha, a fermented beverage made from Camellia sinensis tea (black, oolong, or green) with sugar and a symbiotic culture of bacteria and yeast (SCOBY), has gained global attention for its potential health benefits. Factors like the type and amount of sugar substrate, fermentation time, and temperature significantly influence its organic compounds, total phenolics, vitamin content, and alcohol levels.
+
+In a previous study, kombucha's impact on glucose tolerance, insulin sensitivity, body composition, and liver function was tested in male prediabetic mice with diet-induced obesity. Daily supplementation (200 µL per mouse) improved glucose tolerance after nine days (equivalent to one year in humans) and reduced liver steatosis, despite no changes in body composition.
+
+Although kombucha has been associated with antioxidant, antimicrobial, probiotic, antidiabetic, and anticancer activities, strong scientific evidence in humans remains limited. Further clinical studies are needed to substantiate kombucha's health benefits in humans.
+
+DETAILED DESCRIPTION:
+The objectives of this clinical study aim to explore the effects of kombucha on the health of individuals with overweight and class 1 obesity, while also determining whether the kombucha microbiota plays a role in the observed effects. Specifically, by investigating metabolic parameters such as glucose and insulin levels and lipid profile, as well as the composition and diversity of the gut microbiota and liver function, the study will contribute to a deeper understanding of the potential benefits and mechanisms of action of kombucha consumption in humans. The study aims to recruit at least 30 individuals with overweight and class 1 obesity, aged between 18 and 60 years, randomly distributed into 3 arms (each arm should have about 10 participants). The first arm receives a daily amount of 33 cl of kombucha (live drink) for 4 weeks, the second arm receives a daily amount of 33 cl of kombucha (pasteurized drink) for 4 weeks. The control group receives 33 cl of sparkling water for 4 weeks.
+
+PRIMARY OUTCOMES:
+  - Change in Gut microbiota composition and diversity (fecal samples)
+  - Change in fasting glucose levels
+  - Change in fasting insulin levels
+  - Changes in Homeostasis Model Assessment of insulin Resistance (HOMA-IR) values
+  - Changes in Lipid profile
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Live kombucha (non filtered/ non pasteurized)
+  - DIETARY_SUPPLEMENT: Pasteurized kombucha (non filtered)
+  - OTHER: Control (sparkling water)
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06759324

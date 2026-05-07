@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07529132
+Title: Changes in Energy Expenditure in Response to Physical Activity in Healthy Adults
+Official Title: Assessment of Changes in Energy Expanditure in Response to Short-term Physical Activity Measured by Indirect Calorymetry in Healthy Individuals
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 20
+Topic: caffeine exercise
+
+SUMMARY:
+This study investigates how short, high-intensity body-weight exercises affect energy use in healthy young adults. The focus is on resting metabolic rate (RMR), total energy expenditure (TEE) and excess post-exercise oxygen consumption (EPOC), measured with a portable indirect calorimetry system (COSMED K5). Participants will be 14 volunteers, seven women and seven men aged 18 to 30 years, recruited from the academic community of the Medical University of Białystok. Each subject will first undergo basic screening, including ECG, blood pressure, and body composition. Measurements will be taken in three phases. In the resting phase, RMR will be recorded after fifteen minutes of quiet sitting. In the exercise phase, participants will perform squats, burpees, or a plank for one minute at maximum effort or sustained position while energy use is continuously monitored. In the recovery phase, EPOC will be measured immediately after exercise to capture short-term changes. Oxygen uptake, ventilation, heart rate, and oxygen saturation will be tracked throughout the session. Environmental conditions such as room temperature and humidity will be standardized, and participants will avoid caffeine, alcohol, and heavy physical activity at least 24 hours before testing. The main aim is to determine whether even one minute of exercise can meaningfully alter EPOC steady state parameters, and to compare the energy cost of different exercise types. The data will be analyzed in relation to anthropometric variables and cardiopulmonary function. Results are expected to improve understanding of short-term energy dynamics and may support more precise recommendations in pulmonary rehabilitation, cardiology, sports medicine, and nutrition. By providing reliable measurements of caloric cost in simple exercises, the study can help design safer and more effective training, rehabilitation, and weight control programs.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Differences Between Pre- and Post-exercise Energy Expenditure Measurement
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: physical activity
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07529132

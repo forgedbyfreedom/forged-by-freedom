@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06606912
+Title: Predictive Effect of Abdominal Fat and Muscle Area Calculated Based on Abdominal CT on Gastric Cancer Patients
+Official Title: Predictive Effect of Abdominal Fat and Muscle Area Calculated Based on Abdominal CT on Short- and Long-term Outcomes in Patients with Gastric Cancer
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 4000
+Topic: sarcopenia intervention
+
+SUMMARY:
+This study aims to create a clinical prediction model. Abdominal fat and muscle area also play an important role in the prediction of surgical outcomes in colorectal cancer. Studies have shown that excess visceral fat and low skeletal muscle mass (sarcopenia) are associated with poorer postoperative outcomes, including a higher risk of postoperative complications and lower survival. Preoperative imaging techniques such as CT, MRI and ultrasound that provide accurate measurements to assess abdominal fat and muscle area can help surgeons develop individualized surgical and rehabilitation plans, improve surgical success, reduce complications and improve long-term patient prognosis. In this study, the investigators expected to construct a prediction model of abdominal fat and muscle area on the short- and long-term outcomes of gastric and colorectal cancer patients by calculating the abdominal fat and muscle area in different levels of abdominal CT images, in order to further adjust and guide the treatment plan.
+
+DETAILED DESCRIPTION:
+This is a retrospective observational study, which is expected to include patients diagnosed with gastric cancer and undergoing radical gastric cancer surgery in the Department of Gastrointestinal Surgery of the First Affiliated Hospital of Chongqing Medical University, the Department of Gastrointestinal Surgery of the Second Affiliated Hospital of Chongqing Medical University, the Department of Gastrointestinal Surgery of the Affiliated Yongchuan Hospital of Chongqing Medical University, and the Department of Gastrointestinal Surgery of the Qijiang People\&#39;s Hospital, and to discuss the predictive effects of abdominal fat and muscle area on the short-term and long-term outcomes of gastric cancer patients after surgery.
+
+1\. Case collection Patients diagnosed with gastric cancer and undergoing radical gastric cancer surgery were screened according to the inclusion criteria. All patients had signed informed consent.
+
+Inclusion criteria:
+
+1. Diagnosed with gastric cancer by pathology or cytology;
+2. Age \&gt;18 years;
+3. Not having received chemotherapy, radiotherapy, targeted therapy or immunotherapy;
+4. Patients with postoperative pathological stages other than stage IV, or without metastases in liver, lung or other distant organs confirmed by CT, MRI or B-ultrasound imaging and without surgical treatment;
+5. Pre-operative CT examination data were kept in our hospital.
+
+2\. Data collection Collect patients' preoperative baseline information such as gender, age, body mass index (BMI), complications, tumor stage, etc. Collect patients' preoperative CT scans (make sure to include images from lumbar 1 to lumbar 5). Collect patients' surgical conditions such as operation time and intraoperative bleeding. Collect patients' postoperative complications during hospitalization; 3. Prognostic follow-up Closely follow up the death or cancer recurrence of patients after surgery. 4. Outcome indicators
+
+1. Primary outcome indicators: overall survival (OS), disease-free survival (DFS), postoperative complications.
+2. Secondary outcome indicators: postoperative recovery time, hospitalization time, postoperative weight change.
+
+5\. Image processing 3D Slicer was used to outline the range of subcutaneous fat, visceral fat, and muscle at the level of waist 1 to waist 5 on enhanced CT (5.0mm) images. Export the segmentation result as gpj.format, and select the Area Reading Calculator to calculate the area of fat and muscle at each level. Calculate fat area and muscle area at each level, calculate overall abdominal fat area and muscle area, and use the ratio of fat area to muscle area (e.g., visceral fat/skeletal muscle) as a predictor to generate the desired quantitative analyses.
+
+6\. Statistical Analysis
+
+1. Basic characteristics and imaging indices were described as mean and standard deviation or median and standard deviation.
+2. Univariate analysis including Kaplan-Meier survival analysis and Log-rank test were used to evaluate the effects of fat and muscle a
+
+PRIMARY OUTCOMES:
+  - Overall survival
+
+INTERVENTIONS:
+  - OTHER: Skeletal muscle, subcutaneous fat and visceral fat area
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06606912

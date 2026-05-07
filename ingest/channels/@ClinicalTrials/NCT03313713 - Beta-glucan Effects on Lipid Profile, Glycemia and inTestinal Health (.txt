@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03313713
+Title: Beta-glucan Effects on Lipid Profile, Glycemia and inTestinal Health (BELT)
+Official Title: Randomised Placebo-Controlled Clinical Trial to Assess the Medium-term Effect of 3 g/Day of a Beta-glucan on Lipid Profile, Glycemia and Intestinal Health, in Moderately Hypercholesterolemic Subjects
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 85
+Topic: beta-alanine
+
+SUMMARY:
+This will be a randomized, placebo-controlled, clinical trial carried out on moderately hypercholesterolemic subjects who will consume 3 g per day of beta-glucans, in order to evaluate the effects on lipid profile, glycemia and intestinal function
+
+DETAILED DESCRIPTION:
+In order to assess the mid term effects of beta-glucans on lipid profile, glycemia and intestinal function, moderately hypercholesterolemic subjects will be involved in a cross-over study and supplemented for 8 weeks with 3 g/day of beta-glucans or placebo. The two intervention periods will be spaced by a 4 week washout period
+
+PRIMARY OUTCOMES:
+  - 12 hour fasting lipid profile change from the baseline to the end of the intervention period
+  - 12 hour fasting glycemia change from the baseline to the end of the intervention period
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beta-glucans
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03313713

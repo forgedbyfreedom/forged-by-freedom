@@ -1,0 +1,77 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04523831
+Title: Clinical Trial of Ivermectin Plus Doxycycline for the Treatment of Confirmed Covid-19 Infection
+Official Title: A Phase III Trial to Promote Recovery From Covid 19 With Combined Doxycycline and Ivermectin Along Standard Care
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 400
+Topic: vitamin D muscle
+
+SUMMARY:
+On 31 December 2019, the World Health Organization (WHO) was formally notified about a cluster of cases of pneumonia in Wuhan City, China. On 7 January the responsible virus was isolated and its genome sequence was shared on 12 January. It was named as COVID-19, a novel Coronavirus, SARS-CoV-2. It is a member of the Corona virus family which is RNA enveloped viruses.
+
+Very rapidly the virus emerged as pandemic. Now it is dominating the lives of every people of this universe. Management of the COVID-19 relies on mainly supportive care and oxygen supplementation via non-invasive or mechanical ventilation in critical cases. Patients who are critically ill may also require vasopressor support and antibiotics for secondary bacterial infections.
+
+There is no vaccine or highly effective antiviral drugs for COVID-19. Currently there is a tremendous effort around the world to develop effective preventive and therapeutic treatment for this disease.
+
+World Health Organization has launched a non-blinded clinical trial (SOLIDARITY) to evaluate four candidate treatments (remdesivir, lopinavir/ritonavir, lopinavir/ritonavir/ interferon beta-1a, and chloroquine or hydroxychloroquine) versus standard of care in 18 countries worldwide. RECOVERY trial one of the largest trials to see the efficacy and safety of hydroxychloroquine revealed that they are no clear cut clinical benefit for COVID-19. Other drugs in the SOLIDARTY trial are quite expansive for resource limited countries like Bangladesh.
+
+Study Published in the American Journal of Tropical Medicine advocates further research into Ivermectin for COVID-19 Treatment. The spotlight on Ivermectin was brought by Australian researchers from Monash University who demonstrated its efficacy against the SARS-CoV-2 coronavirus in vitro studies.
+
+In different study Doxycycline also showed promising results in treatment of COVID 19 infection. It is highly lipophilic antibiotics that are known to chelate zinc component of matrix metalloprotienases (MMP). Corona viruses are known to rely heavily of MMPs for survival, cell infiltration and replication. It also has an anti-inflammatory effect which might be effective in combating cytokine storm of Covid-19 infection.
+
+So it have been planned to conduct an experimental clinical trial using combination of ivermectin and doxycycline for treatment of COVID 19 along with the other standard care.
+
+DETAILED DESCRIPTION:
+OBJECTIVES:
+
+General objectives:
+
+To observe the benefit (clinical and microbiological) of Ivermectin and Doxycycline in Confirmed Covid 19 cases.
+
+Specific objectives:
+
+1. To observe the clinical outcome in trial group and the placebo group.
+2. To observe the duration require controlling viral replication (negative RT-PCR) in the trial and placebo group.
+3. To compare the outcome between the two groups.
+
+RATIONALE:
+
+Covid-19 is an emergent pandemic, threatens the life of millions of the people throughout the globe. There is increasing effort of the scientist to unveil a remedy of covid-19. Still it is unsuccessful. At present there is no other alternative other than experimenting the existent drug against the virus. There are several trials going throughout the globe. Among them Ivermectin showed good efficacy in vitro trial. Some clinical trial also proved it beneficial. The Doxycycline also has some anti viral role with its prominent anti-inflammatory role. Synergistic action of the two drugs might be proved some benefit in clinical trial. As both drugs are cheap and less toxic, if it does, it would be the blessing for the poor people of the globe.
+
+METHODOLOGY:
+
+Study type: Interventional Clinical trial Estimated enrollment: 200 participants per group
+
+For superior trial, the formula is:
+
+N=size per group; p=the response rate of standard treatment group; p0= the response rate of new drug treatment group; zx= the standard normal deviate for a one or two sided x; d= the real difference between two treatment effect; δ0= a clinically acceptable margin; S2= Polled standard deviation of both comparison groups.
+
+All parameters were assumed as follows: p =0.40; p0=0.58; α=0.05;β=0.20; δ=0.18; δ0=0.10.
+
+However, we are assuming that lost to follow up or refuse to include in trial will be 20%, that means 24. So at least 150 patients will be allocated randomly and power of this study will be 80%.
+
+Allocation: Randomized Intervention model: Parallel assignment Intervention model description: Patient will be randomized 1:1 to placaebo with standard care and combined doxycycline and ivermectin with standard care.
+
+Blinding: Double blind (The participant and the clinicians/data collectors will be unaware of the treatment the participant receives) Primary purpose: Treatment Official title: A phase III trial to promote recovery from covid 19 with combined Doxycycline and Ivermectin along standard care. Provider of placebo and active ingredients: Popular pharmaceutical limited Dosage of the drugs: Ivermactin 6 mg 2 tab stat, cap Doxycycline 100 mg 1 cap BD 5 days
+
+Data collection technique:
+
+Data will be collected by assigned. trained data collectors (Physician). Patient will be enrolled according to defined inclusion and exclusion criteria in the current research. Informed written consent will be obtained from the patient or their relatives. Each patient participating in the trial will be uniquely identified, and information such as his name, address is recor
+
+PRIMARY OUTCOMES:
+  - Number of Patients With Early Clinical Improvement
+  - Number of Participants With Late Clinical Recovery
+
+INTERVENTIONS:
+  - DRUG: Ivermectin and Doxycycline
+  - DRUG: Standard of care
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04523831

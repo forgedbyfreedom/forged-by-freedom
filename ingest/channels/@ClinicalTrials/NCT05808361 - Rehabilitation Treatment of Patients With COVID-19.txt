@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05808361
+Title: Rehabilitation Treatment of Patients With COVID-19
+Official Title: Rehabilitation Treatment of Patients With COVID-19 in an Infectious Diseases Hospital, Selection of Patients and Efficacy Criteria: A Retrospective Study With Propensity Score Matching.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 180
+Topic: recovery exercise
+
+SUMMARY:
+This is single centre retrospective study with propensity score matching. The aim of the study is to develop criteria for determining groups of patients with a new coronavirus infection based on clinical, laboratory and instrumental data for whom rehabilitation programs (physical exercises, chest massage in an electrostatic field) will be effective. Data on predictors of effective rehabilitation in COVID-19 is limited. Knowledge of predictors of possibility and efficacy of rehabilitation programs could enhance patients recovery. The main symptoms of COVID-19 involve the respiratory system and psychological function. Early rehabilitation can reduce hospital length of stay. Different patients have different degrees of dysfunction; therefore, personal plans should be developed according to the patient's age, sex, lifestyle and physical condition. Regular follow-up and rehabilitation guidance were conducted for discharged patients, focusing on improving vital capacity and cardiopulmonary endurance. There is a clear consensus that early rehabilitation is an important strategy for the treatment of polyneuropathy and myopathy in critical disease, to facilitate and improve long-term recovery and patients' functional independence, and to reduce the duration of respiratory support and hospitalization. Early rehabilitation and exercise prescriptions remain to be further optimized, especially for hospitalised patients.
+
+DETAILED DESCRIPTION:
+The application of early rehabilitation can promote recovery of body functions; however, further studies are needed to determine the patient selection criteria and relevant mode of rehabilitation program.
+
+A primary concern is regarding the timing of when to start a rehabilitation protocol in the face of the real threat of COVID-19.
+
+Rehabilitation programs include physical exercises, and chest massage in an electrostatic field, started in the first 3 days after the patient's body temperature returned to normal.
+
+The demographic and clinical data will be collected. Laboratory data (white blood cells count, C-reactive protein), and Instrumental data (pulse oxymetry, CT-scan) will be analysed. Rehabilitation evaluation - Health profile according to the quality of life questionnaire before and after each rehabilitation mode will be analysed. Exercise termination criteria: (1) Fluctuations in body temperature \> 37.2°C; (2) respiratory symptoms and fatigue worsen; (3) chest tightness, chest pain, breathing difficulties, severe cough, dizziness, headache, blurred vision, palpitations, sweating, trouble standing.
+
+PRIMARY OUTCOMES:
+  - Length of stay in hospital
+
+INTERVENTIONS:
+  - OTHER: exercises
+  - OTHER: massage
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05808361

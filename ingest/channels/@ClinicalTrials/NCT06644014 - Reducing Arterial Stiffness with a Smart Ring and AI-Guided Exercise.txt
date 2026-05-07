@@ -1,0 +1,53 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06644014
+Title: Reducing Arterial Stiffness with a Smart Ring and AI-Guided Exercise
+Official Title: Guidance with Oura and AI for Reducing Arterial Stiffness - the GONDOR-AS Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 165
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this three-month clinical trial is to study if wearing an Oura Ring and following the exercise guidance provided by an AI-based Advisor in the Oura App works to reduce arterial stiffness. It will also study the difference between different exercise protocols in reducing arterial stiffness and improving aerobic fitness. The main questions the study aims to answer are:
+
+* Can an AI-based Advisor provide useful exercise guidance that helps improve cardiovascular health and aerobic fitness?
+* Does regular exercise lower arterial stiffness measured with a clinical reference device and Oura Ring's proprietary Cardiovascular Age -metric and its estimated arterial stiffness?
+* Is there a difference between attending supervised high-intensity interval (HIIT) training sessions and following personalized exercise instructions for steady-state aerobic training?
+
+Participants will:
+
+* Follow Oura's AI Advisor's instructions at their own convenience, attend supervised training sessions, or just wear the Ring without changing their lifestyle
+* Visit an exercise physiology lab in the beginning of the trial and after three months for measurements in arterial stiffness, cardiorespiratory fitness, and body composition
+
+In addition, the study contains questionnaires investigating the participants' experiences related to lifestyle changes.
+
+DETAILED DESCRIPTION:
+This is a single-site, 12-week randomized, controlled trial (RCT) consisting of three groups (N = 55 per group):
+
+* The Oura Ring (a control group)
+* The Oura Ring + Supervised high-intensity interval training (HIIT) twice a week
+* The Oura Ring + AI-based Coaching for steady-state aerobic training (no external supervision)
+
+Exercise modalities are selected based on hypothesized long-term sustainability and expected cardiorespiratory outcomes. The HIIT protocol has been tested in previous studies and found to be effective in improving VO2max; but it is unlikely to be sustainable in the long-term. Thus, in this study we compare the HIIT protocol to individualized, steady-state ("Zone 2") exercise guidance provided by AI.
+
+Participants will be recruited via e-mail and newspaper ads from the region of Kuopio, Finland. All groups will be blinded to their CVA/PWV information but will use identical Rings. Apart from the AI coach -group, Oura Ring App experiences will also be identical. The study consists of four (4) visits.
+
+The study site is Kuopio Institute for Exercise Medicine, Kuopio, Finland. Participants will be provided materials for an informed consent prior to participation. Eligible participants who have provided a written consent will be invited for the first baseline measurement (Visit 1) where they will be provided Oura Rings and given instructions for using it, and their VO2max is measured. The next baseline measurement (Visit 2) is scheduled for two weeks which is the time the Ring needs to calibrate its Cardiovascular Age and pulse-wave velocity (PWV) estimates. At the second baseline measurement, the participants' PWV is recorded with a reference device and their body composition is also measured. Following these measurements, they are immediately randomized to one of the three study groups and given written and oral instructions specific to their allocation. After 12 weeks, the participant is invited for a repeated VO2max measurement (Visit 3), followed by final PWV and body composition measurements (Visit 4) within the same week. Measurements are not conducted on the same days due to fasting requirements for PWV, and interfering effect of VO2max testing on PWV.
+
+PRIMARY OUTCOMES:
+  - Arterial stiffness, clinical reference
+  - VO2max
+
+INTERVENTIONS:
+  - BEHAVIORAL: Exercise
+  - BEHAVIORAL: Exercise
+  - DEVICE: Smart Ring
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06644014

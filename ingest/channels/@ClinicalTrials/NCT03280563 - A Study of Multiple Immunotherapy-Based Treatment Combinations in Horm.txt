@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03280563
+Title: A Study of Multiple Immunotherapy-Based Treatment Combinations in Hormone Receptor (HR)-Positive Human Epidermal Growth Factor Receptor 2 (HER2)-Negative Breast Cancer
+Official Title: A Phase Ib/II, Open-Label, Multicenter, Randomized Umbrella Study Evaluating the Efficacy and Safety of Multiple Immunotherapy-Based Treatment Combinations in Patients With Hormone Receptor-Positive HER2-Negative Breast Cancer (MORPHEUS-HR+ Breast Cancer)
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 144
+Topic: growth hormone treatment
+
+SUMMARY:
+This study is designed to evaluate the efficacy, safety, and pharmacokinetics of several immunotherapy-based combination treatments in participants with inoperable locally advanced or metastatic HR-positive, HER2-negative breast cancer who have progressed during or following treatment with a cyclin-dependent kinase (CDK) 4/6 inhibitor in the first- or second-line setting, such as palbociclib, ribociclib, or abemaciclib. The study will be performed in two stages. During Stage 1, participants will be randomized to fulvestrant (control) or an atezolizumab-containing doublet or triplet combination. Those who experience disease progression, loss of clinical benefit, or unacceptable toxicity may be eligible to receive a new triplet combination treatment in Stage 2 until loss of clinical benefit or unacceptable toxicity. New treatment arms may be added and/or existing treatment arms may be closed during the course of the study on the basis of ongoing clinical efficacy and safety as well as the current treatments available.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Stage 1: Percentage of Participants With Objective Response
+
+INTERVENTIONS:
+  - DRUG: Atezolizumab (MPDL3280A), an engineered anti-programmed death-ligand 1 (PD-L1) antibody
+  - DRUG: Bevacizumab
+  - DRUG: Entinostat
+  - DRUG: Exemestane
+  - DRUG: Fulvestrant
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03280563

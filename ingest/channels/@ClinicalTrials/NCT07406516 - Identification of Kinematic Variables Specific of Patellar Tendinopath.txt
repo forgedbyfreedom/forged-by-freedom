@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07406516
+Title: Identification of Kinematic Variables Specific of Patellar Tendinopathy in Athletes at Risk
+Official Title: Identification of Kinematic Variables Specific of Patellar Tendinopathy in Athletes at Risk
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: tendon injury
+
+SUMMARY:
+This research aims to identify and monitor specific kinematic markers associated with patellar tendinopathy in athletes at risk. Using a markerless motion capture system, vertical jump tests will be analyzed to detect early biomechanical changes in the knees, hips, trunk, and ankles. By comparing injured participants, the study seeks to improve early diagnosis and personalized prevention strategies for patellar tendinopathy.
+
+DETAILED DESCRIPTION:
+Patellar tendinopathy, also known as Jumper's knee, is the most common pathology in elite sports, with 30% of diagnoses occurring in volleyball. Among elite volleyball players, the prevalence of this overuse-related condition ranges between 40% and 50%, resulting in anterior knee pain during daily and recreational activities, which can lead to deficits in strength and sports performance. To date, investigator can determine whether a patient has had a history of tendinopathy through modifications in biomechanical jump-landing strategies. However, there is a lack of early biomechanical markers to identify the onset of patellar tendinopathy and thus prevent its chronic progression. A preventive strategy using markerless motion capture technology, providing quantitative and visual feedback of a 3D human body model, shows promise. Investigators hypothesize that jump-landing kinematic analysis using markerless technology could identify early kinematic markers specific to patellar tendinopathy, distinguishing affected individuals from a non-tendinopathy population. This could ultimately help identify motor strategies following the onset of patellar tendinopathy A prospective longitudinal multicenter cohort. After signing the consent form, participants will undergo a medical examination, including a clinical assessment, a SLDS test, a Doppler ultrasound of the patellar tendon, and evaluation using the VISA-PF and OSTRC-P scores. Following a standardized 10-minute warm-up, participants will perform vertical jump tests captured by high-resolution cameras, analyzed using markerless motion capture technology. These assessments will be conducted at inclusion and at 3, 6, 9, and 12 months. Additional medical visits will occur if symptoms arise outside of testing.
+
+PRIMARY OUTCOMES:
+  - Variations of knee flexion angle at initial contact at 3 months (only for patients in the patellar tendinopathy group)
+  - Variations of knee flexion angle at initial contact at 6 months
+  - Variations of knee flexion angle at initial contact at 9 months (only for patients in the patellar tendinopathy group)
+  - Variations of knee flexion angle at initial contact at 12 months
+  - Variations of the maximum knee flexion angle at 3 months (only for patients in the patellar tendinopathy group)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: The intervention consists of a series of vertical jump tests captured using high-resolution cameras with markerless motion capture technology.
+  - DIAGNOSTIC_TEST: The intervention consists of a series of vertical jump tests captured using high-resolution cameras with markerless motion capture technology at 6 months and 12 months
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07406516

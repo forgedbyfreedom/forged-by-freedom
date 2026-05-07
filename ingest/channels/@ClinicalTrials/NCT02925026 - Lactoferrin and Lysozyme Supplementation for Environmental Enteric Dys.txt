@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02925026
+Title: Lactoferrin and Lysozyme Supplementation for Environmental Enteric Dysfunction
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 235
+Topic: protein supplementation
+
+SUMMARY:
+Randomized, double-blind, placebo controlled trial of daily lactoferrin and lysozyme supplementation in improving environmental enteric dysfunction in Malawian children
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Dual Sugar Absorption Test
+  - Dual Sugar Absorption Test
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Lactoferrin
+  - DIETARY_SUPPLEMENT: Lysozyme
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 12 Months to 35 Months
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02925026

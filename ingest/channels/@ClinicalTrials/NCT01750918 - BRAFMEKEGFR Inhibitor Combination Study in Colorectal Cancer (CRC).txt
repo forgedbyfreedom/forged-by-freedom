@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01750918
+Title: BRAF/MEK/eGFR Inhibitor Combination Study in Colorectal Cancer (CRC)
+Official Title: An Open-Label, Four-Part, Phase I/II Study to Investigate the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of the MEK Inhibitor GSK1120212, BRAF Inhibitor GSK2118436 and the Anti-eGFR Antibody Panitumumab in Combination in Subjects With BRAF-mutation V600E Positive Colorectal Cancer and in Subjects With CRC With Secondary Resistance to Prior Anti-eGFR Therapy
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 166
+Topic: physical activity intervention
+
+SUMMARY:
+This was a four part, phase I/II study aimed to evaluate the safety, tolerability and efficacy of combination of an anti-eGFR antibody panitumumab (P) either with a BRAF inhibitor (dabrafenib (D); GSK2118436) alone or with the combination of a BRAF inhibitor and a MEK inhibitor (trametinib (T); GSK1120212) in patients with BRAF-mutant V600E advanced or mCRC. The goal was to: 1) Determine RP2R/MTD for doublet (D+P) and triplet (D+T+P) combinations in Part 1; 2) Assess clinical activity for these combinations in Part 2; 3) Determine RP2R/MTD for double (T+P) combination in Part 4A, and assess clinical activity of this combination in two patient populations in Part 4B (patients with BRAF-V600E mutation-positive advanced or metastatic CRC and patients with advanced or metastatic CRC with secondary resistance to anti-eGFR therapy).
+
+DETAILED DESCRIPTION:
+Part 1: Dose escalation This was a dose escalation part intended to evaluate safety, tolerability, PK, PD, clinical activity and determine RP2R/MTD for the doublet (D+P) and the triplet (D+T+P) combinations in patients with BRAF-mutation V600E positive advanced or metastatic CRC. A 3+3 dose escalation procedure was followed. Dosing for dabrafenib and trametinib was continuous daily dosing while panitumumab was dosed once every two weeks (Q2W). Patients were evaluated for dose-limiting toxicities (DLTs) during the first 28 days of treatment.
+
+Part 2A:
+
+This was a cohort expansion part to assess the safety and preliminary clinical activity of the optimal safe and tolerable dose combinations (D+P)/(D+T+P) defined in Part 1.
+
+Part 2B:
+
+In this part, additional patients were enrolled into the triplet (D+T+P) combination at two dose levels in to further explore safety, tolerability and clinical activity. Up to 10 patients each with no prior treatment (First Line Population), and up to 20 patients each with at least one prior treatment (Second to Fourth Line Population) were planned to be enrolled in dose Cohorts 3A and 4.
+
+Part 3: Randomized Phase 2 Study The randomized phase 2 portion (Phase 3) of the study was not pursued as the observed responses in any of the cohorts did not meet the predefined criteria at the time of the preliminary analysis (data cut-off date: 06-May-2016).
+
+Part 4 This part was designed to identify the RP2R/MTD and initial clinical activity for the doublet (T+P) combination in patients BRAF-mutation V600E positive advanced or metastatic CRC, and advanced or metastatic CRC with secondary resistance to prior anti-eGFR therapy.
+
+Part 4A: Dose Escalation This was a dose escalation part intended to determine RP2R/MTD for the doublet (T+P) combination in patients with BRAF-mutation V600E positive advanced or metastatic CRC. Approximately 18 patients (\~6 each cohort) were planned to be enrolled in Part 4A. A 3+3 dose escalation procedure was followed. Dosing for trametinib was continuous daily dosing while panitumumab was dosed once every two weeks (Q2W). Patients were evaluated for DLTs during the first 28 days of treatment.
+
+Part 4B: Cohort Expansion This was a cohort expansion part intended to evaluate safety and efficacy of the doublet (T+P) combination. Up to 20 patients in each of two expansion cohorts were planned to be enrolled at the starting dose cohort or MTD from Part 4A.
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Adverse Events
+  - Overall Response Rate (ORR)
+  - Part 3: Progression Free Survival (PFS)
+
+INTERVENTIONS:
+  - DRUG: Dabrafenib
+  - DRUG: Trametinib
+  - DRUG: Panitumumab
+  - DEVICE: 5-fluorouracil
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01750918

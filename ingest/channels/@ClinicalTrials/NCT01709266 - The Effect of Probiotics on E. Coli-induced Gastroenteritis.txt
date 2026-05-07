@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01709266
+Title: The Effect of Probiotics on E. Coli-induced Gastroenteritis
+Official Title: A Randomized, Placebo-controlled, Double Blind Volunteer Study Into the Effect of Probiotics on Gastroenteritis Caused by an Attenuated E. Coli.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: physical activity intervention
+
+SUMMARY:
+Background:
+
+The incidence of gastrointestinal infections is very high. In Western countries at least 30% of the population suffers from at least one food-borne infection per year. Mostly because of the problem of antibiotic resistance, more emphasis is put on prevention of infections. One of the possibilities is to strengthen human resistance to gut infections by consumption of probiotics. A specific blend of probiotic lactic acid bacteria (Lactobacillus helveticus Rosell-52, Lactobacillus rhamnosus Rosell-11, Bifidobacterium longum Rosell-175) and a probiotic yeast (Saccharomyces boulardii), improved stool consistency and shortened the duration of diarrhea in a rat model of E.coli-induced diarrhea. These probiotics showed synergistic effects compared with administration of solely S. boulardii or a mixture of L. helveticus Rosell-52, L. rhamnosus Rosell-11, B. longum Rosell-175. Consumption of S. boulardii and a combination of L. helveticus Rosell-52, L. rhamnosus Rosell-11 reduced diarrhea in humans.
+
+Aim:
+
+To study whether probiotics improves the resistance of humans to enterotoxigenic E. coli (ETEC).
+
+Study design:
+
+The PROTETEC study is a parallel, double-blind, placebo-controlled 4-weeks intervention with probiotics in healthy volunteers. In this study, the effect of probiotic intervention vs placebo on several infection markers in response to an ETEC challenge is investigated. Participants will be randomly assigned to the probiotic or placebo group (n=30 per group). Subjects will be instructed to maintain their usual pattern of physical activity and their habitual food intake, but to standardize their dietary calcium intake. After an adaptation period of 2 weeks, subjects will be orally infected with a live, but attenuated, ETEC vaccine (strain E1392-75-2A; collection NIZO food research; dose 10E10 CFU). Before and after infection, a diary will be kept to record all food and drinks consumption (2x2 days) to assess the habitual dietary intake, as well as for daily recording of bowel habits and frequency and severity of gastrointestinal complaints. The following biological samples will be collected: 4x10 ml venous blood, a single fecal bolus (for screening) and 7x24 hrs feces. Blood is sampled for immune response analyses and the fecal samples are collected to quantify several infection- and immune system markers, to determine probiotic excretion, and to verify dietary calcium intake.
+
+Study population:
+
+Healthy males of 20-55 yrs of age.
+
+Interventions:
+
+Probiotics (capsules containing freeze-dried powder, probiotic dose per capsule 5x10E9 CFU; twice daily) or placebo (capsules with carrier material powder of identical appearance)
+
+Primary outcomes:
+
+Fecal ETEC excretion and severity of diarrhea (quantified by fecal output per day).
+
+Secondary outcomes:
+
+Serum immune response to ETEC, self-reported stool consistency scores and gastrointestinal complaints, relative fecal wet weight.
+
+Tertiary outcomes:
+
+sIgA and calprotectin in feces, probiotic persistence and levels of opportunistic pathogens in the endogenous microbiota.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Fecal ETEC excretion curve over time as marker of the colonization resistance
+  - Total daily fecal output curve over time as marker of diarrhea
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotics
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 55 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01709266

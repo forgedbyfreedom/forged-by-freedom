@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04076982
+Title: Effect of Supplementary Dietary Protein (21g Per Day) on Lean Mass and Strength in Sedentary, Adult Vegetarians
+Official Title: Effect of Supplementary Dietary Protein (21g Per Day) on Lean Mass and Strength in Sedentary, Adult Vegetarians
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 37
+Topic: exercise muscle mass
+
+SUMMARY:
+It is possible that the lower protein intake in vegetarians and vegans may relate to a decrease in grip strength. Furthermore, there is limited research examining the effects of plant-based protein intake on strength and LBM independent of an exercise training component. The present study was designed to examine relationships between strength, protein intake, and LBM in underactive vegetarian and vegan adults, as well as the impact of protein supplementation (18 g mung bean protein daily) on these indices.
+
+DETAILED DESCRIPTION:
+The American Dietetic Association states that based off of evidence, it is possible for a vegetarian to obtain the recommended amount of nutrients with a properly planned diet. By mixing various sources of plant proteins throughout the day, a person can obtain all the amino acids needed for growth and tissue maintenance and repair. Yet, many vegetarians struggle to eat a substantial diet, especially when it comes to protein. This is because plant protein has protein bioavailability that is 10-30% lower than animal protein. As a result, current research suggests that there needs to be a separate protein dietary reference intake (DRI) for vegetarians and it needs to be larger than the protein DRI for omnivores. Whenever considering protein bioavailability, the quality must be assessed by analyzing the digestibility, chemical integrity, and freedom from interference in metabolism of the amino acid. This is a major concern because inadequate protein intake can affect bone health and alter muscle mass. Importantly, research has shown as a result of inadequate protein intake, vegetarians tend to have less lean body mass and less muscle strength than omnivores. Currently, all research available on this topic included strength training as a variable for increasing lean muscle mass, and no research has been reported that analyzed the impact of increased dietary protein on lean body mass without a training component. This parallel arm study will examine the effect of supplemental plant protein on strength and lean body mass in adult, non-athletic vegetarians in the Phoenix area.
+
+PRIMARY OUTCOMES:
+  - grip strength
+  - leg strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: mung bean protein
+  - OTHER: control biscuit
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04076982

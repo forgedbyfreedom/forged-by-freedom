@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07141420
+Title: Application of Large Language Models Techniques to Post-ICU Syndrome Management in Critically Ill Patients: A Fully Longitudinal Mixed Study
+Official Title: Application of Large Language Models Techniques to Post-ICU Syndrome Management in Critically Ill Patients: A Fully Longitudinal Mixed Study
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to evaluate whether Large Language Models (LLMs) combined with an optimized care program can effectively manage Post-Intensive Care Syndrome (PICS) in adult ICU survivors (aged ≥18 years) discharged from a tertiary hospital in China. The main questions it aims to answer are:
+
+* Does the intervention (optimized program + LLMs) improve physical, psychological, cognitive, and social function recovery compared to standard care or the optimized program alone?
+* How do patients experience and perceive the utility of LLMs in PICS self-management during recovery?
+
+Researchers will compare three groups:
+
+1. Group A (routine care)
+2. Group B (optimized program without LLMs)
+3. Group C (optimized program + LLMs) to see if adding LLMs significantly enhances PICS symptom management, patient self-efficacy, and quality of life over 6 months post-discharge.
+
+Participants will:
+
+* Install and use the Kimi Smart Assistant LLM (Group C only) for health queries under nurse supervision.
+* Complete standardized questionnaires at discharge (baseline), 7 days, 1 month, 3 months, and 6 months post-discharge:
+
+  * PICS Symptom Questionnaire (PICSQ)
+  * Pittsburgh Sleep Quality Index (PSQI)
+  * Anxiety (GAD-7) and Depression (PHQ-9) scales
+  * Self-Management Ability Scale (AHSMSRS)
+* Attend semi-structured interviews (Group C only) at 3 and 6 months to share experiences with LLM use.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Post-Intensive Care Syndrome (PICS) Symptom Severity
+
+INTERVENTIONS:
+  - BEHAVIORAL: Routine Care
+  - BEHAVIORAL: Health Promotion Model-Based Optimized Program
+  - BEHAVIORAL: LLM-Enhanced Optimized Program
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07141420

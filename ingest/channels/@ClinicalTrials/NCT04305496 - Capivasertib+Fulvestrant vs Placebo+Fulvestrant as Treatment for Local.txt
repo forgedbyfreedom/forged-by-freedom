@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04305496
+Title: Capivasertib+Fulvestrant vs Placebo+Fulvestrant as Treatment for Locally Advanced (Inoperable) or Metastatic HR+/HER2- Breast Cancer
+Official Title: A Phase III Double-blind Randomised Study Assessing the Efficacy and Safety of Capivasertib + Fulvestrant Versus Placebo + Fulvestrant as Treatment for Locally Advanced (Inoperable) or Metastatic Hormone Receptor Positive, Human Epidermal Growth Factor Receptor 2 Negative (HR+/HER2-) Breast Cancer Following Recurrence or Progression On or After Treatment With an Aromatase Inhibitor
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 818
+Topic: growth hormone treatment
+
+SUMMARY:
+Phase III, double-blind, randomised study assessing the efficacy of capivasertib + fulvestrant vs placebo + fulvestrant for the treatment of patients with locally advanced (inoperable) or metastatic HR+/HER2- breast cancer following recurrence or progression on or after AI therapy.
+
+DETAILED DESCRIPTION:
+Phase III, double-blind, randomised study assessing the efficacy of capivasertib + fulvestrant vs placebo + fulvestrant for the treatment of patients with locally advanced (inoperable) or metastatic Hormone Receptor Positive, Human Epidermal Growth Factor Receptor 2 Negative (HR+/HER2-) breast cancer following recurrence or progression on or after aromatase inhibitor (AI) therapy.
+
+PRIMARY OUTCOMES:
+  - Progression Free Survival: Overall Population (Months) in the Global Cohort
+  - Progression Free Survival: Overall Population (Percentage) in the Global Cohort
+  - Progression Free Survival: Altered Population (Months) in the Global Cohort
+  - Progression Free Survival: Altered Population (Percentage) in the Global Cohort
+  - Progression Free Survival: Overall Population (Months) in the China Cohort
+
+INTERVENTIONS:
+  - DRUG: Fulvestrant
+  - DRUG: Capivasertib
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 130 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04305496

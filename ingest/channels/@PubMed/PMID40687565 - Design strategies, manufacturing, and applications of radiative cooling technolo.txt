@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40687565
+Title: Design strategies, manufacturing, and applications of radiative cooling technologies.
+Authors: Kang, Lee, Chung, Bermel
+Journal: Nanophotonics (Berlin, Germany)
+Year: 2025
+Topic: cooling strategies performance
+
+ABSTRACT:
+Radiative cooling is a passive cooling strategy that leverages thermal radiation to dissipate heat into a cooler environment, offering an energy-efficient and environmentally friendly alternative to conventional cooling technologies. Recent advancements in material science and nanophotonics have led to the development of engineered radiative cooling materials with tailored optical and thermal properties. Photonic structures, multilayer films, metamaterials, and polymer-based composites have demonstrated enhanced cooling performance by maximizing solar reflectance and infrared emissivity. These innovations have facilitated scalable, lightweight, and durable cooling solutions suitable for diverse applications, including building envelopes, electronic devices, and urban infrastructure. Nonetheless, several challenges must be solved to achieve widespread commercialization. These include further research into robust and long-lasting materials to address material degradation, innovations in fabrication techniques to reduce cost, design approaches to make more effective use of these materials and processes, and adaptability to hot and humid climates. Ongoing research continues to refine material and structural design, improve manufacturing methods, and expand the range of practical applications. By overcoming these challenges, radiative cooling has the potential to significantly reduce energy consumption and enhance climate resilience, positioning itself as a crucial component of future sustainable cooling technologies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40687565/

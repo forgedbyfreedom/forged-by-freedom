@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07494916
+Title: Effects of Functional Task Training on Muscle Health and Function in Older Adults With Sarcopenia
+Official Title: Effect of Functional Task Training (FTT) on Functional, Physiological, and Structural Biomarkers in Older Adults With Sarcopenia
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia is a condition associated with aging that causes a loss of muscle mass, strength, and physical function. This decline limits the ability to perform basic daily activities and increases the risk of falls and dependency.
+
+The purpose of this clinical study is to determine the effects of a 12-week Functional Task Training (FTT) program on functional, structural, and physiological biomarkers in older adults with sarcopenia. FTT involves practicing everyday movements, such as standing up from a chair, climbing stairs, walking, and carrying objects.
+
+The study aims to answer the following question: Does Functional Task Training performed specifically in optimal muscle power zones offer greater improvements in aging biomarkers compared to standard Functional Task Training or traditional resistance training?
+
+The researchers hypothesize that while all exercise interventions will be beneficial, the FTT program focused on power zones will generate the greatest improvements in functional, physiological, and structural biomarkers in older adults with sarcopenia.
+
+To test this, 30 older adults (aged 60 and older) will be randomly assigned to one of three active groups for a 12-week period (2 days per week): an FTT group training in power zones, a standard FTT group, or a traditional resistance training group. All exercise groups will use a Functional Electromechanical Dynamometer (DEMF) to precisely measure and control the training loads.
+
+DETAILED DESCRIPTION:
+Population aging is a major public health challenge associated with a progressive decline in muscle function and functional capacity. Sarcopenia, characterized by age-related loss of muscle mass, strength, and function, increases the risk of falls, dependency, and mortality. Among muscular determinants, muscle power has been shown to be highly relevant for executing daily tasks and preventing falls.
+
+In this context, Functional Task Training (FTT) has emerged as a promising strategy to improve muscle quality and functionality by simulating daily activities. Furthermore, the use of a Functional Electromechanical Dynamometer (DEMF) allows for precise load adjustment, replicating natural movements with controlled resistance, and providing accurate measurements of applied force, velocity, and power. Despite these advances, there is a gap in the literature regarding the specific impact of FTT-and particularly FTT executed in optimal power zones-on functional, physiological, and structural biomarkers in older populations.
+
+This randomized controlled trial aims to evaluate these effects over a 12-week period in a sample of 30 older adults with sarcopenia.
+
+Study Procedures and Progression:
+
+Following initial screening and prior to baseline testing, participants will undergo two familiarization sessions to ensure safety and proper technique. During the 12-week intervention phase, participants will be randomized into one of three active training arms: FTT in Power Zones, Standard FTT, or Traditional Resistance Training (RT). All groups will attend supervised sessions 2 days per week.
+
+A key methodological component of this study is the integration of the DEMF device across all three groups, which ensures electronic and progressive load adjustments. During the first session, the initial load will be determined through individual testing. Throughout the program, loads will be progressively increased on a weekly basis by 5% to 10%, depending on the individual's tolerance, performance, and specific group assignment (e.g., specific velocity and power targets for the FTT Power Zone group).
+
+At the end of the 12-week intervention, all participants will undergo post-intervention assessments in the laboratory using the same instruments and standardized conditions to ensure consistency in the results.
+
+Statistical Analysis:
+
+Data normality will be evaluated using the Shapiro-Wilk test, and homogeneity of variance will be assessed with Levene's test. Repeated measures analysis of variance (Two-way ANOVA) will be used to evaluate intra- and inter-group changes, followed by a Tukey post hoc test if significant differences are found.
+
+PRIMARY OUTCOMES:
+  - Muscle Thickness of the Rectus Femoris
+  - Muscle Thickness of the Rectus Femoris (via Ultrasound)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Functional Task Training in Power Zones
+  - BEHAVIORAL: Standard Functional Task Training
+  - BEHAVIORAL: Traditional Resistance Training
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07494916

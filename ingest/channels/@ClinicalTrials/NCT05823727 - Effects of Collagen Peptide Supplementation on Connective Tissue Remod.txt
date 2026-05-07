@@ -1,0 +1,69 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05823727
+Title: Effects of Collagen Peptide Supplementation on Connective Tissue Remodeling, Functional Outcomes, and Wound Healing After Total Knee Arthroplasty (TKA)
+Official Title: Effects of Collagen Peptide Supplementation on Connective Tissue Remodeling, Functional Outcomes, and Wound Healing After Total Knee Arthroplasty (TKA)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: caffeine exercise
+
+SUMMARY:
+Recruiting will be performed via checking the calendar for scheduled TKA procedures in the \> 8 weeks by clinical staff in the UAMS orthopedic clinic. Clinic staff will look for basic inclusion/exclusion criteria in the EMR for those patients. Clinic staff will either contact directly or send contact information to the PI of this study to contact for recruitment purposes. During the initial phone call, study staff will review inclusion/exclusion criteria to verify eligibility and will discuss study specifics and send a link to the current informed consent form located on the UAMS REDCap server. If the subject wishes to enroll, they will do so via electronic consent through REDCap. REDCap will notify study staff that the consent was signed, then study staff will schedule initial baseline study visit.
+
+Visit 1 and Visit 2 will take place at the RIOA at week 0 and week 24, respectively. Participants will report having fasted overnight, and having abstained from alcohol for 24 hours, vigorous exercise for 24 hours, and caffeine for 12 hours. A blood sample will be drawn upon arrival, followed by a DXA scan to measured bone mineral density (BMD) in both hips and lumbar spine, and for body composition, using CTRAL equipment. Participants will also undergo a body water assessment using BIA to determine deuterium dose. Bilateral handgrip strength will be measured via Dynamometer. Participants will fill out a 3-Day food log, physical activity questionnaire, pain scale, KOOS, VR-12, and the POMS. Participants will be given an 8-week supply of their respective treatment supplement, with instructions and a compliance log (to be filled out monthly). Participants will also be given their dose of deuterium oxide (D2O) to be ingested according to instruction at week 2\&3, prior to TKA (week 4).
+
+Tissue samples for ACL, bone fragments, and synovial fluid will be collected by the PI during TKA surgery. All other assessments will be taken during clinical visits with the participant's physical therapists and their orthopedic doctors. The PI will attend some of these visits to assess wound healing, administer handgrip strength assessment, and to replenish participant treatment supply.
+
+DETAILED DESCRIPTION:
+UAMS Orthopedic Clinic personnel will monitor the clinic logs for prospective participants meeting the inclusion/exclusion criteria of the study, notifying the study Principal Investigator (PI) of potential study participants. The PI will meet with the with interested participant to obtain consent virtually (via REDCap) prior to scheduling baseline visit (week 0) at the UAMS Reynolds Institute on Aging (RIOA). The potential study participant will be allowed as much time as needed to be comfortable in their decision to participate in the study.
+
+For tissue specimen collection during TKA, the PI will attend the surgery, collecting samples of the ACL, synovial fluid and bone fragments as they are removed (and would otherwise be discarded) by the surgeon. Blood will also be collected by the anesthesiologist after line placement in the operating room. Tissue samples will be prepared as described in the Specimen Handling and Storage Section and taken to the PI's laboratory, the Center for Translational Research in Aging and Longevity (CTRAL) located on the 7th floor of the UAMS RIOA (a secured access floor).
+
+Study Visits Week 0 (Baseline)
+
+* Informed Consent (executed electronically)
+* Randomization (Excel Randomization Function)
+* Baseline assessments (CTRAL) Knee Injury and Osteoarthritis Outcome Score (KOOS) Veterans RAND 12 (VR-12) Profile of Mood States (POMS) Physical Activity Pain Dietary Intake (3-Day Food Log) Dual-energy X-ray absorptiometry (DXA) scan - bone density (both hips and lumbar spine) Dual-energy X-ray absorptiometry (DXA) scan - body composition Bioelectrical impedance analysis (BIA) Scan - body water Hand grip strength Collecting blood sample (4 mL x 1 for serum and 4 mL x 1 for plasma)
+* Treatment 10 g Collagen Peptides or Placebo, Weeks 0 - 24 Deuterated water (D2O), Weeks 6 - 8 Week 4
+* Virtual
+* Knee Injury and Osteoarthritis Outcome Score (KOOS)
+* Veterans RAND 12 (VR-12)
+* Profile of Mood States (POMS)
+* Physical Activity
+* Pain 3-day food log Compliance Week 8
+* Virtual
+* Knee Injury and Osteoarthritis Outcome Score (KOOS)
+* Veterans RAND 12 (VR-12)
+* Profile of Mood States (POMS)
+* Physical Activity
+* Pain 3-day food log Compliance
+* Total Knee Arthroplasty Collect Anterior Cruciate Ligament Collect Synovial Fluid Collect blood sample (4 mL x 1 for serum and 4 mL x 1 for plasma)
+* Physical Therapy (three times weekly, Weeks 8 - 24) Pain Range of Motion (ROM) for flexion and extension of surgery knee KOOS Jr. Week 10
+* Physician Visit Wound healing Pain ROM for flexion and extension of surgery knee Grip Strength Week 12
+* Virtual
+* Knee Injury and Osteoarthritis Outcome Score (KOOS)
+* Veterans RAND 12 (VR-12)
+* Profile of Mood States (POMS)
+* Physical Activity
+* Pain 3-day food log Compliance Week 14
+* Physician Visit Wound healing Pain ROM for flexion and extension of surgery knee Grip Strength Week 16
+* Virtual
+* Knee Injury and Osteoarthritis Outcome Score (KOOS)
+* Veterans RAND 12 (VR-12)
+* Profile of Mood States (POM
+
+PRIMARY OUTCOMES:
+  - Effects of pre-surgical supplementation on mRNA transcription
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: SOLUGEL
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 50 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05823727

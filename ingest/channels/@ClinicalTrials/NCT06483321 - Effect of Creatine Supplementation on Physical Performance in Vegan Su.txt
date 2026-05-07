@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06483321
+Title: Effect of Creatine Supplementation on Physical Performance in Vegan Subjects
+Official Title: Effect of Creatine Supplementation on Physical Performance and Body Composition in Vegan Subjects
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+The primary objective of this study is to investigate the effect of creatine monohydrate supplementation on body composition, physical performance, and muscle creatine levels in vegan individuals over four weeks.
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled clinical study aims to evaluate the effect of creatine monohydrate supplementation on body composition, physical performance, and plasma biomarkers in 20 vegan individuals (10 men and 10 women) over a 4-week period. Participants, who will have followed a strict vegan diet for at least 6 months prior to the study's start, will be randomly assigned to one of two groups: one receiving 0.1 grams of creatine monohydrate daily and the other receiving a placebo (maltodextrin). A dietitian-nutritionist will standardize the participants' diet to ensure it is normocaloric and equivalent in macronutrient distribution. To ensure proper dietary control, 3-day dietary records (two weekdays and one weekend day) will be maintained both at the start of the study and during the last week of the intervention.
+
+Assessments will be conducted before the start of the study (week 0) and at the end (week 4), and will include body composition measurements using the InBody system, physical tests (30-meter sprint, dynamometry, countermovement jump (CMJ), maximum isometric force, and a 15-repeated-jumps test), as well as blood analyses for creatine, creatinine, and creatine kinase (CK) levels, and urine analyses for creatine excretion. It is expected that creatine supplementation in vegan subjects will significantly increase lean muscle mass, improve physical performance in the mentioned tests, and elevate muscle creatine levels while decreasing markers of muscle damage (CK). Statistical analysis will include a repeated measures ANOVA to evaluate changes in dependent variables between groups over time, with a significance level set at p \< 0.05.
+
+PRIMARY OUTCOMES:
+  - 30-meter sprint
+  - Countermovement jump (CMJ)
+  - 15-repeated-jumps test
+  - Body weight
+  - Lean mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine Supplementation
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06483321

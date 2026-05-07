@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00005810
+Title: Combination Chemotherapy Plus Filgrastim in Treating Patients With Stage IV Prostate Cancer That Has Not Responded to Hormone Therapy
+Official Title: A Phase II Study of Estramustine, Docetaxel, and Carboplatin With G-CSF Support in Men With Hormone Refractory Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: Drugs used in chemotherapy use different ways to stop tumor cells from dividing so they stop growing or die. Colony-stimulating factors such as filgrastim may increase the number of immune cells found in bone marrow or peripheral blood and may help a person's immune system recover from the side effects of chemotherapy.
+
+PURPOSE: Phase II trial to study the effectiveness of combination chemotherapy plus filgrastim in treating patients who have stage IV prostate cancer that has not responded to hormone therapy.
+
+DETAILED DESCRIPTION:
+OBJECTIVES: I. Determine the response rate (objective and PSA response) and duration of response to estramustine, docetaxel, and carboplatin with filgrastim (G-CSF) support in patients with hormone refractory prostate cancer. II. Determine the toxicity of this regimen in this patient population.
+
+PRIMARY OUTCOMES:
+  - Response rate
+
+INTERVENTIONS:
+  - BIOLOGICAL: filgrastim
+  - DRUG: carboplatin
+  - DRUG: docetaxel
+  - DRUG: estramustine phosphate sodium
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00005810

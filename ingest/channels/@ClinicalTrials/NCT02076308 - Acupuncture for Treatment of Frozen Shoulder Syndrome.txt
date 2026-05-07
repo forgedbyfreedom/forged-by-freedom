@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02076308
+Title: Acupuncture for Treatment of Frozen Shoulder Syndrome
+Official Title: Scientifically Merged Acupuncture and Robot-assisted Technology (SMART) for Rehabilitation of Frozen Shoulder Syndrome: First Year Project- Verification of Acupuncture and Evaluation by Magnetic Resonance Imaging Examination
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: recovery exercise
+
+SUMMARY:
+Disability of upper limbs due to neurologic and orthopedic disorder or injuries is commonly seen clinically. For example paralysis or paresis of upper limb due to stroke is relatively prevalent, and it may result in severe muscle weakness, pain, contracture, spasticity and disability. These patients need early and regular rehabilitation to regain their function and prevent unnecessary complications such as contracture and disuse atrophy. Proper rehabilitation is important but the challenge is also great. However, rehabilitation training is a very labor-intensive task in which one to one treatment is essential and that will restrict the number of patients served. Moreover, patients receiving home programs are difficult to supervise, resulting in reduced training effect and delayed functional recovery. In order to reduce related cost (including time, personnel, facilities, and expense, etc.) of rehabilitation in hospitals or clinics, this Robot research team had developed a prototype of upper-limb exoskeleton rehabilitation robot and its related technology and human-robot interaction. This robot is used to serve the rehabilitation need of those patients suffering from upper extremities dysfunctions and also can provide careful designed therapeutic program of upper limbs including shoulder and elbow joint exercises. Its control software also provides a therapeutic management system with intelligence and ergonomic consideration. This work was funded by National Taiwan University Hospital (NTUH) since 2008 and has applied for both the U.S. and Taiwan (ROC) patents, where the latter has been approved in Nov. 2011. The clinical trial was firstly approved by Research Ethics Committee B of NTUH in 2009 and finally approved by Department of Health (DOH) in April 2011. This team had completed the clinical trial for healthy subjects and pre-clinical trial for stroke patients. Based upon this experience an innovative and intelligent SMART Robot Rehabilitation System for Frozen Shoulder Syndrome is proposed to prove its safety, efficacy, and cost-effectiveness.
+
+DETAILED DESCRIPTION:
+In the first year, the robot was under construction and was not involved in the clinical trial.
+
+PRIMARY OUTCOMES:
+  - Disabilities of the Arm, Shoulder and Hand (DASH)
+  - Shoulder Pain And Disability Index (SPADI)
+  - Passive and Active Range of Motion
+  - Musculoskeletal Ultrasound
+
+INTERVENTIONS:
+  - OTHER: Electroacupuncture and physical therapy
+  - OTHER: Sham-electroacupuncture and physical therapy
+
+ELIGIBILITY:
+Age: 20 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02076308

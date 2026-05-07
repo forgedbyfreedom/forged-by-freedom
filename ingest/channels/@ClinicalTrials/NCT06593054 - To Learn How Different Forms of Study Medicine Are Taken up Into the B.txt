@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06593054
+Title: To Learn How Different Forms of Study Medicine Are Taken up Into the Blood and the Effect of Food on Study Medicine in Healthy Adults
+Official Title: An Interventional Open-Label, Single-Dose, 4-Treatment, 4-Period Crossover Study to Evaluate the Relative Bioavailability of CTB and AVI Administered Via Various Tablets or Capsule Formulations of PF-07612577 (PF-06264006 [CTB] - PF-07338233 [AVP]) and the Effect of Food on the Bioavailability of CTB and AVI Administered Via Tablets in Healthy Adult Participants
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 13
+Topic: beta-alanine
+
+SUMMARY:
+The purpose of this study is to learn about the study medicine CTB-AVP for the treatment of severe urinary tract infections that require hospitalization.
+
+This study is seeking for:
+
+* adult male and female participants who are healthy and weigh more than 50 kg.
+* participants who have normal blood pressure, normal kidney and liver function
+* participants willing to stay away from caffeine and other medicines for the duration of the study.
+
+Participants will be required to stay in the study clinic for two weeks. All participants in this study will receive study medicine CTB-AVP by mouth one time each day on four different days. Study medicine will be given in capsules or tablets, on an empty stomach or will be taken with a meal. The study will look at the experiences of people receiving the study medicine. This will help determine if the study medicine is safe and effective.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximum Observed Plasma Concentration [Cmax] of cis-CTB and AVI following test formulation administration in fasted or fed state
+  - Dose-normalized Maximum Observed Plasma Concentration [Cmax(dn)] of cis-CTB and AVI following test/ reference formulation administration
+  - Area Under the Curve From Time Zero to Last Quantifiable Concentration (AUClast) of cis-CTB and AVI following test formulation administration in fasted or fed state
+  - Dose-Normalized Area Under the Curve From Time Zero to Last Quantifiable Concentration [AUClast(dn)] of cis-CTB and AVI following test/ reference formulation administration
+  - Area Under the Curve From Time Zero to Extrapolated Infinite Time (AUCinf) of cis-CTB and AVI (if data permit) following test formulation administration in fasted or fed state
+
+INTERVENTIONS:
+  - DRUG: Ceftibuten
+  - DRUG: Avibactam prodrug
+  - DRUG: CTB-AVP in Tablet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06593054

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02745197
+Title: A Study to See Whether a Nutritional Supplement is Beneficial for Patients With Pancreatic Cancer
+Official Title: Factors That Regulate Components of a Nutritional Supplement to Support Skeletal Muscle in Cancer Patients
+Status: WITHDRAWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: protein supplementation
+
+SUMMARY:
+This study evaluates a nutritional supplement in the treatment of pancreatic cancer in adults. Half of the participants will receive the nutritional supplement, while the other half will receive a placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle fatty acid content
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nutritional Supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 19 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02745197

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06121193
+Title: Using Interventional Informatics to Address Social Determinants of Health During Clinical Care Visits to Promote Behavior Change and PREVENT Cardiovascular Disease
+Official Title: Using Interventional Informatics to Address Social Determinants of Health During Clinical Care Visits to Promote Behavior Change and PREVENT Cardiovascular Disease
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: exercise intervention obesity
+
+SUMMARY:
+Healthcare providers recognize the need for behavior change and the influence of social determinants on youth at risk for poor cardiovascular health (CVH), especially among those of low-socioeconomic status (SES). Yet, providers lack the time and community data necessary to provide tailored, evidence-based care within routine practice. This project will use an Interventional Informatics approach to help providers prescribe patient-centered, evidence-based physical activity and nutrition prescriptions and link patients to community resources to account for social determinants at the point-of-care. This project will integrate our existing, novel, Patient-centered Real-timE interVENTion (PREVENT) tool into the BJC electronic health record (EHR) and test it with providers and adolescent patients at-risk for poor CVH. EHR integration of PREVENT will enable a cyclical, synergistic and data-centric approach to impact modifiable risk factors (physical activity and food intake) and prevent cardiovascular disease. This approach uses health informatics technology (HIT) to deliver data-driven, patient-centered care and generate evidence to support the use of HIT as a way to prevent cardiovascular disease across diverse patients and communities.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Patients' satisfaction of PREVENT tool: survey
+  - Provider's satisfaction of PREVENT tool: survey
+  - Fidelity of PREVENT tool implementation
+
+INTERVENTIONS:
+  - BEHAVIORAL: PREVENT tool
+  - BEHAVIORAL: Wait-list Control
+
+ELIGIBILITY:
+Age: 12 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06121193

@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06068816
+Title: Effect of Nutritional Supplementation on Nutritional Status & Rehospitalization in Malnourished Elderly Patients
+Official Title: The Effect of 12 Weeks of Nutritional Supplementation on Nutritional Intake and Status in Older Outpatients With Malnutrition Risk
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: vitamin D muscle
+
+SUMMARY:
+The primary outcome is the mean difference in energy and protein as well as a selection of micronutrients (calcium, vitamin D, and Vitamin B12) after 12 weeks of intervention between standard care plus nutritional supplementation vs standard care.
+
+The secondary outcomes are body weight, nutritional status, body composition, physical performance, vitamin D level, and nonelective hospitalization
+
+The Study Hypothesize:
+
+The hypothesize that outpatients who receive nutrient-dense drinks (NDD) will have increased body weight, better nutritional status, better body composition, higher vitamin D level, better physical performance and reduced non-elective hospitalization than those receiving standard care after 12 weeks of intervention.
+
+DETAILED DESCRIPTION:
+1. Study Design: Randomized Controlled Trial, Randomized and controlled intervention trial with 2 treatments in parallel
+
+   1. Treatment 1: nutrient-dense drinks on top of standard care
+   2. Treatment 2: standard care only (reference)
+2. Location and time study: Geriatric outpatient clinic and internal medicine outpatient clinic in Cipto Mangunkusumo National Hospital Jakarta. The study will be conducted on July 2022 to October 2023.
+3. Study subject: elderly outpatients (aged 60 years old or more) who visit outpatient clinics will be screened for their eligibility as participants of this study.
+4. Sample Size: sample size for each group is 41 participants per group (for two groups a total of 82 participants). To anticipate a dropout of 20% a minimum of 98 participants (rounded to 100 participants in total) is the minimum sample size of our study.
+5. Data collection : Energy and nutrient intake, particularly protein calcium, vitamin D, and vitamin B12, Nutritional status based on full form Mini Nutritional Assessment, Vitamin D level, lean body mass (using Bioelectrical Impedance Analysis), physical performance will be measured by Shor Physical Performance Battery, handgrip strength, medical history, data on the demographic status and clinical data will be retrieved from the medical record and the attending physicians, body weight and anthropometric measurements, intervention: Nutrient Dense-Drink + Standard Care
+
+PRIMARY OUTCOMES:
+  - Changes of Energy in Kilocalories
+  - Changes in Protein intake in grams
+  - Changes in Fat intake in grams
+  - Changes in carbohydrate intake in grams
+  - Changes in micronutrients intake in micrograms
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nutrient-dense drink
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06068816

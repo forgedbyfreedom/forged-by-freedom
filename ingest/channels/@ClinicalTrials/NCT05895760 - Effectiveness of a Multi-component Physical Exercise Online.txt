@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05895760
+Title: Effectiveness of a Multi-component Physical Exercise Online
+Official Title: Effectiveness of a Multi-component Physical Exercise Online on Physical Performance in Community-dwelling Older Adults: a Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: sarcopenia intervention
+
+SUMMARY:
+Objective: to assess the effectiveness of a multi-component physical exercise online intervention (MPE) on physical performance (PP) in community-dwelling older adults.
+
+Methods: a randomized controlled trial, including 110 older adults (68.45±5.54 years), were divided into two parallel groups: an MPE group (n = 55) and a control group (n = 55). The exercise program included endurance, strength, coordination, balance, and flexibility exercises which were carried out for 3 months. The control group received educational sessions on health prevention related to physical exercise. The main endpoint was a change in PP assessed with the short physical performance battery (SPPB). It is also evaluated other variables such as sociodemographic (sex, age, education level), health conditions (cognitive impairment, polypharmacy, comorbidity, frailty, sarcopenia, depressive and anxiety symptoms), functional dependence through scales of activities of daily living (ADL), nutrition (risk of malnutrition, weight, height, body mass index (BMI), calf and waist circumference) and lifestyles (physical activity, alcoholism, and smoking). Comparisons were made in the follow-up measurements between groups by an independent t-test and baseline and follow-up measurements in both groups by a paired t-test.
+
+DETAILED DESCRIPTION:
+Methods Study design and participants. The study was a randomized controlled trial conducted from June to October 2021. The study population was randomly selected from the FraDySMex study (Frailty, Dynapenia and Sarcopenia in Mexican Adults), adults aged 50 years and older. The adults were residents of Mexico City from three different municipalities (Cuajimalpa, Álvaro Obregón and Magdalena Contreras). The protocol was approved by the Committee on Ethics in Research of the "Iberoamerican University, Mexico City. with No35/2020. Informed consent was obtained from each participant who signed it after fully understanding the procedures.
+
+The eligibility criteria were the following:
+
+* Adults 60 and over years
+* Adults who had an electronic device with internet access for video calls.
+
+The exclusion criteria were:
+
+* Adults self-reported walking disability, with the inability to complete the short physical performance battery (SPPB)
+* Adults with severe functional dependence (defined as a Barthel index ≤ 60/100 score)
+* Adults with cognitive impairment (defined as a mini-mental state examination (MMSE) score \<24/30)
+* Adults with terminal illness
+* Adults who were participation in a physical activity or nutritional program
+* Adults with a limb loss or use of lower or upper limb prostheses
+* Adults with a history of injuries (fractures/falls) of less than one year in hip, knee or ankle joints and with surgery in the last 6 months or contraindications to perform trial activities in the judgment of medical personnel.
+* Adults who presented any medical condition or adverse symptoms during the intervention that made it impossible to carry out the physical exercise program
+* Adults who did not keep three times consecutive were eliminated from the study.
+
+Sample size estimate / power calculations The sample size calculation was based on the primary outcome SPPB with power of .80 \[1-β\], 2-sided α-error (95% CI), 2 groups, 2 measurements. One hundred participants were required in order to detect a clinically meaningful change of ≥1.0 point with a SD of 0.99 points. To account for potential dropouts before study completion, we will inflate the sample size by 10% losses during follow-up, resulting in a total sample size of 110 individuals (55 participants allocated to each group). With a sample of 1000 adults from the FraDySMex study, were selected 110 adults and they will be assigned to groups by computer random number generation and were assigned in 1:1 ratio (intervention group and control group). It was simple-blind, since the participants did not know which they were group. Figure 1 shows the population flow diagram.
+
+Safety All study staff monitored participant safety and reported three categories of adverse events: serious adverse events, unexpected adverse events (those potentially related to study procedures or activities and not listed in the informed consent form or study protocol), and adverse events that occurred while the participant was under 
+
+PRIMARY OUTCOMES:
+  - Physical performance
+
+INTERVENTIONS:
+  - OTHER: Multi-component physical exercise online intervention
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05895760

@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04518891
+Title: Cognitive Functional Therapy Compared With Sham-treatment for Low Back Pain
+Official Title: Efficacy of the Cognitive Functional Therapy (CFT) in Patients With Chronic Nonspecific Low Back Pain: a Study Protocol for a Randomized Sham-controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 152
+Topic: high intensity interval training
+
+SUMMARY:
+Chronic low back pain is a public health problem, and there is strong evidence that it is associated with a complex interaction of biopsychosocial factors. Cognitive functional therapy (CFT) is a promising new intervention that deals with potentially modifiable multidimensional aspects of pain (eg, provocative cognitive, movement and lifestyle behaviors). In order to better understand the contextual effects, the aim of the current study is to investigate the efficacy of CFT compared with a sham-intervention for pain intensity and disability post-intervention in patients with non-specific chronic low back pain (CLBP).
+
+This study is a randomized clinical trial (RCT) in which 152 (18 - 60 years old) patients with CLBP will be enrolled. The patients will be randomly allocated to receive: (1) CFT intervention or (2) sham-intervention. The experimental group will receive individualized CFT in a pragmatic manner (5 to 7 sessions) based on the clinical progression of participants. The sham group will attend six sessions: consisted of 30 minutes of photobiomodulation using a detuned device and more 15 minutes of talking about neutral topics. Participants will be assessed pre and post-intervention, three months and six months after randomization. Patients from both groups also will receive an educational booklet. The primary outcomes will be pain intensity and disability post-intervention. The secondary outcomes will be: pain intensity and disability at 3- and 6-month follow-up, as well as self-efficacy, global perceived effect of improvement and functioning post-intervention, 3- and 6-month follow-up. The patients and the assessor will be blinded to treatment administered (active vs. sham).
+
+The between-group differences (effects of treatment) and their respective 95% confidence intervals will be calculated by constructing linear mixed models. Treatment effect for the primary and secondary outcomes will be estimated using mixed linear models.
+
+To the best of our knowledge, the current study will be the first to compare CFT vs. sham intervention. Sham-controlled RCTs may help to understand the influence of non-specific factors on treatment outcomes. Considering complex interventions as CFT, it is imperative to understand the impact of contextual factors on outcomes.
+
+DETAILED DESCRIPTION:
+The aim of the current study is to investigate the efficacy of Cognitive Functional Therapy (CFT) compared with a sham-intervention (sham photobiomodulation + neutral talking), for pain intensity and disability post-intervention in patients with non-specific chronic low back pain (CLBP). The secondary aims will be to investigate the effect of CFT for pain intensity and disability at 3- and 6-month follow-up, as well as the effect of the active treatment on self-efficacy, global perceived effect of improvement and functioning post-intervention, 3- and 6-month follow-up.
+
+The study was submitted to and approved by the ethics committee for research involving human subjects of the Ribeirão Preto Medical School (Ethics Committee Board from Centro Saúde Escola Cuaibá) of the University of São Paulo (HCFMRP CAE number: 26780619.0.0000.5414). Written informed consent will be obtained from all participants included in the study. No significant adverse reactions are anticipated in the study, but these will be monitored.
+
+This study will be a sham-controlled RCT and will follow the recommendations described on Consolidated Standards of Reporting Trials (CONSORT) statement. The sample will be comprised of 152 participants (both genders) with non-specific CLBP who will be referred to the physiotherapy outpatient clinic from Ribeirão Preto Medical School - University of São Paulo (Brazil).
+
+Patients will be informed that this study will involve a sham intervention arm (fake intervention in which an inert treatment will be provided but it still can result in positive outcomes due to its psychological effects) vs. an active treatment arm, but the nature of the sham will not be elucidated (equipment detuned).
+
+After this initial assessment, participants will be randomly assigned using block randomization by simple computerized procedures to one of the two treatment groups through the use of cards previously placed in opaque sealed envelopes: i) CFT group or ii) Sham group.
+
+As a strategy to control for the treatment fidelity on both arms of the study, we will adopt the framework developed by the NIH Behaviour Change Consortium (BCC). To control for the "Intervention Delivery", the time of therapist-patient interaction, number of sessions and the different components of the intervention administered (e.g.: in the sham-group, the time administering the sham photobiomodulation and the time spent with neutral talking), as well as video recordings along the trial will be registered. Also, regular meetings to discuss the clinical cases will be performed. Furthermore, the "Intervention receipt" will be assessed in two different manners: i) on the completion of the study, each participant will be submitted to a manipulation check and they will be asked about the group they think they were at and ii) patients in both groups will be invited to summarize at the beginning of each session how the treatment impact their lives.
+
+Despite it is a sham-controlled RCT, considering 
+
+PRIMARY OUTCOMES:
+  - Pain intensity: Numeric pain rating scale (NPRS)
+  - Low Back Pain Related Disability: Oswestry Disability Index (ODI)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cognitive Functional Therapy (CFT)
+  - DEVICE: Sham intervention
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04518891

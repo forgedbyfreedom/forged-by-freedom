@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06547307
+Title: CYP1A2 and ADORA2A Genotypes and Endurance Performance.
+Official Title: Effects of Caffeine, CYP1A2 and ADORA2A Genotypes on Cycling Endurance Performance.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: caffeine exercise
+
+SUMMARY:
+The aim of this randomized, double-blind, placebo-controlled experiment will be to assess the potential effect of the selected gene polymorphism (CYP1A2, ADORA2A) on performance after caffeine ingestion.
+
+DETAILED DESCRIPTION:
+This randomized, double-blinded, placebo-controlled, within-subjects counter-measured study design will include 60 males and females that fall between the given age range (18-35 years).
+
+Participants will complete five visits (\~90-120 min each, 2 visits during the first week,3 visit during week 2-4) in the Laboratory at Faculty of Sports Studies of Masaryk University. All testing will take place Monday to Friday during morning hours (7-12) to minimize potential diurnal effect on sports performance. Participants will be instructed to maintain their regular diet (pre-testing meals will be replicated for all visits) and sleeping habits, avoid strenuous activity 48 hours before each visit, and abstain from caffeine one week prior to the first visit and for the duration of the data collection (4 weeks).
+
+Sample size calculations We estimated sample size using G\*Power 3.1 (Version 3.1.9.4). Effect size = 0.25, the trial would be powered to detect small but still physiologically important effect.
+
+Alpha error = 0.025 Power (1-Beta probability) = 0.8 Number of groups = 6 - number of stratification required for genotype subgroup analysis number of measurements = 3 Sample size = based on calculation, 60 participants are required
+
+Recruitment
+
+Recruitment will be carried out at Masaryk University by flyers. Recruitment will also take place online through sharing on the website and social networks of the Faculty of Sports Studies of Masaryk University.
+
+Parameters of Assessment
+
+Physiological data will be collected by a Ph.D.-level exercise physiologist and two doctoral students.
+
+Height will be measured to the nearest 0.1 cm using a wall-mounted stadiometer, and body weight will be measured to the nearest 0.1 kg using a digital scale with participants wearing light clothing without shoes.
+
+Body weight value will be measured on each visit and will be used to determine 2 and 4 mg per kilogram of body mass dosages for caffeine treatments (plus a placebo dose) that will be ingested in random order (derived by research assistant and blinded to all investigators) during visits 2, 3 and 4, over the following three weeks.
+
+Body composition will be assessed by dual-energy x-ray absorptiometry (DXA; Horizon A, Hologic Inc. Marlborough, MA) during the first week of the study.
+
+Exercise Tests
+
+VO2max test
+
+Each participant will initially perform an incremental exercise test. That test will assess Vo2max and maximal workload (Wmax), which is necessary for subsequent settings. Respiratory parameters will be measured breath-by-breath using a CORTEX METALYZER 3B. Wmax will be calculated using the following equation:
+
+Wmax= Wfinal + (t/T) x Winc. Where Wfinal is the power output of the final completed stage, t is the time achieved in the final uncompleted stage (s), T is the duration of each stage (s) and Winc is the workload increment.
+
+Time trial
+
+The ergometer will be set to linear mode (workload increases as the pedalling rate increases). Each participant will perform
+
+PRIMARY OUTCOMES:
+  - Efficacy of caffeine to improve endurance performance (time to complete 10 km trial)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine 2 mg
+  - DIETARY_SUPPLEMENT: Caffeine 4 mg
+  - DIETARY_SUPPLEMENT: Caffeine 0 mg
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06547307

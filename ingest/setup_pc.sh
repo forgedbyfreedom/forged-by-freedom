@@ -77,34 +77,54 @@ echo "Installing pipeline dependencies..."
 echo "Installing faster-whisper (PC transcription backend)..."
 "$PIP" install -q faster-whisper
 
+# ─── CUDA / PyTorch ──────────────────────────────────────────
+echo ""
+echo "Checking for NVIDIA GPU..."
+if command -v nvidia-smi >/dev/null 2>&1; then
+    GPU_NAME=$(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1)
+    VRAM=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader 2>/dev/null | head -1)
+    echo "✅ NVIDIA GPU detected: $GPU_NAME ($VRAM)"
+    echo "   Installing PyTorch with CUDA 12.1 support..."
+    "$PIP" install -q torch --index-url https://download.pytorch.org/whl/cu121
+    echo "✅ PyTorch + CUDA installed"
+    echo "   Installing CTranslate2 CUDA build (faster-whisper backend)..."
+    "$PIP" install -q ctranslate2
+else
+    echo "⚠️  No NVIDIA GPU detected — transcription will use CPU (int8, slower)"
+    echo "   If you have a GPU, install NVIDIA drivers first then re-run setup"
+fi
+
 echo "✅ All dependencies installed"
 
-# ─── Verify whisper backend ──────────────────────────────────
+# ─── Verify GPU + whisper backend ────────────────────────────
 echo ""
-echo "Verifying whisper_transcribe.py backend detection..."
+echo "Verifying GPU and whisper backend..."
 "$VENV_PYTHON" -c "
 import platform
 is_apple = platform.system() == 'Darwin' and platform.machine() == 'arm64'
 if is_apple:
     print('  Platform: Apple Silicon → using MLX Whisper')
-else:
-    from faster_whisper import WhisperModel
-    print('  Platform: PC/Linux → using faster-whisper ✅')
-"
+    exit()
 
-# ─── GPU check ───────────────────────────────────────────────
-echo ""
-"$VENV_PYTHON" -c "
 try:
     import torch
     if torch.cuda.is_available():
-        print('✅ CUDA GPU detected:', torch.cuda.get_device_name(0))
-        print('   Transcription will use GPU (fast)')
+        gpu = torch.cuda.get_device_name(0)
+        vram = torch.cuda.get_device_properties(0).total_memory / 1024**3
+        print(f'  ✅ CUDA GPU: {gpu} ({vram:.0f}GB VRAM)')
+        print(f'  ✅ Transcription: faster-whisper large-v3 @ float16 (FAST)')
+        if vram >= 20:
+            print(f'  ✅ VRAM is sufficient for large-v3 — full quality')
+        else:
+            print(f'  ⚠️  VRAM <20GB — consider medium model if OOM errors occur')
     else:
-        print('⚠️  No CUDA GPU — will use CPU (slower but works)')
+        print('  ⚠️  No CUDA — will use CPU with int8')
 except ImportError:
-    print('⚠️  torch not installed — faster-whisper will auto-detect device')
-" 2>/dev/null || echo "⚠️  torch not found — faster-whisper handles device detection automatically"
+    print('  ⚠️  torch not found — faster-whisper will auto-detect (slower)')
+
+from faster_whisper import WhisperModel
+print('  ✅ faster-whisper imported OK')
+" 2>/dev/null || echo "⚠️  GPU check failed — check CUDA/driver installation"
 
 # ─── .env check ──────────────────────────────────────────────
 echo ""

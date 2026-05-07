@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06466408
+Title: Effect of Vegetable and Fruit Enzyme Supplementation on Muscle Activation, Aerobic Capacity, and Blood Biochemical Parameters After High-Intensity Interval Exercise: Feasibility Study of Exercise Design With Exergaming
+Official Title: Exploring the Impact of Fruit and Vegetable Enzyme Supplementation on Aerobic Performance and Lactate Response in the Elderly Following High-Intensity Interval Exercise Combine Exergaming: Randomized Experimental Matched-Pair Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: high intensity interval training
+
+SUMMARY:
+This study explores the effectiveness of fruit and vegetable enzyme supplementation in reducing fatigue and enhancing aerobic capacity in elderly individuals after engaging in high-intensity interval exercise (HIIE) through exergaming. Sixteen elderly female participants were divided into two groups based on pre-test lactate levels: an enzyme group and a placebo group, to ensure comparability. They performed HIIE using Nintendo Switch Ring Fit Adventure, completing eight sets of 20-second high-effort exercises with 30-second rest intervals, totaling 370 seconds of activity. The primary metrics evaluated were blood lactate levels, heart rate (HR), rating of perceived exertion (RPE), and training impulse (TRIMP). Participants in the enzyme group received a fruit and vegetable enzyme supplement in a 30 c.c. dose twice daily for 14 days. The study aimed to determine if enzyme supplementation could effectively mitigate the physiological stress of HIIE and improve exercise outcomes in the elderly.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Lactate
+  - Heart rate (bpm)
+  - Borg 0-10 score rating of perceived exertion (RPE)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplementation Protocol
+  - DIAGNOSTIC_TEST: Blood Lactate Test
+  - DIAGNOSTIC_TEST: Training Impulse
+  - DIAGNOSTIC_TEST: Exergaming HIIE Test
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06466408

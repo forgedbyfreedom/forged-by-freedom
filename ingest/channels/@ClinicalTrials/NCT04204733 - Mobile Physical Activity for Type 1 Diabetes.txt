@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04204733
+Title: Mobile Physical Activity for Type 1 Diabetes
+Official Title: Mobile Approaches to Promote Physical Activity in Type 1 Diabetes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The study is the formative observation stage of behavioral intervention development. Sedentary adults with type 1 diabetes will be given access to a mobile application that incorporates biosensor feedback, teleconsultation, and online group exercise classes. The first aim is to quantify the feasibility, acceptability, and preliminary efficacy of the application. The second aim is to evaluate predictors and mechanisms of physical activity behavior change among these adults. The possible predictors the investigators are monitoring include usage of specific application features, momentary internal factors (e.g., pre-activity fear of hypoglycemia), momentary external factors (e.g., location), and latent external factors (e.g., mental health traits). These results will be used to develop a refined mobile application utilizing the most popular application features, as well as an algorithm that uses the identified predictors of physical activity to advise adults with type 1 diabetes when to engage in physical activity (i.e., context-aware physical activity coaching) and when to make related diet and insulin adjustments.
+
+DETAILED DESCRIPTION:
+People with type 1 diabetes (T1D), which includes \~1 million American adults, have an 8-fold higher risk of mortality attributable to cardiovascular disease than those in their decade cohort. Current evidence-based T1D self-management interventions target cardiovascular risk by improving glycemic control, but do not effectively address other modifiable risk factors prevalent in T1D such as hypertension, dyslipidemia and obesity. Thus, T1D interventions that are effective for a broader range of health targets than glycemic control are urgently needed. Moderate to vigorous physical activity (MVPA) interventions could provide a novel solution, but only if they can attenuate the unique barriers to MVPA posed by T1D: 1) insufficient knowledge of insulin pharmacokinetics to self-manage and prevent unpredictable blood glucose fluctuations during MVPA; 2) fear of MVPA-induced hypoglycemia; and 3) lack of perceived social support for T1D. The present study is conducting formative research to guide the development of such an intervention incorporating the latest advances in diabetes science: 1) continuous glucose monitors; 2) teleconsultation; 3) peer group MVPA classes; and 4) context-aware diabetes self-management coaching algorithms. The study represents stage #0 (basic science) of the NIH Stage Model for Behavioral Intervention Development. Specifically, the investigators will conduct a longitudinal, observational study in people with T1D who receive a 10-week mobile intervention that incorporates biosensor feedback, teleconsultation, and online group PA classes. Participants will be followed for 10 weeks to evaluate intervention acceptability and identify potential mechanisms of PA behavior change. The expected outcome of this study is preliminary data for the investigators' future direction of an NIH Small Business Technology Transfer grant application to refine this intervention (NIH Stage Model Stage 1). Specifically, the investigators will utilize the most popular components from the observational study and also develop an algorithm that uses identified predictors of PA to advise patients on timing and preparation for PA. This refined intervention will be pilot tested, then optimized and tested for efficacy using an advanced trial design (such as multiphase optimization strategy) among a larger sample (NIH Stage Model Stage 2).
+
+PRIMARY OUTCOMES:
+  - Moderate to vigorous physical activity (objective)
+  - Moderate to vigorous physical activity (subjective)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mobile application
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04204733

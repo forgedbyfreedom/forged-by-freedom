@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38769430
+Title: Ballistic analysis of high-performance armor steel by numerical simulation.
+Authors: Li, Huang, Ren, Zhang, Xiong
+Journal: Scientific reports
+Year: 2025
+Topic: ballistic training performance
+
+ABSTRACT:
+In order to establish a connection between the ballistic performance and mechanical properties of armor steel, a ballistic simulation model was developed and subsequently validated for accuracy and reliability. The mechanical properties of the target plate were described using the Johnson-Cook constitutive relation. An analysis was conducted to investigate the impact of the J-C parameters of the target plate on its ballistic performance, revealing a strong linear relationship between them. Subsequently, a mathematical model represented as H&#x2009;=&#x2009;14.82&#xa0;-&#xa0;0.0048A&#xa0;-&#xa0;0.0023B&#x2009;+&#x2009;5.95n&#xa0;-&#xa0;81.3C was derived, and its accuracy was demonstrated to exceed 90%. This mathematical model can effectively predict the ballistic performance of the armor steel, even when its mechanical properties undergo variations during the production process. This prediction capability significantly contributes to reducing research costs and time.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38769430/

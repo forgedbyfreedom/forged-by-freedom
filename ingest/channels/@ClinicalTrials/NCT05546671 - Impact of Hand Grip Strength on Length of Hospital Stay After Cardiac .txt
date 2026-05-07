@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05546671
+Title: Impact of Hand Grip Strength on Length of Hospital Stay After Cardiac Surgery Among Elderly Patients
+Official Title: Usefulness of Hand Grip Strength as a Predictor of Prolonged Hospital Stay in Elderly Patients Undergoing Cardiac Surgery
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 240
+Topic: strength training
+
+SUMMARY:
+Hand grip strength has been shown to be a predictor of adverse cardiovascular outcomes in the elderly population. This study aims to investigate whether measurement of hand grip strength could be used as a predictor of prolonged hospital stay after cardiac surgery in elderly patients.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Prolonged hospital stay
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Hand grip strength measurement
+
+ELIGIBILITY:
+Age: 70 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05546671

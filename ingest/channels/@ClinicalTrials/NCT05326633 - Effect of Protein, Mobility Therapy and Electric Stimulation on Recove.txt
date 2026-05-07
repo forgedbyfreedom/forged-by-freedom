@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05326633
+Title: Effect of Protein, Mobility Therapy and Electric Stimulation on Recovery in Older ICU Survivors
+Official Title: Effect of Protein, Mobility Therapy and Electric Stimulation on Recovery in Older Survivors of Critical Illness
+Status: NOT_YET_RECRUITING
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 78
+Topic: sarcopenia intervention
+
+SUMMARY:
+Older ICU survivors with ICU acquired weakness (ICUAW) are malnourished, sarcopenic, and functionally debilitated as a consequence of the high burden of comorbidities common in the elderly. To address the sequalae of critical illnesses, the investigators will perform a trial incorporating an intervention that combines mobility-based physical rehabilitation (MRP), high protein supplementation (HPRO), and neuromuscular electric stimulation (NMES). The investigators will then assess both clinical and functional outcomes and determine the relationship of disability with systemic inflammation.
+
+DETAILED DESCRIPTION:
+Annually, nearly 3 million patients ≥ 65 years old are admitted to intensive care units (ICUs) nationwide, 20% of whom experience a long, protracted ICU stay resulting in muscle deconditioning, atrophy, inflammation, and functional disability necessitating transfer from the ICU to a long term acute care hospitals (LTACH). In the LTACH exacerbations of chronic comorbidities and the cycle of prolonged bed rest, ongoing inflammation and malnutrition often leads to continued functional disability, immobility, prolonged mechanical ventilation and increased one-year mortality of up to 25%. After a patient has survived critical illness and is transferred to an LTACH facility, one of the major challenges of their continued care is how to address - and ameliorate - their profound physical and functional deficits.
+
+To address these sequalae of chronic critical illness, the investigators will perform a trial incorporating an intervention that combines mobility-based physical rehabilitation (MRP), high protein supplementation (HPRO) and neuromuscular electric stimulation (NMES) to assess both clinical and functional outcomes and to determine the relationship of disability with systemic inflammation. The investigators will prospectively randomize patient to receive our multicomponent intervention or usual care and assess the outcomes of functional mobility, change in muscle mass and discharge disposition. Additionally, the investigators will determine the effects of our intervention on inflammatory cytokine profiles to determine to what degree systemic inflammation mediates clinical recovery.
+
+PRIMARY OUTCOMES:
+  - Change in Muscle mass
+  - Change in Muscle strength
+  - Change in Systemic Inflammation
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: MRP and High Protein Supplement (HPRO) and Neuromuscular Electric Stimulation (NMES)
+
+ELIGIBILITY:
+Age: 60 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05326633

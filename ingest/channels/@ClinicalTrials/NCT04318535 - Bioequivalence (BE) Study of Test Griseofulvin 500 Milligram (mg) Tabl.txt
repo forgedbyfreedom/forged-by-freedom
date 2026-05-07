@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04318535
+Title: Bioequivalence (BE) Study of Test Griseofulvin 500 Milligram (mg) Tablets Versus Reference and Dose Proportionality Study of Test Griseofulvin 250 mg and 500 mg Tablets Under Fed Conditions
+Official Title: An Open Label, Randomized, Balanced, Three Treatment, Three Period, Three Sequence, Single Dose, Crossover Study to Evaluate the Bioequivalence of Test Griseofulvin Tablets, 500 mg Versus Reference Griseofulvin Tablets, 500 mg as Well as Dose Proportionality of Test Griseofulvin Tablets, 250 mg and 500 mg, in Healthy, Adult Participants Under Fed Conditions
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: beta-alanine
+
+SUMMARY:
+Griseofulvin is an antifungal agent used in treatment of Dermatophytosis caused by Microsporum spp. (species), Trichophyton spp., Epidermophyton spp., where topical therapy is considered inappropriate or has failed. Approved dose of Griseofulvin in Adults (greater than or equal to 50 kg) in India is 500 to 1,000 mg daily, but not less than 10 mg/kg bodyweight daily. As per the World health organization (WHO) guidance, Griseofulvin belongs to Biopharmaceutical Classification System (BCS) Class 2 ("low" solubility-"high" permeability). A Bioequivalence (BE) study will be conducted in India to estimate in vivo behavior (Pharmacokinetic characteristics) of Griseofulvin 500 tablets and dose proportionality study for Griseofulvin 250 mg and 500 mg tablets. This is an open label, randomized, balanced, three treatment period, three sequence, single dose, crossover study that will evaluate the bioequivalence of Griseofulvin tablets 500 mg test product (T1) versus Griseofulvin tablets 500 mg reference product (R) as well as dose proportionality of Griseofulvin tablets 250 mg test product (T2) with Griseofulvin tablets 500 mg T1 in healthy, adult participants under fed conditions. Eligible participants enrolled will be randomized to either of the three treatment sequence periods, T1T2R, T2RT1 or RT1T2 according to 1:1:1 ratio. The total duration of clinical phase will be approximately 20 days from Day-1 to Day 19 including a washout period of at least 7 days (not more than 14 days) for each treatment period. A total of 36 healthy, adult participants will be enrolled in this study and the above mentioned doses of Griseofulvin will be administered under fed conditions. Participants will be followed up 5 days after last dosing.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximum Plasma Concentration (Cmax) for Griseofulvin
+  - Area Under Plasma Concentration-time Curve (AUC) From Zero Hours to Time of Last Quantifiable Concentration (AUC[0-t]) for Griseofulvin
+  - AUC From Time Zero Extrapolated to Infinity (AUC[0-inf]) for Griseofulvin
+  - Dose Proportionality of Griseofulvin Using AUC(0-t) Following a Single Dose
+  - Dose Proportionality of Griseofulvin Using Cmax Following a Single Dose
+
+INTERVENTIONS:
+  - DRUG: Griseofulvin 500 mg
+  - DRUG: Griseofulvin 250 mg
+  - DRUG: Reference Griseofulvin 500 mg
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04318535

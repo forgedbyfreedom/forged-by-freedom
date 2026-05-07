@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02832193
+Title: Retrospective Evaluation of POCD Data of Studies From KAI, Charité - Universitätsmedizin Berlin
+Official Title: Retrospective Evaluation of POCD Data of Studies From the Department of Anesthesiology and Operative Intensive Care Medicine (CCM, CVK) Charité - Universitätsmedizin Berlin
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 5000
+Topic: sarcopenia intervention
+
+SUMMARY:
+Data on prevention of perioperative neurocognitive disorders (pNCDs) are limited. The purpose of this monocentric parallel - grouped observational registry is to collect study data from studies with pNCDs as primary or secondary endpoint to estimate prevalence and incidence of pNCDs.
+
+DETAILED DESCRIPTION:
+Perioperative cognitive trajectories (Perioperative neurocognitive disorders \[pNCDs\]) are described with formal cognitive testing (neurocognitive test battery). Definitions are based on current nomenclature recommendations (Evered et al.) according to DSM-V criteria including a multi-component cognitive test battery comparing baseline and postoperative follow-up testing of patients with cognitive test performance of non-surgical control groups.Cognitive concern and functional ability are described with items from questionnaires, e.g. IQCODE, MMQ, GDS, ADL/IADL and others specific to the respective study design.
+
+Repeated cognitive testing with a battery of computerized neuropsychological tests (Cambridge Neuropsychological Test Automated Battery \[CANTAB®\]) and non computerized (paper based)tests (e.g. trailmaking test, Grooved pegboard test, Stroop color word interference test, animal naming test, etc.) are performed at preoperative baseline, after 5-7 days and at three months follow up, 1 year, 2 years and 5 years follow-up according to the study design of the registered studies.
+
+Different calculation methods will be applied to the cognitive test data, primarily the dichotomousapproach established by Rasmussen et al. in the International Study on postoperative cognitive deficits (ISPOCD). This calculation method defines POCD as a reliable change in pre- and postoperative cognitive performance (difference scores) of each individual in the surgical patients cohort as compared to the changes in a non-surgical control group (reliable change index in either a composite score including cognitive test parameters from all tests in the cognitive test battery or in at least two of the chosen cognitive test parameters). Additional calculation methods like "g-factor", "GCP" and arbitrary definitions e.g. "20.20- rule" will be used for detailed methodologic evaluation.
+
+In two subprojects we plan to describe domain-specific changes in formal cognitive testing over the registered surgical cohorts.
+
+Subproject 1-Analyses will be performed in joint evaluation with Monument Therapeutics (Spin off Cambridge Cognition). The analyses aim to :
+
+1. Describe cognitive change based on raw cognitive data from the applied cognitive test battery (computerized tests with CANTAB eclipse, CANTAB research suite, CANTAB connect and non-computerized tests)
+2. Identify predisposing factors (e.g. patient characteristics, biomarkers, medications) predictive of cognitive decline following surgery
+3. Identify the cognitive domains most sensitive to neuropsychological change following surgery
+
+Subproject 2-Analyses will be performed in joint evaluation with Cambridge Cognition. The analyses aim to :
+
+Facilitate the use of data collected from non-surgical controls as normative material for future studies in the research area.
+
+PRIMARY OUTCOMES:
+  - Neurocognitive Disorder (NCD)
+  - Postoperative cognitive dysfunction (POCD)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02832193

@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07290842
+Title: The Effects of Dietary Nitrate in Patients With Hypertensive Kidney Injury
+Official Title: The Effects of Dietary Nitrate in Patients With Hypertensive Kidney Injury
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: physical activity intervention
+
+SUMMARY:
+The study aims to study the effects of diatery nitrate in patients with hypertension and hypertensive kidney injury.
+
+The study is a randomized, placebo-controlled, double-blinded crossover trial. 14-20 patients with hypertension and CKD I-III will be randomized to receive either nitrate or placebo delivered in the form of beetroot juice.
+
+Effect variables will be measured before and after a 2 week treatment. After a washout period of 14 days, the subjects are crossed over to the opposite treatment.
+
+The study is terminated by measuring effect variables after the second treatment period.
+
+DETAILED DESCRIPTION:
+AIM: We aim to investigate the mechanisms behind the cardiovascular and renal effect of nitrates in patients with hypertension and hypertensive kidney injury.
+
+HYPOTHESIS: Dietary nitrate decreases BP and increases renal blood flow. This is independent of renal function or enhanced during low eGFR due to reduced renal clearance of nitrate.
+
+METHODS: The study is a randomized, placebo-controlled, double-blinded crossover trial. 14-20 patients with hypertension and CKD I-III will be randomized to receive either nitrate or placebo delivered in the form of beetroot juice.
+
+Effect variables will be measured before and after a 2 week treatment. After each treatment period effect variables will be measured, including include 24 hour bloodpressure measurment. Technetium(Tc)99m - Diethylenetriamine pentaacetate (DTPA) clearance and water based positron emission tomography computed tomography (PET/CT) is performed only after the intervention periods.
+
+After a washout period of 14 days, the subjects are crossed over to the opposite treatment. The study is terminated by measuring effect variables after the second treatment period.
+
+PERSPECTIVE: The knowledge gained from these studies can lead to improved dietary counselling, which is a promising approach in the treatment of hypertension.
+
+PRIMARY OUTCOMES:
+  - Changes in 24 h systolic blood pressure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beetroot Juice - Active
+  - DIETARY_SUPPLEMENT: Beetroot juice placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07290842

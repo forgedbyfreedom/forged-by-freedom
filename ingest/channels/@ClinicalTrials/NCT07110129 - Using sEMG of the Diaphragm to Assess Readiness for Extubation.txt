@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07110129
+Title: Using sEMG of the Diaphragm to Assess Readiness for Extubation
+Official Title: Using sEMG of the Diaphragm to Assess Readiness for Extubation - Feasibility Study to Design a Pragmatic Multi-site Trial Protocol
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: physical activity intervention
+
+SUMMARY:
+As part of an admission to an Intensive Care Unit (ICU) many patients have breathing tube inserted into their windpipe, also referred to as intubation . This is done for a variety of reasons which can include the need for invasive breathing support and to place the patient into a medically induced coma to allow their body to rest and be treated for the underlying cause of their deterioration.
+
+One the patient has started to recover from their illness, the process of removing the breathing tube (extubation) and stopping the breathing machine begins. Optimising this process and ensuring successful removal of the breathing tube is extremely important to optimise outcomes. Therefore, identifying new methods to determine the likelihood for successful extubation is of clinical significance.
+
+There are several markers of extubation readiness that clinicians can use to support their decision making discussed in the literature. A novel method is the use of respiratory muscle activity monitoring via sensory electromyogram (sEMG). sEMG has previously been shown to be useful to measure the strength and activity of muscles. However, until recently measuring diaphragm activity has been a challenge due to noise from the chest movements, cardiac artefacts. Recent advancements in signal processing and growing interest in better diagnostic methods has led to an improvement in metrics. Using wavelet transforms and machine learning, new techniques have been developed to measure diaphragm muscle activity using sEMG. sEMG has been shown to be effective in detecting patient-ventilator asynchrony as well as respiratory strength in those not requiring mechanical ventilation. However, its use in assessing patients nearing readiness for extubation has not been explored.
+
+Therefore, the purpose of this feasibility trial is to explore the use of sEMG in patients undergoing trials of extubation. The results of this study will be used to design a multi-site trial.
+
+DETAILED DESCRIPTION:
+150,000 patients a year in the UK need to be admitted to a critical care unit. Those admitted are usually either critically unwell or are in the recovery phase of a critical illness (1). Often patients will require support for one or more of their vital organs such as their lungs, heart or kidneys. Approximately 60% of patients admitted will require support from mechanical ventilation (breathing machine) (2).
+
+Mechanical ventilation is lifesaving when indicated but is beset by potential complications as the duration increases (3). Early identification of patients who are ready to be liberated from ventilatory support is therefore key. However, clinician judgement lacks both sensitivity and specificity for identifying such patients.
+
+A Cochrane review in 2010 (4) demonstrated protocolised and standardised weaning method reduced the duration of total mechanical ventilation by 25%, weaning duration time by 78% and Intensive Care Unit (ICU) length of stay by 10%. Conversely, prolonged weaning process worsens patient outcomes, increases the risk of dying, and increases length of ICU and hospital stay, affects finite critical care resource and a direct impact on financial cost and environment sustainability (5).
+
+Predicting readiness for extubation is challenging. This task is best accomplished by means of a protocolised process including a spontaneous awakening trial (SAT) where sedation is lowered to a safe RASS target and a spontaneous-breathing trials (SBT), in which patients who meet a defined set of criteria undergo a test period of minimal (Pressure support ventilation) or no ventilator (T-piece) support (6). This is then frequently combined with objective markers or 'extubation indices'. These indices include assessments of breathing strength and endurance, cough strength and respiratory distress e.g., P0.1, MIP, Peak cough flow and RSBI. However, these indices have been shown to lack sensitivity and specificity, with none of them able to accurately predict readiness for extubation or likely success (7).
+
+The incidence of extubation failure reported in literature is quite variable with \~5% in post-operative surgical units to 10% in medical ICUs. With each additional day without a weaning success after the first attempt, there is an associated increase in crude mortality. Crude mortality increased from 19.0% in patients not weaned one day after the first attempt to 36.8% in patients still present in the ICU and not successfully weaned 10 days after the first attempt (8). Studies have also demonstrated that patients requiring reintubation are at increased risk of death with mortality rates ranging as high as 43% compared with less than 12% in patients successfully extubated (9). Reintubation is associated with a 4.5 times increased risk of nosocomial pneumonia (10).
+
+Therefore, identifying new methods for determine likelihood for successful extubation is of clinical importance. Once such novel method is the use of respiratory muscle activity mon
+
+PRIMARY OUTCOMES:
+  - Feasibility of recruitment and retention of participants
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07110129

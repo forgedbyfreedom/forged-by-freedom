@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03305419
+Title: A Safety and Pharmacokinetic (PK) Study of GSK2982772 in Healthy Subjects
+Official Title: A Single-centre, Randomized, Double-blind (Sponsor-unblinded), Placebo-controlled Study to Evaluate the Safety, Tolerability and Pharmacokinetics of GSK2982772 in Repeat Oral Doses in Healthy Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 62
+Topic: beta-alanine
+
+SUMMARY:
+This study is designed to evaluate the safety, tolerability and PK of GSK2982772, in repeat oral doses in healthy subjects. This study is being conducted to support administration of higher dose levels of GSK2982772 than initially studied in the First Time in Human (FTiH) study. This study will also assess the impact of food during the repeat doses of GSK2982772. This will be a two part study; Part A and Part B. Part A (cohort 1) - single ascending dose, randomized, placebo-controlled, 3-way crossover. Part B (cohorts 2, 3, 4 and 5) - repeat dose, randomized, placebo-controlled, sequential-group. Subjects will be randomized in 3:1 ratio to receive GSK2982772 or placebo in crossover manner on Day 1 of each of the three periods in Part A. Subjects will be randomized in 3:1 ratio to receive GSK2982772 or placebo in sequential groups for 14 days in cohort 2 of Part B and in 9:5 ratio to receive GSK2982772 or placebo in sequential groups for 14 days in cohorts 3, 4 and 5 of Part B. Approximately 66 subjects will be included in this study. The study duration, including screening and follow-up, will not be expected to exceed 13 weeks for Part A and 8 weeks for Part B.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Subjects With Adverse Events (AEs) and Serious AEs (SAEs): Part A
+  - Number of Participants With AEs and SAEs: Part B
+  - Number of Participants With Worst Case Clinical Chemistry Parameters by Potential Clinical Importance Criteria: Part A
+  - Number of Participants With Worst Case Clinical Chemistry Parameters by Potential Clinical Importance Criteria: Part B
+  - Number of Participants With Worst Case Hematology Parameters by Potential Clinical Importance Criteria: Part A
+
+INTERVENTIONS:
+  - DRUG: GSK2982772 capsule
+  - DRUG: Placebo capsule
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03305419

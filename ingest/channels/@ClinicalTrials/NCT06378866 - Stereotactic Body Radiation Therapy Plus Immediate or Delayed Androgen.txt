@@ -1,0 +1,66 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06378866
+Title: Stereotactic Body Radiation Therapy Plus Immediate or Delayed Androgen Receptor Pathway Inhibitor and Androgen Deprivation Therapy or Salvage Radiation Therapy for the Treatment of Prostate Cancer, DIVINE Trial
+Official Title: MC230502 Dynamic Investigator Initiated Enterprise (DIVINE) in Prostate Cancer
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 532
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase II trial studies the effects of stereotactic body radiation therapy (SBRT) and the timing of treatment with androgen receptor pathway inhibitor (ARPI) plus androgen deprivation therapy (ADT) in treating patients with hormone sensitive prostate cancer that has spread from where it first started to other places in the body (metastatic), and that has come back after a period of improvement (recurrent). It also studies the effects of salvage radiation therapy (sXRT) on prostate cancer and to see if radiation to the pelvis helps prevent prostate cancer from spreading elsewhere. SBRT is a type of external radiation therapy that uses special equipment to position a patient and precisely deliver radiation to tumors in the body (except the brain). The total dose of radiation is divided into smaller doses given over several days. This type of radiation therapy helps spare normal tissue. Androgen can cause the growth of prostate cells. ADT lowers the amount of androgen made by the body. This may help stop the growth of tumor cells that need androgen to grow. Androgen receptor pathway inhibitors work by blocking the effects of androgen to stop the growth and spread of tumor cells. sXRT is a targeted radiation treatment for the prostate, typically given when cancer possibly returns after surgery or radiation. Its goal is to destroy any tumor cells in the area. Giving SBRT alone with watchful waiting may be as effective in treating prostate cancer as giving SBRT together with ARPI and ADT and sXRT may be effective in treating prostate cancer and preventing it from spreading elsewhere.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To evaluate and compare modified radiographic progression-free survival (mrPFS) in patients with metachronous recurrent oligometastatic prostate cancer treated with SBRT and 6 months ADT/ARPI followed by watchful wait (Group A) versus SBRT followed by watchful waiting (Group B). (De-escalation stratified by Extracellular Vesicles--Irradiation with Antiandrogen Therapy Exclusion \[DEVIATE\]) II. To evaluate and compare distant progression-free survival (PFS), landmarked at 12 months, in patients with biochemically recurrent prostate cancer treated with sXRT followed by watchful waiting (Group C) versus initial observation and subsequent image-guided therapy (Group D). (Biochemical Recurrence Irradiation versus Observation \[BRIO\])
+
+SECONDARY OBJECTIVES:
+
+I. To evaluate and compare overall survival (OS) between treatment groups. II. To evaluate and compare biochemical progression-free survival (bPFS) between treatment groups.
+
+III. To evaluate and compare distant progression-free survival (PFS) starting from study registration, in patients with biochemically recurrent prostate cancer treated with sXRT followed by watchful waiting (Group C) versus initial observation and subsequent image-guided therapy (Group D).
+
+TERTIARY OBJECTIVES:
+
+I. To estimate rates of salvage radiotherapy to the pelvis in patients with biochemically recurrent prostate cancer treated with initial observation and subsequent image-guided therapy (Group D).
+
+II. To evaluate the adverse event profile of the study treatments as assessed per National Cancer Institute (NCI) Common Terminology Criteria for Adverse Events (CTCAE).
+
+III. To evaluate and compare castration-resistant prostate cancer (CRPC)-free survival between treatment groups NOTE: CRPC-free survival: radiographic progression-free survival with castrate-level testosterone (\< 50ng/mL).
+
+IV. Determine the efficacy of extracellular vesicles (EVs) as a minimal residual disease (MRD) marker.
+
+V. Determine the efficacy of EVs as an early indicator of disease relapse. VI. Determine whether early ADT and ARPI hasten CRPC. VII. Determine how circulating tumor deoxyribonucleic acid (ctDNA) compares as a biomarker to EVs.
+
+OUTLINE: Patients are assigned to 1 of 2 cohorts.
+
+DEVIATE COHORT: Patients are randomized to 1 of 2 groups.
+
+GROUP A: Patients undergo SBRT and receive ARPI (abiraterone and prednisone, apalutamide, darolutamide, or enzalutamide) and ADT (leuprolide, triptorelin, histrelin, goserelin, degarelix, or relugolix). Cycles repeat every 4 months (16 weeks) for up to 6 months in the absence of disease progression or unacceptable toxicity. Patients then undergo watchful waiting thereafter until disease progression.
+
+GROUP B: Patients undergo SBRT with watchful waiting. Cycles repeat every 4 months (16 weeks) in the absence of disease progression or unacceptable toxicity.
+
+BRIO COHORT: Patients are randomized to 1 of 2 groups.
+
+GROUP C: Patients undergo sXRT with watchful waiting. Cycles repeat
+
+PRIMARY OUTCOMES:
+  - Modified radiographic progression-free survival (mrPFS) (Groups A & B)
+  - Distant progression-free survival (PFS) (Groups C & D)
+
+INTERVENTIONS:
+  - DRUG: Abiraterone
+  - DRUG: Apalutamide
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Bone Scan
+  - PROCEDURE: Computed Tomography
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06378866

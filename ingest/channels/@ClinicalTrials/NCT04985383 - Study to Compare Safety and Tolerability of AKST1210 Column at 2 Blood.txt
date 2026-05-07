@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04985383
+Title: Study to Compare Safety and Tolerability of AKST1210 Column at 2 Blood Flow Rates in Subjects With ESRD on Hemodialysis
+Official Title: An Open Label Phase 1 Study to Compare the Safety and Tolerability of the AKST1210 Column at Different Blood-Flow Rates in Patients With End-Stage Renal Disease (ESRD) Undergoing Hemodialysis (HD)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: growth hormone treatment
+
+SUMMARY:
+This study is to evaluate the safety and tolerability of the AKST1210 column at blood-flow rates greater than 250 mL/min in subjects with end-stage renal disease (ESRD) undergoing hemodialysis (HD). The study will assess the safety, tolerability, and impact on HD parameters when the AKST1210 column is used at a blood-flow of up to 450 mL/min.
+
+DETAILED DESCRIPTION:
+This is an open-label study in approximately 12 to 15 subjects between 40 and 75 years of age with ESRD on HD. The objective of this study is to explore the safety and tolerability of the AKST1210 column at blood-flow rates greater than 250 mL/min in subjects with ESRD undergoing HD. The proposed study will assess the safety, tolerability, and impact on HD parameters when the AKST1210 column is used at a blood-flow rates of up to 450 mL/min. Each participant, per the protocol, will be sequentially treated to each column and blood-flow rate combination.
+
+The incidence of IDH events will be one factor used to determine column size/blood-flow rate escalation/de-escalation as well as discontinuation from the study. The planned duration of subject participation is approximately 12 weeks.
+
+PRIMARY OUTCOMES:
+  - Safety as Evaluated by Rate and Severity of Treatment-emergent AEs (TEAEs)
+  - Safety as Evaluated by the Number of Subjects With Intradialytic Hypotensive (IDH) Events
+  - Safety as Evaluated by Changes in Total Hemoglobin (HGB)
+  - Safety as Evaluated by Changes in Free Hemoglobin (HGB)
+
+INTERVENTIONS:
+  - DEVICE: AKST1210 S-15 at 250 mL/min
+  - DEVICE: AKST1210 S-15 at 450 mL/min
+  - DEVICE: AKST1210 S-25 at 250 mL/min
+  - DEVICE: AKST1210 S-25 at 450 mL/min
+  - DEVICE: AKST1210 S-35 at 250 mL/min
+
+ELIGIBILITY:
+Age: 40 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04985383

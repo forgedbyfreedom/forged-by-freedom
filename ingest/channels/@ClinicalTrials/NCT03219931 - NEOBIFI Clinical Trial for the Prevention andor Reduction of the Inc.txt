@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03219931
+Title: NEOBIFI: Clinical Trial for the Prevention and/or Reduction of the Incidence of Colics in Infants
+Official Title: Effects of an Association of the Two Bifidobacteria Probiotics Bifidobacterium Breve B632 and Bifidobacterium Breve BR03 in Intestinal Bacterial Colonization and in the Prevention and/or Reduction of the Incidence of Colics in Infants
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 320
+Topic: growth hormone treatment
+
+SUMMARY:
+Infant colics represent a clinical condition in childhood, characterized by an uncontrollable crying that occurs without any apparent organic cause.1 They can be associated with face redness, closed fists, thighs flexion, meteorism, and gas emission. They are generally diagnosed according to Wessel's "rule of three" (\>3 h of crying a day, for \>3d a week, for \>3wk in a row).2 These crises tend to reach their maximum intensity at 6 weeks of age, in most cases.3 They represent a serious source of anxiety for the family, increasing hospital admissions (5.8% of infants),4 postpartum depression risk, with higher stress levels for up to 3 years from these events. The etiology is still unknown. Anyway, it's assumed that the following factors may be involved: (1) Lactose intolerance. (2) Food hypersensitivity. (3) Feeding difficulties. (4) Disorders of the enteric nervous system. (5) Alterations of pain transmission. (6) Gastroesophageal reflux. (7) Intestinal hormones. (8) Psychosocial factors. (9) Alteration of the intestinal microbiota. In 1994, Lehtonen was the first to suggest that an altered intestinal microbiota composition in the very first months may induce intestinal colics in infants. Human intestinal microbiota is composed of about 1013 to 1014 microorganisms, mainly bacteria. The total number of microbiota genes is called "microbioma" and it is estimated to be 150 times the number of genes in the human genome.5 It acts as a real organ, whose activity can be influenced by diet, lifestyle, prebiotics, probiotics, and antibiotics. Several studies revealed the predominance of bifidobacteria in breastfed infants, whereas bottle-fed infants show a mixed population where bifidobacteria are less represented. the intestinal microbiota composition in a 3-year-old child is already similar to that of an adult.6 Other factors conditioning the microbiota are gestational age and type of birth. Colicky infants have a microbiota with a slow development and a lower stability over time.7 It also contains less lactobacilli and bifidobacteria, and a prevalence of gram-negative bacteria. The stools of these children often show increased levels of calprotectin, an intestinal index of inflammation.
+
+RISK FACTORS ARE SEVERAL: Smoking: The exposure to cigarette smoke may be related to colics; this might be connected to the increase of plasma and intestinal levels of motilin. Maternal smoking during pregnancy seems to increase the risk of developing colics, more than postnatal exposition to smoke.8
+
+Psychosocial: Infant colics may be more frequent with an instable psychosocial family environment. Maternal stress, anxiety, and depression are important risk factors.8 Breastfeeding: The difference between breastfeeding and bottlefeeding for colicky infants is controversial. Many studies have shown contrasting results,17 but the majority of the authors agree to attribute an important role to bottlefeeding. 9 A melatonin role was assumed too. This hormone is not secreted in infants, but only in adults, and has a hypnotic and relaxing role on the gastrointestinal smooth muscle. Its concentration shows a clear circadian rhythm, with a pick during night hours. Its presence in breast milk may be related to the lower occurrence of colics in breastfed infants compared with the bottle-fed infants.9 Recent literature shows an increasing attention toward probiotics,10 for the intestinal microbiota modulation. Some Lactobacillus reuteri strains were studied, with contrasting results in different studies; other probiotics as bifidobacteria showed in vitro anti-inflammatory properties and the ability to inhibit coliforms growth, whose presence is significant in colicky infants. Some probiotics exert a direct action on the bacterial growth, through bacteriocins production and final fermentation products.11 Bifidobacterium breve was isolated from healthy infants' feces.12 Aloisio et al13 tested in vitro ability of this strain and of other 45 bifidobacteria strains to oppose the growth of several microorganisms such as E. coli, S. enteriditis, C. difficile, K. pneumoniae, and Enterobacter cloacae. B. breve BR03, in a randomized clinical study, proved to have a beneficial effect on constipation in adults, it also seemed effective for the reduction of gas formation and for abdominal distension, and no side effects were shown during the treatment, while the beneficial effects lasted for up to 15 days after the end of the treatment.14,15 Both bifidobacteria strains showed, during an in vitro study, the ability to oppose 4 strains of E. coli; in particular, BR03 displayed an activity against E. coli O157:H7, an enterohemorrhagic strain that through Shiga toxin causes a potentially lethal infection.16
+
+DETAILED DESCRIPTION:
+Type of Study: Interventional single-center, double-blind, randomized study, with treatment and placebo controlled.
+
+Population: Only healthy babies were accepted. They were not treated with antibiotics, enrolled within 15 days from birth, and with an informed consent signed by the parents.
+
+Parents were asked to make an initial recruitment examination within 15 days from birth and a second one at the 91st day of age, at the clinic of Pediatric Gastroenterology.
+
+During the 90 days of the study, parents were asked to give 5 drops of active product (108 viable cells/strain) or placebo and to daily take note of minutes of crying, number, color, and consistency of evacuations, and number of regurgitations or vomits.
+
+Probiotical S.p.A. (Novara, Italy) supplied the active product and the placebo. All data were collected in a database. Randomization was performed by an external operator of the study.
+
+STATISTIC ANALYSIS:
+
+Categorical variables were analyzed with the Fischer exact test. Comparisons between numeric variables between various groups were performed with the Kruskal-Wallis test (in the case of \>2 groups) and with the Wilcoxon test for independent samples (in the case of only 2 groups being compared). A probability value of P\<0.05 was considered as the limit of statistical significance.
+
+PRIMARY OUTCOMES:
+  - Change in infants crying - reduction of infants crying
+
+INTERVENTIONS:
+  - DRUG: Bifidobacterium breve BR03 and Bifidobacterium breve B632
+  - DRUG: Placebos
+
+ELIGIBILITY:
+Age: 6 Days to 15 Days
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03219931

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05672160
+Title: Overal Survival After TAVI According to Sarcopenia
+Official Title: CT Evaluated Sarcopenia Independently Predicts the Overal Survival After Transcatheter Aortic Valve Implantation
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 930
+Topic: fat loss muscle
+
+SUMMARY:
+The goal of this observational study is to compare the overal survival after transcatheter aortic valve implantation (TAVI) according to sarcopenia status evaluated from preprocedural CT scans.
+
+The main question it aims to answer is:
+
+• Is CT evaluated sarcopenia an independent predictor of overal survival after TAVI?
+
+DETAILED DESCRIPTION:
+The patients suffering from aortic valve stenosis, that are not eligible for cardiosurgery were indicated to miniinvasive transcatheter aortic valve implantation (TAVI). The follow up of 930 patients were done in time interval from 1 to 11 years. In every patient the preprocedural CT scans were done. From these CT scans the L3 cross sections will be used for sarcopenia evaluation. Then we will statisticaly evaluate the overal survival after TAVI procedure in the relation with sarcopenia status. We will answer the main question: Is CT evaluated sarcopenia an independent predictor of overal survival after TAVI?
+
+PRIMARY OUTCOMES:
+  - Overal survival
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: CT evaluated sarcopenia
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05672160

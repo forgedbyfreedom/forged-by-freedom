@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05275491
+Title: Fibroblast Growth Factor 23 and Sclerostin in Relation to Calcium in COVID-19 Patients
+Official Title: Serum Levels of Fibroblast Growth Factor 23 and Sclerostin in Relation to Serum Calcium Level in COVID 19 Patients
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 66
+Topic: growth hormone treatment
+
+SUMMARY:
+Hypocalcemia is associated with COVID-19 patients and is linked to poor prognosis, Fibroblast growth factor 23 (FGF23) and Sclerostin inhibit vitamin D activation and are linked to hypocalcemia.
+
+Levels of FGF23 and Sclerostin in COVID-19 patients will be detected and correlated to calcium levels.
+
+DETAILED DESCRIPTION:
+COVID 19 is a current worldwide pandemic caused by severe acute respiratory syndrome coronavirus 2 "SARS-CoV-2". Hypovitaminosis D and hypocalcaemia have been reported to be associated with COVID 19 infection, they are considered good biomarkers of clinical severity of COVID 19. Poor prognosis related to hypocalcemia is increased in elderly patients.
+
+Fibroblast growth factor 23 and sclerostin are secreted from the bone, they decrease active vitamin D levels. Their levels and their relation to calcium levels in COVID-19 patients will be detected.
+
+PRIMARY OUTCOMES:
+  - Changes in serum calcium levels
+  - changes in FGF23 levels
+  - changes in sclerostin levels
+  - Changes in parathyroid hormone levels
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Calcium
+  - DIAGNOSTIC_TEST: Fibroblast growth factor 23
+  - DIAGNOSTIC_TEST: Sclerostin
+  - DIAGNOSTIC_TEST: parathyroid hormone
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05275491

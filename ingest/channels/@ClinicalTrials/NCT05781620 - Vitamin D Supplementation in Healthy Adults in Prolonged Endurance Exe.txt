@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05781620
+Title: Vitamin D Supplementation in Healthy Adults in Prolonged Endurance Exercise
+Official Title: Effects of Vitamin D Supplementation on Biochemical Reaction and Skeletal Muscle Synthesis in Prolonged Endurance Exercise and Cluster Set Configurations of Resistance Training
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of this study is to investigate the effects of vitamin D supplementation on biochemistry response and skeletal muscle synthesis in prolonged endurance exercise.
+
+DETAILED DESCRIPTION:
+Endurance exercise mode will be used to evaluate the effects of vitamin D supplementation on cardiac biomarkers, metabolic hormones, oxidative damage, and inflammation responses. An independent samples and dose titration design will be used to assign 30 participants to the experimental group (n = 15) or placebo group (n = 15). All participants in the experimental group will have serum 25(OH)D concentrations higher than 48 ng/mL after supplementation period. After the prolonged endurance exercise test, the blood samples will be collected for analyzing biomarkers. Data will be analyzed by Two-way mixed design ANOVA.
+
+PRIMARY OUTCOMES:
+  - Concentration of NT-proBNP
+  - Concentration of NT-proBNP
+  - Concentration of NT-proBNP
+  - Concentration of NT-proBNP
+  - Concentration of cTnI
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Medium-chain triglycerides
+
+ELIGIBILITY:
+Age: 20 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05781620

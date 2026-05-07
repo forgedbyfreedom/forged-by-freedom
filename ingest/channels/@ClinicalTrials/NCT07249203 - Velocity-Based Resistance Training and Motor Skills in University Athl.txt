@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07249203
+Title: Velocity-Based Resistance Training and Motor Skills in University Athletes
+Official Title: Effects of Resistance Training Applied With a Velocity-Based Approach on Selected Motor Skills
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: athletic performance
+
+SUMMARY:
+This study investigated the effects of resistance training applied with a velocity-based approach on selected motor skills in university-level athletes. Participants were randomly assigned to two groups: a velocity-based training (VBT) group and a percentage-based training (PBT) group. Both groups performed lower-body resistance exercises over an 8-week period, three times per week. Pre- and post-training assessments were conducted for countermovement jump (CMJ), sprint (20 m and 40 m), agility (505 test), and one-repetition maximum (1RM) squat performance. The aim of this study was to compare the effects of VBT and PBT on jump, sprint, agility, and strength performance. It was hypothesized that the VBT group would show greater improvements in motor skills compared to the PBT group.
+
+DETAILED DESCRIPTION:
+This randomized, parallel-group, interventional trial was designed to examine the effects of resistance training performed using a velocity-based approach on selected motor skills among trained university athletes.
+
+A total of 20 male participants (aged 18-30 years) were randomly assigned into two groups:
+
+Velocity-Based Training (VBT) group: performed squats, lunges, and similar lower-body exercises using individualized movement velocity feedback obtained from a linear encoder.
+
+Percentage-Based Training (PBT) group: performed the same exercises based on traditional fixed-load percentages of one-repetition maximum (1RM).
+
+Both training programs lasted 8 weeks and included three sessions per week. Pre- and post-tests included measurements of countermovement jump (CMJ) height and power, sprint times (20 m and 40 m), agility (505 test), and maximal squat strength (1RM).
+
+The study was approved by the Istanbul Gelişim University Rectorate Ethics Committee (Approval No: 2024-01-144, Date: 12.01.2024) and conducted in accordance with the Declaration of Helsinki. All participants provided written informed consent prior to participation.
+
+The primary outcome of interest was the change in CMJ performance. Secondary outcomes included sprint, agility, and 1RM strength improvements.
+
+The results are expected to contribute to the understanding of how velocity-based resistance training affects neuromuscular adaptations and physical performance in athletes compared to traditional percentage-based training methods.
+
+PRIMARY OUTCOMES:
+  - Vertical Jump Height
+
+INTERVENTIONS:
+  - BEHAVIORAL: Percentage-Based Training (PBT)
+  - BEHAVIORAL: Velocity-Based Training (VBT)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07249203

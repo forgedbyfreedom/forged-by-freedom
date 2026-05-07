@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06019403
+Title: Association Between a Healthy Lifestyle Behavior and Musculoskeletal Pain
+Official Title: Association Between a Healthy Lifestyle Behavior and Musculoskeletal Pain: an Online Cross-sectional Survey
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1188
+Topic: sports nutrition
+
+SUMMARY:
+Objective: The aim of this online cross-sectional survey is to determine the association between a combination of lifestyle factors and the presence of musculoskeletal pain (neck pain, low back pain and/or temporomandibular pain), in the Belgian adult population.
+
+Methods: Belgian adults from the general population will be recruited using non-probability sampling (convenience and snowballing). The survey will be available online for a period of 6 months on LimeSurvey software. Multivariable logistic regression analyses will be performed to determine the association between a combination of lifestyle factors (sleep, physical activity, stress, weight, smoking, nutrition) and the presence of musculoskeletal pain.
+
+Discussion: The results of the study will provide data about associations between a combination of lifestyle factors and the presence of musculoskeletal pain. This could strengthen current evidence about the importance of adhering to a healthy lifestyle and improve understanding of its association with musculoskeletal pain.
+
+DETAILED DESCRIPTION:
+Background: Numerous studies have evaluated the association between some lifestyle factors (e.g., physical activity, sleep, stress) and the presence of musculoskeletal pain (neck pain, low back pain or temporomandibular pain). However, the vast majority of them studied only one lifestyle factor at a time, included specific populations (e.g., workers, nurses), or did not use validated questionnaires. Very few studies to date have investigated the combination of several lifestyle factors. Assessing a single factor does not represent reality, since lifestyle factors are correlated with each other (adherence to some encourages adherence to others, as does non-adherence).
+
+Objective: The aim of this online cross-sectional survey is to determine the association between a combination of lifestyle factors and the presence of musculoskeletal pain (neck pain, low back pain and/or temporomandibular pain), in the Belgian adult population.
+
+Methods: Belgian adults from the general population will be recruited using non-probability sampling (convenience and snowballing). The survey will be available online for a period of 6 months on LimeSurvey software. The questionnaire will include questions about general data, presence of musculoskeletal pain (neck pain, low back pain and temporomandibular pain), and lifestyle factors (sleep, physical activity, stress, weight, smoking, nutrition). Multivariable logistic regression analyses will be performed to determine the association between the combination of lifestyle factors and the presence of musculoskeletal pain. Musculoskeletal pains (neck, low back, temporomandibular) will be analyzed separately and together (multisite pain). As sex seems to play a role in the presence of musculoskeletal pain, different analyses will be performed according to sex (both sexes, males only, females only). Potential confounding and modifying factors (e.g., age, anxiety, depression,...) will be included in the multivariable logistic regression models. Results will be presented using odds ratios (OR) and their 95% confidence intervals.
+
+Discussion: The results of the study will provide data about associations between a combination of lifestyle factors and the presence of musculoskeletal pain. This could strengthen current evidence about the importance of adhering to a healthy lifestyle and improve understanding of its association with musculoskeletal pain. These findings could help clinicians manage these musculoskeletal pains, by considering the role a lifestyle behavior may have on them.
+
+PRIMARY OUTCOMES:
+  - Neck pain (in the last 30 days)
+  - Low back pain (in the last 30 days)
+  - Temporomandibular pain (in the last 30 days)
+  - Multisite pain (in the last 30 days)
+  - Tobacco consumption
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06019403

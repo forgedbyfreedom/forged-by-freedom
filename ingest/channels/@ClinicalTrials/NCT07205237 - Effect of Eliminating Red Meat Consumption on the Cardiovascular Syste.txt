@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07205237
+Title: Effect of Eliminating Red Meat Consumption on the Cardiovascular System
+Official Title: Effect of Eliminating Red Meat Consumption on the Cardiovascular System - A Longitudinal Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: sports nutrition
+
+SUMMARY:
+The objective of this clinical trial is to evaluate, in clinically healthy young omnivores, whether excluding red and processed meat from their diets for four weeks results in:
+
+* measurable changes in arterial structure and function;
+* measurable changes in key metabolic parameters.
+
+The sample consisted of clinically healthy young people who had been following an omnivorous diet for at least one year. Those with a history that could influence the results were excluded. Exclusion criteria included alcohol or coffee abuse, vitamin B12 supplement intake, anemia, hypertension, cholesterol, diabetes, a history of cardiovascular disease, or an unstable clinical situation. Participants taking chronic medication, except those using oral contraceptives, were also excluded.
+
+A single-group longitudinal study design is adopted, comprising a 4-week intervention period. Each participant undergoes two assessments: at baseline (T0) and 4 weeks after eliminating red/processed meat from the diet (T1). After being informed about the study and signing the informed consent form, participants are asked to complete a questionnaire containing information on sociodemographic (sex, age, weight, and height), behavioral (diet, smoking, alcohol consumption, coffee, vitamin B12 supplements, energy drinks, and sports activity), and clinical parameters (use of oral contraceptives, medications, anemia, hypertension, cholesterol, diabetes, and personal history of CVD). Participants are also instructed to replace red and processed meat in their daily diet with fish, eggs, or white meat, and to maintain the food proportions of their meals unchanged.
+
+DETAILED DESCRIPTION:
+Biochemical and Haematological parameters:
+
+To determine blood parameters, 10 ml of peripheral blood was collected by venipuncture for serum and plasma in K3EDTA tubes. The biochemical profile was determined spectrophotometrically on a Prestige 24i chemistry analyzer (Tokyo Boeky, Tokyo, Japan) with reagents from Cormay® (Warsaw, Poland). Complete blood counts are performed on a Cell-Dyn Sapphire™ hematology analyzer (Abbott Laboratories, Santa Clara, CA, USA).
+
+Approximately 7 mL of venous blood is collected per sample in a dry gel tube and centrifuged under vacuum at 1800 g, 4°C for 10 minutes. The serum is then separated into aliquots and stored at -20°C until the desired parameters are achieved. The analytical parameters total cholesterol, HDL-C, LDL-C, triglycerides, and glucose are obtained using the corresponding kit from Cormay, Poland. Concentrations are assessed spectrophotometrically according to the protocol and using the Prestige 24i equipment (TOKYO BOEKI MEDICAL SYSTEM LTD, Tokyo, Japan). The K3EDTA tube is used to perform complete blood counts on the Cell-Dyn Sapphire™ equipment (Abbott Laboratories, Santa Clara, CA, USA). All tests were validated and subjected to quality control.
+
+Vascular parameters:
+
+Participants are placed in the supine position and have a 5-minute rest period before data collection. Subsequently, heart rate (HR), systolic blood pressure (SBP), and diastolic blood pressure (DBP) are measured. The cuff is placed on the right arm, aligned with the brachial artery, and adjusted to the arm circumference.
+
+The common carotid artery (CCA) is assessed using a GE® Vivid T8 ultrasound device with a 6-12 MHz linear probe. The participant is placed in the supine position with the neck in slight hyperextension. A longitudinal section of the CCA is taken, and the image is saved for measurement of systolic (SD) and diastolic diameters (DD) and intima-media thickness (IMT). Subsequently, peak systolic (PSV) and endodiastolic (ED) velocities of the CCA are recorded using pulsed Doppler. Assessments are performed bilaterally. All measurements are performed with the aid of an electrocardiogram electrode.
+
+PRIMARY OUTCOMES:
+  - Changes in Hematological Parameters - Haemoglobin
+  - Changes in Hematological Parameters - Reticulocytes
+  - Changes in Biochemical Parameters
+  - Changes in Vascular Parameters - Common Carotid Artery diameters
+  - Changes in Vascular Parameters - Common Carotid Artery Velocity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Diet without Red and Processed Meat
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07205237

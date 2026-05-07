@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07537140
+Title: Microgreens on Sleep
+Official Title: Microgreen Consumption and Effects on Sleep Architecture
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: sleep athletes
+
+SUMMARY:
+This study aims to investigate the effects of Microgreen use on sleep architecture in athletes. Sleep architecture refers to the structural organization of sleep, including the distribution of non-rapid eye movement (NREM) and rapid eye movement (REM) sleep stages, sleep onset latency, total sleep time, and sleep efficiency. In athletic populations, optimal sleep is essential for recovery, hormonal regulation, cognitive performance, and physical adaptation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - DOMS
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: cabbage for control
+  - DIETARY_SUPPLEMENT: microgreen coctail was given orally
+
+ELIGIBILITY:
+Age: 20 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07537140

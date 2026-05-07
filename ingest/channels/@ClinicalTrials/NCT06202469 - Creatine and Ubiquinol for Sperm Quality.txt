@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06202469
+Title: Creatine and Ubiquinol for Sperm Quality
+Official Title: The Effects of 8-week Creatine Supplementation With and Without Ubiquinol on Sperm Quality Biomarkers in Normospermic and Oligospermic Men
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: creatine supplementation
+
+SUMMARY:
+This randomized controlled double-blind parallel-group interventional trial explores the impact of 8-week creatine supplementation, with or without ubiquinol, on sperm quality biomarkers in normospermic and oligospermic men. It aims to determine potential enhancements in sperm health to provide insights into male fertility and reproductive health improvement strategies.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Sperm concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement 1
+  - DIETARY_SUPPLEMENT: Supplement 2
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06202469

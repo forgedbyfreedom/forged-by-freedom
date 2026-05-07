@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05144763
+Title: Dynamic CDSA to Manage Sick Children in Tanzania
+Official Title: Dynamic Clinical Decision Support Algorithms to Manage Sick Children in Primary Health Care Settings in Tanzania
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 92331
+Topic: resistance training
+
+SUMMARY:
+This study aims to reduce morbidity and mortality among children and mitigate antimicrobial resistance using a novel clinical decision support algorithm, enhanced with point-of-care technologies to help health workers in primary health care settings in Tanzania. Furthermore, the tool provides opportunities to improve supervision and mentorship of health workers and enhance disease surveillance and outbreak detection.
+
+DETAILED DESCRIPTION:
+Children are a well-recognized vulnerable population that still suffers from a high rate of acute infectious diseases and preventable deaths. This is especially true in fragile health systems of Sub-Saharan Africa, where under-five mortality is 10 times higher than in high-income countries. The management of sick children at the primary care level in these environments remains of insufficient quality as front-line clinicians lack appropriate diagnostics, supervision to improve their skills, and decision support tools. Clinically validated point-of-care (POC) diagnostic tests are often not available, and practice guidelines are quickly outdated by new evidence and changing epidemiology. When an epidemic arises, these static, generic guidelines can even become deleterious if the event is not detected on time and integrated into the recommendations.
+
+In the absence of reliable guidance, health care workers (HCWs) tend to over-prescribe antibiotics (Hopkins et al. 2017, Fink et al. 2019). Approximately 9 out of 10 children at the primary care level in Tanzania receive an antibiotic, while only 1 in 10 needs one (D'Acremont et al. 2014). Inappropriate antibiotic use disrupts the gut flora, favoring the proliferation of pathogens and weakening a child's immune response (Benoun et al. 2016). It is also a major driver of antibiotic resistance, which is estimated to be responsible for up to 10 million deaths per year by 2050 (Holmes et al. 2016, Fink et al. 2019). Equally important to antibiotic overuse, is its underuse. Missing a child in need of antibiotic treatment or providing a child with an inappropriate type or dosage of antibiotic puts them at risk of preventable morbidity and death. The same occurs with antimalarials that are not always prescribed to the children in need: those with a positive malaria test result.
+
+Misdiagnoses have consequences that reach beyond the patient. They increase re-attendance rates, further congesting primary health facilities and accruing economic losses not only for families but for the entire health system. Systematic errors in patient-level data accumulate, and as they are aggregated to measure population-level indicators, they have the potential to bias the statistics used to prioritize health interventions and, importantly, identify epidemics.
+
+The WHO has identified digital health interventions and predictive tools in primary care as key accelerators in achieving the 2030 Sustainable Development Goal 3 of ensuring good health and well-being for all. New simple and cheap technologies, such as mobile devices, coupled with the advances in computing and data science, could help mitigate several of the aforementioned challenges. The proposed digital intervention is a third-generation clinical decision support algorithm (CDSA) intended to help HCWs at the primary care level manage children with acute illnesses. The first two versions of the algorithm have undergone rigorous evaluations in controlled research condition
+
+PRIMARY OUTCOMES:
+  - Percentage of children cured at day 7 in the intervention group (ePOCT+) as compared to the control group (routine care)
+  - Percentage of children prescribed an antibiotic at initial consultation in the intervention group (ePOCT+) as compared to the control group (routine care)
+
+INTERVENTIONS:
+  - DEVICE: ePOCT+
+
+ELIGIBILITY:
+Age: 1 Day to 14 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05144763

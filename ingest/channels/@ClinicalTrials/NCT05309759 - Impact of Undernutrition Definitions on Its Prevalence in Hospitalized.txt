@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05309759
+Title: Impact of Undernutrition Definitions on Its Prevalence in Hospitalized Patients
+Official Title: Impact of the French and International Definitions and the Type of Muscle Assessment Tool on the Prevalence of Undernutrition in Hospitalized Patients
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 260
+Topic: muscle rehabilitation
+
+SUMMARY:
+In France, the prevalence of undernutrition among hospitalized patients varies from 30 to 50%. Undernutrition is strongly associated with a decrease in the patient's functional capacities and an increase in morbidity and mortality and in healthcare costs.
+
+In 2019, the Global Leadership Initiative on Malnutrition (GLIM) and the Haute Autorité de Santé (HAS) are each publishing updated diagnostic criteria for undernutrition in adults aged \<70 years. Aetiological and phenotypic criteria are retained: reduced food intake, inflammatory state, weight loss, BMI and reduced muscle mass. Reduced muscle mass has become a major diagnostic criterion and various measurement tools are suggested, such as bioelectrical impedancemetry, grip strength measurement or magnetic resonance imaging. Collaboration between dieticians, physiotherapists, nurses, care assistants and doctors makes it possible to respond to the need to screen for undernutrition according to these new definitions, which involve a multidisciplinary assessment.
+
+These two definitions are very similar but differ on the time period of weight loss, on the BMI cut-off values and on the thresholds for muscle mass loss. The GLIM definition may be less selective than the HAS definition.
+
+The investigators hypothesise that the prevalence of undernutrition in a population of adult patients hospitalised in diabetology-obesity, pneumology, oncology and gastro-nutrition, aged \< 70 years, is different according to the diagnostic criteria recommended by the HAS or by the GLIM, and may be associated with a different patient morbi-mortality. In addition, the choice of the method of assessment of muscle function could impact this prevalence.
+
+The main objective of this study is to compare the prevalence of global undernutrition based on the diagnostic criteria recommended by the HAS with that based on the diagnostic criteria recommended by the GLIM, in patients hospitalised in diabetes-obesity, pneumology, oncology and gastro-nutrition units.
+
+The secondary objectives will be, in patients hospitalized in diabetes-obesity, pneumology, oncology and gastro-nutrition units:
+
+* To compare the prevalence of severe undernutrition between the HAS and GLIM groups;
+* To compare the morbi-mortality of undernutrition between the HAS and GLIM groups on :
+
+  * Length of hospital stay ;
+  * Mortality rate;
+  * Autonomy at discharge.
+* To evaluate the impact of the choice of the muscle function assessment tool on the prevalence of undernutrition in the HAS and GLIM groups.
+
+This is a prospective, monocenter, observationnal and cohort study.
+
+Patients hospitalised in acute and rehabilitation care for diabetes-obesity, pneumology, oncology and gastro-nutrition purpose.
+
+Univariate comparisons will use the usual statistical tests after verification of the distribution of the variables (Chi2 or Fisher's test, t-test, anova or their non-parametric equivalents Wilcoxon and Kruskal-Wallis tests). The variables will be compared between the two groups by the appropriate tests according to the type of variables (quantitative or qualitative) and their distribution.
+
+The results of this study will make it possible to verify whether the GLIM definition increases the prevalence of undernutrition compared to that of the HAS. The use of one or other of the definitions could thus have an impact on the medical and paramedical management of undernutrition. On the other hand, muscle function benefits from different assessment tools, which could lead to a different estimate of the reduction in muscle mass and therefore a different prevalence of undernutrition. The results of our study will help to evaluate this and guide professionals in the choice of tools for assessing muscle function.
+
+DETAILED DESCRIPTION:
+1. Rationale 1.1 Epidemiology and morbidity of undernutrition Undernutrition, whether related to disease, poverty, hunger, war or natural disasters, affects more than one billion people worldwide (1). In France, an empirical estimate suggests a prevalence of undernutrition among hospitalized patients next to 2 million or 30 to 50%. It should be underligned that undernutrition is very common in and out of hospital. It is widely accepted that undernutrition can be caused by a deficit in nutrient intake or malabsorption. However, it is now known that the presence of an inflammatory state during illness is associated with undernutrition (1). The inflammatory state leads to anorexia and decreased intake but also increases basal metabolic rate and muscle catabolism. Undernutrition is marked by a decrease in all markers of muscle mass (1). Thus, It is strongly associated with a decrease in the patient's functional capacity and an increase in morbidity and mortality and health care costs (1,4-6).
+
+   1.2 International consensus on the definition of undernutrition In 2019, the Global Leadership Initiative on Malnutrition (GLIM) published an international consensus report on the diagnostic criteria for undernutrition (1). The diagnostic criteria are numerous, and include aetiological criteria such as reduced food intake; inflammatory context; symptoms such as anorexia, weakness; phenotypic criteria such as weight loss, body mass index (BMI), fat to lean mass ratio, fluid retention and muscle function.
+
+   Muscle mass is described as a major diagnostic criterion, since it is a direct indicator of protein catabolism linked to undernutrition, but also a reflection of patient functional impairment, as it is directly associated with functional capacity, autonomy and prognosis. Various measurement tools are suggested, such as bioelectrical impedancemetry, ultrasound or magnetic resonance imaging, giving the tool choice by the clinicians, depending on experience and local resources. Handgrip measurement is considered as a complementary measure. GLIM advises an assessment of the risk of undernutrition, using validated questionnaires such as the NRS (Nutritional Risk Screening) or the MNA-SF (Mini Nutritional Assessment-Short Form).
+
+   1.3 New definition of undernutrition in France The French National Authority for Health (HAS) revised the definition of undernutrition in adults (\< 70 years) in 2019, which is very similar to, but differs in some important aspects, from the GLIM definition. It includes the use of aetiological and phenotypic criteria, and now includes the assessment of muscle strength, gait speed and bioelectrical impedancemetry.
+
+   1.4 Convergences and divergences between the international and French definitions In adults under 70 years of age, both the GLIM and the HAS recommend screening for undernutrition, but the HAS recommendations do not recommend the use of a precise tool for assessing the risk of undernutrition. The presence of at least on
+
+PRIMARY OUTCOMES:
+  - Prevalence of global undernutrition
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05309759

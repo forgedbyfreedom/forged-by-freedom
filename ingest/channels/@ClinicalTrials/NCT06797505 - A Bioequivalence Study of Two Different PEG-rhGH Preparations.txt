@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06797505
+Title: A Bioequivalence Study of Two Different PEG-rhGH Preparations
+Official Title: A Randomized, Open-lable, Single-dose, 3-sequence, 3-period Crossover Bioequivalence Study of Two Different PEG-rhGH Preparations in Chinese Healthy Adults
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 87
+Topic: growth hormone treatment
+
+SUMMARY:
+The purpose of this study is to investigate whether PEG-rhGH with new preparation is bioequivalent to PEG-rhGH with present preparation.
+
+DETAILED DESCRIPTION:
+The purpose of this study is to investigate whether PEG-rhGH with new preparation is bioequivalent to PEG-rhGH with present preparation.
+
+PRIMARY OUTCOMES:
+  - Pharmacokinetics (Peak Plasma Concentration (Cmax) ) of PEG-rhGH with present and new preparation
+  - Pharmacokinetics (Area under the concentration-time curve from time zero to time infinity (AUC0-inf)) of PEG-rhGH with present and new preparation
+  - Pharmacokinetics (Area under the concentration-time curve from time zero to the time of the last quantifiable (AUC0- last )) of PEG-rhGH with present and new preparation
+
+INTERVENTIONS:
+  - DRUG: PEG-rhGH with new preparation (T)
+  - DRUG: PEG-rhGH with present preparation (T)
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06797505

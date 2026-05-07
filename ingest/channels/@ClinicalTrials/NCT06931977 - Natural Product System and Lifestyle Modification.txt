@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06931977
+Title: Natural Product System and Lifestyle Modification
+Official Title: Wellness and Epigenetic Impact of a Natural Product Supplement System Combined With Lifestyle Modification
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 97
+Topic: vitamin D muscle
+
+SUMMARY:
+The goal of this clinical trial is to learn whether four dietary supplements and lifestyle changes can affect gene expression and blood markers in healthy volunteers. The main questions it aims to answer are:
+
+1. How does daily ingestion of dietary supplements affect gene expression and hs-CRP and vitamin D levels measured in blood?
+2. How does daily ingestion of dietary supplements affect anthropometric measurements, sleep and physical activity, and gut microbiome composition?
+3. How does daily ingestion of dietary supplements affect cognitive and subjective health parameters?
+4. Do prescriptive lifestyle modifications affect the supplements' efficacy?
+5. Is there a difference in outcomes between participants who take all four study supplements and those who take three study supplements with a placebo?
+6. Is ingesting dietary supplements for 12 weeks safe, as measured by laboratory tests and adverse events?
+
+DETAILED DESCRIPTION:
+This double-blind, repeated measures study will recruit healthy adults to determine efficacy, safety, anthropometric, microbiome, and epigenetic effects of consuming four dietary supplements daily for 12 weeks. Prescriptive lifestyle modifications (diet, exercise, and sleep) will be evaluated with the supplement use.
+
+PRIMARY OUTCOMES:
+  - Gene expression
+  - Vitamin D 25-hydroxy (ng/mL)
+  - High sensitivity C-reactive protein (mg/L)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement system + copaiba softgels
+  - DIETARY_SUPPLEMENT: Supplement system + placebo softgels
+
+ELIGIBILITY:
+Age: 30 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06931977

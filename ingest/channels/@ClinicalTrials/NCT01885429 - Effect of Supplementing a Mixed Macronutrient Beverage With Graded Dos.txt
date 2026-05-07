@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01885429
+Title: Effect of Supplementing a Mixed Macronutrient Beverage With Graded Doses of Leucine on Myofibrillar Protein Synthesis
+Official Title: The Effect of a Leucine 'Spike' of a Sub-optimal Protein Dose on Acute Muscle Protein Synthesis
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: exercise muscle mass
+
+SUMMARY:
+Muscle mass is normally maintained through the regulated balance between the processes of protein synthesis (i.e. making new muscle proteins) and protein breakdown (breaking down old muscle proteins). Proteins are composed of amino acids and we know that amino acids increase muscle protein synthesis. However, not all amino acids are the same. Essential amino acids are ones that must be consumed through food, while non-essential amino acids can be made by our body. Interestingly, the essential amino acids are all that are required to increase the rate of muscle protein synthesis. In addition, the essential amino acid leucine appears to be particularly important in regulating protein synthesis. However, how leucine is able to increase protein synthesis is not entirely understood. Previously, it has been shown that 20-25 g of high-quality protein, such as that found in milk (whey), appears to be the amount of protein that maximizes the rate of muscle protein synthesis after performing a bout of resistance exercise. Thus, we aim to measure the synthesis of new muscle proteins after ingesting different amounts of protein and amino acids. We will measure muscle protein synthesis after consumption of the beverage a participant is randomized to in a leg that has done no exercise ( ie. a rested leg) and in the other leg that has done resistance exercise. Amino acids are 'strung-together' to make protein. The 'essential' amino acids must be consumed through food because our body cannot make them, thus they are consumed when you eat protein rich foods like milk or chicken. Leucine, isoleucine, and valine are simply 3 of the 8 essential amino acids that make up dietary protein. Unlike essential amino acids, 'non-essential' amino acids may be synthesized by the body, however they are also present in protein rich foods like chicken or milk. We aim to determine if it is the leucine content found in 25 g of whey protein that is primarily responsible for maximizing muscle protein synthesis at rest and following resistance exercise. We also wish to determine how muscle genes and metabolism respond to this protocol.
+
+DETAILED DESCRIPTION:
+The processes of muscle protein synthesis (MPS) and muscle protein breakdown (MPB) occur concurrently. This constant protein turnover allows the muscle fiber to change its protein structure if loading demands or diet changes. The plasticity of skeletal muscle to respond to altered loading and contractile patterns is evidence of the capacity for remodeling that a fiber can undergo. It is quite well documented for example that mitochondrial content increases with endurance-type work. In contrast, heavier loading leads to less change in mitochondrial content but increases in myofibrillar proteins. All of the aforementioned phenotypic adaptations represent a re-patterning of the muscle's genetic expression patterns, protein translation, and processes for breakdown of existing protein structures to 'insert' the new proteins. A persistent muscle protein turnover also provides for a constant mechanism of protein 'maintenance' by removing damaged proteins and replacing them with new proteins. Damage to proteins can come about through oxidation or simply mechanical damage due to high forces during lengthening contractions. Regardless of the mechanism the balance between the processes of muscle protein synthesis (MPS) and muscle protein breakdown (MPB) will determine the net gain, loss, or no change of proteins in the myofiber.
+
+PRIMARY OUTCOMES:
+  - Change from baseline in myofibrillar protein synthesis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Positive Control
+  - DIETARY_SUPPLEMENT: Negative Control
+  - DIETARY_SUPPLEMENT: Low Protein Low Leucine Spike
+  - DIETARY_SUPPLEMENT: Low Protein High Leucine Spike
+  - DIETARY_SUPPLEMENT: Low Protein + High Leucine + BCAAsSpike
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01885429

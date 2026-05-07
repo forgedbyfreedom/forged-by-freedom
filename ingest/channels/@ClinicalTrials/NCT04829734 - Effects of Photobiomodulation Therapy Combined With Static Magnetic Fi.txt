@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04829734
+Title: Effects of Photobiomodulation Therapy Combined With Static Magnetic Field in Patients With Lateral Epicondylitis
+Official Title: Evaluation of the Effects of Photobiomodulation Therapy Combined With Static Magnetic Field (PBMT-sMF) on Temporary Pain Relief in Patients With Lateral Epicondylitis
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: tendon injury
+
+SUMMARY:
+Lateral epicondylitis (LE) is one of the most frequently encountered lesions affecting the upper extremity and is the most common cause of elbow pain in adults. It occurs on the lateral side of the elbow where the common extensors originate from the lateral epicondyle. LE can be considered an overuse injury which occurs on the lateral side of the elbow in the extensor tendons with repetitive micro-trauma. The clinical presentation of LE involves a painful or burning sensation over the humeral insertion of the common extensor tendons. Despite the high incidence of LE, optimal treatment has not been established. Treatment options include therapeutic exercise, bracing, shock wave or ultrasound therapy , but many of them lack sufficient evidence of beneficial effects. Photobiomodulation therapy (PBMT) alone or combined with static magnetic field (PBMT-sMF) has been shown to stimulate tendon healing, this suggests that therapy using laser or light-emitting diodes (LEDs) is efficacious for the symptoms associated with epicondylitis. According to the favorable results of PBMT-sMF in tendons repair processes, this type of therapy can be used as a therapeutic tool for management in epicondylitis, therefore, more investigations are necessary to establish the ideal parameters. Therefore, the aim of this project is to investigate the effects of PBMT-sMF, in the appropriate parameters, on degree of pain and quality of life of patients with lateral epicondylitis.
+
+DETAILED DESCRIPTION:
+To achieve the proposed objective it will be performed a multi-center, randomized, triple-blinded, placebo-controlled trial, with voluntary patients with lateral epicondylitis. Fifty patients will be randomly allocated to two treatment groups: 1. Active PBMT-sMF (MR5® Prototype Device) or Placebo PBMT-sMF (MR5® Prototype Device). The patients will be treated by a blinded therapist.
+
+The patients randomly allocated to the different groups will be subjected to treatment two times a week for three consecutive weeks, each procedure administration three to four days apart.
+
+The study will contain five phases: 1) pre-procedure activities; 2) pre-procedure assessment phase; 3) procedure administration phase; 4) procedure administration phase measures; 5) post-procedure administration phase.
+
+The outcomes measured will be: degree of pain, forearm pain and disability, grip strength, TNF-α levels, subject satisfaction with overall outcome rating, perceived group assignment and adverse events.
+
+The outcomes will be obtained at the stabilization phase (pre-procedure activities), baseline (pre-procedure assessment phase), 24 hours after the end of the treatment (procedure administration phase measures), and 30 days after the end of the treatment (post-procedure administration phase).
+
+Statistical analysis:
+
+1. The primary statistical method to analyze the primary endpoint will be Fisher's exact test to compare the proportion of success between the test (Active PBMT-sMF) and the control (Placebo PBMT-sMF) groups, considering that randomization has been diligently conducted and important covariates between the two groups are well balanced. Statistical significance will be set at p\<0.05.
+2. The secondary outcomes that are continuous variables will be analyzed through parametric analysis using ANCOVA. Statistical significance will be set at p\<0.05.
+3. For patient satisfaction, measured through a Likert Scale, the data will be reduced to the nominal level by combining all agree and disagree responses into two categories of "accept" and "reject". Differences in satisfaction with Study Outcome Ratings between procedure groups at both evaluated time-points, and any change between. The chi-square will be used after this transformation. Statistical significance will be set at p\<0.05.
+
+PRIMARY OUTCOMES:
+  - Degree of Pain Rating (VAS)
+
+INTERVENTIONS:
+  - DEVICE: Active PBMT-sMF
+  - DEVICE: Placebo PBMT-sMF
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04829734

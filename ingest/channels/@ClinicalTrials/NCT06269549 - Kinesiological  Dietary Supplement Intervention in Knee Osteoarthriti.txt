@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06269549
+Title: Kinesiological / Dietary Supplement Intervention in Knee Osteoarthritis
+Official Title: Effectiveness of Kinesiological and Dietary Supplement Intervention in Individuals With Knee Osteoarthritis
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 93
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+The goal of this clinical trial is to assess the effectiveness of dietary supplement combined with exercise in managing knee osteoarthritis (KOA). The main questions it aims to answer are:
+
+* Is adding a dietary supplement to exercise additionally effective in managing KOA?
+* Is adding exercise to the dietary supplement additionally effective in managing KOA?
+
+Participants will be given in three groups:
+
+1. Real dietary supplement alone
+2. Real dietary supplement with exercise
+3. Placebo dietary supplement with exercise
+
+Investigators will compare groups 1 and 2, or 2 and 3, to answer the research questions.
+
+The hypothesis is that participants who receive the dietary supplement along with exercise will experience greater reduction in pain level, improved physical function, and enhanced quality of life compared to those who receive a placebo combined with exercise or dietary supplement alone.
+
+DETAILED DESCRIPTION:
+Participant recruitment will take place at the Community Healthcare Center dr. Adolf Drolc Maribor based on the doctor's recommendation. Following an informed discussion about the study and potential risks, all patients providing written consent will undergo a one-week screening period to determine eligibility for study entry. At week 0, participants who choose to join an exercise group will be randomly assigned in a 1:1 ratio to either dietary supplements combined with exercise, or placebo dietary supplement combined with exercise. Participants who choose not to participate in exercise will be assigned to the supplement-only grouo, which serves as non-randomized comparator.
+
+The effects of the kinesiological / dietary supplement intervention on selected measures will be assessed using a test battery, before and after the 12 week intervention, and at a 6-week post intervention follow-up.
+
+Exercise / test batery will be conducted at Community Healthcare Center dr. Adolf Drolc under the supervision of an experienced kinesiologist / investigator.
+
+Based on the posed research questions and hypotheses, investigators would like to highlight the following planned statistical analyses. In the case of bilateral KOA, investigators will analyze the more affected knee for differences between groups. In addition to descriptive statistics, investigators will assess normal distribution and homogeneity of variances. Differences between groups will be tested using two-way repeated measures analysis of variance (factor 1 = group, factor 2 = time) and paired two-tailed post-hoc t-tests with Bonferroni correction. The main comparison will be addressed with a 2x2 two-way analysis of variance. The first research question will be addressed with a 2x2 two-way analysis of variance, including groups 2 and 3. The second research question will be addressed with a two-way analysis of variance, including groups 1 and 2. Additionally, effect size will be calculated. The level of statistical significance will be set at p\<0.05.
+
+PRIMARY OUTCOMES:
+  - Change from baseline in self-assessment pain, stiffness, and physical function (WOMAC questionaire) at week 12 and at a 6-week follow-up
+  - Change from baseline in self-assessment quality of life (SF-36 questionaire) at week 12
+  - Change from baseline in knee pain on numeric rating scale at week 12
+  - Change from baseline in 40 metre fast-paced walk at week 12 and at a 6-week follow-up
+  - Change from baseline in static balance time at week 12
+
+INTERVENTIONS:
+  - OTHER: Non-training Real Dietary Supplement (G1)
+  - OTHER: Training Placebo Dietary Supplement (G2)
+  - OTHER: Training Real Dietary Supplement (G3)
+
+ELIGIBILITY:
+Age: 55 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06269549

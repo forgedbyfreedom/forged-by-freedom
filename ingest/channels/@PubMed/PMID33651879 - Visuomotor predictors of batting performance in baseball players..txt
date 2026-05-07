@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 33651879
+Title: Visuomotor predictors of batting performance in baseball players.
+Authors: Chen, Stone, Li
+Journal: Journal of vision
+Year: 2021
+Topic: visualization athletic performance
+
+ABSTRACT:
+Hitting a baseball, one of the most difficult skills in all of sports, requires complex hand-eye coordination, but its link with basic visuomotor capabilities remains largely unknown. Here we examined basic visuomotor skills of baseball players and demographically matched nonathletes by measuring their ocular-tracking and manual-control performance. We further investigated how these two capabilities relate to batting performance in baseball players. Compared to nonathletes, baseball players showed better ocular-tracking and manual-control capabilities, which remain unchanged with increasing baseball experience. Both, however, become more correlated with batting accuracy with increasing experience. Ocular-tracking performance is predictive of batting skill, accounting for &#x2265; 70% of the variance in batting performance across players with &#x2265; 10 years of experience. A simple linear additive-noise cascade model with shared front-end visual noise that limits batting performance can explain many of our results. Our findings show that fundamental visuomotor capabilities can predict the complex, learned skill of baseball batting.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/33651879/

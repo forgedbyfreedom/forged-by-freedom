@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04906395
+Title: Ovarian Suppression Evaluating Subcutaneous Leuprolide Acetate in Breast Cancer
+Official Title: Phase 3,Single Arm,Open-Label Study Evaluating Ovarian Suppression Following 3 Month Leuprolide Acetate For Injectable Suspension (TOL2506) in Combination With Endocrine Therapy in Premenopausal Subjects With Hormone-Receptor-Positive (HR+),Human Epidermal Growth Factor Receptor 2 (HER2)-Negative Breast Cancer
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 250
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a phase 3, single arm, open-label study evaluating the effectiveness of TOL2506 to suppress ovarian function in premenopausal women with HR+, HER2-negative breast cancer. The study will also aim to assess the safety of TOL2506 in men with HR+, HER2-negative breast cancer. The Screening Period will be conducted in two parts: 1) an abbreviated, initial screening where premenopausal status will be determined prior to neoadjuvant or adjuvant chemotherapy (if planned) and 2) the full screening assessment conducted after neoadjuvant or adjuvant chemotherapy (or for subjects who enter the study without having received chemotherapy). Following the Screening Period, eligible subjects will enter into the 48 week Treatment Period in 1 of 2 groups: those who will receive tamoxifen concurrently with TOL2506 or those who will initiate therapy with an AI (letrozole, anastrozole, or exemestane) beginning 6 weeks after the first administration of TOL2506, upon confirmation that estradiol (E2) levels of \< 20 pg/mL (testosterone levels \< 50 ng/dL in males) have been achieved. After Week 12, subjects will be allowed to switch from receiving an AI to receiving tamoxifen or from tamoxifen to AI at the discretion of the Investigator. However, a switch is not permitted 28 days prior to a dosing visit (eg, Week 24, 36, and 48 where a pre-dose blood sample for PK and PD analysis will be drawn). At the end of the Treatment Period, upon completion of the End of Study Visit (Visit 9, Week 48) subjects may be eligible to participate in a Safety Extension Study under a separate Protocol.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Suppression of ovarian function
+
+INTERVENTIONS:
+  - DRUG: TOL2506
+  - DRUG: Tamoxifen
+  - DRUG: Letrozole Tablets
+  - DRUG: Anastrozole Tablets
+  - DRUG: Exemestane Tablets
+
+ELIGIBILITY:
+Age: 18 Years to 49 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04906395

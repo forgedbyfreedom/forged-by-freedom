@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07234916
+Title: Multivitamin Impact on Micronutrient Status in GLP-1 Users: A Randomized Trial
+Official Title: The Impact of Multivitamin Supplementation on Micronutrient Levels in GLP-1 Users: A Randomized, Double-Blind, Placebo-Controlled Trial
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 246
+Topic: vitamin D muscle
+
+SUMMARY:
+Rationale: Glucagon-Like Peptide-1 (GLP-1) receptor agonists have emerged as effective treatments for obesity and associated medical conditions. However, patients may be at risk of micronutrient deficiencies during therapy due to reduced appetite, altered gastrointestinal physiology, and weight loss. Multivitamin supplementation is commonly prescribed to mitigate these risks, but the necessity and efficacy of multivitamin use in GLP-1 users remain debatable, as some clinicians advocate for routine supplementation while others do not.
+
+Objective: To assess the differences in micronutrient levels between patients who use multivitamin supplements while on GLP-1 therapy and those who do not, to provide evidence on the necessity and benefits of supplementation.
+
+Study Design: Randomized, double-blind, placebo-controlled trial. Study Population: Adults with obesity (BMI ≥30 kg/m² or ≥27 kg/m² with obesity-associated medical problems) currently using GLP-1 receptor agonists for at least 3 months with stable dosing.
+
+Intervention:
+
+* Group A (Intervention): Multivitamin supplementation while on GLP-1 therapy
+* Group B (Control): Matching placebo while on GLP-1 therapy Main Study Parameters/Endpoints: The primary outcomes are the differences in serum levels of Vitamin B12, Vitamin D, and Ferritin between the multivitamin and placebo groups after 12 months of supplementation while on GLP-1 therapy.
+
+Nature and Extent of the Burden and Risks: Participants will undergo blood sampling at four timepoints: baseline (before starting GLP-1 therapy), at randomization (3 months of stable GLP-1 therapy), and at 6 and 12 months post-randomization. The risks associated with the study are minimal and primarily related to blood sampling and potential side effects of multivitamin supplementation. The burden includes time commitment for study visits and daily supplement intake.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - serum levels
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Multivitamin Supplementation
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07234916

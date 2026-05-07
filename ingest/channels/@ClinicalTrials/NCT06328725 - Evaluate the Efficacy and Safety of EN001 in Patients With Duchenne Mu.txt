@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06328725
+Title: Evaluate the Efficacy and Safety of EN001 in Patients With Duchenne Muscular Dystrophy
+Official Title: A Multi-center, Randomized, Double-blind, Placebo-controlled, Phase 1/2 Trial to Evaluate the Efficacy and Safety of EN001 in Patients With Duchenne Muscular Dystrophy
+Status: UNKNOWN
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 88
+Topic: creatine supplementation
+
+SUMMARY:
+A Multi-center, Randomized, Double-blind, Placebo-controlled, Phase 1/2 Trial to Evaluate the Efficacy and Safety of EN001 in Patients with Duchenne Muscular Dystrophy
+
+DETAILED DESCRIPTION:
+This clinical trial is a multi-center study conducted in two phases: Phase 1 and Phase 2. Phase 1 follows a 3+3 dose-escalation design to assess the safety, efficacy, and tolerability of EN001, an investigational product. Phase 2 evaluates the efficacy and safety of EN001 at the recommended phase 2 dose (RP2D), as determined in Phase 1, compared to a placebo.
+
+Phase 1 is designed using the traditional 3+3 dose-escalation method to determine the maximum tolerated dose (MTD) and establish the RP2D. Dose escalation continues until the MTD is identified, which must be within the maximum planned dose (MPD) of 2.5 x 10\^6 cells/kg (Cohort 2) or lower. The MTD is defined as the highest dose at which the incidence rate of dose-limiting toxicity (DLT) is less than 33%. To determine the MTD, 3-6 subjects are enrolled in each dose cohort. They receive EN001 every 6 weeks for 3 cycles, with DLTs evaluated up to the 2-week time point (Visit 7).
+
+The Safety Review Committee (SRC) consists of the coordinating Investigator, the responsible trial monitor for subjects enrolled in cohorts requiring safety review, and the sponsor. These members participate as committee members. At the conclusion of each cohort-defined as the endpoint of the DLT assessment for the last subject in that cohort-they comprehensively review the safety data for EN001. The committee makes decisions related to dose adjustments, whether to increase or decrease the dose, and ultimately determines the RP2D.
+
+Phase 2 clinical trials are randomized, double-blind, placebo-controlled clinical trials.
+
+In phase 2, eligible subjects will be randomly assigned to the test group (recommended phase 2 dose (RP2D) of EN001) or the control group (placebo of EN001) in a 1:1 ratio. Efficacy and safety will be evaluated up to 48 weeks after EN001 administration compared to placebo.
+
+In addition, test subjects participating in phase 1 and phase 2 will be followed up for safety and effectiveness for 5 years from the time of EN001 administration according to the long-term follow-up protocol.
+
+PRIMARY OUTCOMES:
+  - <Phase 1> Adverse drug reactions related to dose limiting toxicity (DLT)
+  - <Phase 1> Adverse drug reactions related to discontinuation of clinical trial drug administration
+  - <Phase 2> Change in time to stand test (TTSTAND)
+
+INTERVENTIONS:
+  - DRUG: EN001
+
+ELIGIBILITY:
+Age: 6 Years to 11 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06328725

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06507735
+Title: The Effects of Mannose Supplementation on Glycosylation and Protein Levels in Human Sera
+Official Title: The Effects of Mannose Supplementation on Glycosylation and Protein Levels in Human Sera
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of our study is to investigate the effects of supplemental mannose on sera of humans who are healthy. We will perform proteomics studies to elucidate changes to glycan structure and protein level changes. We hypothesize that we may find that mannose supplies more properly glycosylated protein substrate and helps expedite protein synthesis, that excess mannose leads to alternative glycan structures which confer improved stability, or that there are new sites that become glycosylated after mannose supplementation.
+
+DETAILED DESCRIPTION:
+Subjects will be enrolled and a baseline blood sample taken. Subjects will take mannose supplements for 1 week (3-4 packets of a standard dose in water), then a follow up blood sample will be taken.
+
+Subject blood will be analyzed by proteomic analysis for 1) change in glycan structure or 2) other protein based approaches to measure changes in levels of proteins.
+
+PRIMARY OUTCOMES:
+  - Changes to glycan structure
+  - Change in glycoprotein levels
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Mannose
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06507735

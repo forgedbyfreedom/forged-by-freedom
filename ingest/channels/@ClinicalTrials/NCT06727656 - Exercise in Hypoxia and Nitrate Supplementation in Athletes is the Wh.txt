@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06727656
+Title: Exercise in Hypoxia and Nitrate Supplementation in Athletes: is the Whole Greater Than the Sum of Its Parts?
+Official Title: Exercise in Hypoxia and Nitrate Supplementation in Athletes: is the Whole Greater Than the Sum of Its Parts?
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: high intensity interval training
+
+SUMMARY:
+Determine the combined effect of training in hypoxia and nitrate supplementation on the performance and health of athletes at sea-level and altitude conditions.
+
+DETAILED DESCRIPTION:
+Determine the combined effect of training in hypoxia and nitrate supplementation on the performance and health of athletes at sea-level and altitude conditions. It is hypothesized that the combined effect of these interventions will promote an additional performance and health improvement in this population at sea-level and altitude conditions, compared with the single effect.
+
+PRIMARY OUTCOMES:
+  - Performance adaptations
+  - Performance adaptations
+  - Performance adaptations
+  - Cardiovascular and neuromuscular adaptations
+  - Cardiovascular and neuromuscular adaptations
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Nitrate + Hypoxia
+  - DIETARY_SUPPLEMENT: Placebo + Hypoxia
+  - OTHER: Control
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06727656

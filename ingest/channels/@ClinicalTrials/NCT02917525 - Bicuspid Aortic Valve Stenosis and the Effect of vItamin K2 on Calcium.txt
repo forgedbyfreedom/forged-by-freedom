@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02917525
+Title: Bicuspid Aortic Valve Stenosis and the Effect of vItamin K2 on Calciummetabolism on 18F-NaF PET/MRI
+Official Title: Bicuspid Aortic Valve Stenosis and the Effect of vItamin K2 on Calciummetabolism on 18F-NaF PET/MRI (BASIK2): a Pilot Study
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: protein supplementation
+
+SUMMARY:
+Early development of calcified aortic valve disease (CAVD) is a commonly occurring complication in patients with a bicuspid aortic valve (BAV, an aortic valve consisting of two leaflets instead of three). In general, CAVD is characterized by progressive narrowing of the aortic valve, with involvement of altered calcium metabolism. CAVD progression in fact may lead to necessity of valve replacement, since to date, no other therapies have been shown effective in the treatment of CAVD.
+
+The primary objective of our study is to test the hypothesis that supplementation of vitamin K2 will slow down the calcium metabolism in CAVD. Vitamin K2 is essential in the activation of matrix Gla Protein (MGP), an important inhibitory factor in the regulation of calcification.
+
+In this randomized controlled trial, 44 patients will be allocated to either the vitamin K2 or placebo group. To assess the calcification process in a detailed manner in these patients, a Positron Emission Tomography (PET) scanner using a tracer (18F-fluoride \[NaF\]) that has been shown to bind to regions of newly developing microcalcification in aortic valve tissue is used.
+
+We expect that vitamin K2 supplementation will reduce the calcium metabolism in the aortic valve on 18NaF-PET (primary endpoint) and slow progression of CAVD as measured by the calcium score on CT and echocardiography after 18 months (secondary endpoints), when compared to placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in aortic valve calcium metabolism
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin K2
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02917525

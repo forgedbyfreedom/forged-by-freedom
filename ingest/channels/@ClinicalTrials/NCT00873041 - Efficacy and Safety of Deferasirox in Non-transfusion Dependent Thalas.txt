@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00873041
+Title: Efficacy and Safety of Deferasirox in Non-transfusion Dependent Thalassemia Patients With Iron Overload and a One Year Open-label Extension Study
+Official Title: A Randomized, Double-blind, Placebo-controlled, Phase II Study to Evaluate Efficacy and Safety of Deferasirox in Non-transfusion-dependent Thalassemia Patients With Iron Overload
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 166
+Topic: beta-alanine
+
+SUMMARY:
+CICL670A2209: This study will evaluate the safety and efficacy of deferasirox in non-transfusion dependent thalassemia patients with iron overload. Patients will be treated either with active treatment (deferasirox) or placebo for 12 months (core study phase). Patients who complete the core study phase will be offered to continue their study with the active treatment (deferasirox) in a 12 months extension phase. During the core and extension, the effects of treatment on iron overload in the liver will be evaluated using magnetic resonance imaging (MRI) assessments.
+
+CICL670A2209E1: A one-year open-label extension to a randomized, double-blind, placebo-controlled, phase II study to evaluate efficacy and safety of deferasirox in non-transfusion dependent thalassemia patients with iron overload (Thalassa).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Core Study: Change in Liver Iron Concentration (LIC) From Baseline to Week 52
+  - Extension Study: Percentage of Participants Reaching a Liver Iron Concentration (LIC) < 5 mg Fe/g dw From Core Baseline to End of Extension Study
+
+INTERVENTIONS:
+  - DRUG: deferasirox
+  - DRUG: placebo
+
+ELIGIBILITY:
+Age: 10 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00873041

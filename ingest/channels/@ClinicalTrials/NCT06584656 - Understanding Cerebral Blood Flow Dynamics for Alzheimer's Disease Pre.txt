@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06584656
+Title: Understanding Cerebral Blood Flow Dynamics for Alzheimer's Disease Prevention Through Exercise
+Official Title: Understanding Cerebral Blood Flow Dynamics for Alzheimer's Disease Prevention Through Exercise: the flADex Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: resistance training
+
+SUMMARY:
+Dementia is one of the leading causes of disability worldwide. Underlying biological mechanisms are crucial in preclinical stages of Alzheimer's disease (AD). Alterations in cerebral blood flow (CBF) and their relationship with AD blood-based biomarkers may be fundamental at early stages of the pathology. Physical exercise is a trigger to modify these biological mechanisms. Therefore, flADex aims to examine the acute effects of different types of exercise (resistance vs. aerobic vs. control) on CBF, AD blood-based biomarkers, and its cognitive implications in older adults. The hypothesis is that acute resistance or aerobic exercise will fluctuate levels of blood-based biomarkers, and will exert acute CBF changes combined with cognitive implications.
+
+DETAILED DESCRIPTION:
+The aging population is at an increasing risk of developing Alzheimer's Disease (AD), which is characterized by cognitive decline and memory loss. Current pharmacological treatments have targeted amyloid-beta (Aβ) and tau protein, and have largely failed to halt or reverse the progression of AD. This has led to a growing interest on examining additional underlying mechanisms responsible for the initiation of AD pathology in this preclinical stage, such as cerebral blood flow (CBF) alterations or peripheral levels of AD blood-based biomarkers. Parallelly, exercise might act as a trigger for these potential underlying mechanisms of AD in older adults. Thus, this study seeks to explore the acute effects of different type of exercise on CBF, blood-based biomarkers, and its cognitive implications in older adults.
+
+FlADex is a counterbalanced crossover trial that will include 20 adults aged 68 to 83 with non-pathological brain amyloid status (\<12 centiloid) and APOE e4 noncarriers. Each participant will be included in all study conditions in a randomized order: (i) moderate aerobic exercise (between 60-70 of the Maximal Heart Rate (HRmax); (ii); resistance exercise (4-6 Moderate intensity of Rate of Perceived Exertion) and (iii) control resting condition. Each condition, lasting 30 minutes, will be performed once. CBF will be assessed by magnetic resonance imaging using pseudo-continuous arterial spin labeling at pre-condition and at 3 consecutive times post-condition (at 20', 27' and 34' min). Blood-based biomarkers (Aβ42, Aβ40, p-tau217, p-tau181, GFAP, NfL, BDNF, IGF-1) will be measured pre-condition and post-condition (at 0', 50', 70' min). Cognitive outcomes (Flanker Test and Picture Sequence Memory Test) and mood status (feeling scale and POMS questionnaire) will be measured pre and post condition.
+
+FlADex trial will shed light on the acute effects of different types of exercises on CBF and AD blood-based biomarkers before beta-amyloid accumulation. We expect that aerobic and resistance exercise will have different effects on CBF dynamics and AD blood biomarker levels over time in older adults
+
+PRIMARY OUTCOMES:
+  - Change in Cerebral Blood Flow (CBF)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Aerobic exercise condition
+  - BEHAVIORAL: Resistance exercise condition
+
+ELIGIBILITY:
+Age: 68 Years to 83 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06584656

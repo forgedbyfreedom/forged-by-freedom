@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06438484
+Title: The Challenges of Evidence-based Prehabilitation in a Real-life Context for Patients Preparing for Colorectal Surgery
+Official Title: The Challenges of Evidence-based Prehabilitation in a Real-life Context for Patients Preparing for Colorectal Surgery - a Cohort Study and Multiple Case Analysis
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 43
+Topic: high intensity interval training
+
+SUMMARY:
+Background: Multimodal prehabilitation programs are effective in reducing complications after colorectal surgery in patients with high risk of postoperative complications due to low aerobic capacity and/or malnutrition. However, high implementation fidelity is needed to achieve these effects in real-life practice. Therefore, this study aimed to investigate the implementation fidelity of an evidence-based prehabilitation program in the real-life context of a regional hospital.
+
+Methods: In this observational cohort study with multiple case analysis, we enrolled all patients who underwent surgery for colorectal cancer from January 2023 to June 2023, in one Dutch peripheral hospital. Patients meeting criteria for low aerobic capacity or malnutrition were advised to participate in a personalized prehabilitation program. Implementation fidelity was investigated on four domains; 1) coverage (participation rate), 2) duration (number of days following the prehabilitation program), 3) content (delivery of prescribed intervention modalities), and 4) frequency (attendance of sessions and compliance with prescribed parameters). An aggregated percentage of content and frequency was calculated to determine overall adherence. The intended outcomes were improvement in preoperative aerobic capacity and malnutrition, and improved postoperative recovery (i.e., reducing complications, length of stay, and time to functional recovery).
+
+DETAILED DESCRIPTION:
+Study design and patients This observational cohort study was conducted from January 2023 to June 2023 with case analysis on the high-risk patients following the prehabilitation program in Nij Smellinghe (NS). The study was approved by the Local Ethic Committee of NS. The first author was a physiotherapist, who acted as an embedded scientist in the colorectal pathway25. For the period of this study, only one physiotherapist and dietitian performed the prehabilitation program to prevent provider-dependent bias. All patients, both high-risk and low-risk, of 18 years or older scheduled for elective colorectal surgery in NS were asked for their informed consent to be included in the cohort. No exclusion criteria were applied. The STrengthening the Reporting of Observational Studies in Epidemiology (STROBE) guideline for reporting observational studies was followed26.
+
+Study setting NS is a regional hospital with 339 beds in The Netherlands, where annually 150 patients undergo colorectal surgery27. NS is an innovative hospital in the field of perioperative care and the Enhanced Recovery After Surgery (ERAS) protocol has been implemented into usual care since 201828. In January 2023, following new scientific insights, an evidence-based multimodal prehabilitation program was implemented in the colorectal pathway. This pathway included assessment of patients on their risk of postoperative complications and offering a multimodal prehabilitation program for high-risk patients.
+
+Preoperative risk assessment When patients were indicated for colorectal surgery, a physiotherapist and dietitian conducted risk assessment for postoperative complications. Patients meeting criteria for low aerobic capacity and/or high risk of malnutrition were advised to participate in a personalized prehabilitation program2,29.
+
+The physiotherapist assessed aerobic capacity. Aerobic capacity was measured by the cardiopulmonary exercise test (CPET) or modified steep ramp test (SRT), following the protocol of previous research on preoperative risk assessment2,15,30. Patients with a low aerobic capacity, indicated by a work at peak exercise achieved at the modified SRT ≤1.5W/kg or an oxygen uptake at the VAT ≤11mL/kg/min at the CPET, were indicated as high-risk patients.
+
+The dietitian evaluated risk of malnutrition by using the Patient-Generated Subjective Global Assessment Short Form (PG-SGA SF). Based on the Global Leadership Initiative on Malnutrition (GLIM) criteria, patients were diagnosed with malnutrition, thus indicating the nutrition-modality of prehabilitation31. According to the GLIM-criteria, malnutrition is defined as the presence of one phenotypic criterion (non-volitional weight loss, low body mass index, and reduced muscle mass) and one etiologic criterion (reduced food intake or assimilation, and inflammation or disease burden)32. Muscle mass and body composition was assessed with the bioelectrical impedance analysis (BIA) (Bodygram Plus, Akern, Italy).
+
+Patients wi
+
+PRIMARY OUTCOMES:
+  - Coverage
+  - Duration
+  - Content
+  - Frequency
+
+INTERVENTIONS:
+  - BEHAVIORAL: multimodal prehabilitation program
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06438484

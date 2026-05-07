@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06513988
+Title: Application of MI-BCI Combined With tDCS in Early Rehabilitation After Anterior Cruciate Ligament Reconstruction
+Official Title: Application of MI-BCI Combined With tDCS in Early Rehabilitation After Anterior Cruciate Ligament Reconstruction Monitored by Resting-stage fMRI: the First Case Report
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1
+Topic: muscle rehabilitation
+
+SUMMARY:
+To recover lower-limb motor function is a primary goal for rehabilitation after anterior cruciate ligament (ACL) reconstruction. Although quantitative testing and questionnaire evaluation provide a lot of valuable information, while functional magnetic resonance imaging (fMRI) provides a powerful method to assess functional connectivity (FC) involved in motor function recovery before and after receiving a novel combined rehabilitation training. However, our understanding of the FC changes during early rehabilitation after ACL reconstruction is partial and incomplete.
+
+DETAILED DESCRIPTION:
+ACL has become one of the most common and easily damaged knee ligaments in sports and military training affecting young and active people. The extensive interest in ACL ruptures is related to the subsequent articular degeneration and severe dysfunction, resulting in skeletal muscle functional limitations not only in athletics but also in daily living. Thus, restoring lower limb motor function and stability has become the primary goal after ACL reconstruction (ACLR). Moreover, the newest study has indicated that increased neural activity may reflect central neuroplastic strategies to preserve motor functionality after ACLR\[1\]. Postsurgical rehabilitation guidelines for the orthopedic clinician recommended a common treatments for ACLR patients\[2\]; however, because of long time consuming and poor compliance, which are difficult to get patient recognition, it is very urgent to find a safe, effective and easy conduct and alternative therapy. Transcranial direct-current stimulation (tDCS) is a non-invasive technique of brain stimulation that has potential for clinical utility in neurorehabilitation, and could improve the lower excitability, muscle strength and dynamic balance by acting on the primary motor cortex\[3\]. For another, motor imagery based brain-computer interface (MI-BCI) based neuro rehabilitation paradigms have emerged as a novel iatrotechnics on motor function and brain function recovery\[4\]. However, it is little explored whether the clinical application of MI-BCI therapy combined with tDCS could be effective for early rehabilitation after ACLR patients. This case report would explore the efficacy and neuromechanism for the ACLR patient treated with MI-BCI training combined with tDCS. BOLD-fMRI was performed before and after four weeks' treatment.
+
+PRIMARY OUTCOMES:
+  - resting-stage fMRI
+  - IKDC
+
+INTERVENTIONS:
+  - DEVICE: MI-BCI combined with tDCS treatment
+
+ELIGIBILITY:
+Age: 20 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06513988

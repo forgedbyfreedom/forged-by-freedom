@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06449300
+Title: Effects of Different Volumes of Resistance Training
+Official Title: Effects of Different Volumes of Resistance Training on Body Composition, Peak Power, and Muscle Thickness in Untrained Healthy Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: body composition exercise
+
+SUMMARY:
+This study explores the effects of varying volumes of resistance training on body composition, strength, peak power, and muscle thickness in untrained women over eight weeks. A randomized controlled trial involving 45 female college students assessed the outcomes across three groups: low-volume training (LVT) with three weekly sessions, moderate-volume training (MVT) with four weekly sessions, and high-volume training (HVT) with five weekly sessions. Participants were untrained, aged 18-65, and free from cardiovascular diseases or performance-enhancing drugs.
+
+The hypothesis suggested that moderate volume training would yield optimal muscle development, considering the potential non-linear dose-response relationship where excessive training might be detrimental. Measurements included body composition, muscle thickness, and peak power through a force platform during vertical jumps.
+
+Data analysis focused on changes in muscle thickness, strength, and body composition, with statistical significance set at p \< 0.05. The study aimed to provide insights into how different training volumes affect physiological adaptations in untrained women, potentially guiding fitness regimen optimizations for similar populations.
+
+DETAILED DESCRIPTION:
+The study aimed to investigate the effect of different resistance training volume (low-, moderate, and high) on body composition, maximal strength, peak power, and muscle thickness in untrained women over eight weeks. The study is a three-arm, randomized controlled trial, 45 female college students participated, fit the specific inclusion criteria like age between 18-65 and being untrained. Exclusion criteria included the use of performance-enhancing drugs or recent resistance training.
+
+Participants were randomly assigned to one of three groups: low-volume training (LVT) with three sessions weekly, moderate-volume training (MVT) with four sessions weekly, and high-volume training (HVT) with five sessions weekly. Each session comprised 12 exercises. Split split-strength training method was applied. After participants' 1RM maximums were determined, training loads were calculated separately for each participant. All workouts were conducted by certified trainers to ensure they were performed in the correct training format. Each training session lasted approximately 60 minutes. The weekly training loads of all participants were increased by 5%. In the LVT group, 3 sets of 8-12 repetitions of: between sets interval: 120 seconds (3 days/wk), in the MVT group, 3 sets of 8-12 repetitions of: between sets interval: 120 seconds (4 days/wk), in the HVT group, 3 sets of 8-12 repetitions of: between sets interval: 120 seconds exercises (5 days/wk) were performed.
+
+Results and data analysis involved anthropometric measurements, muscle thickness via ultrasound, and peak power from the vertical jump test. Statistical significance was set at p \< 0.05, and effect sizes were calculated with Partial Eta Squared values.
+
+PRIMARY OUTCOMES:
+  - Body height measurements
+  - Anthropometric measurements
+  - Muscle thickness measurements
+  - Countermovement Jump (CMJ)
+
+INTERVENTIONS:
+  - OTHER: Resistance exercise-LVT
+  - OTHER: Resistance exercise-MVT
+  - OTHER: Resistance exercise-HVT
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06449300

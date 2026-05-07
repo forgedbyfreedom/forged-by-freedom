@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 29311675
+Title: Sensorimotor abilities predict on-field performance in professional baseball.
+Authors: Burris, Vittetoe, Ramger, Suresh, Tokdar
+Journal: Scientific reports
+Year: 2018
+Topic: visualization athletic performance
+
+ABSTRACT:
+Baseball players must be able to see and react in an instant, yet it is hotly debated whether superior performance is associated with superior sensorimotor abilities. In this study, we compare sensorimotor abilities, measured through 8 psychomotor tasks comprising the Nike Sensory Station assessment battery, and game statistics in a sample of 252 professional baseball players to evaluate the links between sensorimotor skills and on-field performance. For this purpose, we develop a series of Bayesian hierarchical latent variable models enabling us to compare statistics across professional baseball leagues. Within this framework, we find that sensorimotor abilities are significant predictors of on-base percentage, walk rate and strikeout rate, accounting for age, position, and league. We find no such relationship for either slugging percentage or fielder-independent pitching. The pattern of results suggests performance contributions from both visual-sensory and visual-motor abilities and indicates that sensorimotor screenings may be useful for player scouting.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/29311675/

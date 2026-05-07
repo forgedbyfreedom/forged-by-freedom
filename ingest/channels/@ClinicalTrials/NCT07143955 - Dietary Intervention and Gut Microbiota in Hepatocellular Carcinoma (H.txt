@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07143955
+Title: Dietary Intervention and Gut Microbiota in Hepatocellular Carcinoma (HCC)
+Official Title: A Randomized Controlled Trial of a Targeted Dietary Intervention to Reshape Gut Microbiota and Lipid Metabolism for Enhancing Anti-Tumor Immunity and Prognosis in Patients With Hepatocellular Carcinoma
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: protein supplementation
+
+SUMMARY:
+This prospective, randomized controlled trial investigates the efficacy of a targeted dietary intervention in patients with hepatocellular carcinoma (HCC). The study aims to compare a structured diet including probiotics and prebiotics against routine dietary care. The primary goal is to assess the impact on clinical outcomes (survival), gut microbiota composition, systemic lipid metabolism, and anti-tumor immune responses, to determine if this intervention can serve as an effective adjunctive therapy for HCC.
+
+DETAILED DESCRIPTION:
+Hepatocellular carcinoma (HCC) is associated with gut microbiota dysbiosis, which contributes to a pro-inflammatory and immunosuppressive tumor microenvironment via the "gut-liver axis." This study hypothesizes that modulating the gut microbiota through a targeted dietary intervention can rebalance systemic immunity and improve clinical outcomes. This single-center, prospective trial randomized 100 patients with HCC into two groups. The experimental group (n=50) received a structured dietary plan including high-fiber foods, probiotics (Bifidobacterium, Lactobacillus), and prebiotics. The control group (n=50) received routine dietary counseling. The study evaluates the intervention's effects on progression-free survival (PFS), overall survival (OS), gut microbiota diversity, serum lipid profiles, peripheral immune cell populations (CD8+ T cells, Tregs), and quality of life. The findings aim to provide robust clinical evidence for integrating microbiota-targeted dietary therapy into the standard management of HCC.
+
+PRIMARY OUTCOMES:
+  - Progression-Free Survival (PFS)
+  - Overall Survival (OS)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Structured Dietary Intervention
+  - BEHAVIORAL: Routine Dietary Care
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07143955

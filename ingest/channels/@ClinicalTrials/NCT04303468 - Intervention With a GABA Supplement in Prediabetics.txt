@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04303468
+Title: Intervention With a GABA Supplement in Prediabetics
+Official Title: The Effects of a GABA Supplement Versus a Placebo on Glucose Tolerance and Blood Pressure in Prediabetics
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 52
+Topic: protein supplementation
+
+SUMMARY:
+In this double-blind parallel placebo controlled intervention study the effects of 3 times daily 500 mg gamma-aminobutyric acid (GABA) supplementation on glucose tolerance and cardiovascular health will be assessed in prediabetics.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Postprandial glycaemic response during a 2 hour oral glucose tolerance test (OGTT)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: GABA
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04303468

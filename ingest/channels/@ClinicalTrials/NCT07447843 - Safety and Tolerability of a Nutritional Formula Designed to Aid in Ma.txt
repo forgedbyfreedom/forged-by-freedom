@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07447843
+Title: Safety and Tolerability of a Nutritional Formula Designed to Aid in maintenance of Muscle During Periods of Caloric Restriction in Adults
+Official Title: An Adaptive, Randomized, Double-Blind, Placebo-Controlled Clinical Trial Assessing the Safety and Tolerability of Redefine, a Multi-Ingredient Nutritional Formulation Designed to Aid Lean Mass Preservation in Subjects Undergoing Caloric Restriction
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: HMB supplementation
+
+SUMMARY:
+Muscle loss during caloric restriction is a significant concern for metabolic health and physical function, yet there is limited evidence on interventions that simultaneously target multiple contributing pathways. This study investigates a multi-component formulation targeting these complementary pathways to address critical gaps in strategies for preserving lean mass during energy restriction. The primary goal of this study is to demonstrate the safety and tolerability of the product Redefine when used as an adjunct to a well-established caloric restriction regimen. Caloric restriction is known to result in unintended loss of skeletal muscle mass, which may negatively impact physical function and metabolic health. This study seeks to evaluate whether supplementation with Redefine may help preserve muscle mass and support the maintenance of healthy muscle function during caloric restriction. Secondarily, this study aims to explore whether Redefine supplementation may confer favorable changes in body composition in subjects participating in a caloric restriction regimen. This product consists of HMB, postbiotics and botanicals.
+
+DETAILED DESCRIPTION:
+Caloric restriction is a cornerstone of weight loss and metabolic health interventions; however, it is consistently associated with unintended reductions in lean body mass. Clinical evidence indicates that pharmacologic-induced caloric restriction involving GLP-1 receptor agonists (GLP-1RAs) consistently produces substantial weight loss (\~10-15% of baseline body weight). This is consistently accompanied by reductions in lean mass as well, similar to the changes seen in diet-induced weight loss. A review of the effect of semaglutide on lean mass in clinical trials indicates that, while weight loss is primarily due to reductions in fat mass, lean mass can account for up to 40% of total weight loss. In the SURMOUNT-1 study, of the tirzepatide-associated body weight lost, 75% was fat mass and 25% was lean mass. This raises concerns as the lean mass loss can account for a clinically meaningful portion of total weight reduction, highlighting the need for strategies to support muscle preservation during semaglutide-induced weight loss.
+
+Loss of skeletal muscle is clinically relevant, as it negatively impacts physical function, resting energy expenditure, metabolic flexibility, and long-term weight maintenance. During sustained energy deficits, skeletal muscle protein balance shifts toward net catabolism due to suppressed anabolic signaling, reduced dietary protein and amino acid availability, and increased activation of proteolytic pathways. Reductions in insulin and insulin-like growth factor-1 (IGF-1), along with increased activity of the ubiquitin-proteasome and autophagy-lysosome systems, contribute to accelerated muscle protein breakdown during caloric restriction.
+
+Appetite suppression whether behaviorally induced or pharmacologically mediated can further exacerbate inadequate protein and micronutrient intake, increasing vulnerability to muscle loss. Importantly, lean mass loss observed in these contexts is largely attributable to reduced caloric and protein intake rather than to the specific method used to achieve energy restriction, underscoring the relevance of muscle-preserving strategies across weight-loss approaches.
+
+Beyond foundational macronutrient strategies, specific dietary ingredients have been shown to directly influence muscle protein metabolism. Beta-hydroxy-beta-methylbutyrate (HMB) has been shown in clinical studies and meta-analyses to help preserve or modestly increase lean body mass by reducing muscle protein breakdown and supporting protein synthesis . HMB is a metabolite of the branched-chain amino acid leucine and has been extensively studied for its ability to support skeletal muscle preservation under catabolic conditions, including caloric restriction, aging, and physical inactivity. Mechanistic studies indicate that HMB attenuates muscle protein breakdown by modulating proteolytic pathways, including the ubiquitin-proteasome system, while also supporting anabolic signaling pathways involved in muscle protein synthesis.
+
+PRIMARY OUTCOMES:
+  - Number of participants with supplementation-related adverse events (AEs) as assessed by Common Terminology Criteria for Adverse Events v4.0 (CTCAE v4.0).
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Redefine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 35 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07447843

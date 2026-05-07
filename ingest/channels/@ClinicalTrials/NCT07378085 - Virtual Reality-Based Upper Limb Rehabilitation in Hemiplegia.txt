@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07378085
+Title: Virtual Reality-Based Upper Limb Rehabilitation in Hemiplegia
+Official Title: The Impact of Virtual Reality Games on Upper Extremity Function, Activity, and Participation in Hemiplegic Patients: A Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: recovery exercise
+
+SUMMARY:
+This study aims to evaluate the effectiveness of Leap Motion-supported virtual reality therapy, applied in addition to traditional rehabilitation programs, in individuals who develop hemiplegia after a cerebrovascular accident. The study will examine the effects of this additional therapy on upper extremity functions, activities of daily living, and participation levels.
+
+DETAILED DESCRIPTION:
+Hemiplegic patients experience significant limitations in their activities of daily living (ADL) and participation levels due to marked losses in upper extremity function following stroke. Approximately 80% of individuals who have had a stroke experience impairment in upper extremity function, and because the upper extremity plays a critical role in many motor functions, these impairments significantly affect independence. Therefore, initiating upper extremity rehabilitation early and tailoring it to the individual's needs is of great importance for functional improvement. Various treatment methods are used in stroke rehabilitation to support physical, functional, and psychological recovery.
+
+In recent years, virtual reality-based technologies have been increasingly used in rehabilitation processes due to their ability to increase motivation, enable intensive and repetitive motor training, and provide environmental feedback. Leap Motion-based virtual reality applications enable patients to participate in therapy through safe, interactive, and task-oriented activities by allowing three-dimensional perception of upper extremity movements.
+
+The aim of this study is to compare the effects of Leap Motion-based virtual reality rehabilitation, applied in addition to conventional treatment, on the functional development of the plegic upper extremity, activities of daily living, and participation levels compared to the group receiving conventional treatment alone.
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer assessment for upper extremity
+
+INTERVENTIONS:
+  - OTHER: conventional rehabilitation
+  - DEVICE: leap motion based virtual reality rehabilitation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07378085

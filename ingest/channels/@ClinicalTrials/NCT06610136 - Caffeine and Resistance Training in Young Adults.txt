@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06610136
+Title: Caffeine and Resistance Training in Young Adults
+Official Title: Effects of Acute and Prolonged Caffeine Intake on Neuromuscular Adaptations to Resistance Training in Young Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: caffeine exercise
+
+SUMMARY:
+Introduction: Several studies have evaluated and confirmed the ergogenic effect of acute caffeine intake on sports performance, specifically on strength and power performance. However, little is known about the prolonged effect of this supplement on neuromuscular adaptations to strength training.
+
+Introduction: Several studies have evaluated and confirmed the ergogenic effect of acute caffeine intake on sports performance, specifically on strength and power performance. However, little is known about the prolonged effects of this supplement on neuromuscular adaptations to strength training.
+
+Objectives: The present study aims to analyze the effects of acute and chronic caffeine intake on neuromuscular adaptations to strength training, according to sex (men vs. women) and type of exercise (bench press vs. squat), as well as on fatigue resistance during repeated sprints, fatigue perception, mood state, reaction time, diet, and potential side effects.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean velocity at different %1RM
+  - Peak velocity at different %1RM
+  - Mean power output at different %1RM
+  - Peak power output and time to reach peak power output at different %1RM
+  - Number of repetitions performed at 65%1RM until task failure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine plus Resistance training
+  - OTHER: Placebo + Resistance training
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06610136

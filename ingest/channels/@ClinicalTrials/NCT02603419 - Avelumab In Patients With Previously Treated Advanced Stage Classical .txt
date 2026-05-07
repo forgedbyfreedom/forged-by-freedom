@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02603419
+Title: Avelumab In Patients With Previously Treated Advanced Stage Classical Hodgkin's Lymphoma (JAVELIN HODGKINS)
+Official Title: A PHASE 1 PHARMACOKINETIC-PHARMACODYNAMIC STUDY OF AVELUMAB (MSB0010718C) IN PATIENTS WITH PREVIOUSLY TREATED ADVANCED STAGE CLASSICAL HODGKIN'S LYMPHOMA
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: creatine supplementation
+
+SUMMARY:
+This is a Phase 1b, open-label, multi-center study comprising a lead-in phase and an expansion phase. The lead-in phase is a multiple-dose, randomized, parallel-arm, pharmacokinetic and pharmacodynamic study of avelumab as a single agent in adult patients with cHL. Patients enrolled in the lead-in phase of this study are required to have relapsed following a prior autologous or allogeneic HSCT, or to be ineligible for HSCT. Based on the preliminary TO, safety, and efficacy results from the lead-in phase, the expansion phase will evaluate the anti-tumor activity and safety of single-agent avelumab utilizing an intra-patient dose escalation paradigm based on two of the dosing regimens studied in the lead-in phase in 40 cHL patients in whom an allogeneic HSCT has failed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Lead-in Phase: Percent Target Occupancy (CD14+ Monocytes) at Day 2 of Cycle 1
+  - Lead-in Phase: Percent Target Occupancy (CD14+ Monocytes) at Day 1 of Cycle 2
+  - Lead-in Phase: Percent Target Occupancy (CD3+ T-Cells) at Day 2 of Cycle 1
+  - Lead-in Phase: Percent Target Occupancy (CD3+ T-Cells) at Day 1 of Cycle 2
+  - Expansion Phase: Percentage of Participants With Objective Response as Assessed by Blinded Independent Central Review (BICR)
+
+INTERVENTIONS:
+  - DRUG: Avelumab
+  - DRUG: Avelumab
+  - DRUG: Avelumab
+  - DRUG: Avelumab
+  - DRUG: Avelumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02603419

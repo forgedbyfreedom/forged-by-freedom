@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06726148
+Title: Study of ECI830 Single Agent or in Combination in Patients With Advanced HR+/HER2- Breast Cancer and Other Advanced Solid Tumors
+Official Title: An Open-label, Multi-center, Phase I/II Study of ECI830 as a Single Agent and in Combination With Ribociclib and Endocrine Therapy in Patients With Advanced Hormone Receptor Positive, HER2-negative Breast Cancer and Advanced Solid Tumors
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 280
+Topic: growth hormone treatment
+
+SUMMARY:
+Phase I: Characterize safety and tolerability of ECI830 as a single agent and in combination with ribociclib and fulvestrant. Identify dose range for optimization/recommended dose for future studies.
+
+Phase II: Assess the anti-tumor activity of ECI830 in combination with ribociclib and fulvestrant in patients with hormone receptor-positive/human epidermal growth factor receptor 2-negative (HR+/HER2-) advanced breast cancer.
+
+DETAILED DESCRIPTION:
+This is a first-in-human, open-label, phase I/II, multi-center study consisting of an ECI830 single agent treatment arm in patients with advanced HR+/HER2- breast cancer or other advanced solid tumors harboring CCNE1 amplification and a combination treatment arm of ECI830 with ribociclib and fulvestrant in patients with advanced breast cancer. Single agent escalation may be followed by an expansion part stratified by disease indication. The escalation of the combination arm may continue into a randomized, open label, Phase II with optional dose optimization in advanced breast cancer patients.
+
+PRIMARY OUTCOMES:
+  - Phase I: Incidence of dose-limiting toxicities (DLTs)
+  - Phase I: Incidence of adverse events (AEs) and serious adverse events (SAEs)
+  - Phase I: Number of participants with dose interruptions, reductions and discontinuations
+  - Phase II: PFS rate at 6 months per local response evaluation criteria in solid tumors (RECIST) v1.1
+
+INTERVENTIONS:
+  - DRUG: ECI830
+  - DRUG: ribociclib
+  - DRUG: fulvestrant
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06726148

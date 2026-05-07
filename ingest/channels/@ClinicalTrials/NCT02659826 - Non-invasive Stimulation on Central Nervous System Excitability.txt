@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02659826
+Title: Non-invasive Stimulation on Central Nervous System Excitability
+Official Title: Effects of Non-invasive Stimulation on Central Nervous System Excitability of Healthy Volunteers
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: high intensity interval training
+
+SUMMARY:
+A crossover trial with healthy volunteers will be conducted. Six sessions will be performed once a week in a counterbalanced order and at least with seven days washout period to minimize carry-over effects. In each session, volunteers will be submitted to quantity and quality of sleep, type of eating, fatigue and motivation level, cortical brain activity measures through paired pulse transcranial magnetic stimulation (ppTMS), spinal cord activity measures through electrical stimulation, non-invasive spinal stimulation (tsDCS) or non-invasive brain stimulation (rTMS) and physical exercise (gait training).
+
+DETAILED DESCRIPTION:
+After given prior informed consent, volunteers will be submitted to six pseudorandomized sessions using a website (randomization.com) by a non-involved researcher. At study beginning, volunteers will be evaluated through structured questionnaire and each session, will comprise the following experimental sequence:
+
+1. Quantity and quality of sleep: It will be enquired how many hours the volunteer slept in the last night. The quality of the sleep will be measured through an analogue scale graded from 0 (worst quality of sleep) to 10 points (best quality of sleep).
+2. Type of eating: All the individuals will be asked about ingestion of food and drinks that could change the cortical excitability ( e. g.; coffee, chocolate, energetic, soda e etcc). If positive, researchers will record the time since of ingestion and quantify the amount of food.
+3. Fatigue and motivation level: Fatigue and motivation level: Fatigue and motivation levels: It will be measured through an analogue scale graded from 0 (lower fatigue or motivation levels) to 10 points (greater fatigue or motivation levels).
+4. Cortical excitability: the cortical will be measured through the motor evoked potential (MEP), short intracortical inhibition (SICI) and intracortical facilitation (ICF). All the measures will be evaluated through transcranial magnetic stimulation (Neurosoft, Russia). Initially, rest motor threshold (RMT) will be determined by finding the lowest stimulator output that elicit motor evoked potential (MEP) at least 50 microvolts (μV). For RMT measure, a figure-eight coil connected to the magnetic stimulator held manually at 45 degrees from the midline, will be placed over the right primary motor cortex (C3 - 10/20 System). The short intracortical inhibition (SICI) and intracortical facilitation (ICF) will be evaluated by paired pulse transcranial magnetic stimulation. A subthreshold conditioning stimuli (80% of RMT) and suprathreshold test stimuli (130% of RMT) will be delivered at an interstimulus interval (ISI) of 2 milliseconds for SICI and 10 milliseconds for ICF. Ten stimuli will be applied at each condition (unconditioned pulse and pairs of stimuli with ISI of 3 and 20 milliseconds). Stimuli order delivery will be pseudo-randomized and SICI and ICF will be expressed as conditioned stimulus percentage regarding unconditioned stimulus. The MEP value will be obtained through single pulse transcranial magnetic stimulation. Ten suprathreshold (130% of RMT) stimuli will be delivered on primary motor cortex (C3).
+5. Spinal cord activity: the level of excitability of spinal cord will be measured through the following outcomes:
+
+   * Hoffman reflex (H reflex): the H reflex will be elicited by a percutaneous electrical stimulation on tibial nerve delivered on popliteal fossae and recorded the electromyographic responses from the soleus muscle. The values of maximal H reflex, M wave and maximal H reflex and maximal M wave ratio (H/M ratio) will be obtained through a recruitmen
+
+PRIMARY OUTCOMES:
+  - Changes on spinal excitability
+
+INTERVENTIONS:
+  - DEVICE: anodal tsDCS
+  - DEVICE: cathodal tsDCS
+  - DEVICE: sham tsDCS
+  - DEVICE: Gait training
+  - DEVICE: High frequency rTMS
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02659826

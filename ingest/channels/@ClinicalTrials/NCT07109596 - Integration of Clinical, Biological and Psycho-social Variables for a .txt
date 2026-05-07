@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07109596
+Title: Integration of Clinical, Biological and Psycho-social Variables for a Gender-sensitive Frailty Prediction
+Official Title: Integration of Clinical, Biological and Psycho-social Variables for a Gender-sensitive Frailty Prediction (Age-It: Ageing Well in an Aging Society - A Novel Public-private Alliance to Generate Socioeconomic, Biomedical and Technological Solutions for an Inclusive Italian Ageing Society)
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1000
+Topic: sarcopenia intervention
+
+SUMMARY:
+The progressive aging of the population worldwide yields profound health and social implications. Aging entails a progressive impairment of functions and, ultimately, leads to increased susceptibility to morbidity and mortality. Unsurprisingly, over 85% of people over 75 years of age suffer from chronic diseases. Notwithstanding, healthcare systems, usually organized for acute conditions, are not structured to provide effective and efficient care for chronic conditions. Patients with chronic conditions often present a complex interplay of multimorbidity, polypharmacy and frailty. These determinants of health, which are tightly intertwined, are further modulated and influenced by several characteristics of patients, including sex, socio-economic factors and the broad spectrum of the so - called gender-related characteristics of the individuals. The combination of these determinants - whose interaction is often unpredictable - contribute to defining the prognosis of these patients.
+
+Frailty is proposed as a state of increased vulnerability and strongly characterizes the older population (Clegg A, Lancet 2013; 381: 752-62). Nonetheless, older age does not always imply a condition of frailty. The development of a simple frailty index can be useful in clinical practice to stratify patients according to their level of frailty, taking into account the specific gender peculiarities, and may facilitate the appropriate tailoring of social- and health-related interventions. One of the factors that accelerates biological aging and increases susceptibility to frailty is a chronic, low-grade and systemic inflammation known as inflammaging. (Ferrucci L, et al. Nat Rev Cardiol 2018). Aging-associated platelet hyperreactivity is driven by chronic inflammation (Pavel Davizon-Castillo et al. Blood 2019) and is associated with chronic age-related cardiovascular disease and mortality. In turn activated platelets fuel inflammation creating a vicious cycle known as thromboinflammation. Both the hemostatic and the immune system display sexual dimorphism and are susceptible to gender-related factors, such as diet, stress, workload, etc. Identification of thromboinflammatory biomarkers could be a novel valuable asset to understand and predict frailty in a more sex and gender sensitive manner in the aging population.
+
+Another aging feature is malnutrition, which can significantly contribute to quality of life and clinical outcomes. In particular, the age-related progressive loss of muscle mass and function (i.e.,sarcopenia) reduces the autonomy of older adults, impinges on their quality of life and reduces the tolerance to chronic as well acute therapeutic interventions. Recent evidence suggests that sarcopenia could be considered as a proxy for biological age (Mandelblatt et al. JAMA Oncol 2021). Therefore, timely diagnosis and treatment of impending malnutrition and sarcopenia could ameliorate not only patients' quality of life but survival as well (Bargetzi L et al. Ann Oncol 2021). Sarcopenia and inflammation are associated with osteoarthritis, the most common degenerative joint disease and a leading cause of frailty and disability in the elderly (Wang H, et al. Plos One 2022). The frailty Index (alone or associated with biomarkers) may not include all factors that impact life expectancy yet. It is a well-described clinical phenomenon that females live longer than males yet tend to experience greater levels of co-morbidity and disability. Gender-sensitive factors may be relevant in this context. Expectations and responsibilities associated with gender roles may contribute to the willingness (and ability) of the sexes to adopt a "sick" role, seek help and access to health care (Hibbard JH, et al. Women Health 1986). While social vulnerability is weakly to moderately correlated with frailty in both sexes, females are more socially vulnerable than males due to their living situation (widowhood and living alone) (Andrew MK, et al. BMC Geriatrics 2014). Even so, females may be better able to cope with higher levels of frailty due to greater social support networks.
+
+Males may be more vulnerable to the effects of social isolation, particularly widowhood, both in terms of frailty and mortality (Shor E, et al. Demography 2012). In conclusion, clinical, biological, social and behavioral factors (captured by gender) may contribute to the frailty burden. To date, few studies have presented frailty scores stratified by sex and, overall, results have not been consistent (Gordon EH, et al. Maturitas 2018). Appropriate tailoring of social- and health-related interventions is critical to reduce potential harm from inappropriate procedures and maximize benefits from therapeutic intervention in such a complex population. Stratification of patients based on their gender and frailty status has the potential to tailor their care more precisely, shift the emphasis in medicine from reaction to prevention and reduce the health cost burden.
+
+DETAILED DESCRIPTION:
+Objective of the study The primary objective of the study is to provide a framework to assess the sex and gender effect in aging research by creating a gender-oriented frailty index score and by developing an AI tool to make it applicable in clinical practice both during and after hospitalization.
+
+As a secondary objective we will investigate the relationship between the nutritional and the thrombo-inflammatory status with the gender-oriented frailty index.
+
+PRIMARY OUTCOMES:
+  - Sex and gender specific frailty index
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 56 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07109596

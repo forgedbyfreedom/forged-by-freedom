@@ -1,0 +1,53 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07355595
+Title: Mobile App-Assisted Home Exercise for Musculoskeletal Disorders
+Official Title: The Effect of the Mobile App-Assisted Home Exercise Program on Clinical Outcomes in Patients With Musculoskeletal Disorders
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: low back pain exercise
+
+SUMMARY:
+Overview This study evaluates the effectiveness of a dedicated mobile health (mHealth) application in supporting home exercise programs for patients with musculoskeletal disorders, such as neck, shoulder, back, or knee pain. The research aims to address the widespread challenge of low patient adherence to unsupervised home-based exercises.
+
+Study Design The project employs a dual-methodology approach:
+
+Clinical Trial: 30 participants presenting with neck, shoulder, back, or knee pain will be randomly assigned to either an app-assisted group or a traditional home exercise group. Both groups will undergo 4 weeks of physiotherapy. The study will compare pain intensity, physical function, and exercise adherence between the two cohorts.
+
+Retrospective Analysis: To complement the trial, the study will analyze a large-scale database containing approximately 700,000 anonymized real-world data entries. This analysis aims to observe real-time pain fluctuations before and after exercise sessions within routine clinical settings.
+
+Goal The primary objective is to determine if integrating mHealth technology into traditional rehabilitation can enhance clinical outcomes and improve patient adherence to home-based exercise routines.
+
+DETAILED DESCRIPTION:
+Background: Musculoskeletal disorders are a leading cause of disability worldwide. Exercise prescription is a cornerstone of musculoskeletal rehabilitation, and physiotherapists often provide home-based exercise programs as part of self-management strategies. This approach is not only an active adjunctive intervention but also cost-effective. However, according to the 2021 Taiwan National Health Interview Survey, 54% of adults did not meet the World Health Organization's recommended physical activity levels-significantly higher than the global average of 27%-highlighting the low adherence to unsupervised exercise among Taiwanese adults. With the advancement of technology, electronic health (e-Health) interventions have become increasingly prevalent. Smartphone applications can provide reminders, recording, and personalized designs to improve adherence and clinical outcomes. Nonetheless, systematic reviews have reported that most commercially available apps have limited coverage of behavior change intervention functions (BCIFs) and lack rigorous scientific validation, leaving their clinical efficacy and large-scale applicability uncertain. Youdon, a mobile app developed by Meike Tech in Taiwan, aims to enhance accessibility and adherence to home exercise programs among Taiwanese patients. Despite its comprehensive behavior change functions, the app's clinical effectiveness remains to be verified through scientific research.
+
+Purpose: This study aims to investigate the clinical effectiveness of a mobile app-assisted home exercise program in patients with musculoskeletal disorders, through two complementary components:
+
+1. A randomized controlled trial (RCT) comparing pain and functional outcomes between app-assisted and non-assisted home exercise programs.
+2. A retrospective observational study analyzing app-user data to evaluate real-time pain changes before and after exercise and their associated factors.
+
+Methods:
+
+Part I: A single-blind randomized controlled trial will recruit 30 participants aged 18 years and above presenting with neck, shoulder, low back, or knee pain. Participants will be randomly assigned to either an app-assisted group or a control group without app support. Both groups will receive a 4-week intervention consisting of weekly physiotherapy sessions and daily 10-minute home exercises. Primary outcomes include pain intensity, Patient-Specific Functional Scale (PSFS) scores, and region-specific disability indices; the secondary outcome is exercise adherence. Measurements will be conducted at baseline, week 2, and week 4. Data will be analyzed using an intention-to-treat approach and mixed ANOVA to examine time and group effects (p \< 0.05).
+
+Part II: A retrospective observational study will analyze approximately 700,000 anonymized data entries from the Youdon database between July 1, 2024, and August 30, 2025. The study will assess real-time changes in pain before and after each exercise session and identify influencing factor
+
+PRIMARY OUTCOMES:
+  - Pain Intensity
+  - Functional performance
+  - Neck Disability (Neck Disability Index, NDI)
+  - Low Back Disability (Oswestry Disability Index, ODI)
+  - Shoulder Disability (Shoulder Pain and Disability Index, SPADI)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mobile App-Assisted Home Exercise with Standard Physiotherapy
+  - BEHAVIORAL: Traditional Home Exercise with Standard Physiotherapy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07355595

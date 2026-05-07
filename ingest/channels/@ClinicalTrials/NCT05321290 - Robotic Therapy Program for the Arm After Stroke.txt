@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05321290
+Title: Robotic Therapy Program for the Arm After Stroke
+Official Title: Evaluation of an Outpatient Upper Limb Robotic Therapy Program for Older Adult Chronic Stroke Survivors
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 9
+Topic: recovery exercise
+
+SUMMARY:
+The aim of this study is to evaluate an outpatient stroke rehabilitation program that uses therapy goal setting and a newly developed, low cost robot for upper limb therapy. The prototype robot has been developed by Toronto Rehab and University of Toronto along with an industry Partner, Quanser Inc. As a prototype, the robot is undergoing research for its effectiveness and feasibility and not currently used in usual therapy. Participants in this study will receive assessments, set their own therapy goals, and work with the robot. Therapy program outcomes for each participant will be evaluated in several ways. These will include comparing changes in values recorded directly from the robot (e.g. speed of movement), clinical assessments of upper limb abilities, and achievement of therapy goals. Program satisfaction will be recorded using questionnaires, surveys, and interviews. Feasibility of and requirements for delivering the program will be examined through participant enrollment, hours in the therapy program, hours of robot use, travel time and distances, and other participant factors, and staffing needs.
+
+DETAILED DESCRIPTION:
+This study evaluates an outpatient stroke rehabilitation program that applies therapy goal setting and a newly developed, low cost robotic system for upper limb therapy. The specific objectives of the study include the following:
+
+1. To evaluate the efficacy of the program in improving upper limb movement function and goal achievement in older adult chronic stroke survivors
+2. To evaluate older adult chronic stroke survivor satisfaction with the rehabilitation program (e.g. overall therapy program, robotic system, service delivery)
+3. To determine the feasibility of and requirements to deliver an outpatient upper limb robotic therapy program in a drop-in clinic setting for older adult chronic stroke survivors
+
+The study uses a multiple single subject research design (SSRD) with 3 study phases and a follow-up. The phases include:
+
+A - Baseline (no intervention, assessment only, 2 weeks) B - Intervention (therapy program, assessment and therapy, 8 weeks) A - Baseline (maintenance with no intervention, assessment only, 2 weeks) A follow-up assessment will be conducted 4 weeks after the phases are completed.
+
+With this study design, each participant's progress can be examined on a person by person basis.
+
+Baseline information collected from participants will include demographics (e.g. age, sex, hand dominance), medical history including type and location of stroke, cognition (screened using the Mini Mental State Exam), communication, vision, hearing, pain (Borg CR10 Scale), fatigue (Fatigue Severity Scale), depression (using Beck's Depression Inventory), functional abilities (Functional Independence Measure), performance of daily activities, treatment precautions, and therapy goals (Goal Attainment Scaling, GAS).
+
+During each of the study phases, robotic and upper limb function assessments will be carried out as described in the Outcomes section. The therapy program will be carried out as described in the Intervention section. At the end of the 3 phases, therapy goals identified in the GAS will be reviewed and the Functional Independence Measure will be re-evaluated. Participants will be asked about their satisfaction with the program using the outcome measures and methods described in the Outcomes section. Participants will be asked to return for a follow up assessment 4 weeks later. If sessions are missed (e.g. owing to illness), attempts will be made to reschedule missed sessions, in which case the total duration of the study will be extended. If participants are unable to attend or miss multiple sessions, participation in the program will be reevaluated and negotiated with the participant. Researchers will keep continuous records of information for program feasibility and requirements.
+
+PRIMARY OUTCOMES:
+  - Change from baseline mean movement velocity of affected arm after 8 weeks of therapy as assessed by metric derived from robot sensor data
+  - Change from baseline movement smoothness of affected arm after 8 weeks of therapy as assessed by metric derived from robot sensor data
+  - Change from baseline movement error of affected arm after 8 weeks of therapy as assessed by metric derived from robot sensor data
+  - Change from baseline range of motion of affected arm after 8 weeks of therapy as assessed by metric derived from robot sensor data
+
+INTERVENTIONS:
+  - OTHER: Robotic Therapy Program
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05321290

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01580189
+Title: Whole Milk Versus Whey Protein Supplement and Resistance Exercise
+Official Title: Effects of Whole Milk Versus Whey Protein Supplementation With Resistance Exercise on Body Composition, Muscle Hypertrophy and Strength Changes in Healthy Individuals
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of the study is to examine the effects of consuming protein supplement (whey) compared to whole milk immediately after bouts of resistance training on muscular strength and body composition.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body composition
+  - Strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey protein
+  - DIETARY_SUPPLEMENT: Chocolate milk
+  - DIETARY_SUPPLEMENT: Sugar
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01580189

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02180581
+Title: Effect of Probiotics in Reducing Infections and Allergies in Young Children Starting Daycare
+Official Title: Effect of Probiotics in Reducing Infections and Allergies in Young Children Starting Daycare
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 290
+Topic: sports nutrition
+
+SUMMARY:
+The aim of the intervention is to examine the effect of a combination of the two bacterial strains BB-12 and LGG, provided for 6 month, on the prevalence of infections and allergic manifestations in small children, and how a combination of BB-12 and LGG affects the immune system, gastrointestinal tract and the microbiota. Children are enrolled during 2 winter seasons.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of days absent from daycare due to respiratory and gastrointestinal infections
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic (2 * 10^9 cfu/day)
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 8 Months to 14 Months
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02180581

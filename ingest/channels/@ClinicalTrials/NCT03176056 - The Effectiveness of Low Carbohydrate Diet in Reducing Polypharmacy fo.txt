@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03176056
+Title: The Effectiveness of Low Carbohydrate Diet in Reducing Polypharmacy for Patients With Type 2 Diabetes Mellitus
+Official Title: Low Carbohydrate Diet for Type 2 Diabetes Mellitus
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 92
+Topic: creatine supplementation
+
+SUMMARY:
+This study determines whether an educational intervention with a 90 g/day LCD is safe, effective and has good compliance for poorly controlled type 2 diabetes patients.
+
+DETAILED DESCRIPTION:
+Poorly controlled type 2 diabetic men and women, aged between 20 and 80 years, with HbA1c≧ 7.5% (58mmol/mol) in the previous 3 months participated in this randomized controlled 18-month trial at a medical center. Patients were randomly assigned to the interventional group and given a 90g/day low carbohydrate diet (LCD) or the controlled group, which maintained a standard calorie-restricted diet (CRD). All patients received periodic educational intervention and were monitored for weight, body composition, waist girth, hip girth, thigh girth, pre- and post-prandial serum glucose, HbA1c, lipid profile(Cholesterol, Triglyceride. HDL, LDL, sdLDL), renal function, microalbumin/cre, carotid intima-media thickness (IMT),and medication effect score (MES).
+
+PRIMARY OUTCOMES:
+  - The improvement of glycemic control status
+  - The reduction of medication effect score (MES)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Low carbohydrate diet
+  - DIETARY_SUPPLEMENT: Calori restricted diet
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03176056

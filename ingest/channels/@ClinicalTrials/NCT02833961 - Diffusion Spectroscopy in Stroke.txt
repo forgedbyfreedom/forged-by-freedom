@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02833961
+Title: Diffusion Spectroscopy in Stroke
+Official Title: DIFFUSION SPECTROSCOPY AND IMAGING IN ACUTE STROKE
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 47
+Topic: creatine supplementation
+
+SUMMARY:
+Cerebral vascular disorder is one of the most fatal diseases despite current advances in medical science. The large number of negative clinical trials on neuroprotection in acute stroke is a pointer to the fact that translating better understanding of the pathogenesis and pathophysiology to clearly beneficial treatment strategies remains a daunting task. This project aims at elucidating the plausible biophysical events that affect water and metabolite diffusion in brain tissue after ischemia, by combining the information provided by two advanced methods of magnetic resonance (MR) diffusion imaging: diffusional kurtosis imaging and diffusion-weighted spectroscopy.
+
+Diffusion weighted imaging (DWI) has been established as a major tool for the early detection of stroke. However, information obtained using conventional DWI may be incomplete. Diffusional kurtosis (K) is a quantitative measure of the complexity or heterogeneity of the microenvironment in white and grey matter, which offers complementary information and may potentially be a more sensitive biomarker for probing pathophysiological changes. In addition, to gain more specific insights into molecular mobility in the intracellular environment, it is beneficial to assess the diffusion properties of metabolites, such as N-acetylaspartate (NAA), creatine and phosphocreatine (Cr), and choline containing compounds (Cho). Assessment of metabolite diffusion changes by diffusion-weighted spectroscopy (DWS) provides information specific to the intracellular environment. In particular, thanks to the specific compartmentation of NAA almost exclusively in neurons and of Cho in glial cells, the diffusion properties of these metabolites may provide specific insights into the pathological processes occurring independently in the two cell types. In addition, measuring a temporal profile of diffusion coefficient of these compounds may help clarify underlying pathophysiological changes in neuronal cells during acute ischemia.
+
+With the help of these two advanced methods, a proof-of-concept trial is proposed on 24 healthy subjects and 24 ischemic stroke patients. Ischemic stroke patients will be scanned three times with a 3T MR scanner (before day 10 post-stroke, around week 4 and 3 months), in order to extract diffusion kurtosis imaging (DKI) and DWS metrics and understand the dynamics of the cellular mechanisms at play in cerebral ischemia. The goal of this study is to investigate neuronal and glial metabolite diffusion changes at different time points after ischemic stroke, in both infarcted and non-infarcted hemispheres. The aim is to get non-invasively important information on the evolution of the cellular damage in this disease, and possibly distinguishing between neuronal and glial processes (by measuring the metrics extracted for these two sequences), as well as on the different mechanisms leading to metabolite diffusion changes in the two brain areas, thus providing a great impact on the strategy of treatment for patients with cerebral infarction.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - ADC measurements (in mm2/second) of metabolites within the ischemic lesion
+
+INTERVENTIONS:
+  - DEVICE: Magnetic resonance imaging
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02833961

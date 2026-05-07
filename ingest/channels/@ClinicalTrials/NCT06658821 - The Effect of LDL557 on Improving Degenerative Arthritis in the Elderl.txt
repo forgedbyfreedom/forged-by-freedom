@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06658821
+Title: The Effect of LDL557 on Improving Degenerative Arthritis in the Elderly
+Official Title: The Effect of LDL557 on Improving Degenerative Arthritis in the Elderly
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: protein supplementation
+
+SUMMARY:
+This project is to conduct a clinical trial of SYNBIO TECH INC.'s LDL557 capsule for joint protection. To understand the improvement of joint discomfort and inflammation after supplementation, we hope to provide an updated choice for modern people's joint protection.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - WOMAC
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: LDL557-HK capsule
+  - DIETARY_SUPPLEMENT: Placebo Capsule
+
+ELIGIBILITY:
+Age: 45 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06658821
