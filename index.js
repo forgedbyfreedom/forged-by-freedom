@@ -1356,22 +1356,11 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 108909, words: 303698707, channels: 190, vectors: 202559, lastUpdated: null };
+// Counts as of 2026-05-09: 113,067 transcript files, 310,856,882 words, 286,451 Chroma chunks
+let cachedStats = { transcripts: 113067, words: 310856882, channels: 190, vectors: 286451, lastUpdated: "2026-05-09T00:00:00.000Z" };
 
-app.get("/stats", async (_, res) => {
-  try {
-    const stats = await index.describeIndexStats();
-    cachedStats.vectors = stats.totalRecordCount || cachedStats.vectors;
-    res.json({
-      transcripts: cachedStats.transcripts,
-      words: cachedStats.words,
-      channels: cachedStats.channels,
-      vectors: cachedStats.vectors,
-      lastUpdated: cachedStats.lastUpdated || new Date().toISOString()
-    });
-  } catch (err) {
-    res.json(cachedStats);
-  }
+app.get("/stats", (_, res) => {
+  res.json(cachedStats);
 });
 
 app.post("/update-stats", async (req, res) => {
