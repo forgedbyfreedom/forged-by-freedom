@@ -110,7 +110,7 @@ setInterval(() => {
 }, 60000);
 
 // ─── Anthropic API ───────────────────────────────────────────
-async function chat(messages, temperature = 0.7, maxTokens = 2500) {
+async function chat(messages, temperature = 0.7, maxTokens = 1000) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), maxTokens > 2500 ? 90000 : 60000);
 
