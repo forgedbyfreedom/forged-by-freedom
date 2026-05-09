@@ -97,7 +97,7 @@ fi
 echo ""
 
 # ── Step 3: Sync skills to .claude/ and .cursor/ ─────────────────────────────
-"$ROOT/scripts/sync-skill.sh"
+"$ROOT/shared/scripts/sync-skill.sh"
 
 echo ""
 
