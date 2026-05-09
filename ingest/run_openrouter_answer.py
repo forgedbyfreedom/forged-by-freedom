@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """
+DEPRECATED — phase_2B P5: this script uses OpenRouter (dropped). The production
+retrieval path runs through `index.js` (Express), not this script. `src/index.js`
+references this file but is itself unused (production entry per package.json is
+`./index.js`). Rewrite or delete this file when the retrieval API is consolidated.
+
 Ask Coach Bryan – Retrieval Engine (JSON output)
 
 Returns:

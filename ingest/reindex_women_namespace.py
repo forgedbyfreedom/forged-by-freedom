@@ -22,11 +22,12 @@ from pinecone import Pinecone
 # =======================
 # ENV
 # =======================
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_HOST = os.getenv("PINECONE_HOST")
 
-assert OPENROUTER_API_KEY, "OPENROUTER_API_KEY missing"
+# OpenAI direct only — OpenRouter dropped in phase_2B P5.
+assert OPENAI_API_KEY, "OPENAI_API_KEY missing"
 assert PINECONE_API_KEY, "PINECONE_API_KEY missing"
 assert PINECONE_HOST, "PINECONE_HOST missing"
 
@@ -64,9 +65,9 @@ def chunk_text(text, max_chars=900):
 def embed_batch(texts, retries=3):
     for attempt in range(retries):
         r = requests.post(
-            "https://openrouter.ai/api/v1/embeddings",
+            "https://api.openai.com/v1/embeddings",
             headers={
-                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
                 "Content-Type": "application/json"
             },
             json={

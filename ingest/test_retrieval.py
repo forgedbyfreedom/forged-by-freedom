@@ -8,7 +8,7 @@ from pinecone import Pinecone
 
 load_dotenv(Path(__file__).parent.parent / ".env", override=True)
 
-client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=os.getenv("OPENROUTER_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index("forged-freedom-ai")
 

@@ -54,12 +54,12 @@ if (!ANTHROPIC_API_KEY) {
   console.error("Missing required env: ANTHROPIC_API_KEY");
   process.exit(1);
 }
-console.log("✅ Using Anthropic Claude API for chat");
-if (OPENAI_API_KEY) {
-  console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
-} else {
-  console.log("[FBF] Embeddings: via OpenRouter (add OPENAI_API_KEY to use OpenAI direct)");
+if (!OPENAI_API_KEY) {
+  console.error("Missing required env: OPENAI_API_KEY (required for Pinecone embeddings; OpenRouter fallback removed in phase_2B P5)");
+  process.exit(1);
 }
+console.log("✅ Using Anthropic Claude API for chat");
+console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
 
 // ─── Pinecone ────────────────────────────────────────────────
 const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
@@ -145,49 +145,89 @@ async function chat(messages, temperature = 0.7, maxTokens = 2500) {
   }
 }
 
-async function embed(text) {
-  const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+// Streaming variant — calls onChunk(text) for each token, returns full text when done.
+async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 90000);
+  let fullText = "";
 
-  // Try OpenAI direct first (if key present), fall back to OpenRouter on quota/auth errors
-  if (OPENAI_API_KEY) {
-    try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 30000);
-      try {
-        const res = await fetch("https://api.openai.com/v1/embeddings", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, "Content-Type": "application/json" },
-          body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
-          signal: controller.signal
-        });
-        const data = await res.json();
-        if (res.status === 429 || res.status === 401) throw new Error(`openai_quota:${res.status}`);
-        if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
-        if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
-        return data.data[0].embedding;
-      } finally {
-        clearTimeout(timer);
-      }
-    } catch (err) {
-      if (!err.message.startsWith("openai_quota:")) throw err;
-      console.warn(`[embed] OpenAI quota hit (${err.message}), falling back to OpenRouter`);
+  try {
+    const systemMsg = messages.find(m => m.role === "system");
+    const chatMsgs = messages.filter(m => m.role !== "system");
+
+    const body = {
+      model: "claude-sonnet-4-6",
+      max_tokens: maxTokens,
+      temperature,
+      stream: true,
+      messages: chatMsgs,
+    };
+    if (systemMsg) body.system = systemMsg.content;
+
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": ANTHROPIC_API_KEY,
+        "content-type": "application/json",
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.error?.message || `Anthropic API error: ${response.status}`);
     }
-  }
 
-  // OpenRouter fallback
-  if (!OPENROUTER_API_KEY) throw new Error("No embedding provider available (set OPENAI_API_KEY or OPENROUTER_API_KEY)");
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop() || "";
+
+      for (const line of lines) {
+        if (!line.startsWith("data: ")) continue;
+        const data = line.slice(6).trim();
+        if (!data || data === "[DONE]") continue;
+        try {
+          const event = JSON.parse(data);
+          if (event.type === "content_block_delta" && event.delta?.type === "text_delta") {
+            const chunk = event.delta.text;
+            fullText += chunk;
+            onChunk(chunk);
+          }
+        } catch {}
+      }
+    }
+  } finally {
+    clearTimeout(timer);
+  }
+  return fullText;
+}
+
+async function embed(text) {
+  // OpenAI direct only. OpenRouter fallback was dropped in phase_2B P5 — env vars
+  // were misconfigured (OPENROUTER_API_KEY was an sk-proj- OpenAI key, not OpenRouter).
+  // Future move to local Ollama (768-d) is gated on the Pinecone → Chroma migration.
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30000);
   try {
-    const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    const res = await fetch("https://api.openai.com/v1/embeddings", {
       method: "POST",
-      headers: { Authorization: `Bearer ${OPENROUTER_API_KEY}`, "Content-Type": "application/json" },
+      headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
-      signal: controller.signal
+      signal: controller.signal,
     });
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `OpenRouter embedding error: ${res.status}`);
-    if (!data?.data?.[0]?.embedding) throw new Error("OpenRouter embedding failed");
+    if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
+    if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
     return data.data[0].embedding;
   } finally {
     clearTimeout(timer);
@@ -1007,7 +1047,7 @@ app.get("/status", async (_, res) => {
 });
 
 app.post("/ask", async (req, res) => {
-  const { question, mode = "synthesized", namespace = "" } = req.body;
+  const { question, mode = "synthesized", namespace = "", stream: wantStream = false } = req.body;
   const start = Date.now();
 
   // Validate
@@ -1073,38 +1113,59 @@ His accolades include but are not limited to:
     }
 
     // Synthesized mode (default)
-    let answer = await chat([
+    const msgs = [
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: buildPrompt(question, quotes) }
-    ]);
-
-    // POST-PROCESSING: Fix host misattributions
-    answer = answer
-      .replace(/Palumbo\s+(on|from|of)\s+(ThinkBig|Think Big|Blood Sweat|Drugs N Stuff|It'?s Just Bodybuilding)/gi,
-        "Scott McNally, Dave Crosland & Skipp Hill $1 $2")
-      .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(RXMuscle|RX Muscle)/gi,
-        "Dave Palumbo $2 $3")
-      .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(Anabolic Bodybuilding)/gi,
-        "Paul Barnett (Big Paul) $2 $3");
-
-    // Strip leaked system prompt (Hermes model sometimes regurgitates instructions)
-    const leakPatterns = [
-      /You are Coach Bryan, the official AI coach[\s\S]*/i,
-      /I have provided a detailed[\s\S]*/i,
-      /Do not mix up the show names[\s\S]*/i,
-      /Always cite evidence properly[\s\S]*/i,
-      /RESPONSE CHECKLIST[\s\S]*/i,
     ];
-    for (const pat of leakPatterns) {
-      answer = answer.replace(pat, "").trim();
+
+    function postProcessAnswer(raw) {
+      let a = raw
+        .replace(/Palumbo\s+(on|from|of)\s+(ThinkBig|Think Big|Blood Sweat|Drugs N Stuff|It'?s Just Bodybuilding)/gi,
+          "Scott McNally, Dave Crosland & Skipp Hill $1 $2")
+        .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(RXMuscle|RX Muscle)/gi,
+          "Dave Palumbo $2 $3")
+        .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(Anabolic Bodybuilding)/gi,
+          "Paul Barnett (Big Paul) $2 $3");
+      const leakPatterns = [
+        /You are Coach Bryan, the official AI coach[\s\S]*/i,
+        /I have provided a detailed[\s\S]*/i,
+        /Do not mix up the show names[\s\S]*/i,
+        /Always cite evidence properly[\s\S]*/i,
+        /RESPONSE CHECKLIST[\s\S]*/i,
+      ];
+      for (const pat of leakPatterns) a = a.replace(pat, "").trim();
+      return a + "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
     }
 
-    answer += "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+    const attribution = [...new Set(quotes.map(q => q.displayName))].filter(c => c !== "unknown");
+
+    if (wantStream) {
+      res.setHeader("Content-Type", "text/event-stream");
+      res.setHeader("Cache-Control", "no-cache");
+      res.setHeader("Connection", "keep-alive");
+      res.setHeader("X-Accel-Buffering", "no");
+      res.flushHeaders();
+
+      // Send sources immediately so client can display them while text streams
+      res.write(`data: ${JSON.stringify({ type: "sources", sources: quotes, attribution })}\n\n`);
+
+      let rawAnswer = await chatStream(msgs, 0.7, 1200, (chunk) => {
+        res.write(`data: ${JSON.stringify({ type: "content", text: chunk })}\n\n`);
+      });
+
+      const finalAnswer = postProcessAnswer(rawAnswer);
+      res.write(`data: ${JSON.stringify({ type: "done", answer: finalAnswer, sources: quotes, attribution, mode: "synthesized", timing: Date.now() - start })}\n\n`);
+      res.end();
+      return;
+    }
+
+    let answer = await chat(msgs);
+    answer = postProcessAnswer(answer);
 
     res.json({
       answer,
       sources: quotes,
-      attribution: [...new Set(quotes.map(q => q.displayName))].filter(c => c !== "unknown"),
+      attribution,
       mode: "synthesized",
       timing: Date.now() - start
     });
@@ -1490,6 +1551,36 @@ function getCoachActor() {
   return { id, name };
 }
 
+// Auto-create a clients row for an approved lead so downstream uploads + intake
+// always have a real client_id to attach to. Idempotent: if a client with the
+// lead's email already exists, returns that id. Mirrors phase_2B Op-4.
+const FBF_ORG_ID = process.env.FBF_ORG_ID || "a0000000-0000-0000-0000-000000000001";
+
+async function ensureClientForLead(lead) {
+  if (!lead?.email) throw new Error("Cannot ensure client: lead has no email");
+
+  const { data: existing } = await supabase
+    .from("clients").select("id").eq("email", lead.email).maybeSingle();
+  if (existing) return existing.id;
+
+  const parts = (lead.name || "").trim().split(/\s+/);
+  const first_name = parts[0] || lead.email.split("@")[0];
+  const last_name  = parts.slice(1).join(" ") || "-";
+
+  const { data: created, error } = await supabase
+    .from("clients").insert({
+      organization_id: FBF_ORG_ID,
+      first_name,
+      last_name,
+      email: lead.email,
+      phone: lead.phone || null,
+      is_active: true,
+    }).select("id").single();
+  if (error) throw new Error(`clients insert failed: ${error.message}`);
+  console.log(`[CLIENT] auto-created ${created.id} for lead ${lead.id} (${lead.email})`);
+  return created.id;
+}
+
 async function markProgramDelivered(programId) {
   const actor = getCoachActor();
   const { data, error } = await supabase.rpc("mark_program_delivered", {
@@ -1663,9 +1754,10 @@ app.post("/api/leads", async (req, res) => {
     return res.status(400).json({ error: "Disclaimer must be acknowledged" });
   }
 
-  // Auto-reject low commitment, auto-approve everyone else
+  // Auto-reject low commitment; everyone else lands in pending_review for Bryan
+  // to approve manually via the email button or admin UI (phase_2B P8 — gate-1 is a human gate).
   const rejected = commitment_level === "I'll do what I can when it's convenient";
-  const status = rejected ? "rejected" : "approved";
+  const status = rejected ? "rejected" : "pending_review";
 
   try {
     
@@ -2337,7 +2429,7 @@ app.patch("/api/leads/:id/status", async (req, res) => {
   try {
     
     const { data: lead, error: fetchErr } = await db
-      .from("leads").select("id, name, email").eq("id", req.params.id).single();
+      .from("leads").select("id, name, email, phone").eq("id", req.params.id).single();
 
     if (fetchErr || !lead) {
       return res.status(404).json({ error: "Lead not found" });
@@ -2348,6 +2440,12 @@ app.patch("/api/leads/:id/status", async (req, res) => {
 
     if (error) {
       return res.status(500).json({ error: error.message });
+    }
+
+    // Auto-create the clients row on approval so onboarding uploads succeed (Op-4).
+    if (status === "approved" && lead.email) {
+      try { await ensureClientForLead(lead); }
+      catch (clientErr) { console.error(`[LEADS] ensureClientForLead failed: ${clientErr.message}`); }
     }
 
     // When approving, email the client their onboarding link
@@ -2391,7 +2489,7 @@ app.get("/api/leads/:id/approve", async (req, res) => {
 
   try {
     const { data: lead, error: fetchErr } = await db
-      .from("leads").select("id, name, email, status").eq("id", req.params.id).single();
+      .from("leads").select("id, name, email, phone, status").eq("id", req.params.id).single();
 
     if (fetchErr || !lead) return res.status(404).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">Lead not found</body></html>`);
 
@@ -2401,6 +2499,10 @@ app.get("/api/leads/:id/approve", async (req, res) => {
 
     const { error } = await db.from("leads").update({ status: "approved" }).eq("id", req.params.id);
     if (error) return res.status(500).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;padding:40px;font-family:Arial;">Error: ${error.message}</body></html>`);
+
+    // Auto-create the clients row on approval so onboarding uploads succeed (Op-4).
+    try { await ensureClientForLead(lead); }
+    catch (clientErr) { console.error(`[LEADS] ensureClientForLead failed: ${clientErr.message}`); }
 
     // Send onboarding email to client
     if (emailTransporter && lead.email) {
@@ -3996,7 +4098,7 @@ app.get('/api/client/:id/daily-score', async (req, res) => {
 app.post("/api/coach-chat", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
 
-  const { client_id, message } = req.body;
+  const { client_id, message, stream: wantStream = false } = req.body;
   if (!message) return res.status(400).json({ error: "Message required" });
 
   try {
@@ -4075,10 +4177,41 @@ RULES:
 - Use the FBF programming philosophy: simplicity first, dumbbells over barbells, progressive overload, train close to failure, match volume to recovery.
 ${context}${knowledgeContext}`;
 
-    const reply = await chat([
+    const chatMsgs = [
       { role: "system", content: systemPrompt },
       { role: "user", content: message }
-    ], 0.7);
+    ];
+    const disclaimer = "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+
+    if (wantStream) {
+      res.setHeader("Content-Type", "text/event-stream");
+      res.setHeader("Cache-Control", "no-cache");
+      res.setHeader("Connection", "keep-alive");
+      res.setHeader("X-Accel-Buffering", "no");
+      res.flushHeaders();
+
+      const rawReply = await chatStream(chatMsgs, 0.7, 1200, (chunk) => {
+        res.write(`data: ${JSON.stringify({ type: "content", text: chunk })}\n\n`);
+      });
+
+      const finalReply = rawReply + disclaimer;
+      if (client_id) {
+        supabase.from("conversations").insert({
+          channel: "app_coach",
+          sender_id: client_id,
+          sender_name: "Client",
+          direction: "inbound",
+          message,
+          ai_response: finalReply,
+          metadata: { source: "context_aware_coach" }
+        }).catch(() => {});
+      }
+      res.write(`data: ${JSON.stringify({ type: "done", reply: finalReply })}\n\n`);
+      res.end();
+      return;
+    }
+
+    const reply = await chat(chatMsgs, 0.7);
 
     // Save conversation
     if (client_id) {
@@ -4093,7 +4226,7 @@ ${context}${knowledgeContext}`;
       }).catch(() => {});
     }
 
-    const disclaimedReply = reply + "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+    const disclaimedReply = reply + disclaimer;
 
     res.json({ reply: disclaimedReply });
   } catch (err) {
@@ -7394,6 +7527,76 @@ app.post("/vapi/webhook", express.json(), async (req, res) => {
   }
   if (eventType === "transfer-destination-request") {
     console.log("[VAPI] Transfer initiated for call:", message.call?.id);
+  }
+});
+
+// ─── Reconciliation Digest (Phase 2B P7) ─────────────────
+// GET /api/cron/recon-digest?key=ADMIN_KEY
+// Hits v_open_recon_findings; emails Bryan if any critical findings have been
+// open >24h. Intended to be invoked daily by Supabase pg_cron via pg_net.
+app.get("/api/cron/recon-digest", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  const keyValid = req.query.key === process.env.ADMIN_KEY
+    || req.query.key === process.env.CRON_SECRET
+    || (req.headers.authorization || "").replace(/^Bearer\s+/i, "") === process.env.CRON_SECRET;
+  if (!keyValid) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { data: findings, error } = await supabase
+      .from("v_open_recon_findings")
+      .select("*")
+      .eq("severity", "critical")
+      .gt("hours_open", 24)
+      .order("hours_open", { ascending: false });
+    if (error) throw error;
+
+    const count = findings?.length || 0;
+    if (count === 0) {
+      return res.json({ ok: true, count: 0, emailed: false });
+    }
+
+    const rows = findings.map(f => `
+      <tr>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;">${f.client_name_resolved || "—"}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;font-family:monospace;">${f.finding_type}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;text-align:right;">${Number(f.hours_open).toFixed(1)}h</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;font-family:monospace;font-size:11px;">${(f.id || "").slice(0, 8)}</td>
+      </tr>`).join("");
+
+    const html = `
+      <div style="font-family:sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#0a0a0a;color:#e8e8e8;">
+        <h2 style="color:#ef4444;margin-top:0;">FBF Recon — ${count} critical finding${count === 1 ? "" : "s"} open &gt;24h</h2>
+        <p style="color:#aaa;font-size:13px;">Triggered: ${new Date().toISOString()}. View latest in dashboard or v_open_recon_findings.</p>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:12px;">
+          <thead>
+            <tr style="background:#1a1a1a;color:#ff6a00;">
+              <th style="padding:8px 10px;text-align:left;">Client</th>
+              <th style="padding:8px 10px;text-align:left;">Finding</th>
+              <th style="padding:8px 10px;text-align:right;">Open</th>
+              <th style="padding:8px 10px;text-align:left;">ID</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+
+    let emailed = false;
+    if (emailTransporter) {
+      await emailTransporter.sendMail({
+        from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+        to: process.env.RECON_DIGEST_EMAIL || COACH_EMAIL,
+        subject: `[FBF Recon] ${count} critical finding${count === 1 ? "" : "s"} open >24h`,
+        html,
+      });
+      emailed = true;
+    } else {
+      console.warn("[RECON-DIGEST] No emailTransporter — skipping email; findings logged only");
+    }
+
+    res.json({ ok: true, count, emailed });
+  } catch (err) {
+    console.error("[RECON-DIGEST] Error:", err.message);
+    res.status(500).json({ error: err.message });
   }
 });
 

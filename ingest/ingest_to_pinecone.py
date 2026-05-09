@@ -44,18 +44,12 @@ SLEEP_BETWEEN_BATCHES = 0.3
 if not os.getenv("PINECONE_API_KEY"):
     raise RuntimeError("❌ PINECONE_API_KEY not set")
 
-# Use OpenAI directly for embeddings (cheaper, more reliable, no OpenRouter middleman)
-if os.getenv("OPENAI_API_KEY"):
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    print("📡 Embeddings: OpenAI direct")
-elif os.getenv("OPENROUTER_API_KEY"):
-    client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=os.getenv("OPENROUTER_API_KEY")
-    )
-    print("📡 Embeddings: via OpenRouter (set OPENAI_API_KEY to go direct)")
-else:
-    raise RuntimeError("❌ Need OPENAI_API_KEY or OPENROUTER_API_KEY")
+# OpenAI direct only — OpenRouter fallback was removed in phase_2B P5
+# (OPENROUTER_API_KEY env was misconfigured as an sk-proj- OpenAI key).
+if not os.getenv("OPENAI_API_KEY"):
+    raise RuntimeError("❌ OPENAI_API_KEY required (OpenRouter fallback removed in phase_2B P5)")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+print("📡 Embeddings: OpenAI direct (text-embedding-3-large)")
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(INDEX_NAME)
 
