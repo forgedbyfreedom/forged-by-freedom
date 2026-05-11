@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import { Pinecone } from "@pinecone-database/pinecone";
+import { ChromaClient } from "chromadb";
 import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
 import nodemailer from "nodemailer";
@@ -11,7 +11,7 @@ import { createHash } from "crypto";
 /* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
    ─────────────────────────────────────────────────────────────
-   OpenRouter: Embeddings + Chat | Pinecone: Vector search
+   Ollama: Embeddings + Chat (local) | Chroma: Vector search (local)
 
    GET  /health  → Health check
    GET  /status  → Index stats
@@ -20,8 +20,6 @@ import { createHash } from "crypto";
 
 // ─── Config ──────────────────────────────────────────────────
 const {
-  OPENAI_API_KEY,
-  PINECONE_API_KEY,
   ELEVENLABS_API_KEY,
   TWILIO_ACCOUNT_SID,
   TWILIO_AUTH_TOKEN,
@@ -29,15 +27,20 @@ const {
   PORT = 5051,
   NODE_ENV,
   RATE_LIMIT_RPM = 60,
-  ANTHROPIC_API_KEY,
+  OLLAMA_HOST = "http://localhost:11434",
+  CHROMA_HOST = "http://localhost:8000",
   LINKEDIN_CLIENT_ID,
   LINKEDIN_CLIENT_SECRET,
   LINKEDIN_REDIRECT_URI
 } = process.env;
 
 const CONFIG = {
-  embedModel: "text-embedding-3-large",
-  pineconeIndex: "forged-freedom-ai",
+  ollamaHost: OLLAMA_HOST,
+  chromaHost: CHROMA_HOST,
+  chatModel: process.env.OLLAMA_CHAT_MODEL || "qwen2.5:32b",
+  embedModel: process.env.OLLAMA_EMBED_MODEL || "nomic-embed-text",
+  visionModel: process.env.OLLAMA_VISION_MODEL || "llava",
+  chromaCollection: "transcripts",
   maxQuestionLen: 15000,
   maxRPM: parseInt(RATE_LIMIT_RPM),
   topK: 30,
@@ -45,25 +48,21 @@ const CONFIG = {
   isProd: NODE_ENV === "production"
 };
 
-// ─── Startup Validation ──────────────────────────────────────
-if (!PINECONE_API_KEY) {
-  console.error("Missing required env: PINECONE_API_KEY");
-  process.exit(1);
-}
-if (!ANTHROPIC_API_KEY) {
-  console.error("Missing required env: ANTHROPIC_API_KEY");
-  process.exit(1);
-}
-if (!OPENAI_API_KEY) {
-  console.error("Missing required env: OPENAI_API_KEY (required for Pinecone embeddings; OpenRouter fallback removed in phase_2B P5)");
-  process.exit(1);
-}
-console.log("✅ Using Anthropic Claude API for chat");
-console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
-
-// ─── Pinecone ────────────────────────────────────────────────
-const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
-const index = pinecone.Index(CONFIG.pineconeIndex);
+// ─── Chroma ──────────────────────────────────────────────────
+const chroma = new ChromaClient({ path: CONFIG.chromaHost });
+let chromaCollection;
+(async () => {
+  try {
+    chromaCollection = await chroma.getOrCreateCollection({ name: CONFIG.chromaCollection });
+    const count = await chromaCollection.count();
+    console.log(`✅ Chroma connected | collection=${CONFIG.chromaCollection} | ${count.toLocaleString()} vectors`);
+  } catch (e) {
+    console.error(`[CHROMA] Could not connect to ${CONFIG.chromaHost}: ${e.message}`);
+    console.error("  → Start the Chroma server: chroma run --path C:/AI/chroma_db_local");
+  }
+})();
+console.log(`✅ Using Ollama for chat | model=${CONFIG.chatModel}`);
+console.log(`[FBF] Embeddings: Ollama ${CONFIG.embedModel} (768-d, local)`);
 
 // ─── Express Setup ───────────────────────────────────────────
 const app = express();
@@ -109,37 +108,25 @@ setInterval(() => {
   for (const [ip, r] of rateLimit) if (now > r.reset + 60000) rateLimit.delete(ip);
 }, 60000);
 
-// ─── Anthropic API ───────────────────────────────────────────
+// ─── Ollama Chat ─────────────────────────────────────────────
 async function chat(messages, temperature = 0.7, maxTokens = 1000) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), maxTokens > 2500 ? 90000 : 60000);
-
   try {
-    const systemMsg = messages.find(m => m.role === "system");
-    const chatMsgs = messages.filter(m => m.role !== "system");
-
-    const body = {
-      model: "claude-sonnet-4-6",
-      max_tokens: maxTokens,
-      temperature,
-      messages: chatMsgs,
-    };
-    if (systemMsg) body.system = systemMsg.content;
-
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
+    const res = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
       method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "content-type": "application/json",
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify(body),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: CONFIG.chatModel,
+        messages,
+        stream: false,
+        options: { temperature, num_predict: maxTokens },
+      }),
       signal: controller.signal,
     });
-
+    if (!res.ok) throw new Error(`Ollama chat error: ${res.status}`);
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `Anthropic API error: ${res.status}`);
-    return data.content?.[0]?.text || "";
+    return data.message?.content || "";
   } finally {
     clearTimeout(timer);
   }
@@ -150,35 +137,19 @@ async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 90000);
   let fullText = "";
-
   try {
-    const systemMsg = messages.find(m => m.role === "system");
-    const chatMsgs = messages.filter(m => m.role !== "system");
-
-    const body = {
-      model: "claude-sonnet-4-6",
-      max_tokens: maxTokens,
-      temperature,
-      stream: true,
-      messages: chatMsgs,
-    };
-    if (systemMsg) body.system = systemMsg.content;
-
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+    const response = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
       method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "content-type": "application/json",
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify(body),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: CONFIG.chatModel,
+        messages,
+        stream: true,
+        options: { temperature, num_predict: maxTokens },
+      }),
       signal: controller.signal,
     });
-
-    if (!response.ok) {
-      const err = await response.json();
-      throw new Error(err.error?.message || `Anthropic API error: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`Ollama stream error: ${response.status}`);
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
@@ -187,21 +158,16 @@ async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
-
       buffer += decoder.decode(value, { stream: true });
       const lines = buffer.split("\n");
       buffer = lines.pop() || "";
-
       for (const line of lines) {
-        if (!line.startsWith("data: ")) continue;
-        const data = line.slice(6).trim();
-        if (!data || data === "[DONE]") continue;
+        if (!line.trim()) continue;
         try {
-          const event = JSON.parse(data);
-          if (event.type === "content_block_delta" && event.delta?.type === "text_delta") {
-            const chunk = event.delta.text;
-            fullText += chunk;
-            onChunk(chunk);
+          const event = JSON.parse(line);
+          if (event.message?.content) {
+            fullText += event.message.content;
+            onChunk(event.message.content);
           }
         } catch {}
       }
@@ -213,50 +179,44 @@ async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk
 }
 
 async function embed(text) {
-  // OpenAI direct only. OpenRouter fallback was dropped in phase_2B P5 — env vars
-  // were misconfigured (OPENROUTER_API_KEY was an sk-proj- OpenAI key, not OpenRouter).
-  // Future move to local Ollama (768-d) is gated on the Pinecone → Chroma migration.
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30000);
   try {
-    const res = await fetch("https://api.openai.com/v1/embeddings", {
+    const res = await fetch(`${CONFIG.ollamaHost}/api/embed`, {
       method: "POST",
-      headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
       signal: controller.signal,
     });
+    if (!res.ok) throw new Error(`Ollama embed error: ${res.status}`);
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
-    if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
-    return data.data[0].embedding;
+    const emb = data.embeddings?.[0] || data.embedding;
+    if (!emb) throw new Error("Embedding response missing data");
+    return emb;
   } finally {
     clearTimeout(timer);
   }
 }
 
-// ─── Pinecone Search ─────────────────────────────────────────
-const SEARCH_NAMESPACES = [
-  { ns: "thinkbig_priority", topK: 8 },
-  { ns: "anabolic_bodybuilding_priority", topK: 8 },
-  { ns: "rxmuscle_priority", topK: 8 },
-  { ns: "cycle_design_guides", topK: 8 },
-  { ns: "medical_primary", topK: 8 },
-  { ns: "research_primary", topK: 8 },
-  { ns: "female_health_priority", topK: 5 },
-  { ns: "peptides", topK: 5 },
-  { ns: "vendor_testing", topK: 5 },
-  { ns: "biohacking", topK: 5 },
-  { ns: "sports_nutrition", topK: 5 },
-  { ns: "transcripts", topK: 5 },
-  { ns: "bodybuilding_history", topK: 5 },
-  { ns: "sports_psych", topK: 5 },
-  { ns: "sports_science", topK: 5 },
-  { ns: "women_steroids", topK: 5 },
-  { ns: "medical_education", topK: 5 },
-  { ns: "endocrinology", topK: 5 },
-  { ns: "harm_reduction", topK: 5 },
-  { ns: "bodybuilding_legends", topK: 5 },
-];
+// ─── Chroma Search ───────────────────────────────────────────
+// Normalize Chroma results to { id, score, metadata } (Pinecone-compatible shape).
+// Chroma cosine distance: 0=identical, 2=opposite → score = 1 - (distance/2).
+async function chromaQuery(vector, topK = CONFIG.topK) {
+  if (!chromaCollection) throw new Error("Chroma collection not initialized");
+  const results = await chromaCollection.query({
+    queryEmbeddings: [vector],
+    nResults: topK,
+    include: ["metadatas", "documents", "distances"],
+  });
+  return (results.ids[0] || []).map((id, i) => ({
+    id,
+    score: Math.max(0, 1 - (results.distances[0][i] / 2)),
+    metadata: {
+      ...(results.metadatas[0][i] || {}),
+      text: results.documents[0][i] || "",
+    },
+  }));
+}
 
 // Keywords that should boost cycle_design_guides and peptides namespaces
 const FBF_BOOST_KEYWORDS = [
@@ -269,79 +229,23 @@ const FBF_BOOST_KEYWORDS = [
   "bloodwork", "lab results", "intervention ladder"
 ];
 
-async function search(vector, namespace = "") {
-  // If a specific namespace is requested, search just that one
-  if (namespace) {
-    const query = { vector, topK: CONFIG.topK, includeMetadata: true, namespace };
-    return (await index.query(query)).matches || [];
-  }
-
-  // Otherwise, search all namespaces in parallel (matches Wix backend behavior)
-  const results = await Promise.all(
-    SEARCH_NAMESPACES.map(({ ns, topK }) =>
-      index.namespace(ns).query({ vector, topK, includeMetadata: true })
-        .then(r => r.matches || [])
-        .catch(() => [])
-    )
-  );
-
-  // Merge, deduplicate by ID, sort by score
-  const seen = new Set();
-  const allMatches = [];
-  for (const matches of results) {
-    for (const m of matches) {
-      if (!seen.has(m.id)) {
-        seen.add(m.id);
-        allMatches.push(m);
-      }
-    }
-  }
-  return allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
+async function search(vector, _namespace = "") {
+  return chromaQuery(vector, CONFIG.topK);
 }
 
-// Boost search when question matches FBF/protocol keywords — extra cycle_design_guides + peptides results
+// Boost search when question matches FBF/protocol keywords — wider topK + score bump for guide content
 async function searchWithBoost(vector, question) {
   const q = question.toLowerCase();
   const needsBoost = FBF_BOOST_KEYWORDS.some(kw => q.includes(kw));
 
-  // Standard search
-  const baseResults = await search(vector);
+  const merged = await chromaQuery(vector, needsBoost ? 50 : CONFIG.topK);
 
-  if (!needsBoost) return baseResults;
+  if (!needsBoost) return merged;
 
-  // Extra dedicated search of cycle_design_guides and peptides with higher topK
-  const boostResults = await Promise.all([
-    index.namespace("cycle_design_guides").query({ vector, topK: 15, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-    index.namespace("peptides").query({ vector, topK: 8, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-    index.namespace("peptide_priority").query({ vector, topK: 10, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-    index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-  ]);
-
-  // Merge boost results into base, dedup, boost scores for guide matches
-  const seen = new Set(baseResults.map(m => m.id));
-  const merged = [...baseResults];
-  for (const matches of boostResults) {
-    for (const m of matches) {
-      if (!seen.has(m.id)) {
-        seen.add(m.id);
-        // Boost score for cycle_design_guides to ensure they rank high
-        const src = (m.metadata?.source || "").toLowerCase();
-        if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
-          m.score = (m.score || 0) + 0.15;
-        }
-        merged.push(m);
-      } else {
-        // Already in results — boost score if it's a guide match
-        const src = (m.metadata?.source || "").toLowerCase();
-        if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
-          const existing = merged.find(e => e.id === m.id);
-          if (existing) existing.score = (existing.score || 0) + 0.15;
-        }
-      }
+  for (const m of merged) {
+    const src = (m.metadata?.source || "").toLowerCase();
+    if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
+      m.score = (m.score || 0) + 0.15;
     }
   }
 
@@ -894,25 +798,24 @@ app.get("/api/system/health-check", async (req, res) => {
     return { detail: `${count} clients in database` };
   });
 
-  // 2. Pinecone vector DB
-  await check("pinecone_vectors", async () => {
-    const stats = await index.describeIndexStats();
-    const total = stats.totalRecordCount || 0;
-    if (total === 0) throw new Error("No vectors in index");
-    return { detail: `${total} vectors across ${Object.keys(stats.namespaces || {}).length} namespaces` };
+  // 2. Chroma vector DB
+  await check("chroma_vectors", async () => {
+    if (!chromaCollection) throw new Error("Collection not initialized");
+    const total = await chromaCollection.count();
+    if (total === 0) throw new Error("No vectors in collection");
+    return { detail: `${total.toLocaleString()} vectors in '${CONFIG.chromaCollection}'` };
   });
 
-  // 3. Anthropic API
-  await check("anthropic_api", async () => {
+  // 3. Ollama
+  await check("ollama_api", async () => {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15000);
-    const r = await fetch("https://api.anthropic.com/v1/models", {
-      headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
-      signal: controller.signal,
-    });
+    const r = await fetch(`${CONFIG.ollamaHost}/api/tags`, { signal: controller.signal });
     clearTimeout(timer);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return { detail: "API responding" };
+    const data = await r.json();
+    const models = (data.models || []).map(m => m.name).join(", ");
+    return { detail: `Ollama responding | models: ${models}` };
   });
 
   // 4. Check for stuck/pending programs (older than 30 min)
@@ -1031,14 +934,13 @@ app.get("/api/system/health-check", async (req, res) => {
 
 app.get("/status", async (_, res) => {
   try {
-    const stats = await index.describeIndexStats();
+    const totalVectors = chromaCollection ? await chromaCollection.count() : 0;
     res.json({
       status: "ok",
-      model: "claude-sonnet-4-6",
+      model: CONFIG.chatModel,
       embedModel: CONFIG.embedModel,
-      index: CONFIG.pineconeIndex,
-      totalVectors: stats.totalRecordCount || 0,
-      namespaces: Object.keys(stats.namespaces || {}),
+      collection: CONFIG.chromaCollection,
+      totalVectors,
       environment: CONFIG.isProd ? "production" : "development"
     });
   } catch (err) {
@@ -1210,7 +1112,7 @@ app.post("/analyze-bloodwork", async (req, res) => {
       if (pat.test(labsLower)) markerKeywords.push(pat.source.replace(/\\/g, "").replace(/\|/g, " ").replace(/\(.+?\)/g, ""));
     }
 
-    // Search Pinecone with targeted queries — hit bloodwork-heavy namespaces hard
+    // Search knowledge base — bloodwork-focused query, higher topK for coverage
     const labSearchQuery = `bloodwork analysis interpretation intervention ladder enhanced athlete ranges ${markerKeywords.slice(0, 8).join(" ")}`;
     let vector;
     try {
@@ -1219,23 +1121,13 @@ app.post("/analyze-bloodwork", async (req, res) => {
       throw new Error(`EMBED_FAILED: ${embedErr.message}`);
     }
 
-    // Parallel search: targeted bloodwork namespaces + general boost search
-    const [guideResults, medicalResults, endoResults, researchResults, generalResults] = await Promise.all([
-      index.namespace("cycle_design_guides").query({ vector, topK: 15, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("medical_primary").query({ vector, topK: 10, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("endocrinology").query({ vector, topK: 8, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("harm_reduction").query({ vector, topK: 5, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-    ]);
-
-    // Merge and deduplicate, prioritizing cycle_design_guides (Precision Bloodwork manual)
-    const seen = new Set();
-    const allMatches = [];
-    for (const m of guideResults) {
-      if (!seen.has(m.id)) { seen.add(m.id); m.score = (m.score || 0) + 0.2; allMatches.push(m); }
-    }
-    for (const m of [...medicalResults, ...endoResults, ...researchResults, ...generalResults]) {
-      if (!seen.has(m.id)) { seen.add(m.id); allMatches.push(m); }
+    const allMatches = await chromaQuery(vector, 46);
+    // Boost cycle design / guide content so it ranks high for bloodwork queries
+    for (const m of allMatches) {
+      const src = (m.metadata?.source || "").toLowerCase();
+      if (src.includes("cycledesignguide") || src.includes("cycle_guide") || src.includes("precision_bloodwork")) {
+        m.score = (m.score || 0) + 0.2;
+      }
     }
     allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
 
@@ -1356,8 +1248,8 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-// Counts as of 2026-05-09: 113,067 transcript files, 310,856,882 words, 286,451 Chroma chunks
-let cachedStats = { transcripts: 113067, words: 310856882, channels: 190, vectors: 286451, lastUpdated: "2026-05-09T00:00:00.000Z" };
+// Counts as of 2026-05-10: 135,977 transcript files, ~374M words, 379,002 Chroma chunks
+let cachedStats = { transcripts: 135977, words: 374000000, channels: 226, vectors: 379002, lastUpdated: "2026-05-10T00:00:00.000Z" };
 
 app.get("/stats", (_, res) => {
   res.json(cachedStats);
@@ -4136,11 +4028,7 @@ ${scans?.[0] ? `Latest Scan (${scans[0].scan_type}): BF ${scans[0].body_fat_pct}
     let knowledgeContext = "";
     try {
       const queryVec = await embed(message);
-      const searchPromises = SEARCH_NAMESPACES.map(({ ns, topK }) =>
-        index.namespace(ns).query({ vector: queryVec, topK, includeMetadata: true })
-      );
-      const results = await Promise.all(searchPromises);
-      const allMatches = results.flatMap(r => r.matches || [])
+      const allMatches = (await chromaQuery(queryVec, CONFIG.topK))
         .filter(m => m.score >= 0.3)
         .sort((a, b) => b.score - a.score)
         .slice(0, 8);
@@ -4513,23 +4401,20 @@ IMPORTANT: Output valid JSON only. No markdown.
   "recovery": "string"
 }`;
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
     method: "POST",
-    headers: {
-      "x-api-key": process.env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-6",
-      max_tokens: 8000,
-      messages: [{ role: "user", content: prompt }]
+      model: CONFIG.chatModel,
+      messages: [{ role: "user", content: prompt }],
+      stream: false,
+      options: { num_predict: 8000, temperature: 0.3 },
     })
   });
 
-  if (!response.ok) throw new Error(`Anthropic error: ${response.status}`);
+  if (!response.ok) throw new Error(`Ollama error: ${response.status}`);
   const data = await response.json();
-  let raw = data.content?.[0]?.text || "";
+  let raw = data.message?.content || "";
   const jsonMatch = raw.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("No JSON in response");
   return JSON.parse(jsonMatch[0]);
@@ -4723,24 +4608,22 @@ CRITICAL INSTRUCTIONS:
 - The "methodology" section should be personal and specific to THIS client — never generic.
 - Calculate LISS HR targets from client age: (220 - age) × 0.55 to 0.65.`;
 
-  const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
+  const anthropicRes = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
     method: "POST",
-    headers: {
-      "x-api-key": ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-6",
-      max_tokens: 16000,
-      system: systemPrompt,
-      messages: [{ role: "user", content: clientProfile }],
-      temperature: 0.4,
+      model: CONFIG.chatModel,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: clientProfile },
+      ],
+      stream: false,
+      options: { num_predict: 16000, temperature: 0.4 },
     }),
   });
+  if (!anthropicRes.ok) throw new Error(`Ollama error: ${anthropicRes.status}`);
   const anthropicData = await anthropicRes.json();
-  if (!anthropicRes.ok) throw new Error(anthropicData.error?.message || `Anthropic error: ${anthropicRes.status}`);
-  const content = anthropicData.content?.[0]?.text || "";
+  const content = anthropicData.message?.content || "";
 
   // Parse JSON from response (strip markdown code fences if present)
   let jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
@@ -5928,23 +5811,20 @@ ${JSON.stringify(existingProgram, null, 2)}
 
 Return the complete updated program as valid JSON only. Same structure as the input. No markdown, no explanation.`;
 
-      const aiRes = await fetch("https://api.anthropic.com/v1/messages", {
+      const aiRes = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
         method: "POST",
-        headers: {
-          "x-api-key": process.env.ANTHROPIC_API_KEY,
-          "anthropic-version": "2023-06-01",
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 8000,
-          messages: [{ role: "user", content: modifyPrompt }]
+          model: CONFIG.chatModel,
+          messages: [{ role: "user", content: modifyPrompt }],
+          stream: false,
+          options: { num_predict: 8000, temperature: 0.3 },
         })
       });
 
-      if (!aiRes.ok) throw new Error(`AI error: ${aiRes.status}`);
+      if (!aiRes.ok) throw new Error(`Ollama error: ${aiRes.status}`);
       const aiData = await aiRes.json();
-      let raw = aiData.content?.[0]?.text || "";
+      let raw = aiData.message?.content || "";
       const jsonMatch = raw.match(/\{[\s\S]*\}/);
       if (!jsonMatch) throw new Error("No JSON in AI response");
       const updatedProgram = JSON.parse(jsonMatch[0]);
@@ -6831,9 +6711,8 @@ app.get("/api/testimonials/:id/deny", async (req, res) => {
   }
 });
 
-// ─── Claude Vision: Document & Image Analysis ──────────────
+// ─── Ollama Vision: Document & Image Analysis ───────────────
 app.post("/api/analyze-document", upload.single("file"), async (req, res) => {
-  if (!ANTHROPIC_API_KEY) return res.status(503).json({ error: "Anthropic API not configured" });
 
   try {
     const { type } = req.body; // bloodwork, body_scan, nutrition_label, general
@@ -6860,44 +6739,28 @@ app.post("/api/analyze-document", upload.single("file"), async (req, res) => {
 
     const prompt = prompts[type] || prompts.general;
 
-    // Call Claude Vision API
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+    // Call Ollama Vision API
+    const response = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
       method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 4096,
+        model: CONFIG.visionModel,
         messages: [{
           role: "user",
-          content: [
-            {
-              type: "image",
-              source: {
-                type: "base64",
-                media_type: mediaType,
-                data: base64,
-              },
-            },
-            {
-              type: "text",
-              text: prompt,
-            },
-          ],
+          content: prompt,
+          images: [base64],
         }],
+        stream: false,
+        options: { num_predict: 4096 },
       }),
     });
 
     if (!response.ok) {
-      const err = await response.json();
-      return res.status(response.status).json({ error: err.error?.message || "Claude API error" });
+      return res.status(response.status).json({ error: `Ollama vision error: ${response.status}` });
     }
 
     const result = await response.json();
-    const analysis = result.content?.[0]?.text || "No analysis returned";
+    const analysis = result.message?.content || "No analysis returned";
 
     // Try to parse JSON from the response
     let structured = null;
