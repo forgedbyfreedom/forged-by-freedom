@@ -1248,8 +1248,8 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-// Counts as of 2026-05-10: 135,977 transcript files, ~374M words, 379,002 Chroma chunks
-let cachedStats = { transcripts: 135977, words: 374000000, channels: 226, vectors: 379002, lastUpdated: "2026-05-10T00:00:00.000Z" };
+// Counts as of 2026-05-11: 136,992 transcript files, ~377M words, 379,002 Chroma chunks
+let cachedStats = { transcripts: 136992, words: 377000000, channels: 226, vectors: 379002, lastUpdated: "2026-05-11T00:00:00.000Z" };
 
 app.get("/stats", (_, res) => {
   res.json(cachedStats);
