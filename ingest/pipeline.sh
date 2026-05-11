@@ -18,11 +18,20 @@ set +e  # Don't exit on errors — pipeline should always reach ingestion step
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# Windows requires UTF-8 for emoji/unicode in Python output
+export PYTHONIOENCODING=utf-8
+
 # Use venv Python (has dotenv, tiktoken, openai, pinecone installed)
 # Allow PYTHON to be overridden from the environment (e.g. for mlx_whisper)
 if [ -z "$PYTHON" ]; then
-    PYTHON="$SCRIPT_DIR/.venv/bin/python3"
-    [ -x "$PYTHON" ] || PYTHON="python3"
+    # Windows venv uses Scripts/, Unix uses bin/
+    if [ -x "$SCRIPT_DIR/.venv/Scripts/python" ]; then
+        PYTHON="$SCRIPT_DIR/.venv/Scripts/python"
+    elif [ -x "$SCRIPT_DIR/.venv/bin/python3" ]; then
+        PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+    else
+        PYTHON="python3"
+    fi
 fi
 
 CHANNELS_DIR="$SCRIPT_DIR/channels"
@@ -44,10 +53,18 @@ fi
 # Add common paths for yt-dlp + deno
 export PATH="$HOME/Library/Python/3.12/bin:$PATH:/opt/homebrew/bin:/usr/local/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin"
 
-# Use Python 3.12 yt-dlp (has latest YouTube extractors + EJS support)
-YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
-[ -x "$YT_DLP" ] || YT_DLP="yt-dlp"
-command -v "$YT_DLP" >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
+# Resolve yt-dlp: check venv Scripts (Windows), venv bin (Mac/Linux), then PATH
+if [ -x "$SCRIPT_DIR/.venv/Scripts/yt-dlp" ]; then
+    YT_DLP="$SCRIPT_DIR/.venv/Scripts/yt-dlp"
+elif [ -x "$SCRIPT_DIR/.venv/Scripts/yt-dlp.exe" ]; then
+    YT_DLP="$SCRIPT_DIR/.venv/Scripts/yt-dlp.exe"
+elif [ -x "$SCRIPT_DIR/.venv/bin/yt-dlp" ]; then
+    YT_DLP="$SCRIPT_DIR/.venv/bin/yt-dlp"
+elif [ -x "$HOME/Library/Python/3.12/bin/yt-dlp" ]; then
+    YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
+else
+    YT_DLP="yt-dlp"
+fi
 
 # ─── YouTube Cookie Setup ─────────────────────────────────────
 # Refresh cookies from Chrome if it's running; fall back to saved cookies.txt
@@ -75,8 +92,12 @@ LOW_PRIORITY="PickUpLimes|WhatIveLearned|ThomasDeLauer|VShred|WillTennyson|MattD
 # ─── Per-channel timeout (30 min max per channel) ───────────
 CHANNEL_TIMEOUT=1800
 
+# Set to 1 by deep/deep-auto modes to remove per-channel download caps
+DEEP_SCRAPE=${DEEP_SCRAPE:-0}
+
 get_max_downloads() {
     local channel="$1"
+    [ "$DEEP_SCRAPE" = "1" ] && { echo 9999; return; }
     echo "$channel" | grep -qE "$TIER1" && { echo 50; return; }
     echo "$channel" | grep -qE "$TIER2" && { echo 30; return; }
     echo "$channel" | grep -qE "$LOW_PRIORITY" && { echo 5; return; }
@@ -102,7 +123,11 @@ download_and_transcribe() {
     log "Channels: $CHANNELS_DIR"
     log "Mode: Download audio → Whisper transcribe (${MAX_PARALLEL}x parallel) → Delete audio"
     log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos"
-    log "Tiers: PRIORITY(50) → HIGH(30) → MID(20) → LOW(10) | SKIP: irrelevant"
+    if [ "$DEEP_SCRAPE" = "1" ]; then
+        log "Tiers: ALL UNLIMITED (deep scrape mode) | SKIP: irrelevant"
+    else
+        log "Tiers: PRIORITY(50) → HIGH(30) → MID(15) → LOW(5) | SKIP: irrelevant"
+    fi
 
     # Build priority-sorted channel list into temp file
     local sorted_file=$(mktemp)
@@ -270,7 +295,7 @@ transcribe_pending() {
     local total_mb=$(find "$CHANNELS_DIR" -name "*.mp3" -exec du -k {} + 2>/dev/null | awk '{sum+=$1} END {printf "%.0f", sum/1024}')
     local est_minutes=$((total_mb * 1024 / 8 / 60))  # 64kbps = 8KB/s
     log "Estimated: ~${est_minutes} minutes of audio"
-    log "💰 Cost: FREE (running locally on Apple Silicon)"
+    log "Cost: FREE (running locally — faster-whisper on RTX 3090)"
 
     find "$CHANNELS_DIR" -name "*.mp3" -print0 | sort -z | while IFS= read -r -d '' mp3; do
         [ -f "$mp3" ] || continue
@@ -308,9 +333,20 @@ build_masters() {
 
 # ─── Node 4: Pinecone Ingest ──────────────────────────────────
 ingest_pinecone() {
-    header "NODE 4: PINECONE INGEST"
+    header "NODE 4a: PINECONE INGEST"
     cd "$SCRIPT_DIR"
     $PYTHON -u ingest_to_pinecone.py 2>&1 | tee -a "$LOG_FILE"
+}
+
+ingest_chroma() {
+    header "NODE 4b: LOCAL CHROMA INGEST (C:/AI/chroma_db_local)"
+    cd "$SCRIPT_DIR"
+    $PYTHON -u ingest_to_chroma.py 2>&1 | tee -a "$LOG_FILE"
+}
+
+ingest_all() {
+    ingest_pinecone
+    ingest_chroma
 }
 
 # ─── Node 5: Stats & Cleanup ──────────────────────────────────
@@ -353,7 +389,7 @@ main() {
         research)   fetch_research ;;
         fix)        fix_transcripts ;;
         masters)    build_masters ;;
-        ingest)     ingest_pinecone ;;
+        ingest)     ingest_all ;;
         stats)      show_stats ;;
         full)
             # Downloads can fail — never block ingestion of existing content
@@ -361,7 +397,7 @@ main() {
             fetch_research || log "⚠ Research fetch had issues — continuing"
             fix_transcripts
             build_masters
-            ingest_pinecone
+            ingest_all
             show_stats
             ;;
         fast)
@@ -370,8 +406,43 @@ main() {
             fetch_research
             fix_transcripts
             build_masters
-            ingest_pinecone
+            ingest_all
             show_stats
+            ;;
+        deep)
+            # Deep scrape: no per-channel cap — ingest to both Pinecone + Chroma
+            DEEP_SCRAPE=1
+            log "DEEP SCRAPE MODE — no per-channel cap | Pinecone + Chroma ingest"
+            download_and_transcribe || log "⚠ Some downloads failed — continuing"
+            fetch_research || log "⚠ Research fetch had issues — continuing"
+            fix_transcripts
+            build_masters
+            ingest_all
+            show_stats
+            ;;
+        deep-auto)
+            # Deep scrape + auto-loop: runs until every channel is fully caught up — Pinecone + Chroma
+            DEEP_SCRAPE=1
+            log "DEEP AUTO MODE — looping until all channels caught up | Pinecone + Chroma ingest"
+            local run=1
+            while true; do
+                header "DEEP AUTO RUN #$run"
+                local before=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+                download_and_transcribe || log "⚠ Some downloads failed — continuing"
+                fetch_research || log "⚠ Research fetch had issues — continuing"
+                fix_transcripts
+                build_masters
+                ingest_all
+                show_stats
+                local after=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+                local gained=$((after - before))
+                log "Deep auto run #$run complete: $gained new transcripts (total: $after)"
+                if [ "$gained" -eq 0 ]; then
+                    log "All channels fully caught up — Pinecone + Chroma DBs are complete!"
+                    break
+                fi
+                run=$((run + 1))
+            done
             ;;
         auto)
             # Auto-loop: keeps running full pipeline until no new content found
@@ -384,7 +455,7 @@ main() {
                 fetch_research
                 fix_transcripts
                 build_masters
-                ingest_pinecone
+                ingest_all
                 show_stats
 
                 local after=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')

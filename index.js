@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import { Pinecone } from "@pinecone-database/pinecone";
 let ChromaClient;
 import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
@@ -48,9 +49,90 @@ const CONFIG = {
   isProd: NODE_ENV === "production"
 };
 
-// ─── Chroma ──────────────────────────────────────────────────
+// ─── Pinecone (production) ───────────────────────────────────
+const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
+const PINECONE_INDEX_NAME = process.env.PINECONE_INDEX_NAME || "forged-freedom-ai";
+let pineconeIndex;
+if (CONFIG.isProd && PINECONE_API_KEY) {
+  try {
+    const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
+    pineconeIndex = pc.Index(PINECONE_INDEX_NAME);
+    console.log(`✅ Pinecone connected | index=${PINECONE_INDEX_NAME}`);
+  } catch (e) {
+    console.error(`[PINECONE] Init failed: ${e.message}`);
+  }
+}
+
+const SEARCH_NAMESPACES = [
+  { ns: "thinkbig_priority", topK: 8 },
+  { ns: "anabolic_bodybuilding_priority", topK: 8 },
+  { ns: "rxmuscle_priority", topK: 8 },
+  { ns: "cycle_design_guides", topK: 8 },
+  { ns: "medical_primary", topK: 8 },
+  { ns: "research_primary", topK: 8 },
+  { ns: "female_health_priority", topK: 5 },
+  { ns: "peptides", topK: 5 },
+  { ns: "vendor_testing", topK: 5 },
+  { ns: "biohacking", topK: 5 },
+  { ns: "sports_nutrition", topK: 5 },
+  { ns: "transcripts", topK: 5 },
+  { ns: "bodybuilding_history", topK: 5 },
+  { ns: "sports_psych", topK: 5 },
+  { ns: "sports_science", topK: 5 },
+  { ns: "women_steroids", topK: 5 },
+  { ns: "medical_education", topK: 5 },
+  { ns: "endocrinology", topK: 5 },
+  { ns: "harm_reduction", topK: 5 },
+  { ns: "bodybuilding_legends", topK: 5 },
+];
+
+async function embedProd(text) {
+  const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "HTTP-Referer": "https://forgedbyfreedom.com",
+      "X-Title": "FBF AI Coach",
+    },
+    body: JSON.stringify({ model: "text-embedding-3-large", input: text }),
+  });
+  if (!res.ok) throw new Error(`Embedding failed: ${res.status}`);
+  const data = await res.json();
+  if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
+  return data.data[0].embedding;
+}
+
+async function pineconeQuery(vector, namespace = "") {
+  if (!pineconeIndex) throw new Error("Pinecone not initialized");
+  if (namespace) {
+    const r = await pineconeIndex.namespace(namespace).query({ vector, topK: CONFIG.topK, includeMetadata: true });
+    return (r.matches || []).map(m => ({ id: m.id, score: m.score, metadata: m.metadata || {} }));
+  }
+  const results = await Promise.all(
+    SEARCH_NAMESPACES.map(({ ns, topK }) =>
+      pineconeIndex.namespace(ns).query({ vector, topK, includeMetadata: true })
+        .then(r => r.matches || [])
+        .catch(() => [])
+    )
+  );
+  const seen = new Set();
+  const merged = [];
+  for (const matches of results) {
+    for (const m of matches) {
+      if (!seen.has(m.id)) {
+        seen.add(m.id);
+        merged.push({ id: m.id, score: m.score, metadata: m.metadata || {} });
+      }
+    }
+  }
+  return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
+}
+
+// ─── Chroma (local dev) ──────────────────────────────────────
 let chromaCollection;
 (async () => {
+  if (CONFIG.isProd) return;
   try {
     ({ ChromaClient } = await import("chromadb"));
     const chroma = new ChromaClient({ path: CONFIG.chromaHost });
@@ -62,8 +144,7 @@ let chromaCollection;
     console.error("  → Start the Chroma server: chroma run --path C:/AI/chroma_db_local");
   }
 })();
-console.log(`✅ Using Ollama for chat | model=${CONFIG.chatModel}`);
-console.log(`[FBF] Embeddings: Ollama ${CONFIG.embedModel} (768-d, local)`);
+console.log(CONFIG.isProd ? `✅ Production: OpenRouter embeddings + Pinecone search` : `✅ Local: Ollama ${CONFIG.embedModel} + Chroma`);
 
 // ─── Express Setup ───────────────────────────────────────────
 const app = express();
@@ -241,6 +322,7 @@ async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk
 }
 
 async function embed(text) {
+  if (CONFIG.isProd) return embedProd(text);
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30000);
   try {
@@ -291,7 +373,8 @@ const FBF_BOOST_KEYWORDS = [
   "bloodwork", "lab results", "intervention ladder"
 ];
 
-async function search(vector, _namespace = "") {
+async function search(vector, namespace = "") {
+  if (CONFIG.isProd) return pineconeQuery(vector, namespace);
   return chromaQuery(vector, CONFIG.topK);
 }
 
@@ -300,17 +383,27 @@ async function searchWithBoost(vector, question) {
   const q = question.toLowerCase();
   const needsBoost = FBF_BOOST_KEYWORDS.some(kw => q.includes(kw));
 
+  if (CONFIG.isProd) {
+    const merged = await pineconeQuery(vector);
+    if (!needsBoost) return merged;
+    // Boost FBF protocol namespace scores
+    for (const m of merged) {
+      const src = (m.metadata?.source || "").toLowerCase();
+      if (src.includes("cycledesignguide") || src.includes("cycle_guide") || src.includes("cycle_design_guides")) {
+        m.score = (m.score || 0) + 0.15;
+      }
+    }
+    return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
+  }
+
   const merged = await chromaQuery(vector, needsBoost ? 50 : CONFIG.topK);
-
   if (!needsBoost) return merged;
-
   for (const m of merged) {
     const src = (m.metadata?.source || "").toLowerCase();
     if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
       m.score = (m.score || 0) + 0.15;
     }
   }
-
   return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
 }
 
@@ -1056,34 +1149,8 @@ His accolades include but are not limited to:
       });
     }
 
-    // Production (Render): no local Ollama/Chroma — answer via OpenRouter without RAG
-    if (CONFIG.isProd) {
-      const prodPrompt = `You are Coach Bryan, the official AI coach for Forged by Freedom Strength & Nutrition. You are an expert in bodybuilding, PED protocols, peptides, nutrition, and body recomposition. Answer the following question directly and confidently. Be specific, practical, and evidence-based. Do not hedge excessively.`;
-      const prodMsgs = [
-        { role: "system", content: prodPrompt },
-        { role: "user", content: question }
-      ];
-      const disclaimer = "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
-
-      if (wantStream) {
-        res.setHeader("Content-Type", "text/event-stream");
-        res.setHeader("Cache-Control", "no-cache");
-        res.setHeader("Connection", "keep-alive");
-        res.setHeader("X-Accel-Buffering", "no");
-        res.flushHeaders();
-        res.write(`data: ${JSON.stringify({ type: "sources", sources: [], attribution: [] })}\n\n`);
-        let raw = await chatStream(prodMsgs, 0.7, 1200, (chunk) => {
-          res.write(`data: ${JSON.stringify({ type: "content", text: chunk })}\n\n`);
-        });
-        res.write(`data: ${JSON.stringify({ type: "done", answer: raw + disclaimer, sources: [], attribution: [], mode: "synthesized", timing: Date.now() - start })}\n\n`);
-        res.end();
-        return;
-      }
-      let answer = await chat(prodMsgs);
-      return res.json({ answer: answer + disclaimer, sources: [], attribution: [], mode: "synthesized", timing: Date.now() - start });
-    }
-
     // Embed → Search (with FBF/protocol boost) → Extract
+    // Production: embedProd() → Pinecone | Local: embed() → Chroma (both via unified search/embed functions)
     const vector = await embed(question.trim());
     const matches = namespace ? await search(vector, namespace) : await searchWithBoost(vector, question);
 
