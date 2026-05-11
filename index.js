@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import { ChromaClient } from "chromadb";
+let ChromaClient;
 import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
 import nodemailer from "nodemailer";
@@ -49,10 +49,11 @@ const CONFIG = {
 };
 
 // ─── Chroma ──────────────────────────────────────────────────
-const chroma = new ChromaClient({ path: CONFIG.chromaHost });
 let chromaCollection;
 (async () => {
   try {
+    ({ ChromaClient } = await import("chromadb"));
+    const chroma = new ChromaClient({ path: CONFIG.chromaHost });
     chromaCollection = await chroma.getOrCreateCollection({ name: CONFIG.chromaCollection });
     const count = await chromaCollection.count();
     console.log(`✅ Chroma connected | collection=${CONFIG.chromaCollection} | ${count.toLocaleString()} vectors`);
