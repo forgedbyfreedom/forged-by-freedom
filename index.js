@@ -109,8 +109,68 @@ setInterval(() => {
   for (const [ip, r] of rateLimit) if (now > r.reset + 60000) rateLimit.delete(ip);
 }, 60000);
 
+// ─── OpenRouter (cloud fallback for production) ──────────────
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+
+async function chatOpenRouter(messages, temperature = 0.7, maxTokens = 1000) {
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "HTTP-Referer": "https://forgedbyfreedom.com",
+      "X-Title": "FBF AI Coach",
+    },
+    body: JSON.stringify({ model: OPENROUTER_MODEL, messages, temperature, max_tokens: maxTokens }),
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(() => res.status);
+    throw new Error(`OpenRouter error ${res.status}: ${txt}`);
+  }
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || "";
+}
+
+async function chatStreamOpenRouter(messages, temperature = 0.7, maxTokens = 1200, onChunk) {
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "HTTP-Referer": "https://forgedbyfreedom.com",
+      "X-Title": "FBF AI Coach",
+    },
+    body: JSON.stringify({ model: OPENROUTER_MODEL, messages, temperature, max_tokens: maxTokens, stream: true }),
+  });
+  if (!res.ok) throw new Error(`OpenRouter stream error: ${res.status}`);
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let fullText = "";
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n");
+    buffer = lines.pop() || "";
+    for (const line of lines) {
+      if (!line.startsWith("data: ") || line.includes("[DONE]")) continue;
+      try {
+        const event = JSON.parse(line.slice(6));
+        const chunk = event.choices?.[0]?.delta?.content || "";
+        if (chunk) { fullText += chunk; onChunk(chunk); }
+      } catch {}
+    }
+  }
+  return fullText;
+}
+
 // ─── Ollama Chat ─────────────────────────────────────────────
 async function chat(messages, temperature = 0.7, maxTokens = 1000) {
+  if (CONFIG.isProd) return chatOpenRouter(messages, temperature, maxTokens);
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), maxTokens > 2500 ? 90000 : 60000);
   try {
@@ -135,6 +195,7 @@ async function chat(messages, temperature = 0.7, maxTokens = 1000) {
 
 // Streaming variant — calls onChunk(text) for each token, returns full text when done.
 async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk) {
+  if (CONFIG.isProd) return chatStreamOpenRouter(messages, temperature, maxTokens, onChunk);
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 90000);
   let fullText = "";
@@ -993,6 +1054,33 @@ His accolades include but are not limited to:
         mode: "easter_egg",
         timing: Date.now() - start
       });
+    }
+
+    // Production (Render): no local Ollama/Chroma — answer via OpenRouter without RAG
+    if (CONFIG.isProd) {
+      const prodPrompt = `You are Coach Bryan, the official AI coach for Forged by Freedom Strength & Nutrition. You are an expert in bodybuilding, PED protocols, peptides, nutrition, and body recomposition. Answer the following question directly and confidently. Be specific, practical, and evidence-based. Do not hedge excessively.`;
+      const prodMsgs = [
+        { role: "system", content: prodPrompt },
+        { role: "user", content: question }
+      ];
+      const disclaimer = "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+
+      if (wantStream) {
+        res.setHeader("Content-Type", "text/event-stream");
+        res.setHeader("Cache-Control", "no-cache");
+        res.setHeader("Connection", "keep-alive");
+        res.setHeader("X-Accel-Buffering", "no");
+        res.flushHeaders();
+        res.write(`data: ${JSON.stringify({ type: "sources", sources: [], attribution: [] })}\n\n`);
+        let raw = await chatStream(prodMsgs, 0.7, 1200, (chunk) => {
+          res.write(`data: ${JSON.stringify({ type: "content", text: chunk })}\n\n`);
+        });
+        res.write(`data: ${JSON.stringify({ type: "done", answer: raw + disclaimer, sources: [], attribution: [], mode: "synthesized", timing: Date.now() - start })}\n\n`);
+        res.end();
+        return;
+      }
+      let answer = await chat(prodMsgs);
+      return res.json({ answer: answer + disclaimer, sources: [], attribution: [], mode: "synthesized", timing: Date.now() - start });
     }
 
     // Embed → Search (with FBF/protocol boost) → Extract
