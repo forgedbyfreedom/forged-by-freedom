@@ -171,6 +171,8 @@ class JanoshikSpider(scrapy.Spider):
     allowed_domains = ["public.janoshik.com", "verify.janoshik.com"]
     custom_settings = {
         "DOWNLOAD_DELAY": 1.5,
+        # Hard cap so a downed WAF doesn't block the rest of the nightly pipeline
+        "CLOSESPIDER_TIMEOUT": 900,   # bail after 15 min if subdomains are down
     }
 
     def start_requests(self):

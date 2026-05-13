@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 FBF Reddit Scraper — no credentials required.
-Primary: pullpush.io JSON API (historical archive, structured data, free).
+Primary: Arctic Shift API (arctic-shift.photon-reddit.com) — historical archive, free, no auth.
 Comments: old.reddit.com HTML for high-score posts only.
 
 Usage:
@@ -35,16 +35,16 @@ SUBREDDITS = [
     "roids",
 ]
 
-POSTS_PER_BATCH  = 100      # pullpush.io max per request
+POSTS_PER_BATCH  = 100      # Arctic Shift max per request
 MAX_POSTS        = 500      # per subreddit cap
 COMMENT_LIMIT    = 20       # top comments to fetch
 MIN_SCORE        = 2        # skip only junk (score 0-1)
 COMMENT_SCORE_THRESHOLD = 25  # only fetch comments for posts with score >= this
-DAYS_BACK        = 3650     # 10 years — pullpush archives lag ~1yr, grab everything available
+DAYS_BACK        = 3650     # 10 years
 
-PULLPUSH_POST_URL    = "https://api.pullpush.io/reddit/search/submission/"
-PULLPUSH_COMMENT_URL = "https://api.pullpush.io/reddit/search/comment/"
-OLD_REDDIT_BASE      = "https://old.reddit.com"
+ARCTIC_POST_URL    = "https://arctic-shift.photon-reddit.com/api/posts/search"
+ARCTIC_COMMENT_URL = "https://arctic-shift.photon-reddit.com/api/comments/search"
+OLD_REDDIT_BASE    = "https://old.reddit.com"
 
 HEADERS = {"User-Agent": "FBF-RAG-Scraper/1.0 (research; contact forgedbyfreedom@gmail.com)"}
 
@@ -85,8 +85,8 @@ def slug(text: str, maxlen: int = 60) -> str:
     return s[:maxlen]
 
 
-def fetch_comments_pullpush(post_id: str) -> list[str]:
-    data = _get(PULLPUSH_COMMENT_URL, {"link_id": f"t3_{post_id}", "size": COMMENT_LIMIT})
+def fetch_comments_arctic(post_id: str) -> list[str]:
+    data = _get(ARCTIC_COMMENT_URL, {"link_id": f"t3_{post_id}", "limit": COMMENT_LIMIT})
     time.sleep(0.6)
     if not data:
         return []
@@ -163,14 +163,13 @@ def scrape_subreddit(sub_name: str, days_back: int) -> int:
     while total_fetched < MAX_POSTS:
         params = {
             "subreddit": sub_name,
-            "size":      POSTS_PER_BATCH,
+            "limit":     POSTS_PER_BATCH,
             "sort":      "desc",
-            "sort_type": "created_utc",
         }
         if before:
             params["before"] = before
 
-        data = _get(PULLPUSH_POST_URL, params)
+        data = _get(ARCTIC_POST_URL, params)
         time.sleep(1)
         if not data:
             break
@@ -201,7 +200,7 @@ def scrape_subreddit(sub_name: str, days_back: int) -> int:
             # Fetch comments — pullpush first, old.reddit fallback for high scorers
             comments = []
             if score >= COMMENT_SCORE_THRESHOLD:
-                comments = fetch_comments_pullpush(pid)
+                comments = fetch_comments_arctic(pid)
                 if not comments and post.get("permalink"):
                     comments = fetch_comments_oldreddit(post["permalink"])
 
@@ -227,7 +226,7 @@ def main():
     subs = [args.sub] if args.sub else SUBREDDITS
 
     print("=" * 60)
-    print("  FBF REDDIT SCRAPER (pullpush.io)")
+    print("  FBF REDDIT SCRAPER (Arctic Shift)")
     print(f"  Subreddits : {', '.join(subs)}")
     print(f"  History    : {args.days} days")
     print("=" * 60)

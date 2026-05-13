@@ -35,7 +35,7 @@ def run_scrapy(spider: str):
 
 def run_reddit():
     print(f"\n{'='*60}")
-    print(f"  REDDIT SCRAPER (public JSON API)")
+    print(f"  REDDIT SCRAPER (Arctic Shift)")
     print(f"{'='*60}\n")
     result = subprocess.run(
         [sys.executable, str(HERE / "reddit_scraper.py")],
@@ -45,7 +45,7 @@ def run_reddit():
 
 def run_chroma_ingest():
     print(f"\n{'='*60}")
-    print(f"  CHROMA INGEST (nomic-embed-text → local DB)")
+    print(f"  CHROMA INGEST (nomic-embed-text -> local DB)")
     print(f"{'='*60}\n")
     # Use the ingest venv's Python which has chromadb + ollama installed
     venv_py = INGEST_DIR / ".venv" / "Scripts" / "python.exe"
@@ -83,7 +83,7 @@ def main():
     print("  SCRAPER RUN SUMMARY")
     print(f"{'='*60}")
     for name, ok in results.items():
-        status = "✅ OK" if ok else "❌ FAILED"
+        status = "OK" if ok else "FAILED"
         print(f"  {name:20s} {status}")
 
 
