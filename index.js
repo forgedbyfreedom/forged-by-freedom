@@ -1403,8 +1403,8 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-// Counts as of 2026-05-12: 151,038 transcript files, ~377M words, 285,985 Pinecone vectors, 198 channels with content
-let cachedStats = { transcripts: 151038, words: 377000000, channels: 198, vectors: 285985, lastUpdated: "2026-05-12T00:00:00.000Z" };
+// Counts as of 2026-05-13: 151,625 transcript files, 529M words (Python wc), 298,688 Pinecone vectors, 198 channels with content
+let cachedStats = { transcripts: 151625, words: 529289859, channels: 198, vectors: 298688, lastUpdated: "2026-05-13T00:00:00.000Z" };
 
 app.get("/stats", (_, res) => {
   res.json(cachedStats);
