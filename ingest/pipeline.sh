@@ -176,6 +176,7 @@ download_and_transcribe() {
         timeout $CHANNEL_TIMEOUT $YT_DLP \
             $YT_COOKIES \
             --extractor-args "youtubetab:skip=authcheck" \
+            --remote-components ejs:github \
             -x --audio-format mp3 --audio-quality 64K \
             --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
             --ignore-errors --no-warnings \
@@ -235,6 +236,7 @@ download_subtitles_only() {
 
         if $YT_DLP \
             $YT_COOKIES \
+            --remote-components ejs:github \
             --skip-download \
             --write-subs --write-auto-subs \
             --sub-lang en \
