@@ -21,6 +21,30 @@ from pathlib import Path
 HERE = Path(__file__).parent
 INGEST_DIR = HERE.parent  # forged-by-freedom/ingest/
 
+# The residential AT&T IP — Janoshik WAF blocks it.
+# ProtonVPN must be on when running Janoshik.
+HOME_IP = "172.12.76.33"
+
+
+def _current_ip() -> str:
+    try:
+        import urllib.request
+        return urllib.request.urlopen("https://ifconfig.me", timeout=8).read().decode().strip()
+    except Exception:
+        return ""
+
+
+def _vpn_active() -> bool:
+    """True if ProtonVPN WireGuard service is running (fastest check, no network call)."""
+    try:
+        out = subprocess.check_output(
+            ["sc", "query", "ProtonVPN WireGuard"],
+            stderr=subprocess.DEVNULL, text=True
+        )
+        return "RUNNING" in out
+    except Exception:
+        return False
+
 
 def run_scrapy(spider: str):
     print(f"\n{'='*60}")
@@ -70,7 +94,13 @@ def main():
         results["meso_rx"] = run_scrapy("meso_rx")
 
     if args.only == "janoshik" or not args.only:
-        results["janoshik"] = run_scrapy("janoshik")
+        if _vpn_active():
+            print("VPN: ProtonVPN active — running Janoshik")
+            results["janoshik"] = run_scrapy("janoshik")
+        else:
+            print("VPN: ProtonVPN not active — skipping Janoshik (WAF blocks home IP)")
+            print("     Turn on ProtonVPN and re-run with --only janoshik to scrape it.")
+            results["janoshik"] = False
 
     if args.only == "reddit" or not args.only:
         results["reddit"] = run_reddit()
