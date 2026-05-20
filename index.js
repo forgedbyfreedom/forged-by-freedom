@@ -542,6 +542,8 @@ const SOURCE_PRIORITY = {
   "@rxmuscle": 2,
   // Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul)
   "@anabolicbodybuilding": 5,
+  // J3University - John Jewett, contest prep / PED expert
+  "@J3University": 8, "@johnjewett3": 8,
   // Research - high but after ThinkBig
   "@PubMed": 10, "@ClinicalTrials": 10,
   // Tanner Tattered FAQ - high priority PED education
