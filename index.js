@@ -642,6 +642,8 @@ function extractQuotes(matches, question = "") {
             textLower.includes("dr. scott") || titleLower.includes("dr. scott")) {
           priority = -105; // Slight edge over other ThinkBig hosts
         }
+      } else if (isFemaleQuestion && (channel === "@J3University" || channel === "@johnjewett3")) {
+        priority = -95; // J3University is #1 female source — 700+ episodes, dedicated female course, Olympia-level female coaching
       } else if (isFemaleQuestion && FEMALE_PRIORITY_SOURCES.includes(channel)) {
         priority = -50; // Female experts high for women's questions
       }
@@ -2482,14 +2484,14 @@ app.patch("/api/leads/:id/status", async (req, res) => {
 
   try {
     
-    const { data: lead, error: fetchErr } = await db
+    const { data: lead, error: fetchErr } = await supabase
       .from("leads").select("id, name, email, phone").eq("id", req.params.id).single();
 
     if (fetchErr || !lead) {
       return res.status(404).json({ error: "Lead not found" });
     }
 
-    const { error } = await db
+    const { error } = await supabase
       .from("leads").update({ status }).eq("id", req.params.id);
 
     if (error) {
@@ -2542,7 +2544,7 @@ app.get("/api/leads/:id/approve", async (req, res) => {
   if (!supabase) return res.status(503).send("Not configured");
 
   try {
-    const { data: lead, error: fetchErr } = await db
+    const { data: lead, error: fetchErr } = await supabase
       .from("leads").select("id, name, email, phone, status").eq("id", req.params.id).single();
 
     if (fetchErr || !lead) return res.status(404).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">Lead not found</body></html>`);
@@ -2551,7 +2553,7 @@ app.get("/api/leads/:id/approve", async (req, res) => {
       return res.send(`<html><body style="background:#0a0a0a;color:#22c55e;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">✓ ${lead.name} was already approved</body></html>`);
     }
 
-    const { error } = await db.from("leads").update({ status: "approved" }).eq("id", req.params.id);
+    const { error } = await supabase.from("leads").update({ status: "approved" }).eq("id", req.params.id);
     if (error) return res.status(500).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;padding:40px;font-family:Arial;">Error: ${error.message}</body></html>`);
 
     // Auto-create the clients row on approval so onboarding uploads succeed (Op-4).
