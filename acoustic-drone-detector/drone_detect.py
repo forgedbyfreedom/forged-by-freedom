@@ -3,14 +3,18 @@
 Acoustic drone detector — harmonic stack + persistence + RPM modulation + DOA.
 
 Detection layers:
-  1. Harmonic stack   : blade-pass fundamental (80-700 Hz) with >=N harmonics.
-  2. Persistence      : signature must hold for several seconds.
-  3. RPM modulation   : drones jitter RPM to hold position -> small rapid
+  1. Harmonic stack   : blade-pass fundamental (50-700 Hz) with >=N harmonics.
+                        50 Hz floor catches big slow props on heavy-lift builds.
+  2. Persistence      : signature must hold for several seconds (default 3 s).
+  3. Multi-rotor beat : two strong fundamentals a few Hz apart -> multiple
+                        rotors slightly out of sync (hexa/octo heavy-lift cue).
+                        Reliable as a binary flag; beat value is coarse.
+  4. RPM modulation   : drones jitter RPM to hold position -> small rapid
                         wobble in the fundamental. Steady tones (HVAC, a fan
-                        held at constant speed) do not. This is a strong
-                        drone-vs-confuser discriminator.
-  4. Direction (DOA)  : with a multi-mic array, SRP-PHAT estimates azimuth so
+                        held at constant speed) do not. Strong confuser filter.
+  5. Direction (DOA)  : with a multi-mic array, SRP-PHAT estimates azimuth so
                         you get a bearing and can reject diffuse background.
+                        Coarse on a small array at low freq (see notes).
 
 Usage:
   Single mic, live:    python3 drone_detect.py
@@ -30,7 +34,8 @@ import numpy as np
 # ── Audio / FFT config ───────────────────────────────────────────────
 FS = 44100
 BLOCK = 16384                 # ~0.37 s -> ~2.7 Hz resolution
-F0_LOW, F0_HIGH = 80, 700     # blade-pass fundamental search window
+F0_LOW, F0_HIGH = 50, 700     # blade-pass window (50 Hz catches big slow props)
+BEAT_MIN, BEAT_MAX = 0.5, 25  # Hz; two rotors this far apart in BPF -> audible beat
 HARMONICS = [1, 2, 3, 4, 5, 6]
 HARMONIC_SNR_DB = 8.0
 F0_TOLERANCE = 12.0           # Hz, for matching f0 across frames
@@ -65,17 +70,16 @@ def _median_floor(mag, win=51):
     return np.median(strided, axis=1)
 
 
-def find_fundamental(mag, freqs, min_harmonics):
+def find_candidates(mag, freqs, min_harmonics):
+    """Return all qualifying (f0, n_harmonics, mean_snr_db) sorted strongest-first."""
     floor = np.maximum(_median_floor(mag, win=51), 1e-9)
     snr = 20 * np.log10(mag / floor)
     bin_hz = FS / BLOCK
 
     band = (freqs >= F0_LOW) & (freqs <= F0_HIGH)
     cand_idx = np.where(band & (snr > HARMONIC_SNR_DB))[0]
-    if cand_idx.size == 0:
-        return None
 
-    best = None
+    cands = []
     for i in cand_idx:
         f0 = freqs[i]
         if f0 <= 0:
@@ -92,10 +96,50 @@ def find_fundamental(mag, freqs, min_harmonics):
                 hits += 1
                 snrs.append(local)
         if hits >= min_harmonics:
-            cand = (f0, hits, float(np.mean(snrs)))
-            if best is None or (cand[1], cand[2]) > (best[1], best[2]):
-                best = cand
-    return best
+            cands.append((f0, hits, float(np.mean(snrs))))
+    cands.sort(key=lambda c: (c[1], c[2]), reverse=True)
+    return _dedup_candidates(cands)
+
+
+def _dedup_candidates(cands):
+    """Drop candidates that are near-duplicates / harmonics of a stronger one."""
+    kept = []
+    for c in cands:
+        f0 = c[0]
+        dup = False
+        for k in kept:
+            ratio = f0 / k[0]
+            # same tone, or an integer-multiple harmonic of an already-kept tone
+            if abs(f0 - k[0]) <= F0_TOLERANCE or abs(ratio - round(ratio)) < 0.04:
+                dup = True
+                break
+        if not dup:
+            kept.append(c)
+    return kept
+
+
+def find_fundamental(mag, freqs, min_harmonics):
+    cands = find_candidates(mag, freqs, min_harmonics)
+    return cands[0] if cands else None
+
+
+def find_multirotor_beat(cands):
+    """
+    Two distinct strong fundamentals spaced BEAT_MIN..BEAT_MAX apart indicate
+    multiple rotors running slightly out of sync (heavy-lift hexa/octo signature).
+    Returns (f_a, f_b, beat_hz) for the strongest such pair, else None.
+    """
+    strong = [c for c in cands if c[1] >= 3][:5]
+    best = None
+    for a in range(len(strong)):
+        for b in range(a + 1, len(strong)):
+            fa, fb = strong[a][0], strong[b][0]
+            beat = abs(fa - fb)
+            if BEAT_MIN <= beat <= BEAT_MAX:
+                score = strong[a][2] + strong[b][2]
+                if best is None or score > best[3]:
+                    best = (min(fa, fb), max(fa, fb), beat, score)
+    return best[:3] if best else None
 
 
 # ── Persistence ──────────────────────────────────────────────────────
@@ -227,7 +271,9 @@ def analyze_block(block, args, trackers):
     mag = np.abs(np.fft.rfft(windowed, n=BLOCK))
     freqs = np.fft.rfftfreq(BLOCK, 1 / FS)
 
-    res = find_fundamental(mag, freqs, args.min_harmonics)
+    cands = find_candidates(mag, freqs, args.min_harmonics)
+    res = cands[0] if cands else None
+    beat = find_multirotor_beat(cands)
     f0 = res[0] if res else None
     locked = persist.update(f0)
     mod = modtrk.update(locked)
@@ -236,6 +282,8 @@ def analyze_block(block, args, trackers):
         rpm2, rpm3 = locked * 30, locked * 20
         line = (f"[DETECT] BPF={locked:6.1f} Hz | harm={res[1]} "
                 f"| SNR={res[2]:4.1f}dB | RPM≈{rpm2:.0f}(2bl)/{rpm3:.0f}(3bl)")
+        if beat:
+            line += f" | MULTI-ROTOR beat={beat[2]:4.1f}Hz ({beat[0]:.0f}/{beat[1]:.0f}Hz)"
         if mod:
             depth, rate = mod
             tag = "DRONE-LIKE" if 0.3 <= depth <= 8 and rate >= 0.3 else "steady?"
@@ -294,7 +342,9 @@ def main():
     ap.add_argument("--geometry", choices=list(GEOMETRIES), default=None,
                     help="mic array geometry for DOA (needs >=2 channels)")
     ap.add_argument("--min-harmonics", type=int, default=3)
-    ap.add_argument("--persist-sec", type=float, default=2.0)
+    ap.add_argument("--persist-sec", type=float, default=3.0,
+                    help="seconds the signature must persist (default 3.0; "
+                         "heavy-lift loiters, so a longer window cuts false alarms)")
     args = ap.parse_args()
     try:
         run_wav(args.wav, args) if args.wav else run_live(args)
