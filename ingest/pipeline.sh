@@ -46,8 +46,13 @@ log() { echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG_FILE"; }
 header() { log ""; log "═══════════════════════════════════════════"; log "  $1"; log "═══════════════════════════════════════════"; }
 
 # ─── Load Environment ─────────────────────────────────────────
+# Use a loop instead of xargs — xargs chokes on long values (OpenAI keys, etc.)
 if [ -f "$SCRIPT_DIR/../.env" ]; then
-    export $(grep -v '^#' "$SCRIPT_DIR/../.env" | xargs)
+    while IFS='=' read -r _k _v; do
+        [[ "$_k" =~ ^[[:space:]]*# ]] && continue
+        [[ -z "${_k// /}" ]] && continue
+        export "${_k// /}=$_v"
+    done < "$SCRIPT_DIR/../.env"
 fi
 
 # Add common paths for yt-dlp + deno
@@ -121,6 +126,17 @@ download_and_transcribe() {
     local MAX_PARALLEL=4
     local count=0 success=0 failed=0 skipped=0
 
+    # Hard time budget: stop downloading after N hours so the pipeline always
+    # reaches Node 2-4 (fix → masters → ingest). Default 6h; override with
+    # NODE1_BUDGET_HOURS=N ./pipeline.sh full
+    local NODE1_BUDGET_HOURS=${NODE1_BUDGET_HOURS:-6}
+    local _n1_end=$(( $(date +%s) + NODE1_BUDGET_HOURS * 3600 ))
+    local _n1_deadline
+    _n1_deadline=$(date -d "@$_n1_end" '+%H:%M' 2>/dev/null \
+        || date -r "$_n1_end" '+%H:%M' 2>/dev/null \
+        || echo "N/A")
+    log "Node 1 time budget: ${NODE1_BUDGET_HOURS}h — hard stop at ~${_n1_deadline} so ingestion always runs"
+
     log "Channels: $CHANNELS_DIR"
     log "Mode: Download audio → Whisper transcribe (${MAX_PARALLEL}x parallel) → Delete audio"
     log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos"
@@ -159,6 +175,12 @@ download_and_transcribe() {
     local transcripts_before=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
 
     while IFS= read -r url_file; do
+        # Enforce time budget — break so the pipeline advances to ingestion
+        if [ "$(date +%s)" -ge "$_n1_end" ]; then
+            log "⏰ Node 1 budget (${NODE1_BUDGET_HOURS}h) exhausted — stopping downloads, advancing to Node 2-4"
+            break
+        fi
+
         local channel_url=$(head -n 1 "$url_file")
         local output_dir=$(dirname "$url_file")
         local channel_name=$(basename "$output_dir")
