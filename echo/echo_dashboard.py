@@ -109,7 +109,7 @@ PAGE = r"""
   body{margin:0;background:var(--bg);color:var(--txt)}
   header{display:flex;align-items:center;gap:16px;padding:18px 28px;
          background:linear-gradient(90deg,#10161e,#141b24);border-bottom:2px solid var(--accent)}
-  .logo{font-size:30px;font-weight:800;letter-spacing:6px;color:var(--accent)}
+  .logo{font-size:72px;font-weight:800;letter-spacing:6px;color:var(--accent)}
   .logo small{display:block;font-size:11px;letter-spacing:3px;color:var(--mute);font-weight:600}
   .src{margin-left:auto;color:var(--mute);font-size:13px;text-align:right}
   .wrap{padding:24px 28px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
