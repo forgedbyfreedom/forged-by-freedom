@@ -350,6 +350,11 @@ def main():
         run_wav(args.wav, args) if args.wav else run_live(args)
     except KeyboardInterrupt:
         print("\nstopped.")
+    except Exception as e:          # safety net: don't die with a raw traceback
+        print(f"\nERROR: {type(e).__name__}: {e}")
+        print("   The drone detector encountered an unexpected error and has stopped.")
+        print("   (Check your microphone/WAV file, audio permissions, or Python dependencies.)")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
