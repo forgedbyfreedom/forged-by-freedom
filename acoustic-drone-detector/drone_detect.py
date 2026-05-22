@@ -280,8 +280,11 @@ def analyze_block(block, args, trackers):
 
     if locked:
         rpm2, rpm3 = locked * 30, locked * 20
-        line = (f"[DETECT] BPF={locked:6.1f} Hz | harm={res[1]} "
-                f"| SNR={res[2]:4.1f}dB | RPM≈{rpm2:.0f}(2bl)/{rpm3:.0f}(3bl)")
+        # res can be None on a momentary gap while persistence still holds
+        harm = res[1] if res else 0
+        snr = res[2] if res else 0.0
+        line = (f"[DETECT] BPF={locked:6.1f} Hz | harm={harm} "
+                f"| SNR={snr:4.1f}dB | RPM≈{rpm2:.0f}(2bl)/{rpm3:.0f}(3bl)")
         if beat:
             line += f" | MULTI-ROTOR beat={beat[2]:4.1f}Hz ({beat[0]:.0f}/{beat[1]:.0f}Hz)"
         if mod:
