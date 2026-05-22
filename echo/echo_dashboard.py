@@ -24,6 +24,9 @@ import numpy as np
 from flask import Flask, Response, render_template_string
 
 from echo_engine import EchoEngine, FS, BLOCK
+from echo_alerts import AlertManager
+
+_alerts = AlertManager(block_sec=BLOCK / FS)
 
 app = Flask(__name__)
 _subscribers = []
@@ -55,7 +58,9 @@ def feed_wav(path, loop=True):
         for s in range(0, len(audio) - BLOCK, BLOCK):
             blk = audio[s:s + BLOCK]
             blk = blk[:, 0] if nch == 1 else blk
-            publish(eng.process(blk))
+            result = eng.process(blk)
+            _alerts.process(result)
+            publish(result)
             time.sleep(block_dt)        # play at real-time pace
         if not loop:
             break
@@ -69,7 +74,9 @@ def feed_mic(channels, geometry):
         while True:
             data, _ = stream.read(BLOCK)
             blk = data if channels > 1 else data[:, 0]
-            publish(eng.process(blk))
+            result = eng.process(blk)
+            _alerts.process(result)
+            publish(result)
 
 
 @app.route("/")
@@ -232,7 +239,14 @@ def main():
     ap.add_argument("--geometry", default=None)
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8080)
+    ap.add_argument("--test-alert", action="store_true",
+                    help="send one test alert using current config, then exit")
     args = ap.parse_args()
+
+    print(f"  alerts: {_alerts.status()}")
+    if args.test_alert:
+        _alerts.send_test()
+        return
 
     if args.wav:
         t = threading.Thread(target=feed_wav, args=(args.wav, True), daemon=True)
