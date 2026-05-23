@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ECHO — acoustic detection engine.
+ECHO - acoustic detection engine.
 
 Refactor of the prototype detector into a reusable engine that produces a
 structured result dict per audio block (instead of printing). Both the CLI
@@ -26,6 +26,7 @@ Result dict per block:
 """
 
 from collections import deque
+import os
 import numpy as np
 
 FS = 44100
@@ -36,6 +37,14 @@ HARMONICS = [1, 2, 3, 4, 5, 6]
 HARMONIC_SNR_DB = 8.0
 F0_TOLERANCE = 12.0
 SPEED_OF_SOUND = 343.0
+
+# False-alarm guards (override via env):
+#   ECHO_MAINS_HZ     : electrical hum to notch out (60 in US, 50 in EU). 0 disables.
+#   ECHO_MAINS_WIDTH  : +/- Hz notched around each mains harmonic.
+#   ECHO_MIN_LEVEL_DB : input RMS below this = treated as silence, no detection.
+MAINS_HZ = float(os.environ.get("ECHO_MAINS_HZ", "60"))
+MAINS_WIDTH = float(os.environ.get("ECHO_MAINS_WIDTH", "5"))
+MIN_LEVEL_DB = float(os.environ.get("ECHO_MIN_LEVEL_DB", "-45"))
 
 GEOMETRIES = {
     "respeaker": np.array([[0.0463, 0.0], [0.0, 0.0463],
@@ -53,7 +62,24 @@ def _median_floor(mag, win=51):
     return np.median(strided, axis=1)
 
 
+def _notch_mains(mag, freqs):
+    """Suppress electrical-hum harmonics (k * MAINS_HZ) so they can't fake a
+    propeller harmonic stack. Sets affected bins to the local noise floor."""
+    if MAINS_HZ <= 0:
+        return mag
+    mag = mag.copy()
+    floor = _median_floor(mag, 51)
+    k = 1
+    while k * MAINS_HZ <= freqs[-1]:
+        lo, hi = k * MAINS_HZ - MAINS_WIDTH, k * MAINS_HZ + MAINS_WIDTH
+        sel = (freqs >= lo) & (freqs <= hi)
+        mag[sel] = floor[sel]
+        k += 1
+    return mag
+
+
 def find_candidates(mag, freqs, min_harmonics):
+    mag = _notch_mains(mag, freqs)
     floor = np.maximum(_median_floor(mag, 51), 1e-9)
     snr = 20 * np.log10(mag / floor)
     bin_hz = FS / BLOCK
@@ -192,9 +218,14 @@ class EchoEngine:
         mag = np.abs(np.fft.rfft(x, n=BLOCK))
         freqs = np.fft.rfftfreq(BLOCK, 1 / FS)
 
-        cands = find_candidates(mag, freqs, self.min_harmonics)
-        res = cands[0] if cands else None
-        beat = find_multirotor_beat(cands)
+        # Loudness gate: in near-silence, ignore everything (kills hum/self-noise
+        # false alarms). A real audible drone is well above this floor.
+        if level < MIN_LEVEL_DB:
+            cands, res, beat = [], None, None
+        else:
+            cands = find_candidates(mag, freqs, self.min_harmonics)
+            res = cands[0] if cands else None
+            beat = find_multirotor_beat(cands)
         f0 = res[0] if res else None
         locked = self.persist.update(f0)
         mod = self.mod.update(locked)
