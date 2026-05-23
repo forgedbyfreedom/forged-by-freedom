@@ -21,7 +21,7 @@ import time
 import wave
 
 import numpy as np
-from flask import Flask, Response, render_template_string
+from flask import Flask, Response, render_template_string, request, jsonify
 
 from echo_engine import EchoEngine, FS, BLOCK
 from echo_alerts import AlertManager
@@ -32,6 +32,7 @@ app = Flask(__name__)
 _subscribers = []
 _lock = threading.Lock()
 _state = {"source": "—", "started": time.time()}
+_engine = None   # live detector instance, set by the feed thread
 
 
 def publish(result):
@@ -47,12 +48,14 @@ def publish(result):
 
 
 def feed_wav(path, loop=True):
+    global _engine
     _state["source"] = f"demo: {path}"
     with wave.open(path, "rb") as w:
         fs, nch = w.getframerate(), w.getnchannels()
         audio = (np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16)
                  .astype(np.float32) / 32768.0).reshape(-1, nch)
     eng = EchoEngine()
+    _engine = eng
     block_dt = BLOCK / FS
     while True:
         for s in range(0, len(audio) - BLOCK, BLOCK):
@@ -67,9 +70,11 @@ def feed_wav(path, loop=True):
 
 
 def feed_mic(channels, geometry):
+    global _engine
     import sounddevice as sd
     _state["source"] = f"live mic ({channels}ch)"
     eng = EchoEngine(geometry=geometry)
+    _engine = eng
     with sd.InputStream(channels=channels, samplerate=FS, blocksize=BLOCK) as stream:
         while True:
             data, _ = stream.read(BLOCK)
@@ -103,6 +108,21 @@ def stream():
                 if q in _subscribers:
                     _subscribers.remove(q)
     return Response(gen(), mimetype="text/event-stream")
+
+
+@app.route("/config", methods=["GET", "POST"])
+def config():
+    if _engine is None:
+        return jsonify({"error": "engine not started yet"}), 503
+    if request.method == "POST":
+        data = request.get_json(force=True, silent=True) or {}
+        _engine.update_config(
+            min_harmonics=data.get("min_harmonics"),
+            persist_sec=data.get("persist_sec"),
+            harmonic_snr_db=data.get("harmonic_snr_db"),
+            min_level_db=data.get("min_level_db"),
+        )
+    return jsonify(_engine.config())
 
 
 PAGE = r"""
@@ -147,6 +167,13 @@ PAGE = r"""
   .log div{padding:2px 0;border-bottom:1px solid #121922;color:var(--mute)}
   .log div.hit{color:var(--txt)} .log div.hit b{color:var(--accent)}
   .foot{grid-column:1/3;color:var(--mute);font-size:11px;text-align:center;margin-top:4px}
+  .tune{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-bottom:14px}
+  .tune label{display:block;font-size:12px;color:var(--mute);letter-spacing:1px}
+  .tune input[type=range]{width:100%;margin-top:6px;accent-color:var(--accent)}
+  .tune label span{color:var(--accent);font-weight:700}
+  button#apply{background:var(--accent);color:#10161e;border:0;border-radius:8px;padding:9px 22px;font-weight:700;cursor:pointer}
+  #cfgmsg{margin-left:12px;font-size:12px;color:var(--ok)}
+  .hint{color:var(--mute);font-size:11px;margin-top:10px}
 </style></head><body>
 <header>
   <div class="logo">ECHO<small>ACOUSTIC DRONE DETECTION</small></div>
@@ -177,6 +204,22 @@ PAGE = r"""
     <div class="compass"><div class="n">N</div><div class="needle" id="needle"></div></div>
     <p style="text-align:center;color:var(--mute);font-size:12px;margin:12px 0 0">
       <span id="bearing">no array / no lock</span></p>
+  </div>
+
+  <div class="card" style="grid-column:1/3">
+    <h2>Detection tuning (live)</h2>
+    <div class="tune">
+      <label>Harmonic sensitivity: <span id="v_snr">-</span> dB
+        <input type="range" id="s_snr" min="2" max="12" step="0.5"></label>
+      <label>Harmonics required: <span id="v_harm">-</span>
+        <input type="range" id="s_harm" min="1" max="5" step="1"></label>
+      <label>Persistence: <span id="v_persist">-</span> s
+        <input type="range" id="s_persist" min="0.5" max="6" step="0.5"></label>
+      <label>Loudness gate: <span id="v_level">-</span> dB
+        <input type="range" id="s_level" min="-70" max="-20" step="1"></label>
+    </div>
+    <button id="apply">Apply</button><span id="cfgmsg"></span>
+    <p class="hint">Lower dB / fewer harmonics / shorter persistence / lower loudness gate = MORE sensitive (and more false alarms). Changes apply instantly, no restart.</p>
   </div>
 
   <div class="card" style="grid-column:1/3">
@@ -218,6 +261,27 @@ es.onmessage=e=>{
   }
 };
 function setPill(id,on,txt){const e=$(id);e.className="pill "+(on?"on":"off");e.textContent=txt;}
+
+// --- live tuning sliders ---
+const sliders=[["s_snr","v_snr"],["s_harm","v_harm"],["s_persist","v_persist"],["s_level","v_level"]];
+function syncLabels(){sliders.forEach(([s,v])=>$(v).textContent=$(s).value);}
+sliders.forEach(([s,v])=>$(s).addEventListener("input",syncLabels));
+function loadConfig(){
+  fetch("/config").then(r=>r.json()).then(c=>{
+    if(c.error)return;
+    $("s_snr").value=c.harmonic_snr_db; $("s_harm").value=c.min_harmonics;
+    $("s_persist").value=c.persist_sec; $("s_level").value=c.min_level_db;
+    syncLabels();
+  }).catch(()=>{});
+}
+$("apply").addEventListener("click",()=>{
+  const body={harmonic_snr_db:+$("s_snr").value, min_harmonics:+$("s_harm").value,
+              persist_sec:+$("s_persist").value, min_level_db:+$("s_level").value};
+  fetch("/config",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})
+    .then(r=>r.json()).then(()=>{ $("cfgmsg").textContent="applied ✓";
+      setTimeout(()=>$("cfgmsg").textContent="",2000); });
+});
+loadConfig();
 let n=0;
 function addLog(d,hit){
   const l=$("log");const div=document.createElement("div");

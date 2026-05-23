@@ -78,13 +78,13 @@ def _notch_mains(mag, freqs):
     return mag
 
 
-def find_candidates(mag, freqs, min_harmonics):
+def find_candidates(mag, freqs, min_harmonics, snr_db=HARMONIC_SNR_DB):
     mag = _notch_mains(mag, freqs)
     floor = np.maximum(_median_floor(mag, 51), 1e-9)
     snr = 20 * np.log10(mag / floor)
     bin_hz = FS / BLOCK
     band = (freqs >= F0_LOW) & (freqs <= F0_HIGH)
-    idx = np.where(band & (snr > HARMONIC_SNR_DB))[0]
+    idx = np.where(band & (snr > snr_db))[0]
     cands = []
     for i in idx:
         f0 = freqs[i]
@@ -97,7 +97,7 @@ def find_candidates(mag, freqs, min_harmonics):
                 break
             j = int(round(fh / bin_hz))
             local = snr[max(0, j - 1):min(len(snr) - 1, j + 1) + 1].max()
-            if local > HARMONIC_SNR_DB:
+            if local > snr_db:
                 hits += 1
                 snrs.append(local)
         if hits >= min_harmonics:
@@ -201,12 +201,32 @@ def estimate_doa(block, mic_xy, fs, f0=None):
 
 
 class EchoEngine:
-    def __init__(self, min_harmonics=3, persist_sec=3.0, geometry=None):
+    def __init__(self, min_harmonics=2, persist_sec=2.0, geometry=None):
         self.min_harmonics = min_harmonics
+        self.persist_sec = persist_sec
+        self.harmonic_snr_db = HARMONIC_SNR_DB
+        self.min_level_db = MIN_LEVEL_DB
         self.persist = PersistenceTracker(persist_sec, BLOCK / FS)
         self.mod = ModulationTracker(BLOCK / FS)
         self.mic_xy = GEOMETRIES.get(geometry) if geometry else None
         self.n = 0
+
+    def update_config(self, min_harmonics=None, persist_sec=None,
+                      harmonic_snr_db=None, min_level_db=None):
+        """Live-tune detection parameters (called from the dashboard)."""
+        if min_harmonics is not None:
+            self.min_harmonics = int(min_harmonics)
+        if harmonic_snr_db is not None:
+            self.harmonic_snr_db = float(harmonic_snr_db)
+        if min_level_db is not None:
+            self.min_level_db = float(min_level_db)
+        if persist_sec is not None and float(persist_sec) != self.persist_sec:
+            self.persist_sec = float(persist_sec)
+            self.persist = PersistenceTracker(self.persist_sec, BLOCK / FS)
+
+    def config(self):
+        return {"min_harmonics": self.min_harmonics, "persist_sec": self.persist_sec,
+                "harmonic_snr_db": self.harmonic_snr_db, "min_level_db": self.min_level_db}
 
     def process(self, block):
         """block: 1-D or (samples, channels) float array. Returns a result dict."""
@@ -220,10 +240,10 @@ class EchoEngine:
 
         # Loudness gate: in near-silence, ignore everything (kills hum/self-noise
         # false alarms). A real audible drone is well above this floor.
-        if level < MIN_LEVEL_DB:
+        if level < self.min_level_db:
             cands, res, beat = [], None, None
         else:
-            cands = find_candidates(mag, freqs, self.min_harmonics)
+            cands = find_candidates(mag, freqs, self.min_harmonics, self.harmonic_snr_db)
             res = cands[0] if cands else None
             beat = find_multirotor_beat(cands)
         f0 = res[0] if res else None
