@@ -45,6 +45,9 @@ SPEED_OF_SOUND = 343.0
 MAINS_HZ = float(os.environ.get("ECHO_MAINS_HZ", "60"))
 MAINS_WIDTH = float(os.environ.get("ECHO_MAINS_WIDTH", "5"))
 MIN_LEVEL_DB = float(os.environ.get("ECHO_MIN_LEVEL_DB", "-45"))
+# Voice-rejection: a drone holds a near-constant pitch; speech glides. Reject a
+# lock whose fundamental drifts more than this (Hz std) across the window.
+MAX_DRIFT_HZ = float(os.environ.get("ECHO_MAX_DRIFT_HZ", "4.0"))
 
 GEOMETRIES = {
     "respeaker": np.array([[0.0463, 0.0], [0.0, 0.0463],
@@ -90,18 +93,29 @@ def find_candidates(mag, freqs, min_harmonics, snr_db=HARMONIC_SNR_DB):
         f0 = freqs[i]
         if f0 <= 0:
             continue
-        hits, snrs = 0, []
+        present, snrs = [], []
         for h in HARMONICS:
             fh = f0 * h
             if fh >= freqs[-1]:
+                present.append(False)
                 break
             j = int(round(fh / bin_hz))
             local = snr[max(0, j - 1):min(len(snr) - 1, j + 1) + 1].max()
-            if local > snr_db:
-                hits += 1
+            ok = local > snr_db
+            present.append(ok)
+            if ok:
                 snrs.append(local)
-        if hits >= min_harmonics:
-            cands.append((f0, hits, float(np.mean(snrs))))
+        # Contiguous harmonic comb from the fundamental up. A propeller produces
+        # an unbroken even comb; voice formants punch gaps in the low harmonics,
+        # so a gappy series is rejected here even if total hits are high.
+        run = 0
+        for ok in present:
+            if ok:
+                run += 1
+            else:
+                break
+        if run >= min_harmonics:
+            cands.append((f0, sum(present), float(np.mean(snrs))))
     cands.sort(key=lambda c: (c[1], c[2]), reverse=True)
     # dedup near-duplicates / integer harmonics
     kept = []
@@ -127,9 +141,10 @@ def find_multirotor_beat(cands):
 
 
 class PersistenceTracker:
-    def __init__(self, persist_sec, block_sec, hit_ratio=0.6):
+    def __init__(self, persist_sec, block_sec, hit_ratio=0.6, max_drift_hz=MAX_DRIFT_HZ):
         self.need = max(2, int(persist_sec / block_sec))
         self.hit_ratio = hit_ratio
+        self.max_drift_hz = max_drift_hz
         self.hist = deque(maxlen=self.need)
 
     def update(self, f0):
@@ -138,8 +153,14 @@ class PersistenceTracker:
         if len(self.hist) < self.need or not present:
             return None
         ref = float(np.median(present))
-        agree = sum(1 for f in present if abs(f - ref) <= F0_TOLERANCE)
-        return ref if agree / self.need >= self.hit_ratio else None
+        agreeing = [f for f in present if abs(f - ref) <= F0_TOLERANCE]
+        if len(agreeing) / self.need < self.hit_ratio:
+            return None
+        # Stability gate: a steady prop holds pitch; speech glides. Reject a lock
+        # whose fundamental wanders more than max_drift_hz (std) across the window.
+        if len(agreeing) >= 3 and float(np.std(agreeing)) > self.max_drift_hz:
+            return None
+        return ref
 
 
 class ModulationTracker:
@@ -206,13 +227,14 @@ class EchoEngine:
         self.persist_sec = persist_sec
         self.harmonic_snr_db = HARMONIC_SNR_DB
         self.min_level_db = MIN_LEVEL_DB
-        self.persist = PersistenceTracker(persist_sec, BLOCK / FS)
+        self.max_drift_hz = MAX_DRIFT_HZ
+        self.persist = PersistenceTracker(persist_sec, BLOCK / FS, max_drift_hz=MAX_DRIFT_HZ)
         self.mod = ModulationTracker(BLOCK / FS)
         self.mic_xy = GEOMETRIES.get(geometry) if geometry else None
         self.n = 0
 
     def update_config(self, min_harmonics=None, persist_sec=None,
-                      harmonic_snr_db=None, min_level_db=None):
+                      harmonic_snr_db=None, min_level_db=None, max_drift_hz=None):
         """Live-tune detection parameters (called from the dashboard)."""
         if min_harmonics is not None:
             self.min_harmonics = int(min_harmonics)
@@ -220,13 +242,20 @@ class EchoEngine:
             self.harmonic_snr_db = float(harmonic_snr_db)
         if min_level_db is not None:
             self.min_level_db = float(min_level_db)
-        if persist_sec is not None and float(persist_sec) != self.persist_sec:
+        if max_drift_hz is not None:
+            self.max_drift_hz = float(max_drift_hz)
+        rebuild = ((persist_sec is not None and float(persist_sec) != self.persist_sec)
+                   or max_drift_hz is not None)
+        if persist_sec is not None:
             self.persist_sec = float(persist_sec)
-            self.persist = PersistenceTracker(self.persist_sec, BLOCK / FS)
+        if rebuild:
+            self.persist = PersistenceTracker(self.persist_sec, BLOCK / FS,
+                                              max_drift_hz=self.max_drift_hz)
 
     def config(self):
         return {"min_harmonics": self.min_harmonics, "persist_sec": self.persist_sec,
-                "harmonic_snr_db": self.harmonic_snr_db, "min_level_db": self.min_level_db}
+                "harmonic_snr_db": self.harmonic_snr_db, "min_level_db": self.min_level_db,
+                "max_drift_hz": self.max_drift_hz}
 
     def process(self, block):
         """block: 1-D or (samples, channels) float array. Returns a result dict."""

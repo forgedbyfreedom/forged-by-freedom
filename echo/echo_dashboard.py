@@ -121,6 +121,7 @@ def config():
             persist_sec=data.get("persist_sec"),
             harmonic_snr_db=data.get("harmonic_snr_db"),
             min_level_db=data.get("min_level_db"),
+            max_drift_hz=data.get("max_drift_hz"),
         )
     return jsonify(_engine.config())
 
@@ -217,6 +218,8 @@ PAGE = r"""
         <input type="range" id="s_persist" min="0.5" max="6" step="0.5"></label>
       <label>Loudness gate: <span id="v_level">-</span> dB
         <input type="range" id="s_level" min="-70" max="-20" step="1"></label>
+      <label>Max pitch drift (voice reject): <span id="v_drift">-</span> Hz
+        <input type="range" id="s_drift" min="1" max="15" step="0.5"></label>
     </div>
     <button id="apply">Apply</button><span id="cfgmsg"></span>
     <p class="hint">Lower dB / fewer harmonics / shorter persistence / lower loudness gate = MORE sensitive (and more false alarms). Changes apply instantly, no restart.</p>
@@ -263,7 +266,7 @@ es.onmessage=e=>{
 function setPill(id,on,txt){const e=$(id);e.className="pill "+(on?"on":"off");e.textContent=txt;}
 
 // --- live tuning sliders ---
-const sliders=[["s_snr","v_snr"],["s_harm","v_harm"],["s_persist","v_persist"],["s_level","v_level"]];
+const sliders=[["s_snr","v_snr"],["s_harm","v_harm"],["s_persist","v_persist"],["s_level","v_level"],["s_drift","v_drift"]];
 function syncLabels(){sliders.forEach(([s,v])=>$(v).textContent=$(s).value);}
 sliders.forEach(([s,v])=>$(s).addEventListener("input",syncLabels));
 function loadConfig(){
@@ -271,12 +274,14 @@ function loadConfig(){
     if(c.error)return;
     $("s_snr").value=c.harmonic_snr_db; $("s_harm").value=c.min_harmonics;
     $("s_persist").value=c.persist_sec; $("s_level").value=c.min_level_db;
+    $("s_drift").value=c.max_drift_hz;
     syncLabels();
   }).catch(()=>{});
 }
 $("apply").addEventListener("click",()=>{
   const body={harmonic_snr_db:+$("s_snr").value, min_harmonics:+$("s_harm").value,
-              persist_sec:+$("s_persist").value, min_level_db:+$("s_level").value};
+              persist_sec:+$("s_persist").value, min_level_db:+$("s_level").value,
+              max_drift_hz:+$("s_drift").value};
   fetch("/config",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})
     .then(r=>r.json()).then(()=>{ $("cfgmsg").textContent="applied ✓";
       setTimeout(()=>$("cfgmsg").textContent="",2000); });
