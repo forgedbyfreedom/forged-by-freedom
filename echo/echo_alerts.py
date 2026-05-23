@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ECHO alerts — email / SMS / phone-push notifications on detection.
+ECHO alerts - email / SMS / phone-push notifications on detection.
 
 Three channels, all optional, all configured via environment variables so no
 secrets live in code:
@@ -15,8 +15,10 @@ secrets live in code:
                        T-Mobile: 5551234567@tmomail.net
     (optional) ECHO_SMTP_HOST (default smtp.gmail.com), ECHO_SMTP_PORT (587)
 
-  Phone push (ntfy.sh — easiest, no account):
-    ECHO_NTFY_TOPIC  any hard-to-guess topic name, e.g. echo-drone-bryan-9f3.
+  Phone push (ntfy.sh - easiest):
+    ECHO_NTFY_TOPIC  topic name, e.g. echo-drone-bryan-9f3x.
+    ECHO_NTFY_TOKEN  (optional) access token (tk_...) for a protected topic.
+    ECHO_NTFY_SERVER (optional) server URL, default https://ntfy.sh
                      Install the free "ntfy" app, subscribe to that topic.
 
   Behavior:
@@ -47,6 +49,8 @@ class AlertManager:
         self.smtp_pass = os.environ.get("ECHO_SMTP_PASS", "")
         self.recipients = _env_list("ECHO_ALERT_TO")
         self.ntfy_topic = os.environ.get("ECHO_NTFY_TOPIC", "")
+        self.ntfy_token = os.environ.get("ECHO_NTFY_TOKEN", "")
+        self.ntfy_server = os.environ.get("ECHO_NTFY_SERVER", "https://ntfy.sh").rstrip("/")
         self.cooldown = float(os.environ.get("ECHO_ALERT_COOLDOWN", "300"))
 
         self.confirm_blocks = max(1, int(confirm_sec / block_sec))
@@ -68,12 +72,12 @@ class AlertManager:
     def status(self):
         ch = []
         if self.email_enabled:
-            ch.append(f"email/SMS→{len(self.recipients)} recipient(s)")
+            ch.append(f"email/SMS -> {len(self.recipients)} recipient(s)")
         if self.push_enabled:
-            ch.append(f"ntfy→{self.ntfy_topic}")
+            ch.append(f"ntfy -> {self.ntfy_topic}")
         return ", ".join(ch) if ch else "alerts OFF (no channels configured)"
 
-    # ── trigger logic ────────────────────────────────────────────────
+    # -- trigger logic --
     def process(self, result):
         """Call once per engine result. Fires (async) on a confirmed, non-cooled detection."""
         if result.get("detected"):
@@ -87,7 +91,7 @@ class AlertManager:
 
     def _build(self, r):
         bpf = r.get("bpf")
-        bearing = f", bearing {r['bearing_deg']}°" if r.get("bearing_deg") is not None else ""
+        bearing = f", bearing {r['bearing_deg']} deg" if r.get("bearing_deg") is not None else ""
         multi = " multi-rotor" if r.get("multirotor") else ""
         subject = "ECHO ALERT: drone detected"
         body = (f"ECHO detected a drone acoustic signature.\n\n"
@@ -96,7 +100,7 @@ class AlertManager:
                 f"Harmonics: {r.get('harmonics')}   SNR: {r.get('snr_db')} dB\n"
                 f"Multi-rotor: {'yes' if r.get('multirotor') else 'no'}{bearing}\n"
                 f"Time index: t={r.get('t')}s   ({time.strftime('%Y-%m-%d %H:%M:%S')})\n\n"
-                f"(Passive acoustic detection — confirm with RF/visual before acting.)")
+                f"(Passive acoustic detection - confirm with RF/visual before acting.)")
         sms = f"ECHO: drone detected. BPF {bpf}Hz,~{r.get('rpm2')}rpm{multi}{bearing}"
         return subject, body, sms
 
@@ -131,10 +135,13 @@ class AlertManager:
                 s.send_message(msg)
 
     def _send_ntfy(self, title, message):
+        headers = {"Title": title, "Priority": "high", "Tags": "rotating_light"}
+        if self.ntfy_token:
+            headers["Authorization"] = f"Bearer {self.ntfy_token}"
         req = urllib.request.Request(
-            f"https://ntfy.sh/{self.ntfy_topic}",
+            f"{self.ntfy_server}/{self.ntfy_topic}",
             data=message.encode("utf-8"),
-            headers={"Title": title, "Priority": "high", "Tags": "rotating_light"},
+            headers=headers,
         )
         urllib.request.urlopen(req, timeout=15).read()
 
