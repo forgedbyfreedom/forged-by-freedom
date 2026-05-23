@@ -88,18 +88,42 @@ const SEARCH_NAMESPACES = [
 
 async function embedProd(text) {
   const key = process.env.OPENAI_API_KEY || OPENROUTER_KEY;
-  const res = await fetch("https://api.openai.com/v1/embeddings", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${key}`,
-    },
-    body: JSON.stringify({ model: "text-embedding-3-large", input: text }),
-  });
-  if (!res.ok) throw new Error(`Embedding failed: ${res.status}`);
-  const data = await res.json();
-  if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
-  return data.data[0].embedding;
+  // Retry transient rate-limit 429s with exponential backoff. A 429 caused by
+  // insufficient_quota (account out of credits) is NOT transient — fail fast
+  // on it so we don't burn 4 retries before returning the same error.
+  const maxAttempts = 4;
+  let lastErr;
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    const res = await fetch("https://api.openai.com/v1/embeddings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${key}`,
+      },
+      body: JSON.stringify({ model: "text-embedding-3-large", input: text }),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
+      return data.data[0].embedding;
+    }
+
+    const body = await res.text().catch(() => "");
+    lastErr = new Error(`Embedding failed: ${res.status} ${body}`.trim());
+
+    const isQuota = res.status === 429 && /insufficient_quota|exceeded your.*quota/i.test(body);
+    const isRetryable = (res.status === 429 || res.status >= 500) && !isQuota;
+    if (!isRetryable || attempt === maxAttempts - 1) {
+      if (isQuota) {
+        console.error("[EMBED] OpenAI quota exhausted — add credits/billing to OPENAI_API_KEY account");
+      }
+      throw lastErr;
+    }
+    const delayMs = 1000 * 2 ** attempt; // 1s, 2s, 4s
+    console.warn(`[EMBED] ${res.status} from OpenAI, retrying in ${delayMs}ms (attempt ${attempt + 1}/${maxAttempts})`);
+    await new Promise(r => setTimeout(r, delayMs));
+  }
+  throw lastErr;
 }
 
 async function pineconeQuery(vector, namespace = "") {
