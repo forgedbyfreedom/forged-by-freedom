@@ -115,7 +115,7 @@ def find_candidates(mag, freqs, min_harmonics, snr_db=HARMONIC_SNR_DB):
             else:
                 break
         if run >= min_harmonics:
-            cands.append((f0, sum(present), float(np.mean(snrs))))
+            cands.append((float(f0), int(sum(present)), float(np.mean(snrs)) if snrs else 0.0))
     cands.sort(key=lambda c: (c[1], c[2]), reverse=True)
     # dedup near-duplicates / integer harmonics
     kept = []
