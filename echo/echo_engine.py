@@ -244,6 +244,11 @@ class EchoEngine:
         self.min_continuity = MIN_CONTINUITY
         self.ml = ml
         self.ml_threshold = float(os.environ.get("ECHO_ML_THRESHOLD", ml_threshold))
+        # ML-primary detection: require P>=threshold for ml_need of the last
+        # ml_win blocks (~1.5 s). Robust to the rule layer's fundamental jitter.
+        self.ml_win = max(3, int(1.5 / (BLOCK / FS)))
+        self.ml_need = max(2, int(0.6 * self.ml_win))
+        self.ml_hist = deque(maxlen=self.ml_win)
         self.persist = PersistenceTracker(persist_sec, BLOCK / FS,
                                           max_drift_hz=MAX_DRIFT_HZ,
                                           min_continuity=MIN_CONTINUITY)
@@ -324,14 +329,20 @@ class EchoEngine:
             if doa:
                 out["bearing_deg"] = round(doa[0], 1)
                 out["bearing_conf"] = round(doa[1], 2)
-        # ML confirmation gate: rules found a candidate; verify it's drone timbre
-        # (not speech/noise) before letting the detection stand.
-        if self.ml and out["detected"]:
+        # ML-PRIMARY detection: the rule layer's fundamental jitters on real
+        # (harmonically rich) drones so it rarely locks. The ML classifier is
+        # the robust discriminator, so when --ml is on it DRIVES detection:
+        # require P>=threshold for ml_need of the last ml_win blocks. The rule
+        # layer still supplies BPF/RPM/bearing for display.
+        if self.ml:
             import echo_ml
             p = echo_ml.drone_probability(block, FS)
-            if p is not None:
-                out["ml_prob"] = round(p, 2)
-                if p < self.ml_threshold:
-                    out["detected"] = False
-                    out["ml_rejected"] = True
+            out["ml_prob"] = round(p, 2) if p is not None else None
+            self.ml_hist.append(1 if (p is not None and p >= self.ml_threshold) else 0)
+            ml_det = (len(self.ml_hist) == self.ml_win and sum(self.ml_hist) >= self.ml_need)
+            out["detected"] = ml_det
+            out["building"] = (not ml_det) and (sum(self.ml_hist) > 0)
+            if ml_det and out["bpf"] is None and f0:
+                out["bpf"] = round(f0, 1)
+                out["rpm2"], out["rpm3"] = int(f0 * 30), int(f0 * 20)
         return out
