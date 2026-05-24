@@ -33,6 +33,7 @@ _subscribers = []
 _lock = threading.Lock()
 _state = {"source": "-", "started": time.time()}
 _engine = None   # live detector instance, set by the feed thread
+_ML_ON = False   # ML confirmation gate, enabled via --ml
 
 
 def publish(result):
@@ -54,7 +55,7 @@ def feed_wav(path, loop=True):
         fs, nch = w.getframerate(), w.getnchannels()
         audio = (np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16)
                  .astype(np.float32) / 32768.0).reshape(-1, nch)
-    eng = EchoEngine()
+    eng = EchoEngine(ml=_ML_ON)
     _engine = eng
     block_dt = BLOCK / FS
     while True:
@@ -73,7 +74,7 @@ def feed_mic(channels, geometry):
     global _engine
     import sounddevice as sd
     _state["source"] = f"live mic ({channels}ch)"
-    eng = EchoEngine(geometry=geometry)
+    eng = EchoEngine(geometry=geometry, ml=_ML_ON)
     _engine = eng
     with sd.InputStream(channels=channels, samplerate=FS, blocksize=BLOCK) as stream:
         while True:
@@ -313,9 +314,14 @@ def main():
     ap.add_argument("--port", type=int, default=8080)
     ap.add_argument("--test-alert", action="store_true",
                     help="send one test alert using current config, then exit")
+    ap.add_argument("--ml", action="store_true",
+                    help="enable ML confirmation gate (rejects speech/noise the rules pass)")
     args = ap.parse_args()
 
+    global _ML_ON
+    _ML_ON = args.ml
     print(f"  alerts: {_alerts.status()}")
+    print(f"  ML confirmation gate: {'ON' if _ML_ON else 'off'}")
     if args.test_alert:
         _alerts.send_test()
         return

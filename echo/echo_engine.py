@@ -234,13 +234,16 @@ def estimate_doa(block, mic_xy, fs, f0=None):
 
 
 class EchoEngine:
-    def __init__(self, min_harmonics=2, persist_sec=2.0, geometry=None):
+    def __init__(self, min_harmonics=2, persist_sec=2.0, geometry=None,
+                 ml=False, ml_threshold=0.5):
         self.min_harmonics = min_harmonics
         self.persist_sec = persist_sec
         self.harmonic_snr_db = HARMONIC_SNR_DB
         self.min_level_db = MIN_LEVEL_DB
         self.max_drift_hz = MAX_DRIFT_HZ
         self.min_continuity = MIN_CONTINUITY
+        self.ml = ml
+        self.ml_threshold = float(os.environ.get("ECHO_ML_THRESHOLD", ml_threshold))
         self.persist = PersistenceTracker(persist_sec, BLOCK / FS,
                                           max_drift_hz=MAX_DRIFT_HZ,
                                           min_continuity=MIN_CONTINUITY)
@@ -321,4 +324,14 @@ class EchoEngine:
             if doa:
                 out["bearing_deg"] = round(doa[0], 1)
                 out["bearing_conf"] = round(doa[1], 2)
+        # ML confirmation gate: rules found a candidate; verify it's drone timbre
+        # (not speech/noise) before letting the detection stand.
+        if self.ml and out["detected"]:
+            import echo_ml
+            p = echo_ml.drone_probability(block, FS)
+            if p is not None:
+                out["ml_prob"] = round(p, 2)
+                if p < self.ml_threshold:
+                    out["detected"] = False
+                    out["ml_rejected"] = True
         return out
