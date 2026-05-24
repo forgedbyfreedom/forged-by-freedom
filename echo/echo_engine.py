@@ -47,7 +47,10 @@ MAINS_WIDTH = float(os.environ.get("ECHO_MAINS_WIDTH", "5"))
 MIN_LEVEL_DB = float(os.environ.get("ECHO_MIN_LEVEL_DB", "-45"))
 # Voice-rejection: a drone holds a near-constant pitch; speech glides. Reject a
 # lock whose fundamental drifts more than this (Hz std) across the window.
-MAX_DRIFT_HZ = float(os.environ.get("ECHO_MAX_DRIFT_HZ", "4.0"))
+MAX_DRIFT_HZ = float(os.environ.get("ECHO_MAX_DRIFT_HZ", "6.0"))
+# Continuity: a drone tone is unbroken; speech has breath/syllable gaps. Require
+# this fraction of the window to contain a valid signature, or reject it.
+MIN_CONTINUITY = float(os.environ.get("ECHO_MIN_CONTINUITY", "0.85"))
 
 GEOMETRIES = {
     "respeaker": np.array([[0.0463, 0.0], [0.0, 0.0463],
@@ -141,16 +144,25 @@ def find_multirotor_beat(cands):
 
 
 class PersistenceTracker:
-    def __init__(self, persist_sec, block_sec, hit_ratio=0.6, max_drift_hz=MAX_DRIFT_HZ):
+    def __init__(self, persist_sec, block_sec, hit_ratio=0.6, max_drift_hz=MAX_DRIFT_HZ,
+                 min_continuity=MIN_CONTINUITY):
         self.need = max(2, int(persist_sec / block_sec))
         self.hit_ratio = hit_ratio
         self.max_drift_hz = max_drift_hz
+        self.min_continuity = min_continuity
         self.hist = deque(maxlen=self.need)
 
     def update(self, f0):
         self.hist.append(f0)
+        if len(self.hist) < self.need:
+            return None
         present = [f for f in self.hist if f is not None]
-        if len(self.hist) < self.need or not present:
+        if not present:
+            return None
+        # Continuity gate: a drone tone is unbroken; speech is full of gaps
+        # (breaths, pauses, stop consonants). If the window isn't filled enough,
+        # it's gappy like speech -> reject immediately.
+        if len(present) / self.need < self.min_continuity:
             return None
         ref = float(np.median(present))
         agreeing = [f for f in present if abs(f - ref) <= F0_TOLERANCE]
@@ -228,13 +240,17 @@ class EchoEngine:
         self.harmonic_snr_db = HARMONIC_SNR_DB
         self.min_level_db = MIN_LEVEL_DB
         self.max_drift_hz = MAX_DRIFT_HZ
-        self.persist = PersistenceTracker(persist_sec, BLOCK / FS, max_drift_hz=MAX_DRIFT_HZ)
+        self.min_continuity = MIN_CONTINUITY
+        self.persist = PersistenceTracker(persist_sec, BLOCK / FS,
+                                          max_drift_hz=MAX_DRIFT_HZ,
+                                          min_continuity=MIN_CONTINUITY)
         self.mod = ModulationTracker(BLOCK / FS)
         self.mic_xy = GEOMETRIES.get(geometry) if geometry else None
         self.n = 0
 
     def update_config(self, min_harmonics=None, persist_sec=None,
-                      harmonic_snr_db=None, min_level_db=None, max_drift_hz=None):
+                      harmonic_snr_db=None, min_level_db=None, max_drift_hz=None,
+                      min_continuity=None):
         """Live-tune detection parameters (called from the dashboard)."""
         if min_harmonics is not None:
             self.min_harmonics = int(min_harmonics)
@@ -244,18 +260,21 @@ class EchoEngine:
             self.min_level_db = float(min_level_db)
         if max_drift_hz is not None:
             self.max_drift_hz = float(max_drift_hz)
+        if min_continuity is not None:
+            self.min_continuity = float(min_continuity)
         rebuild = ((persist_sec is not None and float(persist_sec) != self.persist_sec)
-                   or max_drift_hz is not None)
+                   or max_drift_hz is not None or min_continuity is not None)
         if persist_sec is not None:
             self.persist_sec = float(persist_sec)
         if rebuild:
             self.persist = PersistenceTracker(self.persist_sec, BLOCK / FS,
-                                              max_drift_hz=self.max_drift_hz)
+                                              max_drift_hz=self.max_drift_hz,
+                                              min_continuity=self.min_continuity)
 
     def config(self):
         return {"min_harmonics": self.min_harmonics, "persist_sec": self.persist_sec,
                 "harmonic_snr_db": self.harmonic_snr_db, "min_level_db": self.min_level_db,
-                "max_drift_hz": self.max_drift_hz}
+                "max_drift_hz": self.max_drift_hz, "min_continuity": self.min_continuity}
 
     def process(self, block):
         """block: 1-D or (samples, channels) float array. Returns a result dict."""
