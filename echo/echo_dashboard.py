@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ECHO dashboard — live acoustic drone detection in your browser.
+ECHO dashboard - live acoustic drone detection in your browser.
 
 Run:
   Demo (loops a WAV, no mic needed):
@@ -31,7 +31,7 @@ _alerts = AlertManager(block_sec=BLOCK / FS)
 app = Flask(__name__)
 _subscribers = []
 _lock = threading.Lock()
-_state = {"source": "—", "started": time.time()}
+_state = {"source": "-", "started": time.time()}
 _engine = None   # live detector instance, set by the feed thread
 
 
@@ -130,7 +130,7 @@ def config():
 PAGE = r"""
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ECHO — Acoustic Drone Detection</title>
+<title>ECHO - Acoustic Drone Detection</title>
 <style>
   :root{--bg:#0b0f14;--panel:#141b24;--line:#1f2935;--txt:#e9eef3;--mute:#8c98a6;
         --ok:#35c28e;--alert:#ff4d4d;--accent:#ff7a18;--warn:#f5b53d}
@@ -179,7 +179,7 @@ PAGE = r"""
 </style></head><body>
 <header>
   <div class="logo">ECHO<small>ACOUSTIC DRONE DETECTION</small></div>
-  <div class="src">source: <span id="src">connecting…</span><br><span id="clock"></span></div>
+  <div class="src">source: <span id="src">connecting...</span><br><span id="clock"></span></div>
 </header>
 <div class="wrap">
   <div class="status clear" id="status">
@@ -190,12 +190,12 @@ PAGE = r"""
   <div class="card">
     <h2>Signature</h2>
     <div class="metrics">
-      <div class="metric"><div class="v" id="bpf">—</div><div class="l">Blade-pass (Hz)</div></div>
-      <div class="metric"><div class="v" id="rpm">—</div><div class="l">Implied RPM (2-blade)</div></div>
-      <div class="metric"><div class="v" id="harm">—</div><div class="l">Harmonics</div></div>
-      <div class="metric"><div class="v" id="snr">—</div><div class="l">SNR (dB)</div></div>
-      <div class="metric"><div class="l">Multi-rotor</div><div><span class="pill off" id="multi">—</span></div></div>
-      <div class="metric"><div class="l">Flight wobble</div><div><span class="pill off" id="wob">—</span></div></div>
+      <div class="metric"><div class="v" id="bpf">-</div><div class="l">Blade-pass (Hz)</div></div>
+      <div class="metric"><div class="v" id="rpm">-</div><div class="l">Implied RPM (2-blade)</div></div>
+      <div class="metric"><div class="v" id="harm">-</div><div class="l">Harmonics</div></div>
+      <div class="metric"><div class="v" id="snr">-</div><div class="l">SNR (dB)</div></div>
+      <div class="metric"><div class="l">Multi-rotor</div><div><span class="pill off" id="multi">-</span></div></div>
+      <div class="metric"><div class="l">Flight wobble</div><div><span class="pill off" id="wob">-</span></div></div>
     </div>
     <div style="margin-top:18px"><div class="l" style="color:var(--mute);font-size:11px">INPUT LEVEL</div>
       <div class="meter"><i id="level"></i></div></div>
@@ -232,7 +232,7 @@ PAGE = r"""
     <h2>Detection log</h2>
     <div class="log" id="log"></div>
   </div>
-  <div class="foot">ECHO prototype • passive acoustic detection • pair with RF for confirmation before acting</div>
+  <div class="foot">ECHO prototype * passive acoustic detection * pair with RF for confirmation before acting</div>
 </div>
 <script>
 const $=id=>document.getElementById(id);
@@ -249,21 +249,21 @@ es.onmessage=e=>{
     $("status").className="status alert";
     $("stitle").textContent="DRONE DETECTED";
     $("ssub").textContent="Acoustic signature confirmed.";
-    $("bpf").textContent=d.bpf??"—";
-    $("rpm").textContent=d.rpm2??"—";
+    $("bpf").textContent=d.bpf??"-";
+    $("rpm").textContent=d.rpm2??"-";
     $("harm").textContent=d.harmonics;
     $("snr").textContent=d.snr_db;
     setPill("multi",d.multirotor,d.multirotor?("YES "+(d.beat_hz?d.beat_hz+"Hz":"")):"no");
     setPill("wob",d.drone_like,d.drone_like?("DRONE-LIKE "+d.wobble_pct+"%"):"steady");
     if(d.bearing_deg!==null){
       $("needle").style.transform="translate(-50%,-100%) rotate("+d.bearing_deg+"deg)";
-      $("bearing").textContent=d.bearing_deg+"° (conf "+d.bearing_conf+")";
+      $("bearing").textContent=d.bearing_deg+" deg (conf "+d.bearing_conf+")";
     }
     addLog(d,true);
   }else{
     $("status").className="status clear";
-    $("stitle").textContent= d.building? "TRACKING…" : "LISTENING";
-    $("ssub").textContent= d.building? "Candidate signature building…" : "No drone signature detected.";
+    $("stitle").textContent= d.building? "TRACKING..." : "LISTENING";
+    $("ssub").textContent= d.building? "Candidate signature building..." : "No drone signature detected.";
   }
 };
 function setPill(id,on,txt){const e=$(id);e.className="pill "+(on?"on":"off");e.textContent=txt;}
@@ -286,7 +286,7 @@ $("apply").addEventListener("click",()=>{
               persist_sec:+$("s_persist").value, min_level_db:+$("s_level").value,
               max_drift_hz:+$("s_drift").value, min_continuity:+$("s_cont").value};
   fetch("/config",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})
-    .then(r=>r.json()).then(()=>{ $("cfgmsg").textContent="applied ✓";
+    .then(r=>r.json()).then(()=>{ $("cfgmsg").textContent="applied OK";
       setTimeout(()=>$("cfgmsg").textContent="",2000); });
 });
 loadConfig();
@@ -294,9 +294,9 @@ let n=0;
 function addLog(d,hit){
   const l=$("log");const div=document.createElement("div");
   if(hit)div.className="hit";
-  div.innerHTML=`[t=${d.t}s] <b>BPF ${d.bpf}Hz</b> · ${d.harmonics} harm · ${d.snr_db}dB`
-    +(d.multirotor?` · MULTI-ROTOR`:``)
-    +(d.bearing_deg!==null?` · ${d.bearing_deg}°`:``);
+  div.innerHTML=`[t=${d.t}s] <b>BPF ${d.bpf}Hz</b> | ${d.harmonics} harm | ${d.snr_db}dB`
+    +(d.multirotor?` | MULTI-ROTOR`:``)
+    +(d.bearing_deg!==null?` | ${d.bearing_deg} deg`:``);
   l.prepend(div);
   if(++n>200)l.removeChild(l.lastChild);
 }
@@ -326,7 +326,7 @@ def main():
         t = threading.Thread(target=feed_mic, args=(args.channels, args.geometry), daemon=True)
     t.start()
 
-    print(f"\n  ECHO dashboard → http://{args.host}:{args.port}\n  (Ctrl-C to stop)\n")
+    print(f"\n  ECHO dashboard -> http://{args.host}:{args.port}\n  (Ctrl-C to stop)\n")
     app.run(host=args.host, port=args.port, threaded=True)
 
 
