@@ -1,3 +1,4 @@
 numpy>=1.24
 flask>=3.0
-sounddevice>=0.4.6   # live mic only; demo (--wav) mode does not need it
+sounddevice>=0.4.6   # live mic + --play only; the --wav analysis path is pure numpy
+# Note: the ML model is embedded in echo_ml.py (numpy-only) - no scikit-learn/joblib needed.
