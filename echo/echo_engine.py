@@ -245,9 +245,11 @@ class EchoEngine:
         self.ml = ml
         self.ml_threshold = float(os.environ.get("ECHO_ML_THRESHOLD", ml_threshold))
         # ML-primary detection: require P>=threshold for ml_need of the last
-        # ml_win blocks (~1.5 s). Robust to the rule layer's fundamental jitter.
-        self.ml_win = max(3, int(1.5 / (BLOCK / FS)))
-        self.ml_need = max(2, int(0.6 * self.ml_win))
+        # ml_win blocks. Window is ~3 s and needs ~2.2 s of sustained positives,
+        # so brief tonal sounds (text dings, beeps, claps, single words) can't
+        # trigger - only a sustained source like a real drone does.
+        self.ml_win = max(4, int(3.0 / (BLOCK / FS)))
+        self.ml_need = max(3, int(0.75 * self.ml_win))
         self.ml_hist = deque(maxlen=self.ml_win)
         self.persist = PersistenceTracker(persist_sec, BLOCK / FS,
                                           max_drift_hz=MAX_DRIFT_HZ,
