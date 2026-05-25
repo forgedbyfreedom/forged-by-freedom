@@ -34,6 +34,7 @@ _lock = threading.Lock()
 _state = {"source": "-", "started": time.time()}
 _engine = None   # live detector instance, set by the feed thread
 _ML_ON = False   # ML confirmation gate, enabled via --ml
+_PLAY = False    # play demo WAV out the speakers, enabled via --play
 
 
 def publish(result):
@@ -58,14 +59,31 @@ def feed_wav(path, loop=True):
     eng = EchoEngine(ml=_ML_ON)
     _engine = eng
     block_dt = BLOCK / FS
+    out = None
+    if _PLAY:
+        try:
+            import sounddevice as sd
+            out = sd.OutputStream(samplerate=fs, channels=1, dtype="float32")
+            out.start()
+            print("  [play] demo audio -> speakers")
+        except Exception as ex:
+            print(f"  [play] audio output unavailable: {ex}")
+            out = None
     while True:
         for s in range(0, len(audio) - BLOCK, BLOCK):
             blk = audio[s:s + BLOCK]
-            blk = blk[:, 0] if nch == 1 else blk
-            result = eng.process(blk)
+            mono = blk[:, 0]
+            eng_blk = mono if nch == 1 else blk
+            result = eng.process(eng_blk)
             _alerts.process(result)
             publish(result)
-            time.sleep(block_dt)        # play at real-time pace
+            if out is not None:
+                try:
+                    out.write(np.ascontiguousarray(mono.astype(np.float32)))  # paces in real time
+                except Exception:
+                    time.sleep(block_dt)
+            else:
+                time.sleep(block_dt)        # play at real-time pace
         if not loop:
             break
 
@@ -316,10 +334,13 @@ def main():
                     help="send one test alert using current config, then exit")
     ap.add_argument("--ml", action="store_true",
                     help="enable ML confirmation gate (rejects speech/noise the rules pass)")
+    ap.add_argument("--play", action="store_true",
+                    help="in --wav demo mode, also play the clip out the speakers (cosmetic)")
     args = ap.parse_args()
 
-    global _ML_ON
+    global _ML_ON, _PLAY
     _ML_ON = args.ml
+    _PLAY = args.play
     print(f"  alerts: {_alerts.status()}")
     print(f"  ML confirmation gate: {'ON' if _ML_ON else 'off'}")
     if args.test_alert:
