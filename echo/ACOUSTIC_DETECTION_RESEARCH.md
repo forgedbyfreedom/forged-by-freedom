@@ -121,3 +121,29 @@ Research-backed discriminators between drone and speech/confusers:
 - Performance Enhancement of Drone Acoustic Source Localization Through Distributed Microphone Arrays (MDPI Sensors 25:1928)
 - DroneDetect Dataset: RF dataset of UAS Signals (IEEE DataPort)
 - DroneAudioDataset — Sara Al-Emadi (GitHub)
+
+---
+
+## Addendum (research pass 2) — signature detail + actionable fixes
+
+### Refined signature facts
+- **Blade-pass fundamental varies widely by drone size:** small/fast props ~400-600 Hz; larger/slower props ~100-300 Hz. (Confirms ECHO's 50-700 Hz window; your heavy-lift targets sit low.)
+- **Harmonics extend 1-5 kHz, sometimes 10-15 kHz**; primary energy in the low kHz. Full useful band ~100 Hz-10 kHz.
+- **Temporal modulation is itself a signature.** Rotors produce periodic amplitude/frequency modulation that is *sustained* over time — this is a distinguishing feature vs. transient sounds (dings, claps, single words). Backs a duration/persistence gate.
+- **STFT params used in current papers:** 2048-sample window, Hann, ~23 Hz resolution, hop 160. (Finer than ECHO's; would sharpen wobble/beat precision.)
+
+### State-of-the-art recognition
+- **AUDRON** (2025): MFCC + STFT-CNN + recurrent (temporal) + autoencoder fusion -> 98.5%/97.1%.
+- **Ensemble learning for micro-drones** (2026): integrated acoustic signatures across multiple classifiers for small/quiet UAVs.
+- Common thread: **temporal modeling matters** (recurrent layers / sustained structure), not just per-frame spectra.
+
+### Two fixes this directly supports for ECHO
+1. **Sustained-duration gate** — research shows the drone signature is *sustained periodic modulation*; brief tonal sounds (text dings, beeps, claps) are not. Requiring ~2-3 s of continuous positive detection rejects those false alarms threshold-independently.
+2. **Augmented retraining (fixes the speaker-playback / threshold problem WITHOUT needing field recordings):** papers synthesize/augment training audio by adding **modulation + noise + environmental factors + reverb**. Applying the same to the real DroneAudioDataset clips (add room noise, band-limiting, level variation to mimic speaker playback) would teach the model to score degraded/real-world drone audio HIGH -> lets a safe 0.5 threshold work everywhere, killing the per-machine tuning loop.
+
+### Sources (pass 2)
+- The Acoustic Signature of Drones: Detection, Identification, and Countermeasure Possibilities (2025)
+- AUDRON: Deep Learning Framework with Fused Acoustic Signatures (arXiv 2512.20407)
+- Ensemble learning models for micro-drone detection using integrated acoustic signatures (Springer, 2026)
+- Acoustic Source Drone Detection Using Tetrahedral Mic Array + DNNs (MDPI Sensors 26:1778)
+- Outdoor Microphone Range Tests and Spectral Analysis of UAV Acoustic Signatures (PMC)
