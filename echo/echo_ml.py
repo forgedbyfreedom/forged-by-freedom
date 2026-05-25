@@ -66,5 +66,14 @@ def drone_probability(block, fs_in=44100):
         h = np.maximum(0, z @ _W1 + _B1)
         o = h @ _W2 + _B2
         return float(1 / (1 + np.exp(-o[0])))
-    except Exception:
+    except Exception as ex:
+        # Surface the failure once instead of silently returning None forever
+        # (a feature-pipeline bug would otherwise make ML quietly do nothing).
+        global _WARNED
+        if not _WARNED:
+            print(f"[echo_ml] inference error (ML disabled for this run): {type(ex).__name__}: {ex}")
+            _WARNED = True
         return None
+
+
+_WARNED = False

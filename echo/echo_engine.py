@@ -27,6 +27,7 @@ Result dict per block:
 
 from collections import deque
 import os
+import threading
 import numpy as np
 
 FS = 44100
@@ -257,29 +258,36 @@ class EchoEngine:
         self.mod = ModulationTracker(BLOCK / FS)
         self.mic_xy = GEOMETRIES.get(geometry) if geometry else None
         self.n = 0
+        self._lock = threading.Lock()   # guards live config vs. the feed thread
+
+    @staticmethod
+    def _clamp(v, lo, hi):
+        return max(lo, min(hi, v))
 
     def update_config(self, min_harmonics=None, persist_sec=None,
                       harmonic_snr_db=None, min_level_db=None, max_drift_hz=None,
                       min_continuity=None):
-        """Live-tune detection parameters (called from the dashboard)."""
-        if min_harmonics is not None:
-            self.min_harmonics = int(min_harmonics)
-        if harmonic_snr_db is not None:
-            self.harmonic_snr_db = float(harmonic_snr_db)
-        if min_level_db is not None:
-            self.min_level_db = float(min_level_db)
-        if max_drift_hz is not None:
-            self.max_drift_hz = float(max_drift_hz)
-        if min_continuity is not None:
-            self.min_continuity = float(min_continuity)
-        rebuild = ((persist_sec is not None and float(persist_sec) != self.persist_sec)
-                   or max_drift_hz is not None or min_continuity is not None)
-        if persist_sec is not None:
-            self.persist_sec = float(persist_sec)
-        if rebuild:
-            self.persist = PersistenceTracker(self.persist_sec, BLOCK / FS,
-                                              max_drift_hz=self.max_drift_hz,
-                                              min_continuity=self.min_continuity)
+        """Live-tune detection parameters (called from the dashboard). Values are
+        clamped to sane ranges so a bad/hostile request can't break detection."""
+        with self._lock:
+            if min_harmonics is not None:
+                self.min_harmonics = int(self._clamp(int(min_harmonics), 1, 6))
+            if harmonic_snr_db is not None:
+                self.harmonic_snr_db = self._clamp(float(harmonic_snr_db), 0.0, 30.0)
+            if min_level_db is not None:
+                self.min_level_db = self._clamp(float(min_level_db), -90.0, 0.0)
+            if max_drift_hz is not None:
+                self.max_drift_hz = self._clamp(float(max_drift_hz), 1.0, 50.0)
+            if min_continuity is not None:
+                self.min_continuity = self._clamp(float(min_continuity), 0.1, 1.0)
+            rebuild = ((persist_sec is not None and float(persist_sec) != self.persist_sec)
+                       or max_drift_hz is not None or min_continuity is not None)
+            if persist_sec is not None:
+                self.persist_sec = self._clamp(float(persist_sec), 0.5, 10.0)
+            if rebuild:
+                self.persist = PersistenceTracker(self.persist_sec, BLOCK / FS,
+                                                  max_drift_hz=self.max_drift_hz,
+                                                  min_continuity=self.min_continuity)
 
     def config(self):
         return {"min_harmonics": self.min_harmonics, "persist_sec": self.persist_sec,
@@ -296,16 +304,21 @@ class EchoEngine:
         mag = np.abs(np.fft.rfft(x, n=BLOCK))
         freqs = np.fft.rfftfreq(BLOCK, 1 / FS)
 
+        # Snapshot live-tunable state under the lock so a concurrent /config
+        # update (which may rebuild self.persist) can't be read half-swapped.
+        with self._lock:
+            min_h, snr_db, min_lvl = self.min_harmonics, self.harmonic_snr_db, self.min_level_db
+            persist = self.persist
         # Loudness gate: in near-silence, ignore everything (kills hum/self-noise
         # false alarms). A real audible drone is well above this floor.
-        if level < self.min_level_db:
+        if level < min_lvl:
             cands, res, beat = [], None, None
         else:
-            cands = find_candidates(mag, freqs, self.min_harmonics, self.harmonic_snr_db)
+            cands = find_candidates(mag, freqs, min_h, snr_db)
             res = cands[0] if cands else None
             beat = find_multirotor_beat(cands)
         f0 = res[0] if res else None
-        locked = self.persist.update(f0)
+        locked = persist.update(f0)
         mod = self.mod.update(locked)
 
         out = {

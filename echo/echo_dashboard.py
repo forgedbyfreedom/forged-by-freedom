@@ -15,6 +15,7 @@ Then open the URL it prints (default http://127.0.0.1:8080).
 
 import argparse
 import json
+import math
 import queue
 import threading
 import time
@@ -37,7 +38,17 @@ _ML_ON = False   # ML confirmation gate, enabled via --ml
 _PLAY = False    # play demo WAV out the speakers, enabled via --play
 
 
+def _sanitize(result):
+    """Replace non-finite floats (NaN/Inf) with None so json.dumps emits valid
+    JSON the browser can parse."""
+    for k, v in result.items():
+        if isinstance(v, float) and not math.isfinite(v):
+            result[k] = None
+    return result
+
+
 def publish(result):
+    result = _sanitize(result)
     with _lock:
         dead = []
         for q in _subscribers:
@@ -52,10 +63,30 @@ def publish(result):
 def feed_wav(path, loop=True):
     global _engine
     _state["source"] = f"demo: {path}"
+    try:
+        _feed_wav(path, loop)
+    except Exception as ex:
+        msg = f"demo feed error: {type(ex).__name__}: {ex}"
+        print("  " + msg)
+        _state["source"] = msg
+
+
+def _feed_wav(path, loop=True):
+    global _engine
     with wave.open(path, "rb") as w:
         fs, nch = w.getframerate(), w.getnchannels()
         audio = (np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16)
                  .astype(np.float32) / 32768.0).reshape(-1, nch)
+    # Resample to the engine's rate so the FFT frequency mapping is correct
+    # (the engine assumes FS); a 16k/48k WAV would otherwise read every
+    # frequency/RPM wrong.
+    if fs != FS:
+        n2 = int(audio.shape[0] * FS / fs)
+        idx = np.linspace(0, audio.shape[0] - 1, n2)
+        audio = np.stack([np.interp(idx, np.arange(audio.shape[0]), audio[:, c])
+                          for c in range(nch)], axis=1).astype(np.float32)
+        print(f"  [wav] resampled {fs} -> {FS} Hz")
+        fs = FS
     eng = EchoEngine(ml=_ML_ON)
     _engine = eng
     block_dt = BLOCK / FS
@@ -94,17 +125,24 @@ def feed_wav(path, loop=True):
 
 def feed_mic(channels, geometry):
     global _engine
-    import sounddevice as sd
     _state["source"] = f"live mic ({channels}ch)"
-    eng = EchoEngine(geometry=geometry, ml=_ML_ON)
-    _engine = eng
-    with sd.InputStream(channels=channels, samplerate=FS, blocksize=BLOCK) as stream:
-        while True:
-            data, _ = stream.read(BLOCK)
-            blk = data if channels > 1 else data[:, 0]
-            result = eng.process(blk)
-            _alerts.process(result)
-            publish(result)
+    try:
+        import sounddevice as sd
+        eng = EchoEngine(geometry=geometry, ml=_ML_ON)
+        _engine = eng
+        with sd.InputStream(channels=channels, samplerate=FS, blocksize=BLOCK) as stream:
+            while True:
+                data, _ = stream.read(BLOCK)
+                blk = data if channels > 1 else data[:, 0]
+                result = eng.process(blk)
+                _alerts.process(result)
+                publish(result)
+    except Exception as ex:
+        # A mic that can't do 44.1 kHz (or no input device) would otherwise kill
+        # this thread silently, leaving the dashboard running with no data.
+        msg = f"mic error: {type(ex).__name__}: {ex}"
+        print("  " + msg)
+        _state["source"] = msg
 
 
 @app.route("/")
@@ -357,6 +395,9 @@ def main():
         t = threading.Thread(target=feed_mic, args=(args.channels, args.geometry), daemon=True)
     t.start()
 
+    if args.host == "0.0.0.0":
+        print("  WARNING: bound to 0.0.0.0 - the dashboard and /config are reachable by")
+        print("           anyone on this network (no password). Use only on a trusted LAN.")
     print(f"\n  ECHO dashboard -> http://{args.host}:{args.port}\n  (Ctrl-C to stop)\n")
     app.run(host=args.host, port=args.port, threaded=True)
 

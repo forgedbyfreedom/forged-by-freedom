@@ -329,9 +329,14 @@ def run_wav(path, args):
         fs, nch = w.getframerate(), w.getnchannels()
         audio = (np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16)
                  .astype(np.float32) / 32768.0)
-    if fs != FS:
-        print(f"WARN: file is {fs} Hz; code tuned for {FS} Hz. Resample for accuracy.")
     audio = audio.reshape(-1, nch)
+    if fs != FS:
+        # Resample to the analysis rate so frequencies/RPM are correct.
+        n2 = int(audio.shape[0] * FS / fs)
+        idx = np.linspace(0, audio.shape[0] - 1, n2)
+        audio = np.stack([np.interp(idx, np.arange(audio.shape[0]), audio[:, c])
+                          for c in range(nch)], axis=1).astype(np.float32)
+        print(f"resampled {fs} -> {FS} Hz")
     block = audio if nch > 1 else audio[:, 0]
     step = BLOCK
     for s in range(0, len(audio) - step, step):
