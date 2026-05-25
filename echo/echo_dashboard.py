@@ -59,31 +59,35 @@ def feed_wav(path, loop=True):
     eng = EchoEngine(ml=_ML_ON)
     _engine = eng
     block_dt = BLOCK / FS
-    out = None
+    mono_full = np.ascontiguousarray(audio[:, 0].astype(np.float32))
+    sd = None
     if _PLAY:
         try:
-            import sounddevice as sd
-            out = sd.OutputStream(samplerate=fs, channels=1, dtype="float32")
-            out.start()
+            import sounddevice as _sd
+            sd = _sd
             print("  [play] demo audio -> speakers")
         except Exception as ex:
             print(f"  [play] audio output unavailable: {ex}")
-            out = None
+            sd = None
     while True:
+        if sd is not None:
+            try:
+                sd.play(mono_full, samplerate=fs)   # whole clip in background; robust on macOS + Windows
+            except Exception as ex:
+                print(f"  [play] playback error: {ex}")
+                sd = None
         for s in range(0, len(audio) - BLOCK, BLOCK):
             blk = audio[s:s + BLOCK]
-            mono = blk[:, 0]
-            eng_blk = mono if nch == 1 else blk
+            eng_blk = blk[:, 0] if nch == 1 else blk
             result = eng.process(eng_blk)
             _alerts.process(result)
             publish(result)
-            if out is not None:
-                try:
-                    out.write(np.ascontiguousarray(mono.astype(np.float32)))  # paces in real time
-                except Exception:
-                    time.sleep(block_dt)
-            else:
-                time.sleep(block_dt)        # play at real-time pace
+            time.sleep(block_dt)        # pace detection in real time
+        if sd is not None:
+            try:
+                sd.stop()
+            except Exception:
+                pass
         if not loop:
             break
 
