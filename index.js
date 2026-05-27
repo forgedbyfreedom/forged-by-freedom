@@ -6444,7 +6444,7 @@ app.get("/api/coach/clients", async (req, res) => {
     const adminKey = req.query.key;
     if (adminKey !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
 
-    const { data: clients, error } = await sb.from("clients")
+    const { data: clients, error } = await supabase.from("clients")
       .select("id, first_name, last_name, email, is_active, target_calories, target_protein, target_steps, last_weight, created_at")
       .eq("is_active", true)
       .order("last_name");
@@ -6453,17 +6453,17 @@ app.get("/api/coach/clients", async (req, res) => {
 
     // Get latest metrics for each client
     const clientIds = clients.map(c => c.id);
-    const { data: metrics } = await sb.from("client_metrics")
+    const { data: metrics } = await supabase.from("client_metrics")
       .select("*")
       .in("client_id", clientIds);
 
     // Get latest checkin for each client
-    const { data: checkins } = await sb.rpc("get_latest_checkins_per_client", { client_ids: clientIds }).catch(() => ({ data: null }));
+    const { data: checkins } = await supabase.rpc("get_latest_checkins_per_client", { client_ids: clientIds }).catch(() => ({ data: null }));
 
     // Fallback: get recent checkins manually if RPC doesn't exist
     let latestCheckins = checkins;
     if (!latestCheckins) {
-      const { data: allCheckins } = await sb.from("checkins")
+      const { data: allCheckins } = await supabase.from("checkins")
         .select("*")
         .in("client_id", clientIds)
         .order("date", { ascending: false })
@@ -6503,10 +6503,10 @@ app.get("/api/coach/clients/:id", async (req, res) => {
     const clientId = req.params.id;
 
     const [clientRes, checkinsRes, scansRes, metricsRes] = await Promise.all([
-      sb.from("clients").select("*").eq("id", clientId).single(),
-      sb.from("checkins").select("*").eq("client_id", clientId).order("date", { ascending: false }).limit(90),
-      sb.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
-      sb.from("client_metrics").select("*").eq("client_id", clientId).single(),
+      supabase.from("clients").select("*").eq("id", clientId).single(),
+      supabase.from("checkins").select("*").eq("client_id", clientId).order("date", { ascending: false }).limit(90),
+      supabase.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
+      supabase.from("client_metrics").select("*").eq("client_id", clientId).single(),
     ]);
 
     if (clientRes.error) throw clientRes.error;
@@ -6535,7 +6535,7 @@ app.get("/api/coach/clients/:id/trends", async (req, res) => {
     const since = new Date();
     since.setDate(since.getDate() - days);
 
-    const { data: checkins, error } = await sb.from("checkins")
+    const { data: checkins, error } = await supabase.from("checkins")
       .select("date, weight_lbs, body_temp, blood_glucose, resting_heart_rate, blood_pressure_systolic, blood_pressure_diastolic, mood_rating, stress_level, calories, protein_g, carbs_g, fat_g, water_oz, steps, sleep_hours, sleep_quality, training_done, performance_rating, supplement_compliance, workout_duration_min, avg_heart_rate, cardio_minutes")
       .eq("client_id", clientId)
       .gte("date", since.toISOString().split("T")[0])
@@ -6563,10 +6563,10 @@ app.get("/api/coach/clients/:id/report", async (req, res) => {
     since.setDate(since.getDate() - days);
 
     const [clientRes, checkinsRes, scansRes, metricsRes] = await Promise.all([
-      sb.from("clients").select("*").eq("id", clientId).single(),
-      sb.from("checkins").select("*").eq("client_id", clientId).gte("date", since.toISOString().split("T")[0]).order("date", { ascending: true }),
-      sb.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
-      sb.from("client_metrics").select("*").eq("client_id", clientId).single(),
+      supabase.from("clients").select("*").eq("id", clientId).single(),
+      supabase.from("checkins").select("*").eq("client_id", clientId).gte("date", since.toISOString().split("T")[0]).order("date", { ascending: true }),
+      supabase.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
+      supabase.from("client_metrics").select("*").eq("client_id", clientId).single(),
     ]);
 
     if (clientRes.error) throw clientRes.error;
