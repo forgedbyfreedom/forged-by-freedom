@@ -14,40 +14,60 @@ import numpy as np
 
 
 # Features where HIGHER values = more stress (positive z is what we count)
-HIGH_IS_STRESS = {"jitter_local", "shimmer_local", "f0_std",
-                  "intensity_std", "pause_ratio"}
+HIGH_IS_STRESS = {"jitter_local", "shimmer_local", "f0_std", "f0_iqr",
+                  "intensity_std", "pause_ratio", "mfcc_distance",
+                  "disfluency_rate", "hedge_rate"}
 
 # Features where LOWER values = more stress
-LOW_IS_STRESS = {"hnr"}
+LOW_IS_STRESS = {"hnr", "first_person_rate"}
 
 # Features where any deviation (|z|) counts — direction is individual-dependent
-TWO_TAILED = {"f0_mean", "speaking_rate", "intensity_mean"}
+TWO_TAILED = {"f0_mean", "f0_slope", "speaking_rate", "intensity_mean",
+              "words_per_sec"}
 
 # Weighting from systematic-review consensus on what tracks stress most reliably
 WEIGHTS = {
-    "jitter_local":    0.22,
-    "shimmer_local":   0.18,
-    "hnr":             0.15,
-    "f0_std":          0.12,
-    "f0_mean":         0.10,
-    "intensity_std":   0.08,
-    "speaking_rate":   0.08,
-    "pause_ratio":     0.07,
+    # Acoustic stress channel
+    "jitter_local":      0.13,
+    "shimmer_local":     0.11,
+    "hnr":               0.09,
+    "f0_std":            0.06,
+    "f0_iqr":            0.05,
+    "f0_slope":          0.03,
+    "f0_mean":           0.06,
+    "intensity_std":     0.04,
+    "speaking_rate":     0.04,
+    "pause_ratio":       0.04,
+    "mfcc_distance":     0.08,
+    # Content channel — present only when whisper is installed.
+    # Hedging is the single strongest deception correlate in the
+    # Vrij/Pennebaker literature, so it gets a real weight.
+    "disfluency_rate":   0.07,
+    "hedge_rate":        0.10,
+    "first_person_rate": 0.06,
+    "words_per_sec":     0.04,
 }
 
 # Feature-aware minimum sigma — prevents z-score explosion when baseline samples
 # are very uniform (especially with synthetic audio or very short calibrations).
 # Values are the smallest within-speaker variation we expect in normal speech.
 NOISE_FLOORS = {
-    "jitter_local":   0.0015,   # ~0.15 pct
-    "shimmer_local":  0.005,    # ~0.5 pct
-    "hnr":            1.5,      # dB
-    "f0_mean":        5.0,      # Hz
-    "f0_std":         3.0,      # Hz
-    "intensity_mean": 1.5,      # dB
-    "intensity_std":  0.8,      # dB
-    "speaking_rate":  0.4,      # onsets/sec
-    "pause_ratio":    0.06,     # 6 % of duration
+    "jitter_local":      0.0015,
+    "shimmer_local":     0.005,
+    "hnr":               1.5,
+    "f0_mean":           5.0,
+    "f0_std":            3.0,
+    "f0_iqr":            4.0,
+    "f0_slope":          3.0,
+    "intensity_mean":    1.5,
+    "intensity_std":     0.8,
+    "speaking_rate":     0.4,
+    "pause_ratio":       0.06,
+    "mfcc_distance":     0.5,
+    "disfluency_rate":   0.03,
+    "hedge_rate":        0.02,
+    "first_person_rate": 0.03,
+    "words_per_sec":     0.4,
 }
 
 # Cap how much any single feature can contribute (in σ units) — avoids one
@@ -61,6 +81,7 @@ class Baseline:
     def __init__(self):
         self.samples: list[dict] = []
         self.stats: dict[str, tuple[float, float]] = {}  # k → (mean, std)
+        self.mfcc_centroid: Optional[np.ndarray] = None
         self.locked: bool = False
 
     def add(self, features: dict) -> None:
@@ -69,11 +90,27 @@ class Baseline:
         self.samples.append(features)
 
     def lock(self) -> dict:
-        """Compute mean/std per feature from collected samples."""
+        """Compute mean/std per feature and MFCC centroid from collected samples."""
         if not self.samples:
             return {}
+
+        # ── MFCC centroid + within-baseline MFCC distance distribution ─
+        mfcc_vecs = [np.asarray(s["mfcc_vec"]) for s in self.samples
+                     if s.get("mfcc_vec") is not None]
+        mfcc_dists = []
+        if mfcc_vecs:
+            self.mfcc_centroid = np.mean(np.stack(mfcc_vecs), axis=0)
+            mfcc_dists = [float(np.linalg.norm(v - self.mfcc_centroid))
+                          for v in mfcc_vecs]
+            # Inject mfcc_distance into each baseline sample so it's stat-tracked
+            for s, d in zip([s for s in self.samples if s.get("mfcc_vec") is not None],
+                            mfcc_dists):
+                s["mfcc_distance"] = d
+
         keys = set().union(*[set(s.keys()) for s in self.samples])
         for k in keys:
+            if k == "mfcc_vec":
+                continue  # vector, not scalar
             vals = [s.get(k) for s in self.samples
                     if isinstance(s.get(k), (int, float))
                     and not math.isnan(s.get(k))]
@@ -87,6 +124,18 @@ class Baseline:
         self.locked = True
         return self.stats
 
+    def mfcc_distance(self, features: dict) -> Optional[float]:
+        """Euclidean distance from this sample's MFCC vector to baseline centroid."""
+        if self.mfcc_centroid is None:
+            return None
+        v = features.get("mfcc_vec")
+        if v is None:
+            return None
+        try:
+            return float(np.linalg.norm(np.asarray(v) - self.mfcc_centroid))
+        except Exception:
+            return None
+
     def score(self, features: dict) -> dict:
         """Return composite stress score 0–100 + per-feature contributions.
 
@@ -95,6 +144,13 @@ class Baseline:
         """
         if not self.stats or not features:
             return {"composite": None, "per_feature": {}, "note": "no baseline"}
+
+        # Inject derived mfcc_distance so it scores like any other feature
+        features = dict(features)
+        if "mfcc_distance" not in features:
+            d = self.mfcc_distance(features)
+            if d is not None:
+                features["mfcc_distance"] = d
 
         per_feature = {}
         weighted = 0.0

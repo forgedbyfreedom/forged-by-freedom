@@ -12,14 +12,18 @@ import subprocess
 import tempfile
 import time
 from pathlib import Path
+from typing import Optional
 
 import numpy as np
 import parselmouth
 
 from .features import extract_features
+from .content import transcribe, content_features
 
 TARGET_FS = 16000
 MIN_DURATION_SEC = 0.5
+TIMELINE_WIN_SEC = 1.0
+TIMELINE_HOP_SEC = 0.5
 
 
 def load_audio(path: str | os.PathLike) -> tuple[np.ndarray, int]:
@@ -65,18 +69,75 @@ def download_url(url: str, out_dir: str | None = None) -> str:
     return str(wavs[-1])
 
 
+def _response_latency(audio: np.ndarray, fs: int,
+                      energy_threshold: float = 0.005) -> Optional[float]:
+    """Seconds from start of clip until the first non-silent frame.
+
+    Cheap proxy for live response latency: the gap before the subject begins
+    speaking. Uses simple RMS thresholding on 30 ms frames.
+    """
+    if audio.size == 0:
+        return None
+    frame_n = int(fs * 0.03)
+    if frame_n <= 0:
+        return None
+    n_frames = audio.size // frame_n
+    for i in range(n_frames):
+        frame = audio[i * frame_n:(i + 1) * frame_n]
+        rms = float(np.sqrt(np.mean(frame * frame)))
+        if rms > energy_threshold:
+            return float(i * 0.03)
+    return None
+
+
+def _within_answer_timeline(audio: np.ndarray, fs: int, baseline,
+                            win_sec: float = TIMELINE_WIN_SEC,
+                            hop_sec: float = TIMELINE_HOP_SEC) -> list:
+    """Slide a window across the answer; return [{t, composite, level}, …].
+
+    A flat timeline = uniform stress across the answer. A spike mid-answer is
+    where the speaker's voice changed — often the moment of fabrication or
+    recall difficulty. This is for interpretation, not classification.
+    """
+    if not baseline.locked or audio.size < fs * win_sec:
+        return []
+    win = int(fs * win_sec)
+    hop = int(fs * hop_sec)
+    out = []
+    for start in range(0, audio.size - win + 1, hop):
+        chunk = audio[start:start + win]
+        try:
+            feats = extract_features(chunk, fs)
+            score = baseline.score(feats)
+        except Exception:
+            continue
+        if score.get("composite") is None:
+            continue
+        out.append({
+            "t": round(start / fs, 2),
+            "composite": float(score["composite"]),
+            "level": score.get("level"),
+        })
+    return out
+
+
 def analyze_audio_array(audio: np.ndarray, fs: int, engine,
-                        mode: str = "question", label: str = "") -> dict:
+                        mode: str = "question", label: str = "",
+                        question_type: str = "target",
+                        question_start_time: Optional[float] = None,
+                        transcribe_enabled: bool = True) -> dict:
     """Run features → baseline add OR score → append to history.
 
     mode == "calibrate": chunk into 5s windows, add to baseline, then lock.
-    mode == "question":  extract whole-utterance features, score, push to history.
+                         (Preserves history; engine.baseline replaced.)
+    mode == "question":  extract whole-utterance features, score, transcribe if
+                         enabled, compute within-answer timeline, push record.
     """
     if audio.size < fs * MIN_DURATION_SEC:
         return {"error": "audio too short"}
 
     if mode == "calibrate":
-        # Replace any existing baseline
+        # Replace baseline but KEEP history (multiple-baselines workflow)
         from .baseline import Baseline
         engine.baseline = Baseline()
         win = int(fs * 5.0)
@@ -88,6 +149,19 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
                 continue
             try:
                 feats = extract_features(chunk, fs)
+                # Also transcribe baseline chunks so content features
+                # have a baseline distribution (otherwise they're un-scored).
+                if transcribe_enabled and feats:
+                    try:
+                        tx = transcribe(chunk, fs)
+                        if tx:
+                            cf = content_features(tx, chunk.size / fs)
+                            for k in ("words_per_sec", "first_person_rate",
+                                      "hedge_rate", "disfluency_rate"):
+                                if cf.get(k) is not None:
+                                    feats[k] = cf[k]
+                    except Exception as e:
+                        print(f"[squirrel] cal transcribe failed: {e}")
                 if feats:
                     engine.baseline.add(feats)
                     added += 1
@@ -106,18 +180,44 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
     if not engine.baseline.locked:
         return {"error": "calibrate first"}
 
+    duration_sec = float(audio.size / fs)
     try:
         feats = extract_features(audio, fs)
-        score = engine.baseline.score(feats)
     except Exception as e:
         return {"error": f"feature extraction failed: {e}"}
 
+    # Content channel (whisper) — adds words_per_sec, hedge_rate, etc. to feats
+    content = None
+    if transcribe_enabled:
+        try:
+            tx = transcribe(audio, fs)
+            if tx:
+                content = content_features(tx, duration_sec)
+                # Merge scalar content features into feats for scoring
+                for k in ("words_per_sec", "first_person_rate", "hedge_rate",
+                          "disfluency_rate"):
+                    if content.get(k) is not None:
+                        feats[k] = content[k]
+        except Exception as e:
+            print(f"[squirrel] content extraction failed: {e}")
+
+    score = engine.baseline.score(feats)
+    timeline = _within_answer_timeline(audio, fs, engine.baseline)
+    latency = _response_latency(audio, fs)
+    if question_start_time is not None:
+        # Caller knows the wall-clock moment they asked the question
+        latency = max(0.0, (time.time() - question_start_time))
+
     record = {
         "label": label or f"Q{len(engine.history) + 1}",
+        "type": question_type,
         "timestamp": time.time(),
-        "duration_sec": float(audio.size / fs),
+        "duration_sec": duration_sec,
+        "response_latency_sec": latency,
         "features": feats,
         "score": score,
+        "timeline": timeline,
+        "content": content,
         "source": "offline",
     }
     with engine._lock:
@@ -128,18 +228,23 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
 
 
 def analyze_file(path: str, engine, mode: str = "question",
-                 label: str = "") -> dict:
+                 label: str = "", question_type: str = "target",
+                 transcribe_enabled: bool = True) -> dict:
     if not os.path.exists(path):
         return {"error": f"file not found: {path}"}
     try:
         audio, fs = load_audio(path)
     except Exception as e:
         return {"error": f"load failed: {e}"}
-    return analyze_audio_array(audio, fs, engine, mode=mode, label=label or path)
+    return analyze_audio_array(audio, fs, engine, mode=mode,
+                               label=label or path,
+                               question_type=question_type,
+                               transcribe_enabled=transcribe_enabled)
 
 
 def analyze_url(url: str, engine, mode: str = "question",
-                label: str = "") -> dict:
+                label: str = "", question_type: str = "target",
+                transcribe_enabled: bool = True) -> dict:
     try:
         wav_path = download_url(url)
     except Exception as e:
@@ -153,4 +258,7 @@ def analyze_url(url: str, engine, mode: str = "question",
             os.unlink(wav_path)
         except OSError:
             pass
-    return analyze_audio_array(audio, fs, engine, mode=mode, label=label or url)
+    return analyze_audio_array(audio, fs, engine, mode=mode,
+                               label=label or url,
+                               question_type=question_type,
+                               transcribe_enabled=transcribe_enabled)

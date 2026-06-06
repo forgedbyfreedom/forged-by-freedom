@@ -50,6 +50,8 @@ class VoiceEngine:
         self._record_start: float = 0.0
         self._cal_duration: float = 30.0
         self._question_label: str = ""
+        self._question_type: str = "target"
+        self._first_voice_time: Optional[float] = None  # for response latency
         self._stream = None
         self._vad = webrtcvad.Vad(2) if webrtcvad else None
         self._lock = threading.Lock()
@@ -71,22 +73,32 @@ class VoiceEngine:
         self._start_stream()
         return {"ok": True}
 
-    def start_question(self, label: str = "") -> dict:
+    def start_question(self, label: str = "",
+                       question_type: str = "target") -> dict:
         if sd is None:
             return {"error": "sounddevice not installed"}
         if not self.baseline.locked:
             return {"error": "calibrate first"}
         if self.state != "ready":
             return {"error": f"busy ({self.state})"}
+        if question_type not in ("control", "buffer", "target", "neutral"):
+            question_type = "target"
         with self._lock:
             self.state = "recording"
             self._mode = "question"
             self._question_label = label or f"Q{len(self.history) + 1}"
+            self._question_type = question_type
             self._buffer = []
             self._silence_ms = 0
             self._record_start = time.time()
+            self._first_voice_time = None
         self._start_stream()
         return {"ok": True}
+
+    def recalibrate(self, duration_sec: float = 30.0) -> dict:
+        """Restart calibration but keep history. Used for multiple-baselines
+        workflow when the speaker's calm state has drifted (fatigue, rapport)."""
+        return self.start_calibration(duration_sec=duration_sec)
 
     def stop(self) -> dict:
         self._stop_stream()
@@ -162,6 +174,8 @@ class VoiceEngine:
                         is_speech = False
                 if is_speech:
                     self._silence_ms = 0
+                    if self._first_voice_time is None:
+                        self._first_voice_time = time.time()
                 else:
                     self._silence_ms += FRAME_MS
 
@@ -210,18 +224,48 @@ class VoiceEngine:
         if not self._buffer:
             return
         audio = np.concatenate(self._buffer)
+        latency = (self._first_voice_time - self._record_start
+                   if self._first_voice_time is not None else None)
         record = {
             "label": self._question_label,
+            "type": self._question_type,
             "timestamp": time.time(),
             "duration_sec": float(audio.size / SAMPLE_RATE),
+            "response_latency_sec": latency,
+            "source": "live",
         }
         if audio.size < SAMPLE_RATE * MIN_UTTERANCE_SEC:
             record["error"] = "audio too short"
         else:
             try:
+                # Delegate to analyzer for transcription + timeline + scoring,
+                # but we already have features here — keep the cheap path.
+                from .analyzer import (_within_answer_timeline,
+                                       _response_latency)
+                from .content import transcribe, content_features
+
                 feats = extract_features(audio, SAMPLE_RATE)
+                duration_sec = audio.size / SAMPLE_RATE
+                content = None
+                try:
+                    tx = transcribe(audio, SAMPLE_RATE)
+                    if tx:
+                        content = content_features(tx, duration_sec)
+                        for k in ("words_per_sec", "first_person_rate",
+                                  "hedge_rate", "disfluency_rate"):
+                            if content.get(k) is not None:
+                                feats[k] = content[k]
+                except Exception as e:
+                    print(f"[VoiceEngine] content failed: {e}")
                 record["features"] = feats
                 record["score"] = self.baseline.score(feats)
+                record["timeline"] = _within_answer_timeline(
+                    audio, SAMPLE_RATE, self.baseline)
+                record["content"] = content
+                # If VAD missed the first voice frame, fall back to RMS proxy
+                if record["response_latency_sec"] is None:
+                    record["response_latency_sec"] = _response_latency(
+                        audio, SAMPLE_RATE)
             except Exception as e:
                 record["error"] = f"feature extraction failed: {e}"
         self.history.append(record)

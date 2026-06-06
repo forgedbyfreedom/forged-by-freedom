@@ -102,9 +102,39 @@ def extract_features(audio: np.ndarray, fs: int,
         voiced_sec = voiced.size * 0.01
         pause_ratio = float(max(0.0, 1.0 - voiced_sec / total_sec))
 
+    # ── Prosody trajectory ─────────────────────────────────────────
+    f0_iqr = None
+    f0_slope = None
+    if voiced.size > 4:
+        f0_iqr = float(np.percentile(voiced, 75) - np.percentile(voiced, 25))
+        # Linear slope of F0 across voiced frames (Hz/sec)
+        voiced_idx = np.where(f0 > 0)[0]
+        if voiced_idx.size > 4:
+            t = voiced_idx * 0.01
+            try:
+                slope, _ = np.polyfit(t, voiced, 1)
+                f0_slope = float(slope)
+            except Exception:
+                f0_slope = None
+
+    # ── MFCC vector (mean over time) for spectral-envelope tracking ─
+    mfcc_vec = None
+    try:
+        # 13 coefficients, classic for speech
+        mfcc_obj = sound.to_mfcc(number_of_coefficients=13)
+        mfcc_mat = mfcc_obj.to_array()  # shape: (n_coeffs+1, n_frames)
+        # Drop coefficient 0 (energy) — sensitive to absolute loudness,
+        # which we already track via intensity_mean.
+        if mfcc_mat.shape[0] > 1 and mfcc_mat.shape[1] > 0:
+            mfcc_vec = mfcc_mat[1:].mean(axis=1).astype(float).tolist()
+    except Exception:
+        mfcc_vec = None
+
     return {
         "f0_mean": f0_mean,
         "f0_std": f0_std,
+        "f0_iqr": f0_iqr,
+        "f0_slope": f0_slope,
         "jitter_local": jitter_local,
         "shimmer_local": shimmer_local,
         "hnr": hnr,
@@ -112,5 +142,6 @@ def extract_features(audio: np.ndarray, fs: int,
         "intensity_std": intensity_std,
         "speaking_rate": speaking_rate,
         "pause_ratio": pause_ratio,
+        "mfcc_vec": mfcc_vec,
         "duration_sec": float(total_sec),
     }

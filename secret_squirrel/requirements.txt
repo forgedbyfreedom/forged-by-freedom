@@ -4,3 +4,4 @@ webrtcvad>=2.0.10    # VAD for live utterance segmentation
 flask>=3.0
 numpy>=1.24
 yt-dlp>=2024.0       # video/audio URL ingest; also needs ffmpeg in PATH
+faster-whisper>=1.0  # OPTIONAL: enables transcript + content features (hedge/disfluency/first-person rates)
