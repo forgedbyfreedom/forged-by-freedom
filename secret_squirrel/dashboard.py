@@ -35,21 +35,21 @@ INDEX_HTML = """<!doctype html>
   input[type=text] { background:#0e1116; color:#e8eef5; border:1px solid #2b3140;
                      padding:8px; border-radius:6px; width:60%; }
   .gauge { font-size:54px; font-weight:700; text-align:center; }
-  .level-accurate  { color:#3ec06d; }
-  .level-baseline  { color:#e7b13a; }
-  .level-deception { color:#ff8c00; }
-  .level-extreme   { color:#e3534a; }
-  .level-none      { color:#7f8898; }
+  .level-accurate { color:#3ec06d; }
+  .level-baseline { color:#e7b13a; }
+  .level-elevated { color:#ff8c00; }
+  .level-extreme  { color:#e3534a; }
+  .level-none     { color:#7f8898; }
   .level-pill {
       display:inline-block; padding:4px 12px; border-radius:14px;
       font-weight:700; font-size:13px; letter-spacing:0.4px;
       text-transform:uppercase; margin-top:6px;
   }
-  .pill-accurate  { background:#173d27; color:#3ec06d; border:1px solid #3ec06d; }
-  .pill-baseline  { background:#3a2e10; color:#e7b13a; border:1px solid #e7b13a; }
-  .pill-deception { background:#4a2810; color:#ff8c00; border:1px solid #ff8c00; }
-  .pill-extreme   { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a;
-                    box-shadow:0 0 12px rgba(227,83,74,0.5); }
+  .pill-accurate { background:#173d27; color:#3ec06d; border:1px solid #3ec06d; }
+  .pill-baseline { background:#3a2e10; color:#e7b13a; border:1px solid #e7b13a; }
+  .pill-elevated { background:#4a2810; color:#ff8c00; border:1px solid #ff8c00; }
+  .pill-extreme  { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a;
+                   box-shadow:0 0 12px rgba(227,83,74,0.5); }
   table { width:100%; border-collapse:collapse; font-size:13px; }
   th, td { padding:6px 8px; border-bottom:1px solid #232936; text-align:left; }
   th { color:#7f8898; font-weight:500; }
@@ -70,12 +70,11 @@ INDEX_HTML = """<!doctype html>
   <div class="disclaimer">
     <b>This is not a lie detector.</b> Peer-reviewed research finds no acoustic
     feature reliably distinguishes truth from deception. The
-    <i>accurate / baseline / deception / extreme</i> labels are interpretive
-    shorthand for <b>how far the speaker's voice and word choice have drifted
-    from their own calibrated baseline.</b> Stress has many causes — nervousness,
-    fatigue, recall difficulty, illness — and deception is only one of them.
-    Treat any orange or red reading as a cue to ask follow-up questions, never
-    as proof.
+    <i>accurate / baseline / elevated / extreme</i> labels describe
+    <b>how far the speaker's voice and word choice have drifted from their own
+    calibrated baseline</b> — nothing more. Stress has many causes: nervousness,
+    fatigue, recall difficulty, illness, anger. Treat any orange or red reading
+    as a cue to ask a follow-up question, never as proof of anything.
   </div>
 
   <div class="row">
@@ -233,10 +232,10 @@ evt.onmessage = (e) => {
   const gaugeLabel = document.getElementById('gaugeLabel');
   const feats = document.getElementById('features');
   const LEVEL_TEXT = {
-    accurate:  'Accurate',
-    baseline:  'Baseline',
-    deception: 'Deception',
-    extreme:   'Extreme Deception',
+    accurate: 'Accurate',
+    baseline: 'Baseline',
+    elevated: 'Elevated',
+    extreme:  'Extreme',
   };
   if (last && last.score && last.score.composite != null) {
     const c = last.score.composite;
@@ -291,7 +290,7 @@ evt.onmessage = (e) => {
     const tMax = pts[pts.length-1].t || 1;
     const xScale = (t) => 20 + (t / tMax) * (W - 40);
     const yScale = (c) => H - 15 - (c / 100) * (H - 30);
-    // band gridlines: 25 (accurate→baseline), 50 (baseline→deception), 75 (deception→extreme)
+    // band gridlines: 25 (accurate→baseline), 50 (baseline→elevated), 75 (elevated→extreme)
     [0, 25, 50, 75, 100].forEach(v => {
       const y = yScale(v);
       const ln = document.createElementNS('http://www.w3.org/2000/svg','line');
@@ -322,9 +321,9 @@ evt.onmessage = (e) => {
     path.setAttribute('stroke', '#2a6df4');
     path.setAttribute('stroke-width', '2');
     tl.appendChild(path);
-    // Dots — colored by per-window level (accurate / baseline / deception / extreme)
+    // Dots — colored by per-window level (accurate / baseline / elevated / extreme)
     const DOT = {accurate:'#3ec06d', baseline:'#e7b13a',
-                 deception:'#ff8c00', extreme:'#e3534a'};
+                 elevated:'#ff8c00', extreme:'#e3534a'};
     pts.forEach(p => {
       const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
       c.setAttribute('cx', xScale(p.t)); c.setAttribute('cy', yScale(p.composite));
