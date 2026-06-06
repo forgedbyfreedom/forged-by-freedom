@@ -35,10 +35,21 @@ INDEX_HTML = """<!doctype html>
   input[type=text] { background:#0e1116; color:#e8eef5; border:1px solid #2b3140;
                      padding:8px; border-radius:6px; width:60%; }
   .gauge { font-size:54px; font-weight:700; text-align:center; }
-  .level-low { color:#3ec06d; }
-  .level-elevated { color:#e7b13a; }
-  .level-high { color:#e3534a; }
-  .level-none { color:#7f8898; }
+  .level-accurate  { color:#3ec06d; }
+  .level-baseline  { color:#e7b13a; }
+  .level-deception { color:#ff8c00; }
+  .level-extreme   { color:#e3534a; }
+  .level-none      { color:#7f8898; }
+  .level-pill {
+      display:inline-block; padding:4px 12px; border-radius:14px;
+      font-weight:700; font-size:13px; letter-spacing:0.4px;
+      text-transform:uppercase; margin-top:6px;
+  }
+  .pill-accurate  { background:#173d27; color:#3ec06d; border:1px solid #3ec06d; }
+  .pill-baseline  { background:#3a2e10; color:#e7b13a; border:1px solid #e7b13a; }
+  .pill-deception { background:#4a2810; color:#ff8c00; border:1px solid #ff8c00; }
+  .pill-extreme   { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a;
+                    box-shadow:0 0 12px rgba(227,83,74,0.5); }
   table { width:100%; border-collapse:collapse; font-size:13px; }
   th, td { padding:6px 8px; border-bottom:1px solid #232936; text-align:left; }
   th { color:#7f8898; font-weight:500; }
@@ -58,10 +69,13 @@ INDEX_HTML = """<!doctype html>
 
   <div class="disclaimer">
     <b>This is not a lie detector.</b> Peer-reviewed research finds no acoustic
-    feature reliably distinguishes truth from deception. This tool reports
-    <b>stress / cognitive-load markers</b> relative to your subject's own calibrated
-    baseline. Stress has many causes — nervousness, fatigue, recall difficulty,
-    illness — and is only one possible explanation for elevated readings.
+    feature reliably distinguishes truth from deception. The
+    <i>accurate / baseline / deception / extreme</i> labels are interpretive
+    shorthand for <b>how far the speaker's voice and word choice have drifted
+    from their own calibrated baseline.</b> Stress has many causes — nervousness,
+    fatigue, recall difficulty, illness — and deception is only one of them.
+    Treat any orange or red reading as a cue to ask follow-up questions, never
+    as proof.
   </div>
 
   <div class="row">
@@ -218,11 +232,22 @@ evt.onmessage = (e) => {
   const gauge = document.getElementById('gauge');
   const gaugeLabel = document.getElementById('gaugeLabel');
   const feats = document.getElementById('features');
+  const LEVEL_TEXT = {
+    accurate:  'Accurate',
+    baseline:  'Baseline',
+    deception: 'Deception',
+    extreme:   'Extreme Deception',
+  };
   if (last && last.score && last.score.composite != null) {
     const c = last.score.composite;
+    const lv = last.score.level || 'none';
     gauge.textContent = c.toFixed(0);
-    gauge.className = 'gauge level-' + (last.score.level || 'none');
-    gaugeLabel.textContent = (last.label || '') + ' — ' + (last.score.level || '');
+    gauge.className = 'gauge level-' + lv;
+    const labelText = (last.label || 'unlabeled');
+    const pillText  = LEVEL_TEXT[lv] || lv;
+    gaugeLabel.innerHTML =
+      `<div style="margin-bottom:4px;">${labelText}</div>` +
+      `<span class="level-pill pill-${lv}">${pillText}</span>`;
     let html = '<table><thead><tr><th>Feature</th><th>This</th><th>Baseline</th><th>z</th><th>Contrib</th></tr></thead><tbody>';
     const fmt = (v) => v == null ? '—' : (typeof v === 'number' ? v.toFixed(3) : v);
     const pf = last.score.per_feature || {};
@@ -266,13 +291,17 @@ evt.onmessage = (e) => {
     const tMax = pts[pts.length-1].t || 1;
     const xScale = (t) => 20 + (t / tMax) * (W - 40);
     const yScale = (c) => H - 15 - (c / 100) * (H - 30);
-    // 40 / 70 gridlines
-    [0, 40, 70, 100].forEach(v => {
+    // band gridlines: 25 (accurate→baseline), 50 (baseline→deception), 75 (deception→extreme)
+    [0, 25, 50, 75, 100].forEach(v => {
       const y = yScale(v);
       const ln = document.createElementNS('http://www.w3.org/2000/svg','line');
       ln.setAttribute('x1', 20); ln.setAttribute('x2', W - 20);
       ln.setAttribute('y1', y); ln.setAttribute('y2', y);
-      ln.setAttribute('stroke', v === 40 ? '#3ec06d' : v === 70 ? '#e7b13a' : '#2b3140');
+      const stroke = v === 25 ? '#3ec06d'
+                   : v === 50 ? '#e7b13a'
+                   : v === 75 ? '#ff8c00'
+                   : '#2b3140';
+      ln.setAttribute('stroke', stroke);
       ln.setAttribute('stroke-dasharray', '3,3');
       tl.appendChild(ln);
       const tx = document.createElementNS('http://www.w3.org/2000/svg','text');
@@ -293,13 +322,14 @@ evt.onmessage = (e) => {
     path.setAttribute('stroke', '#2a6df4');
     path.setAttribute('stroke-width', '2');
     tl.appendChild(path);
-    // Dots
+    // Dots — colored by per-window level (accurate / baseline / deception / extreme)
+    const DOT = {accurate:'#3ec06d', baseline:'#e7b13a',
+                 deception:'#ff8c00', extreme:'#e3534a'};
     pts.forEach(p => {
       const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
       c.setAttribute('cx', xScale(p.t)); c.setAttribute('cy', yScale(p.composite));
       c.setAttribute('r', 3);
-      c.setAttribute('fill', p.level === 'high' ? '#e3534a'
-                          : p.level === 'elevated' ? '#e7b13a' : '#3ec06d');
+      c.setAttribute('fill', DOT[p.level] || '#7f8898');
       tl.appendChild(c);
     });
     meta.textContent = `${pts.length} windows across ${tMax.toFixed(1)}s — peak ${Math.max(...pts.map(p=>p.composite)).toFixed(0)} at t=${pts.reduce((m,p)=>p.composite>m.composite?p:m, pts[0]).t}s`;

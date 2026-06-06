@@ -197,8 +197,17 @@ class Baseline:
 
 
 def _level(composite: float) -> str:
-    if composite < 40:
-        return "low"
-    if composite < 70:
-        return "elevated"
-    return "high"
+    """Map composite stress 0–100 to a four-band label.
+
+    Note: these labels (accurate / baseline / deception / extreme) are
+    interpretive shorthand chosen by the user. The underlying signal is still
+    just "deviation from baseline acoustic + content features." Stress has
+    many non-deceptive causes; do not treat any single reading as proof.
+    """
+    if composite < 25:
+        return "accurate"
+    if composite < 50:
+        return "baseline"
+    if composite < 75:
+        return "deception"
+    return "extreme"
