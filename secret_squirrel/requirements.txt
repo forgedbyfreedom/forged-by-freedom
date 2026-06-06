@@ -1,0 +1,6 @@
+praat-parselmouth>=0.4.3
+sounddevice>=0.4.6   # live mic only; --baseline/--question and URL flow are mic-free
+webrtcvad>=2.0.10    # VAD for live utterance segmentation
+flask>=3.0
+numpy>=1.24
+yt-dlp>=2024.0       # video/audio URL ingest; also needs ffmpeg in PATH
