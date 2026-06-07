@@ -122,6 +122,7 @@ INDEX_HTML = """<!doctype html>
         <option value="buffer">buffer</option>
         <option value="neutral">neutral</option>
       </select>
+      <input type="text" id="qTopic" placeholder="topic (optional, groups related Qs)" style="width:40%;margin-top:6px;">
       <br>
       <button id="btnAsk" disabled>Start question</button>
       <button id="btnStop" class="warn">Stop now</button>
@@ -224,6 +225,30 @@ INDEX_HTML = """<!doctype html>
   </div>
 
   <div class="card" style="margin-top:16px;">
+    <h3>Topics — cumulative target evidence</h3>
+    <p class="sub">When several target answers share a topic, the per-topic mean
+    score is a stronger signal than any single answer. Set the optional
+    "topic" field when you ask related questions; this table updates live.</p>
+    <table>
+      <thead><tr><th>Topic</th><th>n questions</th>
+        <th>Mean stress</th><th>Max</th><th>Types</th></tr></thead>
+      <tbody id="topicAgg"></tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <h3>Per-subject calibration <span id="calibratedBadge"></span></h3>
+    <p class="sub">After you know which answers were truthful and which were
+    lies, click 👍 (truth) or 👎 (lie) in the History table. Once you have
+    ≥3 of each, hit <b>Refit</b> below and the feature weights re-tune to
+    what discriminates THIS subject. All history scores recompute immediately
+    with the new weights.</p>
+    <button id="btnRefit" disabled>Refit weights from labels</button>
+    <button id="btnRefitRevert" class="ghost" disabled>Revert to default weights</button>
+    <div id="refitStatus" class="sub" style="margin-top:8px;"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
     <h3 style="display:inline-block;">History</h3>
     <span style="float:right;">
       <button class="ghost" onclick="window.open('/api/export/json','_blank')">Download JSON</button>
@@ -231,8 +256,8 @@ INDEX_HTML = """<!doctype html>
     </span>
     <audio id="player" controls style="width:100%;margin:6px 0;display:none;"></audio>
     <table id="histTable">
-      <thead><tr><th>▶</th><th>#</th><th>Label</th><th>Type</th><th>Stress</th><th>Level</th>
-        <th>Latency</th><th>Duration</th><th>When</th></tr></thead>
+      <thead><tr><th>▶</th><th>#</th><th>Label</th><th>Topic</th><th>Type</th><th>Stress</th><th>Level</th>
+        <th>Latency</th><th>Truth?</th><th>When</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
@@ -250,7 +275,8 @@ document.getElementById('btnCalibrate').onclick = () => post('/api/calibrate', {
 document.getElementById('btnAsk').onclick = () => {
   const label = document.getElementById('qLabel').value;
   const type = document.getElementById('qType').value;
-  post('/api/question', {label, question_type: type});
+  const topic = document.getElementById('qTopic').value;
+  post('/api/question', {label, question_type: type, topic});
 };
 document.getElementById('btnStop').onclick = () => post('/api/stop');
 document.getElementById('btnRecal').onclick = () => {
@@ -265,7 +291,8 @@ async function submitUrl(mode) {
   document.getElementById('urlStatus').textContent = 'fetching & analyzing…';
   const label = document.getElementById('urlLabel').value || '';
   const question_type = document.getElementById('qType').value;
-  const r = await post('/api/analyze', {url, mode, label, question_type});
+  const topic = document.getElementById('qTopic').value;
+  const r = await post('/api/analyze', {url, mode, label, question_type, topic});
   document.getElementById('urlStatus').textContent =
     r.error ? ('error: ' + r.error)
             : (r.mode === 'calibrate'
@@ -289,6 +316,7 @@ async function submitFile(mode) {
   form.append('mode', mode);
   form.append('label', document.getElementById('fileLabel').value || '');
   form.append('question_type', document.getElementById('qType').value);
+  form.append('topic', document.getElementById('qTopic').value || '');
   try {
     const r = await fetch('/api/upload', {method: 'POST', body: form});
     const j = await r.json();
@@ -414,6 +442,7 @@ async function _uploadMicRecording() {
   form.append('label',
     document.getElementById('micLabel').value || ('mic ' + _recordMode));
   form.append('question_type', document.getElementById('qType').value);
+  form.append('topic', document.getElementById('qTopic').value || '');
   try {
     const r = await fetch('/api/upload', {method: 'POST', body: form});
     const j = await r.json();
@@ -628,6 +657,52 @@ evt.onmessage = (e) => {
       `Use the "control" question type for questions you know the truthful answer to.</span>`;
   }
 
+  // Topic aggregation
+  const topics = {};
+  (s.history || []).forEach(h => {
+    const t = (h.topic || '').trim();
+    if (!t) return;
+    topics[t] = topics[t] || {n: 0, sum: 0, max: 0, types: new Set()};
+    if (h.score && h.score.composite != null) {
+      topics[t].n += 1;
+      topics[t].sum += h.score.composite;
+      if (h.score.composite > topics[t].max) topics[t].max = h.score.composite;
+    }
+    if (h.type) topics[t].types.add(h.type);
+  });
+  const topicBody = document.getElementById('topicAgg');
+  topicBody.innerHTML = '';
+  const topicEntries = Object.entries(topics).sort(
+    (a, b) => (b[1].n ? b[1].sum/b[1].n : 0) - (a[1].n ? a[1].sum/a[1].n : 0)
+  );
+  if (topicEntries.length === 0) {
+    topicBody.innerHTML = '<tr><td colspan="5" class="sub">No questions have a topic yet. Set the topic field above when asking related questions.</td></tr>';
+  } else {
+    topicEntries.forEach(([name, a]) => {
+      const mean = a.n > 0 ? (a.sum / a.n).toFixed(1) : '—';
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${name}</td><td>${a.n}</td><td>${mean}</td><td>${a.max.toFixed(0)}</td><td>${Array.from(a.types).join(', ')}</td>`;
+      topicBody.appendChild(tr);
+    });
+  }
+
+  // Calibration badge + refit buttons
+  const nTruth = (s.history || []).filter(h => h.truth_label === 'truth').length;
+  const nLie   = (s.history || []).filter(h => h.truth_label === 'lie').length;
+  const calibrated = !!s.calibrated_weights;
+  document.getElementById('btnRefit').disabled = !(nTruth >= 3 && nLie >= 3);
+  document.getElementById('btnRefitRevert').disabled = !calibrated;
+  const badge = document.getElementById('calibratedBadge');
+  if (calibrated) {
+    badge.innerHTML = `<span class="level-pill pill-accurate" style="margin-left:8px;">CALIBRATED</span>`;
+  } else {
+    badge.innerHTML = '';
+  }
+  if (!document.getElementById('refitStatus').textContent) {
+    document.getElementById('refitStatus').textContent =
+      `${nTruth} truth-labeled, ${nLie} lie-labeled. Refit needs ≥3 of each.`;
+  }
+
   const tbody = document.querySelector('#histTable tbody');
   tbody.innerHTML = '';
   (s.history || []).slice().reverse().forEach((h, idx) => {
@@ -639,9 +714,34 @@ evt.onmessage = (e) => {
     const playCell = h.audio_path
       ? `<button class="ghost" style="padding:2px 8px;" onclick="playQ(${num})">▶</button>`
       : '<span class="sub">—</span>';
-    tr.innerHTML = `<td>${playCell}</td><td>${num}</td><td>${h.label||''}</td><td>${h.type||'target'}</td><td>${c}</td><td>${lvl}</td><td>${lat}</td><td>${(h.duration_sec||0).toFixed(1)}s</td><td>${new Date(h.timestamp*1000).toLocaleTimeString()}</td>`;
+    const tl = h.truth_label || null;
+    const upStyle  = tl === 'truth' ? 'background:#173d27;color:#3ec06d;border:1px solid #3ec06d;'
+                                    : 'background:#2b3140;color:#7f8898;';
+    const dnStyle  = tl === 'lie'   ? 'background:#4a1818;color:#ffb0a8;border:1px solid #e3534a;'
+                                    : 'background:#2b3140;color:#7f8898;';
+    const truthCell = `<button class="ghost" style="padding:2px 6px;${upStyle}" onclick="labelQ(${num},'truth')" title="Mark truthful">👍</button>` +
+                      `<button class="ghost" style="padding:2px 6px;margin-left:2px;${dnStyle}" onclick="labelQ(${num},'lie')" title="Mark lie">👎</button>`;
+    tr.innerHTML = `<td>${playCell}</td><td>${num}</td><td>${h.label||''}</td><td>${h.topic||''}</td><td>${h.type||'target'}</td><td>${c}</td><td>${lvl}</td><td>${lat}</td><td>${truthCell}</td><td>${new Date(h.timestamp*1000).toLocaleTimeString()}</td>`;
     tbody.appendChild(tr);
   });
+};
+async function labelQ(num, label) {
+  const cur = await (await fetch('/api/snapshot')).json();
+  const existing = (cur.history || [])[num - 1];
+  const wasSame = existing && existing.truth_label === label;
+  await post('/api/label/' + num, {truth_label: wasSame ? null : label});
+}
+document.getElementById('btnRefit').onclick = async () => {
+  const r = await post('/api/refit', {});
+  const s = document.getElementById('refitStatus');
+  if (r.error) { s.textContent = 'refit failed: ' + r.error; return; }
+  const top = (r.top || []).map(([k,v]) => `${k} ${(v*100).toFixed(0)}%`).join(' · ');
+  s.textContent = `Weights refit from ${r.n_truth} truth + ${r.n_lie} lie. Top features: ${top}`;
+};
+document.getElementById('btnRefitRevert').onclick = async () => {
+  await post('/api/refit/revert', {});
+  document.getElementById('refitStatus').textContent =
+    'Reverted to default weights. History rescored.';
 };
 function playQ(num) {
   const p = document.getElementById('player');
@@ -683,6 +783,7 @@ def api_question():
     return jsonify(engine.start_question(
         label=str(body.get("label", "")),
         question_type=str(body.get("question_type", "target")),
+        topic=str(body.get("topic", "")),
     ))
 
 
@@ -713,10 +814,11 @@ def api_analyze():
         return jsonify({"error": "mode must be 'calibrate' or 'question'"})
     label = str(body.get("label", ""))
     question_type = str(body.get("question_type", "target"))
+    topic = str(body.get("topic", ""))
     looks_like_url = src.startswith(("http://", "https://"))
     fn = analyze_url if looks_like_url else analyze_file
     result = fn(src, engine, mode=mode, label=label,
-                question_type=question_type)
+                question_type=question_type, topic=topic)
     return jsonify(_sanitize(result))
 
 
@@ -741,8 +843,9 @@ def api_upload():
         tmp.close()
         label = request.form.get("label", "") or safe_name
         question_type = request.form.get("question_type", "target")
+        topic = request.form.get("topic", "")
         result = analyze_file(tmp.name, engine, mode=mode, label=label,
-                              question_type=question_type)
+                              question_type=question_type, topic=topic)
         return jsonify(_sanitize(result))
     except Exception as e:
         return jsonify({"error": f"analysis failed: {e}"})
@@ -751,6 +854,94 @@ def api_upload():
             os.unlink(tmp.name)
         except OSError:
             pass
+
+
+def _rescore_history():
+    """Re-score every history record against the current baseline / weights.
+    Used after a weight refit so the dashboard shows updated composites
+    immediately."""
+    with engine._lock:
+        for h in engine.history:
+            feats = h.get("features")
+            if feats:
+                try:
+                    h["score"] = engine.baseline.score(feats)
+                except Exception as e:
+                    print(f"[secret-squirrel] rescore failed: {e}")
+
+
+@app.route("/api/label/<int:idx>", methods=["POST"])
+def api_label(idx: int):
+    """Mark a history record's ground-truth label post-hoc.
+    Body: {"truth_label": "truth" | "lie" | null}"""
+    body = request.get_json(silent=True) or {}
+    val = body.get("truth_label")
+    if val not in (None, "truth", "lie"):
+        return jsonify({"error": "truth_label must be 'truth', 'lie', or null"})
+    with engine._lock:
+        if idx < 1 or idx > len(engine.history):
+            return jsonify({"error": "no such question"})
+        engine.history[idx - 1]["truth_label"] = val
+    return jsonify({"ok": True})
+
+
+@app.route("/api/refit", methods=["POST"])
+def api_refit():
+    """Fit per-subject feature weights from labeled history.
+
+    Method: for each scoring feature, compute the absolute gap between the
+    mean z-score on lie answers and the mean z-score on truth answers
+    (|mean(z|lie) − mean(z|truth)|). Features that strongly discriminate
+    between truth and lie get bigger weights. Normalize across features so
+    they sum to 1, then apply via baseline.set_custom_weights() and re-score
+    the entire history so the dashboard updates immediately.
+
+    Requires ≥3 truth-labeled AND ≥3 lie-labeled records to refit.
+    """
+    import numpy as np
+    from .baseline import WEIGHTS
+    with engine._lock:
+        truths = [h for h in engine.history if h.get("truth_label") == "truth"]
+        lies   = [h for h in engine.history if h.get("truth_label") == "lie"]
+    if len(truths) < 3 or len(lies) < 3:
+        return jsonify({"error":
+            f"Need ≥3 truth and ≥3 lie labels. "
+            f"You have {len(truths)} truth, {len(lies)} lie."})
+    gaps = {}
+    for feat in WEIGHTS:
+        tzs = [h["score"]["per_feature"][feat]["z"]
+               for h in truths
+               if isinstance(h.get("score"), dict)
+               and feat in (h["score"].get("per_feature") or {})
+               and isinstance(h["score"]["per_feature"][feat].get("z"),
+                              (int, float))]
+        lzs = [h["score"]["per_feature"][feat]["z"]
+               for h in lies
+               if isinstance(h.get("score"), dict)
+               and feat in (h["score"].get("per_feature") or {})
+               and isinstance(h["score"]["per_feature"][feat].get("z"),
+                              (int, float))]
+        if len(tzs) >= 2 and len(lzs) >= 2:
+            gaps[feat] = float(abs(np.mean(lzs) - np.mean(tzs)))
+    if sum(gaps.values()) <= 0:
+        return jsonify({"error": "no discriminative features across labels"})
+    engine.baseline.set_custom_weights(gaps)
+    _rescore_history()
+    return jsonify({
+        "ok": True,
+        "n_truth": len(truths),
+        "n_lie": len(lies),
+        "weights": engine.baseline.custom_weights,
+        "top": sorted(engine.baseline.custom_weights.items(),
+                      key=lambda kv: -kv[1])[:5],
+    })
+
+
+@app.route("/api/refit/revert", methods=["POST"])
+def api_refit_revert():
+    engine.baseline.clear_custom_weights()
+    _rescore_history()
+    return jsonify({"ok": True})
 
 
 @app.errorhandler(413)

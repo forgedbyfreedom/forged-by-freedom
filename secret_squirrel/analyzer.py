@@ -202,6 +202,7 @@ def _within_answer_timeline(audio: np.ndarray, fs: int, baseline,
 def analyze_audio_array(audio: np.ndarray, fs: int, engine,
                         mode: str = "question", label: str = "",
                         question_type: str = "target",
+                        topic: str = "",
                         question_start_time: Optional[float] = None,
                         transcribe_enabled: bool = True) -> dict:
     """Run features → baseline add OR score → append to history.
@@ -292,6 +293,8 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
     record = {
         "label": label or f"Q{len(engine.history) + 1}",
         "type": question_type,
+        "topic": topic or "",
+        "truth_label": None,
         "timestamp": time.time(),
         "duration_sec": duration_sec,
         "response_latency_sec": latency,
@@ -322,6 +325,7 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
 
 def analyze_file(path: str, engine, mode: str = "question",
                  label: str = "", question_type: str = "target",
+                 topic: str = "",
                  transcribe_enabled: bool = True) -> dict:
     if not os.path.exists(path):
         return {"error": f"file not found: {path}"}
@@ -332,11 +336,13 @@ def analyze_file(path: str, engine, mode: str = "question",
     return analyze_audio_array(audio, fs, engine, mode=mode,
                                label=label or path,
                                question_type=question_type,
+                               topic=topic,
                                transcribe_enabled=transcribe_enabled)
 
 
 def analyze_url(url: str, engine, mode: str = "question",
                 label: str = "", question_type: str = "target",
+                topic: str = "",
                 transcribe_enabled: bool = True) -> dict:
     try:
         wav_path = download_url(url)
@@ -354,4 +360,5 @@ def analyze_url(url: str, engine, mode: str = "question",
     return analyze_audio_array(audio, fs, engine, mode=mode,
                                label=label or url,
                                question_type=question_type,
+                               topic=topic,
                                transcribe_enabled=transcribe_enabled)

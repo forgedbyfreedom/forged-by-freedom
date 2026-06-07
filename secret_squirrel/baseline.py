@@ -83,6 +83,25 @@ class Baseline:
         self.stats: dict[str, tuple[float, float]] = {}  # k → (mean, std)
         self.mfcc_centroid: Optional[np.ndarray] = None
         self.locked: bool = False
+        # When the operator labels some history records as truth/lie and clicks
+        # "Refit weights", these subject-specific weights override the defaults.
+        # Set back to None to revert.
+        self.custom_weights: Optional[dict[str, float]] = None
+
+    def active_weights(self) -> dict[str, float]:
+        return self.custom_weights if self.custom_weights else WEIGHTS
+
+    def set_custom_weights(self, weights: dict[str, float]) -> None:
+        # Normalize to sum to 1 so the squash function still maps reasonably
+        total = sum(max(w, 0.0) for w in weights.values())
+        if total <= 0:
+            self.custom_weights = None
+            return
+        self.custom_weights = {k: max(w, 0.0) / total
+                               for k, w in weights.items()}
+
+    def clear_custom_weights(self) -> None:
+        self.custom_weights = None
 
     def add(self, features: dict) -> None:
         if self.locked or not features:
@@ -185,7 +204,7 @@ class Baseline:
         per_feature = {}
         weighted = 0.0
         weight_total = 0.0
-        for k, w in WEIGHTS.items():
+        for k, w in self.active_weights().items():
             v = features.get(k)
             stat = self.stats.get(k)
             if v is None or stat is None:

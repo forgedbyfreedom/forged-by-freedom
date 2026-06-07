@@ -99,7 +99,8 @@ class VoiceEngine:
         return {"ok": True}
 
     def start_question(self, label: str = "",
-                       question_type: str = "target") -> dict:
+                       question_type: str = "target",
+                       topic: str = "") -> dict:
         if sd is None:
             return {"error": "sounddevice not installed"}
         if not self.baseline.locked:
@@ -113,6 +114,7 @@ class VoiceEngine:
             self._mode = "question"
             self._question_label = label or f"Q{len(self.history) + 1}"
             self._question_type = question_type
+            self._question_topic = topic or ""
             self._buffer = []
             self._silence_ms = 0
             self._record_start = time.time()
@@ -254,6 +256,8 @@ class VoiceEngine:
         record = {
             "label": self._question_label,
             "type": self._question_type,
+            "topic": getattr(self, "_question_topic", "") or "",
+            "truth_label": None,
             "timestamp": time.time(),
             "duration_sec": float(audio.size / SAMPLE_RATE),
             "response_latency_sec": latency,
@@ -316,6 +320,9 @@ class VoiceEngine:
                 "baseline_samples": len(self.baseline.samples),
                 "baseline_stats": dict(self.baseline.stats),
                 "baseline_quality": self.baseline.quality(),
+                "calibrated_weights": (dict(self.baseline.custom_weights)
+                                       if self.baseline.custom_weights
+                                       else None),
                 "session_id": getattr(self, "session_id", None),
                 "history_count": len(self.history),
                 "history": list(self.history[-20:]),
