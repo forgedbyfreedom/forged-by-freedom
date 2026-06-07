@@ -68,6 +68,12 @@ INDEX_HTML = """<!doctype html>
   .pill-elevated { background:#4a2810; color:#ff8c00; border:1px solid #ff8c00; }
   .pill-extreme  { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a;
                    box-shadow:0 0 12px rgba(227,83,74,0.5); }
+  .quality-badge { display:inline-block; padding:3px 10px; border-radius:10px;
+                   font-size:12px; font-weight:600; margin-left:6px; }
+  .quality-good { background:#173d27; color:#3ec06d; border:1px solid #3ec06d; }
+  .quality-warn { background:#3a2e10; color:#e7b13a; border:1px solid #e7b13a; }
+  .quality-bad  { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a; }
+  .quality-none { background:#2b3140; color:#7f8898; border:1px solid #2b3140; }
   table { width:100%; border-collapse:collapse; font-size:13px; }
   th, td { padding:6px 8px; border-bottom:1px solid #232936; text-align:left; }
   th { color:#7f8898; font-weight:500; }
@@ -102,6 +108,7 @@ INDEX_HTML = """<!doctype html>
       (the alphabet, what they ate today, a paragraph from a book).</p>
       <button id="btnCalibrate">Start 30s calibration</button>
       <div id="calStatus" class="sub" style="margin-top:8px;"></div>
+      <div id="qualityBadge" style="margin-top:8px;"></div>
     </div>
 
     <div class="card">
@@ -291,9 +298,17 @@ evt.onmessage = (e) => {
   document.getElementById('histN').textContent = s.history_count;
   document.getElementById('btnAsk').disabled = !s.baseline_locked || s.state !== 'ready';
   document.getElementById('btnRecal').disabled = !s.baseline_locked;
-  document.getElementById('calStatus').textContent =
-    s.baseline_locked ? `Baseline locked (${s.baseline_samples} samples).`
-                      : (s.state === 'calibrating' ? 'Calibrating…' : 'Not calibrated yet.');
+  const q = s.baseline_quality || {level:'none', message:'Not calibrated yet.'};
+  document.getElementById('calStatus').textContent = q.message;
+  const badge = document.getElementById('qualityBadge');
+  if (q.level && q.level !== 'none') {
+    const LABEL = {good:'GOOD BASELINE', warn:'THIN BASELINE — recalibrate?', bad:'BAD BASELINE — recalibrate'};
+    badge.innerHTML =
+      `<span class="quality-badge quality-${q.level}">${LABEL[q.level]||q.level}</span>` +
+      `<span class="sub" style="margin-left:8px;">${q.n_samples} sample(s), ${q.total_sec.toFixed(0)}s</span>`;
+  } else {
+    badge.innerHTML = '';
+  }
   const t = s.now_recording_for_sec;
   document.getElementById('recTimer').textContent =
     (s.mode ? `${s.mode} for ${t.toFixed(1)}s` : '');

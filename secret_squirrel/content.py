@@ -11,10 +11,16 @@ and the rest of the pipeline still works.
 """
 from __future__ import annotations
 
+import os
 import re
 from typing import Optional
 
 import numpy as np
+
+# Default whisper model: "tiny" is fast (~75 MB) but smooths over disfluencies
+# (it ignores "um"/"uh" almost entirely). Override with SQUIRREL_WHISPER_MODEL
+# to "base" (~145 MB) or "small" (~470 MB) when you want disfluency capture.
+DEFAULT_WHISPER_MODEL = os.environ.get("SQUIRREL_WHISPER_MODEL", "tiny")
 
 # Lexicons (lowercase comparison, word-boundary matched)
 FIRST_PERSON = {
@@ -48,7 +54,7 @@ _WHISPER_MODEL = None
 _WHISPER_TRIED = False
 
 
-def _load_whisper(model_name: str = "tiny"):
+def _load_whisper(model_name: str = DEFAULT_WHISPER_MODEL):
     """Lazy-load a faster-whisper model. Returns model or None if unavailable."""
     global _WHISPER_MODEL, _WHISPER_TRIED
     if _WHISPER_MODEL is not None:
@@ -68,7 +74,7 @@ def _load_whisper(model_name: str = "tiny"):
 
 
 def transcribe(audio: np.ndarray, fs: int,
-               model_name: str = "tiny") -> Optional[dict]:
+               model_name: str = DEFAULT_WHISPER_MODEL) -> Optional[dict]:
     """Transcribe a mono float64 audio array. Returns:
        {"text": str, "words": [(start, end, word), ...]} or None if unavailable.
     """
@@ -86,8 +92,13 @@ def transcribe(audio: np.ndarray, fs: int,
                 np.linspace(0, len(audio_f32) - 1, n_new),
                 np.arange(len(audio_f32)), audio_f32
             ).astype(np.float32)
+        # vad_filter=False keeps disfluencies ("um", "uh", "er") in the
+        # transcript — they're a real deception signal in the Vrij literature.
+        # condition_on_previous_text=False reduces whisper's tendency to
+        # smooth filler words away across segments.
         segments, _info = model.transcribe(audio_f32, word_timestamps=True,
-                                            vad_filter=True)
+                                            vad_filter=False,
+                                            condition_on_previous_text=False)
         text_parts = []
         words = []
         for seg in segments:

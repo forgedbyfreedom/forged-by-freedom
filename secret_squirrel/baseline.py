@@ -136,6 +136,36 @@ class Baseline:
         except Exception:
             return None
 
+    def quality(self) -> dict:
+        """Report how trustworthy the baseline is.
+
+        Bad baselines silently produce bad scores. This surfaces the obvious
+        red flags before the operator starts asking real questions:
+          n_samples < 2  or  total_sec < 10  → bad   (recalibrate)
+          n_samples < 4  or  total_sec < 20  → warn  (acceptable but thin)
+          else                               → good
+        """
+        n = len(self.samples)
+        total_sec = float(sum(s.get("duration_sec", 0.0) or 0.0
+                              for s in self.samples))
+        if not self.locked:
+            level = "none"
+            msg = "Not calibrated yet."
+        elif n < 2 or total_sec < 10:
+            level = "bad"
+            msg = (f"Bad baseline ({n} samples, {total_sec:.0f}s). "
+                   f"Scores will be unreliable. Recalibrate with ≥20s of "
+                   f"neutral speech.")
+        elif n < 4 or total_sec < 20:
+            level = "warn"
+            msg = (f"Thin baseline ({n} samples, {total_sec:.0f}s). "
+                   f"Recommended: ≥4 samples and ≥20s of neutral speech.")
+        else:
+            level = "good"
+            msg = f"Baseline locked ({n} samples, {total_sec:.0f}s)."
+        return {"n_samples": n, "total_sec": total_sec,
+                "level": level, "message": msg}
+
     def score(self, features: dict) -> dict:
         """Return composite stress score 0–100 + per-feature contributions.
 

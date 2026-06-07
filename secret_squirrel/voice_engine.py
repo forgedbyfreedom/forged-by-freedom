@@ -315,6 +315,8 @@ class VoiceEngine:
                 "baseline_locked": self.baseline.locked,
                 "baseline_samples": len(self.baseline.samples),
                 "baseline_stats": dict(self.baseline.stats),
+                "baseline_quality": self.baseline.quality(),
+                "session_id": getattr(self, "session_id", None),
                 "history_count": len(self.history),
                 "history": list(self.history[-20:]),
                 "now_recording_for_sec": (time.time() - self._record_start
