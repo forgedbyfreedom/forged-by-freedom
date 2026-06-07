@@ -152,10 +152,13 @@ INDEX_HTML = """<!doctype html>
   </div>
 
   <div class="card" style="margin-top:16px;">
-    <h3>Comparison by question type</h3>
-    <p class="sub">A target answer with significantly higher stress than your
-    controls is what to follow up on. Equal stress across types = nothing to
-    conclude.</p>
+    <h3>Comparison by question type — CQT differential</h3>
+    <p class="sub">The Comparison Question Technique compares target answers to
+    your own control answers, not just to baseline. The <b>differential</b> is
+    <code>mean(target) − mean(control)</code>. A target answer with
+    significantly higher stress than your controls is what to follow up on.
+    Equal stress across types = nothing to conclude.</p>
+    <div id="cqtDiff" style="margin:8px 0 12px 0;"></div>
     <table>
       <thead><tr><th>Type</th><th>n</th><th>Mean stress</th><th>Max</th>
         <th>Mean latency</th></tr></thead>
@@ -322,16 +325,29 @@ evt.onmessage = (e) => {
     path.setAttribute('stroke-width', '2');
     tl.appendChild(path);
     // Dots — colored by per-window level (accurate / baseline / elevated / extreme)
+    // Each dot has a <title> with the words spoken at that moment, surfaced
+    // as a native browser tooltip on hover.
     const DOT = {accurate:'#3ec06d', baseline:'#e7b13a',
                  elevated:'#ff8c00', extreme:'#e3534a'};
     pts.forEach(p => {
       const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
       c.setAttribute('cx', xScale(p.t)); c.setAttribute('cy', yScale(p.composite));
-      c.setAttribute('r', 3);
+      c.setAttribute('r', p.level === 'extreme' ? 5 : (p.level === 'elevated' ? 4 : 3));
       c.setAttribute('fill', DOT[p.level] || '#7f8898');
+      c.style.cursor = 'help';
+      const title = document.createElementNS('http://www.w3.org/2000/svg','title');
+      title.textContent = `t=${p.t}s  score=${p.composite.toFixed(0)}` +
+                          (p.words ? `\n"${p.words}"` : '');
+      c.appendChild(title);
       tl.appendChild(c);
     });
-    meta.textContent = `${pts.length} windows across ${tMax.toFixed(1)}s — peak ${Math.max(...pts.map(p=>p.composite)).toFixed(0)} at t=${pts.reduce((m,p)=>p.composite>m.composite?p:m, pts[0]).t}s`;
+    // Peak summary: show the words that were spoken at the peak moment
+    const peak = pts.reduce((m,p)=>p.composite>m.composite?p:m, pts[0]);
+    const peakWords = peak.words ? ` — at "${peak.words}"` : '';
+    meta.innerHTML = `${pts.length} windows across ${tMax.toFixed(1)}s — ` +
+                     `<b>peak ${peak.composite.toFixed(0)} at t=${peak.t}s</b>` +
+                     peakWords +
+                     `<br><span style="opacity:0.7;">Hover any dot to see the words spoken at that moment.</span>`;
   } else {
     meta.textContent = '';
   }
@@ -360,6 +376,31 @@ evt.onmessage = (e) => {
     tr.innerHTML = `<td>${t}</td><td>${a.n}</td><td>${(a.sum/a.n).toFixed(1)}</td><td>${a.max.toFixed(0)}</td><td>${meanLat}</td>`;
     aggBody.appendChild(tr);
   });
+
+  // CQT differential: mean(target) - mean(control)
+  const diffEl = document.getElementById('cqtDiff');
+  const tgt = agg.target, ctrl = agg.control;
+  if (tgt && ctrl && tgt.n > 0 && ctrl.n > 0) {
+    const diff = (tgt.sum/tgt.n) - (ctrl.sum/ctrl.n);
+    let pill = 'pill-baseline', verdict = 'Inconclusive';
+    if (diff < 5) { pill = 'pill-accurate'; verdict = 'Targets ≈ Controls'; }
+    else if (diff < 15) { pill = 'pill-baseline'; verdict = 'Mild differential'; }
+    else if (diff < 25) { pill = 'pill-elevated'; verdict = 'Meaningful differential — follow up'; }
+    else { pill = 'pill-extreme'; verdict = 'Strong differential — strong follow up'; }
+    const sign = diff >= 0 ? '+' : '';
+    diffEl.innerHTML =
+      `<div style="font-size:13px;color:#7f8898;">target mean − control mean</div>` +
+      `<div style="font-size:32px;font-weight:700;margin:2px 0;">${sign}${diff.toFixed(1)}</div>` +
+      `<span class="level-pill ${pill}">${verdict}</span> ` +
+      `<span class="sub" style="margin-left:8px;">` +
+      `(target ${tgt.n}× mean ${(tgt.sum/tgt.n).toFixed(1)}, ` +
+      `control ${ctrl.n}× mean ${(ctrl.sum/ctrl.n).toFixed(1)})` +
+      `</span>`;
+  } else {
+    diffEl.innerHTML =
+      `<span class="sub">Need ≥1 control and ≥1 target answer to compute the differential. ` +
+      `Use the "control" question type for questions you know the truthful answer to.</span>`;
+  }
 
   const tbody = document.querySelector('#histTable tbody');
   tbody.innerHTML = '';

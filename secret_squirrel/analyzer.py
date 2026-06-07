@@ -92,12 +92,19 @@ def _response_latency(audio: np.ndarray, fs: int,
 
 def _within_answer_timeline(audio: np.ndarray, fs: int, baseline,
                             win_sec: float = TIMELINE_WIN_SEC,
-                            hop_sec: float = TIMELINE_HOP_SEC) -> list:
-    """Slide a window across the answer; return [{t, composite, level}, …].
+                            hop_sec: float = TIMELINE_HOP_SEC,
+                            words: Optional[list] = None) -> list:
+    """Slide a window across the answer; return [{t, composite, level, words}, …].
 
     A flat timeline = uniform stress across the answer. A spike mid-answer is
-    where the speaker's voice changed — often the moment of fabrication or
-    recall difficulty. This is for interpretation, not classification.
+    where the speaker's voice changed — often where a fabrication is
+    constructed or a difficult recall happens. This is for interpretation,
+    not classification.
+
+    When `words` is passed (Whisper word-timestamps, list of (start, end, word)),
+    each timeline point is annotated with the words spoken during that window,
+    so a spike at t=4.2s shows you WHICH WORDS were spoken when the spike
+    occurred.
     """
     if not baseline.locked or audio.size < fs * win_sec:
         return []
@@ -113,11 +120,24 @@ def _within_answer_timeline(audio: np.ndarray, fs: int, baseline,
             continue
         if score.get("composite") is None:
             continue
-        out.append({
-            "t": round(start / fs, 2),
+        t = start / fs
+        point = {
+            "t": round(t, 2),
             "composite": float(score["composite"]),
             "level": score.get("level"),
-        })
+        }
+        if words:
+            # Words whose midpoint falls within this window
+            window_words = []
+            t_end = t + win_sec
+            for w in words:
+                w_start, w_end, w_text = w
+                w_mid = (w_start + w_end) / 2.0
+                if t <= w_mid < t_end:
+                    window_words.append(w_text)
+            if window_words:
+                point["words"] = " ".join(window_words).strip()
+        out.append(point)
     return out
 
 
@@ -188,11 +208,13 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
 
     # Content channel (whisper) — adds words_per_sec, hedge_rate, etc. to feats
     content = None
+    tx_words = None
     if transcribe_enabled:
         try:
             tx = transcribe(audio, fs)
             if tx:
                 content = content_features(tx, duration_sec)
+                tx_words = tx.get("words")
                 # Merge scalar content features into feats for scoring
                 for k in ("words_per_sec", "first_person_rate", "hedge_rate",
                           "disfluency_rate"):
@@ -202,7 +224,8 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
             print(f"[squirrel] content extraction failed: {e}")
 
     score = engine.baseline.score(feats)
-    timeline = _within_answer_timeline(audio, fs, engine.baseline)
+    timeline = _within_answer_timeline(audio, fs, engine.baseline,
+                                       words=tx_words)
     latency = _response_latency(audio, fs)
     if question_start_time is not None:
         # Caller knows the wall-clock moment they asked the question

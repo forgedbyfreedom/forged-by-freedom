@@ -247,10 +247,12 @@ class VoiceEngine:
                 feats = extract_features(audio, SAMPLE_RATE)
                 duration_sec = audio.size / SAMPLE_RATE
                 content = None
+                tx_words = None
                 try:
                     tx = transcribe(audio, SAMPLE_RATE)
                     if tx:
                         content = content_features(tx, duration_sec)
+                        tx_words = tx.get("words")
                         for k in ("words_per_sec", "first_person_rate",
                                   "hedge_rate", "disfluency_rate"):
                             if content.get(k) is not None:
@@ -260,7 +262,7 @@ class VoiceEngine:
                 record["features"] = feats
                 record["score"] = self.baseline.score(feats)
                 record["timeline"] = _within_answer_timeline(
-                    audio, SAMPLE_RATE, self.baseline)
+                    audio, SAMPLE_RATE, self.baseline, words=tx_words)
                 record["content"] = content
                 # If VAD missed the first voice frame, fall back to RMS proxy
                 if record["response_latency_sec"] is None:
