@@ -86,6 +86,56 @@ python -m secret_squirrel.dashboard --host 127.0.0.1 --port 5057
    number. Recalibrate any time the recording environment changes (different
    mic, different room).
 
+## Recording from a phone (iPhone / Android)
+
+The dashboard's **"Record from this device's mic"** card uses the browser's
+native `MediaRecorder` API. It works in Safari on iOS, Chrome on Android,
+and any desktop browser — but **iPhone Safari requires HTTPS** for
+microphone access. Plain `http://` only works when the URL is `localhost`
+or `127.0.0.1`.
+
+Three easy ways to get HTTPS so the iPhone mic capture works:
+
+### Option A — Tailscale Funnel (free, recommended)
+
+```bash
+# install Tailscale, log in, then on the dashboard host:
+tailscale funnel 5057
+# → https://<your-machine>.<your-tailnet>.ts.net is now live
+```
+
+Open that URL on your iPhone. HTTPS, signed certificate, no public DNS
+needed. Devices on the funnel are limited to ones you log in to.
+
+### Option B — ngrok (free tier works)
+
+```bash
+ngrok http 5057
+# → https://abc123.ngrok-free.app
+```
+
+Faster to set up than Tailscale but anyone with the link can reach the
+dashboard. Use a basic-auth flag if you're sharing across the internet:
+
+```bash
+ngrok http --basic-auth='you:strong-password' 5057
+```
+
+### Option C — Self-signed cert + run Flask in HTTPS mode
+
+```bash
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem \
+            -days 30 -nodes -subj '/CN=localhost'
+python -m secret_squirrel.dashboard --host 0.0.0.0 --port 5057 \
+       --ssl-cert cert.pem --ssl-key key.pem
+```
+
+Then on the iPhone, browse to `https://<host-LAN-ip>:5057`, accept the
+self-signed cert warning, and the mic card will work.
+
+If you only need uploads (Voice Memo files etc.) and no live phone mic,
+plain HTTP on LAN is fine — just bind `--host 0.0.0.0`.
+
 ## Architecture
 
 ```

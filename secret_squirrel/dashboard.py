@@ -154,6 +154,24 @@ INDEX_HTML = """<!doctype html>
   </div>
 
   <div class="card" style="margin-top:16px;">
+    <h3>🎙️ Record from this device's mic</h3>
+    <p class="sub">Capture audio directly from this device's microphone — iPhone, iPad,
+    Mac, PC, anything with a browser. Use as <b>baseline</b> first (30s of neutral
+    speech, auto-stops), then as <b>question</b> (you press Stop when the subject
+    finishes). Question type selector above applies. Recording uses MediaRecorder
+    natively; the audio is uploaded and run through the exact same pipeline as
+    file uploads.</p>
+    <div id="micCheck" class="sub" style="margin-bottom:8px;"></div>
+    <input type="text" id="micLabel" placeholder="label (optional)" style="width:50%;">
+    <br>
+    <button id="btnMicCal" class="ghost">Start 30s calibration</button>
+    <button id="btnMicQ">Start question recording</button>
+    <button id="btnMicStop" class="warn" disabled>⏹ Stop & analyze</button>
+    <div id="micTimer" class="sub" style="margin-top:8px;"></div>
+    <div id="micStatus" class="sub"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
     <h3>Or analyze by URL / server path</h3>
     <p class="sub">Paste a YouTube / X / Instagram / TikTok / direct media URL,
     or a path to a file that's already on this server. yt-dlp handles URL
@@ -287,6 +305,131 @@ async function submitFile(mode) {
 }
 document.getElementById('btnFileCal').onclick = () => submitFile('calibrate');
 document.getElementById('btnFileQ').onclick   = () => submitFile('question');
+
+// ── Browser MediaRecorder: capture mic on this device ─────────────────
+let _mediaRecorder = null, _chunks = [], _recordMode = null,
+    _countdown = 0, _countdownInterval = null;
+
+function _pickMimeType() {
+  const candidates = [
+    'audio/webm;codecs=opus','audio/webm',
+    'audio/mp4;codecs=mp4a.40.2','audio/mp4',
+    'audio/ogg;codecs=opus','audio/ogg',
+  ];
+  for (const m of candidates) {
+    if (window.MediaRecorder && MediaRecorder.isTypeSupported &&
+        MediaRecorder.isTypeSupported(m)) return m;
+  }
+  return '';
+}
+function _mimeToExt(mime) {
+  mime = (mime || '').toLowerCase();
+  if (mime.indexOf('webm') >= 0) return '.webm';
+  if (mime.indexOf('mp4')  >= 0) return '.m4a';
+  if (mime.indexOf('ogg')  >= 0) return '.ogg';
+  if (mime.indexOf('wav')  >= 0) return '.wav';
+  return '.webm';
+}
+
+(function checkMic() {
+  const el = document.getElementById('micCheck');
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia ||
+      !window.MediaRecorder) {
+    el.innerHTML = '<span style="color:#e3534a;">This browser does not support in-browser microphone recording. Use the file-upload card instead.</span>';
+    document.getElementById('btnMicCal').disabled = true;
+    document.getElementById('btnMicQ').disabled = true;
+    return;
+  }
+  const isSecure = location.protocol === 'https:' ||
+                   location.hostname === 'localhost' ||
+                   location.hostname === '127.0.0.1';
+  if (!isSecure) {
+    el.innerHTML = '<span style="color:#e7b13a;">⚠ iPhone Safari (and most browsers) require <b>HTTPS</b> for microphone access. ' +
+                   'On HTTP/LAN you can still use the file-upload card. ' +
+                   'For HTTPS see the README: <code>tailscale funnel</code>, <code>ngrok http</code>, or a self-signed cert.</span>';
+  } else {
+    el.textContent = 'Microphone ready. First record press will prompt for permission.';
+  }
+})();
+
+async function _startMic(mode) {
+  _recordMode = mode;
+  const status = document.getElementById('micStatus');
+  const timer = document.getElementById('micTimer');
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(
+      {audio: {echoCancellation: true, noiseSuppression: false, autoGainControl: false}}
+    );
+    const mime = _pickMimeType();
+    _mediaRecorder = new MediaRecorder(stream, mime ? {mimeType: mime} : {});
+    _chunks = [];
+    _mediaRecorder.ondataavailable = (e) => {
+      if (e.data && e.data.size > 0) _chunks.push(e.data);
+    };
+    _mediaRecorder.onstop = () => {
+      stream.getTracks().forEach(t => t.stop());
+      _uploadMicRecording();
+    };
+    _mediaRecorder.start();
+    document.getElementById('btnMicCal').disabled = true;
+    document.getElementById('btnMicQ').disabled = true;
+    document.getElementById('btnMicStop').disabled = false;
+    status.innerHTML = `<span style="color:#e3534a;">● Recording (${mode})…</span>`;
+    // Calibration auto-stops at 30s; question has a 60s hard cap
+    _countdown = (mode === 'calibrate') ? 30 : 60;
+    timer.textContent = `${mode === 'calibrate' ? 'Auto-stop in ' : '(max '}` +
+                        `${_countdown}s${mode === 'calibrate' ? '' : ' — press Stop when done)'}`;
+    _countdownInterval = setInterval(() => {
+      _countdown -= 1;
+      timer.textContent = `${mode === 'calibrate' ? 'Auto-stop in ' : '(max '}` +
+                          `${_countdown}s${mode === 'calibrate' ? '' : ' — press Stop when done)'}`;
+      if (_countdown <= 0) _stopMic();
+    }, 1000);
+  } catch (e) {
+    status.innerHTML = `<span style="color:#e3534a;">Mic permission denied or unavailable: ${e.message || e.name}</span>`;
+  }
+}
+
+function _stopMic() {
+  if (_mediaRecorder && _mediaRecorder.state === 'recording') _mediaRecorder.stop();
+  if (_countdownInterval) { clearInterval(_countdownInterval); _countdownInterval = null; }
+  document.getElementById('micTimer').textContent = '';
+  document.getElementById('btnMicStop').disabled = true;
+}
+
+async function _uploadMicRecording() {
+  const status = document.getElementById('micStatus');
+  if (_chunks.length === 0) {
+    status.textContent = 'No audio captured.';
+    document.getElementById('btnMicCal').disabled = false;
+    document.getElementById('btnMicQ').disabled = false;
+    return;
+  }
+  status.textContent = 'Analyzing…';
+  const mime = _mediaRecorder.mimeType || _chunks[0].type || '';
+  const blob = new Blob(_chunks, {type: mime});
+  const form = new FormData();
+  form.append('file', blob, 'mic_recording' + _mimeToExt(mime));
+  form.append('mode', _recordMode);
+  form.append('label',
+    document.getElementById('micLabel').value || ('mic ' + _recordMode));
+  form.append('question_type', document.getElementById('qType').value);
+  try {
+    const r = await fetch('/api/upload', {method: 'POST', body: form});
+    const j = await r.json();
+    if (j.error) status.innerHTML = '<span style="color:#e3534a;">error: ' + j.error + '</span>';
+    else if (j.mode === 'calibrate') status.textContent = `Baseline locked (${j.baseline_samples} samples).`;
+    else status.textContent = 'Question analyzed — see latest score and history.';
+  } catch (e) {
+    status.innerHTML = '<span style="color:#e3534a;">Upload failed: ' + e + '</span>';
+  }
+  document.getElementById('btnMicCal').disabled = false;
+  document.getElementById('btnMicQ').disabled = false;
+}
+
+document.getElementById('btnMicCal').onclick  = () => _startMic('calibrate');
+document.getElementById('btnMicQ').onclick    = () => _startMic('question');
+document.getElementById('btnMicStop').onclick = _stopMic;
 
 const evt = new EventSource('/stream');
 evt.onmessage = (e) => {
@@ -769,6 +912,9 @@ def main():
     p = argparse.ArgumentParser(description="Secret Squirrel voice stress dashboard")
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=5057)
+    p.add_argument("--ssl-cert", help="PEM cert for HTTPS (required for iPhone "
+                                       "mic capture on a LAN URL)")
+    p.add_argument("--ssl-key", help="PEM key for HTTPS")
     p.add_argument("--baseline", help="(CLI mode) WAV/MP3 path or URL for baseline")
     p.add_argument("--question", action="append", default=[],
                    help="(CLI mode) WAV/MP3 path or URL to score; repeatable")
@@ -780,8 +926,20 @@ def main():
     if args.host == "0.0.0.0":
         print("[secret-squirrel] WARNING: binding to 0.0.0.0 exposes the dashboard "
               "with no authentication.")
-    print(f"[secret-squirrel] http://{args.host}:{args.port}")
-    app.run(host=args.host, port=args.port, threaded=True)
+
+    ssl_context = None
+    scheme = "http"
+    if args.ssl_cert and args.ssl_key:
+        if not (os.path.exists(args.ssl_cert) and os.path.exists(args.ssl_key)):
+            raise SystemExit(f"--ssl-cert / --ssl-key path not found")
+        ssl_context = (args.ssl_cert, args.ssl_key)
+        scheme = "https"
+    elif bool(args.ssl_cert) != bool(args.ssl_key):
+        raise SystemExit("Pass both --ssl-cert and --ssl-key, or neither.")
+
+    print(f"[secret-squirrel] {scheme}://{args.host}:{args.port}")
+    app.run(host=args.host, port=args.port, threaded=True,
+            ssl_context=ssl_context)
 
 
 if __name__ == "__main__":
