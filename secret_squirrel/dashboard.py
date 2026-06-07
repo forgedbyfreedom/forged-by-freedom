@@ -70,7 +70,7 @@ INDEX_HTML = """<!doctype html>
   <div class="disclaimer">
     <b>This is not a lie detector.</b> Peer-reviewed research finds no acoustic
     feature reliably distinguishes truth from deception. The
-    <i>accurate / baseline / elevated stress / extreme stress</i> labels describe
+    <i>accurate / baseline / elevated deception / extreme deception</i> labels describe
     <b>how far the speaker's voice and word choice have drifted from their own
     calibrated baseline</b> — nothing more. Stress has many causes: nervousness,
     fatigue, recall difficulty, illness, anger. Treat any orange or red reading
@@ -234,8 +234,8 @@ evt.onmessage = (e) => {
   const LEVEL_TEXT = {
     accurate: 'Accurate',
     baseline: 'Baseline',
-    elevated: 'Elevated Stress',
-    extreme:  'Extreme Stress',
+    elevated: 'Elevated Deception',
+    extreme:  'Extreme Deception',
   };
   if (last && last.score && last.score.composite != null) {
     const c = last.score.composite;
