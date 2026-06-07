@@ -4,15 +4,30 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
+import tempfile
 import time
 
 from flask import Flask, Response, jsonify, request
+from werkzeug.utils import secure_filename
 
 from .voice_engine import VoiceEngine
 from .analyzer import analyze_file, analyze_url
 
 
+# 500 MB cap on uploads — accommodates a long-form interview at modest bitrates
+# but stops accidental "the whole podcast archive" from blowing the host out.
+MAX_UPLOAD_MB = 500
+ALLOWED_AUDIO_EXTS = {
+    ".wav", ".aiff", ".aifc", ".flac", ".au",          # native
+    ".mp3", ".mp4", ".m4a", ".aac", ".ogg", ".opus",   # common audio
+    ".webm", ".mpeg", ".mpga", ".wma", ".amr", ".3gp", # legacy / phone
+    ".mkv", ".mov", ".avi",                            # video-with-audio
+}
+
+
 app = Flask(__name__)
+app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_MB * 1024 * 1024
 engine = VoiceEngine()
 
 
@@ -114,11 +129,25 @@ INDEX_HTML = """<!doctype html>
   </div>
 
   <div class="card" style="margin-top:16px;">
-    <h3>Analyze a video / audio URL or file</h3>
+    <h3>Upload a recorded conversation</h3>
+    <p class="sub">Drop in an audio or video file from your computer or phone
+    (WAV, MP3, MP4, M4A, AAC, OGG, OPUS, FLAC, MPEG, WMA, AMR, 3GP, WebM,
+    MKV, MOV, AVI — anything ffmpeg reads). Max 500 MB. Use
+    <b>"as baseline"</b> on a calm clip first, then <b>"as question"</b> on the
+    clip you want scored. The current question-type selector applies.</p>
+    <input type="file" id="fileInput" accept="audio/*,video/*,.wav,.mp3,.mp4,.m4a,.aac,.ogg,.opus,.webm,.mpeg,.mpga,.flac,.wma,.amr,.3gp,.aiff,.au,.mkv,.mov,.avi" style="background:#0e1116;color:#e8eef5;padding:8px;">
+    <input type="text" id="fileLabel" placeholder="label (optional)" style="width:30%;">
+    <br>
+    <button id="btnFileCal" class="ghost">Use as baseline</button>
+    <button id="btnFileQ">Use as question</button>
+    <div id="fileStatus" class="sub" style="margin-top:8px;"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <h3>Or analyze by URL / server path</h3>
     <p class="sub">Paste a YouTube / X / Instagram / TikTok / direct media URL,
-    or a local WAV/MP3 path. yt-dlp will fetch the audio and run it through
-    the same pipeline. Use <b>"as baseline"</b> on a neutral clip first, then
-    <b>"as question"</b> on the clip you want scored.</p>
+    or a path to a file that's already on this server. yt-dlp handles URL
+    fetching.</p>
     <input type="text" id="urlInput" placeholder="https://…  OR  /path/to/file.wav" style="width:80%;">
     <input type="text" id="urlLabel" placeholder="label (optional)" style="width:30%;">
     <br>
@@ -212,6 +241,37 @@ async function submitUrl(mode) {
 }
 document.getElementById('btnUrlCal').onclick = () => submitUrl('calibrate');
 document.getElementById('btnUrlQ').onclick = () => submitUrl('question');
+
+async function submitFile(mode) {
+  const fi = document.getElementById('fileInput');
+  const status = document.getElementById('fileStatus');
+  if (!fi.files || fi.files.length === 0) {
+    status.textContent = 'choose a file first'; return;
+  }
+  const file = fi.files[0];
+  const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+  status.textContent = `uploading ${file.name} (${sizeMB} MB)…`;
+  const form = new FormData();
+  form.append('file', file);
+  form.append('mode', mode);
+  form.append('label', document.getElementById('fileLabel').value || '');
+  form.append('question_type', document.getElementById('qType').value);
+  try {
+    const r = await fetch('/api/upload', {method: 'POST', body: form});
+    const j = await r.json();
+    if (j.error) {
+      status.textContent = 'error: ' + j.error;
+    } else if (j.mode === 'calibrate') {
+      status.textContent = `baseline locked (${j.baseline_samples} samples, ${(j.duration_sec||0).toFixed(1)}s).`;
+    } else {
+      status.textContent = `analyzed ${file.name}.`;
+    }
+  } catch (e) {
+    status.textContent = 'upload failed: ' + e;
+  }
+}
+document.getElementById('btnFileCal').onclick = () => submitFile('calibrate');
+document.getElementById('btnFileQ').onclick   = () => submitFile('question');
 
 const evt = new EventSource('/stream');
 evt.onmessage = (e) => {
@@ -482,6 +542,44 @@ def api_analyze():
     result = fn(src, engine, mode=mode, label=label,
                 question_type=question_type)
     return jsonify(_sanitize(result))
+
+
+@app.route("/api/upload", methods=["POST"])
+def api_upload():
+    f = request.files.get("file")
+    if f is None or not f.filename:
+        return jsonify({"error": "no file uploaded"})
+    safe_name = secure_filename(f.filename)
+    ext = os.path.splitext(safe_name.lower())[1]
+    if ext not in ALLOWED_AUDIO_EXTS:
+        return jsonify({"error": f"unsupported file type: {ext or '(none)'}"})
+    mode = request.form.get("mode", "question")
+    if mode not in ("calibrate", "question"):
+        return jsonify({"error": "mode must be 'calibrate' or 'question'"})
+
+    # Save the upload to a temp file with the original extension so ffmpeg
+    # picks the right demuxer.
+    tmp = tempfile.NamedTemporaryFile(suffix=ext, delete=False)
+    try:
+        f.save(tmp.name)
+        tmp.close()
+        label = request.form.get("label", "") or safe_name
+        question_type = request.form.get("question_type", "target")
+        result = analyze_file(tmp.name, engine, mode=mode, label=label,
+                              question_type=question_type)
+        return jsonify(_sanitize(result))
+    except Exception as e:
+        return jsonify({"error": f"analysis failed: {e}"})
+    finally:
+        try:
+            os.unlink(tmp.name)
+        except OSError:
+            pass
+
+
+@app.errorhandler(413)
+def too_large(_e):
+    return jsonify({"error": f"file exceeds {MAX_UPLOAD_MB} MB limit"}), 413
 
 
 @app.route("/api/snapshot")

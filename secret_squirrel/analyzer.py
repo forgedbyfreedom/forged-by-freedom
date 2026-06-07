@@ -26,15 +26,73 @@ TIMELINE_WIN_SEC = 1.0
 TIMELINE_HOP_SEC = 0.5
 
 
+# Formats Parselmouth/Praat read natively; everything else gets routed through
+# ffmpeg first. Extension-based dispatch is cheap and correct for the formats
+# users actually drop in (phone recordings, voice memos, podcast clips).
+_PARSELMOUTH_NATIVE = {".wav", ".aiff", ".aifc", ".flac", ".au"}
+_FFMPEG_FORMATS = {".mp3", ".mp4", ".m4a", ".aac", ".ogg", ".opus",
+                   ".webm", ".mpeg", ".mpga", ".wma", ".amr", ".3gp",
+                   ".mkv", ".mov", ".avi"}
+
+
+def _ensure_wav(path: str | os.PathLike) -> tuple[str, bool]:
+    """Return (wav_path, is_temp). Converts non-native formats via ffmpeg
+    to 16 kHz mono WAV. Caller is responsible for deleting the temp file if
+    is_temp is True.
+    """
+    p = Path(str(path))
+    ext = p.suffix.lower()
+    if ext in _PARSELMOUTH_NATIVE:
+        return str(p), False
+    if ext not in _FFMPEG_FORMATS:
+        # Unknown extension — try Parselmouth first, fall back to ffmpeg
+        try:
+            parselmouth.Sound(str(p))
+            return str(p), False
+        except Exception:
+            pass
+    if shutil.which("ffmpeg") is None:
+        raise RuntimeError(
+            f"ffmpeg required to read {ext} files. Install ffmpeg "
+            f"(`brew install ffmpeg` or `apt install ffmpeg`)."
+        )
+    tmp = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
+    tmp.close()
+    cmd = ["ffmpeg", "-y", "-i", str(p),
+           "-ar", str(TARGET_FS), "-ac", "1",
+           "-loglevel", "error",
+           tmp.name]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        try:
+            os.unlink(tmp.name)
+        except OSError:
+            pass
+        raise RuntimeError(
+            f"ffmpeg failed on {p.name}: {proc.stderr.strip()[:300]}"
+        )
+    return tmp.name, True
+
+
 def load_audio(path: str | os.PathLike) -> tuple[np.ndarray, int]:
-    """Load any audio/video file Parselmouth can read; return mono 16 kHz float64."""
-    sound = parselmouth.Sound(str(path))
-    if sound.sampling_frequency != TARGET_FS:
-        sound = sound.resample(TARGET_FS)
-    arr = sound.values
-    if arr.ndim == 2:
-        arr = arr.mean(axis=0)  # downmix to mono
-    return arr.astype(np.float64), TARGET_FS
+    """Load any audio/video file (WAV/FLAC/AIFF native; MP3/MPEG/M4A/OGG/etc
+    via ffmpeg). Returns mono 16 kHz float64.
+    """
+    wav_path, is_temp = _ensure_wav(path)
+    try:
+        sound = parselmouth.Sound(wav_path)
+        if sound.sampling_frequency != TARGET_FS:
+            sound = sound.resample(TARGET_FS)
+        arr = sound.values
+        if arr.ndim == 2:
+            arr = arr.mean(axis=0)  # downmix to mono
+        return arr.astype(np.float64), TARGET_FS
+    finally:
+        if is_temp:
+            try:
+                os.unlink(wav_path)
+            except OSError:
+                pass
 
 
 def download_url(url: str, out_dir: str | None = None) -> str:
