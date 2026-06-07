@@ -301,7 +301,19 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
         "content": content,
         "source": "offline",
     }
+    # Save the (resampled) audio to the engine's session dir so the dashboard
+    # can play it back later. Done inside the lock so the index is stable.
     with engine._lock:
+        idx = len(engine.history) + 1
+        try:
+            from .voice_engine import save_wav
+            session_dir = getattr(engine, "session_dir", None)
+            if session_dir is not None:
+                wav_path = session_dir / f"Q{idx:03d}.wav"
+                save_wav(wav_path, audio, fs)
+                record["audio_path"] = str(wav_path)
+        except Exception as e:
+            print(f"[squirrel] question save_wav failed: {e}")
         engine.history.append(record)
         if engine.state == "idle":
             engine.state = "ready"

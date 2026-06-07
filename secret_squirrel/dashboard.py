@@ -2,13 +2,16 @@
 from __future__ import annotations
 
 import argparse
+import csv
+import io
 import json
 import math
 import os
 import tempfile
 import time
+from datetime import datetime
 
-from flask import Flask, Response, jsonify, request
+from flask import Flask, Response, jsonify, request, send_file
 from werkzeug.utils import secure_filename
 
 from .voice_engine import VoiceEngine
@@ -196,9 +199,14 @@ INDEX_HTML = """<!doctype html>
   </div>
 
   <div class="card" style="margin-top:16px;">
-    <h3>History</h3>
+    <h3 style="display:inline-block;">History</h3>
+    <span style="float:right;">
+      <button class="ghost" onclick="window.open('/api/export/json','_blank')">Download JSON</button>
+      <button class="ghost" onclick="window.open('/api/export/csv','_blank')">Download CSV</button>
+    </span>
+    <audio id="player" controls style="width:100%;margin:6px 0;display:none;"></audio>
     <table id="histTable">
-      <thead><tr><th>#</th><th>Label</th><th>Type</th><th>Stress</th><th>Level</th>
+      <thead><tr><th>▶</th><th>#</th><th>Label</th><th>Type</th><th>Stress</th><th>Level</th>
         <th>Latency</th><th>Duration</th><th>When</th></tr></thead>
       <tbody></tbody>
     </table>
@@ -465,14 +473,24 @@ evt.onmessage = (e) => {
   const tbody = document.querySelector('#histTable tbody');
   tbody.innerHTML = '';
   (s.history || []).slice().reverse().forEach((h, idx) => {
+    const num = s.history_count - idx;
     const c = (h.score && h.score.composite != null) ? h.score.composite.toFixed(0) : '—';
     const lvl = (h.score && h.score.level) || (h.error || '—');
     const tr = document.createElement('tr');
     const lat = h.response_latency_sec != null ? h.response_latency_sec.toFixed(2) + 's' : '—';
-    tr.innerHTML = `<td>${s.history_count - idx}</td><td>${h.label||''}</td><td>${h.type||'target'}</td><td>${c}</td><td>${lvl}</td><td>${lat}</td><td>${(h.duration_sec||0).toFixed(1)}s</td><td>${new Date(h.timestamp*1000).toLocaleTimeString()}</td>`;
+    const playCell = h.audio_path
+      ? `<button class="ghost" style="padding:2px 8px;" onclick="playQ(${num})">▶</button>`
+      : '<span class="sub">—</span>';
+    tr.innerHTML = `<td>${playCell}</td><td>${num}</td><td>${h.label||''}</td><td>${h.type||'target'}</td><td>${c}</td><td>${lvl}</td><td>${lat}</td><td>${(h.duration_sec||0).toFixed(1)}s</td><td>${new Date(h.timestamp*1000).toLocaleTimeString()}</td>`;
     tbody.appendChild(tr);
   });
 };
+function playQ(num) {
+  const p = document.getElementById('player');
+  p.src = `/api/audio/${num}?t=` + Date.now();
+  p.style.display = 'block';
+  p.play().catch(() => {});
+}
 </script>
 </body></html>
 """
@@ -580,6 +598,101 @@ def api_upload():
 @app.errorhandler(413)
 def too_large(_e):
     return jsonify({"error": f"file exceeds {MAX_UPLOAD_MB} MB limit"}), 413
+
+
+@app.route("/api/audio/<int:idx>")
+def api_audio(idx: int):
+    """Serve the per-question WAV (1-indexed to match Q001 file names)."""
+    with engine._lock:
+        if idx < 1 or idx > len(engine.history):
+            return jsonify({"error": "no such question"}), 404
+        rec = engine.history[idx - 1]
+        path = rec.get("audio_path")
+    if not path or not os.path.exists(path):
+        return jsonify({"error": "audio not available"}), 404
+    return send_file(path, mimetype="audio/wav", as_attachment=False,
+                     download_name=f"Q{idx:03d}.wav")
+
+
+@app.route("/api/export/json")
+def api_export_json():
+    """One-click full session export — baseline stats + all history."""
+    snap = engine.snapshot()
+    snap = _sanitize(snap)
+    # Stamp the export so users can tell which session is which
+    snap["exported_at"] = datetime.now().isoformat(timespec="seconds")
+    snap["session_id"] = getattr(engine, "session_id", None)
+    fname = f"secret-squirrel-{snap.get('session_id') or 'session'}.json"
+    buf = io.BytesIO(json.dumps(snap, indent=2).encode("utf-8"))
+    return send_file(buf, mimetype="application/json", as_attachment=True,
+                     download_name=fname)
+
+
+@app.route("/api/export/csv")
+def api_export_csv():
+    """CSV summary, one row per question — for spreadsheet review."""
+    with engine._lock:
+        history = list(engine.history)
+        session_id = getattr(engine, "session_id", "session")
+
+    out = io.StringIO()
+    w = csv.writer(out)
+    w.writerow([
+        "Q#", "label", "type", "source", "timestamp",
+        "duration_sec", "response_latency_sec",
+        "composite", "level",
+        "transcript", "word_count", "hedge_rate", "disfluency_rate",
+        "first_person_rate", "words_per_sec",
+        "top_feature_1", "top_feature_2", "top_feature_3",
+        "audio_path",
+    ])
+    for i, h in enumerate(history, start=1):
+        score = h.get("score") or {}
+        per_feat = score.get("per_feature") or {}
+        # rank features by stress_contrib for the top-3 columns
+        ranked = sorted(per_feat.items(),
+                        key=lambda kv: kv[1].get("stress_contrib", 0),
+                        reverse=True)
+        top = []
+        for k, v in ranked[:3]:
+            z = v.get("z")
+            top.append(f"{k}(z={z:.2f})" if isinstance(z, (int, float))
+                       else k)
+        top += [""] * (3 - len(top))
+        content = h.get("content") or {}
+        ts = h.get("timestamp")
+        ts_s = (datetime.fromtimestamp(ts).isoformat(timespec="seconds")
+                if isinstance(ts, (int, float)) else "")
+        w.writerow([
+            i,
+            h.get("label", ""),
+            h.get("type", ""),
+            h.get("source", ""),
+            ts_s,
+            f"{h.get('duration_sec', 0):.2f}",
+            (f"{h['response_latency_sec']:.2f}"
+             if isinstance(h.get("response_latency_sec"), (int, float))
+             else ""),
+            (f"{score.get('composite'):.1f}"
+             if isinstance(score.get("composite"), (int, float)) else ""),
+            score.get("level", ""),
+            content.get("text", ""),
+            content.get("word_count", ""),
+            (f"{content.get('hedge_rate'):.3f}"
+             if isinstance(content.get("hedge_rate"), (int, float)) else ""),
+            (f"{content.get('disfluency_rate'):.3f}"
+             if isinstance(content.get("disfluency_rate"), (int, float)) else ""),
+            (f"{content.get('first_person_rate'):.3f}"
+             if isinstance(content.get("first_person_rate"), (int, float)) else ""),
+            (f"{content.get('words_per_sec'):.2f}"
+             if isinstance(content.get("words_per_sec"), (int, float)) else ""),
+            top[0], top[1], top[2],
+            h.get("audio_path", ""),
+        ])
+    buf = io.BytesIO(out.getvalue().encode("utf-8"))
+    fname = f"secret-squirrel-{session_id}.csv"
+    return send_file(buf, mimetype="text/csv", as_attachment=True,
+                     download_name=fname)
 
 
 @app.route("/api/snapshot")

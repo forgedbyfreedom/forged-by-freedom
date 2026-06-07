@@ -7,8 +7,12 @@ This is NOT a lie detector. It reports stress / cognitive-load markers.
 """
 from __future__ import annotations
 
+import os
 import threading
 import time
+import wave
+from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 import numpy as np
@@ -36,6 +40,19 @@ MIN_UTTERANCE_SEC = 0.5
 CALIBRATION_CHUNK_SEC = 5.0
 MIN_CAL_DURATION_SEC = 5.0
 
+SESSION_ROOT = Path(os.path.expanduser("~/.secret_squirrel/sessions"))
+
+
+def save_wav(path: str | os.PathLike, audio: np.ndarray, fs: int) -> None:
+    """Write a mono float audio array to a 16-bit PCM WAV file."""
+    audio = np.asarray(audio, dtype=np.float32)
+    pcm = np.clip(audio * 32767.0, -32768, 32767).astype(np.int16)
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(int(fs))
+        w.writeframes(pcm.tobytes())
+
 
 class VoiceEngine:
     """State machine: idle → calibrating → ready → recording → ready."""
@@ -55,6 +72,14 @@ class VoiceEngine:
         self._stream = None
         self._vad = webrtcvad.Vad(2) if webrtcvad else None
         self._lock = threading.Lock()
+        # Session directory — each engine instance gets its own folder; per-
+        # question WAVs live here so the dashboard can play them back later.
+        self.session_id = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+        self.session_dir: Path = SESSION_ROOT / self.session_id
+        try:
+            self.session_dir.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            print(f"[VoiceEngine] session dir create failed: {e}")
 
     # ── Public control ─────────────────────────────────────────────
     def start_calibration(self, duration_sec: float = 30.0) -> dict:
@@ -238,6 +263,15 @@ class VoiceEngine:
             record["error"] = "audio too short"
         else:
             try:
+                # Save per-question audio (16-bit PCM WAV) for replay later
+                idx = len(self.history) + 1
+                wav_path = self.session_dir / f"Q{idx:03d}.wav"
+                try:
+                    save_wav(wav_path, audio, SAMPLE_RATE)
+                    record["audio_path"] = str(wav_path)
+                except Exception as e:
+                    print(f"[VoiceEngine] save_wav failed: {e}")
+
                 # Delegate to analyzer for transcription + timeline + scoring,
                 # but we already have features here — keep the cheap path.
                 from .analyzer import (_within_answer_timeline,
