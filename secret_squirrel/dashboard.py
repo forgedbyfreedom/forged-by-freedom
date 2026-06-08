@@ -92,13 +92,11 @@ INDEX_HTML = """<!doctype html>
   <div class="sub">Voice stress &amp; cognitive-load analyzer</div>
 
   <div class="disclaimer">
-    <b>This is not a lie detector.</b> Peer-reviewed research finds no acoustic
-    feature reliably distinguishes truth from deception. The
-    <i>accurate / baseline / elevated deception / extreme deception</i> labels describe
-    <b>how far the speaker's voice and word choice have drifted from their own
-    calibrated baseline</b> — nothing more. Stress has many causes: nervousness,
-    fatigue, recall difficulty, illness, anger. Treat any orange or red reading
-    as a cue to ask a follow-up question, never as proof of anything.
+    This tool identifies possible <b>signs of stress or deception in voice
+    and thought patterns</b>. It is not a lie detector and offers no
+    guarantee of accuracy. Stress has many causes — nervousness, fatigue,
+    illness, recall difficulty — and is not by itself proof of deception.
+    <b>Do not accuse anyone of lying based on what this tool reports.</b>
   </div>
 
   <div class="row">

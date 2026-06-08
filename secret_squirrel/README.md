@@ -2,27 +2,16 @@
 
 A voice **stress / cognitive-load** analyzer with a baseline-comparison protocol, a content-channel (transcript) layer, in-browser microphone capture, per-subject weight refitting, and audio replay + session export.
 
-> ## ⚠️ This is NOT a lie detector.
+> ## Disclaimer
 >
-> Peer-reviewed research is clear: **no acoustic feature reliably distinguishes a
-> lie from the truth.** Commercial voice stress analyzers (CVSA, LVA / Nemesysco)
-> perform at chance level (~50%) in independent evaluations. The
-> [Eriksson & Lacerda (2007)](https://www.researchgate.net/publication/236662777_Voice_stress_analyses_Science_and_pseudoscience)
-> review of these systems called them "charlatanry." The National Research
-> Council (2003) concluded "little or no scientific basis" for VSA technology.
+> This tool identifies possible **signs of stress or deception in voice and
+> thought patterns**. It is **not** a lie detector and offers **no guarantee
+> of accuracy**. Stress shows up for many reasons — nervousness, fatigue,
+> illness, recall difficulty, anger, embarrassment — and is not by itself
+> proof of deception.
 >
-> The dashboard's four bands —
-> **Accurate / Baseline / Elevated Deception / Extreme Deception** —
-> are operator-chosen shorthand for *how far this answer drifted from the
-> same subject's own calibrated baseline*. They are **not verdicts**.
-> Stress, cognitive load, and baseline drift have many causes:
-> nervousness, fatigue, recall difficulty, illness, anger, embarrassment,
-> intoxication, accent shift, room noise. Deception is only one of them.
->
-> **Do not use this to accuse anyone of lying.** Use it as one signal
-> among many in a structured interview, the way trained interrogators
-> use voice tells. Treat orange / red readings as cues to ask follow-up
-> questions, never as proof.
+> **Do not accuse anyone of lying based on what this tool reports.**
+> Use the output as one signal among many, not as a verdict.
 
 ## Install
 
