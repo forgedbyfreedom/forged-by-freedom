@@ -17,7 +17,7 @@ from typing import Optional
 import numpy as np
 import parselmouth
 
-from .features import extract_features
+from .features import extract_features, audio_quality, HNR_BAD_DB
 from .content import transcribe, content_features
 
 TARGET_FS = 16000
@@ -260,10 +260,22 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
         return {"error": "calibrate first"}
 
     duration_sec = float(audio.size / fs)
+
+    # Audio-quality gate — surface clipping / SNR warnings on the record
+    quality = audio_quality(audio, fs)
+
     try:
         feats = extract_features(audio, fs)
     except Exception as e:
         return {"error": f"feature extraction failed: {e}"}
+
+    # Voice-quality flag from HNR
+    hnr = feats.get("hnr")
+    if isinstance(hnr, (int, float)) and hnr < HNR_BAD_DB:
+        quality["warnings"].append(
+            f"low HNR: {hnr:.1f} dB (need ≥ {HNR_BAD_DB:.0f} for reliable scoring)"
+        )
+        quality["ok"] = False
 
     # Content channel (whisper) — adds words_per_sec, hedge_rate, etc. to feats
     content = None
@@ -290,6 +302,8 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
         # Caller knows the wall-clock moment they asked the question
         latency = max(0.0, (time.time() - question_start_time))
 
+    countermeasures = engine.baseline.countermeasure_check(feats)
+
     record = {
         "label": label or f"Q{len(engine.history) + 1}",
         "type": question_type,
@@ -302,6 +316,8 @@ def analyze_audio_array(audio: np.ndarray, fs: int, engine,
         "score": score,
         "timeline": timeline,
         "content": content,
+        "quality": quality,
+        "countermeasures": countermeasures,
         "source": "offline",
     }
     # Save the (resampled) audio to the engine's session dir so the dashboard

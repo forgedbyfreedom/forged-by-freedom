@@ -103,6 +103,36 @@ class Baseline:
     def clear_custom_weights(self) -> None:
         self.custom_weights = None
 
+    def countermeasure_check(self, features: dict,
+                             pct_threshold: float = 0.30) -> list[str]:
+        """Flag possible deliberate gaming of the calibration.
+
+        Subjects who learn about VSA tools sometimes speak deliberately
+        monotonously / slowly during baseline so their natural speaking
+        style during target questions reads as "elevated." We catch this
+        by comparing question features that are easy to consciously
+        manipulate (speaking rate, intensity) against the baseline mean.
+        A shift > 30% in either direction is flagged.
+        """
+        if not self.locked:
+            return []
+        flags = []
+        for k in ("speaking_rate", "intensity_mean"):
+            v = features.get(k)
+            stat = self.stats.get(k)
+            if v is None or stat is None:
+                continue
+            mu, _ = stat
+            if mu <= 0:
+                continue
+            pct = (v - mu) / mu
+            if abs(pct) >= pct_threshold:
+                direction = "faster/louder" if pct > 0 else "slower/quieter"
+                flags.append(
+                    f"{k}: {pct * 100:+.0f}% vs baseline ({direction})"
+                )
+        return flags
+
     def add(self, features: dict) -> None:
         if self.locked or not features:
             return

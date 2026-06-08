@@ -513,12 +513,24 @@ evt.onmessage = (e) => {
       html += `<tr><td>${k}</td><td>${fmt(r.value)}</td><td>${fmt(r.baseline_mean)}</td><td>${fmt(r.z)}</td><td>${fmt(r.stress_contrib)}</td></tr>`;
     }
     html += '</tbody></table>';
-    feats.innerHTML = html;
+    feats.innerHTML = qcHtml + html;
   } else if (last && last.error) {
     gauge.textContent = '!';
     gauge.className = 'gauge level-none';
     gaugeLabel.textContent = last.error;
     feats.textContent = '';
+  }
+
+  // Quality + countermeasure warnings (rendered above the feature breakdown)
+  let qcHtml = '';
+  if (last && last.quality && last.quality.warnings && last.quality.warnings.length) {
+    qcHtml += `<div class="disclaimer" style="margin-bottom:8px;"><b>Audio quality warning:</b> ${last.quality.warnings.join(' · ')}.<br>` +
+              `<span class="sub">Composite score may be unreliable for this answer.</span></div>`;
+  }
+  if (last && last.countermeasures && last.countermeasures.length) {
+    qcHtml += `<div class="disclaimer" style="margin-bottom:8px;background:#3a2e10;border-color:#e7b13a;color:#f4e0a8;">` +
+              `<b>Possible countermeasure:</b> ${last.countermeasures.join('; ')}.<br>` +
+              `<span class="sub">Subject may have gamed the baseline calibration. Consider recalibrating from a different neutral prompt.</span></div>`;
   }
 
   // Content panel (whisper transcript + content features)

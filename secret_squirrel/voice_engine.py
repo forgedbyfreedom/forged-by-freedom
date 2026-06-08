@@ -281,8 +281,18 @@ class VoiceEngine:
                 from .analyzer import (_within_answer_timeline,
                                        _response_latency)
                 from .content import transcribe, content_features
+                from .features import audio_quality, HNR_BAD_DB
 
+                quality = audio_quality(audio, SAMPLE_RATE)
                 feats = extract_features(audio, SAMPLE_RATE)
+                hnr = feats.get("hnr")
+                if isinstance(hnr, (int, float)) and hnr < HNR_BAD_DB:
+                    quality["warnings"].append(
+                        f"low HNR: {hnr:.1f} dB (need ≥ {HNR_BAD_DB:.0f})"
+                    )
+                    quality["ok"] = False
+                record["quality"] = quality
+                record["countermeasures"] = self.baseline.countermeasure_check(feats)
                 duration_sec = audio.size / SAMPLE_RATE
                 content = None
                 tx_words = None

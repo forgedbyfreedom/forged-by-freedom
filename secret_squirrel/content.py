@@ -17,10 +17,11 @@ from typing import Optional
 
 import numpy as np
 
-# Default whisper model: "tiny" is fast (~75 MB) but smooths over disfluencies
-# (it ignores "um"/"uh" almost entirely). Override with SQUIRREL_WHISPER_MODEL
-# to "base" (~145 MB) or "small" (~470 MB) when you want disfluency capture.
-DEFAULT_WHISPER_MODEL = os.environ.get("SQUIRREL_WHISPER_MODEL", "tiny")
+# Default whisper model: "base" is the accuracy default — it actually
+# transcribes "um/uh" so the disfluency feature is real. Override with
+# SQUIRREL_WHISPER_MODEL="tiny" (faster, ~75 MB, but ignores fillers)
+# or "small" (~470 MB, slowest, most accurate).
+DEFAULT_WHISPER_MODEL = os.environ.get("SQUIRREL_WHISPER_MODEL", "base")
 
 # Lexicons (lowercase comparison, word-boundary matched)
 FIRST_PERSON = {
@@ -38,6 +39,24 @@ HEDGE_WORDS = {
     "somewhat", "fairly", "roughly", "approximately", "around",
     "about", "more-or-less", "ish",
 }
+
+# Multi-word hedge patterns. Real deception research (Vrij, Pennebaker)
+# weighs phrases like "I think", "I'm not sure", "to be honest" much more
+# heavily than the bare verb. Counted on the lowercase transcript as
+# whole-phrase matches.
+HEDGE_PHRASES = [
+    "i think", "i thought", "i guess", "i guessed",
+    "i suppose", "i supposed", "i believe", "i believed",
+    "i feel like", "i felt like",
+    "i'm not sure", "im not sure", "i am not sure",
+    "i don't know", "i dont know", "i do not know",
+    "i can't remember", "i cant remember", "i don't remember",
+    "kind of", "sort of", "you know", "you see",
+    "to be honest", "honestly speaking", "if i remember",
+    "if i recall", "as far as i", "as far as",
+    "more or less", "or something", "or whatever",
+    "i mean", "well i", "well, i",
+]
 
 DISFLUENCIES = {
     "uh", "uhh", "uhm", "um", "umm", "uhhh", "er", "erm", "ah",
@@ -131,6 +150,15 @@ def content_features(transcript: dict, duration_sec: float) -> dict:
 
     first_p = sum(1 for w in raw_words if w in FIRST_PERSON)
     hedges = sum(1 for w in raw_words if w in HEDGE_WORDS)
+    # Add phrase hedges — each phrase match counts as 1.5 hedge "words"
+    # (the phrase is a stronger signal than any single word in it).
+    text_lc = " " + text.lower() + " "
+    phrase_hits = 0
+    for ph in HEDGE_PHRASES:
+        phrase_hits += text_lc.count(" " + ph + " ")
+        phrase_hits += text_lc.count(" " + ph + ",")
+        phrase_hits += text_lc.count(" " + ph + ".")
+    hedges_total = hedges + 1.5 * phrase_hits
     disfl = sum(1 for w in raw_words if w in DISFLUENCIES)
     past = len(PAST_TENSE_RE.findall(text))
     pres = len(PRESENT_TENSE_RE.findall(text))
@@ -140,7 +168,8 @@ def content_features(transcript: dict, duration_sec: float) -> dict:
         "word_count": n,
         "words_per_sec": float(n / max(duration_sec, 0.5)),
         "first_person_rate": float(first_p / n),
-        "hedge_rate": float(hedges / n),
+        "hedge_rate": float(hedges_total / n),
+        "hedge_phrase_count": int(phrase_hits),
         "disfluency_rate": float(disfl / n),
         "past_tense_count": past,
         "present_tense_count": pres,

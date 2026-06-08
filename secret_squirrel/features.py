@@ -145,3 +145,60 @@ def extract_features(audio: np.ndarray, fs: int,
         "mfcc_vec": mfcc_vec,
         "duration_sec": float(total_sec),
     }
+
+
+# ── Audio-quality checks ────────────────────────────────────────────
+# Garbage-in / garbage-out is the silent failure mode of every VSA tool.
+# These checks refuse to pretend a clipped or noisy recording is scoreable.
+CLIPPING_THRESHOLD = 0.99          # samples at >|0.99| count as clipped
+CLIPPING_PCT_BAD = 0.005           # >0.5 % clipped samples = clipped clip
+SNR_BAD_DB = 12.0                  # below this = unreliable scoring
+HNR_BAD_DB = 8.0                   # mean HNR below this = poor mic / room
+
+
+def audio_quality(audio: np.ndarray, fs: int) -> dict:
+    """Cheap sanity checks on input audio. Returns:
+        {clipping_pct, snr_db, ok, warnings}
+    Used by analyzer.* to refuse-or-warn on garbage input before features
+    get computed and a fake-confident score gets displayed.
+    """
+    out = {"clipping_pct": 0.0, "snr_db": None, "ok": True, "warnings": []}
+    if audio.size == 0:
+        out["ok"] = False
+        out["warnings"].append("empty audio")
+        return out
+
+    # Normalize to float in [-1, 1] for clipping check
+    a = audio.astype(np.float32, copy=False)
+    if np.max(np.abs(a)) > 1.5:           # likely int16, not normalized
+        a = a / 32768.0
+    clip_count = int(np.sum(np.abs(a) >= CLIPPING_THRESHOLD))
+    clip_pct = float(clip_count / a.size)
+    out["clipping_pct"] = clip_pct
+    if clip_pct > CLIPPING_PCT_BAD:
+        out["ok"] = False
+        out["warnings"].append(
+            f"clipping: {clip_pct * 100:.1f}% of samples at the rail"
+        )
+
+    # SNR estimate: RMS of quietest 10% frames vs RMS of loudest 50%
+    frame_n = max(1, int(fs * 0.1))       # 100 ms frames
+    n_frames = a.size // frame_n
+    if n_frames >= 4:
+        frames = a[:n_frames * frame_n].reshape(n_frames, frame_n)
+        rms = np.sqrt(np.mean(frames * frames, axis=1) + 1e-12)
+        rms_sorted = np.sort(rms)
+        noise = float(np.mean(rms_sorted[: max(1, n_frames // 10)]))
+        signal = float(np.mean(rms_sorted[n_frames // 2:]))
+        if noise > 0 and signal / noise > 1.5:
+            # Skip the SNR judgment on uniform-amplitude signals (sine waves,
+            # continuous tones) where there's no quiet baseline to measure
+            # against. Real speech has pauses → meaningful signal/noise gap.
+            snr_db = 20.0 * float(np.log10(signal / noise))
+            out["snr_db"] = snr_db
+            if snr_db < SNR_BAD_DB:
+                out["ok"] = False
+                out["warnings"].append(
+                    f"low SNR: {snr_db:.1f} dB (need ≥ {SNR_BAD_DB:.0f})"
+                )
+    return out
