@@ -10,65 +10,87 @@ export default async function LoginPage({
   const isSignup = mode === "signup";
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-muted px-4">
-      <div className="w-full max-w-sm rounded-lg border bg-card p-6 shadow-sm">
-        <h1 className="mb-1 text-2xl font-semibold tracking-tight">FBF CRM</h1>
-        <p className="mb-6 text-sm text-muted-foreground">
-          {isSignup ? "Create the owner account." : "Sign in to continue."}
-        </p>
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-4">
+      {/* Background glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
+        style={{ background: "radial-gradient(circle, #ff6a00 0%, transparent 60%)" }}
+      />
 
-        <form className="space-y-4">
-          <div>
-            <label htmlFor="email" className="mb-1 block text-sm font-medium">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              autoComplete="email"
-              className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-            />
-          </div>
-          <div>
-            <label htmlFor="password" className="mb-1 block text-sm font-medium">
-              Password
-            </label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              autoComplete={isSignup ? "new-password" : "current-password"}
-              className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-            />
-          </div>
+      <div className="relative w-full max-w-sm">
+        <div className="mb-8 text-center">
+          <div className="fbf-eyebrow mb-3">Forged by Freedom</div>
+          <h1 className="fbf-title-gradient text-4xl font-black tracking-tight">FBF CRM</h1>
+          <div className="fbf-divider" />
+          <p className="mt-4 text-sm text-muted-foreground">
+            {isSignup ? "Create the owner account." : "Sign in to continue."}
+          </p>
+        </div>
 
-          {error && (
-            <p className="text-sm text-destructive">
-              {error === "not_authorized"
-                ? "This email is not authorized."
-                : decodeURIComponent(error)}
-            </p>
-          )}
+        <div className="fbf-card !p-7">
+          <form className="space-y-5">
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                className="w-full rounded-md border border-border bg-surface-2 px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="password"
+                className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
+              >
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                autoComplete={isSignup ? "new-password" : "current-password"}
+                className="w-full rounded-md border border-border bg-surface-2 px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
+              />
+            </div>
 
-          <button
-            formAction={isSignup ? signup : login}
-            className="w-full rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:opacity-90"
-          >
-            {isSignup ? "Create account" : "Sign in"}
-          </button>
-        </form>
+            {error && (
+              <p className="rounded-md border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+                {error === "not_authorized"
+                  ? "This email is not authorized."
+                  : decodeURIComponent(error)}
+              </p>
+            )}
 
-        <p className="mt-4 text-center text-xs text-muted-foreground">
+            <button
+              formAction={isSignup ? signup : login}
+              className="w-full rounded-md px-4 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-fbf-btn transition-transform hover:scale-[1.01] active:scale-[0.99]"
+              style={{
+                background: "linear-gradient(135deg, #ff6a00, #ff8c00, #e85d00)",
+              }}
+            >
+              {isSignup ? "Create Account" : "Sign In"}
+            </button>
+          </form>
+        </div>
+
+        <p className="mt-5 text-center text-xs text-muted-foreground">
           {isSignup ? (
-            <Link href="/login" className="underline">
-              Have an account? Sign in
+            <Link href="/login" className="hover:text-primary">
+              Have an account? <span className="underline">Sign in</span>
             </Link>
           ) : (
-            <Link href="/login?mode=signup" className="underline">
-              First time? Create the owner account
+            <Link href="/login?mode=signup" className="hover:text-primary">
+              First time? <span className="underline">Create the owner account</span>
             </Link>
           )}
         </p>

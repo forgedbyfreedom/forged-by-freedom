@@ -1,16 +1,16 @@
 export default function InventoryPage() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Inventory</h1>
-        <p className="text-sm text-muted-foreground">
-          Stock on hand, stock on order, tracking numbers, and low-stock alerts.
+        <div className="fbf-eyebrow mb-2">Stock Control</div>
+        <h1 className="text-3xl font-black tracking-tight">Inventory</h1>
+        <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+          Stock on hand, stock on order, tracking numbers, expirations, and low-stock alerts.
         </p>
       </header>
-      <div className="rounded-lg border bg-card p-6 text-sm text-muted-foreground">
-        Coming next session: lots per product (qty on hand + on order), supplier, package tracking
-        number, expiration date, unit cost. Receive-shipment action deducts on-order, adds to
-        on-hand.
+      <div className="fbf-card text-sm text-muted-foreground">
+        Coming next session: lots per product (on hand + on order), supplier, package tracking
+        number, expiration date, unit cost. Receive-shipment action moves on-order → on-hand.
       </div>
     </div>
   );

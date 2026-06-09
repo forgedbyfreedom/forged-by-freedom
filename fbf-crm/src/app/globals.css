@@ -1,31 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 47% 11%;
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    /* FBF Dark Theme — orange on near-black */
+    --background: 0 0% 2%;          /* #050505 */
+    --foreground: 0 0% 91%;         /* #e8e8e8 */
+
+    --surface: 0 0% 5%;             /* #0c0c0c — cards */
+    --surface-2: 0 0% 8%;           /* #141414 */
+    --surface-3: 0 0% 11%;          /* #1c1c1c */
+
+    --muted: 0 0% 8%;               /* #141414 */
+    --muted-foreground: 0 0% 60%;   /* #999 */
+    --subtle-foreground: 0 0% 40%;  /* #666 */
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 91%;
+
+    --border: 0 0% 10%;             /* #1a1a1a */
+    --border-strong: 0 0% 16%;      /* #2a2a2a */
+    --input: 0 0% 10%;
+    --ring: 25 100% 50%;            /* orange focus ring */
+
+    --primary: 25 100% 50%;         /* #ff6a00 — FBF orange */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 100% 50%;
+
+    --accent: 25 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --radius: 0.5rem;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 71% 45%;         /* #22c55e */
+    --info: 217 91% 60%;            /* #3b82f6 */
+
+    --radius: 0.75rem;
   }
 
   * {
     @apply border-border;
   }
 
+  html,
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: #fff;
+  }
+}
+
+@layer components {
+  .fbf-eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.2em] text-primary;
+  }
+
+  .fbf-title-gradient {
+    background: linear-gradient(135deg, #ff6a00, #ffb347, #ff8c00, #ffb347, #ff6a00);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: fbf-shimmer 6s ease infinite;
+    filter: drop-shadow(0 0 30px rgba(255, 106, 0, 0.3));
+  }
+
+  .fbf-card {
+    @apply rounded-xl border border-border bg-card p-6 transition-colors;
+  }
+
+  .fbf-card:hover {
+    border-color: rgba(255, 106, 0, 0.25);
+  }
+
+  .fbf-stat-num {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 20px rgba(255, 106, 0, 0.25);
+  }
+
+  .fbf-divider {
+    width: 60px;
+    height: 3px;
+    margin: 20px auto 0;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    border-radius: 2px;
+  }
+}
+
+@keyframes fbf-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
