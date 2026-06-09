@@ -21,8 +21,10 @@ pip install -r requirements.txt
 ```
 
 System dependencies:
-- **ffmpeg** — required for non-WAV uploads (MP3 / MP4 / M4A / OGG / WebM / etc.) and for URL ingest.
-- **portaudio** — only needed if you use the *server-side* live mic recorder. `brew install portaudio` / `apt-get install libportaudio2`.
+- **ffmpeg** — required for non-WAV uploads (MP3 / MP4 / M4A / OGG / WebM / etc.) and for URL ingest. macOS: `brew install ffmpeg`. Windows: `winget install -e --id Gyan.FFmpeg`. Debian/Ubuntu: `apt install ffmpeg`.
+- **portaudio** — only needed if you use the *server-side* live mic recorder. `brew install portaudio` / `apt-get install libportaudio2`. Windows: bundled with the `sounddevice` wheel, nothing to do.
+
+Windows note: `requirements.txt` uses `webrtcvad-wheels` (prebuilt) instead of the canonical `webrtcvad` (which has no Windows wheel for Python 3.10+ and would require MSVC Build Tools — 2+ GB — to compile). The Python `import webrtcvad` line stays identical; only the install dependency differs.
 
 Optional but recommended:
 - **faster-whisper** (in `requirements.txt`) — enables the content channel (transcript → hedge_rate, disfluency_rate, first_person_rate, words_per_sec). Pipeline still works without it; those features just drop out of the score.
