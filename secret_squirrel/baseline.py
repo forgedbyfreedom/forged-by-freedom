@@ -48,26 +48,29 @@ WEIGHTS = {
     "words_per_sec":     0.04,
 }
 
-# Feature-aware minimum sigma — prevents z-score explosion when baseline samples
-# are very uniform (especially with synthetic audio or very short calibrations).
-# Values are the smallest within-speaker variation we expect in normal speech.
+# Feature-aware minimum sigma — prevents z-score explosion when baseline
+# samples are uniform. These were originally too tight: a real-world subject's
+# natural prosody varies more than a 30-second calibration window suggests,
+# so question speech often produced 4σ deviations on perfectly innocent
+# features. Doubled across the board after a real Windows deployment showed
+# "everything looks extreme."
 NOISE_FLOORS = {
-    "jitter_local":      0.0015,
-    "shimmer_local":     0.005,
-    "hnr":               1.5,
-    "f0_mean":           5.0,
-    "f0_std":            3.0,
-    "f0_iqr":            4.0,
-    "f0_slope":          3.0,
-    "intensity_mean":    1.5,
-    "intensity_std":     0.8,
-    "speaking_rate":     0.4,
-    "pause_ratio":       0.06,
-    "mfcc_distance":     0.5,
-    "disfluency_rate":   0.03,
-    "hedge_rate":        0.02,
-    "first_person_rate": 0.03,
-    "words_per_sec":     0.4,
+    "jitter_local":      0.003,
+    "shimmer_local":     0.012,
+    "hnr":               3.0,
+    "f0_mean":           10.0,
+    "f0_std":            8.0,
+    "f0_iqr":            10.0,
+    "f0_slope":          6.0,
+    "intensity_mean":    3.0,
+    "intensity_std":     2.0,
+    "speaking_rate":     0.8,
+    "pause_ratio":       0.12,
+    "mfcc_distance":     1.2,
+    "disfluency_rate":   0.06,
+    "hedge_rate":        0.04,
+    "first_person_rate": 0.06,
+    "words_per_sec":     0.8,
 }
 
 # Cap how much any single feature can contribute (in σ units) — avoids one
@@ -280,12 +283,13 @@ def _level(composite: float) -> str:
 
     Bands measure deviation from the subject's own calibrated baseline of
     acoustic + content features. Higher bands mean larger deviation; they do
-    not name a verdict.
+    not name a verdict. Thresholds tuned for real-world subjects whose natural
+    prosody fluctuates more than synthetic test data suggests.
     """
-    if composite < 25:
+    if composite < 35:
         return "accurate"
-    if composite < 50:
+    if composite < 60:
         return "baseline"
-    if composite < 75:
+    if composite < 80:
         return "elevated"
     return "extreme"

@@ -102,8 +102,10 @@ INDEX_HTML = """<!doctype html>
   <div class="row">
     <div class="card">
       <h3>1. Calibrate baseline</h3>
-      <p class="sub">Have your subject read or speak something neutral for ~30s
-      (the alphabet, what they ate today, a paragraph from a book).</p>
+      <p class="sub"><b>Speak naturally for ~30s</b> — describe your day yesterday,
+      give a tour of your house, talk about a vacation. <b>Do not</b> read the
+      alphabet, count, or read from a book — monotone scripted speech makes
+      every real answer later read as "elevated."</p>
       <button id="btnCalibrate">Start 30s calibration</button>
       <div id="calStatus" class="sub" style="margin-top:8px;"></div>
       <div id="qualityBadge" style="margin-top:8px;"></div>
