@@ -702,11 +702,11 @@ evt.onmessage = (e) => {
   const calibrated = !!s.calibrated_weights;
   document.getElementById('btnRefit').disabled = !(nTruth >= 3 && nLie >= 3);
   document.getElementById('btnRefitRevert').disabled = !calibrated;
-  const badge = document.getElementById('calibratedBadge');
+  const calBadge = document.getElementById('calibratedBadge');
   if (calibrated) {
-    badge.innerHTML = `<span class="level-pill pill-accurate" style="margin-left:8px;">CALIBRATED</span>`;
+    calBadge.innerHTML = `<span class="level-pill pill-accurate" style="margin-left:8px;">CALIBRATED</span>`;
   } else {
-    badge.innerHTML = '';
+    calBadge.innerHTML = '';
   }
   if (!document.getElementById('refitStatus').textContent) {
     document.getElementById('refitStatus').textContent =
