@@ -211,29 +211,33 @@ class Baseline:
                                 f"≥20s of neutral speech.")}
 
         # Detect degenerate-condition baselines: too quiet, too low-pitched,
-        # or too noisy. These cause every natural answer to read as "extreme"
-        # because the question conditions differ from baseline conditions.
-        bad = []
+        # or too noisy. These can cause natural answers to read as elevated
+        # because question conditions differ from baseline conditions.
+        # Thresholds are permissive — absolute intensity_mean in Praat depends
+        # on mic calibration, so a built-in laptop mic can legitimately read
+        # 35-45 dB on healthy speech.
+        warn_conditions = []
         f0m = self.stats.get("f0_mean")
         intm = self.stats.get("intensity_mean")
         hnrv = self.stats.get("hnr")
-        if f0m and f0m[0] < 90:
-            bad.append(f"low pitch ({f0m[0]:.0f} Hz — likely vocal fry / whispered)")
-        if intm and intm[0] < 45:
-            bad.append(f"recording quiet ({intm[0]:.0f} dB — move closer to the mic)")
-        if hnrv and hnrv[0] < 10:
-            bad.append(f"poor HNR ({hnrv[0]:.1f} dB — noisy room or low-quality mic)")
-        if bad:
-            return {"n_samples": n, "total_sec": total_sec, "level": "bad",
-                    "message": (f"Baseline conditions look degenerate: {'; '.join(bad)}. "
-                                f"Every answer recorded under normal conditions will "
-                                f"score as extreme. Recalibrate at normal speaking "
-                                f"volume, close to the mic, in a quieter room.")}
+        if f0m and f0m[0] < 75:
+            warn_conditions.append(f"low pitch ({f0m[0]:.0f} Hz)")
+        if intm and intm[0] < 30:
+            warn_conditions.append(f"very quiet ({intm[0]:.0f} dB — move closer to the mic)")
+        if hnrv and hnrv[0] < 7:
+            warn_conditions.append(f"poor HNR ({hnrv[0]:.1f} dB — noisy room)")
 
         if n < 4 or total_sec < 20:
             return {"n_samples": n, "total_sec": total_sec, "level": "warn",
                     "message": (f"Thin baseline ({n} samples, {total_sec:.0f}s). "
                                 f"Recommended: ≥4 samples and ≥20s.")}
+        if warn_conditions:
+            return {"n_samples": n, "total_sec": total_sec, "level": "warn",
+                    "message": (f"Baseline locked but conditions may not match "
+                                f"natural speech: {'; '.join(warn_conditions)}. "
+                                f"You can proceed, but recalibrating at normal "
+                                f"speaking volume close to the mic will give "
+                                f"more reliable scores.")}
         return {"n_samples": n, "total_sec": total_sec, "level": "good",
                 "message": f"Baseline locked ({n} samples, {total_sec:.0f}s)."}
 
