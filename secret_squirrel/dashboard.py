@@ -38,231 +38,381 @@ INDEX_HTML = """<!doctype html>
 <html><head><meta charset="utf-8">
 <title>Secret Squirrel — Voice Stress</title>
 <style>
-  body { font-family: -apple-system, system-ui, sans-serif;
-         background:#0e1116; color:#e8eef5; margin:0; padding:24px; }
-  h1 { margin:0 0 4px 0; font-size:24px; }
-  .sub { color:#7f8898; margin-bottom:18px; font-size:13px; }
-  .row { display:flex; gap:16px; flex-wrap:wrap; }
-  .card { background:#161a22; border:1px solid #232936; border-radius:10px;
-          padding:16px; flex:1 1 320px; }
-  button { background:#2a6df4; color:white; border:0; padding:10px 16px;
-           border-radius:6px; font-weight:600; cursor:pointer; margin:4px; }
-  button.warn { background:#b54023; }
-  button.ghost { background:#2b3140; }
+  :root {
+    --bg:#0a0d12; --surface:#15191f; --surface-2:#1c2128;
+    --border:#2b3140; --border-strong:#3d4452;
+    --text:#e8eef5; --text-dim:#8c95a3; --text-faint:#5a6275;
+    --primary:#4c8aff; --primary-hover:#3974e6;
+    --success:#3ec06d; --warning:#e7b13a; --alert:#ff8c00; --danger:#e3534a;
+  }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+         background:var(--bg); color:var(--text); margin:0; padding:0;
+         font-size:14px; line-height:1.5; }
+  .container { max-width:1320px; margin:0 auto; padding:0 24px 48px; }
+
+  /* Sticky header */
+  header { position:sticky; top:0; z-index:50;
+           background:rgba(10,13,18,0.92); backdrop-filter:blur(12px);
+           border-bottom:1px solid var(--border); padding:14px 0; margin-bottom:18px; }
+  header .container { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  header h1 { margin:0; font-size:22px; font-weight:700; letter-spacing:-0.02em; }
+  header h1 .sub { color:var(--text-dim); font-weight:400; font-size:14px; margin-left:6px; }
+  header .header-meta { display:flex; gap:14px; align-items:center; flex-wrap:wrap; font-size:12px; color:var(--text-dim); }
+  header .header-meta .session-id { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+
+  /* Cards / sections */
+  .step { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+          padding:20px 22px; margin-bottom:16px; }
+  .step-header { display:flex; align-items:baseline; gap:12px; margin:0 0 4px; }
+  .step-num { display:inline-flex; align-items:center; justify-content:center;
+              width:30px; height:30px; border-radius:50%; background:var(--primary);
+              color:white; font-weight:700; font-size:14px; flex-shrink:0; }
+  .step-title { font-size:18px; font-weight:600; margin:0; }
+  .step-hint { color:var(--text-dim); margin:4px 0 16px 42px; font-size:13px; }
+
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+          padding:18px 20px; }
+  .card h3 { margin:0 0 12px; font-size:15px; font-weight:600;
+             text-transform:uppercase; letter-spacing:0.05em; color:var(--text-dim); }
+  .card .hint { color:var(--text-dim); font-size:12px; margin:0 0 12px; }
+
+  /* Form controls */
+  button { background:var(--primary); color:white; border:0; padding:10px 18px;
+           border-radius:8px; font-weight:600; font-size:14px;
+           cursor:pointer; transition:all 0.15s; font-family:inherit; }
+  button:hover:not(:disabled) { background:var(--primary-hover); transform:translateY(-1px); }
+  button:active:not(:disabled) { transform:translateY(0); }
+  button.warn  { background:var(--danger); }
+  button.warn:hover:not(:disabled)  { background:#c4453d; }
+  button.ghost { background:var(--surface-2); color:var(--text); border:1px solid var(--border); }
+  button.ghost:hover:not(:disabled) { border-color:var(--border-strong); background:#252b35; }
   button:disabled { opacity:0.4; cursor:not-allowed; }
-  input[type=text] { background:#0e1116; color:#e8eef5; border:1px solid #2b3140;
-                     padding:8px; border-radius:6px; width:60%; }
-  .gauge { font-size:54px; font-weight:700; text-align:center; }
-  .level-accurate { color:#3ec06d; }
-  .level-baseline { color:#e7b13a; }
-  .level-elevated { color:#ff8c00; }
-  .level-extreme  { color:#e3534a; }
-  .level-none     { color:#7f8898; }
+  button.small { padding:6px 12px; font-size:13px; }
+
+  input[type=text], input[type=file], select {
+    background:var(--surface-2); color:var(--text); border:1px solid var(--border);
+    padding:9px 12px; border-radius:8px; font-size:14px; font-family:inherit;
+    transition:border-color 0.15s; }
+  input[type=text]:focus, select:focus { outline:none; border-color:var(--primary); }
+  input::placeholder { color:var(--text-faint); }
+
+  .field { display:flex; flex-direction:column; gap:4px; }
+  .field label { font-size:12px; color:var(--text-dim); font-weight:500;
+                 text-transform:uppercase; letter-spacing:0.04em; }
+  .question-fields { display:grid; grid-template-columns:1fr 200px 1fr;
+                     gap:12px; margin-bottom:14px; }
+  @media (max-width:700px) { .question-fields { grid-template-columns:1fr; } }
+
+  /* Tabs */
+  .tabs { display:flex; gap:4px; border-bottom:1px solid var(--border);
+          margin-bottom:18px; flex-wrap:wrap; }
+  .tab { background:transparent; color:var(--text-dim); padding:10px 16px;
+         border-radius:8px 8px 0 0; border:0; border-bottom:2px solid transparent;
+         font-weight:500; cursor:pointer; font-size:13px; font-family:inherit; }
+  .tab:hover { color:var(--text); }
+  .tab.active { color:var(--primary); border-bottom-color:var(--primary);
+                background:transparent; transform:none; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+
+  /* Step 1 — calibrate */
+  .calibrate-row { display:flex; gap:8px; flex-wrap:wrap; }
+
+  /* Levels + pills */
+  .gauge { font-size:64px; font-weight:800; text-align:center; line-height:1;
+           letter-spacing:-0.04em; }
+  .level-accurate { color:var(--success); }
+  .level-baseline { color:var(--warning); }
+  .level-elevated { color:var(--alert); }
+  .level-extreme  { color:var(--danger); }
+  .level-none     { color:var(--text-faint); }
   .level-pill {
       display:inline-block; padding:4px 12px; border-radius:14px;
-      font-weight:700; font-size:13px; letter-spacing:0.4px;
-      text-transform:uppercase; margin-top:6px;
-  }
-  .pill-accurate { background:#173d27; color:#3ec06d; border:1px solid #3ec06d; }
-  .pill-baseline { background:#3a2e10; color:#e7b13a; border:1px solid #e7b13a; }
-  .pill-elevated { background:#4a2810; color:#ff8c00; border:1px solid #ff8c00; }
-  .pill-extreme  { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a;
-                   box-shadow:0 0 12px rgba(227,83,74,0.5); }
-  .quality-badge { display:inline-block; padding:3px 10px; border-radius:10px;
-                   font-size:12px; font-weight:600; margin-left:6px; }
-  .quality-good { background:#173d27; color:#3ec06d; border:1px solid #3ec06d; }
-  .quality-warn { background:#3a2e10; color:#e7b13a; border:1px solid #e7b13a; }
-  .quality-bad  { background:#4a1818; color:#ffb0a8; border:1px solid #e3534a; }
-  .quality-none { background:#2b3140; color:#7f8898; border:1px solid #2b3140; }
+      font-weight:700; font-size:12px; letter-spacing:0.06em;
+      text-transform:uppercase; }
+  .pill-accurate { background:rgba(62,192,109,0.12); color:var(--success); border:1px solid var(--success); }
+  .pill-baseline { background:rgba(231,177,58,0.12); color:var(--warning); border:1px solid var(--warning); }
+  .pill-elevated { background:rgba(255,140,0,0.12); color:var(--alert); border:1px solid var(--alert); }
+  .pill-extreme  { background:rgba(227,83,74,0.15); color:#ffb0a8; border:1px solid var(--danger);
+                   box-shadow:0 0 16px rgba(227,83,74,0.4); }
+
+  .quality-badge { display:inline-block; padding:4px 12px; border-radius:12px;
+                   font-size:11px; font-weight:700; letter-spacing:0.06em;
+                   text-transform:uppercase; }
+  .quality-good { background:rgba(62,192,109,0.12); color:var(--success); border:1px solid var(--success); }
+  .quality-warn { background:rgba(231,177,58,0.12); color:var(--warning); border:1px solid var(--warning); }
+  .quality-bad  { background:rgba(227,83,74,0.15); color:#ffb0a8; border:1px solid var(--danger); }
+  .quality-none { background:var(--surface-2); color:var(--text-faint); border:1px solid var(--border); }
+
+  .status-pill { display:inline-flex; align-items:center; gap:6px;
+                 padding:3px 10px; border-radius:12px; font-size:11px;
+                 font-weight:600; text-transform:uppercase; letter-spacing:0.05em;
+                 background:var(--surface-2); border:1px solid var(--border); }
+  .pill-idle { color:var(--text-faint); }
+  .pill-ready { color:var(--success); border-color:var(--success);
+                background:rgba(62,192,109,0.08); }
+  .pill-calibrating { color:var(--warning); border-color:var(--warning);
+                      background:rgba(231,177,58,0.1); }
+  .pill-recording { color:var(--danger); border-color:var(--danger);
+                    background:rgba(227,83,74,0.1); }
+  .pill-recording::before { content:""; width:8px; height:8px; border-radius:50%;
+                            background:var(--danger); animation:pulse 1s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+  /* Tables */
   table { width:100%; border-collapse:collapse; font-size:13px; }
-  th, td { padding:6px 8px; border-bottom:1px solid #232936; text-align:left; }
-  th { color:#7f8898; font-weight:500; }
-  .bar { height:8px; background:#232936; border-radius:4px; overflow:hidden; }
-  .bar > span { display:block; height:100%; background:#2a6df4; }
-  .disclaimer { background:#2a1c14; border:1px solid #b54023; color:#f3c8b5;
-                padding:10px 14px; border-radius:8px; font-size:13px; margin-bottom:16px; }
-  .status-pill { display:inline-block; padding:3px 10px; border-radius:12px;
-                 font-size:12px; background:#2b3140; }
-  .pill-recording { background:#b54023; }
-  .pill-calibrating { background:#7a5b00; }
-  .pill-ready { background:#205c34; }
+  th, td { padding:9px 10px; border-bottom:1px solid var(--border); text-align:left; }
+  th { color:var(--text-dim); font-weight:500; font-size:11px;
+       text-transform:uppercase; letter-spacing:0.05em; }
+  tr:last-child td { border-bottom:0; }
+
+  /* Disclaimer */
+  .disclaimer { background:rgba(227,83,74,0.06); border:1px solid rgba(227,83,74,0.4);
+                color:#f3c8b5; padding:12px 16px; border-radius:10px;
+                font-size:13px; margin-bottom:16px; }
+
+  /* Layout grids */
+  .result-grid { display:grid; grid-template-columns:280px 1fr; gap:16px; }
+  @media (max-width:900px) { .result-grid { grid-template-columns:1fr; } }
+  .analysis-grid { display:grid; grid-template-columns:1fr 1fr 1fr;
+                   gap:16px; margin-bottom:16px; }
+  @media (max-width:1000px) { .analysis-grid { grid-template-columns:1fr; } }
+
+  .gauge-card { display:flex; flex-direction:column; align-items:center;
+                justify-content:center; gap:12px; min-height:200px; }
+
+  /* Code/mono */
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+         background:var(--surface-2); padding:1px 6px; border-radius:4px;
+         font-size:12px; }
+
+  /* Misc */
+  .row-buttons { display:flex; gap:8px; flex-wrap:wrap; }
+  .stack-sm > * + * { margin-top:8px; }
+  .hr { border:0; border-top:1px solid var(--border); margin:12px 0; }
 </style></head>
 <body>
-  <h1>Secret Squirrel</h1>
-  <div class="sub">Voice stress &amp; cognitive-load analyzer</div>
+  <header>
+    <div class="container">
+      <h1>🐿️ Secret Squirrel <span class="sub">voice stress &amp; cognitive-load</span></h1>
+      <div class="header-meta">
+        <span class="status-pill pill-idle" id="state">idle</span>
+        <span id="qualityBadge"></span>
+        <span>Baseline: <b id="baseN">0</b> samples</span>
+        <span>Questions: <b id="histN">0</b></span>
+        <span class="session-id" id="sessionId"></span>
+      </div>
+    </div>
+  </header>
 
-  <div class="disclaimer">
-    This tool identifies possible <b>signs of stress or deception in voice
-    and thought patterns</b>. It is not a lie detector and offers no
-    guarantee of accuracy. Stress has many causes — nervousness, fatigue,
-    illness, recall difficulty — and is not by itself proof of deception.
-    <b>Do not accuse anyone of lying based on what this tool reports.</b>
-  </div>
+  <div class="container">
 
-  <div class="row">
+    <div class="disclaimer">
+      This tool identifies possible <b>signs of stress or deception in voice
+      and thought patterns</b>. It is not a lie detector and offers no
+      guarantee of accuracy. Stress has many causes — nervousness, fatigue,
+      illness, recall difficulty — and is not by itself proof of deception.
+      <b>Do not accuse anyone of lying based on what this tool reports.</b>
+    </div>
+
+    <!-- STEP 1 ─ CALIBRATE ─────────────────────────────────────── -->
+    <section class="step">
+      <div class="step-header">
+        <span class="step-num">1</span>
+        <h2 class="step-title">Calibrate baseline</h2>
+      </div>
+      <p class="step-hint"><b>Speak naturally for ~30s</b> — describe your day,
+      give a tour of your house, talk about a vacation. <b>Do not</b> read
+      the alphabet, count, or read from a book — monotone scripted speech
+      makes every real answer later read as elevated.</p>
+
+      <div class="calibrate-row">
+        <button id="btnCalibrate">🎤 Server mic — 30s calibration</button>
+        <button id="btnMicCal" class="ghost">📱 Browser mic — 30s calibration</button>
+        <button id="btnRecal" class="ghost" disabled>Recalibrate (keep history)</button>
+        <button id="btnReset" class="ghost">Reset all</button>
+      </div>
+      <div id="calStatus" class="step-hint" style="margin:12px 0 0 42px;"></div>
+      <div id="recTimer" class="step-hint" style="margin:6px 0 0 42px;"></div>
+    </section>
+
+    <!-- STEP 2 ─ ASK A QUESTION ─────────────────────────────────── -->
+    <section class="step">
+      <div class="step-header">
+        <span class="step-num">2</span>
+        <h2 class="step-title">Ask a question</h2>
+      </div>
+      <p class="step-hint">Label the question and pick its type — these apply
+      to every recording method below.</p>
+
+      <div class="question-fields">
+        <div class="field">
+          <label for="qLabel">Question label</label>
+          <input type="text" id="qLabel" placeholder="e.g. Where were you Tuesday night?">
+        </div>
+        <div class="field">
+          <label for="qType">Type</label>
+          <select id="qType">
+            <option value="target">target — question of interest</option>
+            <option value="control">control — known truth</option>
+            <option value="buffer">buffer — filler</option>
+            <option value="neutral">neutral — no expectation</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="qTopic">Topic (optional)</label>
+          <input type="text" id="qTopic" placeholder="groups related questions">
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="live">🎤 Live mic (server)</button>
+        <button class="tab" data-tab="browser">📱 Browser mic</button>
+        <button class="tab" data-tab="upload">📁 Upload file</button>
+        <button class="tab" data-tab="url">🌐 URL / path</button>
+      </div>
+
+      <!-- Live server mic -->
+      <div class="tab-panel active" data-tab="live">
+        <p class="hint">Records from the PC running the dashboard. Auto-stops after 1.5s of silence.</p>
+        <div class="row-buttons">
+          <button id="btnAsk" disabled>● Start question recording</button>
+          <button id="btnStop" class="warn">⏹ Stop now</button>
+        </div>
+      </div>
+
+      <!-- Browser mic -->
+      <div class="tab-panel" data-tab="browser">
+        <p class="hint">Records from whatever device you're viewing on (iPhone, Mac, PC).
+        Needs HTTPS on iPhone — see README for Tailscale Funnel setup.</p>
+        <div id="micCheck" class="hint" style="margin-bottom:8px;"></div>
+        <div class="row-buttons">
+          <button id="btnMicQ">● Start question recording</button>
+          <button id="btnMicStop" class="warn" disabled>⏹ Stop &amp; analyze</button>
+        </div>
+        <div id="micTimer" class="hint" style="margin-top:8px;"></div>
+        <div id="micStatus" class="hint"></div>
+      </div>
+
+      <!-- File upload -->
+      <div class="tab-panel" data-tab="upload">
+        <p class="hint">Drop in audio or video from your phone or computer
+        (WAV, MP3, MP4, M4A, AAC, OGG, FLAC, WebM, MOV — anything ffmpeg reads). Max 500 MB.</p>
+        <input type="file" id="fileInput" accept="audio/*,video/*,.wav,.mp3,.mp4,.m4a,.aac,.ogg,.opus,.webm,.mpeg,.mpga,.flac,.wma,.amr,.3gp,.aiff,.au,.mkv,.mov,.avi" style="margin-bottom:10px;">
+        <div class="row-buttons">
+          <button id="btnFileQ">Analyze as question</button>
+          <button id="btnFileCal" class="ghost">Use as baseline</button>
+        </div>
+        <div id="fileStatus" class="hint" style="margin-top:8px;"></div>
+      </div>
+
+      <!-- URL / path -->
+      <div class="tab-panel" data-tab="url">
+        <p class="hint">YouTube / X / Instagram / TikTok / direct media URL, or a server file path. yt-dlp handles fetching.</p>
+        <input type="text" id="urlInput" placeholder="https://…  OR  /path/to/file.wav" style="width:100%; margin-bottom:10px;">
+        <div class="row-buttons">
+          <button id="btnUrlQ">Analyze as question</button>
+          <button id="btnUrlCal" class="ghost">Use as baseline</button>
+        </div>
+        <div id="urlStatus" class="hint" style="margin-top:8px;"></div>
+      </div>
+    </section>
+
+    <!-- STEP 3 ─ RESULT ─────────────────────────────────────────── -->
+    <section class="step">
+      <div class="step-header">
+        <span class="step-num">3</span>
+        <h2 class="step-title">Latest result</h2>
+      </div>
+      <p class="step-hint">Score is composite stress / cognitive-load 0–100 vs this subject's own baseline. Not a deception verdict.</p>
+
+      <div class="result-grid">
+        <div class="card gauge-card">
+          <div id="gauge" class="gauge level-none">—</div>
+          <div id="gaugeLabel" style="text-align:center;"></div>
+        </div>
+        <div class="card">
+          <h3>Feature breakdown</h3>
+          <div id="features" class="hint">Calibrate, then ask a question.</div>
+          <div id="content" style="margin-top:12px;"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <h3>Within-answer stress timeline</h3>
+        <p class="hint">Flat line = uniform stress. A spike = where the speaker's voice changed. <b>Hover any dot</b> to see the words spoken at that moment.</p>
+        <svg id="timeline" width="100%" height="130"
+             style="background:var(--bg);border:1px solid var(--border);border-radius:8px;"></svg>
+        <div id="timelineMeta" class="hint" style="margin-top:6px;"></div>
+      </div>
+    </section>
+
+    <!-- ANALYSIS GRID ─ CQT / Topics / Refit ───────────────────── -->
+    <div class="analysis-grid">
+      <div class="card">
+        <h3>CQT differential</h3>
+        <p class="hint">mean(target) − mean(control) — the interrogation-grade comparison.</p>
+        <div id="cqtDiff" style="margin:8px 0 12px;"></div>
+        <table>
+          <thead><tr><th>Type</th><th>n</th><th>Mean</th><th>Max</th><th>Latency</th></tr></thead>
+          <tbody id="typeAgg"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Topics</h3>
+        <p class="hint">cumulative target evidence by topic — five 60s on one topic is stronger than one 60.</p>
+        <table>
+          <thead><tr><th>Topic</th><th>n</th><th>Mean</th><th>Max</th></tr></thead>
+          <tbody id="topicAgg"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Per-subject calibration <span id="calibratedBadge"></span></h3>
+        <p class="hint">Mark answers 👍 truth / 👎 lie in the History table. Once you have ≥3 of each, refit re-tunes weights for THIS subject.</p>
+        <div class="row-buttons">
+          <button id="btnRefit" class="small" disabled>Refit from labels</button>
+          <button id="btnRefitRevert" class="ghost small" disabled>Revert</button>
+        </div>
+        <div id="refitStatus" class="hint" style="margin-top:8px;"></div>
+      </div>
+    </div>
+
+    <!-- HISTORY ────────────────────────────────────────────────── -->
     <div class="card">
-      <h3>1. Calibrate baseline</h3>
-      <p class="sub"><b>Speak naturally for ~30s</b> — describe your day yesterday,
-      give a tour of your house, talk about a vacation. <b>Do not</b> read the
-      alphabet, count, or read from a book — monotone scripted speech makes
-      every real answer later read as "elevated."</p>
-      <button id="btnCalibrate">Start 30s calibration</button>
-      <div id="calStatus" class="sub" style="margin-top:8px;"></div>
-      <div id="qualityBadge" style="margin-top:8px;"></div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; flex-wrap:wrap; gap:8px;">
+        <h3 style="margin:0;">History</h3>
+        <div class="row-buttons">
+          <button class="ghost small" onclick="window.open('/api/export/json','_blank')">⬇ JSON</button>
+          <button class="ghost small" onclick="window.open('/api/export/csv','_blank')">⬇ CSV</button>
+        </div>
+      </div>
+      <audio id="player" controls style="width:100%; margin:6px 0; display:none;"></audio>
+      <div style="overflow-x:auto;">
+        <table id="histTable">
+          <thead><tr>
+            <th>▶</th><th>#</th><th>Label</th><th>Topic</th><th>Type</th>
+            <th>Score</th><th>Level</th><th>Latency</th><th>Truth?</th><th>When</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>2. Ask a question</h3>
-      <p class="sub">Label the question, choose its type, then start recording.
-      Stops automatically after 1.5s of silence.</p>
-      <input type="text" id="qLabel" placeholder="e.g. Where were you last night?">
-      <select id="qType" style="background:#0e1116;color:#e8eef5;border:1px solid #2b3140;padding:8px;border-radius:6px;">
-        <option value="target">target</option>
-        <option value="control">control</option>
-        <option value="buffer">buffer</option>
-        <option value="neutral">neutral</option>
-      </select>
-      <input type="text" id="qTopic" placeholder="topic (optional, groups related Qs)" style="width:40%;margin-top:6px;">
-      <br>
-      <button id="btnAsk" disabled>Start question</button>
-      <button id="btnStop" class="warn">Stop now</button>
-      <button id="btnRecal" class="ghost" disabled>Recalibrate (keep history)</button>
-      <button id="btnReset" class="ghost">Reset all</button>
-    </div>
-
-    <div class="card">
-      <h3>State</h3>
-      <div>State: <span id="state" class="status-pill">idle</span></div>
-      <div style="margin-top:6px;">Baseline samples: <span id="baseN">0</span></div>
-      <div>Questions recorded: <span id="histN">0</span></div>
-      <div id="recTimer" class="sub" style="margin-top:6px;"></div>
-    </div>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Upload a recorded conversation</h3>
-    <p class="sub">Drop in an audio or video file from your computer or phone
-    (WAV, MP3, MP4, M4A, AAC, OGG, OPUS, FLAC, MPEG, WMA, AMR, 3GP, WebM,
-    MKV, MOV, AVI — anything ffmpeg reads). Max 500 MB. Use
-    <b>"as baseline"</b> on a calm clip first, then <b>"as question"</b> on the
-    clip you want scored. The current question-type selector applies.</p>
-    <input type="file" id="fileInput" accept="audio/*,video/*,.wav,.mp3,.mp4,.m4a,.aac,.ogg,.opus,.webm,.mpeg,.mpga,.flac,.wma,.amr,.3gp,.aiff,.au,.mkv,.mov,.avi" style="background:#0e1116;color:#e8eef5;padding:8px;">
-    <input type="text" id="fileLabel" placeholder="label (optional)" style="width:30%;">
-    <br>
-    <button id="btnFileCal" class="ghost">Use as baseline</button>
-    <button id="btnFileQ">Use as question</button>
-    <div id="fileStatus" class="sub" style="margin-top:8px;"></div>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>🎙️ Record from this device's mic</h3>
-    <p class="sub">Capture audio directly from this device's microphone — iPhone, iPad,
-    Mac, PC, anything with a browser. Use as <b>baseline</b> first (30s of neutral
-    speech, auto-stops), then as <b>question</b> (you press Stop when the subject
-    finishes). Question type selector above applies. Recording uses MediaRecorder
-    natively; the audio is uploaded and run through the exact same pipeline as
-    file uploads.</p>
-    <div id="micCheck" class="sub" style="margin-bottom:8px;"></div>
-    <input type="text" id="micLabel" placeholder="label (optional)" style="width:50%;">
-    <br>
-    <button id="btnMicCal" class="ghost">Start 30s calibration</button>
-    <button id="btnMicQ">Start question recording</button>
-    <button id="btnMicStop" class="warn" disabled>⏹ Stop & analyze</button>
-    <div id="micTimer" class="sub" style="margin-top:8px;"></div>
-    <div id="micStatus" class="sub"></div>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Or analyze by URL / server path</h3>
-    <p class="sub">Paste a YouTube / X / Instagram / TikTok / direct media URL,
-    or a path to a file that's already on this server. yt-dlp handles URL
-    fetching.</p>
-    <input type="text" id="urlInput" placeholder="https://…  OR  /path/to/file.wav" style="width:80%;">
-    <input type="text" id="urlLabel" placeholder="label (optional)" style="width:30%;">
-    <br>
-    <button id="btnUrlCal" class="ghost">Use as baseline</button>
-    <button id="btnUrlQ">Use as question</button>
-    <div id="urlStatus" class="sub" style="margin-top:8px;"></div>
-  </div>
-
-  <div class="row" style="margin-top:16px;">
-    <div class="card" style="flex:1 1 280px;">
-      <h3>Latest score</h3>
-      <div id="gauge" class="gauge level-none">—</div>
-      <div id="gaugeLabel" class="sub" style="text-align:center;"></div>
-    </div>
-
-    <div class="card" style="flex:2 1 540px;">
-      <h3>Feature breakdown (last question)</h3>
-      <div id="features">Calibrate, then ask a question.</div>
-      <div id="content" style="margin-top:12px;"></div>
-    </div>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Within-answer stress timeline</h3>
-    <p class="sub">Flat = uniform stress across the answer. A spike mid-answer
-    is the moment the speaker's voice changed — often where a fabrication is
-    constructed or a difficult recall happens. Look for the WHERE.</p>
-    <svg id="timeline" width="100%" height="120"
-         style="background:#0e1116;border:1px solid #232936;border-radius:8px;"></svg>
-    <div id="timelineMeta" class="sub" style="margin-top:4px;"></div>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Comparison by question type — CQT differential</h3>
-    <p class="sub">The Comparison Question Technique compares target answers to
-    your own control answers, not just to baseline. The <b>differential</b> is
-    <code>mean(target) − mean(control)</code>. A target answer with
-    significantly higher stress than your controls is what to follow up on.
-    Equal stress across types = nothing to conclude.</p>
-    <div id="cqtDiff" style="margin:8px 0 12px 0;"></div>
-    <table>
-      <thead><tr><th>Type</th><th>n</th><th>Mean stress</th><th>Max</th>
-        <th>Mean latency</th></tr></thead>
-      <tbody id="typeAgg"></tbody>
-    </table>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Topics — cumulative target evidence</h3>
-    <p class="sub">When several target answers share a topic, the per-topic mean
-    score is a stronger signal than any single answer. Set the optional
-    "topic" field when you ask related questions; this table updates live.</p>
-    <table>
-      <thead><tr><th>Topic</th><th>n questions</th>
-        <th>Mean stress</th><th>Max</th><th>Types</th></tr></thead>
-      <tbody id="topicAgg"></tbody>
-    </table>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Per-subject calibration <span id="calibratedBadge"></span></h3>
-    <p class="sub">After you know which answers were truthful and which were
-    lies, click 👍 (truth) or 👎 (lie) in the History table. Once you have
-    ≥3 of each, hit <b>Refit</b> below and the feature weights re-tune to
-    what discriminates THIS subject. All history scores recompute immediately
-    with the new weights.</p>
-    <button id="btnRefit" disabled>Refit weights from labels</button>
-    <button id="btnRefitRevert" class="ghost" disabled>Revert to default weights</button>
-    <div id="refitStatus" class="sub" style="margin-top:8px;"></div>
-  </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3 style="display:inline-block;">History</h3>
-    <span style="float:right;">
-      <button class="ghost" onclick="window.open('/api/export/json','_blank')">Download JSON</button>
-      <button class="ghost" onclick="window.open('/api/export/csv','_blank')">Download CSV</button>
-    </span>
-    <audio id="player" controls style="width:100%;margin:6px 0;display:none;"></audio>
-    <table id="histTable">
-      <thead><tr><th>▶</th><th>#</th><th>Label</th><th>Topic</th><th>Type</th><th>Stress</th><th>Level</th>
-        <th>Latency</th><th>Truth?</th><th>When</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  </div><!-- /container -->
 
 <script>
+// ── Tab switching ──────────────────────────────────────────
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    const name = t.dataset.tab;
+    document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.tab === name));
+    document.querySelectorAll('.tab-panel').forEach(x => x.classList.toggle('active', x.dataset.tab === name));
+  });
+});
+
 async function post(path, body) {
   const r = await fetch(path, {
     method:'POST',
@@ -289,7 +439,7 @@ async function submitUrl(mode) {
   const url = document.getElementById('urlInput').value.trim();
   if (!url) { document.getElementById('urlStatus').textContent = 'enter a URL or path'; return; }
   document.getElementById('urlStatus').textContent = 'fetching & analyzing…';
-  const label = document.getElementById('urlLabel').value || '';
+  const label = document.getElementById('qLabel').value || '';
   const question_type = document.getElementById('qType').value;
   const topic = document.getElementById('qTopic').value;
   const r = await post('/api/analyze', {url, mode, label, question_type, topic});
@@ -314,7 +464,7 @@ async function submitFile(mode) {
   const form = new FormData();
   form.append('file', file);
   form.append('mode', mode);
-  form.append('label', document.getElementById('fileLabel').value || '');
+  form.append('label', document.getElementById('qLabel').value || '');
   form.append('question_type', document.getElementById('qType').value);
   form.append('topic', document.getElementById('qTopic').value || '');
   try {
@@ -440,7 +590,7 @@ async function _uploadMicRecording() {
   form.append('file', blob, 'mic_recording' + _mimeToExt(mime));
   form.append('mode', _recordMode);
   form.append('label',
-    document.getElementById('micLabel').value || ('mic ' + _recordMode));
+    document.getElementById('qLabel').value || ('mic ' + _recordMode));
   form.append('question_type', document.getElementById('qType').value);
   form.append('topic', document.getElementById('qTopic').value || '');
   try {
@@ -470,16 +620,15 @@ evt.onmessage = (e) => {
   document.getElementById('histN').textContent = s.history_count;
   document.getElementById('btnAsk').disabled = !s.baseline_locked || s.state !== 'ready';
   document.getElementById('btnRecal').disabled = !s.baseline_locked;
+  document.getElementById('sessionId').textContent = s.session_id ? `session ${s.session_id}` : '';
   const q = s.baseline_quality || {level:'none', message:'Not calibrated yet.'};
   document.getElementById('calStatus').textContent = q.message;
   const badge = document.getElementById('qualityBadge');
   if (q.level && q.level !== 'none') {
-    const LABEL = {good:'GOOD BASELINE', warn:'THIN BASELINE — recalibrate?', bad:'BAD BASELINE — recalibrate'};
-    badge.innerHTML =
-      `<span class="quality-badge quality-${q.level}">${LABEL[q.level]||q.level}</span>` +
-      `<span class="sub" style="margin-left:8px;">${q.n_samples} sample(s), ${q.total_sec.toFixed(0)}s</span>`;
+    const LABEL = {good:'BASELINE GOOD', warn:'BASELINE THIN', bad:'BASELINE BAD'};
+    badge.innerHTML = `<span class="quality-badge quality-${q.level}">${LABEL[q.level]||q.level}</span>`;
   } else {
-    badge.innerHTML = '';
+    badge.innerHTML = '<span class="quality-badge quality-none">NOT CALIBRATED</span>';
   }
   const t = s.now_recording_for_sec;
   document.getElementById('recTimer').textContent =
