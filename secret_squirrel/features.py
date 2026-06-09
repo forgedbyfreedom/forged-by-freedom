@@ -113,7 +113,10 @@ def extract_features(audio: np.ndarray, fs: int,
             t = voiced_idx * 0.01
             try:
                 slope, _ = np.polyfit(t, voiced, 1)
-                f0_slope = float(slope)
+                # Clamp slope: short clips with sparse voicing produce
+                # ridiculous polyfit outliers (±700 Hz/s) that wreck z-scores.
+                # Real conversational slopes rarely exceed ±100 Hz/s.
+                f0_slope = float(max(-200.0, min(200.0, slope)))
             except Exception:
                 f0_slope = None
 

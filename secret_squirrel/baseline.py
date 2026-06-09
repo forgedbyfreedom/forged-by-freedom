@@ -27,50 +27,51 @@ TWO_TAILED = {"f0_mean", "f0_slope", "speaking_rate", "intensity_mean",
 
 # Weighting from systematic-review consensus on what tracks stress most reliably
 WEIGHTS = {
-    # Acoustic stress channel
-    "jitter_local":      0.13,
-    "shimmer_local":     0.11,
+    # Acoustic channel — speaker-variable features get less weight than the
+    # 2025-06 round because real-world recordings showed f0_mean and shimmer
+    # spiking on innocent answers when the baseline conditions (mic distance,
+    # speaking volume) didn't perfectly match the question conditions.
+    "jitter_local":      0.10,
+    "shimmer_local":     0.08,
     "hnr":               0.09,
-    "f0_std":            0.06,
-    "f0_iqr":            0.05,
-    "f0_slope":          0.03,
-    "f0_mean":           0.06,
-    "intensity_std":     0.04,
-    "speaking_rate":     0.04,
-    "pause_ratio":       0.04,
-    "mfcc_distance":     0.08,
-    # Content channel — present only when whisper is installed.
-    # Hedging is the single strongest deception correlate in the
-    # Vrij/Pennebaker literature, so it gets a real weight.
-    "disfluency_rate":   0.07,
-    "hedge_rate":        0.10,
-    "first_person_rate": 0.06,
-    "words_per_sec":     0.04,
+    "f0_std":            0.04,
+    "f0_iqr":            0.04,
+    "f0_slope":          0.02,
+    "f0_mean":           0.02,  # absolute pitch is heavily speaker-style dependent
+    "intensity_std":     0.03,
+    "speaking_rate":     0.03,
+    "pause_ratio":       0.05,
+    "mfcc_distance":     0.12,  # promoted — most condition-stable
+    # Content channel — promoted further, these are the most consistent
+    # deception correlates in the Vrij / Pennebaker literature.
+    "disfluency_rate":   0.10,
+    "hedge_rate":        0.16,
+    "first_person_rate": 0.07,
+    "words_per_sec":     0.05,
 }
 
 # Feature-aware minimum sigma — prevents z-score explosion when baseline
-# samples are uniform. These were originally too tight: a real-world subject's
-# natural prosody varies more than a 30-second calibration window suggests,
-# so question speech often produced 4σ deviations on perfectly innocent
-# features. Doubled across the board after a real Windows deployment showed
-# "everything looks extreme."
+# samples are uniform. Real-world subjects whose calibration and question
+# conditions differ slightly (mic distance, mood, voice warm-up) produce
+# 3-5σ deviations on the acoustic features even when answering honestly.
+# These floors are calibrated against real human speech, not synthetic TTS.
 NOISE_FLOORS = {
-    "jitter_local":      0.003,
-    "shimmer_local":     0.012,
-    "hnr":               3.0,
-    "f0_mean":           10.0,
-    "f0_std":            8.0,
-    "f0_iqr":            10.0,
-    "f0_slope":          6.0,
-    "intensity_mean":    3.0,
-    "intensity_std":     2.0,
-    "speaking_rate":     0.8,
-    "pause_ratio":       0.12,
-    "mfcc_distance":     1.2,
-    "disfluency_rate":   0.06,
-    "hedge_rate":        0.04,
-    "first_person_rate": 0.06,
-    "words_per_sec":     0.8,
+    "jitter_local":      0.015,
+    "shimmer_local":     0.04,
+    "hnr":               5.0,
+    "f0_mean":           25.0,   # individuals' base pitch varies hugely
+    "f0_std":            25.0,   # natural prosody varies hugely
+    "f0_iqr":            20.0,
+    "f0_slope":          15.0,
+    "intensity_mean":    8.0,
+    "intensity_std":     5.0,
+    "speaking_rate":     1.5,
+    "pause_ratio":       0.20,
+    "mfcc_distance":     3.0,
+    "disfluency_rate":   0.08,
+    "hedge_rate":        0.08,
+    "first_person_rate": 0.10,
+    "words_per_sec":     1.2,
 }
 
 # Cap how much any single feature can contribute (in σ units) — avoids one
@@ -201,22 +202,40 @@ class Baseline:
         total_sec = float(sum(s.get("duration_sec", 0.0) or 0.0
                               for s in self.samples))
         if not self.locked:
-            level = "none"
-            msg = "Not calibrated yet."
-        elif n < 2 or total_sec < 10:
-            level = "bad"
-            msg = (f"Bad baseline ({n} samples, {total_sec:.0f}s). "
-                   f"Scores will be unreliable. Recalibrate with ≥20s of "
-                   f"neutral speech.")
-        elif n < 4 or total_sec < 20:
-            level = "warn"
-            msg = (f"Thin baseline ({n} samples, {total_sec:.0f}s). "
-                   f"Recommended: ≥4 samples and ≥20s of neutral speech.")
-        else:
-            level = "good"
-            msg = f"Baseline locked ({n} samples, {total_sec:.0f}s)."
-        return {"n_samples": n, "total_sec": total_sec,
-                "level": level, "message": msg}
+            return {"n_samples": n, "total_sec": total_sec,
+                    "level": "none", "message": "Not calibrated yet."}
+        if n < 2 or total_sec < 10:
+            return {"n_samples": n, "total_sec": total_sec, "level": "bad",
+                    "message": (f"Bad baseline ({n} samples, {total_sec:.0f}s). "
+                                f"Scores will be unreliable. Recalibrate with "
+                                f"≥20s of neutral speech.")}
+
+        # Detect degenerate-condition baselines: too quiet, too low-pitched,
+        # or too noisy. These cause every natural answer to read as "extreme"
+        # because the question conditions differ from baseline conditions.
+        bad = []
+        f0m = self.stats.get("f0_mean")
+        intm = self.stats.get("intensity_mean")
+        hnrv = self.stats.get("hnr")
+        if f0m and f0m[0] < 90:
+            bad.append(f"low pitch ({f0m[0]:.0f} Hz — likely vocal fry / whispered)")
+        if intm and intm[0] < 45:
+            bad.append(f"recording quiet ({intm[0]:.0f} dB — move closer to the mic)")
+        if hnrv and hnrv[0] < 10:
+            bad.append(f"poor HNR ({hnrv[0]:.1f} dB — noisy room or low-quality mic)")
+        if bad:
+            return {"n_samples": n, "total_sec": total_sec, "level": "bad",
+                    "message": (f"Baseline conditions look degenerate: {'; '.join(bad)}. "
+                                f"Every answer recorded under normal conditions will "
+                                f"score as extreme. Recalibrate at normal speaking "
+                                f"volume, close to the mic, in a quieter room.")}
+
+        if n < 4 or total_sec < 20:
+            return {"n_samples": n, "total_sec": total_sec, "level": "warn",
+                    "message": (f"Thin baseline ({n} samples, {total_sec:.0f}s). "
+                                f"Recommended: ≥4 samples and ≥20s.")}
+        return {"n_samples": n, "total_sec": total_sec, "level": "good",
+                "message": f"Baseline locked ({n} samples, {total_sec:.0f}s)."}
 
     def score(self, features: dict) -> dict:
         """Return composite stress score 0–100 + per-feature contributions.
