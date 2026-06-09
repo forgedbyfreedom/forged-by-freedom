@@ -1,0 +1,59 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { createClient } from "@/lib/supabase/server";
+import { int, moneyCents, str } from "@/lib/forms";
+
+export async function addLot(formData: FormData) {
+  const product_id = str(formData, "product_id");
+  if (!product_id) return { error: "Product is required" };
+
+  const supabase = await createClient();
+  const { error } = await supabase.from("crm_inventory_lots").insert({
+    product_id,
+    lot_number: str(formData, "lot_number"),
+    supplier: str(formData, "supplier"),
+    unit_cost_cents: moneyCents(formData, "unit_cost"),
+    qty_on_hand: int(formData, "qty_on_hand"),
+    qty_on_order: int(formData, "qty_on_order"),
+    tracking_number: str(formData, "tracking_number"),
+    carrier: str(formData, "carrier"),
+    status: str(formData, "status") || "ordered",
+    ordered_at: str(formData, "ordered_at") || null,
+    received_at: str(formData, "received_at") || null,
+    expires_at: str(formData, "expires_at") || null,
+    notes: str(formData, "notes"),
+  });
+
+  if (error) return { error: error.message };
+  revalidatePath("/inventory");
+  revalidatePath("/dashboard");
+  return { ok: true };
+}
+
+export async function receiveLot(formData: FormData) {
+  const id = str(formData, "id");
+  if (!id) return { error: "Lot id required" };
+
+  const supabase = await createClient();
+  const { data: lot, error: readErr } = await supabase
+    .from("crm_inventory_lots")
+    .select("qty_on_hand, qty_on_order")
+    .eq("id", id)
+    .single();
+  if (readErr || !lot) return { error: readErr?.message || "Lot not found" };
+
+  const { error } = await supabase
+    .from("crm_inventory_lots")
+    .update({
+      qty_on_hand: (lot.qty_on_hand || 0) + (lot.qty_on_order || 0),
+      qty_on_order: 0,
+      status: "received",
+      received_at: new Date().toISOString(),
+    })
+    .eq("id", id);
+
+  if (error) return { error: error.message };
+  revalidatePath("/inventory");
+  return { ok: true };
+}
