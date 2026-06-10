@@ -14,6 +14,16 @@ export async function addProduct(formData: FormData) {
   if (!name) fail("Name is required");
 
   const supabase = await createClient();
+
+  // Diagnostic: confirm the action sees the user. If this is null, the
+  // session cookie isn't reaching the server-action's Supabase client and
+  // RLS will reject everything — auth fix needed, not data fix.
+  const { data: userData, error: userErr } = await supabase.auth.getUser();
+  if (userErr) fail(`Auth check failed: ${userErr.message}`);
+  if (!userData.user) {
+    fail("Server action sees no authenticated user — sign out and back in.");
+  }
+
   const { data: product, error } = await supabase
     .from("crm_products")
     .insert({
@@ -28,9 +38,14 @@ export async function addProduct(formData: FormData) {
     .select("id")
     .single();
 
-  if (error || !product) fail(error?.message || "Insert failed");
+  if (error || !product) {
+    fail(
+      `(auth user: ${userData.user.email} / ${userData.user.id}) ${
+        error?.message || "Insert failed"
+      }`,
+    );
+  }
 
-  // Optional initial stock — if user filled in quantity, create a received lot.
   const initialQty = int(formData, "initial_qty");
   if (initialQty > 0) {
     const initialCost =
