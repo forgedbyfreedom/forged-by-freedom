@@ -10,6 +10,7 @@ import {
   ShoppingCart,
   Receipt,
   BarChart3,
+  Upload,
   LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -21,6 +22,7 @@ const NAV = [
   { href: "/inventory", label: "Inventory", icon: Boxes },
   { href: "/orders", label: "Orders", icon: ShoppingCart },
   { href: "/expenses", label: "Expenses", icon: Receipt },
+  { href: "/import", label: "Import", icon: Upload },
   { href: "/reports", label: "Reports", icon: BarChart3 },
 ];
 

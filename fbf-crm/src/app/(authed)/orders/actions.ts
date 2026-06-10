@@ -81,3 +81,16 @@ export async function addOrder(formData: FormData) {
   revalidatePath("/dashboard");
   revalidatePath("/reports");
 }
+
+export async function deleteOrder(formData: FormData) {
+  const id = str(formData, "id");
+  if (!id) fail("Order id required");
+  const supabase = await createClient();
+  // crm_order_items has ON DELETE CASCADE so items go too.
+  const { error } = await supabase.from("crm_orders").delete().eq("id", id);
+  if (error) fail(error.message);
+  revalidatePath("/orders");
+  revalidatePath("/clients");
+  revalidatePath("/dashboard");
+  revalidatePath("/reports");
+}

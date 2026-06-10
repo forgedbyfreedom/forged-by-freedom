@@ -1,3 +1,4 @@
+import { Trash2 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
@@ -8,7 +9,7 @@ import {
   SubmitButton,
   Textarea,
 } from "@/components/ui/form-primitives";
-import { addClient } from "./actions";
+import { addClient, deleteClient } from "./actions";
 
 export default async function ClientsPage({
   searchParams,
@@ -100,6 +101,7 @@ export default async function ClientsPage({
                     <th className="px-5 py-3 text-right font-semibold">Avg</th>
                     <th className="px-5 py-3 text-right font-semibold">Largest</th>
                     <th className="px-5 py-3 font-semibold">Last Order</th>
+                    <th className="px-5 py-3"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -131,6 +133,19 @@ export default async function ClientsPage({
                         {c.last_order_at
                           ? new Date(c.last_order_at).toLocaleDateString()
                           : "—"}
+                      </td>
+                      <td className="px-5 py-3 text-right">
+                        <form action={deleteClient}>
+                          <input type="hidden" name="id" value={c.id} />
+                          <button
+                            type="submit"
+                            aria-label="Delete client"
+                            title="Delete (orders are kept, just unlinked)"
+                            className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </button>
+                        </form>
                       </td>
                     </tr>
                   ))}

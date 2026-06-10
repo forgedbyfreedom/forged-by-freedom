@@ -31,3 +31,15 @@ export async function addClient(formData: FormData) {
   if (error) fail(error.message);
   revalidatePath("/clients");
 }
+
+export async function deleteClient(formData: FormData) {
+  const id = str(formData, "id");
+  if (!id) fail("Client id required");
+  const supabase = await createClient();
+  // crm_orders.client_id has ON DELETE SET NULL — past orders are kept but
+  // unlinked from the deleted client. crm_order_items is unaffected.
+  const { error } = await supabase.from("crm_clients").delete().eq("id", id);
+  if (error) fail(error.message);
+  revalidatePath("/clients");
+  revalidatePath("/orders");
+}
