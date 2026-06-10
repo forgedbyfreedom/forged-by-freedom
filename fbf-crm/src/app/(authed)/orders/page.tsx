@@ -39,7 +39,7 @@ export default async function OrdersPage({
 }) {
   const { error: errorParam } = await searchParams;
   const supabase = await createClient();
-  const [clientsRes, productsRes, ordersRes] = await Promise.all([
+  const [clientsRes, productsRes, ordersRes, totalsRes] = await Promise.all([
     supabase.from("crm_clients").select("id, name").order("name"),
     supabase
       .from("crm_products")
@@ -53,11 +53,42 @@ export default async function OrdersPage({
       )
       .order("ordered_at", { ascending: false })
       .limit(200),
+    // Lightweight pass over every non-refunded order for the stat cards.
+    supabase
+      .from("crm_orders")
+      .select("total_cents, ordered_at")
+      .neq("status", "refunded"),
   ]);
 
   const clients = clientsRes.data || [];
   const products = productsRes.data || [];
   const orders = (ordersRes.data || []) as unknown as Order[];
+
+  const now = new Date();
+  const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+  const yearStart = new Date(now.getFullYear(), 0, 1);
+  let mtdRev = 0;
+  let mtdCount = 0;
+  let ytdRev = 0;
+  let ytdCount = 0;
+  let allRev = 0;
+  let allCount = 0;
+  for (const o of totalsRes.data || []) {
+    const cents = o.total_cents || 0;
+    const d = new Date(o.ordered_at);
+    allRev += cents;
+    allCount++;
+    if (d >= yearStart) {
+      ytdRev += cents;
+      ytdCount++;
+    }
+    if (d >= monthStart) {
+      mtdRev += cents;
+      mtdCount++;
+    }
+  }
+  const monthLabel = now.toLocaleString("en-US", { month: "long" });
+  const yearLabel = now.getFullYear();
 
   return (
     <div className="space-y-6">
@@ -70,6 +101,32 @@ export default async function OrdersPage({
       </header>
 
       <ErrorBanner message={errorParam} />
+
+      <div className="grid gap-4 sm:grid-cols-3">
+        <div className="fbf-card">
+          <div className="fbf-eyebrow mb-2 !text-muted-foreground">
+            {monthLabel} {yearLabel}
+          </div>
+          <div className="fbf-stat-num text-2xl font-black">{formatMoney(mtdRev)}</div>
+          <div className="mt-1 text-xs text-subtle">
+            {mtdCount} order{mtdCount === 1 ? "" : "s"} this month
+          </div>
+        </div>
+        <div className="fbf-card">
+          <div className="fbf-eyebrow mb-2 !text-muted-foreground">Year {yearLabel}</div>
+          <div className="fbf-stat-num text-2xl font-black">{formatMoney(ytdRev)}</div>
+          <div className="mt-1 text-xs text-subtle">
+            {ytdCount} order{ytdCount === 1 ? "" : "s"} YTD
+          </div>
+        </div>
+        <div className="fbf-card">
+          <div className="fbf-eyebrow mb-2 !text-muted-foreground">Lifetime</div>
+          <div className="fbf-stat-num text-2xl font-black">{formatMoney(allRev)}</div>
+          <div className="mt-1 text-xs text-subtle">
+            {allCount} order{allCount === 1 ? "" : "s"} total
+          </div>
+        </div>
+      </div>
 
       {products.length === 0 ? (
         <div className="fbf-card text-sm text-muted-foreground">
