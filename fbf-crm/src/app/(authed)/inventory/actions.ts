@@ -1,12 +1,17 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { int, moneyCents, str } from "@/lib/forms";
 
+function fail(msg: string): never {
+  redirect(`/inventory?error=${encodeURIComponent(msg)}`);
+}
+
 export async function addLot(formData: FormData) {
   const product_id = str(formData, "product_id");
-  if (!product_id) return { error: "Product is required" };
+  if (!product_id) fail("Product is required");
 
   const supabase = await createClient();
   const { error } = await supabase.from("crm_inventory_lots").insert({
@@ -25,15 +30,14 @@ export async function addLot(formData: FormData) {
     notes: str(formData, "notes"),
   });
 
-  if (error) return { error: error.message };
+  if (error) fail(error.message);
   revalidatePath("/inventory");
   revalidatePath("/dashboard");
-  return { ok: true };
 }
 
 export async function receiveLot(formData: FormData) {
   const id = str(formData, "id");
-  if (!id) return { error: "Lot id required" };
+  if (!id) fail("Lot id required");
 
   const supabase = await createClient();
   const { data: lot, error: readErr } = await supabase
@@ -41,7 +45,7 @@ export async function receiveLot(formData: FormData) {
     .select("qty_on_hand, qty_on_order")
     .eq("id", id)
     .single();
-  if (readErr || !lot) return { error: readErr?.message || "Lot not found" };
+  if (readErr || !lot) fail(readErr?.message || "Lot not found");
 
   const { error } = await supabase
     .from("crm_inventory_lots")
@@ -53,7 +57,6 @@ export async function receiveLot(formData: FormData) {
     })
     .eq("id", id);
 
-  if (error) return { error: error.message };
+  if (error) fail(error.message);
   revalidatePath("/inventory");
-  return { ok: true };
 }

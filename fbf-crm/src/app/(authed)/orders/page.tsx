@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
-import { AddNewSection } from "@/components/ui/form-primitives";
+import { AddNewSection, ErrorBanner } from "@/components/ui/form-primitives";
 import { OrderForm } from "./order-form";
 
 type Order = {
@@ -22,7 +22,12 @@ const STATUS_STYLE: Record<string, string> = {
   refunded: "border-destructive/40 bg-destructive/10 text-destructive",
 };
 
-export default async function OrdersPage() {
+export default async function OrdersPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error: errorParam } = await searchParams;
   const supabase = await createClient();
   const [clientsRes, productsRes, ordersRes] = await Promise.all([
     supabase.from("crm_clients").select("id, name").order("name"),
@@ -54,6 +59,8 @@ export default async function OrdersPage() {
         </p>
       </header>
 
+      <ErrorBanner message={errorParam} />
+
       {products.length === 0 ? (
         <div className="fbf-card text-sm text-muted-foreground">
           You need at least one{" "}
@@ -63,7 +70,7 @@ export default async function OrdersPage() {
           before you can record an order.
         </div>
       ) : (
-        <AddNewSection title="Add New Order">
+        <AddNewSection title="Add New Order" defaultOpen={!!errorParam}>
           <OrderForm clients={clients} products={products} />
         </AddNewSection>
       )}

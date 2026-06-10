@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
   AddNewSection,
+  ErrorBanner,
   Field,
   Input,
   Select,
@@ -10,7 +11,12 @@ import {
 } from "@/components/ui/form-primitives";
 import { addExpense } from "./actions";
 
-export default async function ExpensesPage() {
+export default async function ExpensesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error: errorParam } = await searchParams;
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("crm_expenses")
@@ -36,7 +42,9 @@ export default async function ExpensesPage() {
         <div className="fbf-stat-num text-2xl font-black">{formatMoney(total)}</div>
       </div>
 
-      <AddNewSection title="Add New Expense">
+      <ErrorBanner message={errorParam} />
+
+      <AddNewSection title="Add New Expense" defaultOpen={!!errorParam}>
         <form action={addExpense} className="grid gap-4 md:grid-cols-2">
           <Field label="Date" required>
             <Input name="incurred_at" type="date" defaultValue={today} required />

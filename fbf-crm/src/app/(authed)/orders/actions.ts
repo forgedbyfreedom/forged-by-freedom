@@ -1,8 +1,13 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { ints, moneyCents, moneyCentsAll, str, strs } from "@/lib/forms";
+
+function fail(msg: string): never {
+  redirect(`/orders?error=${encodeURIComponent(msg)}`);
+}
 
 export async function addOrder(formData: FormData) {
   const productIds = strs(formData, "item_product_id");
@@ -13,7 +18,7 @@ export async function addOrder(formData: FormData) {
     .map((pid, i) => ({ product_id: pid, qty: qtys[i] || 0, unit_price_cents: unitPrices[i] || 0 }))
     .filter((it) => it.product_id && it.qty > 0);
 
-  if (items.length === 0) return { error: "At least one line item is required" };
+  if (items.length === 0) fail("At least one line item is required");
 
   const supabase = await createClient();
 
@@ -22,7 +27,7 @@ export async function addOrder(formData: FormData) {
     .from("crm_products")
     .select("id, current_cost_cents")
     .in("id", items.map((it) => it.product_id));
-  if (prodErr) return { error: prodErr.message };
+  if (prodErr) fail(prodErr.message);
   const costMap = new Map((prods || []).map((p) => [p.id, p.current_cost_cents || 0]));
 
   const subtotal = items.reduce((s, it) => s + it.qty * it.unit_price_cents, 0);
@@ -48,7 +53,7 @@ export async function addOrder(formData: FormData) {
     .select("id")
     .single();
 
-  if (orderErr || !order) return { error: orderErr?.message || "Failed to create order" };
+  if (orderErr || !order) fail(orderErr?.message || "Failed to create order");
 
   const itemRows = items.map((it) => ({
     order_id: order.id,
@@ -60,7 +65,7 @@ export async function addOrder(formData: FormData) {
   }));
 
   const { error: itemsErr } = await supabase.from("crm_order_items").insert(itemRows);
-  if (itemsErr) return { error: itemsErr.message };
+  if (itemsErr) fail(itemsErr.message);
 
   // Bump last_contact_at on the client if one was attached.
   const clientId = str(formData, "client_id");
@@ -75,5 +80,4 @@ export async function addOrder(formData: FormData) {
   revalidatePath("/clients");
   revalidatePath("/dashboard");
   revalidatePath("/reports");
-  return { ok: true };
 }

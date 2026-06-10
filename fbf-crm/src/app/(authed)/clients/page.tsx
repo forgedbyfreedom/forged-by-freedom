@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
   AddNewSection,
+  ErrorBanner,
   Field,
   Input,
   SubmitButton,
@@ -9,7 +10,12 @@ import {
 } from "@/components/ui/form-primitives";
 import { addClient } from "./actions";
 
-export default async function ClientsPage() {
+export default async function ClientsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error: errorParam } = await searchParams;
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("crm_clients_with_stats")
@@ -29,7 +35,9 @@ export default async function ClientsPage() {
         </p>
       </header>
 
-      <AddNewSection title="Add New Client">
+      <ErrorBanner message={errorParam} />
+
+      <AddNewSection title="Add New Client" defaultOpen={!!errorParam}>
         <form action={addClient} className="grid gap-4 md:grid-cols-2">
           <Field label="Name" required className="md:col-span-2">
             <Input name="name" required placeholder="Jane Doe" />

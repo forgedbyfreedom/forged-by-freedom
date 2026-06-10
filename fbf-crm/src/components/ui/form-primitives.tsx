@@ -104,3 +104,12 @@ export function AddNewSection({
     </details>
   );
 }
+
+export function ErrorBanner({ message }: { message?: string }) {
+  if (!message) return null;
+  return (
+    <div className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
+      <span className="font-semibold">Couldn’t save:</span> {message}
+    </div>
+  );
+}

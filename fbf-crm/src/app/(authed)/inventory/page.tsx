@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
   AddNewSection,
+  ErrorBanner,
   Field,
   Input,
   Select,
@@ -33,7 +34,12 @@ const STATUS_STYLE: Record<string, string> = {
   depleted: "border-border bg-surface-2 text-subtle",
 };
 
-export default async function InventoryPage() {
+export default async function InventoryPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error: errorParam } = await searchParams;
   const supabase = await createClient();
   const [productsRes, lotsRes] = await Promise.all([
     supabase.from("crm_products").select("id, name").eq("active", true).order("name"),
@@ -79,6 +85,8 @@ export default async function InventoryPage() {
         </div>
       </div>
 
+      <ErrorBanner message={errorParam} />
+
       {products.length === 0 ? (
         <div className="fbf-card text-sm text-muted-foreground">
           You need to add a{" "}
@@ -88,7 +96,7 @@ export default async function InventoryPage() {
           before you can add inventory lots.
         </div>
       ) : (
-        <AddNewSection title="Add New Inventory Lot">
+        <AddNewSection title="Add New Inventory Lot" defaultOpen={!!errorParam}>
           <form action={addLot} className="grid gap-4 md:grid-cols-2">
             <Field label="Product" required>
               <Select name="product_id" required defaultValue="">

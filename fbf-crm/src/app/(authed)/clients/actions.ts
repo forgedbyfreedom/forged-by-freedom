@@ -1,12 +1,17 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { str } from "@/lib/forms";
 
+function fail(msg: string): never {
+  redirect(`/clients?error=${encodeURIComponent(msg)}`);
+}
+
 export async function addClient(formData: FormData) {
   const name = str(formData, "name");
-  if (!name) return { error: "Name is required" };
+  if (!name) fail("Name is required");
 
   const supabase = await createClient();
   const { error } = await supabase.from("crm_clients").insert({
@@ -23,7 +28,6 @@ export async function addClient(formData: FormData) {
     last_contact_at: str(formData, "last_contact_at") || null,
   });
 
-  if (error) return { error: error.message };
+  if (error) fail(error.message);
   revalidatePath("/clients");
-  return { ok: true };
 }
