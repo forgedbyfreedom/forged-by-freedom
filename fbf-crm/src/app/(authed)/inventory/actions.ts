@@ -6,8 +6,8 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { requireSession } from "@/lib/auth";
 import { int, moneyCents, str } from "@/lib/forms";
 
-function fail(msg: string): never {
-  redirect(`/inventory?error=${encodeURIComponent(msg)}`);
+function fail(msg: string, returnTo = "/inventory"): never {
+  redirect(`${returnTo}?error=${encodeURIComponent(msg)}`);
 }
 
 export async function addLot(formData: FormData) {
@@ -34,7 +34,38 @@ export async function addLot(formData: FormData) {
 
   if (error) fail(error.message);
   revalidatePath("/inventory");
+  revalidatePath("/products");
   revalidatePath("/dashboard");
+}
+
+export async function updateLot(formData: FormData) {
+  await requireSession("/inventory");
+  const id = str(formData, "id");
+  if (!id) fail("Lot id required");
+
+  const supabase = createAdminClient();
+  const { error } = await supabase
+    .from("crm_inventory_lots")
+    .update({
+      lot_number: str(formData, "lot_number"),
+      supplier: str(formData, "supplier"),
+      unit_cost_cents: moneyCents(formData, "unit_cost"),
+      qty_on_hand: int(formData, "qty_on_hand"),
+      qty_on_order: int(formData, "qty_on_order"),
+      tracking_number: str(formData, "tracking_number"),
+      carrier: str(formData, "carrier"),
+      status: str(formData, "status") || "ordered",
+      ordered_at: str(formData, "ordered_at") || null,
+      received_at: str(formData, "received_at") || null,
+      expires_at: str(formData, "expires_at") || null,
+      notes: str(formData, "notes"),
+    })
+    .eq("id", id);
+
+  if (error) fail(error.message, `/inventory/${id}/edit`);
+  revalidatePath("/inventory");
+  revalidatePath("/products");
+  redirect("/inventory");
 }
 
 export async function receiveLot(formData: FormData) {
@@ -62,4 +93,54 @@ export async function receiveLot(formData: FormData) {
 
   if (error) fail(error.message);
   revalidatePath("/inventory");
+  revalidatePath("/products");
+}
+
+export async function withdrawLot(formData: FormData) {
+  await requireSession("/inventory");
+  const id = str(formData, "id");
+  if (!id) fail("Lot id required");
+  const qty = int(formData, "qty");
+  if (qty <= 0) fail("Quantity must be at least 1");
+
+  const supabase = createAdminClient();
+  const { data: lot, error: readErr } = await supabase
+    .from("crm_inventory_lots")
+    .select("qty_on_hand")
+    .eq("id", id)
+    .single();
+  if (readErr || !lot) fail(readErr?.message || "Lot not found");
+
+  if (qty > (lot.qty_on_hand || 0)) {
+    fail(`Only ${lot.qty_on_hand || 0} on hand — can't withdraw ${qty}.`);
+  }
+
+  const { error } = await supabase
+    .from("crm_inventory_lots")
+    .update({ qty_on_hand: (lot.qty_on_hand || 0) - qty })
+    .eq("id", id);
+
+  if (error) fail(error.message);
+  revalidatePath("/inventory");
+  revalidatePath("/products");
+  revalidatePath("/dashboard");
+}
+
+export async function deleteLot(formData: FormData) {
+  await requireSession("/inventory");
+  const id = str(formData, "id");
+  if (!id) fail("Lot id required");
+
+  const supabase = createAdminClient();
+  const { error } = await supabase.from("crm_inventory_lots").delete().eq("id", id);
+  if (error) {
+    if (error.message.includes("violates foreign key")) {
+      fail(
+        "Can't delete — past order line items reference this lot. Set qty to 0 instead to mark it depleted.",
+      );
+    }
+    fail(error.message);
+  }
+  revalidatePath("/inventory");
+  revalidatePath("/products");
 }

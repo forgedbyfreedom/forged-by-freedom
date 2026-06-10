@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Pencil, Trash2, Minus } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
@@ -10,7 +11,7 @@ import {
   SubmitButton,
   Textarea,
 } from "@/components/ui/form-primitives";
-import { addLot, receiveLot } from "./actions";
+import { addLot, deleteLot, receiveLot, withdrawLot } from "./actions";
 
 type Lot = {
   id: string;
@@ -176,7 +177,7 @@ export default async function InventoryPage({
                   <th className="px-5 py-3 font-semibold">Tracking</th>
                   <th className="px-5 py-3 font-semibold">Expires</th>
                   <th className="px-5 py-3 font-semibold">Status</th>
-                  <th className="px-5 py-3 font-semibold"></th>
+                  <th className="px-5 py-3 font-semibold">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -217,17 +218,61 @@ export default async function InventoryPage({
                       </span>
                     </td>
                     <td className="px-5 py-3">
-                      {l.qty_on_order > 0 && l.status !== "received" && (
-                        <form action={receiveLot}>
+                      <div className="flex flex-wrap items-center justify-end gap-2">
+                        {l.qty_on_order > 0 && l.status !== "received" && (
+                          <form action={receiveLot}>
+                            <input type="hidden" name="id" value={l.id} />
+                            <button
+                              type="submit"
+                              className="rounded-md border border-border bg-surface-2 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+                              title="Move all on-order qty to on-hand"
+                            >
+                              Receive
+                            </button>
+                          </form>
+                        )}
+                        {l.qty_on_hand > 0 && (
+                          <form action={withdrawLot} className="flex items-center gap-1">
+                            <input type="hidden" name="id" value={l.id} />
+                            <input
+                              name="qty"
+                              type="number"
+                              min={1}
+                              max={l.qty_on_hand}
+                              defaultValue={1}
+                              className="h-7 w-14 rounded-md border border-border bg-surface-2 px-2 text-xs text-foreground outline-none focus:border-primary"
+                              title="How many to remove"
+                            />
+                            <button
+                              type="submit"
+                              aria-label="Withdraw from this lot"
+                              title="Withdraw (personal use, sample, breakage)"
+                              className="grid h-7 w-7 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                            >
+                              <Minus className="h-3.5 w-3.5" />
+                            </button>
+                          </form>
+                        )}
+                        <Link
+                          href={`/inventory/${l.id}/edit`}
+                          aria-label="Edit lot"
+                          title="Edit"
+                          className="grid h-7 w-7 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                        >
+                          <Pencil className="h-3.5 w-3.5" />
+                        </Link>
+                        <form action={deleteLot}>
                           <input type="hidden" name="id" value={l.id} />
                           <button
                             type="submit"
-                            className="rounded-md border border-border bg-surface-2 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+                            aria-label="Delete lot"
+                            title="Delete lot"
+                            className="grid h-7 w-7 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
                           >
-                            Receive
+                            <Trash2 className="h-3.5 w-3.5" />
                           </button>
                         </form>
-                      )}
+                      </div>
                     </td>
                   </tr>
                 ))}

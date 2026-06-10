@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Pencil, Trash2 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
@@ -8,7 +10,7 @@ import {
   Select,
   SubmitButton,
 } from "@/components/ui/form-primitives";
-import { addProduct } from "./actions";
+import { addProduct, deleteProduct } from "./actions";
 
 type ProductRow = {
   id: string;
@@ -145,6 +147,7 @@ export default async function ProductsPage({
                   <th className="px-5 py-3 text-right font-semibold">Cost</th>
                   <th className="px-5 py-3 text-right font-semibold">Margin</th>
                   <th className="px-5 py-3 font-semibold">Status</th>
+                  <th className="px-5 py-3"></th>
                 </tr>
               </thead>
               <tbody>
@@ -186,6 +189,29 @@ export default async function ProductsPage({
                             Inactive
                           </span>
                         )}
+                      </td>
+                      <td className="px-5 py-3">
+                        <div className="flex items-center justify-end gap-2">
+                          <Link
+                            href={`/products/${p.id}/edit`}
+                            aria-label="Edit product"
+                            title="Edit"
+                            className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                          >
+                            <Pencil className="h-4 w-4" />
+                          </Link>
+                          <form action={deleteProduct}>
+                            <input type="hidden" name="id" value={p.id} />
+                            <button
+                              type="submit"
+                              aria-label="Delete product"
+                              title="Delete (only allowed if no lots / orders)"
+                              className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </button>
+                          </form>
+                        </div>
                       </td>
                     </tr>
                   );
