@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { requireSession } from "@/lib/auth";
 import { int, moneyCents, str } from "@/lib/forms";
 
 function fail(msg: string): never {
@@ -10,20 +11,12 @@ function fail(msg: string): never {
 }
 
 export async function addProduct(formData: FormData) {
+  await requireSession("/products");
+
   const name = str(formData, "name");
   if (!name) fail("Name is required");
 
-  const supabase = await createClient();
-
-  // Diagnostic: confirm the action sees the user. If this is null, the
-  // session cookie isn't reaching the server-action's Supabase client and
-  // RLS will reject everything — auth fix needed, not data fix.
-  const { data: userData, error: userErr } = await supabase.auth.getUser();
-  if (userErr) fail(`Auth check failed: ${userErr.message}`);
-  if (!userData.user) {
-    fail("Server action sees no authenticated user — sign out and back in.");
-  }
-
+  const supabase = createAdminClient();
   const { data: product, error } = await supabase
     .from("crm_products")
     .insert({
@@ -38,13 +31,7 @@ export async function addProduct(formData: FormData) {
     .select("id")
     .single();
 
-  if (error || !product) {
-    fail(
-      `(auth user: ${userData.user.email} / ${userData.user.id}) ${
-        error?.message || "Insert failed"
-      }`,
-    );
-  }
+  if (error || !product) fail(error?.message || "Insert failed");
 
   const initialQty = int(formData, "initial_qty");
   if (initialQty > 0) {
@@ -58,9 +45,7 @@ export async function addProduct(formData: FormData) {
       received_at: new Date().toISOString(),
       notes: "Initial stock — created with product",
     });
-    if (lotErr) {
-      fail(`Product added, but initial stock failed: ${lotErr.message}`);
-    }
+    if (lotErr) fail(`Product added, but initial stock failed: ${lotErr.message}`);
   }
 
   revalidatePath("/products");

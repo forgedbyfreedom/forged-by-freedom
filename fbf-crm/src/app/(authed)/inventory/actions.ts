@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { requireSession } from "@/lib/auth";
 import { int, moneyCents, str } from "@/lib/forms";
 
 function fail(msg: string): never {
@@ -10,10 +11,11 @@ function fail(msg: string): never {
 }
 
 export async function addLot(formData: FormData) {
+  await requireSession("/inventory");
   const product_id = str(formData, "product_id");
   if (!product_id) fail("Product is required");
 
-  const supabase = await createClient();
+  const supabase = createAdminClient();
   const { error } = await supabase.from("crm_inventory_lots").insert({
     product_id,
     lot_number: str(formData, "lot_number"),
@@ -36,10 +38,11 @@ export async function addLot(formData: FormData) {
 }
 
 export async function receiveLot(formData: FormData) {
+  await requireSession("/inventory");
   const id = str(formData, "id");
   if (!id) fail("Lot id required");
 
-  const supabase = await createClient();
+  const supabase = createAdminClient();
   const { data: lot, error: readErr } = await supabase
     .from("crm_inventory_lots")
     .select("qty_on_hand, qty_on_order")

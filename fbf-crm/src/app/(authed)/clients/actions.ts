@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { requireSession } from "@/lib/auth";
 import { str } from "@/lib/forms";
 
 function fail(msg: string): never {
@@ -10,10 +11,12 @@ function fail(msg: string): never {
 }
 
 export async function addClient(formData: FormData) {
+  await requireSession("/clients");
+
   const name = str(formData, "name");
   if (!name) fail("Name is required");
 
-  const supabase = await createClient();
+  const supabase = createAdminClient();
   const { error } = await supabase.from("crm_clients").insert({
     name,
     email: str(formData, "email"),
@@ -33,11 +36,10 @@ export async function addClient(formData: FormData) {
 }
 
 export async function deleteClient(formData: FormData) {
+  await requireSession("/clients");
   const id = str(formData, "id");
   if (!id) fail("Client id required");
-  const supabase = await createClient();
-  // crm_orders.client_id has ON DELETE SET NULL — past orders are kept but
-  // unlinked from the deleted client. crm_order_items is unaffected.
+  const supabase = createAdminClient();
   const { error } = await supabase.from("crm_clients").delete().eq("id", id);
   if (error) fail(error.message);
   revalidatePath("/clients");

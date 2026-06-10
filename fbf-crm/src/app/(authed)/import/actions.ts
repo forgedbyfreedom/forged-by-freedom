@@ -2,14 +2,15 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { requireSession } from "@/lib/auth";
 import { findHeaderRowIndex, parseCsv, parseSignedMoneyCents } from "@/lib/csv";
 
 type ImportRow = {
   external_id: string;
   source: "venmo" | "cashapp";
-  ordered_at: string; // ISO
-  amount_cents: number; // already signed
+  ordered_at: string;
+  amount_cents: number;
   counterparty: string;
   note: string;
 };
@@ -35,7 +36,6 @@ function parseVenmo(rows: string[][]): ImportRow[] {
   const cStatus = col("Status");
   const cNote = col("Note");
   const cFrom = col("From");
-  const cTo = col("To");
   const cAmount = col("Amount (total)");
 
   const out: ImportRow[] = [];
@@ -46,7 +46,7 @@ function parseVenmo(rows: string[][]): ImportRow[] {
     const status = (r[cStatus] || "").toLowerCase();
     if (status && status !== "complete") continue;
     const amount = parseSignedMoneyCents(r[cAmount] || "");
-    if (amount <= 0) continue; // only inbound payments
+    if (amount <= 0) continue;
     const date = r[cDate]?.trim() || "";
     const isoDate = (() => {
       const d = new Date(date);
@@ -114,19 +114,19 @@ function parseCashapp(rows: string[][]): ImportRow[] {
 function detectAndParse(text: string): ImportRow[] {
   const rows = parseCsv(text);
   if (rows.length === 0) return [];
-  // Try Venmo first (more specific columns), then CashApp.
   const venmo = parseVenmo(rows);
   if (venmo.length) return venmo;
   return parseCashapp(rows);
 }
 
 export async function importStatements(formData: FormData) {
+  await requireSession("/import");
+
   const files = formData.getAll("files").filter((f): f is File => f instanceof File);
   if (files.length === 0) fail("No files uploaded");
 
-  const supabase = await createClient();
+  const supabase = createAdminClient();
 
-  // 1. Parse all uploaded files
   const all: ImportRow[] = [];
   let skippedFiles = 0;
   for (const file of files) {
@@ -141,7 +141,6 @@ export async function importStatements(formData: FormData) {
     );
   }
 
-  // 2. Resolve clients — match existing by case-insensitive name, otherwise insert new.
   const uniqueNames = Array.from(
     new Set(all.map((r) => r.counterparty.trim()).filter(Boolean)),
   );
@@ -155,9 +154,7 @@ export async function importStatements(formData: FormData) {
     nameToId.set(c.name.trim().toLowerCase(), c.id);
   }
 
-  const newNames = uniqueNames.filter(
-    (n) => !nameToId.has(n.toLowerCase()),
-  );
+  const newNames = uniqueNames.filter((n) => !nameToId.has(n.toLowerCase()));
   let newClientsCreated = 0;
   if (newNames.length > 0) {
     const { data: inserted, error: insertErr } = await supabase
@@ -171,16 +168,13 @@ export async function importStatements(formData: FormData) {
     newClientsCreated = inserted?.length || 0;
   }
 
-  // 3. Find which transactions are already imported (avoid duplicates).
   const externalIds = all.map((r) => r.external_id);
   const { data: dupes } = await supabase
     .from("crm_orders")
     .select("external_id, source")
     .in("external_id", externalIds);
 
-  const dupeKey = new Set(
-    (dupes || []).map((d) => `${d.source}::${d.external_id}`),
-  );
+  const dupeKey = new Set((dupes || []).map((d) => `${d.source}::${d.external_id}`));
 
   const toInsert = all
     .filter((r) => !dupeKey.has(`${r.source}::${r.external_id}`))

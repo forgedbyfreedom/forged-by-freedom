@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { requireSession } from "@/lib/auth";
 import { ints, moneyCents, moneyCentsAll, str, strs } from "@/lib/forms";
 
 function fail(msg: string): never {
@@ -10,6 +11,8 @@ function fail(msg: string): never {
 }
 
 export async function addOrder(formData: FormData) {
+  await requireSession("/orders");
+
   const productIds = strs(formData, "item_product_id");
   const qtys = ints(formData, "item_qty");
   const unitPrices = moneyCentsAll(formData, "item_unit_price");
@@ -20,9 +23,8 @@ export async function addOrder(formData: FormData) {
 
   if (items.length === 0) fail("At least one line item is required");
 
-  const supabase = await createClient();
+  const supabase = createAdminClient();
 
-  // Snapshot current product costs so future cost changes don't rewrite history.
   const { data: prods, error: prodErr } = await supabase
     .from("crm_products")
     .select("id, current_cost_cents")
@@ -67,7 +69,6 @@ export async function addOrder(formData: FormData) {
   const { error: itemsErr } = await supabase.from("crm_order_items").insert(itemRows);
   if (itemsErr) fail(itemsErr.message);
 
-  // Bump last_contact_at on the client if one was attached.
   const clientId = str(formData, "client_id");
   if (clientId) {
     await supabase
@@ -83,10 +84,10 @@ export async function addOrder(formData: FormData) {
 }
 
 export async function deleteOrder(formData: FormData) {
+  await requireSession("/orders");
   const id = str(formData, "id");
   if (!id) fail("Order id required");
-  const supabase = await createClient();
-  // crm_order_items has ON DELETE CASCADE so items go too.
+  const supabase = createAdminClient();
   const { error } = await supabase.from("crm_orders").delete().eq("id", id);
   if (error) fail(error.message);
   revalidatePath("/orders");
