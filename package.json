@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "npm --prefix fbf-crm run dev",
+    "api:dev": "node --watch index.js",
+    "api:start": "node index.js"
   },
   "dependencies": {
     "@pinecone-database/pinecone": "^7.2.0",
