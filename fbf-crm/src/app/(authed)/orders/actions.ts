@@ -6,6 +6,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { requireSession } from "@/lib/auth";
 import { ints, moneyCents, moneyCentsAll, str, strs } from "@/lib/forms";
+import { notifyInventory } from "@/lib/sms";
 
 function fail(msg: string): never {
   redirect(`/orders?error=${encodeURIComponent(msg)}`);
@@ -150,12 +151,90 @@ export async function addOrder(formData: FormData) {
       .eq("id", clientId);
   }
 
+  // SMS: one summary line per manual order.
+  const itemSummary = items.map((it) => it.qty).reduce((a, b) => a + b, 0);
+  notifyInventory(
+    `Order recorded: ${itemSummary} item(s), $${(total / 100).toFixed(2)} total${
+      shortItems.length > 0 ? " — STOCK SHORTFALL" : ""
+    }`,
+  );
+
   revalidatePath("/orders");
   revalidatePath("/clients");
   revalidatePath("/inventory");
   revalidatePath("/products");
   revalidatePath("/dashboard");
   revalidatePath("/reports");
+}
+
+export async function updateOrder(formData: FormData) {
+  await requireSession("/orders");
+  const id = str(formData, "id");
+  if (!id) fail("Order id required");
+
+  const supabase = createAdminClient();
+  const { error } = await supabase
+    .from("crm_orders")
+    .update({
+      client_id: str(formData, "client_id"),
+      ordered_at: str(formData, "ordered_at") || new Date().toISOString(),
+      status: str(formData, "status") || "paid",
+      shipping_cents: moneyCents(formData, "shipping"),
+      tax_cents: moneyCents(formData, "tax"),
+      tracking_number: str(formData, "tracking_number"),
+      carrier: str(formData, "carrier"),
+      notes: str(formData, "notes"),
+    })
+    .eq("id", id);
+
+  if (error) fail(error.message, `/orders/${id}/edit`);
+
+  // Recalculate total in case shipping/tax changed (subtotal stays — line
+  // items aren't editable from this form to avoid messy inventory reshuffles).
+  const { data: order } = await supabase
+    .from("crm_orders")
+    .select("subtotal_cents, shipping_cents, tax_cents")
+    .eq("id", id)
+    .single();
+  if (order) {
+    await supabase
+      .from("crm_orders")
+      .update({
+        total_cents:
+          (order.subtotal_cents || 0) +
+          (order.shipping_cents || 0) +
+          (order.tax_cents || 0),
+      })
+      .eq("id", id);
+  }
+
+  revalidatePath("/orders");
+  revalidatePath("/clients");
+  revalidatePath("/dashboard");
+  revalidatePath("/reports");
+  redirect("/orders");
+}
+
+export async function markShipped(formData: FormData) {
+  await requireSession("/orders");
+  const id = str(formData, "id");
+  if (!id) fail("Order id required");
+  const carrier = str(formData, "carrier");
+  const tracking = str(formData, "tracking_number");
+
+  const supabase = createAdminClient();
+  const { error } = await supabase
+    .from("crm_orders")
+    .update({
+      status: "shipped",
+      carrier: carrier || undefined,
+      tracking_number: tracking || undefined,
+    })
+    .eq("id", id);
+
+  if (error) fail(error.message);
+  revalidatePath("/orders");
+  revalidatePath("/dashboard");
 }
 
 export async function deleteOrder(formData: FormData) {

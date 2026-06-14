@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Trash2, ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
+import { Trash2, ArrowUp, ArrowDown, ArrowUpDown, Download } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { cn, formatMoney } from "@/lib/utils";
 import {
@@ -76,32 +76,66 @@ function SortHeader({
 export default async function ClientsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string; sort?: string; dir?: string }>;
+  searchParams: Promise<{ error?: string; sort?: string; dir?: string; q?: string }>;
 }) {
-  const { error: errorParam, sort, dir } = await searchParams;
+  const { error: errorParam, sort, dir, q } = await searchParams;
 
   const sortKey: SortKey = sort && sort in SORT_KEYS ? (sort as SortKey) : DEFAULT_SORT;
   const sortDir: "asc" | "desc" = dir === "asc" ? "asc" : DEFAULT_DIR;
+  const search = (q || "").trim();
 
   const supabase = await createClient();
-  const { data, error } = await supabase
+  let q1 = supabase
     .from("crm_clients_with_stats")
     .select(
       "id, name, email, phone, city, state, last_contact_at, order_count, lifetime_revenue_cents, largest_order_cents, avg_order_cents, last_order_at",
     )
     .order(sortKey, { ascending: sortDir === "asc", nullsFirst: false })
     .limit(200);
+  if (search) q1 = q1.or(`name.ilike.%${search}%,email.ilike.%${search}%,phone.ilike.%${search}%`);
+  const { data, error } = await q1;
 
   return (
     <div className="space-y-6">
-      <header>
-        <div className="fbf-eyebrow mb-2">Customer Records</div>
-        <h1 className="text-3xl font-black tracking-tight">Clients</h1>
-        <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-          Searchable client list with product history, lifetime revenue, and last contact. Click
-          any column header to sort.
-        </p>
+      <header className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <div className="fbf-eyebrow mb-2">Customer Records</div>
+          <h1 className="text-3xl font-black tracking-tight">Clients</h1>
+          <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+            Click any column header to sort. Click a name to see their full order history.
+          </p>
+        </div>
+        <Link
+          href="/api/export/clients.csv"
+          className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+        >
+          <Download className="h-4 w-4" /> Export CSV
+        </Link>
       </header>
+
+      <form className="flex gap-2">
+        <input
+          type="text"
+          name="q"
+          defaultValue={search}
+          placeholder="Search clients by name, email, or phone…"
+          className="w-full max-w-md rounded-md border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none placeholder:text-subtle focus:border-primary focus:ring-1 focus:ring-primary"
+        />
+        <button
+          type="submit"
+          className="rounded-md border border-border bg-surface-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:border-primary hover:text-primary"
+        >
+          Search
+        </button>
+        {search && (
+          <Link
+            href="/clients"
+            className="rounded-md border border-border bg-surface-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground"
+          >
+            Clear
+          </Link>
+        )}
+      </form>
 
       <ErrorBanner message={errorParam} />
 

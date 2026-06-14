@@ -10,6 +10,7 @@ import {
   Select,
   SubmitButton,
 } from "@/components/ui/form-primitives";
+import { SortHeader, parseSort } from "@/components/ui/sort-header";
 import { addProduct, deleteProduct } from "./actions";
 
 type ProductRow = {
@@ -24,19 +25,46 @@ type ProductRow = {
   on_hand: number;
 };
 
+type ProductSortKey =
+  | "name"
+  | "sku"
+  | "category"
+  | "unit"
+  | "sell_price_cents"
+  | "current_cost_cents"
+  | "active";
+
+const SORT_KEYS: Record<ProductSortKey, true> = {
+  name: true,
+  sku: true,
+  category: true,
+  unit: true,
+  sell_price_cents: true,
+  current_cost_cents: true,
+  active: true,
+};
+
 export default async function ProductsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; sort?: string; dir?: string; q?: string }>;
 }) {
-  const { error: errorParam } = await searchParams;
+  const { error: errorParam, sort, dir, q } = await searchParams;
+  const { sort: sortKey, dir: sortDir } = parseSort<ProductSortKey>(sort, dir, SORT_KEYS, {
+    sort: "name",
+    dir: "asc",
+  });
+  const search = (q || "").trim();
   const supabase = await createClient();
 
+  let productsQuery = supabase
+    .from("crm_products")
+    .select("id, name, sku, category, unit, sell_price_cents, current_cost_cents, active")
+    .order(sortKey, { ascending: sortDir === "asc", nullsFirst: false });
+  if (search) productsQuery = productsQuery.ilike("name", `%${search}%`);
+
   const [productsRes, lotsRes] = await Promise.all([
-    supabase
-      .from("crm_products")
-      .select("id, name, sku, category, unit, sell_price_cents, current_cost_cents, active")
-      .order("name", { ascending: true }),
+    productsQuery,
     supabase.from("crm_inventory_lots").select("product_id, qty_on_hand"),
   ]);
 
@@ -64,6 +92,30 @@ export default async function ProductsPage({
       </header>
 
       <ErrorBanner message={errorParam} />
+
+      <form className="flex gap-2">
+        <input
+          type="text"
+          name="q"
+          defaultValue={search}
+          placeholder="Search products by name…"
+          className="w-full max-w-md rounded-md border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none placeholder:text-subtle focus:border-primary focus:ring-1 focus:ring-primary"
+        />
+        <button
+          type="submit"
+          className="rounded-md border border-border bg-surface-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:border-primary hover:text-primary"
+        >
+          Search
+        </button>
+        {search && (
+          <Link
+            href="/products"
+            className="rounded-md border border-border bg-surface-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground"
+          >
+            Clear
+          </Link>
+        )}
+      </form>
 
       <AddNewSection title="Add New Product" defaultOpen={!!errorParam}>
         <form action={addProduct} className="grid gap-4 md:grid-cols-2">
@@ -137,16 +189,16 @@ export default async function ProductsPage({
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-border bg-surface-2 text-left text-[11px] uppercase tracking-wider text-muted-foreground">
-                  <th className="px-5 py-3 font-semibold">Name</th>
-                  <th className="px-5 py-3 font-semibold">SKU</th>
-                  <th className="px-5 py-3 font-semibold">Category</th>
-                  <th className="px-5 py-3 font-semibold">Unit</th>
+                <tr className="border-b border-border bg-surface-2 text-[11px] uppercase tracking-wider text-muted-foreground">
+                  <SortHeader label="Name" k="name" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} />
+                  <SortHeader label="SKU" k="sku" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} />
+                  <SortHeader label="Category" k="category" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} />
+                  <SortHeader label="Unit" k="unit" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} />
                   <th className="px-5 py-3 text-right font-semibold">On Hand</th>
-                  <th className="px-5 py-3 text-right font-semibold">Sell</th>
-                  <th className="px-5 py-3 text-right font-semibold">Cost</th>
+                  <SortHeader label="Sell" k="sell_price_cents" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} align="right" />
+                  <SortHeader label="Cost" k="current_cost_cents" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} align="right" />
                   <th className="px-5 py-3 text-right font-semibold">Margin</th>
-                  <th className="px-5 py-3 font-semibold">Status</th>
+                  <SortHeader label="Status" k="active" activeKey={sortKey} activeDir={sortDir} basePath="/products" extraParams={{ q: search }} />
                   <th className="px-5 py-3"></th>
                 </tr>
               </thead>

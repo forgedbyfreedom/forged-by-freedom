@@ -11,7 +11,28 @@ import {
   SubmitButton,
   Textarea,
 } from "@/components/ui/form-primitives";
+import { SortHeader, parseSort } from "@/components/ui/sort-header";
 import { addLot, deleteLot, receiveLot, withdrawLot } from "./actions";
+
+type LotSortKey =
+  | "ordered_at"
+  | "received_at"
+  | "expires_at"
+  | "qty_on_hand"
+  | "qty_on_order"
+  | "unit_cost_cents"
+  | "status"
+  | "supplier";
+const LOT_SORT_KEYS: Record<LotSortKey, true> = {
+  ordered_at: true,
+  received_at: true,
+  expires_at: true,
+  qty_on_hand: true,
+  qty_on_order: true,
+  unit_cost_cents: true,
+  status: true,
+  supplier: true,
+};
 
 type Lot = {
   id: string;
@@ -38,9 +59,13 @@ const STATUS_STYLE: Record<string, string> = {
 export default async function InventoryPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; sort?: string; dir?: string }>;
 }) {
-  const { error: errorParam } = await searchParams;
+  const { error: errorParam, sort, dir } = await searchParams;
+  const { sort: sortKey, dir: sortDir } = parseSort<LotSortKey>(sort, dir, LOT_SORT_KEYS, {
+    sort: "ordered_at",
+    dir: "desc",
+  });
   const supabase = await createClient();
   const [productsRes, lotsRes] = await Promise.all([
     supabase.from("crm_products").select("id, name").eq("active", true).order("name"),
@@ -49,7 +74,7 @@ export default async function InventoryPage({
       .select(
         "id, lot_number, supplier, unit_cost_cents, qty_on_hand, qty_on_order, tracking_number, carrier, status, ordered_at, expires_at, crm_products!inner(id, name, sell_price_cents)",
       )
-      .order("ordered_at", { ascending: false, nullsFirst: false })
+      .order(sortKey, { ascending: sortDir === "asc", nullsFirst: false })
       .limit(200),
   ]);
 
@@ -168,16 +193,16 @@ export default async function InventoryPage({
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-border bg-surface-2 text-left text-[11px] uppercase tracking-wider text-muted-foreground">
-                  <th className="px-5 py-3 font-semibold">Product</th>
-                  <th className="px-5 py-3 font-semibold">Lot / Supplier</th>
-                  <th className="px-5 py-3 text-right font-semibold">On Hand</th>
-                  <th className="px-5 py-3 text-right font-semibold">On Order</th>
-                  <th className="px-5 py-3 text-right font-semibold">Unit Cost</th>
-                  <th className="px-5 py-3 font-semibold">Tracking</th>
-                  <th className="px-5 py-3 font-semibold">Expires</th>
-                  <th className="px-5 py-3 font-semibold">Status</th>
-                  <th className="px-5 py-3 font-semibold">Actions</th>
+                <tr className="border-b border-border bg-surface-2 text-[11px] uppercase tracking-wider text-muted-foreground">
+                  <th className="px-5 py-3 text-left font-semibold">Product</th>
+                  <SortHeader label="Lot / Supplier" k="supplier" activeKey={sortKey} activeDir={sortDir} basePath="/inventory" />
+                  <SortHeader label="On Hand" k="qty_on_hand" activeKey={sortKey} activeDir={sortDir} basePath="/inventory" align="right" />
+                  <SortHeader label="On Order" k="qty_on_order" activeKey={sortKey} activeDir={sortDir} basePath="/inventory" align="right" />
+                  <SortHeader label="Unit Cost" k="unit_cost_cents" activeKey={sortKey} activeDir={sortDir} basePath="/inventory" align="right" />
+                  <th className="px-5 py-3 text-left font-semibold">Tracking</th>
+                  <SortHeader label="Expires" k="expires_at" activeKey={sortKey} activeDir={sortDir} basePath="/inventory" />
+                  <SortHeader label="Status" k="status" activeKey={sortKey} activeDir={sortDir} basePath="/inventory" />
+                  <th className="px-5 py-3 text-left font-semibold">Actions</th>
                 </tr>
               </thead>
               <tbody>

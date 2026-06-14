@@ -1,10 +1,19 @@
 import Link from "next/link";
-import { Trash2 } from "lucide-react";
+import { Pencil, Trash2, Truck, Download } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import { AddNewSection, ErrorBanner } from "@/components/ui/form-primitives";
+import { SortHeader, parseSort } from "@/components/ui/sort-header";
 import { OrderForm } from "./order-form";
-import { deleteOrder } from "./actions";
+import { deleteOrder, markShipped } from "./actions";
+
+type OrderSortKey = "ordered_at" | "source" | "status" | "total_cents";
+const ORDER_SORT_KEYS: Record<OrderSortKey, true> = {
+  ordered_at: true,
+  source: true,
+  status: true,
+  total_cents: true,
+};
 
 type Order = {
   id: string;
@@ -35,9 +44,13 @@ const STATUS_STYLE: Record<string, string> = {
 export default async function OrdersPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; sort?: string; dir?: string }>;
 }) {
-  const { error: errorParam } = await searchParams;
+  const { error: errorParam, sort, dir } = await searchParams;
+  const { sort: sortKey, dir: sortDir } = parseSort<OrderSortKey>(sort, dir, ORDER_SORT_KEYS, {
+    sort: "ordered_at",
+    dir: "desc",
+  });
   const supabase = await createClient();
   const [clientsRes, productsRes, ordersRes, totalsRes] = await Promise.all([
     supabase.from("crm_clients").select("id, name").order("name"),
@@ -51,7 +64,7 @@ export default async function OrdersPage({
       .select(
         "id, ordered_at, source, status, total_cents, tracking_number, notes, crm_clients(id, name), crm_order_items(qty, crm_products(name))",
       )
-      .order("ordered_at", { ascending: false })
+      .order(sortKey, { ascending: sortDir === "asc", nullsFirst: false })
       .limit(200),
     // Lightweight pass over every non-refunded order for the stat cards.
     supabase
@@ -92,12 +105,20 @@ export default async function OrdersPage({
 
   return (
     <div className="space-y-6">
-      <header>
-        <div className="fbf-eyebrow mb-2">Sales</div>
-        <h1 className="text-3xl font-black tracking-tight">Orders</h1>
-        <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-          Manual order entry. Stripe auto-import lands in a later session.
-        </p>
+      <header className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <div className="fbf-eyebrow mb-2">Sales</div>
+          <h1 className="text-3xl font-black tracking-tight">Orders</h1>
+          <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+            Manual entry + Venmo / CashApp imports. Click client name to see their history.
+          </p>
+        </div>
+        <Link
+          href="/api/export/orders.csv"
+          className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+        >
+          <Download className="h-4 w-4" /> Export CSV
+        </Link>
       </header>
 
       <ErrorBanner message={errorParam} />
@@ -151,13 +172,13 @@ export default async function OrdersPage({
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-border bg-surface-2 text-left text-[11px] uppercase tracking-wider text-muted-foreground">
-                  <th className="px-5 py-3 font-semibold">Date</th>
-                  <th className="px-5 py-3 font-semibold">Client</th>
-                  <th className="px-5 py-3 font-semibold">Items / Note</th>
-                  <th className="px-5 py-3 font-semibold">Source</th>
-                  <th className="px-5 py-3 font-semibold">Status</th>
-                  <th className="px-5 py-3 text-right font-semibold">Total</th>
+                <tr className="border-b border-border bg-surface-2 text-[11px] uppercase tracking-wider text-muted-foreground">
+                  <SortHeader label="Date" k="ordered_at" activeKey={sortKey} activeDir={sortDir} basePath="/orders" />
+                  <th className="px-5 py-3 text-left font-semibold">Client</th>
+                  <th className="px-5 py-3 text-left font-semibold">Items / Note</th>
+                  <SortHeader label="Source" k="source" activeKey={sortKey} activeDir={sortDir} basePath="/orders" />
+                  <SortHeader label="Status" k="status" activeKey={sortKey} activeDir={sortDir} basePath="/orders" />
+                  <SortHeader label="Total" k="total_cents" activeKey={sortKey} activeDir={sortDir} basePath="/orders" align="right" />
                   <th className="px-5 py-3"></th>
                 </tr>
               </thead>
@@ -203,18 +224,41 @@ export default async function OrdersPage({
                       <td className="px-5 py-3 text-right font-semibold tabular-nums">
                         {formatMoney(o.total_cents)}
                       </td>
-                      <td className="px-5 py-3 text-right">
-                        <form action={deleteOrder}>
-                          <input type="hidden" name="id" value={o.id} />
-                          <button
-                            type="submit"
-                            aria-label="Delete order"
-                            title="Delete (not an FBF transaction)"
-                            className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
+                      <td className="px-5 py-3">
+                        <div className="flex items-center justify-end gap-2">
+                          {o.status !== "shipped" && o.status !== "refunded" && (
+                            <form action={markShipped}>
+                              <input type="hidden" name="id" value={o.id} />
+                              <button
+                                type="submit"
+                                aria-label="Mark shipped"
+                                title="Mark as shipped"
+                                className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-success hover:text-success"
+                              >
+                                <Truck className="h-4 w-4" />
+                              </button>
+                            </form>
+                          )}
+                          <Link
+                            href={`/orders/${o.id}/edit`}
+                            aria-label="Edit order"
+                            title="Edit"
+                            className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                           >
-                            <Trash2 className="h-4 w-4" />
-                          </button>
-                        </form>
+                            <Pencil className="h-4 w-4" />
+                          </Link>
+                          <form action={deleteOrder}>
+                            <input type="hidden" name="id" value={o.id} />
+                            <button
+                              type="submit"
+                              aria-label="Delete order"
+                              title="Delete (refunds inventory)"
+                              className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </button>
+                          </form>
+                        </div>
                       </td>
                     </tr>
                   );

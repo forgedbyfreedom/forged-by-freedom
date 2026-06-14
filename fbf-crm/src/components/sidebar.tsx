@@ -11,6 +11,7 @@ import {
   Receipt,
   BarChart3,
   Upload,
+  History,
   LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -24,6 +25,7 @@ const NAV = [
   { href: "/expenses", label: "Expenses", icon: Receipt },
   { href: "/import", label: "Import", icon: Upload },
   { href: "/reports", label: "Reports", icon: BarChart3 },
+  { href: "/audit", label: "Audit Log", icon: History },
 ];
 
 export function Sidebar({ email }: { email?: string | null }) {

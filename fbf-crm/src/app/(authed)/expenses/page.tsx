@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Pencil, Trash2 } from "lucide-react";
+import { Pencil, Trash2, Download } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { formatMoney } from "@/lib/utils";
 import {
@@ -11,20 +11,36 @@ import {
   SubmitButton,
   Textarea,
 } from "@/components/ui/form-primitives";
+import { SortHeader, parseSort } from "@/components/ui/sort-header";
 import { addExpense, deleteExpense } from "./actions";
+
+type ExpenseSortKey = "incurred_at" | "category" | "vendor" | "amount_cents";
+const EXP_SORT_KEYS: Record<ExpenseSortKey, true> = {
+  incurred_at: true,
+  category: true,
+  vendor: true,
+  amount_cents: true,
+};
 
 export default async function ExpensesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; sort?: string; dir?: string; q?: string }>;
 }) {
-  const { error: errorParam } = await searchParams;
+  const { error: errorParam, sort, dir, q } = await searchParams;
+  const { sort: sortKey, dir: sortDir } = parseSort<ExpenseSortKey>(sort, dir, EXP_SORT_KEYS, {
+    sort: "incurred_at",
+    dir: "desc",
+  });
+  const search = (q || "").trim();
   const supabase = await createClient();
-  const { data, error } = await supabase
+  let query = supabase
     .from("crm_expenses")
     .select("id, incurred_at, category, vendor, amount_cents, note")
-    .order("incurred_at", { ascending: false })
+    .order(sortKey, { ascending: sortDir === "asc", nullsFirst: false })
     .limit(500);
+  if (search) query = query.or(`vendor.ilike.%${search}%,note.ilike.%${search}%`);
+  const { data, error } = await query;
 
   const rows = data || [];
   const total = rows.reduce((s, e) => s + (e.amount_cents || 0), 0);
@@ -43,15 +59,47 @@ export default async function ExpensesPage({
 
   return (
     <div className="space-y-6">
-      <header>
-        <div className="fbf-eyebrow mb-2">Outflows</div>
-        <h1 className="text-3xl font-black tracking-tight">Expenses</h1>
-        <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-          Recurring and one-off business expenses for accurate monthly P&L.
-        </p>
+      <header className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <div className="fbf-eyebrow mb-2">Outflows</div>
+          <h1 className="text-3xl font-black tracking-tight">Expenses</h1>
+          <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+            Recurring and one-off business expenses for accurate monthly P&L.
+          </p>
+        </div>
+        <Link
+          href="/api/export/expenses.csv"
+          className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+        >
+          <Download className="h-4 w-4" /> Export CSV
+        </Link>
       </header>
 
       <ErrorBanner message={errorParam} />
+
+      <form className="flex gap-2">
+        <input
+          type="text"
+          name="q"
+          defaultValue={search}
+          placeholder="Search vendor or note…"
+          className="w-full max-w-md rounded-md border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none placeholder:text-subtle focus:border-primary focus:ring-1 focus:ring-primary"
+        />
+        <button
+          type="submit"
+          className="rounded-md border border-border bg-surface-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:border-primary hover:text-primary"
+        >
+          Search
+        </button>
+        {search && (
+          <Link
+            href="/expenses"
+            className="rounded-md border border-border bg-surface-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground"
+          >
+            Clear
+          </Link>
+        )}
+      </form>
 
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="fbf-card">
@@ -115,12 +163,12 @@ export default async function ExpensesPage({
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-border bg-surface-2 text-left text-[11px] uppercase tracking-wider text-muted-foreground">
-                    <th className="px-5 py-3 font-semibold">Date</th>
-                    <th className="px-5 py-3 font-semibold">Category</th>
-                    <th className="px-5 py-3 font-semibold">Vendor</th>
-                    <th className="px-5 py-3 font-semibold">Note</th>
-                    <th className="px-5 py-3 text-right font-semibold">Amount</th>
+                  <tr className="border-b border-border bg-surface-2 text-[11px] uppercase tracking-wider text-muted-foreground">
+                    <SortHeader label="Date" k="incurred_at" activeKey={sortKey} activeDir={sortDir} basePath="/expenses" extraParams={{ q: search }} />
+                    <SortHeader label="Category" k="category" activeKey={sortKey} activeDir={sortDir} basePath="/expenses" extraParams={{ q: search }} />
+                    <SortHeader label="Vendor" k="vendor" activeKey={sortKey} activeDir={sortDir} basePath="/expenses" extraParams={{ q: search }} />
+                    <th className="px-5 py-3 text-left font-semibold">Note</th>
+                    <SortHeader label="Amount" k="amount_cents" activeKey={sortKey} activeDir={sortDir} basePath="/expenses" extraParams={{ q: search }} align="right" />
                     <th className="px-5 py-3"></th>
                   </tr>
                 </thead>
