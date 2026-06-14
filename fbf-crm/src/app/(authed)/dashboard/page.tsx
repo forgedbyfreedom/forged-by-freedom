@@ -34,7 +34,7 @@ const SOURCE_LABEL: Record<string, string> = {
 export default async function DashboardPage() {
   const supabase = await createClient();
 
-  const [totalsRes, lotsRes, productsRes, latestRes] = await Promise.all([
+  const [totalsRes, lotsRes, productsRes, latestRes, pendingRes] = await Promise.all([
     supabase
       .from("crm_orders")
       .select("total_cents, ordered_at")
@@ -46,6 +46,12 @@ export default async function DashboardPage() {
       .select("id, ordered_at, source, status, total_cents, crm_clients(id, name)")
       .order("ordered_at", { ascending: false })
       .limit(5),
+    // Placeholder expenses ($0) — needs receipt amount filled in.
+    supabase
+      .from("crm_expenses")
+      .select("id, incurred_at, category, vendor, note")
+      .eq("amount_cents", 0)
+      .order("incurred_at", { ascending: false }),
   ]);
 
   // ── MTD revenue + order count ──────────────────────────────
@@ -86,6 +92,13 @@ export default async function DashboardPage() {
     .slice(0, 8);
 
   const latest = (latestRes.data || []) as unknown as LatestOrder[];
+  const pendingReceipts = (pendingRes.data || []) as {
+    id: string;
+    incurred_at: string;
+    category: string | null;
+    vendor: string | null;
+    note: string | null;
+  }[];
   const monthLabel = now.toLocaleString("en-US", { month: "long" });
 
   return (
@@ -97,6 +110,50 @@ export default async function DashboardPage() {
           {monthLabel} {now.getFullYear()} so far.
         </p>
       </header>
+
+      {pendingReceipts.length > 0 && (
+        <div className="fbf-card border-primary/40 bg-primary/[0.04] !p-0 overflow-hidden">
+          <div className="flex items-center justify-between border-b border-primary/30 bg-primary/10 px-5 py-3">
+            <div className="flex items-center gap-2">
+              <span className="grid h-6 w-6 place-items-center rounded-full bg-primary text-xs font-black text-white">
+                !
+              </span>
+              <div className="fbf-eyebrow !text-primary">
+                Pending Receipts ({pendingReceipts.length})
+              </div>
+            </div>
+            <Link
+              href="/expenses"
+              className="text-xs text-muted-foreground hover:text-primary"
+            >
+              View all →
+            </Link>
+          </div>
+          <ul className="divide-y divide-border">
+            {pendingReceipts.map((p) => (
+              <li
+                key={p.id}
+                className="flex items-center justify-between gap-3 px-5 py-3 transition-colors hover:bg-surface-2"
+              >
+                <div className="min-w-0">
+                  <div className="truncate font-semibold">
+                    {p.vendor || p.note?.split(".")[0] || p.category || "Untitled expense"}
+                  </div>
+                  <div className="text-xs text-subtle">
+                    {p.incurred_at} · {p.category || "—"}
+                  </div>
+                </div>
+                <Link
+                  href={`/expenses/${p.id}/edit`}
+                  className="rounded-md border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary transition-colors hover:bg-primary/20"
+                >
+                  Add Amount
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="fbf-card">

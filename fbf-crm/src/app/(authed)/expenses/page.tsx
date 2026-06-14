@@ -125,45 +125,62 @@ export default async function ExpensesPage({
                   </tr>
                 </thead>
                 <tbody>
-                  {rows.map((e) => (
-                    <tr
-                      key={e.id}
-                      className="border-b border-border/60 transition-colors hover:bg-surface-2"
-                    >
-                      <td className="px-5 py-3 tabular-nums">{e.incurred_at}</td>
-                      <td className="px-5 py-3 text-muted-foreground">{e.category || "—"}</td>
-                      <td className="px-5 py-3 text-muted-foreground">{e.vendor || "—"}</td>
-                      <td className="max-w-md px-5 py-3 text-muted-foreground">
-                        {e.note || "—"}
-                      </td>
-                      <td className="px-5 py-3 text-right font-semibold tabular-nums">
-                        {formatMoney(e.amount_cents)}
-                      </td>
-                      <td className="px-5 py-3">
-                        <div className="flex items-center justify-end gap-2">
-                          <Link
-                            href={`/expenses/${e.id}/edit`}
-                            aria-label="Edit expense"
-                            title="Edit"
-                            className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-                          >
-                            <Pencil className="h-4 w-4" />
-                          </Link>
-                          <form action={deleteExpense}>
-                            <input type="hidden" name="id" value={e.id} />
-                            <button
-                              type="submit"
-                              aria-label="Delete expense"
-                              title="Delete"
-                              className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
+                  {rows.map((e) => {
+                    const isPlaceholder = (e.amount_cents || 0) === 0;
+                    return (
+                      <tr
+                        key={e.id}
+                        className={`border-b border-border/60 transition-colors hover:bg-surface-2 ${
+                          isPlaceholder ? "bg-primary/[0.04]" : ""
+                        }`}
+                      >
+                        <td className="px-5 py-3 tabular-nums">{e.incurred_at}</td>
+                        <td className="px-5 py-3 text-muted-foreground">{e.category || "—"}</td>
+                        <td className="px-5 py-3 text-muted-foreground">{e.vendor || "—"}</td>
+                        <td className="max-w-md px-5 py-3 text-muted-foreground">
+                          {e.note || "—"}
+                        </td>
+                        <td className="px-5 py-3 text-right">
+                          {isPlaceholder ? (
+                            <Link
+                              href={`/expenses/${e.id}/edit`}
+                              className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-primary hover:bg-primary/20"
+                              title="Add receipt amount"
                             >
-                              <Trash2 className="h-4 w-4" />
-                            </button>
-                          </form>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
+                              Pending Receipt
+                            </Link>
+                          ) : (
+                            <span className="font-semibold tabular-nums">
+                              {formatMoney(e.amount_cents)}
+                            </span>
+                          )}
+                        </td>
+                        <td className="px-5 py-3">
+                          <div className="flex items-center justify-end gap-2">
+                            <Link
+                              href={`/expenses/${e.id}/edit`}
+                              aria-label="Edit expense"
+                              title="Edit"
+                              className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                            >
+                              <Pencil className="h-4 w-4" />
+                            </Link>
+                            <form action={deleteExpense}>
+                              <input type="hidden" name="id" value={e.id} />
+                              <button
+                                type="submit"
+                                aria-label="Delete expense"
+                                title="Delete"
+                                className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
+                              >
+                                <Trash2 className="h-4 w-4" />
+                              </button>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
