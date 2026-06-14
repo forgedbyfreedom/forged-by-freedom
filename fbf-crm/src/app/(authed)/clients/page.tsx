@@ -204,7 +204,12 @@ export default async function ClientsPage({
                   {data!.map((c) => (
                     <tr key={c.id} className="border-b border-border/60 transition-colors hover:bg-surface-2">
                       <td className="px-5 py-3">
-                        <div className="font-semibold text-foreground">{c.name}</div>
+                        <Link
+                          href={`/clients/${c.id}`}
+                          className="font-semibold text-foreground transition-colors hover:text-primary"
+                        >
+                          {c.name}
+                        </Link>
                         {(c.city || c.state) && (
                           <div className="text-xs text-subtle">
                             {[c.city, c.state].filter(Boolean).join(", ")}

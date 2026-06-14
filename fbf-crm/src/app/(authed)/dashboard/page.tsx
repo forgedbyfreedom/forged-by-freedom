@@ -21,7 +21,7 @@ type LatestOrder = {
   source: string;
   status: string;
   total_cents: number;
-  crm_clients: { name: string } | null;
+  crm_clients: { id: string; name: string } | null;
 };
 
 const SOURCE_LABEL: Record<string, string> = {
@@ -43,7 +43,7 @@ export default async function DashboardPage() {
     supabase.from("crm_products").select("id, name, sell_price_cents, active"),
     supabase
       .from("crm_orders")
-      .select("id, ordered_at, source, status, total_cents, crm_clients(name)")
+      .select("id, ordered_at, source, status, total_cents, crm_clients(id, name)")
       .order("ordered_at", { ascending: false })
       .limit(5),
   ]);
@@ -185,7 +185,14 @@ export default async function DashboardPage() {
                 >
                   <div className="min-w-0">
                     <div className="truncate font-semibold">
-                      {o.crm_clients?.name || (
+                      {o.crm_clients ? (
+                        <Link
+                          href={`/clients/${o.crm_clients.id}`}
+                          className="hover:text-primary"
+                        >
+                          {o.crm_clients.name}
+                        </Link>
+                      ) : (
                         <span className="text-subtle">(no client)</span>
                       )}
                     </div>

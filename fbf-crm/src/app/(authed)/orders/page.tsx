@@ -14,7 +14,7 @@ type Order = {
   total_cents: number;
   tracking_number: string | null;
   notes: string | null;
-  crm_clients: { name: string } | null;
+  crm_clients: { id: string; name: string } | null;
   crm_order_items: { qty: number; crm_products: { name: string } | null }[];
 };
 
@@ -49,7 +49,7 @@ export default async function OrdersPage({
     supabase
       .from("crm_orders")
       .select(
-        "id, ordered_at, source, status, total_cents, tracking_number, notes, crm_clients(name), crm_order_items(qty, crm_products(name))",
+        "id, ordered_at, source, status, total_cents, tracking_number, notes, crm_clients(id, name), crm_order_items(qty, crm_products(name))",
       )
       .order("ordered_at", { ascending: false })
       .limit(200),
@@ -172,7 +172,16 @@ export default async function OrdersPage({
                         {new Date(o.ordered_at).toLocaleDateString()}
                       </td>
                       <td className="px-5 py-3 font-semibold">
-                        {o.crm_clients?.name || <span className="text-subtle">—</span>}
+                        {o.crm_clients ? (
+                          <Link
+                            href={`/clients/${o.crm_clients.id}`}
+                            className="transition-colors hover:text-primary"
+                          >
+                            {o.crm_clients.name}
+                          </Link>
+                        ) : (
+                          <span className="text-subtle">—</span>
+                        )}
                       </td>
                       <td className="px-5 py-3 text-muted-foreground">
                         {itemSummary || (
