@@ -1,0 +1,96 @@
+name: Daily Content Fetch
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 00:00 UTC daily — runs an hour before the existing Pinecone ingest
+    # (ingest.yml is 01:00 UTC), so any new content gets indexed the same night.
+    - cron: "0 0 * * *"
+
+# Allow commits back to the branch
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 🧩 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install scraper deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --no-cache-dir \
+            requests \
+            beautifulsoup4 \
+            lxml \
+            curl_cffi \
+            scrapy \
+            PyYAML
+
+      # ────────────────────────────────────────────────────────
+      # Each fetcher runs independently. A single failure won't
+      # kill the others — Bryan can re-run by hand if needed.
+      # Janoshik is intentionally skipped (needs ProtonVPN at home IP).
+      # YouTube/Whisper is skipped (heavy GPU work — stays on Bryan's PC).
+      # ────────────────────────────────────────────────────────
+
+      - name: 📚 PubMed
+        continue-on-error: true
+        run: python ingest/fetch_pubmed.py
+
+      - name: 🧪 ClinicalTrials.gov
+        continue-on-error: true
+        run: python ingest/fetch_clinicaltrials.py
+
+      - name: 👽 Reddit (Arctic Shift)
+        continue-on-error: true
+        run: python ingest/scrapers/reddit_scraper.py
+
+      - name: 💊 ThinkSteroids
+        continue-on-error: true
+        run: python ingest/scrape_thinksteroids.py
+
+      - name: 💪 MESO-Rx (Scrapy)
+        continue-on-error: true
+        working-directory: ingest/scrapers
+        run: scrapy crawl meso_rx
+
+      - name: 🧬 Ergolog
+        continue-on-error: true
+        run: python ingest/scrape_ergolog.py
+
+      - name: 📖 Tanner FAQ
+        continue-on-error: true
+        run: python ingest/scrape_tanner_faq.py
+
+      # ────────────────────────────────────────────────────────
+      # Summary + commit any new content back to the branch.
+      # ────────────────────────────────────────────────────────
+
+      - name: 📊 What changed
+        run: |
+          echo "Files added or changed:"
+          git status --porcelain | head -100
+          echo
+          echo "Count:"
+          git status --porcelain | wc -l
+
+      - name: 💾 Auto-commit new content
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: |
+            chore(fetch): nightly content sync
+
+            Auto-committed by .github/workflows/fetch.yml
+          file_pattern: "ingest/**"
+          commit_user_name: "FBF Fetch Bot"
+          commit_user_email: "forgedbyfreedom@gmail.com"
