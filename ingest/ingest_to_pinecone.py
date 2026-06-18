@@ -24,6 +24,23 @@ _env_path = Path(__file__).parent.parent / ".env"
 if _env_path.exists():
     load_dotenv(_env_path, override=True)
 
+# ── INGEST PAUSED ─────────────────────────────────────────────────
+# Production ingest stopped by repo owner. Prevents accidental manual
+# runs, OpenAI embedding spend, and Pinecone writes.
+#
+# To resume:
+#   • Revert the commit that introduced this guard, OR
+#   • Set INGEST_FORCE_RESUME=1 in the environment for a single one-off run.
+# ─────────────────────────────────────────────────────────────────
+if os.environ.get("INGEST_FORCE_RESUME") != "1":
+    print("⏸  Pinecone ingest is PAUSED.")
+    print("    No vectors will be embedded or upserted.")
+    print("    To force a one-off run: INGEST_FORCE_RESUME=1 python "
+          "ingest/ingest_to_pinecone.py")
+    print("    To resume permanently: revert the commit that introduced "
+          "this guard and re-enable the GitHub Actions workflow.")
+    raise SystemExit(0)
+
 import tiktoken
 from openai import OpenAI
 from pinecone import Pinecone

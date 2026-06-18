@@ -1,12 +1,23 @@
 name: Nightly Pinecone Ingest
 
+# ─────────────────────────────────────────────────────────────
+# ⏸  PAUSED until further notice (requested by repo owner).
+# To resume:
+#   1. Uncomment the schedule + workflow_dispatch triggers below
+#   2. Remove the `if: false` guard on the job
+#   3. Remove the matching guard at the top of
+#      ingest/ingest_to_pinecone.py
+# ─────────────────────────────────────────────────────────────
+
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 1 * * *"   # Nightly at 01:00 UTC
+  # workflow_dispatch:
+  # schedule:
+  #   - cron: "0 1 * * *"   # Nightly at 01:00 UTC — PAUSED
+  workflow_dispatch:        # manual only (still gated by the if:false below)
 
 jobs:
   ingest:
+    if: false               # PAUSED — job is unconditionally skipped
     runs-on: ubuntu-latest
 
     steps:
