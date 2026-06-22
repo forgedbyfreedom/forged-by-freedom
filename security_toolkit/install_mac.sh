@@ -64,6 +64,30 @@ pipx install spiderfoot   && ok "SpiderFoot"     || fail "SpiderFoot"    "pipx i
 brew install sundowndev/phoneinfoga/phoneinfoga 2>/dev/null \
   && ok "PhoneInfoga" || fail "PhoneInfoga" "brew tap install failed"
 
+# AzureHound — Azure AD data collector (sibling to BloodHound)
+if command -v go >/dev/null 2>&1; then
+  GOBIN="$HOME/go/bin" go install github.com/bloodhoundad/azurehound/v2@latest 2>&1 | tail -1 \
+    && ok "AzureHound → ~/go/bin/azurehound" || fail "AzureHound" "go install failed"
+else
+  brew install go 2>/dev/null && \
+    GOBIN="$HOME/go/bin" go install github.com/bloodhoundad/azurehound/v2@latest 2>&1 | tail -1 \
+    && ok "AzureHound" || fail "AzureHound" "go install failed"
+fi
+
+# Evilginx3 — GATED on EVILGINX_CONTEXT env var. Offensive 2FA-bypass
+# phishing framework. Install only with: authorized red-team engagement,
+# CTF competition, or isolated lab VM. NOT for daily-driver Mac.
+if [ -n "${EVILGINX_CONTEXT:-}" ]; then
+  EG_DIR="$HOME/security_toolkit_bin/evilginx2"
+  mkdir -p "$(dirname "$EG_DIR")"
+  git clone --depth 1 -q https://github.com/kgretzky/evilginx2.git "$EG_DIR" 2>/dev/null \
+    && (cd "$EG_DIR" && go build -o "$HOME/go/bin/evilginx" -ldflags="-s -w" 2>&1 | tail -1) \
+    && ok "Evilginx3 → ~/go/bin/evilginx (context: $EVILGINX_CONTEXT)" \
+    || fail "Evilginx3" "git clone or build failed"
+else
+  skip "Evilginx3" "set EVILGINX_CONTEXT=<lab|ctf|engagement-id> before running this script to install"
+fi
+
 # CloudFox — Go binary via Bishop Fox tap
 brew install bishopfox/cloudfox/cloudfox 2>/dev/null \
   && ok "CloudFox" || fail "CloudFox" "brew tap install failed"

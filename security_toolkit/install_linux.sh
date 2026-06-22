@@ -83,6 +83,29 @@ curl -fsSL -o /tmp/pi.tar.gz "$PI_URL" \
   && rm -f /tmp/pi.tar.gz \
   && ok "PhoneInfoga $PI_VER → $TOOLS_DIR/phoneinfoga" || fail "PhoneInfoga" "binary download failed"
 
+# ── 5b. AzureHound (Azure AD collector — sibling to BloodHound) ────
+note "AzureHound (Azure AD data collector)"
+GOBIN=$HOME/go/bin go install github.com/bloodhoundad/azurehound/v2@latest 2>&1 | tail -1 \
+  && ok "AzureHound" || fail "AzureHound" "go install failed"
+
+# ── 5c. Evilginx3 — GATED on defensive context ────────────────
+# This is an offensive 2FA-bypass phishing framework. Installing it on
+# anything but an isolated lab or signed-engagement workstation is a
+# bad idea. Gated on $EVILGINX_CONTEXT being set so accidental runs of
+# the script don't install it. Examples for $EVILGINX_CONTEXT:
+#   "lab"   — running in an isolated VM / sandbox
+#   "ctf"   — competition use
+#   "engagement-2026-q3" — internal tracking ID for an authorized pentest
+note "Evilginx3 (gated on \$EVILGINX_CONTEXT)"
+if [ -n "${EVILGINX_CONTEXT:-}" ]; then
+  git clone --depth 1 -q https://github.com/kgretzky/evilginx2.git "$TOOLS_DIR/evilginx2" 2>&1 \
+    && (cd "$TOOLS_DIR/evilginx2" && go build -o "$TOOLS_DIR/evilginx" -ldflags="-s -w" 2>&1 | tail -1) \
+    && ok "Evilginx3 → $TOOLS_DIR/evilginx (context: $EVILGINX_CONTEXT)" \
+    || fail "Evilginx3" "git clone or build failed"
+else
+  skip "Evilginx3" "set EVILGINX_CONTEXT=<context-string> to install (lab / ctf / engagement-id)"
+fi
+
 # ── 6. CyberChef (offline standalone HTML) ────────────────────
 note "CyberChef (offline)"
 CC_DIR="$TOOLS_DIR/cyberchef"
