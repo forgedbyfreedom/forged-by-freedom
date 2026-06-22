@@ -1,103 +1,221 @@
-# ECHO — Acoustic Drone Detection
+# ECHO — Acoustic Drone Detection (+ Correctional Drone & Inmate Monitoring)
 
-Passive acoustic drone detection. ECHO listens through a microphone and flags
-the harmonic "buzz" of drone propellers, with a live browser dashboard, voice/
-noise rejection, an embedded ML classifier, and optional phone alerts. Runs on
-a laptop, Raspberry Pi, or any machine with Python — **no GPU, no cloud, no API
-keys.**
+ECHO started as a single-mic acoustic drone detector and has grown into a
+multi-camera, multi-modal correctional facility security platform that
+combines audio detection, computer vision, facial recognition, vendor
+data feeds (ViaPath / Tecore MAS), and cross-system link analysis to
+identify who's behind a drone incursion.
 
-## What it does
+> **Two ways to use this codebase:**
+>
+> 1. **As a single-mic drone detector** for home / property use →
+>    use `echo_dashboard.py` as documented in the original section below.
+> 2. **As a correctional drone + inmate monitoring + link-analysis
+>    system** → use `echo_multi.py` driven by `echo_cameras.yaml`.
+>    Architecture in [`ARCHITECTURE.md`](./ARCHITECTURE.md).
 
-- **Detects drones** by their blade-pass fundamental (50–700 Hz) and harmonic stack.
-- **Rejects false alarms** from speech, fans, dings, and brief sounds via four layers:
-  pitch-stability, harmonic-comb, continuity, and an **ML classifier** (trained on
-  real drone audio) that confirms drone *timbre* and a **sustained-duration gate**
-  (a drone drones on for seconds; a ding doesn't).
-- **Live dashboard** at `http://127.0.0.1:8080` — status banner, blade-pass/RPM,
-  harmonics, bearing (with a mic array), input meter, detection log, and **live
-  tuning sliders** (no restart).
-- **Phone alerts** via ntfy (and optional email/SMS).
-- **Direction-of-arrival** bearing when fed a multi-mic array.
+---
 
-## Install
+## Quick start (single-mic mode)
 
 ```bash
-git clone https://github.com/forgedbyfreedom/echo-drone-detector.git
-cd echo-drone-detector
 pip install -r requirements.txt
+python echo_dashboard.py            # live mic, browser at http://127.0.0.1:5050
+python echo_dashboard.py --wav file.wav     # analyze a WAV file
 ```
-Requires Python 3.10+. Dependencies: `numpy`, `flask`, `sounddevice` (sounddevice
-is only needed for live mic; on Linux/Pi: `sudo apt install libportaudio2` first).
 
-## Run
+See `ACOUSTIC_DETECTION_RESEARCH.md` for the science behind the detection
+algorithm (BPF/harmonic stacks, persistence tracking, ML confirmation
+layer).
+
+---
+
+## Quick start (correctional multi-camera mode)
 
 ```bash
-# Live microphone, with the ML confirmation gate on (recommended):
-python echo_dashboard.py --host 0.0.0.0 --ml
-
-# Demo on a bundled clip (no mic needed):
-python echo_dashboard.py --wav real_drone_test.wav --ml
-
-# Demo that ALSO plays the clip through the speakers (for showing people):
-python echo_dashboard.py --wav real_drone_test.wav --ml --play
+pip install -r requirements.txt
+# Edit echo_cameras.yaml with your camera RTSP URLs + zones
+python echo_multi.py --config echo_cameras.yaml
 ```
-Then open **http://127.0.0.1:8080**. (Use `127.0.0.1`, not `0.0.0.0`. To let other
-devices on your Wi-Fi view it, keep `--host 0.0.0.0` and browse to the machine's
-LAN IP, e.g. `http://192.168.1.x:8080`.)
 
-## Tuning (live, in the dashboard)
+The orchestrator:
+- Spins up one acoustic detector per camera (existing audio engine + new RTSP source)
+- Wires placeholder vision + facial-recognition workers per camera
+- Loads zone rules from YAML
+- Runs cross-system link analysis on every drone event
+- Routes named alerts to configured channels
 
-Six sliders, applied instantly:
-- **Harmonic sensitivity (dB)** / **Harmonics required** — raw detection strength
-- **Persistence (s)** — how long a signature must hold
-- **Loudness gate (dB)** — ignore near-silence
-- **Max pitch drift (Hz)** — reject pitch-gliding voice
-- **Min continuity** — reject gappy (speech-like) audio
+**Most subsystems are runnable today; vendor integrations are
+clearly-marked placeholders** waiting on data-sharing contracts.
+Architecture document explains every module's status:
+[`ARCHITECTURE.md`](./ARCHITECTURE.md).
 
-The **ML threshold** is set with `ECHO_ML_THRESHOLD` (default `0.5`).
+---
 
-## Phone alerts (optional)
+## Module map
 
-```bash
-export ECHO_NTFY_TOPIC="your-topic-name"      # subscribe to it in the ntfy app
-export ECHO_NTFY_TOKEN="tk_..."               # only for reserved/protected topics
-# email/SMS (optional, needs a Gmail App Password):
-export ECHO_SMTP_USER="you@gmail.com"
-export ECHO_SMTP_PASS="16-char-app-password"
-export ECHO_ALERT_TO="you@gmail.com,5551234567@vtext.com"
 ```
-Test alerts: `python echo_dashboard.py --test-alert`
+echo/
+├── echo_engine.py        OK  acoustic detection (BPF, harmonics, persistence, ML)
+├── echo_ml.py            OK  numpy-only MLP for drone confirmation
+├── echo_alerts.py        OK  multi-channel alert dispatch (email, SMS, ntfy + routing)
+├── echo_dashboard.py     OK  Flask SSE single-mic dashboard
+├── echo_rtsp.py          OK  RTSP audio ingestion via ffmpeg
+├── echo_cameras.yaml     OK  multi-camera + zones + alert-routing config
+├── echo_zones.py         OK  inmate access rules (hours, classification)
+├── echo_correlation.py   OK  rolling event log + link-analysis engine
+├── echo_multi.py         OK  orchestrator: ties everything together
+├── echo_vision.py        ··  PLACEHOLDER — YOLO interface (drone, phone, violence)
+├── echo_face.py          ··  PLACEHOLDER — facial recognition + inmate DB
+├── echo_viapath.py       ··  PLACEHOLDER — ViaPath/GTL/IRT data integration
+├── echo_tecore.py        ··  PLACEHOLDER — Tecore MAS contraband-phone integration
+├── ARCHITECTURE.md       full system design + procurement + legal
+├── ACOUSTIC_DETECTION_RESEARCH.md   the science behind the audio detector
+└── README.md             this file
+```
 
-## How detection works
+`OK` = runnable today;  `··` = scaffold + clearly marked `# PLACEHOLDER`
+for vendor wiring.
 
-Rules find a harmonic candidate fast; with `--ml`, a small embedded MLP (numpy-only,
-weights baked into `echo_ml.py`) confirms it's a drone, requiring ~2.2 s of sustained
-positive detection before alerting. This combination detects real drones while
-rejecting speech, dings, and brief noises.
+---
+
+## What "link analysis" actually does — worked example
+
+A drone is detected over Yard A at 14:32:15 by `cam-yard-east`'s
+microphone. The correlation engine immediately runs against the past
+4 hours of events and produces a report. The signals it finds:
+
+| Subject | Signal | Score |
+|---|---|---|
+| Inmate I-12345 (John Doe) | seen on cam-yard-east 2 min before drone (face) | 0.60 |
+| Inmate I-12345 | on ViaPath call 1 min before drone | 0.80 |
+| External contact +1-202-555-1234 | called inmate I-12345 1 min before drone | 0.98 |
+| External contact +1-202-555-1234 | MSISDN matches a Tecore MAS capture in housing block where I-12345 lives | 1.00 |
+| External contact +1-202-555-1234 | visited inmate I-12345 5 days ago | 0.70 |
+
+**Output:**
+- Inmate I-12345 candidate score: **0.236** (audio + call signals)
+- External contact +1-202-555-1234 candidate score: **0.495** (called +
+  MSISDN match + visit)
+
+→ HIGH-severity `drone_with_correlated_inmate` alert fires. Package goes
+to SIU pager, warden email, and FBI liaison email. The complete evidence
+trail (every event with timestamp and source) is attached.
+
+This is what real DOC fusion-center workflows look like — combine weak
+signals across multiple authorized data sources to produce a strong
+inference about who orchestrated the drop.
+
+---
+
+## Configuration
+
+`echo_cameras.yaml` is the single source of truth. Hot-reloadable —
+the orchestrator picks up changes within 10s without restart.
+
+Schema:
+- `site` — facility metadata (timezone, lat/lng for bearing math)
+- `zones` — named polygons / building tags with `permitted_hours` and
+  `permitted_classifications`
+- `cameras` — RTSP URL + capabilities (`has_audio`, `has_video`) +
+  zone assignments
+- `detection_overrides` — per-zone sensitivity tuning
+- `alert_routing` — per-alert-type severity + channel list
+
+Sample provided in the file with realistic Yard, Perimeter, Housing,
+and Visitation zones.
+
+---
+
+## Alerts
+
+Five named alert types, each routed to one or more channels via the YAML:
+
+| Alert type | Default severity | Default channels |
+|---|---|---|
+| `drone_detected` | high | siu_pager, control_center_screen, email_alerts_distro |
+| `inmate_out_of_bounds` | medium | control_center_screen |
+| `violence_imminent` | critical | siu_pager, control_center_screen, all_officers_radio |
+| `phone_in_inmate_hand` | medium | siu_pager, mas_correlation_engine |
+| `drone_with_correlated_inmate` | critical | siu_pager, warden_email, fbi_liaison_email |
+
+Channels:
+- `email_alerts_distro`, `warden_email`, `fbi_liaison_email` — Gmail SMTP
+- `siu_pager` — ntfy push to officer phones
+- `control_center_screen`, `all_officers_radio`,
+  `mas_correlation_engine` — log-only stubs by default; register custom
+  channel handlers in `AlertDispatcher.register_channel()` for the
+  agency's incident-management system, RTU integrations, etc.
+
+---
+
+## Required environment variables
+
+For email/SMS alerts:
+```
+ECHO_SMTP_USER         your gmail address
+ECHO_SMTP_PASS         a Gmail App Password (NOT your normal password)
+ECHO_ALERT_TO          comma-separated recipients
+```
+
+For ntfy push:
+```
+ECHO_NTFY_TOPIC        topic name
+ECHO_NTFY_TOKEN        bearer token (for private topics)
+ECHO_NTFY_SERVER       default https://ntfy.sh
+```
+
+ViaPath, Tecore, and inmate-face-DB credentials are PLACEHOLDERs — see
+`ARCHITECTURE.md` for the contracts each integration expects.
+
+---
+
+## What's runnable end-to-end TODAY
+
+Without any vendor contracts, with just RTSP cameras:
+
+- ✅ Multi-camera acoustic drone detection
+- ✅ Per-camera audio score tracking, dashboard tiles
+- ✅ Zone configuration + alert routing
+- ✅ Correlation engine (will produce empty reports until other event
+  sources are wired — but produces them correctly)
+- ✅ Alert dispatch via email / SMS / ntfy
+- ✅ Hot-reloadable config
+
+What you GET with just RTSP + this codebase: a multi-camera acoustic
+drone-detection system with rich alerting and a correlation engine
+ready to ingest whatever data sources you wire in next.
+
+What you'll ADD as integrations come online:
+- Tecore MAS feed → drone events correlate with contraband-cellphone
+  captures
+- ViaPath feed → adds inmate calls, visits, deposits to the correlation
+- YOLO drone model → adds visual confirmation that strengthens audio
+  detection
+- Facial recognition → adds inmate-location events for zone violations
+  and correlation
+- Each new feed makes every other one more valuable
+
+This is intentional. Vendor contracts take months. Don't wait — deploy
+the acoustic foundation today; light up the rest as the data feeds come
+online.
+
+---
 
 ## Honest limitations
 
-- **Acoustic is close-in**, not perimeter radar: tens of meters to ~2 km depending
-  on drone size and conditions. Wind hurts — use a windscreen outdoors.
-- **Testing by playing clips through speakers is unreliable** — speakers can't
-  reproduce the low blade-pass frequencies, so playback is missing what defines a
-  drone. Validate with the `--wav` demo (clean file) or a **real drone in the air**.
-- The ML model is trained on small consumer quads + augmentation. For best results
-  on a specific fleet, retrain on recordings of those drones.
-
-## Files
-
-| File | What it is |
-|------|-----------|
-| `echo_dashboard.py` | Flask dashboard + live config + audio feed |
-| `echo_engine.py` | Detection engine (rules, gates, ML-primary logic) |
-| `echo_ml.py` | Embedded ML classifier (numpy-only, no model file needed) |
-| `echo_alerts.py` | ntfy / email / SMS alerts |
-| `drone_detect.py` | Standalone CLI detector (no dashboard) |
-| `requirements.txt` | Dependencies |
-| `*.wav` | Test/demo clips |
-
-## Note
-
-Passive situational-awareness tool. Operate in compliance with local laws on
-recording and monitoring.
+- Acoustic detection has been validated on consumer/hobby quads and on
+  speech/dog/wind rejection. It has NOT been validated against heavy-
+  lift drones used in real correctional drops (DJI Matrice, Gustin
+  custom builds, gas-powered). For a real deployment, expect to retrain
+  the ML model on samples from your local threat picture.
+- Vision + face + vendor integrations are scaffolds. They define the
+  contracts but require real model weights, real face DBs, and real
+  vendor APIs to function.
+- Correlation engine weights (`DEFAULT_WEIGHTS` in `echo_correlation.py`)
+  are heuristic priors. They should be tuned on real incident data
+  once enough has accumulated.
+- This is not FAA-authorized to disable / intercept drones. Detection
+  + identification + alerting only.
+- All facial recognition deployments require explicit agency-level
+  policy authorization. See `ARCHITECTURE.md § Legal & policy`.

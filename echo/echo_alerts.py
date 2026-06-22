@@ -152,3 +152,106 @@ class AlertManager:
                 "bearing_deg": 90.0, "t": 0.0}
         print(f"[ALERT] sending test via: {self.status()}")
         self._fire(fake)
+
+
+# ────────────────────────────────────────────────────────────────────
+# Multi-channel dispatcher (used by echo_multi.py orchestrator)
+# Routes named alert types to channels per echo_cameras.yaml
+# alert_routing config. Falls back to the AlertManager above when an
+# alert type isn't explicitly routed.
+# ────────────────────────────────────────────────────────────────────
+_DISPATCHER: "AlertDispatcher | None" = None
+
+
+class AlertDispatcher:
+    """Named-alert dispatcher with per-type channel routing.
+
+    Looks up the alert type in the YAML alert_routing config and sends
+    to the configured channels. Channel implementations are pluggable —
+    by default this uses the existing AlertManager (email / SMS / ntfy).
+    Custom channels (siu_pager / control_center_screen / etc.) can be
+    registered via register_channel() — see ARCHITECTURE.md.
+    """
+
+    def __init__(self, routing_config: dict | None = None):
+        self.routing = routing_config or {}
+        self.alert_manager = AlertManager()
+        # Map channel-name → handler function. Add yours via register_channel.
+        self.channels: dict = {
+            "email_alerts_distro":    self._channel_email,
+            "siu_pager":              self._channel_ntfy,
+            "control_center_screen":  self._channel_log,
+            "all_officers_radio":     self._channel_log,
+            "warden_email":           self._channel_email,
+            "fbi_liaison_email":      self._channel_email,
+            "mas_correlation_engine": self._channel_log,
+        }
+
+    def dispatch(self, alert_type: str, payload: dict) -> None:
+        cfg = self.routing.get(alert_type, {})
+        severity = cfg.get("severity", "medium")
+        channel_names = cfg.get("channels", ["email_alerts_distro"])
+        for name in channel_names:
+            handler = self.channels.get(name)
+            if handler:
+                try:
+                    handler(alert_type, severity, payload)
+                except Exception as e:
+                    print(f"[ALERT] channel {name} failed: {e}")
+            else:
+                print(f"[ALERT] no handler for channel '{name}' "
+                      f"(type={alert_type}, severity={severity})")
+
+    def register_channel(self, name: str, handler) -> None:
+        """Register a custom channel — e.g., a Twilio voice call, a
+        webhook into the agency's existing incident management system,
+        a push to PagerDuty, an RTU pulse to a physical strobe light."""
+        self.channels[name] = handler
+
+    # ── built-in channel handlers ──────────────────────────
+    def _channel_email(self, alert_type: str, severity: str, payload: dict):
+        title = f"[ECHO {severity.upper()}] {alert_type}"
+        body = self._format_body(alert_type, payload)
+        try:
+            self.alert_manager._send_email(title, body)
+        except Exception as e:
+            print(f"[ALERT email] {e}")
+
+    def _channel_ntfy(self, alert_type: str, severity: str, payload: dict):
+        title = f"[ECHO {severity.upper()}] {alert_type}"
+        body = self._format_body(alert_type, payload)
+        try:
+            self.alert_manager._send_ntfy(title, body)
+        except Exception as e:
+            print(f"[ALERT ntfy] {e}")
+
+    def _channel_log(self, alert_type: str, severity: str, payload: dict):
+        # Default for channels with no real implementation yet —
+        # PLACEHOLDER for: control_center_screen, all_officers_radio,
+        # mas_correlation_engine. Wired up to the SIU/CC integrations
+        # when those are available.
+        print(f"\n[{severity.upper()} ALERT] {alert_type}")
+        for k, v in payload.items():
+            print(f"  {k}: {v}")
+
+    def _format_body(self, alert_type: str, payload: dict) -> str:
+        return "\n".join(f"{k}: {v}" for k, v in payload.items())
+
+
+def dispatch_alert(alert_type: str, payload: dict) -> None:
+    """Module-level convenience used by echo_multi.py."""
+    global _DISPATCHER
+    if _DISPATCHER is None:
+        # Lazy init from YAML if available; otherwise empty routing
+        try:
+            import yaml
+            from pathlib import Path
+            yaml_path = Path(__file__).parent / "echo_cameras.yaml"
+            if yaml_path.exists():
+                cfg = yaml.safe_load(yaml_path.read_text())
+                _DISPATCHER = AlertDispatcher(cfg.get("alert_routing", {}))
+            else:
+                _DISPATCHER = AlertDispatcher()
+        except Exception:
+            _DISPATCHER = AlertDispatcher()
+    _DISPATCHER.dispatch(alert_type, payload)

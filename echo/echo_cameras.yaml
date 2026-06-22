@@ -1,0 +1,164 @@
+# ECHO Multi-Camera Config
+# ─────────────────────────────────────────────────────────────────────
+# One YAML file describes every camera, every zone, and where each one
+# physically lives in the facility. Hot-reloadable — edit + save and
+# echo_multi.py picks up changes within 10s without restart.
+#
+# Tested with: Valerus (Vicon), generic ONVIF, Axis, Hikvision, Dahua.
+# Anything that exposes an RTSP URL works.
+
+# ── Site identification ──────────────────────────────────────────────
+site:
+  id: example-site-01
+  name: "Example Correctional Facility"
+  timezone: "America/New_York"
+  # Lat/lng helps the dashboard plot drone-bearing estimates on a map
+  location: { lat: 40.000, lng: -75.000 }
+
+# ── Zones (used for inmate-out-of-bounds alerts + drone bearing) ────
+# Each zone is a named polygon over a single camera's FOV, OR a
+# building-wide tag attached to multiple cameras.
+zones:
+  - id: yard-a
+    name: "Recreation Yard A"
+    type: outdoor_yard
+    # Hours when inmates are permitted in this zone (24h local time)
+    permitted_hours: "08:00-11:00,13:00-16:30"
+    # Which inmate classifications are allowed here
+    permitted_classifications: [GP, GP-low]
+    # Which cameras cover this zone
+    covered_by: [cam-yard-east, cam-yard-west, cam-tower-1]
+
+  - id: perimeter-fence-north
+    name: "North perimeter fence"
+    type: perimeter
+    # Anyone in this zone is by definition out-of-bounds — alert always
+    permitted_hours: ""
+    permitted_classifications: []
+    covered_by: [cam-perimeter-n1, cam-perimeter-n2]
+
+  - id: housing-block-c
+    name: "Housing Block C"
+    type: housing
+    permitted_hours: "always"  # inmates assigned here can be here any time
+    permitted_classifications: [GP, GP-low, AdSeg]
+    covered_by: [cam-c-hallway, cam-c-dayroom, cam-c-rec]
+
+  - id: visitation
+    name: "Visitation Room"
+    type: visitation
+    permitted_hours: "09:00-11:00,13:00-15:00"  # scheduled visits only
+    permitted_classifications: [GP, GP-low]
+    covered_by: [cam-visitation-1, cam-visitation-2]
+
+# ── Cameras ──────────────────────────────────────────────────────────
+cameras:
+  - id: cam-yard-east
+    name: "Yard A — East corner"
+    rtsp: "rtsp://USER:PASS@10.10.20.51:554/Streaming/Channels/101"
+    has_audio: true       # has a microphone — feed into ECHO acoustic
+    has_video: true       # process frames in echo_vision.py
+    audio_sensitivity: medium
+    zone_ids: [yard-a]
+    # Optional: rough compass bearing the camera faces (degrees from N)
+    facing_bearing: 90
+
+  - id: cam-yard-west
+    name: "Yard A — West corner"
+    rtsp: "rtsp://USER:PASS@10.10.20.52:554/Streaming/Channels/101"
+    has_audio: true
+    has_video: true
+    audio_sensitivity: medium
+    zone_ids: [yard-a]
+    facing_bearing: 270
+
+  - id: cam-tower-1
+    name: "Tower 1 — overlook"
+    rtsp: "rtsp://USER:PASS@10.10.20.61:554/Streaming/Channels/101"
+    has_audio: false      # video-only tower camera
+    has_video: true
+    zone_ids: [yard-a, perimeter-fence-north]
+    facing_bearing: 0
+
+  - id: cam-perimeter-n1
+    name: "North perimeter — segment 1"
+    rtsp: "rtsp://USER:PASS@10.10.20.71:554/Streaming/Channels/101"
+    has_audio: false
+    has_video: true
+    zone_ids: [perimeter-fence-north]
+    facing_bearing: 0
+
+  - id: cam-perimeter-n2
+    name: "North perimeter — segment 2"
+    rtsp: "rtsp://USER:PASS@10.10.20.72:554/Streaming/Channels/101"
+    has_audio: false
+    has_video: true
+    zone_ids: [perimeter-fence-north]
+    facing_bearing: 0
+
+  - id: cam-c-hallway
+    name: "Block C — main hallway"
+    rtsp: "rtsp://USER:PASS@10.10.30.11:554/Streaming/Channels/101"
+    has_audio: true
+    has_video: true
+    audio_sensitivity: low   # indoor, less drone concern
+    zone_ids: [housing-block-c]
+
+  - id: cam-c-dayroom
+    name: "Block C — dayroom"
+    rtsp: "rtsp://USER:PASS@10.10.30.12:554/Streaming/Channels/101"
+    has_audio: true
+    has_video: true
+    zone_ids: [housing-block-c]
+
+  - id: cam-c-rec
+    name: "Block C — rec area"
+    rtsp: "rtsp://USER:PASS@10.10.30.13:554/Streaming/Channels/101"
+    has_audio: true
+    has_video: true
+    zone_ids: [housing-block-c]
+
+  - id: cam-visitation-1
+    name: "Visitation — table cluster A"
+    rtsp: "rtsp://USER:PASS@10.10.40.21:554/Streaming/Channels/101"
+    has_audio: true
+    has_video: true
+    zone_ids: [visitation]
+
+  - id: cam-visitation-2
+    name: "Visitation — table cluster B"
+    rtsp: "rtsp://USER:PASS@10.10.40.22:554/Streaming/Channels/101"
+    has_audio: true
+    has_video: true
+    zone_ids: [visitation]
+
+# ── Detection thresholds (per-zone overrides) ────────────────────────
+# Defaults live in echo_engine.py; override here when a specific zone
+# needs different sensitivity (e.g. perimeter cams more sensitive than
+# indoor hallways).
+detection_overrides:
+  yard-a:
+    audio_threshold_p: 0.55       # lower threshold = more sensitive
+    visual_drone_confidence: 0.60
+  perimeter-fence-north:
+    audio_threshold_p: 0.50
+    visual_drone_confidence: 0.55
+
+# ── Alert routing ────────────────────────────────────────────────────
+# Where alerts of each severity go. Channels defined in echo_alerts.py.
+alert_routing:
+  drone_detected:
+    severity: high
+    channels: [siu_pager, control_center_screen, email_alerts_distro]
+  inmate_out_of_bounds:
+    severity: medium
+    channels: [control_center_screen]
+  violence_imminent:
+    severity: critical
+    channels: [siu_pager, control_center_screen, all_officers_radio]
+  phone_in_inmate_hand:
+    severity: medium
+    channels: [siu_pager, mas_correlation_engine]
+  drone_with_correlated_inmate:
+    severity: critical
+    channels: [siu_pager, warden_email, fbi_liaison_email]

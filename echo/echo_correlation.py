@@ -1,0 +1,337 @@
+"""
+ECHO Link-Analysis & Correlation Engine.
+
+REAL implementation — this is the heart of "tie an inmate or civilian
+to the drone."  It ingests events from every other subsystem and
+surfaces correlations that build a case package for SIU.
+
+The engine keeps a rolling time-windowed event log (default ±15 min
+around every drone detection, configurable up to 4 hours) in memory.
+When a drone is detected, it runs a correlation pass that scores every
+known inmate and every known external contact on multiple weak signals,
+and ranks the top candidates.
+
+Signals (each scored 0..1, then weighted; weights configurable):
+
+  Inmate-side signals (who in the facility caused / received the drop)
+    • inmate_outdoors_at_drone_time     — face seen on outdoor camera ±5 min
+    • inmate_on_phone_at_drone_time     — voice call active ±5 min
+    • inmate_phone_in_hand_visual       — phone-in-hand visual ±5 min
+    • inmate_mas_capture_correlation    — MAS captured a phone in their
+                                          housing block ±5 min
+    • inmate_recent_visitor_contact     — visit/call/tablet contact with
+                                          a known drone operator in the
+                                          past 30 days
+    • inmate_recent_deposit_anomaly     — large deposit from new source
+                                          in the past 14 days
+    • inmate_history                    — prior drone-related incidents
+
+  External-contact-side signals (who outside orchestrated the drop)
+    • contact_called_inmate_pre_drop    — call to inmate ±60 min before drop
+    • contact_visited_recently          — in-person/video visit in past 14d
+    • contact_deposited_recently        — deposit in past 14d
+    • contact_known_associate           — known to another inmate with prior drone activity
+
+The engine emits a CorrelationReport per drone detection that lists
+the top N candidates with their score breakdown and the evidence trail.
+"""
+from __future__ import annotations
+
+import threading
+import time
+from collections import defaultdict, deque
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta
+from typing import Any, Callable, Optional
+
+
+# ── Generic event envelope used by every subsystem ─────────────────
+@dataclass
+class Event:
+    """A single observation from any data source."""
+    source: str                       # "drone_audio" | "drone_visual" | "face" | "viapath_call" | "viapath_tablet" | "viapath_visit" | "viapath_deposit" | "mas_capture" | "vision_phone" | "vision_violence" | "zone_violation"
+    timestamp: datetime
+    payload: dict                     # source-specific fields
+
+
+@dataclass
+class CorrelationCandidate:
+    """One ranked candidate from a correlation pass."""
+    subject_type: str                 # "inmate" | "external_contact"
+    subject_id: str
+    subject_name: Optional[str]
+    score: float                      # 0..1
+    signal_scores: dict               # {"inmate_outdoors_at_drone_time": 0.9, ...}
+    evidence: list[dict]              # the events that contributed
+
+
+@dataclass
+class CorrelationReport:
+    drone_event_id: str
+    drone_timestamp: datetime
+    drone_camera: str
+    drone_confidence: float
+    inmate_candidates: list[CorrelationCandidate]
+    external_candidates: list[CorrelationCandidate]
+    generated_at: datetime
+
+
+# ── Signal weights (tuned over time as data accumulates) ───────────
+DEFAULT_WEIGHTS = {
+    # Inmate signals
+    "inmate_outdoors_at_drone_time":   0.18,
+    "inmate_on_phone_at_drone_time":   0.16,
+    "inmate_phone_in_hand_visual":     0.18,
+    "inmate_mas_capture_correlation":  0.18,
+    "inmate_recent_visitor_contact":   0.08,
+    "inmate_recent_deposit_anomaly":   0.08,
+    "inmate_history":                  0.06,
+    "inmate_zone_violation":           0.08,
+    # External-contact signals
+    "contact_called_inmate_pre_drop":  0.30,
+    "contact_visited_recently":        0.15,
+    "contact_deposited_recently":      0.15,
+    "contact_known_associate":         0.20,
+    "contact_msisdn_matches_mas":      0.20,  # strongest possible link
+}
+
+
+# ── Engine ─────────────────────────────────────────────────────────
+class CorrelationEngine:
+    """Rolling-window event log + on-demand correlation passes."""
+
+    def __init__(self,
+                 window_hours: int = 4,
+                 weights: Optional[dict] = None,
+                 on_report: Optional[Callable[[CorrelationReport], None]] = None):
+        self.window = timedelta(hours=window_hours)
+        self.weights = weights or DEFAULT_WEIGHTS
+        self.on_report = on_report
+
+        # Time-indexed events, oldest auto-pruned
+        self._events: deque[Event] = deque()
+        # Lookup indexes for fast correlation
+        self._by_source: defaultdict[str, list] = defaultdict(list)
+        self._by_inmate: defaultdict[str, list] = defaultdict(list)
+        self._by_msisdn: defaultdict[str, list] = defaultdict(list)
+        self._lock = threading.RLock()
+
+    # ── Ingest ────────────────────────────────────────────────
+    def ingest(self, event: Event) -> None:
+        with self._lock:
+            self._events.append(event)
+            self._by_source[event.source].append(event)
+            inmate_id = event.payload.get("inmate_id")
+            if inmate_id:
+                self._by_inmate[inmate_id].append(event)
+            msisdn = event.payload.get("msisdn") or event.payload.get("called_number")
+            if msisdn:
+                self._by_msisdn[msisdn].append(event)
+            self._prune()
+        # Auto-trigger correlation on drone events
+        if event.source in ("drone_audio", "drone_visual"):
+            report = self.correlate_drone(event)
+            if self.on_report and report:
+                self.on_report(report)
+
+    def _prune(self) -> None:
+        """Drop events older than window."""
+        cutoff = datetime.now() - self.window
+        while self._events and self._events[0].timestamp < cutoff:
+            old = self._events.popleft()
+            # Best-effort cleanup of indexes
+            try:
+                self._by_source[old.source].remove(old)
+            except ValueError:
+                pass
+            inmate = old.payload.get("inmate_id")
+            if inmate:
+                try:
+                    self._by_inmate[inmate].remove(old)
+                except ValueError:
+                    pass
+
+    # ── Correlation pass ─────────────────────────────────────
+    def correlate_drone(self,
+                        drone_event: Event,
+                        top_n: int = 10) -> CorrelationReport:
+        """Score every candidate and return ranked report."""
+        t = drone_event.timestamp
+        with self._lock:
+            inmate_scores: dict[str, dict] = {}
+            for inmate_id, inmate_events in list(self._by_inmate.items()):
+                inmate_scores[inmate_id] = self._score_inmate(
+                    inmate_id, inmate_events, t)
+
+            contact_scores: dict[str, dict] = {}
+            for msisdn, msisdn_events in list(self._by_msisdn.items()):
+                contact_scores[msisdn] = self._score_contact(
+                    msisdn, msisdn_events, t)
+
+        inmate_candidates = [
+            CorrelationCandidate(
+                subject_type="inmate",
+                subject_id=iid,
+                subject_name=v.get("name"),
+                score=v["composite"],
+                signal_scores=v["signals"],
+                evidence=v["evidence"],
+            )
+            for iid, v in inmate_scores.items()
+            if v["composite"] > 0
+        ]
+        inmate_candidates.sort(key=lambda c: c.score, reverse=True)
+
+        contact_candidates = [
+            CorrelationCandidate(
+                subject_type="external_contact",
+                subject_id=msisdn,
+                subject_name=v.get("name"),
+                score=v["composite"],
+                signal_scores=v["signals"],
+                evidence=v["evidence"],
+            )
+            for msisdn, v in contact_scores.items()
+            if v["composite"] > 0
+        ]
+        contact_candidates.sort(key=lambda c: c.score, reverse=True)
+
+        return CorrelationReport(
+            drone_event_id=str(id(drone_event)),
+            drone_timestamp=t,
+            drone_camera=drone_event.payload.get("camera_id", "unknown"),
+            drone_confidence=float(drone_event.payload.get("confidence", 0.0)),
+            inmate_candidates=inmate_candidates[:top_n],
+            external_candidates=contact_candidates[:top_n],
+            generated_at=datetime.now(),
+        )
+
+    # ── Per-subject scoring ──────────────────────────────────
+    def _score_inmate(self, inmate_id: str, events: list,
+                      drone_t: datetime) -> dict:
+        signals: dict[str, float] = {}
+        evidence: list[dict] = []
+        name = None
+
+        for ev in events:
+            dt = abs((ev.timestamp - drone_t).total_seconds())
+            payload = ev.payload
+            name = payload.get("inmate_name") or name
+
+            if ev.source == "face" and dt <= 5 * 60:
+                if payload.get("zone_type") in ("outdoor_yard", "perimeter"):
+                    signals["inmate_outdoors_at_drone_time"] = max(
+                        signals.get("inmate_outdoors_at_drone_time", 0),
+                        _decay_score(dt, 5 * 60))
+                    evidence.append({"source": ev.source,
+                                     "summary": f"seen on {payload.get('camera_id')} {dt:.0f}s away",
+                                     "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "viapath_call" and dt <= 5 * 60:
+                signals["inmate_on_phone_at_drone_time"] = max(
+                    signals.get("inmate_on_phone_at_drone_time", 0),
+                    _decay_score(dt, 5 * 60))
+                evidence.append({"source": ev.source,
+                                 "summary": f"call to {payload.get('called_number')}, {dt:.0f}s away",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "vision_phone" and dt <= 5 * 60:
+                signals["inmate_phone_in_hand_visual"] = max(
+                    signals.get("inmate_phone_in_hand_visual", 0),
+                    _decay_score(dt, 5 * 60))
+                evidence.append({"source": ev.source,
+                                 "summary": f"phone-in-hand on {payload.get('camera_id')}",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "mas_capture" and dt <= 5 * 60:
+                if payload.get("rf_cell_id") == payload.get("inmate_housing_rf_cell"):
+                    signals["inmate_mas_capture_correlation"] = max(
+                        signals.get("inmate_mas_capture_correlation", 0),
+                        _decay_score(dt, 5 * 60))
+                    evidence.append({"source": ev.source,
+                                     "summary": f"MAS captured IMEI {payload.get('imei')} in {payload.get('rf_cell_id')}",
+                                     "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source in ("viapath_visit", "viapath_call", "viapath_tablet") \
+                    and dt <= 30 * 86400 and payload.get("contact_on_watch_list"):
+                signals["inmate_recent_visitor_contact"] = max(
+                    signals.get("inmate_recent_visitor_contact", 0), 0.8)
+                evidence.append({"source": ev.source,
+                                 "summary": f"recent {ev.source} with watchlist contact",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "viapath_deposit" and dt <= 14 * 86400:
+                if payload.get("amount_usd", 0) >= 300 and payload.get("new_depositor"):
+                    signals["inmate_recent_deposit_anomaly"] = max(
+                        signals.get("inmate_recent_deposit_anomaly", 0), 0.7)
+                    evidence.append({"source": ev.source,
+                                     "summary": f"${payload['amount_usd']:.0f} deposit from new source",
+                                     "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "zone_violation" and dt <= 5 * 60:
+                signals["inmate_zone_violation"] = max(
+                    signals.get("inmate_zone_violation", 0),
+                    _decay_score(dt, 5 * 60))
+                evidence.append({"source": ev.source,
+                                 "summary": f"zone violation {payload.get('reason')}",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+        composite = sum(signals.get(k, 0) * w for k, w in self.weights.items()
+                        if k.startswith("inmate_"))
+        return {"composite": composite, "signals": signals,
+                "evidence": evidence, "name": name}
+
+    def _score_contact(self, msisdn: str, events: list,
+                       drone_t: datetime) -> dict:
+        signals: dict[str, float] = {}
+        evidence: list[dict] = []
+        name = None
+
+        for ev in events:
+            dt = abs((ev.timestamp - drone_t).total_seconds())
+            payload = ev.payload
+            name = payload.get("called_party_name") or payload.get("visitor_name") \
+                   or payload.get("depositor_name") or name
+
+            if ev.source == "viapath_call" and dt <= 60 * 60:
+                signals["contact_called_inmate_pre_drop"] = max(
+                    signals.get("contact_called_inmate_pre_drop", 0),
+                    _decay_score(dt, 60 * 60))
+                evidence.append({"source": ev.source,
+                                 "summary": f"call to inmate {payload.get('inmate_id')}, {dt:.0f}s before drone",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "viapath_visit" and dt <= 14 * 86400:
+                signals["contact_visited_recently"] = max(
+                    signals.get("contact_visited_recently", 0), 0.7)
+                evidence.append({"source": ev.source,
+                                 "summary": f"visit to inmate {payload.get('inmate_id')}",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "viapath_deposit" and dt <= 14 * 86400:
+                signals["contact_deposited_recently"] = max(
+                    signals.get("contact_deposited_recently", 0), 0.7)
+                evidence.append({"source": ev.source,
+                                 "summary": f"deposit ${payload.get('amount_usd', 0):.0f}",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            if ev.source == "mas_capture" and payload.get("msisdn") == msisdn:
+                signals["contact_msisdn_matches_mas"] = 1.0
+                evidence.append({"source": ev.source,
+                                 "summary": f"MAS captured this phone number inside the facility",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+        composite = sum(signals.get(k, 0) * w for k, w in self.weights.items()
+                        if k.startswith("contact_"))
+        return {"composite": composite, "signals": signals,
+                "evidence": evidence, "name": name}
+
+
+# ── Helpers ────────────────────────────────────────────────────────
+def _decay_score(elapsed_sec: float, window_sec: float) -> float:
+    """Linear decay from 1.0 at t=0 to 0.0 at t=window. Negative clamped."""
+    if elapsed_sec <= 0:
+        return 1.0
+    if elapsed_sec >= window_sec:
+        return 0.0
+    return 1.0 - (elapsed_sec / window_sec)

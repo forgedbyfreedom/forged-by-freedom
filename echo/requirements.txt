@@ -1,4 +1,14 @@
 numpy>=1.24
 flask>=3.0
 sounddevice>=0.4.6   # live mic + --play only; the --wav analysis path is pure numpy
+PyYAML>=6.0          # camera/zone/alert-routing config (echo_multi, echo_zones)
 # Note: the ML model is embedded in echo_ml.py (numpy-only) - no scikit-learn/joblib needed.
+# Note: ffmpeg binary must be on PATH for echo_rtsp.py (RTSP camera ingestion).
+#       Install separately: apt install ffmpeg / brew install ffmpeg / winget install Gyan.FFmpeg
+#
+# OPTIONAL — only required when filling in the PLACEHOLDER modules:
+# ultralytics            # echo_vision.py — YOLO drone/phone detection
+# opencv-python          # echo_vision.py — frame decoding
+# torch torchvision      # echo_vision.py — YOLO inference
+# insightface            # echo_face.py — facial recognition
+# faiss-cpu              # echo_face.py — inmate face DB lookups
