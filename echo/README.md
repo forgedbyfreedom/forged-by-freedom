@@ -34,21 +34,36 @@ layer).
 
 ```bash
 pip install -r requirements.txt
-# Edit echo_cameras.yaml with your camera RTSP URLs + zones
-python echo_multi.py --config echo_cameras.yaml
+
+# Step 1 — edit echo_cameras.yaml with your camera RTSP URLs + zones
+# Step 2 — run the orchestrator
+python -m echo.echo_multi --config echo/echo_cameras.yaml
+
+# In a second terminal, open the operator dashboard
+python -m echo.echo_correlation_dashboard --port 5060
+# → http://127.0.0.1:5060
 ```
 
 The orchestrator:
-- Spins up one acoustic detector per camera (existing audio engine + new RTSP source)
+- Spins up one acoustic detector per camera (audio engine + RTSP source)
 - Wires placeholder vision + facial-recognition workers per camera
-- Loads zone rules from YAML
-- Runs cross-system link analysis on every drone event
+- Loads zone rules from YAML, hot-reloadable
+- Runs cross-system link analysis on every drone event (22 signals)
 - Routes named alerts to configured channels
 
-**Most subsystems are runnable today; vendor integrations are
-clearly-marked placeholders** waiting on data-sharing contracts.
-Architecture document explains every module's status:
-[`ARCHITECTURE.md`](./ARCHITECTURE.md).
+The correlation dashboard:
+- Live event feed from every data source
+- Correlation reports w/ ranked inmate + external-contact candidates
+- Network graph visualization of subjects + connections
+- **Live drone map** (Leaflet) — position, pilot location, flight history from Dedrone
+- Pattern analysis — drone hour heatmap, top recurring contacts, top recurring plates
+
+**Standalone preview mode:**
+```bash
+python -m echo.echo_correlation_dashboard --demo --port 5060
+```
+This seeds synthetic events so you can see the dashboard with realistic
+data before any real cameras or integrations are wired.
 
 ---
 
@@ -56,26 +71,39 @@ Architecture document explains every module's status:
 
 ```
 echo/
-├── echo_engine.py        OK  acoustic detection (BPF, harmonics, persistence, ML)
-├── echo_ml.py            OK  numpy-only MLP for drone confirmation
-├── echo_alerts.py        OK  multi-channel alert dispatch (email, SMS, ntfy + routing)
-├── echo_dashboard.py     OK  Flask SSE single-mic dashboard
-├── echo_rtsp.py          OK  RTSP audio ingestion via ffmpeg
-├── echo_cameras.yaml     OK  multi-camera + zones + alert-routing config
-├── echo_zones.py         OK  inmate access rules (hours, classification)
-├── echo_correlation.py   OK  rolling event log + link-analysis engine
-├── echo_multi.py         OK  orchestrator: ties everything together
-├── echo_vision.py        ··  PLACEHOLDER — YOLO interface (drone, phone, violence)
-├── echo_face.py          ··  PLACEHOLDER — facial recognition + inmate DB
-├── echo_viapath.py       ··  PLACEHOLDER — ViaPath/GTL/IRT data integration
-├── echo_tecore.py        ··  PLACEHOLDER — Tecore MAS contraband-phone integration
-├── ARCHITECTURE.md       full system design + procurement + legal
-├── ACOUSTIC_DETECTION_RESEARCH.md   the science behind the audio detector
-└── README.md             this file
+├── echo_engine.py                    OK  acoustic detection (BPF, harmonics, persistence, ML)
+├── echo_ml.py                        OK  numpy-only MLP for drone confirmation
+├── echo_alerts.py                    OK  multi-channel alert dispatch (email/SMS/ntfy + named-channel routing)
+├── echo_dashboard.py                 OK  Flask SSE single-mic dashboard (original)
+├── echo_rtsp.py                      OK  RTSP audio ingestion via ffmpeg
+├── echo_cameras.yaml                 OK  multi-camera + zones + alert-routing config
+├── echo_zones.py                     OK  inmate access rules (hours, classification, scheduled movement)
+├── echo_correlation.py               OK  rolling event log + 22-signal link-analysis engine
+├── echo_correlation_dashboard.py     OK  operator-facing Flask dashboard:
+│                                          - live event feed
+│                                          - correlation reports w/ candidate cards
+│                                          - vis.js network graph (subjects + connections)
+│                                          - Leaflet drone map (position, pilot, flight history)
+│                                          - pattern analysis (hour heatmap, top contacts/plates)
+├── echo_multi.py                     OK  orchestrator: ties every camera + integration together
+├── echo_vision.py                    ··  PLACEHOLDER — YOLO (drone / phone-in-hand / violence)
+├── echo_face.py                      ··  PLACEHOLDER — committee's in-house facial recognition
+├── echo_dedrone.py                   ··  PLACEHOLDER — Dedrone multi-sensor + serial-number tracks
+├── echo_flock.py                     ··  PLACEHOLDER — Flock Safety LPR network
+├── echo_dmv_sc.py                    ··  PLACEHOLDER — SC DMV / SLED plate→owner lookup (DPPA-compliant)
+├── echo_cellebrite.py                ··  PLACEHOLDER — UFDR forensic extraction ingestion
+├── echo_drone_forensics.py           ··  PLACEHOLDER — recovered-airframe data (flight log, pairing, media)
+├── echo_viapath.py                   ··  PLACEHOLDER — ViaPath/GTL/IRT (calls, tablet, visit, deposit)
+├── echo_tecore.py                    ··  PLACEHOLDER — Tecore MAS contraband-phone capture
+│
+├── ARCHITECTURE.md                   full system design + procurement + legal
+├── INTEGRATION_CHECKLIST.md          the deliverable for the committee
+├── ACOUSTIC_DETECTION_RESEARCH.md    science behind the audio detector
+└── README.md                         this file
 ```
 
-`OK` = runnable today;  `··` = scaffold + clearly marked `# PLACEHOLDER`
-for vendor wiring.
+`OK` = runnable today;  `··` = scaffold with clearly-marked `# PLACEHOLDER`
++ a top-of-file `# TO COMPLETE — committee must provide:` checklist.
 
 ---
 
@@ -83,28 +111,44 @@ for vendor wiring.
 
 A drone is detected over Yard A at 14:32:15 by `cam-yard-east`'s
 microphone. The correlation engine immediately runs against the past
-4 hours of events and produces a report. The signals it finds:
+4 hours of events across every wired-in data source. With all
+integrations live, an actual incident produces something like this:
+
+**Drone-centric corroborating signals** (boost overall drone-event
+confidence; surfaced as colored pills on the dashboard):
+
+| Signal | Score | Source |
+|---|---|---|
+| Dedrone confirmed track ±30s | 1.00 | Dedrone fusion |
+| Drone serial captured (DJI Remote ID) | 1.00 | Dedrone RF |
+| ⭐⭐ Serial matches previously-recovered airframe SIU-2026-0078 | 1.00 | Drone-forensics evidence locker |
+
+**Per-subject signals:**
 
 | Subject | Signal | Score |
 |---|---|---|
-| Inmate I-12345 (John Doe) | seen on cam-yard-east 2 min before drone (face) | 0.60 |
+| Inmate I-12345 | seen on cam-yard-east 2 min before drone (face) | 0.60 |
 | Inmate I-12345 | on ViaPath call 1 min before drone | 0.80 |
-| External contact +1-202-555-1234 | called inmate I-12345 1 min before drone | 0.98 |
-| External contact +1-202-555-1234 | MSISDN matches a Tecore MAS capture in housing block where I-12345 lives | 1.00 |
-| External contact +1-202-555-1234 | visited inmate I-12345 5 days ago | 0.70 |
+| External contact +1-843-555-1234 | called inmate 1 min before drone | 0.97 |
+| External contact +1-843-555-1234 | MSISDN matches Tecore MAS capture in inmate's housing block | 1.00 |
+| External contact +1-843-555-1234 | DMV-resolved registered owner appears in ViaPath visit records | 1.00 |
+| External contact +1-843-555-1234 | Cellebrite extraction of earlier-seized phone shows DJI Fly app installed | 1.00 |
+| External contact (Flock plate ABC1234) | vehicle passed perimeter camera 1 min before drone | 0.97 |
 
 **Output:**
-- Inmate I-12345 candidate score: **0.236** (audio + call signals)
-- External contact +1-202-555-1234 candidate score: **0.495** (called +
-  MSISDN match + visit)
+- External contact candidate score: **0.773** (called + DMV + MAS + Cellebrite)
+- Inmate candidate score: **0.236** (face + call)
+- Drone identified as SAME PHYSICAL AIRFRAME used in prior incident
 
-→ HIGH-severity `drone_with_correlated_inmate` alert fires. Package goes
-to SIU pager, warden email, and FBI liaison email. The complete evidence
-trail (every event with timestamp and source) is attached.
+→ CRITICAL-severity `drone_with_correlated_inmate` alert fires. Package
+goes to SIU pager, warden email, and FBI liaison email. The complete
+evidence trail (every event with timestamp + source + raw payload
+reference) is attached to the alert.
 
-This is what real DOC fusion-center workflows look like — combine weak
-signals across multiple authorized data sources to produce a strong
-inference about who orchestrated the drop.
+This is what real DOC fusion-center workflows look like — combine
+weak signals across multiple authorized data sources to produce a
+strong inference about who orchestrated the drop and what physical
+drone they used.
 
 ---
 
