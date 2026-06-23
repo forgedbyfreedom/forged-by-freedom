@@ -74,25 +74,41 @@ class CorrelationReport:
     inmate_candidates: list[CorrelationCandidate]
     external_candidates: list[CorrelationCandidate]
     generated_at: datetime
+    # Drone-centric corroborating signals (Dedrone confirmation, serial, etc.)
+    drone_signals: dict = field(default_factory=dict)
+    drone_signal_evidence: list[dict] = field(default_factory=list)
 
 
 # ── Signal weights (tuned over time as data accumulates) ───────────
 DEFAULT_WEIGHTS = {
-    # Inmate signals
-    "inmate_outdoors_at_drone_time":   0.18,
-    "inmate_on_phone_at_drone_time":   0.16,
-    "inmate_phone_in_hand_visual":     0.18,
-    "inmate_mas_capture_correlation":  0.18,
-    "inmate_recent_visitor_contact":   0.08,
-    "inmate_recent_deposit_anomaly":   0.08,
-    "inmate_history":                  0.06,
-    "inmate_zone_violation":           0.08,
-    # External-contact signals
-    "contact_called_inmate_pre_drop":  0.30,
-    "contact_visited_recently":        0.15,
-    "contact_deposited_recently":      0.15,
-    "contact_known_associate":         0.20,
-    "contact_msisdn_matches_mas":      0.20,  # strongest possible link
+    # ── Inmate signals ────────────────────────────────────────
+    "inmate_outdoors_at_drone_time":      0.14,
+    "inmate_on_phone_at_drone_time":      0.12,
+    "inmate_phone_in_hand_visual":        0.14,
+    "inmate_mas_capture_correlation":     0.14,
+    "inmate_recent_visitor_contact":      0.06,
+    "inmate_recent_deposit_anomaly":      0.06,
+    "inmate_history":                     0.04,
+    "inmate_zone_violation":              0.06,
+    "inmate_pan_called_by_seized_phone":  0.16,  # Cellebrite: seized phone called this inmate's PAN
+    "inmate_cellebrite_msg_thread":       0.10,  # Cellebrite messages with this inmate's known external contacts
+
+    # ── External-contact signals ──────────────────────────────
+    "contact_called_inmate_pre_drop":     0.22,
+    "contact_visited_recently":           0.10,
+    "contact_deposited_recently":         0.10,
+    "contact_known_associate":            0.14,
+    "contact_msisdn_matches_mas":         0.20,  # strongest single-source link
+    "contact_plate_at_perimeter":         0.16,  # Flock: vehicle pass within 30 min of drone
+    "contact_plate_hotlist":              0.10,  # Flock NCIC / state-list hit
+    "contact_dmv_owner_in_viapath":       0.18,  # DMV-resolved owner appears in ViaPath records
+    "contact_cellebrite_location_near":   0.20,  # Cellebrite GPS pings near drop site
+    "contact_cellebrite_drone_app":       0.18,  # Cellebrite app data shows drone-control app
+
+    # ── Drone-centric signals (boost drone-event confidence) ──
+    "drone_dedrone_confirmed":            0.30,  # Dedrone confirmed within ±30s of acoustic
+    "drone_serial_known":                 0.40,  # Dedrone got serial — STRONGEST identifier
+    "drone_serial_matches_recovery":      0.50,  # serial matches a previously-recovered drone
 }
 
 
@@ -196,6 +212,36 @@ class CorrelationEngine:
         ]
         contact_candidates.sort(key=lambda c: c.score, reverse=True)
 
+        # Drone-centric signals: look for Dedrone confirmation, serial,
+        # serial-matches-recovery within ±30s of the drone event
+        drone_signals: dict[str, float] = {}
+        drone_signal_evidence: list[dict] = []
+        for ev in self._by_source.get("dedrone_detection", []):
+            if abs((ev.timestamp - t).total_seconds()) <= 30:
+                drone_signals["drone_dedrone_confirmed"] = 1.0
+                drone_signal_evidence.append({
+                    "source": ev.source,
+                    "summary": f"Dedrone confirmed track {ev.payload.get('track_id')} "
+                               f"({ev.payload.get('drone_classification', 'unknown class')})",
+                    "timestamp": ev.timestamp.isoformat(),
+                })
+                if ev.payload.get("drone_serial"):
+                    drone_signals["drone_serial_known"] = 1.0
+                    drone_signal_evidence.append({
+                        "source": ev.source,
+                        "summary": f"⭐ serial: {ev.payload['drone_serial']}",
+                        "timestamp": ev.timestamp.isoformat(),
+                    })
+                    if ev.payload.get("serial_matches_recovery_case_id"):
+                        drone_signals["drone_serial_matches_recovery"] = 1.0
+                        drone_signal_evidence.append({
+                            "source": "drone_forensics",
+                            "summary": (f"⭐⭐ serial matches recovered drone case "
+                                        f"{ev.payload['serial_matches_recovery_case_id']} — "
+                                        f"same physical airframe, repeat operation"),
+                            "timestamp": ev.timestamp.isoformat(),
+                        })
+
         return CorrelationReport(
             drone_event_id=str(id(drone_event)),
             drone_timestamp=t,
@@ -204,6 +250,8 @@ class CorrelationEngine:
             inmate_candidates=inmate_candidates[:top_n],
             external_candidates=contact_candidates[:top_n],
             generated_at=datetime.now(),
+            drone_signals=drone_signals,
+            drone_signal_evidence=drone_signal_evidence,
         )
 
     # ── Per-subject scoring ──────────────────────────────────
@@ -319,6 +367,45 @@ class CorrelationEngine:
                 signals["contact_msisdn_matches_mas"] = 1.0
                 evidence.append({"source": ev.source,
                                  "summary": f"MAS captured this phone number inside the facility",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            # Flock plate pass near perimeter within ±30 min of drone
+            if ev.source == "flock_detection" and dt <= 30 * 60:
+                if payload.get("plate") == msisdn:  # msisdn key reused for plate
+                    signals["contact_plate_at_perimeter"] = max(
+                        signals.get("contact_plate_at_perimeter", 0),
+                        _decay_score(dt, 30 * 60))
+                    evidence.append({"source": ev.source,
+                                     "summary": f"plate {payload.get('plate')} on {payload.get('camera_name')}, {dt:.0f}s away",
+                                     "timestamp": ev.timestamp.isoformat()})
+                    if payload.get("hotlist_hit"):
+                        signals["contact_plate_hotlist"] = 1.0
+                        evidence.append({"source": ev.source,
+                                         "summary": f"hotlist hit: {payload.get('hotlist_categories')}",
+                                         "timestamp": ev.timestamp.isoformat()})
+
+            # DMV owner of plate also appears in ViaPath records
+            if ev.source == "dmv_lookup" and payload.get("owner_in_viapath_records"):
+                signals["contact_dmv_owner_in_viapath"] = 1.0
+                evidence.append({"source": ev.source,
+                                 "summary": f"DMV owner '{payload.get('owner_name')}' has prior ViaPath contact",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            # Cellebrite — phone location near drone drop site
+            if ev.source == "cellebrite_location" and dt <= 60 * 60:
+                signals["contact_cellebrite_location_near"] = max(
+                    signals.get("contact_cellebrite_location_near", 0),
+                    _decay_score(dt, 60 * 60))
+                evidence.append({"source": ev.source,
+                                 "summary": f"seized phone GPS within {payload.get('accuracy_m')}m of drop site",
+                                 "timestamp": ev.timestamp.isoformat()})
+
+            # Cellebrite — drone-control app on seized phone
+            if ev.source == "cellebrite_app_data" and \
+                    payload.get("app_name", "").lower() in ("dji fly", "dji go 4", "autel explorer", "skydio", "litchi"):
+                signals["contact_cellebrite_drone_app"] = 1.0
+                evidence.append({"source": ev.source,
+                                 "summary": f"seized phone had {payload.get('app_name')} installed",
                                  "timestamp": ev.timestamp.isoformat()})
 
         composite = sum(signals.get(k, 0) * w for k, w in self.weights.items()

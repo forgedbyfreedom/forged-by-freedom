@@ -161,6 +161,91 @@ Status legend per item:
 
 ---
 
+## Section 5b — Dedrone (multi-sensor drone tracking + serial)
+
+| Item | Committee answer |
+|---|---|
+| Dedrone DroneTracker version (5.x / 6.x) | ⚪ |
+| **Integration mode** — REST / websocket / syslog | ⚪ |
+| Endpoint URL + auth (API key / mTLS / OAuth2) | ⚪ |
+| Pilot/controller location enabled (Pro tier)? | ⚪ |
+| Serial-number capture enabled? (DJI Remote ID — ⭐ strongest signal) | ⚪ |
+| Geographic origin (lat/lng Dedrone tracks are relative to) | ⚪ |
+| Sample drone-track event (sanitized JSON) | ⚪ |
+
+**Module impacted:** `echo_dedrone.py`. Three drone-centric correlation
+signals unlock once wired: `drone_dedrone_confirmed`, `drone_serial_known`,
+`drone_serial_matches_recovery`.
+
+---
+
+## Section 5c — Flock Safety (LPR camera network)
+
+| Item | Committee answer |
+|---|---|
+| Flock OS API endpoint (typically `https://<agency>.flockos.com/api/...`) | ⚪ |
+| API key with scopes `read:detections`, `read:vehicles` | ⚪ |
+| Camera IDs within 1-2 mi of the facility (authorized only) | ⚪ |
+| Network Sharing — can we query OTHER agencies' Flock cameras in-state? | ⚪ |
+| NCIC / state hotlist integration enabled? | ⚪ |
+| Sample detection record (sanitized JSON) | ⚪ |
+| Poll interval | ⚪ |
+
+**Module impacted:** `echo_flock.py`. Signals: `contact_plate_at_perimeter`,
+`contact_plate_hotlist`.
+
+---
+
+## Section 5d — SC DMV (plate → registered owner)
+
+| Item | Committee answer |
+|---|---|
+| **Integration mode** — SLED API / NLETS terminal / batch CSV | ⚪ |
+| Endpoint + auth (typically mTLS cert issued to specific operator) | ⚪ |
+| DPPA authorized-use language to log per query | ⚪ |
+| Operator ID for audit trail | ⚪ |
+| Sample DMV response (sanitized) | ⚪ |
+| Rate limits | ⚪ |
+| Multi-state NLETS access (for NC / GA / etc. plates)? | ⚪ |
+
+**Module impacted:** `echo_dmv_sc.py`. Signal: `contact_dmv_owner_in_viapath`.
+
+---
+
+## Section 5e — Cellebrite (UFDR extractions from seized phones)
+
+| Item | Committee answer |
+|---|---|
+| UFDR drop directory (network share path or SFTP host) | ⚪ |
+| Authentication for that share (Kerberos / SMB / SSH key) | ⚪ |
+| Chain-of-custody metadata expected per UFDR (case ID, officer, etc.) | ⚪ |
+| UFDR parser library: Cellebrite Reader SDK / ufed2json / ALEAPP / plaso | ⚪ |
+| PII redaction policy — what does ECHO STORE vs. reference by hash? | ⚪ |
+| Retention — confirm ECHO references UFDRs but never copies them | ⚪ |
+
+**Module impacted:** `echo_cellebrite.py`. Signals: `inmate_pan_called_by_seized_phone`,
+`inmate_cellebrite_msg_thread`, `contact_cellebrite_location_near`,
+`contact_cellebrite_drone_app`.
+
+---
+
+## Section 5f — Drone forensics (recovered airframes)
+
+| Item | Committee answer |
+|---|---|
+| Recovery-locker drop directory (network share / SFTP) | ⚪ |
+| Authentication for that share | ⚪ |
+| Forensic-extraction tool used: DJI FlightReader / DROP / Cellebrite Drone module / custom | ⚪ |
+| Output format (JSON / CSV / SQLite) | ⚪ |
+| Chain-of-custody metadata per recovery | ⚪ |
+| Reference photo location for each recovered drone | ⚪ |
+
+**Module impacted:** `echo_drone_forensics.py`. Feeds the serial-number
+match signal (`drone_serial_matches_recovery`) — strongest possible
+drone-centric signal (= same physical airframe used in a prior incident).
+
+---
+
 ## Section 10 — Test / dev environment
 
 | Item | Committee answer |
