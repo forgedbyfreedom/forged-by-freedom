@@ -52,6 +52,24 @@ The integration paths are typically:
   • SFTP daily CSV drops (legacy)
 Implementation should support all three.
 ────────────────────────────────────────────────────────────────────────
+
+TO COMPLETE — committee / Tecore admin must provide (see INTEGRATION_CHECKLIST.md):
+  1. Integration mode: "rest" | "syslog" | "sftp"
+  2. Endpoint URL / syslog listen-port / SFTP host+path
+  3. Authentication — API key / mTLS cert / SFTP key
+  4. Field mapping — your Tecore schema's field names → MasCaptureEvent
+       • Need: timestamp, imei, imsi, msisdn (if resolved), rf_cell_id,
+         attempted_action, destination, blocked, signal_strength_dbm,
+         first_seen_at_facility
+  5. RF cell → housing block mapping (echo_correlation needs to know
+     which housing block each MAS rf_cell_id covers, so it can match
+     MAS captures to inmate housing assignments). Usually a small static
+     dict provided by the agency RF coordinator.
+  6. Poll interval (REST) / syslog facility code / file-drop schedule (SFTP)
+
+Once provided, the only methods that need real implementation are
+TecoreConnector.start() and fetch_recent_captures().
+────────────────────────────────────────────────────────────────────────
 """
 from __future__ import annotations
 

@@ -43,6 +43,23 @@ The integration paths are typically:
   • Direct SQL access to a read-replica (largest facilities only)
 Implementation in this file should support all three.
 ────────────────────────────────────────────────────────────────────────
+
+TO COMPLETE — committee / ViaPath admin must provide (see INTEGRATION_CHECKLIST.md):
+  1. Integration mode: "rest" | "sftp" | "sql"
+  2. Endpoint URL / SFTP host+path / SQL connection string
+  3. Authentication — API key / SFTP key + passphrase / SQL credentials
+  4. Field mapping — your ViaPath schema's field names → the dataclasses below
+       • InmateCall: needs inmate_id, called_number, start_time, duration, ...
+       • TabletEvent: needs inmate_id, event_type, contact_id, timestamp, ...
+       • VideoVisit:  needs inmate_id, visitor_id, scheduled_start, ...
+       • Deposit:     needs inmate_id, depositor_name, amount, timestamp, ...
+  5. Watchlist source — where do "flagged contact" / "watchlist visitor"
+     lists live? (Some DOCs maintain in IRT; others in a separate SIU DB.)
+  6. Poll interval (REST) / file-drop schedule (SFTP) / query window (SQL)
+
+Once provided, the only methods that need real implementation are
+ViaPathConnector.start() and the four fetch_recent_*() methods.
+────────────────────────────────────────────────────────────────────────
 """
 from __future__ import annotations
 

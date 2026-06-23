@@ -30,7 +30,30 @@ all using the YOLOv8 (or v9/v11) family from Ultralytics:
 External dependencies when implemented:
   pip install ultralytics opencv-python torch torchvision
   GPU strongly recommended for >1 camera at >5 fps each.
+  Your work AI PC (RTX 3090/4090 + 128 GB RAM) is plenty — should run
+  all three detectors across ~20-40 cameras at 2-5 fps each
+  concurrently with face recognition.
 
+────────────────────────────────────────────────────────────────────────
+
+TO COMPLETE — committee must provide (see INTEGRATION_CHECKLIST.md):
+  1. Drone-detection model — paths to your trained .pt weights (or
+     confirmation we should use a public model like the Roboflow drone
+     detector as a starting point).
+  2. Phone-detection model — same. Single-frame YOLO on COCO's "cell
+     phone" class works for big phones at close range; small phones in
+     a closed fist need a fine-tune.
+  3. Violence-detection model — temporal model required (SlowFast,
+     MoViNet, X3D). Either committee-trained weights OR a confirmation
+     to use an open-source pretrained model + locally fine-tune.
+  4. Per-detector confidence thresholds (defaults: drone 0.55,
+     phone 0.50, violence 0.65).
+  5. Frame rate per detector per camera (default 2 fps each).
+  6. Whether vision frames should ALSO feed echo_face.py (the committee
+     FR system), or whether FR runs on its own frame stream.
+
+Once provided, fill in _load_models() and _infer() with the right
+YOLO calls; the rest of the worker loop is structural.
 ────────────────────────────────────────────────────────────────────────
 """
 from __future__ import annotations
