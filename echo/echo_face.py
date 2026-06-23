@@ -136,7 +136,7 @@ class FaceRecognitionClient:
 
         # ── File-watcher (air-gapped) ──────────────────────────────
         # write frame to drop dir, poll results dir, parse on hit
-
+        """
         return [], []  # safe no-op until wired
 
     def _parse_response(self, raw: dict) -> tuple[list[FaceMatch],
