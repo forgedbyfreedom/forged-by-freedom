@@ -56,6 +56,13 @@ _ENGINE: Optional[CorrelationEngine] = None
 _REPORTS: list[CorrelationReport] = []   # rolling — newest first
 _REPORTS_LOCK = threading.Lock()
 _MAX_REPORTS_KEPT = 200
+_FACILITY_CENTER: dict = {"lat": 33.8361, "lng": -81.1637}  # SC capitol; overridden by YAML
+
+
+def set_facility_center(lat: float, lng: float) -> None:
+    """Called by echo_multi.py from the YAML config so the map centers correctly."""
+    global _FACILITY_CENTER
+    _FACILITY_CENTER = {"lat": float(lat), "lng": float(lng)}
 
 
 def attach_engine(engine: CorrelationEngine) -> None:
@@ -80,6 +87,8 @@ INDEX_HTML = """<!doctype html>
 <html><head><meta charset="utf-8">
 <title>ECHO — Correlation Dashboard</title>
 <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root {
     --bg:#0a0d12; --surface:#15191f; --surface-2:#1c2128;
@@ -164,6 +173,16 @@ INDEX_HTML = """<!doctype html>
 
   #graph { height:520px; background:var(--bg); border:1px solid var(--border);
            border-radius:8px; }
+  #drone-map { height:460px; background:var(--bg); border:1px solid var(--border);
+               border-radius:8px; }
+  .leaflet-container { background:#0a0d12 !important; }
+  .leaflet-tile { filter:brightness(0.85) saturate(0.8); }   /* darken basemap to match theme */
+  .drone-track-list { max-height:160px; overflow-y:auto; margin-top:8px; font-size:11px; }
+  .drone-track-row { padding:6px 8px; border-left:3px solid var(--danger); margin-bottom:4px;
+                     background:var(--surface-2); border-radius:4px; }
+  .drone-track-row .id { color:var(--danger); font-weight:700; font-family:ui-monospace,monospace; }
+  .drone-track-row .meta { color:var(--text-dim); font-size:10px; margin-top:2px; }
+  .drone-track-row .serial { color:var(--alert); font-family:ui-monospace,monospace; }
 
   .pattern-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
   @media (max-width:700px) { .pattern-grid { grid-template-columns:1fr; } }
@@ -209,6 +228,16 @@ INDEX_HTML = """<!doctype html>
           <h2>Network Graph — Subjects & Connections</h2>
           <div id="graph"></div>
         </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h2>Live Drone Map — Dedrone tracks, pilot location, flight history</h2>
+      <div id="drone-map"></div>
+      <div class="drone-track-list" id="drone-track-list"></div>
+      <div style="font-size:10px; color:var(--text-dim); margin-top:6px;">
+        🔴 active drone &nbsp;·&nbsp; 🟡 pilot location (when RF-triangulated) &nbsp;·&nbsp;
+        🟦 facility &nbsp;·&nbsp; dashed line = flight history (last 10 min)
       </div>
     </div>
 
@@ -317,9 +346,95 @@ function renderTable(id, rows) {
   ).join('') || '<tr><td colspan="3" style="color:var(--text-dim);">no data yet</td></tr>';
 }
 
+// ── Live drone map (Leaflet) ──────────────────────────────────────
+let droneMap = null, droneMapLayers = [];
+function initDroneMap(centerLat, centerLng) {
+  if (droneMap) return;
+  droneMap = L.map('drone-map', {zoomControl: true, attributionControl: false})
+    .setView([centerLat, centerLng], 14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(droneMap);
+  L.marker([centerLat, centerLng], {
+    icon: L.divIcon({className: '', iconSize: [24, 24],
+      html: '<div style="background:#4c8aff;border:2px solid #fff;width:22px;height:22px;border-radius:4px;font-size:14px;text-align:center;line-height:18px;">🏢</div>'})
+  }).addTo(droneMap).bindPopup('Facility');
+}
+function renderDroneMap(tracks) {
+  if (!droneMap) return;
+  droneMapLayers.forEach(l => droneMap.removeLayer(l));
+  droneMapLayers = [];
+  if (!tracks || tracks.length === 0) return;
+  const bounds = [];
+  tracks.forEach(t => {
+    const hist = t.history || [];
+    // Flight history polyline
+    if (hist.length > 1) {
+      const latlngs = hist.map(p => [p.lat, p.lng]);
+      const line = L.polyline(latlngs, {color: '#e3534a', weight: 2, dashArray: '4 4', opacity: 0.7});
+      line.addTo(droneMap);
+      droneMapLayers.push(line);
+      latlngs.forEach(ll => bounds.push(ll));
+    }
+    // Current drone marker
+    if (t.current_lat && t.current_lng) {
+      const m = L.marker([t.current_lat, t.current_lng], {
+        icon: L.divIcon({className: '', iconSize: [26, 26],
+          html: '<div style="background:#e3534a;border:2px solid #fff;width:24px;height:24px;border-radius:50%;font-size:13px;text-align:center;line-height:20px;box-shadow:0 0 10px rgba(227,83,74,0.8);">🛸</div>'})
+      }).addTo(droneMap);
+      m.bindPopup(
+        `<b>${t.classification || 'unknown drone'}</b><br>` +
+        `track ${t.track_id}<br>` +
+        (t.serial ? `serial: <code>${t.serial}</code><br>` : '') +
+        `alt: ${t.current_alt ? t.current_alt.toFixed(0) + 'm' : '—'}<br>` +
+        `confidence: ${(t.confidence*100).toFixed(0)}%`);
+      droneMapLayers.push(m);
+      bounds.push([t.current_lat, t.current_lng]);
+    }
+    // Pilot location (if Dedrone triangulated it)
+    if (t.pilot_lat && t.pilot_lng) {
+      const p = L.marker([t.pilot_lat, t.pilot_lng], {
+        icon: L.divIcon({className: '', iconSize: [22, 22],
+          html: '<div style="background:#e7b13a;border:2px solid #fff;width:20px;height:20px;border-radius:50%;font-size:12px;text-align:center;line-height:17px;">🎮</div>'})
+      }).addTo(droneMap);
+      p.bindPopup(`<b>Pilot (RF triangulated)</b><br>track ${t.track_id}`);
+      droneMapLayers.push(p);
+      // Line from pilot to drone
+      if (t.current_lat && t.current_lng) {
+        const link = L.polyline([[t.pilot_lat, t.pilot_lng], [t.current_lat, t.current_lng]],
+          {color: '#e7b13a', weight: 1, dashArray: '2 6', opacity: 0.6});
+        link.addTo(droneMap);
+        droneMapLayers.push(link);
+      }
+      bounds.push([t.pilot_lat, t.pilot_lng]);
+    }
+  });
+  if (bounds.length > 0) droneMap.fitBounds(bounds, {padding: [40, 40], maxZoom: 17});
+}
+function renderDroneTrackList(tracks) {
+  $('drone-track-list').innerHTML = (tracks || []).map(t => `
+    <div class="drone-track-row">
+      <span class="id">${escapeHtml(t.track_id)}</span>
+      &nbsp;<span>${escapeHtml(t.classification || 'unknown')}</span>
+      ${t.serial ? '&nbsp;⭐ <span class="serial">' + escapeHtml(t.serial) + '</span>' : ''}
+      ${t.serial_matches_recovery_case_id ? '&nbsp;<span class="pill pill-recovery">SAME AIRFRAME ' + escapeHtml(t.serial_matches_recovery_case_id) + '</span>' : ''}
+      <div class="meta">
+        ${t.history.length} positions over ${t.duration_sec.toFixed(0)}s
+        ${t.pilot_lat ? ' · 🎮 pilot triangulated' : ' · pilot unknown'}
+      </div>
+    </div>`).join('') || '<div style="color:var(--text-dim); padding:8px;">No active drone tracks. Dedrone events appear here in real time.</div>';
+}
+
 async function refresh() {
   try {
     const s = await (await fetch('/api/snapshot')).json();
+    // Init map on first response that has a facility center
+    if (s.facility_center && !droneMap) {
+      initDroneMap(s.facility_center.lat, s.facility_center.lng);
+    }
+    const dt = await (await fetch('/api/drone_tracks')).json();
+    renderDroneMap(dt.tracks);
+    renderDroneTrackList(dt.tracks);
     $('stat-events').textContent  = s.total_events;
     $('stat-drones').textContent  = s.drones_today;
     $('stat-reports').textContent = s.reports_count;
@@ -413,7 +528,62 @@ def _snapshot() -> dict:
         "drone_hour_buckets": buckets,
         "top_external_contacts": top_contacts,
         "top_plates": top_plates,
+        "facility_center": _FACILITY_CENTER,
     }
+
+
+def _drone_tracks_snapshot() -> dict:
+    """Build live Dedrone-track view: current position, pilot location,
+    flight history (last 10 min) per active track."""
+    if _ENGINE is None:
+        return {"tracks": []}
+    with _ENGINE._lock:
+        events = list(_ENGINE._by_source.get("dedrone_detection", []))
+    # Group by track_id, only keep tracks active in last 5 min
+    cutoff = datetime.now() - timedelta(minutes=5)
+    by_track: dict[str, list] = defaultdict(list)
+    for ev in events:
+        tid = ev.payload.get("track_id")
+        if tid and ev.timestamp >= cutoff - timedelta(minutes=10):  # 10 min of history
+            by_track[tid].append(ev)
+    tracks = []
+    for tid, evs in by_track.items():
+        evs.sort(key=lambda e: e.timestamp)
+        latest = evs[-1]
+        # Only include if "active" (most recent event in last 5 min)
+        if latest.timestamp < cutoff:
+            continue
+        history = [
+            {"lat": e.payload.get("position_lat"),
+             "lng": e.payload.get("position_lng"),
+             "alt": e.payload.get("position_alt_m"),
+             "ts":  e.timestamp.isoformat()}
+            for e in evs
+            if e.payload.get("position_lat") is not None
+            and e.payload.get("position_lng") is not None
+        ]
+        duration = (evs[-1].timestamp - evs[0].timestamp).total_seconds()
+        tracks.append({
+            "track_id": tid,
+            "classification": latest.payload.get("drone_classification"),
+            "make": latest.payload.get("drone_make"),
+            "model": latest.payload.get("drone_model"),
+            "serial": latest.payload.get("drone_serial"),
+            "serial_matches_recovery_case_id": latest.payload.get("serial_matches_recovery_case_id"),
+            "confidence": latest.payload.get("confidence", 0.0),
+            "current_lat": latest.payload.get("position_lat"),
+            "current_lng": latest.payload.get("position_lng"),
+            "current_alt": latest.payload.get("position_alt_m"),
+            "pilot_lat": latest.payload.get("pilot_lat"),
+            "pilot_lng": latest.payload.get("pilot_lng"),
+            "rf_fingerprint": latest.payload.get("rf_fingerprint"),
+            "sensors": latest.payload.get("sensors_contributing", []),
+            "history": history,
+            "duration_sec": duration,
+            "first_seen": evs[0].timestamp.isoformat(),
+            "last_seen":  evs[-1].timestamp.isoformat(),
+        })
+    return {"tracks": tracks}
 
 
 def _report_to_dict(r: CorrelationReport) -> dict:
@@ -448,6 +618,10 @@ def index():
 def api_snapshot():
     return jsonify(_snapshot())
 
+@app.route("/api/drone_tracks")
+def api_drone_tracks():
+    return jsonify(_drone_tracks_snapshot())
+
 
 # ── Demo mode — generates synthetic events so the dashboard renders ─
 def _seed_demo_events(engine: CorrelationEngine) -> None:
@@ -465,12 +639,32 @@ def _seed_demo_events(engine: CorrelationEngine) -> None:
     engine.ingest(Event("flock_detection", now - timedelta(minutes=1), {
         "plate": "ABC1234", "plate_state": "SC",
         "camera_name": "Hwy 17 + 3rd", "hotlist_hit": False}))
-    # Dedrone confirms with serial number
-    engine.ingest(Event("dedrone_detection", now, {
-        "track_id": "T-9001", "drone_classification": "DJI Mavic 3",
-        "drone_make": "DJI", "drone_model": "Mavic 3",
-        "drone_serial": "1581F5BNC23A100K0M00",
-        "confidence": 0.94}))
+    # Dedrone — multiple pings building a flight track + pilot location
+    facility = _FACILITY_CENTER
+    track_path = [
+        # (offset seconds back, dlat, dlng, alt)
+        (240, -0.0040, +0.0050, 80),
+        (180, -0.0020, +0.0035, 90),
+        (120, -0.0005, +0.0020, 100),
+        ( 60, +0.0005, +0.0008, 95),
+        ( 20, +0.0008, +0.0003, 60),   # closer to facility
+        (  0, +0.0010, +0.0001, 30),   # over the yard
+    ]
+    for back, dlat, dlng, alt in track_path:
+        engine.ingest(Event("dedrone_detection", now - timedelta(seconds=back), {
+            "track_id": "T-9001",
+            "drone_classification": "DJI Mavic 3",
+            "drone_make": "DJI", "drone_model": "Mavic 3",
+            "drone_serial": "1581F5BNC23A100K0M00",
+            "serial_matches_recovery_case_id": "SIU-2026-0078",
+            "position_lat": facility["lat"] + dlat,
+            "position_lng": facility["lng"] + dlng,
+            "position_alt_m": alt,
+            "pilot_lat":  facility["lat"] - 0.0050,    # RF-triangulated pilot, 500m away
+            "pilot_lng":  facility["lng"] + 0.0070,
+            "confidence": 0.94,
+            "sensors_contributing": ["rf", "video"],
+        }))
     # MAS capture
     engine.ingest(Event("mas_capture", now, {
         "imei": "356123456789012", "msisdn": "+18435551234",
