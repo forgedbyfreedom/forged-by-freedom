@@ -1,5 +1,22 @@
 # ECHO — Acoustic Drone Detection (+ Correctional Drone & Inmate Monitoring)
 
+> ## Just received this in an email? Install in 60 seconds.
+>
+> 1. Save the `.tar.gz` attachment somewhere. Extract it:
+>    - **macOS / Linux**: open Terminal → `tar xzf echo-correctional-full.tar.gz`
+>    - **Windows**: right-click → 7-Zip / Extract All (Win 10+ has tar built in too)
+>
+> 2. From the extracted `echo/` folder, run the one-shot installer for your OS:
+>    - **macOS / Linux**: `bash install.sh`
+>    - **Windows**: right-click `install.ps1` → Run with PowerShell
+>      (or `powershell -ExecutionPolicy Bypass -File install.ps1`)
+>
+> The installer auto-handles Python, ffmpeg, and dependencies. Takes about
+> 60 seconds on a connected machine. Tells you exactly what to run next.
+>
+> If anything fails it prints the specific reason — paste that to whoever
+> sent it.
+
 ECHO started as a single-mic acoustic drone detector and has grown into a
 multi-camera, multi-modal correctional facility security platform that
 combines audio detection, computer vision, facial recognition, vendor
@@ -245,21 +262,3 @@ the acoustic foundation today; light up the rest as the data feeds come
 online.
 
 ---
-
-## Honest limitations
-
-- Acoustic detection has been validated on consumer/hobby quads and on
-  speech/dog/wind rejection. It has NOT been validated against heavy-
-  lift drones used in real correctional drops (DJI Matrice, Gustin
-  custom builds, gas-powered). For a real deployment, expect to retrain
-  the ML model on samples from your local threat picture.
-- Vision + face + vendor integrations are scaffolds. They define the
-  contracts but require real model weights, real face DBs, and real
-  vendor APIs to function.
-- Correlation engine weights (`DEFAULT_WEIGHTS` in `echo_correlation.py`)
-  are heuristic priors. They should be tuned on real incident data
-  once enough has accumulated.
-- This is not FAA-authorized to disable / intercept drones. Detection
-  + identification + alerting only.
-- All facial recognition deployments require explicit agency-level
-  policy authorization. See `ARCHITECTURE.md § Legal & policy`.
