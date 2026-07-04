@@ -109,6 +109,12 @@ DEFAULT_WEIGHTS = {
     "drone_dedrone_confirmed":            0.30,  # Dedrone confirmed within ±30s of acoustic
     "drone_serial_known":                 0.40,  # Dedrone got serial — STRONGEST identifier
     "drone_serial_matches_recovery":      0.50,  # serial matches a previously-recovered drone
+    "drone_lora_link_detected":           0.22,  # LoRa/LoRaWAN chirp in facility RF band ±90s
+                                                 # (sub-GHz control link — home-built drop rigs
+                                                 #  and ExpressLRS-900 that Dedrone often misses)
+    "drone_lora_bearing_toward_facility": 0.28,  # KrakenSDR direction-finding puts the LoRa
+                                                 # ground station within a bearing cone that
+                                                 # intersects the facility perimeter
 }
 
 
@@ -241,6 +247,31 @@ class CorrelationEngine:
                                         f"same physical airframe, repeat operation"),
                             "timestamp": ev.timestamp.isoformat(),
                         })
+
+        # LoRa/LoRaWAN sub-GHz link within ±90s of the drone event
+        # (echo_lora.py — home-built drop rigs / ExpressLRS-900 that
+        # Dedrone's 2.4/5.8 GHz-tuned coverage typically misses)
+        for ev in self._by_source.get("lora_detection", []):
+            if abs((ev.timestamp - t).total_seconds()) <= 90:
+                drone_signals["drone_lora_link_detected"] = 1.0
+                proto = ev.payload.get("protocol_guess", "lora_unknown")
+                freq_mhz = ev.payload.get("center_freq_hz", 0) / 1e6
+                drone_signal_evidence.append({
+                    "source": ev.source,
+                    "summary": (f"LoRa chirp {proto} @ {freq_mhz:.3f} MHz "
+                                f"RSSI {ev.payload.get('rssi_dbm', 0):.0f} dBm "
+                                f"(sub-GHz drone control link)"),
+                    "timestamp": ev.timestamp.isoformat(),
+                })
+                bearing = ev.payload.get("source_bearing_deg")
+                if bearing is not None:
+                    drone_signals["drone_lora_bearing_toward_facility"] = 1.0
+                    drone_signal_evidence.append({
+                        "source": ev.source,
+                        "summary": (f"⭐ direction-finding bearing {bearing:.1f}° "
+                                    f"toward facility (KrakenSDR)"),
+                        "timestamp": ev.timestamp.isoformat(),
+                    })
 
         return CorrelationReport(
             drone_event_id=str(id(drone_event)),

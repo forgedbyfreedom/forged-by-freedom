@@ -112,6 +112,13 @@ echo/
 ├── echo_drone_forensics.py           ··  PLACEHOLDER — recovered-airframe data (flight log, pairing, media)
 ├── echo_viapath.py                   ··  PLACEHOLDER — ViaPath/GTL/IRT (calls, tablet, visit, deposit)
 ├── echo_tecore.py                    ··  PLACEHOLDER — Tecore MAS contraband-phone capture
+├── echo_lora.py                      ··  PLACEHOLDER — LoRa/LoRaWAN SDR sniffer (sub-GHz drone
+│                                          control link — home-built drop rigs / ExpressLRS-900
+│                                          that 2.4 GHz-tuned counter-UAS misses)
+├── echo_lily_pads.py                 OK  Distributed acoustic sensor network + TDOA fusion
+│                                          (Ukraine Sky Fortress-style: many $140 Raspberry-Pi
+│                                          nodes → position tracking across a whole facility;
+│                                          reuses echo_engine.py on each node)
 │
 ├── ARCHITECTURE.md                   full system design + procurement + legal
 ├── INTEGRATION_CHECKLIST.md          the deliverable for the committee

@@ -246,6 +246,81 @@ drone-centric signal (= same physical airframe used in a prior incident).
 
 ---
 
+## Section 5g — LoRa / LoRaWAN SDR (sub-GHz drone control link)
+
+Home-built drop rigs, ExpressLRS-900 kits, and Meshtastic-based
+telemetry all live in the 902-928 MHz US ISM band that traditional
+2.4/5.8 GHz counter-UAS (Dedrone RfPatrol, most legacy systems)
+does not cover. ECHO adds an SDR-based CSS-preamble sniffer to close
+that gap. Detection alone — no decryption required — is a strong
+correlate signal because facilities generally have zero legitimate
+LoRa emitters inside the fence line once whitelisted.
+
+| Item | Committee answer |
+|---|---|
+| Hardware selection: RTL-SDR ($30) / HackRF ($320) / USRP B210 ($2.3k) / KrakenSDR ($600 + DF) | ⚪ |
+| Antenna: type (whip / discone / log-periodic), gain (dBi), install height | ⚪ |
+| Deploy PC USB port allocation (SDR needs USB 2.0+ with sustained bandwidth) | ⚪ |
+| Region plan: US915 (default) / EU868 / AS923 / IN865 | ⚪ |
+| Facility RF audit — list of LEGITIMATE 900 MHz emitters inside fence (AMR meters, staff radios, legacy telemetry). Each gets frequency-whitelisted. | ⚪ |
+| Demod stack: (a) preamble-only default / (b) gr-lora GNU Radio flowgraph / (c) sx126x_decoder community fork | ⚪ |
+| Retention policy for raw IQ captures (default: 24h rolling; flagged captures per case retention) | ⚪ |
+| FCC authorization letter — required IF transmit-side counter-response ever intended (default: NO transmit; jamming = federal violation without waiver) | ⚪ |
+| Direction-finding: KrakenSDR array install? (Adds `drone_lora_bearing_toward_facility` signal — pilot ground station localization) | ⚪ |
+
+**Module impacted:** `echo_lora.py`. Feeds two correlation signals:
+`drone_lora_link_detected` (any qualifying chirp ±90s of drone event)
+and `drone_lora_bearing_toward_facility` (KrakenSDR-only — bearing cone
+intersects perimeter).
+
+**Legal notes:**
+- Passive receive is lawful under 47 CFR § 15.
+- Decrypting LoRaWAN traffic without authorization likely violates
+  CFAA + potentially Wiretap Act — store raw IQ, log preamble
+  metadata, hand encrypted payloads to a warrant-driven analyst.
+- Transmit / jamming requires FCC experimental license or statutory
+  authorization (federal prisons can obtain; most state facilities
+  cannot without legislative action). DEFAULT: transmit disabled.
+
+---
+
+## Section 5h — Acoustic Lily Pads (distributed sensor network)
+
+Ukraine Sky Fortress-inspired network of low-cost networked microphones
+spread across (and around) the facility. Each node runs the same
+`echo_engine.py` detector; the central hub time-groups detections and
+runs TDOA fusion to produce (x, y, z) drone tracks — turning one
+detector into a facility-wide tracking radar for ~$3k of hardware.
+
+| Item | Committee answer |
+|---|---|
+| Per-node hardware tier: basic Pi+USB mic ($140) / Pi+MEMS array+GPS ($245) / pro grade ($500+) | ⚪ |
+| Number of nodes + install locations (recommend ≥ 4 for 2D, ≥ 5 for altitude) | ⚪ |
+| Surveyed (x, y, z) coordinates in facility-local ENU meters per node | ⚪ |
+| Facility ENU origin — chosen once (lat, lng, bearing to north) for WGS84 conversion | ⚪ |
+| Clock sync: GPS PPS (best) / PTP over wired PoE (good) / NTP (coarse only) / ultrasonic beacon (cheap fallback) | ⚪ |
+| Transport: MQTT broker / gRPC / HTTP POST | ⚪ |
+| Broker/endpoint URL + auth | ⚪ |
+| Retention: raw audio ON/OFF (default OFF — detections only) | ⚪ |
+| Public-audio signage plan (for perimeter nodes near sidewalks / visitor lots) | ⚪ |
+| Federation ON/OFF: share tracks across sister facilities via a DOC-controlled central service | ⚪ |
+| Production TDOA solver: keep the placeholder Gauss-Newton in `echo_lily_pads.py`, or swap in `scipy.optimize.least_squares` (recommended)? | ⚪ |
+
+**Module impacted:** `echo_lily_pads.py`. Emits fused
+`LilyPadTrack` events into the correlation engine as
+`drone_audio` events tagged `source_kind: "lily_pad_tdoa"`
+with position — the operator dashboard's Leaflet map plots them
+distinctly from single-camera detections.
+
+**Legal / policy notes:**
+- Perimeter mics can pick up voices on public sidewalks; SC is
+  one-party-consent for audio, but public-facing installs need
+  signage per DOC policy.
+- Federation crosses agency policy lines — route through a central
+  DOC-controlled service, not peer-to-peer between sites.
+
+---
+
 ## Section 10 — Test / dev environment
 
 | Item | Committee answer |

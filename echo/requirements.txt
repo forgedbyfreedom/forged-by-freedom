@@ -12,3 +12,8 @@ PyYAML>=6.0          # camera/zone/alert-routing config (echo_multi, echo_zones)
 # torch torchvision      # echo_vision.py — YOLO inference
 # insightface            # echo_face.py — facial recognition
 # faiss-cpu              # echo_face.py — inmate face DB lookups
+# pyrtlsdr               # echo_lora.py — RTL-SDR ($30 dongle) LoRa preamble sniffer
+# SoapySDR               # echo_lora.py — HackRF / USRP / KrakenSDR abstraction (alt to pyrtlsdr)
+# scipy                  # echo_lora.py — CSS chirp correlation (FFT + matched filter)
+# (GNU Radio 3.10+ + gr-lora out-of-tree module needed for full LoRa demod;
+#  install via apt: `apt install gnuradio` then build gr-lora from source.)
