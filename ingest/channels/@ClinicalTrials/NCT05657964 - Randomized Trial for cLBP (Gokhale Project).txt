@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05657964
+Title: Randomized Trial for cLBP (Gokhale Project)
+Official Title: A Randomized Comparative Effectiveness Trial of Two Postural Therapies for People With Chronic Lower Back Pain (cLBP)-Gokhale Project
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: low back pain exercise
+
+SUMMARY:
+The study aims to compare the effectiveness of the Gokhale Method posture therapy for low back pain (LBP) management to standard physical therapy (PT) with posture training. The second aim of this study is to evaluate usability and user adherence of the online/digital intervention through the Gokhale Method Foundation Class (online delivery with smartphone App).
+
+The investigator hopes to learn:
+
+The effectiveness of the Gokhale Method posture therapy for low back pain management, in comparison to the effectiveness of standard physical therapy with posture training.
+
+the usability and user adherence of the online/digital intervention through the Gokhale Method Foundation Class (online delivery with smartphone App).
+
+DETAILED DESCRIPTION:
+100 participants with chronic low back pain will be recruited through the Stanford PMR clinics (Redwood City, Emeryville, Los Gatos, and Palo Alto). Information about the study will also be disseminated to the Stanford Primary Care clinics and through community advertisements.
+
+Patients will be referred to the reaserch team by the providers who is been recommended for Physical Therapy.
+
+Research team personnel will approach the recommended patients via email and will screen them prior to consenting for eligibility criteria by sending out a set of questionnaires via Redcap.
+
+Eligible patients will be consented remotely via Redcap and will be subjected to randomization.
+
+Eligible and consented participants will be randomly assigned (1:1) into one of the two intervention groups. Prior to intervention, participants will be asked to complete questionnaires on demographics, self-reported levels of pain, functional status, and disability levels. The questionnaires include:
+
+Roland Morris Disability Questionnaire (RMDQ), Numeric Pain Rating Scale (NPRS), Patient-Reported Outcomes Measurement Information System (PROMIS-29),
+
+Participants will be randomized (1:1) into the Gokhale method posture treatment (Gokhale) arm will receive a 18-sessions coaching under the Gokhale Elements course (may spread between 6-12 weeks, 1- 2 times per week, online delivery). Participants randomized into the standard care/physical therapy (PT) arm will similarly receive a standardized PT prescription during a 6-12 weeks period, meeting 1-2 times per week, to include posture education and training, therapeutic exercise instructions and development of an independent home exercise program.
+
+Participants enrolled in the Gokhale Arm will be provided the Gokhale PostureTracker, a wearable posture monitoring sensor developed for interactive posture coaching, and a loaner smartphone with pre-installed App. Participants will be provided instruction to apply the sensor on their lumbar area and receive real-time visual feedback on their posture kinematic during the class. Participants can also perform normal daily activities while wearing the device. Data collected by the sensor will be sent to a HIPAA compliance server and shared with Stanford researchers.
+
+Participant will complete remote follow-up assessments upon completion of their respective intervention, and at 6, and 12-month post intervention.
+
+Primary outcomes assessed at baseline and each follow-up include the RMDQ,NPRS, PROMIS-29, PCS Secondary outcomes at each timepoint include 1) patient satisfaction and adherence. 2) Type, incidence and severity of complications and adverse events. 3) Concurrent pain medication use (including opioids) All collected data will be stored in a Stanford-secured server. No data would be transmitted to a third party. Access to the data will be limited exclusively to members of the research team.
+
+PRIMARY OUTCOMES:
+  - NPRs ( national pain score)
+  - PROMIS-29 questionnaire
+  - RMDQ questionnaire
+
+INTERVENTIONS:
+  - DEVICE: Gokhale sensor
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05657964

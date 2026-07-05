@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04922216
+Title: Adaptive Goals and Interventions for Lifestyle Enhancement
+Official Title: Optimization of a mHealth Behavioral Weight Loss Intervention for Young Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 759
+Topic: sports nutrition
+
+SUMMARY:
+Mobile obesity interventions have the potential to reach a diverse population in need; however, while effective, have not resulted in weight losses obtained in in-person interventions. Newer digital approaches called Just-in-Time Adaptive Interventions (JITAI) that offer adaptive, personalized feedback 'when needed' and in 'real time' offer an opportunity to use digital health tools "just in time". This study seeks to identify the optimal components of a comprehensive weight loss JITAI that results in weight losses that meet or exceed those in existing remotely delivered interventions.
+
+DETAILED DESCRIPTION:
+Obesity has reached epidemic proportions in the United States and is recognized as a major cause of morbidity and mortality. Young adults (18-35 years) are at particularly high risk for weight gain and obesity. In-person behavioral interventions generally produce clinically significant weight losses; however, cost and access limit their potential to reduce obesity at a population level. Although web-based interventions that mimic the structure of weekly face-to-face treatment have proven a viable alternative treatment, weight losses are generally smaller than in-person treatment. Exclusively mobile treatments have been less effective, producing 1-3 kgs over 6 months. Newer digital intervention approaches called "Just-in-Time Adaptive Interventions" (JITAIs) promise to improve upon outcomes by offering adaptive, personalized feedback on behavior "when needed" in "real time," rather than on a fixed schedule. This "just-in-time," or JIT, approach is made possible by the emergence of low-cost and widely available digital health tools that allow for the collection of continually updated health data. However, few studies have used JIT approaches in remotely delivered, fully scalable weight loss interventions. Although JITAIs are a potentially transformative approach to delivering obesity interventions, a major obstacle in their development is efficient selection of components and systematic design of an optimized intervention package that produces clinically meaningful weight losses with a population-level strategy. To solve this problem, this trial will use the Multiphase Optimization Strategy (MOST), an engineering-inspired framework, and a highly efficient experimental design to identify which levels of 5 intervention components contribute meaningfully to change in weight over 6 months among young adults with overweight and obesity. All participants (n=608) will receive a core 6-month weight loss intervention that includes evidence-based lessons, behavioral skills training, and daily weighing. With the goal of determining if greater adaptation will lead to greater weight loss, participants will be randomized to standard versus more adaptive options of 5 additional intervention components: 1) diet monitoring approach (standard vs. simplified), 2) adaptive physical activity goals (weekly vs. daily), 3) decision points for message timing (fixed vs. adaptive), 4) decision rules for message content (standard vs. adaptive), and 5) message choice (no vs. yes). Candidate components have been carefully selected from empirical evidence, tested in prior studies conducted by the research team, or in a pilot micro-randomized trial conducted by the research team. Assessments will occur at 0, 3 and 6 months to accomplish the following specific aims: 1) Build an optimized JITAI consisting of the set of intervention components that yield the greatest improvement in weight change among young adults at 6 months; 2) Conduct mediation analyses to test the relationships 
+
+PRIMARY OUTCOMES:
+  - Weight (kg)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Core
+  - BEHAVIORAL: Standard Diet Monitoring
+  - BEHAVIORAL: Simplified Diet Monitoring
+  - BEHAVIORAL: Adaptive Activity Goals (Daily)
+  - BEHAVIORAL: Adaptive Activity Goals (Weekly)
+
+ELIGIBILITY:
+Age: 18 Years to 39 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04922216

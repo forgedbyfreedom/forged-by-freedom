@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05147961
+Title: Precision Medicine for Preventing Type 2 Diabetes: a Step Forward
+Official Title: Precision Medicine for Preventing Type 2 Diabetes: a Step Forward (PRE-MED2)
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 300
+Topic: exercise intervention obesity
+
+SUMMARY:
+The prevalence of type 2 diabetes (T2D) has been rising rapidly with an increased burden to the healthcare system. As such T2D prevention is highly recommendable, and, theoretically, it can definitely be successful. However, though feasible T2D prevention is difficult to implement due to the heterogeneity of the disease that make response to population intervention (and treatment) only partially successful. Precision medicine aims to prevent chronic diseases by tailoring interventions or recommendations to a combination of a genetic background, metabolic profile, and lifestyle. Classification of individuals at risk into clusters that differ in their susceptibility to develop T2D may foster the identification of preventive interventions. Recent advances in omics technologies have offered opportunities as well as challenges in the use of precision medicine to prevent T2D. Moreover, new mobile health (mHealth) technologies have enhanced how diabetes is managed. However, little is still known about the effectiveness of mHealth technology as intervention tools for reducing diabetes risk.
+
+DETAILED DESCRIPTION:
+Multicenter, interventional study (mHealth automated behavioral intervention versus traditional recommendations) designed: 1. toexplore the potential of more accurate subgroup distinction in prediabetes that may help to deliver a more effective preventive strategy with the final goal to enhance the possibility to prevent or delay the development of type 2 diabetes; 2. toexplore the use of mHealth to modify lifestyle in a subgroup of subjects known for their elevated risk of developing type 2 diabetes (i.e. obese and women with previous gestational diabetes) and to determine the impact of such strategies on the basis of individual characterization.
+
+Phase 1: 1200 subjects at high risk of developing type 2 diabetes will be enrolled based on an opportunistic approach (FINDRISK questionnaire).The questionnaire will be made available at GP's offices, Pharmacies as well as through media.Moreover, the infrastructure for data collection and patient interventions will be developed.
+
+Phase 2: all individuals will be characterized on the basis of diet habits (EPIC questionnaire; Binge Eating Scale) and physical activity (by a wrist-worn wearable device) as well metabolic profile (complete blood count, creatinine, plasma glucose and insulin, HbA1c, liver function tests, total cholesterol, HDL cholesterol, triglycerides, urine test, auto-antibody anti-GAD, and A/C ratio on urine spot sample; 75-g oral glucose tolerance test; HOMA-B and HOMA-IR)for identification of special subgroups.Circulating RNA and miRNAwill be extracted from lymphocytes and plasmafor identification ofbiomarkers for prediction of risk of disease and new targets for preventive intervention. A biobank of serum, urine and stool samples will be also collected genetic characterization and for omics profiling.
+
+Phase 3, all lab determination and cluster analysis will be performed. All data will be integrated in the infrastructurefor the identification of new relevant factors and indicators useful for better understanding health conditions and outcomesand for the analysis of discrete risk subtypes (cluster).
+
+Phase 4: the validity of themHealth approach on the metabolic and lifestyle attitude as a function of the individual characterization as obtained in Phase 3 will be tested in the exploratory clinical trial.ThemHealth automated behavioral intervention via E-mail, web, and mobile phone will be developed and tested in a trial in two high-risk populations of obese non-diabetic subjects (n=150) and women with previous gestational diabetes (n=150). These subjects will be randomized 1:1 to either 9-month conventional recommendation for correct lifestyle based on the procedures described in the Diabetes Prevention Programme or mHealth automated behavioral intervention via E-mail, web, and mobile phone. Subjects will be seen at 3-month interval for recording of anthropometric measurements and determination of fasting plasma insulin and glucose as well as lipid profile. During the last two weeks of t
+
+PRIMARY OUTCOMES:
+  - Development of type 2 diabetes, diagnosed by fasting or post-challenge plasma glucose concentrations meeting the American Diabetes Association criteria.
+
+INTERVENTIONS:
+  - OTHER: Digital Health
+  - OTHER: Standard care
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05147961

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05648032
+Title: PLT and Steroid in Lateral Epicondylopathy and Supraspinatus Calcific Tendinopathy
+Official Title: The Clinical Application of PLT Combined With Steroid in Lateral Epicondylopathy and Supraspinatus Calcific Tendinopathy
+Status: UNKNOWN
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 180
+Topic: tendon injury
+
+SUMMARY:
+PLT vs. steroid vs. PLT + steroid, which treatment is most effective in lateral epicondylitis (or tennis elbow) and supraspinatus calcific tendinitis.
+
+DETAILED DESCRIPTION:
+Lateral epicondylitis (or tennis elbow) and supraspinatus calcific tendinitis are common tendinopathies of the upper limb and both have negative impacts on the patients' quality of life. The former affects function of wrist extension due to degeneration of common extensor tendons; the latter causes severe pain and limitation of shoulder range of motion due to calcific deposits within the supraspinatus tendon. Current common injection therapies are ultrasound-guided injection of steroid or platelet-rich plasma (PRP).
+
+Previous studies have shown that steroid injection provides early but short-term pain reduction, while PRP injection causes post-injection pain by inducing inflammation but provides long-term pain relief and functional improvement. It may provide early pain reduction with long-term tissue regeneration if combining steroid and PRP. A recent study on tennis elbow showed that inclusion of steroid in the autologous whole blood and 20% dextrose injection can reduce pain during early treatment, without interfering with the therapeutic effects.
+
+Furthermore, disadvantages of current PRP include difficulty in quantifying platelet numbers and growth factor activity, and in long-term preservation. In this study lyophilized platelet (PLT) can solve these problems, which can be dissolved in saline before injection.
+
+This 3-arm randomized controlled trial will divide subjects into the PLT group (group A), steroid group (group B) or PLT+steroid group (group C). Therapeutic effects will be evaluated by pain visual analogue scale (VAS), grip dynamometer, and disabilities of the arm, shoulder, and hand (DASH) questionnaires during follow-ups at 2nd, 4th, 6th, 12th and 24th week after treatment, and ultrasound at 12th and 24th week . The hypothesis is that PLT+steroid injection will have earlier pain reduction than PLT injection and longer effects of pain reduction and functional improvement.
+
+PRIMARY OUTCOMES:
+  - Lateral elbow pain and shoulder pain (worst in the last one week)
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: lyophilized platelet (30ng) and triamcinolone acetonide 10mg
+  - OTHER: lyophilized platelet (30ng)
+  - DRUG: triamcinolone acetonide 10mg
+
+ELIGIBILITY:
+Age: 25 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05648032

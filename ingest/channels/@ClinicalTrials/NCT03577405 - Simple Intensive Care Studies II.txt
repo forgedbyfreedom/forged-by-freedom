@@ -1,0 +1,58 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03577405
+Title: Simple Intensive Care Studies II
+Official Title: Simple Intensive Care Studies II
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1010
+Topic: creatine supplementation
+
+SUMMARY:
+Critically ill patients admitted to the intensive care unit (ICU) frequently suffer from circulatory shock or respiratory distress, with high morbidity and mortality up to 40%. After initial fluid resuscitation other complications associated with either treatment or disease may arise. A consequence of treatment might be fluid overload or overfilling. Multiple studies have shown the possible negative effects of - too much - fluid administration, such as venous congestion. Venous congestion entails venous fluid overload, manifested by for example an increased central venous pressure (CVP) or peripheral oedema. This venous congestion may contribute to the occurrence of short-term organ failure by causing a high ''afterload'' in the venous tracts of organs.
+
+There is no consensus on how to measure venous congestion. It is important to identify variables that reflect the development of venous congestion in order to investigate whether venous congestion is associated with short-term organ failure. Variables that indicate venous congestion may be obtained with clinical examination and biochemical analyses, supplemented by hemodynamic variables derived from critical care ultrasonography (CCUS) with information about organ perfusion, and both arterial and venous function.
+
+The development of short-term organ failure can be assessed by collecting clinical, biochemical and hemodynamic variables at multiple moments. Using repeated measurements is likely to add dynamic information about the diagnostic and prognostic value of these variables. The dynamics of variables, in any direction, over time might improve the diagnostic accuracy and prognostic value of clinical, biochemical and hemodynamic variables that can be collected at the beside of the critically ill patient.
+
+Aim and hypotheses This study aims to investigate the association between dynamic variables that reflect venous congestion and the development of short-term organ failure and mortality in the critically ill.
+
+The primary objective of this study is to identify the combination of variables at different time points that indicate venous congestion and predict patient outcome. Secondary objectives are to identify a combination of CCUS variables that precede serum creatine rises in patients who develop acute kidney injury (AKI) after an acute ICU admission {diagnostic}; to identify a combination of variables per organ system or subset of populations to predict short-term organ deterioration and 7-day mortality {prognostic}; to identify a combination of variables over 48 hours of ICU admission that predict long-term (90 day) morbidity and mortality {prognostic} and; to validate multiple prognostic risk scores developed for critically ill ICU patients.
+
+DETAILED DESCRIPTION:
+Registry procedures:
+
+This study is the follow-up study of the Simple Intensive Care Studies I (SICS-I, NCT02912624). All eligible patients will first be included in the Simple Observational Critical Care Studies (SOCCS, NCT03553069) within 3 hours after ICU admission. The SOCCS includes all acutely admitted ICU patients by means of a standardized onetime physical examination and registration of observational standard care data to predict patient outcome. The SICS-II will screen these included patients within 24 hours of ICU admission and exclude patients with a non-traumatic neurological reason for admission. All eligible patients will undergo clinical examination and critical care ultrasonography on day one, three and five.
+
+Monitoring:
+
+Monitoring will be performed by independent researchers of the University Medical Center Groningen (UMCG). Audits are planned to take place once a year. The first audit is planned in August 2018.
+
+Recruitment:
+
+Inclusion of patients and measurements of variables will be performed by the study coordinator or a co-researcher under supervision and responsibility of the principle investigator. Due to its observational nature, informed consent is not deemed necessary for this study. However, we will obtain informed consent to also cover possible advances within this study.
+
+Source data verification At inclusion all conventional hemodynamic variables are derived by physical examination and recording data from the basic hemodynamic monitoring (Philips ImageVue monitor with tracing of heart rate, electrocardiogram (ECG), arterial oxygen saturation (SpO2), arterial pressure from arterial line pressure measurement and/or from non-invasively blood pressure monitoring. CCUS will be used to envision cardiac function, pulmonary edema, venal cave overload and renal perfusion. All variables are predefined (see data dictionary) to standardize all measurements conducted by the student researchers. A CCUS protocol was written before start of the study to train researchers in CCUS during a pilot phase. Researchers were trained by an expert cardiologist-intensivist. Measurements will later be validated by independent specialists blinded for all other measurements. General patient characteristics and laboratory measurements were recorded from patient's electronic charts and the Acute Physiology and Chronic Health Evaluation (APACHE) II and IV score, Simplified Acute Physiology Score II (SAPS) scores are extracted from our local National Intensive Care Evaluation database. Follow-up of all-cause mortality will be acquired using the municipal personal records database.
+
+Data collection:
+
+Data are collected on different moments as follows:
+
+T=0, patient admission, extracted from electronic patient file Date and time of admission and patient history are recorded. T=1, within 3 hours of inclusion, variables obtained through physical examination (SOCCS) Heart rate (HR): will be recorded from the bedside electrocardiographic monitor. In ca
+
+PRIMARY OUTCOMES:
+  - The combination of variables at different time points that indicate venous congestion and predict patient outcome in the critically ill.
+  - Short term organ failure
+  - Short-term mortality
+  - Long term mortality
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03577405

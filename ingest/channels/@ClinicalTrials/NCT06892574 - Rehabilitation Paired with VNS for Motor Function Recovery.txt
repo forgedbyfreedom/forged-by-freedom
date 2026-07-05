@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06892574
+Title: Rehabilitation Paired with VNS for Motor Function Recovery
+Official Title: A Trial of Rehabilitation Paired with VNS for Motor Function Recovery in Post-ICH Patients (Recovery Study)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: recovery exercise
+
+SUMMARY:
+The goal of this clinical trial is to investigate the efficacy and safety of vagus nerve stimulation (VNS) combined with rehabilitation in improving upper extremity motor function after spontaneous intracerebral hemorrhage (ICH).
+
+Researchers will evaluate the efficacy and safety of VNS by comparing the improvements of arm motor function post-ICH in the active VNS combined rehabilitation group with that in the sham VNS combined rehabilitation group (actual intensity 0 mA).
+
+Participants in this study will undergo a surgical procedure to implant the VNS system and will subsequently recieve a 6 weeks in-clinic therapy, followed by an additional 6 weeks home exercise. During the final 6 weeks, participants will either recieve in-clinic therapy or maintain their home exercise, depending on their assigned group.
+
+DETAILED DESCRIPTION:
+There are 6 follow-up timepoints in this trial:
+
+1. Screening follow-up timepoint (V1): All participants will sign the informed consent form and receive pre-implant evaluation, including physical examination, brain magnetic resonance imaging, FMA-UE, WMFT, modified Ashworth scale, ect.
+2. Surgery follow-up timepoint (V2): All participants will be implanted with the VNS system, including the G115R IPG and L312 lead.
+3. Baseline follow-up timepoint (V3): There is a baseline evaluation 7 to 14 days after the surgery, then participants will be randomly assigned to VNS group or Control group.
+4. Clinic rehabilitation follow-up timepoint (V4): Participants will receive standard clinic rehabilitation 3 days per week and lasting 6 weeks. Both active VNS group (VNS group) and sham VNS group (Control group) will receive rehabilitation. Participants will be evaluated at the last day of this follow-up timepoint.
+5. Home exercise follow-up timepoint (V5): Participants will take standard home exercise everyday in 6 weeks. Both active VNS group (VNS group) and sham VNS group (Control group) will receive rehabilitation. At the last day, after evaluating, group assignment is unblinded.
+6. Unmasking follow-up timepoint (V6): In this 6 weeks, all participants will receive active VNS. Participants in VNS group will still take standard home exercise, and participants in Control group will receive standard clinic rehabilitation again. Participants will be also evaluated at the last day of this follow-up timepoint.
+
+PRIMARY OUTCOMES:
+  - Upper Extremity Motor Section of the Fugl-Meyer Assessment (FMA-UE) Average Change
+
+INTERVENTIONS:
+  - DEVICE: Active-VNS
+  - DEVICE: Sham VNS
+
+ELIGIBILITY:
+Age: 22 Years to 79 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06892574

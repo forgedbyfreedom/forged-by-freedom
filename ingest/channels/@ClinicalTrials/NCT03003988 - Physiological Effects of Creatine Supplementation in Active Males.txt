@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03003988
+Title: Physiological Effects of Creatine Supplementation in Active Males
+Official Title: Effects of 28 Days of Different Forms of Creatine Supplementation on Muscle Creatine, Body Composition and Exercise Performance in Recreationally Active Males
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: creatine supplementation
+
+SUMMARY:
+This study was designed to examine how different forms of creatine impact active males.
+
+DETAILED DESCRIPTION:
+This study examined the effects of different formulations of creatine nitrate on muscle creatine content, body composition, anaerobic exercise capacity, bench press performance and clinical chemistry panels in recreationally active males.
+
+PRIMARY OUTCOMES:
+  - Effects of 28 Days of Different Forms of Creatine Supplementation on Body Water
+  - Effects of 28 Days of Different Forms of Creatine Supplementation on Body Composition
+  - Effects of 28 Days of Different Forms of Creatine Supplementation on intramuscular creatine
+  - Effects of 28 Days of Different Forms of Creatine Supplementation on intramuscular phosphocreatine
+  - Effects of 28 Days of Different Forms of Creatine Supplementation on intramuscular ATP
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine monohydrate
+  - DIETARY_SUPPLEMENT: Creatine nitrate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03003988

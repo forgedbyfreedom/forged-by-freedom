@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06091969
+Title: Supplementation for Male Subfertility
+Official Title: Nutraceutical Supplementation for Male Subfertility
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: creatine supplementation
+
+SUMMARY:
+Old age, obesity, physical inactivity, environmental factors and genetics may contribute negatively to fertility in both males and females. In males, specifically, certain supplements, such as single antioxidants and trace minerals, have previously been shown to improve sperm function marginally. One hypothesis is that sperm function can be improved even further by combining several different types of supplements (e.g., amino acids, energy carriers, vitamins, antioxidants, and trace minerals) to target several age-related cell pathways, for example, oxidative stress, mitochondrial dysfunction, inflammation and cell energetics. This 3-month placebo-controlled, randomized clinical trial, aims to test the effects of a novel multi-ingredient supplement (Fertility Enhancer) that targets several age-related cell pathways on sperm function in overweight or obese and subfertile males.
+
+DETAILED DESCRIPTION:
+BACKGROUND: Infertility is characterized by the failure to become pregnant after one year of regular intercourse without the use of contraceptives and impacts 10-15% of couples worldwide. Both male and female partners contribute to a couple's reproductive health, with approximately one third of infertility cases caused by male factors, one third by female factors, and the remaining by either a combination of both or unknown causes. The prevalence of infertility is a growing concern in Canada, as is seen in an increased use of assisted reproductive technology (ART), which may be both invasive and expensive. Cost-effective, safe, and accessible alternatives to ART are therefore needed. The most common cause of subfertility is 'biological aging', characterized by the hallmarks of aging, such as mitochondrial dysfunction, oxidative damage and inflammation. Another common cause of male and female subfertility is obesity, which is associated with multisystemic oxidative damage and inflammation.
+
+PURPOSE: The aim of this placebo-controlled, double-blind randomized clinical trial is to test the effects of a multi-ingredient supplement (Fertility Enhancer) designed to target several aging- and obesity-related pathways on World Health Organization (WHO) semen quality parameters in overweight and obese and subfertile males (sperm count, motility, morphology and vitality).
+
+SAMPLE-SIZE ESTIMATE AND DESIGN: Sperm count/concentration is strongly correlated to all World Health Organization semen quality parameters. With significance set at 0.05 (Z = 1.96) and power to 0.8 (Z = 0.84), a sample-size of 17-32 per group is sufficient to detect an increase of 10 x 10\^6 spermatozoa/mL with a standard deviation of 15 to 20 x 10\^6 spermatozoa/mL. Thus, sixty-four (n = 64) males between 25 and 50 years of age that are confirmed overweight or obese and subfertile will be randomized into age-matched Placebo (PLA, n = 32) vs Fertility Enhancer (FE, n = 32) groups and undergo daily supplementation for 3 months.
+
+SUPPLEMENTS: The FE supplement contains energy carriers (creatine), conditionally essential amino acids (arginine), Omega 3 fatty acids (DHA and EPA), vitamins (B9, B12, E, and D3), antioxidants (CoQ10 and alpha lipoic acid), trace minerals (selenium, iron, zinc, and copper), and plant extracts (beet root, green tea, and green coffee bean). The isocaloric and inactive placebo contains safflower oil, microcrystalline cellulose and sugar and is identical in flavor to FE.
+
+CO-PRIMARY OUTCOMES: All outcomes will be measured at baseline and post intervention for assessing % pre-to-post changes. Co-primary outcomes are body composition by dual x-ray absorptiometry, including lean mass to fat mass ratio (body composition index; BCI) and total fat mass, and the WHO semen quality parameters; specifically, % improvements in sperm count, motility, morphology, and vitality.
+
+SECONDARY OUTCOMES: Secondary outcomes are % improvements in sperm DNA fragmentation (flow cytometry-a
+
+PRIMARY OUTCOMES:
+  - Percent change in body composition index from baseline to 3 months
+  - Percent change in total fat mass from baseline to 3 months
+  - Percent change in sperm count/concentration from baseline to 3 months
+  - Percent change in sperm motility from baseline to 3 months
+  - Percent change in sperm morphology from baseline to 3 months
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Active multi-ingredient supplement (Fertility Enhancer, FE)
+  - DIETARY_SUPPLEMENT: Inactive placebo (Placebo; PLA)
+
+ELIGIBILITY:
+Age: 25 Years to 50 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06091969

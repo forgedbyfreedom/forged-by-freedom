@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03168438
+Title: Letetresgene Autoleucel Engineered T Cells Alone and in Combination With Pembrolizumab in NY-ESO-1 Positive Multiple Myeloma
+Official Title: Open-Label Pilot Study to Assess the Safety, Tolerability and Antitumor Activity of Genetically Engineered NY-ESO-1 Specific (c259) T Cells Alone or in Combination With Pembrolizumab in HLA-A2+ Subjects With NY-ESO-1 and/or LAGE-1a Positive Relapsed and Refractory Multiple Myeloma
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: protein supplementation
+
+SUMMARY:
+This trial will evaluate safety, tolerability, and efficacy of letetresgene autoleucel (GSK3377794) with or without pembrolizumab in participants with relapsed and refractory multiple myeloma.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Adverse Events (AEs) and Serious Adverse Events (SAEs)
+  - Number of Participants With Treatment Limiting Toxicities-GSK3377794+Pembrolizumab Arm Only
+  - Number of Participants With Worst-case Chemistry Results by Any Grade Increase Post-Baseline Relative to Baseline
+  - Number of Participants With Worst-case Hematology Results by Any Grade Increase Post-Baseline Relative to Baseline
+  - Number of Participants With Worst-case Results for Coagulation Parameters Relative to Normal Range Post-Baseline Relative to Baseline
+
+INTERVENTIONS:
+  - DRUG: Letetresgene autoleucel
+  - DRUG: Letetresgene autoleucel with pembrolizumab
+  - DRUG: Fludarabine
+  - DRUG: Cyclophosphamide
+  - DRUG: Pembrolizumab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03168438

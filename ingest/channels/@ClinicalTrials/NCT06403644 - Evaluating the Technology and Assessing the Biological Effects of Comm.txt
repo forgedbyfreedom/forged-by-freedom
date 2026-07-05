@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06403644
+Title: Evaluating the Technology and Assessing the Biological Effects of Commercially Available PhotoBioModulation Devices
+Official Title: Evaluating the Technology and Assessing the Biological Effects of Commercially Available PhotoBioModulation Devices
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: athletic performance
+
+SUMMARY:
+Photobiomodulation therapy (PBMT) involves applying non-ionizing forms of light from sources including lasers, LEDs, and broadband light, in the visible and near infrared spectrum, to the body to enhance performance, stimulate healing, modulate recovery, and improve health. The investigators will conduct a single-blinded randomized-control trial with sham control to investigate the effectiveness of providing PBMT in a military population, translating this cutting-edge research to application in the operational setting.
+
+DETAILED DESCRIPTION:
+In addition to assessing the efficacy of whole-body PBMT in comparison to sham therapy, the human subjects PBM study conducted encompasses a comprehensive data collection endeavor aimed at evaluating PBMT's impact on general wellness. Using a single-blinded randomized control trial design, participants are assigned to different treatment groups and subjected to PBMT or sham treatments over specified periods. Randomization ensures unbiased assignment to treatment groups, and participants are blinded to their assigned study arm until the conclusion of the final study visit. Detailed treatment protocols are followed, including precautions to minimize bias between active and sham treatments. Data collection includes an extensive array of both subjective and physiological measures, encompassing tools such as the Defense and Veteran's Pain Rating Scale (DVPRS), Epworth Sleepiness Scale (ESS), Pittsburgh Sleep Quality Index (PSQI), heart rate monitors, blood samples, and saliva samples. Additionally, this study investigates the differences between high-power PBMT (\~70mW/cm2) and low-power PBMT (\~30mW/cm2) by a secondary randomization of participants into one of two commercial PBMT light beds (either the NovoTHOR or ARRC LED).
+
+The study is conducted over an 8-week period and separated into two arms. Participants that meet final eligibility criteria will be randomized to a study arm following informed consent using a computer-generated randomization model. Participants will first be randomized (1:1) to a high-power PBM (ARRC-LED) or low-power PBM (NovoTHOR) treatment group. Then participants will subsequently be randomized (1:1) to a treatment schedule (either sham or active treatment first). The initial week of the study consists of a washout week in which baseline data is collected. In Part 1 (Weeks 2-4), participants undergo photobiomodulation treatment sessions or sham photobiomodulation treatment sessions lasting 20 minutes, occurring 3 times a week for 3 weeks. Following Part 1, Week 5 consists of an additional washout period. During this 1-week period, participants will continue daily study procedures, including questionnaires, saliva collection, and wearing the Oura Ring, but will not receive sham or active PBMT. In Part 2 (Weeks 6-8), participants will resume treatment sessions crossing over into the other condition (either sham or active PBMT), also lasting 20 minutes and occurring 3 times a week for 3 weeks. Overall, the human subjects experiment works to provide valuable insights into the practical applications and potential benefits of PBMT.
+
+PRIMARY OUTCOMES:
+  - Effects of PBMT versus Sham PBMT on Proinflammatory Blood Biomarkers
+  - Effects of PBMT versus Sham PBMT on Anti-Inflammatory Blood Biomarkers
+  - Effects of PBMT versus Sham PBMT on Saliva Biomarkers
+  - Effects of PBMT versus Sham PBMT on Heart Rate
+  - Effects of PBMT versus Sham PBMT on Defense Veterans Pain Rating Scale Scores
+
+INTERVENTIONS:
+  - DEVICE: NovoTHOR XL Photobiomodulation Full Body Light Bed
+  - DEVICE: ARRC LED Photobiomodulation Full Body Light Bed
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06403644

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04723550
+Title: COVID-19 Lockdown Related Telemedicine for Type 2 Diabetes
+Official Title: Impact of Telemedicine on Young and Middle-aged Obese Patients With Type 2 Diabetes Mellitus During COVID-19 Pandemic
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: exercise intervention obesity
+
+SUMMARY:
+At present, in order to cope with the global pandemic of the COVID-19 virus, governments have introduced corresponding measures, COVID-19 lockdown is one of the most important measures. However, lockdown makes the management of chronic diseases (such as type 2 diabetes) more difficult, and telemedicine may be one of the solutions. We hope to explore the effect of telemedicine on blood glucose control and other prognostic indicators of young and middle-aged obese patients with type 2 diabetes who will experience isolation control.
+
+DETAILED DESCRIPTION:
+We recruit patients with type 2 diabetes who need to be isolated due to the COVID-19 epidemic, Our study will include young and middle-aged obese patients. The lockdown period is 21 days. The patients will be randomly divided into two groups with a total follow-up time of 6 months. One group is the telemedicine intervention group, and the other group is the routine follow-up control group. The intervention group used the hospital telemedicine management system to upload blood glucose values (fasting and 2h after three meals), food intake of three meals, and exercise volume (Data collection frequency: first three months, 4 times/week; 4-6 Month, 2 times/week).Doctors will collect data from hospital telemedicine management system to guide patients on diets, exercise, and medication adjustments. The control group will be followed up by telephone/outpatient clinic every 1 week. (only telephone follow-up will be conducted during the lockdown period) Then doctors will collect their blood glucose values.(fasting and 2h after three meals) Based on the data collected, The doctors will provide lifestyle guidance to the patients on the telephone or face to face. The clinical data of the two groups of patients will be collected at baseline, 22 days, 3 months, and 6 months respectively. (HbA1c, fasting blood glucose(FBG), blood glucose 2 hours after breakfast, blood pressure, Body Mass Index(BMI), waist-to-hip ratio, total cholesterol(TC), triglyceride(TG), high-density lipoprotein cholesterol(HDL-C), low-density lipoprotein cholesterol(LDL-C), Blood Urea Nitrogen(BUN), serum creatinine(Scr), e-GFR, Self-rating Depression Scale, frequency of hypoglycemia，and Cost effectiveness) The clinical data will be statistically analyzed.
+
+PRIMARY OUTCOMES:
+  - Glucose control (HbA1c levels)
+
+INTERVENTIONS:
+  - DEVICE: Hospital telemedicine management system
+  - OTHER: Usual care
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04723550

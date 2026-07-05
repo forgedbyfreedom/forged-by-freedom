@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07389200
+Title: Application of Multimodal MRI-based Radiomics in Histological Grading and Prognostic Assessment of Breast Cancer
+Official Title: Application of Multimodal MRI-based Radiomics in Histological Grading and Prognostic Assessment of Breast Cancer
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 400
+Topic: growth hormone treatment
+
+SUMMARY:
+In addition to TNM staging, the current management of breast cancer is based on conventional pathological features that categorize the disease into three molecular subtypes, each with significant prognostic implications in clinical practice: human epidermal growth factor receptor 2 (HER2)-positive, luminal (hormone receptor-positive and HER2-negative), and triple-negative breast cancers. The overexpression or amplification of HER2 is observed in 10-15% of breast cancer cases. This phenomenon often correlates with a more aggressive tumor behavior while also demonstrating an increased responsiveness to HER2-targeted therapies. However, the use of highly effective anti-HER2 drugs can significantly enhance the survival outcomes of these patients. Additionally, the expression status of HER2 is critical in determining the necessity for targeted therapy. Therefore, preoperative assessment of HER2 expression status has important therapeutic implications. Currently, clinical methods for assessing HER2 status in breast cancer before surgery include immunohistochemistry (IHC) tests and fluorescence in situ hybridization (FISH) measurements performed on core-needle biopsy specimens. However, these biopsy sampling techniques have inherent limitations, including sampling bias and an inability to fully represent intratumor heterogeneity. Additionally, the biopsy procedure can be uncomfortable and carries certain risks for patients. Tumour heterogeneity generally refers to the variations in angiogenesis, metabolism, gene expression, and other biological characteristics among tumors. Intratumoral heterogeneity (ITH) can manifest as signal differences in radiological images at the macro level. Investigators hypothesized that significant differences in biological characteristics and behavior exist between HER2-positive (HER2+) and HER2-negative (HER2 -) breast cancers, allowing for the distinction of these two types of tumours by identifying specific imaging features that reflect ITH.
+
+Dynamic contrast-enhanced MRI (DCE-MRI) is an effective imaging modality that provides temporal information regarding the dynamics of contrast agents in suspicious lesions while maintaining acceptable spatial resolution. It is particularly sensitive in detecting breast cancer lesions, especially those in dense breast tissue. DCE-MRI can indirectly reflect abnormal tumor vascular proliferation through the hemodynamic characteristics of the lesions. Radiomics is an emerging technology that involves extracting quantitative and reproducible features from medical images using high-throughput, sophisticated modalities that are often challenging to identify or quantify visually. These features, which may be linked to specific diseases, are analyzed using statistical or machine learning (ML) algorithms to create predictive models for tumor diagnosis, grading, efficacy evaluation, and prognosis prediction. ML has two important advantages over traditional statistical models. The goal is to reduce decision time during diagnosis and generally achieve greater diagnostic accuracy. As demonstrated in breast cancer diagnosis, ML can significantly improve cancer risk prediction by identifying complex patterns in large amounts of clinical data. Despite the great potential of ML, it still faces several obstacles in its clinical application. A major challenge is a lack of interpretability-many ML models operate like "black boxes", making it difficult for clinicians to understand and trust their decision-making processes. Furthermore, the performance of the model depends heavily on the quality and representativeness of the training data. ML methods often require larger data sets than traditional clinical studies.
+
+Thus, this study aimed to develop a radiomics-based ML model that could predict the HER2 status of breast cancers in a non-invasive manner using DCE-MRI images. Additionally, the Shapley Additive Explanation (SHAP) algorithm was employed to analyze the contribution of the variables included in the model, providing valuable insights for formulating more accurate preoperative treatment plans for patients with breast cancers.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Patients with pathologically confirmed breast cancer who underwent DCE-MRI were included. Radiomic features were extracted, and seven machine learning algorithms were utilized to construct predictive model.The AUC served as the evaluation metric
+  - F1 score
+
+INTERVENTIONS:
+  - OTHER: DCE-MRI
+
+ELIGIBILITY:
+Age:  to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07389200

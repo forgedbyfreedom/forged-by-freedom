@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06600243
+Title: Influence of Microfiltered-seawater Supplementation and Variable Resistance Training in Blood Pressure, Oxidative Stress, Hepatic, and Renal Biomarkers in Older Women
+Official Title: Could Microfiltered-seawater Supplementation and Variable Resistance Training Improve Blood Pressure, Oxidative Stress, Hepatic, and Renal Biomarkers in Older Women? a 32-week, Double-blinded, Randomized, Placebo-controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 109
+Topic: vitamin D muscle
+
+SUMMARY:
+This study was conducted to investigate the effects of the intake of deep sea water prior to resistance training on blood pressure, oxidative stress and hepatic and renal variables in older women.
+
+DETAILED DESCRIPTION:
+This study was a 32 weeks, double-blinded, randomized, placebo-controlled trial.
+
+PRIMARY OUTCOMES:
+  - Malondialdehyde (MDA)
+  - Oxidized/reduced glutathione ratio (GSH/GSSG)
+  - Interleukin-6 (IL-6)
+  - Vitamin D
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Resistance training + deep sea water
+  - DIETARY_SUPPLEMENT: Resistance training + Placebo
+  - DIETARY_SUPPLEMENT: Control + deep sea water
+  - DIETARY_SUPPLEMENT: Control + Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06600243

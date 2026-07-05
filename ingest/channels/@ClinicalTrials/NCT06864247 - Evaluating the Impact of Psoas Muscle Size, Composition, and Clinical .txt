@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06864247
+Title: Evaluating the Impact of Psoas Muscle Size, Composition, and Clinical Frailty on Long-term Outcomes Following Elective Endovascular Aneurysm Repair
+Official Title: Evaluating the Impact of Psoas Muscle Size, Composition, and Clinical Frailty on Long-term Outcomes Following Elective Endovascular Aneurysm Repair: a Multicenter Retrospective Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 525
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia, which is characterized by the progressive loss of skeletal muscle mass and strength, has emerged as a significant prognostic biomarker in the field of vascular surgery, particularly regarding endovascular aneurysm repair (EVAR). This article delves into the implications of sarcopenia on the outcomes of EVAR, emphasizing its predictive value for long-term survival and potential as a tool for patient risk stratification.
+
+Recent research suggests that sarcopenia could be used as a biomarker for prognosis. A systematic review and meta-analysis have underscored sarcopenia's negative prognostic value for survival during long-term follow-up post-EVAR. The presence of sarcopenia, as determined by decreased core muscle area in axial abdominal computed tomography (CT) scans, has been widely discussed as a predictor of outcomes in patients undergoing EVAR.1
+
+Moreover, studies have consistently reported an association between sarcopenia and increased mortality and adverse outcomes following EVAR.2 For instance, a retrospective review investigating sarcopenia as a method to predict 1-year survival in patients undergoing EVAR found a significant increase in overall mortality among patients with the lowest quartile of normalized total psoas cross-sectional area (nTPA).2 Therefore, researchers suggested that physicians can use sarcopenia for risk stratification and patient selection before an EVAR. The evaluation of sarcopenia from preoperative CT scans can assist clinicians in identifying EVAR candidates who may be less likely to benefit from the procedure.2 This objective radiographic finding offers a standardized method for patient selection, which could be particularly useful in telemedicine and remote patient evaluation.
+
+The integration of sarcopenia assessment into the preoperative evaluation of patients considered for EVAR can revolutionize the approach to managing abdominal aortic aneurysms (AAA). By providing a reliable biomarker for risk stratification, sarcopenia can enable a more personalized treatment plan, potentially improving patient outcomes and optimizing healthcare resources. Nonetheless, the majority of the studies were conducted among Western populations. The implications are questionable for Taiwan patients. This study aims to fill the gap and to analyze the sarcopenia and its impact on patient outcomes following EVAR in Taiwan
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Death
+
+INTERVENTIONS:
+  - OTHER: No Intervention: Observational Cohort
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06864247

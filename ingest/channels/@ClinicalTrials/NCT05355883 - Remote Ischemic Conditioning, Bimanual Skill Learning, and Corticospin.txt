@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05355883
+Title: Remote Ischemic Conditioning, Bimanual Skill Learning, and Corticospinal Excitability
+Official Title: Effects of Remote Ischemic Conditioning on Bimanual Skill Learning, Bimanual Coordination, and Corticospinal Excitability in Children With Unilateral Cerebral Palsy
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: high intensity interval training
+
+SUMMARY:
+Unilateral cerebral palsy (UCP) is a leading cause of childhood disability. An early brain injury impairs the upper extremity function, bimanual coordination, and impacts the child's independence. The existing therapeutic interventions have higher training doses and modest effect sizes. Thus, there is a critical need to find an effective priming agent to enhance bimanual skill learning in children with UCP. This study aims to determine the effects of a novel priming agent, remote ischemic conditioning (RIC), when paired with intensive bimanual skill training to enhance bimanual skill learning and to augment skill dependent plasticity in children with UCP.
+
+DETAILED DESCRIPTION:
+Ischemic conditioning (IC) is a phenomenon of protecting the target organ from ischemia by directly exposing it to brief episodes of sublethal ischemia. RIC is a clinically feasible way of performing IC where episodes of ischemia and reperfusion are delivered with cyclic inflation and deflation of a blood pressure cuff on the arm or leg. Pre-clinical and preliminary clinical trials in humans show neuroprotective effects of RIC. Investigators prior work has shown that when paired with motor training, RIC enhances motor learning in healthy individuals. Based on these diversified benefits of RIC, the central hypothesis is that the multifactorial mechanisms of RIC can be harnessed as a priming agent to enhance motor learning and augment neuroplasticity in children with UCP. The Specific Aims are: 1) to determine the effects of RIC + training on bimanual skill performance, and 2) to determine the effects of RIC + training on corticospinal excitability in children with UCP. In this triple blind, randomized controlled trial, 30 children with UCP, ages 6-16 years will first undergo bimanual speed stack performance, functional upper extremity, and Transcranial Magnetic Stimulation assessments. Children will then undergo RIC/Sham conditioning plus training. Investigators will deliver RIC/sham conditioning via cyclic inflation and deflation of a pressure cuff on the paretic arm using a standard protocol. Training will involve 5 days (15 trials/day) of bimanual speed stack training and intensive bimanual training using hand arm bimanual intensive therapy (HABIT) with a standard dose of 6 hours/day for 5 days. The children will perform the same baseline assessments post-intervention. Investigators hypothesize that compared to sham conditioning + training, RIC + training will significantly enhance: 1) bimanual skill performance (decrease in movement time (sec) to complete bimanual speed stack task), 2) bimanual function (increase in the Assisting Hand Assessment scores), 3) cortical excitability in the ipsilesional primary motor cortex (M1) (larger amplitude of motor evoked potentials and lower resting or active motor thresholds), and 4) reduce motor cortex inhibition (reduced short-interval intracortical inhibition and increase in intracortical facilitation in ipsilesional M1). The long-term goal is to develop effective interventions to improve function of children with UCP. Outcomes of this project will provide critical ingredients for designing Phase II trials that will determine the effects of RIC combined with different dose of intensive behavioral interventions to improve functional outcomes in children with UCP.
+
+PRIMARY OUTCOMES:
+  - Change in Assisting Hand Assessment
+  - Change in Bimanual Task Performance
+  - Change in Resting and Active Motor Thresholds
+  - Change in Stimulus-response curves
+
+INTERVENTIONS:
+  - BEHAVIORAL: Remote Ischemic Conditioning (RIC)
+  - BEHAVIORAL: Sham conditioning
+  - BEHAVIORAL: Hand Arm Bimanual Intensive Therapy (HABIT)
+  - BEHAVIORAL: Bimanual Cup Stacking Training
+  - BEHAVIORAL: Balance training
+
+ELIGIBILITY:
+Age: 6 Years to 16 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05355883

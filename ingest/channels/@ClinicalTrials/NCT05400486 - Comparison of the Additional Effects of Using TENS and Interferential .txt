@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05400486
+Title: Comparison of the Additional Effects of Using TENS and Interferential Currents for the Treatment of Individuals With Chronic Nonspecific Neck Pain.
+Official Title: Comparison of the Additional Effects of Using TENS and Interferential Currents for the Treatment of Individuals With Chronic Nonspecific Neck Pain.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: muscle rehabilitation
+
+SUMMARY:
+In the current clinical and scientific reality, conservative treatment is the most coherent clinical management with a view to the proper rehabilitation of patients with chronic neck pain, with a trend towards the use of therapeutic exercise. However, some uncertainty about the effectiveness of therapeutic exercises still remains, requiring further studies with high methodological rigor, especially with regard to multimodal treatment, such as the combination of therapeutic exercises with photobiomodulation. Thus, the objective of this project is to evaluate the effects of adding photobiomodulation to a program of specific therapeutic exercises for the treatment of individuals with chronic non-specific neck pain. To this end, 60 participants will be randomized into three groups: therapeutic exercise group + photobiomodulation (n = 20), and therapeutic exercise group. There will be 8 treatment sessions and participants will be evaluated before, after the 8 sessions, and 4 weeks after the end of treatment using the Numerical Pain Scale, Neck Disability Index, Catastrophic Thoughts about Pain Scale, and Tampa Kinesiophobia Scale. In the statistical analysis, a linear mixed model will be applied, considering the interaction between the time and group factors. Finally, the addition of photobiomodulation to a therapeutic exercise program is expected to generate clinical improvements for patients with chronic neck pain.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Functional disability
+  - Numerical Pain Scale
+
+INTERVENTIONS:
+  - OTHER: Therapeutic exercise
+  - OTHER: Therapeutic exercise group + high frequency TENS
+  - OTHER: Therapeutic exercise group + Interferential
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05400486

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05231694
+Title: The Impact of Electroacupuncture Combined With NGF on Clinical Effect and Functional Changes on Ischemic Stroke
+Official Title: Specific Stimulation Mode Electroacupuncture Combined With NGF for Recovery Period of Ischemic Stroke：Protocol for a Randomized Controlled Clinical Trial
+Status: UNKNOWN
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 288
+Topic: high intensity interval training
+
+SUMMARY:
+Ischemic stroke is a common clinical disease, often accompanied by motor dysfunction and cognitive impairment. At present, clinical treatment for patients with ischemic stroke recovery is limited and ineffective. The emergence of NGF has surprised the field of neurorehabilitation, but the clinical effect is not satisfactory. The main problem is that NGF is a macromolecular material with a molecular weight of 13.4 KD, which is difficult to penetrate the blood brain barrier. A large number of previous studies in our team have found that electroacupuncture with specific stimulation mode can open the blood brain barrier and induce NGF into the brain。Therefore, the purpose of this study is to investigate the effect of specific stimulation mode electroacupuncture combined with NGF treatment together with rehabilitation training on patients with ischemic stroke recovery period and to explore the mechanism of this combination therapy to improve brain function, which creates a new method and theoretical basis for nerve rehabilitation of integrated traditional Chinese and Western medicine.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - basic cure rate
+
+INTERVENTIONS:
+  - DRUG: Nerver growth factor (NGF) injection
+  - DRUG: Placebo injection
+  - DEVICE: EA intervention
+  - DEVICE: sham EA intervention
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05231694

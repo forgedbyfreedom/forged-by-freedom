@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07344389
+Title: Virtual Reality Intervention in Children With Hyperlipidemia
+Official Title: The Effect of Virtual Reality Application on Body Composition, Functional Capacity, Balance, and Participation in Children With Hyperlipidemia
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: fat loss muscle
+
+SUMMARY:
+Children with hyperlipidemia have elevated blood lipid levels, which increase the risk of developing cardiovascular diseases later in life. Since the atherosclerotic process begins in childhood, early identification and effective management of risk factors such as physical inactivity are essential. Regular physical activity has been shown to improve lipid profiles, reduce cardiovascular risk, and support healthy body composition in children. However, long-term lifestyle and medical treatments may reduce motivation and participation, especially in pediatric populations.
+
+Virtual reality-based exercise programs provide an engaging and interactive environment that can increase motivation and active participation in rehabilitation. Virtual reality applications allow children to perform functional movements through game-based activities while receiving visual and auditory feedback, which may enhance motor learning, balance, and functional capacity. These applications are widely used in pediatric rehabilitation and have the potential to improve adherence to exercise programs.
+
+Participation in daily life activities at home, school, and in the community is an important component of child development. According to the International Classification of Functioning, Disability and Health (ICF), participation refers to involvement in life situations. Children with chronic health conditions may experience limitations in participation due to physical, environmental, or motivational factors. However, participation levels of children with hyperlipidemia have not been sufficiently investigated.
+
+The purpose of this study is to investigate the effects of a virtual reality-based exercise program on body composition, functional capacity, balance, and participation in children with hyperlipidemia. The findings of this study may contribute to the development of effective, enjoyable, and sustainable rehabilitation approaches for improving physical health and participation in daily life activities in this population.
+
+DETAILED DESCRIPTION:
+Hyperlipidemia in childhood is an increasingly prevalent metabolic disorder associated with early initiation of the atherosclerotic process and an elevated risk of cardiovascular disease in adulthood. Since atherosclerosis begins in childhood, early identification and management of hyperlipidemia, particularly through lifestyle-based interventions, are critical for long-term cardiovascular health. Regular physical activity is known to positively influence lipid metabolism by reducing triglyceride levels, increasing high-density lipoprotein cholesterol, and improving endothelial function. However, adherence to long-term exercise and lifestyle recommendations in children is often limited due to low motivation and sedentary behaviors.
+
+Virtual reality-based exercise interventions offer an innovative and engaging approach to increase physical activity participation in children. By providing immersive, interactive, and gamified environments, virtual reality applications can enhance motivation, enjoyment, and adherence to exercise programs. Virtual reality training integrates core principles of motor learning, including task repetition, goal-oriented movement, multisensory feedback, and active participation, which are essential for improving physical function and promoting sustained behavioral change.
+
+This prospective randomized controlled study is designed to investigate the effects of an 8-week virtual reality-based exercise program on physical and functional outcomes in children with hyperlipidemia. Participants will be randomly allocated to either a virtual reality training group or a control group using computer-based randomization software. All assessments will be conducted by an assessor blinded to group allocation. To minimize confounding effects related to nutrition, participants in both groups will continue their usual dietary management throughout the study period.
+
+The intervention group will participate in virtual reality-based exercise sessions twice weekly for eight weeks, with each session lasting approximately 40 minutes. Training will be delivered using the Microsoft Kinect system, a markerless motion capture technology capable of detecting and analyzing three-dimensional body movements in real time. The system enables participants to interact with virtual environments through whole-body movements and provides immediate visual and auditory feedback. Exercise sessions will include a variety of game-based activities that promote aerobic exercise, dynamic balance, coordination, and functional movement patterns. The intensity and content of the sessions are designed to support cardiovascular fitness while maintaining engagement and enjoyment.
+
+Outcome assessments will be performed at baseline, immediately after the 8-week intervention period, and at an 8-week follow-up to examine both short-term and sustained effects of the intervention. The study evaluates changes in body composition, physical activity level, functional capacity, balanc
+
+PRIMARY OUTCOMES:
+  - Body Weight
+  - Physical activity
+  - Functional capacity
+  - Participation
+  - Body Mass Index (BMI)
+
+INTERVENTIONS:
+  - OTHER: Virtual Reality Training
+  - OTHER: Conventional Physiotherapy
+
+ELIGIBILITY:
+Age: 8 Years to 14 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07344389

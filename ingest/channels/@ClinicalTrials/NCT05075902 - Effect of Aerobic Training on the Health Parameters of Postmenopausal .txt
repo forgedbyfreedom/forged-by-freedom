@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05075902
+Title: Effect of Aerobic Training on the Health Parameters of Postmenopausal Women With Multimorbidity
+Official Title: Effect of Aerobic Training on Hemodynamic, Metabolic and Climacteric Symptoms in Postmenopausal Women With Multimorbidity
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 41
+Topic: high intensity interval training
+
+SUMMARY:
+People affected by multiple chronic diseases have a greater chance of hospitalization, longer hospital stays, worse general health, worse physical and mental function and lower functional capacity, with an average risk of 50% of functional decline with each additional condition. The frequency of multimorbidity is higher in older, inactive women, who live in urban areas in low- and middle-income countries, the most affected by multimorbidity. The practice of physical exercise is an important component in the prevention of multiple chronic diseases, in which lower levels of physical activity were associated with an increased prevalence of multimorbidity in women aged 16 to 24 years. And regardless of the presence of multimorbidity, engaging in a healthier lifestyle, including regular physical activity, was associated with up to 7.6 more years of life for women, improving the individual's general health status even when multimorbid.
+
+The hypothesis is that multimorbid women have a worse general health status when compared to women without multimorbidity, but aerobic exercise will be able to improve health parameters in 12 weeks of training.
+
+This is a quasi-experimental clinical trial with a 12-week aerobic training intervention in postmenopausal women with and without cardiometabolic multimorbidity. Participants were allocated into groups according to the amount of cardiometabolic diseases, with the Morbidity group (MORB) being composed of women with one or no chronic cardiometabolic disease and the Multimorbidity group (MULTI) with two or more chronic cardiometabolic diseases.
+
+The assessments of arterial stiffness, 24-hour ambulatory pressure, blood pressure variability, heart rate variability, lipid and glucose profile, body composition and climacteric symptoms were performed before and after the training period.
+
+The study was carried out at the Laboratory of Cardiorespiratory and Metabolic Physiology at the Faculty of Physical Education of the Federal University of Uberlândia, Uberlândia, Brazil and approved by the Ethics Committee for studies in humans (CAEE: 12453719.1.0000.5152). All participants signed a consent form. The experiments followed the principles of the Declaration of Helsinki.
+
+The program consists of aerobic physical exercises performed three times a week on non-consecutive days for 12 weeks with an intensity of 65% to 75% of the reserve heart rate.
+
+DETAILED DESCRIPTION:
+The sample size was classified using the G \* Power 3.1 software (University of Dusseldorf, Dusseldorf, Germany), adopting an α error of 5%, 80% power analysis, 0.5 correlation between repeated measures and a correction of non-sphericity of 1, in an F-family of intra-between analysis. Changes in serum triglycerides were evaluated as the primary study endpoint. The investigators did not not found the in literature the study with design and calculation prediction according to the calculation of this study with the effect size of f = 0.24 for the sample calculation. Thus, was found a minimum required sample of 38 subjects (19 per group).
+
+Results were found as mean ± standard error. Unpaired testing was used to compare baseline characteristics between groups. Comparison between groups and duration of arterial stiffness, lipid profile, glucose profile, climacteric symptoms, body composition and ABPM were made by Generalized Equation Estimates (GEE) of two factors (time, group and their interaction) with Bonferroni correction. The analyzes were performed by intention-to-treat (including those who did not complete the study: MORB n = 18; MULTI = 24) using the last-observation carried forward method. A p value \<0.05 was used for statistical significance and all statistical analyzes were performed with Statistical Package for the Social Sciences (SPSS) software v26.0 (IBM, New York, USA).
+
+PRIMARY OUTCOMES:
+  - Change in Arterial stiffness in 12 weeks
+  - Change in Lipid profile in 12 weeks
+  - Change in 24-hour ambulatory blood pressure in 12 weeks
+  - Change in glycated hemoglobin (HbA1c)
+  - Change in glucose
+
+INTERVENTIONS:
+  - BEHAVIORAL: Aerobic training
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05075902

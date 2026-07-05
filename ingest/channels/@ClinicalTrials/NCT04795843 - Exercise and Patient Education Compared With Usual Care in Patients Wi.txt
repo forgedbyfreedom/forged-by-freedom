@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04795843
+Title: Exercise and Patient Education Compared With Usual Care in Patients With Hip Dysplasia
+Official Title: MovetheHip-trial: The Effectiveness of Exercise and Patient Education Compared With Usual Care on Self-reported Pain in Patients With Hip Dysplasia
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: tendon injury
+
+SUMMARY:
+This effectiveness trial will investigate if patients with hip dysplasia randomised to exercise and patient education have a different mean change in self-reported pain measured by the Copenhagen Hip and Groin Outcome Score (HAGOS) compared with those randomised to usual care over a six-month follow-up period.
+
+Participating patients will be allocated to either exercise and patient education or usual care. Alongside this, a health-economic study and a process-evaluation study will be conducted.
+
+DETAILED DESCRIPTION:
+This study is a parallel-group superiority randomised controlled trial. Alongside this, a health-economic study and a process-evaluation study will be conducted. Participating patients will be allocated to either exercise and patient education or usual care at a 1:1 ratio. The primary outcome is change in self-reported pain measured with Copenhagen Hip and Groin Outcome Score (HAGOS) from baseline to 6-month follow-up.
+
+The effectiveness of exercise and patient education compared with usual care will be reported in the primary trial paper, including the primary outcome and the following secondary outcomes: HAGOS symptoms, HAGOS function in daily living (ADL), HAGOS function in sport and recreation (sport/recreation), HAGOS participation in physical activity (participation), HAGOS quality of life (QOL), the impact of hip disease with the Short Version of the International Hip Outcome Tool (iHOT-12), lower limb reach length (anterior, posteromedial, posterolateral), single-leg hip for distance (SLHD) test and hip muscle strength (flexion, extension and abduction).
+
+The primary aim of this effectiveness trial is to investigate if patients with hip dysplasia randomised to exercise and patient education have a different mean change in self-reported pain measured by the Copenhagen Hip and Groin Outcome Score (HAGOS) compared with those randomised to usual care over a six-month follow-up period.
+
+The primary hypothesis: Patients randomised to exercise and patient education will have a between-group mean change score on the HAGOS pain that is at least 10 points higher than those randomised to usual care over a 6-month follow-up period.
+
+The secondary aims are to compare mean changes between the two groups on the other HAGOS subscales over a 6-month follow-up period. Similar comparisons will be made on self-reported mean changes in the Short Version of the International Hip Outcome Tool (iHOT-12) and mean changes in performance, balance and hip muscle strength.
+
+A full trial protocol will be published and made publicly available. All primary and secondary outcomes will be analysed with the intention-to-treat principle. Between-group differences from baseline to 3-month and 6-month follow-up of continuous outcomes will be estimated using repeated measurement analysis in a mixed-effects model, including patient as a random effect, with a fixed factor for group and time and the corresponding interaction (Group × Time), adjusted for baseline values. Between-group differences of continuous outcomes from baseline to 6-month follow-up will be analysed with an unpaired t-test, where between-group differences of categorical data from baseline to 6-month follow-up will be analysed with a binominal regression model using risk difference as a measure of association. In this paper, all collected outcomes will be listed, and it will be described that the below listed will be reported in other papers (i.e. health-economic study and process-evaluation study) and secondar
+
+PRIMARY OUTCOMES:
+  - Change in self-reported pain measured with The Copenhagen Hip and Groin Outcome Score (HAGOS) (continuous data)
+
+INTERVENTIONS:
+  - OTHER: Exercise and patient education
+  - OTHER: Usual Care
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04795843

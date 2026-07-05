@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02110836
+Title: The Impact of Sucrose Ingestion During Exercise on Liver and Muscle Glycogen Concentration.
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: sports nutrition
+
+SUMMARY:
+Carbohydrate is stored in the body as glycogen, which is mainly found in the liver and muscle. During endurance exercise, muscle glycogen is used as fuel for the working muscles and liver glycogen is broken down to provide glucose to maintain blood glucose (sugar) levels. Both liver and muscle glycogen are important for the ability to perform intense/prolonged endurance exercise. Therefore, nutritional strategies which can maximise the availability of glycogen in muscle and liver can benefit endurance exercise capacity.
+
+The carbohydrates typically found in sports drinks are glucose and sometimes fructose. If glucose only is ingested during exercise, then the maximum rate at which can be absorbed from the intestine into the blood stream is \~1 g/min. However, if different sources of carbohydrate (fructose) are used, which are absorbed through a different pathway, absorption of carbohydrate can be up to \~1.8 g/min. With more carbohydrate available as a fuel, this translates into an improvement in performance.
+
+Sucrose is a naturally occurring sugar that is made up of a single glucose and single fructose molecule. Therefore, theoretically, this can use the two different pathways of absorption and also maximise carbohydrate delivery. It is not yet known however, what impact this has on our liver and muscle glycogen stores during exercise. Therefore the aim of this study is to assess whether sucrose ingestion influences liver and muscle glycogen depletion during endurance exercise.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in liver glycogen concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Glucose ingestion
+  - DIETARY_SUPPLEMENT: Sucrose ingestion
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02110836

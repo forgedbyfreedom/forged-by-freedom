@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07167277
+Title: The Impact of Whey Protein on Frailty in Older Adults Classified as Pre-frail
+Official Title: Impact of Whey Protein on Frailty - a Pilot Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: protein supplementation
+
+SUMMARY:
+This pilot study aims to determine the impact of whey protein supplementation on brain antioxidant levels and to assess the effects of whey protein supplementation on physical function, body composition, and cognition in pre-frail older adults.
+
+DETAILED DESCRIPTION:
+Frailty is characterized by weakness, muscle loss, and physical impairment. It is suggested that long term oxidative stress might contribute to frailty. Glutathione (GSH), an antioxidant in cells, is needed to combat oxidative stress. Whey protein has the potential to increase brain antioxidant (GSH) levels by aiding in antioxidant synthesis. Frail older adults under-consume protein compared to healthy older adults.
+
+Researchers want to see if supplementing with whey protein will improve brain antioxidant status in pre-frail older adults. They will measure this by using special Magnetic Resonance Imaging (MRI) scans.
+
+Participants will be asked to complete a total of 4 study visits, all taking place on the University of Kansas Medical Center (KUMC) main campus. Two of these visits will include an MRI scan. Participation will last about 3 months.
+
+PRIMARY OUTCOMES:
+  - Change in brain glutathione (GSH) levels measured using MRI scans.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey Protein
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07167277

@@ -1,0 +1,70 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07057219
+Title: Steps Against the Burden of Parkinson's Disease
+Official Title: StepuP: Steps Against the Burden of Parkinson's Disease
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: weight loss exercise
+
+SUMMARY:
+Parkinson's Disease Treadmill Training RCT Summary
+
+Parkinson's disease (PD) affects over 10 million people globally. Despite optimal pharmacological treatment, approximately 70% of individuals experience unstable gait and falls, leading to loss of confidence, social isolation, fractures, and frequent hospitalisations. Treadmill training-especially when augmented by mechanical or virtual-reality perturbations-has shown promise in improving gait and reducing fall risk. However, the mechanisms underlying these benefits remain poorly understood, limiting the ability to personalise interventions effectively.
+
+This randomised controlled trial (RCT) forms part of the broader Steps Against the Burden of Parkinson's Disease project (CT-IDs: 6ef2e427b002, 6ef2e427b003, 6ef2e427b004), comprising three harmonised but independently conducted RCTs. All sites follow a shared core protocol, allowing for pooled data analysis while preserving site-specific perturbation adaptations. Findings from this trial will be reported both independently and as part of the combined dataset.
+
+In this trial, participants with PD will undergo 12 sessions of treadmill training, with or without virtual reality and perturbation-based adaptations. Assessments will be conducted at baseline, post-training, and follow-up. The intervention aims to enhance gait through improved sensorimotor integration and balance control. During the follow-up period, a smartphoneapp "Walking Tall" will be used to encourage continued exercises and long-term retention of training effects.
+
+Biomechanical analyses will focus on changes in foot placement control. Neurophysiological outcomes will be examined using EEG and EMG, targeting reductions in beta-band EEG power and enhanced EEG-EMG coherence as markers of improved gait stability.
+
+Recognising that laboratory-based improvements may not always translate to daily life, this study will also investigate gait self-efficacy as a potential moderator of transfer. Remote monitoring tools will capture real-world mobility outcomes over a week. Machine learning techniques will be employed to identify factors differentiating those who improve in both settings from those who do not. These insights will inform the development of personalised interventions capable of translating training effects into meaningful real-life outcomes.
+
+DETAILED DESCRIPTION:
+i. Rationale The rationale of this trial is that speed-dependent treadmill training (SDTT) improves gait in people with Parkinson's disease (PD) through enhanced sensorimotor integration, with cortical activity changes as underlying neural correlates. Additional benefits may be gained when treadmill training includes perturbations, which help train reactive balance responses. Furthermore, it is hypothesised that improvements in gait quality through SDTT can enhance gait self-efficacy, which may mediate or moderate the transfer of training effects to everyday mobility. Understanding these mechanisms is essential for personalising interventions and maximising real-world outcomes.
+
+ii. Objectives
+
+The objectives of the StepuP project are to:
+
+1. Understand the kinematic and neural mechanisms that underlie improvements in gait due to treadmill training with and without mechanically and VR-triggered gait adaptations in people with PD.
+2. Assess the extent to which gait improvements measured in the laboratory transfer to improvements in daily-life mobility.
+3. Identify the mechanisms that support or limit the transfer of training effects from lab-based gait improvements to real-world mobility.
+4. Determine for whom treadmill training improves gait characteristics in the lab and for whom it does not, and similarly, who benefits in terms of daily-life mobility.
+
+Achieving these objectives will advance understanding of the variability in individual response to treadmill training, allowing more targeted and ultimately personalised interventions to improve outcomes in PD.
+
+iii. Endpoints This trial will evaluate the effects of treadmill training with and without perturbations on gait performance and neural correlates in people with PD.
+
+Primary endpoint:
+
+\> Change in gait speed under controlled treadmill conditions.
+
+Secondary endpoints:
+
+* Clinical outcomes: Changes in motor symptoms and function measured through clinical assessments.
+* Kinematic outcomes: Changes in gait parameters such as step length and variability from baseline to follow-up.
+* Neurophysiological outcomes: EEG and EMG markers, including changes in EEG beta power and EEG-EMG coherence.
+
+Exploratory endpoints:
+
+* Real-world gait metrics assessed via wearable sensors.
+* Gait self-efficacy assessed with validated questionnaires to examine psychological influences on transfer.
+
+These outcomes will help identify how and for whom treadmill training leads to meaningful, lasting improvements in mobility.
+
+PRIMARY OUTCOMES:
+  - Gait speed
+
+INTERVENTIONS:
+  - OTHER: Exercise
+  - OTHER: Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07057219

@@ -1,0 +1,76 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07123012
+Title: RELATIONSHIP OF REDUCED HAMSTRING FLEXIBILITY WITH LUMBOPELVIC RHYTHM AND MUSCLE ACTIVATION
+Official Title: RELATIONSHIP OF REDUCED HAMSTRING FLEXIBILITY WITH LUMBOPELVIC RHYTHM AND MUSCLE ACTIVATION: A CROSS-SECTIONAL BIOMECHANICAL ANALYSIS
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 38
+Topic: athletic performance
+
+SUMMARY:
+Key Findings (narrative form) The study examined how hamstring flexibility influences the way the lumbar spine and pelvis share movement during forward bending and how this affects muscle activity.
+
+1. Flexibility and lumbar contribution When participants had tighter hamstrings, their lower back took on a larger share of the bending motion. In the full forward-bend task this relationship was strong, while in the partial bend it was still clearly evident. In other words, limited hamstring length forces the spine to bend more to reach the same position.
+2. Meaningful flexibility thresholds
+
+   Participants were divided into three straight-leg-raise (SLR) groups:
+   * ≤ 60 ° (short hamstrings)
+   * 61-79 ° (moderate flexibility)
+   * ≥ 80 ° (good flexibility) Those in the ≤ 60 ° group showed a significantly higher lumbar contribution in both bending tasks than their more flexible peers. Once SLR exceeded roughly 60 °, additional gains in flexibility produced only modest further improvement in spine-pelvis balance, suggesting that 60 ° is a clinically important threshold.
+3. When the differences appear The greatest gap between flexibility groups occurred during the first half of the bend-particularly as participants began to lean forward. As they returned to upright, the differences narrowed. This indicates that early-phase movement is the critical moment when tight hamstrings shift load onto the lumbar spine.
+4. Impact on muscle activity Better hamstring flexibility was linked to a more even distribution of work between the lumbar extensor muscles and the hamstrings themselves. Participants with looser hamstrings did not have to activate their spinal muscles as forcefully, whereas gluteus maximus activity remained low in all groups because the tasks were unloaded.
+
+Practical Take-Aways
+
+* Hamstrings shorter than about 60 ° on the SLR "lock" the pelvis and make the lower back bend excessively, increasing spinal strain.
+* Improving hamstring length shifts motion back toward the pelvis, reducing demand on lumbar joints and muscles.
+* Even small everyday bends-such as reaching for an object on a chair-follow the same pattern, so stretching benefits daily life, not just sports performance.
+* Patients and families can adopt simple hamstring-stretch routines; clinicians should consider targeted flexibility training whenever SLR is 60 ° or below before progressing to heavy lifting or core-stability programs.
+
+Limitations The study involved healthy young adults and measured only unloaded forward bending. Outcomes may differ in older individuals, manual laborers, or tasks that involve twisting or weight. Long-term research is needed to confirm that stretching actually prevents low-back pain.
+
+Bottom Line Flexible hamstrings let the pelvis and lower back "share the job." If your hamstrings are tight, your spine must work harder, which may invite discomfort or injury over time. A regular stretching program that brings SLR above roughly 60 ° can restore a healthier, more balanced bending pattern and help protect the lower back.
+
+DETAILED DESCRIPTION:
+This cross-sectional biomechanical study investigates how reduced hamstring flexibility alters sagittal lumbopelvic rhythm and trunk-hip muscle activation during forward bending. All procedures are completed in a single laboratory visit and do not involve any clinical intervention or longitudinal follow-up.
+
+Study setting and oversight Testing is conducted in a university motion-analysis laboratory equipped with force-isolated flooring, adjustable height fixtures, and electromagnetic shielding. The protocol was approved by the Institutional Review Board of Sahmyook University (IRB #SYU-2025-03-033-002). Written informed consent is obtained before any study-related activity, and the identity of participants is coded to protect confidentiality.
+
+Participant allocation and sample size
+
+A priori power analysis (one-way ANOVA, effect size f = 0.55, α = 0.05, power = 0.80) indicated that at least 36 participants were required; 38 healthy adults were enrolled to offset potential attrition, and 37 completed the protocol. Participants are not assigned to treatment arms but are retrospectively stratified into three flexibility categories based on their dominant-limb straight-leg-raise (SLR) angle:
+
+(1) ≤ 60° (short group), (2) 61-79° (moderate group), (3) ≥ 80° (long group). Eligibility criteria-including absence of low-back pain in the preceding six months-are recorded in a separate module.
+
+Instrumentation and calibration
+
+* Inertial-measurement units (IMUs; Xsens MTw Awinda, 60 Hz) are affixed to T12, S2, and the posterior thigh with double-sided tape and elastic wraps after a two-point static calibration that aligns sensor axes with anatomical reference frames.
+* Surface electromyography (EMG; Delsys Trigno, 1 000 Hz) records bilateral erector spinae at L3, multifidus at L5, biceps femoris long head, and gluteus maximus. Skin is shaved, abraded, and cleaned with 70 % alcohol; electrode pairs are placed parallel to muscle fibers following SENIAM guidelines.
+* Maximal voluntary contractions (MVCs) for each muscle are collected for normalisation. All raw data are synchronised via a hardware trigger and stored in a de-identified repository.
+
+Experimental tasks
+
+After warm-up, participants perform two tasks in random order, three trials each, barefoot and with knees extended:
+
+1. a full-range forward bend from upright to maximum comfortable flexion and return, and
+2. a partial bend from upright to the point where fingertips touch the patella and return.
+
+A metronome (80 beats · min-¹) standardises angular velocity. Verbal instructions avoid coaching specific pelvic or lumbar strategies.
+
+Primary technical outcomes Sagittal lumbar and pelvic angles are derived from IMU quaternions and filtered with a fourth-order Butterworth filter (6 Hz). The Relative Contribution Index (RCI) is calculated as the percentage of total trunk excursion attributable to the lumbar spine, sampled at 10 % increments of the flexion and extension phases. Higher RCI indicates greater 
+
+PRIMARY OUTCOMES:
+  - Lumbar Relative Contribution Index (RCI) During Full-Range Forward Bend
+  - Lumbar Relative Contribution Index (RCI) During Partial Forward Bend
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07123012

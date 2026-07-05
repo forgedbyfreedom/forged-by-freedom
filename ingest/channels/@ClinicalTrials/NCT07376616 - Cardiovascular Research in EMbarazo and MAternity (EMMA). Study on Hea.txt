@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07376616
+Title: Cardiovascular Research in EMbarazo and MAternity (EMMA). Study on Heart Rate Variability and Hemodynamic Adaptations During Pregnancy and Postpartum.
+Official Title: Cardiovascular Research in EMbarazo and MAternity (EMMA). Study on Heart Rate Variability and Hemodynamic Adaptations During Pregnancy and Postpartum.
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 242
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Heart rate variability (HRV) provides a non-invasive assessment of autonomic control of the nervous system over the heart. During pregnancy, the cardiovascular system adapts significantly, affecting HRV and hemodynamics. Studying the relationship between HRV and hemodynamic changes is critical to understanding and monitoring cardiovascular health during pregnancy and postpartum, and predicting potential complications.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - RR (R-R range)
+  - RMSSD (Root Mean Square of Successive Differences)
+  - pNN50 (Percentage of successive RR intervals differing by more than 50 ms)
+  - HF (High Frecuency)
+  - LF (low frequency)
+
+INTERVENTIONS:
+  - OTHER: Assessment of HRV and blood pressure
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07376616

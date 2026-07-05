@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05052190
+Title: Patient Portal Flu Vaccine Reminders_RCT 4
+Official Title: Improving Influenza Vaccination Delivery Across a Health System by the Electronic Health Records Patient Portal RCT 4
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 239567
+Topic: physical activity intervention
+
+SUMMARY:
+This trial is taking place in Los Angeles, CA at clinics within the UCLA Health System.
+
+The study design is a 2x2 nested factorial design. Patients will be randomized into 1) receiving text based reminder messages, 2) portal-based reminder messages or 3) the control group. Patients randomized to the intervention arms will receive reminders if they are due for influenza vaccine.
+
+Nested within the reminder arms (text or portal), we will have 2 additional components for which patients will be randomized separately:
+
+* A direct scheduling link within the reminder letter enabling the patient to schedule an influenza vaccine only visit (direct scheduling link vs. no direct scheduling link).
+* A pre-appointment reminder, encouraging patients to ask for their influenza vaccine at their upcoming appointment (pre-appointment reminder encouraging influenza vaccination vs. standard pre-appointment reminder not mentioning influenza vaccination)
+
+Despite the Advisory Committee on Immunization Practices (ACIP) recommendation in 2010 that all people above 6 months of age should receive an annual flu vaccine, vaccination rates remain low: at 6m-4.9 yrs. (70%), 5-17.9 yrs. (56%), 18-64.9 yrs. (38%), and \>65 yrs. (63%). The investigators will assess the effectiveness of MyChart R/R messages and text R/R messages as compared to the standard of care control (no messages).
+
+DETAILED DESCRIPTION:
+Sub-optimal vaccination rates are a significant problem in the U.S., despite their effectiveness in preventing morbidity and mortality from vaccine-preventable illness. For influenza specifically, annual epidemics of influenza cause substantial morbidity in the U.S. with up to 40,00-80,000 deaths/year and many hospitalizations, emergency and outpatient visits, and significant costs.
+
+Reminder/recall (R/R), sent by phone, mail or other modality, can improve child and adult influenza vaccination rates. However, the majority of pediatric or adult primary care practices do not conduct R/R. Barriers are lack of finances, personnel, and algorithms to identify eligible patients.
+
+A technological breakthrough that might overcome these barriers involves patient portals-- secure, web-based communication systems, embedded within electronic health records (EHRs), for patients and providers to communicate with each other via email and the internet. Portals are used by about half of Americans and half of UCLA patients. Another is text messaging at the health system level.
+
+This randomized controlled trial will assess the effectiveness of reminders messages sent to portal users, encouraging influenza vaccination, on increasing influenza vaccination rates within a health system. Patients will be randomized into three groups: 1) one-third of patients will receive reminder letters via the portal, 2) one-third will receive reminders via text messages sent by the health system and 3) one-third will not receive reminders.
+
+Patients in the reminder arms will be further randomized (separately) for two additional components: 1) direct appointment scheduling and 2) pre-appointment reminders.
+
+Direct scheduling: The convenience of scheduling an appointment for influenza vaccination may increase the likelihood that patients receive an influenza vaccination. Patients receiving reminders will be randomized to receive one of two types of reminder letters: 1) one half will receive flu vaccine reminder letters with a link to the MyChart direct appointment scheduling page and 2) one half will receive flu vaccine reminder message without the direct appointment scheduling link.
+
+Pre-appointment flu reminders: Finally, a missed opportunities for vaccination occurs when patients are eligible for vaccination but are not offered a vaccine at their medical appointment. Pre-appointment reminders, sent in advance of an upcoming appointment, encouraging the patient talk to their doctor about influenza vaccination, may increase the likelihood of that patient receiving a vaccine. Patients will be randomized to one of two groups: 1) one half will receive modified pre-appointment reminders that mention influenza vaccination and 2) one half will receive the standard pre-appointment reminders for an upcoming appointment (no mention of influenza vaccination).
+
+Interventions that apply Behavioral Economics principles in vaccine promotion messaging can increase vaccine receipt. We will include own
+
+PRIMARY OUTCOMES:
+  - Receipt of the Annual Influenza Vaccine Among Adult and Pediatric Index Patients
+
+INTERVENTIONS:
+  - BEHAVIORAL: Text Message R/R with Direct Appointment Schedule Link
+  - BEHAVIORAL: Text Message R/R without Direct Appointment Schedule Link
+  - BEHAVIORAL: Text Pre-Appointment Reminder
+  - BEHAVIORAL: Portal Message R/R with Direct Appointment Schedule Link
+  - BEHAVIORAL: Portal Message R/R without Direct Appointment Schedule Link
+
+ELIGIBILITY:
+Age: 6 Months to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05052190

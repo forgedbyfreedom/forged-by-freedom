@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04783662
+Title: Intraoperative EEG Marker of Preoperative Frailty in Elderly Patients
+Official Title: Study of an Intraoperative Frontal Electroencephalographic Marker of Preoperative Frailty in Patients Over 65 Years of Age for Elective Non-cardiac Surgery.
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 60
+Topic: recovery exercise
+
+SUMMARY:
+Frailty is a state of vulnerability, characterized by a loss of mechanisms that maintain homeostasis, determining a lower capacity for recovery in the event of a stressful incident. It is one of the risk factors that increase postoperative adverse outcomes in the elderly population. It has been associated with worse results in different surgical settings, including increased mortality, readmission, referral to specialized care units, increased costs and hospital stay. Currently, there are several instruments for diagnosis and screening of frailty. All of them require time for their execution, an experienced evaluator and an adequate validation in the population in which they are intended to be used. The use of frontal electroencephalography during the intraoperative period has become increasingly popular. It allows the monitoring of brain activity during the administration of anesthetics. Various intraoperative electroencephalographic markers, such as alpha spectral power or total spectrum power, have been associated with factors such as preoperative physical activity, preoperative cognitive level, comorbidities, and postoperative delirium. The objective of this study will be to determine an intraoperative frontal electroencephalographic marker of preoperative frailty in ≥ 65 years patients undergoing general anesthesia with Sevoflurane for non-cardiac surgery.
+
+DETAILED DESCRIPTION:
+The world health organization has estimated that the population over 60 years of age will increase exponentially between 2015 and 2050. This change will be more pronounced in developing countries, including Chile. Each year, the number of older people (≥ 65 years) undergoing surgical interventions raises. This is due to a sustained increase in life expectancy, demographic changes, and progress in surgical/anesthetic techniques that allow this population to undergo less invasive procedures. In addition, older patients have a higher risk of postoperative morbidity and mortality compared to younger people.
+
+Frailty is one of the risk factors that increase adverse postoperative outcomes in the elderly population. It is defined as a state of vulnerability or lack of physiological reserve that is characterized by an inadequate resolution of homeostasis after a stressful event. Frailty determines that an event can generate changes in the postoperative state of dependence of these patients; causing a person who was independent prior to surgery to end up requiring assistance with their activities of daily living after it. Frailty has been associated with worse outcomes in different surgical settings, including increased mortality, readmission, referral to specialized care units, increased costs and hospital stay. In addition, preoperative frailty has also been associated with postoperative delirium.
+
+Currently, there are several instruments for the diagnosis and screening of frailty that present good sensitivity and specificity. All of them require time for their execution, an experienced evaluator and adequate validation in the population in which they are intended to be used. Furthermore, with some instruments, specific elements may be required, for example the Handgrip dynamometer for the Fried phenotype. These conditions are not always easy to obtain in the local preoperative setting and the tools are not always adequately validated for non-English speaking populations. Moreover, there is uncertainty regarding which frailty instrument to choose among the dozens described in the literature, and there are time pressures that prevent the addition of more tests or evaluations in the preoperative clinic.
+
+The use of frontal electroencephalography (EEG) during the intraoperative period has become increasingly popular. It is used to obtain a real-time record of brain electrical activity during administration of anesthetics. Interpreting the EEG in the time domain in real time in the operation room is challenging. Therefore, various processed EEG monitors (BIS®, SedLine®) currently clinically used, have incorporated the spectral analysis to their records. The spectrum presents the advantage to show the frequency decomposition of the EEG segment for all frequencies in a given range (usually \<30 Hz) by plotting the frequency on the X axis and power on the Y axis. The accumulation of spectra over time is called spectrogram and can be presented graphically on th
+
+PRIMARY OUTCOMES:
+  - Electroencephalogram Alpha power
+
+INTERVENTIONS:
+  - DEVICE: Intraoperative frontal electroencephalogram
+
+ELIGIBILITY:
+Age: 65 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04783662

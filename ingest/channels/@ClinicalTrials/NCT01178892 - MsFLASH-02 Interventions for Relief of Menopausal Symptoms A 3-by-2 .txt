@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01178892
+Title: MsFLASH-02: Interventions for Relief of Menopausal Symptoms: A 3-by-2 Factorial Design Examining Yoga, Exercise, and Omega-3 Supplementation
+Official Title: MsFLASH-02: Interventions for Relief of Menopausal Symptoms: A 3-by-2 Factorial Design Examining Yoga, Exercise, and Omega-3 Supplementation
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 355
+Topic: omega 3 exercise
+
+SUMMARY:
+This study is the second clinical trial to be conducted by the Menopause Strategies - Finding Lasting Answers for Symptoms and Health (MsFLASH) research network, a group of investigators conducting clinical trials designed to find new ways to alleviate the most common, bothersome symptoms of the menopausal transition.
+
+In this twelve-week clinical trial, 374 women aged 40-62 who are in the late menopausal transition or postmenopausal and experiencing bothersome hot flashes will be randomized to one of three behavioral intervention groups: yoga, exercise, or usual activity. All women will simultaneously be randomized to receive omega-3 supplementation or a matching placebo.
+
+The primary aims of this trial are to compare the magnitude of changes in perceived, self-reported frequency and bother of vasomotor symptoms (VMS) before and after the intervention between yoga and the usual activity comparison group, between exercise and the usual activity comparison group, and between omega-3 fatty acid supplementation or placebo. The hypotheses to be tested are:
+
+1. Women assigned to yoga will report lower frequency and less VMS bother than women assigned to the usual activity group at the end of a 12-week study period.
+2. Women assigned to aerobic exercise at moderate-vigorous intensity will report lower frequency and less VMS bother than women assigned to the usual activity group at the end of a 12-week study period.
+3. Women assigned to omega-3 fatty acid supplementation will report lower frequency and less VMS bother than women assigned to the placebo group at the end of a 12-week study period.
+
+The omega-3 component of the study is double-blinded. For yoga, exercise, and usual activity, the outcomes assessors are blinded to the randomization assignments.
+
+DETAILED DESCRIPTION:
+Over 33 million U.S. women will transition through menopause in the next decade. Among women with natural menopause, the transition typically lasts four years, with a mean age at menopause of 51 years. Menstrual irregularity (90%) and vasomotor symptoms (VMS) (80%) are the most common symptoms associated with the transition. Hormone therapy has been the gold standard for treating VMS symptoms against which other therapies are measured. However, resistance to hormone therapy use due to its risks and side effects continues to fuel the search for safer alternatives.
+
+This research study will evaluate three low risk interventions (yoga, exercise, and omega-3 supplements) compared to either a usual activity group or a placebo pill. This factorial design is motivated by the desire to have all women receive some intervention. Neither comparisons between yoga and exercise nor tests of interaction between the behavioral interventions (yoga, exercise, usual activity) and omega-3 motivated this design. However, these aspects can be examined in secondary analyses in a more rigorous fashion through this design than would be permitted by separate trials.
+
+PRIMARY OUTCOMES:
+  - Frequency and bother of hot flashes measured by self-report diaries.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Omega-3
+  - BEHAVIORAL: Yoga
+  - BEHAVIORAL: Exercise
+  - BEHAVIORAL: Usual Activity
+
+ELIGIBILITY:
+Age: 40 Years to 62 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01178892

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01529281
+Title: Exercise-induced Muscle Damage is Reduced in Resistance Trained Athletes by Branch Chain Amino Acids
+Official Title: Exercise-induced Muscle Damage is Reduced in Resistance Trained Athletes by Branch Chain Amino Acids
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: creatine supplementation
+
+SUMMARY:
+It is well documented that exercise-induced muscle damage (EIMD) decreases muscle function and causes severe soreness and discomfort. Branched-chain amino acid (BCAAs) supplementation has been shown to increase protein synthesis and decrease muscle protein breakdown, however, the effects of BCAAs on recovery from EIMD are unknown. Thus, the aim of this study was to examine the effects of a BCAAssupplement on markers of muscle damage.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximal voluntary contraction
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Branch Chain Amino Acid (BCAAs)
+  - DIETARY_SUPPLEMENT: Placebo - asparmate
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01529281

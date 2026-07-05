@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06115356
+Title: Hypovitaminosis D and "Metabolic" Inflammatory Status in Patients With Obesity
+Official Title: Hypovitaminosis D and "Metabolic" Inflammatory Status in Patients With Obesity: a Retrospective Cohort Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 208
+Topic: vitamin D muscle
+
+SUMMARY:
+Since obesity is related to systemic chronic inflammatory status and hypovitaminosis D, the study aimed to assess the incidence of hypovitaminosis D in obese patients and the correlations between vitamin D levels, inflammation indices, and bioimpedance measures.
+
+A retrospective study was conducted on a cohort of obese patients. The inflammation-based prognostic scores, diagnosis of liver fibrosis, systemic inflammatory indices, and bioimpedance measures were analyzed. The linear relationship between vitamin D levels and continuous variables was assessed through the Spearman correlation coefficient, and to determine significant predictors of vitamin D levels a stepwise multiple linear regression was used.
+
+DETAILED DESCRIPTION:
+Introduction Obesity is a major health problem related to a cluster of chronic metabolic disorders and is associated with increased overall morbidity and mortality. Several studies proved that obesity is linked to a low grade of systemic chronic inflammatory status, considering the adipose tissue the largest metabolically active organ with endocrine, inflammatory, and immunological functions.
+
+The "metabolic" inflammatory process leads to the release of inflammatory cytokines with subsequent systemic effects on insulin-sensitive organs, such as the liver which markedly suffers from the systemic proinflammatory environment. Vitamin D (25(OH)D) plays a key role in the regulation of mineral homeostasis by binding the vitamin D receptors, leading to an adequate calcium level to promote skeletal health. Furthermore, vitamin D has anti-inflammatory and immunoregulatory functions. It is an indispensable nutritive component that regulates the inflammatory microenvironment through several mechanisms such as the up-regulation of Mitogen-activated protein kinases (MAPKs) and inhibition of Nuclear Factor-Kappa B (NF-Kb) signaling pathways.
+
+A low level of vitamin D in the visceral adipose tissue (VAT) induces more lipogenesis and less lipolysis promoting fat storage and obesity. The prevalence of vitamin D deficiency is 24% and 35% higher in overweight and obese people, respectively, compared to the general population. Many hypotheses have been proposed to explain the inverse correlation between Vitamin D and obesity:1) the storage of this fatsoluble nutrient in the exceeded VAT; 2) the higher plasma dilution of the Vitamin D in the obese patient compared to the normal-weight population; 3) the reduced sun exposure due to the stigma of obesity; 4) the presence of metabolic syndrome or type 2 diabetes that often co-exist with obesity; 5) molecular interactions between Vitamin D and pro-inflammatory cytokines.
+
+Thus, hypovitaminosis D, inflammation, and obesity are three pathological conditions closely linked. In the literature, data explaining this relationship are still inconsistent, but crosstalk based on molecular signals exists.
+
+On this basis, patients with obesity could be a high-achieving biological model helping to clarify the noncalcemic effects of vitamin D in regulating inflammation.
+
+The first aim of the study is to assess the incidence of hypovitaminosis D in a cohort of obese patients; secondly, our purpose is to evaluate the correlation between hypovitaminosis D and inflammation's indices: inflammation-based prognostic scores, ferritin, C-reactive protein (CRP), inflammation grade on liver biopsy, and bioimpedance measures.
+
+Materials and Methods This monocentric retrospective cohort study is based on a prospective database of consecutive obese patients referred to the General Surgery Department at Cattinara University Hospital in Trieste, Italy, between January 2018 and June 2021.
+
+Patients were divided into three groups according to 25(OH) D 
+
+PRIMARY OUTCOMES:
+  - Vitamine D plasma level in patients with obesity
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Vitamin D Plasma Level
+  - DIAGNOSTIC_TEST: Bioelectrical Impedance Analysis (BIA) technique
+  - DIAGNOSTIC_TEST: Ferritin
+  - DIAGNOSTIC_TEST: C-reactive protein (CRP)
+  - DIAGNOSTIC_TEST: Inflammation-based prognostic scores
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06115356

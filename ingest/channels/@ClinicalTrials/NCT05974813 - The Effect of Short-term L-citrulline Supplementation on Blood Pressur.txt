@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05974813
+Title: The Effect of Short-term L-citrulline Supplementation on Blood Pressure and Arterial Stiffness
+Official Title: The Effect of Short-term L-citrulline Supplementation on Blood Pressure and Arterial Stiffness
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: protein supplementation
+
+SUMMARY:
+The goal of this clinical trial is to examine the effect of short-term L-Citrulline on central and peripheral blood pressure in healthy older adults. The main questions it aims to answer are:
+
+* Does L-citrulline favorably affect blood pressure at rest and during exercise?
+* Does L-citrulline favorably affect arterial stiffness?
+* Does L-citrulline favorably affect muscle oxygenation at rest and during exercise?
+
+Participants will be asked to consume L-citrulline and a placebo for six days and participate in the evaluation of their blood pressure, arterial stiffness, and muscle oxygenation before and after each intervention.
+
+Researchers will compare L-citrulline and placebo groups to examine whether L-citrulline supplementation affects the above health parameters.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in aortic and brachial systolic blood pressure (rest)
+  - Change in aortic and brachial systolic blood pressure
+  - Change in carotid-femoral pulse wave velocity (cfPWV) (rest)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-Citrulline
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 55 Years to 70 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05974813

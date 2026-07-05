@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06386133
+Title: Chronic Fatigue in Multiple Sclerosis: MS Copilot Boost Solution Compared to Standard Care
+Official Title: Chronic Fatigue in Multiple Sclerosis: Validating Clinical Performance, Economic, and Organizational Benefits of MSCopilot Boost Compared to Standard Care
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 208
+Topic: muscle rehabilitation
+
+SUMMARY:
+The main objective of the MS Boost study is to demonstrate the superiority of MSCopilot Boost over standard practice in reducing the impact of fatigue on Patients with Multiple Sclerosis (MS).
+
+The secondary objectives include validating MSCopilot Boost clinical performance in reducing fatigue and its impact as well as evaluating its functional tests performance and its safety of use. The investigation team will also investigate the effects of MSCopilot Boost on patient symptoms, functional parameters and physical activity levels. The investigation team will evaluate patients and healthcare professionals' perceived clinical benefit as well as adherence, satisfaction and user experience related to the mobile application and the web portal. Ultimately, the investigation team will define the medico-economic and organizational impact of the MSCopilot Boost solution.
+
+Patients' expected benefits are the access to additional clinical tests not routinely performed, covering dimensions not addressed by standard tests like the EDSS for example; a remote monitoring of functional tests similar to those of the modified MSFC with the possibility of adding an evaluation of fatigue through digital questionnaires; improvement of symptoms related to MS fatigue through access to a personalised tele-rehabilitation program.
+
+Healthcare professionals' expected benefits are to track objective measures of key functional symptoms of the disease between consultations, supporting MS patients' management and to gain time by providing a "big picture" of the patient's condition over time.
+
+DETAILED DESCRIPTION:
+Multiple sclerosis (MS) is an autoimmune, inflammatory disease of the central nervous system that causes unpredictable neurological symptoms. It is the leading cause of non-traumatic disability in young adults in France. MS often leads to mobility impairments, visual problems (26% of patients), cognitive dysfunction (40-70%) and chronic fatigue, which affects more than 70% of patients. Fatigue, a major problem for 55% of patients, reduces energy, affects work capacity and increases sickness absence. Despite its importance, common clinical tools such as the EDSS and MSFC-4 do not assess fatigue.
+
+MS-related fatigue is multifactorial, influenced by disease phenotype, comorbidities (e.g. depression, pain, sleep problems) and lifestyle factors. Fatigue assessments such as the Fatigue Severity Scale (FSS) and the Modified Fatigue Impact Scale (MFIS) are commonly used, but have validity issues and often require additional qualitative methods.
+
+There is no clear consensus on the management of fatigue in MS. Pharmacological treatments show inconsistent results and non-pharmacological methods, particularly physical activity, are promising. Moderate exercise and resistance training improve symptoms and fitness, but no single exercise regimen is superior, so individualised approaches are needed. Multidisciplinary management combining physical activity, behavioural therapies and sometimes medications is increasingly recommended.
+
+Most people with MS do not meet physical activity guidelines, highlighting the need for tailored exercise programmes. Mobile applications for remote monitoring and self-management offer promising solutions to enable patients to maintain activity and manage symptoms between medical visits.
+
+Ad Scientiam has developed MSCopilot Boost, a medical software device that supports remote monitoring and management of MS symptoms. It includes a smartphone app with functional tests for walking, dexterity, vision, cognition and fatigue, and a telerehabilitation programme with personalised advice. Healthcare professionals can track patient progress via a web portal, making MSCopilot Boost a complementary tool to support consultations, rather than a stand-alone diagnostic device.
+
+The primary objective of the MS Boost study is to demonstrate the efficacy of MSCopilot Boost in reducing the impact of fatigue in people with MS. Secondary objectives include evaluating its performance in reducing fatigue, improving functional testing, ensuring safety, and assessing its impact on symptoms and physical activity levels. The study also aims to measure patient and healthcare professional satisfaction, adherence and user experience with the app and web portal, and to define its organisational and economic impact.
+
+Patients could benefit from additional clinical tests, real-time monitoring of functional parameters and a personalised fatigue management programme, while healthcare professionals would gain insight into patients' conditions over time, enabling mo
+
+PRIMARY OUTCOMES:
+  - To demonstrate that MSCopilot Boost is superior to standard practice in reducing the impact of fatigue on Patients with Multiple Sclerosis
+
+INTERVENTIONS:
+  - DEVICE: MS Boost
+  - OTHER: Standard of care
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06386133

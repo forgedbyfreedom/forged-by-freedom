@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07386561
+Title: Virtual Reality Therapy and Non-Sleep Deep Rest Relaxation After Joint Arthroplasty
+Official Title: Adjunctive Virtual Reality Therapy Versus Non-Sleep Deep Rest Relaxation During Postoperative Rehabilitation in Older Adults Undergoing Hip or Knee Arthroplasty
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: recovery exercise
+
+SUMMARY:
+The aim of this study is to compare the effectiveness of Virtual Reality therapy (VR therapy), Non-Sleep Deep Rest relaxation (NSDR relaxation) each delivered as an adjunct to standard postoperative rehabilitation, in older adults following hip or knee arthroplasty, focusing on reducing psychological stress and improving functional recovery.
+
+DETAILED DESCRIPTION:
+Older adults undergoing hip or knee arthroplasty frequently experience psychological distress, including elevated stress and anxiety, which may reduce engagement in rehabilitation and limit functional recovery. This randomized clinical trial will compare the effectiveness of Virtual Reality therapy (VR therapy) and Non-Sleep Deep Rest relaxation (NSDR relaxation) each delivered as an adjunct to standard postoperative rehabilitation, in this population. Ninety participants aged 60-85 years, within three months post-arthroplasty, will be recruited from an inpatient rehabilitation unit and randomized to receive standard rehabilitation alone, standard rehabilitation plus VR therapy or standard rehabilitation plus NSDR relaxation over a four-week period. The VR therapy will consist of eight 20-minute session using VRTierOne medical device. NSDR relaxation will be delivered as eight 20-minute, audio-guided relaxation sessions (body scan and breathing exercises) via noise-cancelling headphones in a quiet environment. Primary outcomes will include changes in psychological distress (stress, anxiety, depressive symptoms; assessed with validated questionnaires) and functional recovery (functional performance and mobility indices), measured at baseline and post-intervention. Both adjuncts are designed to be safe, well-tolerated, and feasible for clinical implementation. The findings are expected to clarify the comparative role of VR therapy and NSDR relaxation as low-risk adjunctive strategies to support psychological well-being and functional outcomes during post-arthroplasty rehabilitation.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline in Hospital Anxiety and Depression Scale (HADS) Score at 4 Weeks
+  - Change from Baseline in Perceived Stress Scale (PSS-10) Score at 4 Weeks
+  - Change from Baseline in Generalized Self-Efficacy Scale (GSES) Score at 4 Weeks
+  - Change from Baseline in Perception of Stress Questionnaire (PSQ) Score at 4 Weeks
+
+INTERVENTIONS:
+  - DEVICE: Immersive Virtual Reality Therapy
+  - BEHAVIORAL: Non-Sleep Deep Rest Relaxation
+  - BEHAVIORAL: Conventional rehabilitation
+
+ELIGIBILITY:
+Age: 60 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07386561

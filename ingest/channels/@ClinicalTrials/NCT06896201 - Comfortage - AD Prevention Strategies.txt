@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06896201
+Title: Comfortage - AD Prevention Strategies
+Official Title: Comfortage - Integration of Biomarkers, Genetic and Clinical Risk Factors for AD Prevention Strategies
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: omega 3 exercise
+
+SUMMARY:
+Study is Interventional, cross-sectional, clinical trial without drug and without device
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Changes in cognitive performance and quality of life through cognitive scales (MiniMental State Examination)
+  - Changes in cognitive performance and quality of life through cognitive scales (Clinical Dementia Rating Scale)
+  - Changes in cognitive performance and quality of life through cognitive scales (Activities of the Daily Living)
+  - Changes in cognitive performance and quality of life through cognitive scales (Instrumental activities of the daily living)
+  - Changes in cognitive performance and quality of life through questionnaires (Quality of sleep)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Neuropsychological Assessments and Other Questionnaires
+  - BIOLOGICAL: Blood Exams, Fluid Biomarkers, Genetics
+  - OTHER: Connectivity Analysis
+  - DEVICE: Physical Activity
+  - DEVICE: Healthentia
+
+ELIGIBILITY:
+Age: 50 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06896201

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04669509
+Title: Effect of Liver Injury on Mortality in Coronavirus Disease-2019 Patients Admitted to Intensive Care Unit
+Official Title: Effect of Liver Injury on Mortality in Coronavirus Disease-2019 Patients Admitted to Intensive Care Unit
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 532
+Topic: creatine supplementation
+
+SUMMARY:
+In addition to primarily affecting the lungs, coronavirus disease-2019 (COVID-19) disease can also affect many different organs, especially the heart, kidneys, liver and brain. In this group of patients, the impact of an important organ such as the liver can lead to a further deterioration of the clinical course. In this study, critical patients admitted to Gazi Yasargil Training and Research Hospital intensive care unit (ICU) due to COVID-19 between April 1 and October 1, 2020 were retrospectively analyzed. The effect of liver damage on mortality in critical COVID-19 patients was investigated. The necessary permits for the study were obtained from the Scientific Research Platform of the T.R. Ministry of Health. (20.11.2020) Patients diagnosed with COVID-19 on the specified dates, followed in the ICU, older than 18 years, identified as critical/serious according to the World Health Organization and provisional guidelines of the Scientific Board of the T.R. Ministry of Health will be included in the study.
+
+ICU patients without COVID-19, COVID-19 patients under 18 years of age,COVID-19 patients with known liver disease, and COVID-19 patients with mild to moderate symptoms will be excluded from the study.
+
+Patients' age, gender, comorbidity, Acute Physiology and Chronic Health Evaluation II (APACHE II), Sequential Organ Failure Assessment (SOFA) scores when first admitted to the ICU, hemogram parameters (white blood cell count, neutrophil, lymphocyte, hemoglobin, platelet count), coagulation parameters (prothrombin time, activated partial thromboplastin time and D-dimer, blood biochemistry results (C-reactive protein, lactate dehydrogenase, creatine kinase , alanine aminotransferase (ALT), aspartate aminotransferase (AST), total bilirubin, direct bilirubin and indirect bilirubin), procalcitonin and ferritin levels will be recorded. In addition, the number of days spent in the ICU and whether mortality develops or not will be recorded. It will also be recorded whether mortality develops on day 7 and day 28.
+
+Patients will be divided into three groups according to their ALT, AST and total bilirubin levels at the time of admission to the ICU. Group 1 will consist of patients with normal ALT, AST and total bilirubin values. Group 2 will consist of patients whose ALT, AST or total bilirubin levels are up to 3 times upper limit of normal. Group 3 will consist of patients whose ALT, AST or total bilirubin levels are increased more than 3 times upper limit of normal.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - 7 and 28 day mortality
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Liver function tests
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04669509

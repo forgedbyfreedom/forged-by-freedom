@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05367804
+Title: Dietary Protein Impact on Human Gut Health
+Official Title: Växtbaserade Proteiner påverkan på människors tarmhälsa Dietary Protein Impact on Human Gut Health
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: exercise muscle mass
+
+SUMMARY:
+The overall aim of this project is to evaluate the quantity of dietary protein that affects gut protein metabolization and if the baseline measurements are stable.
+
+DETAILED DESCRIPTION:
+Healthy male and female adult subjects (n=39) will be recruited to take part in an evaluation study to determine the amount of dietary protein intake which influences gut-protein-derived metabolites production. The subjects eligible to take part in this study will consume an isolated plant protein for 4 weeks, in each week the amount of protein supplementation will increase. The protein will be provided as a powder in opaque bags and participants will be instructed to dissolve the contained powder in liquids (as water) or on their food (e.g., yogurt, oat porridge). The baseline will consist in 4 visits, which in all visits faecal samples will be collected by themselves at their house or at hospital, using materials provided by the study staff. In one baseline visits (visit 4) in addition to the faecal sample, urinary sample will be collected by themselves, and blood samples will be collected at the hospital. After that, subjects will have the dietary intervention for four weeks and more 4 visits. For the visits with blood collection (visits 4 to 8), subjects will come to the study centre after 10 hours overnight fast. Subjects will have anthropometry measurements taken in the visits 4, 5, 6, and 7 using a Tanita® full body composition. Subjects will respond to questionnaires about their physical activity (once a week), Gastrointestinal Symptom rating scale (GSRS - once a week) and track their intestinal habits using Bristol scale (every day). Subjects' diet will be assessed using a web-based 24-hour diet recall (interviewed so the participants learn how to use the tool regardless of where they are) followed by multiple day records (3 times week).
+
+PRIMARY OUTCOMES:
+  - Changes in the faecal metabolites using targeted and untargeted metabolomics
+  - Routinely analysed markers for protein intake/compliance - urine
+  - Routinely analysed markers for protein intake/compliance - blood
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Isolated pea protein
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05367804

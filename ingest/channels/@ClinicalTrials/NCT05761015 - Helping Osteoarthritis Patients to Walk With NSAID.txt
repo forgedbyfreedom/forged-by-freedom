@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05761015
+Title: Helping Osteoarthritis Patients to Walk With NSAID
+Official Title: A Rehabilitation Walking Program With the Help of a Transient Intake of Nonsteroidal Anti-inflammatory Drug for Patients With Painful Hip/Knee Osteoarthritis - A Pilot Cohort Study With Objectives of Short Walks in the Real Life.
+Status: RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 55
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+There is a lack of effective analgesic treatments to help walking patients with painful hip/knee osteoarthritis. Our team therefore imagined a new strategy lying on a multimodal rehabilitation walking program with the help of a transient intake of nonsteroidal anti-inflammatory drug (NSAID). NSAIDs are indeed known to act specifically on pain at movement, but their continuous intake would induce unacceptable side effects. To optimize the benefit/risk balance, the molecule to be chosen must fit to the patient's profile, and its intake should cover only the period of interest, i.e. planned walks. Our multimodal rehabilitation program will also include physical techniques such as appropriate footwear, a patient's education aiming at reducing fear/avoidance and spotting side effects of NSAIDs, and a prescription frame to avoid any overdosing.
+
+This clinical study is a single-center, non-randomized, open label, one-arm trial, using drugs prescribed according to their label (i.e. osteoarthritis pain), pending a reinforced monitoring of side effects.
+
+The primary endpoint is to evaluate efficacy and tolerance of a tailored and transient administration of NSAID within a rehabilitation walking program in patients with painful hip/knee osteoarthritis.
+
+Secondary endpoints are to evaluate the adherence to the program and the factors influencing adherence; to identify the less well tolerated conditions of treatment (one condition being one molecule for one patient profile); to identify the factors of success among a set of baseline demographic, morphometric and psychometric variables; and to study the role of central sensitization (assessed by temporal summation) on the efficacy of treatment.
+
+DETAILED DESCRIPTION:
+Study schedule:
+
+* Inclusion visit (V0): check of the eligibility criteria, explanation of the protocol, plan for a podiatric consultation, baseline questionnaires, and delivery of diary to collect efficacy outcomes.
+* Observation time (4 weeks): baseline measurement of efficacy outcomes (physical activity and pain at walk), podiatric consultation and improvement of footwear (including orthosis or soles).
+* Pre-intervention visit (V1) : collection of self-reported outcomes, measurement of temporal summation, 6-min walk test before and after NSAID test \*, plan for the first 6-week intervention period and delivery of diary to collect efficacy and tolerance outcomes.
+* Intermediate within-intervention visit (after 6 weeks): collection of self-reported outcomes, blood sampling (biological tolerance outcomes), plan for the second 6-week intervention period and delivery of diary to collect efficacy and tolerance outcomes.
+* End-of-study visit: collection of self-reported outcomes, blood sampling (biological tolerance outcomes), and collection of last efficacy outcomes (anxiety, depression, kinesiophobia, global impression of change).
+
+  * The patient will undergo two 6-min walk tests at the pre-intervention visit, one before and one 45 min. after oral administration of the NSAID. The patient will be considered as responsive to the NSAID if one of the following criteria occurs: a 15% increase (or more) of the time-to-first pain at walk, self-defined as bothering; a 1-point decrease (or more) of pain intensity (out of 10) throughout the test; or a 15% increase (or more) of the walked distance, if this was \< 200 m at the first test. Only patients responsive to the NSAID will continue the trial.
+
+The sequence of successes will be treated in Bayesian analyses. Sequential analyses with be conducted stepwise. At each step, the decision to stop or to keep going will be taken, until a maximum of 50 cases eligible for analysis.
+
+* 1st step (N=20): stop for efficacy if more than 11 successes; stop for non-efficacy if less than 6 successes; continuation otherwise (20 supplementary patients);
+* 2nd step (N=40): stop for efficacy if more than 17 successes; stop for non-efficacy if less than 16 successes; continuation otherwise (20 supplementary patients);
+* 3rd step (N=50): efficacy if more than 21 successes; non-efficacy otherwise
+
+PRIMARY OUTCOMES:
+  - Success
+
+INTERVENTIONS:
+  - DRUG: therapeutic program including intermittent drug intake and multimodal rehabilitation program
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05761015

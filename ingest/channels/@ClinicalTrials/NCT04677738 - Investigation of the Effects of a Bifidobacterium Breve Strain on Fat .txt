@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04677738
+Title: Investigation of the Effects of a Bifidobacterium Breve Strain on Fat Loss in Healthy Adults
+Official Title: A Randomized, Double-blind, Placebo-controlled Study to Investigate the Effects of a Bifidobacterium Breve Strain on Fat Loss in Healthy Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 95
+Topic: fat loss muscle
+
+SUMMARY:
+Overweight has become a critical issue in North America and the market value of weight loss products is expected to rise as the population becomes more health-conscious and aware of the risks associated with excess body weight. This randomized, placebo-controlled, clinical trial investigates the effect of Bifidobacterium breve supplementation with exercise intervention on fat loss.
+
+DETAILED DESCRIPTION:
+In early adulthood, excess body weight is a risk factor associated with several health complications later on in life and probiotics have been used for decades for maintaining intestinal health, and in recent years probiotics have been proposed for weight management. This randomized, placebo-controlled, clinical trial investigates the effect of Bifidobacterium breve supplementation with exercise intervention on fat loss.
+
+PRIMARY OUTCOMES:
+  - Change in Fat Loss (g)
+  - Change in Fat Loss (Percentage of Body Weight)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: B. breve strain
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04677738

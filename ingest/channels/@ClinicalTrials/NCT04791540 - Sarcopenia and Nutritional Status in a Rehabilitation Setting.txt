@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04791540
+Title: Sarcopenia and Nutritional Status in a Rehabilitation Setting
+Official Title: Observational Pilot Study in Patients Who Underwent Tracheostomy: Sarcopenia Assessment by Handgrip Strenght and BIA. Association to Malnutrion Risk, Nutritional Status, Gut Microbioma and Decannulation Time.
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: creatine supplementation
+
+SUMMARY:
+In this pilot observational study the primary outcome is to assess, in a Respiratory Rehabilitation Unit, if there is an association between sarcopenia, assessed by handgrip strenght and BIA, and a delayed decannulation time in patients who underwent tracheostomy.
+
+Secondary outcomes are to assess if there is an association between an increased malnutrition risk (assessed by MUST), a poor nutritional status (assessed by GLIM criteria) and a delayed decannulation time and the gut microbiota composition.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from admission in muscle mass at decannulation time
+  - Change from admission in hangrip strenght at decannulation time
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: handgrip strenght
+  - DIAGNOSTIC_TEST: Bioelectrical Impedance Analysis (BIA)
+  - DIAGNOSTIC_TEST: MUST
+  - DIAGNOSTIC_TEST: GLIM
+  - BIOLOGICAL: Gut microbiota
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04791540

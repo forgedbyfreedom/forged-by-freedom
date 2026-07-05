@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06834984
+Title: Ritual Synbiotic+, a Dietary Supplement Designed to Impact Gastrointestinal Health, Mood, and Behavior in Women
+Official Title: Ritual Synbiotic+, a Dietary Supplement
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: beta-alanine
+
+SUMMARY:
+The aim of this study is to determine how regular consumption of Synbiotic+, a dietary supplement that contains prebiotics, probiotics, and postbiotics, impacts functional gastrointestinal health, markers of intestinal inflammation and immune health, and influences mood and behavior. The primary outcome will be to assess gastrointestinal health using bowel movement tracking, self-report and objective assessments of gastrointestinal symptom severity, stool levels of short chain fatty acids, changes in the gut microbiota, including recovery of LGG and BB-12, and functional measures of the microbiome. Secondary outcomes will include stool and blood markers of gut barrier function and intestinal inflammation, immune health, and self-assessments of stress, anxiety, sleep, and quality of life.
+
+DETAILED DESCRIPTION:
+The trial will be a double-blinded, randomized, placebo-controlled parallel arm intervention study taking place at Colorado State University. In total, \~100 adult women (25-65 years old) with a BMI \<30, with moderate digestive discomfort (as evidenced by a moderate score on a functional gastrointestinal questionnaire will be enrolled into the study. With an estimated 20% attrition rate, this will allow approximately 80 individuals to complete the study. Exclusion criteria include a BMI\>30, any significant systemic diseases (including Crohn's, Ulcerative Colitis, but not including diagnosis of Irritable Bowel Syndrome), prescription medication for digestive symptoms, antibiotic or probiotic ingestion within the two months before entry into the study, and pregnancy or breastfeeding. Subjects will be provided with the consent form prior to the baseline visit and informed consent will be obtained prior to participating in the study. Participants will be compensated for their participation. Medical health history will be collected at the baseline visit. Quality of Life (QOL) and GI Health questionnaires, along with questionnaires to gauge mood and anxiety, will be collected from each enrolled participant at the baseline, mid-point ("check-in visit 2"), and final clinic visits; a GI health questionnaire will also be collected at the acute study visit (48-72 hours after treatment start). Anthropometric measures at the baseline visit will include seated blood pressure, height, weight, and waist:hip measurements; blood pressure will also be collected at the final visit. A stool sample will be collected from participants at each clinic visit, and a blood sample will be collected at the baseline and final clinical visits. Two 3-day diet records will be completed prior to the start and at completion of the study. In addition, participants will keep a daily record of their bowel movements and brief notes regarding any GI symptoms starting 7-days prior to beginning the treatment and for the duration of the study.
+
+All enrolled participants will start with a baseline clinic visit and a 7-day lead in period, after which they will take one of the treatments for 12 weeks. To determine the acute effects of the treatment, participants will return a stool sample to the clinic 48-72 hours after the treatment start to establish acute effects (ie. changes in SCFA, microbial dysbiosis index). Subjects will randomly be assigned to a starting treatment (A or B) and capsules will be blinded and labeled by Ritual personnel who are not directly involved in the study. CSU clinical personnel will not be provided with the code for treatment groups until after all data analysis has been completed.
+
+PRIMARY OUTCOMES:
+  - Short Chain Fatty Acid concentration in stool
+  - Fecal pH
+  - Fermentation Rate of microbiome
+  - Microbial composition (alpha and beta diversity, dysbiosis index, differential taxa)
+  - Total number and types of bowel movements
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Prebiotic, probiotic, postbiotic combination
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 25 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06834984

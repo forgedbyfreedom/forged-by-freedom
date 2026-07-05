@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02451189
+Title: RCT to Describe the Effects of Colon Delivered Acetate, Propionate and Butyrate on Satiety and Glucose Homeostasis
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: protein supplementation
+
+SUMMARY:
+Obesity, with its associated co-morbidities, is a major public health challenge. It is estimated that by 2050, 60% of men and 50% of women will be clinically obese. Obesity is associated with increased risk of developing diabetes, cardiovascular disease, and certain cancers. The increasing epidemic of obesity has necessitated the study of the complex mechanisms underlying energy homeostasis. Food intake, energy balance and body weight are tightly regulated by the hypothalamus, brainstem and reward circuits, on the basis both of cognitive inputs and of diverse humoral and neuronal signals of nutritional status. Several gut hormones, including glucagon-like peptide-1 (GLP-1) and peptide YY3-36 (PYY), have been shown to play an important role in regulating short-term food intake. Peripheral administration of PYY or GLP-1 enhances satiety and reduces food intake in animals and man. PYY, GLP-1 along with a host of other hormones are produced by the gut in response to nutrient availability in different regions of the gut and provide an exquisite mechanism of nutrient sensing in response to dietary intake. These hormones therefore represent potential targets in the development of novel anti-obesity treatments. A novel and attractive strategy to induce appetite regulation is the enrichment of foods with components that stimulate the release of GLP-1 and PYY. The short chain fatty acids (SCFA) produced by microbial fermentation of dietary fibre in the colon have been shown to stimulate the release of PYY and GLP-1 from rodent enteroendocrine L cells, via stimulation of the G-protein coupled free fatty acid receptors (FFAR) on colonic L cells. However, it is not known whether the three SCFA, acetate, butyrate and propionate, differentially affect appetite and glucose control. The aim of this study is to compare the effects of increased colonic delivery of acetate, butyrate and propionate on appetite and glucose control in overweight men in a randomised crossover study.
+
+DETAILED DESCRIPTION:
+The role of SCFA in appetite regulation: SCFA have been shown to stimulate PYY and GLP-1 production in animal models and dietary fibre, of which SCFA are the major end products, induce appetite regulation in humans. However the evidence underpinning which dietary fibres induce appetite regulation in humans is very weak because of the difficulty in controlling studies with very high fibre intake. In a recent project funded under the BBSRC DRINC initiative (BB/H004815/1), the investigators have the first direct evidence that SCFA can directly regulate appetite in humans. Prior to this study, in order to achieve production of SCFA to a level, which is high enough to induce appetite-regulating effects, very large amounts of dietary fibre (\>25 g/d and up to 40 g/d) are required, and compliance with high fibre diets is poor due to gastrointestinal side effects. Furthermore, supplementing diets with mixed high fibre does not predictably or reliably increase colonic SCFA production or circulating levels of SCFA in all human populations because of the variability in gut microbial activity. Finally, orally administered SCFAs are not palatable and are rapidly absorbed in the small intestine where L cells are sparse. In our studies to date we have focussed on the SCFA propionate because it has the highest affinity for the receptors and is an end product of metabolism in the microbiota and therefore seems the obvious target to manipulate to investigate the effects of SCFA on appetite regulation. To overcome the unpalatably high levels of fermentable dietary fibre needed to significantly increase colonic propionate levels, and the unpredictability in the production of the resulting SCFAs, the investigators have developed and tested a novel delivery system targeting the release of gram quantities of propionate in the proximal colon. It is estimated that the delivery system may lead to a 2-8 fold increase in colonic propionate, a level very difficult to achieve through feeding a mixed fermentable fibre diet. This level of propionate production might have been observed in ancestral diets and in parts of rural Africa where dietary fibre intake is very high. Previous work, conducted by the investigators, has also demonstrated that delivery system increases plasma propionate levels, reduces food intake in acute studies of appetite, and in a longer term study (24 weeks), positive effects on food intake, body composition, glucose homeostasis, circulating lipids, cholesterol and liver function, liver and visceral fat and weight management were observed. However, at present it is not known if acetate, propionate and butyrate exert similar effects on appetite and glucose metabolism. Therefore in this study we wish to compare the the effects of targeted delivery of acetate, propionate and butyrate to the proximal colon on appetite and glucose homeostasis in overweight men.
+
+PRIMARY OUTCOMES:
+  - Energy intake at ad libitum meal
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Inulin acetate ester
+  - DIETARY_SUPPLEMENT: Inulin propionate ester
+  - DIETARY_SUPPLEMENT: Inulin butyrate ester
+
+ELIGIBILITY:
+Age: 21 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02451189

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02801344
+Title: The Impact of Protein Intake on Protein Metabolism During Intensified Training
+Official Title: The Impact of Protein Intake on Amino Acid and Protein Metabolism, and Performance During Intensified Training
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: creatine supplementation
+
+SUMMARY:
+Protein requirements in individuals who participate in endurance-based exercise training have been suggested to be greater than the current recommended dietary allowance (RDA).
+
+Our recent study using the minimally invasive indicator amino acid oxidation (IAAO) technique have suggested that protein requirements in young men are at least 30% higher than the recommended protein intake.
+
+The present study will investigate the impact of protein sufficiency on protein metabolism and performance during intensified training periods as a means to further our understanding of the nutritional requirements for the endurance athlete.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in 24h whole body protein balance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Normal
+  - DIETARY_SUPPLEMENT: Moderate
+  - DIETARY_SUPPLEMENT: High
+  - OTHER: Controlled-diet
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02801344

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04009759
+Title: Influence of Morphine or Ketamine or Saline Applied During In-hospital Cardiopulmonary Resuscitation on Early Survival
+Official Title: Randomized Triple-blind Placebo Controlled Trial of Influence of Morphine or Ketamine or Saline Applied During In-hospital Cardiopulmonary Resuscitation on Early Survival and Neurological Outcome
+Status: UNKNOWN
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 240
+Topic: resistance training
+
+SUMMARY:
+A small numbers of patients (10-15%) treated with cardiopulmonary resuscitation (CPR) are discharged from hospitals with a favorable neurologic outcome. However, a higher incidence of chest injuries (30-70%), mainly rib and sternum fractures, are observed among the survivors. It's no surprise that 6 months after cardiac arrest (CA) 50-70% of the patients who have survived continue to have pain and stress-related problems. Based on the need for the pain/stress treatment in these patients and several experimental evidences demonstrating neuroprotective features of anesthetics it is logical to presume that application of anesthesia during CPR may be indicated. In rodents exposed to hypoxic gas (5% 02, 95% N2) for 70 min, all seven animals died at the end of the experiments in the naloxone pre-treated group while only one out of seven rats died in the morphine pre-treated group, and five of seven rats died in the control group. In human volunteers, intravenously administered 60 mg of morphine did not alter cerebral blood flow and cerebral vascular resistance but markedly depressed cerebral oxygen uptake. Interestingly, in critical patients, morphine even in low doses is effective in relieving dyspnea by altering central perception and decreasing anxiety. In rats, morphine demonstrates dose- depending reduction of cerebral glucose utilization in limbic and forebrain regions. Thus, the main points of application for morphine in treatment of CA may be a reduction of oxygen/glucose consumption. Pre-treatment of zebrafish with ketamine protects against cardiac arrest-induced brain injury by inhibiting Ca2+ wave propagation and consequently it improves survival rate. Inhibition of NMDA receptors by ketamine reduces neuronal apoptosis and attenuates the systemic inflammatory response to tissue injury. The sympathomimetic effects of ketamine may facilitates recovery of systemic blood pressure during CPR. Retrospective investigations demonstrate that patients who are treated with opioids before or during CA have a statistically significantly higher survival rate and much better neurological outcome compared to untreated patients. Experimental studies have a limitation as all animals are treated with anesthesia and therefore survival rate varies between 50-90%. Thus, prospective research is urgently needed to investigate the influence of morphine or/and ketamine on survival and neurological outcome in patients with CA.
+
+DETAILED DESCRIPTION:
+Almost 35 years ago, Dr Peter Safar wrote that "cerebral recovery from more than 5 min of cardiac arrest is hampered by complex secondary derangements of multiple organ systems after reperfusion". Actually, these 5 "golden" minutes determine the ability of cerebral neurones to regain ordinary function after anoxia. The ordinary function of cerebral neurones is conduction of electrical impulses across their length from the post-synaptic membrane of dendrites to the presynaptic membrane of an axon. The process is based on exchange of Ca2+, Na+ and K+ between the extra- and intracellular space of cerebral neurones, and therefore a lot of energy in the form of adenosine triphosphate (ATP) is needed to remove Ca2+ and Na+ from the intracellular space of these cells. Cardiac arrest (CA) initiates a switch to glycolytic metabolism with very low production of ATP and the increased levels of lactate and H+. Both acidosis and the lack of ATP inhibit the ions pumps, which are responsible for handling excessive intracellular accumulation of Ca2+ and Na+. Preclinical studies demonstrate that acute hypoxia results in an uncontrolled release of glutamate with consequent stimulation of the N-methyl-D-aspartate (NMDA) receptors causing also an excessive Ca2+ influx. Meanwhile, the ATP reservoir in neurones can be completely depleted after 5 minutes of no-flow state. In case of oxygen supplying restoration, two molecules of ATP are initially required to split glucose and restart the cellular respiration. Thus, the presence or absence of these two molecules of ATP in neurones actually determine restoring of both oxidative phosphorylation and the ordinary function of the neurones. Finally, prolonged intracellular Ca2+ overload results in increased mitochondrial permeability causing following release of cytochrome C from mitochondria, and consequent cleavage and activation of caspase-3. Caspase-3 is an essential protease, which is involved in the early stage of apoptosis and it is generally accepted as a hallmark of irreversible cell death. Interestingly, in an experimental study with rats, the activation of caspase-3 was observed in a significant number of neurones of the cerebellum and neocortex only after 9 hours following asphyxial cardiac arrest.
+
+Today, only therapeutic hypothermia has been shown to have a beneficial impact on the ion pump dysfunction, and thereby reduce neurotoxicity. Interestingly, in hibernators, hypothermia is also believed to protect against hypoxic brain damage. Meanwhile, if naloxone, a non selective opioid receptor antagonist, is injected during the maintenance phase of hibernation, arousal is quickly achieved and the protective effects are vanished. Delta opioid peptides, previously discovered to induce hibernation have also been shown to protect rats from hypoxic brain damage. Based on the ability of opioids to reduce the level of cyclic adenosine monophosphate (cAMP), and consequently to block Na+ channels, it would be logical to pro
+
+PRIMARY OUTCOMES:
+  - Survival at 28 days in patients after in-hospital cardiac arrest
+
+INTERVENTIONS:
+  - DRUG: Morphine
+  - DRUG: Ketamine Injectable Solution
+  - DRUG: Saline 0.9%
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04009759

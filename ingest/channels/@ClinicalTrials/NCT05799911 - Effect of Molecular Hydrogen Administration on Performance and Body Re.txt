@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05799911
+Title: Effect of Molecular Hydrogen Administration on Performance and Body Response on Exercise in National-level Fin-swimmers
+Official Title: Effect of Molecular Hydrogen Administration on Performance and Body Response on Repeated Exercise and the Following Recovery in National-level Fin-swimmers: A Randomized, Double-blind, Placebo-controlled Crossover Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: strength training
+
+SUMMARY:
+The aim of this randomized, double-blind, placebo-controlled crossover trial is to evaluate the effect of hydrogen-rich water consumption on performance, recovery, psychological and biochemical outcomes in elite Czech fin-swimmers.
+
+DETAILED DESCRIPTION:
+Twelve Czech national and international-level fin-swimmers participate in this trial. Participants take molecular hydrogen via drinking hydrogen-rich water (HRW) or placebo three days before (1260 ml/day) and during testing day (2520 ml). All participants participate in two testing session and receive HRW and placebo in random order. Each session includes two training units in a 25-m indoor swimming pool and a 24-hour monitored recovery. The first training unit takes place in the morning between 9 and 11 AM and includes three high intensity interval sets. The afternoon training unit includes a continuous 400-m competitive performance. The washout period between testing sessions is 7 days. The variables assessed are as follows: swimming times, heart rate variability, lower limb explosive strength, rating of perceived exertion, subjective perceived muscle soreness, creatine kinase, blood lactate, and protein carbonyls. Statistical analysis is based on analysis of variance for repeated measures with factors: water (HRW and placebo), time, and interaction. Fisher's post-hoc tests is used for pairwise comparisons. The significance level is set at 0.05.
+
+PRIMARY OUTCOMES:
+  - Swimming time for 400 m
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Hydrogen rich water
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 16 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05799911

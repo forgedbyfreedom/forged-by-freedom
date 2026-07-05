@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06672952
+Title: Dose-Response Impact of Glucosyl-Hesperidin (CitraPeak) on Exercise Performance, Blood Flow, Stress, Cognition, and Other Perceptual Indicators
+Official Title: Dose-Response Impact of Glucosyl-Hesperidin (CitraPeak) on Exercise Performance, Blood Flow, Stress, Cognition, and Other Perceptual Indicators
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: aerobic exercise
+
+SUMMARY:
+The purpose of this study is to evaluate the dose-dependent effects of glucosyl-hesperidin (CITRAPEAK) supplementation on exercise performance, recovery indicators, blood flow, cognitive function, mood, sleep, and fuel utilization in recreationally active adults.
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled study investigates the effects of glucosyl-hesperidin (CITRAPEAK) on exercise performance, recovery, cognitive function, mood, and cardiovascular health in approximately 60 healthy, recreationally active adults aged 18-50. Participants will be assigned to one of three groups (placebo, 200mg CITRAPEAK, or 400mg CITRAPEAK) based on sex and baseline fat-free mass. Each participant will consume their assigned supplement daily for 8 weeks, with adherence tracked via supplementation logs. The study includes multiple visits, where participants will undergo a range of assessments, including exercise performance tests, blood flow analysis, and cognitive evaluations.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline in Peak VO2 at Week 8 Following Glucosyl-Hesperidin (CITRAPEAK) Supplementation
+  - Change from Baseline in Wingate Anaerobic Test Peak Anaerobic Power at Week 8 Following Glucosyl-Hesperidin (CITRAPEAK) Supplementation
+  - Change from Baseline in Wingate Anaerobic Test Mean Anaerobic Power at Week 8 Following Glucosyl-Hesperidin (CITRAPEAK) Supplementation
+  - Change from Baseline in Fatigue Rate at Week 8 Following Glucosyl-Hesperidin (CITRAPEAK) Supplementation
+  - Change from Baseline in Perceived Indicators of Recovery, Training Readiness, Soreness, and Overall Feel Using Visual Analog Scales (VAS) at Week 8 Following Glucosyl-Hesperidin (CITRAPEAK) Supplementation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: 400 mg CITRAPEAK® (glucosyl-hesperidin) supplementation
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: 200 mg CITRAPEAK® (glucosyl-hesperidin) supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06672952

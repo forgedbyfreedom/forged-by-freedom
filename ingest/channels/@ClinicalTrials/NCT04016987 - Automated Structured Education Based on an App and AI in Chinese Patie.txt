@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04016987
+Title: Automated Structured Education Based on an App and AI in Chinese Patients With Type 1 Diabetes
+Official Title: Automated Structured Education Intervention Based on an App and Artificial Intelligence in Chinese Patients With Type 1 Diabetes
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 138
+Topic: exercise intervention diabetes
+
+SUMMARY:
+In recent years, more and more attention has been paid to diabetes self-management. Glycemic control and self-management skills of patients with type 1 diabetes (T1DM) in China are poor. Artificial intelligence (AI) and the Internet offer a new way to improve the self-management skills of patients with chronic diseases. Few studies have combined AI technology with structured education intervention of type 1 diabetes. This study is innovative in that it compares the effectiveness of smartphone app between usual care, as well as automatic and individualized app education and standardized app education to explore whether the individualized treatment advocated by the latest guideline will bring any additional benefit to T1DM patients. The ultimate goal is to provide an effective and convenient approach for glycemic control of type 1 diabetes and reduce related disease burden in China.
+
+DETAILED DESCRIPTION:
+This is a single-blinded, 1:1 paralleled group cluster randomized controlled trial (RCT). The intervention will last for 24 weeks. The laboratory staff who test the HbA1c level, the outcome assessor who collects the blood glucose data, and the statisticians will be blinded to the treatment allocation.
+
+Sample size estimation: We propose to enroll 138 patients with type 1 diabetes (T1DM) by considering withdrawals, 69 in the smartphone app groups and 69 in the routine care group. Sample size estimation is based on hypothesized changes in the primary outcome HbA1c.
+
+In order to ensure high quality data, two staff are responsible for the input of original data into the database to check and confirm the accuracy. When the data entered by two staff independently, the auxiliary staff decides which data to use.
+
+Data analysis will be conducted under the intention-to-treat principle by including all the randomized patients in the data analysis. Missing data will be filled in with multiple imputation method. Any substantial difference in baseline characteristics will be adjusted with mixed-model regression analysis. Sensitivity analysis will be conducted by using per-protocol data by excluding those patients who drop out of the RCT.
+
+PRIMARY OUTCOMES:
+  - changes in serum hemoglobin A1c level
+
+INTERVENTIONS:
+  - BEHAVIORAL: Automated structured education intervention based on an app and artificial intelligence
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04016987

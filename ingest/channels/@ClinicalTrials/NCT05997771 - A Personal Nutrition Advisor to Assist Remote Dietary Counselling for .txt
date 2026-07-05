@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05997771
+Title: A Personal Nutrition Advisor to Assist Remote Dietary Counselling for Weight Loss and maintenance
+Official Title: A Personal Nutrition Advisor to Assist Remote Dietary Counselling for Weight Loss and maintenance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 81
+Topic: exercise intervention obesity
+
+SUMMARY:
+The purpose of the study is to assess the usability of the PNA and satisfaction with the treatment within the framework of usual care remote nutritional counselling for GLP-1-supported weight management and collect pilot data on its potential to support weight loss.
+
+DETAILED DESCRIPTION:
+The global prevalence of obesity and overweight is increasing and persistently drives global mortality and morbidity.As overweight and obesity are the result of an imbalance between energy intake and energy use, achieving a negative energy balance build the foundation for weight loss. Whilst dietary modification as a standalone procedure often fail in achieving or maintaining weight loss, the recent advent of supportive Glucagon-like Peptide-1 (GLP-1) based pharmacotherapies have greatly changed the landscape.Dietary counselling help people on GLP-1 based treatment reaching their individual weight goals and continued reimbursement of medication costs. However, nutritional advice provided by dietitians is often generic, not sufficiently aligned to individual weight loss trajectories.
+
+The "Personal Nutrition Advisor" (PNA) is a decision support tool which is built upon an interpretable weight prediction model based on the energy balance equation (energy intake is a function of recorded dietary intake and a latent part dependent on observed weight changes, whereas energy expenditure is a function of weight and physical activity). Food, weight- and activity records captured using a smartphone application represent input data to the model. Output of the model is the predicted body weight trajectory alongside with personalized recommendations to reach a pre-defined target weight.
+
+Integrating the PNA into a remote dietary counselling programme, in which certified dietitians deliver nutritional and lifestyle coaching via an application, has the potential to improve treatment satisfaction and efficacy. Therefore, the purpose of the study assess the usability of the PNA and satisfaction with the treatment within the framework of usual care remote nutritional counselling for GLP-1-supported weight management and collect pilot data on its potential to support weight loss.
+
+PRIMARY OUTCOMES:
+  - Change in the overall mean satisfaction score of the Nutritional and Dietetic Patient Outcomes Questionnaire (NDPOQ)
+  - The overall mean score of the "perceived impact" section from the user version of the mobile application scale (uMARS )
+  - The overall mean score of the Healthcare Systems Usability Scale (HSUS)
+
+INTERVENTIONS:
+  - OTHER: Personal Nutrition Advisor
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05997771

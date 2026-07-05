@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06217640
+Title: Multivariate Biomarker Study for Sarcopenia in Heart Failure
+Official Title: Towards Diagnosis of Secondary Sarcopenia as a Comorbidity in Heart Failure: a Multivariate Biomarker Approach
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 80
+Topic: exercise muscle mass
+
+SUMMARY:
+In the United Kingdom, heart failure (HF) affects about 900,000 people with 60,000 new cases annually. Up to 60% of people living with HF also experience sarcopenia, known as loss of muscle mass and strength. Sarcopenia contributes significantly to low physical capacity and exercise intolerance and worsens the prognosis of the disease and quality of life.
+
+In comparison to primary sarcopenia (age-related sarcopenia), secondary sarcopenia occurs if other factors, including malignancy or organ failure, are evident in addition to aging. Secondary sarcopenia is highly common in patients with heart failure (Sarc-HF) (prevalence is 35%-69%), and has a significantly negative impact on exercise capacity, weight-adjusted peak maximal oxygen consumption, left ventricular function, and re-hospitalization rates and mortality.
+
+In this integrated study of NHS patients with HF, the investigators aim is to identify the underlying mechanisms of muscle weakness in HF utilizing including body composition, circulating metabolites (metabolic profile), and functional tests for (1) early detection of otherwise subclinical HF, (2) diagnostic assessment of clinically manifest HF-sarcopenia, (3) the risk stratification of subjects with a suspected or confirmed diagnosis, and (4) selection of an appropriate therapeutic intervention.
+
+DETAILED DESCRIPTION:
+Investigators aim to understanding the underlying physiological links for secondary sarcopenia in older age and particularly those with heart failure. This links partly can be explained by impaired energy metabolism of amino acids and fatty acid oxidation. This can lead to lower ATP production and deprivation of both skeletal muscle and heart from energy sources, which worsens the sarcopenia in HF.
+
+RESEARCH QUESTION/AIM(S)
+
+* Faecal and plasma metabolite content will be correlated with matrix of global muscle function to assess if there are differences according to sarcopenia status in heart failure.
+* Utilizing metabolomic data to disclose dysregulation of pathways linked to energy production (Krebs cycle, Warburg effect), amino acid catabolism and free fatty acids and Bile acids. I will investigate these relationships with gut microbiome composition.
+
+Outcomes Descriptive and bioinformatic analysis on associations of multivariate biomarkers including muscle mass and muscle strength from lower and upper body and functional tests, and plasma metabolome and proteome items according to cardiac function and HF status.
+
+PRIMARY OUTCOMES:
+  - Appendicular Lean Mass (kg)
+  - Gait Speed (m/s)
+  - Handgrip Strength (kg)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Dual X Ray Absorptiometry
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06217640

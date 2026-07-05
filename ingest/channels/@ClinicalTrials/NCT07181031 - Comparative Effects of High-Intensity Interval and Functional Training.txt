@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07181031
+Title: Comparative Effects of High-Intensity Interval and Functional Training on Performance Outcomes in Adolescent Female Volleyball Players
+Official Title: Comparative Effects of High-Intensity Interval and Functional Training on Performance Outcomes in Adolescent Female Volleyball Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: athletic performance
+
+SUMMARY:
+Background Volleyball requires repeated explosive actions, agility, and technical precision, demanding contributions from both aerobic and anaerobic energy systems. Time-efficient training methods such as high-intensity interval training (HIIT) and high-intensity functional training (HIFT) have been proposed to enhance multidimensional performance in young athletes. However, direct comparisons of their effects in adolescent female volleyball players are limited.
+
+Methods Thirty-two licensed female volleyball players (aged 15-18 years) were randomly assigned to HIIT (n=10), HIFT (n=11), or control (n=11). Training interventions lasted 12 weeks with two sessions per week, in addition to regular volleyball practice. The HIIT program consisted of progressive resistance-based high intensity intervals performed at 85-95% HRmax, while the HIFT program comprised multimodal circuit-style functional exercises performed at comparable intensities (\~85-95% HRmax). Pre- and post-tests included countermovement jump (CMJ), standing long jump (SLJ), medicine ball throw (MBT), pro-agility, 20 m sprint, repeated sprint fatigue index (RSI), volleyball skill test, Yo-Yo IR1 distance, VO₂max, blood lactate, and maximal heart rate (MaxHR). A 3×2 mixed-model ANOVA with Tukey post hoc tests was conducted, and effect sizes were reported as Cohen's d and ηp².
+
+DETAILED DESCRIPTION:
+Volleyball is a high-intensity intermittent sport characterized by repeated explosive actions such as jumping, sprinting, accelerating, decelerating, and rapid changes of direction, combined with frequent technical maneuvers including serving, setting, spiking, and blocking. These actions require sustained neuromuscular output while maintaining technical precision under fatigue, placing substantial demands on both aerobic and anaerobic energy systems. Aerobic capacity is critical for sustaining recovery between rallies and maintaining performance throughout long matches or tournaments, whereas anaerobic power and strength are essential for explosive efforts that dominate competitive play. Additionally, agility, reactive strength, and coordination contribute significantly to performance, particularly in adolescent players who are still developing physiologically.
+
+Given these demands, volleyball training requires conditioning approaches that are both time-efficient and sport-specific. Traditional continuous endurance training has been criticized for its poor transferability to volleyball, as it fails to replicate the intermittent, high-intensity, and multidirectional nature of the game. In contrast, modern approaches such as high-intensity interval training (HIIT) and high-intensity functional training (HIFT) have emerged as promising strategies. HIIT, involving repeated near-maximal bouts interspersed with structured recovery, has been shown to improve both aerobic and anaerobic capacity, enhance repeated sprint ability, and optimize recovery kinetics. However, resistance-based HIIT often emphasizes traditional strength exercises performed in a format with fixed rest intervals, which may not fully capture the sport-specific, multidirectional, and reactive movement patterns required in volleyball.
+
+HIFT has been introduced as an integrative and multimodal training approach that combines plyometric drills, bodyweight resistance, agility exercises, and functional movements into circuit-based formats performed at high intensity with minimal recovery. Unlike resistance-based HIIT, which primarily involves structured strength exercises performed in a circuit format with fixed rest intervals, HIFT emphasizes more varied, compound, and task-oriented exercises that more closely mirror the sport-specific demands of volleyball. These exercises not only target cardiovascular fitness but also simultaneously improve explosive power, neuromuscular coordination, and stability. This integrative nature makes HIFT particularly promising for adolescent volleyball players, where physical conditioning must also support technical skill development and injury prevention.
+
+Despite the growing use of both HIIT and HIFT in applied practice, direct experimental comparisons between these modalities in youth volleyball players are limited. Adolescence represents a critical developmental window where training adaptations can have long-term effects on physical performance, neur
+
+PRIMARY OUTCOMES:
+  - Change in Countermovement Jump (CMJ) Height
+  - Change in Maximal Oxygen Uptake (VO₂max)
+  - Change in Volleyball Skill Test Score
+
+INTERVENTIONS:
+  - BEHAVIORAL: High-Intensity Interval Training (HIIT)
+  - BEHAVIORAL: High-Intensity Functional Training (HIFT)
+
+ELIGIBILITY:
+Age: 15 Years to 18 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07181031

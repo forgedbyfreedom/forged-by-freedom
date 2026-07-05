@@ -18,11 +18,20 @@ set +e  # Don't exit on errors — pipeline should always reach ingestion step
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# Windows requires UTF-8 for emoji/unicode in Python output
+export PYTHONIOENCODING=utf-8
+
 # Use venv Python (has dotenv, tiktoken, openai, pinecone installed)
 # Allow PYTHON to be overridden from the environment (e.g. for mlx_whisper)
 if [ -z "$PYTHON" ]; then
-    PYTHON="$SCRIPT_DIR/.venv/bin/python3"
-    [ -x "$PYTHON" ] || PYTHON="python3"
+    # Windows venv uses Scripts/, Unix uses bin/
+    if [ -x "$SCRIPT_DIR/.venv/Scripts/python" ]; then
+        PYTHON="$SCRIPT_DIR/.venv/Scripts/python"
+    elif [ -x "$SCRIPT_DIR/.venv/bin/python3" ]; then
+        PYTHON="$SCRIPT_DIR/.venv/bin/python3"
+    else
+        PYTHON="python3"
+    fi
 fi
 
 CHANNELS_DIR="$SCRIPT_DIR/channels"
@@ -37,17 +46,30 @@ log() { echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG_FILE"; }
 header() { log ""; log "═══════════════════════════════════════════"; log "  $1"; log "═══════════════════════════════════════════"; }
 
 # ─── Load Environment ─────────────────────────────────────────
+# Use a loop instead of xargs — xargs chokes on long values (OpenAI keys, etc.)
 if [ -f "$SCRIPT_DIR/../.env" ]; then
-    export $(grep -v '^#' "$SCRIPT_DIR/../.env" | xargs)
+    while IFS='=' read -r _k _v; do
+        [[ "$_k" =~ ^[[:space:]]*# ]] && continue
+        [[ -z "${_k// /}" ]] && continue
+        export "${_k// /}=$_v"
+    done < "$SCRIPT_DIR/../.env"
 fi
 
 # Add common paths for yt-dlp + deno
 export PATH="$HOME/Library/Python/3.12/bin:$PATH:/opt/homebrew/bin:/usr/local/bin:$HOME/Library/Python/3.9/bin:$HOME/.local/bin"
 
-# Use Python 3.12 yt-dlp (has latest YouTube extractors + EJS support)
-YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
-[ -x "$YT_DLP" ] || YT_DLP="yt-dlp"
-command -v "$YT_DLP" >/dev/null 2>&1 || YT_DLP="python3 -m yt_dlp"
+# Resolve yt-dlp: check venv Scripts (Windows), venv bin (Mac/Linux), then PATH
+if [ -x "$SCRIPT_DIR/.venv/Scripts/yt-dlp" ]; then
+    YT_DLP="$SCRIPT_DIR/.venv/Scripts/yt-dlp"
+elif [ -x "$SCRIPT_DIR/.venv/Scripts/yt-dlp.exe" ]; then
+    YT_DLP="$SCRIPT_DIR/.venv/Scripts/yt-dlp.exe"
+elif [ -x "$SCRIPT_DIR/.venv/bin/yt-dlp" ]; then
+    YT_DLP="$SCRIPT_DIR/.venv/bin/yt-dlp"
+elif [ -x "$HOME/Library/Python/3.12/bin/yt-dlp" ]; then
+    YT_DLP="$HOME/Library/Python/3.12/bin/yt-dlp"
+else
+    YT_DLP="yt-dlp"
+fi
 
 # ─── YouTube Cookie Setup ─────────────────────────────────────
 # Refresh cookies from Chrome if it's running; fall back to saved cookies.txt
@@ -64,19 +86,24 @@ YT_COOKIES="--cookies $COOKIES_FILE"
 
 # ─── Channel Priority Tiers ──────────────────────────────────
 # Tier 1: Primary sources — your core content (max 50 downloads)
-TIER1="ThinkBIGBodybuilding|rxmuscle|anabolicbodybuilding|realtattered|TannerTatteredFAQ|johnjewett3"
+TIER1="ThinkBIGBodybuilding|rxmuscle|anabolicbodybuilding|johnjewett3"
 # Tier 2: Key PED/fitness experts + female health + medical (max 30 downloads)
-TIER2="AnabolicDoc|MorePlatesMoreDates|MPMD|vigoroussteve|LeoandLongevity|hubermanlab|AndrewHuberman|PeterAttiaMD|FoundMyFitness|GregDoucette|JohnMeadowsMountainDog|dorian_yates_official|FouadAbiad|RenaissancePeriodization|rpstrength|StanEfferding|JeffNippard|Biolayne|AthleanX|BarbellMedicine|GregNuckols|StrongerByScience|DrGabrielleLyon|DrStacySims|DrMindyPelz|HollyBaxter|SoheeFit|LaurinConlin|megsquats|StephanieButtermore|AshleyKaltwasser|ErinSternFitness|JulieLohre|KristyHawkins|Natacha_Oceane|StefiCohen|AbbeySharp|LoriHarder|MedCram|NinjaNerdOfficial|SquatUniversity|NorthwesternMed|TOTRevolution|gillettehealth|TaylorMadeCompounding|JayCampbell|DrCraigKoniver|TonyHuge|CoachTrevorBlack|TrevorBachmeyer|drtrevorbachmeyer|DrAndyGalpin|DrBradStanfield|Physionic|HighIntensityHealth|SethFeroce|MilosSarcev|HypertrophyCoach|MattJansen|BryanJohnson|DavidSinclair|MuscleIntelligence|3DMuscleJourney|EricHelms3DMJ|BradSchoenfeldPhD|BalanceMyHormones|DrAkshayJainMD|OmarIsuf"
+TIER2="MorePlatesMoreDates|MPMD|vigoroussteve|LeoandLongevity|hubermanlab|PeterAttiaMD|FoundMyFitness|GregDoucette|FouadAbiad|RenaissancePeriodization|StanEfferding|JeffNippard|AthleanX|BarbellMedicine|StrongerByScience|DrGabrielleLyon|DrStacySims|DrMindyPelz|HollyBaxter|SoheeFit|LaurinConlin|megsquats|StephanieButtermore|StefiCohen|LoriHarder|MedCram|NinjaNerdOfficial|SquatUniversity|JayCampbell|CoachTrevorBlack|TrevorBachmeyer|drtrevorbachmeyer|DrAndyGalpin|DrBradStanfield|Physionic|HighIntensityHealth|SethFeroce|MilosSarcev|HypertrophyCoach|MattJansen|BryanJohnson|MuscleIntelligence|BradSchoenfeldPhD|BalanceMyHormones|DrAkshayJainMD|OmarIsuf"
 # Skip: Not relevant to fitness/bodybuilding/PED coaching — already indexed content stays in Pinecone
-SKIP_CHANNELS="3Blue1Brown|kurzgesagt|veritasium|Vsauce|numberphile|minutephysics|Vihart|StudyForce|AliAbdaal|melrobbins|MulliganBrothers|BroScienceLife|mitocw|Stanford|YaleCourses|ProfessorDaveExplains|TheRoyalInstitution|SciShow|TEDxTalks|TED|CarolineGirvan|HandwrittenTutorials|LecturioMedical|SketchyMedical|BoardsBeyond|USMLEFirstAid|NBMEmedical|Physeo|PathologyOutlines|ScienceNaturePage|NatureVideo|LancetTV|CellPress|PsychiatryOnline|Neurology|NeuroscientificallyC|CochraneCollaboration|BMJupdates|JAMANetwork|WHO|CDCgov|FDAChannel|NIH|ACPInternist"
+# Plus 132 channels confirmed dead/404 as of 2026-05-12 (handles changed or channels deleted)
+SKIP_CHANNELS="3Blue1Brown|kurzgesagt|veritasium|Vsauce|numberphile|minutephysics|Vihart|StudyForce|AliAbdaal|melrobbins|MulliganBrothers|BroScienceLife|mitocw|Stanford|YaleCourses|ProfessorDaveExplains|TheRoyalInstitution|SciShow|TEDxTalks|TED|CarolineGirvan|HandwrittenTutorials|LecturioMedical|SketchyMedical|BoardsBeyond|USMLEFirstAid|NBMEmedical|Physeo|PathologyOutlines|ScienceNaturePage|NatureVideo|LancetTV|CellPress|PsychiatryOnline|Neurology|NeuroscientificallyC|CochraneCollaboration|BMJupdates|JAMANetwork|WHO|CDCgov|FDAChannel|NIH|ACPInternist|3DMJCoaching|3DMuscleJourney|AABORCS|ABORNEGROUP|ACSMNews|ACSM_org|AHAScience|AbbeySharp|AlbertNunez3DMJ|AmericanDiabetesAssociation|AnabolicDoc|AnatomyMB|AndreaNunezOfficially|AndrewJacked|AndyGalpin|AshleyKaltwasser|BJJFanatics|BenGreenfield|BenPollack|BigRobFitness|BioDigitalHuman|Biolayne|BodybuilderInThailand|BonesBrigadeVintage|BrandonTietz|BrianShawStrong|BrittLarson|CDCgov|CalisthenicMovement|CochraneCollaboration|DavidGoggins|DerekLunsford|DrAlanChristianson|DrCraigKoniver|DrEricBergDC|DrJacobGoodwin|DrJoAnnDahlkoetter|DrJohnRusin|DrMattAndDrMike|DrNajeebLectures|DrSarfrazZaidi|EddiehallStrongman|EndocrineSociety|EndocrineWeb|EnhancedInfo|EricHelms3DMJ|ExPhysResearch|FlexWheeler|GeneticallyShredded|GetBodySmart|GojiManUK|GoldenEraBB|GregNuckols|HadiChoopan|HandwrittenTutorials|ISSN_Sport|IainValliere|IlanaMuhlstein|InstituteofHumanAnatomy|JayColter|JockoPodcast|JoeGordonFitness|JoelSeedman|JohnMeadowsMountainDog|JordanPetersCoaching|JulieLohre|Kabuki_Strength|KatieCrewe|KristyHawkins|LeePriest|MarkBellSlingShot|MennoHenselmans|MensHealthClinic|MindPumpPodcast|MountSinaiHealth|MuscleMemoirsOfficial|Natacha_Oceane|NickTrigili|NickWalkerBodybuilder|NorthwesternMed|NutritionExamined|NutritionFacts|OFFICIALTHENX|OfficialRonnieColeman|PrecisionNutrition|PrehabGuys|PrepCoachGary|RBTGym|RichPianaRaw|RushUniversity|ScienceNaturePage|SportPsychSolutions|SportsScience|SteveKuclo|SteveShawFitness|StrongMedicine|SuperTrainingGym|SwollenAF|THENX|TOTRevolution|TaylorMadeCompounding|TheBodyGeek|TheBodybuildingPodcast|TonyHuge|UABORCSF|USABORCS|USAntidoping|Vertical-Diet|VisibleBody|WABORCS|bostin_loyd|dorian_yates_official|gillettehealth|harvaborard|kaboratory|kevinlevrone|medicaboratory|realtattered|TannerTatteredFAQ|stanjeffordsen|strengthandconditioningresearch|teamlocofit"
 # Low priority: Tangentially relevant (max 5 downloads per night)
 LOW_PRIORITY="PickUpLimes|WhatIveLearned|ThomasDeLauer|VShred|WillTennyson|MattDoesFitness|BradleyMartyn|DavidGoggins|JockoPodcast|LondonReal"
 
 # ─── Per-channel timeout (30 min max per channel) ───────────
 CHANNEL_TIMEOUT=1800
 
+# Set to 1 by deep/deep-auto modes to remove per-channel download caps
+DEEP_SCRAPE=${DEEP_SCRAPE:-0}
+
 get_max_downloads() {
     local channel="$1"
+    [ "$DEEP_SCRAPE" = "1" ] && { echo 9999; return; }
     echo "$channel" | grep -qE "$TIER1" && { echo 50; return; }
     echo "$channel" | grep -qE "$TIER2" && { echo 30; return; }
     echo "$channel" | grep -qE "$LOW_PRIORITY" && { echo 5; return; }
@@ -99,10 +126,25 @@ download_and_transcribe() {
     local MAX_PARALLEL=4
     local count=0 success=0 failed=0 skipped=0
 
+    # Hard time budget: stop downloading after N hours so the pipeline always
+    # reaches Node 2-4 (fix → masters → ingest). Default 6h; override with
+    # NODE1_BUDGET_HOURS=N ./pipeline.sh full
+    local NODE1_BUDGET_HOURS=${NODE1_BUDGET_HOURS:-6}
+    local _n1_end=$(( $(date +%s) + NODE1_BUDGET_HOURS * 3600 ))
+    local _n1_deadline
+    _n1_deadline=$(date -d "@$_n1_end" '+%H:%M' 2>/dev/null \
+        || date -r "$_n1_end" '+%H:%M' 2>/dev/null \
+        || echo "N/A")
+    log "Node 1 time budget: ${NODE1_BUDGET_HOURS}h — hard stop at ~${_n1_deadline} so ingestion always runs"
+
     log "Channels: $CHANNELS_DIR"
     log "Mode: Download audio → Whisper transcribe (${MAX_PARALLEL}x parallel) → Delete audio"
     log "Rate limit: ${SLEEP_MIN}-${SLEEP_MAX}s between videos"
-    log "Tiers: PRIORITY(50) → HIGH(30) → MID(20) → LOW(10) | SKIP: irrelevant"
+    if [ "$DEEP_SCRAPE" = "1" ]; then
+        log "Tiers: ALL UNLIMITED (deep scrape mode) | SKIP: irrelevant"
+    else
+        log "Tiers: PRIORITY(50) → HIGH(30) → MID(15) → LOW(5) | SKIP: irrelevant"
+    fi
 
     # Build priority-sorted channel list into temp file
     local sorted_file=$(mktemp)
@@ -133,6 +175,12 @@ download_and_transcribe() {
     local transcripts_before=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
 
     while IFS= read -r url_file; do
+        # Enforce time budget — break so the pipeline advances to ingestion
+        if [ "$(date +%s)" -ge "$_n1_end" ]; then
+            log "⏰ Node 1 budget (${NODE1_BUDGET_HOURS}h) exhausted — stopping downloads, advancing to Node 2-4"
+            break
+        fi
+
         local channel_url=$(head -n 1 "$url_file")
         local output_dir=$(dirname "$url_file")
         local channel_name=$(basename "$output_dir")
@@ -151,6 +199,7 @@ download_and_transcribe() {
         timeout $CHANNEL_TIMEOUT $YT_DLP \
             $YT_COOKIES \
             --extractor-args "youtubetab:skip=authcheck" \
+            --remote-components ejs:github \
             -x --audio-format mp3 --audio-quality 64K \
             --output "$output_dir/%(title)s [%(id)s].%(ext)s" \
             --ignore-errors --no-warnings \
@@ -210,6 +259,7 @@ download_subtitles_only() {
 
         if $YT_DLP \
             $YT_COOKIES \
+            --remote-components ejs:github \
             --skip-download \
             --write-subs --write-auto-subs \
             --sub-lang en \
@@ -253,8 +303,8 @@ fetch_research() {
 
 # ─── Node 1c: Whisper Transcription (FREE — local MLX Whisper on Apple Silicon) ────
 transcribe_pending() {
-    header "NODE 1c: LOCAL WHISPER TRANSCRIPTION (FREE — MLX Whisper)"
-    local MAX_PARALLEL=1  # Local GPU — run one at a time for stability
+    header "NODE 1c: LOCAL WHISPER TRANSCRIPTION (FREE — MLX/faster-whisper)"
+    local MAX_PARALLEL=1  # GPU inference is serial — model handles batching internally
     local count=0 transcribed=0
 
     # Count pending mp3s
@@ -270,7 +320,7 @@ transcribe_pending() {
     local total_mb=$(find "$CHANNELS_DIR" -name "*.mp3" -exec du -k {} + 2>/dev/null | awk '{sum+=$1} END {printf "%.0f", sum/1024}')
     local est_minutes=$((total_mb * 1024 / 8 / 60))  # 64kbps = 8KB/s
     log "Estimated: ~${est_minutes} minutes of audio"
-    log "💰 Cost: FREE (running locally on Apple Silicon)"
+    log "Cost: FREE (running locally — faster-whisper on RTX 3090)"
 
     find "$CHANNELS_DIR" -name "*.mp3" -print0 | sort -z | while IFS= read -r -d '' mp3; do
         [ -f "$mp3" ] || continue
@@ -308,9 +358,20 @@ build_masters() {
 
 # ─── Node 4: Pinecone Ingest ──────────────────────────────────
 ingest_pinecone() {
-    header "NODE 4: PINECONE INGEST"
+    header "NODE 4a: PINECONE INGEST"
     cd "$SCRIPT_DIR"
     $PYTHON -u ingest_to_pinecone.py 2>&1 | tee -a "$LOG_FILE"
+}
+
+ingest_chroma() {
+    header "NODE 4b: LOCAL CHROMA INGEST (C:/AI/chroma_db_local)"
+    cd "$SCRIPT_DIR"
+    $PYTHON -u ingest_to_chroma.py 2>&1 | tee -a "$LOG_FILE"
+}
+
+ingest_all() {
+    ingest_pinecone
+    ingest_chroma
 }
 
 # ─── Node 5: Stats & Cleanup ──────────────────────────────────
@@ -353,7 +414,7 @@ main() {
         research)   fetch_research ;;
         fix)        fix_transcripts ;;
         masters)    build_masters ;;
-        ingest)     ingest_pinecone ;;
+        ingest)     ingest_all ;;
         stats)      show_stats ;;
         full)
             # Downloads can fail — never block ingestion of existing content
@@ -361,7 +422,7 @@ main() {
             fetch_research || log "⚠ Research fetch had issues — continuing"
             fix_transcripts
             build_masters
-            ingest_pinecone
+            ingest_all
             show_stats
             ;;
         fast)
@@ -370,8 +431,43 @@ main() {
             fetch_research
             fix_transcripts
             build_masters
-            ingest_pinecone
+            ingest_all
             show_stats
+            ;;
+        deep)
+            # Deep scrape: no per-channel cap — ingest to both Pinecone + Chroma
+            DEEP_SCRAPE=1
+            log "DEEP SCRAPE MODE — no per-channel cap | Pinecone + Chroma ingest"
+            download_and_transcribe || log "⚠ Some downloads failed — continuing"
+            fetch_research || log "⚠ Research fetch had issues — continuing"
+            fix_transcripts
+            build_masters
+            ingest_all
+            show_stats
+            ;;
+        deep-auto)
+            # Deep scrape + auto-loop: runs until every channel is fully caught up — Pinecone + Chroma
+            DEEP_SCRAPE=1
+            log "DEEP AUTO MODE — looping until all channels caught up | Pinecone + Chroma ingest"
+            local run=1
+            while true; do
+                header "DEEP AUTO RUN #$run"
+                local before=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+                download_and_transcribe || log "⚠ Some downloads failed — continuing"
+                fetch_research || log "⚠ Research fetch had issues — continuing"
+                fix_transcripts
+                build_masters
+                ingest_all
+                show_stats
+                local after=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')
+                local gained=$((after - before))
+                log "Deep auto run #$run complete: $gained new transcripts (total: $after)"
+                if [ "$gained" -eq 0 ]; then
+                    log "All channels fully caught up — Pinecone + Chroma DBs are complete!"
+                    break
+                fi
+                run=$((run + 1))
+            done
             ;;
         auto)
             # Auto-loop: keeps running full pipeline until no new content found
@@ -384,7 +480,7 @@ main() {
                 fetch_research
                 fix_transcripts
                 build_masters
-                ingest_pinecone
+                ingest_all
                 show_stats
 
                 local after=$(find "$CHANNELS_DIR" -name "*.txt" ! -name "master_*" 2>/dev/null | wc -l | tr -d ' ')

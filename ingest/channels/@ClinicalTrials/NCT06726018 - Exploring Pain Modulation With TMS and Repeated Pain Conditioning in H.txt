@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06726018
+Title: Exploring Pain Modulation With TMS and Repeated Pain Conditioning in Healthy Individuals
+Official Title: Exploring Pain Modulation Mechanisms: A Study of TMS and Repeated Conditioned Pain Modulation
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 75
+Topic: high intensity interval training
+
+SUMMARY:
+Conditioned pain modulation (CPM) is the behavioral measure of diffuse noxious inhibitory control (DNIC), an endogenous pain inhibitory pathway in which pain inhibits pain. CPM is less efficient in individuals with chronic pain conditions, and it is a predictor for the development of chronic pain. Continuous stimulation of central/cortical mechanisms through engaging CPM might alter pain processing and improve pain inhibition. Transcranial Magnetic Stimulation (TMS) is a valuable tool for assessing how effectively the brain's central and cortical mechanisms engage in pain inhibition, particularly through pathways like CPM.
+
+While alterations in cortical excitability related to analgesic-induced pain inhibition have been documented, the effects of continuous stimulation of central pain pathways, along with the mediating influence of psychosocial factors, remain underexplored. This study aims to investigate the central pain modulatory mechanisms, as assessed by CPM, and cortical excitability, as measured by TMS, in healthy participants. Additionally, the study will evaluate the impact of sociocultural factors, including ethnic identity, optimism, resilience, perceived stress, and marginalization, on the magnitude and efficiency of CPM responses.
+
+The successful completion of this research will determine how cortical excitability changes due to training and whether these changes are mediated by psychosocial factors.
+
+DETAILED DESCRIPTION:
+Background:
+
+Pain and Its Burden
+
+Pain is a prevalent and complex health condition that significantly impacts individuals, families, and society as a whole. Of the 39.4 million adults experiencing pain most days and persisting for over three months, nearly two-thirds report it as "constantly present," with over half describing it as "unbearable and excruciating" . Pain can be categorized into physiological and pathological types. Nociceptive and inflammatory pain are physiological responses that serve protective and adaptive functions, whereas pathological pain is considered non-protective and maladaptive.
+
+Central Mechanisms in Pain Modulation
+
+Laboratory-based quantitative sensory testing (QST) evaluates sensory function using psychophysical methods, teasing out components of the nervous system that demonstrate loss or gain of sensory function contributing to pain. The conditioned pain modulation (CPM) paradigm is a dynamic QST measure of a pain inhibitory process in which pain sensitivity in one area decreased in response to a remotely applied painful stimulus and is used to assess the ability of the person to endogenously inhibit pain. CPM may be a valuable tool in directing mechanistic-based approaches for treating painful conditions. For example, individuals with painful diabetic neuropathy and poorly functioning CPM have more significant analgesia when given duloxetine, a medication that augments conditioned pain modulation. Additionally, identifying and treating the source of pain is associated with positive changes in CPM. Healthy individuals demonstrate more efficient CPM when compared with people in pain and a systematic review of adults with chronic pain revealed that CPM efficiency improves after a reduction in clinical pain. For example, total hip arthroplasty for treating painful osteoarthritis reduces joint pain and improves post-operative CPM. Collectively, these studies suggest that the CPM test has the potential to predict risk and treatment outcomes for chronic pain, therefore CPM may be considered an essential treatment moderator and mediator.
+
+The activation of central mechanisms, particularly endogenous inhibitory systems, is proposed as a fundamental process underlying various pain management interventions. Descending pain inhibitory systems, which are part of central mechanisms, play a crucial role in mediating the analgesic effects of interventions such as manual therapy. Manual therapy stimulates afferent neuronal inputs that activate the central nervous system's descending pathways to inhibit pain. Conditioned Pain Modulation (CPM) shares a similar mechanism, inhibiting pain through descending modulation pathways. Continuous stimulation of these central mechanisms through CPM could potentially alter pain processing and enhance pain inhibition.
+
+Role of Transcranial Magnetic Stimulation (TMS) in Pain Inhibition
+
+TMS is a non-invasive neurophysiological technique that employs magnetic fields to modulate and measure brain
+
+PRIMARY OUTCOMES:
+  - Conditioned Pain Modulation as an assessment
+  - Transcranial Magnetic Stimulation
+  - Quantitative Sensory Testing
+
+INTERVENTIONS:
+  - BEHAVIORAL: Conditioned Pain Modulation (CPM)
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06726018

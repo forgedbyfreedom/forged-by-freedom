@@ -1,0 +1,59 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03284957
+Title: Phase 1/2 Study of Amcenestrant (SAR439859) Single Agent and in Combination With Other Anti-cancer Therapies in Postmenopausal Women With Estrogen Receptor Positive Advanced Breast Cancer
+Official Title: A Phase 1/2 Study for the Safety, Efficacy, Pharmacokinetic and Pharmacodynamics Evaluation of Amcenestrant (SAR439859), Administered Orally as Monotherapy, Then in Combination With Other Anti-cancer Therapies in Postmenopausal Women With Estrogen Receptor-positive Advanced Breast Cancer
+Status: TERMINATED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 136
+Topic: beta-alanine
+
+SUMMARY:
+Primary Objectives:
+
+Dose Escalation:
+
+* To assess the incidence rate of dose-limiting toxicity (DLT) and to determine the maximum tolerated dose (MTD) as well as the recommended dose (RD) of amcenestrant administered as monotherapy and in combination with palbociclib
+* To assess the incidence rate of DLT and determine the RD of everolimus or abemaciclib in combination with the selected amcenestrant dose for the combination therapy
+
+Safety Run-In:
+
+\- To confirm the RD of amcenestrant in combination with alpelisib
+
+Dose Expansion:
+
+* Antitumor activity using objective response rate (ORR)
+* Overall safety profile of amcenestrant administered in combination with palbociclib, alpelisib, everolimus, and abemaciclib
+
+Secondary Objectives:
+
+* Overall safety profile of amcenestrant monotherapy and in combination
+* Pharmacokinetic (PK) profile of amcenestrant administered as monotherapy or in combination and PK profile of palbociclib, alpelisib, everolimus and abemaciclib
+* Antitumor activity using ORR, the clinical benefit rate (CBR) and progression free survival (PFS)
+* Time to first tumor response
+* Residual ER availability with positron emission tomography (PET) scan \[(18)F\] fluoroestradiol (18F-FES) uptake with increasing doses of amcenestrant
+* Food effect on PK of amcenestrant
+* Potential induction/inhibition effect of amcenestrant on cytochrome P450 (CYP) 3A using 4b-OH cholesterol
+
+DETAILED DESCRIPTION:
+Duration of the study, per participant, will include eligibility period (screening period) of up to 4 weeks (28 days), treatment period (at least 1 cycle \[28 days\] of study treatment), and end of treatment (EOT) visit at least 22 to 30 days (or until the participant receives another anticancer therapy, whichever is earlier) following the last study treatment administration. The expected enrollment period is approximately 60 months.
+
+PRIMARY OUTCOMES:
+  - Parts A, C, F, H, J: Number of Participants With Study Treatment-Related Dose-Limiting Toxicities (DLTs)
+  - Part B: Objective Response Rate (ORR) as Determined by Independent Central Review (ICR)
+  - Parts D, I: Number of Participants With Treatment-Emergent Adverse Events and Treatment-Emergent Serious Adverse Events (TESAEs)
+
+INTERVENTIONS:
+  - DRUG: Amcenestrant
+  - DRUG: Palbociclib
+  - DRUG: Alpelisib
+  - DRUG: Everolimus
+  - DRUG: Abemaciclib
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03284957

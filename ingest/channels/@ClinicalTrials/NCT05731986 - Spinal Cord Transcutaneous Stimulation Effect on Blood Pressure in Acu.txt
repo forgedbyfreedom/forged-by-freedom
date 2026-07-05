@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05731986
+Title: Spinal Cord Transcutaneous Stimulation Effect on Blood Pressure in Acute Spinal Cord Injury (SCI)
+Official Title: Neuromodulation of Blood Pressure Using Transcutaneous Spinal Stimulation in Individuals With an Acute Spinal Cord Injury - A Safety, Feasibility and Efficacy Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: muscle rehabilitation
+
+SUMMARY:
+The goal of this clinical trial is to evaluate the effect of transcutaneous spinal cord stimulation on blood pressure in individuals with an acute spinal cord injury (within 30 days of injury). Blood pressure instability, specifically orthostatic hypotension (a drop in blood pressure when moving lying flat on your back to an upright position), appears early after the injury and often significantly interferes with participation in the critical rehabilitation time period.
+
+The main questions it aims to answer are:
+
+1. Can optimal spinal stimulation increase blood pressure and resolve orthostatic symptoms (such as dizziness and nausea) when individuals undergo an orthostatic provocation (a sit-up test)? Optimal stimulation and sham stimulation (which is similar to a placebo treatment) will be compared.
+2. What are the various spinal sites and stimulation parameters that can be used to increase and stabilize blood pressure to the normal range of 110-120 mmHg?
+
+Participants will undergo orthostatic tests (lying on a bed that starts out flat and then moved into an upright seated position by raising the head of bed by 90° and dropping the base of the bed by 90° from the knee) with optimal and sham stimulation, and their blood pressure measurements will be evaluated and compared.
+
+DETAILED DESCRIPTION:
+Blood pressure (BP) control in persons with a spinal cord injury (SCI) is often impaired, resulting in short and long-term health complications and a decline in quality of life. Cardiovascular (CV) dysfunction develops early after SCI and often continues a lifetime. Orthostatic hypotension (OH), a 20/10 mmHg decrease in systolic/diastolic BP when moving from a supine to an upright position, is especially prevalent in the early phase, and frequently accompanied by symptoms of dizziness, weakness, fatigue, and syncope. Affecting up to 75% of therapy treatments during inpatient rehabilitation, OH significantly interferes with participation during the critical rehab time-period, especially as length of stay in rehabilitation has substantially shortened in the past decades.
+
+The compelling rationale for early identification and treatment of OH is met by several pharmacological and non-pharmacological interventions, however, the majority have limited effect, and increase the risk of adverse drug effects due to polypharmacy. In recent years, epidural and transcutaneous spinal cord stimulation has been explored with promising results as a potential treatment to CV dysfunction in SCI. To date, only individuals with a chronic SCI (\>1 year) were included in these studies.
+
+The objective of this study is to investigate the effect of spinal cord transcutaneous stimulation (scTS) on BP in individuals with an acute/sub-acute SCI (7-30 days after injury), during their inpatient rehabilitation. Optimal stimulation sites and parameters that increase and stabilize systolic BP (SBP) within the normotensive range (110-120 mmHg) during an orthostatic challenge will be sought. In this crossover randomized controlled trial (RCT), the effect of optimal CV stimulation and sham stimulation on BP and orthostatic symptoms will be assessed and compared.
+
+The information gleaned from this work will allow design and implementation of scTS interventions in the early phase following an SCI, allowing full participation in inpatient rehabilitation programs, which are often hindered by the patients' autonomic dysfunction.
+
+PRIMARY OUTCOMES:
+  - Optimal stimulation sites
+  - Optimal stimulation frequency
+  - Systolic blood pressure measurements (mmHg) - Mean and SD of beat-to-beat BP
+  - Change in Orthostatic symptoms when stimulation is applied
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Orthostatic challenge
+  - DEVICE: Biostim-5 transcutaneous spinal stimulation - Mapping
+  - DEVICE: Biostim-5 transcutaneous spinal stimulation - "Optimal" testing
+  - DEVICE: Biostim-5 transcutaneous spinal stimulation - "Sham" testing
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05731986

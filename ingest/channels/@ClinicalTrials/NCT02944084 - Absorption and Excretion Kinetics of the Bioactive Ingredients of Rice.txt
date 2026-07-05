@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02944084
+Title: Absorption and Excretion Kinetics of the Bioactive Ingredients of Rice Bran Extract
+Official Title: Absorption and Excretion Kinetics of the Bioactive Ingredients of Rice Bran Extract
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: beta-alanine
+
+SUMMARY:
+The oral absorption and urinary excretion kinetics of the bioactive ingredients from rice bran (gamma-oryzanol, tocotrienols, tocopherols and ferulic acid esters) after incorporation into an oat porridge (oat porridge) compared to unprocessed rice bran extract oil were investigated. The influence of the type of preparation (with water vs. milk) of porridge on the bioavailability of the bioactive compounds was compared. The study followed a single dose (2 g rice bran extract), randomized, three armed crossover study design with ≥1-week washout periods. Plasma and urine samples were collected at intervals up to 24 h after intake.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total alfa, beta, gamma and delta tocopherols and tocotrienols [nmol/L*h]
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total ferulic acid [nmol/L*h]
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total gamma-oryzanol [nmol/L*h]
+  - Mean maximum plasma concentration (Cmax) of total total alfa, beta, gamma and delta tocopherols and tocotrienols [nmol/L]
+  - Mean maximum plasma concentration (Cmax) of total ferulic acid [nmol/L]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Rice bran extract
+  - DIETARY_SUPPLEMENT: Porridge in water
+  - DIETARY_SUPPLEMENT: Porridge in milk
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02944084

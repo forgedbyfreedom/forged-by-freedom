@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04247126
+Title: A Study of SY 5609, a Selective CDK7 Inhibitor, in Advanced Solid Tumors
+Official Title: A Phase 1 Study of SY 5609, an Oral, Selective CDK7 Inhibitor, in Adult Patients With Select Advanced Solid Tumors
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: growth hormone treatment
+
+SUMMARY:
+The study consists of 2 parts. Part 1 is dose escalation and will first administer SY-5609 alone to participants with select advanced solid tumors and then in combination with fulvestrant to participants with HR positive, HER2-negative breast cancer. Part 2 is a dose expansion and will first administer SY-5609 in combination with gemcitabine and then SY-5609 in combination with gemcitabine and nab-paclitaxel in participants with pancreatic ductal adenocarcinoma (PDAC) .
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Groups 1 and 2: Dose-Limiting Toxicity of SY-5609
+  - Groups 1 and 2: Number of Participants With Treatment Emergent Adverse Events
+  - Groups 3 and 4 (Safety Lead-ins): Number of Participants With Dose-Limiting Toxicity
+  - Groups 3 and 4 (Safety Lead-ins): Number of Participants With TEAEs
+  - Groups 3 and 4 (Expansions): Progression Free Survival
+
+INTERVENTIONS:
+  - DRUG: SY-5609
+  - DRUG: Fulvestrant
+  - DRUG: Gemcitabine
+  - DRUG: Nab-paclitaxel
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04247126

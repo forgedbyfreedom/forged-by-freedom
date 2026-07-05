@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05334121
+Title: Safety Analysis of Chronic Intake of a β-alanine Supplement
+Official Title: Randomized Clinical Trial to Analyze the Safety of Chronic Intake of a β-alanine Supplement in Active Individuals
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: beta-alanine
+
+SUMMARY:
+Single-center, double-blind, placebo-controlled clinical trial with two arms (product and placebo) to analyze the safety of beta-alanine consumption in active people.
+
+DETAILED DESCRIPTION:
+After recruitment, subjects will be randomized and assigned to one of the two arms of the study: beta-alanine group or control group (placebo).
+
+Subjects must be active people, and will take a dose of 15 g per day of the product for 4 weeks.
+
+PRIMARY OUTCOMES:
+  - Liver safety variables
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beta-alanine
+  - OTHER: Control product consumption
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05334121

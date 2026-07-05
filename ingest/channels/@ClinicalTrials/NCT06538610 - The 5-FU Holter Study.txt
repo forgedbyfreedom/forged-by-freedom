@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06538610
+Title: The 5-FU Holter Study
+Official Title: Feasibility Study of Ambulatory Holter Monitoring While Receiving Infusional Fluorouracil (5-FU) Chemotherapy
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: beta-alanine
+
+SUMMARY:
+To assess the feasibility of using ambulatory ECG monitoring (Holter monitor) for patients receiving 5-FU chemotherapy
+
+DETAILED DESCRIPTION:
+5-fluorouracil (5-FU) is the key chemotherapy component in systemic treatment of colorectal cancer. However, 5-FU treatment is also associated with cardiotoxicity which can have devastating consequences.
+
+Cardiotoxicity can be both symptomatic (e.g. chest pain, myocardial infarction (heart attack) and/or sudden death) as well as asymptomatic ('silent myocardial ischemia', which is only detectable by ECG). Data suggests that asymptomatic cardiotoxicity may be relatively common (\~30% of patients).
+
+About 69% of the cardiac events are seen during or within the first 72 hours of the first cycle of 5-FU.
+
+The development of cardiotoxicity requires permanent discontinuation of 5-FU chemotherapy. There are no PHARMAC funded alternatives for patients who discontinue 5-FU due to cardiotoxicity. Discontinuation of 5-FU is likely to lead to a worse oncological outcome (survival time) for the patient.
+
+One proposed mechanism for 5-FU cardiotoxicity involves fluoro-beta-alanine (FBAL), which is a metabolite formed when 5-FU is catalysed by the enzyme dihydropyrimidine dehydrogenase (DPD). The rationale for this feasibility study is to provide preliminary information required to develop a prospective pharmacokinetic study exploring plasma clearance of FBAL and 5-FU cardiotoxicity.
+
+This study aims to determine i) whether the use of continuous ECG monitoring (ambulatory Holter monitoring) in real life conditions (over two days, while at home receiving infusional 5-FU chemotherapy), is able to appropriately assess these types of silent heart attacks (ST changes) and ii) the acceptability of this study to both patients and clinicians iii) the excretion rate of FBAL over the 48 hour time period \& interpatient pharmacokinetic variability in FBAL excretion.
+
+PRIMARY OUTCOMES:
+  - Recruitment rate
+  - Acceptability rate
+  - Completion rate
+  - Overall time required to recruit to the target sample size
+  - Clinician experience of recruitment
+
+INTERVENTIONS:
+  - DEVICE: Holter monitor
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06538610

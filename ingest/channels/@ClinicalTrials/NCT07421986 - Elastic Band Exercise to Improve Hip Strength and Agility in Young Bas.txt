@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07421986
+Title: Elastic Band Exercise to Improve Hip Strength and Agility in Young Basketball Players
+Official Title: Does Short-Term Eccentric Strengthening With Elastic Bands Improve Hip Adductor Strength in Young Basketball Players?
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 21
+Topic: athletic performance
+
+SUMMARY:
+Here is the complete Brief Summary entry in a single paragraph, written in plain language, and excluding the study results (as requested), but maintaining academic rigor in describing the study design:
+
+The purpose of this study is to evaluate the effect of a 4-week short-term eccentric strengthening program using elastic bands on both hip adductor muscle strength and agility performance in young male basketball players. For this randomized controlled trial, twenty-one healthy young male athletes were separated by chance into two conditions: a training group, which performed the 4-week elastic band protocol in addition to their regular basketball training, and a control group, which engaged exclusively in their routine training. The primary measurements for comparison were maximal eccentric and isometric hip adduction strength (using a hand-held dynamometer) and the agility T-test. It is hypothesized that this targeted eccentric strengthening will lead to a significant enhancement of both hip adduction strength and overall athletic performance in the intervention group
+
+DETAILED DESCRIPTION:
+The incidence of lower-limb and groin injuries in professional basketball is significant, with weak hip adductor strength identified as a major risk factor. While eccentric strengthening programs have shown promise in athletic populations, there is a clear gap in the literature regarding the effectiveness of short-term hip-adduction strengthening using available tools like elastic bands in young basketball players. This study was thus designed as a rigorous randomized controlled trial to investigate this specific intervention.
+
+This study was a 4-week Interventional Randomized Controlled Trial (RCT) involving 21 healthy young male basketball players. Participants were recruited from a single sub-elite team and were excluded if they had any history of lower-limb injury (knee, hip, groin, lower back) in the preceding six months, or if they had performed any systematic hip adductor exercises during that period. Participants were randomized into two groups, paired based on their initial isometric hip adduction force. The Training Group (TG) conducted a supervised hip adduction protocol using Tuber-Band elastic bands. This program was performed 2-3 times per week for 4 weeks, in addition to their regular basketball training. The exercise involved a full range of motion in a standing position, incorporating three distinct contraction phases: a 3-second concentric contraction, a 2-second isometric hold, and a 3-second eccentric return phase. The load was individually adjusted to the 8-15 Repetition Maximum (RM) target to ensure progressive resistance throughout the program.
+
+All measurements were performed pre- and post-intervention by an experienced rater. Primary outcome measures included maximal eccentric hip adduction strength (EHAD) and agility T-test time. Secondary outcome measures included maximal isometric hip adduction strength (IHAD) and isometric hip abduction strength (IHAB).
+
+Strength was quantified using a hand-held dynamometer (HHD), performing a make test for isometric strength and a break test for eccentric strength. Agility was assessed objectively using photocell gates for the T-test. Data were analyzed using a 2×2 Analysis of Variance (ANOVA) with repeated measures (group × time) to assess training-related effects. Effect sizes (Cohen's d) were also calculated and reported.
+
+PRIMARY OUTCOMES:
+  - Maximal Eccentric Hip Adduction Strength (EHAD)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Eccentric Hip Adductor Strengthening with Elastic Bands
+
+ELIGIBILITY:
+Age: 15 Years to 18 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07421986

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06359990
+Title: BrotherlyACT: A Tech-Enhanced Violence and Substance Use Intervention for Black Boys and Young Men
+Official Title: BrotherlyACT: A Culturally Congruent and Technology-Enhanced Youth Violence and Substance Use Intervention for Black Boys and Men
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 300
+Topic: physical activity intervention
+
+SUMMARY:
+This study will adapt and test a culturally tailored, multi-component, and trauma-focused digital intervention to reduce the risk and effects of youth violence and substance use and bridge service access gaps for young Black males (YBM) in pediatric emergency and community-based low-resource settings.
+
+DETAILED DESCRIPTION:
+Across U.S. cities, Black youth face a 20-fold higher risk, and Hispanic youth a 4.4-fold higher risk of fatal shootings compared to non-Hispanic White youth aged 18-24. Despite these disparities, young Black males (YBM) in program-rich cities report reduced service utilization and uptake due to various modifiable personal and community-based factors. Several structural discrimination and avoidance-related processes drive these factors. For instance, YBM report high levels of Service Avoidance (where YBM avoid institutions that might create official records or have law enforcement presence, fearing involvement in the judicial system). At the individual level, they also report Experiential Avoidance (where trauma-impacted YBM suppress uncomfortable thoughts, experiences, and feelings - including openness to intervention - leading to maladaptive coping strategies (e.g., retaliation and substance dependence). These issues jointly amplify youth violence (YV) risk and related issues, such as substance use (SU). Yet, few programs target these personal and structural drivers of YV and SU. The investigator's prior research involving assault-injured YBM has shown a preference for digital and remotely delivered interventions that provide personalized feedback, round-the-clock support, privacy, and integrated services. Digital interventions are an underutilized resource for helping at-risk YBMs overcome some os there personal and structural barriers to utilizing behavioral and other health services.
+
+This research study aims to adapt, validate, and test the efficacy of BrotherlyACT, a culturally tailored, multi-component, and trauma-focused digital intervention to reduce the risk and effects of youth violence and substance use and bridge service access gaps for young Black males (YBM) in pediatric emergency and community-based low-resource settings. This study will recruit a sample of 300 assault-injured YBMs at discharge from three level 1-2 emergency departments (EDs) and violence-involved YBMs from two community-based organizations. Participants will be randomly assigned to the intervention or Waitlist Control Group (WCG). The intervention group will receive the app/web-based BrotherlyACT, comprising three main components: 1) Brief psychoeducational microlearning lesson videos based on the Acceptance and Commitment Therapy (ACT); 2) A Safety Planning Toolkit offering tools for risk assessment, emotional regulation, goal setting, and mindfulness-based stress reduction; 3) A Service Engagement Chatbot (called DEVON) that uses NLP to provide zip-code based navigational support and talk therapy. It is hypothesized that at baseline, 1-, and 3-months post-intervention, the intervention group will demonstrate reductions in 1) YV perpetration (reactive and proactive aggression); 2) YV victimization; 3) substance use (alcohol and other drug use occasions in the past 30 days, substance use attitudes and beliefs). Secondary outcomes include (A) service utilization 
+
+PRIMARY OUTCOMES:
+  - The Reactive-Proactive Aggression Questionnaire (RPQ)
+  - Multidimensional Peer Victimization Scale (MPVS)
+  - The Alcohol Use Disorders Identification Test (AUDIT)
+  - Drug Use Disorders Identification Test (DUDIT)
+  - Change in Attitude toward Substance Use
+
+INTERVENTIONS:
+  - BEHAVIORAL: BrotherlyACT
+  - OTHER: BrotherlyACT Waitlist Control Group (WCG)
+
+ELIGIBILITY:
+Age: 15 Years to 24 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06359990

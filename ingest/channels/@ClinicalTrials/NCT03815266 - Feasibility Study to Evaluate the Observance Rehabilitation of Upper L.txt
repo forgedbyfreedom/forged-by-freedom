@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03815266
+Title: Feasibility Study to Evaluate the Observance Rehabilitation of Upper Limbs by Visual-motor Simulation Associated at Transcranial Direct Current Stimulation (tDCS) in Hemiparetic Patient Post-stroke
+Official Title: Feasibility Study to Evaluate the Observance Rehabilitation of Upper Limbs by Visual-motor Simulation Associated at Transcranial Direct Current Stimulation (tDCS) in Hemiparetic Patient Post-stroke.
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 9
+Topic: resistance training
+
+SUMMARY:
+Although the mirror therapy is recognized as effective, its practice is difficult, especially with hemiplegic patients. It is difficult for them to understand, control the movements and carry out a double task with the two upper limbs. The implementation of a Computerized Mirror Therapy (CMT) with the Intensive Visual Simulation 3 (IVS3) device makes it possible to limit these problems by proposing pre-recorded sessions, not limited to the right or left hemi-space, and proposing a work on proximal motricity. Since the functional prognosis of the upper hemiplegic limb remains mostly unfavourable, a wide range of interventions should be proposed. There is currently a consensus to consider the use of transcranial Direct Current Stimulation (tDCS) stimulation in functional recovery after stroke as a method to enhance the effectiveness of training techniques. Although all motor therapies can theoretically benefit from increased effectiveness by the addition of transcranial Direct Current Stimulation (tDCS), Computerized Mirror Therapy (CMT) has a high potential for sensitivity to transcranial Direct Current Stimulation (tDCS) due to the intensity of the motor training of the upper limb applied.
+
+DETAILED DESCRIPTION:
+The primary objective of this study is to investigate the feasibility of a program combining Computerized Mirror Therapy (CMT) with dual- transcranial Direct Current Stimulation (tDCS) stimulation by evaluating observance to hemiparetic stroke patients.
+
+PRIMARY OUTCOMES:
+  - Rate of observance of the program Computerized Mirror Therapy (CMT) + transcranial Direct Current Stimulation (tDCS)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: transcranial Direct Current Stimulation (tDCS)
+  - DIAGNOSTIC_TEST: Computerized Mirror Therapy (CMT)
+  - DIAGNOSTIC_TEST: Tolerance Assessment Questionnaire
+  - DIAGNOSTIC_TEST: Ashworth's scale
+  - DIAGNOSTIC_TEST: Frenchay arm test
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03815266

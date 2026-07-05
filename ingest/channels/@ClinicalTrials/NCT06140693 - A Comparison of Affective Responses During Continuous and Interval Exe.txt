@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06140693
+Title: A Comparison of Affective Responses During Continuous and Interval Exercise
+Official Title: A Comparison of Affective Responses During Continuous and Interval Exercise
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 29
+Topic: high intensity interval training
+
+SUMMARY:
+Regular exercise is important for good health, but many people do not achieve the minimum physical activity recommendations. How exercise makes people feel is an important factor in how much exercise people do. Affective valence (AV) is a measure of the pleasure and/or displeasure people feel. It has been suggested that if the drop in AV with exercise can be minimised, then people will be more likely to enjoy the exercise, and adhere to the exercise long-term.
+
+Much research has been done to elucidate the factors that affect changes in AV with exercise, with a focus on exercise intensity. It has been hypothesised that AV will increase with low to moderate exercise intensities, but will decrease with higher exercise intensities. This has led a number of researchers to claim that there is little value in research examining the health benefits of high-intensity interval training (HIIT) and/or sprint interval training (SIT), as the exercise intensities used in these exercise routines are so high that affective valence is expected to drop to levels that are suggested to be unpalatable to members of the general public.
+
+However, this hypothesis ignores the likely moderating effect of exercise duration: most available evidence indicates that affect drops over time with increasing exercise duration. This means that it is possible for a longer exercise bout at a lower intensity to be associated with a greater drop in AV compared to a shorter bout of exercise at a higher intensity. This may explain why recent studies have demonstrated that low-volume SIT protocols may be associated with a similar drop in AV compared to moderate-intensity continuous exercise, but are considered more enjoyable.
+
+It is hypothesised that exercise enjoyment (and subsequent uptake and adherence to an exercise routine) is linked to the amount of time spent at reduced AV, rather than the absolute drop in AV per se. To investigate this hypothesis, changes in affective valence will be measured in response to three bouts of moderate intensity continuous exercise at different intensities but equal duration (30 minutes) as well as two bouts of SIT involving different numbers of sprint repetitions and sprint duration but equal intensity. It will be determined whether exercise enjoyment is related to the time spent at reduced levels of AV.
+
+The overall aim of this study is to further elucidate the exercise protocol parameters that influence changes in AV with exercise.
+
+DETAILED DESCRIPTION:
+Participants:
+
+The aim is to recruit up to 30 healthy participants (\~15 men and \~15 women) from one site (University of Stirling). Participants will be reimbursed £50 for the time required to participate in this study. The required data to perform a power analysis was not available, so the number of participants will be replicated from Ekkekakis et al (2008). Exclusion criteria will be age \<18 or \>40 y, answering yes to one or more questions of the physical activity readiness questionnaire (PAR-Q), a resting heart rate ≥100 bpm, and/or clinically significant hypertension (\>140/90 mm Hg). Blood pressure results will be provided to the participants with a note that they should contact their GP if they have any concerns about their blood pressure. Participants will be asked to visit the lab 8 times. Pregnant participants will be excluded from participation. Participants will be asked to provide written informed consent prior to participation.
+
+Initial visit:
+
+At least 48 hours after having been sent an electronic copy of the participant information sheet, volunteers are asked to visit our lab. The study will be fully explained, and volunteers will have the opportunity to ask any questions they may have before they are asked to sign an informed consent form. Following this, eligibility to participate will be checked by measuring height, body mass, resting blood pressure (systolic/diastolic), and heart rate, as well as current physical activity level (International Physical Activity Questionnaire; IPAQ), and potential health-related reasons why participation would not be appropriate (PAR-Q, general health questionnaire). If the volunteer is eligible to participate, then they will be asked to complete a fitness test to measure their maximal aerobic capacity (VO2max) and determine their ventilatory threshold (VT). Participants will start cycling on a stationary bike at a low intensity (50 Watts). The intensity will increase by 1 W every 3 s until volitional exhaustion or an inability to maintain pedalling frequency of 60 RPM. Expired O2 and CO2 will be continuously measured using a COSMED breath-by-breath gas analyser. VO2 is determined as the highest value for a 15-breath rolling average of VO2. The VT is determined by the procedure described by Davis et al (1979). The procedure consists of plotting the ventilatory equivalents for oxygen (VE/VO2) and carbon dioxide (VE/VCO2) over the course of the test and identifying the point at which there is a systematic increase in VE/VCO2 without a corresponding increase in VE/VO2.
+
+Familiarisation Session:
+
+Participants will visit the lab once more before the experimental sessions begin. In this session they will be familiarised with the continuous exercise intensities and the SIT sprints. To familiarise for the continuous exercise, each participant will cycle on the cycle ergometer for 5 min at each of the 3 intensities while ventilatory and heart rate responses are monitored. After the initial rapid incre
+
+PRIMARY OUTCOMES:
+  - Affective valence
+  - Felt-arousal
+
+INTERVENTIONS:
+  - OTHER: Continuous exercise at an intensity below the ventilatory threshold
+  - OTHER: Continuous exercise at an intensity at the ventilatory threshold
+  - OTHER: Continuous exercise at an intensity above the ventilatory threshold
+  - OTHER: Sprint interval training
+  - OTHER: Reduced-exertion high-intensity interval training
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06140693

@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07511010
+Title: Food Effect and Multiple-Dose Study of Chiglitazar/Metformin Extended-Release Tablets
+Official Title: A Phase I Clinical Study to Assess the Food Effect and Multiple Dose Pharmacokinetic of Chiglitazar/Metformin Extended-Release Fixed Dose Combination Tablets
+Status: NOT_YET_RECRUITING
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: creatine supplementation
+
+SUMMARY:
+This trial includes two parts: a food effect (FE) study and a multiple-dose pharmacokinetic (PK) study.
+
+The FE study is a randomized, open-label, two-period, two-sequence crossover study designed to evaluate the effect of a high-fat meal on the PK of a single oral dose of Chiglitazar/Metformin extended-release tablets in healthy adult Chinese participants.
+
+The multiple-dose PK study is an open-label study designed to evaluate the PK characteristics of Chiglitazar/Metformin extended-release tablets in healthy adult Chinese participants following multiple oral doses.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - FE Study: Maximum plasma concentration (Cmax)
+  - FE Study: Area Under the Plasma Concentration-Time Curve (AUC)
+  - FE Study: Time to Maximum Plasma Concentration（Tmax）
+  - FE Study: Elimination Half-life （t1/2）
+  - FE Study: Apparent Total Clearance （CL/F）
+
+INTERVENTIONS:
+  - DRUG: Chiglitazar/Metformin extended-release tablets under fasting conditions
+  - DRUG: Chiglitazar/Metformin extended-release tablets after a high-fat meal
+  - DRUG: multiple-dose of Chiglitazar/Metformin extended-release tablets
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07511010

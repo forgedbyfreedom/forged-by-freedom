@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06852014
+Title: Effects of Peptamen 1.6 in Malnourished Patients (or at Risk) With Pancreatic Neoplasia Undergoing Cephalic Pancreaticoduodenectomy (CPD): A Mechanistic Study
+Official Title: Effects of Peptamen 1.6 in Malnourished Patients (or in Risk) With Pancreatic Neoplasia Undergoing Cephalic Pancreaticoduodenectomy (CPD): A Study Mechanistic.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: sarcopenia intervention
+
+SUMMARY:
+Malnutrition is a common challenge in patients with pancreatic cancer undergoing cephalic pancreaticoduodenectomy (CPD), impacting postoperative recovery and overall prognosis. Nutritional support plays a crucial role in optimising metabolic, inflammatory, and digestive outcomes. This randomised, double-blind, crossover clinical trial aims to evaluate the effects of Peptamen 1.6, a hydrolysed whey protein-based enteral formula, compared to Resource HP/HC, a high-protein and high-calorie polymeric formula, in malnourished or at-risk patients with pancreatic cancer undergoing PD.
+
+The study comprises both in vivo and in vitro analyses. The in vivo component will assess the impact of Peptamen 1.6 on digestive tolerance, amino acid absorption, nutritional status, metabolic profile, inflammatory markers, and gut microbiota composition. The in vitro component will utilise human intestinal organoid models to explore how enteral nutrition formulations influence intestinal permeability and metabolism, with a focus on microbiota interactions.
+
+Primary outcomes include improvements in metabolic status, assessed through serum biomarkers (albumin, immune markers, intestinal permeability, and myosin profile), inflammatory status via peripheral blood mononuclear cells (PBMCs), and microbiota shifts in faecal samples. Additionally, adherence to treatment, digestive tolerance, and changes in body composition will be monitored using bioelectrical impedance, dynamometry, and functional mobility tests.
+
+By elucidating the mechanisms through which different enteral nutrition strategies influence clinical, physiological, and molecular parameters, this study aims to enhance personalised nutritional interventions for patients with pancreatic cancer. The findings could contribute to optimising nutritional support strategies, ultimately improving patient outcomes following CPD.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Adherence to nutritional treatment
+  - Natural food intake
+  - Tolerance to nutritional treatment
+  - Change in aminoacids: Ala, Glu, Asp, Pro, Phe, Leu/Ile, Val, Tyr, Met, Cit, Arg, Gly, and Orn
+  - Change in IL-6 and TNF-alpha RNA expression
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary Supplement: Experimental Treatment with nutritional suplement A + nutritional suplement B
+  - DIETARY_SUPPLEMENT: Dietary Supplement: Dietary Supplement: Experimental Treatment with nutritional suplement B + nutritional suplement A
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06852014

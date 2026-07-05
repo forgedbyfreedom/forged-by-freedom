@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04251195
+Title: Verbal Memory Training Using Virtual Reality in Schizophrenia
+Official Title: Verbal Memory Training Using Virtual Reality in Schizophrenia
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: recovery exercise
+
+SUMMARY:
+Verbal episodic memory is an independent declarative memory system associated with language and is responsible for storage and conscious recall of previous personal experiences. Verbal episodic memory is impaired in schizophrenia and is related to patients' functional outcomes. Because no medication has shown clear positive effects on verbal memory impairment in schizophrenia, there is a great need to find effective cognitive remediation treatments (CRT) that could improve this domain in this psychiatric population. Although CRT programs have shown small to moderate positive effects on verbal memory in individuals with schizophrenia, traditional lab-based computerised cognitive interventions have notable attrition rates. In recent years, along with the advancement of technology, the development of Virtual Reality (VR) has allowed the possibility for new training techniques. Previous studies have established the initial feasibility and safety of using VR in schizophrenia population. However, no studies have examined the feasibility, safety and efficacy of combining VR technology with verbal memory training among individuals with schizophrenia. Thus, in this study, we will adapt an exercise from the Strategy for Semantic Association Memory (SESAME; (Guimond et al., 2018; Guimond \& Lepage, 2016) training to a VR environment. We aim to determine the feasibility of using virtual reality in the context of a cognitive remediation intervention and to assess the initial efficacy of our verbal memory training on the use of semantic encoding strategies in people with schizophrenia. We also aim to assess participants' experience and tolerability of the VR training.
+
+DETAILED DESCRIPTION:
+In this study, participants will first undergo the Hopkins Verbal Learning Test - Revisited (HVLT-R) to assess the baseline use of semantic clustering and verbal memory recall performance. Participants will then be randomly assigned to either a control group or a verbal training group. Participants in both groups will undergo a short session (15 minutes) of VR training. Finally, participants will be invited to perform an alternate version of the HVLT-R to assess initial change in semantic clustering and verbal memory recall performance after the training. They will also complete the VR Experience Questionnaire and the simulator sickness questionnaire (SSQ) in order for the research team to gain feedback from participants regarding their experience and tolerability of the VR session.
+
+PRIMARY OUTCOMES:
+  - Change in semantic encoding strategy use as measured by change in semantic clustering from baseline - the Hopkins Verbal Learning Test - Revisited (HVLT-R).
+  - Feasibility of the intervention
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cognitive Intervention
+  - BEHAVIORAL: Active Control Intervention
+
+ELIGIBILITY:
+Age: 20 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04251195

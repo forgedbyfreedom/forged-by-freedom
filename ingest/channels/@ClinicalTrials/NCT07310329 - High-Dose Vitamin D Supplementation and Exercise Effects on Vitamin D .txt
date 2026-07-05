@@ -1,0 +1,71 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07310329
+Title: High-Dose Vitamin D Supplementation and Exercise Effects on Vitamin D Metabolites in Professional Football Players
+Official Title: Effects of High-Dose Vitamin D Supplementation and Physical Exercise on Vitamin D Metabolites in Professional Football Players: A Pilot Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: vitamin D muscle
+
+SUMMARY:
+This randomized, single-blind, placebo-controlled pilot study investigated the effects of high-dose vitamin D₃ supplementation and football-specific physical exercise on vitamin D metabolite concentrations in professional male football players. The study aimed to evaluate the acute response of circulating vitamin D metabolites, including 25-(OH)D₃, 24,25-(OH)₂D₃, and 3-epi-25-(OH)D₃, following a single oral dose of 500,000 IU cholecalciferol combined with high-intensity intermittent exercise typical of competitive football.
+
+Twenty professional football players from a Polish top-division club participated in the study. Participants were randomly assigned to either the supplementation group (SGP) receiving 500,000 IU of vitamin D₃ or the placebo group (PGP) receiving an identical volume of placebo oil. The intervention was administered 48 hours prior to an intra-squad game. Blood samples were collected at three time points: baseline (T3), pre-match (T4), and post-match (T5). The primary outcome was the change in serum 25-(OH)D₃ concentration. Secondary outcomes included changes in 24,25-(OH)₂D₃ and 3-epi-25-(OH)D₃ levels, as well as their ratios. The study also assessed whether physical exercise modulates vitamin D metabolism.
+
+The findings demonstrated that high-dose vitamin D₃ supplementation significantly increased serum 25-(OH)D₃ (↑198%) and 3-epi-25-(OH)D₃ (↑444%) levels, while football-specific exercise itself induced moderate increases in vitamin D metabolites. The results suggest that skeletal muscle may play a key role in vitamin D storage and release in response to exercise. The supplementation was well tolerated, with no adverse events observed.
+
+DETAILED DESCRIPTION:
+This pilot study was designed to explore the combined effects of high-dose vitamin D₃ supplementation and acute physical exercise on vitamin D metabolism in professional football players. The study responds to growing scientific interest in understanding how vitamin D status influences performance, recovery, and muscle function in athletes. While most previous studies have focused on chronic, low-to-moderate supplementation, this trial examined the response to a single, pharmacological dose of cholecalciferol in a controlled experimental setting.
+
+Study Design
+
+The study employed a randomized, single-blind, placebo-controlled, parallel-group design. Participants were randomly assigned to one of two groups:
+
+Supplementation Group (SGP) - received a single oral dose of 500,000 IU vitamin D₃ (Vigantol Oil, P\&G Health, Germany);
+
+Placebo Group (PGP) - received an identical amount of placebo (vegetable oil).
+
+The supplementation was administered 48 hours before a standardized intra-squad football match (ISG), conducted under conditions simulating a competitive game. All players followed the same training schedule and diet during the study.
+
+Participants
+
+A total of 20 professional male football players (aged 18-35) from a Polish top-league club volunteered to participate. Inclusion criteria included active professional status, regular training participation, and no use of vitamin D or calcium supplements in the previous 3 months. Exclusion criteria included musculoskeletal injuries, metabolic disorders, or refusal to sign informed consent.
+
+Measurements
+
+Blood samples were collected at three time points:
+
+T3: baseline (before supplementation),
+
+T4: 48 hours post-supplementation (pre-match),
+
+T5: immediately after the intra-squad game.
+
+Serum concentrations of 25-(OH)D₃, 24,25-(OH)₂D₃, and 3-epi-25-(OH)D₃ were determined using LC-MS/MS. Additional biochemical variables (hemoglobin, glucose, testosterone, cortisol, ferritin, calcium, CK) were analyzed to monitor physiological status.
+
+Outcomes
+
+Primary Outcome: Changes in serum 25-(OH)D₃ concentrations after supplementation and exercise.
+
+Secondary Outcomes: Changes in 24,25-(OH)₂D₃ and 3-epi-25-(OH)D₃ levels, metabolite ratios.
+
+Ethics
+
+The study was approved by the Ethics Committee of the Wroclaw University of Health and Sport Sciences (Resolution No. 1/2024, March 1, 2024). All participants signed written informed consent.
+
+PRIMARY OUTCOMES:
+  - Changes in serum 25(OH)D₃ concentration
+  - Changes in serum 24,25-dihydroxyvitamin D₃ [24,25(OH)₂D₃] concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D₃
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07310329

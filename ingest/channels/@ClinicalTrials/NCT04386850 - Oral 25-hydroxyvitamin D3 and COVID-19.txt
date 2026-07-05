@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04386850
+Title: Oral 25-hydroxyvitamin D3 and COVID-19
+Official Title: Preventive and Therapeutic Effects of Oral 25-hydroxyvitamin D3 on Coronavirus (COVID-19) in Adults
+Status: UNKNOWN
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1500
+Topic: protein supplementation
+
+SUMMARY:
+The goal of this clinical trial is to investigate the therapeutic efficacy of rapidly correcting vitamin D deficiency in adults with the use of 25-hydroxyvitamin D3 \[25(OH)D3\] for reducing the risk of acquiring the SARS-CoV-2 (COVID-19) viral infection and mitigating morbidity and mortality associated with this infection. This evidence-based hypothesis is related to several observations. Macrophages, activated T and B lymphocytes have a vitamin D receptor and 1,25-dihydroxyvitamin D3 induces defensin protein synthesis, influences immunoglobulin production and modulates T-cell cytokine production and functions. 1,25-dihydroxyvitamin D3 also reduces the angiotensin-converting enzyme 2 (ACE2) that is believed to serve as the binding site and gateway for COVID-19 to become infectious. This is a multicenter randomized3 doubleblinded placebo-controlled study aimed at determining the benefits of 25(OH)D3 treatment for the prevention of COVID-19 infection and improving clinical outcomes in infected patients. The investigators plan to recruit 1500 subjects in 3 study groups that include hospital health providers, patients with a positive test for COVID-19 and their relatives with a negative test. Eligible subjects in each study group with a documented serum level of 25(OH)D \< 20 ng/mL will be randomized. Recruited subjects will be given 25 mcg of 25(OH)D3 daily or an identically appearing placebo at the time of randomization for two months. Three hospitals will participate and the sample size is foreseen to be equally distributed between the three. Since the clinical trial is designed as minimal risk a formal committee for data monitoring is not foreseen. However, potential toxicity will be monitored every 4 weeks with a serum calcium, albumin and creatinine by the PI and the study coordinators. If the corrected serum calcium increases above 10.6 mg/dl and a repeat confirms that the calcium is above 10.6 mg/dL the subject will be dropped from the study and referred to his or her PCP. Early signs and symptoms of vitamin D toxicity associated with hypercalcemia are increased thirst, increase in frequency of urination, especially at night. The subjects will be followed up weekly by phone to ask about their sign and symptoms.
+
+DETAILED DESCRIPTION:
+Improvement in the vitamin D status i.e. total serum 25-hydroxyvitamin D in children and adults has been associated with reduced risk of upper respiratory tract infections including influenza A infection. The rationale for giving 25(OH)D3 rather than vitamin D3 is to rapidly improve the vitamin D status of the subjects who are at high risk of acquiring COVID 19 or who are infected by this very aggressive viral infection. It takes approximately 6-8 weeks to achieve a steady state blood level of 25(OH)D when ingesting a daily dose of vitamin D3 whereas ingesting 25(OH)D3 results in a rapid rise in its blood level reaching steady state within 48 hours. Based on the available literature it is reasonable to consider the possibility that vitamin D deficiency could increase risk of acquiring COVID 19 infection and exacerbating its infectivity and the body's cytokine response to it. It therefore seems plausible that the rapid improvement in vitamin D status by providing 25(OH)D3 may contribute to reducing the severity of illness caused by COVID-19, particularly in settings where hypovitaminosis D is frequent especially in people of color. Arguably, there is little evidence to date that improving the vitamin D status will reduce the infectivity risk or mitigate the devastating health consequences of COVID-19 infection. The proposed study to rapidly improve vitamin D status in adults who are at high risk of acquiring COVID- 19 or who are at risk for its morbidity and mortality will test the veracity of this evidence based hypothesis. Results from this study, especially if positive, would have far reaching global health consequences. Vitamin D3, vitamin D2 and 25-hydroxyvitamin D3 are readily available worldwide and could be quickly instituted as a rapid cost-effective method to help combat this pandemic.
+
+PRIMARY OUTCOMES:
+  - COVID-19 (SARA-Cov-2) infection
+  - Severity of COVID-19 (SARA-Cov-2) infection
+  - Hospitalization
+  - Disease duration
+  - Death
+
+INTERVENTIONS:
+  - DRUG: Oral 25-Hydroxyvitamin D3
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04386850

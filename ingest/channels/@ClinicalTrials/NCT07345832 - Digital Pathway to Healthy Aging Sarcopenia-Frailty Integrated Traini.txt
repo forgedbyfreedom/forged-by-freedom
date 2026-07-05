@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07345832
+Title: Digital Pathway to Healthy Aging: Sarcopenia-Frailty Integrated Training
+Official Title: Digital Pathway to Healthy Aging: Sarcopenia-Frailty Integrated Training
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia and frailty prevention and management are highly prioritized goals in the Healthy Aging agenda. The study aims to evaluate the effects and implementation of the digital critical pathway to improve sarcopenia and frailty, reduce fall risk, and increase health-related quality of life among community-dwelling older adults with risk of, or diagnosed with, sarcopenia and frailty
+
+DETAILED DESCRIPTION:
+Population ageing is accelerating globally and regionally, widening the gap between life expectancy and healthy life expectancy, mainly due to late-life declines in physical function and mobility (Guo et al., 2022). Sarcopenia and frailty are major age-associated public health issues that contribute to a decline in functional ability, increased fall risks, and mortality (Lee et al., 2022; Petermann-Rocha et al., 2021). Nutrition and physical activity integrated interventions are recommended as primary treatment for sarcopenia and frailty (Park \& Lee, 2023). However, current interventions are often generic, resulting in non-precise, non-personalized interventions, usually failing to accommodate individual differences in baseline strength and mobility, nutrition status, comorbidities, preferences, and home environments (Tighe et al., 2020). Consequently, interventions are complex to personalise, adjustments are delayed, and adherence is suboptimal, undermining real-world effectiveness. Future community-based health agendas should prioritize long-term care that removes access barriers (such as mobility and transportation) and transitions from generic care to precision personalization.
+
+The World Health Organisation's Decade of Healthy Ageing and the Integrated Care for Older People (ICOPE) framework provide a practice anchor to maintain intrinsic capacity through person-centred assessment, individualised goal-setting, and continuous follow-up. Within this paradigm, sarcopenia and frailty management apply ICOPE via protocol-driven critical pathways (Sum et al., 2022)-structured decision support that links risk assessment to tailored prescriptions and follow-up-can standardise quality while enabling precise personalisation across diverse home settings.
+
+Digital health interventions have expanded their capabilities to include remote exercise prescription, microlearning, reminders, and tele-coaching, with evidence of benefits for physical activity, fitness, body composition, and patient-reported outcomes (De Santis et al., 2023). Utilising a user-friendly digital tool to streamline functional assessments and develop personalised health plans is a promising approach.
+
+A digital platform-enabled intervention, grounded in the WHO ICOPE framework and a protocol-driven critical pathway, is proposed to identify care needs among community-dwelling older adults. This tool will allow healthcare providers to accurately assess individual needs and tailor interventions in exercise and nutrition, ensuring a focused, effective approach to combating sarcopenia and frailty in older adults.
+
+PRIMARY OUTCOMES:
+  - Appendicular skeletal muscle mass index (ASMI)
+  - Handgrip Strength
+  - Short Physical Performance Battery (SPPB)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Digital Pathway to Healthy Aging: Sarcopenia-Frailty Integrated Training program (D-Path-HA: S-FIT)
+  - BEHAVIORAL: Waitlist Control
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07345832

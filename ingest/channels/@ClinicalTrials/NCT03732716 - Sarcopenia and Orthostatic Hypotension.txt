@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03732716
+Title: Sarcopenia and Orthostatic Hypotension
+Official Title: The Relationship Between Sarcopenia and Orthostatic Hypotension
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: sarcopenia intervention
+
+SUMMARY:
+Elderly patients generally have a tendency for having sarcopenia which refers to muscle loss that may be related to many factors. These patients also have a tendency to falls and injuries. Whether elderly sarcopenic patients have abrupt blood pressure drops upon standing remains unknown. Therefore, in this study, we sought to determine the incidence of orthostatic hypotension in sarcopenic elderly patients and compare it with elderly patients with no sarcopenia.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in blood pressure
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: blood pressure measurement
+
+ELIGIBILITY:
+Age: 75 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03732716

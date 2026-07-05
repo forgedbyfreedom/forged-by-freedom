@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03019640
+Title: Umbilical Cord Blood NK Cells, Rituximab, High-Dose Chemotherapy, and Stem Cell Transplant in Treating Patients With Recurrent or Refractory B-Cell Non-Hodgkin's Lymphoma
+Official Title: Immunotherapy With Ex Vivo-Expanded Cord Blood-Derived NK Cells Combined With Rituximab High-Dose Chemotherapy and Autologous Stem Cell Transplant for B-Cell Non-Hodgkin's Lymphoma
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: beta-alanine
+
+SUMMARY:
+This phase II trial studies the side effects of cord blood-derived expanded allogeneic natural killer cells (umbilical cord blood natural killer \[NK\] cells), rituximab, high-dose chemotherapy, and stem cell transplant in treating patients with B-cell non-Hodgkin's lymphoma that has come back (recurrent) or that does not respond to treatment (refractory). Immune system cells, such as cord blood-derived expanded allogeneic natural killer cells, are made by the body to attack foreign or cancerous cells. Immunotherapy with rituximab, may induce changes in body's immune system and may interfere with the ability of tumor cells to grow and spread. Drugs used in chemotherapy, such as carmustine, cytarabine, etoposide, lenalidomide, melphalan, and rituximab, work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. A stem cell transplant using stem cells from the patient or a donor may be able to replace blood-forming cells that were destroyed by chemotherapy used to kill cancer cells. The donated stem cells may also replace the patient's immune cells and help destroy any remaining cancer cells. Giving cord blood-derived expanded allogeneic natural killer cells, rituximab, high-dose chemotherapy, and stem cell transplant may work better in treating patients with recurrent or refractory B-cell non-Hodgkin's lymphoma.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To establish the safety of this treatment by determining its treatment-related mortality (TRM) within 30 days.
+
+SECONDARY OBJECTIVES:
+
+I. To estimate the relapse-free survival (RFS). II. To estimate the overall survival (OS). III. To quantify duration of infused allogeneic umbilical cord blood (UCB)-derived natural killer (NK) cells in the recipient.
+
+OUTLINE:
+
+PREPARATIVE REGIMEN: Patients receive carmustine intravenously (IV) over 2 hours on day -12, etoposide IV twice daily (BID) over 3 hours on days -11 to -8, cytarabine IV BID over 1 hour on days -11 to -8, melphalan IV over 30 minutes on day -7, and lenalidomide orally (PO) once daily (QD) on days -7 to -2 in the absence of disease progression or unacceptable toxicity. Patients who are CD20+ also receive rituximab IV over 3 hours on days -13 and -7.
+
+NK-CELL INFUSION: Patients receive cord blood-derived expanded allogeneic NK cells IV over 1 hour on day -5 in the absence of disease progression or unacceptable toxicity.
+
+STEM CELL TRANSPLANT: Patients undergo stem cell transplant IV over 30-60 minutes on day 0 in the absence of disease progression or unacceptable toxicity.
+
+POST-TRANSPLANT: Patients receive filgrastim subcutaneously (SC) QD beginning on day +5. Treatment continues until white blood cell count recovers in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed up at 30, 100, and 180 days.
+
+PRIMARY OUTCOMES:
+  - Treatment-related Mortality Within 30 Days (TRM30)
+
+INTERVENTIONS:
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Carmustine
+  - BIOLOGICAL: Cord Blood-derived Expanded Allogeneic Natural Killer Cells
+  - DRUG: Cytarabine
+  - DRUG: Etoposide
+
+ELIGIBILITY:
+Age: 15 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03019640

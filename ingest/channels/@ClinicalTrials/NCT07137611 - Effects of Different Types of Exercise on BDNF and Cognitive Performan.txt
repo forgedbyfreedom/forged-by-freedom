@@ -1,0 +1,59 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07137611
+Title: Effects of Different Types of Exercise on BDNF and Cognitive Performance (Exercise-BDNF)
+Official Title: Effect of Exercise Intensity on Neurochemical and Cognitive Function: The Role of Lactate and BDNF
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: caffeine exercise
+
+SUMMARY:
+Purpose The purpose of this study is to determine the acute effects of different exercise intensities (low, moderate, high) on brain-derived neurotrophic factor (BDNF) levels, trail making test performance, and perceived sensation scale.
+
+Method
+
+This randomized crossover controlled trial aimes to examine the acute effects of four experimental conditions-high-intensity interval training (HIIT), moderate-intensity continuous training (MICT), low-intensity continuous training (LICT), and a resting control (CTRL)-on cognitive performance (via the Stroop test, targeting executive function) and associated neurochemical responses (e.g., serum BDNF and blood lactate levels) in healthy young adults aged 18-25 years.
+
+All participants will complete the four conditions in a randomized and counterbalanced manner. To ensure balanced exposure, they were assigned to one of four groups (n = 3 per group), each following a distinct condition order based on a Latin square design. This approach guaranteed that each session occurred equally across time points (sessions 1-4) and that the order minimized sequence effects by rotating the position of each condition relative to the others.
+
+To control for potential carryover-particularly from elevated neurochemical responses following intense exercise (BDNF increases reported -no two high-intensity sessions will be scheduled consecutively. Where possible, higher and lower intensity protocols will be alternated. Furthermore, a seven-day interval separated each session to reduce residual physiological or cognitive effects.
+
+The trial protocol was developed in line with CONSORT and SPIRIT guidelines, including relevant extensions for within-subject designs and non-pharmacological interventions. Participants were blinded to the study hypothesis (Pandis et al., 2017; Hopewell et al., 2025).
+
+All exercise sessions will be conducted under supervision of a certified strength and conditioning coach to ensure consistency and adherence to protocol. in the morning (09:00-11:00) on a track and field pitch to control for chronobiological variation. Participants were instructed to avoid strenuous activity for 48 hours prior, abstain from alcohol and caffeine for 24 hours, and obtain at least 7-8 hours of sleep before each session. Dietary habits and general lifestyle were to remain unchanged throughout the study.
+
+During the first visit, participants' body weight and body fat percentage were assessed using bioelectrical impedance analysis. Resting heart rate was then recorded, followed by administration of the Yo-Yo Intermittent Recovery Test Level 1 to determine maximal aerobic speed, aerobic capacity, and peak heart rate.
+
+In the following four visits, each participant completed all experimental conditions. Each exercise session will begin with a standardized 10-minute warm-up, including light jogging, dynamic stretching, and movement preparation drills.
+
+All exercise sessions were conducted on a standard track and field facility and lasted 40 minutes in total, consisting of a 10-minute standardized warm-up, 24 minutes of exercise, and a 5-minute recovery period. The exercise component was individually prescribed based on each participant's maximal aerobic speed, determined from the Yo-Yo Intermittent Recovery Test Level 1. All running distances were calculated individually using time × speed formulas based on each participant's maximal aerobic speed, ensuring workload equivalence across conditions.
+
+* High-Intensity Interval Training: Participants ran at 110% of their MAS for 15-second intervals.
+* Moderate-Intensity Continuous Training: Participants ran at a speed corresponding to 70-80% of their MAS.
+* Low-Intensity Continuous Training: Participants ran continuously for 24 minutes at 50-60% of their MAS without breaks.
+* Control: Participants remained seated at rest for the same duration (40 minutes), under the same environmental conditions and time schedule as the active conditions.
+
+Venous blood samples were collected before and immediately after each session to assess neurochemical markers. Subsequently, cognitive performance was evaluated using the computerized Stroop test to measure executive function. Heart rate was continuously monitored during all exercise conditions using a Polar V800 device. Following each session, psychophysiological responses were assessed using the Rating of Perceived Exertion scale and the Exercise Enjoyment Scale.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - BDNF
+  - Lactate
+  - Rating of Perceived Exertion Scale
+  - Exercise Enjoyment Scale
+
+INTERVENTIONS:
+  - BEHAVIORAL: Low Exercise
+  - BEHAVIORAL: Moderate-Intensity Exercise
+  - BEHAVIORAL: HIIT Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07137611

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07354997
+Title: Establishing a Virtual Health Community Management Model for Pre-Diabetes Patients
+Official Title: Research on the Construction and Driving Mechanisms of an Interactive Management Model for Pre-diabetic Patient Groups Based on Virtual Health Communities
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This study builds upon the previously developed virtual health community platform, aiming to address the group characteristics and psychological traits of prediabetic patients. By employing intervention mapping to construct a group interaction management model, it seeks to develop a mobile platform integrating "gamified knowledge acquisition and motivation", "immersive lifestyle practice experiences", and "sustained community interaction management". The primary focus is on fostering patients' continuous and proactive engagement. Subsequently, a single-arm controlled trial will validate the model's efficacy, aiming to address the health management challenges faced by China's substantial prediabetic population. This initiative seeks to provide theoretical foundations and practical support for primary prevention strategies targeting other chronic diseases and at-risk cohorts.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Physical activity
+  - Diet
+  - Fasting blood glucose
+  - Two-hour postprandial blood glucose
+  - Task Completion Rate
+
+INTERVENTIONS:
+  - OTHER: Pre-diabetes Virtual Community
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07354997

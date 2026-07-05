@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07077616
+Title: Clinical Study for the Safety and Therapeutic Efficacy of the AI-QMMM Designed TamavaqTM Personalised Vaccine in Patients With Newly Diagnosed Glioma.
+Official Title: Clinical Study for the Therapeutic Efficacy and Safety of a Personalized and AI-Quantum Mechanics Based and Molecular Modeled Cancer Specific Neoantigenic Vaccine, the TamavaqTM NeoVaccine in Patients With Newly Diagnosed Glioma.
+Status: RECRUITING
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 29
+Topic: creatine supplementation
+
+SUMMARY:
+Gliomas are a heterogeneous group of tumors arising from glial cells in the central nervous system and are associated with poor prognosis and significant morbidity. The most aggressive form, glioblastoma multiforme (GBM), remains particularly challenging to treat, often exhibiting resistance to conventional therapies such as chemotherapy and radiation. The average survival for patients with GBM is approximately 15 months, underscoring the urgent need for novel therapeutic strategies that can improve outcomes. Malignant gliomas are the most common primary brain cancer diagnosed and still carry a poor prognosis despite aggressive multimodal management. Despite the continued advances in immunotherapy for other cancer types, however, there remain no FDA approved immunotherapies for cancers such as glioblastoma. Neoantigen vaccines are a form of immunotherapy involving the use of DNA, mRNA, and proteins derived from non-synonymous mutations identified in patient tumor tissue samples to stimulate tumor-specific T-cell reactivity leading to enhance tumor targeting. Up to and including the current time, we have only nascent understandings, at the molecular and submolecular level, of how immunity is generated and maintained. As a result, we do not have fundamental mechanistic understandings of vaccine:antigen interactions, of vaccine-directed and initiated routes of immunity, nor how, through adjuvants and changes in our biologic environment (such as the intestinal microbiome), we might direct such immune responses. In particular, in the field of vaccinology we have few collaborations between biology, physics, and chemistry...or what has been termed "convergence science"...but particularly from physics and the field of quantum mechanics. Biophysics led to quantum biology and quantum immunology reflecting quantum dynamics within living systems and their evolution. Unfortunately, despite the seismic influence of immunotherapy on oncology today, there remain no FDA approved immunotherapies for GBM due to the lack of efficacy observed in several randomized clinical trials. The TAMAVAQ approaches enable a quantitative understanding of immune response kinetics following neoantigen-based peptide vaccine treatment. Insights gained from challenges can be used to design better vaccines and evaluate the potential candidate vaccines in silico. The TAMAVAQ models also can guide such decisions on treatment regimens such as dosing and infusion frequencies.
+
+DETAILED DESCRIPTION:
+Quantum Vaccinomics for the Generation of the TAMAVAQ personalized neoantigenic vaccines.
+
+The personalized neoantigen vaccines will be prepared based on the analysis of whole-exome sequencing (WES) and RNA-seq data generated from fresh-frozen tumours or tumours that will be available as formalin-fixed paraffin-embedded (FFPE) tissue, obtained at the time of diagnostic resection. WES of normal tissue will be generated from autologous PBMC DNA. Patient HLA allotype will be assessed using standard class I and class II PCR-based typing (BWH Tissue Typing Laboratory). Coding mutations will be identified and personal neoantigens will be predicted based on binding affinity analysis to individual HLA alleles using class I MHC binding prediction tools with a cut-off of predicted IC50 \< 500 nM for selected epitopes. Quantum Circuit platforms for the identification of immunological quantum and design of TAMAVAQ's NeoVaccine consisted of Druggable Immunodominant and Immunogenic Neo-epitopic Peptides will be incorporated in this clinical study. Candidate and Prioritized Neo-epitopic Peptides are identified using systems biology integration of omics dataset combined with Big Data analytics and machine learning. Then, the immunodominant quantized peptide will be identified by using in silico algorithms and HLA epitope mapping and binding domains involved in each one Glioma Patient's Drug-DNA-Protein-protein interactions.
+
+This clinical trial provides an AI-QMMM method for the identification and characterization of neoantigens and outlines the clinical applications of prospective immunotherapeutic strategies based on neoantigens exploring their current status, inherent challenges, and clinical translation potential against Glioma medical conditions.
+
+Enhanced Targeted Therapy\*\*:- The TAMAVAQ vaccine specifically targets neoantigens unique to glioma cells, potentially leading to a more effective immune response while sparing healthy cells. This specificity may reduce collateral damage associated with traditional cancer therapies.
+
+Immune System Activation\*\*:The TAMAVAQ personalized vaccine is designed to stimulate the patient's immune system, enhancing its ability to recognize and attack glioma cells. This activation can lead to a more robust and sustained anti-tumor response.
+
+Potential for Long-term Remission\*\*:- By training the immune system to identify and remember glioma cells, patients may achieve longer-lasting remission rates and a reduced likelihood of tumor recurrence compared to conventional therapies.\*\*Reduction in Side Effects\*\*:- Compared to traditional treatments such as chemotherapy and radiation, which often come with significant side effects, the TAMAVAQ personalized neoantigen vaccine may result in fewer adverse effects, thereby improving the patient's quality of life.
+
+Personalized Treatment Approach\*\*:- Each TAMAVAQ vaccine is tailored to the individual patient's tumor profile, potentially increasing the efficacy of the treatmen
+
+PRIMARY OUTCOMES:
+  - TAMAVAQ Vaccine Safety Analysis
+  - Incidences of Advent Events and Severe Advent Events
+  - Physiological Monitoring and Toxicity Analysis
+  - Gadolinium-enhanced MRI
+  - AI Techniques and Machine Learning Models for the TAMAVAQ's Safety Integration Analysis
+
+INTERVENTIONS:
+  - BIOLOGICAL: Biological: personalized vaccine Based on genetic and transcriptional sequencing information, personalized peptide vaccines would be designed and produced;
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07077616

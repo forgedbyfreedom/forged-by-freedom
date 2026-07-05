@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02370719
+Title: Evaluation of an mHealth Behavioural Intervention for the Self-Management for Type 2 Diabetes
+Official Title: Evaluation of an mHealth Behavioural Intervention for the Self-Management for Type 2 Diabetes Mellitus
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The purpose of this study is to evaluate a patient-centered diabetes self-management mobile application (app), which was developed with feedback from both patients and healthcare providers. During the 12 month randomized control trial, participants in the intervention group will be provided with a mobile phone and commercial home medical devices, such as a weight scale, glucometer and activity monitor. The measurements taken from the medical devices will wirelessly transfer to the mobile phone, where the app will assess the data and provide patients with actionable self-management knowledge. The proposed intervention may be helpful in increasing adherence to recommended self-care practices, improving self-efficacy, and enhancing the overall patient experience.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in HbA1c from baseline to 12 months
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mobile application for diabetes self-management
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02370719

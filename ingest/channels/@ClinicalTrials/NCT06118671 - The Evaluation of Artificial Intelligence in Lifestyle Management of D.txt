@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06118671
+Title: The Evaluation of Artificial Intelligence in Lifestyle Management of Diabetic Patients in Community
+Official Title: Application and Effectiveness Evaluation of Artificial Intelligence in Lifestyle Management of Diabetic Patients of Community
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 460
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The goal of this clinical trial is to learn about the application and effectiveness evaluation of artificial intelligence (AI) in lifestyle management of diabetic patients in community.
+
+DETAILED DESCRIPTION:
+To determine the effectiveness of lifestyle intervention through AI on diabetic patients, whether it can improve blood sugar/ blood pressure/ body weight/ blood lipid control in people with type 1 or type 2 diabetes? Then find related risk factors. Participants will complete the basic information, diet structure, use of dietary supplements, living habits, and exercise according to the AI scale (AI scale can be entered through we-chat mini program search), and provided personalized lifestyle intervention plan according to the survey result, while the control group received routine lifestyle guidance. All included patients would fill in the patient's medication information according to the information content of the machine reading card, and follow up whether the medication is adjusted. The patient was included in the diabetes management we-chat group, followed up for 3 months /6 months according to the visit plan. The experimental group filled in the lifestyle assessment scale again, and personalized lifestyle intervention programs were provided according to the survey results, while the control group received routine follow-up and lifestyle guidance. Researchers will compare the two groups to see if the control of blood glucose, blood pressure, blood lipids and BMI of the experimental group after 6 months of AI-based lifestyle intervention was better than the control group.
+
+PRIMARY OUTCOMES:
+  - Change of HbA1c
+
+INTERVENTIONS:
+  - BEHAVIORAL: personalized lifestyle intervention by AI
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06118671

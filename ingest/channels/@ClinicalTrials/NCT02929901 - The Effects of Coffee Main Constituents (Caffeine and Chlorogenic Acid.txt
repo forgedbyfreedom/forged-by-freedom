@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02929901
+Title: The Effects of Coffee Main Constituents (Caffeine and Chlorogenic Acid) Supplementation on Inflammatory, Metabolic Factors, Hepatic Steatosis and Fibrosis in None- Alcoholic Fatty Liver Patients With Type 2 Diabetes
+Official Title: 
+Status: COMPLETED
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to investigate the effects of coffee main constituents (caffeine and chlorogenic acid) supplements on inflammatory, metabolic factors, hepatic steatosis and fibrosis in none- alcoholic fatty liver patients with type 2 diabetes. Two hundred patients with fatty liver and type 2 diabetes will be randomly assigned to one of four groups: group 1, caffeine (200 mg/d) plus chlorogenic acid (200 mg/d); group 2, caffeine (200 mg/d) plus placebo; group 3, chlorogenic acid (200 mg/d) plus placebo; group 4, placebo plus placebo. Supplementation will be daily and will supervise for 6 months.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Hepatic steatosis
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: caffeine and chlorogenic acid
+  - DIETARY_SUPPLEMENT: caffeine
+  - DIETARY_SUPPLEMENT: chlorogenic acid
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02929901

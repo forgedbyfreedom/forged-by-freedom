@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06978777
+Title: Effect of Caffeine on Cold-stimulated Brown Adipose Tissue Activity
+Official Title: Effect of Caffeine on Cold-stimulated Brown Adipose Tissue Activity
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: physical activity intervention
+
+SUMMARY:
+The purpose of the study is to asses brown adipose tissue activity after a cold mild stimulus, preceded by 200mg caffeine or placebo administration.
+
+DETAILED DESCRIPTION:
+Brown adipose tissue (BAT) activation is typically through beta3-adrenoceptors (beta3-AR), but beta3-alone are less efficacious than cold in activating human BAT. Recent research suggests that adenosine, released during cold exposure, plays a key role in BAT thermogenesis. This study aims to investigate the role of the adenosine A2A receptor (A2AR) in BAT activation through a randomized trial with mild cold exposure and caffeine, a potent A2AR antagonist, to explore new therapeutic strategies for metabolic diseases.
+
+This is a randomized, double-blind, placebo-controlled cross-over trial involving healthy volunteers. The study includes a screening visit and two main study visits (A and B), which will occur in random order.
+
+During the two study visits, resting energy expenditure will be assessed by indirect calorimetry under warm conditions and following mild cold exposure, after administration of either caffeine or placebo. For cold exposure, participants will wear cooling sleeves around the waist, which gradually lower the surface body temperature to 10°C or to the lowest tolerable temperature without inducing shivering.
+
+Additionally, BAT activity will be assessed using 18F-FDG PET/CT, performed 30 minutes after the injection of 75 MBq of 18F-FDG.
+
+PRIMARY OUTCOMES:
+  - BAT SUVmean
+
+INTERVENTIONS:
+  - DRUG: Caffeine (200 mg)
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06978777

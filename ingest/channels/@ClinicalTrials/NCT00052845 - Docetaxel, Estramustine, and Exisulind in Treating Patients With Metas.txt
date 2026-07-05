@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00052845
+Title: Docetaxel, Estramustine, and Exisulind in Treating Patients With Metastatic Prostate Cancer That Has Not Responded to Hormone Therapy
+Official Title: A Phase II Study Of Estramustine, Docetaxel, And Exisulind (IND #64733) In Men With Hormone Refractory Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: Androgens can stimulate the growth of prostate cancer cells. Estramustine may fight prostate cancer by reducing the production of androgens. Exisulind may stop the growth of prostate cancer by stopping blood flow to the tumor. Drugs used in chemotherapy use different ways to stop tumor cells from dividing so they stop growing or die. Combining these therapies may kill more tumor cells.
+
+PURPOSE: Phase II trial to study the effectiveness of combining estramustine with exisulind and docetaxel in treating patients who have metastatic prostate cancer that has not responded to hormone therapy.
+
+DETAILED DESCRIPTION:
+OBJECTIVES:
+
+* Determine the time to objective and biochemical progression and response proportion (objective and post-therapy changes in PSA) in patients with hormone refractory metastatic prostate cancer treated with docetaxel, estramustine, and exisulind.
+* Determine the toxic effects of this regimen in these patients.
+* Determine the overall survival of patients treated with this regimen.
+
+OUTLINE: Patients receive oral estramustine 3 times daily on days 1-5, docetaxel IV over 1 hour on day 2, and oral exisulind twice daily on days 1-21. Courses repeat every 21 days in the absence of disease progression or unacceptable toxicity.
+
+Patients are followed every 3 months for 2 years.
+
+PRIMARY OUTCOMES:
+  - Time to progression
+
+INTERVENTIONS:
+  - DRUG: docetaxel
+  - DRUG: estramustine phosphate sodium
+  - DRUG: exisulind
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00052845

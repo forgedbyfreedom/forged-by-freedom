@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07452757
+Title: To Evaluate Efficacy and Safety of Proprietary Healthy Diet Combinations for Weight Management in Overweight Volunteers
+Official Title: To Evaluate the Efficacy and Safety of Weight Management Program in Overweight/Obese Individuals: A 4 Arm Open Label Randomized Controlled Clinical Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 140
+Topic: fat loss muscle
+
+SUMMARY:
+This is an open-label, four-arm, randomized, controlled clinical study designed to evaluate the efficacy and safety of a structured Weight Management Program (WMP) in overweight and obese adults with a body mass index (BMI) ≥ 23 kg/m² (Asian Indian ethnicity cut-off). A total of 140 subjects will be enrolled and randomized equally into four arms: one control arm and three intervention arms with varying levels of nutritional intervention.
+
+The Weight Management Program comprises three sequential phases: a pre-engagement gut-reset phase (10 days), an intensive intervention phase (30 days), and a maintenance phase (60 days). The intervention arms will receive combinations of meal replacements, protein supplements, fiber supplements, probiotics, and multivitamin-multimineral supplements, along with nutritional and behavioral counseling, calorie-deficit diet plans, and prescribed physical activity. The control arm will follow a free-living lifestyle without intervention.
+
+The primary efficacy outcome is the proportion of subjects demonstrating a reduction in body weight and/or BMI from baseline to the end of the intensive phase. Secondary outcomes include changes in body weight and BMI at the end of the maintenance phase, maintenance of weight loss, changes in body composition, waist circumference, waist-hip ratio, lipid profile, metabolic parameters, physical activity, quality of life, and safety outcomes including adverse events.
+
+The study aims to generate evidence on the effectiveness and safety of a holistic, lifestyle-based weight management program incorporating nutritional supplementation, dietary modification, physical activity, and behavioral support in overweight and obese individuals.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Body Weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Arm II
+  - DIETARY_SUPPLEMENT: Arm III
+  - DIETARY_SUPPLEMENT: Arm IV
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07452757

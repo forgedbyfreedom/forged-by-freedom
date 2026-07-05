@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07212478
+Title: Pelvic Floor Muscle Training vs. Pilates Exercises for Urinary Incontinence
+Official Title: Comparison Between Pelvic Floor Muscle Training and Pilates Exercises for Postmenopausal Women With Urinary Incontinence
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: high intensity interval training
+
+SUMMARY:
+Urinary incontinence (UI) affects approximately 40% of postmenopausal women and is therefore considered a public health problem. Conservative treatment is recommended, and pelvic floor muscle training (PFMT) is considered the gold standard for this condition.
+
+However, other exercise options have been studied, such as Pilates exercises, which focus on stabilizing muscles and require voluntary contraction of the pelvic floor muscles. The literature remains inconclusive regarding the effects of Pilates exercises on urinary incontinence and pelvic floor muscle function. Objective: To compare the effects of 3 months of muscle training, through PFMT and Pilates exercises, on improving UI in postmenopausal women. Methods: Twenty-four postmenopausal women with urinary incontinence will be randomized into two intervention groups: pelvic floor muscle training and mat Pilates exercises. Assessments will be conducted before and after three months of intervention and will include the following instruments: urinary incontinence and quality of life, assessed using the International Consultation of Urinary Incontinence Short Form (ICIQ-UI-SF) questionnaire; a 7-day voiding diary to identify potential modifiable factors related to urination and its frequency; a Pad test to identify and quantify UI; the Female Sexual Function Index to assess female sexual function; and pelvic floor muscle strength and endurance by bidigital palpation using the PERFECT test. Shapiro-Wilk tests will be used to assess normality, Student's t-test or Mann-Whitney U test according to parametric or nonparametric distribution, and ANCOVA will be used to compare groups post-intervention, considering a 95% confidence interval (p\<0.05). Data will be processed using SPSS 25.0.
+
+DETAILED DESCRIPTION:
+The sample will consist of 24 postmenopausal women, that is, who have not menstruated for at least one year and are between 50 and 70 years of age. The sample size was determined by a sample calculation performed in the Bioestat 5.3 program (Mamirauá Institute, Amazonas, Brazil), taking into account the values of the ICIQ\_SF (International Consultation on Incontinence Questionnaire - Short Form) instrument, made available in a previous study (SCHRADER et al., 2017). In this case, the post-intervention mean and standard deviation between the Pilates (8.71 ± 2.98) and PFMT (5.14 ± 2.73) groups were used, with the test power at 80% and an alpha value of 0.05, which generated the need for 10 participants in each group. To account for potential sample losses, 15% of participants were added to each of the two groups, totaling 12 women in each group.
+
+Descriptive data analysis will be expressed as mean, standard deviation, and delta percentage difference. Normality will be verified using the Shapiro-Wilk test. To assess for differences between groups regarding baseline characteristics (age, weight, height, and BMI) at the pre-intervention stage, the Student's t-test for independent samples or the Mann-Whitney U test will be used if the data present a parametric or nonparametric distribution, respectively. For comparison between groups post-intervention, ANCOVA will be used, with baseline data used as covariates. If the data present nonparametric characteristics, the comparison between groups will be made using the Mann-Whitney U test, considering the difference between pre- and post-intervention. The accepted confidence interval will be 95% (p\<0.05). Data will be processed using SPSS 25.0. Effect sizes (Cohen's d) will be calculated and considered small (0.20), medium (0.50), or large (0.80). For effect size calculations, the GPower 3.1 program (Franz Faul, Universitat Kiel, Germany) will be used.
+
+PRIMARY OUTCOMES:
+  - Voiding diary
+  - International Consultation of Urinary questionnaire Incontinence Short Form (ICIQ-UI-SF)
+  - PERFECT test
+  - FSFI Questionnaire (Female Sexual Function Index)
+
+INTERVENTIONS:
+  - OTHER: PFMT
+  - OTHER: Pilates exercises
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07212478

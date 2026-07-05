@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02802514
+Title: A Study Comparing the Effect of Albiglutide With Exenatide on Regional Brain Activity Related to Nausea in Healthy Subjects
+Official Title: An Exploratory Randomized, 2-Part, Single-blind, 2-Period Crossover Study Comparing the Effect of Albiglutide With Exenatide on Regional Brain Activity Related to Nausea in Healthy Volunteers
+Status: TERMINATED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 5
+Topic: creatine supplementation
+
+SUMMARY:
+The drug effects will be studied after a single dose of 50 milligram (mg) albiglutide and a single dose of 10 microgram exenatide, to gain insight into the central mechanisms of nausea associated with Glucagon-like peptide-1 receptor (GLP-1R) agonists. This study will explore the potential differences at the expected time of maximum concentration (Cmax) between a long-acting (albiglutide) and short-acting (exenatide) GLP-1R agonist in brain activation of healthy volunteers assessed by magnetic resonance imaging (MRI). This is a phase IV, 2-part, 2-period crossover (session), single dose, randomized, single blind (blinded to both the subject and the imaging evaluators analysing the MRI data), placebo- and active-controlled study in adult healthy volunteers who are susceptible to motion sickness. Part A and Part B are the same in design, both consisting of a screening stage, a dosing/assessment stage, and a follow-up visit. Data from Part A will inform progression, methods, and analysis plan for Part B. Each sequence includes three scanning visits: albiglutide plus scan, exenatide plus scan and an off-therapy -natural history scan with a 6-9 week washout period between the dosing scans. A total of 24 to 28 subjects will be randomized in the study (Part A and Part B). The cross over design is divided into 2 sessions and schedule is as follow, on Day 1 (either Session 1 (S1) or Session 2 (S2) per, if randomized) subject will under go an off-therapy MRI scan, on Day 5 subject will receive a single dose of 50 mg albiglutide or albiglutide placebo, and Day 8 subject will receive a single dose of 10 microgram exenatide or saline placebo followed by a post-dose MRI scan. At each session subject will receive only one active drug (albiglutide or exenatide).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Blood Oxygen Level Dependent (BOLD) Signal by Functional Magnetic Resonance Imaging (fMRI) Visual Nauseogenic Task
+  - Regional Cerebral Blood Flow (rCBF) by Functional MRI (fMRI)-Arterial Spin Labeling (ASL)
+  - Glutamate Concentration in Nausea-associated Brain Regions by Magnetic Resonance Spectroscopy (MRS)
+  - Gama-aminobutyric Acid (GABA) Concentration in Nausea-associated Brain Regions by MRS
+
+INTERVENTIONS:
+  - DRUG: Albiglutide 50mg
+  - DRUG: Albiglutide matching placebo
+  - DRUG: Exenatide 10microgram
+  - DRUG: Exenatide placebo (saline)
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02802514

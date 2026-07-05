@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06236139
+Title: Cell Therapy (STEAP1 CART) With Enzalutamide for the Treatment of Patients With Metastatic Castration-Resistant Prostate Cancer
+Official Title: Phase 1/2 Dose-Escalation and Cohort Study of STEAP1 CART With Enzalutamide in Participants With mCRPC
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase I/II trial tests the safety and effectiveness of cell therapy (STEAP1 CART) with enzalutamide in treating patients with prostate cancer that continues to grow despite surgical or medical treatments to block androgen production (castration-resistant) and that has spread from where it first started (the prostate) to other places in the body (metastatic). Prostate cancer is the second leading cause of cancer deaths in men. Localized prostate cancer is often curable and even metastatic disease may respond to treatment for a few years. Despite multiple therapies, including hormone therapy and chemotherapy, metastatic castration-resistant prostate cancer (mCRPC) still remains an incurable disease. Recently, adoptive cellular immunotherapies have been developed to transfer immunogenic cells to the patient to produce an anti-tumor response. Chimeric antigen receptor T (CART)-cell therapy is a type of treatment in which a patient's T-cells (a type of immune cell) are changed in the laboratory so they will attack tumor cells. T cells are taken from a patient's blood. Then the gene for a special receptor that binds to a certain protein on the patient's tumor cells is added to the T cells in the laboratory. The special receptor is called a chimeric antigen receptor (CAR). Large numbers of the CAR T cells are grown in the laboratory and given to the patient by infusion for treatment of certain cancers. Prostate stem cell antigen and prostate specific membrane antigen CAR T cell therapies have been shown to be safe and effective, but objective tumor responses remain rare. STEAP1 is an antigen that promotes cancer growth and spread and is found to be broadly expressed in mCRPC tissues. STEAP1 CART is CAR T cells that have been engineered with a STEAP1 antigen to better target prostate tumor cells. Enzalutamide is in a class of medications called androgen receptor inhibitors. It works by blocking the effects of androgen (a male reproductive hormone) to stop the growth and spread of cancer cells. Giving STEAP1 CART with enzalutamide may kill more tumor cells in patients with mCRPC.
+
+DETAILED DESCRIPTION:
+OUTLINE: This is a dose escalation study of STEAP1 CART in combination with enzalutamide followed by a dose expansion study.
+
+Patients undergo leukapheresis then receive cyclophosphamide intravenously (IV) and fludarabine IV on days -5, -4 and -3 and STEAP1 CART IV on day 0. Patients may receive enzalutamide orally (PO) on day 0 then once daily (QD) in the absence of disease progression or unacceptable toxicity. Patients also undergo a tumor biopsy at baseline, day 14 and optionally at progression. Patients additionally undergo blood sample collection, nuclear medicine (NM) bone scan and computed tomography (CT) scan, or magnetic resonance imaging (MRI) or positron emission tomography (PET) scan throughout study. Additionally, patients may undergo echocardiography (ECHO) or multigated acquisition scan (MUGA) at screening.
+
+After completion of study treatment, patients are followed up at 2, 3, 4, 5, 6, 9, and 12 months then every 6 months up to year 5 followed by yearly up to year 15.
+
+PRIMARY OUTCOMES:
+  - Incidence of grade 3 or higher adverse events (AEs) (Phase I)
+  - Incidence of AEs (Phase II)
+  - Response (Phase II)
+  - Prostate specific antigen (PSA) response
+  - Time to response (TTR)
+
+INTERVENTIONS:
+  - BIOLOGICAL: Anti-STEAP1 CAR T-cells
+  - PROCEDURE: Biopsy
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Bone Scan
+  - PROCEDURE: Computed Tomography
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06236139

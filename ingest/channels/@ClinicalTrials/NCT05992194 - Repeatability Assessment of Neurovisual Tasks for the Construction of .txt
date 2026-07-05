@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05992194
+Title: Repeatability Assessment of Neurovisual Tasks for the Construction of a New Concussion Monitoring Tool (SPORTICARE)
+Official Title: Exploratory Study Analyzing the Repeatability of Neurovisual Tasks for the Construction of a New Concussion Monitoring Tool
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 25
+Topic: sleep athletes
+
+SUMMARY:
+Traumatic brain injury (TBI) is a condition that occurs when a mechanical blow to the head causes damage to the brain. The diagnosis of this pathology requires the evaluation of several dimensions, including clinical symptoms, physical signs, cognitive disorders, behavioral and sleep disturbances and state of consciousness. This multidimensional approach provides a comprehensive and accurate assessment of head injury and its severity.
+
+The Berlin Consensus of the International Conference on Concussion in Contact Risk Sports held in Berlin in 2016 (McCrory et al., 2017) emphasized that the management of a CTE must be multimodal and multidisciplinary.
+
+This expert consensus converged on a tool that is now the most widely used in protocols studying concussion in sports at risk of BTI. This tool, the SCAT 5 (Sports Concussion Assessment Tool), combines symptom assessment, cognitive examination, neurological examination (oculomotricity, balance) and immediate and delayed memory.
+
+However, it requires the intervention of a medical expert to assess the clinical signs of the concussed athlete. Hänninen et al (2021) showed that test-retest reproducibility was very good for the clinical symptomatology subscore, but poor or average for the subscores summarizing cognitive tests and balance assessment.
+
+Clinicians now need to be able to better assess the severity of damage following head injury, and to monitor the patient's progress. This will improve the management of concussed athletes right up to their eventual return to sporting activity.
+
+The ultimate aim of our project is to develop and optimize an easily exportable multimodal concussion assessment tool, based on the use of a virtual reality headset, which will enable us to objectively characterize the state and evolution of a subject after a TCE. This will enable the assessment of neuro-visual functions and compensations in the concussed patient, revealing a higher attentional cost characterized by instability of orthostatic control, higher blink frequency and larger pupil size.
+
+The multimodal tool will be built from the results of various tests:
+
+* Standardized oculomotor tasks(pro-saccades, anti-saccades, smooth pursuit, memory guided saccades, self paced saccades)
+* Orthostatic balance control to assess postural compensations and estimate attentional cost during oculomotor tasks.
+* Pupil dynamics using the Pupil Cycle Time (PCT) test. The aim of this exploratory study is to determine the repeatability of measurements provided by the SPORTiCARE virtual reality headset during different tasks.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Assessment of repeatability when performing pro-saccades
+  - Assessment of repeatability when performing anti-saccades
+  - Assessment of repeatability when performing memory tricks
+  - Assessment of repeatability of the number of saccades when performing self-paced saccades
+  - Assessment of repeatability of pupil cycle time when performing self-paced saccades
+
+INTERVENTIONS:
+  - OTHER: multimodal oculomotor measurements
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05992194

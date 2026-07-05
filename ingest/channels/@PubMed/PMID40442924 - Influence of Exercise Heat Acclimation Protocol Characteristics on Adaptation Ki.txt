@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40442924
+Title: Influence of Exercise Heat Acclimation Protocol Characteristics on Adaptation Kinetics: A Quantitative Review With Bayesian Meta-Regressions.
+Authors: McDonald, Brown, Topham, Kelly, Jardine
+Journal: Comprehensive Physiology
+Year: 2025
+Topic: heat acclimation exercise
+
+ABSTRACT:
+The integrative influence of heat acclimation (HA) protocol characteristics and approach on adaptation kinetics and exercise capacity/performance in the heat remains unclear. Bayesian multilevel regression models were used to estimate adaptations with the number of exposures, exposure duration, ambient temperature, water vapor pressure, and HA approach (e.g., constant workrate) as predictors. Data from 211 papers were included in meta-analyses with results presented as posterior means and 90% credible intervals. Mean protocol characteristics were as follows: 8&#x2009;&#xb1;&#x2009;4 exposures, 90&#x2009;&#xb1;&#x2009;36&#x2009;min/exposure, 39.1&#xb0;C&#x2009;&#xb1;&#x2009;4.8&#xb0;C, and 2.78&#x2009;&#xb1;&#x2009;0.83&#x2009;kPa. HA decreased resting (-5 beats&#xb7;min-1 [-7, -3]) and end-exercise heart rate (-17 beats&#xb7;min-1 [-19, -14]), resting (-0.19&#xb0;C [-0.23, -0.14]) and end-exercise core temperature (-0.43&#xb0;C [-0.48, -0.36]), and expanded plasma volume (5.6% [3.8, 7.0]). HA also lowered exercise metabolic rate (-87&#x2009;mL&#xb7;min-1 [-126, -49]), increased whole-body sweat rate (WBSR) (163&#x2009;mL&#xb7;h-1 [94, 226]), time to exhaustion (49% [35, 61]) and incremental exercise time (14% [7, 24]), and improved time trial performance (3.1% [1.8, 4.5]). An additional HA exposure increased hemoglobin mass (1.9&#x2009;g [0.6, 3.2]) and WBSR (9&#x2009;mL&#xb7;h-1 [1, 17]), and an additional 15&#x2009;min/exposure further lowered end-exercise core temperature (-0.04&#xb0;C [-0.05, -0.03]) and expanded plasma volume (0.4% [0.1, 0.7]). A 5&#xb0;C increase in ambient temperature further lowered end-exercise HR (-2 beats&#xb7;min-1 [-3, -1]) and a 1&#x2009;kPa increase enhanced WBSR (37&#x2009;mL&#xb7;h-1 [4, 72]). End-exercise heart rate and core temperature decreased similarly following controlled hyperthermia (-16 beats&#xb7;min-1 [-18, -14]; -0.43&#xb0;C [-0.48, -0.36]) and constant workrate HA (-17 beats&#xb7;min-1 [-18, -16]; -0.45&#xb0;C [-0.49, -0.42]). HA protocol characteristics influence the adaptive response and may be manipulated to optimize adaptations. A predictor for estimating HA adaptations based on protocol characteristics is available at: https://www.canberra.edu.au/research/centres/uc-rise/research/environmental-physiology/exercise-heat-acclimation-predictor.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40442924/

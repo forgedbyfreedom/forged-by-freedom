@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06777394
+Title: Effects of High Intensity Interval Training in Down Syndrome
+Official Title: Effects of High Intensity Interval Training on Endurance and Trunk Stability in Children With Down Syndrome
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: high intensity interval training
+
+SUMMARY:
+Down Syndrome (DS), a genetic condition marked by the presence of an extra chromosome 21, is associated with various cognitive and physical challenges. Children with DS often experience motor development issues, including reduced endurance and decreased trunk stability, which underscores the need for targeted interventions. Common impairments in individuals with DS include hypotonia, ligament laxity, reduced muscle strength, limited muscle co-contraction, poor postural control, and impaired proprioception. This study is driven by a lack of research on the effects of High-Intensity Interval Training (HIIT) in this population, despite its documented benefits in enhancing cardiovascular fitness across other groups. Existing literature supports the benefits of exercise interventions for people with DS, but the application and advantages of HIIT-particularly concerning endurance and trunk stability-are underexplored.
+
+DETAILED DESCRIPTION:
+The study aims to evaluate the impact of a structured HIIT program on endurance and trunk stability in children with DS. Conducted as a randomized controlled trial (RCT) at Khuwaja Arshad Hospital, Sargodha, the study will include 30 participants divided equally and randomly assigned to two groups. The inclusion criteria include children with a confirmed DS diagnosis, aged 3 to 14, with the ability to understand instructions, stand, and walk independently, and of any gender. Exclusion criteria include mobility impairments, signs of atlantoaxial joint instability, and neurological conditions. Group A will participate in a HIIT program, while Group B will receive routine physical therapy. Pre- and post-intervention assessments will use validated tools to measure endurance (6-Minute Walk Test) and trunk stability (Functional Reach Test). Additionally, the feasibility and acceptability of the HIIT program will be qualitatively evaluated. Data will be collected at baseline and post-intervention and analyzed using SPSS version 23.Data analysis will be conducted using SPSS software. Quantitative data will be reported as mean and standard deviation and visualized with histograms, while qualitative data will be summarized as frequency and percentage and displayed using bar charts. Statistical techniques will be applied to compare baseline characteristics between groups and to assess normal distribution through the Four Square Step Test, the Six-Minute Walk Test for endurance, and the Functional Reach Test for trunk stability. If data follow a normal distribution, within-group differences will be analyzed using a paired sample t-test; otherwise, the Wilcoxon Signed Rank test, a non-parametric alternative, will be applied. For between-group differences, an independent sample t-test will be used for normally distributed data, while the Mann-Whitney U test will be used for non-normally distributed data. A 95% confidence interval and a significance level of p \< 0.05 will be considered significant.
+
+PRIMARY OUTCOMES:
+  - Four square balance test
+
+INTERVENTIONS:
+  - OTHER: High intensity interval training
+  - OTHER: Routine treatmet
+
+ELIGIBILITY:
+Age: 3 Years to 14 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06777394

@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05098678
+Title: Zinc Supplementation and Behçet's Syndrome
+Official Title: The Effects of Zinc Gluconate Supplementation on Several Genes Expression, the Serum Level of Inflammatory Factors, Quality of Life, and Disease Activity in Patients With Behcet Syndrome: Double-blind Randomized Controlled Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: protein supplementation
+
+SUMMARY:
+To study the effects of zinc gluconate supplementation on patients with Behçet's syndrome, 50 patients will be randomly allocated to two groups: placebo group or zinc group (one tablet of 30 mg/day elemental zinc) for 12 weeks. All participants will be asked not to alter their diet, medication, and physical activity during the study. At the first and the end of the intervention, genes and proteins expression, the serum level of inflammatory factors, quality of life, disease activity, anthropometric measures, physical activity and serum level of zinc will be assessed and compared between groups.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Toll-like Receptor-2 gene expression
+  - Toll-like Receptor-4 gene expression
+  - Toll-like Receptor-2 protein expression
+  - Toll-like Receptor-4 protein expression
+  - Serum level of tumor necrosis factor-alpha
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Zinc gluconate
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05098678

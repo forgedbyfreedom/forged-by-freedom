@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07319052
+Title: β-Alanine for Kickboxing Anaerobic Performance
+Official Title: Effects of β-Alanine Supplementation on Kickboxing-Specific Anaerobic Performance, Neuromuscular Power, and Strength Endurance: A Randomized, Double-Blind, Placebo-Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: athletic performance
+
+SUMMARY:
+This randomized, double-blind, placebo-controlled parallel-group trial will evaluate whether four weeks of β-alanine (BA) supplementation improves sport-specific anaerobic performance, neuromuscular power, and strength endurance in trained male kickboxers. β-Alanine is the rate-limiting precursor for skeletal muscle carnosine, an intramuscular buffer that can attenuate exercise-induced acidosis during repeated high-intensity efforts. Because kickboxing involves brief, repeated striking sequences with high glycolytic demand, BA may represent a practical, legal ergogenic aid for this population.
+
+Twenty-eight adult male kickboxers will be randomized (stratified) to BA (6.4 g·day-¹) or placebo for 4 weeks while maintaining habitual training and diet. Assessments will occur at baseline and post-intervention under standardized laboratory conditions and time-of-day control. The primary outcome is the total time on the Kickboxing Anaerobic Speed Test (KASTtotal; five consecutive sets of a validated four-technique striking combination with 10-s passive recovery). Secondary outcomes include best single-set time (KASTbest), individual set times (KAST₁-₅), Performance Decrement Index (PDI), countermovement jump (CMJ) and squat jump (SJ) height, and upper-body strength endurance (maximal push-ups and pull-ups performed to strict standards). Timing is determined from 25-fps video with frame-level analysis; jump height is derived via a validated smartphone application.
+
+Adverse events-particularly transient paresthesia-will be monitored throughout. The main analysis will use two-way repeated-measures ANOVA (group × time) with partial eta-squared to quantify effects; assumption checks and correction procedures will be applied as appropriate. BA will yield greater improvements than placebo in KASTtotal and upper-body strength endurance, with limited changes expected for jump performance.
+
+DETAILED DESCRIPTION:
+Rationale and Background: β-Alanine supplementation increases intramuscular carnosine, enhancing intracellular buffering capacity and potentially preserving excitation-contraction coupling during high-intensity, repeated efforts. Kickboxing competition is characterized by short striking bouts, rapid direction changes, and high glycolytic contribution-conditions under which increased buffering may translate to meaningful performance benefits. Prior work in combat sports has reported ergogenic effects of BA; however, evidence in kickboxing using a validated sport-specific test remains limited. This trial addresses that gap using the Kickboxing Anaerobic Speed Test (KAST), which offers strong ecological validity for combat athletes.
+
+Design and Setting: Randomized, double-blind, placebo-controlled, parallel-group clinical trial with two assessment time points (pre, post). Participants continue usual training under coach supervision and are instructed to avoid other ergogenic aids and caffeine for 24 h before testing. All testing is performed under standardized environmental conditions (temperature and humidity controlled) and at the same time of day (±1 h) to minimize circadian and residual fatigue effects.
+
+Participants: Twenty-eight healthy adult male kickboxers with ≥5 years of systematic training and active competition in the prior year. Key exclusions include musculoskeletal injury limiting high-intensity exercise, cardiometabolic or respiratory disease, β-alanine intolerance, and recent use of overlapping supplements. Written informed consent is obtained. The protocol complies with the Declaration of Helsinki and local ethics approval.
+
+Interventions Experimental: β-alanine, 6.4 g·day-¹ for 4 weeks (e.g., divided doses). Comparator: Appearance-matched placebo (rice flour), same schedule. Products are dispensed in coded containers to preserve blinding of participants, investigators, and outcome assessors.
+
+Outcome Measures Primary: KASTtotal (s), computed as the sum of five consecutive sets of a standardized four-technique combination performed at maximal effort with 10-s passive recovery. Timing starts at first bag contact and ends after the final kick; performance is video-recorded at 25 fps and analyzed frame-by-frame.
+
+Secondary: KASTbest (best of two maximal sets separated by 5-min recovery), individual set times KAST₁-₅, PDI (%) = KASTtotal/(KASTbest × 5) × 100, CMJ and SJ height (hands on hips; validated smartphone app), and maximal push-ups and pull-ups (strict form criteria). Adverse events and tolerability-especially paresthesia-are recorded throughout.
+
+Procedures and Standardization: A familiarization session precedes baseline testing. Warm-up includes light aerobic activity, dynamic drills, plyometrics, mobility work, and shadowboxing following a scripted sequence. Standardized verbal encouragement and rest intervals are used. Technique order for KAST is fixed; any deviation leads to trial termination and repeat after enforced rest
+
+PRIMARY OUTCOMES:
+  - Total Time on Kickboxing Anaerobic Speed Test (KASTtotal)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: β-Alanine
+  - DIETARY_SUPPLEMENT: Rice Flour (Placebo)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07319052

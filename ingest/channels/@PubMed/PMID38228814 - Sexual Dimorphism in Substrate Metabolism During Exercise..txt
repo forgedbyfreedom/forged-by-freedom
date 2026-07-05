@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 38228814
+Title: Sexual Dimorphism in Substrate Metabolism During Exercise.
+Authors: Abo, Casella, Layton
+Journal: Bulletin of mathematical biology
+Year: 2024
+Topic: glucagon exercise metabolism
+
+ABSTRACT:
+During aerobic exercise, women oxidize significantly more lipids and less carbohydrates than men. This sexual dimorphism in substrate metabolism has been attributed, in part, to the observed differences in epinephrine and glucagon levels between men and women during exercise. To identify the underpinning candidate physiological mechanisms for these sex differences, we developed a sex-specific multi-scale mathematical model that relates cellular metabolism in the organs to whole-body responses during exercise. We conducted simulations to test the hypothesis that sex differences in the exercise-induced changes to epinephrine and glucagon would result in the sexual dimorphism of hepatic metabolic flux rates via the glucagon-to-insulin ratio (GIR). Indeed, model simulations indicate that the shift towards lipid metabolism in the female model is primarily driven by the liver. The female model liver exhibits resistance to GIR-mediated glycogenolysis, which helps maintain hepatic glycogen levels. This decreases arterial glucose levels and promotes the oxidation of free fatty acids. Furthermore, in the female model, skeletal muscle relies on plasma free fatty acids as the primary fuel source, rather than intramyocellular lipids, whereas the opposite holds true for the male model.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/38228814/

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05457881
+Title: Short-Term Endogenous Hydrogen Sulfide Upregulation For Vein Graft Disease
+Official Title: Short-Term Endogenous Hydrogen Sulfide Upregulation For Vein Graft Disease
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: fat loss muscle
+
+SUMMARY:
+A randomized, controlled trial to evaluate patient compliance and biologic mechanisms of a short-term pre-operative Protein-Calorie Restriction (PCR) diet in comparison to a normal ad libitum diet for 4 days before elective vascular surgery involving a major operation. After a pilot study exploring the safety and feasibility of the PCR diet conducted inpatient before carotid endarterectomy titled Short-Term Endogenous Hydrogen Sulfide Upregulation, and a follow-up study titled Dietary Restriction in Vascular Surgery, the investigators now aim to expand the study to at home diet among a variety of vascular surgery procedures. This study will further elucidate not only the practicality of pre-operative short term dietary restriction, but also provide early data to inform biologic mechanisms and to inform future efficacy trails.
+
+DETAILED DESCRIPTION:
+Peripheral arterial disease (PAD) remains a major health issue in the United States, especially with the metabolic syndrome and aging population. Surgical bypass using autogenous vein remains the most effective and durable choice for patients with advanced PAD. However, these vascular interventions suffer from high failure rates due to the development of significant occlusive lesions (intimal hyperplasia \[IH\]). Similar failure mechanisms plague coronary artery bypass grafts and endovascular interventions. Despite decades of vein graft research, our understanding of the biologic mechanisms of vein graft failure remains obscure.
+
+Hydrogen sulfide (H2S) has emerged as a critical gaseous signaling molecule in multiple processes including ischemia/reperfusion (IR) injury, angiogenesis, intimal hyperplasia, and anti-inflammatory mechanisms. It even appears to hold anti-atherosclerotic properties. However, the gas is toxic with a half-life of minutes, and it can be rapidly oxidized. Furthermore, clinically useful pharmacologic H2S donors have not been developed to date. In our 2015 Cell paper the investigators link substantial upregulation of endogenous H2S via short-term manipulation of mammalian dietary intake: simple dietary restriction. Our first pilot study had aims to determine the feasibility and safety of a PCR diet in vascular patients, concluding with no significant serious adverse events in any of the patients receiving the diet. The investigators learned that patients do not like having to stay in the hospital research unit pre-operatively. Long term the investigators aim to substantively impact the vascular patient at several levels: protection from IR, intimal hyperplasia, peri-procedural events such as stroke, cardiac dysfunction and myocardial infarction, and promotion of angiogenesis. For the current effort, the investigators will focus on potential biologic mechanisms of PCR and feasibility of eventual larger initiatives to accomplish this long-term aim.
+
+A powerful method to upregulate H2S is PCR. Defined as reduced food intake without malnutrition, PCR is best known for extending lifespan in model organisms from yeast to non-human primates. The efficacy of PCR against acute stress, including surgical stress, in preclinical models is also well established. Pilot studies suggest that humans respond to PCR in beneficial ways with respect to metabolic fitness (including improved glucose homeostasis, lipid profiles, and cardiovascular performance). But humans also have great difficulty complying with long-term voluntary food restriction, which is a prime reason that PCR has not been previously exploited in the clinical setting despite promising efficacy. However, recent data in model organisms point to a rapid onset of PCR benefits and challenges the notion that long-term PCR is required for benefits to accrue. In fruit flies, the maximal benefit of PCR on mortality risk occurs within 2-3 days. In rodents, the investigators have shown t
+
+PRIMARY OUTCOMES:
+  - Compliance with outpatient Protein-Calorie Restriction measured via food diary
+  - Compliance with outpatient Protein-Calorie Restriction measured via biologic assays for plasma free amino acids
+  - Compliance with outpatient Protein-Calorie Restriction measured via biologic assays for pre-albumin
+  - Compliance with outpatient Protein-Calorie Restriction measured via biologic assays insulin-like growth factor
+  - Change over time from baseline values to values before surgery and day 1 after surgery in the comparison of H2S and standard biological markers of stress in blood
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Scandi-Shake
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05457881

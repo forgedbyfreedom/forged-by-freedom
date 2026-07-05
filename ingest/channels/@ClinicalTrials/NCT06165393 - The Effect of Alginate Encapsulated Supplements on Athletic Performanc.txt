@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06165393
+Title: The Effect of Alginate Encapsulated Supplements on Athletic Performance and Recovery
+Official Title: The Effect of Alginate Encapsulated Supplements on Athletic Performance and Recovery
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: athletic performance
+
+SUMMARY:
+Endurance sport is often characterized by high training loads and significant metabolic demands, including depletion of endogenous fuel stores (e.g. liver and muscle glycogen) and damage to the skeletal muscle proteins. Nutritional interventions that enhance the restoration of endogenous fuel stores and improve muscle damage repair have received a lot of attention. The primary aim of this project is to clinically test the effect of alginate encapsulation technology on performance. Furthermore, we will investigate the substrate utilization profile during exercise and subsequent recovery.
+
+The encapsulation technology presents a nutrient delivery solution, which results in a sustained or slow-release of the nutrients encapsulated. Thus, potentially optimizing the digestion and absorption by promoting an easy ingestion of high concentrations of fx carbohydrates without negatively affecting the gastrointestinal comfort.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Performance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Slow-release CHO-AA
+  - DIETARY_SUPPLEMENT: Slow-release CHO
+  - DIETARY_SUPPLEMENT: CHO
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06165393

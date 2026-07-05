@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05454007
+Title: Tracking Post-stroke Walking Improvements From the Clinic Into the Home
+Official Title: Tracking Post-stroke Walking Improvements From the Clinic Into the Home
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: high intensity interval training
+
+SUMMARY:
+The purpose of this proposal is to use novel video-based movement tracking technology to measure gait quality after stroke - in the home. Current rehabilitation practice assesses walking in the highly controlled 'ideal' clinical environment. The implicit assumption by clinicians and researchers is that the way people walk in the clinic (their best capacity) reflects the way they walk in the real-world (true performance). With advances in computer vision and development of pose estimation algorithms, it is now possible to directly measure how people are walking in their homes. It is critical that researchers apply this technology to examine the basic assumptions that underlie current rehabilitation practice. Here, a video-based pose estimation workflow will be used to 1) contrast the gait patterns of persons post-stroke as observed in-clinical vs. in-home settings, and 2) map the rate of deterioration of clinically-derived walking improvements, in the home. This methodology has been used to accurately measure gait kinematics in people with stroke as they walk in laboratory, however this study now seeks to use these methods to record people with stroke as they walk in their natural home environments. The ultimate outcome of this project will not only be freely-available video-based workflow modified for home-based gait assessments, but also preliminary data revealing how people with stroke walk in the real world.
+
+DETAILED DESCRIPTION:
+Aim 1 Establish the relationship between walking capacity and walking performance in people with chronic stroke. The first critical step toward improving in-home walking performance after stroke is to uncover how differently people walk in the standard clinic environment vs. in their home. For each individual, the investigators will obtain video recordings of 6 minutes of walking in both clinic and home environments. The investigators will then use pose estimation algorithms to quantify three key features of gait- step length asymmetry, step time asymmetry, and gait speed. The investigators hypothesize that walking capacity measured in the clinic will be superior to walking performance measured in the home for each of the three metrics.
+
+Aim 2 Quantify the magnitude and durability of clinic-derived walking improvements in the home. Current clinical practice is predicated on the belief that changes in walking capacity elicited through rehabilitation transfer to improvements in walking performance in the home. Here, the investigators will directly test this assumption. The same group of participants with stroke from Aim 1 will receive a single session of locomotor adaptation training - an established intervention shown to rapidly improve over ground step length symmetry - in the laboratory. Participants will then record videos as they perform in-home walking trials with instructions to continue to walk with their improved gait patterns at four timepoints (same day, next day, three-day, and one-week post-training). The investigators hypothesize that the improvement in step length symmetry in the home will be half of what is observed in the clinic on the same day and decay to zero by the next day.
+
+Study Design Participants will complete a total of 5 data collection sessions (Figure 1). Day 1 will involve a standardized neurological clinical examination, a video recording of walking in the clinic (e.g. baseline capacity assessment), and a video recording of walking in the home (e.g. baseline performance assessment). Day 2 involves a single 30-minute training session in our laboratory during which the participant engages in an established protocol known to reduce step length asymmetry. They will also record a video of in-home walking (same-day transfer assessment) within an hour of completing the step symmetry training. On Days 3, 5, and 9, the participant will submit video recordings of their in-home walking.
+
+Participants Investigators will recruit a single cohort of 20 people with post-stroke step length asymmetry ≥ 4 cm. Data gathered here will serve as necessary preliminary data for larger studies investigating factors that influence in-home walking performance and for studies testing interventions aimed at improving in-home walking.
+
+Video Recording For assessments of walking capacity, the investigators will record videos (\~30 Hz) of sagittal and frontal views of participants as they walk overground on a level tile surface in a well-lit and dis
+
+PRIMARY OUTCOMES:
+  - Change in step length symmetry
+  - Change in step time symmetry
+  - Change in self selected gait speed
+
+INTERVENTIONS:
+  - BEHAVIORAL: Step length asymmetry training
+
+ELIGIBILITY:
+Age: 21 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05454007

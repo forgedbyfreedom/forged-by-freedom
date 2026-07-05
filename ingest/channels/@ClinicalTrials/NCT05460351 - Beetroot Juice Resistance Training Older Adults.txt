@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05460351
+Title: Beetroot Juice Resistance Training Older Adults
+Official Title: Effect of Beetroot Juice on Body Composition, Physical Function, Muscle Strength, and Peak Oxygen Consumption in Resistance Trained Older Adults Consuming a Protein Supplement
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: fat loss muscle
+
+SUMMARY:
+The present study compared the effects of a nitrate containing beetroot juice supplement (BRJ+Nitrate) vs. a placebo (Control) on total and regional fat free mass, quadriceps muscle strength, lower body mobility, and VO2peak in healthy, older adults undergoing a 10-week long progressive resistance training program with protein supplementation.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Whole body fat free mass
+  - Whole body fat mass
+  - Thigh muscle
+  - Thigh intermuscular fat
+  - Thigh subcutaneous fat
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: BRJ+Nitrate
+  - DIETARY_SUPPLEMENT: Control
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05460351

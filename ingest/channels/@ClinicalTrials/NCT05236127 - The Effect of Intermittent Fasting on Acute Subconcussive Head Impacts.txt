@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05236127
+Title: The Effect of Intermittent Fasting on Acute Subconcussive Head Impacts
+Official Title: The Effect of Intermittent Fasting on Acute Subconcussive Head Impacts
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: athletic performance
+
+SUMMARY:
+The purpose of this study is to examine the effect of intermittent fasting on the acute neural responses to subconcussive head impacts. The study is designed to identify the effects of 20 controlled soccer headings in college-aged soccer players in one of four groups (fasted, pre-fasted, post-fasted, or control) through the use of neural-injury blood biomarkers, magnetic resonance spectroscopy, functional, and diffusion MRI, and ocular-motor function across 4 acute time points. The central hypothesis is that the neuronal structural, physiological, and functional impairments from the subconussive head impacts will be lessened by intermittent fasting either before or after the soccer headings. The neural-injury blood biomarkers neurofilament light (NfL), glial fibrillary acidic protein (GFAP), Ubiquitin C-Terminal Hydrolase L1 (UCH-L1), and Tau will be measured in serum, with the hypothesis that fasting prior to the 20 soccer headings will result in a decreased heightened response compared to the post-heading fasted group and the controls. It is also hypothesized that repetitive subconcussive head impacts will impair neurocognitive function, as measured by regional changes in fMRI activation during a working memory task in the fasted groups. Twenty headings will significantly alter fMRI activation in the fasted groups from baseline. This impairment will not be observed in the control group. White matter microstructure will be measured by diffusion imaging metrics, with the hypothesis that 20 soccer headings will significantly disrupt microstructure in the fasted groups compared to baseline, but not in the control group. The study will also assess neuro-opthalmologic function as measured by the King-Devick test (KDT) and oculomotor function as measured by near-point-of-convergence (NPC) in response to subconcussive head impacts. The hypothesis is that NPC performance will be significantly impaired for longer than 24 hours in all the groups, but this impairment will be greater in the control group, and that the learning curve and expected improvement of KDT will be significantly blunted in both groups, with a display worsening in the control group.
+
+DETAILED DESCRIPTION:
+The researchers will use a randomized controlled trial design and recruit participants on a first-come, first-serve basis for the study. The four groups are; 8 day fast, 5 day pre-heading fast, 3 day post-heading fast, and control.
+
+The study consists of 4 data collection time points in an 8-day period. The four data collection sessions will last approximately 2 hours. This study design will enable the researchers to test outcome measures over subacute and acute phases.
+
+* On day 0. the 1st test session takes place immediately prior to the 8-day period.
+* On day 4, the 2nd test session takes place right before the soccer heading.
+* Participants will perform the soccer headers.
+* On day 5, the 3rd test session takes place 24 hours after the soccer heading.
+* On day 7, the 4th test session takes place 72 hours after the soccer heading.
+
+When written informed consent is obtained, the researchers will use a self-reported health questionnaire to obtain demographic information. The information includes age, sex, race/ethnicity, years of soccer playing and heading experience, number and age of previous concussions, sleep habits, menstrual cycle, and diet history as well as assessment of other neurological conditions to screen participants' eligibility. Participants who meet the inclusion criteria and are free of exclusionary factors will advance to the testing procedures.
+
+Soccer Heading:
+
+A standardized and reliable soccer heading protocol will be used for the experiment. A triaxial accelerometer and gyroscope (Triax Technologies) embedded in a head-band pocket and positioned back of the head to monitor linear and rotational head accelerations. A JUGS soccer machine will be used to simulate a soccer throw-in with a standardized ball speed of 25mph across both groups. The ball speed is similar to when soccer players make a long throw-in from the sideline to mid-field. Soccer players frequently perform this maneuver during practice and game. Participants will stand approximately 40ft away from the machine to perform soccer ball headings. An average linear head acceleration from a header sits around 20 g, while regular corner or goal kicks (\~50mph) yield accelerations above 50 g. Participants in all groups will perform 20 headers with 1 header per 30 seconds.
+
+Questionnaires:
+
+The researchers will also (1) assess depression, anxiety, stress and panic symptoms using the PHQ-9, GAD-7, and the Daily Stress Inventory; (2) alcohol use disorder using AUDIT; (3) cannabis use disorder using CUDIT; (4) mood states using POMS; and (5) concussion symptoms using SCAT.
+
+Biological Impedance Assessment:
+
+Body weight measures will be taken at each visit using a Bioelectrical Impedance Assessment (BIA, Tanita Corporation of America, Arlington Heights, IL). This is a method for estimating body composition, in particular body fat, muscle mass, and total body water composition. BIA uses a weak electric current flow through the body and the voltage is measured to calculate 
+
+PRIMARY OUTCOMES:
+  - Change in brain-derived blood biomarkers from day 4 to day 5 and group differences
+  - Change in brain-derived blood biomarkers from day 4 to day 7 and group differences
+  - Change in regional fMRI activation during the memory task from day 4 to day 5 and group differences
+  - Change in regional fMRI activation during the memory task from day 4 to day 7 and group differences
+  - Change in regional resting state functional connectivity from day 4 to day 5 and group differences
+
+INTERVENTIONS:
+  - OTHER: Soccer Heading
+  - OTHER: Intermittent Fasting
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05236127

@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06721793
+Title: The Impact of a Caffeinated Sports Drink on Performance
+Official Title: The Impact of a Caffeinated Sports Drink on Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: caffeine exercise
+
+SUMMARY:
+Caffeine is known to enhance physical and mental performance, but few beverages combine caffeine with electrolytes and carbohydrates to enhance exercise performance. This study evaluates a caffeinated electrolyte-glucose drink's effect on endurance, strength, and cognition. Using a repeated-measures, cross-over design, 20 trained cyclists will complete one familiarization and four randomized 3-hour experimental trials (Liquid I.V.™ Energy Multiplier, Hydration Multiplier, Sugar-Free Hydration Multiplier, and water). Each trial includes 2 hours of cycling in a warm environment (32ºC), followed by strength and cognitive assessments. Cycling performance, capillary blood, urine, and expiratory gases will be collected.
+
+DETAILED DESCRIPTION:
+Each subject will complete 5 trials (1 familiarization and 4 experimental) consisting of approximately 2 hours cycling in a warm environment (90ºF), followed by strength assessment and cognitive assessment via questionnaire. Each trial will be identical, with the only difference being the type of drink consumed during each trial. The first trial will be for familiarization without any blood sampling. The rest of the trials will be completed in a randomized order and the drink consumed
+
+Cycling Endurance Exercise Performance
+
+The exercise test will consist of a series of three consecutive cycling sets in a warm environment (90ºF), with each series consisting of:
+
+1. a 30-min submaximal ride (50% maximal power as determined from the initial)
+2. a 5-km time trial race-like performance effort. During each 30 min submaximal rides participants will drink a total 500 mL of fluid spread out during the 30 min. During the 5 km performance test the participants will drink 25 mL of fluid at the end of each kilometer.
+
+At regular intervals throughout the exercise task, body weight, blood samples, respiratory gasses, and perceptual data will be collected. See study schematic provided below for specific measurement timepoints.
+
+Upon completion of the cycling task subjects will moved to another room with cool temperature (70ºF), where strength and cognitive function will be assessed to determine the influence of each beverage on indices of exercise performance and fatigue.
+
+PRIMARY OUTCOMES:
+  - 5 kilometer cycling time trial
+  - 5 kilometer Time trial performance
+  - Isokinetic stregth
+  - Congitive performance 1
+  - Cognitive performance 2
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: carbohydrate electrolyte drink
+  - DIETARY_SUPPLEMENT: no-sugar electrolyte drink
+  - DIETARY_SUPPLEMENT: Caffeinated Carbohydrate and electrolyte drink
+  - DIETARY_SUPPLEMENT: Water (Placebo)
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06721793

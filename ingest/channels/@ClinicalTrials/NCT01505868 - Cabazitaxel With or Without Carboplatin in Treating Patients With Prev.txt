@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01505868
+Title: Cabazitaxel With or Without Carboplatin in Treating Patients With Previously Treated Metastatic Castration-Resistant Prostate Cancer
+Official Title: An Open Label Phase I/II Study of Cabazitaxel With or Without Carboplatin in Patients With Metastatic Castration-Resistant Prostate Cancer
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 170
+Topic: growth hormone treatment
+
+SUMMARY:
+This partially randomized phase I/II trial studies cabazitaxel with or without carboplatin in treating patients with previously treated prostate cancer that has spread to other areas of the body and does not respond to treatment with hormones. Drugs used in chemotherapy, such as cabazitaxel and carboplatin, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. It is not yet known whether giving cabazitaxel alone or with carboplatin is more effective in treating prostate cancer.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To determine the maximum tolerated dosage (MTD) of cabazitaxel-carboplatin in the phase I portion of the study.
+
+II. To evaluate progression free survival achieved with cabazitaxel-carboplatin versus cabazitaxel alone in men with metastatic castration resistant prostate cancer (mCRPC) in the phase II portion of the study.
+
+SECONDARY OBJECTIVES:
+
+I. To assess prostate-specific antigen (PSA) response rate (percentage of patients with \> 50 % decline).
+
+II. To correlate changes in bone specific alkaline phosphatase and urine n-telopeptides with response.
+
+III. To evaluate overall survival. IV. To evaluate safety and toxicity. V. To evaluate influence of the anaplastic phenotype on response to therapy. VI. To collect and archive serum, plasma, and urine samples in study patients for later hypothesis generating associations.
+
+OUTLINE: This is a phase I, dose-escalation study followed by a randomized phase II study.
+
+PHASE I: Patients receive cabazitaxel intravenously (IV) over 60-90 minutes and carboplatin IV over 60-90 minutes on day 1. Treatment repeats every 21 days for up to 10 courses in the absence of disease progression or unacceptable toxicity.
+
+PHASE II: Patients are randomized to 1 of 2 treatment arms.
+
+ARM I: Patients receive cabazitaxel IV over 60-90 minutes on day 1. Treatment repeats every 21 days for up to 10 courses in the absence of disease progression or unacceptable toxicity.
+
+ARM II: Patients receive cabazitaxel IV over 60-90 minutes and carboplatin IV over 60-90 minutes on day 1. Treatment repeats every 21 days for up to 10 courses in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed up every 6 months.
+
+PRIMARY OUTCOMES:
+  - Maximum Tolerated Dosage (MTD) of Cabazitaxel-carboplatin in the Phase I Portion of Study
+  - Progression Free Survival (PFS) of Cabazitaxel-carboplatin Versus Cabazitaxel in the Phase II Portion of Study
+
+INTERVENTIONS:
+  - DRUG: Cabazitaxel
+  - DRUG: Carboplatin
+  - OTHER: Laboratory Biomarker Analysis
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01505868

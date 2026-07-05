@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05920473
+Title: Efficacy and Safety Study: Repetitive Transcranial Magnetic Stimulation (rTMS) for Treating Movement Disorders in Patients With Intracranial Hemorrhage (ICH).
+Official Title: Efficacy and Safety of Repetitive Transcranial Magnetic Stimulation (rTMS) for Treating Movement Disorders in Patients With Intracranial Hemorrhage (ICH): A Randomized, Blinded, Sham-controlled Trial.
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 130
+Topic: physical activity intervention
+
+SUMMARY:
+This pilot study aims to assess the effectiveness and safety of rTMS in the treatment of movement disorders in patients with ICH.
+
+DETAILED DESCRIPTION:
+While the fatality rate of intracerebral hemorrhage (ICH) has decreased, many patients continue to experience persistent limb movement dysfunction. Motor dysfunction in ICH is commonly attributed to basal ganglia hemorrhage, as the basal ganglia play a central role in the extrapyramidal motor system. Therefore, promoting the remodeling of the extrapyramidal motor system holds great significance for effectively treating ICH patients with movement disorders.
+
+Repetitive transcranial magnetic stimulation (rTMS) is a safe and non-invasive neuromodulation technique that can modulate neuronal activity, influence neuronal synaptic plasticity, and enhance brain function. Currently, rTMS has shown promise in improving motor function among patients with stroke and those who have undergone brain tumor surgery, which provides valuable insights for its potential application in patients with motor dysfunction following ICH surgery.
+
+This pilot study aims to evaluate the efficacy and safety of rTMS in the treatment of ICH patients with movement disorders. The participants will be randomly assigned to either a real rTMS treatment group or a sham group. The study will assess and compare various clinical outcomes, including the FMA (Fugl-Meyer Assessment), NIHSS (National Institutes of Health Stroke Scale), and BI (Barthel Index) scores, over a period of 6 months.
+
+PRIMARY OUTCOMES:
+  - Change in Fugl-Meyer Assessment (FMA)
+
+INTERVENTIONS:
+  - DEVICE: rTMS with Magstim Rapid 2 magnetic stimulation device
+  - DEVICE: sham control with Magstim Rapid 2 magnetic stimulation device
+
+ELIGIBILITY:
+Age: 45 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05920473

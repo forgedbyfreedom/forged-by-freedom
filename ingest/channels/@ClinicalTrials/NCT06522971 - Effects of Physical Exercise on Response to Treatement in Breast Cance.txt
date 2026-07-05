@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06522971
+Title: Effects of Physical Exercise on Response to Treatement in Breast Cancer
+Official Title: Exploration of the Molecular Mechanisms Behind the Effects of Physical Exercise on Response to Neoadjuvant Chemotherapy in Breast Cancer Patients
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 55
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to learn how regular physical exercise affects breast cancer patients' response to standard neoadjuvant chemotherapy (NAC) and to gain an insight into the molecular mechanisms underlying the effects of exercise on cancer biology. of exercise-induced alterations in cancer gene expression and the immune tumor microenvironment. The main questions it aims to answer are:
+
+* Does a high-intensity interval training (HIIT) program during treatment improve patients' response to NAC and quality of life as compared to low level of physical activity during the treatment?
+* What are the differences in the residual tumor gene expression and tumor infiltrating immune cell profile between patients taking HIIT during the NAC and patients with low level of physical activity?
+* What are the roles of extracellular vesicles (EVs) in mediating the effects of exercise on cancer progression?
+
+Patients in HIIT group will undergo a personalized HIIT program consisting of 3 training sessions per week for the whole duration of NAC, whereas patients from the control group (Ctrl) will be advised to maintain their usual level of physical activity during NAC. After the breast surgery, response to NAC will be assessed by Miller-Payne grading. Tumor and normal breast tissue specimens will be collected for RNA sequencing analysis. Blood samples will be collected before and immediately after the training for the analysis of RNA and protein cargo of circulating EVs.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Miller-Payne grade
+  - Gene expression profile
+
+INTERVENTIONS:
+  - BEHAVIORAL: High-intensiy interval training
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06522971

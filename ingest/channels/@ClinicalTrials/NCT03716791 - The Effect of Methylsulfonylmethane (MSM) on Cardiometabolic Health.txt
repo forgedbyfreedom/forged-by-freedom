@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03716791
+Title: The Effect of Methylsulfonylmethane (MSM) on Cardiometabolic Health
+Official Title: The Effect of Methylsulfonylmethane (MSM) on Cardiometabolic Health
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 43
+Topic: protein supplementation
+
+SUMMARY:
+Obesity- related diseases are linked to elevated levels of inflammation, oxidative stress, and metabolic dysfunction. Methylsulfonylmethane (MSM) is a naturally occurring compound that demonstrates antioxidant and anti-inflammatory effects. Improvements in measures of metabolic health have been observed in mouse models of obesity and type 2 diabetes following MSM treatment. However, the effect of MSM on obesity-related risk factors for disease in humans has not been investigated. Therefore, the purpose of this investigation will be to determine whether MSM supplementation improves metabolic health, and markers of inflammation and oxidative status.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from baseline blood glucose at 4, 8, and 16 weeks
+  - Change from baseline blood cholesterol at 4, 8, and 16 weeks
+  - Change from baseline blood pressure at 4, 8, and 16 weeks
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: methylsulfonylmethane
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03716791

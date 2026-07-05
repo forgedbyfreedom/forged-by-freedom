@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07379606
+Title: Effects of Moderate Exercise and Cyclic Sighing on Stress, Cognition and Physiological Markers in Young Adults
+Official Title: A Comparison of Psychophysiological Effects Between Relaxation Techniques and Physical Exercise in Young Adults
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: low back pain exercise
+
+SUMMARY:
+This study investigates the effects of moderate physical exercise and cyclic sighing (breathing training) on stress, cognition, and physiological markers in young adults. It is a randomized cross-over trial with two interventions. Each participant will take part in two intervention sessions:
+
+1. Moderate-intensity physical activity (PA): 15 minutes of stationary cycling at 65-75% of maximum heart rate (HRmax).
+2. Breathing training (CS): 15 minutes of cyclic sighing, a technique involving inhaling, pausing briefly, taking a deeper breath, and exhaling slowly.
+
+A one-week washout period between sessions is planned to minimise carry-over effects and to ensure participants' physiological state is similar before the next session. During this week, participants will wear Polar Ignite wrist-worn devices to monitor physical activity and sleep.
+
+A total of 30 participants (you adults) will be enrolled.
+
+Measurements performed before and after each intervention include:
+
+* EEG using Emotiv EPOC Flex Gel (32-channel device): 2 minutes with eyes open, 2 minutes with eyes closed, during the interventions, and while performing cognitive test (N-back).
+* Heart rate variability (HRV) using the Polar H10 sensor.
+* SUDS - Subjective Units of Disress Scale for perceived stress.
+* N-back test for cognitive performance using Emotiv App.
+* Blood pressure (systolic and diastolic) and heart rate.
+* Pain threshold measured with a dolorimeter.
+* PANAS-SF - Positive and Negative Affect Schedule.
+
+Baseline questionnaires completed by participants the day before the study:
+
+* PSS-10 - Perceived Stress Scale (Cohen, Kamarck, Mermelstein).
+* MAAS - Mindful Attention Awareness Scale
+* Psychological well-being - short version
+* Mini-COPE - Coping with Stress Inventory
+* Sleep quality and average sleep duration
+* Chronotype questionnaire (morningness-eveningness)
+* GPAQ - Global Physical Activity Questionnaire
+* Pittsburgh Sleep Quality Index
+
+The study aims to understand how brief interventions like moderate exercise and breathing techniques affect stress, cognitive performance, and physiological responses in young adults.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean EEG spectral power in theta, alpha, low beta, high beta, gamma frequency bands during resting-state (eyes-open and eyes-closed)
+  - Heart Rate Variability (HRV)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Moderate-Intensity Physical Activity (PA)
+  - BEHAVIORAL: Breathing Training - Cyclic Sighing (CS)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07379606

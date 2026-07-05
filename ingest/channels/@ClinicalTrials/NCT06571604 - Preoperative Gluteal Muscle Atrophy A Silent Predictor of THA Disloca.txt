@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06571604
+Title: Preoperative Gluteal Muscle Atrophy: A Silent Predictor of THA Dislocation.
+Official Title: Preoperative Gluteal Muscle Atrophy: A Silent Predictor of THA Dislocation.
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 72
+Topic: fat loss muscle
+
+SUMMARY:
+This study looks at how fat buildup in hip muscles relates to hip osteoarthritis and less favorable recovery after hip replacement surgery. While it is known that weak gluteal muscles might cause problems, it is not yet proven if this specifically leads to hip dislocation after surgery. The goal of this study is to compare fat buildup in gluteal muscles between patients who had a hip dislocation soon after surgery and those who did not.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean Attenuation Ratio
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Dislocation
+  - DIAGNOSTIC_TEST: No dislocation
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06571604

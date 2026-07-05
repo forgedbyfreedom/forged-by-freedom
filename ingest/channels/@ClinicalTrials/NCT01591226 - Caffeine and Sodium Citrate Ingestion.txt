@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01591226
+Title: Caffeine and Sodium Citrate Ingestion
+Official Title: Effects of Caffeine and Sodium Citrate Ingestion in 1500m Wheelchair Racing Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 9
+Topic: caffeine exercise
+
+SUMMARY:
+A positive ergogenic effect of sodium citrate and caffeine ingestion in a short-term, high-intensity exercise task was shown by several studies. These studies were conducted with healthy, able-bodied subjects.
+
+The aim of the study is to investigate whether caffeine or sodium citrate ingestion could enhance performance in spinal cord injured wheelchair athletes. It is a double blind, placebo controlled and randomized study.
+
+DETAILED DESCRIPTION:
+The athletes have to complete four 1500m tests on a training roller. Before each treatment they get different supplementations. Once they get sodium citrate and a placebo, once caffeine and a placebo, once sodium citrate and caffeine and for the fourth treatment they get twice a placebo. Two hours after starting with the supplementation they have to complete the 1500m as fast as possible. Time to complete 1500m, blood pH, plasma bicarbonate, sodium concentration, heart rate, oxygen consumption, blood lactate concentration and rate of perceived exertion (RPE) were measured.
+
+PRIMARY OUTCOMES:
+  - Time
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Sodium Citrate
+  - DIETARY_SUPPLEMENT: Mannitol
+  - DIETARY_SUPPLEMENT: Sodium Chloride
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01591226

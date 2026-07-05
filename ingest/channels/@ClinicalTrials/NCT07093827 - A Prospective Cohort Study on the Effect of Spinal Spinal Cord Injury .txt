@@ -1,0 +1,63 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07093827
+Title: A Prospective Cohort Study on the Effect of Spinal Spinal Cord Injury on Sexual Function in Male Patients
+Official Title: A Prospective Cohort Study on the Effect of Spinal Spinal Cord Injury on Sexual Function in Male Patients
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1600
+Topic: high intensity interval training
+
+SUMMARY:
+1. Background and Rationale
+
+   Spinal cord injury (SCI) represents a devastating neurological condition with multidimensional consequences. While motor and sensory deficits are well-characterized, sexual dysfunction remains understudied despite its profound impact on quality of life. Current literature exhibits three critical gaps: (1) Limited longitudinal data on the temporal evolution of sexual dysfunction post-SCI, (2) Inadequate differentiation between psychogenic vs. neurogenic mechanisms in male patients, and (3) Heterogeneous outcome measures hindering cross-study comparisons。 This investigation builds upon pilot findings from our institution's SCI registry, where a large proportion of male participants reported clinically significant sexual impairment within 24 months post-injury. By employing standardized neuro-urological assessments alongside validated psychometric tools, this study aims to dissect the complex interplay between neurological lesion characteristics, endocrine profiles, and psychosocial adaptation processes.
+2. Study Objectives
+
+   Primary Objective To quantify the prevalence and severity trajectories of sexual dysfunction in males with SCI post-injury.
+
+   Secondary Objectives To correlate lesion level with specific sexual function domains To identify predictors of sexual health recovery using multivariate regression modeling To establish normative data for the sexual function in SCI populations
+3. Methodology
+
+3.1 Study Design
+
+Prospective observational cohort with three nested substudies:
+
+Substudy A: Longitudinal biomechanical assessments Substudy B: Endocrine profiling Substudy C: Qualitative interviews exploring coping mechanisms
+
+3.2 Participant Selection
+
+Inclusion Criteria:
+
+Males aged 18-60 years SCI confirmed by raiological methods or clinical symptoms Willing to participate in long-term follow-up
+
+Exclusion Criteria:
+
+Pre-existing sexual dysfunction History of prior surgical procedures Active psychiatric comorbidities 3.3 Data Collection Timeline Timepoint Assessments Baseline Neurological function, sexual function, raiological outcome 3-month Neurological function, sexual function, raiological outcome 12-month Neurological function, sexual function, raiological outcome 24-month Neurological function, sexual function, raiological outcome 36-month Neurological function, sexual function, raiological outcome 48-month Neurological function, sexual function, raiological outcome 60-month Neurological function, sexual function, raiological outcome
+
+DETAILED DESCRIPTION:
+Spinal cord injury (SCI) induces complex pathophysiological alterations extending beyond motor-sensory impairments, with sexual dysfunction emerging as a clinically significant yet insufficiently characterized sequela. This investigation specifically targets three critical knowledge gaps in SCI-related sexual dysfunction: First, regarding neurogenic versus psychogenic differentiation, supraspinal lesions manifest through autonomic dysreflexia-mediated hemodynamic alterations in genital perfusion, while psychological comorbidities predominantly modulate libido and arousal domains. Second, concerning temporal progression dynamics, our institutional pilot data demonstrated 68% of male SCI patients developed clinically significant sexual impairment within 24 months post-injury, though precise trajectory patterns remain uncharacterized. Third, from a biomarker integration perspective, this study will employ cortisol/DHEA-S ratio analysis combined with nocturnal penile tumescence (NPT) monitoring to objectively delineate the endocrine-neurological crosstalk underlying post-SCI sexual dysfunction pathophysiology.
+
+This study employs a robust methodological framework comprising a primary prospective observational cohort (N=180), stratified by both anatomical lesion level and neurological impairment severity. The research architecture incorporates three integrated substudies utilizing advanced multimodal assessment protocols: Substudy A applies penile duplex ultrasonography (PDU), coupled with Rigiscan® technology, International Index of Erectile Function-5 (IIEF-5) and the Premature Ejaculation Diagnostic Tool (PEDT) to quantitatively evaluate sexual parameters; Substudy B conducts high-sensitivity LC-MS/MS serum assays (testosterone, prolactin, SHBG) to systematically characterize hypothalamic-pituitary-adrenal axis dysregulation patterns post-SCI; while Substudy C employs grounded theory methodology to analyze semi-structured interviews, establishing an evidence-based model of psychosocial coping strategy efficacy validated through the International Spinal Cord Injury Male Sexual Function (ISCI-MSF) Basic Data Set and the ICIQ-ADPHS instrument. This tripartite approach ensures comprehensive mechanistic investigation across biomechanical, endocrine, and psychosocial dimensions of post-SCI sexual dysfunction.
+
+The study implements a comprehensive data acquisition protocol employing validated quantitative metrics across multiple domains. Longitudinal data collection occurs at predetermined intervals throughout the 60-month study period. For analytical rigor, we employ group-based trajectory modeling (GBTM) to characterize IIEF score evolution, LASSO-penalized Cox regression for time-to-recovery analysis, and partial least squares path modeling (PLS-PM) to examine mechanistic relationships between lesion level and autonomic function, endocrine profiles and arousal metrics, and depression (PHQ-9) and desire domains. Normative data development utilizes kerne
+
+PRIMARY OUTCOMES:
+  - the Premature Ejaculation Diagnostic Tool (PEDT)
+  - International Index of Erectile Function-5 (IIEF-5)
+  - American Spinal Injury Association (ASIA) Impairment Scale
+
+INTERVENTIONS:
+  - PROCEDURE: Posterior decompression surgery
+  - PROCEDURE: unilateral open-door laminoplasty
+  - PROCEDURE: Posterior lumbar discectomy with fusion
+  - PROCEDURE: Surgical resection of spinal tumors
+  - DRUG: Conservative management of ankylosing spondylitis
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07093827

@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07465328
+Title: Studying the Impairment of Stroke and Sarcopenia Patients Using Maximum Voluntary Contractions of the Leg Joints.
+Official Title: Studying the Impairment of Stroke and Sarcopenia Pa-tients Using Maximum Voluntary Contractions of the Leg Joints.
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: sarcopenia intervention
+
+SUMMARY:
+The goal of this study is to obtain the maximum voluntary torques of the lower-limb joints and to monitor oxygen level in the main lower-limb muscles. This will be done for three joints: i.e. the hip, knee and ankle joint and NIRS sensors will be placed on the biceps femoris, rectus femoris and gastrocnemius muscle. For the hip and knee, the maximum torque will be determined both in exertion direction and flexion direction. For the ankle, both plantarflexion and dorsiflexion will be considered. For each of these directions, the maximum joint torque will be defined for different specific joint angles and joint velocities (see procedure). For every joint and for the whole protocol for the torques measurement campaign, the different muscle of interest will be monitored with the NIRS, i.e. hip is associated with hamstring contraction, knee is associated with thigh contraction and ankle is associated with calf contraction. With these discrete points, an algorithm will be used to obtain a complete plot of the maximum torque in function of both joint angle and joint velocities. Comparing these plots between for example stroke and healthy individuals can help us understand what level of assistance stroke patients require. Comparison in oxygen level between healthy individuals and impairments population of stroke and sarcopenia patients can also help us investigate how oxygen is used depending on the population.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Obtaining maximum voluntary torques of the lower-limb joints for sarcopenia and stroke patients
+
+INTERVENTIONS:
+  - OTHER: MVC measurements of participants
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07465328

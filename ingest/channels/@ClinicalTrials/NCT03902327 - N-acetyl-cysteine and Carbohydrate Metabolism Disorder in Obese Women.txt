@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03902327
+Title: N-acetyl-cysteine and Carbohydrate Metabolism Disorder in Obese Women
+Official Title: Does N-acetyl-cysteine Treatment Improves Carbohydrate Metabolism in Obese Women?
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: protein supplementation
+
+SUMMARY:
+The effect of N-acetylcysteine supplementation on carbohydrate metabolism disorder and homocysteine concentrations in obese women will be analysed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - insulin Resistance
+  - Oral glucose toletance test OGTT
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: NAC group
+  - DIETARY_SUPPLEMENT: Control group
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03902327

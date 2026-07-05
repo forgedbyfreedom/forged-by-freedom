@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05076747
+Title: Exercise and Genotype in Sub-acute Stroke
+Official Title: Promoting Brain Plasticity During Sub-acute Stroke: the Interactive Role of Exercise and Genotype
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: high intensity interval training
+
+SUMMARY:
+This study will investigate the impact of cardiovascular exercise on brain plasticity among patients in sub-acute stages after stroke, and whether genotype modulates the response to this intervention. Participants in the experimental group will perform cardiovascular training for 8 weeks, three times/week in addition to standard therapy, while participants in the control group will perform standard therapy only. Assessments will be performed at baseline, four weeks, and 8 weeks after training.
+
+DETAILED DESCRIPTION:
+Background: Research has shown that the adult human brain has an enormous plastic capacity to adapt after injury. In people who have recently experienced a stroke, interventions that promote brain plasticity in early stages after stroke can improve long-term recovery. Cardiovascular exercise is a simple strategy to increase brain plasticity and promote neural reorganization. However, there is no information about the effects of cardiovascular exercise on brain plasticity in early phases of stroke, despite the importance of this initial period for long-term recovery. Similarly, it is not known if, depending on their genetic profile, some people will be more responsive than others to this type of exercise.
+
+Objectives: To establish whether: 1) cardiovascular exercise improves brain plasticity during the initial phases of post-stroke recovery; 2) carrying a specific form of the BDNF gene modulates the response to cardiovascular exercise.
+
+Design: 70 participants will perform either a progressive high-intensity cardiovascular exercise program or low-intensity stretching and toning exercise program. Both groups will undergo 8 weeks of training performed 3 times per week. Assessments will be performed at the beginning, mid-point (4 weeks) and at the end of the training period (8 weeks).
+
+Methodology: Assessments: 1) brain plasticity by measuring changes in brain excitability, a marker of brain plasticity, with non-invasive brain stimulation; 2) BDNF levels by measuring the blood concentration of this protein; 3) Genotype by identifying the subtype of BDNF gene carried by each participant; 4) Cardiorespiratory fitness by assessing the performance during a graded exercise test.
+
+Statistical analysis: Differences between exercise and control groups on the primary endpoint of all outcomes will be analyzed with linear mixed models. Besides baseline scores, sex, age, and type of stroke (cortical or subcortical) will be included as covariates because they can affect brain plasticity and BDNF response. T1 scores will also be included to increase the efficiency of the model. The influence of genotype on changes in primary and secondary outcomes in the exercise group will be inspected with the Freedman-Schatzkin test, a powerful technique to identify mediators of change that can be used in small-scale exercise studies.
+
+Expected outcomes: Cardiovascular exercise will promote positive changes in brain excitability and will increase blood BDNF levels in individuals in the early phases of stroke recovery. However, the individual response to this type of exercise in relation to brain plasticity and BDNF levels will be influenced by the genotype of each participant.
+
+Relevance: It is important to establish whether cardiovascular exercise enhances brain reorganization early after stroke post-stroke and whether genetic factors may influence the response to this intervention. This will provide clinicians with useful information which will be essential to design more ind
+
+PRIMARY OUTCOMES:
+  - Cortico-spinal excitability
+  - Intra-cortical inhibition
+  - Intra-cortical facilitation
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cardiovascular training
+  - BEHAVIORAL: Standard Therapy
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05076747

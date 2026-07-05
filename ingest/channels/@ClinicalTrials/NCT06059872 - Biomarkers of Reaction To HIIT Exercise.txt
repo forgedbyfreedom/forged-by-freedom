@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06059872
+Title: Biomarkers of Reaction To HIIT Exercise
+Official Title: What Makes a Responder, a Responder? Biomarkers to Help Identify Responders and Resistors to High-intensity Interval Training for Lower Extremity Chronic Stroke
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 55
+Topic: high intensity interval training
+
+SUMMARY:
+Stroke survivors with lower limb disability can improve their walking speed with high-intensity interval training (HIIT) rehabilitation therapy. However, some individuals may not respond to HIIT even when fully adherent to the program. To address this, the investigators propose to build a predictive model that identifies if a Veteran with chronic subcortical stroke will improve their walking speed with HIIT by incorporating blood lactate as an early predictor of exercise response, and inhibitory neurotransmitter gamma-aminobutyric acid (GABA) and regional cerebral blood flow (CBF) as predictors of the brain's potential to respond, while also taking into consideration other factors such as comorbidities, demographics, and fitness levels.
+
+DETAILED DESCRIPTION:
+Most chronic subcortical stroke survivors have difficulty walking, but few predictors can help identify if a patient will respond to an exercise regimen and improve their function. To enhance precision rehabilitation for chronic subcortical stroke patients, personalized aerobic exercise interventions are crucial. This requires the development of innovative technologies that can identify the essential neurobiological factors to predict intervention response and enable clinicians to determine individualized rehabilitation targets. Lactate is one exciting new target that acts as a molecular messenger between the periphery and the brain. For lactate to have an impact on other organs, including the brain, there must be a substantial increase in its level in the bloodstream from baseline. When the blood lactate threshold is surpassed during exercise, lactate acts on the brain metabolically via the TCA cycle. Embedded within the TCA cycle is the means to increase or decrease neurotransmitter concentrations such as GABA and glutamate. Gamma-aminobutyric acid (GABA), the brain's major inhibitory neurotransmitter, is a new treatment target that promotes neural plasticity during stroke rehabilitation. Drawing from the framework of personalized rehabilitation approaches and our preliminary data, the investigators propose to build a predictive model that can identify if a chronic subcortical stroke patient will respond to exercise training. This model aims to predict improvements in walking speed by incorporating blood lactate as an early predictor of exercise response and GABA and cerebral blood flow (CBF) as predictors of the brain's potential to respond, in addition to other influencing factors such as comorbidities, demographics, and fitness levels. The overarching hypothesis is that robust neurophysiological factors driven by lactate can differentiate responders from resistors and that these factors can be applied clinically as biomarkers to predict functional outcomes after a 12-week HIIT intervention. The investigators will assess improvements in walking speed in 48 Veterans with lower limb disability due to chronic subcortical stroke in response to a 36-session (12-week) HIIT intervention. After the intervention, each adherent participant who improves their walking speed to greater than 0.6 m/s will be categorized as a responder while each adherent participant who does not improve their walking speed will be categorized as a resistor. At baseline and after 12 weeks of HIIT the investigators will evaluate walking speed, balance, leg strength, and endurance to identify resistors and responders to HIIT and collect a) GABA from the primary sensory-motor leg area using single-voxel magnetic resonance spectroscopy, b) CBF from the whole brain using pseudo-Continuous Arterial Spin Labeling MRI and c) VO2 max to evaluate change in CRF. During the intervention, the investigators will collect blood lactate via finger prick during sessions 1, 4, 7, 10, and 28 to
+
+PRIMARY OUTCOMES:
+  - 10 m walk test on a GAITRite mat
+  - Timed-Up-and-Go (TUG) test
+  - 6-minute walk test
+
+INTERVENTIONS:
+  - OTHER: High Intensity Interval Training (HIIT)
+
+ELIGIBILITY:
+Age: 18 Years to 89 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06059872

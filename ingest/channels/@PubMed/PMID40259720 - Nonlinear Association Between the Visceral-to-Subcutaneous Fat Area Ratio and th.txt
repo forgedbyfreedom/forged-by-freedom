@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40259720
+Title: Nonlinear Association Between the Visceral-to-Subcutaneous Fat Area Ratio and the Risk of Hypertension in Prediabetic Individuals: Evidence From a Large-Scale Health Screening Dataset in China.
+Authors: Liu, Zou, Sun, Zhou, Li
+Journal: Journal of clinical hypertension (Greenwich, Conn.)
+Year: 2025
+Topic: visceral fat health outcomes
+
+ABSTRACT:
+Abdominal fat distribution, particularly the visceral-to-subcutaneous fat area ratio (V/S ratio), offers a promising avenue for exploring the development of hypertension. However, there is a paucity of quantitative studies examining the relationship between the V/S ratio and the risk of hypertension in individuals with prediabetes, especially within the Chinese population. This cross-sectional study was conducted at the Health Management Center of Henan Provincial People's Hospital, involving 4071 participants with prediabetes. Visceral fat area (VFA) and subcutaneous fat area (SFA) were measured using computed tomography (CT) scans, and the V/S ratio was calculated. Statistical analyses, including multivariable logistic regression, restricted cubic spline regression models, and subgroup analyses, were employed to investigate the relationship between the V/S ratio and hypertension in individuals with prediabetes. The prevalence of hypertension among the 4071 prediabetic participants was 35.54%. Prediabetic individuals with elevated V/S ratios had a significantly higher risk of developing hypertension (Q4 vs. Q1: odds ratio [OR]&#xa0;=&#xa0;2.78, 95% confidence interval (CI)&#xa0;=&#xa0;2.03-3.82, p&#xa0;&lt;&#xa0;0.001; p for trend&#xa0;&lt;&#xa0;0.001), a relationship that remained statistically significant after adjusting for other variables. Importantly, a non-linear association between the V/S ratio and hypertension risk was observed, indicating a notable increase in hypertension risk when the V/S ratio exceeded 1.80 (OR&#xa0;=&#xa0;1.21, 95% CI: 1.06-1.39, p&#xa0;&lt;&#xa0;0.05). These findings underscore the importance of abdominal fat distribution in improving metabolic health outcomes in individuals with prediabetes. Monitoring abdominal fat distribution is essential for prediabetic patients to mitigate the risk of hypertension.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40259720/

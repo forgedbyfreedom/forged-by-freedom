@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03288675
+Title: Stepped Care AiTBS 2 Depression Study (Ghent)
+Official Title: The Effects of Accelerated Intermittent Thetaburst Stimulation Followed by a Cognitive Control Training in Treatment Resistant Unipolar Depressed Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: resistance training
+
+SUMMARY:
+Antidepressant-free unipolar melancholic depressed patients (at least stage 2 treatment-resistant) will be selected by a certified psychiatrist, who will administer (semi-)structured clinical interviews. Because concomitant antidepressant treatment can confound outcome results, all patients will go through a medication washout before entering the study and they will be free from any antidepressant, neuroleptic and mood stabilizer for at least two weeks before entering the treatment protocol. Only habitual benzodiazepine agents will be allowed.
+
+STEP 1: Patients will be treated with in total 20 accelerated intermittent Theta Burst Stimulation (aiTBS) sessions (3000 pulses/session) over the left dorsolateral prefrontal cortex, which will be spread over 4 days. On each stimulation day, a given patient will receive 5 sessions with a between-session delay of 15 minutes. Patients will be randomized to receive either the real aiTBS or sham treatment (first week). However, the sham group will receive real aiTBS treatment with 10 days' time interval. The investigators expect that real aiTBS treatment and not sham will result in a significant and clinical meaningful response.
+
+STEP 2: To optimize treatment and reduce relapse following the iTBS treatment, in a stepped care approach, all patients then continue with cognitive control training (CCT) ten days later. This CCT consists of 20 sessions, spread over 4 weeks. Patients will be randomized to receive either real CCT or a control training. During this follow-up treatment, all patients will be prescribed antidepressant medication (SSRI) again. As iTBS treatment effects are known to decline over time, the investigators expect that combining aiTBS with a follow-up CCT therapy will stabilize the clinical effects over time compared to receiving the iTBS treatment alone.
+
+For baseline comparisons, patients will be closely matched for gender and age with never-depressed, medication-free healthy volunteers. No volunteer will undergo treatment.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Changes in depression severity - clinician-rated
+
+INTERVENTIONS:
+  - DEVICE: aiTBS
+  - BEHAVIORAL: CCT
+  - DRUG: SSRI
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03288675

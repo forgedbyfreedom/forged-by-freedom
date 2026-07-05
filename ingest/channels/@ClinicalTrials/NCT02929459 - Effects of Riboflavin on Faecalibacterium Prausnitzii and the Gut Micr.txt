@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02929459
+Title: Effects of Riboflavin on Faecalibacterium Prausnitzii and the Gut Microbiota
+Official Title: Effects of Oral Riboflavin Supplementation on the Growth of Faecalibacterium Prausnitzii and the Impact on the Gut Microbiota: A Randomized, Double-blind, Placebo-controlled Human Intervention Trial
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this trial is to investigate comprehensively the effect of riboflavin supplementation on the abundance of F. prausnitzii and on other members of the gut microbiota in faeces of healthy volunteers. Additionally it will be assessed whether riboflavin supplementation affects the abundance of potentially pathogenic bacteria such as adherent invasive E. coli (AIEC). Finally, the effect of riboflavin supplementation on the production of Short Chain Fatty Acids, the release of gut hormones and potential changes in glucose homeostasis and appetite perception will be assessed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of F. prausnitzii per gram faeces
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Riboflavin Dose 1
+  - DIETARY_SUPPLEMENT: Riboflavin Dose 2
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 20 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02929459

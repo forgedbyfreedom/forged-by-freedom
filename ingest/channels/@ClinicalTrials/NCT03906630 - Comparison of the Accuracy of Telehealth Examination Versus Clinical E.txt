@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03906630
+Title: Comparison of the Accuracy of Telehealth Examination Versus Clinical Examination in the Detection of Rotator Cuff Tears
+Official Title: Comparison of the Accuracy of Telehealth Examination Versus Clinical Examination in the Detection of Rotator Cuff Tears
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 65
+Topic: tendon injury
+
+SUMMARY:
+The purpose of this study is to compare how accurately a pseudo-telehealth shoulder examination diagnoses rotator cuff tears compared to a regular clinical examination. MRI is used as the gold standard.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Agreement with MRI findings as they pertain to presence or absence of a rotator cuff tear
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Telehealth clinical exam
+  - DIAGNOSTIC_TEST: Standard clinical exam
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03906630

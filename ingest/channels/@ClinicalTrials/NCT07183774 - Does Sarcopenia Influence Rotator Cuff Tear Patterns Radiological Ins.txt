@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07183774
+Title: Does Sarcopenia Influence Rotator Cuff Tear Patterns? Radiological Insights From Patients With Rotator Cuff Syndrome
+Official Title: Does Sarcopenia Influence Rotator Cuff Tear Patterns? Radiological Insights From Patients With Rotator Cuff Syndrome
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 104
+Topic: tendon injury
+
+SUMMARY:
+Sarcopenia is the loss of muscle mass due to aging, which consequently leads to a decline in muscle function. It is considered an independent risk factor for falls and fractures, disability, postoperative complications, and mortality. Rotator cuff tears are known to be influenced by systemic diseases such as diabetes, hypercholesterolemia, thyroid disorders, and osteoporosis. The aim of our study is to investigate whether there is a relationship between sarcopenia and rotator cuff tears, and if so, to determine the location and type of the tear.
+
+DETAILED DESCRIPTION:
+Patients aged between 40 and 75 years who present to the Physical Medicine and Rehabilitation Department's Shoulder Outpatient Clinic with shoulder pain lasting for at least three months, have undergone shoulder MRI as part of their diagnostic work-up, and have been clinically diagnosed with rotator cuff syndrome based on physical examination, will be included in the study.
+
+Demographic data of the patients will be recorded. A detailed history regarding shoulder pain will be obtained. Pain severity will be assessed using the Visual Analog Scale (VAS), and shoulder functional impairment will be evaluated using the Shoulder Disability Questionnaire.
+
+Following the clinical assessment of shoulder pain, sarcopenia evaluation will be performed by a different physician who is blinded to the patients' imaging and clinical findings. Sarcopenia will be assessed using the STAR (Sonographic Thigh Adjustment Ratio) method.
+
+In this method, gait speed, handgrip strength (measured with a dynamometer), and the chair stand test will first be conducted. For gait speed, a 6-meter walking track will be used, and patients will be instructed to walk at their normal pace. The time will be recorded with a stopwatch, and each patient will perform the test three times, with the average recorded in meters per second (m/s).
+
+In the chair stand test, the patient will be asked to rise from a chair five times as quickly as possible without using their arms, keeping both hands crossed over the chest (opposite shoulders). The time taken will be recorded with a stopwatch.
+
+Handgrip strength will be measured using a Jamar dynamometer, with the shoulder in adduction, elbow at 90° flexion, and the wrist and hand in a neutral position. The patient will repeat the test three times, and the highest value will be recorded.
+
+Patients will then be evaluated based on whether their gait speed is below 1.0 m/s, grip strength is 2 standard deviations below the norm, or chair stand time is ≥12 seconds.
+
+Subsequently, anterior thigh muscle thickness will be measured using ultrasonography. Based on this comprehensive evaluation, patients will be categorized as non-sarcopenic, pre-sarcopenic, or sarcopenic.
+
+At the end of the study, the shoulder MRIs of patients in each of these three categories will be analyzed to assess the presence, type, and severity of rotator cuff tears. This study aims to determine whether sarcopenia predisposes individuals to rotator cuff tears and, if so, what type of tear is more likely to occur in sarcopenic patients.
+
+PRIMARY OUTCOMES:
+  - STAR value
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Sarcopenia will be assessed using the STAR (Sonographic Thigh Adjustment Ratio) method.
+
+ELIGIBILITY:
+Age: 40 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07183774

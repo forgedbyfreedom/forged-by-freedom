@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07433049
+Title: Impact of Supplementation in Improving Metabolic Health Outcomes (ISMOS) Study
+Official Title: Impact of Supplementation in Improving Metabolic Health Outcomes (ISMOS) Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 400
+Topic: exercise intervention obesity
+
+SUMMARY:
+This study investigates the role of multivitamin and multimineral (MVM) supplementation in improving metabolic, musculoskeletal, and mental health among midlife Asian women aged 40-60 years, a critical period marked by hormonal and physiological transitions from pre- to post-menopause. Evidence from the GUSTO cohort in Singapore has shown that higher plasma levels of vitamins B6, B9, B12, and D are associated with better metabolic profiles, insulin sensitivity, and mental wellbeing, while deficiencies are linked to increased metabolic and psychological risks. Given that vitamin insufficiency and central obesity are highly prevalent among Asian women even at lower BMI, this randomized, double-blind, placebo-controlled trial will evaluate whether 12 months of daily MVM supplementation can reduce MetaboAge and improve metabolic, mental, and muscle health outcomes compared with placebo. Findings will inform preventive strategies for extending health span and mitigating chronic disease risks among midlife women in Asia.
+
+DETAILED DESCRIPTION:
+Vitamins are essential micronutrients that regulate key metabolic pathways involved in energy metabolism, immune function, and neuronal integrity. Adequate vitamin status is critical during midlife (ages 40-60 years), a period marked by hormonal fluctuations and physiological transitions from pre- to peri- and post-menopause. These transitions profoundly affect women's metabolic, musculoskeletal, and mental health trajectories, often predisposing them to metabolic syndrome, insulin resistance, central adiposity, dyslipidaemia, and hypertension. Concurrently, declines in muscle strength, bone mineral density, and mood are frequently observed, heightening the risk of sarcopenia, osteopenia, and depressive symptoms in later life.
+
+Emerging evidence indicates that suboptimal dietary intake or deficiency of vitamins contributes to these adverse outcomes. Vitamin D insufficiency, highly prevalent in Asia, has been linked to metabolic syndrome, insulin resistance, and mood disturbances in postmenopausal women. Similarly, low levels of B-vitamins, vitamin C, vitamin E, and folate have been associated with impaired glucose regulation, higher inflammatory burden, and poorer muscle function. While several studies in Western populations have reported positive correlations between these micronutrients and musculoskeletal or psychological health, corresponding data in Asian women remain limited despite their higher susceptibility to central obesity and metabolic dysfunction at lower BMI thresholds compared to Western populations.
+
+Findings from the Growing Up in Singapore Towards Healthy Outcomes (GUSTO) cohort provide novel insights into the role of vitamin status in Asian women. Plasma concentrations of vitamins B6, B9, B12, and D were associated with favorable metabolic profiles, including lower metabolic syndrome severity, improved insulin sensitivity, reduced HbA1c, and higher HDL-cholesterol. Furthermore, higher thiamine monophosphate (vitamin B1) levels correlated with greater handgrip strength, while elevated folate was inversely related to depressive symptoms and perceived stress. Importantly, these associations were more pronounced among women with a BMI ≥ 23 kg/m², emphasizing the compounded metabolic vulnerability of overweight Asian phenotypes. Collectively, these findings highlight the potential of multivitamin/multimineral (MVM) supplementation as a preventive strategy to mitigate age-related metabolic, musculoskeletal, and psychological decline during midlife.
+
+Building on these observational findings, this randomized, double-blind, placebo-controlled trial aims to determine whether 12 months of daily MVM supplementation can improve metabolic and overall health in relatively healthy middle-aged Asian women. The trial will recruit women aged 40-60 years, a critical window for metabolic and hormonal adaptation, who are at increased risk of vitamin insufficiency, insulin resistance, and low-grade chronic inflammation. Participants will be randomiz
+
+PRIMARY OUTCOMES:
+  - Changes in MetaboAge
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Multivitamin/mineral study product
+
+ELIGIBILITY:
+Age: 40 Years to 60 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07433049

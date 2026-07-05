@@ -1,0 +1,60 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06765941
+Title: PTeye vs Surgeons Eyes in Intraoperative Identification and Functional Preservation of Parathyroid Glands During Thyroid Surgery: A Parallel Randomized Controlled Clinical Trial.
+Official Title: Clinical Validation of Probe-based Parathyroid Autofluorescence Detection System PTeye vs Surgeons Eyes in Intraoperative Identification and Functional Preservation of Parathyroid Glands During Thyroid Surgery: A Parallel Randomized Controlled Clinical Trial.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 154
+Topic: vitamin D muscle
+
+SUMMARY:
+The goal of this randomized clinical trial is to learn if there are any added benefits of using near-infrared autofluorescence (NIRAF) probe-based imaging system (the PTeye) for intraoperative identification of parathyroid glands (PGs) during thyroid surgery in comparison to visual identification of PGs by the surgeon's naked eyes without PTeye.
+
+The main questions it aims to answer are:
+
+* Is number of PGs identified intraoperatively and preserved in situ larger in thyroid operations with PTeye versus surgeon's naked eyes without PTeye?
+* Is number of patients with undetectable or low parathormone serum level on postoperative day 1 fewer in thyroid operations with PTeye versus surgeon's naked eyes without PTeye?
+* Is number of patients requiring substitution therapy with calcium and vitamin D analogue fewer after thyroid operations with PTeye versus surgeon's naked eyes without PTeye in a short-term (\< 6 weeks) and/or in a long-term (at 6 months) follow-up?
+* Is numer of inadvertenly removed and reimplanted PGs fewer in thyroid operations with PTeye versus surgeon's naked eyes without PTeye?
+* Is number of frozen sections fewer in thyroid operations with PTeye versus surgeon's naked eyes without PTeye?
+* Is number of PGs identified by pathologist in the surgical specimen fewer in in thyroid operations with PTeye versus surgeon's naked eyes without PTeye?
+* Is number of patients with symptomatic hypoparathyroidism within 30 days of the operation fewer in thyroid operations with PTeye versus surgeon's naked eyes without PTeye? The hypothesis explored in this study is that use of PTeye in comparison to the surgeon's naked eyes may be beneficial for intraoperative identification and preservation of PGs in thyroid surgery leading to reduced risk of postoperative hypoparathyroidism.
+
+A prospective, randomized study with 2 arms: use of PTeye vs. visual identification of PGs without PTeye (n=77 patients, each).
+
+The primary outcome measure is number of intraoperatively identified PGs with use of PTeye vs without it.
+
+DETAILED DESCRIPTION:
+A single-center prospective study with 1:1 randomization and a control group. It was assumed that it is possible to visually identify 2-3 (average 2.5) out of 4 PGs (62.5%), and that the use of the PTeye probe will increase the number of identified PGs to 3-4 (average 3.5) out of 4 (87, 5%). The statistical power for p\<0.05 and 90% sensitivity of the study designed in this way is 122 patients (61 in each group), and taking into account the 20% risk of patients withdrawal or dropping out from the study, the required number is 154 patients, 77 patients in each group.
+
+Inclusion criterion: a patient with thyroid disease qualified for first-time total thyroidectomy.
+
+Exclusion criteria: history of thyroid or parathyroid surgery, planned simultaneous thyroid and parathyroid surgery, renal failure, pregnancy, lactation, allergy to contrast agents and/or iodine, inability of the patient to understand the study protocol, inability to participate in the planned postoperative follow-up, age below 18 years.
+
+Included patients will be randomly assigned to the study group (thyroid surgery with the PTeye device) or the control group (thyroid surgery without the device).
+
+Randomization will be performed on the Eurocrine platform. The PTeye device will be used in the study group for intraoperative identification of the PGs. In the control group, the PGs will be identified using the classic technique based on visual identification with naked eyes.
+
+For patients assigned to the study arm with PTeye:
+
+The surgeon will use the PTeye as an intraoperative tool to identify whether a suspect tissue is parathyroid or not during the surgery. The surgeon will first take five baseline NIRAF measurements on the thyroid gland (or neck muscle, if thyroid is absent), to establish a reference point for subsequent measurements, using the disposable sterile fiber probe that is connected to the PTeye console, as per device functionality requirements. The subsequent step involves touching the target tissue in the neck with the fiber optic probe, after which the PTeye will indicate to the surgeon whether the tissue is parathyroid or not. Parameters displayed on the PTeye console - Baseline values, Detection Intensity, Parathyroid Detection Ratio - will be recorded for each patient in the study arm. PTeye indicates that a tissue is parathyroid if the 'Parathyroid Detection Ratio' is greater than 1.2. The rest of the surgical procedure will follow the standard protocol. At the end of the procedure, the thyroid specimen will be evaluated with the PTeye to search for inadvertently resected parathyroid glands. If found, these parathyroid glands will be reimplanted in the sternocleidomastoid muscle, following standard protocol.
+
+For patients assigned to the control arm without PTeye:
+
+The surgeon will not use the PTeye and will proceed with the procedure as usual, relying on their surgical experience to identify parathyroid glands. At the end of the procedure, the thyroid specimen will be
+
+PRIMARY OUTCOMES:
+  - Number of intraoperatively identified parathyroid glands
+
+INTERVENTIONS:
+  - DEVICE: Probe-based near-infrared parathyroid autofluorescence detection system
+  - PROCEDURE: Surgeons naked eyes for parathyroid glands identification
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06765941

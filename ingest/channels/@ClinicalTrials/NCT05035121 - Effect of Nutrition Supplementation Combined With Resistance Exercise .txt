@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05035121
+Title: Effect of Nutrition Supplementation Combined With Resistance Exercise in Elderly With Sarcopenia.
+Official Title: Effects of Milk or Soy Milk Combined With Mild Resistance Exercise on the Muscle Mass and Muscle Strength in Very Old Nursing Home Residents With Sarcopenia
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: fat loss muscle
+
+SUMMARY:
+The purpose of this study was determine whether milk or soy milk supplements combined with resistance exercise improved sarcopenia in the elderly. This study was randomized controlled trail that recruited elderly people ≧65 years old with sarcopenia in the nursing home of Taipei Veterans General Hospital Su-Ao and Yuanshan Branch from June 2017 to December, 2017. The participants were divided into three groups, such as control, milk supplement and soy milk supplement. The milk and soy milk groups provided 200 mL milk or soy milk two times per day. Moreover, all participants joined the resistance exercise training program, three times per week (30 min/time). After 12 weeks, the anthropometry, sarcopenia index, blood biochemical index, nutrition status index, inflammation index, insulin resistance index, and dietary intake were measured.
+
+DETAILED DESCRIPTION:
+The anthropometry data included body weight and body fat. The sarcopenia index included appendicular skeletal muscle mass index, calf circumferences, hand grip and gait speed. Moreover, blood biochemical index (liver function as ALT, kidney function as creatinine), nutrition status index (prealbumin, 25-hydroxyvitamin D) were also analyzed. The blood hs-CRP level was as inflammation index and insulin resistance index included fasting blood sugar, insulin, HbA1c and HOMA-IR. The daily dietary intake were also recorded.
+
+PRIMARY OUTCOMES:
+  - appendicular skeletal muscle mass in kilograms
+  - Change from baseline appendicular skeletal muscle mass at 6 weeks
+  - Change from baseline appendicular skeletal muscle mass at 12 weeks
+  - height in meters
+  - Change baseline weeks height at 6 weeks
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: milk supplement
+  - DIETARY_SUPPLEMENT: soy milk supplement
+  - BEHAVIORAL: resistance exercise
+
+ELIGIBILITY:
+Age: 65 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05035121

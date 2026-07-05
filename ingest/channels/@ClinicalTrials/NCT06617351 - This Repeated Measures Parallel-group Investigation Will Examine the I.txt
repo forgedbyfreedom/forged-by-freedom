@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06617351
+Title: This Repeated Measures Parallel-group Investigation Will Examine the Influence of Short-term Melatonin Supplementation (5mg, 3 x Day for 72 Hours) on Cellular Responses, Functional Performance and Recovery Following an Acute Bout of Dynamic Resistance Exercise in Resistance Trained Men and Women
+Official Title: The Effect of Melatonin Supplementation on Immune Cell Responses and Functional Recovery Following Acute Resistance Exercise
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: creatine supplementation
+
+SUMMARY:
+Oral Melatonin is a commercially available product available alone and as a constituent in a number of supplements. Previous research suggests that short-term supplementation with oral melatonin may amplify the recovery response to damaging resistance exercise via modulation of subsequent immune and inflammatory responses. However the effects of oral melatonin on neutrophil and monocyte invasion/migration, a critical step in the resolution of skeletal muscle tissue homeostasis, has not been examined. An oral melatonin supplement (5mg) will be provided three times daily beginning 24-hours before and ending 48-hours after an acute bout of damaging resistance exercise (total 15mg/day for 3 days).
+
+Goals:
+
+1. To investigate the effect of melatonin on systemic and cellular responses following an acute bout of damaging resistance exercise.
+2. To investigate the effect of melatonin on measures of functional performance before and during recovery from an acute bout of damaging resistance exercise.
+
+DETAILED DESCRIPTION:
+Resistance exercise of sufficient intensity can result in localized damage to skeletal muscle tissue. The resolution of tissue homeostasis following damaging exercise is mediated largely by neutrophils and monocytes of the innate immune system (1). Neutrophils and monocytes originate in the systemic circulation and infiltrate the damaged tissue following activation and migration in response to damage associated molecular cues. These cells are reported to execute a number of processes fundamental to recovery, including the phagocytosis of opsonized cellular debris (2), and secretion of mitogenic factors that stimulate both the proliferation and differentiation of myogenic precursor cells (3). Disruption of this cellular response has been shown to lead to impaired muscle regeneration, and a subsequent deficit in muscle fiber size (4). Accordingly, a successful innate immune response is paramount for optimal tissue regeneration.
+
+Several supplements have been introduced to the market with purported claims of enhanced recovery from exercise. One potential mechanism for enhanced recovery is through augmentation of the immune response, which may allow for a more pronounced stimulus to enhance repair (1). Previous research suggests that short-term supplementation with melatonin, an endogenously produced indoleamine, may amplify the recovery response. Melatonin receptors are expressed on most immune cell types, including monocytes, neutrophils, and Th1 lymphocytes (5). Melatonin has previously been shown to activate monocytes (6), and treatment with melatonin has been shown to upregulate the recruitment of human monocytes through interaction with the melatonin receptor (MLTr) in vitro. Melatonin has also been shown to alter cytokine production and increase the production of cells of both the innate and adaptive immune system (7). Binding of melatonin to MLTr's expressed on immune cells may modulate recruitment of these cells to damaged tissue, which may in turn regulate the ensuing recovery response. Theoretically, this could reduce recovery time following damaging exercise, improving quality of training and potentially allow for enhanced performance over time (8,9,10). Nevertheless, the effect of short-term melatonin supplementation on innate immune cell and inflammatory responses during recovery from resistance exercise has not been examined.
+
+Goals:
+
+1. To assess systemic and cellular responses to an acute bout of resistance exercise between participants ingesting melatonin versus placebo, including creatine kinase (CK), complete blood counts (CBC), serum interleukin-8 (IL-8), serum monocyte chemoattractant protein-1 (MCP-1), serum melatonin, serum C-reactive protein (CRP), cell receptor expression (monocytes: activated CD11b, CCR2, MLTr1A; neutrophils: activated CD11b. CXCR2, MLTr1A), and neutrophil/monocyte invasion/migration dynamics (cell index, CI).
+2. To assess functional measures of recovery following an acute bout of resistance exercise betwee
+
+PRIMARY OUTCOMES:
+  - Subjective Sleep Duration
+  - Subjective Sleep Quality
+  - Subjective Fatigue
+  - Subjective Muscle Soreness
+  - Subjective Mental Stress
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Melatonin
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06617351

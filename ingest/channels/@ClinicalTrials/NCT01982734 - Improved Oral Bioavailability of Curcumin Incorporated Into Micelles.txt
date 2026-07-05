@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01982734
+Title: Improved Oral Bioavailability of Curcumin Incorporated Into Micelles
+Official Title: Novel Strategies for the Enhancement of the Potency of Nutraceuticals With Low Oral Bioavailability and Their Application in Novel Functional Foods for Optimum Protection of the Aging Brain
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: beta-alanine
+
+SUMMARY:
+Curcumin, a lipophilic polyphenol derived from the plant curcuma longa possesses numerous health-promoting activities. The oral bioavailability of curcumin is low due to its poor aqueous solubility, limited gastrointestinal absorption, rapid metabolism and excretion. Therefore, we tested, in a randomized crossover study, simultaneous application of phytochemicals and micellar solubilisation, alone and together, as strategies to enhance the absorption of curcumin into the body. Furthermore, we investigated age and sex differences in curcumin pharmacokinetics.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area under the plasma concentration versus time curve (AUC) of total curcumin [nmol/L*h]
+  - Area under the plasma concentration versus time curve (AUC) of total demethoxycurcumin [nmol/L*h]
+  - Area under the plasma concentration versus time curve (AUC) of total bisdemethoxycurcumin [nmol/L*h]
+  - Maximum plasma concentration (Cmax) of total curcumin [nmol/L]
+  - Maximum plasma concentration (Cmax) of total demethoxycurcumin [nmol/L]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: curcumin
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01982734

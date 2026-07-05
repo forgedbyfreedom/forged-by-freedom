@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07170228
+Title: Casein Supplementation: Pre-Sleep vs. Post-Exercise
+Official Title: The Effects of Casein Supplementation Timing on Exercise Performance: A Comparison Between Pre-Sleep and Post-Exercise Intake
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: athletic performance
+
+SUMMARY:
+This randomized controlled trial aimed to investigate the effects of casein supplementation timing on post-exercise recovery and exercise performance in trained football players. Participants were allocated into three groups: pre-sleep casein ingestion, post-exercise casein ingestion, and control. The study compared the effects of pre-sleep and post-exercise casein intake on anaerobic performance, agility, and recovery markers following a standardized high-intensity resistance training session.
+
+DETAILED DESCRIPTION:
+Casein is a slow-digesting protein commonly used as a dietary supplement to promote muscle recovery and adaptation. Although casein is traditionally consumed before sleep to maximize overnight muscle protein synthesis, limited evidence exists regarding the optimal timing of casein ingestion relative to exercise.
+
+This study employed a randomized controlled experimental design to compare the effects of pre-sleep versus post-exercise casein supplementation on recovery and performance outcomes in trained football players. Twenty-four male participants were stratified by playing position (defender, midfielder, forward) and randomized into three groups: pre-sleep casein ingestion group (PSCIG), post-exercise casein ingestion group (PECIG), and control group (CG). All participants first completed a familiarization session and pre-test assessments, including the countermovement jump (CMJ), Illinois Agility Test, and Running-based Anaerobic Sprint Test (RAST).
+
+After the pre-tests, all players performed a standardized high-intensity resistance training protocol designed to induce muscle fatigue. Participants in the PECIG consumed 30 g of micellar casein dissolved in 300 mL of water within 10-15 minutes post-exercise, while participants in the PSCIG consumed the same supplement 30-60 minutes before sleep. The control group did not receive any supplementation. Twenty-four ± 1 hours after the resistance training, post-tests were conducted using the same protocols as the pre-tests.
+
+The primary aim of this study was to determine whether casein supplementation timing (pre-sleep vs. post-exercise) differentially influences recovery and subsequent anaerobic performance. Outcomes from this trial may provide practical recommendations for athletes and coaches regarding optimal protein supplementation strategies to enhance recovery and performance.
+
+PRIMARY OUTCOMES:
+  - Peak Power (RAST Test)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Micellar Casein
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07170228

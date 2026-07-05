@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07329335
+Title: Comparison of High-Intensity Interval Training and Medium-Intensity Interval Training in Athletes
+Official Title: Comparison of High-Intensity Interval Training and Medium-Intensity Interval Training on Cardiopulmonary Fitness, Strength and Agility in Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: high intensity interval training
+
+SUMMARY:
+High-Intensity Interval Training (HIIT) and Medium-Intensity Interval Training (MIIT) are popular training methods known for enhancing athletic performance. HIIT is characterized by short bursts of high-intensity exercise followed by brief recovery periods. This training approach typically involves exercising at 80-95% of maximum heart rate for intervals ranging from 20 seconds to a few minutes, followed by rest or lower-intensity activity. Moderate-Interval Training (MIIT), on the other hand, involves moderate-intensity exercise performed at 60-75% of maximum heart rate. The primary objective is to determine how HIIT and MIIT differ in improving CPF, strength, and agility among athletes. A randomized clinical trial will be conducted with a sample size of 80 athletes, divided into two groups. Participants will undergo 45-minute training sessions three times a week for six weeks, followed by pre- and post-intervention assessments using Cooper's 12-Minute Run/Walk Test, T-Test for agility, and Active Force 2 muscle tester for strength. Statistical analyses will be conducted to compare pre- and post-intervention results between the two groups, determining the significance of differences in CRF fitness, strength and agility outcomes.
+
+DETAILED DESCRIPTION:
+This study is a single-blinded randomized clinical trial designed to compare the effects of high-intensity interval training (HIIT) and medium-intensity interval training (MIIT) on cardiorespiratory fitness, muscle strength, and agility among trained athletes. The study will be conducted at the Pakistan Cricket Board National Cricket Academy and Hafeez Qadeer Cricket Academy, Lahore, and will be completed within 12 months following synopsis approval. A total of 80 athletes aged 20-30 years will be recruited using non-probability purposive sampling, with 40 participants allocated to each group after accounting for a 10% attrition rate. Eligible participants will include male and female athletes with a BMI of 18.5-24.9 kg/m² and a minimum of three years of regular sports training. Athletes with a history of fractures, neurological or musculoskeletal disorders, systemic illnesses, sleep disorders, or use of medications affecting cardiovascular or neurological function will be excluded. Participants will be randomized using concealed allocation, and outcome assessment will be performed by a blinded assessor to minimize bias.
+
+Although both HIIT and MIIT have been shown to independently improve physical performance, there is a notable lack of direct comparative evidence evaluating their relative effectiveness in athlete populations. To address this gap, participants will undergo supervised training sessions lasting 45 minutes per day, three days per week, for six weeks. Group A will receive a structured HIIT program involving high-intensity cardio intervals, progressive strength exercises, and agility drills, while Group B will follow a MIIT program consisting of moderate-intensity cardio intervals, strength training, and agility exercises with gradual progression. Outcome measures will be assessed pre- and post-intervention using the Cooper's 12-minute run/walk test for cardiorespiratory fitness, the T-test for agility, and the Active Force 2 device for muscle strength, all of which demonstrate established validity and reliability. This study aims to provide evidence-based insight into the comparative effectiveness of HIIT and MIIT in enhancing multiple components of athletic performance.
+
+PRIMARY OUTCOMES:
+  - Cooper's 12 minutes run/walk test
+  - T test Agility (For Agility)
+  - Active Force 2 (For Strength)
+
+INTERVENTIONS:
+  - OTHER: High Intensity Training (Group A)
+  - OTHER: Medium Intensity Training (Group B)
+
+ELIGIBILITY:
+Age: 20 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07329335

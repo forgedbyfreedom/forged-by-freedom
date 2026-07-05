@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03637270
+Title: Protein Supplementation for Chronic Stroke Treatment
+Official Title: Incorporating Supplementary Protein Into Rehabilitative Exercise (INSPIRE Trial) for Patients With Chronic Stroke
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: sarcopenia intervention
+
+SUMMARY:
+Stroke patients usually have difficulties with moving and are venerable to secondary problems such as sarcopenia and strength loss. These problems may accelerate the disability process during aging. It is well known that exercise helps to maintain or promote human fitness. This study is conducted to explore the beneficial effects of exercise and protein supplement on fitness and body composition among patients with chronic stroke.
+
+DETAILED DESCRIPTION:
+This is a multicenter randomized control trial. Participants will be recruited from 4 teaching hospitals in Taipei. Participants are randomly assigned to 2 groups:
+
+1. protein supplementation + exercise (PRO group);
+2. carbohydrate supplementation + exercise (CHO group);
+
+The 1-hour exercise intervention includes aerobic cycling exercise followed by progressive resisted exercise with TheraBand. PRO group receives PS immediately before and after the exercise while the CHO group receive sham product (the same calories with no protein). The Interventions are arranged 3 sessions a week for 10 weeks. The outcome measurements are performed at 0-week, 10-week, and 20-week.
+
+PRIMARY OUTCOMES:
+  - Cardiopulmonary capacity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary supplementation
+  - OTHER: Exercise training
+
+ELIGIBILITY:
+Age: 20 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03637270

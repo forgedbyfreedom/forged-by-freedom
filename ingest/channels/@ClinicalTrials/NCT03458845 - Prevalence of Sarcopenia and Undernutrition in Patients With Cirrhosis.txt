@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03458845
+Title: Prevalence of Sarcopenia and Undernutrition in Patients With Cirrhosis and Abdominal Hernia
+Official Title: Prevalence of Sarcopenia and Undernutrition in Patients With Cirrhosis and Abdominal Hernia
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 140
+Topic: sarcopenia intervention
+
+SUMMARY:
+The study evaluates whether sarcopenia influences the prevalence of abdominal hernias in patients with cirrhosis.
+
+DETAILED DESCRIPTION:
+Sarcopenia is a common condition in patients with cirrhosis, with a prevalence of around 50%. It is unknown if the presence of sarcopenia may influence the prevalence of abdominal hernias in this group of patients. Clinical, nutritional and radiological evaluation will be performed in two groups of cirrhotic patients to evaluate this hypothesis.
+
+PRIMARY OUTCOMES:
+  - Prevalence of Sarcopenia
+  - Influence of Sarcopenia in Prevalence of Abdominal Hernias in Patients with Cirrhosis
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Computed Tomography Scan
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03458845

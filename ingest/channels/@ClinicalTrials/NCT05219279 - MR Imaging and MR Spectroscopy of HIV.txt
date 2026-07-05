@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05219279
+Title: MR Imaging and MR Spectroscopy of HIV
+Official Title: Novel Radial Diffusion-Weighted MR Spectroscopic Imaging of HIV: Biomarker Detection Using Functional Imaging and Neurocognitive Correlates
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 60
+Topic: creatine supplementation
+
+SUMMARY:
+The Center for Disease Control and Prevention estimates that 1,148,200 Americans aged 13 years and older are living with HIV infection, including 207,600 (18.1%) who are unaware of their infection. According to pathological data, central nervous system (CNS) involvement is commonly found during the early phase of infection. In vivo proton magnetic resonance spectroscopy studies of HIV-infected humans have demonstrated significant changes of metabolites observed in the brain N-acetylaspartate, creatine, choline, glutamate, glutamine and myo-inositol with varying changes in different brain regions. Diffusion tensor imaging (DTI) is a novel functional MRI technique which can be used to derive quantitative in vivo measurements of region-specific and diffuse brain alterations. DTI studies have demonstrated changes of mean diffusivity (MD) and fractional anisotropy (FA) in the various parts of brain. Diffusion abnormalities involving various regions of brain have also been observed in patients infected with HIV. One dimensional (1D) or two-dimensional (2D) magnetic resonance spectroscopic imaging (MRSI) technique has been used for many years to study the metabolites changes in HIV. MRI scan time necessary for the acquisition of high-resolution MRSI data with adequate spatial coverage may be prohibitively long for clinical exams. Thus, new imaging and bio-chemical characterization techniques are needed to allow repeated, non-invasive assessment of these processes in vivo. Since neuroinflammation is associated with increased brain water, diffusion tensor imaging (DTI) is sensitive to changes in white matter (WM) and inflammatory changes associated with HIV infections. Even though only single-voxel-based diffusion-weighted MRS has been previously investigated, altered diffusivity of non-water metabolites and its relationship with metabolic disturbance as well as structural and functional abnormalities in HIV has not been investigated. The brain apparent diffusion coefficient (ADC) changes of metabolites measured by the novel 3D MRSI technique will be correlated with the ADCs and fractional anisotrophy of water recorded by DTI and cell count to better understand the role of CNS involvement in HIV pathology.
+
+DETAILED DESCRIPTION:
+This will be a multicenter prospective study. We will recruit ten (10) healthy participants aged 20 to 30 years to investigate the feasibility and test/retest reliability of the REPSI sequence. Twenty five (25) HIV+ patients will be recruited from the Division of HIV Medicine (Dr. Eric Daar) at the Los Angeles Biomedical Research Institute at Harbor-UCLA Medical Center (Torrance, CA). HIV+ patients will be transported to the UCLA Medical center for neuroimaging examination.
+
+PRIMARY OUTCOMES:
+  - Spectroscopy outcomes
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 20 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05219279

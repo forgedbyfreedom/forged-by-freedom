@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04439539
+Title: A Study of JNJ-73763989, Pegylated Interferon Alpha-2a, Nucleos(t)Ide Analog (NA) With or Without JNJ-56136379 in Treatment-naive Participants With Hepatitis B e Antigen (HBeAg) Positive Chronic Hepatitis B Virus (HBV) Infection
+Official Title: A Phase 2, Randomized, Open-label, Multicenter Study to Evaluate Efficacy, Pharmacokinetics, Safety, and Tolerability of Treatment With JNJ-73763989, Pegylated Interferon Alpha-2a, Nucleos(t)Ide Analog With or Without JNJ-56136379 in Treatment-naive Patients With HBeAg Positive Chronic Hepatitis B Virus Infection
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: high intensity interval training
+
+SUMMARY:
+The purpose of this study is to evaluate the efficacy of a treatment regimen of JNJ-73763989 + pegylated interferon alpha-2a (PegIFN-alpha-2a) + nucleos(t)ide analog (NA).
+
+DETAILED DESCRIPTION:
+Hepatitis B virus (HBV) is a small deoxyribonucleic acid virus that specifically infects the human liver. The acute phase of infection is either followed by an immune controlled state or progresses to chronic hepatitis B. The worldwide estimated prevalence of chronic HBV infection is about 292 million people affected. Hepatitis B surface antigen (HBsAg) seroclearance is currently considered to be associated with the most thorough suppression of HBV replication (termed functional cure). With current available NA treatment strategies, rate of HBsAg seroclearance remains very low (around 3 percent \[%\]) even under long-term treatment. Also, with the persistently high global prevalence of HBV-associated mortality, there is a medical need for more effective finite treatment options that lead to sustained HBsAg seroclearance. JNJ-73763989 is a liver-targeted antiviral therapeutic for subcutaneous injection designed to treat chronic HBV infection via a ribonucleic acid interference (RNAi) mechanism. JNJ-56136379 is an orally administered capsid assembly modulator (CAM) that is being developed for the treatment of chronic HBV infection. The aim of the study is to evaluate the efficacy of a treatment regimen of JNJ-73763989 + PegIFN-alpha-2a + NA with or without JNJ-56136379 in participants with hepatitis B e antigen (HBeAg) positive chronic infection. The study will be conducted in 4 phases: a screening phase, an induction phase with flexible duration, a consolidation phase with or without PegIFN-α2a and a follow-up phase. Safety assessments will include Adverse Events (AEs), serious AEs of the study interventions, clinical laboratory tests, Electrocardiograms (ECGs), vital signs, and physical examinations. The study title reflects the original study design and JNJ-56136379 (JNJ-6379) was initially part of the study intervention but was discontinued as per amendment 6 of the study.
+
+PRIMARY OUTCOMES:
+  - Percentage of Participants With Functional Cure: Hepatitis B Surface Antigen (HBsAg) Seroclearance at 24 Weeks After Stopping All Study Interventions at the End of Consolidation Phase (CP) and Without Restarting Nucleos(t)Ide Analog (NA) Treatment
+
+INTERVENTIONS:
+  - DRUG: JNJ-73763989
+  - DRUG: PegIFN-alpha-2a
+  - DRUG: Tenofovir disoproxil
+  - DRUG: Tenofovir alafenamide
+  - DRUG: JNJ-56136379
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04439539

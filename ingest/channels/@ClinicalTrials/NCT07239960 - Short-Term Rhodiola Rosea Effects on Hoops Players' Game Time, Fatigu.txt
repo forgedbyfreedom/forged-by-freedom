@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07239960
+Title: Short-Term Rhodiola Rosea: Effects on Hoops Players' Game Time, Fatigue & Performance
+Official Title: The Effect of Short-term Rhodiola Rosea Supplementation on Simulated Game Time, Perceived Fatigue, and Performance in Basketball Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: athletic performance
+
+SUMMARY:
+This study aims to evaluate the effects of short-term Rhodiola rosea supplementation on simulated game performance, perceived fatigue, and aerobic capacity in basketball players. The participants will include 48 professional male basketball players aged 18-25 years, all from Beijing Sport University and holding at least a national level-2 athlete certification.
+
+The key research questions are as follows:
+
+Does Rhodiola rosea supplementation improve the total completion time of simulated games? Does it reduce post-simulation heart rate and perceived fatigue while enhancing aerobic capacity (e.g., maximal oxygen uptake) and antioxidant indicators?
+
+To address these questions, researchers will compare the Rhodiola rosea supplementation group (RHO group) with the control group (CTR group). Participants will be required to:
+
+Consume Rhodiola rosea supplements or placebos (empty capsules) daily for 28 consecutive days on an empty stomach.
+
+Complete simulated game tests-including sprints, defensive slides, and layups-with total completion time and heart rate recovery recorded.
+
+Provide blood samples for the measurement of biochemical indicators such as total antioxidant capacity, superoxide dismutase activity, and creatine kinase.
+
+Complete a series of physical fitness tests, including the countermovement jump (CMJ) test, 5-km run, YO-YO Intermittent Recovery Test, and maximal oxygen uptake (VO₂max) test.
+
+DETAILED DESCRIPTION:
+This study is a randomized, controlled, double-blind clinical trial aimed at evaluating the effects of short-term Rhodiola rosea supplementation on simulated game performance, perceived fatigue, physical fitness indicators, and biochemical parameters in professional basketball players. The study participants included 48 male basketball players from Beijing Sport University, all of whom were national level 2 athletes or above, ensuring a consistent training background and sports experience. The experimental design employed a strict randomization method, dividing participants into a Rhodiola rosea supplementation group (RHO group) and a control group (CTR group), with double-blind measures implemented to minimize potential bias. For example, the RHO group received a daily dose of 2.4 g of Rhodiola rosea extract (containing 0.5 g of salidroside per 100 g of raw material), while the CTR group consumed identical-looking empty capsules. All supplements were administered in a fasted state, twice daily, 30 minutes before breakfast and lunch, accompanied by an equal volume of water to control for placebo effects. Additionally, participants' daily dietary intake, including total calories, carbohydrates, proteins, and fats, was recorded throughout the study period to exclude nutritional factors as potential confounders.
+
+In terms of experimental procedures, participants first completed baseline health assessments and physical measurements, followed by a 28-day supplementation period. Key testing sessions included simulated game testing, physical fitness tests, and blood sample collection. The simulated game test record the total time taken by participants to complete the simulated game, which includes common on-court movements such as sprints, defensive slides, and step-backs. Physical fitness tests covered multiple dimensions: the vertical jump test (CMJ) ; the YO-YO intermittent recovery test; the maximal oxygen uptake (VO₂max) test; the 5 km running test; heart rate monitoring used Polar HR monitors, with data recorded before and after tests to assess fatigue recovery.
+
+Blood sample collection was conducted before the simulated game, with participants fasting for 8-12 hours. Venous blood samples were collected uniformly between 8:00 and 8:30 AM, followed by centrifugation to separate plasma and red blood cells, which were stored at -80°C for subsequent analysis. Biochemical indicators included plasma total antioxidant capacity (TAC) and superoxide dismutase (SOD) activity, malondialdehyde (MDA) concentration, and creatine kinase (CK) activity. Data analysis was performed using SPSS software (version 26) and GraphPad Prism (version 9.0), with continuous variables presented as mean ± standard deviation. Normality was assessed using the Shapiro-Wilk test, and a 2×2 mixed-design ANOVA \[group (CTR vs. RHO) × time (pre-test vs. post-test)\] was employed to evaluate intervention effects.
+
+PRIMARY OUTCOMES:
+  - Total completion time of the simulated game
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Rhodiola rosea, L
+  - OTHER: Placebo Comparator
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07239960

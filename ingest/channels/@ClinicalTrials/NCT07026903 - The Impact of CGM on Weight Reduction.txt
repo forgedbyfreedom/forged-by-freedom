@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07026903
+Title: The Impact of CGM on Weight Reduction
+Official Title: The Impact of CGM on Weight Reduction in Women With Overweight/Obesity Without Accompanying Chronic Diseases
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: exercise intervention obesity
+
+SUMMARY:
+The goal of this randomized control study is to learn if continuous glucose monitoring (CGM) can aid in weight loss in overweight/obese women with no other chronic condition. The primary hypothesis is that insights from CGM aid in greater weight loss, and the secondary hypothesis is that the use of CGM reduces the dropout rate from a three-month exercise program. Research will compare the results of weight loss after inclusion into 3 month physical exercise and diet counselling program between experimental group (women assigned to wear CGM) and control group (women without CGM). All participants will be included in the same physical exercise program with a fitness coach (3 times weekly for 60 minutes per sessions, three different resistance trainings), and will be given a calorie-controlled diet based on a weekly menu.
+
+DETAILED DESCRIPTION:
+In this prospective study lasting 3 months, a total of 40 participants are planned to be included. The sample size was calculated using the free G Power program. For differences within the group (before-after measurements, 2 measurements), the required number of participants in one group would be 16 (with a power of 0.8 and the calculated effect size based on previous research = 0.66). Considering that differences between two groups will also be observed, the calculation was made more conservatively, using a moderate effect size factor for ANOVA for repeated measures (within-between interaction), and with a minimum required power of 0.8 and an effect size of 0.25, the total number of required participants is 28, which means 14 per group, assuming three BMI measurements. Due to the potential dropout rate, the sample size was increased to 20 participants per group. Participants will be recruited upon enrollment at the fitness center. Participants will be randomly divided into two groups; one that will use isCGM (FreeStyle Libre 2) for glucose control and nutritional choices, and a group without CGM (the control group). At the beginning of the study, all participants will have their body composition measured on a scale, BMI, waist and hip circumference, triceps skinfold thickness, and blood samples taken for biochemical analyses (CBC, glucose, HbA1c, lipid profile, aminotransferases, fT4, and TSH). Blood tests will be analyzed in the private laboratory. Only those participants who do not have glucose metabolism disorders (prediabetes or diabetes), significant anemia, clinically manifest hypo- or hyperthyroidism, or recent musculoskeletal injuries that would limit their participation in the exercise program will be included in the further study. All participants will undergo nutritional counseling and receive a proposal for a calorie-controlled diet based on a weekly menu. Participants will be asked to keep a food diary. Additionally, all participants will follow the same exercise program for 3 months under the professional guidance of a kinesiologist. Exercise will be conducted 3 times a week for 60 minutes in groups of up to 5 participants, and will include three different training sessions with external and bodyweight resistance. In the case of external resistance, weights will be adjusted according to the participants' status so that they can complete the assigned number of repetitions, and in the case of bodyweight exercises, participants who cannot complete the prescribed series will be allowed to take breaks between repetitions. At the midpoint of the program, after 1.5 months of research, body composition will be re-evaluated on the scale, and measurements of the triceps skinfold and waist and hip circumference will be repeated. Participants assigned to the CGM group will wear sensors (FreeStyle Libre 2, Abbott) for 2 weeks three times during the study (at the beginning, after 1.5 months, and after 3 months). At the end of the program, anthro
+
+PRIMARY OUTCOMES:
+  - change from baseline in the body mass index and body composition
+
+INTERVENTIONS:
+  - BEHAVIORAL: resistance exercise and calorie restrictive diet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07026903

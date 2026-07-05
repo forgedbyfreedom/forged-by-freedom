@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07489677
+Title: The Feasibility and Acceptability of a Collaborative Deprescribing Intervention to Reduce Anticholinergic Burden Among Hospitalised Older Patients
+Official Title: The Feasibility and Acceptability of a Collaborative Deprescribing Intervention to Reduce Anticholinergic Burden Among Hospitalised Older Patients (DART)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 21
+Topic: sarcopenia intervention
+
+SUMMARY:
+Why this research is important? It is estimated that over one third of all older adults are prescribed medication which are known to have "anticholinergic" side effects. These anticholinergic side effects can include an increased risk of falls, delirium, and memory problems. People who have a high number of anticholinergic medications have an increased risk of these side effects. This can be measured as their anticholinergic burden (ACB). Several tools have been developed to assess the ACB score, by checking a person's medication list, with the aim of reducing these medications where possible (deprescribing).
+
+The study aim The project team worked with a company to design an online tool which can calculate the total ACB score for patients using their electronic medication list. It can also list the individual anticholinergic medications contributing to that score. Patients with high ACB score will be highlighted to healthcare staff including pharmacists, nurses, and doctors. In this project, we plan to understand how this tool can be used by clinicians in older persons wards to reduce the number of anticholinergic medications prescribed where appropriate.
+
+Our approach Working with doctors and pharmacists in one large hospital, we agreed how the tool should be used. First, pharmacists with check weekly using the digital tool how many patients have high ACB scores. Then they would highlight in patients' medical notes the list of medications with high anticholinergic effects using a sticker note. The doctor looking after the patient then sees the note which would prompt him/her to either stop the drug, reduce the dose or switch to a safer drug.
+
+We will test this intervention among 50 patients admitted to older people wards. We will collect information before and after receiving the intervention including number and type of medications prescribed, quality of life, and cognition. We will also talk to staff and patients to understand their views about the intervention, any challenges, and how to improve the process.
+
+Involving patients and public Two patient and public contributors have been actively involved in developing this research proposal. They represent an older person with comorbidity and polypharmacy and a carer, and both have lived experience of managing polypharmacy following hospital admission. They will continue to provide input on study procedures and materials and contribute to plans for sharing the findings.
+
+Sharing the study findings We will share the findings with public, health professionals, researchers and policymakers through plain English summaries, social media, policy briefing documents, scientific papers, conferences and other meetings.
+
+DETAILED DESCRIPTION:
+Background It is estimated that between 33-47% of hospitalised older people are prescribed one or more medication with anticholinergic effects. Anticholinergic burden (ACB) - the accumulation of higher levels of exposure to one or more anticholinergic medications- is associated with physical impairment, increased risk of falls, cognitive impairment, delirium, dementia, and all-cause mortality in older people. Deprescribing anticholinergic medications is key to improve health outcomes of older people, and hospital admission could be ideal for deprescribing because it offers an opportunity to identify and prioritise patients at high-risk of anticholinergic burden. However, lack of collaborative working, low confidence, system resources and organisation of care are reported barriers for deprescribing anticholinergic burden in routine practice. In addition, most deprescribing studies focused on community or nursing home settings, and little has been done in a hospital setting.
+
+Aims and objectives The aim is to test the feasibility and acceptability of using a digital tool to identify and reduce medications with a high anticholinergic burden among hospitalised older patients. The research team has recently worked with a software company (TRISCRIBE) to develop and validate a digital tool with an embedded evidence-based database, that quantifies the overall anticholinergic burden score for each patient, listing the individual medicines contributing to that score and their individualised drug score.
+
+The objectives are to
+
+* Assess the feasibility of using and integrating the TRISCRIBE tool in the workflow of the clinical team to reduce anticholinergic burden scores.
+* Examine the acceptability of the intervention to patients and carers as well as healthcare professionals involved in delivering the intervention.
+* Determine the potential effects of the intervention on medication- and patient-related outcomes using pre-post quasi study design.
+* Determine the feasibility of collecting resource use and identify key resource items that will be important to capture in the future trial.
+
+Methods A feasibility study using a pre-post study design will be conducted with 50 older patients admitted to Medicine for Older People (MOP) wards at the University Hospital Southampton. Patients will receive a collaborative deprescribing intervention including: 1) pharmacist-led identification of patients using TRISCRIBE digital tool and highlighting anticholinergics medications on their clinical notes for targeted deprescribing, 2) doctor-led medication review to stop, reduce dose or switch to safer alternatives based on individual patient needs, and 3) highlighting and communicating medication changes to GP on discharge summaries.
+
+Feasibility of the intervention will be determined by collecting data on recruitment rates, follow-up rates, time and resources needed. Baseline and 3months follow-up data will be collected on medication-related outcomes (number of medication
+
+PRIMARY OUTCOMES:
+  - The proportion of eligible patients and the feasibility of recruiting
+  - Follow up rates and response rates to questionnaires.
+  - • Time needed for implementing the intervention (e.g. screening time using the TRISCRIBE tool) and resources
+  - Proportion of patients identified to have high ACB score who received the intervention
+
+INTERVENTIONS:
+  - OTHER: DART
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07489677

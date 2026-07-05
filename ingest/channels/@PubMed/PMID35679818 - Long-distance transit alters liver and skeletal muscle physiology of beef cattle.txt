@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 35679818
+Title: Long-distance transit alters liver and skeletal muscle physiology of beef cattle.
+Authors: Deters, Hansen
+Journal: Animal : an international journal of animal bioscience
+Year: 2022
+Topic: leucine threshold muscle protein
+
+ABSTRACT:
+Transportation of cattle is necessary but negatively impacts animal health and production efficiency. To gain a better understanding of the physiological responses to long-distance road transit, 36 crossbred beef steers (324&#x202f;&#xb1;&#x202f;36&#x202f;kg) were randomly assigned to treatments (n&#x202f;=&#x202f;12 steers/treatment): no transit and ad libitum access to feed and water (CON), no transit but deprived of feed and water for 18&#x202f;h (DEPR), or road transit and no access to feed or water for 18&#x202f;h (1&#x202f;790&#x202f;km; TRANS). Blood, liver, and muscle (longissimus dorsi) samples were collected pre- and post-treatment for analysis of blood metabolites, blood leukocyte profiles, blood markers of oxidative stress, and tissue antioxidant enzyme activity. Additionally, discovery-based metabolomics and proteomics analyses were performed on tissue samples collected immediately post-treatment (d 1). Data (except for omics) were analyzed using ProcMixed of SAS 9.4 with the fixed effect of treatment and steer as the experimental unit. Omics data were analyzed using MetaboAnalyst; metabolites and proteins of interest were identified based on a fold change threshold of 1.20 and t-test P-value of 0.10. On d 1, percent of pretreatment BW and DM intake were least for TRANS steers (P&#x202f;&#x2264;&#x202f;0.06). Percent of pretreatment BW remained lesser for TRANS steers on d 8 (P&#x202f;=&#x202f;0.05). Serum haptoglobin was greatest for TRANS steers immediately post-treatment (P&#x202f;=&#x202f;0.02). Additionally, TRANS steers exhibited the greatest increase in the neutrophil to lymphocyte ratio and serum non-esterified fatty acids during the treatment period (P&#x202f;&lt;&#x202f;0.01), indicating TRANS steers experienced a more robust inflammatory and neuroendocrine response. Immediately post-treatment, liver superoxide dismutase activity tended to be greatest for both DEPR and TRANS (P&#x202f;=&#x202f;0.07) while muscle superoxide dismutase activity was only greatest for TRANS (P&#x202f;=&#x202f;0.02), suggesting TRANS steers may have experienced more oxidative stress due to the additional physical effort required to stand and maintain balance during transit. The abundance of several proteins (alpha-2-HS-glycoprotein) and metabolites (lactate, citrate, tri-hydroxybutyric acid, and leucine) associated with energy metabolism were altered in the liver and muscle of TRANS. The differential responses for DEPR versus TRANS steers indicate muscle plays an important role in how cattle respond to and recover from transportation stress.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/35679818/

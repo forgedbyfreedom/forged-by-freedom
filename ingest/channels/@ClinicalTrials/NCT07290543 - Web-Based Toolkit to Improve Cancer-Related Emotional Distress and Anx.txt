@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07290543
+Title: Web-Based Toolkit to Improve Cancer-Related Emotional Distress and Anxiety in Rural Older Cancer Survivors
+Official Title: Designing for Sustainability: Co-Designing and Testing the Efficacy of a Web-Based Toolkit to Improve Cancer-Related Emotional Distress and Anxiety for Rural Older Cancer Survivors
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 578
+Topic: physical activity intervention
+
+SUMMARY:
+This clinical trial tests how well a web based toolkit works to improve cancer related emotional distress and anxiety in rural older cancer survivors. Rural older adults with cancer-related distress are particularly vulnerable to poorer mental health and cancer-related outcomes including increased difficulties identifying symptoms of anxiety, a reduced likelihood of knowing when to access mental health services, and a higher likelihood of having poorly managed CRD, even after receiving a psychosocial referral. The web based tool kit called CONNECT addresses digital literacy and supports for cancer-related distress management through interactive activities for setting up telehealth visits, accessing educational materials about cancer-related distress, and providing individualized mental health resource recommendations. Using CONNECT may improve cancer related emotional distress and anxiety in rural older cancer survivors.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Co-design Objective (Aim 1): Finalize the CONNECT digital tool design through qualitative co-design evaluations with stakeholders to prepare the intervention for efficacy testing.
+
+II. Efficacy Objective (Aim 2): Evaluate the efficacy of the CONNECT digital tool in reducing cancer-related distress among rural cancer survivors and caregivers, as measured by the validated 23-item Cancer and Treatment Distress Scale (CTXD), in a randomized controlled trial.
+
+III. Implementation Objective (Aim 3): Assess the feasibility and potential for scale-up of the CONNECT intervention in rural communities and healthcare settings through qualitative interviews.
+
+SECONDARY OBJECTIVES:
+
+I. Assess self-reported healthcare resource utilization over the 12-month study period. (Aim 2, Efficacy Testing)
+
+II. Assess self-reported shared device use for accessing health-related information and services. (Aim 2, Efficacy Testing)
+
+III. Assess self-reported telehealth utilization, including portal use, completed visits, and visit modality. (Aim 2, Efficacy Testing)
+
+IV. Evaluate cancer survivors' unmet needs using a validated 35-item unmet needs survey. (Aim 2, Efficacy Testing)
+
+V. Evaluate caregiver strain using the validated 13-item Caregiver Strain Index. (Aim 2, Efficacy Testing)
+
+OUTLINE: Advisory board members are assigned to arm I, patients and their caregivers are randomized to arm II or III.
+
+ARM I: Co-design / Advisory Board Arm (Non-randomized) Advisory board members participate in qualitative co-design activities to refine the CONNECT digital tool prior to efficacy testing. Activities include small-group workshops, interviews, field-testing, and surveys focused on usability, content relevance, and acceptability of the platform.
+
+ARM II: Intervention (CONNECT) Arm: Participants receive access to the CONNECT digital platform, which includes educational materials on cancer-related distress management, guidance on telehealth use, and personalized recommendations for supportive resources. They complete a guided onboarding tutorial with a Study Team Member, receive up to four structured review sessions (20 minutes each) by phone or video, and get automated text message reminders every two weeks for four months to encourage engagement.
+
+Control Arm: Participants receive usual care plus a mailed educational brochure about managing cancer-related distress. They do not receive access to the CONNECT platform or coaching sessions.
+
+ARM III: Patients are mailed an educational brochure about distress management on study. AIM 3: Scale-up / Implementation Assessment A subsample of participants from Arms II and III will participate in exit interviews to assess potential implementation outcomes, sustainability, and barriers/facilitators for scaling CONNECT in rural communities and healthcare settings.
+
+PRIMARY OUTCOMES:
+  - Cancer Related Distress (validated 23-item scale)
+
+INTERVENTIONS:
+  - OTHER: Educational Intervention
+  - OTHER: Educational Intervention
+  - OTHER: Internet-Based Intervention
+  - OTHER: Interview
+  - OTHER: Interview
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07290543

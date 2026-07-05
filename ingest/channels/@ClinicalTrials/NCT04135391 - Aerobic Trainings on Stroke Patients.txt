@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04135391
+Title: Aerobic Trainings on Stroke Patients
+Official Title: Effects of Aerobic Interval Exercise Training on Cardiac Fibroblasts and Brain Cells in Stroke Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: high intensity interval training
+
+SUMMARY:
+Effects of different exercise strategies on stroke patients remain unclear. Randomized controlled trial with concealed allocation has been performed from August 1, 2016 to June 30, 2018. We traced back 23 stroke patients, recruited during the above period, aged about 55 years with stroke duration \> 24 months . Intervention: 13 of them underwent 36 times of moderate-intensity continuous training (MICT) at 60% of peak oxygen consumption (VO2peak) for 30 mins, and 10 had high-intensity interval training (HIIT) at alternative 80% and 40% VO2peak with the same training times and duration. Outcome measures: VO2peak, cardiac output (CO), bilateral frontal cortex blood volume (∆\[THb\]), oxyhemoglobin (∆\[O2Hb\]) and deoxyhemoglobin (∆\[HHb\]), ventilation efficiency, serum brain-derived neurotrophic factor (BDNF) levels, cognitive and life quality questionnaire, percentage of neuroblastic cell bearing neurites (% neurites), and cell fluorescent staining were examined before and after interventions.
+
+DETAILED DESCRIPTION:
+Design The Institutional Review Board of a tertiary care hospital approved the study (IRB No. 201600576A3). A randomized controlled trial was performed in stroke patients with different exercise regimens and was blind to the assessors. The study was conducted from August 2016 to June 2018. Participants were randomly allocated to the MICT or HIIT groups using a computer-generated, concealed allocation schedule. All included stroke patients received traditional rehabilitation programs, including balance, range of motion, or therapeutic exercise, and additional in-hospital supervised 30 min of MICT or HIIT for 36 times. Data were collected by a blinded assessor prior to randomization after completing the exercise trainings.
+
+Participants Stroke patients, diagnosed by the neurologist, were surveyed. The inclusion criteria were listed as follows: (I) ≥ 20 years old; (II) stroke events with stable clinical status ≥ 3 months; (III) mini-mental state examination (MMSE)\> 24; (IV) no acute coronary syndrome. Those who had unstable angina, systolic blood pressure\> 200 mmHg or diastolic blood pressure\> 110 mm Hg, symptomatic orthostatic hypotension, severe aortic stenosis (peak systolic pressure gradient\> 50 mmHg, or an aortic valve opening area\< 0.75 cm2), inflammatory disease within recent 3 months, uncontrolled cardiac dysrhythmias, uncompensated HF, third degree atrioventricular block, pericarditis or myocarditis within recent 3 months, embolic disease within recent 3 months, ST segment displacement≥ 2 mm at rest, and uncontrolled diabetes (blood glucose≥ 300 mg/dL or ≥ 250 mg/dL with ketone bodies) were not candidates of the study.
+
+Stroke patients had absolute contraindications for cardiopulmonary exercise test (CPET) and aerobic activities, suggested by the American College of Sports Medicine (ACSM), were also excluded in the study. Afterwards, eligible participants were randomly assigned to the MICT and HIIT groups. Baseline demographic characteristics were also recorded. All subjects provided informed consent after the experimental procedures were explained.
+
+Cardiopulmonary exercise test (CPET) Participants underwent an incremental exercise test on a bicycle ergometer (Ergoselect 150P, ergoline GmbH, Bitz, Germany) and the examination was performed at a work-rate of 10 W/min with continuous monitoring heart rate, brachial blood pressure, and arterial oxygen saturation, until the stop conditions described previously. Oxygen consumption (VO2) was measured by a cardiopulmonary measurement device (MasterScreen CPX, CareFusion Corp., Hoechberg, Germany). The VO2peak, minute ventilation (VE), and carbon dioxide production (VCO2) were defined as the guideline for exercise testing suggested by the ACSM. VE and VCO2 responses, acquired from the initiation of exercise to the peak values, were used to calculate the VE-VCO2 slope using the least-square linear regression. The O2 uptake efﬁciency slope (OUES), an estimation of the O2 consumption efficiency 
+
+PRIMARY OUTCOMES:
+  - Peak cardiac output (CO)
+  - Peak exercise oxygen consumption (VO2peak)
+  - Oxygen uptake efficiency slope (OUES)
+  - Ventilation/VCO2 ratio (Ve-VCO2)
+  - Differences of the brain tissue oxyhemoglobin (∆[O2Hb])
+
+INTERVENTIONS:
+  - BEHAVIORAL: Aerobic exercise training
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04135391

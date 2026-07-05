@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06015971
+Title: Omega-3 Fatty Acids and Nutritional Support in Gastrointestinal Cancer
+Official Title: Omega-3 Enriched Supplements in the Nutritional Support of Patients With Gastrointestinal Cancer
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: omega 3 exercise
+
+SUMMARY:
+Sarcopenia is a frequent complication in patients with cancer and chronic diseases, it is characterized by decreased muscle strength and fatigue due to reduced skeletal muscle mass, which is accompanied by atrophy and decreased quality of muscle tissue. In all cases, it negatively impacts treatment tolerance, clinical outcomes and survival, in consequence, quality of life of these patients decreases while morbidity, mortality and costs increase. In this context, appropriate nutritional screening and early nutrition support are extremely recommended, to this aim, in some cases, oral nutritional supplements (ONS) are necessary; ONS could have a standard formula or be enriched with specific nutrients (arginine, glutamine, branched chain amino acids, n-3 fatty acids, and nucleotides), which can modulate the activity of the immune system and provide an additional benefit beyond the nutritional support, this intervention type is called immunonutrition. Despite these possible benefits, their utility has been proven in few clinical scenarios, for example in with patients with upper gastrointestinal cancer undergoing surgical resection; based on this, current guidelines recommend that patients should receive oral/enteral nutritional support with an specific formula enriched in immunonutrients (with arginine, n-3 fatty acids or nucleotides) , but there is a lack of evidence for supporting its use in other clinical conditions including patients with cancer that receive systemic treatment
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle mass
+  - Functionality
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: omega-3
+  - DIETARY_SUPPLEMENT: Standard
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06015971

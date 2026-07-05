@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06735547
+Title: Effectiveness of a Mobile Telerehabilitation Tool Versus Conventional Treatment in Total Knee Arthroplasty
+Official Title: Effectiveness of a Mobile Telerehabilitation Tool Versus Conventional Treatment in Total Knee Arthroplasty: a Controlled Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 216
+Topic: recovery exercise
+
+SUMMARY:
+Knee arthroplasty is one of the most common surgical procedures, and early rehabilitation is essential for patient recovery, pain modulation and a faster reintegration into daily life activities. However, it has been reported that the percentage of patients who continue rehabilitation for the time required to achieve these outcomes is much lower than those who abandon therapy. This is often due to various factors such as office hours, difficult access to appointments, and sometimes insufficient infrastructure and personnel to meet the demand. Currently, due to the global situation, it is crucial to conduct these rehabilitation processes remotely and virtually, making use of various technological tools that enable patients to interact with the healthcare professionals in charge of their rehabilitation. Among these tools are mobile applications on smartphones, which not only facilitate proper physical preparation, but also offer valuable real-time feedback. Furthermore, 8% of the total cost of knee joint replacements corresponds to the rehabilitation program. These costs are significantly reduced with telerehabilitation assisted by mobile tools, which not only improves patient access but also increases adherence and satisfaction levels by allowing the customization of rehabilitation programs based on each patient's specific needs and characteristics. The aim of this study is to evaluate the effectiveness outcomes of an artificial intelligence-guided mobile tool versus conventional rehabilitation during the first three months postoperatively following total knee replacement.
+
+DETAILED DESCRIPTION:
+A parallel, controlled randomized clinical trial will be conducted. Study Population: Patients with knee osteoarthritis undergoing primary total knee replacement (TKR) at Clínica Universitaria Colombia and Puente Aranda Emergency Center, whose postoperative follow-up is ambulatory, and who meets the inclusion criteria.
+
+Outcomes: Functionality will be the primary outcome, measured in terms of the WOMAC score, knee range of movement, and pain, by means of the visual analogue scale. Adherence to treatment, number of therapy sessions, patient satisfaction, and the presence of adverse events will also be measured.
+
+PRIMARY OUTCOMES:
+  - Knee Range of Motion
+  - Functionality - WOMAC survey
+  - Functionality - Get Up and Go
+  - Pain - Visual Analogue Scale
+
+INTERVENTIONS:
+  - DEVICE: Telerehabilitation
+  - OTHER: Conventional therapy group
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06735547

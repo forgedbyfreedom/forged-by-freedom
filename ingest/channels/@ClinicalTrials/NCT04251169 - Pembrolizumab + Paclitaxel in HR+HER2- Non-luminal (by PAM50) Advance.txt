@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04251169
+Title: Pembrolizumab + Paclitaxel in HR+/HER2- Non-luminal (by PAM50) Advanced Breast Cancer After CDK4/6 Inhibitor Progression
+Official Title: Targeting Non-Luminal Disease by PAM50 With Pembrolizumab + Paclitaxel in Hormone Receptor-positive/HER2-negative Advanced/Metastatic Breast Cancer, Who Have Progressed on or After CDK 4/6 Inhibitor Treatment
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: growth hormone treatment
+
+SUMMARY:
+This is an open-label, single arm, multicenter phase II study evaluating treatment with pembrolizumab in combination with paclitaxel in patients with locally advanced or metastatic non-luminal hormone receptor-positive (HR+), human epidermal growth factor receptor 2-negative (HER2-) (hereafter referred to as HR+/HER2-) breast cancer who had recurrence or progression while receiving previous therapy with a cyclin-dependent kinase (CDK) inhibitor in the adjuvant setting or to treat advanced disease (or both).
+
+DETAILED DESCRIPTION:
+The study will utilize a 2-stage, single arm, Simon's 2-stage design with one (efficacy) interim and a final analysis. The interim analysis will be conducted when 15 patients are evaluable for Overall Response Rate (ORR) as determined locally by the investigator through the use of Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v.1.1). If 5 or fewer responses are observed in up to 15 patients of the evaluable population (EP), the trial will be terminated in favor of the null for futility. Otherwise, up to a further 31 patients may be evaluated, for a maximum total of 46 evaluable patients. If a total of 19 or more responses are seen at the end of the second stage, then the null will have been rejected in favor of the alternative; and further investigation of the combination is warranted.
+
+Recruitment will not be halted during the interim analysis period. Therefore, no interruption in the accrual will be done during the interim analysis in order to maintain the dynamic of accrual in the trial.
+
+After confirmation of all eligibility criteria, eligible patients will receive pembrolizumab 200 mg every 3 weeks (on Day 1 \[D1\] of each 21-day cycle, beginning in Cycle 1) in combination with paclitaxel 80 mg/m² administered at Days 1, 8, and 15 of each 21-day cycle beginning at Cycle 2. Treatment will continue until disease progression, the development of unacceptable toxicity, withdrawal of consent, 24 months from the date of the first dose of pembrolizumab, or end of study, whichever occurs first.
+
+All patients will be followed for survival from screening until the last patient recruited has been followed for 12 months, has progressed, or has died, whichever occurs first. The patient will be followed for survival approximately every 3 months (± 21 days) until death, withdrawal of consent, loss to follow-up, or study termination by the sponsor. In addition, information regarding use of subsequent anti-cancer agents for metastatic hormone receptor-positive/human epidermal growth factor receptor 2-negative (HR+/HER2-) during the survival follow-up period will be collected.
+
+Tumor assessments per RECIST v.1.1 and Immune-Related Response Evaluation Criteria in Solid Tumors (iRECIST) will be performed every 9 weeks (63 days ± 5 days) until disease progression, treatment discontinuation, the start of new anti-cancer treatment, withdrawal of consent, death, or the end of the study, whichever occurs first. Tumor assessments will be performed on the specified schedule regardless of treatment delays.
+
+Safety assessments will include the incidence, nature, and severity of adverse events (AEs) and laboratory abnormalities graded per the National Cancer Institute Common Terminology Criteria for Adverse Events version 5 (NCI CTCAE v.5).
+
+Laboratory safety assessments will include the regular monitoring of hematology, blood chemistry, and pregnancy test.
+
+PRIMARY OUTCOMES:
+  - Overall Response Rate of Pembrolizumab in Combination With Paclitaxel in HR+/HER2- Non-luminal Subtype Advanced Breast Cancer Defined by the PAM50 Assay
+
+INTERVENTIONS:
+  - DRUG: Pembrolizumab
+  - DRUG: Paclitaxel
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04251169

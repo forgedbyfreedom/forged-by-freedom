@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07408570
+Title: FREQUENCY-DEPENDENT SOLEUS REFLEX MODULATION DURING WHOLE-BODY VIBRATION
+Official Title: FREQUENCY- DEPENDENT MODULATION OF SOLEUS REFLEX RESPONSES DURING WHOLE BODY- VIBRATION IMPLICATIONS FOR PORPELASTIC BOBE MYOREGULATION UNDER GRAVITATIONAL LOADING
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 27
+Topic: muscle rehabilitation
+
+SUMMARY:
+Exposure to microgravity leads to pronounced impairments in neuromuscular control, postural stability, and spinal reflex regulation that cannot be attributed to muscle atrophy alone. Rather, these deficits point to a disruption of load-dependent sensorimotor mechanisms and highlight the essential role of gravitational loading of the skeleton as a critical source of sensory input for spinal motor control.
+
+Spinal reflex behavior during upright stance has traditionally been explained primarily by muscle spindle-mediated pathways. However, this framework does not fully account for the reflex alterations observed under conditions of altered mechanical loading, including microgravity, prolonged unloading, or exposure to vibration. In parallel, advances in bone biology have identified osteocytes within the lacuno-canalicular system as highly sensitive mechanosensors that preferentially respond to dynamic loading and changes in strain rate. This insight has given rise to the concept of bone myoregulation, in which bone-derived mechanosensory signals contribute to the modulation of spinal excitability.
+
+A defining characteristic of this process is the poroelastic nature of bone tissue. As a fluid-saturated porous medium, bone exhibits frequency-dependent mechanical behavior, such that oscillatory loading modifies both the temporal profile and magnitude of interstitial fluid flow within the lacuno-canalicular network. As a result, loading frequency is expected to influence not only the timing of reflex responses but also their amplitude. Whole-body vibration offers a controlled experimental paradigm to probe these frequency-dependent, load-sensitive mechanisms in humans.
+
+Accordingly, the aim of the present study was to identify the whole-body vibration frequency band that most effectively induces soleus reflex responses during quiet standing, considering both reflex latency and response amplitude. Investigators hypothesized that these responses would display frequency-dependent behavior consistent with poroelastic bone-mediated myoregulation and would be modulated by individual anthropometric characteristics, with potential implications for vibration-based countermeasures under altered gravitational loading.
+
+DETAILED DESCRIPTION:
+Experimental Procedure At the beginning of the experiment, participants will perform three repetitions of maximal voluntary plantarflexion (heel-rise) to determine maximal electromyographic (EMG) activity of the soleus muscle. These recordings will be used for normalization and reference purposes.
+
+Subsequently, whole-body vibration will be applied at 13 different frequencies ranging from 25 to 49 Hz (25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, and 49 Hz). The order of vibration frequencies will be randomized for each participant to minimize order effects.
+
+Whole-Body Vibration Protocol Participants will stand upright in an anatomically neutral position on the vibration platform and will be allowed to lightly hold the device's handrail to maintain balance without providing mechanical support. Vibration amplitude will be set at 2 mm. Each frequency condition will be applied for 15 s, with a 10 s rest period between trials. All WBV applications will be delivered using a Power Plate Pro5 device (Power Plate International Ltd., UK).
+
+Surface Electromyography Recording Surface electromyography (sEMG) will be recorded from the left soleus muscle using bipolar Ag/AgCl electrodes (Redline®, Istanbul, Türkiye; 10-mm diameter, 4-cm interelectrode distance) aligned with the muscle fibers following appropriate skin preparation (impedance \<10 kΩ). The electrodes will be placed over the lateral belly of the soleus muscle, with the ground electrode positioned on the right lateral malleolus. The sEMG signals will be amplified (×1000), band-pass filtered between 10 and 1,000 Hz, and sampled at 5,000 Hz.
+
+EMG signals will be acquired using a CED 1902 Quad System MKIII amplifier and a CED Power 1401 MKII A/D converter and will be recorded with Spike2 software (version 7.20; Cambridge Electronic Design, UK). Signals will be stored for offline analysis. Frequency-domain analysis will be performed using fast Fourier transform (FFT) algorithms implemented in Spike2.
+
+PRIMARY OUTCOMES:
+  - 1. WBV-evoked soleus reflex latency (ms)
+
+INTERVENTIONS:
+  - OTHER: whole body vibration
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07408570

@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03804047
+Title: KITAMS: Kinesio Tape and Physical Function in Persons With Multiples Sclerosis
+Official Title: KITAMS: Kinesio Tape and Physical Function in Persons With Multiples Sclerosis
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: athletic performance
+
+SUMMARY:
+Multiple sclerosis (MS) is a disease that causes damage within the central nervous system and results in deficits of body functions. The investigators propose a pilot randomized controlled trial examining the acute effect of kinesio tape application in various body segments on balance, mobility, physical functioning, and pain in persons with MS (pwMS) aged 18 to 55 years old. The investigators will objectively assess balance using a force platform and mobility and physical functioning will be assessed using standardized tests (i.e., Timed Up and Go, Timed 25-foot Walk, 6-minute Step Test, Six Spot Step Test). The trial will recruit 24 pwMS aged 18 to 55 years with mild-to-moderate MS-related disability who will be randomized into intervention (Kinesio Tape) or control conditions (Sham/Inflexible Tape). Participants will complete assessments before and after tape application. This pilot trial will inform future research interventions aiming to use the approach in different situations with pwMS (e.g., exercise).
+
+DETAILED DESCRIPTION:
+Research Plan
+
+Participants The investigators will recruit and enroll 24 pwMS (12 per group) aged 18-55 years. This sample size is appropriate for pilot trials, and was not based on power analysis. The number of 12 per group is justified based on feasibility, gains in the precision about the mean and variance, and regulatory consideration. Related to gains in the precision, the gains are less pronounced after 12 participants. Recruitment will occur though advertisements in local newspapers (100-mile radius around Illinois campus) and posts on the Greater Illinois chapter of the National Multiple Sclerosis Society (NMSS) website. The investigators will further recruit using our participant's database that includes pwMS 40 years of age and older. The 24 persons will be randomly assigned in equal ratios through concealed allocation into either the intervention (i.e., Kinesio Tape - KTG; n=12) or control (i.e., Sham Tape - STG; n=12) conditions. The inclusion criteria are: clinically definitive diagnosis of MS; age between 18 and 55 years; relapse-free for the past 30 days and; ability to walk with or without assistive device (i.e., cane, but not walker/rollator). Participants further must be willing to complete in-person assessments in a university research setting. The investigators will exclude those who use wheelchair, crutches and walker or who have moderate cognitive impairment based on the modified Telephone Interview for Cognitive Status (i.e., moderate cognitive impairment, ≤ 12 points).
+
+Main Outcomes
+
+Balance. Balance will be objectively measured using a force platform (AccuSway, AMTI, Newton, MA, USA) which will be used to calculate the coordinates of the center of pressure (COP) during the standing test using three orthogonal forces and moments. Signals from the force plate will be sampled at 100HZ. Data analysis will then be performed using specific programs developed in MATLAB (Mathworks, Natick, MA, USA). Four classical time domain posturographic parameters will be calculated from the COP co-ordinates: mean deviation along the anterior-posterior (X) and medio-lateral (Y) axes, mean COP velocity along the anterior-posterior (VCOPX) and medio-lateral (VCOPY) axes. Participants will perform a total of four trials (i.e., two with eyes open and two with eyes closed) where they will be asked to stand on the force plate and maintain balance. The force plate will be set up 1.5 meters away from the wall. In the eyes open condition participants will be asked to focus at a dark disc (5cm in diameter) on the wall at the subject's eye level. Each trial will last one minute and participants will be given two minutes rest between trials. The order of the trial condition (eyes open or closed) will be randomized to prevent any order effect.
+
+The Timed and up and Go test (TUG) will be used as a measure of functional mobility. The primary outcome of the TUG test is the total time (in seconds) taken to complete the test. The test will be set up on the ba
+
+PRIMARY OUTCOMES:
+  - Static Balance Performance
+  - Timed and Up and Go
+  - Timed 25-foot Walk
+  - Six-minute Walking Test
+  - Six-spot Step Test
+
+INTERVENTIONS:
+  - OTHER: kinesio tape
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03804047

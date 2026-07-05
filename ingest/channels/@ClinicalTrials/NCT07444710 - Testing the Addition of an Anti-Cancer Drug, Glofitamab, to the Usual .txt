@@ -1,0 +1,66 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07444710
+Title: Testing the Addition of an Anti-Cancer Drug, Glofitamab, to the Usual Chemotherapy Treatment (Alternating R-CHOP/R-DHAP) for Previously Untreated Mantle Cell Lymphoma
+Official Title: A Phase I Study of Glofitamab With Alternating R-CHOP/R-DHAP in Previously Untreated Mantle Cell Lymphoma
+Status: NOT_YET_RECRUITING
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: beta-alanine
+
+SUMMARY:
+This phase I trial tests the safety, side effects and best dose of glofitamab given with alternating cycles of rituximab, cyclophosphamide, doxorubicin, vincristine, and prednisone (R-CHOP)/ rituximab, dexamethasone, cytarabine, and cisplatin (R-DHAP) for the treatment of mantle cell lymphoma. Glofitamab is a monoclonal antibody that may interfere with the ability of cancer cells to grow and spread. A monoclonal antibody is a type of protein that can bind to certain targets in the body, such as molecules that cause the body to make an immune response (antigens). Rituximab is a monoclonal antibody. It binds to a protein called CD20, which is found on B cells (a type of white blood cell) and some types of cancer cells. This may help the immune system kill cancer cells. Cyclophosphamide is in a class of medications called alkylating agents. It works by damaging the cell's deoxyribonucleic acid (DNA) and may kill cancer cells. It may also lower the body's immune response. Doxorubicin is in a class of medications called anthracyclines. Doxorubicin damages the cell's DNA and may kill cancer cells. It also blocks a certain enzyme needed for cell division and DNA repair. Vincristine is in a class of medications called vinca alkaloids. It works by stopping cancer cells from growing and dividing and may kill them. Prednisone and dexamethasone are in a class of medications called corticosteroids. They are used to reduce inflammation and lower the body's immune response to help lessen the side effects of chemotherapy drugs. Chemotherapy drugs, such as cytarabine, work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Cisplatin is in a class of medications known as platinum-containing compounds. It works by killing, stopping or slowing the growth of cancer cells. Giving glofitamab may be safe, tolerable and/or effective in treating patients with mantle cell lymphoma.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To evaluate the safety of the combination of glofitamab and alternating cycles of rituximab, cyclophosphamide, doxorubicin, vincristine, and prednisone (R-CHOP)/ rituximab, dexamethasone, cytarabine, and cisplatin (R-DHAP) as defined by the incidence and severity of adverse events (AEs) and/or dose limiting toxicity (DLT) related to glofitamab and/or chemo-immunotherapy in patients with previously untreated mantle cell lymphoma (MCL).
+
+II. To determine the recommended phase II dose (RP2D) for the combination of glofitamab and R-CHOP/R-DHAP.
+
+SECONDARY OBJECTIVES:
+
+I. To observe and record anti-tumor activity. II. To determine the tolerability of the study treatment as measured by dose interruptions, dose reductions, and treatment discontinuation due to AEs and DLTs.
+
+III. To determine the overall response rate (ORR) after induction therapy and after maintenance therapy, complete response rate (CRR), and partial response rate (PRR) based on positron emission tomography (PET)/ computed tomography (CT) according to the 2014 Lugano Response Criteria.
+
+IV. To assess failure-free survival and overall survival.
+
+EXPLORATORY OBJECTIVES:
+
+I. To evaluate minimum-residual disease (MRD)-negative CRR after completion of induction therapy, and after year(s) 1 and 2 of maintenance glofitamab therapy.
+
+II. To determine the rates of dose delays or discontinuation of therapy, cytopenias, and occurrence of grade 3 or higher infections during glofitamab maintenance therapy.
+
+OUTLINE: This is a dose-escalation study of glofitamab in combination with alternating doses of R-CHOP and R-DHAP followed by a dose-expansion study.
+
+INDUCTION:
+
+CYCLES: 1, 3 and 5: Patients receive rituximab intravenously (IV), cyclophosphamide IV, doxorubicin IV, and vincristine IV on day 1, as well as prednisone orally (PO) on days 1-5. Starting with cycle 3, patients also receive glofitamab IV, over 2-8 hours, on day 8 of each cycle. Cycles repeat every 21 days for up to 6 cycles in the absence of disease progression or unacceptable toxicity.
+
+CYCLES 2, 4 and 6: Patients receive rituximab IV, and cisplatin IV over 24 hours on day 1, as well as cytarabine IV on day 2 and dexamethasone PO on days 1-4. Patients also receive glofitamab IV, over 2-8 hours, on days 8 and 15 of cycle 2 and on day 8 of subsequent cycles. Cycles repeat every 21 days for up to 6 cycles in the absence of disease progression or unacceptable toxicity.
+
+maintenance: Patients receive glofitamab IV on day 1 of each cycle. Cycles repeat every 21 days for a total of 24 months of treatment, in the absence of disease progression or unacceptable toxicity.
+
+Patients undergo positron emission tomography (PET)/computed tomography (CT) scan and blood sample collection throughout the study.
+
+After completion of study treatment, patients are followed up periodically for up to 5 years.
+
+PRIMARY OUTCOMES:
+  - Incidence of adverse events (AEs)
+  - Dose limiting toxicity (DLT)
+
+INTERVENTIONS:
+  - PROCEDURE: Biospecimen Collection
+  - DRUG: Cisplatin
+  - PROCEDURE: Computed Tomography
+  - DRUG: Cyclophosphamide
+  - DRUG: Cytarabine
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07444710

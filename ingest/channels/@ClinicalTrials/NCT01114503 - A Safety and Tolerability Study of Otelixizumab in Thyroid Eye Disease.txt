@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01114503
+Title: A Safety and Tolerability Study of Otelixizumab in Thyroid Eye Disease
+Official Title: A Randomised, Comparator Controlled, Two Part, Open-label Study to Evaluate the Safety, Tolerability and Pharmacodynamics of Multiple Doses of Otelixizumab in Patients With Thyroid Orbitopathy
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 2
+Topic: beta-alanine
+
+SUMMARY:
+The purpose of this study is to investigate the safety and tolerability of otelixizumab in patients with Graves' ophthalmopathy (thyroid eye disease). There is currently no alternative therapy available for this condition other than treatment with steroids, or radiotherapy and surgery. The study also includes a comparison of the current steroid treatment, methylprednisolone, with the proposed new otelixizumab treatment.
+
+DETAILED DESCRIPTION:
+This is a study of otelixizumab, a monoclonal antibody (MAb) directed against the human lymphocyte antigen CD3 (a protein found on a certain type of white blood cell). This will be an open-label, comparator-controlled, two part study to evaluate the safety and tolerability of otelixizumab in patients with Graves' ophthalmopathy (GO). It will also look to see if otelixizumab affects GO and how it works compared to methylprednisolone (the standard treatment for active GO).
+
+In Part A, between one and four groups of 5 patients will receive doses of otelixizumab administered over 8 days. The first dose level will provide a low cumulative dose, this low dose level has been safely administered in previous studies. Safety and clinical response data will be reviewed after 8 weeks, if no clinical response is seen and there are no safety concerns, the dose of otelixizumab will be increased and a new group of subjects will enter Part A. In subsequent groups cumulative medium low, medium high, and high doses of otelixizumab may be investigated. However if a clinical response is seen at the lowest dose the study will move directly to Part B.
+
+In Part B, patients will receive either otelixizumab at the dose set from Part A, over 8 days (5 patients) or methylprednisolone weekly for 12 weeks (5 patients). All dosing will be by intravenous infusion. All participants will undergo long term safety evaluation for 48 months.
+
+Key assessments include vital signs, 12-lead ECG, liver function tests, thyroid function, viral monitoring, monitoring of cortisol and ACTH levels, laboratory safety tests and adverse event (side effect) data. Assessment of GO severity will be evaluated using recommended assessments including clinical activity assessments and quality of life questionnaires. Measurements of exploratory biomarkers (proteins found naturally in the blood) are also included in this study.
+
+PRIMARY OUTCOMES:
+  - Number of Participants With at Least One Adverse Event (AE), Serious Adverse Event (SAE), or Drug-related Adverse Event
+  - Number of Participants With Laboratory Clinical Chemistry Abnormalities Meeting the Criteria for Potential Clinical Concern (PCC)
+  - Number of Participants With Laboratory Hematology Abnormalities Meeting the Criteria for PCC
+  - Number of Participants With Laboratory Urinalysis Abnormalities Meeting the Criteria for PCC
+  - Number of Participants With Thyroid Function Assessment, Hormone and Glucose Assay Abnormalities Meeting the Criteria for PCC
+
+INTERVENTIONS:
+  - DRUG: Otelixizumab - low dose
+  - DRUG: Otelixizumab - medium low dose
+  - DRUG: Otelixizumab - medium high dose
+  - DRUG: Otelixizumab - high dose
+  - DRUG: Otelixizumab
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01114503

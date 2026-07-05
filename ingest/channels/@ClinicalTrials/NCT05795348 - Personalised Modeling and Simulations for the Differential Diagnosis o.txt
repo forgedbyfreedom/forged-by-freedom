@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05795348
+Title: Personalised Modeling and Simulations for the Differential Diagnosis of Dynapenia: Study on Patients With Osteoarthritis
+Official Title: ForceLoss: Part II - Osteoarthritic Patients. Development and Validation of Methods to Generate Personalised Models for the Differential Diagnosis of the Loss of Muscle Force
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: sarcopenia intervention
+
+SUMMARY:
+The ForceLoss study aims to develop personalised modeling and simulation procedures to enable the differential diagnosis for the loss of muscle force, namely dynapenia. The primary causes of dynapenia can be identified in a diffuse or selective sarcopenia, a lack of activation (inhibition), or suboptimal motor control. Each of these causes requires different interventions, but a reliable differential diagnosis is currently impossible. While biomedical instruments and tools can provide valuable information, it is often left to the experience of the single clinican to integrate such information into a complete diagnostic picture. An accurate diagnosis for dynapenia is important for a number of pathologies, including neurological diseases, age-related frailty, diabetes, and orthopaedic conditions.
+
+The hypothesis is that the use of mechanistic, subject-specific models (digital twins) to simulate a maximal isometric knee extension task, informed by experimental measures may be employed to conduct a robust differential diagnosis for dynapenia.
+
+In this study, on patients candidate for knee arthroplasty, the investigators will expand (i) the experimental protocol previously developed and tested on healthy volunteers with a measure of involuntary muscle contraction (superimposed neuromuscular electrical stimulation, SNMES), a hand-grip test, measures of bio-impedance and clinical questionnaires, and (ii) the modeling and simulation framework to include one additional step (to check for muscle inhibition).
+
+Medical imaging, electromyography (EMG) and dynamometry data will be collected and combined to inform a digital twin of each participant. Biomechanical computer simulations of a Maximal Voluntary Isometric Contraction (MVIC) task will then be performed. Comparing the models' estimates to in vivo dynamometry measurements and EMG data, the investigators will test one by one the three possible causes of dynapenia, and, through a process of hypothesis falsification will exclude those that do not explain the observed loss of muscle force.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle volume
+  - MVIC Torque
+  - Muscle Inhibition level
+  - Co-contraction index (CCI)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Personalised Musculoskeletal Modeling
+
+ELIGIBILITY:
+Age: 65 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05795348

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05228314
+Title: Safety and Immunogenicity Dose-finding Study of Adjuvanted SCB-2020S Vaccine in Adults
+Official Title: A Phase 1, Observer-blind, Randomized, Controlled, Dose-finding Study to Evaluate the Safety and Immunogenicity of Clover Adjuvanted Recombinant SARS-CoV-2 Trimeric S-protein Subunit Vaccine (SCB-2020S) in Adults 18 to 75 Years of Age
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 153
+Topic: beta-alanine
+
+SUMMARY:
+This is a phase 1 study to assess the safety and immunogenicity of different formulations of the investigational adjuvanted recombinant SARS-CoV-2 trimeric S-protein (from beta variant) subunit vaccine (SCB-2020S vaccine), when administered as 2 dose vaccination series 21 days apart to adults ≥18 to ≤75 years of age.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of participants with local and systemic adverse events (AEs) after vaccination with SCB-2020S vaccine.
+  - Number of participants with unsolicited AEs after vacccination with SCB-2020S vaccine
+  - Number of participants with MAAEs, SAEs, AESIs and AEs leading to discontinuation from study.
+  - Number of participants with abnormal results in hematology parameters (hemoglobin, platelet count, red blood cell count, total and differential white blood cell count).
+  - Number of participants with abnormal results in biochemistry parameters (alanine aminotransferase, albumin, alkaline phosphatase, aspartate aminotransferase, bilirubin, blood urea nitrogen, creatinine, total protein).
+
+INTERVENTIONS:
+  - BIOLOGICAL: Candidate vaccine, SCB-2020S
+  - BIOLOGICAL: Candidate vaccine, SCB-2019
+  - OTHER: Squalene based adjuvant
+  - OTHER: CpG/alum adjuvant
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05228314

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05839535
+Title: Enhancing Modulation Effects of Baduanjin Through Neuromodulation for Knee OA
+Official Title: Enhancing Modulation Effects of Baduanjin Through Non-invasive Neuromodulation for Knee Osteoarthritis
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 140
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+This study will combine brain imaging and neuromodulation tools to investigate the underlying neurobiological mechanisms of exercises. The findings will enhance our understanding of the mechanisms underlying mind-body exercise and facilitate the development of new pain management approaches.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - M1 resting state functional connectivity
+
+INTERVENTIONS:
+  - BEHAVIORAL: BDJ
+  - DEVICE: tDCS
+  - DEVICE: sham tDCS
+  - OTHER: exercise
+
+ELIGIBILITY:
+Age: 45 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05839535

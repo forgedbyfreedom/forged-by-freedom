@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07257601
+Title: TDCS-RTMS Intervention for Motor Function
+Official Title: The Effect of Transcranial Direct Current Stimulation Combined With Repetitive Transcranial Magnetic Stimulation on Motor Function Rehabilitation in Patients With Locked-in Syndrome
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 72
+Topic: muscle rehabilitation
+
+SUMMARY:
+This study was a multicenter randomized double-blind, sham controlled trial initiated by Zhujiang Hospital of Southern Medical University. It is planned to recruit 72 eligible patients with atresia syndrome and randomly divide them into four groups according to the ratio of 1:1:1:1. Group 1 received the sequential stimulation of true tDCS and true rTMS, group 2 received the stimulation of sham tDCS and then true rTMS, group 3 received the stimulation of true tDCS and then sham rTMS, and group 4 received the simulated stimulation of sham tDCS and sham rTMS. The patients were treated for 4 weeks, 5 days a week, once a day in the bilateral M1 area, and in the morning and afternoon on the left and right sides respectively. Each tDCS and rTMS treatment lasted for 20 minutes.Various indicators were evaluated before and after the intervention, and the observation and follow-up were conducted 1, 3, and 6 months after the intervention.
+
+DETAILED DESCRIPTION:
+This study was a multicenter randomized double-blind, sham controlled trial initiated by Zhujiang Hospital of Southern Medical University. It is planned to recruit 72 eligible patients with atresia syndrome and randomly divide them into four groups according to the ratio of 1:1:1:1. Group 1 received the sequential stimulation of true tDCS and true rTMS, group 2 received the stimulation of sham tDCS and then true rTMS, group 3 received the stimulation of true tDCS and then sham rTMS, and group 4 received the simulated stimulation of sham tDCS and sham rTMS. The patients were treated for 4 weeks, 5 days a week, once a day in the bilateral M1 area, and in the morning and afternoon on the left and right sides respectively. Transcranial direct current stimulation (tDCS) was performed using a 2 Ma DC stimulator. The anode was placed in the M1 area of the target side (corresponding to the electrode position c3/c4 of the 10-20 EEG system), and the cathode was placed on the contralateral shoulder. The left side was done in the morning and the right side was done in the afternoon. Each tDCS treatment lasted for 20 minutes. The sham stimulation was given current stimulation for 30 seconds and gradually decreased to 0. Repetitive transcranial magnetic stimulation (rTMS) intervention was performed 20 minutes after the end of TDCS treatment. RTMS uses an 8-shaped coil placed in the M1 area of the target side to stimulate at a frequency of 10Hz. Each treatment contains 1600 pulses of stimulation for 4 seconds, with an interval of 26 seconds. The total number of pulses is 1600, lasting for 20 minutes. Each time is once a day in the M1 area of both sides. The sequence is the same as that of TDCS, 5 days a week, and the same lasts for 4 weeks. The stimulation coil was placed at 90 degrees during sham stimulation. Various indicators were evaluated before and after the intervention, and the observation and follow-up were conducted 1, 3, and 6 months after the intervention.
+
+PRIMARY OUTCOMES:
+  - the efficiency
+
+INTERVENTIONS:
+  - DEVICE: Repetitive transcranial magnetic stimulation
+  - DEVICE: Transcranial direct current stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07257601

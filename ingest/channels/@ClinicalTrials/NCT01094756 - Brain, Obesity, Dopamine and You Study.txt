@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01094756
+Title: Brain, Obesity, Dopamine and You Study
+Official Title: Central Dopamine Receptors In Obesity
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 82
+Topic: physical activity intervention
+
+SUMMARY:
+Central dopamine is thought to play a significant role in obesity. In support of this idea, animal studies and one human positron emission tomography (PET) study have found reduced postsynaptic D2-like receptor availability in the striatum in obesity, with lower D2 receptor availability associated with higher weight. In addition, reward sensitivity and hedonic responses, known to be related to dopamine function, have also been implicated in obesity and obesity-related eating behavior. These reports have led to the concept that dopaminergic abnormalities (e.g. reduced D2-like receptors) influence reward sensitivity, leading to altered eating behaviors and eventually obesity. However, there are several critical limitations of the human D2 receptor studies that limit the strength of their conclusions and thus the interpretations and speculations embedded in literature that relies on this work. First, estimates of D2-like receptors in humans have been confounded by potential differences in endogenous dopamine release since the PET ligand (raclopride) used is known to be displaceable from receptors by endogenous dopamine. Second, failure to rigorously screen obese individuals for diabetes confounds conclusions, since diabetes has been independently associated with dopaminergic abnormalities such as reduced D2-like receptors and muted dopamine release in diabetic rats. Finally, no human studies have addressed whether reduced D2-like receptor levels are a risk factor for obesity, a consequence of engaging in obesity-related behaviors or being obese or all of the above.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - To determine the status of postsynaptic D2-like receptor binding in humans with obesity.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: meal replacements, psychotherapy, dietary education
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01094756

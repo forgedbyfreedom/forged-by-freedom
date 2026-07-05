@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06339840
+Title: The Impact of Lifestyle Intervention on Weight and Fertility in Obese Males
+Official Title: The Impact of Lifestyle Intervention on Weight and Fertility in Obese Males
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 66
+Topic: testosterone replacement
+
+SUMMARY:
+Obesity, defined by WHO standards as having a body mass index (BMI) equal to or greater than 30 kg/m², affects approximately 800 million people worldwide. It is evident that obesity has become a serious public health issue, resulting in significant health burdens.
+
+Previous systematic reviews have indicated an association between obesity and male factor infertility. In populations undergoing assisted reproductive technology (ART), some studies have shown a correlation between increased male BMI and adverse ART outcomes. Furthermore, the negative effects of obesity may also be transmitted to offspring through genetic and epigenetic changes in reproductive cell DNA, increasing their risk of obesity, metabolic diseases, or other chronic conditions.
+
+Currently, there is a lack of data on the impact of weight loss in obese men on fertility, and it is unclear which nutritional pattern in lifestyle interventions can more effectively control weight, improve semen quality, and address related endocrine issues in obese men, thereby improving reproductive treatment outcomes.
+
+Based on previous literature, we hypothesize that lifestyle interventions, particularly strict low-carbohydrate diets combined with lifestyle guidance, may offer greater health benefits for obese men. These benefits include effective weight loss, improvement in semen parameters, reproductive metabolic health, quality of life related to reproductive health, and the impact on reproductive treatment outcomes. This provides a basis for non-pharmacological intervention strategies and methods for the health of obese men.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Low-carbohydrate diet group
+  - BEHAVIORAL: Health Education Group
+
+ELIGIBILITY:
+Age: 22 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06339840

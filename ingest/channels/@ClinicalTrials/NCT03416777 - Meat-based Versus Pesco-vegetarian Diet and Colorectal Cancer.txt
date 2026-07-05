@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03416777
+Title: Meat-based Versus Pesco-vegetarian Diet and Colorectal Cancer
+Official Title: Faecal Microbiome as Determinant of the Effect of Diet on Colorectal-cancer Risk: Comparison of Meat Based Versus Pesco-vegetarian Diets (MeaTIc)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 103
+Topic: protein supplementation
+
+SUMMARY:
+Colorectal cancer (CRC) is strongly affected by diet, with red and processed meat increasing risk. To understand the role of microbiome in this phenomenon and to identify specific microbiome/metabolomics profiles associated with CRC risk, will be studied: 1) healthy volunteers fed for 3 months with: a high-CRC risk diet (meat-based MBD), a normalized CRC risk diet (MBD plus alpha-tocopherol, MBD-T), a low-CRC risk diet (pesco-vegetarian, PVD). At the beginning and at the end of the intervention, gut microbiome profiles (metagenomics and metabolomics), and CRC biomarkers (genotoxicity, cytotoxicity, peroxidation in faecal water; lipid/glycemic indexes, inflammatory cytokines, oxidative stress), 2) Colon carcinogenesis: the same diets will be fed (3 months) to carcinogen-induced rats or to Pirc rats, mutated in Apc, the key gene in CRC; faecal microbiome profiles, will be correlated to carcinogenesis measuring preneoplastic lesions, colon tumours, and faecal and blood CRC biomarkers as in humans; 3) To further elucidate the mechanisms underlying the effect of different microbiomes in determining CRC risk, faeces from rats fed the experimental diets will be transplanted into carcinogen-induced germ-free rats, measuring how microbiome changes correlate with metabolome and disease outcomes. The results will provide fundamental insight in the role of microbiome in determining the effect of the diet, in particular red/processed meat intake, on CRC risk
+
+DETAILED DESCRIPTION:
+Colorectal cancer (CRC) is the second leading cause of cancer death in Europe. The geographical variation of incidence demonstrates how environmental factors, chiefly dietary habits, play a major role in this disease. Convincing evidence suggests that risk of CRC is increased by red meat and processed meat consumption (classified, as regard cancer hazard as 2A and 1, respectively, WHO) and decreased by foods containing dietary fibers. As regarding other food groups, like fish, although epidemiological studies suggest a reduction of CRC risk associated with its consumption, the evidence for this link is considered limited; similarly, for non-starchy vegetables and fruits, although there is suggestive evidence of a protective effect, this is considered limited, and thus less convincing than that for red and processed meat.
+
+Several hypotheses are proposed to explain the positive association between red, processed meat and CRC: meat-based diets contain mutagens-carcinogens formed during cooking, but also lipid peroxidation and N-nitroso compounds whose formation is catalyzed by heme in the colon. Accordingly, recent experimental and epidemiological studies on the E3N cohort and on the randomized placebo-controlled trial SUVIMAX carried out by our group, demonstrated the central role of heme iron in the positive association between meat and CRC. According to these studies, this effect is largely explained by the ability of heme iron to catalyze peroxidation and induce high luminal polyunsaturated fatty acids (PUFAs) peroxidation, forming cytotoxic and genotoxic alkenals which will in turn induce positive selection of precancerous cells mutated for Apc, the key gene in CRC. On this basis, it was also demonstrated that antioxidants, in particular tocopherol, modulate the risk of cancer associated with red meat in experimental animals and humans by controlling heme iron-induced peroxidation. Recent data from the investigators demonstrated that microbiota is involved in the heme-induced peroxidation and it has been reported that the gut microbiota is required for heme-induced epithelial hyperproliferation and hyperplasia because of the capacity to reduce mucus barrier function. Notwithstanding these reports, the role of gut microbiome in determining cancer risk associated with red and processed meat is not clear.
+
+Microbial fermentation of plant-based foods, associated with a low CRC risk increases intestinal Short Chain Fatty Acids (SCFAs), among which butyrate, endowed with antineoplastic activity through its inhibition of histone deacetylase and promotion of apoptosis and microbial activated phytochemicals, such as polyphenols with anti-inflammatory and antioxidant activities. Accordingly, it is also known that the process of fermenting fibers to SCFAs needs intestinal bacteria because germ-free mice produce almost no SCFAs. These data clearly indicate that, at least part of the effect of the diet on colon carcinogenesis is mediated by the intestinal 
+
+PRIMARY OUTCOMES:
+  - DNA damage
+
+INTERVENTIONS:
+  - BEHAVIORAL: Meat-based diet
+  - DIETARY_SUPPLEMENT: Meat-based diet supplemented with alpha-tocopherol (MBD-T)
+  - BEHAVIORAL: Pesco-vegetarian diet
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03416777

@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05767385
+Title: Fetal Cerebrovascular Autoregulation in Congenital Heart Disease and Association With Neonatal Neurobehavior
+Official Title: Fetal Cerebrovascular Autoregulation in Congenital Heart Disease and Association With Neonatal Neurobehavior
+Status: RECRUITING
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: physical activity intervention
+
+SUMMARY:
+Determine 1) the impact of abnormal fetal cerebrovascular physiology with neurodevelopmental delay (ND) outcomes and 2) how this relationship is modified by patient and environmental factors such as chronic congenital heart disease (CCHD) lesion, maternal-fetal environment, and social determinants of heath (SDOH) in a diverse population using a multicenter design.
+
+Pregnant women will be approached during one of their fetal cardiology clinic visits.
+
+DETAILED DESCRIPTION:
+Aim 1:
+
+Determine the association of baseline cerebrovascular resistance and reactivity and pre-operative neurobehavior in neonates with complex congenital heart disease (CCHD).
+
+Exposures: The baseline middle cerebral artery pulsatility index (MCA-PI) and change in MCA-PI.
+
+Analyses: Our principal analyses for Aim 1 will use separate linear regression models to relate the Neonatal Intensive Care Unit Network Neurobehavioral Scale (NNNS) attention score to 1) the baseline MCA-PI while controlling for maternal age, infant sex, race/ethnicity, and SDOH measures (maternal education, socioeconomic status (SES), insurance status), and clinical site, and 2) the change in MCA-PI adjusted for baseline MCA-PI while controlling for the same set of covariates. If the NNNS attention score distribution is skewed, we will consider transformations so that model residual plots achieve approximate normality. The covariates in the above regression analyses exclude factors that may potentially lie on the causal pathway from the MCA-PI to the attention score to avoid risk of over adjustment. In secondary analyses, 2 regression analyses will be repeated after additional adjustment for the maternal-fetal environment indicator(s), CCHD category, and age at NNNS evaluation. As a secondary analysis, we will evaluate the interaction between baseline MCA-PI and change in MCA-PI. For this analysis, we will consider dichotomizing baseline MCA-PI to facilitate interpretation of the interaction effect.
+
+Aim 2:
+
+Determine the impact of patient and environmental factors on cerebrovascular resistance and reactivity Exposures: Patient factors including CCHD category, indicators of the maternal-fetal environment, and SDOH
+
+Analysis: The primary analysis for Aim 2 will investigate the joint relationship of the MCA-PI with SDOH measures and the maternal-fetal comorbidity indicator while accounting for the CCHD category (defined as Left sided obstructive lesion, Right sided obstructive lesion, Dextro-Transposition of the Great Arteries, and Other). We will apply multiple linear regression to relate the MCA-PI to the SDOH measures and a maternal-fetal comorbidity indicator for the presence of any of maternal hypertension, diabetes, pre-eclampsia, eclampsia, and abruption, prematurity, and small for gestational age. The CCHD category will also be a covariate in the regression model. Additional exploratory regression analyses will include pairwise interaction terms between the maternal-fetal comorbidity indicator(s) with the SDOH measures to assess if the association of the maternal-fetal environment indicator(s) with the MCA-PI varies across the different levels of the SDOH measures. We will perform a separate multiple regression with the change in the MCA-PI as the outcome and with the baseline MCA-PI as an additional covariate.
+
+PRIMARY OUTCOMES:
+  - Pre-operative Neonatal Network Neurobehavioral Scale (NNNS) attention scores
+  - Baseline MCA-PI and change in MCA-PI with Maternal Hyperoxia
+
+INTERVENTIONS:
+  - PROCEDURE: Single Arm
+  - PROCEDURE: Neonatal Neurobehavioral Scale
+
+ELIGIBILITY:
+Age: 0 Years to 52 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05767385

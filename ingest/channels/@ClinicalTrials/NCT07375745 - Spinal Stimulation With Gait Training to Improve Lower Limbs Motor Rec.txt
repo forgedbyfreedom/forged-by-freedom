@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07375745
+Title: Spinal Stimulation With Gait Training to Improve Lower Limbs Motor Recovery in Spinal Cord Injury
+Official Title: Combined Gait Training and Transcutaneous Spinal Cord Stimulation to Enhance Lower Limbs Motor Recovery After Subacute SCI
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: resistance training
+
+SUMMARY:
+Spinal cord injury (SCI) often results in partial or complete loss of movement. In the subacute phase (\< 6 months), the central nervous system shows increased potential for neuroplasticity, making it more responsive to rehabilitation and external stimulation. Standard care in rehabilitation centers relies on activity-based therapy (ABT), which uses intensive, task-specific training to promote recovery. Although ABT can improve mobility, its effects are often limited due to the nature of SCI and the indirect activation of neural circuits.
+
+Recent findings suggest that adding transcutaneous spinal cord stimulation (tSCS) to ABT in chronic SCI (\> 12 months) can enhance lower-limb motor recovery. This study will evaluate whether combining tSCS with gait training is safe and feasible in individuals with subacute SCI and whether it improves lower-limb motor outcomes compared with gait training alone.
+
+The investigators hypothesize that pairing gait training with tSCS early after injury will be safe and feasible and that tSCS delivered during gait training will augment leg muscle activation and lead to greater functional improvements. The study will also assess the feasibility, safety and tolerability of implementing this combined intervention in a intensive functional rehabilitation setting.
+
+DETAILED DESCRIPTION:
+This study is lead by Dorothy Barthélemy (Ph.D, pht, Principal Investigator) and Nicolas Hoang Quang (M.Sc, Ph.D student) and collaborators, Marina Martinez (Ph.D), Marco Bonizzato (Ph.D) and Diana Zidarov (Ph.D).
+
+Spinal cord injury (SCI) often results in partial or complete loss of motor function, greatly impacting independence and quality of life. During the subacute phase of recovery, defined as the first 6 months after injury, the central nervous system enters a period of heightened neuroplasticity in which it becomes especially responsive to rehabilitation and external stimulation. This critical window offers an opportunity to maximize motor recovery through targeted interventions.
+
+In rehabilitation centers, the current standard of care focuses on activity-based therapy (ABT). ABT consists of intensive, repetitive and task-specific exercises designed to activate neural circuits below the level of injury, strengthen spared pathways and promote the formation of new neural connections. Although ABT has demonstrated benefits, it is frequently insufficient to restore functional walking, even when delivered intensively. As part of the CIME (Clinic for Intensive and Neuromodulation for Individuals with Spinal Cord Injury) Program, this study aims not to remain passive observers of the participant's nervous system as it attempts to generate the sensory inputs required for motor recovery. Instead, the investigators aim to actively enhance these inputs through targeted neuromodulation.
+
+Recent evidence in chronic SCI suggests that combining ABT with transcutaneous spinal cord stimulation (tSCS) may augment the activity of spinal circuits involved in movement. tSCS is a non-invasive form of electrical stimulation applied to the skin over the spine, capable of activating dorsal root afferents and increasing the excitability of spinal networks. In this study, tSCS is used to provide direct, patterned sensory input to the CNS to potentially improve motor output during gait training.
+
+This pragmatic randomized clinical trial will evaluate the safety and feasibility of combining task-specific gait training-delivered using robotic-assisted gait devices, treadmill-based therapy, or overground walking, with tSCS delivered Neurotrac Myoplus (FDA-approved stimulator) beginning as early as 4 to 6 weeks post-injury, within an intensive functional rehabilitation program. The study will also examine whether the addition of tSCS enhances lower-limb motor recovery in individuals with subacute SCI compared with gait training alone.
+
+The investigators hypothesize that delivering tSCS during gait training early after injury will be safe and feasible, and that the combined intervention will increase leg muscle activation and lead to greater functional improvements than gait training alone. Feasibility, safety and tolerability of the combined approach will be systematically assessed to inform future clinical applications and larger-scale trials.
+
+PRIMARY OUTCOMES:
+  - Lower Extremity Motor Score
+
+INTERVENTIONS:
+  - OTHER: Protocol 1: Gait training combined with a sham stimulation
+  - OTHER: Protocol 2: Gait training combined with an effective tSCS
+
+ELIGIBILITY:
+Age: 16 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07375745

@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02145195
+Title: The Effect of Vitamin D Supplements on Vitamin D Status, Cardiometabolic Health and Immune Defense in Danish Children
+Official Title: Food-based Solutions for Optimal Vitamin D Nutrition and Health Through the Life Cycle (ODIN) Junior
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 130
+Topic: vitamin D muscle
+
+SUMMARY:
+The main purpose of this study is to investigate whether and in which doses vitamin D intake is needed in order to maintain an adequate vitamin D status in 4-8 year-old Danish children during wintertime.
+
+DETAILED DESCRIPTION:
+The main objective of ODIN Junior is to investigate whether and in which doses vitamin D intake is needed in order to maintain serum 25(OH)D concentrations above deficiency and insufficiency cut-offs (30 nmol/L and 50 nmol/L, respectively) in 4-8 year-old Danish children during the winter time. The children will be randomized to receive tablets with either 10 micrograms/day or 20 microgram/day of vitamin D3 (cholecalciferol), corresponding to one and two times the recommended daily intake in children, or placebo for 20 weeks. Measurements and blood sampling will be performed before the beginning and by the end of the intervention.
+
+PRIMARY OUTCOMES:
+  - Change in vitamin D status
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D3 (cholecalciferol)
+
+ELIGIBILITY:
+Age: 4 Years to 8 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02145195

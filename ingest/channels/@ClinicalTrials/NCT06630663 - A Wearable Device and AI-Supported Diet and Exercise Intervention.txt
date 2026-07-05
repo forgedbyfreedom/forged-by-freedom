@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06630663
+Title: A Wearable Device and AI-Supported Diet and Exercise Intervention
+Official Title: Effectiveness of a Wearable Device and AI-Supported Diet and Exercise Intervention in Obese Adults-a Quasi-experimental Design Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: aerobic exercise
+
+SUMMARY:
+This study implemented a personalized 6-month diet and exercise program to promote weight loss. Participants were recruited from outpatient clinics at the Department of Family Medicine, National Taiwan University Hospital. Overweight and obese adults were eligible, defined as follows: overweight (BMI 24-27 kg/m²), mild obesity (BMI 27-30 kg/m²), moderate obesity (BMI 30-35 kg/m²), and severe obesity (BMI ≥ 35 kg/m²). Exclusion criteria included recent weight changes exceeding 3%, a history of bariatric surgery, untreated psychiatric disorders, or medications affecting body weight.
+
+Study design: Of the 171 subjects screened, 29 were excluded due to BMI criteria, leaving 142 participants for baseline body composition and biochemical analysis. Of these, 98 joined the 6-month weight loss program, while 44 remained in the control group. Participants were divided into two groups: one followed a standard diet and exercise program, while the other used a wearable device and AI apps alongside the same program. The wearable device tracked steps, heart rate, and estimated calories burned. Outpatient visits occurred at weeks 0, 12, and 24, with additional diet and exercise education. Phone consultations at weeks 2, 4, and 8 provided 10-minute guidance sessions from case managers. Weight loss medications were not permitted during the study.
+
+Data collection: Weight, height, and blood pressure were measured using standard scales and sphygmomanometers. Waist circumference was measured by a trained operator, and bioelectrical impedance analysis was used to assess skeletal muscle, fat mass, and body fat percentage. Blood samples were collected after an 8-hour fast to measure glucose, cholesterol, and triglycerides. insulin levels were measured, and HOMA-IR was used to assess insulin resistance. Galectin-1 levels were measured using an ELISA kit. Measurements were taken at baseline and at the end of the intervention (week 24).
+
+Diet and exercise intervention: All participants followed a standard diet and exercise program. Those opting for the wearable device aimed for 7,500 steps per day, following World Health Organization recommendations for 150 minutes of moderate aerobic activity per week. Dietary education included caloric intake calculations and Mediterranean diet principles. Participants using wearable devices logged daily steps and food intake, which was uploaded to a health management platform. Case managers provided lifestyle coaching through the platform.
+
+DETAILED DESCRIPTION:
+Introduction The prevalence of obesity has grown globally, and leading to increases in obesity-related conditions and the medical costs of obesity. Obesity is a complex endocrine and metabolic disorder with features of adipose tissue inflammation, remodeling hypertrophy and hyperplasia of adipocytes. Furthermore, obesity induces an imbalance in the regulation of adipokines, which are a group of cytokines that are produced and secreted in adipose tissue. Many studies have investigated the role of different adipokines, and galectin-1 (Gal-1) has emerged as a novel adipokine. Galectins are carbohydrate-binding proteins with an affinity for β-galactosides. Gal-1 is expressed by various tissues and exhibits a wide range of biological activities. Evidence has indicated that galectin-1 is a regulator of immune responses, inflammation, allergy, homeostasis and development.Gal-1 mainly performs an anti-inflammatory role. However, only in recent years have studies shown that the pro-inflammatory properties of Gal-1 in certain diseases, indicating the dual effects of Gal-1.The expression of Gal-1 is highest in subcutaneous adipose tissue. Gal-1 has been proposed as a novel adipokine that circulates during adipocyte differentiation and adipose tissue homeostasis in the literature.In human studies, circulating Gal-1 is positively associated with body mass index (BMI),body fat and waist circumference.
+
+The promotion of physical activity/exercise training and weight loss is advocated to reduce cardiovascular risk in overweight and obese patients. Exercise training programs consistent with the minimum physical activity guidelines are associated with cardiovascular health benefits.With the development of technology, wearable device plus artificial intelligence APPs can be an effective and low-cost tool for patients by helping facilitate their interactions with health care providers. In a systemic review focused on the characteristics of fitness APPs and wearables to assist users overcome obesity and discovered that the wearables emphasize reminders, tracking / monitoring/ feedback and goals / rewards. The use of wearable devices for improving health care processes and outcomes is promising for health promotion among patients with chronic diseases such as obesity and diabetes.
+
+The level of circulating Gal-1 after diet- and exercise-induced body composition changes has previously never been examined. Therefore, we implemented a 6-month diet and exercise program which applied wearable device plus artificial intelligence APPs to investigate the association of changes in circulating Gal-with weight loss, body composition and metabolic parameters among individuals with obesity.
+
+Materials and Methods Participants This study adopted a personalized 6-month personalized diet and exercise program to promote weight loss. Subjects were recruited in outpatient clinics at the Department of Family Medicine, National Taiwan University Hospital. Overweight and obese adults were 
+
+PRIMARY OUTCOMES:
+  - weight change
+
+INTERVENTIONS:
+  - BEHAVIORAL: A Wearable Device and AI-Supported Diet and Exercise intervention
+  - BEHAVIORAL: standard care
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06630663

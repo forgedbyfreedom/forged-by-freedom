@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06458205
+Title: Impact of Multi-Component Interventions on High-Risk COPD Smokers
+Official Title: Population Medicine Multimorbidity Interventions in Xishui on High-risk COPD Smokers: A Cluster Randomized Controlled Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 7400
+Topic: weight loss exercise
+
+SUMMARY:
+Study Participants: In our study, we focus on smokers who self-report a "current smoking" status or smoking cessation less than 6 months. This trial is a sub-trial of "Impact of Multi-Component Interventions on a High-Risk COPD population" (Protocol ID: CAMS\&PUMC-IEC-2024-040). All smokers in this trial are either from the high-risk COPD population (defined by COPD-SQ score≥16) .
+
+Intervention: For study participants in the intervention arm, we will ask them to finish an online COPD-SQ questionnaire with notification of his or her COPD high risk. For those whose score of COPD-SQ ≥ 16, we will provide a face-to-face survey, simple physical examination, pulmonary function tests, and provide a multi-component intervention at baseline. For smokers in the intervention arm, we provide a digital health intervention program, NicQuit, to whom could familiarly use intelligent mobile phones, and health education for all smokers. We also provide community-based spirometry pulmonary function test (PFT) and education to smokers. If smokers whose post-bronchodilator FEV1/FVC\<0.7, they will be spirometry-defined COPD patients and will be encouraged to seek treatment and medication to the superior hospitals. Additionally, we provide (1) another digital health intervention programs to smokers with mental health issues; (2) CBT-based health education for study participants with abnormal BMI; (3) active recruitment into National Essential Public Health Program in China for those with abnormal blood pressure and blood glucose. Intensive follow-ups will be conducted at month 3 (telephone interview), month 6 (face-to-face with full steps of physical examination), and month 12.
+
+Comparison: Those who are assigned in the control arm, we will ask them to finish the same COPD-SQ online questionnaire with notification of his or her COPD high risk status and a face-to-face survey. No physical examinations, community-based pulmonary function tests will be given.
+
+Outcomes: The primary outcomes are self-reported average number of cigarettes consumed per day, smoking dependence index, and CO measurement.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Amount of smoking
+  - Smoking Dependence
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Multi-component intervention for smokers
+
+ELIGIBILITY:
+Age: 35 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06458205

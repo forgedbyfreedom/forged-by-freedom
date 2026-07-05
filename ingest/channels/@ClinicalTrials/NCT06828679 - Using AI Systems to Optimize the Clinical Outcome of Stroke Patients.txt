@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06828679
+Title: Using AI Systems to Optimize the Clinical Outcome of Stroke Patients
+Official Title: Personalized Rehabilitation Pathways to Maximal Motor Functional Return Through an AI Recovery Prediction System for Diverse Stroke Survivors
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 400
+Topic: resistance training
+
+SUMMARY:
+This project addresses the imminent challenge of providing adequate motor rehabilitation to a growing number of stroke survivors amidst the ageing population, decreasing age of stroke, and shortage of physical/occupational therapists in Hong Kong through AI and precision rehabilitation. To reduce the socioeconomic burden from the stroke survivors' loss of independence and their care (\>HK$15 billion/year), the efficacy of rehabilitation and efficiency of its delivery must be improved. These goals can be achieved by prescribing them with individually tailored rehabilitations predicted to yield maximal functional return. Defining a predictive model for such personalization remains challenging given the immense heterogeneity of stroke. The investigators aim to build an explainable AI system that predicts a subject's recovery potential and the treatment option that may realize this potential based on multi-modal pre-rehab assessments. Data from clinical, neuroimaging, neurophysiological, and multi-omic evaluations will be collected from stroke survivors (N≥400) before they undergo upper limb rehab with usual care, neuromuscular stimulation, robotic training, or acupuncture. Machine learning-extracted data features will be used to train decision-tree and neural-network AI algorithms for robust predictions. As soon as the model is validated, the investigators will deploy it to implement a personalized rehab program in the community. Our model's ability to predict the optimal intervention from a wide spectrum of input modalities distinguishes ours from previous less-than-accurate models. Our interdisciplinary team of 13 PIs with expertise in neurology, PT/OT, acupuncture, electrical/biomed. engineering, robotics, neuroscience, neuroimaging, multi-omics, data science, and clinical trial management will put us in a world-unique position to execute this project successfully and generate opportunities of interdisciplinary education. In the long run, our prediction system will accelerate marketization of new rehab strategies by facilitating their clinical-trial evaluations in more targeted subjects, thereby leading Hong Kong to be a future global hub of innovative rehabilitation.
+
+DETAILED DESCRIPTION:
+DELIVERABLE 1: Overview of Data Collection Plan. Subacute stroke survivors (N=400) will be recruited and randomly assigned to one of four groups, which will receive usual rehab care only, and usual care plus acupuncture, robotic, or neuromuscular electrical stimulation (NMES) training, respectively. Each subject will be evaluated before (A0), after (A1) and 6 months after the start of intervention (A2). At A0, thorough clinical, neurophysiological (EEG, EMG, TMS), MRI, and blood-based assessments will be made for deriving predictive recovery markers. At A1 and A2, only the clinical scores and EMG will be assessed for characterizing post-rehab functional gain and long-term recovery. Also, in all groups clinical scores will be recorded midway through intervention (A½) to monitor treatment progress. Treatments will last ≥1 month with ≥20 training sessions. All A0, A1, and A2 data will be analyzed offline with machine learning and other methods, and then used to train the AI model, PRAISE-HK (Precision Rehabilitation AI System for Enhancing recovery in Hong Kong and beyond).
+
+DELIVERABLE 2: Explainable AI Models of Recovery. Overview. Our AI system receives high-dimensional data inputs from diverse modalities, each of which requires unique processing techniques tailored to the specific characteristics of the data type for analysis. Neuroimaging data, for instance, demand specialized image processing algorithms for deriving brain structural and functional measures, while time series data such as EEG and EMG must first be analyzed with signal processing tools that capture embedded patterns across varying temporal resolutions. The need for domain-specific preprocessing of diverse data types engenders a level of analytic complexity that defies standard deep learning techniques, which may not accommodate the unique challenges presented by each modality. To obtain actionable, clinically relevant insights while ensuring interpretability and integration of the multimodal data, more sophisticated algorithms beyond standard deep learning are needed.
+
+As such, the investigators propose the construction of a sophisticated AI fusion model as the core of PRAISE-HK. Fusion model is a machine learning approach that integrates input features from multiple data modalities in a way that leverages their unique contributions to make a prediction more accurate and robust than any single modality could produce. Although the number of subjects here (N=400) is, to the best of our knowledge, the highest among all similar studies, for high-dimensional data this number is small enough to impose rather stringent constraints on the choice of analytical methods should overfitting be avoided, and model generalization ensured. With these considerations, the investigators will construct our fusion model in two phases. Phase 1 involves extraction of predictors from the individual modalities through their independent processing with domain-specific AI models. This phase is necessary si
+
+PRIMARY OUTCOMES:
+  - Surface EMG Recordings
+  - Kinematic recordings
+  - Cortico-muscular Coherence (CMC) from Electroencephalography (EEG) and EMG
+
+INTERVENTIONS:
+  - OTHER: Acupuncture
+  - OTHER: control group
+  - DEVICE: Robotic Training
+  - DEVICE: Neuromuscular Electrical Stimulation Group
+
+ELIGIBILITY:
+Age: 65 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06828679

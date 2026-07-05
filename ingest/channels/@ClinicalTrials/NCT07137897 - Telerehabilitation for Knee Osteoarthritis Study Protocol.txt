@@ -1,0 +1,66 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07137897
+Title: Telerehabilitation for Knee Osteoarthritis: Study Protocol
+Official Title: Telerehabilitation of Patients With Osteoarthritis of the Knee Joint: Study Protocol for a Randomised Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 118
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Patient Recruitment and Enrolment
+
+All patients diagnosed with knee OA who present at Artros Medical Center for an orthopaedic specialist consultation will undergo a radiological examination. Based on the radiographic findings and clinical evaluation, the orthopaedic specialist will refer eligible patients to a physiotherapist, who will assign them to the TG or CG. The physiotherapist will provide both verbal and written explanations of the study procedures. Patients will be included in the study after providing written informed consent.
+
+Baseline Assessments
+
+The physiotherapist will collect baseline data, including: Sociodemographic characteristics, Anthropometric measurements: height (cm), weight (kg), body mass index (BMI) (kg/m²), Educational background and employment status, Knee joint mobility assessment using a goniometer, Pain intensity measurement using the Numerical Rating Scale (NRS), Physical function, stiffness, and pain assessment using the Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC), Physical activity evaluation using the International Physical Activity Questionnaire (IPAQ), Health-related quality of life assessment using the 12-Item Short Form Health Survey (SF-12), OA severity classification based on recent knee radiographs (≤ 4 months old), graded using the Kellgren-Lawrence classification system.
+
+DETAILED DESCRIPTION:
+Osteoarthritis (OA) of the knee is a chronic degenerative disease that affects the articular cartilage, causing pain, reduced mobility and reduced quality of life. Early detection and appropriate treatment are key to reducing symptoms and slowing disease progression. This study aims to evaluate the effectiveness of therapeutic interventions in patients with knee OA treated at the Artros Medical Centre.
+
+Patients diagnosed with OA of the knee who visit the Artros Medical Centre for a consultation with an orthopaedic specialist will be included in the study. After the visit, they will undergo a radiological examination, based on which the orthopaedic surgeon will assess the severity of the disease. The specialist will then refer suitable patients to a physiotherapist who will further assess them and assign them to a telerehabilitation group (TR) or a control group (TS). The physiotherapist will provide verbal and written explanations of the study procedures to the patients.
+
+Written informed consent will be required from each participant to participate in the study.
+
+After inclusion in the study, the physiotherapist will collect baseline data on the patients, including the following measures:
+
+* Sociodemographic characteristics: age, gender, education, employment status.
+* Anthropometric measurements: height (cm), weight (kg), body mass index (BMI) (kg/m²).
+* Assessment of knee joint mobility: measurement of range of movement with a goniometer.
+* Pain intensity: Use the Numerical Rating Scale (NRS) to measure subjective pain.
+
+Assessment of physical function, stiffness, and pain: The validated Western Ontario and McMaster University Osteoarthritis Index (WOMAC) questionnaire is used.
+
+* Physical activity assessment: performed using the International Physical Activity Questionnaire (IPAQ).
+* Assessment of health-related quality of life: administered by the 12-item Short Form Health Survey (SF-12).
+* Osteoarthritis severity classification: based on knee radiographs (≤ 4 months old) and will be performed according to the Kellgren-Lawrence classification system.
+
+Patients will be randomly assigned to one of two groups:
+
+* telerehabilitation group (TR): They will be enrolled in a tailored physiotherapy programme, including individually tailored exercises to strengthen, stretch, and improve the functionality of the knee joint.
+* control group (CG): patients will continue with standard care without additional therapeutic interventions.
+
+Patient measurements and assessments will be carried out at the start of the study and at specific time points (after 12 weeks). All data will be recorded and analysed to identify changes in pain, mobility, functionality, and quality of life.
+
+Statistical analysis Data will be analysed using appropriate statistical methods (e.g., t-test, ANOVA, regression analysis). The main outcome parameters will be changes in WOMAC, NRS, IPAQ, and SF-12, where the statistical significance and clinical relevance of differences between gr
+
+PRIMARY OUTCOMES:
+  - Pain Intensity
+  - Knee Function (WOMAC)
+  - Joint Mobility
+  - Physical Activity
+  - Quality of Life ( SF-12)
+
+INTERVENTIONS:
+  - OTHER: Telerehabilitation
+  - OTHER: Control group
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07137897

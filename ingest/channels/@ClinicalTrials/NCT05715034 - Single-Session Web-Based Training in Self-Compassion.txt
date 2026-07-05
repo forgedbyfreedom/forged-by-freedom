@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05715034
+Title: Single-Session Web-Based Training in Self-Compassion
+Official Title: Pilot Randomized Trial of Compassionate Care: A Single-Session Web-Based Training in Self-Compassion Among Adults With Stress, Anxiety, and/or Depressive Symptoms
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 365
+Topic: physical activity intervention
+
+SUMMARY:
+Two-arm, parallel group randomized clinical trial conducted via Mturk comparing a single-session web-based intervention called Compassionate Care versus a control intervention (nature videos with relaxing music) for adults with moderate-to-severe stress, depression and/or anxiety symptoms.
+
+DETAILED DESCRIPTION:
+Procedures include completing: (1) pre-intervention baseline assessment; (2) one of two single-session web-based intervention (approximately 30 to 45 minutes each); (3) a brief post-intervention survey; and (4) a 2-week follow-up assessment.
+
+PRIMARY OUTCOMES:
+  - Change in Stress symptoms
+  - Change in Anxiety symptoms
+  - Change in Depressive symptoms
+  - Change in Functional Impairment
+
+INTERVENTIONS:
+  - BEHAVIORAL: Compassionate Care
+  - BEHAVIORAL: Relaxing with Nature
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05715034

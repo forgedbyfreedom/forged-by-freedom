@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05538871
+Title: Body Structure and Capacity Evaluation of Adults With Scoliosis
+Official Title: Body Structure and Capacity Evaluation of Adults With Scoliosis
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 108
+Topic: low back pain exercise
+
+SUMMARY:
+Adults with scoliosis have not been the focus of much research in physical therapy despite their prevalence being very important. Adults with idiopathic scoliosis have a reported prevalence of about 2-11%. This includes adolescents with idiopathic scoliosis who have become adults but still have a scoliosis. They do not get much treatment as the adolescent treatment focuses on preventing worsening of the curvatures and the risk of progression is significantly reduced once a person reaches skeletal maturity. Still some patients experience self-image, function and pain issues which may be amenable to treatment using specific exercises as was recently shown. With ageing population a growing number of adults with de novo degenerative scoliosis is observed. This is a spinal misalignment due to spine degeneration. Adult degenerative scoliosis with pain is thought to affect about 24% of the ageing adults. This population has not been investigated very much.
+
+Before planning conservative treatments for adults with scoliosis it would be important to describe what deficit these adults present that may be targeted by physical therapy. The objective of this study is to compare samples of patients with adults degenerative scoliosis, adult idiopathic scoliosis to matched healthy controls (for age, height and weight). Participants will complete questionnaires and a physical exam to identify which limitations they present that may be amenable to treatment with physical therapy. This information will assist planning trials to address the needs of these two neglected patient populations.
+
+DETAILED DESCRIPTION:
+Study design: A cross sectional study will be undertaken.
+
+Participants will complete 45 minutes of questionnaires online using REDCAP then complete a physical exam for 1h15 including assessment of the posture, flexibility of the spine and lower extremity, neurological function, response to pain provocation test of the spine, pelvis and hips and tests of pulmonary function.
+
+Sample size: A 0.8 point difference is expected between the expected score in the healthy groups (of 4.5) and the score in the scoliosis groups (expected scores of 3.7) on the SRS 22 with an expected SD of 1 in each group. With alpha=0.0167 (corrected for multiple comparisons) and beta=0.8 using an unilateral test needed 27 patients per group for a paired t test analysis.
+
+Assessment methodology: Participants will bring their last X-ray and will fill out a survey and have a physical exam.
+
+-Analysis : The population will be described with averages and standard deviations for the continuous data and frequencies with confidence intervals for the categorical.
+
+Comparisons between groups: the continuous data among the 3 groups will be compared with paired and unpaired t test using Bonferroni post hoc comparison. Categorical data will be compared between groups with a Chi2 test (2 by 2).
+
+References (see uploaded protocol).
+
+PRIMARY OUTCOMES:
+  - Socliosis Research Society 22-revised total score
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Survey + Physical exam
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05538871

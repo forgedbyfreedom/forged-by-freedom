@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01461863
+Title: DarDar Nutrition Study in HIV Breastfeeding Women
+Official Title: Effects of Protein-calorie Supplementation on HIV Disease in Breastfeeding Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 96
+Topic: protein supplementation
+
+SUMMARY:
+This study being conducted in Dar es Salaam, Tanzania, to determine if a protein-calorie supplementation (PCS) and micronutrient supplement (MNS) will have an impact on health outcomes for HIV-infected pregnant women and their infants.
+
+DETAILED DESCRIPTION:
+In resource poor regions of the world where HIV is endemic, especially countries in sub-Saharan Africa, nutrition plays a critical role in HIV disease. Nutrition affects the health of HIV-infected women and children, and may influence the risk of mother to infant transmission of HIV through breast milk. Nutrition influences the risk of tuberculosis (TB) and TB disease severity. Existing research has focused on the role of micronutrients in HIV disease outcomes but has not addressed the role of protein calorie supplementation (PCS) in subpopulations of patients with HIV disease at high risk, specifically, HIV-infected women who are either breast feeding or have active TB. Our hypotheses are that administration of a culturally acceptable PCS is a practical, sustainable and effective strategy to: 1) decrease HIV viral load in plasma and breast milk of breast feeding women, enhance passively transferred immune mediators in breast milk, and improve HIV outcomes in women and their breast-fed infants and, 2) decrease HIV viral load, enhance TB-specific T cell immunity, and improve outcomes in women with HIV and active TB.
+
+PRIMARY OUTCOMES:
+  - Infant Weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Porridge protein calorie supplement
+  - DIETARY_SUPPLEMENT: multivitamin
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01461863

@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00550862
+Title: Study of INT 747 in Combination With URSO in Patients With Primay Biliary Cirrhosis (PBC)
+Official Title: A Study of INT 747 (6α-ethyl Chenodeoxycholic Acid (6-ECDCA)) in Combination With Ursodeoxycholic Acid (URSO®, UDCA) in Patients With Primary Biliary Cirrhosis
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 165
+Topic: beta-alanine
+
+SUMMARY:
+The primary hypothesis is that INT-747 will cause a reduction in alkaline phosphatase levels in Primary Biliary Cirrhosis patients, over a 12 week treatment period, as compared to placebo.
+
+DETAILED DESCRIPTION:
+None provided
+
+PRIMARY OUTCOMES:
+  - Double-blind Phase: Percent Change From Baseline in Serum Alkaline Phosphatase (ALP)
+
+INTERVENTIONS:
+  - DRUG: INT-747
+  - DRUG: Ursodeoxycholic Acid (URSO)
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00550862

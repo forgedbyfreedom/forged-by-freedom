@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06686329
+Title: Physical Activity to Prevent and Treat Hyperglycemia From a Mistimed Bolus insulin Dose
+Official Title: Physical Activity to Prevent and Treat Hyperglycemia From a Mistimed Bolus insulin Dose: The MISSED DOSE Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: caffeine exercise
+
+SUMMARY:
+People living with type 1 diabetes (PwT1D) are recommended to administer insulin 10-15 minutes before meal consumption (pre-bolus), to account for the delay in the glucose lowering action associated with subcutaneously administered insulin. Due to the demands of day-to-day life, pre-bolusing is not always possible or may be forgotten. With continuous glucose monitors (CGMs), PwT1D may be alerted to this missed insulin dose by a CGM alert, including rapidly rising glucose (change \>2.5mmol/L/15min) or hyperglycemia (\>10.0 mmol/L), and deliver a mistimed (post-prandial) dose in response to CGM alert.
+
+This study was designed to determine the effect of combining a post-prandial/mistimed insulin dose with 15 minutes of brisk walking. It is expected that walking will help to minimize or prevent hyperglycemia after a mistimed bolus insulin dose, as well as blunt the rise in glucose following a mistimed insulin dose.
+
+DETAILED DESCRIPTION:
+While important for managing glucose concentration, achieving consistent pre-prandial dosing is difficult. A recent study of 3,945 adults living with T1D found an average of six missed bolus doses during a 14-day period, with each missed dose being associated with -1.7% (-1.8, -1.6) less time in target range. An increase of 5% in time in range is a clinically significant improvement. The frequency of missed boluses reported by adolescents and young adults is especially high with 33% of those aged 13 - 18 years (n=1513), and 43% of those aged 18 - 26 years (n=1160) reporting more than one mistimed insulin delivery per week in a USA clinic registry cohort. Missing or mistiming two bolus doses weekly can raise HbA1c, a 3-month proxy of average glucose, by 0.5%. A 1% increase in HbA1c is associated with a 2.2- and 1.8-fold increase in the risk of developing nephropathy and retinopathy, respectively.
+
+This large increase in HbA1c from just two missed or mistimed doses weekly is likely due to the subsequent duration and severity of hyperglycemia. Upon recognition of a mistimed insulin dose, blood glucose (BG) levels may already be rising rapidly or in a hyperglycemic range (\>10.0 mmol/L) causing the duration of the resulting glucose excursion to be prolonged. Common explanations for missed doses include forgetting, disruption to usual routine (ex. travelling), dosing interfered with performing activities, hypoglycemia avoidance, injection pain, and embarrassment.
+
+To meet the increased energy demands of PA, glucose uptake in contracting skeletal muscle increases through mechanisms which are dependent and independent of insulin. In the context of T1D this increased uptake can be problematic for maintaining normoglycemia because insulin-mediated glucose uptake does not decrease, as it does in people without diabetes. Additionally, PA decreases blood flow to the gut and slows gastric emptying which delays the entry of glucose into circulation following the consumption of food, and blunts the rise in blood glucose following food consumption in people without diabetes. While the glucose lowering effects of PA are generally problematic for people living with T1D due to an increased risk of hypoglycemia, PA could be useful to reduce glucose concentration when it is increasing rapidly, such as after a mistimed insulin dose. In the context of a mistimed insulin dose, PA may be beneficial as it: 1) begins to lower blood glucose concentration immediately independently of insulin, 2) increases sensitivity to insulin, and 3) delays glucose entry into circulation. Therefore, PA may be a useful strategy to lower blood glucose more quickly when combined with an insulin dose following recognition of a mistimed dose.
+
+One study has investigated the effect of postprandial walking on the glucose concentration of people living with T1D and found that, compared to remaining sedentary after a meal, 15 minutes of brisk walking lead to a 36.2% and 47.2% reduction in peak gluc
+
+PRIMARY OUTCOMES:
+  - Mean glucose
+
+INTERVENTIONS:
+  - BEHAVIORAL: Control (CON)
+  - BEHAVIORAL: Missed Dose (MISS)
+  - BEHAVIORAL: Missed Dose + 15min walk (MISS+EX)
+
+ELIGIBILITY:
+Age: 18 Years to 24 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06686329

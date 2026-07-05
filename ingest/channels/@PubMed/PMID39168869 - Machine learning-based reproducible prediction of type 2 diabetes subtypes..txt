@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39168869
+Title: Machine learning-based reproducible prediction of type 2 diabetes subtypes.
+Authors: Tanabe, Sato, Miyake, Shimajiri, Ojima
+Journal: Diabetologia
+Year: 2024
+Topic: cluster sets resistance training
+
+ABSTRACT:
+Clustering-based subclassification of type 2 diabetes, which reflects pathophysiology and genetic predisposition, is a promising approach for providing personalised and effective therapeutic strategies. Ahlqvist's classification is currently the most vigorously validated method because of its superior ability to predict diabetes complications but it does not have strong consistency over time and requires HOMA2 indices, which are not routinely available in clinical practice and standard cohort studies. We developed a machine learning (ML) model to classify individuals with type 2 diabetes into Ahlqvist's subtypes consistently over time.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39168869/

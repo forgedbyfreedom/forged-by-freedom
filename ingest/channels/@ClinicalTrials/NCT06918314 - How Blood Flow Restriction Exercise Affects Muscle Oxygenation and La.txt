@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06918314
+Title: "How Blood Flow Restriction Exercise Affects Muscle Oxygenation and Lactate in Elite Athletes"
+Official Title: The Effect of Blood Flow Restriction Exercise on Muscle Oxygenation and Lactate Levels in Elite Athletes: A Comparative Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 35
+Topic: athletic performance
+
+SUMMARY:
+This study investigates the effects of blood flow restriction (BFR) training combined with low-intensity aerobic exercise on muscle oxygenation, total hemoglobin (THb), and blood lactate levels in elite athletes, comparing them with healthy sedentary individuals. BFR training, which partially restricts arterial and fully restricts venous blood flow using a pneumatic cuff, creates a hypoxic environment, leading to muscle strength and endurance improvements with lower-intensity exercise. The study aims to determine whether BFR-induced occlusion enhances muscle adaptation and how these physiological responses differ between elite athletes and sedentary individuals.
+
+DETAILED DESCRIPTION:
+This comparative cross-sectional study aims to examine the acute physiological responses to low-intensity aerobic exercise combined with blood flow restriction (BFR) training in elite male track and field athletes versus sedentary individuals. The primary focus is on changes in muscle oxygenation, total hemoglobin (THb), and blood lactate concentrations.
+
+BFR is applied via a pneumatic cuff that partially restricts arterial and fully restricts venous return, thereby creating a localized hypoxic environment. This method has been shown to induce strength and endurance adaptations comparable to high-intensity training, even when performed at low intensities.
+
+Near-infrared spectroscopy (NIRS) via the Moxy Muscle Oxygen Monitor will be used to assess muscle oxygenation parameters in real-time. Blood lactate levels will be measured through capillary sampling before and after exercise. Additional physiological parameters including heart rate, blood pressure, and respiratory rate will also be monitored.
+
+The study compares two groups with distinct physical activity backgrounds, intending to elucidate potential differences in physiological adaptation to BFR. All measurements will be carried out in a controlled lab environment using validated instruments. Statistical analyses will be performed using SPSS software, with appropriate parametric or non-parametric methods depending on data distribution.
+
+The results may contribute to a deeper understanding of BFR training mechanisms and guide tailored conditioning strategies for both athletic and sedentary populations.
+
+PRIMARY OUTCOMES:
+  - Change in muscle oxygenation (SmO₂) measured by Moxy Muscle Oxygen Monitor (Near-Infrared Spectroscopy - NIRS)
+  - Change in blood lactate concentration measured by portable lactate analyzer (e.g., Lactate Scout+)
+  - Change in body fat percentage measured by Bioelectrical Impedance Analysis (TANITA BIA device)
+  - Change in muscle mass measured by Bioelectrical Impedance Analysis (TANITA BIA device)
+  - Change in Body Mass Index (BMI) measured by Bioelectrical Impedance Analysis (TANITA BIA device)
+
+INTERVENTIONS:
+  - DEVICE: Blood Flow Restriction Kaatsu Training Device
+
+ELIGIBILITY:
+Age: 15 Years to 18 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06918314

@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02914314
+Title: Pharmacokinetic Study With an Oral Suspension of Perampanel as Adjunctive Therapy in Pediatric Subjects With Epilepsy
+Official Title: An Open-Label Study With an Extension Phase to Evaluate the Pharmacokinetics of Perampanel (E2007) Oral Suspension When Given as an Adjunctive Therapy in Subjects From 1 Month to Less Than 4 Years of Age With Epilepsy
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: growth hormone treatment
+
+SUMMARY:
+The purpose of this study is to evaluate the pharmacokinetics (PK) of perampanel during the maintenance Period of the Core Study following oral suspension administration given as an adjunctive therapy in pediatric participants from 1 month to less than 4 years of age with epilepsy.
+
+DETAILED DESCRIPTION:
+This is a multicenter, open-label study comprised of pretreatment, treatment (core study), and extension phases that is designed to evaluate the PK of an oral suspension of perampanel (maximum dose must not exceed 12 milligrams per day \[mg /day\] for participants taking non-enzyme-inducing antiepileptic drug \[non-EIAED\] or 16 mg/day for participants taking EIAED) when given as an adjunctive therapy in participants ranging from 1 month to less than 4 years of age with epilepsy. The Pretreatment Phase will last up to 2 weeks, during which participants will be assessed for their eligibility to participate in the study. The Treatment Phase will consist of 3 periods: Titration (12 \[for participants taking non-EIAED\] to 16 weeks \[for participants taking EIAED\]), maintenance (4 weeks), and Follow-Up (4 weeks; only for those participants who complete the maintenance Period but do not continue into the Extension Phase and those participants who discontinue study participation). Extension Phase: The Extension Phase will consist of 2 periods: maintenance (32 weeks \[for participants taking EIAED\]; 36 weeks \[for participants taking non-EIAED\]) and Follow-Up (4 weeks).
+
+The maximum total duration of treatment for each participant will be 52 weeks and the maximum total duration of the study for each participant will be 58 weeks (2 weeks Pretreatment+52 weeks of treatment+4 weeks Follow-up).
+
+PRIMARY OUTCOMES:
+  - Dose Normalized Area Under the Concentration-Time Curve for Dosing Interval at Steady State (AUCtau,ss) of Perampanel During the maintenance Period of the Core Phase for Non-EIAED Participants
+  - Dose Normalized Maximum (Peak) Steady-state Concentration (Cmax,ss) of Perampanel During the maintenance Period of the Core Phase for Non-EIAED Participants
+  - Dose Normalized Average Steady-state Drug Concentration (Css,Av) of Perampanel During the maintenance Period of the Core Phase for Non-EIAED Participants
+  - Dose Normalized Minimum Observed Steady State Plasma Concentration (Cmin,ss) of Perampanel During the maintenance Period of the Core Phase for Non-EIAED Participants
+  - Dose Normalized AUCtau,ss of Perampanel During the maintenance Period of the Core Phase for EIAED Participants
+
+INTERVENTIONS:
+  - DRUG: perampanel
+
+ELIGIBILITY:
+Age: 1 Month to 4 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02914314

@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03918395
+Title: Supplemental Protein And Resistance Training Adaptations
+Official Title: Does Protein and Polyphenol Supplementation Augment Adaptations to 30 Sessions of Resistance Exercise Training in Healthy Males and Females Compared to an Isoenergetic Placebo Supplement?
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: protein supplementation
+
+SUMMARY:
+Chronic resistance training has been shown to increase muscle cross-sectional area, volume and strength. Individuals participating in a resistance training program may wish to consume protein supplements to aid recovery and maximise adaptation. Furthermore, antioxidants have been shown to aid recovery from acute bouts of exercise. However, the effect of antioxidants combined with protein on long term-training adaptation is not fully understood.
+
+This study will combine measures of muscle size, muscle strength and function, and the underlying changes in muscle metabolism in order to assess the effect of consuming a combined protein-antioxidant supplement during a 30 session resistance training program.
+
+DETAILED DESCRIPTION:
+Supplemental protein ingestion is an established method for augmenting gains in fat free mass, muscle strength and muscle cross sectional area following a period of resistance exercise training. In addition to protein, supplements high in polyphenols such as berry and pomegranate extract are believed to be an effective method of reducing soreness and facilitating recovery following a single bout of resistance exercise.
+
+However, whilst polyphenols are shown to facilitate recovery from a single session of resistance exercise, their effect on adaptations to repeated bouts of resistance exercise are unknown. Asking this question will allow a detailed investigation of the mechanisms by which protein-polyphenol ingestion may affect adaptations to resistance exercise training when compared to a non protein or polyphenol containing placebo, which is an important yet underexplored area
+
+PRIMARY OUTCOMES:
+  - Change in cross-sectional area of quadriceps muscle group
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo beverage
+  - DIETARY_SUPPLEMENT: Protein-polyphenol beverage
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03918395

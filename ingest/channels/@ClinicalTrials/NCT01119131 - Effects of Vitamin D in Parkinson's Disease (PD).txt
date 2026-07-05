@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01119131
+Title: Effects of Vitamin D in Parkinson's Disease (PD)
+Official Title: The Effects of Vitamin D on Balance in Persons With PD
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 101
+Topic: vitamin D muscle
+
+SUMMARY:
+A trial to measure the effects of vitamin D (versus a placebo) on balance, gait, falls, strength, and cognition in persons with Parkinson's disease.
+
+DETAILED DESCRIPTION:
+The proposed study is a randomized, double-blinded, placebo controlled intervention trial to measure the effects of vitamin D at (10,000IU/day) versus placebo on balance and falls in Parkinson's disease. The investigators will measure static, dynamic, and ambulatory balance, as well as strength, falls, and cognition before and after 16 weeks of therapy. Dynamic posturography will be used to measure static and ambulatory balance, a device called iMOBILITY will measure a timed up and go, and strength will be measured with the Biodex machine checking knee flexion and extension. Multiple quality of life and cognitive tests will also be performed.
+
+PRIMARY OUTCOMES:
+  - Change in Static Balance as Recorded Using Dynamic Posturography With the Sensory Organization Test (SOT 1-3)
+  - Change in Ambulatory Balance Measured by Instrumented Timed up and go (iTUG) Turn Duration
+  - Change in Strength as Recorded by Measuring Knee Flexion Using Biodex (Total Work)
+  - Change in Dynamic Balance as Recorded Using Dynamic Posturography With the Sensory Organization Test (SOT 4-6)
+  - Change in Strength as Recorded by Measuring Knee Extension Using Biodex (Total Work)
+
+INTERVENTIONS:
+  - DRUG: Vitamin D3
+  - DIETARY_SUPPLEMENT: calcium
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 50 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01119131

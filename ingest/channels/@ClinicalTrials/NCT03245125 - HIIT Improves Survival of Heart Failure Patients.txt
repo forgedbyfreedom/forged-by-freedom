@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03245125
+Title: HIIT Improves Survival of Heart Failure Patients
+Official Title: Impacts of High-intensity Interval Training on Long-term Survival of Heart Failure Patients
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 329
+Topic: high intensity interval training
+
+SUMMARY:
+BACKGROUND Global burdens of heart failure (HF) are increasing in modern societies. High-intensity interval training (HIIT) increases peak oxygen consumption (VO2peak) in HF patients, which was hypothesized to improve the survival of HF patients.
+
+OBJECTIVES The cohort study aimed to highlight the effect of HIIT on long-term survivals of HF patients.
+
+METHODS 329 HF patients, enrolled between 2009 and 2016, received multidisciplinary disease management program (MDP). They had cardiopulmonary exercise test for peak exercise capacity (VO2peak), echocardiographic examination for left ventricular ejection fraction (LVEF), LV end-diastolic diameter (LVEDD), and LV end-systolic diameter (LVESD), b-type natriuretic peptide (BNP), and quality of life questionnaire. HF patients with LVEF≤ 40% (HFrEF) and HF patients with LVEF\> 40% (HFpEF) underwent≥ 36 times of HIIT. HFrEF and HFpEF patients were classified as the MDP group. Generalized estimating equation (GEE) was used to estimate the interaction between time and VO2peak, LVEF, LVEDD, LVESD, and BNP during the follow-up. Survival analysis was conducted to assess effects of HIIT on the long-term survival of HF during at end of the study.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - all-cause death
+  - all-cause re-admission
+
+INTERVENTIONS:
+  - BEHAVIORAL: High-intensity interval training
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03245125

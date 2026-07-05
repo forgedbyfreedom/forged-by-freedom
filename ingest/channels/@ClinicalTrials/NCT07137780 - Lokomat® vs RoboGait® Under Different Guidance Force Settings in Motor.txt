@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07137780
+Title: Lokomat® vs RoboGait® Under Different Guidance Force Settings in Motor-Incomplete SCI
+Official Title: Lokomat® Versus RoboGait®: Comparative Effects on Walking, Mobility, and Quality of Life Under Different Guidance Force Settings in Motor-Incomplete Spinal Cord Injury
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: strength training
+
+SUMMARY:
+This study compares two robotic-assisted gait training systems, Lokomat® and RoboGait®, used under different guidance force (GF) settings, in people with motor-incomplete spinal cord injury (iSCI). Nineteen adults, aged 18 years or older, with injury at T3 level or below and classified as AIS C or D within two years of injury, participated. They were assigned to one of three groups based on the average GF used during training: Lok90- (GF \< 90% with Lokomat®), Lok90+ (GF ≥ 90% with Lokomat®), and RG (GF ≥ 90% with RoboGait®). All participants completed 10 treadmill-based gait training sessions over 4 weeks, in addition to standard physiotherapy including stretching, strengthening, balance, and walking exercises. Walking ability, mobility, muscle strength, balance, independence in daily activities, and quality of life were assessed before and after the program. The study aimed to see whether the type of robot and GF setting affected recovery. Results showed modest improvements in some outcomes, with changes depending on the group and outcome measured. Findings suggest that adjusting GF settings may help tailor robotic gait training to individual needs.
+
+DETAILED DESCRIPTION:
+This pilot study investigated the effects of two robotic-assisted gait training systems, Lokomat® V6 (Hocoma AG, Switzerland) and RoboGait® (BAMA Teknoloji, Türkiye), applied under different guidance force (GF) settings, on walking ability, functional mobility, and health-related quality of life in individuals with motor-incomplete spinal cord injury (iSCI).
+
+Eligible participants were aged 18 years or older, with injury at T3 level or below, AIS C or D classification, and injury duration of 2 years or less. Exclusion criteria included severe spasticity (Modified Ashworth Scale ≥ 3), joint disorders, implanted electronic devices, orthostatic hypotension, cardiac problems, or conditions preventing secure positioning in the robotic systems.
+
+Participants were assigned to three groups according to their average GF during training: Lok90- (GF \< 90% with Lokomat®), Lok90+ (GF ≥ 90% with Lokomat®), and RG (GF ≥ 90% with RoboGait®). All participants completed 10 treadmill-based gait training sessions over 4 weeks, with three sessions per week. Walking speed and angular parameters were individually adjusted to enhance comfort, reduce fatigue, and encourage active participation. Alongside robotic gait training, all participants received conventional physiotherapy that included stretching, strengthening, balance, walking, and mobility exercises.
+
+The primary outcome was walking status, measured using the Walking Index for Spinal Cord Injury II (WISCI II). Secondary outcomes included, functional mobility (Timed Up and Go Test, TUG), lower extremity muscle strength (LEMS), balance (Berg Balance Scale, BBS), functional independence (Spinal Cord Independence Measure III, SCIM III), and health-related quality of life (WHOQOL-BREF-TR). The study aimed to determine whether the type of robotic system and GF settings influence functional outcomes in iSCI rehabilitation.
+
+PRIMARY OUTCOMES:
+  - Walking Index in Spinal Cord Injury II
+
+INTERVENTIONS:
+  - DEVICE: Lokomat® V6 (GF < 90%)
+  - DEVICE: Lokomat® V6 (GF ≥ 90%)
+  - DEVICE: RoboGait®
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07137780

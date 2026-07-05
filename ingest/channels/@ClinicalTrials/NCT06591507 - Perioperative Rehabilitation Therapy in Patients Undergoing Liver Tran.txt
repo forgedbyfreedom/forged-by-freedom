@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06591507
+Title: Perioperative Rehabilitation Therapy in Patients Undergoing Liver Transplantation
+Official Title: Perioperative Rehabilitation Therapy in Patients Undergoing Liver Transplantation: a Clinical Multicenter Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 750
+Topic: sarcopenia intervention
+
+SUMMARY:
+Patients undergoing liver transplantation frequently experience a reduction in skeletal muscle mass, malnutrition, and decreased levels of physical activity. These complications can adversely affect early postoperative recovery and the therapeutic effect of the transplant. This clinical study aims to investigate the effects of nutritional supplementation and rehabilitation therapy on sarcopenia associated with liver transplantation in adults. The goal is to establish a comprehensive perioperative intervention strategy to reduce the incidence of postoperative sarcopenia and improve transplantation outcomes.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - 2-year overall survival
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: BCAAsNutritional Intervention
+  - BEHAVIORAL: Muscle Rehabilitation Training
+  - DIETARY_SUPPLEMENT: Standard Nutritional Therapy
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06591507

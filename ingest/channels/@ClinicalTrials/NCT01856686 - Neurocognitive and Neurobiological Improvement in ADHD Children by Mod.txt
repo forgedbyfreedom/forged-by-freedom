@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01856686
+Title: Neurocognitive and Neurobiological Improvement in ADHD Children by Modification of Dietary Protein
+Official Title: Neurocognitive and Neurobiological Improvement in ADHD Children by Modification of Dietary Protein
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: protein supplementation
+
+SUMMARY:
+Multicenter, Prospective, randomized, comparative and controlled study about the beneficial effects in behavior and brain connectivity of different dietary patterns in 100 children with ADHD between 7 and 12 years, followed up for 3 months of nutritional therapy.
+
+DETAILED DESCRIPTION:
+The investigators collect electroencephalogram (EEG), event related potentials (ERP) data, and behavior parameters in ADD/ADHD children that not take stimulants or other drugs during study. They would only follow some nutritional recommendations based on increasing the amount of dietary protein and fast carbohydrates decrease. The duration of the study will be 6 months, 3 months for recruitment and 3 months for dietary treatment.
+
+PRIMARY OUTCOMES:
+  - Reaction Time at 3 Months
+  - Omission Errors at 3 Months
+  - Comission Errors at 3 Months
+  - Occipital Alpha Brainwaves Amplitudes at 3 Months
+  - Mu Waves-amplitude at 3 Months
+
+INTERVENTIONS:
+  - DRUG: BP22042013
+  - DIETARY_SUPPLEMENT: Low carbohydrate diet
+
+ELIGIBILITY:
+Age: 7 Years to 13 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01856686

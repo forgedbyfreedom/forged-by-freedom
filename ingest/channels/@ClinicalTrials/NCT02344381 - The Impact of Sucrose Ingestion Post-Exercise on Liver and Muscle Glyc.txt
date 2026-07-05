@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02344381
+Title: The Impact of Sucrose Ingestion Post-Exercise on Liver and Muscle Glycogen Repletion.
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: sports nutrition
+
+SUMMARY:
+Carbohydrate is stored in the body as glycogen, which is mainly found in the liver and muscle. During endurance exercise, muscle glycogen is used as fuel for the working muscles and liver glycogen is broken down to provide glucose to maintain blood glucose (sugar) levels. Both liver and muscle glycogen are important for our ability to perform intense/prolonged endurance exercise. Therefore, it is important to replete these stores after an intense/prolonged endurance exercise session in order to recover and perform optimally during a subsequent exercise bout, especially if the next exercise session is within 24h (e.g. stage races such as the Tour de France, tournament-style competitions such as the Olympic games and ultra-endurance events).
+
+Carbohydrate intake has been shown to increase the availability of glycogen in the muscle and liver after exercise. The carbohydrates typically found in sports drinks are glucose and sometimes fructose. It has been observed that the ingestion of glucose will lead to a maximum rate of absorption of approximately \~1 g/min. However, if we also provide a different source of carbohydrate (fructose) then this is absorbed through a different pathway and therefore we can absorb up to \~1.75 g/min of carbohydrate. In addition, both carbohydrate sources are metabolised differently in the human body. By supplementing both glucose and fructose, we can potentially replenish the liver and muscle glycogen stores at a faster rate than ingestion of glucose only.
+
+Sucrose is a naturally occurring sugar that is made up of a single glucose and single fructose molecule. Therefore, theoretically, this can use the two different pathways of absorption and also maximise carbohydrate delivery. It is not yet known however, what impact this has on our liver and muscle glycogen stores post-exercise when supplemented in relatively high amounts. Therefore the aim of this study is to assess whether relative high amounts of sucrose ingestion will improve liver and muscle glycogen repletion after endurance exercise.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - change in liver glycogen concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Sucrose
+  - DIETARY_SUPPLEMENT: Glucose
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02344381

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04990518
+Title: Physical Deconditioning in COVID-19 Positive Patients and Non-Specific Low Back Pain
+Official Title: Physical Deconditioning and Non-Specific Low Back Pain: the PHYDEL Study. A Prospective Study in a COVID-19 Positive Cohort
+Status: TERMINATED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 350
+Topic: low back pain exercise
+
+SUMMARY:
+The purpose of this study is to take advantage of cohorts of patients followed for Coronavirus Disease 2019 (COVID19) expected to present poor physical fitness as the consequence of COVID19 to explore the relationship between physical fitness and low back pain (LBP). Level of physical fitness will be measured at baseline and incidence and intensity of LBP will be recoreded over 1 year.
+
+DETAILED DESCRIPTION:
+Non-specific low back pain (LBP) is the worldwide number one cause for disease related years lived with disability. It is frequently assumed that a low physical fitness is a major risk factor for acute LBP as well as a factor for chronic LBP. However only few prospective observational study have been conducted.
+
+The purpose of this study is to take advantage of cohorts of patients followed for Coronavirus Disease 2019 (COVID19) expected to present poor physical fitness as the consequence of COVID19 and assessing level of physical fitness and both incidence and intensity of LBP over a 1-year period.
+
+The study aims to determine if a poor physical health, as measured by 6 minutes walk test (6MWT) and 30''seconds sit to stand test (30''STS), is a risk factor for LBP occurrence and for chronic LBP Secondary objectives aim to explore the respective weight of physical factors (i.e. physical fitness, BMI, smoking, physical activities) and psychological factors (i.e. depression, anxiety, catastrophism, fear-avoidance) on the occurrence and severity of LBP.
+
+According to the literature, we expect that in the physically healthy population, 15% will developed back pain; whereas in the population in poor physical health the incidence at 1 year will be 30%. If alpha error is set at 0.05 then 236 patients are required to have a 80% chance to confirm our hypothesis. In order to account for drop out, and considering that the risk of drop out is high in this type of non-interventional study 350 persons will be recruited. Note that this amount of persons should yield approximately 70 persons with low back pain, which allow up to 7 independent variable in a logistic or cox regression. This is based on the rule of at least 10 events (low back pain) per variable.
+
+PRIMARY OUTCOMES:
+  - 1-year incidence of LBP
+  - 1-year incidence of chronic LBP
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04990518

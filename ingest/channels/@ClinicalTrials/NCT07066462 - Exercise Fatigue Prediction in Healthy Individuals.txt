@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07066462
+Title: Exercise Fatigue Prediction in Healthy Individuals
+Official Title: Effect of Exercise on Human Fatigue and Performance in Healthy Individuals
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: strength training
+
+SUMMARY:
+The goal of this research study is to develop an AI-based model to detect physical fatigue in healthy young adults. The main questions it aims to answer are:
+
+1. Can muscle, heart, and brain signals be used to predict physical fatigue in real time?
+2. How accurately can an AI model detect fatigue based on these signals?
+
+Participants will:
+
+* Perform moderate to high intensity physical exercises, including static bicycling and dumbbell squats, while wearing non-invasive sensors that measure muscle activity (sEMG), heart rate (HR), and brain activity (EEG).
+* Before starting the exercises, participants will complete a brief warm-up session that includes stretching and mobility movements.
+* Each participant undergoes two training sessions, with pre- and post-evaluations of their physical fitness status and static muscle strength.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - EEG (Electroencephalography) Alpha, Beta, Delta, and Theta Band Frequency (Hz)
+  - sEMG (Surface Electromyography) amplitude (μV) and median frequency (MDF) (Hz)
+  - Heart rate (HR) and Heart rate variability (HRV)
+
+INTERVENTIONS:
+  - OTHER: Fatigue Exercise Protocol with Biosignal Monitoring
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07066462

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06596395
+Title: Effect of Acute Caffeine and Beetroot Juice Intake on Strength, Power, and Muscular Endurance
+Official Title: Effect of Acute Caffeine and Beetroot Juice Intake on Strength, Power, and Muscular Endurance Based on Circadian Rhythms.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: exercise muscle mass
+
+SUMMARY:
+Introduction: Several studies have evaluated and confirmed the ergogenic effect of acute caffeine and beetroot juice intake on sports performance. However, there are few studies focused on the production of strength, power, and muscle endurance, particularly when both supplements are ingested together.
+
+Objectives: Evaluate the acute effect of combined and isolated intake of caffeine and beetroot juice on the production of strength, power, and muscle endurance in young adults, analyzing the effect of circadian rhythms (morning vs. afternoon) on the exercise performed (bench press vs. squat).
+
+Methods: A total of 12 healthy and physically active participants will be recruited for the study. Through a double-blind, crossover, randomized, and controlled design, participants will ingest: a) Caffeine (3 mg/kg body mass); b) Beetroot juice (70 ml, 6.5 mmol of nitrates); c) Caffeine + Beetroot juice; d) Placebo (maltodextrin, 3 mg/kg). The supplements will be ingested 120 minutes (beetroot juice or placebo) and 60 minutes before (caffeine or placebo), the latter dissolved in 200 ml of water. After the ingestion period, strength, power, and muscle endurance will be analyzed with 1RM tests, strength and power tests at 25%, 50%, 75%, and 90% 1RM, and muscle endurance tests at 65% 1RM, in all cases for squat and bench press exercises. Additionally, dynamometry (manual and the isometric mid-thigh pull test) and vertical jump (squat jump and countermovement jump) will be analyzed. The four experimental conditions will be conducted in the morning (8:00 am to 10:00 am) and in the afternoon (4:30 pm to 6:30 pm).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean and peak velocity and time to reach peak velocity at different %1RM
+  - Mean and peak power output and time to reach peak power output at different %1RM
+  - Number of repetitions performed at 65%1RM until task failure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Acute caffeine and beetroot juice
+  - DIETARY_SUPPLEMENT: Acute caffeine
+  - DIETARY_SUPPLEMENT: Acute beetroot juice
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06596395

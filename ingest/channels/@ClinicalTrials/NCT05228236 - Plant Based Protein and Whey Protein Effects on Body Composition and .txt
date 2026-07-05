@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05228236
+Title: Plant Based Protein and Whey Protein: Effects on Body Composition and Performance
+Official Title: Comparing the Effects of Plant Based Protein vs. Whey Protein on Performance and Body Composition of Futsal Players
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: sports nutrition
+
+SUMMARY:
+This study aimed to investigate the effects of a newly developed plant-based protein blend regarding health and safety, body composition, and performance on healthy and physically active adult individuals, specifically team sports athletes. A randomized, double-blind, controlled trial was used to compare the effects of the plant-based protein versus whey protein, after an 8-week supplementation protocol, on body composition, biochemical markers, muscle strength and power, as well as aerobic performance in male futsal players. The working hypothesis is that this special blend of plant-based protein will be equivalent to whey protein, not only regarding body composition and performance, but also insofar as health and safety at the biochemical and physiological level.
+
+DETAILED DESCRIPTION:
+A randomized, double-blind, controlled trial was performed to investigate health and safety following supplementation with a newly developed plant-based protein blend and to compare the effects of this plant-based protein versus whey protein, after an 8-week supplementation protocol, on body composition and performance. Prior to intervention, volunteers' general health and ability to participate in the study were assessed. The study involved 50 male futsal players currently engaged in a training program and competing. Before engaging the 8-week supplementation protocol, participants underwent measurements of body composition, strength and power, and aerobic performance, as well as a full profile of biochemical health markers, and assessment of food and fluid intake. Evaluations were repeated after 4 weeks, for follow up and to detect potential compliance issues, and after 8 weeks of supplementation. Assessments took place in the morning (starting at 7:00 a.m.) after an overnight fast, except for the performance tests, which were performed following consumption of a standard, meal replacement bar.
+
+Anthropometry and Body Composition - Wearing minimal clothing and no shoes, participants had their weight and height measured on a scale and stadiometer (Seca, Hamburg, Germany), respectively. Body composition, namely bone mineral content, fat mass and fat free mass, were evaluated by dual energy X-ray absorptiometry (DXA) (Horizon Wi, Hologic, Waltham, USA) and skeletal muscle through the evaluation of the muscle thickness of the rectus femoris by ultrasonography (model WED-180 HL, Shenzhen,China). Total body water and its intra and extracellular compartments were estimated from whole body resistance (R) and reactance (Xc), measured through bioelectrical impedance analysis (BIA), using a single frequency device of 50 kHz (BIA-101, RJL/Akern Systems, Firenze, Italy). From the raw R and Xc data, the phase angle was additionally determined, using the Akern Software.
+
+Muscle Strength and Power, and Aerobic Performance - Strength was assessed using the handgrip strength test, as well as the back squat and bench press 1 repetition maximum (1 RM). The handgrip strength test was used to evaluate the maximal isometric force of the muscles of the hand and forearm. Using a portable hand dynamometer (JAMAR, Sammons Preston, Bolingbrook, IL, USA), participants were assessed for both hands alternately, in a stand-up position. The maximal force generated out of 3 attempts was considered for analysis. Additionally, muscle strength was evaluated by 1RM back squat and bench press in a Multipower machine, using a velocity-based training device (Vitruve Encoder, Madrid, Spain). Muscle power was assessed during maximal cycling (Wingate test) and jumping movements. During the Wingate test, participants were instructed to cycle (Monark 894 Peak Bike, Vansbro, Sweden) against a predetermined resistance (7.5% body weight), as fast as possible, for 30 seconds. Vertical jumps, n
+
+PRIMARY OUTCOMES:
+  - Body composition parameter - change in fat free mass (FFM)
+  - Body composition parameter - change in fat mass (FM)
+  - Body composition parameter - change in muscle thickness
+  - Body composition parameter - change in body water
+  - Performance parameter - change in strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Plant based protein
+  - DIETARY_SUPPLEMENT: Whey protein
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05228236

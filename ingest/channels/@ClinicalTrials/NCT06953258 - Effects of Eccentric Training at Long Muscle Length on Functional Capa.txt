@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06953258
+Title: Effects of Eccentric Training at Long Muscle Length on Functional Capacities of Elderly Adults
+Official Title: Effects of Home-Based Eccentric Training at Long Muscle Length on Functional Capacity and Neuromechanical Function in Healthy Older Adults
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: low back pain exercise
+
+SUMMARY:
+As aging leads to a decline in muscle function and overall physical performance, interventions targeting muscle strength and neuromechanical properties are critical for maintaining functional independence in older adults. Long-length eccentric training has shown promise in enhancing muscle performance, but its effects in older adults, particularly in a home-based setting, remain underexplored.
+
+The aim of this trial is to assess whether a targeted home-based training intervention incorporating long-length eccentric contractions can enhance functional capacity and neuromechanical properties in healthy older adults. Participants will be semi-randomly allocated to one of two groups: an experimental group incorporating long-length eccentric contractions (Group 1) or a conventional resistance training group (Group 2), with group assignment stratified to ensure an equal number of men and women in each group. Each participant will complete three laboratory-based experimental sessions (i.e., two Pre-training sessions and one Post-training session) , during which five key evaluations will be conducted: (i) the 5-Time Sit to Stand test, serving as the primary outcome measure; (ii) the Timed Up and Go test; (iii) assessments of isometric and dynamic muscle strength in the knee extensors and plantar flexors; (iv) measurements of the cross-sectional areas of the vastus lateralis, rectus femoris, gastrocnemius medialis, and soleus muscles; and (v) evaluation of tendon stiffness.
+
+Following the pre-evaluation, each participant will engage in a 24-session, semi-supervised, home-based training protocol over a period of 8 to 11 weeks. The training program will include eight exercises, with four targeting the upper limbs and four focused on the lower limbs. Group 1 will perform the lower limb exercises at long muscle lengths, while Group 2 will perform the same exercises in a conventional manner (i.e., at neutral or shorter muscle lengths). The total training volume (calculated as repetitions × sets, in arbitrary units) will be matched across both groups, ensuring that any observed differences in outcomes are attributable to the specific training modality rather than differences in workload.
+
+DETAILED DESCRIPTION:
+Home-based resistance training has emerged as a practical alternative for individuals who lack access to traditional, facility-based exercise programs. This is particularly relevant for older adults, who often face multiple barriers to participating in supervised center-based training-the current gold standard-including reduced mobility, transportation difficulties, and financial constraints. As a result, home-based programs can offer a more accessible option to support engagement in resistance training. Evidence suggests that home-based resistance training can lead to improvements in strength and functional capacity among healthy older individuals; however, these gains tend to be modest. One key limitation is that exercise intensity in home settings may not progress adequately over time, often due to the absence of supervision or limited motivation to increase effort.
+
+Besides training localization and level of supervision, the modality of contraction appears to be of importance. Previous evidences in young but also elderly adults suggest that eccentric training should be performed at long muscle length to obtain the greatest improvements in neuromuscular and physical functions. At the muscle level, the force-length relationship indicates that muscle tension is greater at long vs short muscle length. This is an obvious but important point since mechanical tension during training exercises is a key parameter for muscle plasticity and strength gains. It has been reported positive effects of a short-term (i.e. 3-week) eccentric training performed in a lengthened position on architectural and functional characteristics of the hamstrings in young adults. However, they found no difference between long and short muscle lengths, likely because of the short training duration. It has also been reported significant neuromuscular (e.g. fascicle length, pennation angle, voluntary activation level) and functional (e.g. muscle force) improvements after a 6-week eccentric training at long muscle length in the hamstrings of young adults. Resistance training interventions focusing on eccentric contractions seem particularly interesting for older individuals, as they are less metabolically demanding than concentric contractions for comparable workloads.
+
+Although home-based resistance training programs emphasizing eccentric contractions have been shown to be more effective than those focusing on concentric contractions for improving lower limb strength, mobility, and postural stability in healthy older adults, the integration of eccentric exercises performed at long muscle lengths within home-based protocols has yet to be explored. This represents a significant challenge, as both contraction intensity and muscle length are difficult to monitor and control in real-world, home-based settings compared to tightly controlled laboratory environments.
+
+The aim of this trial is to assess whether a home-based resistance training program incorporating long-length eccentric 
+
+PRIMARY OUTCOMES:
+  - 5 times Sit to Stand
+
+INTERVENTIONS:
+  - OTHER: Home-based eccentric training at long muscle length
+  - OTHER: Conventional home-based training
+
+ELIGIBILITY:
+Age: 60 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06953258

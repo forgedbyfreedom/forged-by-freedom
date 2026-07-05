@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07003126
+Title: A Cohort Study on Treating Primary Nocturnal Enuresis by Regulating Central-Peripheral Circadian Rhythm
+Official Title: A Cohort Study on Treating Primary Nocturnal Enuresis by Regulating Central-Peripheral Circadian Rhythm
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: high intensity interval training
+
+SUMMARY:
+Primary nocturnal enuresis (PNE), a prevalent pediatric disorder, suffers from therapeutic limitations characterized by low efficacy and high relapse rates. Targeting its core pathophysiology could significantly improve treatment outcomes. Growing evidence implicates circadian dysregulation in PNE pathogenesis. Our preliminary fMRI cohort identified abnormal functional connectivity between the suprachiasmatic nucleus (SCN, the central circadian pacemaker) and superior temporal gyrus in PNE patients, with clinical data confirming circadian realignment correlates with symptom remission. Small-scale pilot studies and clinical observations indicate that modulating central and peripheral circadian rhythms significantly alleviates PNE symptoms. This study will establish a circadian-focused PNE cohort to quantify therapeutic efficacy and elucidate underlying mechanisms, ultimately driving the development of mechanism-based therapies for PNE.
+
+DETAILED DESCRIPTION:
+The intervention training will last for 6 months. Researchers will compare the therapeutic efficacy of the "Circadian Rhythm Intervention Combined with Bladder Training Group (treatment group)" and the "Bladder Training (basic treatment for enuresis) Only Group (control group)" for PNE.
+
+Participants will be assigned to either the "Circadian Rhythm Intervention Combined with Bladder Training Group (treatment group)" or "Bladder Training (basic treatment for enuresis) Only Group (control group)" through stratified block randomization matching participants by sex (male/female), age (in years), and enuresis frequency. Within each stratified subgroup, block randomization with a 1:1 allocation ratio will be implemented using computer-generated random sequences, ensuring balanced demographic distribution between the two intervention arms while maintaining concealment of allocation sequence.
+
+In the "Circadian Rhythm Intervention Combined with Bladder Training Group (treatment group)", participants will receive a 6-month behavioral therapy including both bladder training and circadian rhythm intervention. Bladder training combined with circadian rhythm interventions involves sleep hygiene optimization, individualized chronotype alignment, morning bright light therapy and bladder training component. The bladder training component (basic treatment for enuresis) includes fluid intake modification, micturition desire-relaxation training, and sphincter control training. Clinical symptom severity and key pathophysiological parameters will be evaluated at baseline and at 6 months post-intervention.
+
+In the "Bladder Training Only Group (control group)", participants will receive a 6-month behavioral therapy including only bladder training. The bladder training component (basic treatment for enuresis) includes fluid intake modification, micturition desire-relaxation training, and sphincter control training. Clinical symptom severity and key pathophysiological parameters will be evaluated at baseline and 6 months post-intervention.
+
+The investigators will compare changes in enuresis improvement rate, resting-state functional magnetic resonance imaging data, sleep physiological parameters, salivary melatonin levels, diurnal and nocturnal urine volume, standardized bladder capacity, and grade scoring of the micturition desire-awakening function before and after the intervention.
+
+PRIMARY OUTCOMES:
+  - Enuresis Improvement Rate
+
+INTERVENTIONS:
+  - BEHAVIORAL: Circadian Rhythm Intervention Combined with Bladder Training
+  - BEHAVIORAL: Bladder Training (basic treatment for enuresis)
+
+ELIGIBILITY:
+Age: 5 Years to 15 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07003126

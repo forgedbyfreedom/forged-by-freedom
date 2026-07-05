@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07240506
+Title: Effect of Caffeinated Chewing Gum on Vertical Jump Performance in Female Volleyball Players
+Official Title: Effect of Acute Caffeine Intake Via Caffeinated Gum on Vertical Jump Performance in Female Volleyball Players: A Single-Blind Placebo-Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: athletic performance
+
+SUMMARY:
+This study aimed to examine the acute effects of caffeine intake through caffeinated chewing gum on the vertical jump performance of professional female volleyball players. Ten athletes from the Turkish Women's Volleyball First League voluntarily participated in this single-blind, placebo-controlled, randomized crossover study. Each athlete completed two test sessions: one with caffeinated gum containing 200 mg of caffeine and one with a caffeine-free placebo gum. After chewing the gum for 5 minutes, participants performed three types of vertical jump tests: squat jump, countermovement jump, and block jump. The results showed that caffeinated gum significantly improved countermovement jump height compared with the placebo, while no significant differences were observed for squat or block jumps. The findings suggest that caffeine in gum form may enhance explosive performance in sports requiring rapid power output, such as volleyball.
+
+DETAILED DESCRIPTION:
+Caffeine is a well-established ergogenic aid known to improve endurance, strength, and cognitive performance. However, limited evidence exists on its acute effects in female team-sport athletes. This study was designed to evaluate the impact of acute caffeine intake via caffeinated chewing gum on vertical jump performance among professional female volleyball players. The research employed a randomized, single-blind, placebo-controlled crossover design.
+
+Ten professional athletes aged 18-33 years from the Yeşilyurt Sports Club Women's A Team, competing in the Turkish Volleyball Federation Women's 1st League, were included. Participants underwent two experimental sessions: one involving caffeinated gum (CAF, 200 mg total caffeine from two 100 mg pieces) and one involving placebo gum (PLA, identical but caffeine-free), separated by a six-day washout period. The gums were chewed for 5 minutes, and jump performance tests were conducted 15 minutes later.
+
+Vertical jump performance was evaluated using a Chronojump jump mat for three jump types: squat jump (SJ), countermovement jump (CMJ), and block jump (BJ). Each test included three attempts, with the highest score recorded for analysis. Data were analyzed with paired-sample t-tests using SPSS 27.0, with significance set at p\<0.05.
+
+The results showed that caffeine gum significantly increased CMJ height compared with the placebo (p\<0.05), but no significant effects were observed for SJ or BJ performance. The findings indicate that caffeine in gum form may acutely improve explosive performance involving stretch-shortening cycle movements.
+
+The study was approved by the Non-Interventional Clinical Research Ethics Committee of Istanbul Medipol University (Approval No: E-10840098-202.3.02-735). All participants provided informed consent prior to data collection.
+
+PRIMARY OUTCOMES:
+  - Countermovement Jump Height
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeinated chewing gum
+  - DIETARY_SUPPLEMENT: Placebo chewing gum
+
+ELIGIBILITY:
+Age: 18 Years to 33 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07240506

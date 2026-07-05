@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06741033
+Title: Comparing the Effect of Toe-in Gait Modification Along With Conventional Physiotherapy in People With Medial KO
+Official Title: Comparing the Effect of Toe-in Gait Modification Along With Conventional Physiotherapy in People With Medial Knee Osteoarthritis
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 34
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Medial knee osteoarthritis (OA) remains a prevalent and debilitating condition, despite conventional physiotherapy interventions aimed at reducing pain and improving function. This study investigates the additional benefits of toe-in gait modification when combined with conventional physiotherapy in individuals with medial knee OA. Rooted in biomechanical theories suggesting that altering gait patterns can reduce medial knee load, this research employs a randomized controlled trial methodology.
+
+DETAILED DESCRIPTION:
+Participants are divided into two groups: one receiving conventional physiotherapy alone, and the other receiving a combination of conventional physiotherapy and toe-in gait modification. Outcomes are assessed over a 8-week period, focusing on pain levels and physical function. The significance of this study lies in its potential to enhance current treatment protocols, offering a more effective, non-invasive intervention to alleviate symptoms and improve the quality of life for those suffering from medial knee OA. The findings could inform clinical practices and pave the way for personalized rehabilitation strategies that incorporate gait modifications, ultimately reducing the healthcare burden associated with knee osteoarthritis.
+
+PRIMARY OUTCOMES:
+  - NUMERIC PAIN RATING SCALE (NPRS)
+  - WOMAC scale
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Conventional physiotherapy
+  - COMBINATION_PRODUCT: Toe-in gait modification
+
+ELIGIBILITY:
+Age: 45 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06741033

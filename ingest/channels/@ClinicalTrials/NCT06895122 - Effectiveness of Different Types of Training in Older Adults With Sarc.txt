@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06895122
+Title: Effectiveness of Different Types of Training in Older Adults With Sarcopenic Obesity
+Official Title: Effectiveness of High-speed Resistance and Multicomponent Training in Older Adults With Sarcopenic Obesity: a Randomized Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: resistance training
+
+SUMMARY:
+This study is a randomized, parallel-group, double-blind clinical trial. The primary aim is to assess the effectiveness of power-based resistance training, multimodal exercise incorporating non-specific movements, and a control group in improving functionality and body composition in women over 65 years old with pre-sarcopenia. The intervention will take place over 30 weeks, with three training sessions per week in both experimental groups. Assessments will be conducted at two time points: before and after the intervention. Evaluated parameters will include functionality (Timed Up \& Go test (TUG), chair stand test, handgrip strength, and Short Physical Performance Battery (SPPB)) and body composition (body fat percentage, skeletal muscle index (SMI), appendicular skeletal muscle mass (ASM), waist circumference, waist-to-hip ratio, body weight, and body mass index (BMI)).
+
+DETAILED DESCRIPTION:
+Design: This study is a randomized controlled clinical trial with three parallel groups, recruiting women over 65 years old with sarcopenic obesity. Participants will be randomly assigned to one of three intervention groups. The study will span 8 months, with two assessment points: an initial evaluation and a final follow-up at 8 months. Throughout the intervention period, participants will attend three supervised sessions per week, each lasting 50 minutes.
+
+Setting: The study will take place in the Salamanca Health Area, in collaboration with the Research, Teaching, and Care Unit of the Faculty of Nursing and Physiotherapy at the University of Salamanca and the Department of Older Adults of the Salamanca City Council.
+
+Interventions: The three intervention groups include: (1) a Multicomponent Exercise Program (MT); (2) a Muscle Strength Training Program (M-RT); and (3) a Control Group (CG) with no structured exercise intervention. Both MT and M-RT sessions will follow a standardized format, incorporating exercises based on the guidelines of the American College of Sports Medicine (ACSM). The strength component of the MT program will progressively increase in speed, adjusting to the maximum capability of each participant.
+
+Study Population: A total of 33 women aged 65 years and older with sarcopenic obesity, residing in Salamanca, will be enrolled and randomly allocated into the three study groups in a 1:1:1 ratio. Randomization will be carried out using Epidat 4.2 software, and the sample size was determined using GRANMO version 8.
+
+Outcome Measures: The primary outcome is the Skeletal Muscle Index (SMI). Secondary outcomes include functional assessments (Timed Up \& Go \[TUG\] test, chair rise test, handgrip strength test, and Short Physical Performance Battery \[SPPB\]), body composition measures (percentage of body fat, appendicular skeletal muscle mass \[ASM\], waist circumference, waist-to-hip ratio, body weight, and body mass index \[BMI\]), and gait speed. Descriptive statistics will be reported as mean ± standard deviation for continuous variables and as frequency distributions for categorical variables.
+
+Statistical Analysis: Normality tests and baseline comparisons will be conducted to confirm group homogeneity. Depending on data distribution, parametric or non-parametric tests will be applied to assess intra-group changes. To compare the effects between groups, repeated measures ANOVA will be used when assumptions of normality and sphericity are met, whereas mixed-effects models will be applied for handling missing data. If normality is violated, the Kruskal-Wallis test will be used. When significant differences are found, post-hoc comparisons will be performed using Bonferroni or Tukey corrections. A significance level of α = 0.05 will be considered. All statistical analyses will be conducted using SPSS version 28.0.
+
+Ethical Considerations: The study has received approval from the Ethics Committee for Drug Research (CEIm) of the Sal
+
+PRIMARY OUTCOMES:
+  - Skeletal Muscle Index (SMI)
+
+INTERVENTIONS:
+  - PROCEDURE: High resistance training
+  - PROCEDURE: Multicomponent Training
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06895122

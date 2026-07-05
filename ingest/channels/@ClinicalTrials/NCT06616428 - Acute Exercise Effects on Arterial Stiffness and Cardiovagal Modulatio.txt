@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06616428
+Title: Acute Exercise Effects on Arterial Stiffness and Cardiovagal Modulation in Adults
+Official Title: Acute Effects of Commercial Group Exercise Classes on Arterial Stiffness and Cardiovagal Modulation in Healthy Young and Middle-aged Adults: an Ecological Valid Model
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: athletic performance
+
+SUMMARY:
+Background and Gap:
+
+The physiological importance of large artery distensibility in cardiovascular function is well-established. Stiffening of central arteries leads to elevated systolic blood pressure (SBP), increased left ventricular afterload, and altered coronary artery perfusion. These changes can elevate cardiovascular disease risk and all-cause mortality. Cardiac autonomic function, including heart rate recovery (HRR) and heart rate variability (HRV), is closely linked to blood pressure regulation. Reductions in HRR and HRV are predictive of cardiovascular mortality. The dynamic regulation of arterial stiffness and autonomic function post-exercise is crucial for both health and performance outcomes. Exercise, particularly aerobic, has been shown to reduce arterial stiffness, but evidence across different exercise modalities is limited, especially for group fitness classes. These classes are a common method for achieving cardiovascular fitness, but their acute effects on arterial stiffness and autonomic function remain understudied.
+
+Study Type: Parallel Group Crossover Randomised Trial Primary Purpose: To assess and compare the acute effects of three commercially available group exercise classes on arterial stiffness and cardiovagal modulation in healthy young and middle-aged adults.
+
+Study Population: Healthy adults aged 18-60 years.
+
+Main Question:
+
+How does age influence post-exercise recovery patterns in arterial stiffness and cardiovagal modulation following different group fitness classes?
+
+Comparison Group: Researchers compared arterial stiffness and autonomic function responses across three group fitness classes in young and older adults.
+
+Participant Tasks:
+
+* Attend a 60-minute group exercise class.
+* Undergo measurements of arterial stiffness and autonomic function before and after 3 group fitness classes.
+
+DETAILED DESCRIPTION:
+All participants were randomly assigned to 1 of 4 experimental conditions using a randomized block scheme (https://www.randomizer.org/). Participants completed 4 separate intervention sessions, each consisting of an initial rest, a group fitness class of either indoor cycling, resistance training, combined exercise training, or no exercise (CON), followed by a recovery period. A minimum of 72 hours between sessions was ensured. Body composition and cardiorespiratory fitness for each participant were evaluated before and after the CON session, respectively.
+
+Each session began with 20 minutes of supine rest on a cushioned examination table, with resting energy expenditure (REE) measured by indirect calorimetry (K5, Cosmed, Rome, Italy) and heart rate (HR) and blood pressure (BP) recorded continuously using digital plethysmography (Finapres, nolva, Finapres Medical Systems, Amsterdam, The Netherlands). This was followed by: 1) Regional assessments of PWV and pulse wave analysis of the carotid, brachial, femoral, and distal arteries on the right side of the body using applanation tonometry (Complior 2.0, Alam Medical; Saint Quentin Fallavier, France); and 2) Assessment of heart rate variability (HRV) and baroreflex sensitivity (BRS) indices using the Finapres nolva 5 ECG lead module. Following these assessments, participants engaged in a 45-minute group fitness class, while activity energy expenditure (AEE) was continuously measured by indirect calorimetry (K5, Cosmed, Rome, Italy). In the CON session, participants remained comfortably seated for 45 minutes, maintaining a good posture. After each group fitness class, participants immediately returned to the examination table and recovered in the supine position for 30 minutes, during which local and regional stiffness, HRV, and baroreflex sensitivity (BRS) were re-evaluated at 10-, 20-, and 30-minute intervals during recovery and compared to those at rest. Participants were blinded to the order of the experimental interventions until arrival at the laboratory. All sessions were conducted in the morning to minimize potential diurnal variation. Participants were also instructed not to ingest any food or drink (except water) 4 hours before the sessions and to avoid alcohol, caffeine, and exercise for at least 24 hours preceding each session.
+
+Based on a medium effect size of 0.154 derived from published changes in aortic PWV within-between modes of exercise (23), an a priori power analysis suggested that 22 participants were required (11 per group) to detect significant differences within-between groups, conditions, and time points (1-β = 80%, α = 0.05).
+
+PRIMARY OUTCOMES:
+  - Changes in Blood Pressure
+  - Changes in Heart Rate Variability
+  - Changes in Cardiovagal Baroreflex Sensitivity
+  - Changes in Regional Arterial Stiffness
+
+INTERVENTIONS:
+  - OTHER: Bike group fitness class
+  - OTHER: Pump Power
+  - OTHER: Global Training
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06616428

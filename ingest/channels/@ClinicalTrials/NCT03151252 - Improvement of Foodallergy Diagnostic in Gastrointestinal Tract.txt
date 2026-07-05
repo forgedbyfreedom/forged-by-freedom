@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03151252
+Title: Improvement of Foodallergy Diagnostic in Gastrointestinal Tract
+Official Title: Improvement of Foodallergy Diagnostic in Gastrointestinal Tract With a New Kind of Sampling
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: sports nutrition
+
+SUMMARY:
+Currently, diagnostic possibilities for the detection of food allergy in the gastrointestinal tract are scarce. The endoscopic segmental Lavage is the method of choice, but it´s controversial.
+
+Additional to the endoscopic segmental lavage fluid a cytobrush is used for collecting the mucosa cells and biopsies are taken. Comparative to the Lavage specific IgE antibodies, Tumor necrosis factor- alpha, Eosinophilic cation protein and mastcell tryptase were measured.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - detection of specific IgE Antibodies in colon
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Cytobrush
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03151252

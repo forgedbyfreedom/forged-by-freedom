@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07259564
+Title: A Study of GS3-007a for Oral Suspension in the Diagnosis of Adult Growth Hormone Deficiency (AGHD)
+Official Title: Phase II Clinical Study of Single Oral Administration of GS3-007a for Oral Suspension in the Diagnosis of AGHD: A Multicenter, Randomized, Open-Label, Three-Way Crossover Trial
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: growth hormone treatment
+
+SUMMARY:
+The GS3-007a Growth Hormone Stimulation Test (GHST) will be compared with the insulin Tolerance Test (ITT) in an open-label, randomized, three-way crossover trial. The trial will include subjects suspected to have adult growth hormone deficiency (AGHD) and a group of healthy control subjects.
+
+DETAILED DESCRIPTION:
+Trial subjects will be assigned to groups of descending likelihood of having AGHD:
+
+Group A: High likelihood of AGHD Group B: Intermediate likelihood of AGHD Group C: Low likelihood of AGHD Group D: Healthy control subjects matched to Group A. The sequential of the GHSTs for Group A-C will be determined by randomization. Group D will undergo testing in the same sequence as their matched Group A counterparts Serum growth hormone (GH) concentrations will be measured at predefined time points before and after GHST with GS3-007a or insulin. The peak GH value and diagnostic cut-off for GS3-007a dry suspension will be evaluated using receiver operating characteristic (ROC) curves. Safety, pharmacokinetics (PK), and pharmacodynamics (PD) outcomes were assessed for GS3-007a. The insulin Tolerance Test (ITT) served as the comparator to determine positive and negative agreement with GS3-007a GHSTs.
+
+PRIMARY OUTCOMES:
+  - ROC curves and the area under the curve (AUC) of the ROC curves
+
+INTERVENTIONS:
+  - DRUG: GS3-007a dry suspension
+  - DRUG: insulin
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07259564

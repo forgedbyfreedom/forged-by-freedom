@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07081737
+Title: Person-Centred AI Support in Interdisciplinary Rehabilitation for Chronic Pain
+Official Title: The Future of Pain Management: Can Person-centred and Precision AI-Based Decision Support Enhance Interdisciplinary Rehabilitation for Chronic Pain?
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 400
+Topic: recovery exercise
+
+SUMMARY:
+This cluster randomized controlled trial evaluates whether a person-centred, AI-supported Clinical Decision Support System (CDSS) can improve outcomes and cost-effectiveness in interdisciplinary rehabilitation for people with complex chronic pain. The CDSS is designed to assist clinicians in making personalized treatment decisions within standard interdisciplinary treatment (IDT). It has been developed using machine learning models trained on real-world data from over 100,000 patients in the Swedish Quality Registry for Pain Rehabilitation (SQRP), linked to several national registers, including the National Patient Register, the Prescribed Drug Register, the Social Insurance Agency database (MiDAS), and the Cause of Death Register. This enables individualized predictions of treatment outcomes, work ability, and healthcare utilization.
+
+The trial includes 400 adult patients with chronic pain, enrolled at 20 IDT clinics randomized to either CDSS-supported or standard IDT. The study has three phases: feasibility, effectiveness, and implementation. The primary outcome is a patient-prioritized composite single-index of health-related well-being, based on domains such as pain, sleep, physical and mental health, emotional distress, and work ability. Patients prioritize these domains together with their clinical team, enabling a person-centred assessment. Secondary outcomes include HRQoL (EQ-5D, SF-36), emotional distress (HADS), and work ability (WAI), measured at baseline, post-treatment, 6- and 12-month follow-up.
+
+A parallel mixed-methods process evaluation will examine implementation outcomes such as usability, clinician adherence, and workflow integration, using logs, surveys (e.g., S-NoMAD), and interviews. Normalization Process Theory guides the analysis. Cost-utility will be assessed using QALYs and ICERs from a societal perspective, with long-term projections using simulation models. Results will be reported in peer-reviewed publications.
+
+DETAILED DESCRIPTION:
+This project consists of three integrated phases aimed at evaluating a machine learning-based Clinical Decision Support System (CDSS) to improve interdisciplinary rehabilitation for individuals with complex chronic pain. The evaluation encompasses feasibility, clinical effectiveness, cost-utility, and implementation in routine care. The results will be reported in multiple peer-reviewed scientific publications.
+
+Phase 1: Development, validation, and feasibility By the end of 2025, the CDSS-developed in an ongoing project-will be ready for clinical testing. It is based on predictive models trained on registry-linked data from over 100,000 patients in the Swedish Quality Registry for Pain Rehabilitation (SQRP), linked to several national registers, including the National Patient Register, the Prescribed Drug Register, the Social Insurance Agency database (MiDAS), and the Cause of Death Register. The system provides personalized forecasts for treatment outcomes, long-term work ability, and healthcare use. A pilot cluster-RCT will be conducted at 10 clinics (5 patients per site) to evaluate feasibility outcomes such as recruitment, retention, usability, data completeness, and workflow fit. These will be assessed using structured surveys, usage data, and interviews. Outcome measures will be collected at baseline, immediately after the intervention (i.e., up to 18 weeks after baseline), and at 12-month follow-up. While a typical interdisciplinary rehabilitation program lasts 6-8 weeks, some clinics may extend the intervention up to 18 weeks (with less treatment occasions per week) due to their ordinary and existing treatment procedures at that specific clinic. Published results indicate however no significant differences in treatment outcomes based on such extended program duration (Tseli et al., 2020). No major changes to the CDSS algorithm or interface are planned during the trial.
+
+Phase 2: Clinical effectiveness and health economic evaluation The full evaluation will be conducted through a non-registry-based cluster randomized controlled trial involving 400 patients across 20 interdisciplinary rehabilitation clinics. Outcomes will be analyzed using linear mixed-effects models adjusted for time, group, clustering, and covariates. The primary endpoint is at 12-month follow-up. Secondary outcomes will be assessed at baseline, up to 18 weeks after baseline (i.e., immediately post intervention), and at 6- and 12-month follow-up. Health economic analyses will include within-trial cost-utility evaluation (QALYs from EQ-5D and SF-36) and longer-term modelling using Markov or microsimulation methods. Both direct (healthcare) and indirect (productivity loss) costs will be included. Sensitivity analyses will address uncertainty and robustness.
+
+Phase 3: Implementation research A mixed-methods process evaluation will examine real-world adoption, scalability, and sustainability. Data will include system logs (e.g., reach, fidelity), survey responses (S-NoMAD), 
+
+PRIMARY OUTCOMES:
+  - Change from Baseline in Patient-Prioritized Health-Related Well-being Composite at 12 Months
+
+INTERVENTIONS:
+  - OTHER: Interdisciplinary treatment (IDT) + Clinical Decision Support System (CDSS)
+  - OTHER: Interdisciplinary treatment (IDT)
+
+ELIGIBILITY:
+Age: 18 Years to 67 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07081737

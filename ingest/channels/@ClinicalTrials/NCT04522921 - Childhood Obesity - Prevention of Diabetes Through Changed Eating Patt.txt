@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04522921
+Title: Childhood Obesity - Prevention of Diabetes Through Changed Eating Patterns
+Official Title: Childhood Obesity - Prevention of Diabetes Through Changed Eating Patterns (The COPE-study) - An Non-randomized Intervention Trial Investigating the Efficacy of Dietary Changes in Protein
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 211
+Topic: exercise intervention obesity
+
+SUMMARY:
+The main purpose of the present study is to perform a 10 weeks dietary intervention study with a follow-up for 52 weeks in children from 7-14 years of age with overweight or obesity. In a caloric restricted and increased physical activity setting the control group will consume a low-moderate protein (15E%/day) diet whereas the intervention group will consume a higher protein (25E%/day) diet. Secondary, the investigators want to investigate the effect of frequent follow-up after the intervention, and the overall effect of the lifestyle camp.
+
+Compared to the low-moderate protein diet, the investigators hypothesis that a diet with higher consumption of protein-containing foods will more effectively induce weight loss (a reduction in BMI-SDS) or weight maintenance in children with overweight or obesity, and improve quality of life, and risk factors for type 2 diabetes.
+
+DETAILED DESCRIPTION:
+The study will be performed in collaboration with the staff of the well-established multi-component-overnight camps (Julemærkehjem) in Denmark. The multi-component-overnight camps are intensive weight loss camps to which Danish schoolchildren, from 7-14 years of age, are referred to for 10-weeks intervention focusing on healthy lifestyle, healthy eating, new habits and increased physical activity.
+
+The primary outcome is anthropometry (BMI-SDS, fat mass, fat-free mass). Secondary outcomes are metabolic health and questionnaires investigating quality of life, eating behavior traits, eating habits and eating-related problems i.e., overeating and loss of control eating.
+
+The children will be measured at baseline, 10-weeks and at a 52-weeks follow-up visit.
+
+Furthermore, participants will be invited to follow-up visits 3 years, 5 years, 7 years and 10 years, respectively.
+
+PRIMARY OUTCOMES:
+  - Body Mass Index Standard Deviation Score (BMI-SDS)
+  - Body Weight (kg)
+  - Body Fat (%)
+  - Skeletal Muscle Mass (kg)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Diet with a higher amount of protein (25E% per day)
+  - BEHAVIORAL: Increased follow-up contact after the 10-week intervention
+  - DIETARY_SUPPLEMENT: Diet with a lower amount of protein (15E% per day)
+
+ELIGIBILITY:
+Age: 7 Years to 14 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04522921

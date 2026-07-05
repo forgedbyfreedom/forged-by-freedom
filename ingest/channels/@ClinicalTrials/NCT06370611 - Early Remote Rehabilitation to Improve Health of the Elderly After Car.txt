@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06370611
+Title: Early Remote Rehabilitation to Improve Health of the Elderly After Cardiac Surgery. (RECARD Trial)
+Official Title: Early REmote Rehabilitation to Improve Health of the Elderly After CARDiac Surgery. (RECARD Trial). A Bi-center, Prospective, Randomized, Open-label, Blinded Evaluation (PROBE) Trial
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: vitamin D muscle
+
+SUMMARY:
+An increasing number of older patients undergo heart surgery. Despite seemingly successful outcomes, these vulnerable patients may face prolonged decreased functional capacity, reduced self-efficacy, and impaired quality of life after discharge. Early engagement in physical activity and education plays a key role in health and well-being after heart surgery The goal of this clinical trial is to evaluate the effectiveness of an app-based exercise program and weekly calls from a physiotherapist in the early stages after open heart surgery.
+
+Eligible patients will be randomly assigned to either a control group receiving standard care or an intervention group, which will be introduced to an individually tailored exercise program as an addition to standard care.
+
+Follow-up is planned with an out-patient visit six weeks after discharge and a telephone interview six months post-surgery.
+
+All participants will undergo assessments at enrollment and during follow-up. Physical performance will be evaluated through physical tests. General well-being, quality of life, self-reported physical activity, and cost-effectiveness of the intervention will be assessed through questionnaires. Muscle health will be examined through blood sampling, CT scans, and muscle biopsies.
+
+The primary endpoint is the 30-second Chair Stand Test serving as a measurement of physical function.
+
+DETAILED DESCRIPTION:
+Hypotheses:
+
+Primary: Early mobile health intervention at home supplemented by weekly calls from a physiotherapist after cardiac surgery improves functional outcomes, exercise tolerance, and quality of life in older patients.
+
+Secondary:
+
+* Cardiac surgery increases the prevalence and extent of sarcopenia in the elderly which can be mitigated by early mobile health intervention
+* Sarcopenia on Chest Computed Tomography (CCT) is strongly correlated to functional outcome and quality of life following cardiac surgery
+* Early mobile health intervention is feasible and cost-effective
+
+Design:
+
+This is a bi-center, prospective, randomized controlled, parallel, two-arm, open-label, blinded evaluation (PROBE) trial with a superiority design. The study population will consist of a representative group (n=120) of older patients scheduled for open heart surgery who fulfill the requirements according to inclusion and exclusion criteria. The patients will be recruited from 2 cardiac surgery centers in northern and central Denmark.
+
+Patients are stratified after center and subsequently randomly allocated (1:1) to receive mobile health intervention as an adjunct to standard care (Intervention Group), or standard care alone (Control group) for 6 weeks after discharge. Follow-up is planned with an outpatient visit 6 weeks after discharge, and a telephone interview 6 months after surgery.
+
+Patients in the intervention group receive a 6-week home-based CR using the ICURA app and sensor-based technology (ICURA ApS, Copenhagen, Denmark). During the hospital stay patients in the intervention group are introduced to the app's usage, and an individualized training plan is collaboratively created and subsequently tailored by a physiotherapist. The patients are equipped with a case including an ICURA -sensor with a charger, an illustrative quick guide, and a contact telephone number. According to the patient's preference, the app is either installed on their own mobile phone or provided on a separate mobile device.
+
+The comprehensive mobile health intervention includes customized training programs, activity tracking, visualization of exercises with videos, text message communication with patients, and a password-protected webpage for physiotherapists to customize training programs and track patient activity.
+
+A few days after discharge, patients in the intervention group will receive the first call from the physiotherapist, to ensure, that the patient is using the ICURA app actively. The patients will receive two calls per week for the first two weeks and as required the following four weeks.
+
+PRIMARY OUTCOMES:
+  - Change (Δ) 30-second chair stand test (30CST) baseline vs. 6-week FU
+
+INTERVENTIONS:
+  - DEVICE: Early mobile health intervention supplemented by weekly calls from a physiotherapist
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06370611

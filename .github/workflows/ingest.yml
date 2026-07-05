@@ -1,12 +1,23 @@
 name: Nightly Pinecone Ingest
 
+# ─────────────────────────────────────────────────────────────
+# ⏸  PAUSED until further notice (requested by repo owner).
+# To resume:
+#   1. Uncomment the schedule + workflow_dispatch triggers below
+#   2. Remove the `if: false` guard on the job
+#   3. Remove the matching guard at the top of
+#      ingest/ingest_to_pinecone.py
+# ─────────────────────────────────────────────────────────────
+
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 1 * * *"   # Nightly at 01:00 UTC
+  # workflow_dispatch:
+  # schedule:
+  #   - cron: "0 1 * * *"   # Nightly at 01:00 UTC — PAUSED
+  workflow_dispatch:        # manual only (still gated by the if:false below)
 
 jobs:
   ingest:
+    if: false               # PAUSED — job is unconditionally skipped
     runs-on: ubuntu-latest
 
     steps:
@@ -63,11 +74,11 @@ jobs:
       # 7️⃣ Verify required secrets
       - name: 🔐 Verify secrets
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
         run: |
-          [ -z "$OPENROUTER_API_KEY" ] && echo "❌ OPENROUTER_API_KEY missing" && exit 1
+          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
           [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
           [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
           echo "✅ All required secrets present"
@@ -87,7 +98,7 @@ jobs:
       # 🔟 Run ingest
       - name: 🚀 Run Pinecone ingest
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
         run: |
@@ -96,6 +107,7 @@ jobs:
       # 9️⃣ Optional stats
       - name: 📊 Pinecone post-ingest stats
         env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
         run: |

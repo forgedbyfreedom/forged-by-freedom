@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03583268
+Title: Determining the Appropriate Intensity of Exercise to Prevent Post-exercise Hypoglycemia in Persons Living With T1D
+Official Title: Determining the Appropriate Intensity of Vigorous Intensity Exercise to Prevent Post-exercise Hypoglycemia in Persons Living With Type 1 Diabetes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: high intensity interval training
+
+SUMMARY:
+Over 300, 000 youth and young adults across Canada are living with Type 1 Diabetes (T1D) which is considered the most common endocrine condition. Physical activity offers numerous health benefits however the majority of persons living with T1D are physically inactive, primarily due to fear of low blood sugar (hypoglycemia). This fear of hypoglycemia continues to exist for physically active persons with T1D as no established physical activity guidelines exist. Several acute studies have used high intensity interval training as a way to reduce the risk of hypoglycemia as it has the ability to activate fight or flight hormones which can raise blood sugar; however the intensity needed to elicit this response is unknown.
+
+The purpose of this project is to determine the acute effects of varying exercise intensities on the time spent in a low blood sugar range in 10 sedentary (VIGOR acute sedentary) and 16 physically active (VIGOR acute trained) individuals with T1D. Each participant will complete a maximal exercise test prior to the exercise sessions. Sedentary participants will complete 45 minutes of continuous moderate intensity exercise at 45-55% heart rate reserve (HRR) and three high intensity interval sessions with six one minute burst of high intensity at 70%, 80%, or 90% of HRR every four minutes. Active participants will complete 45 minutes of moderate intensity exercise at 45-55% of HRR and one high intensity interval session at 90% of HRR with intervals spaced every two minutes.
+
+The investigators will track the blood sugar response to exercise using a device called a continuous glucose monitor (CGM) which records blood sugar every five minutes over a period of six days. The CGM will help determine which exercise intensity does a better job at reducing the time spent in a low blood sugar range. The information gained through this study will help individuals with T1D remain active without fear of low blood sugar and provide guidelines for professionals working with this population.
+
+Adding high intensity bursts at 80% and 90% of maximum aerobic capacity (active participants) or heart rate reserve (sedentary participants) to a moderate intensity exercise session will significantly reduce the amount of time spent in a low blood sugar range in sedentary and active persons with T1D compared to moderate intensity exercise alone.
+
+DETAILED DESCRIPTION:
+Sedentary Arm: This portion of the study is complete. 10 participants completed the study in its entirety. Maximal exercise testing utilized a Parvomedics Metabolic cart to analyze oxygen consumption in ml/kg/min and maximum heart rate. Results from this test were used to estimate intensity using heart rate for the exercise sessions. Prior to each exercise session, participants arrived at 4:00 PM ate a Glucerna bar (to prevent drastic falls in glycemia with exercise) and had an IV inserted. A total of six blood samples were taken at each session at the following timepoints: (1) 0 mins-baseline, (2) 10 mins- end of warm up, (3) 35 mins-end of intervals, (4) 45 mins-end of exercise, (5) 75 mins-mid recovery, and (6) 105 mins-end of exercise. Each blood draw was sampled for glucose, cortisol, and growth hormone. Before exercise, blood glucose was measured on a handheld glucometer. If blood glucose was \<5.7 mmol/L glucose was administered via Dex4 tablets. Exercise did not begin until blood glucose was at least 5.7 mmol/L. If blood glucose was greater than 16.7 mmol/L but less than 20.0 mmol/L ketones were tested on a urine ketone strip. If ketones were negative or trace exercise began.
+
+The first exercise session was 45 minutes of moderate intensity exercise at 45-55% of heart rate reserve (HRR). The intensity determined from this session (speed and incline) was used as the recovery intensity for the high intensity sessions. The high intensity sessions were allocated in a random order from www.random.org where 1=70%, 2=80%, and 3=90%. Each high intensity session started with 10 minutes of moderate intensity exercise (at the same speed and incline from the first session) and six one minute bursts of high intensity every four minutes followed by a 10 minute cool down.
+
+Because of the small sample size and non-normal glucose profiles, data was analyzed using a Friedman analysis of variance (non-parametric test).
+
+Active Arm: This portion is still recruiting participants. The procedures for this experiment are very similar to the sedentary component. Blood glucose targets prior to exercise are the same however no blood samples will be taken. Participants will arrive at the lab for 4:30 PM and eat a Glucerna bar (to avoid drastic falls in glycemia with exercise). The two exercise sessions, moderate and 90%, will be allocated in a random order from a coin flip where heads is moderate exercise and tails is the 90% intervals. The moderate intensity session will consist of 45 minutes of exercise at 45-55% of HRR. The 90% session will consist of 15 minutes of moderate intensity at 45-55% of HRR followed by six one minute bursts of exercise at 90% of HRR every two minutes followed by a 10 minute cooldown.
+
+Data will be analyzed using a general linear model and logistic regression.
+
+PRIMARY OUTCOMES:
+  - Percent time spent </= 3.9 mmol/L as measured by continuous glucose monitor
+
+INTERVENTIONS:
+  - OTHER: Exercise
+
+ELIGIBILITY:
+Age: 15 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03583268

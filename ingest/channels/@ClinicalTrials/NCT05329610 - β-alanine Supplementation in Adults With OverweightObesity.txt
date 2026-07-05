@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05329610
+Title: β-alanine Supplementation in Adults With Overweight/Obesity
+Official Title: β-alanine Supplementation in Adults With Overweight or Obesity (BASA-O): A Randomised Controlled Feasibility Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: beta-alanine
+
+SUMMARY:
+The study will investigate the safety, feasibility, and efficacy of beta-alanine supplementation in adults with overweight or obesity. Beta-alanine is a widely used dietary supplement that can increase the amount of carnosine in skeletal muscle. Both carnosine and beta-alanine occur naturally in animal food products and previous research shows that supplementation with beta-alanine leads to an improvement in exercise performance; more recently, the present investigators have shown that increasing carnosine can also help to improve cardiometabolic health, detoxify skeletal muscle, and improve glucose (sugar) uptake into muscle cells.
+
+The investigators will recruit 30 participants (15 per arm) with overweight or obesity who meet the study criteria (this accounts for up to 20% attrition - a minimum of 12 participants per arm). Those who are eligible will be required to receive three short telephone calls and attend three laboratory sessions. Participants will be randomised to receive either beta-alanine or placebo (an inactive sugar pill) for the 3-month study period.
+
+To see whether beta-alanine supplementation is feasible in this population the investigators will measure recruitment, adherence (how well people can stick to the supplement regime), the number and nature of side effects, and blinding to the intervention. Markers of cardiac function, glycaemic control, and metabolic health will also be explored. All measurements will take place before and after a 3-month supplementation period. This will provide us with novel information of the role of beta-alanine and carnosine in cardiometabolic health; and will aid in the planning of a larger randomised controlled trial to assess the efficacy of beta-alanine supplementation as a therapeutic strategy.
+
+DETAILED DESCRIPTION:
+Overweight and obesity are major public health problems. Recent estimates show that 64.3% of people in the UK are living with overweight or obesity; this is projected to increase to 71% by 2040, which equates to approx. 42.2 million people (Cancer Research UK, 2022). Overweight and obesity are characterised by excess amounts of adiposity and systemic, chronic, low-grade inflammation, which is associated with a range of metabolic disorders including dyslipidaemia, hypertension, and hyperglycaemia (Calder et al., 2011). This confers an increased risk of developing prediabetes, type-2 diabetes, and cardiovascular disease, as well as associated microvascular complications such as retinopathy, neuropathy, and nephropathy (Brannick et al., 2016). Lifestyle interventions can help delay or prevent the progression of overweight or obesity, thereby reducing morbidity (Lin et al., 2017; Wing et al., 2021). Such interventions, however, can be challenging to implement and a lack of long-term adherence can limit their effectiveness (Fappa et al., 2008). It is therefore important to develop low-cost, novel adjunct therapies to improve cardiometabolic health and help delay or prevent disease progression.
+
+The multifunctional dipeptide carnosine has emerged as a candidate for improving glycaemic control and cardiometabolic health. A recent meta-analysis showed that supplementation with carnosine, or its rate-limiting precursor β-alanine, reduces fasting glucose and HbA1c in humans and rodents. Work from our Research Group shows that treatment with carnosine decreases highly toxic lipid peroxidation products in skeletal muscle cells, leading to an increase in insulin-stimulated glucose uptake under glucolipotoxic conditions. A similar role occurs in vivo, where supplementation with β-alanine leads to greater formation of carnosine-adducts in post-exercise skeletal muscle samples. Given that skeletal muscle insulin resistance is a key component of prediabetes and type 2 diabetes, and reactive aldehydes can directly interfere with insulin signalling, carnosine may exert its therapeutic actions in skeletal muscle. There is also emerging evidence that carnosine, and other histidine-containing dipeptides (HCDs), play an important role in Ca2+ handling and excitation-contraction coupling in cardiac muscle, which may have implications for cardiovascular health. A limitation of existing studies is that the low carnosine dose used is likely to have only a modest effect on tissue carnosine content. Supplementation with β-alanine, however, can increase skeletal muscle carnosine content by 60-80% in 4-10 weeks, but it has not yet been trialled in adults with overweight or obesity.
+
+Please note: a change was made to the study eligibility criteria, which was approved by the UK Health Research Authority Research Ethics Committee on 01/09/2022.
+
+PRIMARY OUTCOMES:
+  - Adherence to the intervention
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beta-alanine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05329610

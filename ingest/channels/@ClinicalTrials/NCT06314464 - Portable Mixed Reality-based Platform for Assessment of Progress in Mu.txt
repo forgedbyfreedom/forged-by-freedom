@@ -1,0 +1,65 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06314464
+Title: Portable Mixed Reality-based Platform for Assessment of Progress in Multisensory Rehabilitation Strategies Post-TBI
+Official Title: Portable Mixed Reality-based Platform for Assessment of Progress in Multisensory Rehabilitation Strategies for Post-TBI Return-to-duty (RTD) Decision Making (Praxis)
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this comparative pilot study is to provide evidence that Praxis, a portable testbed with low-cost wearable sensors and a mixed reality environment, can deliver effective multisensory rehabilitation exercises with military face-validity in a military service member (SM) population after mild Traumatic Brain Injury (mTBI).
+
+The main questions this comparative pilot study aims to answer are:
+
+* Can the Praxis testbed provide feasible/acceptable 4-week multisensory rehabilitation for SMs with post-acute mTBI?
+* Can Praxis detect and influence measurable changes in readiness performance during mTBI recovery?
+
+Fifteen SMs with post-acute mTBI from the Center for the Intrepid's Special Operations Performance and Recovery (SPaR) Program will participate in the multisensory vestibular rehabilitation regimen. These SMs will go through 4 weeks of multisensory vestibular rehabilitation including:
+
+* gaze stabilization
+* dual-task balance training
+* spatial navigation
+* agility training
+
+Data from another fifteen SMs, who will not go through the multisensory rehabilitation regimen and will receive supervised cardiovascular exercise, will be used as the control group.
+
+Researchers will compare the Praxis and Control group to determine if the Praxis group shows improvement over the control group with respect to the military-relevant behavioral performance outcomes and patient-reported symptom scores after the end of the rehabilitation.
+
+DETAILED DESCRIPTION:
+This study considers Praxis: a portable testbed with low-cost wearable sensors and a mixed reality environment to deliver effective multisensory rehabilitation exercises with military face-validity. Through a small comparative pilot study, the investigators plan to provide evidence for future multi-center randomized trials (MCRTs) to show that progress in these multisensory exercises correlates with established military readiness assessments; and that the improvements in functional performance in response to multisensory rehabilitation strategies is associated with changes in brain activity.
+
+In preparation for an MCRT, the investigators will conduct a pilot study to examine and settle the issues of feasibility and effectiveness of protocol implementation in accordance with best practices. In this study, we:
+
+* deliver a well-defined rehabilitation strategy via the Praxis system to the enable the patient to practice challenging rehabilitation tasks,
+* assess changes in neurophysiological activity via resting state functional magnetic resonance imaging (rs-fMRI) over time in relation to the intensity of the rehabilitation strategy, and
+* assess sensitive behavioral outcome measures that monitor the SM's functional gains over time via a battery of military-relevant tasks.
+
+Fifteen SMs with post-acute mTBI from the Center for the Intrepid's Special Operations Performance and Recovery (SPaR) Program will participate in the multisensory vestibular rehabilitation regimen. These SMs will go through 4 weeks of multisensory vestibular rehabilitation:
+
+* gaze stabilization
+* dual-task balance training
+* spatial navigation
+* agility training
+
+Data from another fifteen SMs, who will not go through the multisensory rehabilitation regimen and will receive supervised cardiovascular exercise, will be used as the control group.
+
+The first purposes of this study are to demonstrate the feasibility of obtaining a representative sample of SMs with and without vestibular/ocular impairments post-mTBI in a Special Operations population; determine whether the data is collected reliably; and establish compliance with the protocol in the 4-week study timeline. The primary endpoints for this study are feasibility/acceptability of the 4-week multisensory rehabilitation for SMs with post-acute mTBI as determined by compliance to daily rehabilitation doses as verified by the VestAid software and acceptability measured by the System Usability Scale (SUS) with success thresholds set at 80% or more of the target population completing all the doses and an average total score of 68 or above on the SUS assessment.
+
+The second purpose of this study is to determine the average values and variations of the behavioral outcome measures before and after multisensory rehabilitation delivered by Praxis, as well as the changes in neurophysiological activity, and the correlation between the two. The investigators will use this information to determine the sample size required for a future, la
+
+PRIMARY OUTCOMES:
+  - Perceived usability of the Praxis system measured by the System Usability Scale (SUS)
+
+INTERVENTIONS:
+  - DEVICE: Praxis
+  - BEHAVIORAL: Supervised cardiovascular exercise
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06314464

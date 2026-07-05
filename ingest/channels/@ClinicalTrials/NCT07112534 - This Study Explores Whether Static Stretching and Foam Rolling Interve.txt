@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07112534
+Title: This Study Explores Whether Static Stretching and Foam Rolling Intervention of the Calf (Dominant Leg) Can Improve Range of Motion and Balance Similarly to Treatments Applied to the Hamstring (Dominant Leg), Supporting the Concept of Myofascial Chains
+Official Title: Static Stretching and Foam Rolling in the Calf Muscles vs Static Stretching and Foam Rolling in the Hamstrings: Effects on Knee ROM and Balance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: athletic performance
+
+SUMMARY:
+This study explores the effects of static stretching (SS) and foam rolling (FR) on the knee's range of motion (ROM) and balance, with particular reference to their application to the calf muscles and their possible influence through the myofascial chain known as the superficial back line (SBL). Balance is an essential skill for maintaining an upright posture and avoiding Falls, especially in people with chronic conditions. The knee plays a crucial role in load-bearing and locomotion, and its function can be limited by reduced muscle flexibility, particularly of the rectus femoris. To counteract this, SS and FR are commonly used strategies to improve ROM and are frequently employed in sports and rehabilitation settings.
+
+SS involves holding a muscle in an elongated position for a set period, while FR is a self-massage technique using a roller or massage bar that applies pressure to soft tissues through body weight. Both techniques have been shown to increase ROM, reduce muscle stiffness, and potentially improve athletic performance and recovery.
+
+The study also discusses the concept of tensegrity, fascia, and myofascial chains, which explain how different body structures are biomechanically connected. Fascia is described as a tissue capable of transmitting mechanical forces throughout the body, forming a continuum that supports and connects muscles, bones, and other structures. Evidence shows that tension can be transmitted through fascial connections, influencing movement and posture far from the point of force application. The SBL, described by Myers, connects the calf muscles with the hamstrings and posterior structures, implying that interventions on the calf could affect knee mobility similarly to direct hamstrings treatment.
+
+The research aimed to verify whether SS and FR protocols applied to the calves could produce similar benefits for knee ROM and balance as those applied to the hamstrings, based on their shared fascial connection. It also sought to compare the effectiveness of FR and SS, hypothesizing greater effects for FR due to its combined compression and stretching action.
+
+A total of 48 healthy subjects aged 20-40 years, with no recent lower limb injuries, were recruited and divided into four groups: hamstring static stretching (SSH), calf static stretching (SSC), hamstring foam rolling (FRH), and calf foam rolling (FRC). The interventions were standardized in terms of duration and intensità: 3 sets of 1 minute each with moderate intensity perceived as 7/10 on a discomfort scale, performed only on the dominant leg. SS was performed using classic stretching positions, while FR involved rolling from the popliteal fossa to the insert points of the target muscles using a BLACROLL® foam roller.
+
+Measurements included single-leg balance (SLB) test on a posturographic platform, knee ROM in flexion and extension using an inertial sensor, both before and 5 minutes after the intervention. Balance parameters analyzed were sway path length, sway ellipse surface, mean sway speed, and other center of pressure variables.
+
+Statistical analysis involved repeated-measures ANOVA for parametric variables and non-parametric ANOVA for balance parameters, with appropriate post hoc tests. The significance level was set at p\<0.05, and the effect size was assessed with partial eta squared.
+
+This research provides insights into the effectiveness of targeting different muscle groups within the same myofascial chain for improving knee mobility and balance. The results are expected to clarify whether indirect treatments of the calf can replicate the effects of direct hamstring protocols and whether FR can outperform SS in terms of increasing knee ROM and improving postural control.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Evaluation of static balance via a posturographic platform
+  - Assessment of knee flexion and extension range of motion using an inertial sensor
+
+INTERVENTIONS:
+  - OTHER: Static stretching
+  - OTHER: Foam rolling
+
+ELIGIBILITY:
+Age: 20 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07112534

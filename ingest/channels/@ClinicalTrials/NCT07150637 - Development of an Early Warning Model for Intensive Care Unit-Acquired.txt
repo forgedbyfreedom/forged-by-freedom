@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07150637
+Title: Development of an Early Warning Model for Intensive Care Unit-Acquired Weakness in Mechanically Ventilated Children
+Official Title: Development of an Early Warning Model for Intensive Care Unit-Acquired Weakness in Mechanically Ventilated Children: A Disease-Specific Cohort and Database Study
+Status: ENROLLING_BY_INVITATION
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1500
+Topic: muscle rehabilitation
+
+SUMMARY:
+Acquired weakness (AW) is a common complication among patients in the Intensive Care Unit (ICU). It is a systemic muscle weakness and dysfunction associated with critical illness, often related to prolonged bed rest, mechanical ventilation, systemic inflammatory response syndrome (SIRS), and multiple organ dysfunction syndrome (MODS). The primary clinical manifestations include weakness in limb and respiratory muscles, particularly diminished strength in distal muscle groups. As a result, the weaning process from mechanical ventilation becomes more challenging, leading to prolonged ICU stays, increased mortality, and a higher risk of long-term functional disability. The significance of AW lies not only in its substantial impediment to short-term recovery but also in its role as a core component of Post-Intensive Care Syndrome (PICS), profoundly affecting patients' long-term outcomes.
+
+Mechanical ventilation is a vital life-support technology for critically ill children in the Pediatric Intensive Care Unit (PICU). However, complications associated with mechanical ventilation have garnered increasing attention, particularly Acquired Weakness in mechanically ventilated children. With improving survival rates in the PICU, a growing number of pediatric critical illness survivors are at risk of developing AW. Despite rapid advancements in pediatric critical care medicine in China, there is currently a lack of an early warning system for AW in children receiving mechanical ventilation, resulting in significantly delayed clinical interventions. This project aims to identify novel biomarkers for pediatric ICU-AW and develop an early warning model. It holds promise for transitioning from the traditional post-symptomatic diagnostic approach to subclinical prediction of AW in children, which is of great clinical value for reducing disability rates and optimizing critical care rehabilitation strategies.
+
+DETAILED DESCRIPTION:
+A prospective cohort study of mechanically ventilated children was established to systematically analyze epidemiological characteristics. The modified Pediatric Medical Research Council (MRC) muscle strength scale (pMRC) combined with simplified bedside neuroelectrophysiological testing (measurement of common peroneal nerve compound muscle action potential amplitude) was used to determine the occurrence rate, subtype distribution (CIP/CIM/Mixed), and natural disease course of intensive care unit-acquired weakness (ICU-AW) among mechanically ventilated children in China. An age-stratified model was applied to analyze differences in the occurrence rate of ICU-AW among children of different age groups. A Cox regression model was employed to quantify the dose-response relationship between dynamic parameters-such as duration of mechanical ventilation, cumulative doses of sedative and analgesic drugs, and glycemic variability-and the development of ICU-AW, and to construct a risk prediction nomogram.
+
+Clinical parameters-including demographic characteristics, disease types, critical illness scores, treatment indicators such as mechanical ventilation parameters, laboratory indicators (e.g., inflammatory and biomarkers, metabolic genes), imaging data (muscle and diaphragmatic ultrasound, electrophysiology), molecular biomarkers, and muscle biopsy data-were integrated. Data mining and machine learning techniques were applied to develop an early warning model for ICU-AW based on Cox regression. A logistic regression preliminary screening model was constructed by integrating demographic characteristics and biomarkers. Quantitative parameters from muscle ultrasound (e.g., diaphragmatic excursion, muscle thickness) were incorporated, and dynamic risk assessment was optimized using the Random Forest algorithm. The sensitivity and specificity of the model were evaluated.
+
+1\. Study Design: This study employed a multicenter prospective cohort design.
+
+1. Grouping: Pediatric patients undergoing mechanical ventilation were grouped based on the occurrence of ICU-AW at the study endpoint. The diagnostic criteria required meeting any one of the following: i) New-onset muscle dysfunction or weaning difficulty (unrelated to the primary disease, or in non-neuromuscular diseases with normal cardiopulmonary function); ii) Daily MRC score assessment for enrolled PICU patients \[for patients under analgesic sedation, drug dosages were adjusted to maintain a modified Comfort-B sedation score between 11 and 23\]. Patients with a total MRC score \< 48 on two consecutive assessments 24 hours apart, and excluding those with other neuromuscular disorders, were assigned to the ICU-AW group; those with a total MRC score ≥ 48 were assigned to the non-ICU-AW group; patients who could not be evaluated were excluded. Subtype criteria: CIP: In addition to the above criteria, also meeting iii) Slowed sensory and/or motor nerve conduction velocity; CIM: In addition to criteria i and ii, a
+
+PRIMARY OUTCOMES:
+  - The occurrence rate of ICU-AW
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: ICU-AW
+
+ELIGIBILITY:
+Age: 1 Month to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07150637

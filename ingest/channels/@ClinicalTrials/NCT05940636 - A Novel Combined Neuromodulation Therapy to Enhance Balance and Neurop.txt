@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05940636
+Title: A Novel Combined Neuromodulation Therapy to Enhance Balance and Neuroplasticity
+Official Title: A Novel Combined Neuromodulation Therapy to Enhance Balance and Neuroplasticity After Incomplete SCI
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 17
+Topic: muscle rehabilitation
+
+SUMMARY:
+Many people with partial damages in their spinal cord (iSCI) have physical impairments such as muscle paralysis in legs which make standing balance difficult. Poor balance control often leads to falls, injuries, and hospitalization. Therefore, improvement of standing balance is an important therapeutic goal for these individuals. Our team has shown that a therapy called visual feedback training (VFT) can improve standing balance by allowing individuals with iSCI to actively participate and follow visual feedback of their body sway on a screen like a computer game. We have also found that the application of low-energy electrical pulses to weak muscles called functional electrical stimulation (FES) during VFT can enhance the training effects. Recently, transcutaneous spinal cord stimulation (TSCS) has been discussed as a promising technique to further promote the rehabilitation effects after SCI by enhancing the connectivity between the brain and spinal cord and within the spinal pathways. However, to date, the potential of combining the two techniques (TSCS+FES) to improve the standing balance remains unknown. In this study, through the completion of a clinical trial, we will investigate the effects of an intervention that combines lumbar TSCS with FES of ankle muscles during VFT on the functional and neurophysiological outcomes in individuals living with iSCI. Participants will be randomly allocated to receive combined TSCS with FES or FES alone during VFT for 12 training sessions over 4 weeks. We expect that the new therapy would further improve balance and strengthen the neural connections between the brain and muscles. The expected changes in the neural connections will be measured by recording electrical signals from the lower limb muscles following stimulation of the motor region of the brain. Results of this study will be used for a larger-scale study in people with iSCI to improve balance and reduce falls during their daily life activities.
+
+DETAILED DESCRIPTION:
+This is a single-center, randomized controlled trial to test the effects of a novel neuromodulation program on balance performance and neuroplasticity in individuals with iSCI. Participants will be randomly assigned to 2 equal groups labeled as (1) FES with VFT, and (2) combined neuromodulation with VFT. They will complete 8 training sessions over 4 weeks (2 sessions/week). For the FES with VFT group, participants will receive visual feedback regarding their center of pressure location during four games with varying levels of difficulty and FES will be applied bilaterally to SOL and TA via a closed-loop system. Each exercise will be completed 3 times per training session. For the combined neuromodulation with VFT group, the sub-motor threshold, open-loop TSCS will be coupled with closed-loop FES of ankle muscles during VFT. For this purpose, 2 electrical stimulators, one for each leg will stimulate SOL and TA muscles bilaterally while open-loop tonic lumbar TSCS will be applied at an intensity producing paresthesia in most of the lower-limb dermatomes. The range of FES stimulation intensity will vary between the minimal contraction threshold and 80% of the maximal tolerable threshold for each participant during games depending on the instant location of the participant's center of pressure and the location of the desired target during the game. All dependent variables will be assessed prior, immediately after, and 6-weeks after the end of intervention.
+
+PRIMARY OUTCOMES:
+  - Mini-Balance Evaluation Systems Test (mini-BESTest)
+  - 10-meter Walk Test (10MWT)
+  - Motor evoked potentials (MEP)
+
+INTERVENTIONS:
+  - OTHER: Activity-based rehabilitation+electrical stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05940636

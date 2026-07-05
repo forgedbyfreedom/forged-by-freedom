@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06039358
+Title: Effects of Caffeine Ingestion on the Biomechanics of Healthy Young Subjects
+Official Title: Influence of 6mg/kg of Caffeine Supplementation on the Technical Execution of General Movement Patterns Performed by Healthy Subjects, With and Without Neuromuscular Fatigue: a Randomized, Double-blind, Placebo-controlled, Crossover Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: caffeine exercise
+
+SUMMARY:
+Caffeine is one of the few supplements that have enough scientific evidence to state that can notably improve performance, as different remarkable organizations in the sports nutrition context have classified it as an ergogenic aid with strong evidence regarding its efficacy and that is apparently safe. The beneficial effect of this substance on physical and cognitive performance has been identified in aerobic and anaerobic efforts, including aerobic and muscular endurance, power, or strength.
+
+However, it seems that the benefits of caffeine are usually measured only by its effect on performance, while a comprehensive analysis of its impact on other aspects of the movement technique of the exercise is not considered. Therefore, although caffeine generates better performance, a null or negative effect may occur on technique execution. As such, some consequences might arise (e.g., an increase in injury risk or a decrease in energy efficiency).
+
+The objective of this randomized controlled trial is to assess the influence of caffeine on certain biomechanical parameters of the technique of physical exercises in circumstances without fatigue and under neuromuscular fatigue. The study hypothesis is that caffeine generates modifications in the technical execution of certain movements in fatigued and unfatigued circumstances due to its physiological effects, which may be beneficial for performance and injury prevention.
+
+The participants will have to attend 5 sessions (enrollment, familiarization, control, placebo, and caffeine), at least 7 days apart. In the last 3 sessions, different measurements will be done to their technique while jumping, squatting, and running, without fatigue and with it. Other data will be collected throughout the study to contextualize and analyze in more detail the obtained information.
+
+DETAILED DESCRIPTION:
+A detailed description of the study can be found in the protocol uploaded with this registry entry.
+
+PRIMARY OUTCOMES:
+  - Knee flexion angle at the midstance while running.
+  - Ankle dorsiflexion angle at the midstance while running.
+  - Step rate while running.
+  - Contact time while running.
+  - Stride length while running.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine.
+  - DRUG: Cellulose.
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06039358

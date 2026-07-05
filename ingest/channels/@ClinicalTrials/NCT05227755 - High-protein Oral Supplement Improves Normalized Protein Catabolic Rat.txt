@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05227755
+Title: High-protein Oral Supplement Improves Normalized Protein Catabolic Rate and Inflammation Markers
+Official Title: High-protein Oral Supplement Improves Normalized Protein Catabolic Rate and Inflammation Markers
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: protein supplementation
+
+SUMMARY:
+The investigators propose to determine the impact of high-protein beverages on protein status and inflammation markers among CKD patients undergoing hemodialysis. A 12-week double-blind randomized cross-over trial will be used in which participants (n=22) will consume a 4-ounce high protein supplement with either whey (20 g total protein) or soy (20 g total protein). Outcomes of interest include serum urea nitrogen and inflammation markers (CRP and IL-6). The findings will contribute to the knowledge gap regarding the effect of different protein types in CKD populations which can be translated to the development of affordable supplements to prevent malnutrition in adults with non-communicable diseases.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - C-reactive protein
+  - IL-6
+  - Normalized protein catabolic rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Soy protein isolate
+  - DIETARY_SUPPLEMENT: Whey protein isolate
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05227755

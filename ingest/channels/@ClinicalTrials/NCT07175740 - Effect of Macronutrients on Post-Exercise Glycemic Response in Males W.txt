@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07175740
+Title: Effect of Macronutrients on Post-Exercise Glycemic Response in Males With Type 2 Diabetes
+Official Title: Influence of the Macronutrient Content of a Standardized Pre-Exercise Meal on the Glycemic Response Following Exercise in Type 2 Diabetics
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The goal of this randomized crossover trial is to evaluate the impact of meal macronutrient composition on the glycemic response following exercise in males with type 2 diabetes. The main question it aims to answer is:
+
+• Is the consumption of a glucose enriched meal associated with a bigger reduction in plasma glucose following a 1-hour exercise session than other meals Researchers will compare different meal macronutrient composition to see how it affects the glycemic response after exercise.
+
+Participants will
+
+* Fast, then do a 1-hour exercise session
+* Eat a glucose enriched meal, then do a 1-hour exercise session
+* Eat a fructose enriched meal, then do a 1-hour exercise session
+* Eat a fat enriched meal, then do a 1-hour exercise session
+* Eat an aspartame enriched meal, then do a 1-hour exercise session
+
+DETAILED DESCRIPTION:
+Meals The meals will be equivalent in terms of total calories (with the exception of the aspartame meal) and the percentage of protein will be the same in all four conditions. Only the fat and carbohydrates percentages will vary in the four meal conditions.
+
+Exercise protocol Each subject will perform a maximal aerobic capacity (VO2peak) test on an ergocycle at the start of the protocol. Subsequently, at one-week intervals, each patient will perform an exercise session consisting of one hour of ergocycle at a capacity corresponding to 60% of each individual's VO2peak. The prescribed workload will be established based on the VO2peak test. Exercise will be monitored using heart rate, work, and oxygen consumption measured using an indirect calorimetry system. The five conditions will be randomized and performed at one-week intervals. Each exercise session will be supervised by a physician. Patients taking oral hypoglycemic agents will not take their medication on the morning of the exercise.
+
+Blood samples Samples will be taken to measure glucose, free fatty acids, insulin, glucagon, and plasma catecholamines. In addition, an indirect calorimetry system will allow us to measure total substrate oxidation. For each blood sample period, there will be a 5-minute assessment as described above.
+
+PRIMARY OUTCOMES:
+  - Glycemic response during and following intervention
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fasting
+  - DIETARY_SUPPLEMENT: Sucrose enriched meal
+  - DIETARY_SUPPLEMENT: Fructose enriched meal
+  - DIETARY_SUPPLEMENT: Fat enriched meal
+  - DIETARY_SUPPLEMENT: Aspartame enriched meal
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07175740

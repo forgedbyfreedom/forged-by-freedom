@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03155282
+Title: Utility of EUS-elastography to Predict Portal Hypertension
+Official Title: Diagnostic Accuracy of Spleen and Liver Stiffness Measurement by EUS-elastography, to Predict Portal Hypertension in Patients With Cirrhosis.
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 61
+Topic: high intensity interval training
+
+SUMMARY:
+Patients with cirrhosis have structural and functional alterations of the liver. The progressive deposition of hepatic fibrosis is related to the subsequent development of portal hypertension (PH), and PH is associated with mayor complications including ascites, hepatic encephalopathy and development of gastroesophageal varices with a high risk of bleeding. Variceal bleeding is a medical emergency associated with a 6-week mortality rate of approximately 10-20%. Liver biopsy is the gold standard for the assessment of hepatic fibrosis, whereas the measurement of hepatic vein pressure gradient (HVPG) is the standard to evaluate PH and upper endoscopy (UE) is the method of choice to detect the presence and grade of gastroesophageal varices. The last two also estimates the risk of variceal bleeding. Unfortunately, clinical investigation of PH implies HVPG measurement or endoscopy for esophageal varices (EV) screening and grading. The first one is an invasive technique, mainly restricted to tertiary centers, that requires personal training, increased health care costs and patient discomfort. The UE, even though has demonstrated utility to predict HVPG (HVPG value ≥ 10 mmHg predicts the presence of EV and a value ≥ 12 mmHg is predictive for variceal bleeding), has been criticized of being subjective. Because of this, alternative test including elastographic techniques, have been develop to assess the severity of PH, the presence of EVs and the risk of variceal bleeding. Elastography is a technique used to measure tissue elasticity and stiffness in real time, by the application of slight compression using a transducer to the targeted tissue. The principle is that tissue compression produces deformation (strain) and that the strain is smaller in harder tissue as compared to softer tissue. Consequently, by measuring the tissue strain induced by compression, it is possible to estimate the tissue hardness. Fibroscan® (FS) (Echosens, París, Francia) uses the principle of one-dimension transient elastography (TE) for the assessment of tissue stiffness. It was used initially for liver stiffness measurement (LSM) and proved to be reliable for the diagnosis of liver cirrhosis and avoid liver biopsy in 90% of cases. Also LSM by TE accurately correlates with the severity of PH and the presence of esophageal varices.
+
+DETAILED DESCRIPTION:
+More recently, the use of Fibroscan for the spleen stiffness measurement (SSM) has become particularly attractive to assess. Previous studies have demonstrated that liver cirrhosis and PH generates some modifications in the spleen such as an increment in size, splenic blood flow, tissue hyperplasia, and fibrosis that determine an increase in the spleen's density and tissue stiffness that may be quantified by elastography. The SSM was found to be a valuable tool for assessing the degree of PH, the presence and severity of EVs and the risk of variceal bleeding among patients with cirrhosis. Moreover, spleen stiffness as compared with liver stiffness better represents the dynamic changes occurring in the advanced stages of cirrhosis and shows higher diagnostic performance in detecting esophageal varices.
+
+Elastography can also be applied by endoscopic ultrasound (EUS-E). The EUS elastography allowed qualitative and quantitative evaluation. Qualitative elastography evaluates tissue elasticity by measuring the degree of deformation using a scale in the B-mode image of 1 to 255. This scale is represented by a color map (red- green-blue), wherein hard tissue is shown in dark blue, tissue with intermediate hardness in green, medium soft tissue in yellow, and soft tissue in red. There are two options for quantitative elastography and both are based on the qualitative EUS elastography data, the hue histogram and strain ratio. The hue histogram represents the overall elasticity within a manually selected area witch is the region of interest (ROI). The global hardness is being represent by a hue scale from 0 to 250, where 0 represents the hardest and 255 is the softest. The strain ratio (SR) analyzes the elastographic picture of the target lesion in relation to the surrounding tissues. Two different areas (A and B) are selected. Area A includes as much of the target lesion as possible without including the surrounding tissues. Area B is selected within a soft (red) reference area outside the target lesion, preferably the gut wall. The strain ratio is calculated as the quotient of B/A.
+
+EUS is also a technique that has proved to be useful to evaluate cirrhotic patients in many aspects. It allows visualization of a greater part of the portal and portosystemic collateral circulation. It can be used to detect esophageal and gastric varices witch correlate with the presence and severity of liver disease and portal hypertension. It can be use to measure varices size. Large varices (≥ 5 mm) may be risk factors for variceal hemorrhage. It can visualize paramural collaterals and large vessels such as splenic, portal and azygos veins. Previous studies have found a significant increase in azygos vein diameter and blood-flow velocity in patients with varices when compared with control subjects. The evaluation of the azygos vein using EUS can ad useful information about the porto-systemic collateral circulation and could help to determine the treatment efficacy. It has b
+
+PRIMARY OUTCOMES:
+  - evaluate the accuracy of LSM and SSM by EUS-elastography (EUS-E) to assess PH in patients with liver cirrhosis and determinate if EUS-E can be used as a surrogate marker for PH. It also aims to find the optimal liver and spleen EUS-E values in predicting
+
+INTERVENTIONS:
+  - PROCEDURE: EUS-E to measure liver and spleen stiffness.
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03155282

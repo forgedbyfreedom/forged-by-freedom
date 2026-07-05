@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00933608
+Title: Effects of Memantine on Magnetic Resonance (MR) Spectroscopy in Subjects at Risk for Alzheimer's Disease
+Official Title: Effects of Memantine on the Magnetic Resonance Spectroscopy (MRS) Measures of Neuronal Integrity in Subjects at Risk for Alzheimer's Disease
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 17
+Topic: creatine supplementation
+
+SUMMARY:
+Recent data show that marked cell damage precedes the clinical manifestation of Alzheimer's disease (AD). Hence, targeting populations at risk with pharmacological interventions is a possible strategy to lessen the burden of the disease. Cognitively normal individuals with subjective memory complaints (SMC) manifest biological characteristics consistent with early AD and are at risk for future cognitive decline. Family history of AD also constitutes a risk. In a previous study the investigators showed that memantine slows down the accumulation of phosphorylated tau in normal SMC subjects. Using a multivoxel high field MR spectroscopy (MRS) technique, the investigators also demonstrated that memantine decreased hippocampal glutamate. Both these findings may be consistent with the drug's anti-excitotoxic activity. In this new project the investigators propose to treat a sample of 12 presymptomatic individuals at risk (SMC and family history of AD) with memantine. This will be a double blind, placebo controlled study with a control group (12 non-treated subjects). The investigators will determine whether the effects of memantine as assessed by cognitive performance and MRS are present after 4 months of treatment and persist 2 months after discontinuation. MRS will be used to evaluate the effect of memantine on levels of the neurotransmitter glutamate and neuronal viability marker N-acetylaspartate (NAA) in the hippocampus. The investigators will test the following hypotheses:
+
+1. In subjects with SMC, memantine has modifying effects on brain biochemistry as reflected in MRS reductions in glutamate (reduced excitotoxicity) and increases in NAA (neuronal integrity).
+2. The effects of the drug persist (as a marker of sustained neuroprotection) and can be measured 2 months after discontinuation of the treatment.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - N-acetylaspartate
+
+INTERVENTIONS:
+  - DRUG: memantine
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 55 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00933608

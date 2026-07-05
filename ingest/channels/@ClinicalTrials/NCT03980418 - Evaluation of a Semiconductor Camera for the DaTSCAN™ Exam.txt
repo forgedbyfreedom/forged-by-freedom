@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03980418
+Title: Evaluation of a Semiconductor Camera for the DaTSCAN™ Exam
+Official Title: Comparative Study of DaTSCAN ™ Cerebral SPECT Recorded by Conventional Anger Cameras and Semiconductor Camera (VERITON-CT ™)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 96
+Topic: physical activity intervention
+
+SUMMARY:
+The semiconductor (cadmium-zinc-telluride, CZT) cameras significantly increase detection sensitivity in Single Photon Emission Computer Tomoscintigraphy (SPECT)(1) . The clinical routine applications of these cameras are today mainly limited to myocardial tomoscintigraphy with CZT dedicated cameras. Several studies whose one was done in Hospital of Nancy, made it possible to demonstrate a good diagnosis agreement between conventional cameras and semiconductor cameras in this indication, with better image quality obtained with semiconductor cameras (2). Today, so-called "wide field" semiconductor cameras are available in the clinic and allow for any type of SPECT examination. A comparative study between conventional and semiconductor cameras has been conducted for bone scintigraphy, and shows diagnostic superiority with this new type of camera (3).
+
+In addition, the new VERITON-CT ™ (Spectrum Dynamics Medical) camera has 12 mobile CZT-based detectors positioned around the patient allowing tomographic acquisitions and focusing the acquisition on the organ studied. This camera has a sensitivity of detection higher than that of conventional cameras and thus reduces the activity injected into the patient and / or the recording time.
+
+To date, no study has compared the two types of cameras in nuclear neurology and in particular, for the SPECT DaTSCAN ™ imaging of the pre-synaptic dopaminergic pathway.
+
+DaTSCAN ™ exam is used in clinical routine:
+
+1. for the diagnosis of Parkinson's disease or related diseases when in doubt with an essential tremor (4) or
+2. if suspicion of Lewy body disease, if in doubt with Alzheimer's disease (5). If the interpretation of DaTSCAN ™ exam is first visual, the quantification may increase accuracy diagnosis (6). Also, the database creation specific to each type of camera is recommended(7).
+
+The purpose of this study is to compare the diagnostically relevant informations and the quantitative analysis provided by the DaTSCAN™ SPECT, recorded on the conventional camera and recorded on the semiconductor camera VERITON-CT™
+
+DETAILED DESCRIPTION:
+The clinical study is monocentric, interventional, non randomized, with minimal risk and constraints.
+
+All patients going to the nuclear medicine department for a DaTSCAN exam will be able to participate in this study if they understood study informations given by the physician and if they signed the inform consent.
+
+In first, patients will have a DaTSCAN™ SPECT on a conventional camera and after, they will have DaTSCAN™ SPECT on VERITON-CT™ camera with two records: one in focus striatum mode and the second in focus brain mode.
+
+The attenuation correction will be made with the computer tomography (CT) recorded at the same time as the SPECT (SPECT/CT)
+
+PRIMARY OUTCOMES:
+  - Degree of concordance (Kappa) of the exams results of different records
+
+INTERVENTIONS:
+  - PROCEDURE: DaTSCAN SPECT/CT in VERITON-CT camera
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03980418

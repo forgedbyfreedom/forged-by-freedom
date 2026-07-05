@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 33752175
+Title: Effects of an exoskeleton-assisted gait training on post-stroke lower-limb muscle coordination.
+Authors: Zhu, Kern, Fowkes, Afzal, Contreras-Vidal
+Journal: Journal of neural engineering
+Year: 2021
+Topic: complex training post activation
+
+ABSTRACT:
+Objective.Powered exoskeletons have been used to help persons with gait impairment regain some walking ability. However, little is known about its impact on neuromuscular coordination in persons with stroke. The objective of this study is to investigate how a powered exoskeleton could affect the neuromuscular coordination of persons with post-stroke hemiparesis.Approach.Eleven able-bodied subjects and ten stroke subjects participated in a single-visit treadmill walking assessment, in which their motion and lower-limb muscle activities were captured. By comparing spatiotemporal parameters, kinematics, and muscle synergy pattern between two groups, we characterized the normal gait pattern and the post-stroke motor deficits. Five eligible stroke subjects received exoskeleton-assisted gait trainings and walking assessments were conducted pre-intervention (Pre) and post-intervention (Post), without (WO) and with (WT) the exoskeleton. We compared their gait performance between (a) Pre and Post to investigate the effect of exoskeleton-assisted gait training and, (b) WO and WT the exoskeleton to investigate the effect of exoskeleton wearing on stroke subjects.Main results.While four distinct motor modules were needed to describe lower-extremity activities during stead-speed walking among able-bodied subjects, three modules were sufficient for the paretic leg from the stroke subjects. Muscle coordination complexity, module composition and activation timing were preserved after the training, indicating the intervention did not significantly change the neuromuscular coordination. In contrast, walking WT the exoskeleton altered the stroke subjects' synergy pattern, especially on the paretic side. The changes were dominated by the activation profile modulation towards the normal pattern observed from the able-bodied group.Significance.This study gave us some critical insight into how a powered exoskeleton affects the stroke subjects' neuromuscular coordination during gait and demonstrated the potential to use muscle synergy as a method to evaluate the effect of the exoskeleton training.This study was registered at ClinicalTrials.gov (identifier: NCT03057652).
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/33752175/

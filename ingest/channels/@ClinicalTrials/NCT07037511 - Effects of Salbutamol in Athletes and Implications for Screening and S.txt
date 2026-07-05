@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07037511
+Title: Effects of Salbutamol in Athletes and Implications for Screening and Sports
+Official Title: Physiological, Sensory and Ergogenic Effects of Salbutamol - Implications for Athletic Screening and β2 Agonist Use in Sport
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: athletic performance
+
+SUMMARY:
+β2-Agonists, commonly used to treat asthma, have also been used by athletes to enhance performance, leading to their ban by the International Olympic Committee in 1972. Research has shown non-asthmatics receive no benefit from these drugs at therapeutic dosages; however, many elite athletes still use them, and asthmatic athletes often win more Olympic medals. In some non-asthmatics, β2-agonists may improve breathing limitations during high intensity exercise, which may improve performance. Therefore, we aim to examine if there is a select group of non-asthmatic individuals who experience breathing limitations that may receive benefit from β2-agonists.
+
+DETAILED DESCRIPTION:
+Purpose:
+
+The purpose of this study is to examine the effects of β2-agonists on exercise performance in non-asthmatic male and female endurance athletes.
+
+Hypothesis:
+
+Our primary hypothesis is that ß2-agonists will improve exercise duration to a greater degree in athletes who experience expiratory flow limitation (EFL) compared to those who do not experience EFL. Additionally, female athletes will, on average, experience greater benefits with ß2-agonists due to a greater prevalence of EFL than males.
+
+Justification:
+
+While β2-agonists have historically been used by athletes as an ergogenic aid, systematic reviews indicate their ineffectiveness in improving aerobic performance. Consequently, the World Anti-Doping Agency (WADA) revised regulations to allow controlled use of specific β2-agonists. Despite a lack of evidence supporting their ergogenic benefits, positive tests for supratherapeutic doses of salbutamol among elite athletes, such as cyclist Chris Froome and cross-country skier Martin Johnsrud Sundby, suggests a belief in their performance-enhancing capabilities. Additionally, there is a physiological rationale for some non-asthmatics to benefit from these drugs. For instance, therapeutic doses of β2-agonists can induce bronchodilation, resulting in a \~5% increase in forced expiratory volume in one second (FEV1) in non-asthmatics. While this level of bronchodilation does not meet the diagnostic threshold for asthma, it holds potential for enhancing ventilatory responses in certain athletes. For example, a subset of non-asthmatic athletes who develop EFL during exercise, characterized by the inability to increase expiratory flows despite increases in expiratory effort, may derive greater benefits if the bronchodilation is sufficient to attenuate EFL. Indeed, experimental reduction of EFL via breathing a helium-oxygen gas mixture improves ventilatory responses, gas exchange, and endurance performance in non-asthmatics. We speculate that non-asthmatics experiencing EFL during exercise are likely to benefit more from β2-agonists than those who do not develop EFL.
+
+Statistical Analysis:
+
+The effects of salbutamol vs. placebo on exercise duration in all participants will be compared using a paired t-test. In all cases, a P-value \< 0.05 will be considered statistically significant. A total of 64 participants (32 males and 32 females) will be recruited to adequately assess the effects of salbutamol on exercise tolerance, dyspnea, and related physiological variables.
+
+PRIMARY OUTCOMES:
+  - Difference in time to exhaustion following salbutamol inhalation compared to placebo inhalation.
+  - Sex differences in time to exhaustion following salbutamol inhalation
+
+INTERVENTIONS:
+  - DRUG: Salbutamol
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07037511

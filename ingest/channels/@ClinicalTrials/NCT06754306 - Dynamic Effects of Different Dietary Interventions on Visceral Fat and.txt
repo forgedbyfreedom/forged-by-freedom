@@ -1,0 +1,71 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06754306
+Title: Dynamic Effects of Different Dietary Interventions on Visceral Fat and Biochemical Markers
+Official Title: A Randomized Controlled Trial on the Dynamic Effects of Different Dietary Interventions on Visceral Fat and Other Biochemical Markers
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 84
+Topic: exercise muscle mass
+
+SUMMARY:
+This randomized clinical trial aims to evaluate the dynamic effects of various dietary interventions on visceral fat and biochemical markers among healthy adults. Participants aged 18-35 years with a normal body mass index (BMI 18.5-23.9) will be recruited from the community. Exclusion criteria include metabolic diseases, unstable weight, medication use, or pregnancy.
+
+Participants will be randomly assigned to one of seven groups: 1) balanced diet (100% energy), 2) time-restricted eating (16+8, 100% energy), 3) time-restricted eating (16+8, 75% energy), 4) alternate-day fasting (75% energy), 5) 5+2 fasting (75% energy), 6) low-calorie diet (75% energy), and 7) very low-calorie diet (45% energy). The intervention consists of a 1-week baseline phase, a 4-week dietary intervention phase, and a 28-week recovery phase.
+
+Primary outcomes include changes in visceral fat area, while secondary outcomes include body composition, cardiovascular health indicators (e.g., blood pressure, cholesterol), inflammation markers, and liver/kidney function. Biological samples (blood, urine, and feces) will be collected at multiple time points to facilitate multi-omics analyses, including proteomics, metabolomics, metagenomics, and DNA methylation.
+
+The study aims to compare the short-term effects of different dietary interventions and explore underlying biological mechanisms. Findings will provide evidence for public health policies and dietary guidelines related to weight management and metabolic health.
+
+DETAILED DESCRIPTION:
+This study is a randomized clinical trial (RCT) designed to investigate the effects of different dietary interventions on visceral fat, body composition, and various biochemical indicators. The study will also incorporate multi-omics analyses to explore the dynamic biological mechanisms underlying these effects.
+
+Study Background The increasing burden of obesity and chronic diseases has raised global concerns about effective dietary strategies. Recent dietary approaches, such as intermittent fasting (e.g., 16:8, alternate-day fasting, and 5:2 fasting) and continuous caloric restriction, have shown potential benefits in weight management and metabolic health. However, there is a lack of systematic comparisons between these dietary interventions and insufficient understanding of their dynamic biological effects.
+
+This study aims to compare the short-term impacts of various dietary interventions and identify the biological mechanisms influencing visceral fat and metabolic changes. Multi-omics analyses will include proteomics, metabolomics, metagenomics, DNA methylation etc. to provide a comprehensive understanding of these effects.
+
+Study Design
+
+This RCT will recruit 84 healthy adults (12 participants per group), aged 18-35 years, with a normal BMI (18.5-23.9). Participants will be randomly assigned to one of seven groups:
+
+Balanced diet group: Daily intake of 100% energy requirements, adjusted individually based on each participant's basal metabolic rate (BMR) and activity level.
+
+16+8 time-restricted eating group (100% energy): Participants will consume 100% energy within an 8-hour eating window and fast for the remaining 16 hours.
+
+16+8 time-restricted eating group (75% energy): Participants will consume 75% of their energy requirements within the 8-hour eating window.
+
+Alternate-day fasting group: Participants alternate between "feeding days" (125% energy requirements) and "fasting days" (25% energy requirements).
+
+5+2 intermittent fasting group: Participants consume 95% energy requirements for 5 consecutive days and 25% energy requirements for 2 fasting days.
+
+Low-calorie diet group (75% energy): Participants will reduce daily caloric intake to 75% of energy requirements, consumed evenly across three meals.
+
+Very low-calorie diet group (45% energy): Participants will reduce daily caloric intake to 45% of energy requirements (\~800 kcal/day).
+
+The study will span 33 weeks and include three phases:
+
+Baseline phase (1 week): Participants consume their usual diet, and baseline measurements are taken.
+
+Intervention phase (4 weeks): Participants adhere to their assigned dietary intervention.
+
+Recovery phase (28 weeks): Participants return to their usual diet. Participants will be monitored closely throughout the study to ensure adherence to the intervention and the stability of other lifestyle factors (e.g., physical activity).
+
+Outcome Measures Primary outcome: Changes in visceral fat area. Secondary outcomes: Changes in body composition (waist cir
+
+PRIMARY OUTCOMES:
+  - Change in Visceral Fat Area over the Course of the Dietary Intervention
+
+INTERVENTIONS:
+  - OTHER: Balanced diet (100% energy)
+  - OTHER: 16+8 time-restricted eating group (100% energy)
+  - OTHER: 16+8 time-restricted eating group (75% energy)
+  - OTHER: Alternate-day fasting group (75% energy)
+  - OTHER: 5+2 intermittent fasting group (75% energy)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06754306

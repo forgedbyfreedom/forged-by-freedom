@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05001815
+Title: CSII Versus MDI in Pregnant Women With Type 2 Diabetes
+Official Title: Continuous Subcutaneous insulin Infusion Versus Multiple Daily Injection in Pregnant Women With Type 2 Diabetes: A Single-center Open Label Randomized Controlled Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: weight loss exercise
+
+SUMMARY:
+The primary objective of the study is to determine if continuous subcutaneous insulin infusion (CSII) can improve glycemic control in women with type 2 diabetes (T2D) who are pregnant.
+
+DETAILED DESCRIPTION:
+In women with diabetes, hyperglycemia is associated with increased rates of maternal and fetal adverse outcomes. Mothers are at increased risk of preeclampsia, deterioration of proteinuria and caesarean sections. Infants of mothers with diabetes have increased rates of congenital anomalies, premature delivery, macrosomia, stillbirth and NICU admissions, as well as increased risks of shoulder dystocia, birth injury, hypoglycemia, hyperbilirubinemia, respiratory distress syndrome, asphyxia and death in the neonatal period. Several studies have shown that pregnancy outcomes can be improved along with better glycemic control. Theoretically CSII could achieve better glycemic control due to its flexibility in adjusting both basal rate and bolus insulin infusion. Several randomized controlled studies have compared the ability of CSII with multiple daily injection (MDI) in glycemic control and improvement of pregnancy outcomes in patients with type 1 diabetes (T1D). However, there is a lack of similar studies in women with T2D. We hypothesize that CSII will assist women with T2D achieve better glycemic control during pregnancy compared to MDI users.
+
+PRIMARY OUTCOMES:
+  - Time in range (TIR) at 24 weeks of gestation
+  - Time in range (TIR) at 28 weeks of gestation
+  - Time in range (TIR) at 34 weeks of gestation
+
+INTERVENTIONS:
+  - DEVICE: Continuous subcutaneous insulin infusion (CSII)
+  - DEVICE: Multiple daily insulin injection (MDI)
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05001815

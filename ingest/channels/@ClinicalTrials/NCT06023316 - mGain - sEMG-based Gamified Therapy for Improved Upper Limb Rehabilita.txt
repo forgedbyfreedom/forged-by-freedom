@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06023316
+Title: mGain - sEMG-based Gamified Therapy for Improved Upper Limb Rehabilitation
+Official Title: mGain - sEMG-based Gamified Therapy for Improved Upper Limb Rehabilitation
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: tendon injury
+
+SUMMARY:
+The purpose of this Phase I study is to conduct a pilot clinical trial using a mobile app-connected, wire-free surface electromyography (sEMG) system, called mGain, that provides biofeedback-based therapy in individuals with upper limb weakness due to neurologic injury or with upper limb amputation. Our overarching hypothesis is that the mGain wireless sEMG device and mobile therapeutic gaming environment will demonstrate improved adherence to therapy when compared to standard of care and will be feasible, acceptable, and usable in individuals with upper limb weakness or limb amputation.
+
+All participants will undertake four weeks of therapy. Conducting therapy five days a week for 30 minutes a day. In addition, participants will have an initial and final assessment visit at a study site, with each visit expected to last 1-2 hours.
+
+DETAILED DESCRIPTION:
+All participants will undertake four weeks of therapy. Conducting therapy five days a week for 30 minutes a day. In addition, participants will have an initial and final assessment visit at a study site, with each visit expected to last 1-2 hours.
+
+Initial Assessment: Eligible individuals will complete a baseline assessment including range of motion, manual muscle testing, and handheld dynamometry of the target limb(s). Target muscles for therapy will be identified (e.g., biceps, triceps, deltoids, forearm flexors, forearm extensors) and a trial of sEMG evaluation to detect muscle signal will be conducted. If detectable muscle signal is present, participants will complete the consent process and be enrolled in the study. Each participant will be taught the use of the mGain system using their own mobile phone or tablet and be given a therapeutic regimen to target their individual muscle weakness. Participants will then be asked to demonstrate use of the system. Participants can ask questions to ensure they understand system usage and the expectations when at home. Participants will complete baseline validated outcome measures such as the QuickDASH (Disabilities of the Arm, Shoulder and Hand questionnaire) and PROMIS Self-Efficacy Scale.
+
+Home Therapy: For the four weeks following the initial assessment, participants will be asked to conduct a minimum of 30 minutes of therapy per day, 5 days a week, at home using the mGain system targeting the muscles identified during the initial assessment. Individuals will be asked to complete short questionnaires and write in an eDiary about their experience after conducting their daily exercises. A member of the study team will contact the participants on a weekly basis to provide technical support, inquire about adherence, and encourage participation. Data for each participant will be uploaded to Orthocare Innovations' HIPAA compliant cloud-based server.
+
+Final Assessment: Participants will complete a final assessment of strength, range of motion, and manual muscle testing. Additionally, participants will complete outcome measures and surveys such as the QuickDASH, PROMIS Self-Efficacy, system usability scale, and a custom feasibility survey.
+
+PRIMARY OUTCOMES:
+  - Pre Self-Efficacy
+  - Post Self-Efficacy
+  - System Usability Scale
+
+INTERVENTIONS:
+  - DEVICE: mGain system
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06023316

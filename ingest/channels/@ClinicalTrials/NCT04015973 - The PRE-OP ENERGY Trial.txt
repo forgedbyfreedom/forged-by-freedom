@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04015973
+Title: The PRE-OP ENERGY Trial
+Official Title: A Randomised Controlled Trial of a Pre-operative High Energy Diet for the Prevention of Organ Injury in Cardiac Surgery: The PRE-OP ENERGY Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 116
+Topic: exercise muscle mass
+
+SUMMARY:
+The PRE-OP ENERGY Trial proposes to test the overarching hypothesis that a pre-surgery high energy diet will protect patients against organ damage during cardiac surgery with cardiopulmonary bypass.
+
+DETAILED DESCRIPTION:
+PRE-OP ENERGY is a single centre, unblinded, parallel group, randomised controlled trial of a pre-operative high energy diet, versus a control group receiving standard care.
+
+The trial will test a number of specific hypotheses:
+
+1. A pre-surgery high energy diet will protect against post-cardiac surgery organ failure by altering the pre-surgery cardiometabolic state, a process referred to as 'metabolic preconditioning'.
+2. The effects of the trial intervention will not be attributable to changes in frailty, activity or baseline organ dysfunction.
+3. The trial intervention will not result in long-term adverse changes in cardiometabolic status.
+4. Metabolic preconditioning will confer protection against post-cardiac surgery kidney injury by increasing the expression of genes that promote renal tubular homeostasis.
+5. Metabolic preconditioning will confer protection against post-cardiac surgery myocardial injury by increasing the expression of genes that promote myocardial mitochondrial homeostasis via effects on chromatin histone deacetylation.
+6. Metabolic preconditioning will confer protection against post-cardiac surgery endothelial dysfunction by increasing the expression of genes that promote endothelial homeostasis.
+
+PRIMARY OUTCOMES:
+  - Change of Serum Creatinine level
+  - Change of Serum Troponin I level
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: High energy diet
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04015973

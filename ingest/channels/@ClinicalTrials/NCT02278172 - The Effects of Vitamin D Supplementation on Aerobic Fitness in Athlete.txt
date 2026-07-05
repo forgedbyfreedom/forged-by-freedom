@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02278172
+Title: The Effects of Vitamin D Supplementation on Aerobic Fitness in Athletes
+Official Title: The Effects of Vitamin D Supplementation on VO2max in Athletes: a Randomised, Double-blind, Placebo-controlled Trial
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: vitamin D muscle
+
+SUMMARY:
+The primary aim of the study is to identify if vitamin D3 supplementation influences VO2max in athletes.
+
+Secondary aims are to determine if vitamin D3 supplementation impacts on measures of muscle function, lung function, body composition, immune function and the self-reported incidence of upper respiratory tract infection.
+
+This double-blind, randomised, placebo-controlled trial is of parallel design and will aim to recruit a total of 50 athletes randomised into either a placebo or treatment group for a 12-week intervention.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Aerobic fitness (VO2max)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02278172

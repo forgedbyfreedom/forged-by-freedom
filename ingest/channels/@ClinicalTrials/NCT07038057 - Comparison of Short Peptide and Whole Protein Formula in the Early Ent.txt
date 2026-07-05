@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07038057
+Title: Comparison of Short Peptide and Whole Protein Formula in the Early Enteral Nutrition of Patients With Sepsis
+Official Title: Comparison of Short Peptide and Whole Protein Formula in the Early Enteral Nutrition of Patients With Sepsis: a Single-Center, Prospective, Randomized Controlled Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: protein supplementation
+
+SUMMARY:
+To explore the effects of early enteral nutrition with short peptide formula on energy metabolism and clinical outcomes in patients with sepsis based on blood samples, clinical database, full-spectrum metabolomics test and imaging data, and to form a theoretical basis for optimizing the formula of early enteral nutrition in patients with sepsis.
+
+DETAILED DESCRIPTION:
+This study is a single-center prospective trial. Based on the annual patient volume, available human resources, and funding at our research center, the expert team determined a sample size of 80 cases, with 40 cases in the experimental group and 40 in the control group. Eligible participants will be randomized 1:1 via computer-generated randomization into two groups, receiving either a short-peptide-based enteral nutrition formula or a whole-protein-based enteral nutrition formula.
+
+Short-peptide formula group:
+
+Within 48 hours of ICU admission, short-peptide-based enteral nutrition (Peptisorb) will be initiated. For patients with impaired swallowing or unconsciousness, a nasogastric tube will be placed. Feeding will start with low-calorie or trophic feeding, reaching 70% of the target energy and 1.2-1.5 g/kg/day of protein within 7 days. Due to significant individual variability in energy expenditure among sepsis patients, indirect calorimetry (IC) will be used to measure energy needs. If IC is unavailable, a weight-based formula (20-25 kcal/kg/day) will be applied. If patients remain in the ICU after 7 days, feeding will be gradually increased to full energy and protein targets as tolerated, followed by a transition to whole-protein nutrition.
+
+Whole-protein formula group:
+
+Within 48 hours of ICU admission, whole-protein-based enteral nutrition (Nutrison) will be initiated, with the remaining protocol identical to the short-peptide group.
+
+The study will assess changes in metabolomics after 7 days of early enteral nutrition with different protein formulations in sepsis patients, as well as differences in nutritional status, biochemical markers, and short- and long-term clinical outcomes.
+
+PRIMARY OUTCOMES:
+  - Metabolomics changes form
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Short peptide enteral nutrition
+  - DIETARY_SUPPLEMENT: Whole protein enteral nutrition
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07038057

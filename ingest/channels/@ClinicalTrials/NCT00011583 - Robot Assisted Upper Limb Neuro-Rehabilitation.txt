@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00011583
+Title: Robot Assisted Upper Limb Neuro-Rehabilitation
+Official Title: Robot Assisted Upper Limb Neuro-Rehabilitation
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: recovery exercise
+
+SUMMARY:
+Our long term objectives are to understand the mechanisms of motor impairment following neurologic injury and to develop interventions to improve motor recovery. A series of complementary, overlapping clinical trials and development activities will validate and optimize the use of robot-assisted upper limb therapy for neuro rehabilitation.
+
+We have developed a robotic system that assists or resists elbow and shoulder movements in three dimensional space. In addition to unilateral exercise modes, a novel bimanual mode enables hemiparetic subjects to practice mirror image upper limb exercises.
+
+DETAILED DESCRIPTION:
+Randomized controlled clinical trial of the Mirror Image Movement Enabler (MIME) robotic device for shoulder and elbow neurorehabilitation in subacute stroke patients. MIME incorporates a PUMA 560 robot that applies forces to the paretic limb during unilateral and bilateral movements in three dimensions. Robot-assisted treatment (bilateral, unilateral, and combined bilateral and unilateral) was compared with conventional therapy.
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer score
+
+INTERVENTIONS:
+  - DEVICE: Robot-assisted therapy
+  - DEVICE: Traditional therapy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00011583

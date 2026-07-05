@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07500376
+Title: Multimodal Nutritional and Sarcopenia Assessment for Risk Stratification in Lung Cancer Surgery
+Official Title: Prognostic Value of Multimodal Nutritional Status and Sarcopenia Assessment for Postoperative Risk Stratification in Patients Undergoing Lung Cancer Surgery: A Prospective Cohort Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 142
+Topic: sarcopenia intervention
+
+SUMMARY:
+This prospective observational cohort study aims to evaluate the prognostic value of multimodal nutritional status and sarcopenia assessment in patients undergoing lung cancer surgery. Postoperative complications, mortality, and prolonged hospital stay remain major clinical concerns in thoracic surgery. Although malnutrition and sarcopenia are recognized as important determinants of surgical outcomes, their combined and multidimensional evaluation has not been sufficiently studied.
+
+Adult patients undergoing anatomical lung resection for primary lung cancer will be included. Nutritional status will be assessed using serum biomarkers, inflammatory indices, and validated clinical nutritional scores. Sarcopenia will be evaluated using computed tomography-based muscle mass and density measurements, as well as ultrasonographic muscle thickness.
+
+These parameters will be analyzed in relation to postoperative complications, intensive care unit (ICU) requirement, length of hospital stay, and mortality. Multivariable analyses will be performed to identify independent predictors, and a combined risk stratification model will be developed.
+
+This study aims to improve preoperative risk assessment and to support personalized perioperative management strategies, including identification of patients who may benefit from targeted nutritional optimization and prehabilitation.
+
+DETAILED DESCRIPTION:
+This prospective, single-center observational cohort study will be conducted at Ondokuz Mayis University, Department of Thoracic Surgery. The study aims to investigate the combined prognostic impact of nutritional status and sarcopenia on postoperative outcomes in patients undergoing lung cancer surgery.
+
+Postoperative morbidity and mortality remain significant concerns following lung cancer surgery. Current risk stratification approaches mainly focus on age, comorbidities, and pulmonary function, while modifiable biological factors such as nutritional status and sarcopenia are not systematically integrated into routine assessment.
+
+In this study, nutritional status will be evaluated using serum biomarkers (including albumin and inflammatory markers), inflammatory indices such as CRP/albumin ratio, and validated clinical nutritional scores (including NRS-2002, CONUT, PNI, and NRI). Dietitian-based assessments will include bioimpedance analysis, handgrip strength, and functional performance tests.
+
+Sarcopenia will be assessed using preoperative computed tomography (CT) by measuring skeletal muscle area, muscle density, and pectoralis muscle index. Ultrasonographic measurements of pectoral muscle thickness will also be obtained. Sarcopenia will be defined according to established international consensus criteria.
+
+Postoperative outcomes including complications, intensive care unit requirement, length of hospital stay, and short-term mortality will be recorded. Complications will be classified using a standardized severity grading system.
+
+Multivariable statistical analyses will be performed to identify independent predictors of adverse outcomes. The combined effect of malnutrition and sarcopenia will be evaluated, and a multimodal risk stratification model will be developed. Model performance will be assessed using discrimination and calibration metrics.
+
+The study is expected to provide a clinically applicable and reproducible multimodal risk assessment framework. This approach may improve patient selection, support perioperative decision-making, and facilitate targeted nutritional and prehabilitation strategies in lung cancer surgery.
+
+PRIMARY OUTCOMES:
+  - Postoperative complications (30-day, Clavien-Dindo classification)
+
+INTERVENTIONS:
+  - OTHER: Observational Assessment
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07500376

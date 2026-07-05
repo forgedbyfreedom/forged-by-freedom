@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07465367
+Title: Methionine for CaPhos Stone
+Official Title: Assessment of L-methionine Supplementation on Urinary pH in Calcium Phosphate Stone Formers
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: protein supplementation
+
+SUMMARY:
+Some kidney stones including calcium phosphate and struvite stones form in vary alkaline urine (high pH). Currently available medication for stone prevention, namely citrate supplementation, can lead to even higher pH levels and promote stone formation. Multiple prior studies have looked at ways to acidify the urine to reduce the risk of recurrent stone formation. Ascorbic acid has been evaluated but showed no reduction in urinary pH. Ammonium chloride has shown to be effective but poorly tolerated (GI upset) at higher doses and thus is not recommended. Most recently, citric acid has been investigated but demonstrated no change in pH as compared to placebo. L-methionine is an amino acid which is metabolized to sulfate and hydrogen ions by the liver, thereby conferring an acid load onto the kidney and in theory can reduce the pH. Prior studies have demonstrated effective acidification of the urine in healthy individuals and amongst struvite stone formers. The purpose of this study is to assess the ability of L-methionine to acidify the urine of calcium phosphate stone formers. The study will involved patients abiding by a short term metabolic diet. The diet consists of typical foods (some frozen, some fresh) that have been carefully balanced to match the recommended/optimal amount of calories, protein, fat, sodium and calcium for a specific body weight. After eating this diet for 2 days, patients will begin taking L-methionine. The metabolic diet will then be resumed for 2 days at the end of taking the L-methionine (both taken together). At various times of the study, urine collections will be performed to see whether the urine becomes more acidic as a result of the L-methionine. If applicable, participants will be asked to undergo drug washout, to begin after consenting. If participants are taking Thiazide diuretics including hydrochlorothiazide, Chlorthalidone, and indapamide and alkali medications including potassium citrate, sodium bicarbonate, sodium citrate, and potassium bicarbonate, they will be asked to stop taking them 5 days before Day 1 of the protocol.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Urine pH
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-Methionine
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07465367

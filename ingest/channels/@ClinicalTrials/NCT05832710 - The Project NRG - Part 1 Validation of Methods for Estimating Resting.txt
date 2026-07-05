@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05832710
+Title: The Project NRG - Part 1: Validation of Methods for Estimating Resting Energy Expenditure
+Official Title: Comparison of Methods to Estimate Resting Energy Expenditure in Population With Different Levels of Physical Activity.
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 90
+Topic: body composition exercise
+
+SUMMARY:
+Total daily energy expenditure (TDEE) is known as the energy used by an organism during a day. The TDEE is divided into resting energy expenditure (REE), the thermic effect of food (TFE), and the energy expenditure of physical activity. There are multiple methods of measuring REE (e.g., estimating equations, direct and indirect calorimetry) among which there are significant discrepancies in its calculation in specific populations. Considering the lack of validation in the Colombian population to estimate the REE, the objective of the present research study is to compare the methods for estimating resting energy expenditure in the Colombian population with different levels of physical activity. This cross-sectional-observational study will be carried out through the guidelines for strengthening the reporting of observational studies in nutritional epidemiology (STROBE-Nut). The study population will be 130 adults from the city of Medellín, Bogotá and metropolitan areas with different levels of physical activity according to the results of the International Physical Activity Questionnaire (IPA-Q) where a high (athletes), moderate (physically active people) and low (sedentary) categorization will be made, then the indirect calorimetry tests will be applied. The development of the equation to estimate the REE will be carried out with multiple regression models under traditional and Bayesian approaches with three independent variables. It is expected to obtain a simple and valid equation to estimate the REE and contribute to the good practices of Colombian practitioners in health sciences, exercise, and sports.
+
+DETAILED DESCRIPTION:
+Determination of the total daily energy expenditure (TDEE) is of great importance as a starting point for professional support and the achievement of physical, aesthetic, and health goals. Considering that TDEE is mainly composed of resting energy expenditure (REE), nutrition and health professionals generally estimate REE and then add values for the thermic effect of food (TFE) and physical activity expenditure. As well as allostatic load and stress may increase the REE, depending on the intensity and duration of the stressor. Based on predictor variables, REE estimating equations are used. However, the values yielded by the estimating equations can be inaccurate due to variations in the characteristics of the population. Considering the lack of validation in the Colombian population to estimate the REE, the objective of the present research study is to compare the methods for estimating resting energy expenditure in the Colombian population with different levels of physical activity. This is a cross-sectional-observational study that will be carried out by means of the guidelines for strengthening the reporting of observational studies in nutritional epidemiology (STROBE-Nut). Likewise, the data collection will be carried out with a pilot test where ISAK-certified personnel in levels 2 and 3 will offer specialized training to the research assistants to allow standardization in the taking of anthropometric measurements, which minimizes the error in the data collection. This process prior to data collection allows adjustment of the methodology and procedures during the research. In addition, technical staff with a master's degree in sports science, a master's degree in exercise physiology, or a medical degree will be available for the measurement of the REE by indirect calorimetry. The measurement will be performed after device calibration and a pilot test will be performed to standardize the work methodology and calculate the coefficient of variation of the equipment.
+
+The NRG project is developed by the Research Division of the Dynamical Business \& Science Society-DBSS International with the support of University CES, University of Cordoba, the R\&D department of ARTHROS IPS, Smart Fit, INDEPORTES Antioquia, and the University Santo Tomás in Bogotá. The development of the equation to estimate the REE will be carried out with multiple regression models under traditional and Bayesian approaches with three independent variables. It is expected to obtain a simple and valid equation to estimate the REE and contribute to the good practices of Colombian practitioners in health sciences, exercise, and sports.
+
+PRIMARY OUTCOMES:
+  - Estimation of resting energy expenditure.
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05832710

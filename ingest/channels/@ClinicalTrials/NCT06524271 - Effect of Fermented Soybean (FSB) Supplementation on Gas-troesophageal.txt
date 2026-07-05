@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06524271
+Title: Effect of Fermented Soybean (FSB) Supplementation on Gas-troesophageal Reflux Disease (GERD)
+Official Title: Effect of Fermented Soybean (FSB) Supplementation on Gas-troesophageal Reflux Disease (GERD)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: protein supplementation
+
+SUMMARY:
+Gastroesophageal reflux disease (GERD) is a prevalent chronic condition affecting the well-being of both adults and children in general medical practice. Research on the effects of fermented soy-bean (FSB) supplementation in managing GERD is relatively new, with limited studies available. Existing research often lacks sufficient dosing regimens and study durations to differentiate be-tween transient placebo effects and sustained benefits. In this study, the beneficial effects of FSB supplementation were investigated in 50 voluntary participants. Participants were required to take 1g of FSB supplement once daily for twelve weeks. GERD symptoms were evaluated using the Reflux Disease Questionnaire (RDQ), while inflammatory markers, including interleukin-4 (IL-4), interleukin-6 (IL-6), and interleukin-8 (IL-8), were measured to assess inflammation. The Quality of Life in Reflux and Dyspepsia (QOLRAD) questionnaire was used to evaluate partici-pants' quality of life. Results indicated that FSB supplementation significantly (P\<0.05) alleviated heartburn and regurgitation symptoms and reduced levels of IL-4, IL-6, and IL-8, indicating a notable anti-inflammatory effect. Additionally, significant (P\<0.05) improvements were observed in QOLRAD scores, particularly in vitality, emotional distress, and physical/social functioning. Collectively, our findings support the use of FSB as an adjuvant approach in managing GERD, with notable improvements in patients' quality of life.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Reflux Disease Questionnaire (RDQ)
+  - Quality of Life in Reflux and Dyspepsia (QOLRAD)
+  - Inflammatory Markers
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fermented Soybean
+  - DIETARY_SUPPLEMENT: Supplement without fermented soybean
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06524271

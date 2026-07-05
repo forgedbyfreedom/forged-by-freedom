@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04949451
+Title: Time Restricted Feeding, Muscle, and Metabolism
+Official Title: Time Restricted Feeding Intervention for Muscle and Metabolic Health (TRIMM)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: creatine supplementation
+
+SUMMARY:
+Effective nutrition strategies for combatting and/or preventing obesity still need to be identified. This has been the case despite the numerous and different approaches that have been taken. Potential targets for combatting/preventing obesity have been identified, but long-term solutions have not emerged. This study uses time restricted feeding to study the role of dietary protein in obesity prevention and/or treatment. The objectives are to determine the role of skeletal muscle mass as a driver of energy-sensing mechanisms and peripheral signals that regulate appetite and energy intake in overweight and obese adults and to determine the effects of protein timing on muscle mass to regulate appetite and energy intake in overweight and obese adults.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body composition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey protein supplement
+  - DIETARY_SUPPLEMENT: Ketogenic aid
+  - OTHER: Control group - time restricted feeding only
+
+ELIGIBILITY:
+Age: 25 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04949451

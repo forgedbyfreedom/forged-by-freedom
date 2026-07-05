@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07128017
+Title: Online MBCT for Adjustment Disorder During COVID-19: Efficacy, Mechanisms, and RCT
+Official Title: Efficacy and Mechanisms of Internet-delivered MBCT for Adjustment Disorder During the COVID-19 Pandemic: A Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 301
+Topic: physical activity intervention
+
+SUMMARY:
+This study tested a 4-week, internet-based Mindfulness-Based Cognitive Therapy (MBCT) program designed to help people experiencing adjustment disorder during the COVID-19 pandemic. Adjustment disorder is a stress-related condition that can cause anxiety, depression, and difficulty coping after major life changes.
+
+We compared the online MBCT program to two other groups: an internet-based relaxation training program and a wait-list group. A total of 301 adults from Poland took part. We measured symptoms of adjustment disorder, depression, and anxiety before the program, right after, and one month later.
+
+Results showed that the online MBCT program led to greater improvements in depression and anxiety than the other two groups. People in MBCT also developed more self-compassion and were better able to distance themselves from unhelpful thoughts, which helped reduce their symptoms. Benefits lasted at least one month after the program ended.
+
+These findings suggest that a brief, self-guided, online mindfulness program can be an effective, accessible way to support mental health during stressful times such as a pandemic.
+
+DETAILED DESCRIPTION:
+Background and Rationale Adjustment disorder (AjD) is a stress-related mental health condition characterized by maladaptive emotional and behavioral responses to an identifiable stressor. Core symptoms include persistent preoccupation with the stressor and difficulty adapting, often accompanied by anxiety, depressed mood, and avoidance behaviors. According to ICD-11 criteria, AjD symptoms emerge within three months of a stressor and typically resolve within six months after the stressor ends, although in many cases they can persist longer and contribute to chronic distress.
+
+Epidemiological studies indicate that AjD is highly prevalent, affecting up to 30% of clinical populations and a substantial proportion of the general public during times of widespread stress. Despite this, AjD remains understudied compared to mood and anxiety disorders. Few empirically validated psychological interventions are available, and existing treatment recommendations are often extrapolated from evidence on depression and anxiety.
+
+The COVID-19 pandemic presented a unique context in which AjD rates surged globally. Fear of infection, prolonged social isolation, economic uncertainty, and disruption of daily life contributed to high levels of stress-related distress. Surveys during the pandemic indicated that 18-43% of adults in Europe reported symptom patterns consistent with AjD, underscoring the urgent need for scalable interventions that could be delivered remotely and at low cost.
+
+Mindfulness-Based Cognitive Therapy (MBCT) MBCT is an eight-week, group-based psychological program originally developed to prevent relapse in recurrent depression. It combines mindfulness meditation practices with cognitive-behavioral therapy strategies, fostering non-judgmental awareness of present-moment experience, greater cognitive flexibility, and reduced reactivity to negative thoughts and emotions.
+
+Mechanistic research suggests that MBCT works by:
+
+Increasing cognitive defusion - the ability to step back from and observe thoughts without automatically believing or reacting to them.
+
+Reducing experiential avoidance - the tendency to suppress or avoid difficult emotions and sensations.
+
+Enhancing self-compassion - a kinder, more understanding stance toward oneself in times of suffering.
+
+These processes are relevant to AjD, where stressor-related rumination and self-critical coping often maintain distress. Although MBCT's efficacy for depression and anxiety is well-established, little is known about its effects in AjD or its feasibility in brief, fully online, self-guided formats.
+
+Internet-Delivered MBCT (iMBCT) Internet-delivered psychological interventions (IPIs) have the potential to greatly expand access to evidence-based care. Online MBCT (iMBCT) can be delivered synchronously (live sessions with a facilitator) or asynchronously (self-paced, unguided), with evidence supporting effectiveness in reducing distress and improving resilience. Unguided iMBCT programs are especiall
+
+PRIMARY OUTCOMES:
+  - Change in Adjustment Disorder symptoms
+  - Remission Rates from Adjustment Disorder
+
+INTERVENTIONS:
+  - BEHAVIORAL: Mindfulness-Based Cognitive Therapy (Internet-delivered)
+  - BEHAVIORAL: Progressive Muscle Relaxation (Internet-delivered)
+  - BEHAVIORAL: No Intervention - Waitlist Control
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07128017

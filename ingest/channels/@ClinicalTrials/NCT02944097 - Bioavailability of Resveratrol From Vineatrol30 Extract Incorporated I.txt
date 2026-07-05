@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02944097
+Title: Bioavailability of Resveratrol From Vineatrol30 Extract Incorporated Into Micelles
+Official Title: Study of the Oral Bioavailability of Trans-epsilon-viniferin and Trans-resveratrol From Native and Micellar Solubilized vineatrol30 Vine Extract
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: beta-alanine
+
+SUMMARY:
+To enhance the oral bioavailability of the antioxidants trans-resveratrol and trans-ε-viniferin from Vineatrol30 grapevine-shoot extract, the native powder was incorporated into micelles. A single dose, single blind, two arms crossover trial was conducted. Plasma and urine samples were collected at intervals up to 24 h after oral intake of native or micellar Vineatrol30 (500 mg), and resveratrol content was quantified and compared between formulations. Tolerability of the dose was also controlled by safety parameters in plasma.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total trans-resveratrol [nmol/L*h]
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total trans-epsilon-viniferin [nmol/L*h]
+  - Mean maximum plasma concentration (Cmax) of total trans-resveratrol [nmol/L]
+  - Mean maximum plasma concentration (Cmax) of total trans-epsilon-viniferin [nmol/L]
+  - Time to reach maximum plasma concentration (Tmax) of total trans-resveratrol [h]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vineatrol 30 native powder
+  - DIETARY_SUPPLEMENT: Vineatrol 30 micelles
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02944097

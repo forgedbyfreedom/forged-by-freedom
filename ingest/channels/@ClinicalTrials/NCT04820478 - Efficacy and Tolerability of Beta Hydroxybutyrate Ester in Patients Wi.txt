@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04820478
+Title: Efficacy and Tolerability of Beta Hydroxybutyrate Ester in Patients With Amyotrophic Lateral Sclerosis (ALS)
+Official Title: Efficacy and Tolerability of Beta Hydroxybutyrate Ester in Patients With Amyotrophic Lateral Sclerosis (ALS)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 76
+Topic: fat loss muscle
+
+SUMMARY:
+Weight loss is a known negative prognostic factor in amyotrophic lateral sclerosis (ALS). One potential mechanism of weight loss in ALS is a disturbance of the mitochondrial complex I which causes an energy deficit in affected cells. Over the last years, various interventional studies targeting the energy deficit in ALS yielded promising results; however,it is still unclear which kind of nutrition or nutritional supplement is most beneficial. Ketone bodies represent a logical therapeutic option in ALS as ketone bodies are an extremely high-energetic substrate which yields the double amount of adenosine triphosphate (ATP) per mole compared to glucose. The human liver is able to synthesize ketone bodies (beta-hydroxybutyrate, acetone, and aceto-acetate) from fat in times of glucose shortage, for example after a prolonged period of fasting. This metabolic shift is the underlying principle of the ketogenic diet, a carbohydrate-free, fat-rich diet which has been successfully tested in other neurodegenerative diseases such as Alzheimer's and Parkinson's disease. In the ALS mouse model, a ketogenic diet was associated with a slower decline of motor function. However, a ketogenic diet is difficult to implement in ALS as it requires a long-term change of eating habits, which is difficult to achieve due to progressive dysphagia, fast worsening of general condition, and limited survival. Therefore, the direct administration of ketone bodies yields a more realistic alternative in ALS as it is easy to apply and allows to maintain the usual eating habits. In this study, we hypothesize that the administration of 3 x 10 g beta hydroxybutyrate ester per day (in addition to normal food intake and the standard medication of 2 x 50 mg riluzole) slows down disease progression as measured by neurofilament light chains (NfL) in serum after 6 months compared to placebo. Power calculation relies on the results of the lipids and calories for ALS (LIPCAL-ALS) study which tested the effect of a high-caloric fatty nutritional supplement in ALS. The study revealed that NfL serum values declined significantly in the intervention group while remaining stable in the placebo group over the course of the study. Assuming a similar effect size for ketone bodies, we calculated that 76 patients had to be included in the current trial.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Neurofilament Light Chain
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beta Hydroxybutyrate Ester (KetoneAid KE4)
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04820478

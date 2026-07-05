@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05184777
+Title: Evaluation of Salivary ELISA for Hormone Monitoring in IVF Patients
+Official Title: Evaluation of Salivary ELISA for Hormone Monitoring in IVF Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: growth hormone treatment
+
+SUMMARY:
+In assisted reproductive treatment (ART), it is necessary to follow closely the stimulation cycles of patients undergoing these treatments in order to monitor the number and size of developing follicles. Oestradiol (E2) and progesterone (P) are products of steroidogenesis and the concentrations of both hormones increase with the diameter of the growing follicle and accurate and reliable methods to measure E2 and P are essential to assess treatment response and support clinical decision. Measurement of both hormones, as well as monitoring of follicle growth through ultrasound measurements, is an important part of ovarian stimulation, requiring patients to undergo multiple blood draws. It is often a physically and emotionally painful process and the most convenient solution to this problem is the measurement of hormone concentration in other biological fluids. Salivary diagnostic tests are a less invasive, inexpensive and stress-free alternative to measurements of hormone concentration in other biological fluids. The current study pretends to evaluate the correlation between salivary ELISA assays and serum determination of progesterone and oestradiol concentrations IVF patients. In addition, secondary objectives include the measurement of diurnal variability of salivary hormone levels and patient experience with saliva collection as users.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - To evaluate the correlation between salivary ELISA assays and serum determination of progesterone and oestradiol concentrations IVF patients.
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Determination of progesterone and oestradiol
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05184777

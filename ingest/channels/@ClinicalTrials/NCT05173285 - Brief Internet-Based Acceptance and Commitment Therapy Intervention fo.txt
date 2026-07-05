@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05173285
+Title: Brief Internet-Based Acceptance and Commitment Therapy Intervention for Parents in the Postpartum
+Official Title: Feasibility and Acceptability of a Brief Internet-Based Acceptance and Commitment Therapy Intervention for Parents in the Postpartum: A Feasibility Randomized Control Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 138
+Topic: physical activity intervention
+
+SUMMARY:
+It is common for parents in the postpartum period (the first twelve months following childbirth) to experience psychological difficulties, particularly low mood. Acceptance and Commitment Therapy (ACT) is an evidence-based intervention that aims to cultivate psychological flexibility; the ability to stay in contact with the present moment regardless of unpleasant thoughts, feelings and bodily sensations, while choosing one's behaviours based on values. Acceptance and Commitment Therapy (ACT) is effective in reducing depression in the general population, including brief ACT interventions. However, the effectiveness of ACT interventions in the postpartum period is not yet fully established.
+
+This study aims to investigate the feasibility (recruitment source, rate and attrition rate), acceptability (usability, usefulness and satisfaction) and the potential effectiveness (to inform the required sample size for a fully powered randomised control trial) of a four week internet-based ACT intervention for postpartum parents on depression.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Depression on The Edinburgh Postnatal Depression Scale from Baseline to Post Intervention (i.e. between week 4-6 after baseline assessment)
+  - Change in Depression on The Edinburgh Postnatal Depression Scale from Baseline to Follow-up (i.e. between week 8-12 after baseline assessment)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Baseline Assessment
+  - BEHAVIORAL: Brief Online ACT Intervention
+  - DIAGNOSTIC_TEST: Post-Intervention Assessment (i.e. between 4-6 weeks after baseline assessment)
+  - DIAGNOSTIC_TEST: Follow-up Assessment (i.e. between 8-12 weeks after baseline assessment)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05173285

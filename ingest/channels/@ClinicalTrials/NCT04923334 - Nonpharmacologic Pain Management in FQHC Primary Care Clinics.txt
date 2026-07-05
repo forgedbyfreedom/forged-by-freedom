@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04923334
+Title: Nonpharmacologic Pain Management in FQHC Primary Care Clinics
+Official Title: Nonpharmacologic Pain Management in FQHC Primary Care Clinics
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 500
+Topic: low back pain exercise
+
+SUMMARY:
+The goal of this study is to improve pain management and reduce opioid reliance for patients with chronic back pain in Utah Federally-Qualified Health Centers (FQHCs). The study compares the effectiveness of nonpharmacologic pain treatments using telehealth to overcome access barriers. We will use automated EHR reminders for electronic referral to teleconsult services. Our project tests adaptive treatments and uses a hybrid type I design - focused on effectiveness outcomes while gathering implementation data to inform future efforts to scale effective strategies.
+
+DETAILED DESCRIPTION:
+This randomized clinical trial compares the effectiveness of different strategies to provide efficacious nonpharmacologic interventions to patients with back pain seeking care in FQHCs throughout the state of Utah. The strategies evaluated are designed to overcome the barriers specific to rural and low income communities served by FQHC clinics through innovative use of telehealth resources. The randomized trial will randomize individual participants to one of two interventions strategies, one providing both a brief pain teleconsult with a 10-week telehealth physical therapy, the other uses an adaptive strategy - providing the brief pain teleconsult first, followed by the 10-week telehealth physical therapy only among those non-responsive to the brief teleconsult treatment. We will also evaluate outcomes related to the efforts to implement strategies in FQHC clinics in order to provide valuable information for future efforts to scale effective strategies into other low resource health care settings. Assessments will occur at baseline and after 12-, 26- and 52-weeks.
+
+PRIMARY OUTCOMES:
+  - PEG-3
+
+INTERVENTIONS:
+  - BEHAVIORAL: Brief Pain Teleconsult
+  - BEHAVIORAL: Telehealth Physical Therapy
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04923334

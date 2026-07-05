@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02486783
+Title: Infection, Sepsis and Meningitis in Surinamese Neonates
+Official Title: Infection, Sepsis and Meningitis in Surinamese Neonates
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 190
+Topic: physical activity intervention
+
+SUMMARY:
+Suriname is a small developing country in South America with a population of half a million people. Early neonatal death in Suriname is high with 16 per 1000 live births. Unpublished data from the Suriname Perinatal and Infant Mortality Survey estimate contribution of infection to early neonatal mortality at 25% (4 per 1000 live births) of all deaths. In comparison, incidence rates of neonatal sepsis alone are 3.5 per 1000 live births. These numbers indicate an increased burden of neonatal infection in Suriname versus the U.S. In any case about 40 newborns that die each year of infection are a huge loss, also considering the small Surinamese community. Despite this overall idea on the impact of infectious disease in Surinamese neonates exact information regarding incidence, type of infection (e.g., localized, viral, early-onset or late-onset sepsis), risk factors (e.g., insufficient antenatal care, maternal Group B-Streptococcus status), etiology, microbial causes, morbidity, antibiotic treatment (type and duration), and epidemiological determinants (e.g., gestational age, sex, ethnicity) are lacking.
+
+From a clinical perspective, there is still a challenge to identify neonates with infection. Neonates are often admitted with ambivalent clinical symptoms and receive preventive antibiotics that are costly, promote pathogen-resistance, and have negative long-term effects (i.e., on the development of the intestinal bacterial flora). Currently, assessment of blood leukocyte or trombocyte counts and levels of CRP are insufficiently sensitive to be used as biomarkers, while confirmation of actual sepsis or meningitis by positive culture results is relatively rare (0.5-3% in the United States). This complicates decisions on duration of antibiotic treatment and hospitalization significantly, while no other biomarkers exist.
+
+The circulating isoforms of adhesion molecules (cAMs), which mediate interactions of leukocytes with the vascular endothelium, have been proposed as biomarkers for infection and sepsis. During infection they accumulate in the bloodstream as a result of shedding, which represents their removal from cell surfaces of endothelial cells and leukocytes by enzymes called sheddases. Recently, we have reviewed mechanisms behind shedding of cAMs in neonatal, pediatric and adult sepsis. The shedding process reflects a critical and active process in orchestrating interaction between leukocytes and the endothelium for an effective host response, while minimizing collateral tissue damage. As a result, both plasma levels of cAMs and their sheddases are subject to change during infection and sepsis. Additionally, compelling, albeit limited, data suggest changes of levels of cAMs in CSF in adult and pediatric meningitis.
+
+To date, some evidence exists of changes in levels of cAMs during malaria (in children from Malawi) and sepsis, although not sensitive enough to predict outcomes in the clinic. Those levels have never been assessed simultaneously with levels of their sheddases in blood or CSF as a diagnostic tool. We propose that this combined approach may provide more detailed information about the extent of inflammatory activation in neonates.While a balance in levels is maintained under resting conditions or mild (local) infection, it may be perturbed during sepsis or meningitis . Thus, simultaneous measurement of these levels could promote early identification of infection, and may even distinguish between mild infection, systemic infection or meningitis. Currently, manufacturers are rapidly developing Luminex® technology as an advanced, fast, high-throughput and clinically feasible bedside tool for such an approach.
+
+We hypothesize that incidence rates of neonates with infection in Suriname are high. We further hypothesize that, upon signs of infection, the simultaneous measurement of cAMs and their SEs in serum and CSF discriminates between infected and non-infected neonates. We aim to: 1) identify and follow neonates at the Academic Hospital Paramaribo with signs of infection to establish incidence rates of infection, and 2) investigate diagnostic potential of our proposed biomarker combination in these neonates for infection, type of infection (e.g., local (mild), sepsis or meningitis) and outcomes.
+
+DETAILED DESCRIPTION:
+Study Design:
+
+The Academic Hospital Paramaribo (AZP) has the largest perinatal care facility in Suriname. Recently, the AZP opened the country's only neonatal intensive care unit (NICU). This study aims to include all neonates presenting here and at the high and medium care facilities with clinical signs of infection, sepsis or meningitis (age: 0-1 month) that require infection work up. Along with the inclusion of these neonates follows a detailed epidemiological description of newborns with infectious disease. Inclusion will take place by one of 10 residents, with approval from one of the 5 attending pediatricians. Along with standard blood draws for infection parameters (at t=0 and t=48 hours), blood culture (at t=0 hours) and CSF culture (at t=0 hours), serum and CSF will be separated for our biomarker study. For all neonates, normal local protocol for the management of infection, sepsis or meningitis will be followed. This includes antibiotic treatment for 7 days when 1) clinical suspicion of infection at admission was high; 2) infection parameters are aberrant at 48 hours; 3) blood culture is positive. Otherwise, antibiotic treatment is stopped after 48 hours. Further protocol includes necessary changes in respiratory support, circulatory (fluid) support and feeding. Medical treatments can be cardiotonics and treatments for hyperglycemia and seizures. Neonates are divided over 5 groups based on course of antibiotic treatment and culture results: 1) Baseline controls (no signs of infection): neonates admitted for serial blood draws at t=0 and 48 hours for uncomplicated hyperbilirubinemia (with jaundice, but without other signs of infection); 2) Signs of infection, further divided in: 2a) No infection: antibiotics stopped after 48 hours; negative cultures; 2b) Clinical infection: 7 day antibiotics; negative cultures; 2c) Sepsis: positive bacterial blood culture; 2d) Meningitis: positive bacterial CSF culture.
+
+Sample size and power:
+
+Sample size and power analysis is complicated because The Suriname Perinatal and Infant Mortality Survey only provides data on mortality as a result of infection (amongst other causes), without data on the incidence of neonatal infection. We estimate an incidence of admission for clinical signs for infection of 50 per 1000 live births (5%) at the NICU of the AZP. An annual birth rate at the AZP of about 3000 live births per year gives us n=150 neonates with signs of infection divided over four groups. Based on these estimations the recommended sample size of the whole population would be n=1538 (margin of error 1% and CI 99%). Since the incidence of newborns for which exclusion criteria apply and incidence of the subgroups are currently unknown, and to compensate for loss to follow up, we decided to include over a one-year period (n=3000). The biomarker study is exploratory in nature and we aim for a baseline control group of n=40 (larger n may be difficult to establish due to practical constraint). In our analys
+
+PRIMARY OUTCOMES:
+  - Presence of infection upon signs of infection
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age:  to 1 Month
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02486783

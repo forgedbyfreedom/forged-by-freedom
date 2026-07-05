@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01271803
+Title: A Study of Vemurafenib and GDC-0973 (Cobimetinib) in Participants With BRAFV600E Mutation-Positive Metastatic Melanoma
+Official Title: A Phase IB, Open-Label, Dose-Escalation Study Evaluating the Safety, Tolerability and Pharmacokinetics of Vemurafenib in Combination With GDC-0973 (Cobimetinib) When Administered in BRAFV600E Mutation-Positive Patients Previously Treated (But Without Prior Exposure to BRAF or MEK Inhibitor Therapy) or Previously Untreated for Locally Advanced/Unresectable or Metastatic Melanoma or Those Who Have Progressed After Treatment With Vemurafenib
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 131
+Topic: creatine supplementation
+
+SUMMARY:
+This open-label, dose-escalation study of vemurafenib in combination with cobimetinib will evaluate the safety, tolerability and pharmacokinetics in participants with BRAFV600 mutation-positive metastatic melanoma. Participants with previously untreated, BRAFV600E mutation-positive, locally advanced/unresectable or metastatic melanoma or those who have progressed on vemurafenib monotherapy immediately prior to enrolling in this trial are eligible. Participants will be assigned to different cohorts with escalating oral doses of vemurafenib and cobimetinib. This study consists of 2 stages, Stage 1 (Dose Escalation Stage \[DES\] and Cohort Expansion Stage \[CES\]) and the anticipated time on study treatment is until disease progression, unacceptable toxicity or any other discontinuation criterion is met.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Dose-Limiting Toxicities (DLTs) During DES in Combination Cohorts
+  - Maximum Tolerated Doses (MTD) of Vemurafenib and Cobimetinib When Administered in Combination in DES
+  - Maximum Plasma Concentration (Cmax) of Cobimetinib on Day 1, Cycle 1
+  - Cmax of Cobimetinib on Day 1, Cycle 1 in Cohort 3
+  - Time Taken to Reach Maximum Plasma Concentration (Tmax) of Cobimetinib on Day 1, Cycle 1
+
+INTERVENTIONS:
+  - DRUG: Cobimetinib
+  - DRUG: vemurafenib
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01271803

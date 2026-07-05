@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07473193
+Title: Beetroot Beverage and Repeated Sprint Power Output During RAST
+Official Title: "Effects of a Beetroot-Based Functional Beverage on Repeated Sprint Performance: A Randomized, Double-Blind, Placebo-Controlled Crossover Trial"
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: sleep athletes
+
+SUMMARY:
+This randomized, double-blind, placebo-controlled crossover trial aims to evaluate the acute effects of a nitrate-rich beetroot-based beverage on repeated sprint performance in trained athletes.
+
+Ten athletes will complete two experimental conditions in randomized order: beetroot beverage (BET) and placebo (PLA), separated by a 7-day washout period. The beetroot beverage consists of 200 mL of a mixture containing beetroot, cocoa, and green tea, providing approximately 6.4 mmol of nitrate.
+
+In each condition, participants will perform a Running Anaerobic Sprint Test (RAST), consisting of six maximal 35-meter sprints with 10 seconds of passive recovery between sprints. The primary outcome is mean power output across the six sprints.
+
+Secondary outcomes include fatigue index, sprint-by-sprint power output, heart rate, rating of perceived exertion (Borg 6-20 scale), maximal oxygen uptake (VO₂max), and sleep quality assessed using the Insomnia Severity Index (ISI).
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled crossover trial is designed to investigate the acute effects of a nitrate-rich beetroot-based beverage on repeated sprint performance in trained athletes.
+
+Ten athletes will participate in two experimental sessions in randomized order: beetroot beverage (BET) and placebo (PLA). Randomization will determine the sequence of beverage administration. Participants and investigators will be blinded to treatment allocation.
+
+After beverage ingestion, participants will perform a standardized warm-up followed by the Running Anaerobic Sprint Test (RAST), consisting of six maximal 35-meter sprints with 10 seconds of passive recovery between sprints. Sprint time will be recorded using electronic timing, and power output will be calculated using body mass and sprint time.
+
+The primary outcome measure is mean power output across all six sprints. Secondary outcomes include:
+
+Fatigue index (percentage decrement across sprints)
+
+Individual sprint power (S1-S6)
+
+Heart rate response
+
+Rating of perceived exertion (Borg 6-20 scale)
+
+VO₂max (assessed at baseline)
+
+Sleep quality measured using the Insomnia Severity Index (ISI)
+
+A linear mixed-effects model will be used to analyze repeated sprint performance, including subject as a random intercept and treatment, sprint, and their interaction as fixed effects. Non-parametric tests will be applied when assumptions of normality are not met. Statistical significance will be set at p ≤ 0.05.
+
+PRIMARY OUTCOMES:
+  - Mean power output (W) during six maximal 35-m sprints
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beetroot-based antioxidant beverage
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07473193

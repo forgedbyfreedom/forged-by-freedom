@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06465602
+Title: Nicotinamide Supplementation Improves Physical Performance in Older Adults at Risk of Falls
+Official Title: Nicotinamide Supplementation Improves Physical Performance in Older Adults at Risk of Falls: a Pilot Randomized Clinical Trial
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: vitamin D muscle
+
+SUMMARY:
+Falls are unplanned events resulting in contact with a lower surface. They are common in older adults, affecting one in three individuals over 65 years old. They have serious consequences, ranging from physical injuries (fractures, traumatic brain injury) to psychological repercussions. Physical training focused on muscle strength, balance, and gait has consistently been shown to prevent falls. However, there are significant challenges in its implementation, such as the need for trained personnel and long intervention times, which are associated with high costs. Therefore, developing strategies to improve the efficiency of physical training programs in older adults is mandatory. The reduced response to physical training in older adults compared to younger individuals is a well-documented phenomenon, reflecting physiological changes associated with aging.
+
+Nicotinamide adenine dinucleotide (NAD+) is an essential coenzyme for cells, mediating energy metabolism and participating in crucial processes such as DNA repair, mitochondrial function, and cell death. As we age, NAD+ levels decrease in various tissues (including the brain and muscle), contributing to the development of aging phenotypes and associated pathologies. Preclinical evidence suggests that increasing NAD+ levels reduces the appearance of aging phenotypes. During physical activity, cellular metabolic pathways that increase the demand for NAD+ to support energy production in mitochondria are activated. This increase in demand is associated with the upregulation of key enzymes involved in NAD+ degradation promoted by exercise. Considering the decrease in cellular levels of this coenzyme associated with aging, it can be hypothesized that NAD+ deficiency may play a significant role in the reduced response of older adults to training programs. Nicotinamide, a water-soluble form of vitamin B3 currently considered a nutritional supplement, is a fundamental precursor for NAD+ synthesis, capable of raising cellular levels of it. It has already been used in clinical practice in the treatment of certain endocrinological and dermatological conditions. This study aims to determine through a randomized clinical trial whether nicotinamide supplementation improves physical performance in older adults at risk of falls undergoing a physical training program.
+
+DETAILED DESCRIPTION:
+To test the hypothesis, a randomized pilot clinical trial will be conducted using block allocation, double-blind (patient and evaluator), designed according to the SPIRIT guidelines for drafting a trial protocol. This study involves the implementation of guided home-based physical training by a physiotherapist (2 sessions per week for 4 weeks) combined with supplementation with nicotinamide (1.5 g/day) or placebo depending on the assigned group. Improvement in physical performance will be evaluated using the Short Physical Performance Battery (SPPB), handgrip strength test, quadriceps dynamometry, posturography, and near-infrared spectroscopy (NIRS) of the quadriceps. The RedCap software will be used for randomization and data analysis.
+
+PRIMARY OUTCOMES:
+  - Improvement in physical performance
+
+INTERVENTIONS:
+  - DRUG: Nicotinamide
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06465602

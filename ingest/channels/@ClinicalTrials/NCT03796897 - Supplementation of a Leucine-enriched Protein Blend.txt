@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03796897
+Title: Supplementation of a Leucine-enriched Protein Blend
+Official Title: Supplementation of a Leucine-Enriched Dairy Protein Blend: Chronic and Acute Metabolic Responses in Young Men and Women
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 8
+Topic: vitamin D muscle
+
+SUMMARY:
+It is well known that dietary protein transiently stimulates muscle protein synthesis (MPS) whereby changes in MPS in response to feeding may be regulated by specific downstream target proteins of mammalian target of rapamycin signaling, such as S6K1, rpS6, and eIF2B. A meal deficient in protein, however, does not increase the rate of MPS because a rise in the bioavailability of amino acids does not occur. In addition, the source of dietary proteins has been shown to impact postprandial blood levels of amino acids. The concept that certain types of proteins are "fast acting" or "slow acting" has been shown to affect the postprandial profile of amino acids appearing in the systemic circulation. Native whey and micellar casein are both dairy proteins that contain a similar amount of essential (EAAs), but blood EAAslevels increase faster and to a higher level after the consumption of whey protein. Differences in gastric emptying, digestion and absorption kinetics between micellar casein and native whey are the underlying factors. Nonetheless, micellar casein protein has been shown to protract MPS in humans. Despite the significant amount of information gained with respect to both of these protein sources, the effects of combinatorial formulations on the postprandial profile of amino acids appearing in the blood is less well known.
+
+DETAILED DESCRIPTION:
+In a cross-over, randomized controlled trial, 10 healthy young participants (5 men and 5 women) will be recruited to undergo exercise resistance training randomized to habitual diet or habitual diet and supplementation (2 x per training session). For two of the training sessions the investigators will utilize a uni-lateral resistance exercise model to identify the acute effects of exercise and exercise + supplementation on the integrated rate of myofibrillar MPS within subject. This model enhances statistical power and eliminates between-subject differences impacting our outcomes. Throughout the study participants will record their macronutrient dietary intake. In addition, baseline body composition will be assessed with dual-energy x-ray absorptiometry.
+
+Visit 1 (Day -7): Familiarization, strength testing and baseline body composition One week before the exercise trial, the investigators will ask participants to visit McMaster University to undergo a familiarization session with the exercise equipment and to perform 3-5 repetition maximum strength testing. This will allow the investigators to calculate the resistance (weight) participants will lift in their upcoming training sessions. The investigators will also perform a body composition scan using a dual-energy x-ray absorptiometry (DXA), assess participants' height and weight, and administer daily food logs with instructions to assess their habitual diet.
+
+Visit 2 (Day 0): D2O administration and resting blood and saliva sampling One week after the familiarization visit, the investigators will ask participants to come to McMaster University in a fasted state and receive a dose of doubly labelled water D2O equal to 0.8mLs/kgBW and every hour for 3 hours after providing a blood and saliva sample. D2O is a safe, and widely used stable isotope, used to effectively measure the rate at which participants' muscle grow.
+
+Visits 3 and 7 (Days 1 and 7): Resistance training program and muscle biopsy On these days participants will come to the lab in the morning following their habitual diet routine and will have a resting biopsy, blood and saliva samples taken. Next, participants may be asked to consume the supplement but will be asked to drink a small amount of D2O. Finally, participants will perform a combination resistance style exercise training session and immediately following training may be asked to consume the supplement.
+
+Visit 4, 5, 8 \& 9 (Days 2, 3, 8, 9): Resistance training program On these days participants will come to the lab in the morning following their habitual diet routine and have a saliva sample taken. Next, participants may be asked to consume the supplement but will be asked to drink a small amount of D2O. Finally, participants will perform a combination resistance style exercise training session and immediately following training participants may be asked to consume the supplement.
+
+Visits 6 and 10 (Days 4 and 10): Uni-lateral acute training session and muscle biopsy On these 
+
+PRIMARY OUTCOMES:
+  - Integrated Muscle Protein Synthetic Rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Leucine-enriched protein
+  - BEHAVIORAL: Habitual diet only
+
+ELIGIBILITY:
+Age: 18 Years to 29 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03796897

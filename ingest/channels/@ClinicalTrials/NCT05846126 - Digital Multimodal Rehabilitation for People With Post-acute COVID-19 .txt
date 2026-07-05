@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05846126
+Title: Digital Multimodal Rehabilitation for People With Post-acute COVID-19 Syndrome.
+Official Title: Digital Rehabilitation With Cognitive Training, Physical Activity and Mindfulness for People With Post-acute COVID-19 Syndrome With Cognitive Impairment. REHABCOVID Project.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 158
+Topic: high intensity interval training
+
+SUMMARY:
+Although most infected people survive the infection, many have persistent sequelae or symptoms, which cause disability or decreased quality of life. The World Health Organization has called on countries to prioritize the rehabilitation of the consequences of COVID-19 in both the medium and long term, as this chronicity is expected to impact the health public and the economy in the coming years.
+
+RehabCOVID (also referred to as RehabNautilus) is born from the need to provide solutions to persistent cognitive impairment symptoms of people who have suffered from COVID-19. Thus, we will offer people with long COVID that accomplish inclusion/exclusion criteria to participate in a randomized clinical trial to evaluate the effectiveness of cognitive stimulation therapy combined with physical exercise and mindfulness. The current project is a single-blind randomized control study, where we will compare two combined interventions with a control group that will encompass different functional, structural, and biochemical changes and interactions in the brain. We will study the effects that this combined intervention produces in the brain. We expect to gain more insight into the specific neuroplasticity mechanisms of cognitive persistent COVID symptoms.
+
+DETAILED DESCRIPTION:
+The current project is a single-blind randomized clinical study, where we will compare two combined interventions with a control group that will encompass different functional, structural, and biochemical changes and interactions in the brain. We will study the effects that this combined intervention produces in the brain. We expect to gain more insight into the specific neuroplasticity mechanisms of cognitive persistent COVID symptoms.
+
+Specifically, we aim to:
+
+1. Examine the effects of a combined intervention in a population of long-COVID patients on various domains: cognition; emotion; physical health and quality of life.
+2. Study the molecular mechanisms (biomarkers of inflammation, vascular risk, growth factors, angiogenesis, neurogenesis, and cellular metabolism markers of neural plasticity) by which the combined interventions influence brain functions.
+3. Compare the levels of neural plasticity-related miRNAs and Sirt-1 protein in the plasma of long-COVID patients of the experimental groups versus the active control group.
+4. Examine specific plasticity effects of each of the two interventions regarding structural magnetic resonance imaging (MRI) combined with volumetry and morphometry, resting-state functional MRI.
+5. Determine the influence that demographic characteristics, previous pathologies, lifestyle, baseline brain state, and genetic polymorphisms can have on neuroplasticity.
+
+We hypothesize that we will find recovery in our three groups, although it will be enhanced in the two experimental groups (those that combine cognitive training with physical activity and mindfulness) compared to our control group.
+
+1. Post-COVID patients of the experimental groups will perform better than those patients of the active control group in cognition (episodic memory tests, executive function, attention, and speed processing), functional capacity, mental health, and quality of life measures at the end of the intervention.
+2. Post-COVID patients of the experimental groups will show greater changes in biomarkers than those patients of the active control group at the end of the intervention. These changes will include higher levels of Sirt-1 and regulation of neural plasticity-related miRNAs in plasma from patients in the experimental group.
+3. We will find an association between changes in biomarkers and cognitive, functional capacity and mental health outcomes in individuals of the experimental groups.
+4. Post-COVID patients of the experimental groups will show greater improvements in grey and white matter structural data and functional connectivity than those patients of the active control group at the end of the intervention.
+
+PRIMARY OUTCOMES:
+  - Differences between groups in scores of global cognition
+  - Differences between groups in scores of selective attention, inhibition, and processing speed
+  - Differences between groups in scores of Visual scanning and processing speed
+  - Differences between groups in scores of Executive functioning and cognitive flexibility
+  - Differences between groups in scores of auditory attention
+
+INTERVENTIONS:
+  - BEHAVIORAL: RehabCovid_Telematic
+  - BEHAVIORAL: RehabCovid_ImmersiveVR
+  - BEHAVIORAL: Control_Condition
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05846126

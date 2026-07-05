@@ -1,0 +1,53 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07056504
+Title: Technologies and Systems for Assessing Human Energy Metabolism and Nutritional Rehabilitation
+Official Title: Active Rehabilitation Training System for Motor and Cognitive Function Technologies and Systems for Assessing Human Energy Metabolism and Nutritional Rehabilitation
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 80
+Topic: high intensity interval training
+
+SUMMARY:
+The objective of this observational study is to integrate the doubly labeled water (DLW) database from healthy individuals with multimodal data-including, but not limited to, weight, height, age, sex, race, elevation-from cohorts undergoing rehabilitation following movement impairments or neurological injuries. Machine learning algorithms will be used to develop injury-specific predictive models of energy requirements.
+
+The primary research question is:
+
+How does energy metabolism change during the rehabilitation process in individuals recovering from traumatic brain injury, stroke, or major surgical procedures? To answer this, participants will undergo a comprehensive set of assessments, including measurements of height and weight, body composition, resting metabolic rate, physical activity levels, total energy expenditure, psychological health, food intake and hunger ratings, sleep quality, cognitive performance, non-invasive brain function monitoring, and gait analysis. Fecal and blood samples will also be collected for untargeted metabolomics analysis.
+
+DETAILED DESCRIPTION:
+1. Body Weight and Height Participants will fast overnight prior to measurement. Body weight will be measured in the morning using a calibrated Seca digital scale, with participants wearing light clothing and no shoes. Height will be measured using a Seca 217 stadiometer, with participants standing barefoot.
+2. Resting Energy Expenditure (REE) REE will be measured via indirect calorimetry using a respiratory hood system (Cosmed). Participants will report to the laboratory after an overnight fast, lie supine on a flat bed, and have the hood placed over their head. Oxygen consumption and carbon dioxide production will be recorded for 40 minutes, with the final 10 minutes used for analysis. The system will be quality-checked regularly using a turbine test, and monthly validation will be conducted via an alcohol combustion test.
+3. Total Energy Expenditure (TEE)
+
+   TEE will be assessed using two complementary methods:
+
+   Doubly Labeled Water (DLW) Method: Urine samples from the DLW subset will be stored at -20 °C and shipped on dry ice to Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences. Isotope ratios will be analyzed using a Liquid Water Isotope Analyzer (ABB). CO₂ production will be calculated using the latest equation from Speakman et al. (2021, Cell Reports Medicine), and TEE will be estimated using the Weir equation.
+
+   Metabolic Chamber: TEE will also be measured using a whole-body metabolic chamber (Maastricht Instruments, Netherlands), which continuously tracks oxygen consumption and carbon dioxide production. Participants will remain in the chamber for 48 hours, engaging in routine daily activities. Data from the second day will be analyzed to estimate TEE.
+4. Physical Activity Physical activity will be assessed using a GT3X accelerometer worn on the hip for 15 consecutive days. The device should not be worn during bathing or swimming. Data from the first day and any day with \<12 hours of wear time will be excluded. A valid dataset requires at least two weekdays and two weekend days of usable data.
+5. Body Composition
+
+   Body composition will be measured using the following techniques:
+
+   Magnetic Resonance Imaging (MRI; Philips Multiva 1.5T) Dual-energy X-ray Absorptiometry (DXA; HOLOGIC Horizon Wi, USA) Bioelectrical Impedance Analysis (BIA; TANITA MC-980, Japan) Parameters to be assessed include total and regional fat mass, lean mass, and fat percentage across the limbs and trunk. MRI will be used for whole-body fat distribution analysis by trained technicians.
+6. Mental Health Assessment The Symptom Checklist-90 (SCL-90) will be used to evaluate psychological well-being. This tool measures ten dimensions: somatization, obsessive-compulsive traits, interpersonal sensitivity, depression, anxiety, hostility, phobia, paranoid ideation, psychosis, and additional symptoms. Scores for each dimension and overall symptom severity will be calculated.
+7. Food Intake and Hunger Assessment Meals will be designed based on
+
+PRIMARY OUTCOMES:
+  - Height
+  - Resting Energy Expenditure (REE)
+  - Total Energy Expenditure (TEE)
+  - Physical Activity Level
+  - Fat mass
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 20 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07056504

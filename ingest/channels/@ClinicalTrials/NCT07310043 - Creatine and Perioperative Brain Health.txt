@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07310043
+Title: Creatine and Perioperative Brain Health
+Official Title: Creatine Intervention in Older Adults to Improve Perioperative Brain Health
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: athletic performance
+
+SUMMARY:
+The goal of this study is to understand the effects of oral creatine supplementation in the perioperative period. Creatine is commonly used to enhance athletic performance, but it can also have positive effects on the brain. Since surgery can lead to alterations in thinking, memory, and attention patterns in some patients, we will assess whether creatine can be protective against these changes in older adults undergoing surgery.
+
+DETAILED DESCRIPTION:
+Surgical interventions, while often necessary, are associated with substantial postoperative morbidity, particularly among older adults. Perioperative neurocognitive disorders (PND), characterized by changes in memory patterns in the perioperative period and are among the most common surgical complications in aging populations. Beyond their considerable economic burden, estimated to exceed $30 billion annually, PND impose profound immediate consequences for patients and caregivers and is associated with long-term adverse outcomes, including an increased risk of dementia. Despite their high prevalence and clinical impact, effective, scalable, and easily implementable preventive strategies for PND remain limited.
+
+Creatine plays a critical role in supporting the brain's high metabolic demands, and its homeostasis may be disrupted during periods of physiological stress such as anesthesia and surgery. Creatine supplementation has demonstrated neuroprotective effects in other high-stress conditions. However, its potential to mitigate perioperative cognitive vulnerability has not been previously investigated. This study will evaluate creatine supplementation as a novel protective strategy to reduce the risk of PND in older adults undergoing surgery.
+
+PRIMARY OUTCOMES:
+  - Preoperative cognitive function assessed with the Montreal Cognitive Assessment (MoCA)
+  - Postoperative cognitive function assessed with the Montreal Cognitive Assessment (MoCA)
+  - Postoperative cognitive function assessed with the Montreal Cognitive Assessment (MoCA)
+  - Postoperative delirium assessed with the Confusion Assessment Method
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Creatine monohydrate
+
+ELIGIBILITY:
+Age: 60 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07310043

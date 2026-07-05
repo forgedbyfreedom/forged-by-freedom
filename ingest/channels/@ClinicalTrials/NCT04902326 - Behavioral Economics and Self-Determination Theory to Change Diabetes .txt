@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04902326
+Title: Behavioral Economics and Self-Determination Theory to Change Diabetes Risk (BEST Change)
+Official Title: Integrating Behavioral Economics and Self-Determination Theory to Advance Patient Engagement in Diabetes Prevention
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 380
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Patients with prediabetes can significantly reduce their risk of developing type 2 diabetes mellitus (T2DM) by participating in a Diabetes Prevention Program (DPP) or using metformin, but very few patients with prediabetes engage in these strategies. This randomized controlled trial will compare, among adults with prediabetes, the effectiveness of financial incentives, tailored messages based on self-determination theory (SDT) principles, and the combination of financial incentives plus tailored messages based on SDT principles in decreasing hemoglobin A1c (HbA1c) and weight and in increasing participation in a DPP or use of metformin. Our main hypotheses are that the mean decrease in HbA1c will be greater in the arm that receives a combination of financial incentives plus tailored messages than in the arm that receives generic health education messages, and that the mean decrease in HbA1c will be greater in the arm that receives a combination of financial incentives plus tailored messages than in the arm that receives financial incentives alone and the arm that receives tailored messages alone. The study will also identify moderators and mediators of the effectiveness of the interventions and evaluate facilitators of and barriers to scalability, acceptability, and sustainability of the different interventions.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Hemoglobin A1c From Baseline to 6 Months
+  - Change in Hemoglobin A1c From Baseline to 12 Months
+
+INTERVENTIONS:
+  - BEHAVIORAL: Automated educational text messages
+  - BEHAVIORAL: Autonomy-supportive automated educational text messages
+  - BEHAVIORAL: Financial incentives
+  - BEHAVIORAL: Tailored text messages
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04902326

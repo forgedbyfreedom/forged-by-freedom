@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07001176
+Title: Caffeine, Resistance Exercise and Muscle/Cerebral Oxygenation
+Official Title: Effect of Acute Caffeine Intake on Muscle and Cerebral Oxygenation During Muscular Strength, Power, and Endurance Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: caffeine exercise
+
+SUMMARY:
+Introduction: Several studies have evaluated and confirmed the ergogenic effects of acute caffeine intake on sports performance. However, the mechanism responsible for this ergogenic effect remains to be elucidated.
+
+Objectives: This study aims to evaluate the acute effects of caffeine intake on muscle and cerebral oxygen during muscular strength, power, muscle endurance performance. and muscle electrical activity in young adults.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Muscle Oxygenation
+  - Cerebral oxygenation
+  - Number of repetitions performed in 1 set at 65%1RM until task failure
+  - Bar velocity deplacement performed in 1 set at 65%1RM until task failure
+  - Power output generated in 1 set at 65%1RM until task failure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07001176

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06490133
+Title: Evaluation of Consuming Olive Extract on Total Cholesterol Levels
+Official Title: Nutritional Intervention to Evaluate the Effectiveness of the Consumption of Dehydrated Olive Pulp in Reducing Total Cholesterol Levels in Subjects with Overweight-obesity and High Total Cholesterol Levels
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: exercise intervention obesity
+
+SUMMARY:
+The main objective of this nutritional intervention is to assess the efficacy of polyphenol-rich capsules on reducing metabolic syndrome traits, mainly cholesterol levels. For this purpose, a double blind, placebo controlled study of 12 weeks will be carried out.
+
+The target population is women and men with overweight or obesity. Researchers will compare the experimental capsules with placebo capsules, but will be blinded during the intervention and results analyses. Only after analysing the parameters, the groups will be revealed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Total cholesterol
+  - Total cholesterol
+  - HDL cholesterol
+  - HDL cholesterol
+  - LDL cholesterol
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Polyhpenol extract
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06490133

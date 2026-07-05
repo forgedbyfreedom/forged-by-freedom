@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06544187
+Title: Can Imaging be an Alternative to Exercise Testing as a Predictor of Surgical Fitness?
+Official Title: Can Imaging be an Alternative to Exercise Testing as a Predictor of Surgical Fitness?
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 56
+Topic: body composition exercise
+
+SUMMARY:
+This study aims to explore an alternative method for assessing a participant's readiness for surgery, specifically for those undergoing surgery for gastric, oesophageal, or pancreatic cancer. Surgery for these diseases is extremely demanding on the body and surgeons need to be confident that a patient can tolerate the procedure.
+
+Traditionally, participants undergo Cardiopulmonary Exercise Tests (CPET) to determine their fitness for surgery. This involves cycling on an exercise bike with increasing resistance until the resistance is too great to continue cycling at a constant rate. An individual's maximum rate of oxygen consumption (VO2max) and the anaerobic threshold (AT) are calculated during CPET and used by surgeons as a predictor for surgical fitness. CPET tests can be physically demanding for participants and are very resource intensive. Furthermore, some patients may not be able to tolerate exercise tests due to physical constraints.
+
+An alternative method, Magnetic Resonance Spectroscopy (MRS), could be used to measure an individual's fitness prior to surgery. Within this study, MRS will be used to determine the levels of fat within the thigh muscle, which in turn may be able to be used to predict fitness for surgery.
+
+The first phase includes recruiting participants on the surgical pathway. MRS will be performed as an additional examination, typically on the same day as the CPET. Fat levels determined from MRS will be compared with conventional CPET outcomes (VO2max and AT). This analysis aims to determine if MRS derived fat levels correlates with VO2max and AT and, if correlation is high, potentially providing an alternative to CPET for patients who cannot tolerate exercise tests.
+
+The second phase involves recruiting volunteers who will undergo repeated MRS scans to assess the reliability of MRS methods. This process allows us to understand the consistency of MRS derived fat levels over both short and long-term intervals.
+
+The potential benefits of this project include an additional pathway for assessing fitness for surgery or enhancing the presurgical pathway for patients by providing an alternative method for fitness assessment. This study aims to provide evidence that could present an alternative method of assessing a patient's fitness for surgery. The goal is to explore an alternative that may complement or refine current practices in preoperative assessments.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Correlations between levels
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: MRS scan
+  - DIAGNOSTIC_TEST: CPET
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06544187

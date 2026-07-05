@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05632601
+Title: Reexamining Her Cardiovascular Risk - Ottawa WomeN's Longitudinal Cohort Study
+Official Title: Reexamining Her Cardiovascular Risk - Ottawa WomeN's Longitudinal Cohort Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 210
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The full HER CROWN will be a prospective cohort study to propose a novel, women-specific cardiovascular risk score/ algorithm in the prediction of hard cardiovascular outcomes (myocardial infarction, unstable angina, coronary revascularization, stroke, total and cardiovascular mortality). This future study will be the first longitudinal cohort study, to our knowledge, that is focused entirely on researching the pathophysiology and natural history of cardiovascular disease in women with known female-specific risk factors. Further, the investigators are aiming to recruit a sample that is representative of the ethnic distribution in Canada. The proposed pilot study is a feasibility study as an essential preparatory step for HER CROWN.
+
+DETAILED DESCRIPTION:
+Cardiovascular diseases (CVD), including ischemic heart disease (IHD), peripheral vascular disease (PVD), and stroke, remain the leading preventable cause of death among Canadian women, resulting in over 34,000 deaths per year (age-standardized death rate: 25.1%). Nearly 40% of CVD-related deaths in women are due to IHD. Increased awareness efforts and effective treatments have led to an overall decline in CVD mortality among men and women in high income countries over the past few decades; however, alarmingly, an increase in CVD mortality has been observed in women in the most recent 5 to 10 years in Canada and the United States, and an upward trend in rates of AMI among younger women.
+
+CVD in women remains understudied, under-diagnosed, and undertreated. Clinical guidelines are largely based on studies of men. Several existing large longitudinal cohort studies (e.g., the Nurses' Health Study, The Framingham Heart Study, the PURE study) have included women; however, they have not focused recruitment specifically on high-risk cohorts of women or on risk factors that are unique to women, more common in women, or that disproportionately affect women; they have not used novel measures of subclinical disease in women (e.g., coronary computed tomography angiography and cardiac Rb-positive emission tomography); and most have not recruited representative samples of women in terms of ethnicity or socioeconomic status. CVD risk calculators (e.g., Framingham, the American College of Cardiology ASCVD) focus on traditional risk factors (e.g., tobacco smoking, hypertension, diabetes), do not include sex-specific CVD risk factors or factors that disproportionately affect women, and thus tend to underestimate risk in women. Female-specific factors that have been associated with CVD risk include: premature or late menarche, abnormal menses, premature or early menopause, gestational hypertensive disorders, gestational diabetes, preterm delivery, pregnancy loss, hormonal contraceptive use, and polycystic ovarian syndrome. Risk factors that are under-recognized or disproportionately affect women include: rheumatologic inflammatory disorders (RIDs), depression, anxiety, chronic stress, abuse and intimate partner violence, and health literacy. In addition, a more feminine gender role has been shown to be associated with higher risk of reinfarction after premature acute coronary syndrome, but no additional research on gender roles and future cardiovascular risk is available. Importantly, novel cardiovascular risk markers such as measures of arterial stiffness and aging, among others, have not been prospectively evaluated in a female population. As such, additional longitudinal research is needed to understand the natural history of CVD and the impact of these 'non-conventional' risk factors in women.
+
+A recent article published in the Lancet by a multi-national group of women's heart health experts reviewed existing evidence, identified knowledge gaps, and provided sp
+
+PRIMARY OUTCOMES:
+  - Demographics questionnaire
+  - Medical History Questionnaire
+  - General Anxiety Disorder-7 (GAD-7)
+  - Patient Health Questionnaire (PHQ)-9
+  - Perceived Stress Scale (PSS)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: PET scan
+
+ELIGIBILITY:
+Age: 25 Years to 55 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05632601

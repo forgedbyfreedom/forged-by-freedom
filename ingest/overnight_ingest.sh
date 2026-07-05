@@ -24,6 +24,8 @@ while IFS="|" read -r category name url; do
   mkdir -p "$AUDIO_DIR/$name" "$SUB_DIR/$name"
 
   yt-dlp \
+    --cookies-from-browser chrome \
+    --extractor-args "youtubetab:skip=authcheck" \
     --ignore-errors \
     --no-abort-on-error \
     --sleep-interval 20 \

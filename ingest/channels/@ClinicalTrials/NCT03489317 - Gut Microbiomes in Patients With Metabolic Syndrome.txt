@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03489317
+Title: Gut Microbiomes in Patients With Metabolic Syndrome
+Official Title: Gut Microbiomes and Viromes in Patients With Metabolic Syndrome
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1000
+Topic: exercise intervention obesity
+
+SUMMARY:
+Metabolic syndrome (MS) is defined by a manifestation of cardiometabolic risk factors including high blood pressure, glucose and triglycerides, low high-density lipoprotein (HDL) cholesterol, and abdominal obesity. It is closely associated with other diseases such as fatty liver and gouty arthritis. In recent years there is evidence that gut microorganisms are intimately linked to health and wellbeing. Here, the investigators hypothesize that gut microorganisms are involved in the regulation and/or onset of MS and its symptoms.
+
+DETAILED DESCRIPTION:
+There is mounting evidence that the gut microbiome plays a vital role in health and wellbeing. In particular, population-association and mouse model studies have demonstrated that gut bacteria can be reproducibly linked to obesity and diabetes. There is, however, a lack of progress in translating current scientific knowledge to healthcare practices in part due to the strong influence of biogeography and demography on gut microbiomes. Another major knowledge gap in gut microbiomes is the ecology of gut viruses and their associations with MS despite having intimate relationships with human and bacterial hosts.
+
+In this study, the investigators aim to assess variation in the gut microbiomes of patients with MS with reference to the healthy population in Hong Kong, and to explore gut microorganisms as predictive/diagnostic markers of MS and clinical outcomes associated with medical interventions. This will be achieved through studying microorganisms in the stools of participants. The investigators will use the 16S small subunit ribosomal RNA (16S rRNA) marker gene to create compositional profiles of the gut microbial community in healthy and individuals with MS to identify bacterial populations that are associated with the onset and progression of MS. A subset of samples will be selected for bulk DNA sequencing based on their stool community profiles and/or MS parameters to obtain genomic information of the microorganisms involved.
+
+Participants who undergo intervention as part of their routine medical care for MS will be invited to provide stool samples following intervention. These stools will be used to profile gut microbial communities to investigate whether their compositions undergo changes reflective of medical intervention. Here, the aim is to investigate whether resolution of MS symptoms can be linked to alterations in gut microorganisms, and the hypothesis is that their profiles will more closely resemble healthy individuals following medical intervention.
+
+PRIMARY OUTCOMES:
+  - Change in waist circumference at four weeks
+  - Change in baseline systolic and diastolic blood pressure at four weeks
+  - Change in blood triglyceride levels at four weeks
+  - Change in high-density lipoprotein (HDL) cholesterol levels at four weeks
+  - Change in fasting blood sugar levels at four weeks
+
+INTERVENTIONS:
+  - DRUG: Metformin
+  - BEHAVIORAL: lifestyle modification
+  - DRUG: Simvastatin 10mg
+  - DRUG: Amlodipine 5mg
+
+ELIGIBILITY:
+Age: 35 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03489317

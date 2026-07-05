@@ -1,0 +1,71 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07439601
+Title: Long-Term Omega-3 and Omega-3 Index >8%: Effects on Physiological Recovery
+Official Title: The Impact of Long-term Omega-3 Supplementation and an Omega-3 Index Above 8% on Physiological Recovery Following Exercise-Induced Muscle Damage
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 46
+Topic: omega 3 exercise
+
+SUMMARY:
+The Omega-3 Index measures how much of the Omega-3 fats EPA and DHA are built into red blood cell membranes. These fats are essential for health, but the body cannot make enough of them, so they must come from foods like oily fish or from supplements. The Index reflects long-term Omega-3 intake and is considered optimal at 8% or higher. Levels below this range have been linked with poorer cardiovascular health (Harris \& Von Schacky, 2004).
+
+. For athletes, Omega-3 research suggests they can help reduce inflammation, ease muscle soreness, and support immune function. Despite this, many elite athletes appear to have Omega-3 Index values around 4-5%, well below the recommended level of 8%.
+
+Therefore, the aim of this study is to investigate whether increasing the Omega-3 index has any recovery benefits post a bout of downhill running in athletes. Downhill running is commonly used as way to cause exercise-induced muscle damage and study recovery. The Omega-3 index will be increased with a daily fish oil supplement.
+
+DETAILED DESCRIPTION:
+The proposed research will follow quantitative methods using a randomized independent-groups design. Participants will be allocated to one of two conditions: a placebo group or a fish oil supplementation group. All testing will take place in the St. Mary's University Performance Labs.
+
+Screening and Eligibility
+
+At the initial visit, participants will provide informed consent and complete a PAR-Q form. Eligibility screening will include confirmation that participants have an Omega-3 index ≤ 5%, assessed via a dried blood spot sample obtained from a capillary finger-prick. Samples are processed by OmegaQuant at their lab in Stirling, and results are typically returned within one week.
+
+Participants will also be excluded if they are currently consuming ≥1 g/day of fish-oil supplements.
+
+Randomisation and Blinding
+
+Eligible participants will be randomly assigned to one of the two experimental groups using a random number generator (https://www.random.org). The study will follow a double-blind design: participants will not know which supplement they receive, and the primary investigators involved in data collection will also remain blinded. Supplement distribution and any dose adjustments will be conducted by a separate member of the research team who is unblinded and not involved in testing of participants or data analysis.
+
+Screening Tests/familiarisation
+
+Once Omega-3 index results are available, eligible participants will return to the lab for physiological screening/familiarisation of the test battery and to receive their supplements. Screening/familiarisation procedures include:
+
+* An incremental treadmill ramp test, starting at 8 km·h-¹ and increasing by 1 km·h-¹ every 3 minutes until volitional exhaustion. During the test the below measures will be taken:
+* Capillary blood lactate sampling (finger or earlobe) every 3 minutes.
+* Continuous breath-by-breath respiratory analysis using the Vyntus online gas analyser.
+* Heart rate monitoring (Polar H10) and Rate of Perceived Exertion (RPE; Borg scale).
+
+The screening session also introduces participants to the test battery illustrated in Figure 3.
+
+Supplementation Phase (Part A)
+
+Participants will be asked to refrain from:
+
+* Alcohol for 48 hours before each testing session.
+* Caffeine for 12 hours before each testing session.
+
+Participants will consume their assigned supplements daily for four months. Investigators will contact participants approximately every four weeks to assess adherence and to distribute additional supplement supplies.
+
+At two months, a repeat dried blood spot sample will assess whether Omega-3 levels in the fish-oil group are increasing as expected. If required, supplementation will be adjusted using the OmegaQuant calculator (https://omegaquant.com/omega-3-index-calculator/). Adjustments will typically involve changes of approximately 0.5 g/day (EPA + DHA).
+
+To maintain double-blinding, placebo dosages will also be altered by ±0.5 g/day, ensuring both investigator and parti
+
+PRIMARY OUTCOMES:
+  - Plasma interleukin-6 (IL-6) concentration
+  - Plasma interleukin-10 (IL-10) concentration
+  - Plasma Tumor Necrosis Factor-α (TNF-α) concentration
+  - Myoglobin concentration
+  - Serum Lactate dehydrogenase (LDH) concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oil Supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07439601

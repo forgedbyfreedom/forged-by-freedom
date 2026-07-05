@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03019263
+Title: Berberine, Chlorogenic Acid and Tocotrienols in Menopause-associated Dyslipidemia
+Official Title: Nutraceutical Intervention With Berberine, Chlorogenic Acid and Tocotrienols for Menopause-associated Dyslipidemia: a Randomized, Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 63
+Topic: body composition exercise
+
+SUMMARY:
+Menopause is usually associated with an increase in body weight, a change in body composition and fat distribution and a large number of cardio-metabolic changes, such as hypertension, reduction of insulin-sensitivity and dyslipidaemia. The first-line strategy for these complications is the modification of dietary habits and lifestyle in terms of physical activity. Besides, there is also a growing interest in complementary therapies (i.e. nutraceuticals) that can be used alone or in combination to achieve more consistent results. In this context, preliminary evidence supports the potential role of some compounds of vegetal origin such as berberine, chlorogenic acid and tocotrienols. However, in support of their use, the evidence from good quality trials is limited.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - LDL cholesterol
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nutraceutical
+  - OTHER: Control
+
+ELIGIBILITY:
+Age:  to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03019263

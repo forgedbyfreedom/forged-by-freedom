@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04437758
+Title: Effects of Hydrolyzed Collagen and Vitamin C on Explosive Performance
+Official Title: Effects of Hydrolyzed Collagen and Vitamin C on Explosive Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: protein supplementation
+
+SUMMARY:
+Determine whether supplementation with a combined dose of 20 g of hydrolyzed collagen and 50 mg vitamin C, along with a power training exercise program, increases rate of force development (RFD) and performance in athletes
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximal rate of force development (RFD) of isometric squat (MIS)
+  - Counter-movement jump (CMJ) rate of force development (RFD)
+  - Squat jump height rate of force development (RFD)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Collagen and Vitamin C powder mix nutritional intervention
+  - OTHER: Maltodextrin placebo powder
+  - OTHER: Maximum power training exercise
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04437758

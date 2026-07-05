@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05397470
+Title: Efficacy and Safety of Losmapimod in Treating Participants With Facioscapulohumeral Muscular Dystrophy (FSHD) (REACH)
+Official Title: A Phase 3 Global, Randomized, Double-Blind, Placebo-Controlled, 48-Week, Parallel-Group Study of the Efficacy and Safety of Losmapimod in Treating Patients With Facioscapulohumeral Muscular Dystrophy (FSHD) (REACH)
+Status: TERMINATED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 260
+Topic: creatine supplementation
+
+SUMMARY:
+This is a study to evaluate the safety and efficacy of losmapimod in treating participants with Facioscapulohumeral Muscular Dystrophy (FSHD). Participants diagnosed with Facioscapulohumeral muscular dystrophy type 1 (FSHD1) or Facioscapulohumeral muscular dystrophy type 2 (FSHD2) will participate in Part A (Placebo-controlled treatment period) and will be randomized in a 1:1 ratio to receive losmapimod 15 milligrams (mg) or placebo orally twice daily (BID). Upon completion of Part A, participants will have the option to rollover into Part B (open-label extension) to evaluate the long-term safety, tolerability, and efficacy of losmapimod and will receive losmapimod 15 mg orally BID.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Part A: Change From Baseline in Total Relative Surface Area (RSA) Quadrants 1 to 5 (Q1-Q5) With 500 Grams (g) Wrist Weight Averaged Over Both Arms as Assessed by Reachable Workspace (RWS) at Week 48
+  - Part B: Number of Participants Reporting Serious Treatment Emergent Adverse Events (Serious TEAEs) and Non-serious TEAEs > 5%
+  - Part B: Number of Participants With Clinically Significant Changes in Chemistry Parameters
+  - Part B: Number of Participants With Clinically Significant Changes in Hematology Parameters
+  - Part B: Number of Participants With Clinically Significant Changes in Urinalysis
+
+INTERVENTIONS:
+  - DRUG: Losmapimod
+  - DRUG: Placebo oral tablet
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05397470

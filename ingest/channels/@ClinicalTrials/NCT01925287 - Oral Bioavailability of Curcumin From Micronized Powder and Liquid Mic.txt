@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01925287
+Title: Oral Bioavailability of Curcumin From Micronized Powder and Liquid Micelles in Healthy Young Women and Men
+Official Title: Novel Strategies for the Enhancement of the Potency of Nutraceuticals With Low Oral Bioavailability and Their Application in Novel Functional Foods for Optimum Protection of the Aging Brain
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: beta-alanine
+
+SUMMARY:
+Background: The oral bioavailability of curcumin is low due to its limited intestinal uptake, rapid metabolism and excretion from the body. Considering its potent reported health-beneficial properties, researchers have tried to increase its bioavailability as a means to enhance its biological activities.
+
+Objective: The aim of the project was to develop novel curcumin formulations with enhanced oral bioavailability and to study the safety of the formulations and potential sex-differences in humans.
+
+Design: In this single-blind crossover study with three arms separated by ≥1-week washout periods, healthy subjects (13 women, 10 men) were provided standardized meals and took, in random order, a single oral dose of 500 mg curcumin as native powder, micronized powder, or liquid micelles. Blood and urine samples were collected in intervals for 24 h and total curcumin, demethoxycurcumin, and bis-demethoxycurcumin were quantified.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area under the plasma concentration versus time curve (AUC) of total curcumin [nmol/L*h]
+  - Area under the plasma concentration versus time curve (AUC) of total demethoxycurcumin [nmol/L*h]
+  - Area under the plasma concentration versus time curve (AUC) of total bisdemethoxycurcumin [nmol/L*h]
+  - Maximum plasma concentration (Cmax) of total curcumin [nmol/L]
+  - Maximum plasma concentration (Cmax) of total demethoxycurcumin [nmol/L]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: curcumin
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01925287

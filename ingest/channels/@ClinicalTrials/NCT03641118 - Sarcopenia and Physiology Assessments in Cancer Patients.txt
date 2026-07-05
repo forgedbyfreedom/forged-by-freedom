@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03641118
+Title: Sarcopenia and Physiology Assessments in Cancer Patients
+Official Title: Assessment of Measures of Sarcopenia and Whole Body Physiology in Cancer Patients and Their Relationship to Surgical Outcome and Survival
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 639
+Topic: sarcopenia intervention
+
+SUMMARY:
+Primary Aim:
+
+To establish a reliable relationship between oxygen uptake (VO2) at estimated lactate threshold (AT) and CT-derived body composition measurments (e.g. muscle radiation attenuation), and to relate these to post-operative outcomes (i.e. post-operative complications or 1-year survival) in cohort of upper (UGI) and lower (LGI) gastrointestinal and hepatobiliary (HPB) cancer patients undergoing surgery +/- cancer therapies.
+
+Rationale:Objectively measured reduction of muscle radiation attenuation (i.e. Computed Tomography (CT) measured indices of muscle wasting) coupled with reduced physical fitness (measured objectively using Cardiopulmonary Exercise Testing (CPET)) will result in worse post-operative surgical outcome and reduced survival.
+
+Trial Design: Observational Sample size: See statistical analyses section for individual cohort power calculations Inclusion Criteria: Male or female patients, aged over 18 years old with UGI, LGI or HPB cancer undergoing surgery +/- cancer therapies; WHO performance status 0-2.
+
+Exclusion Criteria: Patients will be excluded if they have surgery for benign disease, a diagnosis of inflammatory bowel disease, patients physically unable to perform a CPET on a cycle ergometer, patients having no surgery performed or interim emergency surgery, patients lacking complete in-hospital morbidity and survival data.
+
+Primary Trial Endpoints: UGI patients - 2 year overall survival, LGI and HPB patients - post-operative complications (Calvien-Dindo and Composite Endpoint in pancreaticoduodenectomy)
+
+DETAILED DESCRIPTION:
+Study overview and background
+
+We hypothesise that an objectively measured reduction in muscle radiation attenuation (i.e. Computed Tomography (CT) measured indices of muscle wasting and/or sarcopenia) coupled with reduced physical fitness (measured objectively using Cardiopulmonary Exercise Testing (CPET)) will result in worse post-operative surgical outcome and reduced survival in patients going straight to surgery or having cancer therapies.
+
+An analyses of prospectively collected clinical data from routine clinical practice in a cohort of upper and lower gastrointestinal and hepatobiliary (liver, pancreas and biliary tree) cancer patients will be undertaken. These patients may undergo neoadjuvant (before surgery) cancer therapies before undergoing surgery.
+
+We aim to interrogate prospectively collected objectively measures of radiological markers of muscle wasting and body composition, as well as objectively measured markers of physical fitness in 3 cohorts: upper and lower gastrointestinal and hepatobiliary (liver, pancreas and biliary tree) cancer patients and to explore if body composition is related with physical fitness. In addition, body composition and physical fitness will be related to post-operative outcomes and survival. These data will be readily available as they are collected as part of routine clinical care at University Hospital Southampton NHS Foundation Trust. Our hospital performs a large number of major cancer operations in these 3 cancer patient groups. These patients already undergo accurate radiological cancer staging and sometimes re-staging (after cancer therapies) and also a CPET as part of their pre-operative pathway. As part of their enhanced recovery pathway, which is now well embedded into routine clinical care, post-operative surgical outcomes, cancer outcomes and survival are routinely collected.
+
+METHODOLOGY
+
+Patients will be identified from prospectively maintained enhanced recovery databases. All patients will be having surgery at University Hospital Southampton where all upper and lower gastrointestinal and hepatobiliary (liver, pancreas and biliary tree) cancer teams maintain well validated enhanced recovery databases with patient and cancer specific demographics, operative records, histopathological, cancer specific and post-operative outcomes. These databases are maintained to a high level due to their usage in national cancer audits. All patients will undergo a staging CT (as part of routine care), this will be used to measure radiological markers of sarcopenia and body composition in the research setting. No additional radiological scanning sequences, contrast or scanner time is required here. In addition all patients will also undergo a CPET (also as part of routine care), this will be used to objectively measure markers of pre-operative physical fitness. The CPET protocol is defined in Appendix 1 of the trial protocol. All variables measured by CT and CPET that will be collected are outlined in Appen
+
+PRIMARY OUTCOMES:
+  - Skeletal muscle radiation attenuation at L3
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Cardiopulmonary exercise test
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03641118

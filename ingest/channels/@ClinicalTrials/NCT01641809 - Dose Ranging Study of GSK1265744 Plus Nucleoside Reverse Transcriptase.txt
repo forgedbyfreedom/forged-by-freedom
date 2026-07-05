@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01641809
+Title: Dose Ranging Study of GSK1265744 Plus Nucleoside Reverse Transcriptase Inhibitors for Induction of Human Immunodeficiency Virus-1 (HIV-1) Virologic Suppression Followed by Virologic Suppression maintenance by GSK1265744 Plus Rilpivirine
+Official Title: A Phase IIb, Dose Ranging Study of Oral GSK1265744 in Combination With Nucleoside Reverse Transcriptase Inhibitors for Induction of Human Immunodeficiency Virus -1 (HIV-1) Virologic Suppression Followed by an Evaluation of maintenance of Virologic Suppression When Oral GSK1265744 is Combined With Oral Rilpivirine in HIV-1 Infected, Antiretroviral Therapy Naive Adult Subjects
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 244
+Topic: creatine supplementation
+
+SUMMARY:
+The study is designed to select a dose of GSK1265744 primarily on the basis of antiviral activity and tolerability in HIV-1 infected, antiretroviral naive subjects.
+
+This study consists of two parts:
+
+Induction Phase: Approximately 200 subjects will be randomized (50 subjects in each of the 4 treatment arms). The Induction Phase consists of a 24 week dose-ranging evaluation of GSK1265744 at blinded doses of 10 mg, 30 mg and 60 mg once-daily and a control arm of open-label efavirenz (EFV) 600 mg once daily. The background dual nucleoside reverse transcriptase inhibitor (NRTI) antiretroviral therapy (ART) for all arms will be either abacavir/lamivudine (ABC/3TC) or tenofovir/emtricitabine (TDF/FTC) as selected by the Investigator. Subjects randomized to a GSK1265744 containing arm, who successfully complete 24 weeks on study and demonstrate virologic suppression (defined as having a plasma HIV-1 ribonucleic acid \[RNA\] \<50 copies per milliliter \[c/mL\] before Week 24, with no signs of virologic rebound) will become eligible for the maintenance Phase of this study.
+
+maintenance Phase: The background NRTIs will be discontinued and the subjects will continue their randomized dose of GSK1265744 in combination with rilpivirine (RPV) 25 mg once-daily for an additional 72 weeks. The maintenance phase will evaluate the ability of this two drug ART regimen to maintain virologic suppression through Week 48, Week 72 and Week 96. Subjects randomized to the EFV arm will continue on their randomized regimen through Week 96.
+
+After completion of the maintenance phase, subjects could enroll in the Open-Label Phase to continue GSK1265744 + RPV treatment as long as they continue to derive clinical benefit and until it is locally approved and commercially available.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Percentage of Participants With HIV-1 Ribonucleic Acid (RNA) <50 Copies/Milliliter (mL) at Week 48 Using the Missing, Switch, Discontinuation Equals Failure (MSDF) Algorithm
+
+INTERVENTIONS:
+  - DRUG: GSK1265744 10 mg
+  - DRUG: GSK1265744 30 mg
+  - DRUG: GSK1265744 60 mg
+  - DRUG: Efavirenz 600 mg
+  - DRUG: Rilpivirine 25 mg
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01641809

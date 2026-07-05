@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06332664
+Title: Collaborative Tele-Nutritional Care for Patient With Stage IV Cancer
+Official Title: Collaborative Tele-Nutritional Care for Patients With Stage IV Cancer Undergoing Chemotherapy: The Randomised Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 158
+Topic: sarcopenia intervention
+
+SUMMARY:
+In China, the treatment of advanced-stage cancer often follows a pattern where the management of patients is primarily overseen by oncologists who focus on addressing the main clinical symptoms and intervening accordingly.
+
+However, symptoms such as appetite loss, weight loss, and anxiety are often overlooked. It is common for clinical nutritionists to passively enter oncology wards to conduct comprehensive nutritional assessments and develop nutrition plans only when patients exhibit significant malnutrition, upon request from oncologists or patients and their families.
+
+Against this background, the investigators integrated clinical nutritionists into the oncology treatment team and established a proactive nutritional intervention team specifically targeting stage IV cancer patients. This initiative aims to conduct a single-center, open-label, randomized parallel-group prospective study, with the following objectives: 1) to evaluate the impact of this model on the nutritional status, survival, and quality of life of advanced-stage cancer patients, and 2) to further optimize this model for widespread replication in clinical practice.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - the incidence of cachexia
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Early Nutrition Intervention
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06332664

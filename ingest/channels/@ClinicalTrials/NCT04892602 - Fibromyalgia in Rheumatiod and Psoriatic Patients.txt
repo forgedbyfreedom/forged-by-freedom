@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04892602
+Title: Fibromyalgia in Rheumatiod and Psoriatic Patients
+Official Title: Fibromyalgia in Rheumatiod and Psoriatic Arthritis Patients:Relationshipwith Disease Activity and Serum Vitamin Dlevel
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 130
+Topic: vitamin D muscle
+
+SUMMARY:
+the study based on investigate for fibromyalgia among rheumatiod arthritis patient and psoriatic arthritis.....and to what extent gibromyalgia affect disease activity indices ....and its relation to serum Vitamin D level in those patients
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Serum vitamin D level
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Serum vitaminDlevel
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04892602

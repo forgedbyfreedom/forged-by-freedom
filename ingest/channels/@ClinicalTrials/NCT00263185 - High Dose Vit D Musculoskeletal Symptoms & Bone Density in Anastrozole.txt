@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00263185
+Title: High Dose Vit D Musculoskeletal Symptoms & Bone Density in Anastrozole-Treated Breast Cancer With Marginal Vit D Status
+Official Title: A Double-Blind, Randomized, Placebo Controlled Trial of High Dose Vitamin D Therapy On Musculoskeletal Symptoms and Bone Mineral Density in Anastrozole-Treated Early Stage Breast Cancer Patients With Marginal Vitamin D Status
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 63
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of this study is to determine whether Vitamin D supplementation reduces the symptoms of muscle stiffness and joint tenderness that some patients may develop after starting therapy with Anastrozole for breast cancer.
+
+DETAILED DESCRIPTION:
+This is a pilot, double-blind, randomized, placebo-controlled study with the following aims:
+
+* To compare the effects of high dose vitamin D versus standard dose vitamin D on musculoskeletal pain in breast cancer patients receiving anastrozole when vitamin D levels are in the insufficient but not deficient range (10 to 29 ng/ml).
+* To evaluate the prevalence of vitamin D insufficiency/deficiency in post-menopausal women with a history of breast cancer who are treated with anastrozole and have musculoskeletal symptoms versus those who are asymptomatic.
+* To establish correlations between levels of vitamin D, the levels of PTH, the degree of bone loss and the severity of musculoskeletal symptoms.
+* To evaluate the effect of standard dose versus high dose Vitamin D replacement on bone density in post-menopausal women with a history of breast cancer who are treated with anastrozole and have musculoskeletal symptoms.
+
+PRIMARY OUTCOMES:
+  - To compare the effects of high dose vitamin D versus standard dose vitamin D on musculoskeletal pain in breast cancer patients receiving anastrozole when vitamin D levels are in the insufficient but not deficient range (10 to 29 ng/ml).
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Calcium carbonate
+  - DRUG: Vitamin D
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00263185

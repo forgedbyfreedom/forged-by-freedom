@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06179784
+Title: Personalising Psychotherapy for Chronic Primary Pain Using Network Analysis
+Official Title: Personalising Cognitive Behaviour Therapy for Chronic Primary Pain Using Network Analysis - A Single Case Experimental Design Study With Multiple Baselines
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: recovery exercise
+
+SUMMARY:
+The goal of this single case experimental design study with multiple baselines is to use network analysis to personalise cognitive behaviour therapy for chronic primary pain (CPP) and base the selection of individual treatment targets and interventions on data to avoid cognitive biases of the clinicians. The main questions it aims to answer are:
+
+* Is the study procedure accepted by and feasible for CPP patients as well as their therapists?
+* Does the personalised psychotherapy with databased clinical decisionmaking lead to significant improvement?
+
+Participants will go through several study phases:
+
+* Pretest and informational meeting with study management
+* Baseline 1: answering a questionnaire six times a day for 21 days in daily life on their mobilephone (EMA); this data will be used for the calculation of a network for each participant, that in turn will be used to select the treatment target and according treatment intervention as suggested by an algorithmic decisiontool
+* Probatory therapy phase: three weekly sessions with therapist; questionnaire three times a week
+* Baseline 2: questionnaire three times a week
+* Therapy phase: up to ten sessions with therapist; questionnaire three times a week
+* Post phase: posttest, two weeks of three weekly assessments, then another 21 days EMA; two monthly booster sessions with therapist
+* Follow-up: posttest and meeting with study management
+
+DETAILED DESCRIPTION:
+Background and aims:
+
+The treatment of chronic primary pain (CPP) with Cognitive Behaviour Therapy (CBT) is effective, yet effects remain small to moderate. New approaches to the treatment of CPP are needed. They should include an orientation toward processes instead of symptoms and strategies for personalisation. This paradigm shift requests precisce, testable models that allow to link treatment procedures to psychological changes. Unfortunately, current models are rather vague about specific, especially temporal pathways by which its elements interact, or the pathways are not as simplistic as proposed. Therefore, multiple variables and pathways related to the development and persistence of pain-related disabilities should be considered.
+
+One approach to individualisation makes use of repeated measures in the daily lives of patients, which enable the usage of network analysis to investigate interactions between symptoms/processes of a patient. Process-oriented, individualised, network-based therapy for CPP (POINT Pain) combines process-oriented measurements to individualise therapy with network-based analysis approaches for target and treatment selection. We propose the following hypotheses:
+
+1. In line with previous research, we assume that the implementation of POINT Pain is feasible for and accepted by patients as well as therapists. Feasibility and acceptance are indicated by mean ratings of at least 3.5 out of 5 across all items of one scale (each rated on 1-5 Likert scales) on a feedback form developed for this study and by positive comments to open ended questions.
+2. Furthermore, we expect POINT Pain to lead to clinically significant improvements as compared to baseline, i.e. decreasing scores in the outcome measures. According to current recommendations, the improvement will be operationalised as effect-size estimated with Hedge's g, the significance with Tau-z.
+
+Procedure:
+
+Before participants are enrolled in the study, they will have two sessions with the study management for diagnostics, pretest, and individualisation of and instructions to the questionnaire.
+
+An ABA'C Multiple Baseline design is chosen to evaluate the effect of individually selected therapy interventions:
+
+Firstly, a baseline assessment (A) is conducted over the period of 21 days six times per day using EMA. In the EMA, a previously validated and piloted questionnaire with items on treatment relevant pain processes is implemented. It contains processes derived from the most prominent psychological models of chronic pain, as there is no overarching theoretical framework adressing the interaction of multi-dimensional pain processes yet. For the EMA, the waking hours of the participants will be divided into six equal time intervals within which the signals for the questionnaires will be randomised (semi randomisation). After completion of phase A, an individual network will be computed.
+
+Secondly, the probatory phase (B) is initiated after completion of phase A. After 
+
+PRIMARY OUTCOMES:
+  - Ecological Momentary Assessment questionnaire
+  - Pain Disability Index (PDI)
+  - Quebec Back Pain Disability Scale (QBPDS)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cognitive Behaviour Therapy including third-wave
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06179784

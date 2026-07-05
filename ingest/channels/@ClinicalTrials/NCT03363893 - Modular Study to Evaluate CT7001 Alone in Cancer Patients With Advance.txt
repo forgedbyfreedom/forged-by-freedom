@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03363893
+Title: Modular Study to Evaluate CT7001 Alone in Cancer Patients With Advanced Malignancies
+Official Title: A Modular, Multipart, Multiarm, Open-label, Phase I/II Study to Evaluate the Safety and Tolerability of CT7001 Alone and in Combination With Anti-cancer Treatments in Patients With Advanced Malignancies
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 124
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a modular, Phase I/II, multicentre study to investigate CT7001 monotherapy in advanced solid malignancies and to further investigate CT7001 as monotherapy or in combination with standard therapy in specific participant groups with Triple Negative Breast Cancer (TNBC), Castrate Resistant Prostate Cancer (CRPC) and in combination with fulvestrant for patients with hormone receptor-positive (HR+ve) / human epidermal growth factor-2 negative (HER2-ve) breast cancer.
+
+DETAILED DESCRIPTION:
+Module 1 comprises two sequential parts:
+
+* Part A: First-in-human (FiH) dose escalation investigating the safety and tolerability of CT7001 to identify the minimum biologically active dose (MBAD) and maximum tolerated dose (MTD). Part A also includes a cohort expansion for breast cancer participants only: this includes sequential tumour biopsies for evaluation of pharmacokinetic (PK), pharmacodynamic (PD) and tumour responses. The module is completed.
+* Part B: To refine the safety, tolerability, and PK and PD profiles of CT7001 monotherapy in participants with advanced solid malignancies from up to four tumour- specific cohorts, which may include, but is not limited to, triple-negative breast cancer, ovarian cancer, small-cell lung cancer and prostate cancer.
+
+  * Part B, Cohort 1, Triple-Negative Breast Cancer (M1B-1 TNBC) treated with CT7001 as monotherapy. The module is completed.
+  * Part B, Cohort 2, Prostate Cancer (M1B-2 CRPC) treated with CT7001 as monotherapy. The module is completed.
+* Module 2 is a Phase Ib/II, 3-part safety and efficacy study in participants with hormone- receptor positive (HR+ve) and human epidermal growth factor-2 negative (HER2-ve) breast cancer. This module includes dosing CT7001 in combination with fulvestrant. Module 2 was planned to comprise of 3 parts; Part A (open-label, single-arm, ascending dose study), Part B (double blinded, randomised, placebo-controlled study) and Part C (crossover from Part B). However, only Module 2 Part A was initiated and completed. Therefore, further sections of this record only reflect Module 2 Part A information.
+* Module 4 is a study investigating the effect of food on the PK of CT7001 monotherapy in participants with advanced solid malignancies. The module is completed.
+* Module 6 was planned as a Phase 1 study to explore the tolerability of, and the total and peak exposure of, an enteric capsule formulation of CT7001 \[CT7001(EC)\], when given as monotherapy to patients with advanced solid malignancies. Module 6 was not initiated.
+
+PRIMARY OUTCOMES:
+  - Treatment-Emergent Adverse Events and Laboratory Abnormalities (Safety and Tolerability)
+
+INTERVENTIONS:
+  - DRUG: CT7001
+  - DRUG: Fulvestrant
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03363893

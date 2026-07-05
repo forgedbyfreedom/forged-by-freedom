@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05648422
+Title: Effect of the Nutritional Support System on Neuromotor Alterations in Patients With Cerebral Palsy
+Official Title: Effect of the Nutritional Support System (NSS) on Neuromotor Alterations in Patients With Cerebral Palsy
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 144
+Topic: vitamin D muscle
+
+SUMMARY:
+Study to determine the impact of a nutritional support system (NSS) on neuromotor alterations in patients with cerebral palsy.
+
+DETAILED DESCRIPTION:
+Cerebral Palsy (CP) is a group of motor disorders of the brain and can be accompanied by alterations in sensation, perception, cognition, communication and behavior, epilepsy and secondary musculoskeletal disorders. These disorders decrease daily functional performance in the areas of mobility, cognition and self-care, resulting in the need for a primary caregiver and increased health care costs. Rehabilitative treatment to increase functional independence is taken from the point of view of motor function (physiotherapy), however, no emphasis is placed on nutritional treatment aimed at alterations in mobility, cognition and self-care; currently it has been observed that eating disorders alter neuromuscular function directly or indirectly, therefore many patients do not respond adequately to treatment due to deterioration in secondary nutritional status. Dietary deficiency in patients with ICH is the result of the lack of an essential nutrient in the diet, each of these nutrients has a functional dynamic in the different stages, so that if one of them is missing or deficient, a functional or organic alteration, a biochemical variation or a disorder in body mass will occur. The World Health Organization (WHO) only considers energy, protein and fat requirements according to the age of the child. The NSS (Nutritional Support System) consisting of specific diet, supplementation (glutamine, arginine, folic acid, PUFA-n3, vegetal protein, nicotinic acid, cobalamin, thiamine, pyridoxine, magnesium, zinc, selenium, cholecalciferol, resveratrol, ascorbic acid, Spirulina Máxima, and inuline) and probiotics, have individually demonstrated effects such as neuronal regeneration, neuroprotective effect, reduction of oxidative stress.
+
+A randomized, blinded, clinical trial will be conducted in children aged 4 to 11 years with CP functional level III of the Gross Motor Function Classification System (GMFCS), without impaired cognitive status and unable to walk on their own. They are randomly assigned to three groups: 1) follow-up group (GS) to which conventional diet (WHO) be applied; 2) control group 2 (GC) to which conventional diet (WHO), deworming and probiotics will be applied 3) intervention group (GI) deworming, probiotics, NSS supplements and specific diet will be applied, they will be followed up for three months; They will be evaluated at baseline, week 7 and week 13 with Gross Motor Function Measure 66 (GMFM-66) and MACS; at baseline and week 13 with kinetics and kinematic analysis, and electromyography (EMG). Statistical analysis: For the intragroup inferential statistical analysis, 2-way ANOVA will be used if the distribution is normal, otherwise FRIEDMAN will be used, in both cases post hoc tests will be applied; for the intergroup analysis, 1-way ANOVA will be used if the distribution is normal, otherwise KRUSKAL WALLIS will be used, in both cases post hoc tests will be applied.
+
+PRIMARY OUTCOMES:
+  - CHANGE FROM BASELINE GROSS MOTOR FUNCTION MEASURE 66 AT 7 WEEKS
+  - CHANGE FROM BASELINE GROSS MOTOR FUNCTION MEASURE 66 AT 13 WEEKS
+  - CHANGE FROM BASELINE MANUAL ABILITY CLASSIFICATION SYSTEM AT 7 WEEKS
+  - CHANGE FROM BASELINE MANUAL ABILITY CLASSIFICATION SYSTEM 13 WEEKS
+  - CHANGE FROM BASELINE MUSCLE ELECTRIC ACTIVITY AT 13 WEEKS
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotics
+  - DIETARY_SUPPLEMENT: NSS Nutritional Support System
+  - DRUG: Deworming
+  - OTHER: Specific diet
+  - OTHER: Conventional diet (WHO)
+
+ELIGIBILITY:
+Age: 4 Years to 11 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05648422

@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05860426
+Title: Confidence in the Ability to Perform Movements in Patients With Low Back Pain
+Official Title: Assessment of Confidence in the Ability to Perform Movements in Patients With Low Back Pain and Its Relationship With the Characteristics and Evolution of Pain
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 141
+Topic: low back pain exercise
+
+SUMMARY:
+The goals of this observational study are:
+
+To determine the validity and reliability of the OPTIMAL-confidence scale in people with chronic low back pain.
+
+To assess the influence of confidence and fear of movement on the evolution of low back pain.
+
+The main question it aims to answer is if people with chronic low back pain present different psychoemotional variables around fear of movement and decreased confidence in their ability to perform movement that may influence their low back pain.
+
+For this purpose, a two-phase study was designed. In the first phase, the OPTIMAL-confidence scale will be validated in patients with chronic low back pain, determining its internal consistency and validity. In the second phase, a prospective study will be carried out with patients with low back pain who attend physiotherapy centres to determine how confidence and fear of movement influence the characteristics of pain and its evolution. Data will be collected at the beginning of the physiotherapy treatment, at the end of the treatment and after three months. The data will be analysed using learning machine techniques.
+
+DETAILED DESCRIPTION:
+In the first phase of the study, a sample of patients diagnosed with chronic low back pain will bwe selected, as well as a general population of convenience. The scope of the study is the health centres of the Primary Care Management of León and El Bierzo. To calculate the optimal sample size, the criteria included in the COSMIN20 guide (Consensus-based standards for the selection of health measurement instruments) were taken into account, taking as a reference the maximum quality criterion for hypotheses testing, which states that they should be equal to or greater than 100 subjects.
+
+The second phase will consist of a prospective observational study among patients with low back pain selected by physiotherapists and interested in participating in the study. Data will be collected at three different times: at recruitment and at the end of treatment, in person, and three months after the end of treatment, by telephone.
+
+The scope of the study will be the Primary and Specialised Health Care Departments of León and El Bierzo.
+
+In both cases participants will sign an informed consent form and the physiotherapists who will collect the data will be trained by researchers.
+
+Patients will complete socio-demographic and health questions as well as validated questionnaires on confidence, self-efficacy, fear of movement, risk of chronification and disability. Participants in the second phase will complete the questionnaires not only at the beginning, but two more times.
+
+In the validation phase of optimal-confidence, the internal consistency of the scale will be analysed, as well as convergent and known-groups validity.
+
+In the second phase, the data will be analysed using machine learning techniques. In order to find out which variables are most influential in the evolution of low back pain, different variations of the following machine learning techniques will be used: Gaussian Naive Bayes, Complement Naive Bayes, K-Nearest Neighbours (KNN and decision trees. Experiments using oversampling techniques such as RandomOver and Smote will also be carried out.
+
+PRIMARY OUTCOMES:
+  - Change from Baseline Confidence at 3 months
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05860426

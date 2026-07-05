@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05598463
+Title: The Exploratory Study of AR-based Home Rehabilitation Exercise Combined With Wearable Sensor (IMU) in the Elderly
+Official Title: The Effect of AR-based Home Rehabilitation Exercise Combined With Wearable Sensor (IMU) on Physical Function, Depression, Physical Activity, and Self-efficacy in the Elderly: A Exploratory Study on the Effectiveness of OASIS Pro
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: muscle rehabilitation
+
+SUMMARY:
+According to the results of a systematic literature review and meta-analysis based on recent studies on exercise interventions for the elderly based on augmented reality, virtual reality, and functional games, these technology-based exercise interventions It was confirmed that there was a positive effect on the function. In addition, it was found to indirectly enhance the motivation for performing physical exercise. In a recent similar study, when an exercise program was applied to 27 elderly people for 3 months through an exercise device that can measure body movements in real time through a Kinect camera, the physical activity of the elderly was induced, and the sustainability of exercise was increased. It is expected that this will be effective in preventing muscle loss in the elderly.
+
+However, due to the limitations of the existing Kinect camera, motions that have to be performed lying down or when exercising while wearing black clothes overlapped the movements of the lower extremities and caused motions in which the joint position could not be accurately tracked, thereby reducing the accuracy of exercise performance. There were limitations that could not be measured. In order to solve these technical limitations and improve clinical applicability, several existing studies have conducted inertia measurement that can accurately detect the motion of lower extremity joints by measuring the speed, acceleration, and direction of body movement in the X, Y, and Z axes. I started using Inertial Measurement Units (IMUs). Wearable sensors such as IMUs can enhance motor learning by providing immediate feedback on motor performance and motor errors. In addition, in the case of commercial camera systems such as the Kinect camera, if the user's appearance is obscured by other objects, there is a disadvantage that it is not detected. This is an important advantage in a home environment where there is no medical supervision, and this risk can be minimized, especially for the elderly who are at risk of falling. Previously, several literatures have applied the IMU sensor to the elderly and patients with total knee/hip arthroplasty and confirmed the effect.
+
+In this study, the OASIS Pro to be used can receive visual feedback by applying a virtual environment (number of exercises, exercise target point, and holding time) with the real home environment as the background. The Kinect camera can be used alone, and at the same time, an IMU sensor can be attached to the lower extremities to perform precise movements. The user performs the exercise prescribed by the manager (medical staff), and when the exercise is finished, the user can receive feedback on the accuracy and performance. Administrators can create and manage individual exercise protocols through OASIS-Manager. Therefore, the investigators intend to prove the effectiveness of OASIS Pro by applying augmented reality-based home rehabilitation exercise combined with IMU sensor to the elderly and confirming the effect on physical ability, depression, physical activity, and self-efficacy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change of Short Physical Performance Battery (SPPB)
+
+INTERVENTIONS:
+  - DEVICE: OASIS Pro
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05598463

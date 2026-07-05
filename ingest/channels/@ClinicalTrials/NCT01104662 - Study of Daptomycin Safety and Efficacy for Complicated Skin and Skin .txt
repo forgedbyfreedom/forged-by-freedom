@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01104662
+Title: Study of Daptomycin Safety and Efficacy for Complicated Skin and Skin Structure Infections (cSSSI) and Bacteremia in Renal Impairment
+Official Title: A Prospective, Multicenter, Randomized, Evaluator-blinded, Comparator-controlled Study to Describe the Safety and Efficacy of Daptomycin for the Treatment of Complicated Skin and Skin Structure Infections (cSSSI) and Staphylococcus Aureus Bacteremia Among Subjects With Moderate or Severe Renal Impairment
+Status: TERMINATED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 92
+Topic: creatine supplementation
+
+SUMMARY:
+This is a multicenter, randomized, evaluator-blinded, comparator-controlled study. Participants were to be randomized (1:1) to daptomycin or comparator, stratified by degree of renal impairment (creatinine clearance \[CLcr\] 30 - 50 milliliters per minute \[mL/min\] \[moderate impairment\] and \<30 mL/min \[severe impairment\]) and by type of infection (bacteremia and complicated skin and skin structure infections \[cSSSI\]) to create 4 cohorts defined as follows:
+
+* Cohort 1: Bacteremia and CLcr \<30 mL/min
+* Cohort 2: Bacteremia and CLcr 30 - 50 mL/min
+* Cohort 3: cSSSI and CLcr \<30 mL/min
+* Cohort 4: cSSSI and CLcr 30 - 50 mL/min
+
+Participants will be treated and evaluated for safety and microbiological and clinical efficacy in accordance with their type of infection and degree of renal impairment. Peak and trough samples will be collected to assess exposure to daptomycin for participants on Day 1 and following the 5th dose.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment-emergent Creatine Phosphokinase (CPK) Elevations Through End of Therapy/Early Termination (EOT/ET)
+
+INTERVENTIONS:
+  - DRUG: Vancomycin
+  - DRUG: Daptomycin
+  - DRUG: Semi-Synthetic Penicillin
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01104662

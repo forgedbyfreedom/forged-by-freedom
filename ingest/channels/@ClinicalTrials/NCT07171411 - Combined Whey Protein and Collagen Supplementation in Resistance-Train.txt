@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07171411
+Title: Combined Whey Protein and Collagen Supplementation in Resistance-Trained Men
+Official Title: The Combined Effects of Whey Protein and Collagen Supplementation on Bone Mineral Density and Muscle Mass in Resistance-Trained Men: A Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: caffeine exercise
+
+SUMMARY:
+This study tested whether taking whey protein together with collagen peptides would provide greater benefits for muscle and bone health compared to whey protein alone, collagen alone, or a placebo. Forty healthy, resistance-trained men aged 18-35 years were randomly assigned to one of four groups: (1) whey protein plus collagen (30 g + 10 g/day), (2) whey protein only (30 g/day), (3) collagen only (10 g/day), or (4) placebo (maltodextrin). All participants followed a supervised resistance training program (3 times per week) for 8 weeks.
+
+The primary outcome was muscle mass, measured with bioelectrical impedance analysis (BIA). Secondary outcomes included bone mineral density (DXA scans), maximal strength (1RM squat and bench press), and blood markers of bone turnover (P1NP and CTX-I).
+
+Results showed that the whey + collagen group achieved the largest improvements in muscle growth, lumbar spine bone mineral density, strength, and favorable changes in bone turnover markers compared to all other groups. No serious side effects were reported, and supplement adherence was very high.
+
+These findings suggest that combining whey protein and collagen may be a practical strategy to support muscle and bone adaptation in resistance-trained men.
+
+DETAILED DESCRIPTION:
+This was a double-blind, randomized, placebo-controlled trial evaluating the combined effects of whey protein and collagen supplementation on muscle mass, bone mineral density (BMD), muscular strength, and bone turnover markers in resistance-trained men.
+
+Forty healthy male participants (18-35 years, with ≥1 year of resistance training experience) were recruited and randomized into four parallel groups (n=10 per group):
+
+Whey Protein + Collagen (30 g WP + 10 g collagen/day)
+
+Whey Protein only (30 g/day)
+
+Collagen only (10 g/day)
+
+Placebo (10 g maltodextrin/day, isocaloric)
+
+All supplements were provided in identical single-dose sachets to ensure blinding. Participants consumed one dose upon waking and one post-exercise (or same time on rest days). A standardized, supervised hypertrophy-oriented resistance training program (3 sessions/week for 8 weeks) was applied to all groups.
+
+Primary outcome: Muscle mass (lean body mass, assessed with BIA at baseline and 8 weeks).
+
+Secondary outcomes: Lumbar spine and femoral neck BMD (DXA), maximal squat and bench press strength (1RM), and serum biomarkers of bone turnover (P1NP and CTX-I).
+
+The trial was approved by the Islamic Azad University IRB (Protocol No: IAU.Ilk.C.162911421.2024). All participants gave written informed consent. Compliance with supplementation was \>90% and training adherence was \>95%. No adverse events were reported.
+
+PRIMARY OUTCOMES:
+  - Change in Muscle Mass (kg, lean body mass by BIA)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey Protein + Collagen
+  - DIETARY_SUPPLEMENT: Whey Protein
+  - DIETARY_SUPPLEMENT: Collagen Peptides
+  - OTHER: Maltodextrin (Placebo)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07171411

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03877393
+Title: The Effect of Probiotic Supplementation on the Mental Status, Inflammation, and Intestinal Barrier in Major Depressive Disorder Patients Using Gluten-free or Gluten-containing Diet
+Official Title: A 12-week, Randomized, Double-blind, and Placebo-controlled Study Evaluating the Effect of Probiotic Supplementation on the Mental Status, Inflammation, And Intestinal Barrier in Major Depressive Disorder Patients Using Gluten-free or Gluten-containing Diet
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: protein supplementation
+
+SUMMARY:
+More and more evidence confirms the relationship between the gut-brain-microbiota axis and the symptoms of mood disorders. A potential pathway connecting the intestines and the brain in depression is inflammation. Interventions for reducing inflammation and restoring the integrity of the intestinal mucosa are promising approaches in patients with major depressive disorder (MDD). Gut dysbiosis and the diet containing gluten are potential factors may be factors that negatively affect the communication between intestinal and brain. Gluten has a high immunogenic potential and affinity for the intestinal mucosa layer. In patients with an abnormal reaction to gluten, the elimination diet led to improved mood symptoms. However, the relationship between gluten and depression is still poorly understood. Intestinal microbiota can affect the digestion of gluten and reduce its immunogenic potential. Studies have shown that probiotic supplementation has an anti-inflammatory effect, can lead to changes in intestinal permeability and alleviate the symptoms of depression. This evidence supports the need for co-therapy, including the elimination of gluten and the restoration of intestinal eubiosis to reduce inflammation and modulate the gut-brain-microbiota axis. The objective of the SANGUT study is to determine the impact of interventions concerning the gut-brain-microbiota axis (probiotic supplementation, gluten-free diet and their combination) on the mental state, markers of inflammation and markers of intestinal permeability in adult patients with MDD. The study will last 12 weeks and consist of four visits (V): V0 - Screening (Day 0), V1 - Baseline (up to 1 week after Screening), V2 (six weeks after Baseline), V3 - End of the study (12 weeks after Baseline). The main hypothesis is that probiotic supplementation and/or a gluten-free diet will reduce the symptoms of depression, lower the level of inflammatory markers and favourably affect the integrity of the intestinal mucosal barrier.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The changes in Montgomery-Åsberg Depression Rating Scale(MADRS) total score to measure the severity of depression symptoms
+  - The changes in Beck Depression Inventory (BDI) total score to measure the severity of depression symptoms
+  - The changes in Symptom Checklist-90 (SCL-90) total score to measure the severity of psychopathological impairment
+  - The changes in the 36-Item Short Form Survey (SF-36) total score to measure the quality of life
+  - The changes in the Perceived Stress Scale (PSS-10) total score to measure the stress levels
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Probiotic supplementation + gluten-free diet
+  - COMBINATION_PRODUCT: Placebo supplementation + gluten-free diet
+  - COMBINATION_PRODUCT: Probiotic supplementation + gluten-containing diet
+  - COMBINATION_PRODUCT: Placebo supplementation + gluten-containing diet
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03877393

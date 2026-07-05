@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02281331
+Title: Optimal Exercise Training and Nutrition Supplementation in Older Men
+Official Title: Evaluation of the Effects of a Combined Resistance and High-intensity Interval Exercise Training Program, Along With Nutritional Supplementation, on Strength and Physical Function in Older Men
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: high intensity interval training
+
+SUMMARY:
+As we age we tend to lose muscle mass and strength. These losses contribute to the increased incidence of falls and fractures, metabolic diseases such as type 2 diabetes, loss of independence and reduced quality of life in the elderly. As the number of seniors increases worldwide, it is becoming more and more important to develop strategies to counteract this loss of muscle mass and strength, and promote healthy aging. Fortunately, relatively simple lifestyle modifications are the most potent defense strategies. Exercises such as weight lifting and high-intensity interval exercise (HIIT), which consists of short, repeated bouts of vigorous aerobic exercise interspersed with period of rest, are the most effective in promoting gains in muscle mass and strength. Additionally, components of foods like whey (a protein found in milk), creatine (found in meat), calcium and vitamin D have been shown to independently increase strength. In this study, we are looking to determine how much we can increase muscle strength in older men who are put on an 12 week exercise training program that combines weight lifting and HIIT, and who consume a daily supplement that contains whey protein, creatine, calcium and vitamin D.
+
+DETAILED DESCRIPTION:
+Please see other documentation.
+
+PRIMARY OUTCOMES:
+  - Muscle mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02281331

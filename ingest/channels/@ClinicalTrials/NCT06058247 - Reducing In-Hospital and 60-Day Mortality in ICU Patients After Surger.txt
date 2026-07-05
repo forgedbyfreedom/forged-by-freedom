@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06058247
+Title: Reducing In-Hospital and 60-Day Mortality in ICU Patients After Surgery With Strict Nutritional Supplementation
+Official Title: Reducing In-Hospital and 60-Day Mortality in Critically Ill Patients After Surgery With Strict Nutritional Supplementation: A Prospective, Single-Labeled, Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 368
+Topic: protein supplementation
+
+SUMMARY:
+Malnutrition in critically ill patients is a global concern due to its association with increased infectious complications, prolonged hospital stays, and higher morbidity rates. Patients who undergo abdominal surgery are particularly vulnerable due to alterations in gastrointestinal function and prolonged fasting. Despite the significance of proper nutrition, guidelines remain broad, and practical implementation is often inadequate.
+
+The investigators aimed to assess the effects of strict nutritional provision, targeting an energy adequacy of 80% or more and a protein intake of at least 1.5 g/kg/day, on in-hospital and 60-day mortality.
+
+DETAILED DESCRIPTION:
+During the acute phase of critical illness, patients experience metabolic and physiological changes that affects their nutrition status. One prominent feature is the activation of stress hormones and inflammatory mediators, which contribute to a negative nitrogen balance, increased gluconeogenesis, and accelerated muscle proteolysis. Among these patients, those who undergo abdominal surgery are particularly vulnerable to malnutrition as they experience alterations in the structural barrier of the gastrointestinal tract, impaired nutrient absorption, and prolonged fasting due to concerns such as the integrity of an anastomosis. Thus, appropriate nutritional therapy should be prioritized for critically ill patients following abdominal surgery, and it should include adequate nutritional support to preserve lean body mass and organ function.
+
+Despite the importance of nutritional supply, the recommendations for protein or calorie intake vary according to different guidelines, and this is the same for surgical patients. Additionally, some patients experience a delay in initiating nutritional support, and several studies reported that only 39 - 63% of the intended energy and 45 - 55% of the prescribed protein are being administered to critically ill patients during the acute phase. Furthermore, recent randomized controlled trials reported conflicting results with current guidelines, with some suggesting that lower calorie or higher protein dose administrations did not significantly impact clinical outcomes and may even worsen the outcomes for certain patient groups. Thus, the optimal nutritional provision target during the acute phase of critical illness, particularly for surgical patients, remains controversial, and there is no standardized protocol.
+
+In our previous study, the malnutrition status upon admission, indicated by a modified Nutrition Risk in the Critically Ill (mNUTRIC) score of 5 or higher, and low energy adequacy during intensive care unit (ICU) stay were identified as mortality predictors in critically ill patients following abdominal surgery. The investigators aimed to assess the effects of strict nutritional provision, targeting an energy adequacy of 80% or more and a protein intake of at least 1.5 g/kg/day, on in-hospital and 60-day mortality. Additionally, the investigators investigated the appropriate target for nutrition support in critically ill patients who undergo abdominal surgery.
+
+PRIMARY OUTCOMES:
+  - 60-day mortality rate
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Active nutritional supplementation
+  - DIETARY_SUPPLEMENT: Conventional nutritional supplementation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06058247

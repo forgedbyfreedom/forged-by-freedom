@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05056610
+Title: Confocal Laser Endomicroscopy to Determine Influence of Food Antigens on Mucosal Integrity
+Official Title: Bestimmung Des Einflusses Von Nahrungsmitteln Auf Die Darmschleimhaut Mit Der Konfokalen Laserendomikroskopie Und Humanen in Vitro Organoiden
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 17
+Topic: sports nutrition
+
+SUMMARY:
+Irritable bowel syndrome (IBS) is mainly associated with food intolerance and presents a particular challenge in gastrointestinal practice. The clinical symptoms are often associated by patients with the consumption of certain foods. This leads to strict elimination diets, and often without identification of the triggering food. In particular, the avoidance of wheat yields a relief of the clinical symptoms in many patients. Nevertheless, it is unclear which components of wheat are responsible for the symptoms. Besides the glutens, other wheat proteins, such as the amylase trypsin inhibitors, but also carbohydrates are discussed as triggers of the diseases.
+
+Confocal laser endomicroscopy (CLE) is a new diagnostic method for detecting the local effect of food on the mucosa. CLE enables microscopic assessment of the mucosa already during an endoscopic examination and also allows statements to be made about intestinal permeability through changes in the influx of fluorescein into the intestinal lumen. In the course of the study, diluted food solutions are applied to the mucosa after a detailed assessment of the mucosa via the endoscope. The changes in mucosa and permeability are observed and documented.
+
+Tissue samples are then taken for histopathological assessment of the degree of inflammation. Further biopsies are taken and cultured in vitro to produce human organoids. The organoids are stimulated with the food. Changes in proliferation, gene and cytokine expression are determined.
+
+The aim of the proposed project is to investigate the influence of the main allergens, e.g. wheat, soy, milk, yeast and chicken egg white on the intestinal mucosa. The data obtained will be compared with the histopathological findings and the in vitro data in the human organoid model.
+
+The long-term goal is to establish a valid patient-based rapid detection method for the detection of the triggering substances in patients with IBS or food intolerances.
+
+DETAILED DESCRIPTION:
+Patients with IBS of unclear etiology, i.e. non-IgE mediated food intolerances (FI), often have a long course of suffering. It is not uncommon for patients to follow self-imposed strict diets to alleviate food-dependent intestinal and extraintestinal symptoms. However, these diets carry a high risk of malnutrition. In practice, an elimination diet followed by provocation of individual foods attempts to identify the triggers of the intolerances. However, since the reaction to the food antigens can occur with a delay and not infrequently a combination of several intolerances is present, the correct diagnosis is often difficult. This often leads to a massively reduced quality of life for the patients and repeated examinations, such as gastrointestinal endoscopies, which lead to the patient being hospitalised again.
+
+In addition to medical approaches to alleviate the symptoms (drugs for diarrhoea, laxatives for constipation), an improvement is often achieved through a change in diet. Recently, there have been increasing reports that patients with IBS respond to a diet that is reduced in FODMAPs (fermentable oligo-, di- and monosaccharides as well as polyols) with a significant improvement in symptoms. Furthermore, patients with IBS often report significant symptom relief with adherence to a gluten-free diet (GFD), so that current estimates suggest that almost half of patients with IBS benefit from a GFD.
+
+The introduction of CLE provides a new objective method for detecting changes at the cellular level.The CLE allows a microscopic assessment of the mucosa already during the endoscopic examination and thus enables an vivo histology, with an exact analysis of the intestinal mucosa.
+
+Others already showed that stimulation of intestinal mucosa with food antigens causes an increased permeability and cell shedding in patients with FI (Fritscher-Ravens et al. Gastroenterology 2014). The response to food antigens can be visualized after administration of intravenous fluorescein and measurement of the release of fluroescein in the gut lumen. A major advantage of CLE is the direct local assessment of food antigens on the intestinal mucosa and the identification of patients who have a clinically relevant FI.
+
+Hypothesis: We suggest that patients with IBS and/or FI react more strongly to mucosal applied food antigens than healthy controls due to an existing low-grade intestinal inflammation. We plan to apply wheat, soy, milk, yeast and chicken egg white during CLE and record cell shedding and fluorescein efflux in the gut lumen. Since many patients with IBS are known to respond positively to a wheat-free diet, we expect the strongest mucosal response especially after application of wheat.
+
+The aim is to prove our hypothesis by the increased cell shedding and the increased efflux of fluorescein into the intestinal lumen.
+
+After CLE, tissue samples are taken for routine histopathological analysis. In addition, mucosal biopsies are taken and used to isolate stem c
+
+PRIMARY OUTCOMES:
+  - Correlation of the intestinal barriere defects determined by CLE with histopathological data
+  - Determination of patients with IBS and response to food antigens
+
+INTERVENTIONS:
+  - OTHER: food antigens on duodenal mucosa
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05056610

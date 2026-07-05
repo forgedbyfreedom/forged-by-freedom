@@ -2,15 +2,17 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { Pinecone } from "@pinecone-database/pinecone";
+let ChromaClient;
 import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
 import nodemailer from "nodemailer";
 import multer from "multer";
+import { createHash } from "crypto";
 
 /* ─────────────────────────────────────────────────────────────
    FORGED BY FREEDOM — COACH BRYAN API
    ─────────────────────────────────────────────────────────────
-   OpenRouter: Embeddings + Chat | Pinecone: Vector search
+   Ollama: Embeddings + Chat (local) | Chroma: Vector search (local)
 
    GET  /health  → Health check
    GET  /status  → Index stats
@@ -19,8 +21,6 @@ import multer from "multer";
 
 // ─── Config ──────────────────────────────────────────────────
 const {
-  OPENAI_API_KEY,
-  PINECONE_API_KEY,
   ELEVENLABS_API_KEY,
   TWILIO_ACCOUNT_SID,
   TWILIO_AUTH_TOKEN,
@@ -28,15 +28,20 @@ const {
   PORT = 5051,
   NODE_ENV,
   RATE_LIMIT_RPM = 60,
-  ANTHROPIC_API_KEY,
+  OLLAMA_HOST = "http://localhost:11434",
+  CHROMA_HOST = "http://localhost:8000",
   LINKEDIN_CLIENT_ID,
   LINKEDIN_CLIENT_SECRET,
   LINKEDIN_REDIRECT_URI
 } = process.env;
 
 const CONFIG = {
-  embedModel: "text-embedding-3-large",
-  pineconeIndex: "forged-freedom-ai",
+  ollamaHost: OLLAMA_HOST,
+  chromaHost: CHROMA_HOST,
+  chatModel: process.env.OLLAMA_CHAT_MODEL || "qwen2.5:32b",
+  embedModel: process.env.OLLAMA_EMBED_MODEL || "nomic-embed-text",
+  visionModel: process.env.OLLAMA_VISION_MODEL || "llava",
+  chromaCollection: "transcripts",
   maxQuestionLen: 15000,
   maxRPM: parseInt(RATE_LIMIT_RPM),
   topK: 30,
@@ -48,25 +53,101 @@ const CONFIG = {
   isProd: NODE_ENV === "production"
 };
 
-// ─── Startup Validation ──────────────────────────────────────
-if (!PINECONE_API_KEY) {
-  console.error("Missing required env: PINECONE_API_KEY");
-  process.exit(1);
-}
-if (!ANTHROPIC_API_KEY) {
-  console.error("Missing required env: ANTHROPIC_API_KEY");
-  process.exit(1);
-}
-console.log("✅ Using Anthropic Claude API for chat");
-if (OPENAI_API_KEY) {
-  console.log("[FBF] Embeddings: OpenAI direct (text-embedding-3-large)");
-} else {
-  console.log("[FBF] Embeddings: via OpenRouter (add OPENAI_API_KEY to use OpenAI direct)");
+// ─── Pinecone (production) ───────────────────────────────────
+const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
+const PINECONE_INDEX_NAME = process.env.PINECONE_INDEX_NAME || "forged-freedom-ai";
+let pineconeIndex;
+if (CONFIG.isProd && PINECONE_API_KEY) {
+  try {
+    const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
+    pineconeIndex = pc.Index(PINECONE_INDEX_NAME);
+    console.log(`✅ Pinecone connected | index=${PINECONE_INDEX_NAME}`);
+  } catch (e) {
+    console.error(`[PINECONE] Init failed: ${e.message}`);
+  }
 }
 
-// ─── Pinecone ────────────────────────────────────────────────
-const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
-const index = pinecone.Index(CONFIG.pineconeIndex);
+const SEARCH_NAMESPACES = [
+  { ns: "thinkbig_priority", topK: 8 },
+  { ns: "anabolic_bodybuilding_priority", topK: 8 },
+  { ns: "rxmuscle_priority", topK: 8 },
+  { ns: "cycle_design_guides", topK: 8 },
+  { ns: "medical_primary", topK: 8 },
+  { ns: "research_primary", topK: 8 },
+  { ns: "female_health_priority", topK: 5 },
+  { ns: "peptides", topK: 5 },
+  { ns: "vendor_testing", topK: 5 },
+  { ns: "biohacking", topK: 5 },
+  { ns: "sports_nutrition", topK: 5 },
+  { ns: "transcripts", topK: 5 },
+  { ns: "bodybuilding_history", topK: 5 },
+  { ns: "sports_psych", topK: 5 },
+  { ns: "sports_science", topK: 5 },
+  { ns: "women_steroids", topK: 5 },
+  { ns: "medical_education", topK: 5 },
+  { ns: "endocrinology", topK: 5 },
+  { ns: "harm_reduction", topK: 5 },
+  { ns: "bodybuilding_legends", topK: 5 },
+];
+
+async function embedProd(text) {
+  const key = process.env.OPENAI_API_KEY || OPENROUTER_KEY;
+  const res = await fetch("https://api.openai.com/v1/embeddings", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${key}`,
+    },
+    body: JSON.stringify({ model: "text-embedding-3-large", input: text }),
+  });
+  if (!res.ok) throw new Error(`Embedding failed: ${res.status}`);
+  const data = await res.json();
+  if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
+  return data.data[0].embedding;
+}
+
+async function pineconeQuery(vector, namespace = "") {
+  if (!pineconeIndex) throw new Error("Pinecone not initialized");
+  if (namespace) {
+    const r = await pineconeIndex.namespace(namespace).query({ vector, topK: CONFIG.topK, includeMetadata: true });
+    return (r.matches || []).map(m => ({ id: m.id, score: m.score, metadata: m.metadata || {} }));
+  }
+  const results = await Promise.all(
+    SEARCH_NAMESPACES.map(({ ns, topK }) =>
+      pineconeIndex.namespace(ns).query({ vector, topK, includeMetadata: true })
+        .then(r => r.matches || [])
+        .catch(() => [])
+    )
+  );
+  const seen = new Set();
+  const merged = [];
+  for (const matches of results) {
+    for (const m of matches) {
+      if (!seen.has(m.id)) {
+        seen.add(m.id);
+        merged.push({ id: m.id, score: m.score, metadata: m.metadata || {} });
+      }
+    }
+  }
+  return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
+}
+
+// ─── Chroma (local dev) ──────────────────────────────────────
+let chromaCollection;
+(async () => {
+  if (CONFIG.isProd) return;
+  try {
+    ({ ChromaClient } = await import("chromadb"));
+    const chroma = new ChromaClient({ path: CONFIG.chromaHost });
+    chromaCollection = await chroma.getOrCreateCollection({ name: CONFIG.chromaCollection });
+    const count = await chromaCollection.count();
+    console.log(`✅ Chroma connected | collection=${CONFIG.chromaCollection} | ${count.toLocaleString()} vectors`);
+  } catch (e) {
+    console.error(`[CHROMA] Could not connect to ${CONFIG.chromaHost}: ${e.message}`);
+    console.error("  → Start the Chroma server: chroma run --path C:/AI/chroma_db_local");
+  }
+})();
+console.log(CONFIG.isProd ? `✅ Production: OpenRouter embeddings + Pinecone search` : `✅ Local: Ollama ${CONFIG.embedModel} + Chroma`);
 
 // ─── Express Setup ───────────────────────────────────────────
 const app = express();
@@ -112,114 +193,177 @@ setInterval(() => {
   for (const [ip, r] of rateLimit) if (now > r.reset + 60000) rateLimit.delete(ip);
 }, 60000);
 
-// ─── Anthropic API ───────────────────────────────────────────
-async function chat(messages, temperature = 0.7, maxTokens = 2500) {
+// ─── OpenRouter (cloud fallback for production) ──────────────
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "nousresearch/hermes-3-llama-3.1-70b";
+
+async function chatOpenRouter(messages, temperature = 0.7, maxTokens = 1000) {
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "HTTP-Referer": "https://forgedbyfreedom.com",
+      "X-Title": "FBF AI Coach",
+    },
+    body: JSON.stringify({ model: OPENROUTER_MODEL, messages, temperature, max_tokens: maxTokens }),
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(() => res.status);
+    throw new Error(`OpenRouter error ${res.status}: ${txt}`);
+  }
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || "";
+}
+
+async function chatStreamOpenRouter(messages, temperature = 0.7, maxTokens = 1200, onChunk) {
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "HTTP-Referer": "https://forgedbyfreedom.com",
+      "X-Title": "FBF AI Coach",
+    },
+    body: JSON.stringify({ model: OPENROUTER_MODEL, messages, temperature, max_tokens: maxTokens, stream: true }),
+  });
+  if (!res.ok) throw new Error(`OpenRouter stream error: ${res.status}`);
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let fullText = "";
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n");
+    buffer = lines.pop() || "";
+    for (const line of lines) {
+      if (!line.startsWith("data: ") || line.includes("[DONE]")) continue;
+      try {
+        const event = JSON.parse(line.slice(6));
+        const chunk = event.choices?.[0]?.delta?.content || "";
+        if (chunk) { fullText += chunk; onChunk(chunk); }
+      } catch {}
+    }
+  }
+  return fullText;
+}
+
+// ─── Ollama Chat ─────────────────────────────────────────────
+async function chat(messages, temperature = 0.7, maxTokens = 1000) {
+  if (CONFIG.isProd) return chatOpenRouter(messages, temperature, maxTokens);
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), maxTokens > 2500 ? 90000 : 60000);
-
   try {
-    const systemMsg = messages.find(m => m.role === "system");
-    const chatMsgs = messages.filter(m => m.role !== "system");
-
-    const body = {
-      model: "claude-sonnet-4-6",
-      max_tokens: maxTokens,
-      temperature,
-      messages: chatMsgs,
-    };
-    if (systemMsg) body.system = systemMsg.content;
-
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
+    const res = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
       method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "content-type": "application/json",
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify(body),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: CONFIG.chatModel,
+        messages,
+        stream: false,
+        options: { temperature, num_predict: maxTokens },
+      }),
       signal: controller.signal,
     });
-
+    if (!res.ok) throw new Error(`Ollama chat error: ${res.status}`);
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `Anthropic API error: ${res.status}`);
-    return data.content?.[0]?.text || "";
+    return data.message?.content || "";
   } finally {
     clearTimeout(timer);
   }
+}
+
+// Streaming variant — calls onChunk(text) for each token, returns full text when done.
+async function chatStream(messages, temperature = 0.7, maxTokens = 1200, onChunk) {
+  if (CONFIG.isProd) return chatStreamOpenRouter(messages, temperature, maxTokens, onChunk);
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 90000);
+  let fullText = "";
+  try {
+    const response = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: CONFIG.chatModel,
+        messages,
+        stream: true,
+        options: { temperature, num_predict: maxTokens },
+      }),
+      signal: controller.signal,
+    });
+    if (!response.ok) throw new Error(`Ollama stream error: ${response.status}`);
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop() || "";
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        try {
+          const event = JSON.parse(line);
+          if (event.message?.content) {
+            fullText += event.message.content;
+            onChunk(event.message.content);
+          }
+        } catch {}
+      }
+    }
+  } finally {
+    clearTimeout(timer);
+  }
+  return fullText;
 }
 
 async function embed(text) {
-  const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-
-  // Try OpenAI direct first (if key present), fall back to OpenRouter on quota/auth errors
-  if (OPENAI_API_KEY) {
-    try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 30000);
-      try {
-        const res = await fetch("https://api.openai.com/v1/embeddings", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, "Content-Type": "application/json" },
-          body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
-          signal: controller.signal
-        });
-        const data = await res.json();
-        if (res.status === 429 || res.status === 401) throw new Error(`openai_quota:${res.status}`);
-        if (!res.ok) throw new Error(data.error?.message || `OpenAI embedding error: ${res.status}`);
-        if (!data?.data?.[0]?.embedding) throw new Error("Embedding failed");
-        return data.data[0].embedding;
-      } finally {
-        clearTimeout(timer);
-      }
-    } catch (err) {
-      if (!err.message.startsWith("openai_quota:")) throw err;
-      console.warn(`[embed] OpenAI quota hit (${err.message}), falling back to OpenRouter`);
-    }
-  }
-
-  // OpenRouter fallback
-  if (!OPENROUTER_API_KEY) throw new Error("No embedding provider available (set OPENAI_API_KEY or OPENROUTER_API_KEY)");
+  if (CONFIG.isProd) return embedProd(text);
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30000);
   try {
-    const res = await fetch("https://openrouter.ai/api/v1/embeddings", {
+    const res = await fetch(`${CONFIG.ollamaHost}/api/embed`, {
       method: "POST",
-      headers: { Authorization: `Bearer ${OPENROUTER_API_KEY}`, "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ model: CONFIG.embedModel, input: text }),
-      signal: controller.signal
+      signal: controller.signal,
     });
+    if (!res.ok) throw new Error(`Ollama embed error: ${res.status}`);
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error?.message || `OpenRouter embedding error: ${res.status}`);
-    if (!data?.data?.[0]?.embedding) throw new Error("OpenRouter embedding failed");
-    return data.data[0].embedding;
+    const emb = data.embeddings?.[0] || data.embedding;
+    if (!emb) throw new Error("Embedding response missing data");
+    return emb;
   } finally {
     clearTimeout(timer);
   }
 }
 
-// ─── Pinecone Search ─────────────────────────────────────────
-const SEARCH_NAMESPACES = [
-  { ns: "thinkbig_priority", topK: 8 },
-  { ns: "anabolic_bodybuilding_priority", topK: 8 },
-  { ns: "rxmuscle_priority", topK: 8 },
-  { ns: "cycle_design_guides", topK: 8 },
-  { ns: "medical_primary", topK: 8 },
-  { ns: "research_primary", topK: 8 },
-  { ns: "female_health_priority", topK: 5 },
-  { ns: "peptides", topK: 5 },
-  { ns: "vendor_testing", topK: 5 },
-  { ns: "biohacking", topK: 5 },
-  { ns: "sports_nutrition", topK: 5 },
-  { ns: "transcripts", topK: 5 },
-  { ns: "bodybuilding_history", topK: 5 },
-  { ns: "sports_psych", topK: 5 },
-  { ns: "sports_science", topK: 5 },
-  { ns: "women_steroids", topK: 5 },
-  { ns: "medical_education", topK: 5 },
-  { ns: "endocrinology", topK: 5 },
-  { ns: "harm_reduction", topK: 5 },
-  { ns: "bodybuilding_legends", topK: 5 },
-];
+// ─── Chroma Search ───────────────────────────────────────────
+// Normalize Chroma results to { id, score, metadata } (Pinecone-compatible shape).
+// Chroma cosine distance: 0=identical, 2=opposite → score = 1 - (distance/2).
+async function chromaQuery(vector, topK = CONFIG.topK) {
+  if (!chromaCollection) throw new Error("Chroma collection not initialized");
+  const results = await chromaCollection.query({
+    queryEmbeddings: [vector],
+    nResults: topK,
+    include: ["metadatas", "documents", "distances"],
+  });
+  return (results.ids[0] || []).map((id, i) => ({
+    id,
+    score: Math.max(0, 1 - (results.distances[0][i] / 2)),
+    metadata: {
+      ...(results.metadatas[0][i] || {}),
+      text: results.documents[0][i] || "",
+    },
+  }));
+}
 
 // Keywords that should boost cycle_design_guides and peptides namespaces
 const FBF_BOOST_KEYWORDS = [
@@ -233,81 +377,36 @@ const FBF_BOOST_KEYWORDS = [
 ];
 
 async function search(vector, namespace = "") {
-  // If a specific namespace is requested, search just that one
-  if (namespace) {
-    const query = { vector, topK: CONFIG.topK, includeMetadata: true, namespace };
-    return (await index.query(query)).matches || [];
-  }
-
-  // Otherwise, search all namespaces in parallel (matches Wix backend behavior)
-  const results = await Promise.all(
-    SEARCH_NAMESPACES.map(({ ns, topK }) =>
-      index.namespace(ns).query({ vector, topK, includeMetadata: true })
-        .then(r => r.matches || [])
-        .catch(() => [])
-    )
-  );
-
-  // Merge, deduplicate by ID, sort by score
-  const seen = new Set();
-  const allMatches = [];
-  for (const matches of results) {
-    for (const m of matches) {
-      if (!seen.has(m.id)) {
-        seen.add(m.id);
-        allMatches.push(m);
-      }
-    }
-  }
-  return allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
+  if (CONFIG.isProd) return pineconeQuery(vector, namespace);
+  return chromaQuery(vector, CONFIG.topK);
 }
 
-// Boost search when question matches FBF/protocol keywords — extra cycle_design_guides + peptides results
+// Boost search when question matches FBF/protocol keywords — wider topK + score bump for guide content
 async function searchWithBoost(vector, question) {
   const q = question.toLowerCase();
   const needsBoost = FBF_BOOST_KEYWORDS.some(kw => q.includes(kw));
 
-  // Standard search
-  const baseResults = await search(vector);
-
-  if (!needsBoost) return baseResults;
-
-  // Extra dedicated search of cycle_design_guides and peptides with higher topK
-  const boostResults = await Promise.all([
-    index.namespace("cycle_design_guides").query({ vector, topK: 15, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-    index.namespace("peptides").query({ vector, topK: 8, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-    index.namespace("peptide_priority").query({ vector, topK: 10, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-    index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true })
-      .then(r => r.matches || []).catch(() => []),
-  ]);
-
-  // Merge boost results into base, dedup, boost scores for guide matches
-  const seen = new Set(baseResults.map(m => m.id));
-  const merged = [...baseResults];
-  for (const matches of boostResults) {
-    for (const m of matches) {
-      if (!seen.has(m.id)) {
-        seen.add(m.id);
-        // Boost score for cycle_design_guides to ensure they rank high
-        const src = (m.metadata?.source || "").toLowerCase();
-        if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
-          m.score = (m.score || 0) + 0.15;
-        }
-        merged.push(m);
-      } else {
-        // Already in results — boost score if it's a guide match
-        const src = (m.metadata?.source || "").toLowerCase();
-        if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
-          const existing = merged.find(e => e.id === m.id);
-          if (existing) existing.score = (existing.score || 0) + 0.15;
-        }
+  if (CONFIG.isProd) {
+    const merged = await pineconeQuery(vector);
+    if (!needsBoost) return merged;
+    // Boost FBF protocol namespace scores
+    for (const m of merged) {
+      const src = (m.metadata?.source || "").toLowerCase();
+      if (src.includes("cycledesignguide") || src.includes("cycle_guide") || src.includes("cycle_design_guides")) {
+        m.score = (m.score || 0) + 0.15;
       }
     }
+    return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
   }
 
+  const merged = await chromaQuery(vector, needsBoost ? 50 : CONFIG.topK);
+  if (!needsBoost) return merged;
+  for (const m of merged) {
+    const src = (m.metadata?.source || "").toLowerCase();
+    if (src.includes("cycledesignguide") || src.includes("cycle_guide")) {
+      m.score = (m.score || 0) + 0.15;
+    }
+  }
   return merged.sort((a, b) => (b.score || 0) - (a.score || 0));
 }
 
@@ -447,6 +546,8 @@ const SOURCE_PRIORITY = {
   "@rxmuscle": 2,
   // Anabolic Bodybuilding - IFBB Pro Paul Barnett (Big Paul)
   "@anabolicbodybuilding": 5,
+  // J3University - John Jewett, contest prep / PED expert
+  "@J3University": 8, "@johnjewett3": 8,
   // Research - high but after ThinkBig
   "@PubMed": 10, "@ClinicalTrials": 10,
   // Tanner Tattered FAQ - high priority PED education
@@ -545,6 +646,8 @@ function extractQuotes(matches, question = "") {
             textLower.includes("dr. scott") || titleLower.includes("dr. scott")) {
           priority = -105; // Slight edge over other ThinkBig hosts
         }
+      } else if (isFemaleQuestion && (channel === "@J3University" || channel === "@johnjewett3")) {
+        priority = -95; // J3University is #1 female source — 700+ episodes, dedicated female course, Olympia-level female coaching
       } else if (isFemaleQuestion && FEMALE_PRIORITY_SOURCES.includes(channel)) {
         priority = -50; // Female experts high for women's questions
       }
@@ -572,9 +675,16 @@ const SYSTEM_PROMPT = `You are Coach Bryan, the official AI coach for Forged by 
 **CRITICAL ANTI-HALLUCINATION RULES - READ FIRST:**
 - ONLY cite information that appears in the EVIDENCE section below
 - NEVER make up quotes, names, or attribute statements to people
+- NEVER fabricate specific dosing numbers (mg, IU, frequency) and attribute them to a named expert — if exact numbers aren't in the evidence verbatim, paraphrase the concept without inventing figures
 - NEVER claim experts discussed a specific person unless their name appears in the evidence
 - If the question asks about a specific person/topic NOT in the evidence, say: "I don't have specific information about that in my knowledge base, but here's what our experts say about [related topic]..."
 - If NO relevant evidence exists, be honest: "I don't have expert content on that specific topic yet."
+
+**CRITICAL — STAY ON THE COMPOUNDS ASKED ABOUT:**
+- Answer ONLY about the specific compounds the user mentioned in their question
+- If the user asks about tren + test + masteron, answer about EXACTLY those three — do NOT bring in deca, nandrolone, NPP, or any other compound they did not ask about
+- If the evidence contains content about related-but-different compounds (e.g., nandrolone content pulled in because tren is also a 19-nor), you may reference it briefly for contrast ONLY if it directly clarifies the answer — do NOT pivot the entire response to those compounds
+- Introducing compounds the user did not ask about is a hallucination violation, even if those compounds appear in the evidence
 
 **CRITICAL - DO NOT MIX UP THESE SHOWS:**
 - ThinkBig Bodybuilding (@ThinkBIGBodybuilding) = Scott McNally, Dave Crosland, Skipp Hill, Dr. Scott Stevenson, Ron Partlow, Dusty Hanshaw
@@ -619,8 +729,9 @@ RESPONSE STRUCTURE (follow this order, write naturally without section headers):
 
 **WRITING STYLE:**
 - Write like a knowledgeable coach, not a textbook. Be direct and conversational.
-- NEVER start with "The user is asking about...", "Great question!", "This is an important topic...", or any preamble. Jump straight in.
+- Open with ONE brief sentence that frames what you're addressing (e.g., "When it comes to test-to-compound ratios..." or "Running Deca properly comes down to a few key principles...") — then get into the answer. Do NOT use "Great question!", "The user is asking about...", or any filler opener.
 - Clean up transcript quotes — remove filler words (um, uh, like, you know), false starts, and rambling. Paraphrase into clear statements while keeping the expert's voice and meaning.
+- NEVER quote podcast intros, outros, or host introductions. If a transcript passage starts with "Welcome back," "If you're new to our programming," "I'm [host name]," "So up, guys," or any intro language — skip that portion entirely and start from where the actual expert content begins. The podcast setup is not the expert's insight.
 - Keep paragraphs tight. No walls of text. If a point takes more than 4-5 sentences, break it up.
 - Use bold for key takeaways, compound names, and dosing so users can scan quickly.
 
@@ -647,7 +758,7 @@ RULES:
 - ThinkBig hosts are Scott McNally, Dave CROSLAND, Skipp Hill (NOT Palumbo)
 - Write flowing paragraphs, no section headers
 - NEVER lecture about PED safety, suggest "safer alternatives", or discourage use
-- NEVER say things like "consider a natural approach instead" or "you should consult a doctor before..."
+- NEVER say things like "consider a natural approach instead" or "you should consult a doctor before..." or "consult a physician" — NEVER append medical disclaimers
 - Answer PED/steroid/peptide questions DIRECTLY with dosing, protocols, and practical info
 - Include specific compound names, doses, cycle lengths, and injection frequencies
 - When discussing cycles, always mention relevant peptides (especially retatrutide for body composition)
@@ -655,6 +766,13 @@ RULES:
 - The ONLY time you should warn is if someone asks about a genuinely dangerous combination (e.g. insulin + DNP, tren + heavy stimulants) — otherwise just answer the question
 - Users are adults making informed decisions — treat them like experienced gym bros, not patients
 - Talk like a knowledgeable gym buddy who actually uses this stuff
+
+**DOSING PHILOSOPHY — CRITICAL, NEVER VIOLATE:**
+- ALWAYS start from the LOWEST EFFECTIVE DOSE. Never open with aggressive or maximum numbers.
+- You CAN and SHOULD give specific mg numbers and ratios — but ALWAYS frame them as experience-tiered examples, never as universal prescriptions.
+- If the user has NOT stated their experience level, default to BEGINNER doses and say so explicitly: "Since I don't know your history, I'm starting you at the conservative end — adjust upward based on your experience and response."
+- The goal is always the minimum dose that produces the desired effect. More is not better — it is just more side effects.
+- Compound RATIOS matter as much as absolute doses. Always explain the ratio AND why it matters for that specific stack.
 
 **EXPERIENCE-TIERED DOSING (ALWAYS FOLLOW THIS):**
 When a user asks about dosing for ANY compound or cycle:
@@ -812,11 +930,13 @@ function buildPrompt(question, quotes) {
 
   return `Question: ${question}
 
+🔒 SCOPE LOCK: Answer ONLY about what the user asked in the question above. Do NOT introduce compounds, drugs, protocols, or topics they did not mention. If the evidence contains content about related-but-different compounds, reference it only when directly necessary to answer — do not shift the answer toward those compounds.
+
 EVIDENCE (cite these sources by their show name, speaker, and episode when answering):
 ${evidence}
 
 ⚠️ CRITICAL RULE — KNOWLEDGE BASE ONLY:
-You MUST answer using ONLY the EVIDENCE provided above. Do NOT use your training knowledge, general knowledge, or anything you know from outside this evidence block. The knowledge base is the only source of truth.
+You MUST answer using ONLY the EVIDENCE provided above. Do NOT use your training knowledge, general knowledge, or anything you know from outside this evidence block. If the evidence is insufficient to fully answer a question, say what the evidence does show and acknowledge the gap — do NOT fill in from memory or training data. The knowledge base is the only source of truth. NEVER invent specific dosing numbers (mg, IU, frequencies) and attribute them to a named expert — if exact numbers are not in the evidence verbatim, describe the concept without fabricated figures.
 
 ⚠️ OFF-TOPIC RETRIEVAL CHECK (do this FIRST, before anything else):
 Read the question, then scan the EVIDENCE. If the evidence does NOT directly address the specific subject of the question (e.g. the question asks about compound X but the evidence is about compound Y), respond with EXACTLY this and STOP — do not produce a checklist response, do not pivot to a related FBF product, do not pad:
@@ -864,25 +984,24 @@ app.get("/api/system/health-check", async (req, res) => {
     return { detail: `${count} clients in database` };
   });
 
-  // 2. Pinecone vector DB
-  await check("pinecone_vectors", async () => {
-    const stats = await index.describeIndexStats();
-    const total = stats.totalRecordCount || 0;
-    if (total === 0) throw new Error("No vectors in index");
-    return { detail: `${total} vectors across ${Object.keys(stats.namespaces || {}).length} namespaces` };
+  // 2. Chroma vector DB
+  await check("chroma_vectors", async () => {
+    if (!chromaCollection) throw new Error("Collection not initialized");
+    const total = await chromaCollection.count();
+    if (total === 0) throw new Error("No vectors in collection");
+    return { detail: `${total.toLocaleString()} vectors in '${CONFIG.chromaCollection}'` };
   });
 
-  // 3. Anthropic API
-  await check("anthropic_api", async () => {
+  // 3. Ollama
+  await check("ollama_api", async () => {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15000);
-    const r = await fetch("https://api.anthropic.com/v1/models", {
-      headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
-      signal: controller.signal,
-    });
+    const r = await fetch(`${CONFIG.ollamaHost}/api/tags`, { signal: controller.signal });
     clearTimeout(timer);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return { detail: "API responding" };
+    const data = await r.json();
+    const models = (data.models || []).map(m => m.name).join(", ");
+    return { detail: `Ollama responding | models: ${models}` };
   });
 
   // 4. Check for stuck/pending programs (older than 30 min)
@@ -1001,14 +1120,13 @@ app.get("/api/system/health-check", async (req, res) => {
 
 app.get("/status", async (_, res) => {
   try {
-    const stats = await index.describeIndexStats();
+    const totalVectors = chromaCollection ? await chromaCollection.count() : 0;
     res.json({
       status: "ok",
-      model: "claude-sonnet-4-6",
+      model: CONFIG.chatModel,
       embedModel: CONFIG.embedModel,
-      index: CONFIG.pineconeIndex,
-      totalVectors: stats.totalRecordCount || 0,
-      namespaces: Object.keys(stats.namespaces || {}),
+      collection: CONFIG.chromaCollection,
+      totalVectors,
       environment: CONFIG.isProd ? "production" : "development"
     });
   } catch (err) {
@@ -1017,7 +1135,7 @@ app.get("/status", async (_, res) => {
 });
 
 app.post("/ask", async (req, res) => {
-  const { question, mode = "synthesized", namespace = "" } = req.body;
+  const { question, mode = "synthesized", namespace = "", stream: wantStream = false } = req.body;
   const start = Date.now();
 
   // Validate
@@ -1063,6 +1181,7 @@ His accolades include but are not limited to:
     }
 
     // Embed → Search (with FBF/protocol boost) → Extract
+    // Production: embedProd() → Pinecone | Local: embed() → Chroma (both via unified search/embed functions)
     const vector = await embed(question.trim());
     const matches = namespace ? await search(vector, namespace) : await searchWithBoost(vector, question);
 
@@ -1100,38 +1219,58 @@ His accolades include but are not limited to:
     }
 
     // Synthesized mode (default)
-    let answer = await chat([
+    const msgs = [
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: buildPrompt(question, quotes) }
-    ]);
-
-    // POST-PROCESSING: Fix host misattributions
-    answer = answer
-      .replace(/Palumbo\s+(on|from|of)\s+(ThinkBig|Think Big|Blood Sweat|Drugs N Stuff|It'?s Just Bodybuilding)/gi,
-        "Scott McNally, Dave Crosland & Skipp Hill $1 $2")
-      .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(RXMuscle|RX Muscle)/gi,
-        "Dave Palumbo $2 $3")
-      .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(Anabolic Bodybuilding)/gi,
-        "Paul Barnett (Big Paul) $2 $3");
-
-    // Strip leaked system prompt (Hermes model sometimes regurgitates instructions)
-    const leakPatterns = [
-      /You are Coach Bryan, the official AI coach[\s\S]*/i,
-      /I have provided a detailed[\s\S]*/i,
-      /Do not mix up the show names[\s\S]*/i,
-      /Always cite evidence properly[\s\S]*/i,
-      /RESPONSE CHECKLIST[\s\S]*/i,
     ];
-    for (const pat of leakPatterns) {
-      answer = answer.replace(pat, "").trim();
+
+    function postProcessAnswer(raw) {
+      let a = raw
+        .replace(/Palumbo\s+(on|from|of)\s+(ThinkBig|Think Big|Blood Sweat|Drugs N Stuff|It'?s Just Bodybuilding)/gi,
+          "Scott McNally, Dave Crosland & Skipp Hill $1 $2")
+        .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(RXMuscle|RX Muscle)/gi,
+          "Dave Palumbo $2 $3")
+        .replace(/(Scott McNally|Dave Crosland|Skipp Hill)\s+(on|from|of)\s+(Anabolic Bodybuilding)/gi,
+          "Paul Barnett (Big Paul) $2 $3");
+      const leakPatterns = [
+        /You are Coach Bryan, the official AI coach[\s\S]*/i,
+        /I have provided a detailed[\s\S]*/i,
+        /Do not mix up the show names[\s\S]*/i,
+        /Always cite evidence properly[\s\S]*/i,
+        /RESPONSE CHECKLIST[\s\S]*/i,
+      ];
+      for (const pat of leakPatterns) a = a.replace(pat, "").trim();
+      return a;
     }
 
-    answer += "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+    const attribution = [...new Set(quotes.map(q => q.displayName))].filter(c => c !== "unknown");
+
+    if (wantStream) {
+      res.setHeader("Content-Type", "text/event-stream");
+      res.setHeader("Cache-Control", "no-cache");
+      res.setHeader("Connection", "keep-alive");
+      res.setHeader("X-Accel-Buffering", "no");
+      res.flushHeaders();
+
+      res.write(`data: ${JSON.stringify({ type: "sources", sources: quotes, attribution })}\n\n`);
+
+      let rawAnswer = await chatStream(msgs, 0.7, 4000, (chunk) => {
+        res.write(`data: ${JSON.stringify({ type: "content", text: chunk })}\n\n`);
+      });
+
+      const finalAnswer = postProcessAnswer(rawAnswer);
+      res.write(`data: ${JSON.stringify({ type: "done", answer: finalAnswer, sources: quotes, attribution, mode: "synthesized", timing: Date.now() - start })}\n\n`);
+      res.end();
+      return;
+    }
+
+    let answer = await chat(msgs, 0.7, 4000);
+    answer = postProcessAnswer(answer);
 
     res.json({
       answer,
       sources: quotes,
-      attribution: [...new Set(quotes.map(q => q.displayName))].filter(c => c !== "unknown"),
+      attribution,
       mode: "synthesized",
       timing: Date.now() - start
     });
@@ -1176,7 +1315,7 @@ app.post("/analyze-bloodwork", async (req, res) => {
       if (pat.test(labsLower)) markerKeywords.push(pat.source.replace(/\\/g, "").replace(/\|/g, " ").replace(/\(.+?\)/g, ""));
     }
 
-    // Search Pinecone with targeted queries — hit bloodwork-heavy namespaces hard
+    // Search knowledge base — bloodwork-focused query, higher topK for coverage
     const labSearchQuery = `bloodwork analysis interpretation intervention ladder enhanced athlete ranges ${markerKeywords.slice(0, 8).join(" ")}`;
     let vector;
     try {
@@ -1185,23 +1324,13 @@ app.post("/analyze-bloodwork", async (req, res) => {
       throw new Error(`EMBED_FAILED: ${embedErr.message}`);
     }
 
-    // Parallel search: targeted bloodwork namespaces + general boost search
-    const [guideResults, medicalResults, endoResults, researchResults, generalResults] = await Promise.all([
-      index.namespace("cycle_design_guides").query({ vector, topK: 15, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("medical_primary").query({ vector, topK: 10, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("endocrinology").query({ vector, topK: 8, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("research_primary").query({ vector, topK: 8, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-      index.namespace("harm_reduction").query({ vector, topK: 5, includeMetadata: true }).then(r => r.matches || []).catch(() => []),
-    ]);
-
-    // Merge and deduplicate, prioritizing cycle_design_guides (Precision Bloodwork manual)
-    const seen = new Set();
-    const allMatches = [];
-    for (const m of guideResults) {
-      if (!seen.has(m.id)) { seen.add(m.id); m.score = (m.score || 0) + 0.2; allMatches.push(m); }
-    }
-    for (const m of [...medicalResults, ...endoResults, ...researchResults, ...generalResults]) {
-      if (!seen.has(m.id)) { seen.add(m.id); allMatches.push(m); }
+    const allMatches = await chromaQuery(vector, 46);
+    // Boost cycle design / guide content so it ranks high for bloodwork queries
+    for (const m of allMatches) {
+      const src = (m.metadata?.source || "").toLowerCase();
+      if (src.includes("cycledesignguide") || src.includes("cycle_guide") || src.includes("precision_bloodwork")) {
+        m.score = (m.score || 0) + 0.2;
+      }
     }
     allMatches.sort((a, b) => (b.score || 0) - (a.score || 0));
 
@@ -1322,22 +1451,11 @@ ${labs.trim()}${evidenceBlock}`;
 });
 
 // ─── Stats Endpoint (for AI Coach live stats display) ─────
-let cachedStats = { transcripts: 108909, words: 303698707, channels: 190, vectors: 202559, lastUpdated: null };
+// Counts as of 2026-05-13: 151,625 transcript files, 529M words (Python wc), 298,688 Pinecone vectors, 198 channels with content
+let cachedStats = { transcripts: 151625, words: 529289859, channels: 198, vectors: 298688, lastUpdated: "2026-05-13T00:00:00.000Z" };
 
-app.get("/stats", async (_, res) => {
-  try {
-    const stats = await index.describeIndexStats();
-    cachedStats.vectors = stats.totalRecordCount || cachedStats.vectors;
-    res.json({
-      transcripts: cachedStats.transcripts,
-      words: cachedStats.words,
-      channels: cachedStats.channels,
-      vectors: cachedStats.vectors,
-      lastUpdated: cachedStats.lastUpdated || new Date().toISOString()
-    });
-  } catch (err) {
-    res.json(cachedStats);
-  }
+app.get("/stats", (_, res) => {
+  res.json(cachedStats);
 });
 
 app.post("/update-stats", async (req, res) => {
@@ -1503,6 +1621,140 @@ const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_
 // Alias for backwards compat with any code referencing supabaseAdmin
 const supabaseAdmin = supabase;
 
+// ─── Gated Program Delivery Helpers ──────────────────────
+// All program deliveries must go through public.mark_program_delivered() RPC,
+// which validates against the gate trigger (approved_at + program_reviews.status='approved').
+// Direct UPDATEs setting status='delivered' are blocked from syncing to clients
+// and write a CRITICAL row to reconciliation_findings.
+function getCoachActor() {
+  const id = process.env.COACH_USER_ID;
+  const name = process.env.COACH_USER_NAME || "Bryan Antonelli";
+  if (!id) {
+    throw new Error("COACH_USER_ID env var is required for program delivery (set to coach's auth.users.id UUID)");
+  }
+  return { id, name };
+}
+
+// Auto-create a clients row for an approved lead so downstream uploads + intake
+// always have a real client_id to attach to. Idempotent: if a client with the
+// lead's email already exists, returns that id. Mirrors phase_2B Op-4.
+const FBF_ORG_ID = process.env.FBF_ORG_ID || "a0000000-0000-0000-0000-000000000001";
+
+async function ensureClientForLead(lead) {
+  if (!lead?.email) throw new Error("Cannot ensure client: lead has no email");
+
+  const { data: existing } = await supabase
+    .from("clients").select("id").eq("email", lead.email).maybeSingle();
+  if (existing) return existing.id;
+
+  const parts = (lead.name || "").trim().split(/\s+/);
+  const first_name = parts[0] || lead.email.split("@")[0];
+  const last_name  = parts.slice(1).join(" ") || "-";
+
+  const { data: created, error } = await supabase
+    .from("clients").insert({
+      organization_id: FBF_ORG_ID,
+      first_name,
+      last_name,
+      email: lead.email,
+      phone: lead.phone || null,
+      is_active: true,
+    }).select("id").single();
+  if (error) throw new Error(`clients insert failed: ${error.message}`);
+  console.log(`[CLIENT] auto-created ${created.id} for lead ${lead.id} (${lead.email})`);
+  return created.id;
+}
+
+async function markProgramDelivered(programId) {
+  const actor = getCoachActor();
+  const { data, error } = await supabase.rpc("mark_program_delivered", {
+    p_program_id: programId,
+    p_actor_id: actor.id,
+    p_actor_name: actor.name,
+  });
+  if (error) {
+    throw new Error(`mark_program_delivered RPC failed: ${error.message}`);
+  }
+  const result = Array.isArray(data) ? data[0] : data;
+  if (!result?.success) {
+    const reasons = (result?.reasons || []).join(", ") || "unknown";
+    const err = new Error(`Delivery gate blocked: ${reasons}`);
+    err.gateBlocked = true;
+    err.reasons = result?.reasons || [];
+    throw err;
+  }
+  return result;
+}
+
+// ─── Archive Storage Uploads ────────────────────────────
+// Every Supabase Storage upload from the app must also write an archive_objects row,
+// so Drive sync + reconciliation can track it. Mirrors phase_2B_brief.md Priority 3.
+const ALLOWED_ARCHIVE_STAGES = new Set([
+  "lead_intake", "second_stage_intake", "nda", "waiver",
+  "program_pdf", "program_json",
+  "bloodwork", "body_scan", "progress_photo", "lab_pdf",
+  "other",
+]);
+
+/**
+ * Upload to Supabase Storage AND record an archive_objects row.
+ * Throws on either step failure. Caller is responsible for resolving client_id
+ * before invoking — this helper does not look up entities.
+ *
+ * @param {Object} args
+ * @param {string} args.bucket
+ * @param {string} args.path
+ * @param {Buffer} args.fileBuffer
+ * @param {string} args.contentType
+ * @param {number} args.sizeBytes
+ * @param {string} args.originalName
+ * @param {string} args.stage          - one of ALLOWED_ARCHIVE_STAGES
+ * @param {?string} args.clientId
+ * @param {?string} [args.leadId]
+ * @param {?string} [args.intakeId]
+ * @param {?string} [args.programId]
+ * @param {?string} [args.archivedBy]  - auth.users uuid
+ * @param {boolean} [args.upsert=false]
+ */
+async function uploadAndArchive(args) {
+  const {
+    bucket, path, fileBuffer, contentType, sizeBytes, originalName,
+    stage, clientId = null, leadId = null, intakeId = null, programId = null,
+    archivedBy = null, upsert = false,
+  } = args;
+
+  if (!ALLOWED_ARCHIVE_STAGES.has(stage)) {
+    throw new Error(`Invalid archive stage '${stage}'. Allowed: ${[...ALLOWED_ARCHIVE_STAGES].join(", ")}`);
+  }
+
+  const { error: uploadErr } = await supabase.storage
+    .from(bucket).upload(path, fileBuffer, { contentType, upsert });
+  if (uploadErr) throw new Error(`Storage upload failed: ${uploadErr.message}`);
+
+  const sha256 = createHash("sha256").update(fileBuffer).digest("hex");
+
+  const { error: archiveErr } = await supabase.from("archive_objects").insert({
+    client_id: clientId,
+    lead_id: leadId,
+    intake_id: intakeId,
+    program_id: programId,
+    stage,
+    bucket_id: bucket,
+    storage_path: path,
+    original_name: originalName,
+    mime_type: contentType,
+    size_bytes: sizeBytes,
+    sha256,
+    archived_by: archivedBy,
+  });
+  if (archiveErr) {
+    console.error(`[ARCHIVE] storage upload to ${bucket}/${path} succeeded but archive_objects insert failed:`, archiveErr.message);
+    throw new Error(`Archive insert failed: ${archiveErr.message}`);
+  }
+
+  return { path, sha256 };
+}
+
 // ─── File Upload (Supabase Storage) ──────────────────────
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
@@ -1510,34 +1762,66 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Storage not configured" });
   if (!req.file) return res.status(400).json({ error: "No file provided" });
 
-  const { lead_id, category } = req.body;
-  if (!lead_id) return res.status(400).json({ error: "lead_id required" });
+  const { lead_id, client_id: bodyClientId, category, stage: bodyStage, intake_id } = req.body;
+  if (!lead_id && !bodyClientId) {
+    return res.status(400).json({ error: "lead_id or client_id required" });
+  }
+
+  // Resolve client_id (P4: never file under lead_id; require a real client record).
+  let clientId = bodyClientId || null;
+  let leadId = lead_id || null;
+  let leadEmail = null;
+  if (!clientId && leadId) {
+    const { data: lead } = await supabase
+      .from("leads").select("id, email").eq("id", leadId).maybeSingle();
+    if (!lead) {
+      return res.status(404).json({ error: `lead ${leadId} not found` });
+    }
+    leadEmail = lead.email;
+    const { data: client } = await supabase
+      .from("clients").select("id").eq("email", lead.email).maybeSingle();
+    if (!client) {
+      return res.status(409).json({
+        error: "No client record exists yet for this lead — refusing to file under lead_id (per phase_2B_brief Priority 4). Create the client record first, then retry.",
+        lead_id: leadId,
+        email: lead.email,
+      });
+    }
+    clientId = client.id;
+  }
+
+  // Map category → archive stage. Front-end already passes 'bloodwork' and 'body_scan'
+  // which match the stage enum directly. Fall back to 'other' for unrecognized values.
+  const stage = (bodyStage && ALLOWED_ARCHIVE_STAGES.has(bodyStage))
+    ? bodyStage
+    : (ALLOWED_ARCHIVE_STAGES.has(category) ? category : "other");
 
   const ext = req.file.originalname.split(".").pop() || "bin";
-  const fileName = `${category || "uploads"}/${lead_id}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+  const fileName = `${stage}/${clientId}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
 
   try {
-    const { data, error } = await supabase.storage
-      .from("client-documents")
-      .upload(fileName, req.file.buffer, {
-        contentType: req.file.mimetype,
-        upsert: false,
-      });
-
-    if (error) {
-      console.error("[UPLOAD] Storage error:", error);
-      return res.status(500).json({ error: "Upload failed: " + error.message });
-    }
+    await uploadAndArchive({
+      bucket: "client-documents",
+      path: fileName,
+      fileBuffer: req.file.buffer,
+      contentType: req.file.mimetype,
+      sizeBytes: req.file.size,
+      originalName: req.file.originalname,
+      stage,
+      clientId,
+      leadId,
+      intakeId: intake_id || null,
+    });
 
     const { data: urlData } = supabase.storage
       .from("client-documents")
       .getPublicUrl(fileName);
 
-    console.log(`[UPLOAD] ${req.file.originalname} → ${fileName}`);
-    res.json({ url: urlData.publicUrl, path: fileName });
+    console.log(`[UPLOAD] ${req.file.originalname} → ${fileName} (stage=${stage}, client=${clientId})`);
+    res.json({ url: urlData.publicUrl, path: fileName, stage, client_id: clientId });
   } catch (err) {
-    console.error("[UPLOAD] Error:", err);
-    res.status(500).json({ error: "Upload failed" });
+    console.error("[UPLOAD] Error:", err.message);
+    res.status(500).json({ error: "Upload failed: " + err.message });
   }
 });
 
@@ -1554,9 +1838,10 @@ app.post("/api/leads", async (req, res) => {
     return res.status(400).json({ error: "Disclaimer must be acknowledged" });
   }
 
-  // Auto-reject low commitment, auto-approve everyone else
+  // Auto-reject low commitment; everyone else lands in pending_review for Bryan
+  // to approve manually via the email button or admin UI (phase_2B P8 — gate-1 is a human gate).
   const rejected = commitment_level === "I'll do what I can when it's convenient";
-  const status = rejected ? "rejected" : "approved";
+  const status = rejected ? "rejected" : "pending_review";
 
   try {
     
@@ -2227,18 +2512,24 @@ app.patch("/api/leads/:id/status", async (req, res) => {
 
   try {
     
-    const { data: lead, error: fetchErr } = await db
-      .from("leads").select("id, name, email").eq("id", req.params.id).single();
+    const { data: lead, error: fetchErr } = await supabase
+      .from("leads").select("id, name, email, phone").eq("id", req.params.id).single();
 
     if (fetchErr || !lead) {
       return res.status(404).json({ error: "Lead not found" });
     }
 
-    const { error } = await db
+    const { error } = await supabase
       .from("leads").update({ status }).eq("id", req.params.id);
 
     if (error) {
       return res.status(500).json({ error: error.message });
+    }
+
+    // Auto-create the clients row on approval so onboarding uploads succeed (Op-4).
+    if (status === "approved" && lead.email) {
+      try { await ensureClientForLead(lead); }
+      catch (clientErr) { console.error(`[LEADS] ensureClientForLead failed: ${clientErr.message}`); }
     }
 
     // When approving, email the client their onboarding link
@@ -2281,8 +2572,8 @@ app.get("/api/leads/:id/approve", async (req, res) => {
   if (!supabase) return res.status(503).send("Not configured");
 
   try {
-    const { data: lead, error: fetchErr } = await db
-      .from("leads").select("id, name, email, status").eq("id", req.params.id).single();
+    const { data: lead, error: fetchErr } = await supabase
+      .from("leads").select("id, name, email, phone, status").eq("id", req.params.id).single();
 
     if (fetchErr || !lead) return res.status(404).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">Lead not found</body></html>`);
 
@@ -2290,8 +2581,12 @@ app.get("/api/leads/:id/approve", async (req, res) => {
       return res.send(`<html><body style="background:#0a0a0a;color:#22c55e;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;">✓ ${lead.name} was already approved</body></html>`);
     }
 
-    const { error } = await db.from("leads").update({ status: "approved" }).eq("id", req.params.id);
+    const { error } = await supabase.from("leads").update({ status: "approved" }).eq("id", req.params.id);
     if (error) return res.status(500).send(`<html><body style="background:#0a0a0a;color:#ef4444;font-family:Arial;padding:40px;font-family:Arial;">Error: ${error.message}</body></html>`);
+
+    // Auto-create the clients row on approval so onboarding uploads succeed (Op-4).
+    try { await ensureClientForLead(lead); }
+    catch (clientErr) { console.error(`[LEADS] ensureClientForLead failed: ${clientErr.message}`); }
 
     // Send onboarding email to client
     if (emailTransporter && lead.email) {
@@ -3887,7 +4182,7 @@ app.get('/api/client/:id/daily-score', async (req, res) => {
 app.post("/api/coach-chat", async (req, res) => {
   if (!supabase) return res.status(503).json({ error: "Not configured" });
 
-  const { client_id, message } = req.body;
+  const { client_id, message, stream: wantStream = false } = req.body;
   if (!message) return res.status(400).json({ error: "Message required" });
 
   try {
@@ -3936,11 +4231,7 @@ ${scans?.[0] ? `Latest Scan (${scans[0].scan_type}): BF ${scans[0].body_fat_pct}
     let knowledgeContext = "";
     try {
       const queryVec = await embed(message);
-      const searchPromises = SEARCH_NAMESPACES.map(({ ns, topK }) =>
-        index.namespace(ns).query({ vector: queryVec, topK, includeMetadata: true })
-      );
-      const results = await Promise.all(searchPromises);
-      const allMatches = results.flatMap(r => r.matches || [])
+      const allMatches = (await chromaQuery(queryVec, CONFIG.topK))
         .filter(m => m.score >= 0.3)
         .sort((a, b) => b.score - a.score)
         .slice(0, 8);
@@ -3966,10 +4257,41 @@ RULES:
 - Use the FBF programming philosophy: simplicity first, dumbbells over barbells, progressive overload, train close to failure, match volume to recovery.
 ${context}${knowledgeContext}`;
 
-    const reply = await chat([
+    const chatMsgs = [
       { role: "system", content: systemPrompt },
       { role: "user", content: message }
-    ], 0.7);
+    ];
+    const disclaimer = "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+
+    if (wantStream) {
+      res.setHeader("Content-Type", "text/event-stream");
+      res.setHeader("Cache-Control", "no-cache");
+      res.setHeader("Connection", "keep-alive");
+      res.setHeader("X-Accel-Buffering", "no");
+      res.flushHeaders();
+
+      const rawReply = await chatStream(chatMsgs, 0.7, 1200, (chunk) => {
+        res.write(`data: ${JSON.stringify({ type: "content", text: chunk })}\n\n`);
+      });
+
+      const finalReply = rawReply + disclaimer;
+      if (client_id) {
+        supabase.from("conversations").insert({
+          channel: "app_coach",
+          sender_id: client_id,
+          sender_name: "Client",
+          direction: "inbound",
+          message,
+          ai_response: finalReply,
+          metadata: { source: "context_aware_coach" }
+        }).catch(() => {});
+      }
+      res.write(`data: ${JSON.stringify({ type: "done", reply: finalReply })}\n\n`);
+      res.end();
+      return;
+    }
+
+    const reply = await chat(chatMsgs, 0.7);
 
     // Save conversation
     if (client_id) {
@@ -3984,7 +4306,7 @@ ${context}${knowledgeContext}`;
       }).catch(() => {});
     }
 
-    const disclaimedReply = reply + "\n\n---\n⚠️ This information is for educational and research purposes only. No recommendations for human consumption are made or implied. Always consult a licensed physician before beginning any fitness, nutrition, or supplementation protocol.";
+    const disclaimedReply = reply + disclaimer;
 
     res.json({ reply: disclaimedReply });
   } catch (err) {
@@ -4282,23 +4604,20 @@ IMPORTANT: Output valid JSON only. No markdown.
   "recovery": "string"
 }`;
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
     method: "POST",
-    headers: {
-      "x-api-key": process.env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-6",
-      max_tokens: 8000,
-      messages: [{ role: "user", content: prompt }]
+      model: CONFIG.chatModel,
+      messages: [{ role: "user", content: prompt }],
+      stream: false,
+      options: { num_predict: 8000, temperature: 0.3 },
     })
   });
 
-  if (!response.ok) throw new Error(`Anthropic error: ${response.status}`);
+  if (!response.ok) throw new Error(`Ollama error: ${response.status}`);
   const data = await response.json();
-  let raw = data.content?.[0]?.text || "";
+  let raw = data.message?.content || "";
   const jsonMatch = raw.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("No JSON in response");
   return JSON.parse(jsonMatch[0]);
@@ -4492,24 +4811,22 @@ CRITICAL INSTRUCTIONS:
 - The "methodology" section should be personal and specific to THIS client — never generic.
 - Calculate LISS HR targets from client age: (220 - age) × 0.55 to 0.65.`;
 
-  const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
+  const anthropicRes = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
     method: "POST",
-    headers: {
-      "x-api-key": ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-6",
-      max_tokens: 16000,
-      system: systemPrompt,
-      messages: [{ role: "user", content: clientProfile }],
-      temperature: 0.4,
+      model: CONFIG.chatModel,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: clientProfile },
+      ],
+      stream: false,
+      options: { num_predict: 16000, temperature: 0.4 },
     }),
   });
+  if (!anthropicRes.ok) throw new Error(`Ollama error: ${anthropicRes.status}`);
   const anthropicData = await anthropicRes.json();
-  if (!anthropicRes.ok) throw new Error(anthropicData.error?.message || `Anthropic error: ${anthropicRes.status}`);
-  const content = anthropicData.content?.[0]?.text || "";
+  const content = anthropicData.message?.content || "";
 
   // Parse JSON from response (strip markdown code fences if present)
   let jsonStr = content.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
@@ -5038,48 +5355,65 @@ app.post("/api/intake/generate-program", async (req, res) => {
   }
 
   try {
-    // Check both intake tables (Render's client_intakes AND Dashboard's client_intake)
+    // Look up intake from the canonical client_intakes table (singular client_intake is deprecated post phase2a_04).
     let intake = null;
-    const { data: renderIntake } = await supabase
-      .from("client_intakes").select("*").eq("id", intake_id).single();
-    intake = renderIntake;
-
-    if (!intake) {
-      // Try dashboard table
-      const { data: dashIntake } = await supabase
-        .from("client_intake").select("*").eq("id", intake_id).single();
-      if (dashIntake) {
-        // Map dashboard fields to Render format
-        intake = {
-          ...dashIntake,
-          full_name: client_name || "Client",
-          lead_id: dashIntake.client_id,
-        };
-      }
+    if (intake_id) {
+      const { data } = await supabase
+        .from("client_intakes").select("*").eq("id", intake_id).maybeSingle();
+      intake = data;
+    }
+    if (!intake && client_id) {
+      // Fall back to most-recent intake for this client
+      const { data } = await supabase
+        .from("client_intakes")
+        .select("*")
+        .eq("client_id", client_id)
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      intake = data;
     }
 
     if (!intake) {
-      // Last resort: if client_id was provided, look up by that
-      if (client_id) {
-        const { data: byClient } = await supabase
-          .from("client_intake").select("*").eq("client_id", client_id).single();
-        if (byClient) {
-          intake = { ...byClient, full_name: client_name || "Client", lead_id: client_id };
-        }
-      }
+      return res.status(404).json({
+        error: "Intake not found in client_intakes",
+        intake_id: intake_id || null,
+        client_id: client_id || null,
+      });
     }
 
-    if (!intake) return res.status(404).json({ error: "Intake not found in either table" });
+    // Gate: refuse to generate until intake is fully completed + waivered.
+    // Mirrors phase_2B_brief.md Priority 2.
+    const missing = [];
+    if (!intake.completed_at) missing.push("completed_at");
+    if (intake.disclaimer_acknowledged !== true) missing.push("disclaimer_acknowledged");
+    if (!intake.waiver_signature && !intake.waiver_accepted_at) missing.push("waiver");
+    if (missing.length > 0) {
+      console.warn(`[PROGRAM] Refusing generation for intake ${intake.id}: missing ${missing.join(", ")}`);
+      return res.status(422).json({
+        error: "Intake is not eligible for program generation",
+        intake_id: intake.id,
+        missing,
+      });
+    }
 
-    // Try to get lead info
-    const { data: lead } = await supabase
-      .from("leads").select("*").eq("id", intake.lead_id).maybeSingle();
+    // Ensure full_name is set for downstream formatting (older rows may use first/last instead).
+    if (!intake.full_name) {
+      intake.full_name = client_name
+        || `${intake.first_name || ""} ${intake.last_name || ""}`.trim()
+        || "Client";
+    }
+
+    // Try to get lead info — only if intake actually has a lead_id (never synthesize from client_id).
+    const { data: lead } = intake.lead_id
+      ? await supabase.from("leads").select("*").eq("id", intake.lead_id).maybeSingle()
+      : { data: null };
 
     console.log(`[PROGRAM] Generating program for ${intake.full_name}...`);
     const program = await generateProgram(intake, lead || {});
     const programHtml = formatProgramHTML(program, intake.full_name);
 
-    // Try saving to Render's generated_programs table (may fail if intake is from dashboard table)
+    // Insert into generated_programs. Always passes a real intake.id (FK enforced by phase2a triggers).
     let saved = null;
     const gpApprovalToken = crypto.randomUUID();
     const { data: gpSaved, error: saveErr } = await supabase.from("generated_programs").insert({
@@ -5104,11 +5438,10 @@ app.post("/api/intake/generate-program", async (req, res) => {
     }).select().single();
 
     if (saveErr) {
-      console.warn("[PROGRAM] generated_programs save failed (likely dashboard intake):", saveErr.message);
-      // Not fatal — we still write to program_reviews below
-    } else {
-      saved = gpSaved;
+      console.error("[PROGRAM] generated_programs insert failed:", saveErr.message);
+      return res.status(500).json({ error: `Program insert failed: ${saveErr.message}` });
     }
+    saved = gpSaved;
 
     // Also update dashboard's program_reviews if review_id was passed
     const reviewId = req.body.review_id;
@@ -5136,14 +5469,14 @@ app.post("/api/intake/generate-program", async (req, res) => {
         generated_at: new Date().toISOString(),
       }).eq("id", reviewId);
 
-      // Update dashboard intake status
+      // Update intake status by client_id as well (covers cases where intake_id wasn't passed in originally).
       if (req.body.client_id) {
-        await supabase.from("client_intake").update({ program_status: "ready_for_review" }).eq("client_id", req.body.client_id);
+        await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("client_id", req.body.client_id);
       }
     }
 
-    // Update Render's client_intakes status too
-    try { await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake_id); } catch(e) { /* ignore */ }
+    // Update intake status by id (the precise/preferred path).
+    try { await supabase.from("client_intakes").update({ program_status: "ready_for_review" }).eq("id", intake.id); } catch(e) { /* ignore */ }
 
     // Notify Bryan for approval
     const programId = saved?.id || "dashboard";
@@ -5347,10 +5680,27 @@ app.get("/api/programs/:id/approve", async (req, res) => {
         </div>
       `);
     } else {
-      // No Stripe — just mark approved and deliver directly
-      await supabase.from("generated_programs")
-        .update({ payment_status: "paid", delivered_at: new Date().toISOString(), status: "delivered" })
-        .eq("id", req.params.id);
+      // No Stripe — gated delivery via mark_program_delivered RPC
+      try {
+        await supabase.from("generated_programs")
+          .update({ payment_status: "paid" })
+          .eq("id", req.params.id);
+
+        await markProgramDelivered(req.params.id);
+      } catch (deliveryErr) {
+        if (deliveryErr.gateBlocked) {
+          console.error(`[APPROVE] Gate blocked delivery for ${req.params.id}: ${(deliveryErr.reasons || []).join(", ")}`);
+          return res.type("html").send(`
+            <div style="font-family:sans-serif;max-width:560px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+              <h2 style="color:#ef4444;">Delivery Blocked by Gate</h2>
+              <p>The program for <strong>${program.client_name}</strong> was approved but cannot be delivered yet.</p>
+              <p style="color:#aaa;font-size:13px;margin-top:12px;">Reason(s): ${(deliveryErr.reasons || []).join(", ")}</p>
+              <p style="color:#666;font-size:12px;margin-top:16px;">Resolve the missing prerequisite (typically a <code>program_reviews</code> row with <code>status='approved'</code>) and try again.</p>
+            </div>
+          `);
+        }
+        throw deliveryErr;
+      }
 
       // Send program directly
       if (emailTransporter) {
@@ -5664,23 +6014,20 @@ ${JSON.stringify(existingProgram, null, 2)}
 
 Return the complete updated program as valid JSON only. Same structure as the input. No markdown, no explanation.`;
 
-      const aiRes = await fetch("https://api.anthropic.com/v1/messages", {
+      const aiRes = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
         method: "POST",
-        headers: {
-          "x-api-key": process.env.ANTHROPIC_API_KEY,
-          "anthropic-version": "2023-06-01",
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 8000,
-          messages: [{ role: "user", content: modifyPrompt }]
+          model: CONFIG.chatModel,
+          messages: [{ role: "user", content: modifyPrompt }],
+          stream: false,
+          options: { num_predict: 8000, temperature: 0.3 },
         })
       });
 
-      if (!aiRes.ok) throw new Error(`AI error: ${aiRes.status}`);
+      if (!aiRes.ok) throw new Error(`Ollama error: ${aiRes.status}`);
       const aiData = await aiRes.json();
-      let raw = aiData.content?.[0]?.text || "";
+      let raw = aiData.message?.content || "";
       const jsonMatch = raw.match(/\{[\s\S]*\}/);
       if (!jsonMatch) throw new Error("No JSON in AI response");
       const updatedProgram = JSON.parse(jsonMatch[0]);
@@ -5739,13 +6086,36 @@ app.get("/api/programs/:id/payment-success", async (req, res) => {
       const { data: program } = await supabase.from("generated_programs")
         .select("*").eq("id", req.params.id).single();
 
+      // Write payment metadata first (not gated)
       await supabase.from("generated_programs").update({
         payment_status: "paid",
         stripe_payment_intent_id: session.payment_intent,
         payment_amount: session.amount_total,
-        status: "delivered",
-        delivered_at: new Date().toISOString()
       }).eq("id", req.params.id);
+
+      // Gated delivery via mark_program_delivered RPC
+      try {
+        await markProgramDelivered(req.params.id);
+      } catch (deliveryErr) {
+        if (deliveryErr.gateBlocked) {
+          console.error(`[PAYMENT] Gate blocked delivery for ${req.params.id}: ${(deliveryErr.reasons || []).join(", ")}`);
+          // Notify coach so they can resolve the missing prerequisite
+          await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+            method: "POST",
+            headers: { "Title": `Payment received but delivery blocked: ${program?.client_name}`, "Tags": "warning" },
+            body: `Program ${req.params.id} for ${program?.client_name} — payment confirmed but gate blocked delivery.\nReasons: ${(deliveryErr.reasons || []).join(", ")}`
+          }).catch(() => {});
+          return res.type("html").send(`
+            <div style="font-family:sans-serif;max-width:560px;margin:60px auto;text-align:center;color:#e8e8e8;background:#0a0a0a;padding:40px;border-radius:12px;">
+              <h1 style="color:#ff6a00;">FORGED BY FREEDOM</h1>
+              <h2 style="color:#eab308;margin-top:24px;">Payment Received — Delivery in Review</h2>
+              <p>Your payment was successful. Coach Bryan was notified and will email your program shortly.</p>
+              <p style="color:#666;font-size:12px;margin-top:16px;">If you don't receive it within an hour, reply to your approval email or contact support.</p>
+            </div>
+          `);
+        }
+        throw deliveryErr;
+      }
 
       // Deliver program via email
       if (emailTransporter && program) {
@@ -5907,13 +6277,30 @@ app.post("/api/stripe/webhook", express.raw({ type: "application/json" }), async
     const session = event.data.object;
     const programId = session.metadata?.program_id;
     if (programId) {
+      // Write payment metadata first (not gated)
       await supabase.from("generated_programs").update({
         payment_status: "paid",
         stripe_payment_intent_id: session.payment_intent,
         payment_amount: session.amount_total,
-        status: "delivered",
-        delivered_at: new Date().toISOString()
       }).eq("id", programId);
+
+      // Gated delivery via mark_program_delivered RPC.
+      // Webhook must always ack 200 to Stripe (otherwise indefinite retries),
+      // so we catch+log gate failures instead of throwing.
+      try {
+        await markProgramDelivered(programId);
+      } catch (deliveryErr) {
+        if (deliveryErr.gateBlocked) {
+          console.error(`[STRIPE] Gate blocked delivery for ${programId}: ${(deliveryErr.reasons || []).join(", ")}`);
+          await fetch(`https://ntfy.sh/${process.env.NTFY_TOPIC || "fbf-leads-bryan"}`, {
+            method: "POST",
+            headers: { "Title": `Stripe paid but delivery blocked: ${programId}`, "Tags": "warning" },
+            body: `Program ${programId} — payment confirmed via webhook but gate blocked delivery.\nReasons: ${(deliveryErr.reasons || []).join(", ")}`
+          }).catch(() => {});
+        } else {
+          console.error(`[STRIPE] Delivery error for ${programId}:`, deliveryErr.message);
+        }
+      }
 
       console.log(`[STRIPE] Payment confirmed for program ${programId}`);
     }
@@ -6085,7 +6472,7 @@ app.get("/api/coach/clients", async (req, res) => {
     const adminKey = req.query.key;
     if (adminKey !== process.env.ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
 
-    const { data: clients, error } = await sb.from("clients")
+    const { data: clients, error } = await supabase.from("clients")
       .select("id, first_name, last_name, email, is_active, target_calories, target_protein, target_steps, last_weight, created_at")
       .eq("is_active", true)
       .order("last_name");
@@ -6094,17 +6481,17 @@ app.get("/api/coach/clients", async (req, res) => {
 
     // Get latest metrics for each client
     const clientIds = clients.map(c => c.id);
-    const { data: metrics } = await sb.from("client_metrics")
+    const { data: metrics } = await supabase.from("client_metrics")
       .select("*")
       .in("client_id", clientIds);
 
     // Get latest checkin for each client
-    const { data: checkins } = await sb.rpc("get_latest_checkins_per_client", { client_ids: clientIds }).catch(() => ({ data: null }));
+    const { data: checkins } = await supabase.rpc("get_latest_checkins_per_client", { client_ids: clientIds }).catch(() => ({ data: null }));
 
     // Fallback: get recent checkins manually if RPC doesn't exist
     let latestCheckins = checkins;
     if (!latestCheckins) {
-      const { data: allCheckins } = await sb.from("checkins")
+      const { data: allCheckins } = await supabase.from("checkins")
         .select("*")
         .in("client_id", clientIds)
         .order("date", { ascending: false })
@@ -6144,10 +6531,10 @@ app.get("/api/coach/clients/:id", async (req, res) => {
     const clientId = req.params.id;
 
     const [clientRes, checkinsRes, scansRes, metricsRes] = await Promise.all([
-      sb.from("clients").select("*").eq("id", clientId).single(),
-      sb.from("checkins").select("*").eq("client_id", clientId).order("date", { ascending: false }).limit(90),
-      sb.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
-      sb.from("client_metrics").select("*").eq("client_id", clientId).single(),
+      supabase.from("clients").select("*").eq("id", clientId).single(),
+      supabase.from("checkins").select("*").eq("client_id", clientId).order("date", { ascending: false }).limit(90),
+      supabase.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
+      supabase.from("client_metrics").select("*").eq("client_id", clientId).single(),
     ]);
 
     if (clientRes.error) throw clientRes.error;
@@ -6176,7 +6563,7 @@ app.get("/api/coach/clients/:id/trends", async (req, res) => {
     const since = new Date();
     since.setDate(since.getDate() - days);
 
-    const { data: checkins, error } = await sb.from("checkins")
+    const { data: checkins, error } = await supabase.from("checkins")
       .select("date, weight_lbs, body_temp, blood_glucose, resting_heart_rate, blood_pressure_systolic, blood_pressure_diastolic, mood_rating, stress_level, calories, protein_g, carbs_g, fat_g, water_oz, steps, sleep_hours, sleep_quality, training_done, performance_rating, supplement_compliance, workout_duration_min, avg_heart_rate, cardio_minutes")
       .eq("client_id", clientId)
       .gte("date", since.toISOString().split("T")[0])
@@ -6204,10 +6591,10 @@ app.get("/api/coach/clients/:id/report", async (req, res) => {
     since.setDate(since.getDate() - days);
 
     const [clientRes, checkinsRes, scansRes, metricsRes] = await Promise.all([
-      sb.from("clients").select("*").eq("id", clientId).single(),
-      sb.from("checkins").select("*").eq("client_id", clientId).gte("date", since.toISOString().split("T")[0]).order("date", { ascending: true }),
-      sb.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
-      sb.from("client_metrics").select("*").eq("client_id", clientId).single(),
+      supabase.from("clients").select("*").eq("id", clientId).single(),
+      supabase.from("checkins").select("*").eq("client_id", clientId).gte("date", since.toISOString().split("T")[0]).order("date", { ascending: true }),
+      supabase.from("body_scans").select("*").eq("client_id", clientId).order("scan_date", { ascending: false }),
+      supabase.from("client_metrics").select("*").eq("client_id", clientId).single(),
     ]);
 
     if (clientRes.error) throw clientRes.error;
@@ -6527,9 +6914,8 @@ app.get("/api/testimonials/:id/deny", async (req, res) => {
   }
 });
 
-// ─── Claude Vision: Document & Image Analysis ──────────────
+// ─── Ollama Vision: Document & Image Analysis ───────────────
 app.post("/api/analyze-document", upload.single("file"), async (req, res) => {
-  if (!ANTHROPIC_API_KEY) return res.status(503).json({ error: "Anthropic API not configured" });
 
   try {
     const { type } = req.body; // bloodwork, body_scan, nutrition_label, general
@@ -6556,44 +6942,28 @@ app.post("/api/analyze-document", upload.single("file"), async (req, res) => {
 
     const prompt = prompts[type] || prompts.general;
 
-    // Call Claude Vision API
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+    // Call Ollama Vision API
+    const response = await fetch(`${CONFIG.ollamaHost}/api/chat`, {
       method: "POST",
-      headers: {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 4096,
+        model: CONFIG.visionModel,
         messages: [{
           role: "user",
-          content: [
-            {
-              type: "image",
-              source: {
-                type: "base64",
-                media_type: mediaType,
-                data: base64,
-              },
-            },
-            {
-              type: "text",
-              text: prompt,
-            },
-          ],
+          content: prompt,
+          images: [base64],
         }],
+        stream: false,
+        options: { num_predict: 4096 },
       }),
     });
 
     if (!response.ok) {
-      const err = await response.json();
-      return res.status(response.status).json({ error: err.error?.message || "Claude API error" });
+      return res.status(response.status).json({ error: `Ollama vision error: ${response.status}` });
     }
 
     const result = await response.json();
-    const analysis = result.content?.[0]?.text || "No analysis returned";
+    const analysis = result.message?.content || "No analysis returned";
 
     // Try to parse JSON from the response
     let structured = null;
@@ -7212,6 +7582,76 @@ app.post("/vapi/webhook", express.json(), async (req, res) => {
   }
   if (eventType === "transfer-destination-request") {
     console.log("[VAPI] Transfer initiated for call:", message.call?.id);
+  }
+});
+
+// ─── Reconciliation Digest (Phase 2B P7) ─────────────────
+// GET /api/cron/recon-digest?key=ADMIN_KEY
+// Hits v_open_recon_findings; emails Bryan if any critical findings have been
+// open >24h. Intended to be invoked daily by Supabase pg_cron via pg_net.
+app.get("/api/cron/recon-digest", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "Not configured" });
+  const keyValid = req.query.key === process.env.ADMIN_KEY
+    || req.query.key === process.env.CRON_SECRET
+    || (req.headers.authorization || "").replace(/^Bearer\s+/i, "") === process.env.CRON_SECRET;
+  if (!keyValid) return res.status(401).json({ error: "Unauthorized" });
+
+  try {
+    const { data: findings, error } = await supabase
+      .from("v_open_recon_findings")
+      .select("*")
+      .eq("severity", "critical")
+      .gt("hours_open", 24)
+      .order("hours_open", { ascending: false });
+    if (error) throw error;
+
+    const count = findings?.length || 0;
+    if (count === 0) {
+      return res.json({ ok: true, count: 0, emailed: false });
+    }
+
+    const rows = findings.map(f => `
+      <tr>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;">${f.client_name_resolved || "—"}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;font-family:monospace;">${f.finding_type}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;text-align:right;">${Number(f.hours_open).toFixed(1)}h</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #2a2a2a;font-family:monospace;font-size:11px;">${(f.id || "").slice(0, 8)}</td>
+      </tr>`).join("");
+
+    const html = `
+      <div style="font-family:sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#0a0a0a;color:#e8e8e8;">
+        <h2 style="color:#ef4444;margin-top:0;">FBF Recon — ${count} critical finding${count === 1 ? "" : "s"} open &gt;24h</h2>
+        <p style="color:#aaa;font-size:13px;">Triggered: ${new Date().toISOString()}. View latest in dashboard or v_open_recon_findings.</p>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:12px;">
+          <thead>
+            <tr style="background:#1a1a1a;color:#ff6a00;">
+              <th style="padding:8px 10px;text-align:left;">Client</th>
+              <th style="padding:8px 10px;text-align:left;">Finding</th>
+              <th style="padding:8px 10px;text-align:right;">Open</th>
+              <th style="padding:8px 10px;text-align:left;">ID</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+
+    let emailed = false;
+    if (emailTransporter) {
+      await emailTransporter.sendMail({
+        from: `"Forged by Freedom" <${process.env.SMTP_USER}>`,
+        to: process.env.RECON_DIGEST_EMAIL || COACH_EMAIL,
+        subject: `[FBF Recon] ${count} critical finding${count === 1 ? "" : "s"} open >24h`,
+        html,
+      });
+      emailed = true;
+    } else {
+      console.warn("[RECON-DIGEST] No emailTransporter — skipping email; findings logged only");
+    }
+
+    res.json({ ok: true, count, emailed });
+  } catch (err) {
+    console.error("[RECON-DIGEST] Error:", err.message);
+    res.status(500).json({ error: err.message });
   }
 });
 

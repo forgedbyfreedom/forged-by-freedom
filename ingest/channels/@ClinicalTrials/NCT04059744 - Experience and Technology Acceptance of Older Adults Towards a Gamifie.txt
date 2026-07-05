@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04059744
+Title: Experience and Technology Acceptance of Older Adults Towards a Gamified Rehabilitative Device Prototype
+Official Title: Experience and Technology Acceptance of Older Adults Towards a Gamified Rehabilitative Device Prototype
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Title: Older adults' experience and acceptance of a 'gamified' rehabilitative device for Total Knee Arthroplasty Background: Total Knee Arthroplasty (TKA) is a common surgical procedure. Good post-operative rehabilitation is needed for successful functional recovery. Patients in our institution demonstrated reduced exercise compliance and accuracy during early post-operative rehabilitation. Root cause analysis identified 'reduced feedback', 'reduced care continuity' and 'lack of engagement' to be key contributing factors. Yet, healthcare resource limitations necessitate new ways of care continuation and patient activation. In response, Fun-Knee™, an app-based innovation was created. Using 'gamification' of rehabilitative exercises, Fun-Knee™ guides and tracks rehabilitation from post-surgery to after hospital discharge, till outpatient physiotherapy review. The experience and opinions of older adults towards such 'gamified' rehabilitative technology is unknown.
+
+Purpose: This feasibility study aims to evaluate and develop Fun-Knee™, a novel, app-based rehabilitation device that 'gamifies' post-TKA exercises to improve exercise compliance, effectiveness, and patient activation. Our prototype of Fun-Knee™ was introduced to two cohorts of healthy older adults. Users' experience with hardware and software components of Fun-Knee™, and their acceptance of Fun-Knee™ for rehabilitation were surveyed. Feedback from the first cohort guided prototype refinement. User experience was re-evaluated in the second cohort.
+
+Methods: Community-dwelling adults with no knee pain, 50 years old and above were recruited if they met inclusion criteria. Participants were introduced to two 'gamified' exercises within Fun-Knee™ with standardised instructions. They were instructed to complete one round of the two games at their own time. Thereafter, a survey consisting of quantitative responses was administered. Statistical analysis were performed using Stata (version 13.1, College Station, TX: StataCorp LP), Fisher's exact tests were performed 2-sided at the 5% significance level. Qualitative feedback was obtained during individual interview. Suggestions for hardware or software refinements to Fun-Knee™ were collated and implemented. The above process was repeated for the second cohort of participants, using the latest version of Fun-Knee™.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - survey
+
+INTERVENTIONS:
+  - DEVICE: Fun-Knee
+
+ELIGIBILITY:
+Age: 50 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04059744

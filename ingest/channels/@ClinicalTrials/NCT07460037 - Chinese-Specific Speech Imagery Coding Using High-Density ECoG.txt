@@ -1,0 +1,57 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07460037
+Title: Chinese-Specific Speech Imagery Coding Using High-Density ECoG
+Official Title: Investigation of Chinese-Specific Speech Imagery Encoding and Decoding Using High-Density Electrocorticography
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: resistance training
+
+SUMMARY:
+The goal of this study is to investigate whether high-density electrocorticography (ECoG) signals recorded from the surface of the brain can be used to decode neural representations of Mandarin Chinese speech features, including lexical tone, without requiring overt speech movements. The study focuses on the development and evaluation of decoding algorithms based on neural activity recorded during clinically indicated neurosurgical procedures.
+
+The main questions it aims to answer are:
+
+Can high-density ECoG signals be decoded to reconstruct neural representations of Mandarin Chinese speech features, particularly lexical tone?
+
+Can neural activity recorded during silent auditory speech imagery be decoded to reconstruct tone-specific speech representations without actual articulation?
+
+The study includes two groups of adult patients with neurological conditions who require cortical electrode placement as part of clinically indicated care:
+
+A intraoperative high-density ECoG temporary coverage group, enrolling approximately 50 patients with functional-area glioma or drug-resistant epilepsy who undergo awake neurosurgery with temporary high-density ECoG coverage for clinical functional mapping.
+
+A permanent high-density ECoG implantation group, enrolling approximately 10 patients with severe speech or language impairment caused by neurological conditions such as stroke, brain tumors, amyotrophic lateral sclerosis (ALS), or locked-in syndrome, who receive permanent high-density cortical electrode implantation for long-term monitoring.
+
+Participants will:
+
+Complete preoperative clinical assessments as part of standard medical care, including brain imaging, language function evaluation, and routine neurological assessments
+
+Undergo clinically indicated awake neurosurgical procedures during which high-density ECoG electrodes are placed on the cortical surface for clinical functional localization
+
+Perform language-related tasks, such as listening to speech, imagining speech, and limited spoken responses, while brain electrical activity is recorded for approximately 20-30 minutes during surgery, without altering standard surgical procedures
+
+For participants in the permanent implantation group, participate in long-term follow-up visits approximately every 2 weeks or monthly for up to 12 months after surgery, including evaluation of signal quality and research-related analysis and optimization of decoding algorithms
+
+All surgical procedures involving temporary or permanent electrode placement are performed for clinical indications and have been approved through institutional ethical and scientific review. Participation in this study does not alter standard clinical care for the temporary recording group and does not require additional clinical procedures beyond routine treatment.
+
+This research aims to support the long-term development of silent brain-to-speech communication technologies for individuals with severe speech or motor impairments and to improve understanding of how frontal, parietal, and temporal brain regions represent imagined speech in tonal languages such as Mandarin Chinese.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Electrode Signal Quality Assessment
+  - Decoding Classification Accuracy
+
+INTERVENTIONS:
+  - PROCEDURE: Intraoperative high-density ECoG recording
+  - PROCEDURE: Permanent high-density ECoG implantation
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07460037

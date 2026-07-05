@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07475741
+Title: Exergaming for Imrpving Upper Limb Functions in Parkinson's Disease
+Official Title: Exergaming With Physical Onjects for Upper Limb Rehabilitation in Parkinson's Disease: Effects on Functional Outcome
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: resistance training
+
+SUMMARY:
+Parkinson's Disease commonly results in impaired hand dexterity, reducing a patient's ability to perform activities of daily living. While digital exergaming has been used to encourage physical activity and improve motor function, it often lacks real-world tactile engagement. Integrating physical objects into exergaming known as a phygital approach which may enhance sensorimotor learning and functional carryover. However, its impact on upper limb functional outcomes in PD remains underexplored.
+
+Objectives: To assess the effectiveness of exergaming with physical objects on functional outcomes of upper limb rehabilitation in individuals with Parkinson's Disease.
+
+Methodology: This randomized controlled pilot study will include 30 individuals with early-stage Parkinson's Disease, recruited through convenience sampling and randomly assigned to either a phygital exergaming group or a control group. Both groups will receive sessions over three monthd (3 sessions/week, 30 minutes each). The phygital group will perform task-based exergaming using both physical objects and digital prompts, while the control group will use digital prompts alone. Functional outcomes will be assessed using the Box and Block Test (BBT), at baseline (day 1) and post intervention 12 weeks.
+
+Statistical Analysis: Data will be analyzed using SPSS version 25. Descriptive statistics like gender, stages of diseases etc. will be summarized and described as bar charts and percentages. Within-group differences will be assessed using paired t-tests or Wilcoxon signed-rank tests based on data normality. Between-group comparisons will be conducted using independent t-tests or Mann-Whitney U tests. A p-value of less than 0.05 will be considered statistically significant.
+
+DETAILED DESCRIPTION:
+Upper limb motor impairments in Parkinson's Disease significantly affect daily functioning and independence . While digital exergaming has emerged as a promising tool in neurorehabilitation, traditional models often rely solely on screen-based interaction and lack real-world physical engagement. Recent studies have highlighted the need to include tactile and sensory feedback to improve functional relevance and user experience. Integrating physical objects into exergames referred to as a "phygital" approach, enhances realism, encourages multisensory stimulation, and may result in better motor learning and functional outcomes.
+
+After the selection of subjects as per the guideline of university ethical review board. Informed consent will be taken from each participant. Participants who meet the inclusion criteria and provide informed consent will be assigned to one of two groups (30 per group) Data collection will occur in private examination rooms to ensure privacy and minimize distractions during assessments. Measures will be taken to maintain participant privacy during assessments and data collection. Data will be collected using Box and Block Test (BBT).
+
+The intervention group (phygital) will receive 36 sessions (three sessions per week over 12 weeks), each lasting approximately 30 minutes, involving structured exergaming tasks using physical objects (e.g., blocks, spoons, cups) combined with digital prompts on a tablet or laptop. Control group B will receive the same session frequency and duration, with identical digital prompts, but without the use of physical objects. While conventional Physical Therapy will be given to all the subjects of both groups. All sessions will be conducted under the supervision of a physiotherapist in a controlled clinical environment. Data will be collected at two points: baseline (pre-intervention), immediately after the 6-weeks intervention. Outcome measures will include the Box and Block Test (BBT) for gross manual dexterity.
+
+Data shall be collected through an assessor who will be blinded to the patient group to minimize biases.
+
+Data will be analyzed using IBM SPSS version 25. Descriptive Statistics shall be used to summarize demographics and clinical characteristics (e.g., age, gender, P.D. stage) and shall be presented as means, standard deviations, frequencies, and percentages. Data will be visualized using bar charts and tables. Within group comparisons will be performed to assess pre- and post-intervention changes using the paired t-test for data that meet assumptions of normality. If the data are non-normally distributed, the Wilcoxon signed-rank test will be used as a non-parametric alternative. For between-group comparisons, the independent t-test will be applied to compare outcomes between the intervention and control groups when data are normally distributed, while the Mann-Whitney U test will be used for non-parametric data.
+
+Independent sample t test will be used for comparison of hand motor movem
+
+PRIMARY OUTCOMES:
+  - Box and Block Test
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Exergaming
+  - PROCEDURE: Conventional Physical Therapy
+
+ELIGIBILITY:
+Age: 45 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07475741

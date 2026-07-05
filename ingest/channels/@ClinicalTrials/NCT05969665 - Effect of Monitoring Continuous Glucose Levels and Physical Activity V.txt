@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05969665
+Title: Effect of Monitoring Continuous Glucose Levels and Physical Activity Via Wearables on Cardiovascular Risk Factors
+Official Title: Effect of Monitoring Continuous Glucose Levels and Physical Activity Via Wearables on Cardiovascular Risk Factors After Cardiac Rehabilitation - A Randomised Controlled Trial: MITIGATE-RF
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The study aims to assess the effect of smart watches and continuous glucose measuring devices on cardiovascular risk factors.
+
+DETAILED DESCRIPTION:
+Within a period of 4 months 100 patients will be recruited and randomised to the intervention or control arm (1:1) for a duration of 3 months. Randomisation will be stratified by age, sex, BMI, diabetes, blood pressure, and duration after finishing cardiac rehabilitation. Patients randomised to the intervention arm will be given a smart watch as well as a continuous blood glucose measurement device with detailed instructions. At baseline and at the end of the study questionnaires will be answered and anthropomorphic measurements attained. Blood samples will be drawn at baseline and after an intervention period of 3 months in all subjects. Additional data on sleep, temperature, heart rate (resting and exercise), breathing rate, activity and exercise, oxygen saturation and daily weight will be collected through the Fitbit web application programming interface (API).
+
+PRIMARY OUTCOMES:
+  - Change in cardiovascular risk factor score blood pressure
+  - Change in cardiovascular risk factor score LDL
+  - Change in cardiovascular risk factor score HbA1c
+  - Change in cardiovascular risk factor score BMI
+  - Change in cardiovascular risk factor score physical activity
+
+INTERVENTIONS:
+  - DEVICE: Fitbit Inspire 2
+  - DEVICE: Abbott Freestyle Libre 3
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05969665

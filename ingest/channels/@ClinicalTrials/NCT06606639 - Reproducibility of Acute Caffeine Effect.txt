@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06606639
+Title: Reproducibility of Acute Caffeine Effect
+Official Title: Reproducibility of the Acute Effect of Caffeine on Energy Metabolism and Muscular Strength, Power and Endurance Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: caffeine exercise
+
+SUMMARY:
+Introduction: Various studies have evaluated and verified the ergogenic effect of acute caffeine intake on sports performance, specifically on strength and power performance. However, all experimental investigations designed so far have been based on the comparison of the \&#34;caffeine\&#34; and \&#34;placebo\&#34; conditions in a single trial, not considering the reproducibility and variability of caffeine in multiple trials.
+
+Objectives: The present study aims to evaluate the reproducibility and replicability of the acute effect of caffeine intake on energy metabolism and the muscular production of force, power and endurance, according to sex (men vs women) and type of exercise ( bench press vs squat).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean velocity at different %1RM
+  - Peak velocity at different %1RM
+  - Mean power output at different %1RM
+  - Peak power output and time to reach peak power output at different %1RM
+  - Number of repetitions performed in 1 set at 65%1RM until task failure
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06606639

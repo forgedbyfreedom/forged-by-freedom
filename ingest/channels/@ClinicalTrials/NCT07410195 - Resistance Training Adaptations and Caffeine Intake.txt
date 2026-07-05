@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07410195
+Title: Resistance Training Adaptations and Caffeine Intake
+Official Title: Study of Different Caffeine Supplementation Strategies on Resistance Training-Induced Adaptations
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 180
+Topic: caffeine exercise
+
+SUMMARY:
+This randomized, double-blind, placebo-controlled crossover trial investigates the effects of three different caffeine supplementation strategies on resistance training-induced adaptations in 180 caffeine-naive, inactive young adult males. Participants will undergo two 4-week supervised resistance training programs separated by a 2-week washout/crossover period. The three caffeine strategies are: (1) constant daily low-moderate dosing (3 mg/kg/day), (2) gradually escalating dose (3 to 6 mg/kg across weeks), and (3) training-day-only caffeine (3 mg/kg/day). Primary outcomes include non-invasive measures of integrated anabolism and hypertrophy (D2O-derived plasma proteomic fractional synthesis rate, DXA muscle volume) and strength metrics. Secondary outcomes include hormonal responses (insulin, cortisol, testosterone, IGF-1), sleep/recovery parameters, and adverse effects.
+
+DETAILED DESCRIPTION:
+BACKGROUND: Caffeine is a well-established acute ergogenic aid that reliably improves endurance, power, and resistance-exercise performance when consumed at typical ergogenic doses (approximately 3-6 mg/kg about 60 minutes pre-exercise). However, whether caffeine exerts direct biological effects on muscle protein balance and hypertrophy remains unclear. Regular caffeine ingestion produces partial physiological tolerance, creating the possibility that chronic supplementation elicits different outcomes than acute dosing. OBJECTIVES: This study addresses three translational questions: (1) Does constant daily low-moderate dosing potentiate training adaptations? (2) Does a gradually escalating dose strategy produce greater effects by overcoming tolerance? (3) Does training-day-only caffeine preserve acute ergogenic effects while limiting tolerance and sleep disturbance? METHODS: 180 caffeine-naive, physically inactive young adult males aged 18-30 years will be randomly assigned to one of three caffeine supplementation strategies (n=60 per strategy). Within each strategy, 30 participants will receive caffeine and 30 will receive placebo for 4 weeks. Following a 2-week washout/crossover, interventions will be switched. All participants will undergo supervised resistance training 3 times per week. OUTCOMES: Primary endpoints include deuterium oxide (D2O)-derived plasma proteomic fractional synthesis rate (FSR), DXA-measured lean tissue mass and muscle volume, maximal strength (1RM or 3RM for bench press and squat), and training volume metrics. Secondary outcomes include hormonal and metabolic time-courses, sleep quality, subjective recovery scores, and adverse event monitoring. STATISTICAL ANALYSIS: Linear Mixed Models will be used to analyze the data.
+
+PRIMARY OUTCOMES:
+  - Change in Plasma Proteomic Fractional Synthesis Rate (FSR)
+  - Change in Lean Body Mass Measured by DXA
+  - Change in Muscle Volume Measured by DXA
+  - Change in Maximal Strength Assessed by 1RM/3RM Tests
+  - Total Training Volume Load
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine (Constant Daily Dose)
+  - DIETARY_SUPPLEMENT: Placebo (Constant Daily Dose)
+  - DIETARY_SUPPLEMENT: Caffeine (Escalating Dose)
+  - DIETARY_SUPPLEMENT: Placebo (Escalating Dose)
+  - DIETARY_SUPPLEMENT: Caffeine (Training Days Only)
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07410195

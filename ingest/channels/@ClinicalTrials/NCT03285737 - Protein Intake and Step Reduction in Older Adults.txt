@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03285737
+Title: Protein Intake and Step Reduction in Older Adults
+Official Title: Whey Protein Intake in the Amelioration of Skeletal Muscle Quantity and Function During Inactivity in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: exercise muscle mass
+
+SUMMARY:
+Sarcopenia, the loss in muscle mass with age, is associated with several negative health outcomes including cancer, stroke, cardiovascular disease and diabetes. This loss of muscle mass remains relatively steady following 50 years of age however it can be accelerated with periods of disuse associated with hospitalization, fracture or surgery of the hip or simply influenza. Also associated with periods of disuse, is a lack of energy intake as hospitalizations often result in undernourishment. The consumption of protein has been shown to stimulate muscle growth and therefore the investigators are wondering whether it is able to offset the loss of muscle mass associated with disuse. Therefore, the purpose of the study is to examine the effects of protein consumption combined with mild caloric restriction on changes in muscle mass and function during a period of disuse as well as during a period of recovery .
+
+DETAILED DESCRIPTION:
+The age-related decline in skeletal muscle mass, termed sarcopenia, is associated with a host of metabolic disease states including, but not limited to, cancer, stroke, microvascular disease, type 2 diabetes, Parkinson's and Alzheimer's. Moreover, declines in skeletal muscle mass also are accompanied by an even more precipitous reduction in skeletal muscle strength, known as dynapenia, which is a predisposition for disability and falls.
+
+Sarcopenia begins in the 5th decade of life and proceeds, at least based on population- derived estimates, at a \~0.8% loss annually, with strength losses being greater and more variable at 2-5% year past the age of 50. However, these rates of muscle and strength loss are not linear. Rather, the steady decline in muscle mass loss is punctuated by short-term periods of muscle disuse, which accelerate strength and muscle loss and from which older, as compared to younger, persons have a difficult time recovering. These acute periods of muscle disuse have been shown to result in a transient accelerated decline in strength and skeletal muscle mass effectively accelerating sarcopenia. Such episodes of muscle inactivity manifest from a variety of circumstances such as hospitalization requiring short-term bed rest, immobilization of limbs due to fracture or surgery, and periods of inactive convalescence from illnesses. For example, influenza is the second most common cause of short-term hospitalization in persons 65y with an average hospital stay of 3-4d in duration during which substantial muscle disuse occurs. In addition, many surgeries in older persons (e.g., cholecystectomy), are followed by a hospital stay averaging 3d with a 6-9d period of recovery, or an average of \~10 d of convalescence and minimal activity before a return to normal activity. Given that physical strength is a predictor of all-cause mortality, strategies that prevent the decline in, or enhance the recovery of, skeletal muscle strength and functional mass following periods of inactivity in the elderly are critical.
+
+Data from our lab and others have shown that reduced ambulation (i.e., reduced daily steps), a model of a remarkably common but seemingly benign state of muscle disuse, leads to a significant loss of skeletal muscle in both young and older individuals. The investigators propose that a period of disuse induced through step reduction provides an excellent model by which to study disuse-induced dynapenia and atrophy. In older persons, 2wk of reduced activity has been shown to decrease leg lean mass by 3.9% and increase in trunk adipose tissue by 7.3%. Interestingly, others have demonstrated that older individuals lose the same amount of muscle with only 10d of bed rest as compared to that lost with 28d of bed rest in young persons. During the same 10d period there is shocking loss of lower extremity strength, power, and aerobic capacity, and a reduction in physical activity. These data demonstrate just how susceptible older persons are t
+
+PRIMARY OUTCOMES:
+  - Integrated myofibrillar muscle protein synthesis with use of deuterated water, measured by GCMS
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey
+  - DIETARY_SUPPLEMENT: Collagen
+
+ELIGIBILITY:
+Age: 65 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03285737

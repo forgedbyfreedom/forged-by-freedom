@@ -1,0 +1,83 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06988176
+Title: Frailty and Muscle Strength Tests in Older Adults Undergoing Major Surgery
+Official Title: Feasibility and Correlation of Functional Muscle Strength Tests and Objective Frailty Measures With Clinical Frailty Scale in Patients Undergoing Major Surgery
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: sarcopenia intervention
+
+SUMMARY:
+The goal of this observational study is to learn if simple tests for frailty and muscle strength can help predict which older adults (age 65 and older) are at higher risk for problems after major abdominal surgery.
+
+The main questions it aims to answer are:
+
+* Do measures of frailty and muscle strength, taken before surgery, predict complications after surgery?
+* Can these tests be easily done during a routine pre-surgical visit?
+
+Participants will:
+
+* Complete brief tests measuring muscle strength, breathing strength, physical function, nutrition status, body composition, and memory during a regular pre-surgical clinic appointment.
+* Allow researchers to review their medical records 30 and 90 days after surgery to identify any complications or health problems.
+
+DETAILED DESCRIPTION:
+This observational study aims to assess whether brief, objective frailty and muscle-strength tests can be feasibly incorporated into routine preoperative evaluations and whether these assessments predict postoperative complications in older adults undergoing elective major abdominal surgery. The broader clinical objective is to enhance perioperative risk stratification using multidimensional frailty measurements.
+
+Study Procedures:
+
+Eligible participants aged 65 years or older scheduled for elective major abdominal surgeries (including colorectal, hepatobiliary, gynecologic, and urologic procedures) will undergo a structured frailty assessment battery during their standard preoperative clinic visit. This battery includes:
+
+* Clinical Frailty Scale (CFS) evaluation
+* Maximal Inspiratory Pressure (MIP) and Maximal Expiratory Pressure (MEP) using a MicroRPM handheld respiratory pressure meter
+* Hand-grip strength using a Jamar dynamometer
+* Timed Up-and-Go (TUG) test
+* Skeletal Muscle Index (SMI) measurement via bioimpedance analysis (InBody 120)
+* Rectus femoris muscle thickness assessment using portable ultrasound
+* Cognitive screening using Mini-Cog test
+* Nutritional risk assessment using the Perioperative Nutrition Screen (PONS)
+
+All assessments will be performed by trained clinical research personnel. The entire battery is anticipated to take approximately 20 minutes per participant.
+
+Postoperatively, participant medical records will be reviewed at 30 and 90 days to identify and document complications, ICU admissions, hospital length of stay, discharge disposition, and mortality.
+
+Quality Assurance and Data Validation:
+
+* A comprehensive quality assurance plan includes:
+* Routine calibration checks for testing equipment (spirometer, dynamometer, ultrasound, bioimpedance devices).
+* Bi-weekly data validation through double data entry and consistency checks in the Research Electronic Data Capture (REDCap) database.
+* Source data verification through periodic audits comparing REDCap entries against medical records.
+
+Data Dictionary and Coding:
+
+A detailed data dictionary outlining each variable, units, normal range, and coding schemes is maintained in REDCap. Frailty measures include both raw continuous data and binary categorical flags indicating normal versus abnormal based on established normative values from published consensus guidelines.
+
+Standard Operating Procedures (SOPs):
+
+The following SOPs ensure standardized study execution:
+
+* Patient recruitment and informed consent processes
+* Standardized administration of frailty assessments
+* Data collection, entry, verification, and management procedures
+* Procedures for identification, grading, and reporting postoperative complications
+* Regular training and competency evaluation of clinical research personnel
+* Procedures for managing protocol deviations and amendments
+
+Sample Size Justification:
+
+The target enrollment of 100 participants provides 80% power to detect moderate correlations (r
+
+PRIMARY OUTCOMES:
+  - Feasibility of Frailty Assessment Integration
+  - Predictive Capability of Frailty Measures for Postoperative Complications
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Frailty assessment, nutrition assessment, cognition assessment, muscle strength testing
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06988176

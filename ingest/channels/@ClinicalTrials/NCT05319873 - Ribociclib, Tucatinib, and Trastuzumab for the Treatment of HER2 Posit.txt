@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05319873
+Title: Ribociclib, Tucatinib, and Trastuzumab for the Treatment of HER2 Positive Breast Cancer
+Official Title: A Phase 1B Trial Evaluating the Safety of Ribociclib, Tucatinib, and Trastuzumab in Patients With Metastatic, HER2+ Breast Cancer and a Multicenter, Randomized, Open-Label, Phase 2 Study of Preoperative Treatment With Ribociclib,Ttrastuzumab, Tucatinib, and Fulvestrant Versus Docetaxel, Carboplatin,Ttrastuzumab, and Pertuzumab in HR+/HER2+ Breast Cancer and Ribociclib, Trastuzumab, and Tucatinib Versus Docetaxel, Carboplatin, Trastuzumab, and Pertuzumab in Patients With HR-/HER2+ Breast Cancer
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase Ib/II trial studies the side effects and best dose of ribociclib, tucatinib, and trastuzumab for the treatment of HER2 positive breast cancer that has spread to other parts of the body (metastatic), and then compares the effect of ribociclib, tucatinib, trastuzumab with or without fulvestrant to docetaxel, carboplatin, trastuzumab, and pertuzumab (standard of care) for the treatment of early stage breast cancer before surgery (neoadjuvant therapy). Ribociclib and tucatinib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth. Trastuzumab is a form of targeted therapy because it attaches itself to specific molecules (receptors) on the surface of tumor cells, known as HER2 receptors. When trastuzumab attaches to HER2 receptors, the signals that tell the cells to grow are blocked and the tumor cell may be marked for destruction by the body's immune system. Pertuzumab is a monoclonal antibody that may interfere with the ability of tumor cells to grow and spread. Estrogen can cause the growth of breast tumor cells. Fulvestrant blocks the use of estrogen by the tumor cells. Chemotherapy drugs, such as docetaxel and carboplatin, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving ribociclib, tucatinib, and trastuzumab with or without fulvestrant before surgery may make the tumor smaller and may reduce the amount of normal tissue that needs to be removed.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To assess the safety of the combination of ribociclib, tucatinib, and trastuzumab in patients with metastatic, HER2+ breast cancer. (Phase 1 Dose Escalation Trial) II. To determine the recommended phase 2 dose of ribociclib when combined with tucatinib and trastuzumab. (Phase 1 Dose Escalation Trial) III. To assess the pathologic complete response (pCR). (Phase 2 Neoadjuvant Study)
+
+SECONDARY OBJECTIVES:
+
+I. To evaluate the pharmacokinetics of ribociclib and tucatinib when given in combination. (Phase 1 Dose Escalation Trial) II. To assess the clinical objective response rate after 3 cycles via Response Evaluation Criteria in Solid Tumors (RECIST) 1.1. (Phase 1 Dose Escalation Trial) III. To assess the clinical objective response rate in the experimental arms. (Phase 2 Neoadjuvant Study) IV. To assess quality of life by evaluating toxicity burden using a quality of life (QOL)/patient-reported outcomes (PRO) questionnaire- the European Organization for Research and Treatment of Cancer Quality-of-Life Questionnaire-Core 30 (EORTC QLQ-C30) instrument. (Phase 2 Neoadjuvant Study) V. To assess the molecular changes in tumor biomarkers after 1 cycle of targeted therapy (anti-HER2, anti-estrogen, and CDK 4/6 directed therapy). (Phase 2 Neoadjuvant Study) VI. Pathological Assessment According to Residual Cancer Burden (RCB) Index at surgery. (Phase 2 Neoadjuvant Study)
+
+EXPLORATORY OBJECTIVE:
+
+I. To investigate potential serum and tumor predictive biomarkers to predict response to experimental therapy. (Phase 2 Neoadjuvant Study)
+
+OUTLINE: This is a phase Ib, dose-escalation study of ribociclib followed by a phase II study.
+
+PHASE Ib: Patients receive ribociclib orally (PO) once daily (QD) on days 1-21, tucatinib PO twice daily (BID) on days 1-28, and trastuzumab intravenously (IV) over 30-90 minutes every 7 days. Cycles repeat every 28 days for up to 4 cycles in the absence of disease progression or unacceptable toxicity.
+
+PHASE II: Patients with hormone receptor (HR) positive status are randomized to Arm A or Arm B. Patients with HR negative status are randomized to Arm B or Arm C.
+
+ARM A: Patients receive ribociclib PO QD on days 1-21, tucatinib BID on days 1-28, trastuzumab IV over 30-90 minutes every 7 days and fulvestrant subcutaneously (SC) on days 1 and 15 of cycle 1 and day 1 of every subsequent cycle. Cycles repeat every 28 days for up to 6 cycles in the absence of disease progression or unacceptable toxicity.
+
+ARM B: Patients receive docetaxel IV over 1 hour on day 1, carboplatin IV on day 1, trastuzumab IV over 30-90 minutes on day 1, and pertuzumab IV over 1 hour on day 1. Cycles repeat every 21 days for up to 6 cycles in the absence of disease progression or unacceptable toxicity.
+
+ARM C: Patients receive ribociclib PO QD on days 1-21, tucatinib BID on days 1-28, and trastuzumab IV over 30-90 minutes every 7 days. Cycles repeat every 28 days for up to 6 cycles in the absence of disease progression or unacceptable tox
+
+PRIMARY OUTCOMES:
+  - Maximum tolerated dose (MTD) (Phase Ib)
+  - Pathologic complete response (pCR) (Phase II)
+
+INTERVENTIONS:
+  - DRUG: Carboplatin
+  - DRUG: Docetaxel
+  - DRUG: Fulvestrant
+  - BIOLOGICAL: Pertuzumab
+  - OTHER: Quality-of-Life Assessment
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05319873

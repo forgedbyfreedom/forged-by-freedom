@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07048678
+Title: Evaluating the Impact of Preoperative Respiratory Exercises on Post-Surgical Pulmonary Outcomes RCT
+Official Title: Evaluating the Impact of Preoperative Respiratory Exercises on Post-Surgical Pulmonary Outcomes: A Randomized Controlled Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 126
+Topic: weight loss exercise
+
+SUMMARY:
+This randomized controlled trial aims to evaluate the role of preoperative respiratory exercises in reducing postoperative pulmonary complications (PPCs) such as atelectasis, pneumonia, and hypoxia, and in shortening the hospital stay in surgical patients. A total of 126 adult patients (\>40 years), scheduled for total knee or hip replacement surgeries at Horizon Hospital Lahore, will be randomly assigned into two groups: the intervention group and the control group.
+
+DETAILED DESCRIPTION:
+The intervention group will receive preoperative respiratory exercises including incentive spirometry, deep breathing exercises, and chest physiotherapy, one day before surgery. The control group will receive standard preoperative care without any respiratory exercises. Clinical assessments post-surgery will determine the presence of PPCs and hospital stay duration.
+
+PRIMARY OUTCOMES:
+  - Postoperative Pulmonary Complication (PPC) assessment
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: preoperative respiratory exercises
+  - COMBINATION_PRODUCT: Standard Care (Control Group)
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07048678

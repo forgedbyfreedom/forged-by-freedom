@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04712578
+Title: Influence of Caffeinated and Non-caffeinated Pre-workout Supplements on Resistance Exercise Performance
+Official Title: Influence of Caffeinated and Non-caffeinated Pre-workout Supplements on Resistance Exercise Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: caffeine exercise
+
+SUMMARY:
+This study is a randomized, double-blind, placebo-controlled crossover trial examining the effects of caffeinated and non-caffeinated pre-workout supplements on resistance exercise performance. Resistance-trained adults will be randomly assigned to complete three study conditions (caffeinated pre-workout, non-caffeinated pre-workout, and placebo) in one of the six possible condition orders. During each condition, participants will report to the laboratory for ingestion of the assigned beverage and subsequent muscular performance testing. Major performance outcomes will be force production variables from a mechanized squat device and maximal strength and muscular endurance on the bench press and leg press exercises.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Isometric Peak Force Production
+  - Isometric Rate of Force Development
+  - Isokinetic Peak Concentric Force Production
+  - Isokinetic Peak Eccentric Force Production
+  - Maximal Strength on Bench Press Exercise
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeinated pre-workout supplement
+  - DIETARY_SUPPLEMENT: Non-caffeinated pre-workout supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04712578

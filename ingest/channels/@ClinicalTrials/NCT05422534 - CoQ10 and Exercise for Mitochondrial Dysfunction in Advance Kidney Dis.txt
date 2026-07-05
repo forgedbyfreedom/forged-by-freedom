@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05422534
+Title: CoQ10 and Exercise for Mitochondrial Dysfunction in Advance Kidney Disease
+Official Title: Role of Mitochondrial Dysfunction in the Response to Exercise in Patients With Advance Kidney Disease
+Status: RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 156
+Topic: resistance training
+
+SUMMARY:
+Frailty and sarcopenia are modifiable risk factors for morbidity and mortality in patients with ESRD. Exercise is the recommended intervention to prevent frailty and sarcopenia, however, many clinical trials have shown limited clinical improvement in muscle mass and physical function. We propose that mitochondrial dysfunction is one of the deterrents to the effectiveness of the exercise. We plan to evaluate the additive effect of HIIT and CoQ10, a mitochondrial-targeted therapy, on mitochondrial function and physical performance. Understanding the interplay among CoQ10, exercise, and mitochondrial function will identify novel mechanisms to improve the efficiency of exercise. This will also serve to prevent frailty, sarcopenia, and muscle dysfunction in patients with ESRD.
+
+DETAILED DESCRIPTION:
+Frailty and sarcopenia in patients with end-stage renal disease (ESRD) Patients on maintenance hemodialysis (MHD) experience frailty and sarcopenia. Approximately 73% of patients are diagnosed with frailty at the time of initiation of dialysis. Frailty is a multisystem impairment associated with vulnerability to stressors, and it is characterized by the presence of three of the following criteria: unintentional weight loss, self-reported exhaustion or fatigue, measured muscle weakness, slow walking speed, and low physical activity. The prevalence of frailty increases with age; approximately 7% of individuals older than 65 years of age are diagnosed as frail. Frailty is present at younger ages in patients with ESRD on MHD than in the general population, as many as 44% of patients with ESRD younger than 40 years are frail. Sarcopenia, defined as a reduction in muscle and/or muscle strength, is common in patients on MHD and contributes significantly to the frailty syndrome in this population.6 The loss of muscle power is one of the components of the frailty phenotype, and poor muscle function is recognized as a major cause of frailty.
+
+Muscle mass has been used as a surrogate of muscle function. While the decrease in muscle mass usually correlates with a decrease in muscle strength,11 recent studies have shown that the loss of muscle mass does not fully explain the decrease in muscle function. Likewise, a study in older individuals has shown that the decline in strength is faster than the decline in muscle mass. Furthermore, the maintenance of muscle mass does not necessarily prevent the loss of muscle function, suggesting that the quality of the muscle may play an important role in muscle function. Muscle abnormalities, such as fat infiltration and fibrosis, could explain in part the discrepancy between muscle mass and function. Lack of physical activity is a possible cause of increased intermuscular fat. A study showed that unilateral leg suspension augmented intermuscular fat in thigh muscles. In contrast, aerobic exercise combined with weight loss decreases intermuscular fat. A previous study showed increased intermuscular fat in patients with ESRD compared to controls, a finding we have also observed in our studies. Our preliminary data also showed that intermuscular fat inversely correlates with physical function in patients with ESRD, highlighting the need to find strategies that improve muscle quality and physical function in this population.
+
+Exercise in ESRD Patients with ESRD have reduced muscle mass and strength compared to controls. Resistance exercise is considered the best type of exercise to increase muscle mass and muscle strength. Multiple studies have evaluated the effects of resistance exercise on muscle mass and strength. In most of these studies, resistance exercise failed to elicit an appropriate response compared to the general population. A recent study, using progressive resistance exercise training, showed a comparable inc
+
+PRIMARY OUTCOMES:
+  - PCr recovery measured by 31 phosphorus magnetic resonance spectroscopy
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: CoQ10
+  - DRUG: Placebo
+  - BEHAVIORAL: HB-HIIT
+  - BEHAVIORAL: Observational
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05422534

@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05684055
+Title: "Community-based, eHealth Supported Management of Cardiovascular Risk Factors by Lay Village Health Workers (ComBaCaL aHT TwiC 1 & ComBaCaL aHT TwiC 2)
+Official Title: Community-based, eHealth Supported Management of Cardiovascular Risk Factors by Lay Village Health Workers for People With Controlled and Uncontrolled Arterial Hypertension in Rural Lesotho: Joint Protocol for Two Cluster-randomized Trials Within the ComBaCaL Cohort Study (ComBaCaL aHT TwiC 1 & ComBaCaL aHT TwiC 2)
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1354
+Topic: exercise intervention obesity
+
+SUMMARY:
+ComBaCaL aHT TwiC 1 and aHT TwiC 2 are two cluster-randomized controlled trials that are identical in intervention, design and endpoints. TwiC 1 enrols individuals with uncomplicated aHT with baseline BP values above treatment targets and the hypothesis is that in intervention clusters where community-based treatment is offered, a higher proportion will have controlled aHT at twelve months' follow-up as compared to control clusters where participants are referred to the facility for further care after diagnosis.
+
+TwiC 2 enrols individuals with uncomplicated pharmacologically controlled aHT with the hypothesis that the offer of community-based antihypertensive treatment is non-inferior to facility-based care with regard to BP control rates at twelve months. The trials are nested within the ComBaCaL (Community-Based Chronic disease care Lesotho) cohort study (EKNZ ID 2022-00058, clinicaltrials.gov ID NCT05596773), a platform for the investigation of chronic diseases and their management in rural Lesotho that is maintained by local chronic care village health workers (CC-VHWs). 50% of the villages being part of the overarching ComBaCaL cohort will be randomly allocated to receive the TwiC intervention. The non-selected villages will serve as comparators and follow the regular ComBaCaL cohort activities conducted by CC-VHWs, including screening, diagnosis, standardized counselling and referral to a health facility for further therapeutic management. The TwiC intervention will be offered to all eligible people living with aHT in the sampled intervention villages. Individuals with uncomplicated uncontrolled and uncomplicated controlled aHT at baseline will be enrolled in aHT TwiC 1 and aHT 2 respectively. In case of complicated disease, unclear diagnosis, or presence of clinical alarm signs or symptoms, participants will be referred to the closest health facility for further investigation.
+
+DETAILED DESCRIPTION:
+Globally, arterial hypertension (aHT) is the single most important risk factor for early mortality. The task-shifting from facility-based healthcare professionals to lay healthcare workers (LHWs) at community-level has been identified as a promising solution to increase access to aHT treatment in low- and middle-income countries (LMICs). A cluster-randomized intervention is planned within the ComBaCaL (Community-Based Chronic disease care Lesotho) cohort study (EKNZ ID 2022-00058, clinicaltrials.gov ID NCT05596773), a platform for the investigation of chronic diseases and their management in rural Lesotho that is maintained by local chronic care village health workers (CC-VHWs). CC-VHWs are lay healthcare workers operating within the Lesotho Ministry of Health (MoH) Village Health Worker Program who receive a specific training to deliver chronic care services.
+
+In the intervention clusters, CC-VHWs operating within the existing healthcare system will be capacitated to screen for and diagnose aHT, to prescribe first-line antihypertensive single-pill combinations (SPCs) and to monitor the treatment supported by a tailored clinical decision support application (ComBaCaL app) in their villages. The control group consists of people diagnosed with aHT living in villages that are also part of the ComBaCaL cohort but not sampled for the intervention (control villages), where CC-VHWs will only screen for and diagnose aHT with subsequent standardized counselling and referral to the closest health facility if aHT is present, but no village-based prescriptions.
+
+The effectiveness of this intervention in two different trial populations is assessed:
+
+* in people with uncomplicated aHT and blood pressure (BP) values above treatment target (≥ 140/90 mmHg) at baseline (aHT TwiC 1) and
+* in people with uncomplicated aHT and BP values below treatment target at baseline (aHT TwiC 2).
+
+Randomization for the two TwiCs will be done at cluster level, meaning that all people with aHT in one village will be offered the same care package from their local CC-VHW. It is planned to recruit 100 clusters (50 per study arm) for a total of 800 participants with uncontrolled aHT (TwiC 1) and 1000 participants with controlled aHT (TwiC2). 50% of the villages being part of the overarching ComBaCaL cohort will be randomly allocated to receive the TwiC intervention. The non-selected villages will serve as comparators and follow the regular ComBaCaL cohort activities conducted by CC-VHWs, including screening, diagnosis, standardized counselling and referral to a health facility for further therapeutic management. The TwiC intervention will be offered to all eligible people living with aHT in the sampled intervention villages. Individuals with uncomplicated uncontrolled and uncomplicated controlled aHT at baseline will be enrolled in aHT TwiC 1 and aHT 2 respectively. In case of complicated disease, unclear diagnosis, or presence of clinical alarm signs or symptoms, participants will be
+
+PRIMARY OUTCOMES:
+  - Blood pressure (BP) within target (<140/90 mmHg)
+
+INTERVENTIONS:
+  - DRUG: First-line antihypertensive single-pill combination (SPC)
+  - OTHER: Standardized counselling and referral to the closest health facility
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05684055

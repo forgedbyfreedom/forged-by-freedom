@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07423611
+Title: ctDNA-Guided Chemotherapy Omission With Ribociclib Plus Endocrine Therapy in HR-Positive/HER2-Negative Breast Cancer
+Official Title: A Multicenter, Open-label, Randomized Controlled Clinical Study Comparing the Efficacy and Safety of ctDNA-guided Ribociclib Plus Endocrine Therapy Versus Chemotherapy Followed by Ribociclib Plus Endocrine Therapy as Adjuvant Treatment in Patients With HR+/HER2- Early Breast Cancer
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 388
+Topic: growth hormone treatment
+
+SUMMARY:
+This study is a prospective, multicenter, open-label, randomized controlled clinical trial designed to determine whether ribociclib plus endocrine therapy (ET) is non-inferior to adjuvant chemotherapy followed by ribociclib plus ET in patients with circulating tumor DNA (ctDNA)-negative, hormone receptor-positive/human epidermal growth factor receptor 2-negative (HR+/HER2-) early breast cancer.
+
+DETAILED DESCRIPTION:
+This study is a prospective, multicenter, open-label, randomized controlled clinical trial designed to determine whether ribociclib plus endocrine therapy (ET) is non-inferior to adjuvant chemotherapy followed by ribociclib plus ET in patients with circulating tumor DNA (ctDNA)-negative, hormone receptor-positive/human epidermal growth factor receptor 2-negative (HR+/HER2-) early breast cancer.
+
+Patients with HR+/HER2- early breast cancer who have undergone definitive surgery will be enrolled and must undergo ctDNA-MRD analysis within 4 weeks after surgery. Patients who are ctDNA negative will be randomly assigned (1:1) to two study groups, according to stratification factors: menopausal status (premenopausal vs. postmenopausal). The experimental group will receive ribociclib plus aromatase inhibitor (AI) or ovarian function suppression (OFS), while the control group will receive chemotherapy followed by ribociclib plus AI or OFS. The safety and efficacy of each group will be assessed through ctDNA nagative rate, invasive disease free survival (iDFS), and adverse effects (AE) as graded by Common Terminology Criteria for Adverse Events (CTCAE) 5.0 and patient reported outcome (PRO).
+
+PRIMARY OUTCOMES:
+  - ctDNA negativity rate
+
+INTERVENTIONS:
+  - DRUG: Aromatase inhibitor (± ovarian suppression) plus Ribociclib
+  - DRUG: 4 cycles of TC (docetaxel + cyclophosphamide) adjuvant chemotherapy
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07423611

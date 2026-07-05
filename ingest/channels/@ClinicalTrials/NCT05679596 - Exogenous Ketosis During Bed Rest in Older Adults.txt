@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05679596
+Title: Exogenous Ketosis During Bed Rest in Older Adults
+Official Title: Ketone Bodies as Therapeutic Agents to Reduce the Harmful Effects of Bed Rest on Muscle Mass and Metabolic Health in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: exercise muscle mass
+
+SUMMARY:
+The goal of this randomized, double-blind, parallel group interventional study is to evaluate the effect of ketone bodies on healthy older adults (65-85 y) during 5 days of bed rest. The main questions it aims to answer are:
+
+Does supplementation of ketone bodies prevent the typical decline in muscle protein synthesis, muscle size, muscle function, insulin sensitivity, and muscle mitochondrial function that occurs in response to bed rest?
+
+Researchers will compare ketone supplements (KET) to an energy matched control beverage (carbohydrates and fats) to see if the ketones can rescue the decline in muscle protein synthesis rates, muscle loss, muscle function, insulin sensitivity, and mitochondrial function due to 5 days of bed rest.
+
+This may positively impact the heath of older adults subjected to bed rest.
+
+DETAILED DESCRIPTION:
+Bed rest is a common feature of many clinical environments such as hospitals and long-term care facilities. However, physical inactivity due to bed rest decreases muscle size, muscle strength, and physical performance (i.e. rising from a chair) that can lead to a reduced quality of life and a higher risk of disease and death. Eating protein-rich foods and exercising normally helps to maintain muscle size by building proteins found in muscle. However, during bed rest there is a reduction in the rate at which proteins found in muscle are made and this leads to smaller muscles. Bed rest leads to problems with blood glucose regulation and insulin resistance which can increase the risk for diabetes. Both the loss of muscle size and insulin resistance are linked to problems with parts of our cells called mitochondria. Mitochondria do a lot of important things including keeping our cells full of energy. Bed rest occurs more frequently in older adults and also negatively impacts their health more than in younger adults. Sadly, there are limited options to prevent the problems associated with bed rest. Ketone bodies are molecules that come from fat that are normally produced in the body in response to reduced carbohydrate intake (i.e. a ketogenic diet). Recently ketone supplements have become available, which increase the amount of ketone bodies in the body without the need to limit carbohydrate intake from food. Elevated ketone bodies may help protect muscle size and health during bed rest by enhancing the process of building muscle proteins, improving blood glucose regulation, and helping mitochondria work optimally.
+
+PRIMARY OUTCOMES:
+  - Changes in integrated fractional synthesis rate (%/d) in response to bed rest with and without ketone monoester (KET) supplementation.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: ketone monoester (R)-3-hydroxybutyl (R)-3- hydroxybutyrate
+  - DIETARY_SUPPLEMENT: carbohydrate-fat placebo (fructose, corn and canola oil 50:50 ratio)
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05679596

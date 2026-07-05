@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03871439
+Title: OPEN LABEL, 2-PERIOD STUDY, TO COMPARE BIO-AVAILABILITY OF 2 DIFFERENT FORMULATIONS OF PF-05221304 IN HEALTHY ADULTS
+Official Title: A PHASE 1, OPEN LABEL, TWO-PERIOD, RANDOMIZED CROSSOVER STUDY TO COMPARE THE PHARMACOKINETICS OF TWO DIFFERENT FORMULATIONS OF PF-05221304 ADMINISTERED ORALLY TO HEALTHY ADULT SUBJECTS
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to characterize the plasma pharmacokinetics of two formulations of PF 05221304 in healthy adults.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma PF-05221304 AUClast
+  - Plasma PF-05221304 Cmax
+
+INTERVENTIONS:
+  - DRUG: PF-05221304 Formulation A
+  - DRUG: PF-05221304 Formulation B
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03871439

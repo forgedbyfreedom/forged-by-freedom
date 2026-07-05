@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00683826
+Title: The Effects of Leucine on Body Weight
+Official Title: Effects of Leucine Supplement on Body Weight and Cardiometabolic Changes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 8
+Topic: protein supplementation
+
+SUMMARY:
+Protein-rich diets appear to show some benefits in promoting weight loss. It is thought that increased intake of leucine may account for some of this effect. This study is designed to assess whether any of the beneficial effects of dietary leucine supplementation observed in mice also apply to humans.
+
+Specifically, our team would like to determine whether oral leucine supplementation in overweight/obese humans increases metabolic rate, reduces body weight, improves glucose utilization and/or, reduces circulating fat levels in the blood. We hope that the results obtained from this pilot study will highlight the specific aspects of metabolic improvement associated with increased daily leucine intake. This study will should provide data that can be used to design more definitive trials with regard to dietary leucine supplementation.
+
+Hypothesis
+
+This pilot study is designed to accomplish the following two goals:
+
+1. to assess whether any of the beneficial effects of dietary leucine supplementation observed in mice also apply in humans. Specifically, we want to determine whether oral leucine supplementation in overweight/obese individuals' increases basal metabolic rate, reduces body weight, improves glucose tolerance and/or insulin sensitivity, and/or reduces circulating Low-density Lipoprotein (LDL)-cholesterol levels.
+2. To provide data that can be used to design more definitive trials with regard to dietary leucine supplementation.
+
+We hope that the results obtained from this pilot study will highlight the specific aspects of metabolic improvement associated with increased daily leucine intake. This would in turn lead to more rigorous clinical trials involving larger sample sizes, and with diverse populations of different gender, age, and ethnic groups. Future trials may also be directed to determine minimal doses and durations of leucine supplementation that are capable of achieving clinically significant improvement in the cardio-metabolic risk profile in people.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Effects on Weight
+  - Weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-Leucine 8gr
+  - OTHER: Liquid meal
+  - DIETARY_SUPPLEMENT: L-Leucine 4g
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00683826

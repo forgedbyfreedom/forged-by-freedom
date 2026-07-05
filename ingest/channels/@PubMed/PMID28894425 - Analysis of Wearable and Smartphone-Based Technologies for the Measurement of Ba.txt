@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 28894425
+Title: Analysis of Wearable and Smartphone-Based Technologies for the Measurement of Barbell Velocity in Different Resistance Training Exercises.
+Authors: Balsalobre-Fern&#xe1;ndez, Marchante, Baz-Valle, Alonso-Molero, Jim&#xe9;nez
+Journal: Frontiers in physiology
+Year: 2022
+Topic: velocity based training
+
+ABSTRACT:
+The purpose of this study was to analyze the validity, reliability, and accuracy of new wearable and smartphone-based technology for the measurement of barbell velocity in resistance training exercises. To do this, 10 highly trained powerlifters (age = 26.1 &#xb1; 3.9 years) performed 11 repetitions with loads ranging 50-100% of the 1-Repetition maximum in the bench-press, full-squat, and hip-thrust exercises while barbell velocity was simultaneously measured using a linear transducer (LT), two Beast wearable devices (one placed on the subjects' wrist -BW-, and the other one directly attached to the barbell -BB-) and the iOS PowerLift app. Results showed a high correlation between the LT and BW (r = 0.94-0.98, SEE = 0.04-0.07 m&#x2022;s-1), BB (r = 0.97-0.98, SEE = 0.04-0.05 m&#x2022;s-1), and the PowerLift app (r = 0.97-0.98, SEE = 0.03-0.05 m&#x2022;s-1) for the measurement of barbell velocity in the three exercises. Paired samples T-test revealed systematic biases between the LT and BW, BB and the app in the hip-thrust, between the LT and BW in the full-squat and between the LT and BB in the bench-press exercise (p &lt; 0.001). Moreover, the analysis of the linear regression on the Bland-Altman plots showed that the differences between the LT and BW (R2 = 0.004-0.03), BB (R2 = 0.007-0.01), and the app (R2 = 0.001-0.03) were similar across the whole range of velocities analyzed. Finally, the reliability of the BW (ICC = 0.910-0.988), BB (ICC = 0.922-0.990), and the app (ICC = 0.928-0.989) for the measurement of the two repetitions performed with each load were almost the same than that observed with the LT (ICC = 0.937-0.990). Both the Beast wearable device and the PowerLift app were highly valid, reliable, and accurate for the measurement of barbell velocity in the bench-press, full-squat, and hip-thrust exercises. These results could have potential practical applications for strength and conditioning coaches who wish to measure barbell velocity during resistance training.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/28894425/

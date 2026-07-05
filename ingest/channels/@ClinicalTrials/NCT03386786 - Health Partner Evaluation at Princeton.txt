@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03386786
+Title: Health Partner Evaluation at Princeton
+Official Title: Randomized, Controlled Evaluation of Health Partner mHealth for Total Joint Replacement at Penn Medicine Princeton Medical Center
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 127
+Topic: physical activity intervention
+
+SUMMARY:
+This is a prospective, single-center, randomized, comparative, controlled study. Penn Medicine Princeton Medical Center will enroll a total of 296 subjects (18 years or older) who are electing to have total knee or hip replacement surgery. Subjects will be randomized to either the treatment group (Health Partner alongside standard care) or the control group (standard care alone). Health Partner is a combination of a mobile application and a web-based portal. The primary objective is to compare care plan adherence (pre- and post-surgery) for Health Partner vs. control subjects. Secondary objectives include evaluating all-cause medical resource utilization, communication with health care provider, well-being, fear of surgery, confidence in recovery from surgery, sleep, and patient satisfaction for 90 days post-surgery.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Care Path Behavioral Assessment (CPBA), Pre-surgery
+  - Care Path Behavioral Assessment (CPBA), Post-surgery
+
+INTERVENTIONS:
+  - BEHAVIORAL: Health Partner
+  - BEHAVIORAL: Standard Care
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03386786

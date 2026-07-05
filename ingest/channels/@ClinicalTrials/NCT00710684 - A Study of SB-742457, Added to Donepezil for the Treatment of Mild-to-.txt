@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00710684
+Title: A Study of SB-742457, Added to Donepezil for the Treatment of Mild-to-moderate Alzheimer's Disease
+Official Title: Study AZ3110866, a Fixed Dose Study of SB-742457 Versus Placebo When Added to Existing Donepezil Treatment in Subjects With Mild-to-moderate Alzheimer's Disease
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 682
+Topic: creatine supplementation
+
+SUMMARY:
+The study is designed to investigate the safety and efficacy of SB-742457 when added to stable donepezil treatment in subjects with mild-to-moderate Alzheimer's disease.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Baseline in Alzheimer's Disease Assessment Scale - Cognitive Subscale (ADAS-Cog) Total Score at Week 24
+  - Change From Baseline in Clinical Dementia Rating - Sum of Boxes (CDR-SB) Score at Week 24
+
+INTERVENTIONS:
+  - DRUG: SB-742457 15mg
+  - DRUG: SB-742457 35mg
+  - DRUG: Placebo
+  - DRUG: donepezil 5-10mg
+
+ELIGIBILITY:
+Age: 50 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00710684

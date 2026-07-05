@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06643273
+Title: Evaluation of a Haptic Glove for Assessing Tactile Perception in Post-Stroke Patients
+Official Title: A Multicenter Randomized Controlled Trial on the Effects of Upper Limb Robotic Rehabilitation on Sensory and Cognitive Impairments in Subjects With Stroke. The SCORES (Sensory and Cognitive Outcomes of Robotic Exercises in Stroke) Study. Evaluation of a Haptic Glove.
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 126
+Topic: recovery exercise
+
+SUMMARY:
+The aim of the SCORES Haptic Glove Study is to assess the technical features, safety, and reliability of a sensor-equipped glove designed to evaluate tactile perception. This will help guide further technical and functional improvements to finalize the device. The secondary goal is to validate a new tactile sensitivity index based on data collected using the glove. This will be done in a randomized controlled multicenter study (ClinicalTrials.gov ID NCT06109324) aimed to compare the effectiveness of robotic upper limb rehabilitation to conventional treatment in improving cognitive and sensory deficits, as well as evaluating the impact of these deficits on motor recovery.
+
+DETAILED DESCRIPTION:
+Sensory and proprioceptive deficits in the upper limbs affect about 50-85% of stroke survivors. These deficits can impact single sensations (such as primary tactile senses like light touch, pressure, and localization) and the ability to discriminate between different materials or temperatures, as well as proprioception and multiple somatosensory modalities. Furthermore, somatosensory deficits have been strongly correlated with variations in treatment responses among patients. However, in clinical practice, the use of appropriate quantitative tools to measure these deficits is not widespread, and evidence for active sensory training remains limited.
+
+In recent years, robotic therapy has been proposed as an effective approach for upper limb rehabilitation. Nevertheless, recent studies with large samples have failed to demonstrate the superiority of robotic treatment over traditional methods regarding the recovery of upper limb motor functions. These studies primarily focus on motor aspects of stroke recovery, often neglecting sensory and cognitive aspects of rehabilitation, whether robotic or conventional.
+
+Actually, there is limited evidence supporting the superiority of robotic approaches over conventional rehabilitation in recovering cognitive deficits and sensitivity. Additionally, it remains unclear whether cognitive and/or sensory deficits impact motor outcomes differently when using robotic versus conventional approaches.
+
+To address this, the SCORES (Sensory and Cognitive Outcomes of Robotic Exercises in Stroke) study is a multicenter randomized controlled study investigating the effects of robotic rehabilitation on cognitive and sensory deficits in stroke survivors. It aims to compare robotic and conventional rehabilitation approaches regarding cognitive recovery and tactile sensitivity in subacute stroke patients. While some quantitative methods exist to assess absolute perception levels of tactile stimuli, standardized, repeatable, and objectively quantitative methods for assessing localization ability are lacking. Therefore, this study will evaluate how the tactile perceptual abilities of recruited patients evolve during and after a rehabilitation course-whether robotic or conventional-using a specifically developed haptic device that includes a glove with integrated vibrotactile elements. This system aims to objectively define patients' tactile sensitivity through psychophysical evaluations involving the identification and localization of randomized vibrations delivered to the surface of the hand affected by sensorimotor alterations. Specifically, this study will investigate the test-retest reliability, discriminant ability, responsiveness, and clinical validity of the metrics obtained from the haptic glove.
+
+During each experimental session, randomized vibrotactile stimuli will be administered to the recruited patient at different sites on the hand. The patient will be asked to identify and verbally communicate the site of each percei
+
+PRIMARY OUTCOMES:
+  - Number and types of the haptic glove malfunctions that occurred during the study, along with their descriptions (Feasibility evaluation)
+
+INTERVENTIONS:
+  - OTHER: Robotic rehabilitation
+  - OTHER: Conventional rehabilitation
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06643273

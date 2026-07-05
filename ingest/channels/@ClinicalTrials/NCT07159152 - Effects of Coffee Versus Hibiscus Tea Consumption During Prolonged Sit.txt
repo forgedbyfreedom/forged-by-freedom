@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07159152
+Title: Effects of Coffee Versus Hibiscus Tea Consumption During Prolonged Sitting on Blood Pressure and Heart Rate
+Official Title: Effects of Coffee Versus Hibiscus Tea Consumption During Prolonged Sitting on Blood Pressure and Heart Rate
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: caffeine exercise
+
+SUMMARY:
+Modern lifestyles often involve long periods of sitting, which can increase the risk of heart problems, obesity, and other health issues. Diet also plays a key role in heart health. Coffee and hibiscus tea are two common beverages, but their effects during prolonged sitting are not well understood.
+
+This study will examine how drinking coffee versus hibiscus tea affects blood pressure, heart rate, and heart rate variability in men and women during extended periods of sitting.
+
+Participants (30 in total: 15 women and 15 men) will take part in a randomized crossover study, meaning each person will try both beverages at different times. Data will be collected using questionnaires, body measurements, and devices to measure heart rate, blood pressure, and heart rate variability.
+
+The goal is to better understand how these drinks influence heart health during sedentary behavior.
+
+DETAILED DESCRIPTION:
+Modern lifestyles, shaped by technological advancements and urbanization, have led to a dramatic increase in sedentary behavior, particularly prolonged sitting. Physical inactivity is a major risk factor for cardiovascular diseases (CVDs), obesity, and premature mortality, with women generally being less active than men. Prolonged sitting affects key indicators of cardiovascular health, including blood pressure, heart rate, and heart rate variability (HRV), which reflect autonomic nervous system regulation and overall heart function. Despite the growing concern, research on how sedentary behavior specifically affects women, particularly in Saudi Arabia, remains limited.
+
+Dietary habits also play a critical role in cardiovascular health. Coffee, one of the most widely consumed beverages worldwide, contains caffeine and polyphenols that can both stimulate and protect the cardiovascular system. Moderate coffee consumption may provide benefits such as reduced risk of chronic diseases and lower resting heart rate, while excessive intake can increase blood pressure, particularly in hypertensive individuals. Hibiscus tea, rich in flavonoids and antioxidants like anthocyanins, has been traditionally used as an antihypertensive agent. It has potential therapeutic effects, including lowering blood pressure, improving metabolic health, and protecting against cardiovascular inflammation. However, the acute effects of these beverages during prolonged sitting are not well understood.
+
+This study aims to investigate the effects of coffee versus hibiscus tea on blood pressure, heart rate, and HRV in healthy women during extended periods of sitting. Using a randomized crossover design, participants will consume each beverage at separate times while their cardiovascular responses are monitored. Data will be collected through questionnaires, body composition measurements, and non-invasive devices to track blood pressure and heart rate variability. By comparing the acute effects of coffee and hibiscus tea during sedentary behavior, this study seeks to provide new insights into how common dietary choices may influence cardiovascular function and help guide recommendations for healthier lifestyles in populations at risk of prolonged sitting.
+
+PRIMARY OUTCOMES:
+  - Systolic and diastolic blood pressure
+  - Heart Rate
+  - NN Intervals
+  - RMSSD
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Coffee
+  - DIETARY_SUPPLEMENT: Hibiscus drink
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07159152

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02322294
+Title: Investigating the Effects of Glucodia™ on Glucose Parameters, Triglycerides and Body Weight
+Official Title: A Double-Blind, Placebo-Controlled, Parallel Study to Investigate the Effects of 8 Weeks Use of Glucodia™ on Glucose Parameters, Triglycerides and Body Weight as Compared to Placebo
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: protein supplementation
+
+SUMMARY:
+This study is investigating the effects of 8 weeks of supplementation with Glucodia™, on glucose parameters, triglycerides and body weight as compared to a placebo. Half of the subjects will be administered Glucodia™, while the other half will receive placebo.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in glucose response to 2-hour oral glucose tolerance test (OGTT) in subjects taking Glucodia™ versus Placebo
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Glucodia™
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 21 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02322294

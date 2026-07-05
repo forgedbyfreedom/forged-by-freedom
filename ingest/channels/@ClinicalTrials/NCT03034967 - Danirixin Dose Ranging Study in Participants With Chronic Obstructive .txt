@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03034967
+Title: Danirixin Dose Ranging Study in Participants With Chronic Obstructive Pulmonary Disease (COPD)
+Official Title: Randomised, Double-Blind (Sponsor Open), Placebo-Controlled, Multicentre, Dose Ranging Study to Evaluate the Efficacy and Safety of Danirixin Tablets Administered Twice Daily Compared With Placebo for 24 Weeks in Adult Participants With Chronic Obstructive Pulmonary Disease (COPD)
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 614
+Topic: beta-alanine
+
+SUMMARY:
+Danirixin (DNX) is a selective CXC chemokine receptor (CXCR2) antagonist being developed as a potential anti-inflammatory agent for the treatment of COPD. This is a Phase 2, randomized, double-blind (Sponsor Open) study. The primary objective of the study is to evaluate the clinical activity and safety of danirixin compared with placebo in participants with COPD. Following baseline assessments collected over a 7 day period participants will be randomized (1:1:1:1:1:1) to receive one of five dose strengths of danirixin (5 milligram \[mg\], 10 mg, 25 mg, 35 mg and 50 mg) or placebo. Study treatment will be administered orally twice daily for 24 weeks. Participants will continue with their standard of care inhaled medications (i.e. long acting bronchodilators with or without inhaled corticosteroids) while receiving study treatment. Follow up will continue up to 28 days post last dose. Approximately 700 participants will be screened with a target of 540 participants completing 24 weeks of treatment and key study assessments.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Baseline in Respiratory Symptoms Measured by Evaluating Respiratory Symptoms (E-RS) in COPD. E-RS: COPD Total Score
+  - Change From Baseline in Respiratory Symptoms Measured by E-RS in COPD (E-RS: COPD Breathlessness Score)
+  - Change From Baseline in Respiratory Symptoms Measured by E-RS in COPD (E-RS: COPD Cough and Sputum Score)
+  - Change From Baseline in Respiratory Symptoms Measured by E-RS in COPD (E-RS: COPD Chest Symptoms Score)
+  - Number of Participants With Adverse Events (AE) and Serious Adverse Events (SAE)
+
+INTERVENTIONS:
+  - DRUG: Danirixin
+  - DRUG: Danirixin matching placebo
+  - DRUG: Standard of care
+  - DRUG: Rescue medication
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03034967

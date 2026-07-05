@@ -1,0 +1,96 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06690619
+Title: Effects of Alpha-GPC on Muscle Power, GH Levels, and Cognitive Function
+Official Title: Effects of Alpha-GPC on Muscle Power, GH Levels, and Cognitive Function
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: growth hormone treatment
+
+SUMMARY:
+Purpose: To determine the effects of low dose and high dose Alpha-GPC on cognitive performance, muscle performance, and serum growth hormone levels.
+
+Design: Randomized, three-arm, within-subject crossover
+
+Study Participants: 21 apparently healthy men to be recruited at a single investigational center in Northeast Ohio
+
+4 Study Visits
+
+Study Visit 1: Participants will be screened for participation (i.e., medical history, routine blood work, background baseline diet)
+
+Study Visit 2: Participants will ingest one of three supplements (a low dose α-GPC, a high dose α-GPC, or a placebo). Subjects will complete visual analog scale (VAS) questionnaires (assessing mood, motivation, alertness, and concentration) and a cognitive battery (Stroop, Flanker, and N-Back tests) 60 min post ingestion and approximately 3 hours post-ingestion, undergo upper body and lower body power testing and a lower body bout of moderate-intensity exercise 90 min post-ingestion. Also, subjects will undergo blood draws for levels of growth hormone at baseline (prior to supplementation) and 5, 15, 30, and 60 min post lower body bout of exercise. Vital signs and comprehensive side effect profile/ adverse event monitoring will take place throughout the duration of the study. The study will be conducted following ICH-GCP guidelines to ensure subject safety and scientific integrity of the data.
+
+Study Visit 3 and 4 Identical to visit 2 with exception of different supplementation being provided. Supplement administration was randomized using a Latin square approach to reduce variability and enhance statistical power
+
+Primary Outcomes: Upper and lower body peak force production, peak power production, and peak velocity
+
+Secondary Outcomes: Cognitive performance on the Stroop test, Flanker, and N-Back test, serum growth hormone levels, mood, motivation, alertness, and concentration (as assessed by visual analog scales).
+
+Tertiary/Safety Outcomes: Vital signs, side effect profile/AE monitoring
+
+DETAILED DESCRIPTION:
+DIET:
+
+* All subjects will be asked to maintain their usual dietary habits throughout the study.
+* At screening, all subjects will complete a 24-hour diet recall from the day prior while refraining from any nutrients that might affect choline.
+* To replicate screening conditions as closely as possible, subjects will follow their previously recorded 24-hour diet record and fast for 8 hours prior to each laboratory visit.
+* An online application (Nutritionix) will be used to analyze their dietary consumption.
+
+BLOODWORK:
+
+•Blood draws will take place during each laboratory visit, and they will be performed by a study nurse or phlebotomist. At screening a single blood draw will be performed with a total blood volume of approximately 12 mL. During visits 2-4 serial blood draws will be performed before and 5-, 15-, 30-, and 60-min post ingestion of the investigational product. During visits 2-4, an intra-venous catheter (flexible tubing to enable blood sampling) will be inserted into an upper extremity vein. Blood samples will be collected up to 5 times over 4 hours.
+
+EXERCISE TRAINING AND PHYSICAL ACTIVITY CONTROL
+
+•Subjects will be asked to maintain their activities of daily living and abstain from exercise for 48 hours prior to each trial.
+
+TEST PRODUCTS
+
+* After qualifying for the study, subjects will be randomly assigned to receive a placebo, a low dose of α-GPC, and a high dose of α-GPC using a Latin Square design.
+
+  * Low dose of α-GPC (350 mg)
+  * High dose of α-GPC (700 mg)
+  * Placebo (containing maltodextrin)
+* Supplements will be provided in identical-looking capsules with label directions and Study Protocol Number.
+* Subjects will consume each supplement in the presence of the medical staff.
+* There will be no less than one week between each trial, though this may be longer depending on scheduling.
+* As stated earlier, subjects who withdraw from the study prior to completing all three trials may be replaced.
+
+DETAILED STUDY PROCEDURES
+
+Visit 1 (Screening)
+
+* Medical history, safety blood work (CBC, CMP, and Lipid Panel)
+* Body composition (bioimpedance-BIA)
+* Baseline diet (24hr recall).
+* Body weight
+* Familiarization trial for the cognitive battery (Stroop, Flanker, and N-Back test).
+
+Visits 2-4
+
+* Subjective feelings of mood, motivation, alertness, and concentration will be assessed 60 minutes post ingestion and approximately 3 hours post-ingestion. All assessments will be made using 100 mm anchored visual analogue scales (VAS).
+* Three repetitions of the Stroop (2-min tests), Flanker, and N-Back (90s tests) tests will be assessed 60 minutes post ingestion and approximately 3 hours post-ingestion.
+
+  * Stroop - https://www.psytoolkit.org/lessons/stroop.html
+  * Flanker - https://www.psytoolkit.org/experiment-library/flanker.html
+  * N-Back - https://www.lumosity.com/app/v4/games/speed-match-overdrive-web
+* Upper and lower body muscular power will be assessed with a Tendo unit. For the upper body, the bench press throw using a submaxim
+
+PRIMARY OUTCOMES:
+  - Cognitive Performance-NBack
+  - Cognitive Performance
+  - Cognitive Performance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: 315 mg Alpha-GPC
+  - DIETARY_SUPPLEMENT: 630 mg Alpha-GPC
+
+ELIGIBILITY:
+Age: 25 Years to 55 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06690619

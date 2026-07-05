@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02086409
+Title: GAit, MEmory, Dietary and Vitamin D
+Official Title: Dairy Product, Calcium & Vitamin D Supplementation and Cognitive-motor Function
+Status: COMPLETED
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: vitamin D muscle
+
+SUMMARY:
+Gait and posture disorders are very common in subjects aged 65 and over, and result mainly from neuromuscular and cognitive disorders.
+
+Many studies have shown that 1) vitamin D deficiency is very common in women aged 65 and over, 2) individuals with hypovitaminosis D have lower muscle, gait and executive performances and are more prone to fail than individuals with no hypovitaminosis D, 3) the intake of vitamin D combined or not with calcium may improve muscle strength and cognitive performance.
+
+The investigators hypothesized that the daily intake of 2 yogurts containing 200 IU of vitamin D and 400 mg of calcium 1) can improve spatiotemporal gait parameters, posture and executive performance, 2) and that this improvement depends of the initial level of vitamin D deficiency.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in spatiotemporal gait, and in particular in the variability of stride time
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Yogurt supplemented with vitamin D and calcium
+  - DIETARY_SUPPLEMENT: Yogurt not supplemented with vitamin D and calcium
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02086409

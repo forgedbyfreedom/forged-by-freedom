@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03603041
+Title: Nutrition, Body Composition, and Sleep
+Official Title: The Effect of Protein and Omega-3 Fatty Acid Supplementation on Body Composition, Sleep, Cardiometabolic Health and Strength in Postmenopausal Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 45
+Topic: omega 3 exercise
+
+SUMMARY:
+The purpose of the research is to determine if protein and omega-3 fatty acid supplementation improve sleep, improve body composition, and improve markers of metabolic health in postmenopausal women.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Sleep Quality
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Whey protein
+  - DIETARY_SUPPLEMENT: Omega-3 fatty acids
+
+ELIGIBILITY:
+Age:  to 85 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03603041

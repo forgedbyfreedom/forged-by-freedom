@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06911619
+Title: Impact of Nutritional Management on the Frailty of Patients Waiting for Liver Transplantation (Via the LFI Tool)
+Official Title: Impact of Nutritional Management on the Frailty of Patients Waiting for Liver Transplantation (Via the LFI Tool)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 210
+Topic: sarcopenia intervention
+
+SUMMARY:
+Cirrhosis is a major public health issue responsible for about 15000 deaths each year. Liver transplantation (LT) remains the only curative treatment for decompensated cirrhosis. Decompensated cirrhotic patients awaiting LT are malnourished, sarcopenic and fragile. The evaluation of the nutritional status of these patients is complex because the anthropometric data that define undernutrition (weight variation, BMI) are often compromised by the presence of edema and ascites related to liver disease. It therefore seems appropriate to focus on the fragility and sarcopenia of the cirrhotic patient as a reflection of the nutritional status. In 2017, the American team of Lai et al. validated a Liver fraily index (LFI) score of frailty specific to cirrhotic patients waiting for LT. The LFI is composed of three simple physical tests (Grip test, chair lift test, and balance tests) performed at the patient's bedside, which results in a quantitative and reproducible frailty score. Frailty while waiting for LT is associated with an increase in mortality on the waiting list, independently of the MELD (Model for End stage Liver disease) score, which is a reflection of liver severity. About half of the patients who are candidates for LT will present an aggravation of their frailty while waiting for LT. To date, no study has reported the results of a nutritional intervention on the evolution of fragility in patients awaiting LT. The objective of our study is to evaluate the impact of a nutritional management and follow-up by a dietitian specialized in hepatology on the fragility of patients waiting for LT. This is a monocentric study, randomized in two parallel groups (an intervention group with nutritional follow-ups by a trained dietitian and a control group with follow-up by the reference hepatologist without specific dietary management by a dietician) in open. All patients enrolled on the LT list with an LFI \> 3.2 (pre-frail and frail state) will be included in the study. It is planned to include 210 patients over a period of 24 months. The LFI will be measured for all patients (control group + intervention group) at 3 and 6 months, as part of their follow-up in the LT center. This study will also make it possible to correlate frailty with other parameters (severity of liver disease, access to LT).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Evaluate the impact at 3 months, of a nutritional management and follow-up by a dietitian specialized in hepatology compared to the usual management without dietary follow-up, on the fragility of patients waiting for liver transplantation (LT).
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary management
+  - OTHER: No dietary management
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06911619

@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05467566
+Title: Transcranial Direct Current Stimulation Combined With Exercise in Low Back Pain
+Official Title: The Effects of Transcranial Direct Current Stimulation Combined With Pilates Based Exercise in the Treatment of Patients With Chronic Low Back Pain
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: low back pain exercise
+
+SUMMARY:
+The purpose of this study is to evaluate the effects of transcranial direct current stimulation combined with Pilates based exercise on chronic low back pain. This is a randomized clinical trial composed of two arms.
+
+DETAILED DESCRIPTION:
+Chronic low back pain may be associated with pathoanatomical, neurophysiological, physical, psychological and social factors. Treatments that relieve the symptoms of these patients are of great importance to improve the quality of life of these individuals. Thus, this study aims to evaluate the effects of transcranial direct current stimulation combined with Pilates based exercise on chronic low back pain. This is a randomized clinical trial that will be composed of men and women between 18 and 65 years of age, with a history of low back pain for more than 12 weeks and a minimum pain intensity equal to 3 cm on the numerical pain scale. The volunteers will be randomized into two distinct groups: stimulation + exercise group (EG - will perform a Pilates based exercise protocol combined with transcranial direct current stimulation) and sham stimulation + exercise group (SG - will perform the same exercise program combined with sham stimulation). The interventions, regardless of the group, will be carried out three times a week for four weeks. Participants will be submitted to three assessments: the first (T0) will be performed before the treatment protocols; the second (T1) will be performed after the four weeks of intervention; and the third (T2) will be a follow-up one month after the end of the treatment protocol. Pain sensation, functional performance, central sensitization, quality of life, pressure pain threshold, global impression of change, adverse events and medication use will be evaluated. For the statistical analysis, a mixed model ANOVA will be performed for the inter and intragroup comparison, with Tukey's post hoc, considering a significance level of 5%.
+
+PRIMARY OUTCOMES:
+  - Pain intensity
+  - Functional performance associated to back pain
+
+INTERVENTIONS:
+  - DEVICE: Transcranial direct current stimulation
+  - DEVICE: Sham Transcranial direct current stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05467566

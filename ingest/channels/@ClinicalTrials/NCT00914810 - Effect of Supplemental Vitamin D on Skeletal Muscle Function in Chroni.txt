@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00914810
+Title: Effect of Supplemental Vitamin D on Skeletal Muscle Function in Chronic Obstructive Pulmonary Disease (COPD) Patients
+Official Title: Effect of Supplemental Vitamin D on Skeletal Muscle Function in COPD Patients.
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of this study is to determine whether or not vitamin D supplementation can improve physical performance in persons with severe chronic obstructive pulmonary disease (COPD).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Short Physical Performance Battery (SPPB) Score
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D (cholecalciferol)
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00914810

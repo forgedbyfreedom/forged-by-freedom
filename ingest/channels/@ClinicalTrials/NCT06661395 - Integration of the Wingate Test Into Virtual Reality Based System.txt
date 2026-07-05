@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06661395
+Title: Integration of the Wingate Test Into Virtual Reality Based System
+Official Title: Adaption of the Wingate Test to Virtual Reality Based Wearable Technology
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: strength training
+
+SUMMARY:
+Virtual reality (VR) is a technology utilizing three-dimensional graphical representations to immerse individuals in computer-generated environments, fostering engagement through visual, auditory, and tactile stimuli. VR applications offer enriched training environments, enhancing motor learning and autonomy, thus becoming integral in rehabilitation programs. Recent research underscores VR's efficacy in improving functional abilities across various conditions, including upper and lower limb disorders, balance, and cognitive impairments. Additionally, VR-based interventions demonstrate superiority over traditional methods in pain management, kinesiophobia prevention, and gait enhancement, particularly in conditions like cerebral palsy. The advantages of VR in therapy include its entertainment value, detailed performance feedback, simplicity, cost-effectiveness, and promotion of social interaction and cognitive function.
+
+In sports, precise anaerobic assessment is crucial, especially for athletes engaging in high-intensity activities like sprinting and jumping. The 30-second Wingate Anaerobic Test (WAnT) is widely regarded as the gold standard for assessing anaerobic power, measuring peak power, average power, and fatigue index. External stimuli, such as verbal feedback and motivational guidance, influence test performance significantly, as evidenced by studies showing increased peak power and speed in athletes. Music has also been shown to enhance exercise performance, possibly through physiological synchronization with movement.
+
+Integrating VR scenarios into assessment methods, such as the WAnT, may improve reproducibility and standardization by eliminating evaluator biases and ensuring consistent feedback levels. This study aims to explore the feasibility and efficacy of using VR-integrated WAnT in athletes, comparing its effects on performance to traditional applications.
+
+DETAILED DESCRIPTION:
+Virtual reality (VR) is defined as a three-dimensional graphical representation created by imaging technologies, where people are virtually present and real and imaginary environments are computer-generated. Applications that incorporate VR provide training in stimulating and enriched environments using visual, auditory, and tactile inputs. The virtual environment provides feedback to enhance motor learning and allows individuals to safely explore their environment independently by increasing their sense of autonomy in high-intensity training protocols. The effect of VR can be strong enough to allow participants to respond realistically. Participants' behavior can be altered as if they were exposed to a real-life scenario. Furthermore, being inside an avatar, where the virtual body feels like one's own, creates the perception that an action of the avatar is intended by the participant in their own brain.
+
+In recent years, thanks to the advantages and possibilities offered by VR technologies, it has been widely used as an alternative rehabilitation program. It can improve functional abilities, such as repetition of specific tasks, in various rehabilitation patients. Literature has shown its benefits for upper and lower limb disorders, balance gait, and cognitive disorders. VR-based isokinetic training was found more effective than traditional exercise for pain management and preventing kinesiophobia. VR-based treadmill training in children with cerebral palsy has been shown to contribute more to gait quality, muscle strength gains, and the development of balance skills than classical treadmill training. The incorporation of VR applications into treatment programs has many advantages in use, such as reducing space and time dependency through entertainment and motivation, providing detailed feedback on performance, being simple, inexpensive, and reliable, allowing multiple repetitions of activities, stimulating motor learning and cortical plasticity, providing social interaction and supporting cognitive function.
+
+The use of fast, high-intensity activities such as sprinting and jumping in sports makes accurate anaerobic assessment essential, particularly in athletes. Although many different methods/tests have been proposed for the measurement of anaerobic components, the 30-second Wingate Anaerobic Test (WAnT) is considered to be the gold standard. The WAnT is a maximal intensity cycle ergometer test developed in the 1970s. The commonly accepted performance components of the WAnT are peak power, average power, and fatigue index. Peak power is defined as the highest mechanical power achieved during the test in any 5-second period and is taken as the average power. Average power is the average power maintained over a 6x5 second period. The fatigue index is expressed as a percentage of the amount of drop in peak power during the test. The sum of these three components of power is considered to be an objective indicator of the anaerobic power of the ath
+
+PRIMARY OUTCOMES:
+  - Wingate Anaerobic Test
+
+INTERVENTIONS:
+  - DEVICE: Wingate Anaerobic Test with Virtual Reality
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06661395

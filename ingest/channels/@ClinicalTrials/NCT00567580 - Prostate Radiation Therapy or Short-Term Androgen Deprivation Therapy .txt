@@ -1,0 +1,58 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00567580
+Title: Prostate Radiation Therapy or Short-Term Androgen Deprivation Therapy and Pelvic Lymph Node Radiation Therapy With or Without Prostate Radiation Therapy in Treating Patients With a Rising Prostate Specific Antigen (PSA) After Surgery for Prostate Cancer
+Official Title: A Phase III Trial of Short Term Androgen Deprivation With Pelvic Lymph Node or Prostate Bed Only Radiotherapy (SPPORT) in Prostate Cancer Patients With a Rising PSA After Radical Prostatectomy
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1792
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: Radiation therapy uses high-energy x-rays to kill tumor cells. Androgens can cause the growth of prostate cancer cells. Antihormone therapy, such as flutamide, bicalutamide, and luteinizing hormone-releasing hormone agonist, may lessen the amount of androgens made by the body. It is not yet known which regimen of radiation therapy with or without androgen-deprivation therapy is more effective for prostate cancer.
+
+PURPOSE: This randomized phase III trial is studying prostate radiation therapy to see how well it works compared with short-term androgen deprivation therapy given together with pelvic lymph node radiation therapy with or without prostate radiation therapy in treating patients with a rising PSA after surgery for prostate cancer.
+
+DETAILED DESCRIPTION:
+OBJECTIVES:
+
+Primary
+
+* To determine whether the addition of short-term androgen deprivation (STAD) to prostate bed radiotherapy (PBRT) improves freedom from progression (FFP) (i.e., maintenance of a prostate-specific antigen \[PSA\] less than the nadir+2 ng/mL, absence of clinical failure, and absence of death from any cause) for 5 years, over that of PBRT alone in men treated with salvage radiotherapy after radical prostatectomy.
+* To determine whether STAD, pelvic lymph node radiotherapy (PLNRT), and PBRT improves FFP over that of STAD+PBRT and PBRT alone in men treated with salvage radiotherapy after radical prostatectomy.
+
+Secondary
+
+* To compare secondary biochemical failure, the development of hormone-refractory disease , distant metastasis, cause-specific mortality, and overall mortality at five years.
+* To compare acute and late morbidity based on Common Toxicity Criteria for Adverse Effects (CTCAE), v. 3.0.
+* To measure the expression of cell kinetic, apoptotic pathway, and angiogenesis-related genes in archival diagnostic tissue to better define the risk of FFP, distant failure, cause-specific mortality, and overall mortality after salvage radiotherapy for prostate cancer, independently of conventional clinical parameters now used.
+* To quantify blood product-based proteomic and genomic (single nucleotide polymorphisms) patterns and urine-based genomic patterns before and at different times after treatment to better define the risk of FFP, distant failure, cause-specific mortality, and overall mortality after salvage radiotherapy for prostate cancer, independently of conventional clinical parameters now used.
+* To assess the degree, duration, and significant differences of disease-specific health-related quality of life (HRQOL) decrements among treatment arms.
+* To assess whether mood is improved and depression is decreased with the more aggressive therapy if it improves FFP.
+* To collect paraffin-embedded tissue blocks, serum, plasma, urine, and buffy coat cells for future translational research analyses.
+
+Tertiary
+
+* To assess whether an incremental gain in FFP and survival with more aggressive therapy outweighs decrements in the primary generic domains of HRQOL (i.e., mobility, self care, usual activities, pain/discomfort, and anxiety/depression).
+* To evaluate the cost-utility of the treatment arm demonstrating the most significant benefit (in terms of the primary outcome) in comparison with other widely accepted cancer and non-cancer therapies.
+* To assess associations between serum levels of beta-amyloid and measures of cognition and mood and depression.
+* An exploratory aim is to assess the relationship(s) between the American Urological Association Symptom Index (AUA SI) and urinary morbidity using the CTCAE v. 3.0 grading system.
+
+OUTLINE: Patients are stratified according to seminal vesicle involvement (yes vs no), prostatectomy Gleason score (≤ 7 vs 8-9), pre-radiotherapy PSA (≥ 0.1 and ≤ 1.0 ng/mL vs \> 1.0 and \< 2.0 ng/mL
+
+PRIMARY OUTCOMES:
+  - Percentage of Participants Free From Progression (FFP) at 5 Years
+
+INTERVENTIONS:
+  - RADIATION: PBRT
+  - RADIATION: PLNRT
+  - DRUG: AA
+  - DRUG: LHRH agonist
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00567580

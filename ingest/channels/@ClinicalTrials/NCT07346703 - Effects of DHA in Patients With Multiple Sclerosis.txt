@@ -1,0 +1,94 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07346703
+Title: Effects of DHA in Patients With Multiple Sclerosis
+Official Title: Effects of Therapeutic Exercise and Long-term Docosahexaenoic Acid (DHA) Supplementation on Physical, Physiological, Motor, Mental, and Cognitive Variables in Patients With Multiple Sclerosis.
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: omega 3 exercise
+
+SUMMARY:
+This clinical trial will investigate the effects of combining therapeutic exercise with DHA supplementation in 100 patients with multiple sclerosis using a randomized controlled design. Participants, diagnosed according to the McDonald criteria, will undergo functional, cognitive, fatigue, and quality-of-life assessments through tools such as the EDSS, BRB-N, MFIS, EVA-f, and MSQoL-54. Physiological evaluations will include infrared thermography, isokinetic strength testing, perceived exertion (Modified Borg Scale), balance (Timed Up and Go), lower-limb power (Sit-to-Stand app), and handgrip strength. The study hypothesizes that this combined intervention will improve motor function, cognition, fatigue management, and overall quality of life by enhancing neuromuscular activation and metabolic efficiency.
+
+DETAILED DESCRIPTION:
+Design
+
+Randomized clinical trial.
+
+Study Period
+
+Two years: from January 2024 to January 2026.
+
+Population Selection Reference Population
+
+The study sample will be recruited from the Multiple Sclerosis Association (AMDEM) in the Region of Murcia and the Neurology Department of Hospital Ribera Salud in Molina de Segura.
+
+Eligible participants will be patients diagnosed with multiple sclerosis (MS) according to the McDonald criteria, aged approximately 18 to 65 years, who have not experienced relapse episodes in the month prior to inclusion, and have an Expanded Disability Status Scale (EDSS) score between 0.0 and 6.0, as well as the ability to voluntarily activate the tibialis anterior muscle.
+
+Sample Size
+
+Given the characteristics of the study, the target sample size is at least 100 participants, divided into four groups (n ≈ 25 per group) according to treatment.
+
+Participants will be randomly assigned to one of four groups, each following a different therapeutic protocol:
+
+Group 1: therapeutic exercise protocol three times per week throughout the study + daily DHA supplementation (4 capsule/day).
+
+Group 2: same exercise protocol + placebo capsule (sunflower oil) identical in appearance, color, and dosage.
+
+Group 3: DHA supplementation only (4 capsule/day).
+
+Group 4: placebo capsule only (sunflower oil), identical to intervention groups.
+
+Statistical Design
+
+A one-way or repeated-measures ANOVA will be used to test for statistically significant differences among three or more dependent samples.
+
+Measurement time points will be defined as follows:
+
+T0: baseline (pre-intervention).
+
+T1: midpoint of the intervention (approximately 1.5 months after initiation).
+
+T2: immediately after completing the 3-month intervention protocol.
+
+T3: 3 months after the end of the intervention.
+
+Data Collection Participant Characteristics
+
+Sensitive data will be collected regarding:
+
+Age, sex, height, weight, medication use, relapse episodes in the months prior to the study, disability status, disease condition, and cognitive function.
+
+Additional psychophysical information will be gathered using validated questionnaires administered before and after the intervention:
+
+Disability will be assessed using the Expanded Disability Status Scale (EDSS).
+
+A score of 0.0 represents normal physical function without disability.
+
+3-4 indicates mild impairment not limiting daily or work activities.
+
+5-6 indicates moderate disability, typically able to walk but requiring assistance for about 100 meters at level 6.
+
+7-9 represents severe impairment, often confined to a wheelchair or bed.
+
+Cognitive function will be assessed using the Brief Repeatable Battery of Neuropsychological Tests (BRB-N), a validated tool for MS. It includes tests of selective recall, the 7/24 spatial recall test, the controlled oral word association test, and the paced auditory serial addition test (PASAT).
+
+Fatigue will be measured using the Modified Fatigue Impact Scale (MFIS), assessing the perceived imp
+
+PRIMARY OUTCOMES:
+  - ISOKINETIC
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Docosahexaenoic Acid (DHA) Dietary Supplement
+  - DIETARY_SUPPLEMENT: Docosahexaenoic Acid (DHA) Dietary Supplement
+  - DIETARY_SUPPLEMENT: Sunflower Oil
+  - DIETARY_SUPPLEMENT: Sunflower Oil
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07346703

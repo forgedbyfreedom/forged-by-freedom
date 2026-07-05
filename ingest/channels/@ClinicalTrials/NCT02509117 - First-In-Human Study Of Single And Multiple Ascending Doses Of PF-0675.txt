@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02509117
+Title: First-In-Human Study Of Single And Multiple Ascending Doses Of PF-06751979
+Official Title: A Phase 1, Randomized, Double-blind, Sponsor-open, Placebo Controlled First-in-human Trial To Evaluate The Safety,Tolerability, Pharmacokinetics And Pharmacodynamics Of Pf-06751979 After Oral Administration Of Single And Multiple Ascending Doses To Healthy Adult And Elderly Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 55
+Topic: beta-alanine
+
+SUMMARY:
+The purpose of this study is to evaluate the safety, tolerability, PK and PD of PF-06751979 following oral doses in healthy adult and healthy elderly subjects.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment-Emergent Adverse Events (AEs) and Serious Adverse Events (SAEs)
+  - Number of Participants With Abnormal Physical Examinations Findings
+  - Number of Participants With Abnormal Neurological Examinations Findings
+  - Part blast and cruise: Number of Participants With Positive Response on Columbia Suicide Severity Rating Scale (C-SSRS) at Baseline
+  - Part blast and cruise: Number of Participants With Positive Response on Columbia Suicide Severity Rating Scale (C-SSRS) on Day 7
+
+INTERVENTIONS:
+  - DRUG: PF-06751979 single ascending dose
+  - DRUG: Placebo single dose
+  - DRUG: PF-06751979 multiple ascending dose
+  - DRUG: Placebo multiple dose
+  - DRUG: PF-06751979 multiple dose
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02509117

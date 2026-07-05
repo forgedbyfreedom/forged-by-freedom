@@ -1,0 +1,65 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01256398
+Title: Dasatinib Followed by Stem Cell Transplant in Treating Older Patients With Newly Diagnosed Acute Lymphoblastic Leukemia
+Official Title: A Phase II Study of Dasatinib (Sprycel&#174;) (NSC #732517) as Primary Therapy Followed by Transplantation for Adults &gt;/= 18 Years With Newly Diagnosed Ph+ Acute Lymphoblastic Leukemia by CALGB, ECOG and SWOG
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 66
+Topic: beta-alanine
+
+SUMMARY:
+This phase II clinical trial studies how well dasatinib followed by stem cell transplant works in treating older patients with newly diagnosed acute lymphoblastic leukemia. Dasatinib may stop the growth of cancer cells by blocking some of the enzymes needed for cell growth. Giving chemotherapy before a stem cell transplant stops the growth of cancer cells by stopping them from dividing or killing them. Monoclonal antibodies, such as alemtuzumab, may interfere with the ability of cancer cells to grow and spread. Giving more than one drug (combination chemotherapy) and giving dasatinib together with chemotherapy may kill more cancer cells.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Estimate the disease-free survival (DFS) and overall survival (OS) profiles in newly diagnosed patients 18 years or older who have Philadelphia chromosome positive (Ph+) (BCR/(v-abl Abelson murine leukemia viral oncogene homolog \[ABL\]+) acute lymphoblastic leukemia (ALL) receiving sequential dasatinib followed by allogeneic or autologous hematopoietic cell transplant (HCT) or chemotherapy followed by dasatinib maintenance.
+
+SECONDARY OBJECTIVES:
+
+I. Compare the OS and DFS profiles for each of the three cohorts to those from similar populations from other studies.
+
+II. Determine the ability of dasatinib to produce or maintain a BCR/ABL-negative status, as judged by quantitative-polymerase chain reaction (Q-PCR) following sequential dasatinib, chemotherapy, and HCT.
+
+III. Determine the feasibility of collecting adequate peripheral blood stem cells for autologous HCT following dasatinib therapy and assess for residual Ph+ (BCR/ABL+) cells by Q-PCR.
+
+IV. Study the safety and efficacy of autologous HCT following therapy with dasatinib.
+
+V. Study the safety and efficacy of reduced-intensity preparatory regimen followed by an allogeneic HCT following induction therapy with dasatinib.
+
+VI. Study the safety and efficacy of dasatinib maintenance administered after allogeneic or autologous HCT or chemotherapy.
+
+VII. Correlate plasma and cerebrospinal fluid (CSF) levels of dasatinib when given orally during induction.
+
+OUTLINE: As of 8/21/2014, no new patients may be enrolled on E3903.
+
+REMISSION INDUCTION THERAPY (RIT): Patients receive dasatinib orally (PO) daily continuously and dexamethasone PO or intravenously (IV) on days 1-7.
+
+EARLY INTENSIFICATION THERAPY: Patients with bone marrow =\< 20% blasts are assigned to cohort A and patients with bone marrow \> 20% blasts are assigned to cohort B.
+
+COHORT A: Patients receive dasatinib and dexamethasone as in RIT.
+
+COHORT B: Patients receive dasatinib and dexamethasone as in RIT, and vincristine sulfate IV and daunorubicin hydrochloride IV on days 1, 8, and 15. Patients who do NOT achieve a complete response (CR) or CR with incomplete hematologic recovery based on bone marrow continue on to second induction therapy; patients who achieve a hematologic and morphologic CR continue on to CNS prophylaxis therapy.
+
+SECOND INDUCTION THERAPY: Patients receive dasatinib and dexamethasone as in RIT, cyclophosphamide IV on day 1, daunorubicin hydrochloride IV and vincristine sulfate IV on days 1 and 8, and filgrastim subcutaneously (SC) beginning on day 9 and continuing for \>= 7 days or one dose of pegfilgrastim on day 9.
+
+CNS PROPHYLAXIS THERAPY: Patients receive dasatinib PO daily continuously during CNS prophylaxis therapy; methotrexate intrathecally (IT), vincristine sulfate IV, and methotrexate IV over 3 hours on days 1, 15, and 29; methotrexate PO every 6 hours for a total of 4 doses each on days 1-2, 15-16, and 29-30; leucovorin calcium IV on days 2, 16, and 30; and leucovorin PO calciu
+
+PRIMARY OUTCOMES:
+  - Disease Free Survival Defined From the Date of First Induction Complete Response (CR) to Relapse or Death Due to Any Cause
+
+INTERVENTIONS:
+  - BIOLOGICAL: Alemtuzumab
+  - PROCEDURE: Allogeneic Hematopoietic Stem Cell Transplantation
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Cyclophosphamide
+  - DRUG: Cytarabine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01256398

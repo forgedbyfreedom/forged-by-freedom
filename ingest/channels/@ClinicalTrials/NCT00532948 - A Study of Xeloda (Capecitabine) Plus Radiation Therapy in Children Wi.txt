@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00532948
+Title: A Study of Xeloda (Capecitabine) Plus Radiation Therapy in Children With Newly Diagnosed Gliomas
+Official Title: A Phase I Trial of Capecitabine Rapidly Disintegrating Tablets and Concomitant Radiation Therapy in Children With Newly Diagnosed Brainstem Gliomas and High Grade Gliomas
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: beta-alanine
+
+SUMMARY:
+This single arm study will assess the maximum tolerated dose, and dose-limiting toxicities, of Xeloda administered concurrently with radiation therapy, in children with newly diagnosed diffuse intrinsic brain stem gliomas and high grade gliomas. Xeloda will be administered twice daily, at a starting dose of 500mg/m2 bid, beginning within 24 hours of the start of radiation therapy. Subsequent dose escalations will be in increments of 30%, using a standard dose escalation schema. Post-radiation therapy with Xeloda will continue after a 2 week break. The anticipated time on study treatment is 3-12 months, and the target sample size will not exceed 30 evaluable patients.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximum Tolerated Dose (MTD) of Capecitabine.
+  - Dose Limiting Toxicities (DLTs)
+  - Number of Participants With Adverse Events (AE)
+  - Number of Participants With Baseline Shift From Normal to Low or High in Hematology Parameters
+  - Number of Participants With Baseline Shift From Normal to Low or High in Blood Chemistry Parameters
+
+INTERVENTIONS:
+  - DRUG: capecitabine [Xeloda]
+
+ELIGIBILITY:
+Age: 3 Years to 21 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00532948

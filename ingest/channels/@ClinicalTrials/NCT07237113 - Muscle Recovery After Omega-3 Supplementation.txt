@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07237113
+Title: Muscle Recovery After Omega-3 Supplementation
+Official Title: Effects of Omega-3 Fatty Acid Supplementation on Muscle Damage and Oxylipin Production Induced by Eccentric Exercise in Young Men
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: omega 3 exercise
+
+SUMMARY:
+In recent decades, omega-3 eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA) have been proposed as potential therapeutic agents for minimizing muscle damage induced by eccentric exercise, especially when supplementation is long-term (\> 6 weeks) and at high doses (\> 1 g/d). However, no study has analyzed whether these effects are mediated by an increase in oxylipins (metabolites derived from EPA and DHA), which play an essential role in the muscle regeneration process. The objective of the present study is to determine the effect of eight weeks of high-dose omega-3 fatty acid supplementation on blood oxylipin levels and their association with muscle function and markers of muscle damage after high-intensity eccentric exercise in young men.
+
+DETAILED DESCRIPTION:
+Research question Does supplementation with high doses of omega-3 for eight weeks reduce muscle damage induced by a session of high-intensity eccentric exercise in young men? Is the response to eccentric exercise related to an increase in oxylipins derived from omega-3 fatty acids? Hypothesis Long-term supplementation (8 weeks) with high doses of omega-3 (3 g/d) will increase the concentration of oxylipins in the blood, which will be associated with less muscle damage after an eccentric exercise protocol in young men.
+
+General objective To determine the effect of eight weeks of high-dose omega-3 fatty acid supplementation on blood oxylipin levels and indirect markers of muscle damage after high-intensity eccentric exercise in young men.
+
+Specific objectives
+
+1. To determine the effect of eight weeks of high-dose omega-3 fatty acid supplementation on blood oxylipin levels after high-intensity eccentric exercise in young men.
+2. To determine the effect of eight weeks of high-dose omega-3 fatty acid supplementation on muscle function and markers of muscle damage after high-intensity eccentric exercise in young men.
+3. Associate blood oxylipin levels with changes in muscle function and markers of muscle damage induced by a session of eccentric exercise, before and after high-dose omega-3 fatty acid supplementation in young men.
+
+Methodology This study is an experimental, prospective, double-blind design. Sample size: The sample size calculation establishes a minimum of 12 subjects per group based on an α level of 0.05 and a power (1-β) of 0.8, assuming an estimated maximum strength loss difference of 22% after eccentric exercise (effect size = 1.06) between the omega-3 and control groups, based on a previous study (1). However, 15 participants will be recruited per group to account for a 20% dropout rate.
+
+Methodology: Thirty young men will be recruited through posters and social media advertisements. Participants will be randomly assigned in a double-blind manner to two supplementation groups: (a) placebo (yellow maltodextrin) or (b) omega-3 (EPA and DHA). Prior to the start of the supplementation period, participants will undergo venous blood sampling, indirect markers of muscle damage testing, oxygen consumption testing, and the eccentric exercise protocol on one leg (6 sets of 10 repetitions at 80% of 1 repetition maximum). Immediately after, 1, 2, 24, 48, 72, and 96 hours after the eccentric exercise session, muscle damage will be assessed and venous blood samples will be obtained. The following day, participants will begin their 8-week supplementation protocol with omega-3 or placebo. After the supplementation period, participants will perform the same tests as at the beginning and will perform the eccentric exercise session on the opposite leg.
+
+Exclusion criteria: Participants must not have performed regular strength training during the 6 months prior to the start of the study. Participants must also not be taking medications that affect infl
+
+PRIMARY OUTCOMES:
+  - Maximum isometric voluntary contraction strength loss
+  - Plasma oxylipins
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Omega
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07237113

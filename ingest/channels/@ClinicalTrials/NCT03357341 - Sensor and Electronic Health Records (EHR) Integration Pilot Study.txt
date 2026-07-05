@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03357341
+Title: Sensor and Electronic Health Records (EHR) Integration Pilot Study
+Official Title: Enabling Innovative Respiratory Real World Evidence Generation: Sensor and EHR Integration Pilot Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 194
+Topic: high intensity interval training
+
+SUMMARY:
+This is a pilot study that will evaluate the feasibility of collecting increasing amounts of clinical study data from subjects through sensor and web/app based methods and integrating it with data from their EHR to facilitate more efficient and meaningful research with acceptable quality. Approximately 100 subjects with asthma and 100 subjects with chronic obstructive pulmonary disease (COPD) will be enrolled in this prospective study. The subjects will be identified through integrated EHR records following which eligible subjects will receive study devices and training on proper use of the devices at Baseline visit. Data will be collected remotely from subject reports, devices and sensors over six months.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Baseline in Forced Expiratory Volume in One Second (FEV1)
+  - Median Number of Steps Per Day
+  - Median Daily Activity Level Based on Vector Magnitude Counts.
+  - Patient Reported Outcome (PRO) Active Total Score
+  - PROactive Amount Domain Score
+
+INTERVENTIONS:
+  - DEVICE: Mobile spirometer
+  - DEVICE: Device sensor
+  - DRUG: Salbutamol
+  - DEVICE: Activity monitor
+  - OTHER: electronic diary card
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03357341

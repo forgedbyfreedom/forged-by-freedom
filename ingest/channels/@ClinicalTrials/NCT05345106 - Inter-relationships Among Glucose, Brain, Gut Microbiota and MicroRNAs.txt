@@ -1,0 +1,77 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05345106
+Title: Inter-relationships Among Glucose, Brain, Gut Microbiota and MicroRNAs (IRONmiRNA).
+Official Title: Inter-relationships Among Iron Stores, the Gut Metagenome, Glucose Levels, and Different Cognitive Domains: the Role of Circulating MicroRNAs (IRONmiRNA Study).
+Status: ACTIVE_NOT_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 138
+Topic: exercise intervention obesity
+
+SUMMARY:
+The brain is a recognized target of iron deposition. This process is enhanced by the presence of obesity and hyperglycemia and impacts cognitive functions. There is evidence suggesting that the gut microbiota composition modulates this process. It has been proposed that microRNAs are mediators in the dialogue between the composition and functionality of the intestinal microbiota and increased iron deposition in the brain.
+
+The hypothesis is that circulating microRNAs are associated with parameters of cognitive dysfunction, gut microbiota, brain iron content, glucose levels, and physical activity in subjects with and without obesity.
+
+The study includes both a cross-sectional (comparison of subjects with and without obesity) and a longitudinal design (evaluation one year after weight loss induced by bariatric surgery or by diet in patients with obesity) to evaluate the associations between circulating microRNAs, continuous glucose monitoring, brain iron content (by magnetic resonance), cognitive function (by means of cognitive tests), physical activity (measured by activity and sleep tracker device) and the composition of the microbiota, evaluated by metagenomics.
+
+DETAILED DESCRIPTION:
+Subjects and methods:
+
+A. Cross-sectional study:
+
+Patients with obesity previously scheduled at the Service of Endocrinology, Diabetes, and Nutrition (UDEN) of the Hospital "Dr. Josep Trueta" of Girona (Spain) will be recruited and studied. Subjects without obesity will also be recruited through a public announcement.
+
+A glycemia sensor will be inserted for ten days, as well as an activity and sleep tracker device (Fitbit) to record physical activity during this period of time. Interstitial subcutaneous glucose concentrations will be monitored on an outpatient basis for a period of time of 10 consecutive days using a glucose sensor validated by the Food and Drug Administration (Dexcom G6 ®). The sensor will be inserted on day 0 and it will retire on day 10 mid-morning.
+
+Glucose records will preferably be evaluated on days 2 to 9 to avoid the bias caused by the insertion and removal of the sensor, which prevents a sufficient stabilization of the monitoring system. The characteristic glycemic pattern of each patient will be calculated on average from the profiles obtained on days 2 to 9.
+
+At the end of the week, magnetic resonance imaging will be done to evaluate the iron content in the brain and parameters of "Diffusion Tensor Imaging" in different brain territories.
+
+Cognitive tests will be carried out, and feces and urine will be collected for the study of the microbiota. Additionally, blood samples will be collected for the extraction and purification of circulating RNA and then retrotranscription of circulating miRNAs and preamplification.
+
+The project will be carried out in subjects with obesity (20 men, 20 premenopausal women, and 20 women postmenopausal, Body mass index (BMI) \> = 30kg/m2) and subjects without obesity, similar in age, sex, and menopausal status (20 men, 20 premenopausal women, and 20 postmenopausal women, BMI \<30kg/m2).
+
+B. Longitudinal study:
+
+After one year of follow-up, in which, subjects with obesity will undergo conventional treatment (hypocaloric diet, and physical activity advice) or bariatric surgery for weight loss, a second visit will be carried out.
+
+For comparison, the same protocol of the cross-sectional study will be done again. See the information above.
+
+DATA COLLECTION OF SUBJECTS OF CROSS-SECTIONAL AND LONGITUDINAL STUDIES:
+
+1. Subsidiary data: Age, sex, and birth date.
+2. Clinical variables:
+
+   * Weight
+   * height,
+   * body mass index
+   * waist and hip perimeters
+   * waist-to-hip ratio
+   * blood pressure (systolic and diastolic)
+   * fat mass and fat free-mass (bioelectric impedance and DEXA)
+   * smoking status
+   * alcohol intake
+   * registry of usual medicines
+   * personal history of blood transfusion and/or donation
+   * a record of family history of obesity, cardiovascular events, and diabetes
+   * psychiatric and eating disorder history.
+3. Laboratory variables: 15cc of blood will be extracted from fasted subjects to determine the following variables using the usual routine techniques of th
+
+PRIMARY OUTCOMES:
+  - Concentration of advanced glycation end products (AGE) receptor agonists.
+  - Glycemic variability.
+  - The percentage of time in glucose target range (glucose level 100mg/dl-125mg/dl)
+  - The glycaemic risk measured with low blood glucose index (LBGI)
+  - The glycaemic risk measured with high blood glucose index (HBGI)
+
+INTERVENTIONS:
+  - PROCEDURE: Bariatric Surgery
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05345106

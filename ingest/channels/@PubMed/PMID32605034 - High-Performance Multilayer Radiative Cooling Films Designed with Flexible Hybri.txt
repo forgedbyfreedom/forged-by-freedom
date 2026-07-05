@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 32605034
+Title: High-Performance Multilayer Radiative Cooling Films Designed with Flexible Hybrid Optimization Strategy.
+Authors: You, Li, Huang, Ma, Pu
+Journal: Materials (Basel, Switzerland)
+Year: 2020
+Topic: cooling strategies performance
+
+ABSTRACT:
+Despite their great potential for energy-saving applications, it is still challenging to design passive radiative cooling (RC) materials with simultaneous high performance and simple structures based on traditional design philosophy. To solve the contradiction between optimization speed and corresponding performance, we present a flexible hybrid optimization strategy based on a genetic algorithm (GA) in conjunction with the transfer matrix method and introducing the calculation of radiative cooling power density in the evaluation function of the GA. As a demonstration, an optimized coating with 1.5-&#x3bc;m-overlapping MgF2 and Si3N4 layers on top of a silver film was numerically designed. Based on a detailed analysis of the material's electromagnetic properties and cooling performance, this coating achieved a radiative cooling power density of 62 W/m2 and a temperature reduction of 6.8 &#xb0;C at an ambient temperature of 300 K. Our optimization strategy may have special significance in the design of high-performance RC materials or other multi-spectral engineering materials with simple structures.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/32605034/

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 27183999
+Title: Multi-breed genome-wide association study reveals heterogeneous loci associated with loin eye area in pigs.
+Authors: He, Ma, Zhang, Hou, Chen
+Journal: Journal of applied genetics
+Year: 2017
+Topic: leucine threshold muscle protein
+
+ABSTRACT:
+Numerous quantitative trait loci (QTL) for loin eye area had been identified by linkage mapping studies, but the lack of their precise position hinders their application in the pig breeding industry. To map QTL for loin eye area to a precise genomic region, we conducted a genome-wide association study (GWAS) using Illumina 60&#xa0;K PorcineSNP60 Beadchip in four swine populations: 819&#xa0;F2 pigs, 273 Laiwu pigs, 434 Sutai pigs, and 326 Erhualian pigs. In total, 26 single nucleotide polymorphisms (SNPs) deposited on seven chromosomes associated with loin eye area were identified, 11 of which surpassed the genome-wide significant threshold; of the 11 SNPs, seven located on SSC2 in F2 pigs and four located on SSC12 and SSC18 in Laiwu pigs. Of note, all of the identified QTL were breed specific and no common QTL was identified across the four populations in our study. These findings not only confirmed a previous QTL on SSC2 harboring the candidate gene insulin-like growth factor 2 (IGF2), but also identified some novel candidate genes, far upstream element binding protein 3 (FUBP3), myosin heavy chain (MYH) family, leucine-rich repeats and guanylate kinase domain containing (LRGUK). Our study will contribute to the further identification of the causal mutation underlying these QTL and improve our knowledge of the complex genetic architecture for loin eye area in pigs.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/27183999/

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02160275
+Title: Algorithm to Control Postprandial, Post Exercise and Night Glucose Excursions in a Portable Closed Loop Format
+Official Title: Algorithm to Control Postprandial, Post Exercise and Night Glucose Excursions in a Portable Closed Loop Format, APPEL 4
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: exercise intervention diabetes
+
+SUMMARY:
+In previous studies, we tested the feasibility of a bi-hormonal closed loop system. This system for automated control of blood glucose in patients with type 1 diabetes was tested in the clinical research center as well as at the home of the patients. Glucose control with automated closed loop control was comparable to patient-managed open loop control.
+
+The closed loop system has been further developed and miniaturized (from backpack to smartphone size) in order to interfere as little as possible with daily patient life. The aim of this trial is to assess the efficacy of the new prototype at the home of the patient. It is hypothesized that the closed loop system provides better glucose control than standard open loop therapy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean sensor glucose concentration
+
+INTERVENTIONS:
+  - DEVICE: Artificial Pancreas (Inreda Diabetic BV)
+  - DEVICE: insulin pump therapy
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02160275

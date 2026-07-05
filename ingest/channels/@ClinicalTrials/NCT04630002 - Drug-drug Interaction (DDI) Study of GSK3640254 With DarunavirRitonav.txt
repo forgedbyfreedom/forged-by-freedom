@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04630002
+Title: Drug-drug Interaction (DDI) Study of GSK3640254 With Darunavir/Ritonavir (DRV/RTV) and Etravirine (ETR)
+Official Title: Open-Label, Single-Sequence Study to Evaluate the Effects of Darunavir/Ritonavir and/or Etravirine on the Pharmacokinetics of GSK3640254 and the Effects of GSK3640254 on the Pharmacokinetics of Darunavir/Ritonavir and/or Etravirine in Heathy Adults
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: creatine supplementation
+
+SUMMARY:
+This is an open-label, single-sequence, multiple-dose, 3 cohort study to investigate the effects of DRV/RTV and/or ETR on the pharmacokinetics (PK) of GSK3640254 and the effects of GSK3640254 on the PK of DRV/RTV and/or ETR. This study will aid in understanding these interactions and resulting changes in exposure (if any) when given in combination with GSK3640254.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cohort 1: Area Under the Plasma Concentration-time Curve From Time Zero to the End of the Dosing Interval at Steady State (AUC[0-tau]) of GSK3640254
+  - Cohort 1: Maximum Observed Concentration (Cmax) of GSK3640254
+  - Cohort 1: AUC(0-tau) of DRV
+  - Cohort 1: Cmax of DRV
+  - Cohort 1: AUC(0-tau) of RTV
+
+INTERVENTIONS:
+  - DRUG: GSK3640254
+  - DRUG: Darunavir/Ritonavir (DRV/RTV)
+  - DRUG: Etravirine (ETR)
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04630002

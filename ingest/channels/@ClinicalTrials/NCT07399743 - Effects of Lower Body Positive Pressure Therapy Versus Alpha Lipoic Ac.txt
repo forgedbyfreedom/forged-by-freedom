@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07399743
+Title: Effects of Lower Body Positive Pressure Therapy Versus Alpha Lipoic Acid and Omega-3 Fatty Acids on Knee Osteoarthritis
+Official Title: Effects of Lower Body Positive Pressure Therapy Versus Alpha Lipoic Acid and Omega-3 Fatty Acids on Pain, Function, and Inflammation in Overweight Women With Knee Osteoarthritis: A Randomized Controlled Clinical Trial
+Status: NOT_YET_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: omega 3 exercise
+
+SUMMARY:
+Here is a \*\*concise, clear summary (\~250 words / well under 5000 characters)\*\* while preserving the key scientific points:
+
+\---
+
+Knee osteoarthritis (KOA) is highly prevalent among overweight women, affecting more than 30% of those with BMI ≥25 kg/m². Excess body weight increases knee joint loading by 4-6 times per additional kilogram, accelerating cartilage degeneration, subchondral bone changes, and synovial inflammation. These alterations result in chronic pain, stiffness, functional limitation, and reduced quality of life, with obesity-related metabolic inflammation further worsening disease progression.
+
+Standard physical therapy (PT) remains first-line treatment, yet provides only modest benefits, achieving approximately 15-20% WOMAC improvement at 12 weeks, while up to half of overweight patients continue to experience significant symptoms. Lower body positive pressure therapy (LBPP) via antigravity treadmill offers a biomechanical enhancement by unloading 40-80% of body weight, enabling pain-free gait training and reducing joint impact forces by up to 80%. Studies report 30-40% WOMAC improvement and better walking capacity compared with conventional PT.
+
+Nevertheless, mechanical interventions alone do not address the inflammatory and oxidative mechanisms driving KOA. Alpha-lipoic acid (600 mg/day) and omega-3 fatty acids (1.5-2 g/day) provide targeted biochemical modulation, reducing pro-inflammatory cytokines, oxidative stress, and cartilage-degrading enzymes, with reported 25-35% functional improvement in clinical trials.
+
+Despite the promise of both approaches, no randomized trial has directly compared adding LBPP versus combined ALA and omega-3 supplementation to standard PT in overweight women with KOA. This study aims to fill this gap by evaluating the relative effectiveness of biomechanical versus biochemical adjuncts to optimize management of KOA in this high-risk population.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in VAS pain score (0-10 cm)
+  - Change in WOMAC total score (0-96)
+
+INTERVENTIONS:
+  - DRUG: Alpha-Lipoic Acid (ALA)+PT
+  - DRUG: Omega-3 cap+ PT
+  - DEVICE: Lower body positive pressure therapy (LBPP)+PT
+  - DEVICE: Standard physical therapy (PT)
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07399743

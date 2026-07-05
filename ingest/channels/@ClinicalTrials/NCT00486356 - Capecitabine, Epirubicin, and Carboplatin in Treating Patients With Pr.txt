@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00486356
+Title: Capecitabine, Epirubicin, and Carboplatin in Treating Patients With Progressive, Unresectable, or Metastatic Cancer
+Official Title: A Phase I Trial of Epirubicin, Carboplatin and Capecitabine in Adult Cancer Patients
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 46
+Topic: physical activity intervention
+
+SUMMARY:
+RATIONALE: Drugs used in chemotherapy, such as capecitabine, epirubicin, and carboplatin, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Giving more than one drug (combination chemotherapy) may kill more tumor cells.
+
+PURPOSE: This phase I trial is studying the side effects and best dose of capecitabine when given together with epirubicin and carboplatin in treating patients with progressive, unresectable, or metastatic cancer.
+
+DETAILED DESCRIPTION:
+OBJECTIVES:
+
+Primary
+
+* Determine the recommended phase II dose of capecitabine when given together with epirubicin hydrochloride and carboplatin in patients with progressive, unresectable, or metastatic cancer.
+* Determine the toxicities of this regimen in these patients.
+
+Secondary
+
+* Correlate end-of-infusion levels of epirubicin hydrochloride and its metabolites with epirubicin hydrochloride dose and clinical toxicity in these patients.
+* Correlate the pharmacokinetics of capecitabine with clinical toxicity in these patients.
+* Determine the possible correlation between polymorphisms in the promoter region of the thymidylate synthase gene with clinical toxicity in these patients.
+* Document antitumor activity of this regimen in these patients.
+
+OUTLINE: This is a dose-escalation study of capecitabine.
+
+Patients receive epirubicin hydrochloride IV over 2 hours and carboplatin IV over 30 minutes on day 1 and oral capecitabine twice daily on days 2-5, 8-12, and 15-19. Treatment repeats every 28 days in the absence of disease progression or unacceptable toxicity.
+
+Cohorts of 3-6 patients receive escalating doses of capecitabine until the maximum tolerated dose (MTD) is determined. The MTD is defined as the dose preceding that at which 2 of 3 or 2 of 6 patients experience dose-limiting toxicity.
+
+Peripheral blood is collected for pharmacokinetic and pharmacogenetic studies before beginning study treatment and periodically during study. Samples for the pharmacogenetic studies are analyzed for correlation between polymorphisms in the promoter region of the thymidylate synthase gene and clinical toxicity. Patients also undergo bone marrow aspirate before beginning study treatment for molecular profiling studies.
+
+PRIMARY OUTCOMES:
+  - Recommended phase II dose of capecitabine
+  - Toxicities of combined chemotherapy regimen
+
+INTERVENTIONS:
+  - DRUG: capecitabine
+  - DRUG: carboplatin
+  - DRUG: epirubicin hydrochloride
+  - GENETIC: microarray analysis
+  - GENETIC: polymorphism analysis
+
+ELIGIBILITY:
+Age: 18 Years to 120 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00486356

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41743302
+Title: Meta-analysis of the Effect of Yogic Techniques on Melatonin Levels: Implications for Sleep Health.
+Authors: Govindasamy, Vengadajalapathi, Yusuff, Venkatachalam, Boopalan
+Journal: International journal of yoga
+Year: 2026
+Topic: melatonin sleep athletes
+
+ABSTRACT:
+Yoga has gained attention as a potential intervention for improving various aspects of health, including sleep quality. Melatonin, a hormone involved in regulating the sleep-wake cycle, has been suggested to play a key role in mediating the effects of yoga on sleep. However, the impact of yoga on melatonin levels remains unclear. The current meta-analysis aimed to evaluate the effect of yoga on melatonin levels based on existing studies. A systematic literature search was conducted to identify studies investigating the impact of yoga on melatonin levels. Five eligible studies were included, comprising a total of 196 observations. The standardized mean difference (SMD) was calculated as the effect size measure. The current meta-analysis was performed using a random-effects model to estimate the pooled SMD, along with 95% confidence intervals (CIs) in R software (version 4.3.2). Heterogeneity across studies was assessed using the I 2 statistics. Totally five studies were included in the current meta-analysis. The meta-analysis revealed a moderate certainty of evidence on the role of yogic techniques on melatonin levels, with a pooled SMD of 0.37 (95% - CI: [0.09; 0.66]). This meta-analysis provides evidence supporting the regular practice of yoga, including meditation and mantra chanting, in enhancing the melatonin levels. This increase in melatonin may contribute to improved sleep quality. These results underscore the potential of yoga as a nonpharmacological approach for enhancing sleep health and overall well-being. Further research is needed to elucidate the underlying mechanisms and optimal practices for incorporating yoga into sleep management strategies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41743302/

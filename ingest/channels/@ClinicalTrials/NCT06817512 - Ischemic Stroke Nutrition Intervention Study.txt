@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06817512
+Title: Ischemic Stroke Nutrition Intervention Study
+Official Title: Health Effects of Vitamin K2 Supplementation on Skeletal Muscle and Neurological Function After Ischemic Stroke
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 190
+Topic: vitamin D muscle
+
+SUMMARY:
+The primary goal of this clinical trial is to assess whether vitamin K2 supplementation can effectively improve skeletal muscle and neurological function in patients with ischemic stroke. The main questions it aims to answer are: 1. Does supplementation with vitamin K2 improve the subjects' muscle strength and muscle mass? 2. Can supplementation with vitamin K2 improve the subjects' neurological function after a stroke? Researchers will compare vitamin K2 supplements with a placebo to observe whether vitamin K2 supplementation can improve skeletal muscle and neurological function in patients with ischemic stroke. Participants will: 1. Take vitamin K2 (MK-7) or a placebo daily for 1 year. 2. Attend face-to-face visits and provide biological samples and relevant data at 0, 3, 6, and 12 months. At 9 months, the visit will be online. After the intervention, follow-up will continue for 1 year to observe the long-term effects.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Handgrip strength
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin K2
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06817512

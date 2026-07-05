@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07010666
+Title: BHB and Cognition During Exercise-Heat Stress
+Official Title: Beta-Hydroxybutyrate Ingestion and Cognition During Exercise-Heat Stress
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 18
+Topic: caffeine exercise
+
+SUMMARY:
+The study investigates how consuming a ketone ester (BHB) along with caffeine impacts cognitive performance under heat stress, similar to what military personnel experience in hot environments. The extreme heat can impair brain function, affecting decision-making and performance, which is critical for Special Operations Forces (SOF). BHB provides an alternative energy source for the brain, potentially improving brain blood flow and cognition, particularly during "stressful" situations. By comparing ketone and carbohydrate intake with caffeine, this study aims to find better ways to maintain mental sharpness during stressful conditions. The results could help enhance the safety and effectiveness of military operations.
+
+DETAILED DESCRIPTION:
+This study aims to examine the effects of ingestion of 25g of BHB ketone ester and 4 mg/kg of caffeine on cognitive performance during exercise-heat induced hyperthermia when compared to carbohydrate combined with the same dosage of caffeine. This will be the first study to investigate the effects of ketone ester ingestion on cognition during exercise-heat induced hyperthermia in endurance-trained adults. Further, this study has the potential to impact the safety and mission success of SOF by improving cognitive performance when making critical decisions in a physiologically compromised state.
+
+PRIMARY OUTCOMES:
+  - Changes in Inhibitory Control by reaction time (Go/No go)
+  - Changes in Inhibitory Control by reaction time by errors (Go/No go)
+  - Changes in Attention (Go/No go)
+  - Changes in Object Hit and Avoid (OHA) task: Total accuracy, Target accuracy, and Non-target accuracy
+  - Changes in 1-Back Task
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Beta-Hydroxybutyrate
+  - DIETARY_SUPPLEMENT: Carbohydrate
+  - DIETARY_SUPPLEMENT: Caffeine
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07010666

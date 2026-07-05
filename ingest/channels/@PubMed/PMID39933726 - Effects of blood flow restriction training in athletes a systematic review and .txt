@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39933726
+Title: Effects of blood flow restriction training in athletes: a systematic review and meta-analysis.
+Authors: Zhang, Xu, Yin, Duan, Kong
+Journal: International journal of sports medicine
+Year: 2025
+Topic: blood flow restriction training
+
+ABSTRACT:
+This systematic review and meta-analysis evaluated the effects of blood flow restriction training on strength and aerobic capacity in athletes, examining how training variables and participant characteristics influenced outcomes. Four databases were searched for peer-reviewed English-language studies, and the risk of bias and the quality of evidence were assessed using RoB 2 and GRADEpro GDT. We evaluated pre- and post-test differences by a three-level meta-analysis using meta and metafor packages. Subgroup analyses and both linear and nonlinear meta-regression methods were used to explore moderating factors. Sixteen studies with "some concerns," the risk of bias and low evidence level, were included. Combining blood flow restriction with low-intensity resistance training produced an effect size of 0.25 for strength, while combining blood flow restriction with aerobic training had an effect size of 0.42. For aerobic capacity, the effect size of combining blood flow restriction with aerobic training was 0.58. Subgroup and regression analyses showed no significant differences. While blood flow restriction with low-intensity resistance training enhances strength, it does not result in additional gains. Combining blood flow restriction with aerobic training enhances both the strength and the aerobic capacity. Overall, blood flow restriction appears to offer the most benefits for male athletes in improving the strength and aerobic capacity.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39933726/

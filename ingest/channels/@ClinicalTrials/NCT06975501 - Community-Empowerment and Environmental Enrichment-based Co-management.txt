@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06975501
+Title: Community-Empowerment and Environmental Enrichment-based Co-management (CEEEC) Model and Mechanisms for Improving Health of Older Stroke Patients With Multimorbidity
+Official Title: A Community-Based 2×2 Factorial Randomized Controlled Trial Evaluating a Multicomponent Physical and Cognitive Intervention for Older Adults With Stroke and Comorbid Chronic Conditions in Urban China
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 444
+Topic: aerobic exercise
+
+SUMMARY:
+This study is a cluster randomized controlled trial with a 2×2 factorial design conducted in community health centers in Kunshan, Harbin, Wuhan, Beijing and Shanghai. It aims to evaluate the independent and combined effects of exercise and cognitive interventions on intrinsic capacity and related health outcomes among stroke survivors aged 60 years and older with hypertension or type 2 diabetes mellitus. Participants will receive either exercise training, cognitive training, combined training, or usual care over 12 months, followed by a 12-month follow-up. Findings will inform integrated health management strategies for older adults with multimorbidity.
+
+DETAILED DESCRIPTION:
+This study is a community-based cluster randomized controlled trial with a 2×2 factorial design, conducted in community health centers in Kunshan (Jiangsu), Wuhan (Hubei), Harbin (Heilongjiang), Beijing and Shanghai, China. A total of 480 stroke survivors aged 60 years and above with comorbid hypertension or type 2 diabetes mellitus will be recruited. Participants will be randomly assigned to one of four groups: exercise intervention only, cognitive intervention only, combined intervention, or control (usual care). The interventions, including aerobic-balance physical training and structured cognitive training, will be delivered twice weekly for 12 months, followed by a 12-month observational follow-up.
+
+The primary outcome is intrinsic capacity (IC), assessed using the World Health Organization Integrated Care for Older People (WHO ICOPE) framework. Secondary outcomes include systolic blood pressure, quality of life (EuroQol 5-Dimension 5-Level, EQ-5D-5L), medication adherence, physical activity (Metabolic Equivalent of Task minutes per week, MET-min/week), and healthcare utilization. Data will be collected at baseline, 6, 12, and 24 months.
+
+Intervention effects and trajectories over time will be analyzed using two-way analysis of variance (ANOVA), repeated measures ANOVA, and mixed-effects models. Implementation outcomes will be evaluated following the Reach, Effectiveness, Adoption, Implementation, and maintenance (RE-AIM) framework. The study aims to generate evidence for integrated health management strategies for older adults with stroke and multimorbidity in urban China.
+
+PRIMARY OUTCOMES:
+  - Intrinsic Capacity (World Health Organization Integrated Care for Older People)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Exercise Intervention
+  - BEHAVIORAL: Cognitive Intervention
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06975501

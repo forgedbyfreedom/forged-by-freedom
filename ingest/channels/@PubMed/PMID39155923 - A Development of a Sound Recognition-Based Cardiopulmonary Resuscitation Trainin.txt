@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39155923
+Title: A Development of a Sound Recognition-Based Cardiopulmonary Resuscitation Training System.
+Authors: Hyun Choi, Ha Joo, Hong Kim, Ho Park, Joo
+Journal: IEEE journal of translational engineering in health and medicine
+Year: 2024
+Topic: velocity based training
+
+ABSTRACT:
+The objective of this study was to develop a sound recognition-based cardiopulmonary resuscitation (CPR) training system that is accessible, cost-effective, easy-to-maintain and provides accurate CPR feedback. Beep-CPR, a novel device with accordion squeakers that emit high-pitched sounds during compression, was developed. The sounds emitted by Beep-CPR were recorded using a smartphone, segmented into 2-second audio fragments, and then transformed into spectrograms. A total of 6,065 spectrograms were generated from approximately 40 minutes of audio data, which were then randomly split into training, validation, and test datasets. Each spectrogram was matched with the depth, rate, and release velocity of the compression measured at the same time interval by the ZOLL X Series monitor/defibrillator. Deep learning models utilizing spectrograms as input were trained using transfer learning based on EfficientNet to predict the depth (Depth model), rate (Rate model), and release velocity (Recoil model) of compressions. Results: The mean absolute error (MAE) for the Depth model was 0.30 cm (95% confidence interval [CI]: 0.27-0.33). The MAE of the Rate model was 3.6/min (95% CI: 3.2-3.9). For the Recoil model, the MAE was 2.3 cm/s (95% CI: 2.1-2.5). External validation of the models demonstrated acceptable performance across multiple conditions, including the utilization of a newly-manufactured device, a fatigued device, and evaluation in an environment with altered spatial dimensions. We have developed a novel sound recognition-based CPR training system, that accurately measures compression quality during training. Significance: Beep-CPR is a cost-effective and easy-to-maintain solution that can improve the efficacy of CPR training by facilitating decentralized at-home training with performance feedback.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39155923/

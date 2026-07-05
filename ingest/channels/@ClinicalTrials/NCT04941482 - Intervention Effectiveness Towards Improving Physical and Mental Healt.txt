@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04941482
+Title: Intervention Effectiveness Towards Improving Physical and Mental Health for Post-stroke Patients.
+Official Title: Intervention Effectiveness Towards Improving Physical and Mental Health for Post-stroke Patients.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 92
+Topic: recovery exercise
+
+SUMMARY:
+This was a multi-intervention randomized controlled trial that aimed to develop a management pattern for stroke survivors. The program consisted of monitoring the recovery process, early detecting the physical and mental disorders, suitably intervening for each patient to improve their quality of life. New intervention techniques were firstly applied for post-stroke patients in Vietnam such as using the portable functional near-infrared spectroscopy (fNIRS) device to explore cortex frontal hemodynamic and motivational interviewing for psychological adjustment. A total of 92 stroke patients registered in Vietnam National Geriatrics Hospital were included in the study for 6 months. Included patients were randomized to an intervention group and received the long-term follow-up program or to a control group receiving standard care. The mental health and physical functioning of participants were assessed at 0, 1, 3, and 6 months follow-up. This work was funded by Vingroup Joint Stock Company and supported by the Domestic Master/Ph.D. Scholarship Programme of Vingroup Innovation Foundation (VINIF), Vingroup Big Data Institute (VINBIGDATA).
+
+DETAILED DESCRIPTION:
+Stroke is a medical condition that occurs when a blood vessel that carries oxygen and nutrients to the brain is either blocked by a clot or bursts (or ruptures). This is a major cause of death and disability worldwide. Post-stroke patients will experience sudden and intense changes in their physical and mental health during the first year. Currently, there is no official management model for improving the physical and mental health of patients after stroke in Vietnam. Furthermore, traditional neuroimaging techniques such as Functional magnetic resonance imaging (fMRI), Positron emission tomography (PET), Electroencephalogram (EEG) are not suitable for routine monitoring due to limited flexibility dynamics and costs. Hence, this study aimed to develop a management pattern that included monitoring the recovery process, early detecting the physical and mental disorders, suitably intervening for each patient to improve their quality of life. New intervention techniques were firstly applied for post-stroke patients in Vietnam such as using the portable fNIRS device to explore cortex frontal hemodynamic and motivational interviewing for psychological adjustment. This randomized controlled trial study included 92 post-stroke patients with dividing into two groups (46 control \& 46 intervention subjects), who experienced emergency by stroke within one week. A multi-intervention program was designed for stroke patients including \[1\] periodic health examination for assessment of physical and mental health, recurrence risks, and harmful behaviors; \[2\] guiding the appropriate rehabilitation exercises for improving the physical status and monitoring through daily online reports; \[3\] using motivational interviewing methods to improve and prevent mental disorder; \[4\] application of the technique of functional near-infrared spectroscopy (fNIRS) for measurement of oxy-hemoglobin on cortex prefrontal to early detect mental disorder and stroke recurrence risks. Outcome data were collected via study questionnaires and fNIRS measuring results which were administered by researchers in the study site at 0, 1, 3, and 6 months follow-up. Simultaneously, Motivational Interviewing was carried out on post-stroke patients in the first three months (one time per week in the first month and one time per second and third month). This intervention method aimed to discover and resolve patient's conflicts by standardized communication skill to improve their mental health and change negative behaviors. The scores of the Stroke Impact Scale (SIS), physical and mental assessment scales and fNIRS data in both groups were used to calculate the effect estimates of intervention methods with a measure of precision (95% CI) and assess the results of the trial.
+
+PRIMARY OUTCOMES:
+  - Changes From Baseline Patient Health Questionnaire at 1, 3, and 6 Months
+  - Fatigue Severity Scale (FSS)
+  - Changes From Baseline Mini-Mental State Examination at 1, 3, and 6 Months
+  - Changes From Baseline Barthel Index at 1, 3, and 6 Months
+  - Changes From Baseline of Physical Domain - Stroke Impact Scale at 1, 3, and 6 Months
+
+INTERVENTIONS:
+  - BEHAVIORAL: Periodic health check program for post-stroke
+  - BEHAVIORAL: Guiding the appropriate rehabilitation exercises
+  - BEHAVIORAL: Motivational Interviewing
+  - DEVICE: Functional near-infrared spectroscopy
+
+ELIGIBILITY:
+Age: 45 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04941482

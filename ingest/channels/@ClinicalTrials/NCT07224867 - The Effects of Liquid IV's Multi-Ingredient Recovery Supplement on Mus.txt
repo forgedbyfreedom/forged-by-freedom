@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07224867
+Title: The Effects of Liquid IV's Multi-Ingredient Recovery Supplement on Muscle Recovery Following Exercise
+Official Title: The Effects of Liquid IV's Multi-Ingredient Recovery Supplement, on Muscle Recovery Following Exercise: A Randomized Crossover Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: caffeine exercise
+
+SUMMARY:
+The purpose of this study is to evaluate the efficacy of a multi-ingredient recovery supplement . The research will focus on strength recovery and performance maintenance assessing reductions in soreness and inflammation, as well as muscle repair and damage mitigation. By investigating these key recovery metrics, this study aims to investigate the efficacy of this supplement as a solution for active individuals seeking to optimize post-exercise recovery.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Lower Body Power and Force Generation (Maximal Countermovement Jump (CMJ))
+  - Lower-Body Strength (Biodex Dynamometry)
+  - Perceived Recovery Status (PRS) Likert Scale
+  - Perceived Body Soreness Likert Scale
+  - Numeric Pain Rating Scale (NPRS)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: proprietary post-workout recovery supplement
+  - DIETARY_SUPPLEMENT: Control placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07224867

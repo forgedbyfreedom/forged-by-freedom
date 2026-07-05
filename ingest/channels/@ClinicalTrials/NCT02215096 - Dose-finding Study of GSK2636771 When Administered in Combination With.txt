@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02215096
+Title: Dose-finding Study of GSK2636771 When Administered in Combination With Enzalutamide in Male Subjects With Metastatic Castration-Resistant Prostate Cancer
+Official Title: A Phase I, Open-label, Dose-finding Study of GSK2636771 Administered in Combination With Enzalutamide (Xtandi^TM ) in Male Subjects With Metastatic Castration-Resistant Prostate Cancer (mCRPC)
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 37
+Topic: beta-alanine
+
+SUMMARY:
+This Phase I, open-label, dose-finding, multicenter study is designed to determine the recommended Phase II dose (RP2D) for the combination of an orally administered Phosphatidylinositol-4,5-bisphosphate 3-kinase beta (PI3K-beta) inhibitor (GSK2636771) with enzalutamide. Subjects with phosphatase and tensin homolog (PTEN)-deficient metastatic castration-resistant prostate cancer (mCRPC) who are receiving a stable dose of enzalutamide with a recently demonstrated progression (either by RECIST \[Response Evaluation Criteria In Solid Tumors\] version 1.1, prostate-specific antigen \[PSA\] progression, and/or progression in bone) per the Prostate Cancer Working Group 2 (PCWG2) criteria will be enrolled. Eligible subjects will be enrolled in the Dose-Escalation Phase to determine the maximum tolerated dose (MTD) of the combination therapy using a modified 3+3 dose escalation procedure. The safety, pharmacokinetics (PK) and clinical efficacy will also be assessed to guide the selection of the RP2D. The starting dose will be GSK2636771 300 mg once daily in combination with the recommended dose (160 milligram \[mg\] once daily) of oral enzalutamide. Once the RP2D has been established, additional subjects will be enrolled in the Dose Expansion Phase to further evaluate the safety, PK and preliminary clinical activity. Safety assessments will be performed throughout the study including physical examinations, vital signs, clinical laboratory tests, 12 lead electrocardiograms and monitoring of adverse events. Blood samples will be collected for pharmacokinetic analysis. Subjects will continue treatment until an unacceptable toxicity, disease progression, withdrawal of consent or death occurs. A post-treatment follow-up visit will be performed within 30 days of the last dose of study treatment. Xtandi is a registered trademark of Astellas Pharma Inc
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Non-serious Adverse Events (Non-SAEs) and Serious Adverse Events (SAEs) During run-in Period
+  - Number of Participants With Non-SAEs and SAEs During Combination Treatment Period
+  - Number of Participant With Dose-limiting Toxicities (DLT) During Combination Treatment Period
+  - Percent Change From Baseline in Hematology Parameters During Combination Treatment Period: Basophils, Eosinophils, Hematocrit, Hemoglobin, Lymphocytes, MCH, MCV, Monocytes, Total Neutrophils, Platelet Count, WBC Count
+  - Percent Change From Baseline in Hematology Parameters During Combination Treatment Period: International Normalized Ratio (INR), Prothrombin Time (PT), Partial Thromboplastin Time (PTT)
+
+INTERVENTIONS:
+  - DRUG: GSK2636771
+  - DRUG: Enzalutamide
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02215096

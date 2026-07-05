@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05821530
+Title: HFIT Versus TENS Study for Chronic Low Back and Knee Pain
+Official Title: A Randomized Controlled Clinical Trial Evaluating the Effectiveness of High-frequency Impulse Therapy (HFIT) Versus Transcutaneous Electronic Nerve Stimulator (TENS) for Treatment of Chronic Low Back and Knee Pain
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 325
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+A high-frequency impulse therapy (HFIT) device (Enso, San Francisco, CA) is a portable device for the treatment of musculoskeletal pain. This three-arm randomized controlled trial study compares a HFIT group to a standard transcutaneous electrical nerve stimulator (TENS) group and a control group.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Pain MCID
+
+INTERVENTIONS:
+  - DEVICE: HFIT
+  - DEVICE: TENS
+  - OTHER: Control
+
+ELIGIBILITY:
+Age: 18 Years to 64 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05821530

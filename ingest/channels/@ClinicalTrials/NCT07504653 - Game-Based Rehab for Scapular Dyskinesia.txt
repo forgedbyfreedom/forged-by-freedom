@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07504653
+Title: Game-Based Rehab for Scapular Dyskinesia
+Official Title: Game-Based Rehabilitation for Scapular Dyskinesia Among Frisbee Players
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: athletic performance
+
+SUMMARY:
+Scapular dyskinesia (SD) is a disorder defined by aberrant scapular placement and movement, which can have a substantial impact on athletes' performance, particularly those who participate in throwing sports like Frisbee. This study aims to investigate the prevalence of SD among Frisbee players in Malaysia, assess its effects on various aspects of athletic performance, and evaluate the effectiveness of gamified scapular rehabilitation exercises delivered via a mobile application. This study's approach is divided into three unique phases, where phase one consists of a prevalence and impact assessment using a cross-sectional study design, which will be carried out among several Frisbee clubs in Malaysia. This phase will use several outcome measures to evaluate SD and its impact along with respiratory muscle strength assessments to analyze the potential respiratory outcomes. Phase Two focuses on the creation of a mobile application that would gamify scapular rehabilitation exercises while embracing agile development approaches. The development process will include comprehensive testing procedures to ensure functionality and usability, such as functional testing to verify the application's features, usability testing to assess user experience, data validation to ensure accurate information processing, and regression testing to confirm stability after updates, and user acceptance testing to evaluate performance in real-world scenarios. Phase Three consists of intervention and evaluation by a randomized controlled trial (RCT) to determine the efficacy of the gamified rehabilitation intervention. The intervention, which consists of gamified scapular rehabilitation exercises given via a mobile application, will last eight weeks. Subjects will be followed up after 6 months of the intervention to determine their level of adherence to the rehabilitation.The expected outcomes of this study aim to significantly contribute to the field of sports medicine and rehabilitation by introducing and validating gamified rehabilitation techniques specifically designed for athletes with scapular dyskinesia. The study results are expected to promote the well-being of athletes by improving their sports performance and reducing the risk of injuries. In conclusion, this study not only advances our understanding of SD in athletes but also paves the way for innovative rehabilitation solutions that can be adopted across various sports and settings.
+
+DETAILED DESCRIPTION:
+2.1 Study Design The study design follows a structured approach comprising three key phases where phase one assesses the prevalence and impact of SD on Frisbee players. Meanwhile, phase two focuses on developing mobile game incorporating scapular stabilization exercises. Lastly, phase three will evaluate the effectiveness of the gamified rehabilitation and the adherence level. Figure. 2 summarizes the flow of the three phases of study.
+
+2.1.1 Phase One: Prevalence and Impact Assessment In the first phase of the study, a cross-sectional design will be employed to determine the prevalence and impact of SD among competitive Frisbee players in Malaysia. This approach will allow researchers to measure the prevalence and explore associations between variables at a specific point in time. The study will be conducted across various Frisbee clubs in Malaysia to ensure a representative sample of the target population. The participants will consist of competitive Frisbee players who have been diagnosed with SD, with a calculated sample size of 235 participants, determined using GPOWER 3.1 software, to provide statistical power and reliable prevalence estimates. The primary outcome measures include the Lateral Scapular Slide Test (LSST) for assessing scapular positioning and movement, the Visual Analog Scale (VAS) for evaluating pain levels, the Seated Medicine Ball Throw Test (SMBT) for measuring upper body strength and throwing ability, the Functional Throwing Performance Index (FTPI) for assessing throwing accuracy and velocity, and spirometry alongside respiratory muscle strength assessments to analyze the impact of SD on breathing patterns and forced vital capacity.
+
+2.1.2 Phase Two: Mobile Application Development The second phase of the study focuses on the development of a mobile application tailored for Frisbee players with scapular dyskinesia. This phase will follow an agile development process, characterized by iterative and incremental progress, allowing for continuous improvements and flexibility based on user feedback. The application will be developed using Flutter and Dart to ensure cross-platform compatibility, enabling it to run smoothly on both iOS and Android devices. The development process will incorporate multiple testing phases to ensure the app's effectiveness and user-friendliness. These phases include functional testing to verify compliance with specified requirements, usability testing to evaluate the user interface and experience, data validation testing to ensure data accuracy and integrity, regression testing to verify that updates do not negatively impact existing functionalities, and user acceptance testing to gather feedback from end-users to ensure the app meets their needs effectively.
+
+2.1.3 Phase Three: Intervention and Evaluation In the third phase, a randomized controlled trial (RCT) will be conducted to evaluate the effectiveness of the gamified rehabilitation intervention delivered through the mobile application. The 
+
+PRIMARY OUTCOMES:
+  - Seated Medicine Ball Throw Test (SMBT)
+  - Lateral Scapular Slide Test (LSST)
+  - Functional Throwing Performance Index (FTPI)
+  - Measurement of Throwing Velocity
+
+INTERVENTIONS:
+  - OTHER: game based mobile application scapular stabilisation exercises
+  - OTHER: Postural correction exercises
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07504653

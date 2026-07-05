@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05366205
+Title: Immune Function in Elderly Patients With Mild to Moderate COVID-19 on Hemodialysis
+Official Title: Prospective, Randomized Controlled Study on Immune Function Regulation by Strengthening Early Oral Nutritional Supplementation in Elderly Patients With Mild to Moderate COVID-19 on Hemodialysis
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 112
+Topic: protein supplementation
+
+SUMMARY:
+This randomized controlled trial will focus on the effects of early oral nutritional supplementation on immune function in elderly patients with mild to moderate COVID-19 on maintenance hemodialysis. The purpose of this study is to determine whether early oral nutritional supplementation can improve immune function and clinical outcomes.
+
+DETAILED DESCRIPTION:
+COVID-19 is in the midst of a global pandemic. Elderly patients are often susceptible and at high risk. Elderly patients on maintenance hemodialysis are often accompanied by a variety of complications, malnutrition is a common complication with an incidence of 23-73%. Due to a variety of risk factors, COVID-19 infection tends to develop into severe disease, and it takes longer for nucleic acid to turn negative.
+
+This randomized controlled trial will focus on the effects of early oral nutritional supplementation on immune function in elderly patients with mild to moderate COVID-19 on maintenance hemodialysis. The purpose of this study is to determine whether early oral nutritional supplementation can improve immune function and clinical outcomes.
+
+PRIMARY OUTCOMES:
+  - CD4 lymphocyte counts
+  - lymphocyte count
+  - T-lymphocyte subsets
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral nutritional supplement
+  - BEHAVIORAL: Nutrition consultation
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05366205

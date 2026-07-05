@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06920667
+Title: Effect of a Protein-Creatine-Omega3-Vitamin D Supplement on Glycemic Variability in Mexican Patients With Type 2 Diabetes
+Official Title: Effect of a Combined Whey Protein, Creatine, Omega-3, and Vitamin D Supplement on Glycemic Variability in Mexican Patients With Recently Diagnosed Type 2 Diabetes: A Randomized, Double-blind Trial Using Continuous Glucose Monitoring
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: vitamin D muscle
+
+SUMMARY:
+This study aims to evaluate the effect of a daily nutritional supplement containing whey protein, creatine, omega-3 fatty acids, and vitamin D on blood sugar fluctuations in adults with recently diagnosed type 2 diabetes. Forty participants will be enrolled in a 12-week, double-blind, randomized clinical trial. Half of the participants will receive the supplement, while the other half will receive a placebo. Blood sugar levels will be monitored using continuous glucose monitoring (CGM) devices placed at five different time points during and after the intervention. The study will also measure changes in HbA1c, body composition, metabolic biomarkers, and gut microbiota. Participants will receive medical follow-up and support for six months after the study. The goal is to explore whether this supplement can help stabilize glucose levels and support early management of diabetes.
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled clinical trial will evaluate the impact of a combined supplement-composed of whey protein, creatine monohydrate, omega-3 fatty acids (EPA/DHA), and vitamin D-on glycemic variability in Mexican adults recently diagnosed with type 2 diabetes (diagnosis within the last 5 years, HbA1c 7.0-10.0%, treated with metformin or no pharmacologic therapy).
+
+Forty participants will be randomized (1:1) to receive either the active supplement or placebo for 12 weeks. Glycemic variability will be assessed through five time points using continuous glucose monitoring (CGM) with FreeStyle Libre sensors. Secondary outcomes include changes in HbA1c, fasting glucose, anthropometric data (via InBody H30), metabolic and inflammatory biomarkers (Bio-Plex Pro Human Diabetes 10-Plex Assay), and gut microbiota composition (via 16S rRNA sequencing in collaboration with the University of Illinois at Chicago).
+
+The study also includes biweekly clinical assessments to monitor adherence and safety, and a final post-intervention follow-up phase four weeks after supplementation ends. All participants will receive six months of free medical follow-up. The study is designed to explore the feasibility of using CGM and multi-nutrient supplementation as part of early, non-pharmacological strategies to improve glycemic control in Latin American populations.
+
+PRIMARY OUTCOMES:
+  - Change in Glycemic Variability
+  - Change in Coefficient of Variation of Glucose (%)
+  - Change in Time in Range (TIR, % of time between 70-180 mg/dL)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Protein-Creatine-Omega-3-Vitamin D Supplement
+  - DIETARY_SUPPLEMENT: Placebo (Maltodextrin)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06920667

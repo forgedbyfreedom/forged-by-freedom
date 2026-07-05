@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04636671
+Title: Methylprednisolone vs. Dexamethasone in COVID-19 Pneumonia (MEDEAS RCT)
+Official Title: Randomized Controlled Trial of Methylprednisolone Versus Dexamethasone in COVID-19 Pneumonia (MEDEAS Trial)
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 690
+Topic: protein supplementation
+
+SUMMARY:
+Low-dose glucocorticoid treatment is the only intervention shown to significantly reduce mortality in cases of COVID-19 pneumonia requiring oxygen supplementation or ventilatory support. In particular, a large UK randomized controlled trial (RECOVERY trial) demonstrated the efficacy of dexamethasone at a dosage of 6mg/day for 10 days in reducing mortality compared to usual therapy, with a greater impact on patients requiring mechanical ventilation (36% reduction) or oxygen therapy (18% reduction) than on those who did not need respiratory support (doi: 10.1056/NEJMoa2021436). However, there is still paucity of information guiding glucocorticoid administration in severe pneumonia/ARDS and no evidence of the superiority of a steroid drug -nor of a therapeutic scheme- compared to the others, which led to a great heterogeneity of treatment protocols and misinterpretation of available findings. In a recent longitudinal observational study conducted in Italian respiratory high-dependency units, a protocol with prolonged low-dose methylprednisolone demonstrated a 71% reduction in mortality and the achievement of other secondary endpoints such as an increase in ventilation-free days by study day 28 in a subgroup of patients with severe pneumonia and high levels of systemic inflammation (doi: 10.1093/ofid/ofaa421). The treatment was well tolerated and did not affect viral shedding from the airways. In light of these data, the present study aims to compare the efficacy of a methylprednisolone protocol and that of a dexamethasone protocol based on previous evidence in increasing survival by day 28, as well as in reducing the need and duration for mechanical ventilation, among hospitalized patients requiring noninvasive respiratory support (oxygen supplementation and/or noninvasive ventilation).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Survival
+
+INTERVENTIONS:
+  - DRUG: Methylprednisolone
+  - DRUG: Dexamethasone
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04636671

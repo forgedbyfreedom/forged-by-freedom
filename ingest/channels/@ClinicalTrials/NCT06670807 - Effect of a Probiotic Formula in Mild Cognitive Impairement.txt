@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06670807
+Title: Effect of a Probiotic Formula in Mild Cognitive Impairement
+Official Title: Clinical Trial to Evaluate the Efficacy of a Probiotic Formula on Cognitive Function in Mild Cognitive Impairement Patients.
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: body composition exercise
+
+SUMMARY:
+Mild cognitive impairment is currently one of the most relevant social challenges, as its prevalence is expected to increase and it is associated with a higher risk of developing Alzheimer's disease or other types of dementia. Therefore, it is necessary to seek strategies that can be applied in the early stages to delay or reverse the progression of the disease.
+
+In this context, probiotics have emerged as a promising alternative for managing cognitive disorders. This project is a clinical-nutritional trial to evaluate the utility of consuming a dietary supplement containing probiotics on the cognitive function of individuals with mild cognitive impairment. The study will involve 100 participants, selected from the Geriatrics Unit of San Carlos Clinical Hospital, as well as through various Leisure Centers in Madrid, randomly assigned to two groups of 50 individuals each (Experimental Group and Control Group). Participants assigned to the experimental group will consume the dietary supplement, while those in the control group will receive a placebo, which is a product without probiotics. Both groups will take 1 capsule per day of the assigned product at breakfast for 16 weeks. During this time, changes will be analyzed in various imaging tests, cognitive tests, and some blood parameters related to cognitive function. Changes in gut microbiota and different lifestyle factors (diet, body composition, physical activity, sleep) will also be evaluated.
+
+DETAILED DESCRIPTION:
+Currently, the number of Alzheimer's disease (AD) cases is reaching epidemic proportions. In the European Union, the prevalence of Alzheimer's disease increases from 2% in individuals aged 65-69 to 22% in those aged 85-89, and this figure is expected to double due to the demographic aging of the population by 2040, placing an unprecedented burden on society (Jané-Llopis \& Gabilondo, 2008). These statistics highlight the urgent need for intervention strategies that counteract the progression of the disease, particularly in the early stages of mild cognitive impairment (MCI), and delay the onset of the most debilitating clinical symptoms.
+
+As is well known, the etiopathophysiology of cognitive decline is multifactorial, involving both non-modifiable factors (e.g., sex, genetics) and modifiable ones (e.g., lifestyle). Among the latter are poor-quality diets, physical inactivity, smoking, and altered sleep patterns, which directly impact key risk factors for cognitive decline, such as hypertension, hypercholesterolemia, and obesity. Moreover, recent studies have observed that diet and other lifestyle factors seem to significantly influence the composition of the gut microbiota, which in turn may directly affect the gut-brain axis and the pathogenesis of dementias (Kesika et al., 2021). This opens the door to new therapeutic options based on microbiota-modifying strategies.
+
+In this context, probiotics have emerged as a promising alternative for the management of cognitive disorders due to their ability to beneficially modulate the gut microbiota and, consequently, the gut-brain axis. However, it is important to note that probiotic properties are strain-specific, meaning that a given strain must be thoroughly investigated before such properties can be ascribed (Hill et al., 2014).
+
+Three probiotic strains, in particular, have shown potential positive effects on gut-brain axis modulation and intestinal barrier reinforcement in previous studies, mainly in vitro. These strains are \*\*L. brevis\*\* CECT 7480, \*\*L. plantarum\*\* CECT 7485, and \*\*L. plantarum\*\* CECT 7481 (L. plantarum DR7™). Specifically:
+
+* L. brevis CECT 7480 has demonstrated a high capacity for GABA production in in vitro experimental studies, as well as broad antagonism against opportunistic pathogens (Bosch et al., 2012; Ferrés-Amat et al., 2020).
+* L. plantarum CECT 7485 appears to improve intestinal permeability and modulate the gut-brain axis through increased acetylcholine (ACh) production and has shown antagonism against opportunistic intestinal pathogens (Perez et al., 2020).
+* Additionally, L. plantarum CECT 7485 and L. brevis CECT 7480 have recently been investigated in two clinical trials related to stress, anxiety, and depression, showing beneficial effects (Denysov et al., 2023). However, to date, these strains have not been studied in other pathologies affecting the central nervous system (CNS) and cognition, such as MCI in aging populations.
+* L. plantarum CECT 748
+
+PRIMARY OUTCOMES:
+  - Change in cognitive function by electrophysiological study
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic Arm
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06670807

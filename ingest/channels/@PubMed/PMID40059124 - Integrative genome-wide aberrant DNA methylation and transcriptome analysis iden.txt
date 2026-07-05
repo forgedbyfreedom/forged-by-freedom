@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40059124
+Title: Integrative genome-wide aberrant DNA methylation and transcriptome analysis identifies diagnostic markers for colorectal cancer.
+Authors: Shen, Wang, Chen, Huang, Xu
+Journal: Archives of toxicology
+Year: 2025
+Topic: cluster sets resistance training
+
+ABSTRACT:
+Colorectal cancer remains a major cause of cancer mortality, with limited sensitivity in current diagnostics. Aberrant DNA methylation in expression-regulating sites shows biomarker potential, though few studies explore such methylation-based diagnostic tools for colorectal cancer. We conducted genome-wide DNA methylation and RNA sequencing on matched colorectal cancer and normal tissues to identify expression-related differentially methylated CpG sites (DMCs). Diagnostic models were constructed with training and validation sets of 689 samples. Machine learning techniques (random forest, elastic net, support vector machine) were employed to identify optimal diagnostic markers. Methylation-specific PCR confirmed marker-host gene regulatory relationships, and targeted bisulfite sequencing validated these markers in an independent cohort of 200 samples. Host genes roles in colorectal cancer pathogenesis were further investigated through in vivo and in vitro assays and tissue microarray analysis. We identified 64,824 DMCs in colorectal cancer, with 442 associated with gene expression. These sites impact transcription factor binding, and their host genes are linked to chemotherapy resistance. Diagnostic panels showed high efficacy, with methylation changes significantly impacting RNA and protein expression of host genes. Markers cg16851417, cg19498960, and cg16302790 were validated in blood for noninvasive screening. Clustering expression-related DMCs with similar methylation patterns may facilitate diagnostic tools development. Host genes SIM2, PDX1, and TNS4 influence colorectal cancer progression and may impact therapy response. Expression-related DMCs hold strong potential as colorectal cancer biomarkers, with implications for prognosis and therapy. The specific expression patterns of these DMCs in host genes support development of non-invasive blood-based diagnostic tools.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40059124/

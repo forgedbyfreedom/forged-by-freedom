@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00479466
+Title: Dose-Range Finding Study for MK0893 (0893-008)
+Official Title: A Multicenter, Double-Blind, Randomized, Placebo and Active Comparator Controlled Dose-Range Finding Study of MK0893 in Patients With Type 2 Diabetes Mellitus Who Have Inadequate Glycemic Control
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 342
+Topic: beta-alanine
+
+SUMMARY:
+A study to compare MK0893 to metformin or placebo for patients with Type 2 diabetes (Diabetes Mellitus).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change From Baseline to Week 12 in Fasting Plasma Glucose (FPG)
+
+INTERVENTIONS:
+  - DRUG: MK0893
+  - DRUG: Metformin
+  - DRUG: Placebo to MK0893
+  - DRUG: Placebo to Metformin
+
+ELIGIBILITY:
+Age: 21 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00479466

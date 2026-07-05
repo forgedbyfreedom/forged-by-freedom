@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05237089
+Title: Effect of Electroacupuncture on Obesity
+Official Title: Effects of Electroacupuncture on Weight Loss in Obese Patients With Prediabetes: a Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 256
+Topic: fat loss muscle
+
+SUMMARY:
+The investigators describe a protocol for a randomized controlled trial to find out the effect and safety of electroacupuncture on losing weight in obese patients with prediabetes.
+
+DETAILED DESCRIPTION:
+Obesity has emerged as a contributing factor in diabetes mellitus. In 2015, about 4 million deaths worldwide were directly related to high BMI, accounting for 7.1% of all deaths; among them, 41% died due to cardiovascular disease, followed by diabetes mellitus. China has become the country with the largest number of obese people and diabetic patients in the world. According to the clinical practice guidelines for medical care of obese patients announced by AACE and ACE, obese patients with prediabetes can effectively prevent the development of diabetes by lose 10% or more than of their body weight. Acupuncture is a widely recognized therapy to lose weight in clinical practice. But there are some doubts about the effectiveness of acupuncture versus sham acupuncture in treating obesity due to its lack of medical evidence.
+
+This randomized placebo-controlled clinical trial is aimed to investigate the effect and safety of Electroacupuncture (EA) in obese patients with prediabetes. The investigators designed a protocol for a randomized controlled trial, in which 256 eligible patients will be randomly assigned to one of the two groups in a ratio of 1:1, the EA group (receiving EA treatment with health education) and the sham electroacupuncture (SA) group (receiving superficial acupuncture treatment with health education). A total of 56 sessions of interventions will be given for consecutive 24 weeks, followed by a 24-week follow-up period. Each session of EA or SA treatment will last for about 30 minutes. The primary outcome is the proportion of patients who lost 10% or more than of their body weight at week 24. The secondary outcomes include the change of patient's body weight and body mass index (BMI), results from the blood tests (FBG, 2hPG, HbA1c, HOMA-IR, LDL-C, HDL-C, TG and TC, ect.), the fat tissue size scanned by abdominal magnetic resonance imaging (MRI), data collected from the body composition analyzer, the and scores of the impact of weight on quality of life (IWQOL-Lite), Three Factor Eating Questionnaire - R21 (TFEQ-R21) and Food Cravings Questionnaire-Trait (FCQ-T). All adverse effects will be accessed by the Treatment Emergent Symptom Scale (TESS) from baseline to the follow-up period. The body weight and BMI will be calculated at baseline, week 8, week 16, week 24, week 32, week 40 and week 48, as well as the IWQOL-Lite, the TFEQ-R21 and the FCQ-T. Blood tests will be analyzed at baseline and week 24, as well as the body composition analyzer and the MRI scan. All patients will be provided with the same health education brochure to choose more beneficial personalized lifestyle during the 24-week intervention period.
+
+All analyses will be performed on the intention-to-treat (ITT) population of participants who have at least one treatment. Missing data will be handled using the multiple imputation method, on the assumption that values at each time point follow a specific distribution calculated by the computer software R V.3.5. The prima
+
+PRIMARY OUTCOMES:
+  - The Percentage of patients who lost 10% of their body weight
+
+INTERVENTIONS:
+  - OTHER: Electroacupuncture
+  - OTHER: Sham acupuncture
+  - OTHER: Health education
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05237089

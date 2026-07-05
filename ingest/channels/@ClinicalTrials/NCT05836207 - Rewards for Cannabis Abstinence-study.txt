@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05836207
+Title: Rewards for Cannabis Abstinence-study
+Official Title: The Cost-effectiveness of Contingency Management Compared to Standard Cognitive Behavioral Treatment for Treating Cannabis Use Disorder in Youth: A Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 154
+Topic: recovery exercise
+
+SUMMARY:
+The goal of this clinical trial is to investigate the (cost-)effectiveness of contingency management (CM) compared with Cognitive Behavioural Therapy (CBT) for the treatment of cannabis use disorder (CUD) in youth (16-22 years).
+
+The main questions it aims to answer are:
+
+* What is the efficacy of 12 weeks outpatient CM versus CBT in youths with a CUD, in terms of cannabis abstinence during the intervention period?
+* What is the long-term efficacy of CM versus CBT at 6- and 12-months follow-up (FU)?
+* What is the cost-effectiveness of CM versus CBT at 12-months FU from a societal perspective?
+
+Study hypotheses are:
+
+1\. CM will result in more cannabis-abstinent days than CBT during the intervention; 2. CM is more effective and cost-effective than CBT at 12 months follow-up.
+
+Eligible patients (n=154) will be randomly assigned to either 12 weeks of outpatient CM or CBT. Assessments are conducted by trained research-assistants at baseline, after 6, 12, 26 and 52 weeks, and twice-weekly during treatment and consist of questionnaires, a computer task and collection of urine samples. Primary endpoint is the number of biochemically verified cannabis abstinent days in the 12-week treatment period. Key secondary endpoint: Treatment response: 50% or more reduction in cannabis use days in the past 4 weeks, compared with baseline.
+
+The primary outcome will be modelled in the intention-to-treat population in a (negative binomial) regression analysis with treatment group as independent variable and stratification variables as covariates.
+
+Cost-effectiveness and cost-utility analysis (CEA; CUA) will be performed from a societal perspective. CEA: Treatment response is the central clinical endpoint for calculations of incremental costs per responder. CUA: Incremental costs per QALY (based on EuroQoL).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Cannabis-abstinent days (biochemically verified)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Abstinence-focused Contingency Management (CM) - stand alone
+  - BEHAVIORAL: Standard Outpatient Cognitive Behavioural Therapy (CBT)
+
+ELIGIBILITY:
+Age: 16 Years to 22 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05836207

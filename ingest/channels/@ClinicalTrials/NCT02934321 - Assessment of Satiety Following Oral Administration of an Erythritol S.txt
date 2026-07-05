@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02934321
+Title: Assessment of Satiety Following Oral Administration of an Erythritol Sweetened Beverage
+Official Title: Assessment of Satiety Following Oral Administration of an Erythritol Sweetened Beverage
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: caffeine exercise
+
+SUMMARY:
+Erythritol is a low calorie sugar substitute that is being increasingly used to sweeten beverages and other food items. Greater amounts of erythritol are required to reach the sweetness level of a common soft drink as compared to aspartame, resulting in higher osmolarity for the erythritol sweetened beverage. Since associations have been noted between osmolarity and satiety, investigators propose that an erythritol sweetened beverage may enhance satiety more than a beverage sweetened with aspartame.
+
+DETAILED DESCRIPTION:
+The effects of an erythritol sweetened beverage on satiety has yet to be specifically explored. In this double-blind, 2-way crossover trial, healthy volunteers will consume one of two beverages on each visit: either an erythritol sweetened beverage or an aspartame sweetened beverage. Both beverages will be prepared to the same level of sweetness.
+
+Timed blood samples will be collected over a period of two hours following consumption of the sweetened beverage. Serum total ghrelin and serum insulin will be measured from all blood samples. A validated hunger scale will be administered three times within the two hour period. Data analysis for all measures will be reported with respect to deviation from the initial baseline measured at time 0.
+
+PRIMARY OUTCOMES:
+  - Ghrelin taken over 2 hours post beverage total area under curve (AUC)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Erythritol
+  - DIETARY_SUPPLEMENT: Aspartame
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02934321

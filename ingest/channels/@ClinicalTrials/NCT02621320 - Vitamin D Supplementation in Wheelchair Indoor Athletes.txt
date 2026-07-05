@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02621320
+Title: Vitamin D Supplementation in Wheelchair Indoor Athletes
+Official Title: Effect of Vitamin D3 Supplementation on Exercise Performance in Wheelchair Athletes.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: vitamin D muscle
+
+SUMMARY:
+There is a high prevalence of vitamin D deficiency in Switzerland. In indoor-athletes as well as wheelchair users, vitamin D deficiency occurs even more often. It is well established that vitamin D deficiency has a negative effect on health. However, vitamin D supplementation in individuals with a vitamin D deficiency has a positive effect on muscle performance. In recently published studies with able-bodied subjects, it has been shown that a normal vitamin D level (\>75nmol/L) can only be achieved with a high-dose supplementation of vitamin D.
+
+The aim of this study is to examine the effect of vitamin D supplementation on exercise performance in wheelchair athletes with vitamin D deficiency . All participants with a vitamin D deficiency are assigned to the intervention group and treated with 6000 IU of vitamin D3 daily over a period of 12 weeks. All participants who have a normal vitamin D level will receive placebo treatment (control group). The physical performance is measured three times at baseline, after six weeks and 12 weeks. The measurements include a Wingate and a dynamometer test.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - peak power
+  - maximum torque
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02621320

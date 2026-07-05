@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02867605
+Title: Human Pilot Study - HA35 (Hyaluronan Molecular Weight 35) Dietary Supplement for Promoting Intestinal Health
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: beta-alanine
+
+SUMMARY:
+The purpose of this study is to evaluate whether oral HA35 supplementation changes the normal intestinal bacteria, increases intestinal protection, decrease intestinal inflammation and permeability, and to assess any health benefits and confirm the safety profile of HA35.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Composition of Stool Micro Biome Diversity and Phylogenetic Distribution at 0 Days, 8 Days and 28 Days
+  - Laboratory Parameters at Day 0, Day 8 and 28 Calcium, Bilirubin, Glucose, Blood Urea Nitrogen, Creatinine
+  - Indirect Calorimetry Data at 0 Day, 8 Days and 28 Days Volume of Oxygen and Volume Carbon Dioxide
+  - Indirect Calorimetry Data at 0 Day, 8 Days and 28 Days Respiratory Quotient RQ
+  - Fecal Intestinal Antimicrobial Peptide Secretion at 0 Days, 8 Days and 28 Days Total Protein
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Hyaluronan
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02867605

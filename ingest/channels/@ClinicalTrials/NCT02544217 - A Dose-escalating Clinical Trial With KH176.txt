@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02544217
+Title: A Dose-escalating Clinical Trial With KH176
+Official Title: A Phase I, Randomized, Double Blind, Placebo-controlled, Dose-escalating Clinical Trial With KH176
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: creatine supplementation
+
+SUMMARY:
+Mitochondrial Diseases are rare progressive, multi-system, often early fatal disorders affecting both children and adults. KH176 is a novel chemical entity currently under development for the treatment of inherited mitochondrial diseases, including MELAS (Mitochondrial Encephalomyopathy, Lactic acidosis, and Stroke-like episodes), Leigh's Disease and Leber's Hereditary Optic Neuropathy (LHON). KH176 is a potent intracellular redox modulating agent targeting the reactive oxygen species which are important in the pathogenesis of disorders of mitochondrial oxidative phosphorylation. After demonstrating a favourable safety profile in the pre-clinical testing, the safety, tolerability and pharmacokinetic and pharmacodynamic characteristics of the compound will now be evaluated in healthy male subjects in this trial
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - SAD: Change From Baseline in ECG Results by Timepoint: Corrected QT Interval According to Fridericia's Formula (QTcF)
+  - Pharmacodynamics of KH176
+  - Relationship to Study Drug and Severity of Treatment-emergent Adverse Events
+  - Change From Baseline in Hematology Laboratory Test Results by Timepoint: Red Blood Cell Count. SAD Group
+  - Change From Baseline in Hematology Laboratory Test Results by Timepoint: Erythrocyte Sedimentation Rate (SAD Group)
+
+INTERVENTIONS:
+  - DRUG: KH176
+  - DRUG: placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02544217

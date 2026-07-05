@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06992323
+Title: Cardiometabolic Properties of Omega-3 Functionalized With Hydroxytyrosol
+Official Title: Cardiometabolic Properties of Omega-3 Funcionalized With Hydroxytyrosol in Healthy and Cardiovascular Risk Population
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: protein supplementation
+
+SUMMARY:
+The primary aim of this study is to investigate the potential cardioprotective effects of daily nutritional doses of eicosapentaenoic acid (EPA) enriched with hydroxytyrosol (HT) on cardiovascular health, as well as its modulatory impact on the intestinal microbiota. This investigation will be conducted through a randomized, double-blind, crossover, and controlled nutritional intervention trial. The study population will include two cohorts: one with normotriglyceridemic individuals, and another with hypertriglyceridemic individuals. Participants will be randomly allocated to one of three intervention groups: (1) EPA+HT supplementation, (2) EPA alone, or (3) a placebo consisting of sunflower oil devoid of EPA.
+
+DETAILED DESCRIPTION:
+The product to be tested is a combination of two key components: an oily preparation containing 97% eicosapentaenoic acid (EPA) and a natural extract (Oleacore®) with a high hydroxytyrosol content (10%). Oleacore® is naturally derived from olives using exclusively physical and mechanical methods and is commercialized by Olivenova Health SL (https://olivenova.com/es/). The EPA-97% component is supplied by Beeps Holding GMBH (https://bepsholding.com/el-holding/?lang=es). Three types of nutraceutical formulations will be prepared, and study participants will consume three capsules daily to achieve the following dosages:
+
+1. 2 g of EPA + 15 mg of hydroxytyrosol (HT) (3 Type-1 capsules, EPA+HT),
+2. 2 g of EPA (3 Type-2 capsules, EPA), and
+3. 2 g of seed oil (sunflower) as a placebo (3 Type-3 capsules, Placebo).
+
+The daily dose of 15 mg HT was selected based on the EFSA claim for the prevention of LDL oxidation , while the 2 g EPA dose was established following EFSA recommendations for triglyceride reduction.
+
+A chronic, randomized, controlled, crossover, double-blind, free-living study design is proposed, spanning 46 weeks. Following a two-week washout period, during which the consumption of extra virgin olive oil, and olives will be restricted, participants will be grouped based on baseline characteristics (control or hypertriglyceridemia). They will then be randomized into three groups (randomization performed using SPSS software), such that one-third of participants will receive EPA+HT, another third will receive EPA without HT, and the remaining third will receive a placebo nutraceutical containing sunflower oil with no EPA or HT.
+
+Each intervention phase will last 12 weeks. After completing one intervention, participants will undergo a four-week washout period before transitioning to the next intervention. Before the start of each phase, participants will be provided with all necessary capsules (EPA+HT, EPA, or placebo) along with detailed consumption guidelines.Volunteers will take the capsules with lunch and dinner.
+
+Additionally, during the study, volunteers will consume a commercial olive oil with a minimal phenol content as their culinary oil. This olive oil will also be supplied by the research team for family use (1 L/2 weeks). Participants will be instructed to maintain their usual lifestyle throughout the study but will be restricted from consuming any other culinary oils apart from the one provided by the research group, as well as olives. Furthermore, the use of dietary supplements containing antioxidants, other than vitamins, will be prohibited.
+
+Participants will attend the Human Nutrition Unit (UNH) at ICTAN-CSIC on six occasions, corresponding to the beginning and end of each intervention phase. Once eligibility has been confirmed based on the inclusion and exclusion criteria, participants will attend the UNH for signing the informed consent, receiving olive oil for household consumption, and receiving instructions to begin the stu
+
+PRIMARY OUTCOMES:
+  - Total cholesterol concentration
+  - HDL-C, LDL-C, VLDL-C, and triglyceride concentrations
+  - Apolipoprotein A1 and B concentrations
+  - Aminotransferases: AST (ASAT) and ALT (ALAT) enzyme activity
+  - Uric acid, creatinine and glucose concentrations
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: EPA + HT
+  - DIETARY_SUPPLEMENT: EPA
+  - DIETARY_SUPPLEMENT: Sunflower Oil
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06992323

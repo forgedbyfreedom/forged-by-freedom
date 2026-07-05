@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06057584
+Title: Effect of Somatosensory Motor Intergration Training on Post-stroke Upper Limb Function.
+Official Title: The Neural Mechanism and Efficacy of Somatosensory Motor Intergration Training on the Upper Extremity Somatosensory Motor Function in Patients With Chronic Stroke.
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 153
+Topic: strength training
+
+SUMMARY:
+Background: Most patients suffer from post-stroke somatosensory and motor impairments, and 50% to 70% of patients in the chronic stage still have upper extremity impairments that severely limit their functional independence and quality of life. Somatosensory and motor functions are closely related to each other. Previous evidence showed that somatosensory training or stimulation can modulate motor performance and enhance the efficacy of motor training, and motor training has the potential to promote the reorganization of the somatosensory cortex and enhance somatosensory-motor integration. Therefore, combining somatosensory and motor training may optimize the recovery of upper limb function. However, due to the small number of relevant empirical studies and the low quality of evidence, the effects and neural mechanisms of combined somatosensory and motor training compared with pure somatosensory training or pure motor training are still unknown or uncertain.
+
+Purposes: This project will compare the immediate and long-term effects of somatosensory-motor integration training, pure motor training, and pure somatosensory training on the somatosensory and motor functions of patients with chronic stroke, and will investigate the neural mechanisms of somatosensory-motor recovery using neuroimaging and neurophysiological techniques.
+
+Research methods: A single-blind (assessor-blinded) randomized controlled trial design will be used in this three-year project. A sample of 153 patients with chronic stroke will be recruited, and subjects who meet the selection criteria will undergo a baseline assessment and then be randomly assigned in stratified blocks to either the somatosensory-motor integration training group, pure somatosensory training group or pure motor training group. Subjects will receive three to five 60-minute sessions per week for a total of 15 sessions, followed by post-intervention (immediate effect) and three-month follow-up (long-term effect) assessments. Outcome measures will include neuroimaging (functional near-infrared spectroscopy.), and clinical scales (somatosensory function, motor function, upper extremity function, real life functional upper extremity performance., daily activities, and quality of life). The data will be analyzed using intention-to-treat analysis. The treatment effects within each group will be determined by paired t tests. The difference in effects among the three groups will be analyzed by analyses of covariate. Multiple linear regressions will also be used to explore the factors affecting the recovery of somatosensory and motor functions.
+
+Expected results and contributions: The researchers expect that somatosensory-motor integration training, pure somatosensory training and pure motor training can all effectively improve the somatosensory and motor functions of patients with stroke. Among the three groups, somatosensory-motor integration training will show the greatest improvement in upper extremity function. The results of this project will provide empirical evidence on the effects and neural mechanisms of somatosensory-motor integration training, which will help clinicians select appropriate treatment strategies, facilitate clinical reasoning, and predict the recovery potential of somatosensory-motor function based on patient characteristics.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Pre- and 3-month change in cerebral hemodynamics evaluated by functional near-infrared spectroscopy (fNIRS)
+  - Pre- and 3-month change in functional ability of the upper extremities assessed by Action Research Arm Test (ARAT)
+  - Pre- and 3-month change in motor function of the upper limbs assessed by Fugl-Meyer Assessment of Upper Extremity (FMA-UE)
+  - Pre- and 3-month change in sensation assessed by Revised Nottingham Sensory Assessment (rNSA)
+  - Pre- and 3-month change in sensation assessed by Rivermead Assessment of Somatosensory Performance (RASP)
+
+INTERVENTIONS:
+  - BEHAVIORAL: somatosensory-motor integration training
+  - BEHAVIORAL: pure somatosensory training
+  - BEHAVIORAL: pure motor training
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06057584

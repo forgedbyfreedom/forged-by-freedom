@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03305536
+Title: Decalcification of the Aortic Valve by Vitamin K2 (Menaquinone-7)
+Official Title: Decalcification of the Aortic Valve by Vitamin K2 (Menaquinone-7)
+Status: UNKNOWN
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: protein supplementation
+
+SUMMARY:
+Aortic Stenosis is a common but fatal disease when it becomes symptomatic, specially if not treated. Until now surgery remains the only reliable and effective treatment.
+
+In this study, the investigators will examine the effect of high dose of Menaquinone-7 (MK-7) supplementation (1000 mcg)/day on the progression of the aortic valve disease. The investigators hypothesize that MK-7 supplementation may slow or even reverse the progression of the disease process.
+
+DETAILED DESCRIPTION:
+The study is a randomized clinical trial that will use Cardiac Echography and multi-detector computed tomography to compare the changes in the Aortic Valve Calcification Score (AVCS) over 3 years when using:
+
+1. 1000 mcg/d Vitamin K2 (menaquinone-7) + 5000 IU/d Vitamin D3
+2. 5000 IU/d Vitamin D3 as a control group
+
+PRIMARY OUTCOMES:
+  - Evolution of the Aortic Valve Hemodynamic measured by echography: Change in Gradients in (mm Hg)
+  - Evolution of the Aortic Valve Hemodynamic measured by echography: Change in Surface area in (cm2/m2)
+  - Evolution of the Aortic Valve Hemodynamic measured by echography: Change in V max in (m/sec)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin K2 (Menaquinone 7) + Vitamin D3
+
+ELIGIBILITY:
+Age: 30 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03305536

@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03885817
+Title: Physically Active During Cancer Treatment (FAKT)
+Official Title: Physically Active During Cancer Treatment
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 66
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This randomized controlled trial aims to investigate whether an individually tailored exercise program and nutritional guide can affect the development of self-reported peripheral sensory neuropathy and fatigue in patients with colorectal cancer receiving adjuvant chemotherapy.
+
+DETAILED DESCRIPTION:
+Colorectal cancer is the second most common cancer in Norway with 4332 new cases in 2017. Standard of care is radical surgery followed by adjuvant chemotherapy for some, depending on the stage of the disease. Most commonly, a combination of Oxaliplatin and Capecitabine or 5-fluorouracil is given for 3 to 6 months.
+
+A common side effect of Oxaliplatin is peripheral sensory neuropathy, which occur in different degree in over 90 % of the patients. There is no established treatment to prevent or reduce Oxaliplatin induced peripheral neuropathy. A few minor studies have been published indicating that physical activity can reduce the patient's experience of chemotherapy-induced peripheral neuropathy.
+
+Most patients receiving chemotherapy will experience fatigue in some degree. It has been shown in several studies that exercise can reduce cancer related fatigue, though most studies have been performed among women with breast cancer.
+
+There are a limited number of randomized controlled clinical trials looking at the effects of physical exercise during ongoing adjuvant chemotherapy in colorectal cancer patients. Thus, there is a clear need for further studies on physical exercise in this patient group.
+
+In the period from January 2017 to November 2018 the investigators did a non-randomized pilot study to test the feasibility of the exercise intervention in this patient group, and to calculate sample size for the randomized trial.
+
+The 9-item European Organisation for Research and Treatment of Cancer (EORTC) Quality of Life Questionnaire (QLQ) Chemotherapy Induced Peripheral Neuropathy (CIPN20) sensory subscale will be used to measure peripheral sensory neuropathy. Each item is rated on a scale from 1 ("not at all") to 4 ("very much"), and the total raw score ranges from 9 to 36. The raw scores will be linearly transformed to a 0 to 100 scale (higher scores represent worse CIPN severity). A difference of 10 is considered clinically significant. The sample size calculation is based on a two-sided t-test. Aim is to demonstrate a difference in patient-reported sensory peripheral neuropathy between the two groups 3 months after randomization. It is postulated that the intervention group develops less degree of peripheral sensory neuropathy than the control group. Based on the answers obtained from the questionnaire in the pilot study, a standard deviation (SD) of 12.5 is assumed for the change between baseline and 3 months. To detect a difference of 10 with a strength of 80% and with a significance level of 0.05, there should be 25 patients in each arm. A drop out of 20% is taken into account based on experience in the pilot study. This suggests that 64 patients should be included in this study.
+
+Patients scheduled for adjuvant Oxaliplatin based combination chemotherapy will be recruited from cancer clinics in Norway, and randomized to an intervention group or a control group. Before randomization and start of the first cycle of chemotherapy, the study partici
+
+PRIMARY OUTCOMES:
+  - Patient reported peripheral sensory neuropathy
+
+INTERVENTIONS:
+  - BEHAVIORAL: Exercise training and nutritional guide
+  - OTHER: Standard follow-up care
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03885817

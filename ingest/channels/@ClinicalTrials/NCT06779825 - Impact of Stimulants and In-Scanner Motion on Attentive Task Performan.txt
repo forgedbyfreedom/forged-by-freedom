@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06779825
+Title: Impact of Stimulants and In-Scanner Motion on Attentive Task Performance in ADHD (ADHD_NFB)
+Official Title: Impact of Stimulants and In-Scanner Motion on FMRI Neurofeedback and Task Performance in ADHD
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this interventional study is to learn the effects that stimulant medication prescribed to ADHD individuals has in their performance of attentive tasks, as measured by images and data collected through neuroimaging (fMRI) while also implementing new motion-correcting software. The main questions it aims to answer are:
+
+1. How do the use of stimulants affect brain activity and motion in fMRI research in ADHD studies?
+2. Can neurofeedback, an attentive task using real-time brain activity, engage the same brain circuits as seen with stimulant medication in individuals with ADHD?
+
+Researchers will compare participant's brain activity from the completion of attentive tasks performed in the scanner while following their regular medication regimen and while abstaining to take medication. Researchers will also compare how the data collected using a more precise motion correction software differs to other previously reported data from ADHD studies who possibly employed more lenient measures of motion correction.
+
+Participants will:
+
+1. Be asked to complete at least 4 fMRI sessions, two of which will include neurofeedback
+2. Be asked to abstain from taking stimulant medication on the day of two of these fMRI visits
+3. Complete attentive tasks while in the scanner that will activate target brain regions of interest
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Neurofeedback mimicking the effects of stimulants
+  - Performance on Attentive Tasks
+  - Precise motion correction as a better accountant of ADHD mechanisms
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: fMRI Neurofeedback attention task
+
+ELIGIBILITY:
+Age: 12 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06779825

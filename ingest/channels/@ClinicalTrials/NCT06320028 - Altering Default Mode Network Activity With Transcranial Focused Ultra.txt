@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06320028
+Title: Altering Default Mode Network Activity With Transcranial Focused Ultrasound to Reduce Depressive Symptoms
+Official Title: Altering Default Mode Network Activity to Reduce Depressive Symptoms
+Status: UNKNOWN
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: physical activity intervention
+
+SUMMARY:
+Depression is a leading cause of disability worldwide, affecting roughly 21 million adults. Repetitive Negative Thought (RNT) has been identified as a potential maintaining factor in depression, such that those who exhibit higher degrees of RNT endorse greater symptoms. Research also suggests that the Default Mode Network (DMN), responsible for self-referential processing, plays an important role in depression wherein it has been linked to RNT. In depressed individuals, this network appears to be hyper-connected, or "too connected", within itself which, in turn, is thought to promote RNT.
+
+Half of depressed individuals are treatment-resistant, creating a critical need to identify more effective interventions derived from a better mechanistic understanding of the development and maintenance of depression. Non-invasive Transcranial-Focused Ultrasound Stimulation (tFUS) is promising for the treatment of depression. tFUS directs a low-intensity (nonthermal) focused ultrasound beam that passes safely through the skull. Compared to other noninvasive neuromodulation approaches, tFUS can target deeper brain regions with high spatial precision.
+
+The present study is an exploratory non-blinded single treatment study to investigate whether tFUS targeting a major hub of the DMN, the anterior-medial prefrontal cortex, can improve depression symptoms and reduce RNT. Twenty depressed individuals with high RNT (75th percentile) will complete up to eleven ultrasound sessions targeting the anterior medial prefrontal cortex, a hub of the brain's default mode network that has been found to be hyper-connected in depression. MRI scans will be obtained before the first and after the last ultrasound sessions. Based on previous literature, it is predicted that depression interview ratings and self-report symptoms will decrease after the intervention, and also that DMN connectivity will decrease following intervention.
+
+DETAILED DESCRIPTION:
+Participants will first complete the online screening to identify those who may meet criteria of major depressive disorder and have high RNT. Those meeting these criteria will be contacted for a formal diagnostic interview, consisting of the consent process and a structured clinical interview using the DSM-5. Once deemed eligible, participants will complete baseline interviews, self-report surveys, and an MRI session. Then, they will complete up to three weeks of ultrasound treatment, wherein the first week consists of five ultrasound sessions. Upon completion of week one, participants will complete the same interview, self-report surveys, and MRI session. Participants' symptom improvement will be determined by whether they meet remission criteria, defined as a Beck Depression Inventory Score - II (BDI-II) of \<13 and a Hamilton Depression Rating Scale (HDRS) score of \<8. If remission criteria are not met, participants will continue ultrasound sessions for two more weeks, three sessions per week. Following completion, participants will complete a final interview, self-report surveys, and MRI session. In each treatment session, the ultrasound device will be placed on the participants' forehead with the aid of the customized headset co-localized to the participant's structural MR image. Each ultrasound treatment lasts ten minutes.
+
+PRIMARY OUTCOMES:
+  - Beck Depression Inventory - II (BDI-II)
+  - Perseverative Thinking Questionnaire (PTQ)
+  - Hamilton Depression Rating Scale (HDRS)
+  - Default Mode Network (DMN) Connectivity
+
+INTERVENTIONS:
+  - DEVICE: Non-Invasive Transcranial Focused Ultrasound
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06320028

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05631938
+Title: Study to Evaluate the Effect of Renal Impairment and Dialysis Treatment on the Pharmacokinetics of a Single 3 mg Cytisinicline Dose
+Official Title: A Phase I, Open-Label Study to Evaluate the Effect of Renal Impairment and Dialysis Treatment on the Pharmacokinetics of a Single 3 mg Cytisinicline Dose.
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: creatine supplementation
+
+SUMMARY:
+The primary objectives of this study are:
+
+1. To obtain information on the pharmacokinetics of cytisinicline following a single oral dose in subjects with varying degrees of renal impairment relative to matched controls with normal renal function.
+2. To investigate the extent of cytisinicline removal by hemodialysis.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma Pharmacokinetic (PK) Parameter: Maximum Observed Plasma Concentration (Cmax)
+  - Plasma PK Parameter: Time of Occurrence of Cmax (Tmax)
+  - Plasma PK Parameter: Area Under the Plasma Concentration Versus Time Curve (AUC) From Time of Dosing (t=0h) to the Time of the Last Measurable Concentration (AUC0-t)
+  - Plasma PK Parameter: Total AUC Extrapolated to Infinity (AUC0-∞)
+  - Plasma PK Parameter: Apparent Terminal Elimination Rate Constant (λz)
+
+INTERVENTIONS:
+  - DRUG: cytisinicline
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05631938

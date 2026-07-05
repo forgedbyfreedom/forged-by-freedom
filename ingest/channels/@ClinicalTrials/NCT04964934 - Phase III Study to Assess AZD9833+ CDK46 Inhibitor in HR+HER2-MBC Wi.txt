@@ -1,0 +1,65 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04964934
+Title: Phase III Study to Assess AZD9833+ CDK4/6 Inhibitor in HR+/HER2-MBC With Detectable ESR1m Before Progression (SERENA-6)
+Official Title: A Phase III, Double-blind, Randomised Study to Assess Switching to AZD9833 (a Next Generation, Oral SERD) + CDK4/6 Inhibitor vs Continuing Aromatase Inhibitor (Letrozole or Anastrozole)+ CDK4/6 Inhibitor in HR+/HER2-MBC Patients With Detectable ESR1Mutation Without Disease Progression During 1L Treatment With Aromatase Inhibitor+ CDK4/6 Inhibitor- A ctDNA Guided Early Switch Study
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 315
+Topic: growth hormone treatment
+
+SUMMARY:
+The study is intended to show superiority of AZD9833 in combination with CDK4/6 inhibitor (palbociclib, abemaciclib or ribociclib) versus aromatase inhibitors (anastrozole or letrozole) in combination with CDK4/6 inhibitor in patients with hormone receptor-positive (HR-positive), human epidermal growth factor receptor 2-negative (HER2-negative) metastatic breast cancer with detectable ESR1 mutation.
+
+DETAILED DESCRIPTION:
+Breast cancer is the most common type of cancer among women. In people with breast cancer, the body is not able to control the growth of some cells. These extra cells can form tumors in the breast. When tumor cells move to different parts of the body this is called advanced cancer. Researchers are looking for better ways to treat advanced breast cancer.
+
+This trial will look at six drugs: palbociclib, abemaciclib, ribociclib, letrozole, anastrozole, and AZD9833. AZD9833 is the trial drug, and is the only drug not yet approved for use. Palbociclib, abemaciclib and ribociclib work in the same way and are a type of cancer drug called a CDK4/6 inhibitor. Letrozole and anastrozole work in the same way and are both a type of cancer drug called an aromatase inhibitor (AI). CDK4/6 inhibitors and AIs work together to block the tumor's ability to grow. These drugs have been approved for combined use in people with advanced breast cancer that is HR-positive and HER2-negative. But if people get mutations in the ESR1 gene, it can make the AI and CDK4/6 inhibitor treatment work less well.
+
+The trial drug, AZD9833, is designed to work with a CDK4/6 inhibitor in the same way that an AI does. Researchers think that AZD9833 might work better with a CDK4/6 inhibitor than an AI does in people who get mutations in their ESR1 gene.
+
+Participants in this trial will have already been receiving one of the following combinations of a CDK4/6 inhibitor and an AI:
+
+* palbociclib + anastrozole
+* palbociclib + letrozole
+* abemaciclib + anastrozole
+* abemaciclib + letrozole
+* ribociclib + anastrozole
+* ribociclib + letrozole
+
+During the trial, participants will remain on the same CDK4/6 inhibitor that they were taking before the trial.
+
+In this trial, the researchers want to find out how well switching a participant with an ESR1 gene mutation from an AI (letrozole or anastrozole) to AZD9833 works in the treatment of advanced breast cancer that is HR-positive and HER2-negative.
+
+The researchers will look at which trial treatment helps the participants live longer with the cancer before it gets worse.
+
+The researchers also want to know more about how safe AZD9833 is.
+
+The trial participants will be split into 2 groups:
+
+* Participants in Group A will receive AZD9833, a CDK4/6 inhibitor, and a placebo
+* Participants in Group B will receive an AI, a CDK4/6 inhibitor, and a placebo
+
+A placebo looks like a treatment but does not have any medicine in it.
+
+A computer program will be used to randomly choose the treatments each participant gets. This helps make sure the groups are chosen fairly. Researchers do this so that comparing the results of each treatment will be as accurate as possible.
+
+The participants will take their trial treatments over 28-day cycles, with a placebo and either AZD9833 or an AI taken once daily by mouth for all 28 days. If the participant is taking abemaciclib, they will take it twice daily by mouth for all 28 days. If the participant is taking palbociclib or
+
+PRIMARY OUTCOMES:
+  - Progression-free survival (PFS) assessed by the Investigator as defined by response evaluation criteria in solid tumors (RECIST version 1.1)
+
+INTERVENTIONS:
+  - DRUG: AZD9833
+  - DRUG: AZD9833 Placebo
+  - DRUG: Anastrozole
+  - DRUG: Anastrozole placebo
+  - DRUG: Letrozole
+
+ELIGIBILITY:
+Age: 18 Years to 130 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04964934

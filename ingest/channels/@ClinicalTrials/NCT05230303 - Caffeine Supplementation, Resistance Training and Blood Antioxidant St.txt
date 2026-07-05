@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05230303
+Title: Caffeine Supplementation, Resistance Training and Blood Antioxidant Status
+Official Title: Acute Effects of Caffeine Supplementation on Resistance Training Volume and Blood Antioxidant Status in Resitance Trained Men
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: caffeine exercise
+
+SUMMARY:
+The purpose of this study is to verify the effect of acute caffeine intake on resistance training volume and blood antioxidant status, in a randomised, double-blind, placebo-controlled crossover trial.
+
+DETAILED DESCRIPTION:
+Caffeine is one of the most commonly consumed psychoactive substances in the world. Several previous studies confirmed that caffeine improves several aspects of exercise performance, including resistance training outcomes. Interestingly, caffeine and its catabolic products, theobromine and xanthine, exhibit antioxidant and prooxidant properties. Additionally, resistance training promotes the generation of reactive oxygen species, which are important for the cellular adaptation process.
+
+Hovewer, to the best of our knowledge, there is no information as to how caffeine combined with resistance training affects blood antioxidant status. Therefore, the aim of this study was to examine acute effects of caffeine supplementation on resistance training volume and blood antioxidant status in resistance trained men.
+
+PRIMARY OUTCOMES:
+  - Change the levels of oxidative stress markers
+  - Changes in markers of muscle damage
+  - Changes in Inflammation markers
+  - Changes in markers of liver function
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine supplementation
+  - DIETARY_SUPPLEMENT: Placebo treatment
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05230303

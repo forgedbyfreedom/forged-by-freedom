@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07503990
+Title: Effects of Food Intake Sequence on Substrate Utilisation and Endurance Performance
+Official Title: Effects of Manipulating Food Intake Sequence in the Pre-exercise Meal on Substrate Utilisation and Endurance Performance in Athletes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: body composition exercise
+
+SUMMARY:
+The goal of this clinical trial is to understand how consuming a pre-exercise meal in different food intake sequences affects substrate utilisation and endurance exercise performance in healthy trained athletes. Specifically, the main questions it aims to answer are:
+
+* Does consuming the pre-exercise meal in different food intake sequences alter the whole-body utilisation of fat and CHO at rest and during prolonged exercise at moderate to heavy intensities?
+* Does consuming the pre-execise meal in different food intake sequences alter time-trial performance?
+* Does consuming the pre-exercise meal in different food intake sequences alter other metabolic and physiological responses before, during or after exercise (i.e., blood glucose, blood lactate, heart rate (HR), ratings of perceived exertion (RPE), appetite)?
+
+To address these questions, researchers will compare eating the dietary sources of rapidly absorbed CHO at the end (CHO-last meal pattern) or at the start (CHO-first meal pattern) of a standardised pre-exercise meal, in a randomised, counterbalanced, crossover design. Two hours after starting the pre-exercise meal, participants will perform a 60-min submaximal test on a cycling ergometer at two different intensities (30 min at 90% of the ventilatory threshold (VT) 1 and 30 min at 50% VT1-VT2), followed by a 10-km cycling time trial (TT).
+
+In the screening visit participants will:
+
+* Be screened for cardiometabolic conditions
+* Perform an 8-12-min graded exercise test to determine their maximal pulmonary oxygen uptake (VO2max) and non-invasive submaximal anchors of performance (VT 1 and VT 2)
+* Be familiarised to the experimental procedures
+
+In experimental visits participants will:
+
+* Follow guidelines pertaining to dietary intake, exercise and sleep in the previous 24 hours
+* Have a standardised test meal in either the CHO-last or CHO-first food intake sequence
+* Have 3 drops of capillary blood (0,9 µL in total) collected to measure glucose and lactate pre-meal, 15, 30, 45, 60, 90 and 120 min post-meal, every 15 min during submaximal exercise and post-TT
+* Breathe into an indirect calorimetry mask for 5 min pre-meal, 15, 30, 45, 60, 90 and 120 min post-meal, every 15 min during submaximal exercise and post-TT
+* Wear a HR monitor continuously during submaximal exercise and the TT
+* Rate their appetite on visual analogue scales pre-meal, 15, 30, 45, 60, 90 and 120 min post-meal, and 30 min post-TT
+* Rate their perceived exertion on RPE scales every 15 min during submaximal exercise, post-TT and 30 min post-TT.
+
+Data will be compared within-participant between food intake sequences using linear mixed-effects models with random intercepts, to account for repeated measurements, interindividual variability, and potential missing data.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Whole-body fat oxidation
+  - Time-trial performance
+
+INTERVENTIONS:
+  - OTHER: Carbohydrate-last meal pattern
+  - OTHER: Carbohydrate-first meal pattern
+
+ELIGIBILITY:
+Age: 18 Years to 64 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07503990

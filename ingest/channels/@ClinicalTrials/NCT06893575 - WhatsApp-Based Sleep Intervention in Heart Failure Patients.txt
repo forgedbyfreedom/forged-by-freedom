@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06893575
+Title: WhatsApp-Based Sleep Intervention in Heart Failure Patients
+Official Title: WhatSleeP-HF Trial: The Effect of a WhatsApp-Based Sleep Intervention on Sleep Quality in Heart Failure Patients, Based on the Transtheoretical Model: Two Center, Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: caffeine exercise
+
+SUMMARY:
+Heart failure (HF) is a growing global health issue, with increasing prevalence among aging populations. In Turkey, the prevalence of HF was 2.114% in 2022, affecting approximately three million individuals. HF patients often experience poor sleep quality due to symptoms like dyspnea, fatigue, and fluid retention, which significantly impact their overall health and quality of life. Sleep disorders, particularly obstructive and central sleep apnea, are commonly reported among HF patients, exacerbating disease progression and increasing morbidity. Nurses play a crucial role in improving HF patients' self-care behaviors, including sleep hygiene interventions. Sleep hygiene consists of non-pharmacological strategies to improve sleep quality, such as maintaining a regular sleep schedule, avoiding electronic devices before bed, and minimizing caffeine and alcohol intake. However, behavior change in sleep hygiene requires structured intervention models, such as the Transtheoretical Model (TTM), which provides a stepwise approach to behavioral change, moving individuals through different stages from precontemplation to maintenance. TTM has been successfully applied in chronic disease management, including smoking cessation, diabetes self-care, hypertension control, and physical activity promotion. However, its application in HF patients, particularly for sleep interventions, remains underexplored. The limited existing studies suggest that HF patients often remain in the contemplation or preparation stages, indicating the need for tailored interventions to facilitate behavior change.
+
+Advancements in digital health have enabled home-based sleep monitoring through wearable devices and mobile applications. Smartwatches, such as the Mi Band, provide real-time data on sleep parameters, offering a non-invasive alternative to traditional clinical sleep studies. Additionally, WhatsApp-based interventions have gained attention in healthcare, proving effective in chronic disease management by enhancing patient education, treatment adherence, and remote monitoring. WhatsApp facilitates real-time communication between patients and healthcare providers, reducing hospital readmissions and improving self-care practices. This study proposes a WhatsApp-based, TTM-guided sleep intervention for HF patients to improve sleep quality and self-care behaviors. Unlike previous studies, which primarily focus on general self-care education, this project integrates TTM with a digital platform to support sustained behavior change. Participants will receive personalized sleep hygiene guidance through WhatsApp, with regular reminders and real-time support. Sleep quality will be assessed using the Pittsburgh Sleep Quality Index (PSQI) and Sleep Hygiene Index (SHI), alongside objective sleep parameters measured via smartwatches. The impact on quality of life (QoL) will be evaluated using the Minnesota Living with Heart Failure Questionnaire (MLHFQ).
+
+Hypotheses H1. The WhatsApp-based, TTM-guided sleep health program will significantly improve subjective sleep quality in HF patients.
+
+H2. The WhatsApp-based, TTM-guided sleep health program will significantly improve sleep hygiene in HF patients.
+
+H3. The WhatsApp-based, TTM-guided sleep health program will significantly improve quality of life in HF patients.
+
+This project is the first study to integrate TTM-based behavior change strategies with a WhatsApp sleep intervention for HF patients. The findings will provide novel insights into digital health interventions for chronic disease management and offer a scalable, cost-effective approach to improving sleep hygiene in HF populations.
+
+DETAILED DESCRIPTION:
+HF is a major global health concern, particularly in aging populations. In Turkey, HF prevalence reached approximately 2.114% in 2022, affecting nearly three million individuals. The condition leads to high hospitalization rates and significant healthcare costs. Given its increasing prevalence, improving self-care behaviors among HF patients is crucial. HF is a chronic disease that impairs the heart's ability to pump blood efficiently, leading to symptoms such as dyspnea, fatigue, and fluid retention. Beyond physical symptoms, HF patients frequently experience psychological issues like depression and anxiety, further compromising their QoL. Among the key determinants of reduced QoL in HF patients is poor sleep quality, which affects daily functioning and overall health status. Studies indicate that HF patients frequently suffer from sleep disturbances, including insomnia, obstructive sleep apnea (OSA), and central sleep apnea (CSA), all of which contribute to disease progression and increased morbidity risk. Addressing sleep quality in HF patients is an essential component of improving disease management and patient outcomes. Nurses, as key healthcare providers, play a pivotal role in implementing interventions to improve sleep hygiene, a critical yet often overlooked aspect of HF care. However, behavior change in sleep hygiene requires structured, evidence-based interventions that account for the complexities of adopting new habits.
+
+Sleep hygiene refers to a set of non-pharmacological strategies designed to promote better sleep quality. These strategies include:
+
+* Maintaining a consistent sleep schedule
+* Reducing screen time before bed
+* Minimizing caffeine, alcohol, and nicotine consumption
+* Creating a comfortable sleep environment
+* Engaging in physical activity during the day while avoiding excessive daytime naps
+
+Despite these well-established guidelines, adherence to sleep hygiene recommendations remains a challenge, particularly among HF patients. Behavior change in chronic illness management is complex, requiring systematic approaches that help individuals transition from awareness to action and long-term maintenance. One effective approach for guiding behavior change is the TTM. TTM outlines five distinct stages of change:
+
+* Precontemplation: No intention to change behavior
+* Contemplation: Awareness of the need for change but no action taken
+* Preparation: Intention to adopt change in the near future
+* Action: Active engagement in behavior change
+* maintenance: Sustained behavior over time TTM has been successfully applied to a range of chronic disease interventions, including smoking cessation, diabetes self-management, and hypertension control. However, its use in HF patients-particularly for sleep hygiene interventions-remains limited. Previous studies suggest that most HF patients remain in the contemplation or preparation stages, indicating the need for targeted, stage-specific interventions that facilitate sustainable behavio
+
+PRIMARY OUTCOMES:
+  - Sleep quality
+  - Sleep hygiene
+
+INTERVENTIONS:
+  - BEHAVIORAL: TTM-Guided Digital Sleep Health Program
+
+ELIGIBILITY:
+Age: 18 Years to 74 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06893575

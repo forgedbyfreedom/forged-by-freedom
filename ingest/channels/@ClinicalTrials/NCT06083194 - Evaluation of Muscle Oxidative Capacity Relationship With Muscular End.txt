@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06083194
+Title: Evaluation of Muscle Oxidative Capacity Relationship With Muscular Endurance, Fatigue (Multiple Sclerosis).
+Official Title: Non-invasive Evaluation of Muscle Oxidative Capacity. Study of Its Relationship With Muscular Endurance and Fatigue in Patients With Multiple Sclerosis
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: exercise muscle mass
+
+SUMMARY:
+Multiple sclerosis (MS) is a chronic inflammatory disease of the central nervous system. It is characterized by different progressive forms with periods of flare-ups interspersed with phases of remission. MS manifests clinically with signs of multiple neurological dysfunctions as well as less specific symptoms such as fatigue, the prevalence of which is found to be high in these patients and is independently associated with an alteration in their quality of life.
+
+Recently, a non-invasive method for assessing maximal muscle oxidative capacity (mVO2) using optical measurement of muscle oxygenation (near-infrared spectroscopy, NIRS) has been described. Measuring tissue light absorption from a skin sensor facing a muscle, makes it possible to distinguish tissue concentrations of oxyhemoglobin (HbO2) and hemoglobin (Hb). The difference in absorbance of Hb and HbO2 corresponds to the balance of O2 supply and consumption in tissue capillaries, allowing calculation of a time constant (kNIRS, min-1) reflecting mitochondrial function.
+
+Current literature provides reference values in young healthy subjects and MS patients. This index could therefore constitute a particularly interesting non-invasive indicator of mitochondrial functioning, usable in the clinic.
+
+DETAILED DESCRIPTION:
+Following an arterial occlusion, the rate of decay of the NIRS signal is only dependent on local O2 consumption. Following an exercise increasing the oxygen consumption of the muscle (isometric contractions for 10 to 15 s), carrying out a series of brief occlusions makes it possible to calculate mVO2 (slope of O2 desaturation at each occlusion). mVO2 decreases exponentially with time, allowing calculation of a time constant (kNIRS, min-1) reflecting mitochondrial function. Furthermore, it has been shown that kNIRS correlates with mitochondrial respiration rate measured in oxygraphy (Ryan et al., 2014).
+
+A few studies have focused on the link between maximal muscular oxidative capacity (mVO2), fatigue and muscular endurance in patients with MS. Furthermore, contradictory results have been reported regarding mVO2 in this population, suggesting in one case a higher mVO2 compared to healthy subjects while others observe the opposite. This results in an imprecise assessment of maximum muscle oxidative capacity (mVO2) in MS patients and its relationship with fatigue and muscular endurance in this population. The investigator therefore propose to carry out a prospective interventional study to analyze the relationship between these different parameters. The investigator's hypothesis is the existence of a positive correlation between mVO2 and muscular endurance, and negative with fatigue. This relationship will also be sought 6 months after participants engagement in regular physical activity. Given the accumulation of functional deficits, this approach is focused on preventive medicine, and with the aim of improving the care of these patients.
+
+The statistical analyzes will be carried out with Stata software (version 15; StataCorp, College Station, Texas, USA), considering a risk of two-sided first type error of 5%.
+
+Continuous variables will be presented in the form of mean and standard deviation, according to the normality of their distribution (Shapiro-Wilk test if necessary). In case of non-normality, they will be presented in the form of median, quartiles and extreme values. Qualitative variables will be expressed in numbers and associated percentages.
+
+Graphical representations will, as much as possible, be associated with these analyses.
+
+A description of the deviations from the protocol, the patients distributed according to these deviations and the causes of abandonment will also be carried out. The number of patients included and the inclusion curve will be presented by group.
+
+Patients will be described at inclusion according to the following variables: compliance with eligibility criteria, epidemiological characteristics, clinical characteristics and possible treatments.
+
+The main analysis aiming to investigate the association between maximum muscle oxidative capacity (mVO2) of MS patients assessed by near-infrared spectroscopy (NIRS) and muscular endurance of the gastrocnemius muscles assessed with the unipedal plantar flexion test (Single-
+
+PRIMARY OUTCOMES:
+  - Maximal muscle oxidative capacity (mVO2)
+  - Muscular endurance of the gastrocnemius muscles
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06083194

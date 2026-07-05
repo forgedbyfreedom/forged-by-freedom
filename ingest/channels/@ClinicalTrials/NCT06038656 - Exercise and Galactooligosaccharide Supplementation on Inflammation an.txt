@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06038656
+Title: Exercise and Galactooligosaccharide Supplementation on Inflammation and Iron Absorption (FexerGOS)
+Official Title: Effects of Exercise and Acute and Chronic Galactooligosaccharide Supplementation on Inflammation and Iron Absorption in Female Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: protein supplementation
+
+SUMMARY:
+Iron depletion is common in female athletes depending on the sports discipline. Endurance and resistance exercise can induce inflammation thereby reducing dietary iron absorption. Galacto-oligosaccharides (GOS) improved iron absorption in young healthy women and infants, and improved gut inflammation in iron-supplemented infants. A stable isotope study will be performed to investigate the effect exercise and acute and chronic GOS supplementation on inflammation and iron absorption in female athletes.
+
+DETAILED DESCRIPTION:
+Iron depletion is common in athletes, particularly in females, reaching prevalence rates up to 70% depending on the sports discipline. As iron is essential for energy production and oxygen transport, a deficiency can impair performance, especially in endurance athletes. Iron deficiency in athletes may be caused by inadequate intake, but reduced iron absorption and increased losses also seem to play a role. Both endurance and resistance exercise at a high intensity, can induce inflammation resulting in a hepcidin response via interleukin-6 (IL-6) regulation. Hepcidin is the master regulator of systemic iron homeostasis, and a recent study in adult males showed that vigorous exercise decreases dietary iron absorption associated with increases in IL-6 and hepcidin. Iron losses induced by exercise have been attributed to several factors, including gastrointestinal bleeding associated with endothelial damage, haematuria, haemolysis, and increased sweating. Galacto-oligosaccharides (GOS) have been shown to acutely enhance iron absorption in young, healthy women. In Kenyan infants with a high infectious disease burden, chronic GOS administration improved iron absorption and mitigated the negative effects of iron supplementation on gut inflammation, likely mediated by its bifidogenic effect. Whether GOS has the potential of improving iron absorption has not been studied in athletes.
+
+The study aims are to determine 1) the effects of a bout of resistance exercise at 70% 1 repetition maximum (RM) on inflammation, hepcidin and iron absorption in female team athletes; and 2) the effect of acute and chronic GOS supplementation on iron absorption in response to the exercise bout.
+
+The trial will entail two series of three iron absorption conditions separated by six weeks of GOS supplementation (10 g/day). The study participants will be 22 female athletes recruited from the North-West University and Potchefstroom area, South Africa. At baseline, the first series of three iron absorption studies will be conducted, all measuring iron absorption from a supplement administered with labelled ferrous fumarate in the following conditions: 1) after a period of rest; 2) three hours after an acute resistance exercise bout; and 3) three hours after an acute resistance exercise bout, co-administered with GOS. Following this, participants will consume GOS daily for 6 weeks, followed by an identical series of iron absorption studies. Markers of systemic and gut inflammation, hepcidin, microflora composition and iron status indicators before and after the GOS intervention will be determined. In addition, erythrocyte iron incorporation will be determined after both series of isotope studies. Furthermore, the kinetics of isotope appearance, inflammatory markers, and hepcidin for 24 hours during each of the six iron absorption studies will be investigated.
+
+The primary hypotheses are that fractional iron absorption from a supplemental dose of ferrous fumarate will be: 1) lower t
+
+PRIMARY OUTCOMES:
+  - a. Fractional iron absorption (%)
+  - b. Fractional iron absorption (%)
+  - c. Fractional iron absorption (%)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Galactooligosaccharides (GOS)
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06038656

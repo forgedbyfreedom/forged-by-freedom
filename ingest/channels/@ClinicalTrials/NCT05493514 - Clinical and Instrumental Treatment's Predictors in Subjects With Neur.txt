@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05493514
+Title: Clinical and Instrumental Treatment's Predictors in Subjects With Neurological Diseases Using G-EO Robotic System
+Official Title: Clinical and Instrumental Treatment's Predictors in Subjects With Neurological Diseases Using G-EO Robotic System: an Observational Longitudinal Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 260
+Topic: strength training
+
+SUMMARY:
+The aim of this work is to elaborate a statistical model to predict the effectiveness of robotic treatment in subjects with neurological diseases. The model will be used to understand which subjects are most responsive to this type of treatment
+
+DETAILED DESCRIPTION:
+In recent years, robotic devices have been used to assist balance and gait rehabilitation of people with neurological disorders. In particular, the G-EO system (Reha Technology AG, Switzerland) is a robotic end-effector device guiding the movement of the feet. It is currently unclear which variables are the predictors of treatment success. Indeed, the effectiveness of the GEO treatment may depends on the characteristics of the treatment itself (instrumental parameters defined by the physiotherapist using the device) and on the characteristics of the subject receiving the treatment. Therefore, it is necessary to measure these clinical and instrumental characteristics to understand which are predictors of treatment effects. Parameters obtained from this assessment can be used to elaborate statistical models. In our study the statistical model will be defined as follows: The change in the primary outcome measure after the robotic treatment will be considered as dependent variable of the model. All the "secondary" clinical outcome measures will be measured only at T0 and will be considered in the model as independent variables, along with the participants characteristics (age, gender, disease, disease duration, falls number, numbers of comorbidity, type of hospitalization) and the treatment characteristics (sessions number, frequency, duration, step length, cadence, gait speed, body weight support, distance traveled). The results of the model will suggest which subjects are most responsive to this type of treatment and which variables can be considered as predictors of the treatment success.
+
+PRIMARY OUTCOMES:
+  - Change in gait speed
+
+INTERVENTIONS:
+  - DEVICE: Robotic Assisted Gait Training with G-EO system
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05493514

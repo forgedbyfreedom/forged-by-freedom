@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07401550
+Title: Assessment and Prediction of Cardiovascular Health and Disease Risk Using Wearable Biometrics.
+Official Title: Assessment and Prediction of Cardiovascular Health and Disease Risk Using Longitudinal Wearable Biometrics: a Prospective Cohort Study.
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: physical activity intervention
+
+SUMMARY:
+This prospective, observational cohort study will evaluate the associations between wearable-derived biometrics and cardiovascular health, quantified by the American Heart Association's Life's Essential 8 framework, as well as related cardiovascular risk factors. The study aims to determine whether wearable biometrics can support the assessment of cardiovascular health and cardiovascular disease risk, both when used in isolation and in combination with point-of-care assessments.
+
+DETAILED DESCRIPTION:
+Participants will be provided with a Fitbit Charge 6 to wear continuously for six-months. These wearable data will be collected via Fitabase (Small Steps Labs LLC) for the duration of the study.
+
+At baseline, mid-point (three months), and end-point (six months), participants will undergo a clinical cardiovascular health assessment and Life's Essential 8 score will be calculated. Life's Essential 8, established by the American Heart Association, is a composite metric comprising four Health Behaviours and four Health Factors, and provides individuals with a score ranging from 0 (poor health) to 100 (optimal health). Life's Essential 8 health tiers are defined as 'Low' (\<50), 'Moderate' (50-79), and 'High' (80-100). Alongside Life's Essential 8, during each clinical assessment, four patient-reported outcome measures will be collected: EQ-5D-5L, International Physical Activity Questionnaire, Patient Health Questionnaire 9, and Generalized Anxiety Disorder 7.
+
+Participants will also complete patient-reported outcome measures online once per week for the duration of the study. These include the Modified Wisconsin Upper Respiratory Symptom Scale (WURSS), Alcohol Intake Questionnaire, Single-Item Sleep Quality Scale (SQS), Patient Health Questionnaire 4 (PHQ-4), and the two-item Modified Hooper Questionnaire for stress and fatigue. Once per month they will complete the Pittsburgh Sleep Quality Index (PSQI).
+
+PRIMARY OUTCOMES:
+  - Cross-Sectional Association of Wearable Biometrics with Cardiovascular Health
+  - Longitudinal Association of Changes in Wearable Biometrics with Changes in Cardiovascular Health
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07401550

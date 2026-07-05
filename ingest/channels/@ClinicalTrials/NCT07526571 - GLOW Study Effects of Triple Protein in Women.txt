@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07526571
+Title: GLOW Study: Effects of Triple Protein in Women
+Official Title: GLOW Study: A Randomized Trial to Evaluate the Effects of Triple Support Protein on Glucose, Lifestyle, and Overall Well-being in Women
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: creatine supplementation
+
+SUMMARY:
+This single-site, randomized, blinded, placebo-controlled study will evaluate whether 4 weeks of daily Triple Support Protein powder improves glycemic control and overall well-being in healthy women aged 30-60 years. Participants will undergo baseline testing (DXA, fasting blood, standardized meal test with 2-hour glucose and insulin sampling), complete one acute supervised dose, and then consume a daily supplement for 4 weeks. During the final 14 days, participants will wear a continuous glucose monitor. Outcomes include postprandial glucose AUC, insulin sensitivity, and body composition.
+
+DETAILED DESCRIPTION:
+Midlife women experience hormonal changes that can impair metabolic health, sleep, and cognition. Triple plant-based protein powder includes creatine and fiber aimed at glycemic control, muscle support, and satiety. Design: 40 participants randomized (1:1) to Triple Protein Support vs. matched placebo for 4 weeks, with acute and chronic phases, weekly check-ins. Assessments: Baseline and end-of-study DXA and bloods; standardized meal tests with 2-hour glucose/insulin sampling; Analysis: Mixed-model ANOVA for primary and secondary endpoints with α=0.05.
+
+PRIMARY OUTCOMES:
+  - Change in postprandial glucose area under the curve (AUC)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Triple protein support
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 30 Years to 60 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07526571

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05526040
+Title: Immunonutrition Supplementation in Head and Neck Cancer Patients Undergoing Cancer Treatment Study
+Official Title: Head and Neck Cancer Immunonutrition Supplementation During Cancer Treatment: A Randomized, Open-label Intervention Study
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 116
+Topic: protein supplementation
+
+SUMMARY:
+This is a prospective, randomized, open-label intervention study to evaluate the effectiveness of immunonutrition supplementation in head and neck cancer (HNC) patients during cancer treatment.
+
+DETAILED DESCRIPTION:
+The study population will be adult HNC patients receiving radiotherapy and chemotherapy treatment. The targeted number of subjects is 116 patients (58 subjects in each arm). Participants will be randomly assigned to receive standard medical nutrition therapy (individualized dietary assessment and counselling, and standard nutrition supplementation as necessary) or standard medical nutrition therapy with high energy, high protein, immunonutrient-enriched oral nutrition supplementation. Immunonutrition supplementation will begin 1 week prior to cancer treatment and continued throughout the cancer treatment, and to be taken in 3 servings/day. The study involves interviewing of subjects for dietary and nutrition assessment; measurement of weight, body composition, handgrip strength; and data collection from subjects' medical records.
+
+PRIMARY OUTCOMES:
+  - Body weight (kilograms)
+  - Nutrition status - scored Patient-Generated Subjective Global Assessment (PG-SGA)
+  - Nutrition status - 3-Minute Nutrition Screening (3-minNS) tool
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Immunonutrient-enriched oral nutrition supplementation
+  - DIETARY_SUPPLEMENT: Standard medical nutrition therapy
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05526040

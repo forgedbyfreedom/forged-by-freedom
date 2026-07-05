@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07133568
+Title: Fun Exercise Intervention for Older Adults to Improve Intrinsic Capacity and Motivation
+Official Title: Design, Development, and Validation of a Recreational Exercise Intervention in Older Adults to Improve Intrinsic Capacity and Motivation: A Randomized Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: sarcopenia intervention
+
+SUMMARY:
+This randomized clinical trial aims to evaluate the effectiveness of a structured, multicomponent recreational exercise program (FEXO: Fun Exercise for Older Adults) in improving intrinsic capacity, motivation, and adherence among community-dwelling older adults. Participants aged 60 years and older will be randomly allocated to either the FEXO group or a control group performing the established OTAGO program. The intervention will last 14 weeks, with three weekly sessions. Assessments will be conducted at baseline, post-intervention, and after a 3-month follow-up.
+
+DETAILED DESCRIPTION:
+The global increase in the aging population poses significant public health and societal challenges, particularly regarding multimorbidity, frailty, and functional decline. In response, the World Health Organization has introduced the concept of Intrinsic Capacity (IC), which encompasses the physical and mental capacities an individual can draw upon. IC includes five domains: locomotion, vitality, cognition, psychological well-being, and sensory function.
+
+Evidence supports multicomponent exercise as a primary strategy to promote healthy aging and preserve functionality in older adults. However, low adherence and motivation remain critical barriers. This study proposes a novel, recreationally oriented multicomponent program-FEXO-designed to increase engagement through fun, low-cost, group-based sessions adapted to functional levels.
+
+The study is a two-arm, parallel-group, randomized clinical trial with a 2:1 allocation ratio (intervention:control). A total of 122 older adults from the community will be recruited and randomized into either the FEXO group or the control group (OTAGO program). Both interventions include three non-consecutive weekly sessions over 14 weeks. The FEXO program includes a familiarization phase and progressive intensity adjustments.
+
+Sessions integrate strength, balance, coordination, cognitive stimulation, and relaxation in a recreational format using music, elastic bands, and playful materials. Primary outcomes include changes in Intrinsic Capacity, assessed through standardized tools across its five domains. Secondary outcomes include anthropometric data, cardiovascular parameters, physical performance tests, cognitive function, depression, resilience, and exercise motivation. Adherence will be tracked as the percentage of sessions attended.
+
+Statistical analysis will be conducted on an intention-to-treat basis using two-way ANOVA, with effect sizes and confidence intervals reported. The study has been approved by the Ethics Committee of CEU Cardenal Herrera University and complies with the Declaration of Helsinki.
+
+PRIMARY OUTCOMES:
+  - Intrinsic Capacity
+  - Adherence to intervention
+  - Motivation (Behavioral Regulation in Exercise Questionnaire (BREQ-3))
+
+INTERVENTIONS:
+  - OTHER: Fun Exercise for Older Adults (FEXO)
+  - OTHER: OTAGO
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07133568

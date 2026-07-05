@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06082648
+Title: Study of Brain-Gut Function Reconstruction After Intersphincteric Resection for Ultra-Low Rectal Tumors
+Official Title: Observation and Intervention Study of Brain-Gut Function Reconstruction After Intersphincteric Resection (ISR) for Ultra-Low Rectal Tumors
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 57
+Topic: muscle rehabilitation
+
+SUMMARY:
+To investigate the effects of intersphincteric resection (ISR) of ultra-low rectal tumor on the brain-rectoanal function of patients, and to precisely localize the cerebral functional regulatory regions for intervention targets of anorectal remodeling. Utilizing transcranial magnetic stimulation(TMS) technology to explore the functional remodeling of the "new" anorectal muscle groups and provide a theoretical basis for more research on the rehabilitation and mechanism of fecal incontinence.
+
+DETAILED DESCRIPTION:
+This study is a Single-center Phase II, Open, Three-Arm clinical trial. We prospectively enroll patients who undergo ISR for ultra-low rectal tumor in the department of General Surgery, Huashan Hospital, Fudan University. Patients with ileostomy closure are randomly divided into two groups (TMS group and false stimulation group), and healthy volunteers were recruited. The differences of task-state fMRI between healthy volunteers, and ISR patients (both preoperative and postoperative) are compared, combined with rectal function scores (Wexner score, LARS score) and quality of life scale (EORTC QLQ-C30, EORTC QLQ-CR38). Proctoanal manometry are used to find the precise location of the proctoanal motor function area in the cerebral cortex, and to evaluate the effect and value of TMS on postoperative anorectal motor function remodeling in patients with ISR.
+
+PRIMARY OUTCOMES:
+  - The differences of cortical activated areas in task-state fMRI in ISR patients.
+  - The differences of cortical activated areas in task-state fMRI between health volunteers and postoperative ISR patients.
+  - Rectal function scores (Wexner score)
+  - Rectal function scores (LARS score)
+  - Quality of life Scale (EORTC QLQ-C30)
+
+INTERVENTIONS:
+  - DEVICE: Transcranial magnetic stimulation
+  - DEVICE: Sham Transcranial magnetic stimulationt
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06082648

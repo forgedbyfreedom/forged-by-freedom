@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05713474
+Title: Micro-EMG: A Novel Multi-electrode System for Intramuscular Imaging
+Official Title: Micro-EMG: A Novel Multi-electrode System for Intramuscular Imaging of Human Motor Units
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: sarcopenia intervention
+
+SUMMARY:
+The purpose of this small-scale exploratory study is to bridge the knowledge gap between the bench testing and the design of potential future confirmative studies. Identifying and evaluating MicroEMG measurement parameters in this exploratory manner is a necessary step to evaluate its usability and design, and determine whether the microEMG system may be suitable for in-house use after further confirmative testing.
+
+DETAILED DESCRIPTION:
+About this study We have developed a completely new multi-electrode electromyography system (MicroEMG) that we want to test in this study. It records muscle activity from multiple recording points in the muscle at once. We believe that this will increase the sensitivity of the technique in diagnosing muscle disease, reduce the time taken, and be more comfortable for patients. However, to prove whether this is the case we first need to understand the how the recorded signals of the new MicroEMG look like in different patient groups.
+
+Background:
+
+Why are we doing this study?
+
+Electromyography (EMG) is an essential diagnostic test for nerve and muscle diseases. Cells in the muscle generate electric potentials when they are activated. This activity can be measured by the EMG. Based on those 'patterns', experts can detect medical abnormalities, such as muscle or nerve disorders. EMG involves inserting a thin metal needle electrode through the skin into a muscle. It records changes in the pattern of electrical signals produced by the muscle fibres. In conventional EMG only a single recording surface at the tip of the needle is used and therefore only small part of muscle can be examined.
+
+We developed a new EMG device called MicroEMG. It uses a novel type of electrode that can examine the muscle in more detail. As it records activity from several different points at the muscle at once it can produce an electrical image (rather than an abstract signal). This way a large volume of muscle can be recorded simultaneously with less movement and discomfort for the patient.
+
+What is the goal of this study?
+
+Patients with a disease known to affect the nerves or the muscles typically would be tested with conventional EMG. Some diseases are linked to a specific 'diagnostic pattern' in the EMG that guides the specialist's diagnosis.
+
+We do not know these pattern for MicroEMG yet. In this study we want to look at how measurements with the new MicroEMG look like in patients with neuromuscular disease. Each patient will undergo recordings from identical muscles using both conventional EMG and microEMG during a single visit. This will allow us to relate the electrical signal patterns in the muscle measured by MicroEMG to the known diagnostic pattern we typically see in conventional EMG. We will do this in both healthy and diseased muscles. Based on that we can determine which of these patterns may be suitable as potential diagnostic markers for the MicroEMG system.
+
+We will also ask participants about their experience as a patient. It will give us a better understanding about how patients in our hospital may benefit from the new MicroEMG device in the future (after further confirmative research).
+
+Who can participate?
+
+In this study we want to look at how measurements with the new MicroEMG look like in patients with neuromuscular diseases - in particular, motor neurone disease, sarcopenia, post-polio syndrome, and myasthenia gravis. We also want to look at how those 
+
+PRIMARY OUTCOMES:
+  - List of potential EMG parameters to inform future diagnostic marker evaluation studies.
+  - Report of tested and potential vs. disregarded diagnostic markers for MicroEMG.
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Diagnostic EMG exam with microEMG
+  - DIAGNOSTIC_TEST: Conventional EMG
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05713474

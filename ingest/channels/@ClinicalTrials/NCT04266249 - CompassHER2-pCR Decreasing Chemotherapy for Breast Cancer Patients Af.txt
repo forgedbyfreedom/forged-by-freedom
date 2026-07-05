@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04266249
+Title: CompassHER2-pCR: Decreasing Chemotherapy for Breast Cancer Patients After Pre-surgery Chemo and Targeted Therapy
+Official Title: (CompassHER2-pCR): Preoperative THP and Postoperative HP in Patients Who Achieve a Pathologic Complete Response
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 2175
+Topic: growth hormone treatment
+
+SUMMARY:
+This trial studies how well paclitaxel, trastuzumab, and pertuzumab work in eliminating further chemotherapy after surgery in patients with HER2-positive stage II-IIIa breast cancer who have no cancer remaining at surgery (either in the breast or underarm lymph nodes) after pre-operative chemotherapy and HER2-targeted therapy. Drugs used in chemotherapy, such as paclitaxel, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Trastuzumab and pertuzumab are both a form of "targeted therapy" because they work by attaching themselves to specific molecules (receptors) on the surface of tumor cells, known as HER2 receptors. When these drugs attach to HER2 receptors, the signals that tell the cells to grow are blocked and the tumor cell may be marked for destruction by the body's immune system. Giving paclitaxel, trastuzumab, and pertuzumab may enable fewer chemotherapy drugs to be given without compromising patient outcomes compared to the usual treatment.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To determine if 3-year recurrence-free survival (RFS) is greater than 92% among clinical stages II or IIIa patients with HER2-positive breast cancer who achieve pathologic complete response (pCR) (ypT0/is ypN0) after preoperative therapy with 12 weeks of a taxane, trastuzumab (or Food and Drug Administration \[FDA\] approved biosimilar) and pertuzumab (THP x 12).
+
+SECONDARY OBJECTIVES:
+
+I. To determine 3-year IDFS (invasive disease-free survival), DDFS (distant disease-free survival), DRFS (distant relapse-free survival), RFI (recurrence-free interval), OS (overall survival) and breast cancer-specific survival in patients who achieve pCR (and by pretreatment clinical stage). (Secondary Clinical Objective) II. To determine 3-year EFS (event-free survival) in all patients from time of study registration. (Secondary Clinical Objective) III. To evaluate safety and tolerability for all patients during the pre-operative phase and for patients who attain pCR and de-escalate therapy (Arm A) until the completion of post-surgery protocol assigned therapy (i.e. until the end of trastuzumab and pertuzumab \[HP\] therapy). (Secondary Clinical Objective) IV. To evaluate the association of estrogen receptor (ER) status in the untreated primary tumor with pathologic response and with long-term survival outcomes (including RFS, EFS, IDFS, DDFS, DRFS, RFI, OS, and breast cancer-specific survival). (Secondary Correlative Objective) V. To evaluate the associations of detection of circulating tumor cells (CTCs) in the blood at baseline with pCR. (Secondary Correlative Objective) VI. To evaluate the association of detection of CTCs in the blood at baseline, after 3 weeks of THP, after 12 weeks of THP (before surgery), after surgery before any additional therapy, and after completion of HER2-targeted therapy with RFS in patients who achieve pCR or not. (Secondary Correlative Objective)
+
+EXPLORATORY OBJECTIVES:
+
+I. To determine 3-year RFS, IDFS (invasive disease-free survival), DDFS (distant disease-free survival), DRFS (distant relapse-free survival), RFI (recurrence-free interval), OS (overall survival) and breast cancer-specific survival in patients who do not achieve pCR (and by pretreatment clinical stage). (Exploratory Clinical Objective) II. To determine the pathologic response to THP neoadjuvant therapy, as assessed by residual cancer burden (RCB). (Exploratory Clinical Objective) III. To determine the association between residual cancer burden (RCB) and all described standardized definitions for efficacy end points (STEEP) criteria outcomes. (Exploratory Clinical Objective) IV. To determine the false negative rate (FNR) of limited staging procedures (defined as sentinel lymph node biopsy \[SLNB\] plus removal of clipped node) in patients who undergo such procedures with a planned axillary lymph node dissection (ALND). (Exploratory Clinical Objective) V. To determine axillary pCR rates as a function of the burden of disease at presentatio
+
+PRIMARY OUTCOMES:
+  - Recurrence-free survival (RFS)
+
+INTERVENTIONS:
+  - DRUG: Docetaxel
+  - PROCEDURE: Lumpectomy
+  - PROCEDURE: Mastectomy
+  - DRUG: Nab-paclitaxel
+  - DRUG: Paclitaxel
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04266249

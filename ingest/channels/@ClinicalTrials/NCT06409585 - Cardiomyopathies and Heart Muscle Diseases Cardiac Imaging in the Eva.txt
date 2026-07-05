@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06409585
+Title: Cardiomyopathies and Heart Muscle Diseases: Cardiac Imaging in the Evaluation of Myocardial Fibrosis Transition
+Official Title: Cardiomyopathies and Heart Muscle Diseases: Cardiac Imaging in the Evaluation of Myocardial Fibrosis Transition
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 290
+Topic: physical activity intervention
+
+SUMMARY:
+Heart scarring, also known as fibrosis, plays a major role in a lot of heart muscle abnormalities. These abnormalities of the heart muscle can lead to major issues such as symptoms of heart failure, dangerous heart rhythm disturbances and even death. However, a lot of these conditions are still not fully understood and treatment options are limited. We here aim to use a new radioactive dye called 68Ga-FAPI to identify patterns and the activity of heart muscle scarring. This radioactive dye is being used in humans particularly in identifying and monitoring cancers and has shown promise in identifying scarring in the heart as well. This will help us not only understand the underlying disease process and risk stratify these patients but also potentially help us develop new targeted therapies that can affect heart muscle scarring. Participants will undergo a baseline MRI scan using this new dye and a plain MRI scan will repeated 12-18 months after to see if there are any changes in the process.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Standardised uptake values
+  - Target-to-background ratio
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: 68Ga-FAPI or 18F-AlF-FAPI cardiac PET-MR
+  - DIAGNOSTIC_TEST: Echocardiogram
+  - DIAGNOSTIC_TEST: Cardiac MRI
+
+ELIGIBILITY:
+Age: 30 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06409585

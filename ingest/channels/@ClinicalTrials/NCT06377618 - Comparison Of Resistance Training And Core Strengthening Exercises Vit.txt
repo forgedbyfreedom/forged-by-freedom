@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06377618
+Title: Comparison Of Resistance Training And Core Strengthening Exercises Vitamin D In Postmenopausal Women With Low Back Pain
+Official Title: Comparison Of Resistance Training And Core Strengthening Exercises Along With Vitamin D Intake In Postmenopausal Women With Low Back Pain
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: vitamin D muscle
+
+SUMMARY:
+This study aims to evaluate the effectiveness of resistance training, core strengthening exercises, and vitamin D supplementation in reducing low back pain (LBP) among postmenopausal women.
+
+DETAILED DESCRIPTION:
+Postmenopausal women are particularly susceptible to LBP due to physiological changes such as reduced estrogen levels, decreased muscle mass, and bone density. The randomized controlled trial (RCT) will be conducted over six months in various clinical settings in Lahore, with a sample size of 36 participants, divided into two groups. The inclusion criteria focus on postmenopausal women aged 50-70 years experiencing LBP for at least three months and who are not currently taking vitamin D supplements. Data on pain intensity, functional disability, muscle strength, endurance, and vitamin D levels will be collected and analyzed to assess the interventions' impact. The study's findings could provide evidence-based recommendations for managing LBP in postmenopausal women, combining physical activity with nutritional supplementation.
+
+PRIMARY OUTCOMES:
+  - Visual Analog Scale (VAS)
+  - Oswestry Disability Index (ODI)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Resistance Training and Core Strengthening Exercises Group
+  - DIAGNOSTIC_TEST: Resistance Training and Core Strengthening Exercises Group Plus Vitamin D Supplementation
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06377618

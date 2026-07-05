@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05813613
+Title: Role of Artificial Intelligence in Predicting Muscle Fatigue Using Virtual Reality Training
+Official Title: Role of Artificial Intelligence in Predicting Muscle Fatigue Using Virtual Reality Training In Healthy And Post COVID19 Subjects
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 90
+Topic: resistance training
+
+SUMMARY:
+The goal of this observational predicted study is to predict muscle fatigue using a specific AI algorithm in healthy vs post Covid-19 infected individuals. The main question it aims to answer is:
+
+Can Artificial Intelligence be used as a reliable source of predicting localized muscle fatigue in healthy vs post Covid-19 infected individuals?
+
+Participants will be divided into two groups: A healthy group and a post Covid-19 group.
+
+* Each group will undergo a familiarization process before the start of the exercises.
+* Then, each group will perform squatting exercises guided by the kynpasis virtual reality apparatus.
+* sEMG for the vastus lateralis and rectus femories, chest expansion, and goniometric measurements of the knee will be taken during different reported fatigue levels using the Biopac system.
+* Groups will continue squatting while recording their subjective fatigue levels using the Borg scale.
+* Data will then be run through machine learning processes to produce an AI algorithm capable of predicting isolated muscle fatigue.
+
+DETAILED DESCRIPTION:
+Participants were divided into two groups, one consisting of healthy individuals and another consisting of Covid-19 subjects. Both groups received a familiarization training for the exercise to be performed with 15 minutes of rest afterwards, before the start of the data collection.
+
+Squatting exercise was performed using a virtual reality (VR) machine (kynapsis) for guidance in both groups. Squats were performed while the hands were kept in front of the bodies and the knees flexed to 90 degrees following a rhythm of two seconds for descent, two second ascent mimicking the movement done on the VR machine.
+
+Additional variables were considered, including chest expansion, and the range of motion using an electric goniometer, all being measured and recorded using the Biopac (BIOPAC Systems, Inc., Santa Barbara, CA) that, according to evidence, possess a high-pass frequency filter and bipolar electrode system.
+
+The muscles tested are the 3 heads of the QF muscle RF, VM, and VL. Their areas were cleaned using alcohol and shaved to reduce resistance of electrodes. Three disposable sEMG surface electrodes were placed, two of them on the muscle belly with 2.5cm distance between them, and one control electrode placed on the agonist side, the participant was asked to extend their knee and flex it against resistance to locate the lateral and medial vasti. sEMG electrodes were placed on the subdivisions of the QF muscle during the exercise. The extracted data is then run through an AI algorithm that will analyze and predict muscle fatigue.
+
+The Borg (C-10) scale was explained to the participants and was present in front of them while performing the exercise as an outcome measure to assess the subjective muscle fatigue that once reached will end the exercise.
+
+PRIMARY OUTCOMES:
+  - Surface electromyography
+  - The Borg Rating of Perceived Exertion (RPE) scale
+
+INTERVENTIONS:
+  - OTHER: Squatting with the aid of Kynapsis Virtual Training apparatus.
+
+ELIGIBILITY:
+Age: 18 Years to 49 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05813613

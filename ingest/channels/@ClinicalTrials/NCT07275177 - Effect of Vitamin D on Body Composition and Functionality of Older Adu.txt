@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07275177
+Title: Effect of Vitamin D on Body Composition and Functionality of Older Adults
+Official Title: Effect of Vitamin D Supplementation on Strength and Muscle Gain in Older Adults With Obesity in Miahuatlán de Porfirio Díaz, in Period 2023-2024
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 29
+Topic: vitamin D muscle
+
+SUMMARY:
+Older adults with obesity often experience a gradual loss of muscle mass and muscle strength, a condition sometimes described as sarcopenic obesity. This combination increases the risk of falls, disability, functional decline, and metabolic complications. Low levels of vitamin D are common in older adults and may contribute to reduced muscle function and poorer physical performance.
+
+This study is designed to evaluate whether taking 10,000 International Units (IU) per day of vitamin D3 for 12 weeks can improve muscle strength and muscle mass in older adults with obesity living in southern Mexico. The study will also examine whether vitamin D3 supplementation influences body composition, physical performance, and serum levels of 25-hydroxyvitamin D.
+
+Participants will complete assessments at the beginning and at the end of the 12-week period. These assessments include measurements of muscle strength, skeletal muscle mass, body fat percentage, and indicators of physical performance such as the Short Physical Performance Battery (SPPB). Additional measures of body composition and anthropometry, such as body mass index, waist circumference, and related indices, will also be recorded. Blood samples will be analyzed to determine vitamin D status.
+
+All participants will receive daily oral vitamin D3 (cholecalciferol) throughout the 12-week intervention. The goal of the study is to understand whether improving vitamin D status can have a positive effect on muscle health and physical function in older adults with obesity.
+
+The results from this research may help guide future strategies to prevent or reduce functional decline related to low muscle mass in older adults with obesity, particularly in rural regions of Mexico where vitamin D deficiency is common.
+
+DETAILED DESCRIPTION:
+This randomized controlled study investigated the effects of vitamin D3 supplementation on muscle strength, body composition, and functional performance in older adults with obesity. Vitamin D deficiency is highly prevalent in this population and has been associated with reduced skeletal muscle mass, decreased physical performance, increased fat accumulation, and progression toward frailty. Improving vitamin D status may contribute to better musculoskeletal health and improved physical function.
+
+Participants received 10,000 International Units (IU) per day of vitamin D3 for a total period of 12 weeks. All assessments were conducted at baseline and at week 12. Handgrip strength was measured using a Jamar hand dynamometer as an indicator of muscle strength. Skeletal muscle mass, body fat percentage, visceral fat index, metabolic age, and related measures were obtained via Bioelectrical Impedance Analysis (BIA). Anthropometric variables including weight, body mass index (BMI), waist circumference, abdominal volume index (AVI), and body adiposity index (BAI) were also recorded.
+
+Functional status was assessed using the Short Physical Performance Battery (SPPB), a validated tool consisting of balance, gait speed, and chair stand tests. The SPPB ranges from 0 to 12 points, with higher scores indicating better physical performance.
+
+Serum concentrations of 25-hydroxyvitamin D \[25(OH)D\] were evaluated using standardized laboratory techniques to determine changes in vitamin D status associated with supplementation.
+
+This study seeks to clarify whether vitamin D3 supplementation can improve muscle strength, muscle mass, functional performance, and body composition among older adults with obesity, and to better understand the role of vitamin D in age-related musculoskeletal decline.
+
+PRIMARY OUTCOMES:
+  - Handgrip strehgth (kg)
+  - Skeletal muscle mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Vitamin D
+  - DIETARY_SUPPLEMENT: Vitamin D placebo
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07275177

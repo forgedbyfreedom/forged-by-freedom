@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01754259
+Title: Effects of Ranolazine on Coronary Flow Reserve in Symptomatic Diabetic Patients and CAD
+Official Title: Effects of Ranolazine on Coronary Flow Reserve in Symptomatic Patients With Diabetes and Suspected or Known Coronary Artery Disease
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 47
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Coronary vascular dysfunction is highly prevalent among patients with known or suspected Coronary Artery Disease (CAD)1, increases the severity of inducible myocardial ischemia (beyond the effects of upstream coronary obstruction)2, and identifies patients at high risk for serious adverse events, including cardiac death1, 3-5. Diabetic patients without known CAD with impaired coronary vascular function show a risk of cardiac death comparable to, and possibly higher, than that for non-diabetic patients with known CAD10. In the setting of increased oxygen demand, coronary vasodilator dysfunction can upset the supply-demand relationship and lead to myocardial ischemia, subclinical left ventricular dysfunction (diastolic and systolic), and symptoms.
+
+The significance of microvascular coronary dysfunction is increasingly recognized as invasive and non-invasive (PET) methods of quantifying CFR become available.
+
+Importantly, current treatment strategies for obstructive CAD, such as percutaneous coronary intervention with angioplasty and stenting, are not helpful in microvascular disease. Similarly, mortality-altering treatments for systolic heart failure, such as angiotensin converting enzyme inhibitors, have not been beneficial in treating diastolic dysfunction.
+
+DETAILED DESCRIPTION:
+Ranolazine is a novel anti-anginal agent which inhibits the late sodium current in cardiomyocytes, decreasing sodium and calcium overload. In ischemia, excess of intracellular calcium may impair myocyte relaxation and contribute to ventricular diastolic stiffness, which in turn affects myocardial contractility and perfusion. Ranolazine is FDA-approved for treatment of chronic angina. In three randomized, placebo-controlled trials of patients with stable angina, it was shown to increase exercise time free of angina and ST-segment depression, increase exercise capacity and decrease angina when used in combination with established antianginal agents including diltiazem, amlodipine or atenolol, and reduce the frequency of angina on patients on maximum doses of amlodipine.Similarly, in a large population of patients with acute coronary syndromes, ranolazine also decreased exertional angina symptoms and incidence of arrhythmias, with no effect on mortality. Interestingly, in this same study, it significantly improved hemoglobin A1c and recurrent ischemia in patients with diabetes mellitus, and reduced the incidence of increased hemoglobin A1c in patients without known prior hyperglycemia.
+
+Although the anti-ischemic effect of ranolazine is thought to be mediated in part by increased myocardial blood flow,there is currently limited evidence for such an effect on tissue perfusion. A previous study in women without overt CAD did not detect improved myocardial blood flow after treatment with ranolazine. In that study, however, coronary hyperemia was elicited with adenosine (which uncouples blood flow from cardiac work, and reflects predominantly endothelial-independent vasodilation) rather than exercise, which triggers a more complex interplay between metabolic demand, coronary hemodynamics, and vasodilator response. Thus, there is a need for additional investigation of whether the beneficial effects of ranolazine on exertional symptoms are directly related to improved global tissue perfusion. Such evidence would support the use of ranolazine as an anti-ischemic therapy in the challenging population of symptomatic patients with evidence of microvascular dysfunction without obstructive CAD.
+
+PRIMARY OUTCOMES:
+  - Change in Post-exercise Coronary Vasodilator Reserve
+
+INTERVENTIONS:
+  - DRUG: Ranolazine
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01754259

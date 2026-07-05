@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03579927
+Title: CAR.CD19-CD28-zeta-2A-iCasp9-IL15-Transduced Cord Blood NK Cells, High-Dose Chemotherapy, and Stem Cell Transplant in Treating Participants With B-cell Lymphoma
+Official Title: Immunotherapy With Ex Vivo-Expanded Cord Blood-Derived CAR-NK Cells Combined With High-Dose Chemotherapy and Autologous Stem Cell Transplantation for B-Cell Lymphoma
+Status: WITHDRAWN
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: beta-alanine
+
+SUMMARY:
+This phase I/II trial studies the side effects and best dose of chimeric antigen receptor (CAR).CD19-CD28-zeta-2A-iCasp9-IL15-transduced cord blood NK cells when given together with high-dose chemotherapy and stem cell transplant and to see how well they work in treating participants with B-cell lymphoma. Cord blood-derived CAR-NK cells may react against the B-cell lymphoma cells in the body, which may help to control the disease. Giving chemotherapy before a stem cell transplant may help kill any cancer cells that are in the body and helps make room in the patient's bone marrow for new blood-forming cells (stem cells) to grow. The stem cells are then returned to the patient to replace the blood-forming cells that were destroyed by the chemotherapy.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To establish the safety and relative efficacy of CAR.CD19-CD28-zeta-2A-iCasp9-IL15-transduced cord blood natural killer (CB-NK) cells in patients with B cell non-Hodgkin lymphoma (NHL) undergoing high dose chemotherapy and autologous stem cell transplantation.
+
+SECONDARY OBJECTIVES:
+
+I. To estimate the relapse-free survival (RFS). II. To estimate the overall survival (OS). III. To quantify the persistence of infused CAR.CD19-CD28-zeta-2A-iCasp9-IL15-transduced CB-NK cells in the recipient.
+
+OUTLINE: This is a phase I, dose-escalation study of CAR.CD19-CD28-zeta-2A-iCasp9-IL15-transduced CB-NK cells followed by a phase II study.
+
+Participants receive rituximab intravenously (IV) over 3 hours on days -14 and -8, carmustine IV over 2 hours on day -13, etoposide IV over 3 hours twice daily (BID) on days -12 to -9, cytarabine IV over 1 hour BID on days -12 to -9, melphalan IV over 30 minutes on day -8, CAR.CD19-CD28-zeta-2A-iCasp9-IL15-transduced CB-NK cells IV over 1 hour on day -5. Participants undergo autologous stem cell transplantation (ASCT) on day 0. Beginning day 0, participants receive filgrastim subcutaneously (SC) once daily (QD) until evidence of an absolute neutrophil count (ANC) of 0.5 x 10\^9/L per 3 consecutive days.
+
+After completion of study treatment, participants are followed for up to 15 years.
+
+PRIMARY OUTCOMES:
+  - Incidence of adverse events defined as graft failure, grade 3, 4 graft versus host disease, grade 3,4 cytokine release syndrome, grade 3, 4, neuro-toxicity, or death from any cause
+  - Complete response (CR) or partial response (PR)
+
+INTERVENTIONS:
+  - PROCEDURE: Autologous Hematopoietic Stem Cell Transplantation
+  - DRUG: Carmustine
+  - DRUG: Cytarabine
+  - DRUG: Etoposide
+  - BIOLOGICAL: Filgrastim
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03579927

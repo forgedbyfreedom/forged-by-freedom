@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04693936
+Title: Metabolic Biomarkers in Hashimoto's Thyroiditis and Psoriasis
+Official Title: Study of Metabolic Pathways for the Identification of Biomarkers in Hashimoto's Thyroiditis and Psoriasis
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: omega 3 exercise
+
+SUMMARY:
+Hashimoto's disease (HT) and psoriasis (PsO) have a significant impact on patient's quality of everyday life, and early diagnosis is critical for the symptoms management and prognosis. There is evidence that HT and PsO share common metabolic pathways that relate to their pathogenesis, and are affected by dietary and lifestyle factors. Previous studies have identified potential metabolic biomarkers, although the small number of studies hamper their validation. Of note, most studies are not longitudinal thus do not capture the metabolic fluctuations in response to disease progression or dietary changes. Thus, the purpose of this study is to identify metabolic biomarkers of HT and PsO and study the role of epigenetic factors (diet and lifestyle) on the involved metabolic pathways . In addition, a comparative analysis of the disease-related quality of life (QoL) will be performed in relation to dietary changes to unravel possible links between the QoL and the associated metabolic pathways in HT and PsO.
+
+DETAILED DESCRIPTION:
+Patients with Hashimoto's thyroiditis (HT), patients with psoriasis (PsO), and healthy individuals aged 18-60 will be recruited and assessed according to inclusion/exclusion criteria. Eligible participants will be randomized to two groups. The intervention group will receive a combinational nutraceuticals plan for 6 months as part of a Mediterranean diet and the control group will follow usual diet. Data will be collected at baseline and at the end of the study including levels of organic and fatty acids, lifestyle and anthropometric measurements, adherence to Mediterranean diet through the Mediterranean Diet Score (MDS) and disease-specific quality of life through the Thyroid Patient Report Outcome (THYPRO) and the Dermatology Life Quality Index (DLQI) questionnaires for the HT and the PsO group respectively.
+
+PRIMARY OUTCOMES:
+  - Differential levels of urinary organic acids in patients with Hashimoto's thyroiditis and psoriasis compared to healthy individuals as assessed by GC-MS
+  - Differential levels of peripheral blood fatty acids in patients with Hashimoto's thyroiditis and psoriasis compared to healthy individuals as assessed by GC-MS
+  - Change from baseline urinary organic acids levels after 6-month intervention with nutraceuticals as assessed by GC-MS
+  - Change from baseline peripheral blood fatty acids levels after the 6-month intervention with nutraceuticals as assessed by GC-MS
+  - Change from baseline thyroid disease-related quality of life at 6-months of intervention with nutraceuticals as assessed by the THYPRO questionnaire
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Nutraceutical Combination Plan
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04693936

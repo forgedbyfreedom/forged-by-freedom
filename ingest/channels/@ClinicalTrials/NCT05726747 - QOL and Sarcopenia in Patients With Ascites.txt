@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05726747
+Title: QOL and Sarcopenia in Patients With Ascites
+Official Title: Health-related Quality of Life Outcomes and Changes in Sarcopenia in Patients With Refractory Ascites
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 70
+Topic: sarcopenia intervention
+
+SUMMARY:
+Clinical data regarding quality of life in patients with refractory ascites is limited and preceded the development of newer questionnaires that may be more robust. One primary objective of this study is to study changes in quality in life in a prospective fashion using newer general and ascites-specific quality of life survey instruments specific to benign and malignant etiologies.
+
+Sarcopenia is a condition that is prevalent in cancer and cirrhosis. Current data is retrospective and associative, evaluating heterogeneous patient populations at different stages within the timeline of refractory ascites. The other primary objective of this study is to study sarcopenia in a prospective fashion and to understand its kinetics once a patient develops refractory ascites.
+
+Prospectively-obtained measures of deterioration in patient-reported outcomes and in muscle mass will form the basis for the next stage of investigation of interventions to mitigate these declines.
+
+DETAILED DESCRIPTION:
+Patients with refractory ascites defined as requiring \>1 paracentesis within a 6 week period will be prospectively enrolled. The Patient-Reported Outcomes Measurement Information System (PROMIS-10) and ascites-specific (Ascites Q and Edmonton Symptom Assessment System: Ascites Modification) quality of life questionnaires will be obtained at baseline, then at 1-, 2-, 4- and 6 months. Sarcopenia will be assessed by muscle area measurement from a single CT image at the L4 level at baseline, 2- and 6 months.
+
+PRIMARY OUTCOMES:
+  - Health-Related Quality of Life scores as measured by the PROMIS-10 questionnaire
+  - Sarcopenia as measured by psoas, paraspinal, and total abdominal wall muscle areas
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Quality of Life surveys
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05726747

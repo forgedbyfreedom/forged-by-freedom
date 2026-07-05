@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02050139
+Title: L-Cysteine in Peritoneal Dialysis
+Official Title: A PROSPECTIVE, RANDOMIZED, DOUBLE-BLIND, CROSS-OVER STUDY TO EVALUATE THE RENAL AND BIOHUMORAL EFFECTS OF L-CYSTEINE COMPARED TO PLACEBO IN STABLE PERITONEAL DIALYSIS PATIENTS WITH RESIDUAL DIURESIS
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: protein supplementation
+
+SUMMARY:
+Over the last decades, peritoneal dialysis has grown worldwide to become one of the most common modalities of renal replacement therapy, particularly in developing or newly industrialized countries, such as India, China, Korea, Turkey, Malaysia, Mexico and Brazil. Peritoneal dialysis has been associated with an initial survival benefit compared to hemodialysis, although this advantage becomes less apparent over time, likely due to the progressive loss of residual renal function and the development of pathological alterations of peritoneum . Recent results suggest that an antioxidant therapy by N-acetyl-cysteine oral supplementation may improve residual renal function in peritoneal dialysis patients. This finding may have major clinical relevance, as preserving residual renal function in peritoneal dialysis patients has been associated with improved survival . Aim of the present randomized, double-blind, crossover study is to confirm the preliminary evidence of the beneficial effects of antioxidant agents on residual renal function by using the L-enantiomeric form of cysteine in 10 prevalent peritoneal dialysis patients with residual diuresis.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - 24-hour urine output
+  - Measured Glomerular Filtration Rate (GFR)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-cysteine
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02050139

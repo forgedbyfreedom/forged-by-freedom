@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05965713
+Title: National Fully Remote Use of IpsiHand Device in Hemiparetic Stroke
+Official Title: IpsiHand Device Use in Hemiparetic Stroke Population to Assess Home Based EEG System Candidacy for BCI Rehabilitation of the Upper Extremity and the Efficacy of a Full Remote Home Based BCI Therapy - A Randomized Control Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 109
+Topic: strength training
+
+SUMMARY:
+The goal of this study is to define the efficacy of fully remote home-based BCI therapy in chronic hemiparetic subcortical stroke patients. A randomized controlled study using the integrated remote BCI system will be tested against standard exercise therapy to determine the efficacy of motor improvement in chronic stroke patients with an upper extremity hemiparesis. Specifically, the integrated BCI system will include 1) the remote screening and motor assessment system for the upper extremity and 2) the BCI-controlled robotic hand exoskeleton (i.e. IpsiHand).
+
+DETAILED DESCRIPTION:
+The ultimate goal of this project is to develop a functioning and clinically feasible method for restoring function to motor impaired stroke survivors. This ultimate goal is to develop a system that allows for enhanced functional capability and works consistently over a long-term basis and is accessible remotely no matter location or access to healthcare. In developing a new rehabilitation method, the researchers hope to create a system that allows for closed loop feedback through a robotic hand orthosis on the motor impaired side of stroke patients in response to intended movements of the muscles. The method, if successful, would represent an ideal, non-invasive method of promoting motor learning and recovery in stroke survivors. The ability to operate robotic hand orthosis using electrical signals of the brain is rapidly leaving the realm of science fiction and becoming a realistic goal of the clinical community. The current advances in BCI controlled neuroprosthetics could have immeasurable influence on adult patients with severe motor impairments from stroke. Even further on the horizon the insights developed from such work could substantively alter the way all stroke patients are treated and rehabilitated.
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer - Upper Extremity (UEFM) , Manual Long Form
+
+INTERVENTIONS:
+  - DEVICE: Neurolutions IpsiHand System
+  - OTHER: Standard of Care - Home Exercise Program for Upper Extremity
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05965713

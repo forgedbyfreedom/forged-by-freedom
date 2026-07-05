@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06669715
+Title: Evaluation of Physical Fitness and Hemodynamics Across a Diverse Population
+Official Title: Validation of an Interval Test for Monitoring Cardiovascular Function for Individuals with Different Levels of Physical Fitness
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 30
+Topic: aerobic exercise
+
+SUMMARY:
+In this study, investigators will use the IFT 30-15 test, a six-minute walking test, and a treadmill test to assess the participants' cardiorespiratory fitness. For the treadmill cardiopulmonary exercise test (CPET), we will measure indirect gas exchange using a CPET device (K5). Maximum heart rate (HRmax) will be measured with a Polar heart rate monitor (model H10). The six-minute walking test will follow standardized procedures, and the treadmill test will follow a protocol of gradually increasing speed each minute.
+
+The study will involve two groups of participants: healthy individuals and pre-hypertensive individuals. While the IFT 30-15 test has been validated on a diverse range of athletes and physically active individuals, it has not yet been validated in individuals with similar characteristics to our participants (BMI \> 30 and limited cardiovascular function). Additionally, a variety of hemodynamic measures and other physical function measures such as sit-to-stand and push-ups will be assessed for all participants.
+
+DETAILED DESCRIPTION:
+Study description This study is a work package of the ACT-ON project, aimed at validating different physical fitness assessment tests in diverse populations considering their health status. Thus, in the proposed study we will assess the potential for validating a selected cardiovascular function test for individuals with varying levels of physical fitness. The chosen test, the Intermittent Fitness Test 30-15 (hereafter referred to as IFT 30-15), is a field test commonly used to measure or determine aerobic capacities. More specifically, IFT 30-15 allows for the assessment of maximum oxygen uptake (VO2max), maximum heart rate (HRmax), as well as anaerobic capacity and capacity for intermittent high-intensity running. Of particular importance to us is the test's high potential to determine VO2max and HRmax, which consequently allows for defining workloads in specific training zones.
+
+To collect the necessary data, the investigators will use a range of instruments and tools in all planned studies in the following order:
+
+Upon arrival at the laboratory of the Institute of Sport at the Faculty of Sport, the investigators will measure participants' basic anthropometric characteristics and body composition. the investigators will use a stadiometer and anthropometer (GPM, Model 101, Switzerland) to measure height, and body mass will be measured using a multi-frequency bioelectrical impedance device (InBody 720: Biospace, Korea). Blood pressure will then be measured using the Omron M6 device.
+
+Hemodynamics
+
+Pulse Wave Velocity (PWV) Characteristics
+
+The Vicorder device (software version 4; Skidmore Medical, United Kingdom) will be used to measure pulse wave characteristics (PWA) of the brachial artery and pulse wave velocity from the carotid to the femoral artery (cfPWV). This device uses an oscillometric technique to obtain the pulse wave. cfPWV measurements will be taken using a 10 cm cuff around the upper right thigh to detect the femoral pulse and a 3 cm cuff around the neck to detect the right carotid pulse. The neck cuff is designed to be positioned above one carotid artery, avoiding compression of the trachea and both carotid arteries simultaneously. The distance between the suprasternal notch and the cuff on the upper thigh will be measured according to the manufacturer's instructions. Both cuffs will automatically inflate simultaneously to 65 mmHg, with pulse waves recorded in 3 to 5-second intervals while the participant lies in a supine position.
+
+Flow-Mediated Slowing (FMS)
+
+The VICORDER® EndoCheck FMS model was used for FMS determination. Testing was conducted following the device instructions. The pulse wave velocity (PWV) on the upper arm was measured simultaneously between the wrist and upper part of the right arm over 10 minutes, with a 5-minute flow occlusion period. FMS was determined by continuously measuring the minimal PWV compared to the baseline PWV, with the percentage change designated as FMS.
+
+Physical Performance
+
+Maximal Aerob
+
+PRIMARY OUTCOMES:
+  - Aerobic capacity (Vo2max-CPET)
+  - Aerobic capacity (Vo2max-IFT)
+  - Aerobic capacity (Vo2max-6MWT)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06669715

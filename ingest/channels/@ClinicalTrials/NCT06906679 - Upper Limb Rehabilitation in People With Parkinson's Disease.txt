@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06906679
+Title: Upper Limb Rehabilitation in People With Parkinson's Disease:
+Official Title: Effectiveness of a Robotic End-effector Device for Upper Limb Rehabilitation in People With Parkinson's Disease: a Multicenter Randomized Controlled Pilot Study
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: strength training
+
+SUMMARY:
+This study evaluates the effectiveness of upper limb rehabilitation using an end-effector robotic device with exercises designed to improve movements, strength, and coordination of the shoulder, elbow, and wrist in patients with Parkinson's disease who have mild to moderate disability, compared to conventional rehabilitation treatment. The study protocol will involve individuals diagnosed with PD according to the UK Parkinson's Disease Society Brain Bank criteria, who will be randomly assigned to one of the following groups:
+
+A - Experimental Group (EG) - robotic treatment for upper limb rehabilitation. B - Control Group (CG) - conventional treatment for upper limb rehabilitation.
+
+Secondary objectives include:
+
+\- Evaluating the effectiveness of an end-effector robotic system in terms of improving upper limb coordination and functionality through the ARAT test and the UPDRS.
+
+Identifying subgroups of participants who may benefit more from robotic therapy based on PD disease stage (Hoehn \& Yahr), age, and upper limb impairment.
+
+Analyzing the effects of robotic rehabilitation on quality of life.
+
+Assessing participants' compliance and satisfaction levels with the robotic system in terms of improving participation in upper limb rehabilitation.
+
+DETAILED DESCRIPTION:
+Parkinson's disease (PD) is the second most common neurodegenerative disorder, affecting over 6 million individuals worldwide, with its prevalence having increased 2.5 times in the last 30 years, making it a leading cause of neurological disability. The hallmark of PD is a motor syndrome characterized by bradykinesia, resting tremor, and rigidity, alongside postural and gait alterations. Despite being considered a movement disorder, PD often presents non-motor symptoms like hyposmia, constipation, urinary dysfunction, orthostatic hypotension, cognitive impairments, mood depression, pain, and sleep disorders. Motor symptoms progressively impair daily activities and reduce quality of life, with difficulties in gait and swallowing worsening disability over time. Specifically, upper limb motor dysfunction is marked by reduced movement speed and impaired force modulation, leading to poor hand movement quality. Motor impairment in PD is inversely correlated with movement speed and directly correlated with task complexity.
+
+PD progresses slowly, and while current treatments manage motor symptoms effectively in the early stages, their efficacy diminishes in advanced stages, with non-motor symptoms becoming more evident. Alongside pharmacotherapy, early and regular physical rehabilitation has shown benefits, improving motor function, posture control, balance, and strength while potentially delaying disease progression. The success of PD treatment depends on treatment quality, timing, and frequency. Conventional rehabilitation includes exercise, strategy training, and patient education, focusing on enhancing upper limb coordination, fluidity, and dexterity. Although some therapies improve motor function and non-motor symptoms, limited evidence exists regarding their impact on hand dexterity.
+
+Robotic devices, leveraging neuroplasticity and motor learning principles, have been integrated into rehabilitation to maximize sensory input and provide targeted, task-specific stimuli to the central nervous system. Advances in technology have made robotic treatments more accessible, complementing traditional physiotherapy, particularly in upper limb neurorehabilitation.
+
+Robotic-assisted therapy (RAT) has shown efficacy in stroke rehabilitation, improving upper limb function, spasticity, and daily living activities. However, research on robotic rehabilitation for PD has primarily focused on lower limbs and gait training (RAGT), demonstrating positive effects on motor function and balance, despite limited sample sizes and follow-up studies.
+
+Regarding upper limb rehabilitation in PD, evidence is scarce. Some studies using virtual reality systems, like Oculus Rift 2 with Leap Motion Controller (OR2-LMC), have shown improvements in strength, fine and gross dexterity, and movement speed, although discrepancies between qualitative and quantitative results were noted. Picelli et al. (2014) found that robotic-assisted upper limb training improved sensorimotor functions, bu
+
+PRIMARY OUTCOMES:
+  - Box and Block Test (BBT)
+
+INTERVENTIONS:
+  - DEVICE: Experimental Group
+  - OTHER: control group
+
+ELIGIBILITY:
+Age: 30 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06906679

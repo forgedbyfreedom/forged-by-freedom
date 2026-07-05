@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06973590
+Title: Blood Flow Restriction and Transcutaneous Electrical Nerve Stimulation on Motor Function in Stroke
+Official Title: Effects of Low-intensity Resistance Training With Blood Flow Restriction and Transcutaneous Electrical Nerve Stimulation on Lower Limb Motor Function in People With Stroke
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: high intensity interval training
+
+SUMMARY:
+Stroke commonly results in persistent leg impairments that limit mobility and reduce quality of life. This study investigates whether combining low-intensity resistance training with blood flow restriction (LIRT-BFR) and transcutaneous electrical nerve stimulation (TENS) can effectively improve leg function in stroke survivors.
+
+Participants with chronic stroke will be randomly assigned to one of four intervention groups: 1) LIRT with simulated BFR and simulated TENS; 2) LIRT with actual BFR and simulated TENS; 3) LIRT with simulated BFR and actual TENS; 4) LIRT with both actual BFR and actual TENS. The resistance training utilizes 20% of each participant's maximum lifting capacity. For blood flow restriction, an automated pressure cuff (SmartCuffs 4.0) will be placed on the upper portion of the affected leg, inflated to 50% of the individual's occlusion pressure during exercises and deflated during rest periods. TENS therapy delivers controlled electrical impulses through electrodes positioned on the anterior thigh.
+
+Each 60-minute session includes a 10-minute warm-up followed by 40 minutes of targeted resistance exercises (leg extensions, leg presses, and weight-bearing squats) and concludes with 10 minutes of stationary cycling. The resistance protocol involves 3 sets of 20 repetitions with standardized rest intervals between sets and exercises. Participants will attend three sessions weekly for six weeks.
+
+Assessments will be conducted at baseline, midpoint (3 weeks), completion (6 weeks), and follow-up (1 month post-intervention). The primary outcome measure is the Fugl-Meyer Assessment for Lower Extremity function, with secondary measures including muscle strength, stiffness, balance, mobility, walking capacity, and gait parameters. To understand the underlying mechanisms, we will measure muscle oxygenation using near-infrared spectroscopy, evaluate muscle structure via ultrasound, and monitor physiological responses including heart rate variability and perceived exertion for safety monitoring.
+
+DETAILED DESCRIPTION:
+Stroke often leads to persistent lower-limb impairments, limiting functional recovery and quality of life. Low-intensity resistance training with blood flow restriction (LIRT-BFR) has shown promise in improving muscle function in healthy populations, but its effects in stroke rehabilitation remain underexplored. Additionally, while BFR and electrical stimulation have been beneficial for pain relief and muscle activation, the impact of combining BFR with transcutaneous electrical nerve stimulation (TENS) in stroke patients remains unknown. The objectives of this study is to evaluate whether a multi-mode exercise rehabilitation training program of LIRT-BFR and TENS can restore lower extremity strength, mobility, and quality of life.
+
+In this randomized controlled trial, chronic stroke patients will be allocated to one of four groups: 1) LIRT + sham BFR + sham TENS, 2) LIRT + BFR + sham TENS, 3) LIRT + sham BFR + TENS, and 4) LIRT + BFR + TENS. The LIRT protocol utilizes 20% of one-repetition maximum (1-RM) as the standardized training load. BFR implementation involves an automated restriction band (SmartCuffs 4.0) positioned at the proximal region of the affected lower extremity, calibrated to 50% of the individual's lower limb occlusion pressure (LOP). The pressure system remains inflated throughout active training phases and is systematically deflated during inter-exercise intervals. TENS application targets the anterior thigh region.
+
+The intervention protocol comprises a structured 60-minute session beginning with a 10-minute preparatory warm-up, followed by 40 minutes of targeted resistance exercises including leg extensions, leg presses, and load-bearing squats focused on the affected limb, concluding with 10 minutes of aerobic cycling. Each resistance exercise consists of 3 sets of 20 repetitions with rest intervals. The assessments will be conducted at baseline, mid-intervention (3 weeks), post-intervention (6 weeks), and follow-up (1 month post-completion).
+
+The primary outcome measure will be the Fugl-Meyer Assessment Lower Extremity (FMA-LE) score, and secondary outcome measures including muscle strength, stiffness, balance, functional mobility, walking capacity, gait speed, etc. To elucidate the underlying mechanisms, the study will use near-infrared spectroscopy (NIRS) to assess muscle oxygenation and hemodynamics, ultrasound for muscle morphology, and exercise measures like heart rate variability (HRV) and rating of perceived exertion (RPE) for safety consideration.
+
+PRIMARY OUTCOMES:
+  - Fugl-Meyer Assessment of Lower Extremity (FMA-LE)
+
+INTERVENTIONS:
+  - DEVICE: Blood flow restriction (BFR)
+  - DEVICE: Transcutaneous electrical nerve stimulation (TENS)
+  - DEVICE: Sham blood flow restriction (Sham-BFR)
+  - DEVICE: Sham transcutaneous electrical nerve stimulation (Sham-TENS)
+  - BEHAVIORAL: Low-intensity resistance training (LIRT)
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06973590

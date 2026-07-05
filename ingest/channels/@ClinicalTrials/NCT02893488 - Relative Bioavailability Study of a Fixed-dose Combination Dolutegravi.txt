@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02893488
+Title: Relative Bioavailability Study of a Fixed-dose Combination Dolutegravir/Abacavir/Lamivudine Dispersible Tablet
+Official Title: A Phase I, Single Dose, Five-period Crossover Relative Bioavailability Study of a Fixed-dose Combination Dolutegravir/Abacavir/Lamivudine Dispersible Tablet as Compared to a Co-dose of TIVICAY and EPZICOM in Healthy Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: creatine supplementation
+
+SUMMARY:
+This is an open-label, randomized, crossover study in healthy adult subjects with 5 treatment groups over 5 dosing periods. This study will evaluate pharmacokinetic parameters and relative bioavailability of a dispersible, fixed-dose combination (FDC) tablet of TRIUMEQ™ (\[abacavir, ABC\]/\[dolutegravir, DTG\]/\[lamivudine, 3TC\]) when dispersed and consumed under four different dosing conditions in comparison to an oral dose of TIVICAY™ (DTG) + EPZICOM™ (ABC/3TC) non-dispersible tablets administered in the fasted state. Approximately 20 subjects will be randomized, each to one of 5 treatment groups. The total duration of participation of a subject in this study will be approximately 10-11 weeks. It will include a screening visit within 30 days prior to the first dose of study drug, five treatment periods each with a single dose of study drug per treatment period and a follow up visit within 7 10 days after the last dose. There will also be a washout of at least 7 days between doses in each treatment period. TRIUMEQ, EPZICOM, and TIVICAY are trademarks of the GlaxoSmithKline group of companies.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area under the plasma concentration-time curve from time zero (pre-dose) extrapolated to infinite time (AUC[0-infinity]) of DTG, ABC, and 3TC
+  - Maximum observed plasma concentration (Cmax) of DTG, ABC, and 3TC
+
+INTERVENTIONS:
+  - DRUG: DTG/ABC/3TC FDC DISPERSIBLE TABLET
+  - DRUG: EPZICOM (ABC/3TC)
+  - DRUG: TIVICAY (DTG)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02893488

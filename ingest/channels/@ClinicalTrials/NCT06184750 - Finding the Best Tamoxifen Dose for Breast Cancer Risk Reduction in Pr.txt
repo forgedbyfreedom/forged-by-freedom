@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06184750
+Title: Finding the Best Tamoxifen Dose for Breast Cancer Risk Reduction in Premenopausal Women, RENAISSANCE Trial
+Official Title: Refining Tamoxifen Dose for Premenopausal Breast Cancer Risk Reduction (RENAISSANCE): A Phase II Single Arm Trial
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: growth hormone treatment
+
+SUMMARY:
+This phase II trial evaluates response-guided low-dose tamoxifen for reducing breast density in women who are at higher than average risk for breast cancer. Increasing breast density is a well established risk factor for breast cancer. Tamoxifen is a selective estrogen receptor modulator. It works by blocking the effects of the hormone estrogen in the breast. Tamoxifen has been shown to reduce breast density, even at reduced dosages, and is approved for the prevention of breast cancer.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVE:
+
+I. To evaluate whether the overall proportion of premenopausal tamoxifen responders (defined by absolute dense area reduction on mammogram of \> 10%) can be increased through a strategy of within-individual dose escalation among non-responders from 5 mg per day to 10 mg per day.
+
+SECONDARY OBJECTIVES:
+
+I. To assess the association of plasma levels of major tamoxifen metabolites with tamoxifen dose and breast density changes from baseline.
+
+II. To evaluate longitudinal change from baseline in serum biomarkers of tamoxifen response at each dose level: sex hormone binding globulin (SHBG), insulin like growth factor 1 (IGF-1) and C-reactive protein (CRP).
+
+III. To assess the association of baseline dense area (continuous variable) with tamoxifen response.
+
+IV. To evaluate the impact of tamoxifen dose on participant-reported symptoms (Breast Eight Symptom Scale, BESS).
+
+V. To evaluate the impact of tamoxifen dose on adherence to final tamoxifen dose.
+
+EXPLORATORY OBJECTIVES:
+
+I. To evaluate breast tissue-based biomarkers (in research biopsy samples) that associate with tamoxifen response at six months, comparing within-person change in responders and non-responder.
+
+II. To assess the association between single nucleotide polymorphisms that overlap between risk of breast cancer and dense are of breasts; and others that relate to efficiency of tamoxifen metabolism.
+
+III. To evaluate change in breast cancer risk estimates from baseline to 18 months, as assessed by an AI (artificial intelligence) tool and compare changes by dose group.
+
+OUTLINE: This is a within-participant dose-escalation study of tamoxifen.
+
+Participants receive tamoxifen 5mg orally (PO) once daily (QD) for 6 months. Participants with absolute dense area reduction (aDAR) \>= 10% on mammogram at 6 months continue receiving tamoxifen 5mg PO QD for 12 months. Participants with aDAR \< 10% at 6 months are escalated to receive tamoxifen 10mg PO QD for 6 months. Participants with aDAR \>= 10% after 6 months of tamoxifen 10mg continue receiving tamoxifen 10 mg PO QD for 6 months. Participants with aDAR \< 10% after 6 months of tamoxifen 10mg are given the option of continuing tamoxifen 10mg or escalating to receive tamoxifen 20mg PO QD for 6 months. Participants undergo mammography and collection of blood samples at screening and on study. Participants may optionally undergo biopsy at screening and on study.
+
+After completion of study intervention, patients are followed up at 4 weeks.
+
+PRIMARY OUTCOMES:
+  - Proportion of women who have a response at any time point
+
+INTERVENTIONS:
+  - PROCEDURE: Biopsy Procedure
+  - PROCEDURE: Biospecimen Collection
+  - PROCEDURE: Mammography
+  - OTHER: Questionnaire Administration
+  - DRUG: Tamoxifen
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06184750

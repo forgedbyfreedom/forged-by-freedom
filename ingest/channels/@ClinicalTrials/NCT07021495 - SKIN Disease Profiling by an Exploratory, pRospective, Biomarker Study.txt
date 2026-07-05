@@ -1,0 +1,66 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07021495
+Title: SKIN Disease Profiling by an Exploratory, pRospective, Biomarker Study in dermatoloGY Practice (SKINERGY)
+Official Title: A Prospective, Multi-Center, Observational Biomarker Real-World Evidence Study for In-Depth Profiling of Patients With Chronic Immune-Mediated Inflammatory Skin Diseases in Daily Practice
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 840
+Topic: creatine supplementation
+
+SUMMARY:
+The goal of this observational study is to comprehensively profile six immune-mediated inflammatory diseases, including atopic dermatitis (AD), plaque psoriasis (PSO), hidradenitis suppurativa (HS), cutaneous T-cell lymphoma subtype mycosis fungoides (MF), chronic spontaneous urticaria (CSU), and cutaneous lupus erythematosus (CLE) in daily practice. Data will be compared with data from healthy volunteers. This study is part of the larger NGID (Next Generation ImmunoDermatology) initiative, of which the main objective is to develop infrastructure that enables personalised patient care. The main questions the SKINERGY study aims to answer are:
+
+* Which biomarkers can discriminate between responders and non-responders to treatment in patients with AD, CLE, CSU, HS, MF, and PSO?
+* How do disease-related biomarkers in patients with AD, CLE, CSU, HS, MF, and PSO differ from those in healthy volunteers?
+* Which (multi-omics) biomarkers are associated with disease subtypes and predict response or non-response to (targeted) therapies in daily clinical practice?
+* How do biomarker profiles compare across different cohorts of patients with immune-mediated inflammatory skin diseases (AD, CLE, CSU, HS, MF, PSO)
+* How do biomarker levels change over time in response to treatment in these patient populations?
+* Which skin tissue biomarkers are associated with disease progression or treatment response?
+* How do the genomic profiles of patients differ across diseases or correlate with treatment outcomes?
+* Can additional imaging biomarkers enhance the characterization of disease profiles or treatment monitoring over time?
+
+Researchers will compare both differences beween patients within a disease group in different treatment arms, as well as patients within the same treatment arm. Additionally, biomarker profiles of patients with different diseases will be evaluated. These comparisons will be made to see if shared or distinct biomarker patterns exist across diseases and treatments, which could inform patient stratification, optimize therapeutic decision-making, and identify potential targets for future interventions.
+
+Participants will start medication according to national guidelines for the treatment of their inflammatory skin disease (AD: Cyclosporin A, anti-IL4/13, or anti-JAK; PSO: anti-TNF, anti-IL23, ani-IL17, anti-TYK2; HS: anti-TNF, anti-IL17; MF: CHLORM, TSC, PUVA-UV-B; CSU: anti-IgE, Cyclosporin A, anti-BTK\*; CLE: TSC, HCQ, MTX)
+
+\*once approved and reimbursed in the Netherlands
+
+Participants will:
+
+* Take the prescribed medication for their skin disease (in line with standard care in the Netherlands).
+* Visit the clinic for a study visit combined with their standard care appointment 3 times (baseline, month 3, and month 6. An additional 4th visit at month 12 is optional).
+* Fill in an online set of questionnaires from home, 3 times during the study period (an additional 4th time is optional).
+* Patients with CSU fill in the UAS7 (and if applicable the AAS7) daily for the study period.
+
+DETAILED DESCRIPTION:
+Atopic dermatitis (AD), cutaneous lupus erythematosus (CLE), chronic spontaneous urticaria (CSU), hidradenitis suppurativa (HS), cutaneous T-cell lymphoma (CTCL, subtype mycosis fungoides, MF), and plaque psoriasis (PSO) are diverse immune-mediated inflammatory skin diseases with complex and often poorly understood pathophysiologies. Genetic, immunological, and environmental factors contribute variably across these conditions, leading to heterogeneous clinical presentations. Despite advances, the identification and validation of specific biomarkers remain limited, hampering precise diagnosis, disease subtyping, and treatment response prediction. For example, AD involves epidermal barrier defects and immune dysregulation; CLE features autoimmune mechanisms and diverse clinical subtypes; CSU results from mast cell activation; HS is driven by follicular occlusion and chronic inflammation; CTCL involves malignant T-cell proliferation in the skin; and PSO is characterized by immune-driven keratinocyte hyperproliferation. The Next Generation ImmunoDermatology project aims to address these challenges by deeply profiling these diseases to discover biomarkers that define disease endotypes and predict therapy response, ultimately enabling personalized treatment strategies.
+
+The investigations will profile various aspects of the disease, including patient-reported outcomes, the clinician-reported outcomes, biophysical, imaging, cellular, microbiological, molecular, blood-based and tissue biomarkers.
+
+This multicenter, open-label, longitudinal biomarker study follows 720 patients with six inflammatory skin diseases-AD, PSO, HS, CSU, CLE, and MF-for one year after starting standard-of-care treatment. Multimodal data are collected at baseline, 3, 6, and 12 months. An additional 120 healthy controls are included for baseline comparison and followed for 6 weeks. Each disease includes multiple treatment arms (N=40 per arm):
+
+* AD: cyclosporine A; anti-IL-4/13 (dupilumab, tralokinumab, lebrikizumab); JAK1 inhibitors (upadacitinib, abrocitinib)
+* PSO: anti-IL-23 (guselkumab, risankizumab, tildrakizumab); anti-IL-17 (secukinumab, ixekizumab, brodalumab, bimekizumab); anti-TNFα (adalimumab, certolizumab); TYK2 inhibitor (deucravacitinib)
+* HS: anti-TNFα (adalimumab); anti-IL-17 (secukinumab, bimekizumab\*)
+* MF: topical chlormethine; topical corticosteroids; phototherapy (PUVA/UV-B)
+* CSU: anti-IgE (omalizumab\*); cyclosporine A; BTK inhibitors\* (remibrutinib, rilzabrutinib)
+* CLE: topical corticosteroids; hydroxychloroquine; methotrexate
+
+PRIMARY OUTCOMES:
+  - Lipidomics of the stratum corneum and OLINK
+  - Cutaneous microbiome
+  - Serum biomarkers
+  - Plasma biomarkers
+  - Eczema Area and Severity Index (EASI)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07021495

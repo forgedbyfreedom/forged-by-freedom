@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04920201
+Title: The Effect of Exercise With Wearable Walking Assist Robot in Various Environments
+Official Title: The Effect of Exercise With Wearable Walking Assist Robot in Various Environments in Healthy Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: physical activity intervention
+
+SUMMARY:
+This single-blinded, randomized, controlled trial includes 60 healthy adults. The participants were randomized to four different groups. The first group performed over-ground walking without GEMS-H, the second group performed over-ground walking with GEMS-H applied resistance mode, the third group performed stair ascent with GEMS-H applied assist mode, and the fourth group were designated as the group that performed inclined gait with GEMS-H applied assist mode on a treadmill. Each group is divided in 15 participants.
+
+DETAILED DESCRIPTION:
+At the first visit, the subjects are fully informed of the study if appropriate after determining whether they meet the selection criteria. If the subjects meet the selection criteria, the participants were randomized to four different groups. The first group performed over-ground walking without GEMS-H, the second group performed over-ground walking with GEMS-H with resistance mode, the third group performed stair ascent with GEMS-H with assist mode, and the fourth group were designated as the group that performed inclined gait with GEMS-H with assist mode on a treadmill. Each group is divided in 15 participants. Each group completed 30 minutes exercise at least three times per week (total 10 sessions). All measurements were conducted before and after the intervention.
+
+PRIMARY OUTCOMES:
+  - Change from baseline performance on gait speed after the intervention
+
+INTERVENTIONS:
+  - OTHER: Over-ground walking without GEMS-H
+  - DEVICE: Over-ground walking with GEMS-H with resist mode
+  - DEVICE: Stair ascent with GEMS-H with assist mode
+  - DEVICE: Incline walking with GEMS-H with assist mode
+
+ELIGIBILITY:
+Age: 65 Years to 84 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04920201

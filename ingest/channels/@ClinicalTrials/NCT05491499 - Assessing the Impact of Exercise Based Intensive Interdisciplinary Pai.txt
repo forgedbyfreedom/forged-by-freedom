@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05491499
+Title: Assessing the Impact of Exercise Based Intensive Interdisciplinary Pain Treatment (IIPT) on Endogenous Pain Modulation in Youth With Chronic Pain Syndromes
+Official Title: Assessing the Impact of Exercise Based Intensive Interdisciplinary Pain Treatment (IIPT) on Endogenous Pain Modulation in Youth With Chronic Pain Syndromes
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 43
+Topic: aerobic exercise
+
+SUMMARY:
+This work will answer two critical questions: 1) Does intensive interdisciplinary pain treatment (IIPT) involving aerobic exercise help normalize pain processing in youth with chronic pain syndromes and 2) Are aerobic fitness levels and the ability to modulate pain inter-related?
+
+Currently, medications are ineffective for improving pain and disability in youth with chronic pain syndromes and identifying non-pharmacologic treatments, such as IIPT, that help strengthen the nervous system's ability to modulate or turn pain signals down will improve outcomes and quality of life for youth suffering from chronic pain. This study will help determine whether exercise based IIPT leads to physiologic improvements in how pain is processed, specifically if youth with chronic pain can better turn pain down during the offset analgesia test after an exercise based IIPT treatment, and also help elucidate the link between a child's aerobic fitness and their ability to modulate pain.
+
+DETAILED DESCRIPTION:
+1. Study Design: We will recruit 38 youth with primary and secondary chronic pain syndromes\[29; 31\] ages 10-17 years who are admitted to the Mayo Family Pediatric Pain Rehabilitation Center (PPRC) at Boston Children's Hospital. This longitudinal cohort study will examine responses to the OA and Fitkids Treadmill tests at 2 timepoints: 1) within 5 days of IIPT admission and 2) within 1 week of IIPT discharge. Twelve participants will complete a 3rd visit within 5 days of the first study visit to examine OA test-retest reliability.
+2. Description of Study Treatments or Exposures/Predictors:
+
+Thermal testing: A computer-controlled temperature paradigm is programmed to deliver each stimulus using the Medoc Thermosensory Analyzer (TSA)-II device (Medoc Ltd. Advanced Medical Systems, Ramat Yishai, Israel). The device operates by a microcomputer-driven 3 cm x 3 cm (9 cm2) Peltier contact thermode secured to the skin by a Velcro band without stretch. Testing is conducted on the non-dominant forearm using 4 locations to minimize skin sensitivity. Participants are blinded to the type of test being performed and expected response patterns.
+
+Assessment of Pain Intensity: During all tests participants rate heat pain intensity continuously in real time using a linear electronic visual analogue scale (eVAS). Participants use their dominant hand to operate a knob on a horizontal sliding eVAS scale (0-100 mm) with the following two anchors: the left defined as "no heat pain sensation" (0 mm) and the right as "most intense heat pain sensation imaginable" (100 mm). Participants are instructed to move the knob on the scale in proportion to perceived heat pain intensity and not temperature intensity during testing.
+
+Determination of the Individualized Test Temperature (ITT): To determine ITT the first temperature stimulus will ramp from baseline (32°C) to 46°C (the 75th percentile heat pain detection threshold for children ages 7-17 years) and held for 5 seconds.\[22\] The temperature will return to baseline (32°C) for 30 seconds and be repeated three times. If an eVAS of 75/100mm is not consistently reported on all three trials, this paradigm will be repeated at 48ºC. The lowest temperature that consistently evokes an eVAS 75/100mm will be used as the first temperature in all tests.
+
+Offset Analgesia (OA) Test: We will use the same paradigm as our previous study, except for increasing the ITT threshold to 75/100mm.\[37\] The first temperature (T1) is set to the ITT and held for 5 seconds, followed by a second temperature (T2) 1°Celsius (C) higher for 5 seconds, and then returns to a third temperature (T3) that is equal to T1 for 20 seconds before returning to baseline (32ºC). OA responses are calculated as a percentage of perceived pain reduction following the 1ºC noxious thermal stimulus offset. A larger OA response (i.e., greater pain reduction) reflects a greater ability to actuate pain inhibition.
+
+Control Test: For control tests, T1 and T2 temperatures are id
+
+PRIMARY OUTCOMES:
+  - Change in Offset Analgesia
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 10 Years to 17 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05491499

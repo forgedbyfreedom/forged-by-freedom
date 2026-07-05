@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07380958
+Title: Mirror Therapy as an Adjunct to Rehabilitation Following Total Knee Arthroplasty
+Official Title: Mirror Therapy as an Adjunct to Rehabilitation Following Total Knee Arthroplasty
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+The investigators are looking to see if using a mirror during knee exercises after a knee replacement helps participants with less pain and/or better knee range of motion.
+
+DETAILED DESCRIPTION:
+Purpose: To examine the effectiveness of mirror therapy combined with standard care physical therapy on knee range of motion (ROM), pain levels, and physical function in individuals following a total knee arthroplasty (TKA).
+
+Background: Following a TKA, patients often present with numerous impairments including joint stiffness, pain, decreased strength, and impaired mobility. These limitations can inhibit functional progress during rehabilitation and recovery. Mirror therapy is a potential treatment option that may assist in reducing these impairments and improving recovery following TKA.
+
+Study Activities: Active and sham group activities will add-on to the physical therapy session and are considered part of standard care, with no change to the current billing process. Both groups will participate in ROM activities, consistent with standard PT care, as part of a billable treatment. The active group with do standard practice ROM activities while looking at a mirror and the sham group will perform ROM activities without a mirror.
+
+Interventions:
+
+* Treatment will start within 2 weeks (14 days) of the total knee replacement.
+* There will be 8 sessions within a 4-week time frame.
+
+Data Analysis: Demographic information will be reported using descriptive statistics. Analyses will use linear mixed-effects models with fixed effects for Group, Time, and the Group × Time interaction, and with subject-level random effects to account for repeated measures. The primary inference will be the Group × Time interaction.
+
+PRIMARY OUTCOMES:
+  - Pain NRS (Pain Numerical Rating Scale)
+  - Knee Flexion and Extension Goniometry
+
+INTERVENTIONS:
+  - OTHER: Mirror Therapy
+  - OTHER: Sham Intervention
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07380958

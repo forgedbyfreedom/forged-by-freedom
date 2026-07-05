@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05002075
+Title: Efficacy of an m-Health Cardiac Rehabilitation Program in Heart Failure With Preserved Ejection Fraction
+Official Title: Efficacy of an m-Health Cardiac Rehabilitation Program in Heart Failure With Preserved Ejection Fraction: A Pilot Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 69
+Topic: aerobic exercise
+
+SUMMARY:
+Heart failure (HF) portends substantial morbidity, mortality, and health care costs in the United States and the prevalence of heart failure with preserved ejection fraction (HFpEF) relative to HF with reduced ejection fraction (HFrEF) has been increasing. HFpEF is associated with a high morbidity and mortality burden and is projected to be the predominant subtype of HF in the near future. While multiple therapies have proven efficacious for patients with HFrEF, no pharmacological agents have demonstrably been shown to improve outcomes in HFpEF, highlighting the need for novel approaches to HFpEF treatment. Exercise intolerance (EI) is the cardinal symptom of HFpEF, which manifests as dyspnea and fatigue. EI leads to functional deconditioning and reduced quality of life (QOL), both of which elevate risk of death and hospitalization in patients with HFpEF. Supervised exercised training is associated with improvements in exercise capacity and QOL in adults with HFpEF. However, supervised exercise has not been widely utilized for the treatment of HFpEF due to logistical and fiscal barriers. Home-based exercise using an m-Health platform is an alternative to supervised exercise that can deliver clinician prescribed exercise interventions and wellness education though monitoring and care coordination. The goal of this study is to evaluate the feasibility and efficacy of a patient specific progressive home-based cardiac rehabilitation program leveraging the technology of the m-Health program in improving functional status, exercise capacity, and QOL in patients with HFpEF.
+
+DETAILED DESCRIPTION:
+Approximately 6.2 million adults in the United States suffer from heart failure (HF), of which almost one-half maintain a left ventricle ejection fraction (EF) \>50% known as heart failure with preserved ejection fraction (HFpEF). The prevalence of HFpEF has been increasing as compared with HF with reduced ejection fraction (HFrEF) over time, particularly in older adults. HFpEF is associated with a high morbidity and mortality burden and remains recalcitrant to available pharmacotherapies, significantly highlighting the need for novel strategies for management. Emerging data suggests HFpEF is a multiorgan disease with complex pathophysiology culminating in debilitating exercise intolerance (EI). This key clinical manifestation of HFpEF, stems from multiple causal pathways: accelerated fitness decline with aging, high comorbidity burden, sarcopenia, impaired cardiovascular reserve, and skeletal muscle myopathy. EI demonstrated by dyspnea and fatigue cascades into functional deconditioning and reduced quality of life (QOL). In addition to EI, \>90% of patients with HFpEF are pre-frail or frail and demonstrate physical function limitations. Unfortunately, these characteristic clinical findings in HFpEF are strongly predictive of death and hospitalization. There is an urgent need to develop effective therapeutic approaches targeting EI and physical function to achieve meaningful improvements in patient-reported and clinical outcomes in HFpEF.
+
+Supervised exercise training has been shown to improve functional status, exercise capacity, quality of life (QOL), and lower risk of hospitalization in patients with HF with most studies conducted in the HFrEF population. Smaller trials have demonstrated significant improvements in exercise capacity and QOL with supervised exercise training in HFpEF.5 Accordingly, the AHA/ACC 2013 HF guidelines recommend exercise and cardiac rehabilitation (CR) for patients with chronic HF who can participate in exercise to improve QOL and functional status. Furthermore, a statement from the AHA committee on exercise, rehabilitation, and prevention recommends exercise intensity, duration, and frequency should be tailored to the individual needs of patients. In 2014, HFrEF became a reimbursable diagnosis for comprehensive cardiac rehabilitation (CR) but HFpEF was excluded due to lack of large-scale clinical end-point driven trial evidence. Despite the established benefits, CR is widely underutilized with \<10% of eligible HF participants engaging in the same. CR participation barriers include comprehensive institutional expertise needed, widespread regulations, low reimbursement rates, high patient cost, patient time and travel, and facility requirement. Considering the benefits effects of exercise training on patient-oriented functional outcomes in HFpEF and the lack of availability of the current supervised exercise CR model (3 times/week x 12 weeks) for this patient population, there is a need for a more feasible, scalable, 
+
+PRIMARY OUTCOMES:
+  - Change from baseline Standard physical performance battery score at 3 and 6 months
+
+INTERVENTIONS:
+  - OTHER: m-health cardiac rehabilitation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05002075

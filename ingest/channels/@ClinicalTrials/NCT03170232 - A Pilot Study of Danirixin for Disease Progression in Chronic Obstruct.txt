@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03170232
+Title: A Pilot Study of Danirixin for Disease Progression in Chronic Obstructive Pulmonary Disease (COPD)
+Official Title: A Randomized, Double-blind, Sponsor Open, Placebo-controlled, 52 Week Study Evaluating the Effect of Danirixin (GSK1325756) on Lung Function and Health Related Quality of Life in Participants With Mild to Moderate Chronic Obstructive Pulmonary Disease (COPD)
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 54
+Topic: beta-alanine
+
+SUMMARY:
+This is a pilot study to investigate the effect of danirixin hydrobromide 35 milligram (mg) tablets on lung function and health related quality of life (HRQoL) in subjects with mild to moderate airflow obstruction and a demonstrated history of decline in forced expiratory volume in one second (FEV1). Specifically, this study aims to assess whether or not danirixin has the potential to impact disease progression in subjects with a COPD progression score indicating they are likely to decline based on 5 year data from a COPDGene study and support the conduct of a larger Phase III study for disease progression. Subjects will receive either placebo or danirixin 35 mg tablets (as hydrobromide hemihydrate salt) twice daily for 52 weeks (12months). Study subjects will continue with their standard of care inhaled medications (i.e. long acting bronchodilators with or without inhaled corticosteroids) while receiving study treatment. This study will be an ancillary study within the COPDGene study investigating the enrichment strategy for assessing disease progression. Potential subjects most likely to decline from the well established COPDGene cohort, will be based on data collected over the initial 5 year period. With the use of an enriched population, it is anticipated that one year of treatment will be sufficient to detect a trend in altering disease progression. Approximately 130 subjects will be screened to enroll 100 subjects in this study. The data from this study will provide useful information in determining whether to progress to a Phase III study to explore an indication for slowing disease progression.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Rate of Decline in Forced Expiratory Volume in One Second (FEV1)
+  - Change From Baseline in St. George's Respiratory Questionnaire (SGRQ) Total Score (Derived From SGRQ-Chronic Obstructive Pulmonary Disease Specific Tool [SGRQ-C])
+
+INTERVENTIONS:
+  - DRUG: Danirixin 35 mg tablets
+  - DRUG: Placebo
+  - DEVICE: Metered dose inhaler (MDI) sensor device
+  - DRUG: Rescue medication
+
+ELIGIBILITY:
+Age: 40 Years to 76 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03170232

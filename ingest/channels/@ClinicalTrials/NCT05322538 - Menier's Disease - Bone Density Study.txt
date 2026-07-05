@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05322538
+Title: Menier's Disease - Bone Density Study
+Official Title: Menier's Disease - Bone Density Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: vitamin D muscle
+
+SUMMARY:
+Meniere's disease is a progressive and debilitating inner ear disease characterised by vertigo and hearing loss. Several studies have linked Menierws disease with lower bone density and lower vitamin D levels. In the current prospective study definite Meniere's patients will be followed over a period of 2 year, during which repetitive measurements of bone density, vitamin D plasma levels, blood pressure as well as hearing and vestibular tests will be made. Results will be compared to healthy controls.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Vitamin D plasma levels
+  - Vitamin D plasma levels
+  - Vitamin D plasma levels
+  - Z-score and T-score of femur and lumbur spine
+  - Z-score and T-score of femur and lumbur spine
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: vitamin D plasma levels baseline
+  - DIAGNOSTIC_TEST: Dual-energy X-ray absorptiometry at baseline
+  - DIAGNOSTIC_TEST: cervical Vestibular evoked myogenic potentials at baseline
+  - DIAGNOSTIC_TEST: Audiogram at baseline
+  - DIAGNOSTIC_TEST: Measuring Orthostatic Blood Pressure at baseline
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05322538

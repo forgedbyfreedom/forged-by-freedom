@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06855316
+Title: Evaluating Combined Electromagnetic Stimulation for Enhanced Physical and Psychological Recovery in Athletes with DOMS
+Official Title: Evaluating Combined Electromagnetic Stimulation for Enhanced Physical and Psychological Recovery in Athletes with DOMS: a Randomized Controlled Study
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: athletic performance
+
+SUMMARY:
+This randomized controlled trial explores the impact of a combined transcranial and peripheral electromagnetic stimulation over the potential correlation between psychological well-being and recovery outcomes of young athletes experiencing Delayed Onset Muscle Soreness.
+
+DETAILED DESCRIPTION:
+This randomized controlled trial explores the impact of a combined transcranial and peripheral electromagnetic stimulation (TMS and PES) over the potential correlation between psychological well-being and recovery outcomes of young athletes experiencing Delayed Onset Muscle Soreness. Grounded in the emerging theory of DOMS as an axonopathy affecting muscle spindles, this study examines whether paired-associative stimulation can show link over physical and psychological recovery processes. Forty-eight male athletes, aged 18 to 35 years, regularly engaged in exercise, will be randomly assigned to one of four groups: Control (placebo), PES, TMS, and Combined Stimulation (TMS + PES). All participants will perform a muscle-damaging exercise protocol to induce DOMS, followed by the assigned electromagnetic intervention. Assessments will include dynamometry, Counter Movement Jump (CMJ), Visual Analog Scale for Fatigue (VAS-F), Pain Pressure Threshold (PPT), sprint performance, and various psychological measures, such as the State-Trait Anxiety Inventory (STAI), Acceptance and Action Questionnaire-II (AAQ-II), and the Spanish versions of the Big Five Personality Traits, Perceived Stress Scale (PSS), and the Zung Self-Rating Depression Scale. These assessments will be conducted at baseline and at multiple intervals post-exercise (1 hour, 24 hours, 48 hours, and 72 hours).
+
+PRIMARY OUTCOMES:
+  - Big Five Personality Trait Short Questionnaire (Spanish version)
+  - State-Trait Anxiety Inventory (STAI, Spanish version)
+  - Acceptance and Action Questionnaire-II (AAQ-II, Spanish version)
+  - UCLA Loneliness Scale (Spanish version):
+  - Zung Self-Rating Depression Scale (Spanish version):
+
+INTERVENTIONS:
+  - DEVICE: electromagnetic stimulation
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06855316

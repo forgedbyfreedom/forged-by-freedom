@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 23028531
+Title: Effects of fiber type and size on the heterogeneity of oxygen distribution in exercising skeletal muscle.
+Authors: Liu, Mac Gabhann, Popel
+Journal: PloS one
+Year: 2013
+Topic: protein distribution muscle synthesis
+
+ABSTRACT:
+The process of oxygen delivery from capillary to muscle fiber is essential for a tissue with variable oxygen demand, such as skeletal muscle. Oxygen distribution in exercising skeletal muscle is regulated by convective oxygen transport in the blood vessels, oxygen diffusion and consumption in the tissue. Spatial heterogeneities in oxygen supply, such as microvascular architecture and hemodynamic variables, had been observed experimentally and their marked effects on oxygen exchange had been confirmed using mathematical models. In this study, we investigate the effects of heterogeneities in oxygen demand on tissue oxygenation distribution using a multiscale oxygen transport model. Muscles are composed of different ratios of the various fiber types. Each fiber type has characteristic values of several parameters, including fiber size, oxygen consumption, myoglobin concentration, and oxygen diffusivity. Using experimentally measured parameters for different fiber types and applying them to the rat extensor digitorum longus muscle, we evaluated the effects of heterogeneous fiber size and fiber type properties on the oxygen distribution profile. Our simulation results suggest a marked increase in spatial heterogeneity of oxygen due to fiber size distribution in a mixed muscle. Our simulations also suggest that the combined effects of fiber type properties, except size, do not contribute significantly to the tissue oxygen spatial heterogeneity. However, the incorporation of the difference in oxygen consumption rates of different fiber types alone causes higher oxygen heterogeneity compared to control cases with uniform fiber properties. In contrast, incorporating variation in other fiber type-specific properties, such as myoglobin concentration, causes little change in spatial tissue oxygenation profiles.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/23028531/

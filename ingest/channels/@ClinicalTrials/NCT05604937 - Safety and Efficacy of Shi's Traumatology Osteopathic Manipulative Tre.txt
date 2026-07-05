@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05604937
+Title: Safety and Efficacy of Shi's Traumatology Osteopathic Manipulative Treatment for Cervicogenic Dizziness
+Official Title: Safety and Efficacy of Shi's Traumatology Osteopathic Manipulation for Cervicogenic Dizziness: A Randomized, Controlled, Multicenter Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: strength training
+
+SUMMARY:
+This is a randomized, controlled, multi-center clinical trail to objectively evaluate safety and efficacy of shi's traumatology Osteopathic manipulative treatment for cervicogenic dizziness. Multi-center study is planned to be carried out in 4 medical institutions in Shanghai, including Shuguang Hospital Affiliated to Shanghai University of Traditional Chinese Medicine, Yueyang traditional chinese and western medicine Hospital Affiliated to Shanghai University of Traditional Chinese Medicine, Baoshan traditional chinese and western medicine Hospital Affiliated to Shanghai University of Traditional Chinese Medicine, and Shanghai General Hospital. Randomly Assigned 106 patients (18 \< ages \<65 ) who meet the diagnostic criteria of cervicogenic dizziness to the treatment group and the control group by a ratio of 1:1, using betahistine mesylate tablets as positive control. Observe and compare the variations of Dizziness Handicap Inventory (DHI) from baseline in two groups after 2 weeks treatment, using Dizziness Handicap Inventory (DHI) as the main efficacy index. After the end of treatment, performing 4weeks follow-up, focus to compare the recurrence rate of vertigo symptoms in the period of 4weeks follow-up after 2 weeks treatment. The safety indexes will be observed and compared, including vital sign, physical examination and adverse event, in the trail.
+
+The electronic case Report Form (eCRF) will be used to collect and manage the study data.
+
+The data of the primary efficacy index, DHI, patient's vertigo condition report, both use electronic patient-reported outcome (e-PRO) to collect. To ensure quality of study, this trail intends to set safeguard measures for clinical trail including setting Clinical Research Associate (CRA) to monitor study quality, evaluating efficacy by the third person, training manual therapy physicians, make access and regular and irregular assessment consistent.
+
+DETAILED DESCRIPTION:
+Recruitment Participants will be recruited from outpatients of Shuguang Hospital Affiliated to Shanghai University of Traditional Chinese Medicine, Yueyang traditional chinese and western medicine Hospital Affiliated to Shanghai University of Traditional Chinese Medicine, Baoshan traditional chinese and western medicine Hospital Affiliated to Shanghai University of Traditional Chinese Medicine, and Shanghai General Hospital. Researcher will provide both oral and written information about the trial to patients, and explain detailed information about participating in the trail, including interventions, procedures and potential adverse reactions. Written informed consent will be obtained from all participants prior to their participation. Researcher will protect the confidentiality of the participants by keeping anonymous state. Documents that have the identity participants will be kept strictly confidential. The researchers in each clinical trail center should take responsibility for medical treatment of patients and make medical decisions related to clinical trail. Ensure patients can receive effective treatment for their diseases during the clinical period or when adverse events happen.
+
+Data management The electronic case Report Form (eCRF) will be used to collect and manage data of this trial. The primary and secondary outcomes will be collected by the eCRF.
+
+Electronic Data Capture Data collection and Management
+
+* CRF: CRF will be designed by data manager according to the protocol, and set up data validation rules, according to Data Validation Plan. It will be used after passing the test and being approved by sponsor.
+* Data Entry: CRF data are derived from original records. Data entry personnel enter visit data of patients into Electronic Data Capture (EDC) in time, according to instructions.
+* Source Data Verification (SDV): The monitor performs source data verification (SDV) to check the consistency of CRF data and source data. Issue if there has questions.
+* Data Questions and Answers: Questions come from EDC logical verification system questions, auditors, data managers and other manual questions. Researchers need to timely answer questions. The data manager and the monitor will reply to the question, and may issue the question again if necessary, until the data is "clean".
+* Researcher Signature: After data entering and SDV, researchers use electronic signature to review and confirm data. If data should be modified after the signature, researchers need to sign the signature again.
+* Database Locking: Database locking will be signed by the main researchers, sponsor, statistical analyst and data manager. The data manager locks the database.
+* Database Submitting: Database will be submitted to statistical analyst by data manager.
+* CRF Archiving: Each patient's CRF will generate as a PDF electronic document for preservation
+* Data Management Report: Data manager write reports of data management.
+* EDC Shutdown: Data manager will shut down 
+
+PRIMARY OUTCOMES:
+  - Change of vertigo within 2 weeks of treatment
+
+INTERVENTIONS:
+  - OTHER: Shi's traumatology osteopathic manipulation
+  - DRUG: Merislon
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05604937

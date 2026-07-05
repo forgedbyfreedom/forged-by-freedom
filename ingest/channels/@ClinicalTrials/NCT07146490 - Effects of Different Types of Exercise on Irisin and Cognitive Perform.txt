@@ -1,0 +1,58 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07146490
+Title: Effects of Different Types of Exercise on Irisin and Cognitive Performance (Exercise-Irisin)
+Official Title: Effects of Exercise Intensity on Neurochemical and Cognitive Function: The Role of Lactate and Irisin
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: caffeine exercise
+
+SUMMARY:
+Purpose The purpose of this study was to determine the acute effects of different exercise intensities on Irisin levels, trail making test performance, and feeling scale.
+
+Method
+
+This randomized crossover controlled trial aims to examine the acute effects of three experimental conditions-Short-Interval High-Intensity Interval Training (SI-HIIT), Long-Interval High-Intensity Interval Training (LI-HIIT) and Low-Intensity Continuous Training (LICT), on cognitive performance (via the Trial Making Test, ) and associated neurochemical responses (e.g., serum Irisin and blood lactate levels) in healthy young adults aged 18-25 years.
+
+All participants completed the three conditions in a randomized and counterbalanced manner. To ensure balanced exposure, they were assigned to one of three groups (n = 4 per group), each following a distinct condition order based on a Latin square design. This approach guaranteed that each session occurred equally across time points (sessions 1-3) and that the order minimized sequence effects by rotating the position of each condition relative to the others.
+
+To control for potential carryover-particularly from elevated neurochemical responses following intense exercise (Irisin increases reported -no two high-intensity sessions were scheduled consecutively. Where possible, higher and lower intensity protocols were be alternated. Furthermore, a seven-day interval separated each session to reduce residual physiological or cognitive effects.
+
+The trial protocol was developed in line with CONSORT and SPIRIT guidelines, including relevant extensions for within-subject designs and non-pharmacological interventions. Participants were blinded to the study hypothesis.
+
+All exercise sessions conducted under supervision of a certified strength and conditioning coach to ensure consistency and adherence to protocol in the morning (09:00-11:00) on a track and field pitch to control for chronobiological variation. Participants were instructed to avoid strenuous activity for 48 hours prior, abstain from alcohol and caffeine for 24 hours, and obtain at least 7-8 hours of sleep before each session. Dietary habits and general lifestyle were to remain unchanged throughout the study.
+
+During the first visit, participants' body weight and body fat percentage were assessed using bioelectrical impedance analysis. Resting heart rate was then recorded, followed by administration of the Yo-Yo Intermittent Recovery Test Level 1 to determine maximal aerobic speed, aerobic capacity, and peak heart rate.
+
+In the following four visits, each participant completed all experimental conditions. Each exercise session began with a standardized 10-minute warm-up, including light jogging, dynamic stretching, and movement preparation drills.
+
+All exercise sessions were conducted on a standard track and field facility and lasted 40 minutes in total, consisting of a 10-minute standardized warm-up, 24 minutes of exercise, and a 5-minute recovery period. The exercise component was individually prescribed based on each participant's maximal aerobic speed, determined from the Yo-Yo Intermittent Recovery Test Level 1. All running distances were calculated individually using time × speed formulas based on each participant's maximal aerobic speed, ensuring workload equivalence across conditions.
+
+* Short-interval high-Intensity Interval Training: Participants ran at 110-120% of their MAS for 15-second intervals.
+* Long-interval high-Intensity Interval Training: Participants ran at a speed corresponding to 80-90% of their MAS.
+* Low-Intensity Continuous Training: Participants ran continuously for 24 minutes at 50-60% of their MAS without breaks.
+
+Venous blood samples were collected before and immediately after each session to assess neurochemical markers. Subsequently, cognitive performance was evaluated using the computerized Trial Making Test to measure executive function. Heart rate was continuously monitored during all exercise conditions using a Polar V800 device. Following each session, psychophysiological responses were assessed using the Feeling Scale.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Lactate
+  - Irisin
+  - Trial Making Test
+  - Feeling Scale
+
+INTERVENTIONS:
+  - BEHAVIORAL: Low Exercise
+  - BEHAVIORAL: Long Interval Exercise
+  - BEHAVIORAL: Short Intevral Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07146490

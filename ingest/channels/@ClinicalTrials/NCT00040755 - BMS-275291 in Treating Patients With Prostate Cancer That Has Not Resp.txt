@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00040755
+Title: BMS-275291 in Treating Patients With Prostate Cancer That Has Not Responded to Hormone Therapy
+Official Title: Randomized Phase II Trial of BMS-275291 (NSC 713763, IND 62573) in Hormone Refractory Prostate Cancer
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: growth hormone treatment
+
+SUMMARY:
+BMS-275291 may stop the growth of prostate cancer by stopping blood flow to the tumor and by blocking the enzymes necessary for tumor cell growth. Randomized phase II trial to study the effectiveness of BMS-275291 in treating patients who have prostate cancer that has not responded to hormone therapy
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. To assess the time to disease progression in patients with hormone-refractory prostate cancer treated with two different doses of BMS-275291.
+
+SECONDARY OBJECTIVES:
+
+I. To assess the overall survival of patients with hormone-refractory prostate cancer treated with two different doses of BMS-275291.
+
+II. To assess the rate of response to BMS-275291, using both PSA and measurable disease.
+
+III. To evaluate the qualitative and quantitative toxic effects of this agent in this patient population.
+
+IV. To investigate the correlation of tumor response with changes in the levels of serum osteocalcin, alkaline phosphatase, procollagen I carboxy-terminal propeptide (PICP), procollagen I amino-terminal propeptide (PINP), and N-telopeptide; and the correlation of tumor response with changes in the levels of urine pyridinoline and deoxypyridinoline.
+
+OUTLINE: This is a randomized, multicenter study. Patients are stratified according to Gleason score (2-4 vs 5-7 vs 8-10), PSA level (less than 10 ng/mL vs 10-50 ng/mL vs 51-100 ng/mL vs more than 100 ng/mL), and concurrent bisphosphonate therapy (yes vs no). Patients are randomized to one of two treatment arms.
+
+ARM I: Patients receive oral BMS-275291 once daily on days 1-28.
+
+ARM II: Patients receive oral BMS-275291 twice daily on days 1-28.
+
+In both arms, treatment repeats every 28 days for at least 2 courses in the absence of disease progression or unacceptable toxicity. Patients achieving a complete response (CR) receive 2 additional courses beyond CR.
+
+Patients are followed until death.
+
+PROJECTED ACCRUAL: A total of 24-68 patients (12-34 per treatment arm) will be accrued for this study within 5-14 months.
+
+PRIMARY OUTCOMES:
+  - Progression free survival (PFS)
+
+INTERVENTIONS:
+  - DRUG: rebimastat
+  - OTHER: laboratory biomarker analysis
+
+ELIGIBILITY:
+Age:  to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00040755

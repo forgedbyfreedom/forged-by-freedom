@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06720779
+Title: Virtual Rehabilitation Platform for Patients With Knee Prothesis
+Official Title: A Randomized Clinical Trial to Evaluate the Effectiveness of Telerehabilitation With Trak in Combination With the Traditional Treatment in Patients Who Have Undergone Knee Prothesis Surgery
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+This clinical trial aims to evaluate the effectiveness and usability of the Trak Rehabilitation Platform in patients who have undergone knee replacement surgery. Its main questions are whether the Trak platform combined with conventional therapy helps patients achieve optimal functionality with fewer in-person sessions compared to conventional rehabilitation alone and whether the Trak platform improves adherence to treatment, independence in daily activities, and quality of life while reducing resource consumption.
+
+Researchers will compare the use of the Trak platform combined with conventional rehabilitation to standard rehabilitation practices to determine its impact on functional outcomes, patient and provider satisfaction, and resource efficiency.
+
+Participants will:
+
+* Use the Trak Platform as part of their personalized treatment plan.
+* Attend face-to-face rehabilitation sessions as prescribed.
+* Participate in assessments to measure functionality, adherence, independence, quality of life, and resource utilization.
+
+DETAILED DESCRIPTION:
+This randomized, controlled, single-center clinical trial conducted at Cruces University Hospital focuses on enhancing recovery outcomes by integrating telerehabilitation into conventional therapy.
+
+The trial involves two parallel groups: an experimental group (EG) using the TRAK platform and conventional face-to-face rehabilitation and a control group (CG) undergoing the last methodology (conventional rehabilitation) alone. Participants in the EG will perform four weekly 30-minute at-home sessions on the TRAK platform, which utilizes artificial intelligence for real-time movement guidance, posture correction, and gamified motivation. Conventional therapy in both groups includes bi-weekly sessions of cryotherapy, joint mobilization, strength exercises, and gait re-education. This hybrid approach aims to personalize care, optimize functionality, and reduce the required face-to-face sessions.
+
+Primary outcomes focus on reducing on-site rehabilitation sessions needed for functional recovery, while secondary outcomes assess adherence, independence, quality of life, and patient satisfaction. Data will be collected through validated questionnaires, biomechanical tests, and metrics from the TRAK system during baseline and four follow-up visits at 2, 4, 6, and 12 weeks.
+
+Healthcare professionals will receive training to ensure the effective use of the TRAK system. Ethical approval has been secured, and all participants will provide informed consent, ensuring compliance with the Declaration of Helsinki and GDPR.
+
+This study seeks to validate the TRAK platform's integration into clinical practice as a cost-effective and scalable solution to improve musculoskeletal rehabilitation outcomes. The findings will contribute to advancing digital health solutions in post-surgical recovery by exploring their usability and clinical impact.
+
+PRIMARY OUTCOMES:
+  - Number of face-to-face rehabilitation sessions required for each patient to reach the optimal level of function for discharge
+
+INTERVENTIONS:
+  - OTHER: TRAK physio knee prosthesis protocol
+  - OTHER: Knee conventional rehabilitation program
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06720779

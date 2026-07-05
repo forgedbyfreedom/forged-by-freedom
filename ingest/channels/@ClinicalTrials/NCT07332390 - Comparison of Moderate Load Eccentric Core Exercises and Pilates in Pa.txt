@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07332390
+Title: Comparison of Moderate Load Eccentric Core Exercises and Pilates in Patients With Non-Specific Low Back Pain
+Official Title: Comparison of Moderate Load Eccentric Core Exercises and Pilates in Patients With Non-Specific Low Back Pain
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: resistance training
+
+SUMMARY:
+Low back pain (LBP) is a major global health concern, significantly affecting mobility, productivity, and quality of life. Non-specific low back pain (NSLBP), which accounts for most LBP cases, is associated with impaired proprioception, reduced lumbar range of motion (ROM), decreased muscular endurance, and altered neuromuscular control. Joint position error (JPE) is a key indicator of proprioceptive dysfunction, contributing to postural instability and movement impairments in NSLBP patients. Effective rehabilitation strategies are essential to improve functional outcomes and prevent recurrence. Exercise therapy, particularly core stabilization exercises, plays a crucial role in NSLBP management. Among various approaches, moderate-load eccentric core exercises and Pilates have gained attention for their potential benefits. Eccentric exercises improve neuromuscular control, proprioception, and endurance by emphasizing controlled muscle lengthening. Pilates, on the other hand, focuses on core activation, postural alignment, and flexibility to enhance spinal stability and movement efficiency. However, limited research directly compares their effects on joint position error, pain, lumbar ROM, and core endurance in NSLBP patients. This randomized controlled trial (RCT) will recruit 44 NSLBP patients from Fauji Foundation Hospital, Rawalpindi, using purposive sampling. Participants will be randomly assigned to either the moderate-load eccentric core exercise group or the Pilates group for an 8-week supervised intervention. Assessments will be conducted at baseline, the 4th week, and post-intervention using an inclinometer (JPE), NPRS (pain), an inclinometer (lumbar ROM), and McGill Torso Endurance Battery (core endurance). SPSS version 21.0 will be used to analyze the data, with normality assessed through the Shapiro-Wilk test or the Kolmogorov-Smirnov test. Group differences will be analyzed using an Independent Sample t-test for normally distributed data and Mann-Whitney U test in case of non-normally distributed data (p \< 0.05).
+
+DETAILED DESCRIPTION:
+Low back pain (LBP) is the most prevalent musculoskeletal condition worldwide, affecting an estimated 619 million people and ranking among the leading causes of disability across all ages. It reduces quality of life, productivity, and mental well-being, creating a major socioeconomic burden. The biopsychosocial model describes LBP as a multifactorial disorder influenced by biological, psychological, and social factors, emphasizing the need for interdisciplinary management. According to the WHO, LBP is defined as pain occurring between the 12th rib and inferior gluteal folds, with or without referred pain, and is classified as acute (\<6 weeks), subacute (6-12 weeks), or chronic (\>12 weeks).
+
+Most LBP is nonspecific (≈90%), with no structural cause, and influenced by inactivity, obesity, smoking, and psychosocial stress. In 2019, LBP ranked 6th in DALYs for females, highlighting a greater burden among women. Impaired trunk muscle activation and proprioception contribute to motor control deficits, abnormal recruitment patterns, and recurrent pain. Core musculature plays a central role: Bergmark classified spinal muscles into deep stabilizers (e.g., multifidus, transversus abdominis) and superficial movers (e.g., extensors), both essential for spinal stability. Weakness of extensors predisposes to initial episodes of LBP, while dysfunction of deep stabilizers is associated with chronicity. Exercise therapy is a key intervention. Eccentric training has gained attention for superior neuromuscular adaptations, increasing strength, muscle fiber size, and coordination, with evidence from athletic populations showing functional benefits beyond concentric training. Pilates provides a holistic approach emphasizing controlled movement, breathing, and core activation, improving alignment, flexibility, proprioception, and quality of life. Core stabilization exercises (CSE) specifically target proprioception and motor control, reducing lumbar joint position error, pain, and disability.
+
+Several randomized controlled trials support these interventions. Puntumetakul et al. reported that CSE significantly reduced lumbar JPE, pain, and disability compared to thermal therapy. Zirek et al. found that six weeks of Pilates decreased pain and disability and improved quality of life in chronic LBP. Su Su Hlaing et al. showed that core stabilization and strengthening improved proprioception and muscular thickness of TrA and multifidi. Antonelli et al. demonstrated that Pilates improved pelvic alignment, trunk stability, and reduced pain. Moradi et al. confirmed that modified Pilates led to greater improvements in motor control, pain, and functional recovery compared to traditional exercises.
+
+PRIMARY OUTCOMES:
+  - Pain intensity
+  - Lumber range of motion
+  - Core endurance
+  - Inclinometer For Lumbar Joint Position Error
+
+INTERVENTIONS:
+  - PROCEDURE: MODERATE LOAD ECCENTRIC CORE EXERCISES
+  - PROCEDURE: Pilates
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07332390

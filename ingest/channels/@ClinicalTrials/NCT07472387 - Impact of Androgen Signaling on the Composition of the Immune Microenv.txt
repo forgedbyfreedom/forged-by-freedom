@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07472387
+Title: Impact of Androgen Signaling on the Composition of the Immune Microenvironment in Glioblastomas
+Official Title: Impact of Androgen Signaling on the Composition of the Immune Microenvironment in Glioblastomas
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: growth hormone treatment
+
+SUMMARY:
+Glioblastoma (GBM) is the most common and most aggressive primary brain cancer in adults. GBM is more common in men than in women, with a male-to-female ratio of 1.6. Furthermore, being male is associated with a poorer prognosis. These data suggest that sex and/or sexual hormones and more specifically androgens may play a role in the initiation, the growth, and the resistance to treatments of GBM.
+
+DETAILED DESCRIPTION:
+Glioblastoma (GBM) is the most common and most aggressive primary brain tumor in adults, with an annual incidence in France of approximately 2,500-3,500 new cases. Despite intensive multimodal treatment, the median overall survival remains less than 18 months.
+
+For reasons that are not yet fully understood, GBM occurs more frequently in men than in women, with a male-to-female ratio of approximately 1.6. Moreover, male sex appears to be associated with a poorer prognosis, as men diagnosed with GBM tend to have shorter survival compared with women. Importantly, such sex-based differences are not restricted to GBM; with few exceptions, they are also observed in most non-hormone-dependent systemic cancers.
+
+These epidemiological and clinical observations suggest that sex and/or sex steroid hormones-particularly androgens-may contribute to GBM biology. The effects of androgens are primarily mediated through their binding to the androgen receptor (AR). Preliminary data indicate that AR is expressed not only by GBM tumor cells but also by cells within the tumor microenvironment, especially cells of the myeloid lineage, including microglia and tumor-associated macrophages.
+
+In addition, some studies have shown that certain GBM cells are capable of producing dihydrotestosterone. Taken together, these findings support a potential role for androgen signaling in modulating both tumor cells and the immune microenvironment in GBM. They also provide a rationale for evaluating anti-androgen therapies, either alone or in combination with other treatment modalities, including immunotherapies, in patients with GBM.
+
+Further support for this hypothesis comes from studies in systemic cancers. In prostate cancer, for example, anti-androgen therapy has been shown to increase cytotoxic T lymphocyte infiltration. Combinations of hormone therapy and immunotherapy have been tested in preclinical models, demonstrating reduced androgen-induced immunosuppression and enhanced sensitivity to immune checkpoint inhibitors, an approach currently being explored in clinical trials. Moreover, in melanoma-a non-hormone-dependent cancer such as GBM-AR silencing increases cytotoxic T-cell infiltration, reduces regulatory T-cell infiltration, and decreases the expression of immune inhibitory molecules such as LAG-3 and PD-1.
+
+PRIMARY OUTCOMES:
+  - Mean expression of AR, ER, and other hormone signaling pathway genes in the tumor
+
+INTERVENTIONS:
+  - OTHER: blood sampling
+  - OTHER: saliva sampling
+  - OTHER: stool sampling
+  - OTHER: Tumor sampling
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07472387

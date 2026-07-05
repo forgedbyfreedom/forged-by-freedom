@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07268794
+Title: CONVERT-HB1: Radical Prostatectomy After Systemic Therapy for High-volume Metastatic Hormone-sensitive Prostate Cancer
+Official Title: A Multicenter, Prospective, Randomized Controlled Phase II Clinical Trial of Prostatectomy After Conversion Therapy With Second-generation Antiandrogen Agents Plus ADT in Patients With High-volume mHSPC(CONVERT-HB1)
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 112
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a prospective, randomized, open-label, phase II multicenter clinical trial evaluating the efficacy and safety of radical prostatectomy in patients with high-volume metastatic hormone-sensitive prostate cancer (mHSPC) who achieve good response after systemic therapy with androgen deprivation therapy (ADT) plus second-generation antiandrogens such as rezvilutamide. All eligible patients will receive 6 months of induction systemic therapy (ADT plus second-generation androgen receptor signaling inhibitors, with or without docetaxel or other systemic agents). Patients who achieve PSMA PET/CT "conversion success" (no metabolically active lesions; all metastases with SUVmax below liver background or blood pool) will be randomized 1:1 to continue systemic therapy alone (control arm) or receive local prostate treatment (radical prostatectomy or radiotherapy) plus systemic therapy (experimental arm). The primary endpoint is radiographic progression-free survival (rPFS). Key secondary endpoints include overall survival (OS), biochemical progression-free survival (bPFS), PSA response rate, quality of life, conversion success rate, and safety.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Radiographic Progression-free Survival (rPFS)
+
+INTERVENTIONS:
+  - DRUG: Androgen Deprivation Therapy (ADT)
+  - DRUG: Docetaxel
+  - DRUG: PARP Inhibitors and Other Systemic Agents
+  - PROCEDURE: Radical Prostatectomy
+  - RADIATION: Prostate Radiotherapy
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07268794

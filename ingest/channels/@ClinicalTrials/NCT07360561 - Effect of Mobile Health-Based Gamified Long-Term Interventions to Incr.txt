@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07360561
+Title: Effect of Mobile Health-Based Gamified Long-Term Interventions to Increase Physical Activity on Cardiovascular Risk Factors: Randomized Controlled Study on University Students and Employees
+Official Title: Effect of Mobile Health-Based Gamified Long-Term Interventions to Increase Physical Activity on Cardiovascular Risk Factors
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 105
+Topic: resistance training
+
+SUMMARY:
+The increasing incidence of cardiovascular disease (CVD) and related mortality is now recognized as a global emergency. CVD risk factors include unhealthy diet, inactivity, dyslipidemia, diabetes, high blood pressure, obesity, smoking, and family history/genetics. Increasing physical activity (PA) is recognized as an essential factor in reducing the risk of CVD. Many studies have emphasized that regular and adequate physical activity significantly reduces the risk of CVD through effects such as lowering blood pressure and cholesterol levels, supporting weight control, and improving diabetes management. Measuring steps/day is used to determine PA, and as technologies have developed, smartphones have become widely used tools. Inactivity and time constraints of modern life make it difficult for people to increase PA levels. Therefore, innovative intervention methods based on mobile health and gamification should be used to improve individuals' physical activity. Gamification is the application of game design elements such as points, badges, leaderboards, and levels in non-game environments. Gamification is increasingly being used to create change, particularly in physical activity and health behaviors. It is recommended to include resistance exercises at least 2 days a week in addition to aerobic activity to maximize health benefits. Recently, the high-intensity circuit training (HICT) program, which combines high-intensity interval training (HIIT) and circuit training (CT), requires less time, combines aerobic and resistance exercises, and uses body weight, has been developed and is used in sports. The main aim of the present study is to examine the effects of 12-week Mobile Health-Based Gamified applications on cardiovascular risk factors among university students and employees. In this direction, it is aimed to increase participants' daily steps and improve their physical activity habits. A total of 105 volunteers aged 18 to 64, including students and employees of Bursa Uludag University, will participate in the study. PACER pedometer and 7 Minute Workout HICT exercise mobile health applications will be used in the study.
+
+Subjects will be divided into five equal groups of 21 people each using the closed opaque envelope randomization method. Walking intervention (WG), gamified walking intervention (GWG), walking and exercise intervention (WEG), gamified walking and exercise intervention (GWEG), and control (CG) groups will be formed. The first four groups (WG, GWG, WEG, and GWEG) will walk every day for 12 weeks to reach the set target number of steps. In addition, volunteers in the GWEG and WEG group will exercise (HICT) for at least 15 minutes on 3 designated days per week in addition to walking. In addition, volunteers in the GWG and GWEG groups will use a gamified application. In CG, there will be no regular physical activity, and they will continue their daily lifestyle. In our study, unlike those conducted to date, the application of HICT with gradually increasing physical activity for 12 weeks to reduce CVD risk factors, and the use of gamified methods to stay in the program and ensure sustainability, emphasize its unique value. The gamified exercise program applied in this study is expected to provide an additional benefit for CVD risk factors compared with the protocols used to date.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body Composition and Anthropometric Measurements
+  - Cardiovascular Disease Risk Factors
+  - Physical Activity Level Assessed by the International Physical Activity Questionnaire-Short Form (IPAQ-SF)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Walking program
+  - BEHAVIORAL: High-intensity circuit training (HICT)
+  - BEHAVIORAL: Gamified Mobile Application
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07360561

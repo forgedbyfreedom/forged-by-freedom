@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05417217
+Title: The Effect of Continued Mechanical Ventilation on the Occurrence of Myocardial Ischemia
+Official Title: The Effect of Continued Mechanical Ventilation on the Occurrence of Myocardial Ischemia in Patients Undergoing Totally Endoscopic Coronary Artery Bypass Grafting
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 165
+Topic: creatine supplementation
+
+SUMMARY:
+The goal of this study is to examine the influence of mechanical ventilation on the occurrence of myocardial ischemia in patients undergoing endo-CABG.
+
+DETAILED DESCRIPTION:
+Coronary artery bypass grafting (CABG) surgery is one of the main treatment options for patients suffering from coronary artery disease, a condition characterized by a build-up of cholesterol in the coronary arteries of the heart that affects 126 million people worldwide each year. During this procedure, cardiopulmonary bypass (CPB) takes over the function of the heart and lungs. In recent years, there has been a huge focus on reducing surgical trauma in this procedure, leading to the emergence of minimally invasive cardiac surgery (MICS) such as endoscopic CABG (endo-CABG). In these techniques, peripheral CPB with femoral arterial cannulation is the most commonly used strategy. However, the use of retrograde arterial perfusion is not without risk. It can cause that the upper part of the body only receives deoxygenated blood. The effect on the heart is not yet fully known. The hypoxemia could cause myocardial ischemia and this could damage the heart muscle cells.
+
+It is reported in the literature that establishing adequate ventilation from the initiation of CPB to cardiac arrest can resolve this phenomenon. This approach was investigated in a recently performed double-blinded, randomized, controlled pilot study (n=10) of our research group. However, a larger randomized controlled trial was needed. Therefore, this research aims to investigate the effect of continued mechanical ventilation on the occurrence of myocardial ischemia in patients undergoing endo-CABG.
+
+PRIMARY OUTCOMES:
+  - The influence of continued mechanical ventilation on the release of cardiac troponin T (cTn-T)
+  - The influence of continued mechanical ventilation on the release of creatine kinase-myocardial band (CK-MB)
+  - The influence of continued mechanical ventilation on the release of heart-type fatty acid-binding protein (hFABP)
+  - The influence of continued mechanical ventilation on lipid peroxidation
+  - The influence of continued mechanical ventilation on the redox balance
+
+INTERVENTIONS:
+  - PROCEDURE: Discontinued ventilation
+  - PROCEDURE: Continued ventilation
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05417217

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05057884
+Title: Breathing Exercise Against Dyspnoea in Heart Failure Patients to Improve Chemosensitivity
+Official Title: Breathing Exercise Against Dyspnoea in Heart Failure Patients to Improve Chemosensitivity and Ventilatory Efficiency - a Randomized Controlled Single-centre Trial
+Status: SUSPENDED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: aerobic exercise
+
+SUMMARY:
+An exaggerated ventilatory response (minute ventilation, V̇E) to exercise relative to exhaled carbon dioxide (V̇CO2) is common in heart failure (HF) patients with reduced as well as preserved left ventricular ejection fraction (HFrEF, HFpEF). Severity of this exaggerated response is associated with poor prognosis. This response may be triggered by pulmonary congestion and peripheral muscle myopathy. A vicious circle is fuelled by hypersensitivity of chemoreceptors to hypercapnia and sympathetic nervous hyperactivity, resulting in hyperventilation (low PaCO2). Low PaCO2 is predictive of mortality in these patients. PaCO2 can be increased acutely, e.g. by apnoea. Also, nasal breathing has been found to reduce the V̇E/V̇CO2 slope during exercise compared to oral breathing. Three previous slow breathing studies in HFrEF patients have had encouraging results with regard to reducing sympathetic activity, reflected in lowered arterial (pulmonary) blood pressure and increased EF. The investigators hypothesise that a 12-week training with nasal slow breathing followed by end-expiratory apnoea based on education, centre-based introduction and home-based 15 min/day breathing training will be effective at reducing the exaggerated ventilatory response to exercise. A total of 68 patients with stable HF seen at the HF clinics of the Inselspital (34 HFrEF, 34 HFpEF) will be randomised to the breathing intervention or usual care. Primary outcome will be V̇E/V̇CO2 slope at 12 weeks. If breathing training successfully ameliorates the exaggerated ventilatory response and perception of dyspnea during exercise, it offers an attractive tele-health based add-on therapy that may add to or even amplify the beneficial effects of exercise training.
+
+DETAILED DESCRIPTION:
+BACKGROUND
+
+Ventilatory inefficiency, most commonly quantified as an increased ventilation (V̇E) to carbon dioxide exhalation (V̇CO2) slope during exercise, is a landmark of heart failure patients both with reduced and preserved ejection fraction (HFrEF, HFpEF).\[1\] Numerous studies have found higher V̇E/V̇CO2 slopes to be associated with poorer prognosis.\[2-4\] The components of the V̇E/V̇CO2 slope are the arterial CO2 partial pressure (PaCO2), that is affected by hyperventilation, and the pulmonary dead space/tidal volume ratio (VD/VT) that is affected by pulmonary perfusion abnormalities.\[5\] The exaggerated response in ventilation of HFrEF patients may be caused by hypersensitivity of chemoreceptors to CO2,\[6\] and/or a sympathetic nervous hyperactivity commonly found in HFrEF patients, based on an increased activation of metaboreceptors in peripheral muscles response to increased anaerobic metabolism.\[7\] Chronic sympathetic nervous hyperactivity has been suggested to decrease aerobic capacity of skeletal muscles based on reduced capillarisation\[8\] and reduced red blood cell flux\[9\] leading to a shift in muscle fibre type towards a lower content on type I fibres.\[10\] The ensuing anaerobic muscle metabolism leads to increased muscle fatiguability\[11\] and acidosis already at low levels of exercise, which trigger exaggerated responses in ventilation.\[12\] Hyperventilation, on the other hand, is well known to stimulate sympathetic nervous activity, and so the vicious circle of sympathetic nervous activity driving hyperventilation and hyperventilation activating sympathetic nervous activity continues.\[13\] This suggests that hyperventilation may not only be a consequence of poor left ventricular (LV) function, but also a driver.
+
+Besides pharmaceutical therapies and electrophysiological interventions, exercise therapy has been found to have beneficial effects on hemodynamic and ventilatory parameters in HFrEF\[14\] and HFpEF patients alike.\[15\] The main mechanisms of exercise are thought to be reduced peripheral resistance and hence cardiac afterload by improvement of endothelial function, increased capillarisation leading to improved oxygenation of skeletal muscles and improved aerobic metabolism.\[16\] Despite the beneficial effects of exercise training in both, centre-based and home-based settings,\[17, 18\] adherence to physical activity has been found to be poor amongst HFrEF patients.\[19\] Surprisingly, few studies have targeted ventilation directly with therapeutic approaches. Only three studies have assessed the effects of slow-breathing training on cardiorespiratory function.\[20, 21\] These studies found improved physical function, reduced blood and pulmonary arterial pressure, increased ejection fraction (EF),\[20, 22\] improved ventilatory efficiency\[20\] and reduced sleep apnoea.\[22\] Further, they found improved regulation of the autonomic nervous system by reducing sympathetic drive and increasing vagal activity
+
+PRIMARY OUTCOMES:
+  - Ventilation to carbon dioxide production slope
+
+INTERVENTIONS:
+  - BEHAVIORAL: Breathing training
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05057884

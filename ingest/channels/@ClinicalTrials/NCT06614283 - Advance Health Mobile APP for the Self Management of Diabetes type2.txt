@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06614283
+Title: Advance Health Mobile APP for the Self Management of Diabetes type2
+Official Title: Effectiveness of Advance Health Mobile APP for the Self Management of Diabetes type2 in a Resource-constrained Setting, a Randomized Control Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1600
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Digital health using mobile health (mHealth) tools, such as telehealth and text messaging, and or mobile Apps can improve blood glucose levels in patients with type 2 diabetes. This intervention is designed to improve self-management of diabetes and blood glucose levels in diabetic patients.
+
+DETAILED DESCRIPTION:
+Patients with type 2 diabetes may experience improvements in their blood glucose levels thanks to mHealth technologies like mobile apps and telehealth text messaging. The goal of this intervention is to help diabetic people better control their blood glucose levels and diabetes. The intervention arm will employ a smartphone application designed specifically for individuals with Type 2 diabetes, with the goal of improving their self-management behaviors. Features of the app include real-time health monitoring, appointment scheduling, medication tracking, patient data storage, treatment and follow-up recommendations, and health education and promotion.
+
+PRIMARY OUTCOMES:
+  - Diabetes Self-Management
+
+INTERVENTIONS:
+  - BEHAVIORAL: Diabetes self management @ click
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06614283

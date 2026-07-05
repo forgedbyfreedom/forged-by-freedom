@@ -1,0 +1,70 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07552974
+Title: CBD Supplementation in Brazilian Jiu-Jitsu Athletes
+Official Title: Evaluation of the Effects of Isolated Cannabidiol (CBD) on Inflammation, Pain, Sleep and Quality of Life in Brazilian Jiu-Jitsu Athletes: A Randomized, Double-Blind, Placebo-Controlled Clinical Trial
+Status: NOT_YET_RECRUITING
+Phase: PHASE2, PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: athletic performance
+
+SUMMARY:
+Brazilian Jiu-Jitsu (BJJ) is a high-intensity martial art that imposes significant physical and physiological demands on practitioners, including rigorous training and frequent competitions, which can result in chronic inflammation, delayed-onset muscle soreness (DOMS), sleep disturbances, and reduced quality of life. Effective recovery strategies are essential to optimize athletic performance and longevity in the sport.
+
+Cannabidiol (CBD), a non-psychotomimetic phytocannabinoid derived from Cannabis sativa, has emerged as a promising therapeutic agent due to its anti-inflammatory, analgesic, anxiolytic, and neuroprotective properties.
+
+Preclinical studies indicate that CBD modulates inflammatory pathways, such as inhibition of NF-κB and NLRP3, thereby reducing pro-inflammatory cytokines such as IL-6, TNF-α, IL-8, and IL-1β, while increasing the anti-inflammatory cytokine IL-10.
+
+In clinical contexts, CBD has shown potential to attenuate DOMS and improve sleep without the adverse effects associated with non-steroidal anti-inflammatory drugs (NSAIDs). However, evidence in BJJ athletes remains limited, with gaps in the translation of preclinical findings to healthy athletic populations.
+
+The prevalence of injuries in combat sports can reach 28%, with contusions and sprains being common and further exacerbating inflammation and pain. Although approximately 23.4% of athletes report cannabis use, there is a lack of randomized controlled trials (RCTs) specifically for BJJ evaluating isolated CBD at standardized doses.
+
+Furthermore, concerns regarding hepatotoxicity, monitored through enzymes such as AST and ALT, require rigorous safety evaluation.
+
+This protocol describes an RCT to investigate the effects of 200 mg/day of isolated CBD for 12 weeks in BJJ athletes, focusing on sensitive inflammatory markers (IL-6 as the primary pro-inflammatory marker and IL-10 as the anti-inflammatory marker), pain, sleep, and quality of life.
+
+The study aims to address gaps identified in systematic reviews and provide an evidence-based foundation for future recommendations.
+
+DETAILED DESCRIPTION:
+Abstract Objective: To evaluate the effects of chronic supplementation with isolated cannabidiol (CBD) on inflammatory markers, pain perception, sleep quality, and quality of life in Brazilian Jiu-Jitsu (BJJ) athletes in a randomized, double-blind, placebo-controlled clinical trial.
+
+Methods: One hundred and twenty-eight BJJ athletes (aged 18-40 years, with a minimum of 2 years of practice and training ≥3 times per week) will be recruited. Participants will be randomized in a 1:1 ratio to receive 100 mg of isolated CBD or placebo twice daily (total 200 mg/day) for 12 weeks.
+
+Primary Outcomes: Serum levels of pro-inflammatory cytokines (IL-6, TNF-α, IL-8, IL-1β) and the anti-inflammatory cytokine (IL-10), measured by ELISA or multiplex assays.
+
+Secondary Outcomes: Pain (Visual Analog Scale - VAS), sleep quality (Pittsburgh Sleep Quality Index - PSQI), quality of life (SF-36 and Athlete Life Quality Scale - ALQS), and safety (hepatic enzyme AST).
+
+Assessments will be conducted at baseline and at weeks 4, 8, and 12. Statistical Analysis: Linear mixed-effects models for repeated measures will be used, with the intention-to-treat (ITT) population as the primary analysis.
+
+Expected Results: Significant reduction in inflammatory markers and improvement in secondary outcomes in the CBD group, with an acceptable safety profile.
+
+Keywords:
+
+Cannabidiol; Brazilian Jiu-Jitsu; Inflammation; Muscle Pain; Sleep; Quality of Life.
+
+Introduction Brazilian Jiu-Jitsu (BJJ) is a high-intensity martial art that imposes significant physical and physiological demands on practitioners. Rigorous training and frequent competitions can lead to chronic inflammation, delayed-onset muscle soreness (DOMS), sleep disturbances, and reduced quality of life. Effective recovery strategies are essential to optimize athletic performance and longevity in the sport.
+
+Cannabidiol (CBD), a non-psychotomimetic phytocannabinoid derived from Cannabis sativa, has emerged as a promising therapeutic agent due to its anti-inflammatory, analgesic, anxiolytic, and neuroprotective properties.
+
+Preclinical studies indicate that CBD modulates inflammatory pathways, such as inhibition of NF-κB and NLRP3, reducing pro-inflammatory cytokines such as IL-6, TNF-α, IL-8, and IL-1β, while increasing the anti-inflammatory cytokine IL-10.
+
+In clinical settings, CBD has demonstrated potential to attenuate DOMS and improve sleep without the adverse effects associated with non-steroidal anti-inflammatory drugs (NSAIDs). However, evidence specifically in BJJ athletes remains limited, with significant gaps in translating preclinical findings to healthy athletic populations.
+
+The prevalence of injuries in combat sports can reach 28%, with contusions and sprains being common and further exacerbating inflammation and pain. Although approximately 23.4% of athletes report cannabis use, there is a lack of randomized controlled trials (RCTs) specifically designed for BJJ evaluating isolated CBD at standardized doses.
+
+Fu
+
+PRIMARY OUTCOMES:
+  - Inflammatory cytokines
+
+INTERVENTIONS:
+  - DRUG: CBD Isolate 100mg BID
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07552974

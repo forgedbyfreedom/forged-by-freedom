@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04931303
+Title: Digital GaitCare - Therapy Monitoring in the Home Environment of Patients With Parkinson
+Official Title: Digital GaitCare - Therapy Monitoring in the Home Environment of Patients With Parkinson Via Digital Gait Analysis and Patient Feedback
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 31
+Topic: physical activity intervention
+
+SUMMARY:
+Gait disturbances and movement restrictions occur frequently in Parkinson's disease. Patient-centered monitoring with objective aids in the patient's daily life, supports and promotes therapy decisions made by physicians and patients. Technical, sensor-based monitoring has the potential to generate objective target parameters at any point in time during therapy (patient journey), representing the state of health and its progression, and to make this information available to physicians and patients via telemedical data management. In this study, the gait analysis system "Mobile GaitLab Home 2.0", consisting of sensors for gait data acquisition, a smartphone application for study participants (Mobile GaitLab app) and a web portal for physicians (Mobile GaitLab portal) is used for data collection.
+
+The research question is divided into three sub-objectives: First, the study explores and tests how technically generated parameters of sensor-based gait analysis can map the symptom "bradykinesis". The second goal is the explorative investigation of how a tele-health service support with low-threshold access to medical professionals, can be integrated into the care process. The third goal is the implementation evaluation of the technological developments. Here, it is examined to determine the extent to which the implementation of gait data and patient feedback (PROMs) in the patient-centered care process within the framework of clinical decision support contributes to early gait-associated therapy optimization and thus improves the general health of patients and how initial indications of positive care effects for patients can be derived.
+
+During a 60-day observation phase, study participants use the gait analysis system, which records their gait pattern throughout the day and collects data via the Mobile GaitLab app. Study participants are asked to perform standardized gait tests in the home environment several times a day, in addition to continuous measurements during the awake phase. Frequency of data collection is controlled by Mobile GaitLab Home 2.0 and can be flexibly adjusted to the study participant's health status and therapy. The Mobile GaitLab app uses questionnaires to record data on gait safety, activity, general well-being, and events relevant to the disease. An evaluation of these data (PROMs) and the results from the gait analyses, are visualized for the study participants via the Mobile GaitLab app.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Difference in gait parameters (stride length) during 4x10 meter gait test (4x10m) performed at clinic
+  - Difference in gait parameters (stride time) during 4x10 meter gait test (4x10m) performed at clinic
+  - Difference in gait parameters (gait speed) during 4x10 meter gait test (4x10m) performed at clinic
+  - Difference in gait parameters (heel-strike angle) during 4x10 meter gait test (4x10m) performed at clinic
+  - Difference in gait parameters (toe-off angle) during 4x10 meter gait test (4x10m) performed at clinic
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04931303

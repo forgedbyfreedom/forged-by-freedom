@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01083368
+Title: Temsirolimus and Bevacizumab in Hormone-Resistant Metastatic Prostate Cancer That Did Not Respond to Chemotherapy
+Official Title: Phase I-II Study Evaluating the Safety and Clinical Efficacy of Temsirolimus and Avastin in Patients With Chemotherapy Refractory Castrate Resistant Prostate Cancer (CRPC)
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: growth hormone treatment
+
+SUMMARY:
+RATIONALE: Temsirolimus may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth. Monoclonal antibodies, such as bevacizumab, can block tumor growth in different ways. Some block the ability of tumor cells to grow and spread. Others find tumor cells and help kill them or carry tumor-killing substances to them. Bevacizumab may also stop the growth of tumor cells by blocking blood flow to the tumor. Giving temsirolimus together with bevacizumab may be a better way to block tumor growth.
+
+PURPOSE: This phase I/II trial is studying the side effects and best dose of temsirolimus when given together with bevacizumab and to see how well it works in treating patients with hormone-resistant metastatic prostate cancer that did not respond to chemotherapy.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. The primary objective of the Phase I portion of this study is to determine the maximum tolerated dose (MTD) of temsirolimus in combination with AVASTIN in subjects with chemotherapy refractory metastatic CRPC.
+
+II. The primary objective for the Phase II portion of this study is to evaluate the objective response frequency (PSA and RECIST-Response Evaluation Criteria in Solid Tumors-defined) of the combination of temsirolimus and AVASTIN in patients with chemotherapy refractory metastatic CRPC.
+
+SECONDARY OBJECTIVES:
+
+I. To evaluate the effect of the combination of temsirolimus and AVASTIN on time to clinical progression and overall survival in patients with chemotherapy refractory metastatic CRPC.
+
+II. To further evaluate the safety of temsirolimus given in combination with AVASTIN in chemotherapy refractory metastatic CRPC patients at the dose established in our phase I safety phase.
+
+III. To determine the presence of circulating tumor cells (CTCs) and status of single nucleotide polymorphism (SNPs) in CRPC patients. (Exploratory)
+
+OUTLINE: Patients receive temsirolimus IV over 30-60 minutes once weekly and bevacizumab IV over 30-90 minutes once every two weeks . Treatment repeats every 4 weeks for 6 courses in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed for 28 days.
+
+PRIMARY OUTCOMES:
+  - Maximum Tolerated Dose (MTD) of Temsirolimus (Phase I)
+  - Objective Response (Dose Level 2)
+
+INTERVENTIONS:
+  - DRUG: temsirolimus
+  - BIOLOGICAL: bevacizumab
+  - GENETIC: polymorphism analysis
+  - OTHER: laboratory biomarker analysis
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01083368

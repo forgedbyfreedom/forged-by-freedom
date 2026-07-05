@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 40155310
+Title: Impact of Menstrual Cycles or Combined Oral Contraception on Training Loads Assessed Using Latent Effort States in Female Elite Cyclists.
+Authors: Storme, Chassard, Dupuit, Delarochelambert, Brunet
+Journal: Scandinavian journal of medicine &amp; science in sports
+Year: 2025
+Topic: oral contraceptives athletic performance
+
+ABSTRACT:
+To quantify the impact of the regular or irregular menstrual cycle (MC) or combined oral contraception (OC) on the time spent at the maximum effort exertion per training, assessed using latent effort states through a Hidden Markov chain Model (HMM). 6303 training sessions with heart rate (HR) and power output (PO) recorded every second were used to train HMM in order to determine latent effort states of 12 elite French cyclists followed up over 30&#x2009;months. A total of 101 MC/OCs full cycles were analyzed. A calendar method was used to estimate regular MC phases (menstruation, estimated follicular phase, estimated luteal phase). Irregular MC was divided into menstruations/no menstruations and OC into break/active pill taking. Four latent effort states were identified: high, medium+, medium-, and low. Focused on high intensity-oriented training sessions, the proportion of time spent in high intensity effort state was significantly lower during menstruation (34.5%) compared to estimated follicular (65.2%, p&#x2009;=&#x2009;0.0009) and luteal (55.4% p&#x2009;=&#x2009;0.024) phases for regular MC, and during pills' break (43.7%) compared to active pill taking phase (62.6% p&#x2009;=&#x2009;0.031) for OC cycles. During the high intensity-oriented training sessions, the proportion of time spent in high effort state is almost twice higher in mid-regular cycles whereas is lower during menstruation or pill's break in elite cyclists. These findings rely on repeated assessment of training loads in a real-world context, analyzed using novel machine learning techniques that objectively quantify both internal and external training loads in elite female cyclists.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/40155310/

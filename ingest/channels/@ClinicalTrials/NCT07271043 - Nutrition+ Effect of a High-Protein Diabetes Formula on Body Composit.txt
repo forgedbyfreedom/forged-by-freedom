@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07271043
+Title: Nutrition+: Effect of a High-Protein Diabetes Formula on Body Composition in Type 2 Diabetes Patients Treated With Incretin Mimetics
+Official Title: Evaluating the Efficacy of High-Protein Diabetes Specific Formula (HP-DSF) on Body Composition in Overweight/Obese Patients With Type 2 Diabetes Treated With Incretin Mimetic Drugs
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+A randomized clinical study to assess the efficacy of a high-protein diabetes specific formula (HPDSF) on lean muscle mass in overweight and obese patients with type 2 diabetes who are initiating treatment with incretin-mimetic drugs.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in lean muscle mass from baseline
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: protein supplement
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07271043

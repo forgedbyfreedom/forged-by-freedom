@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04602117
+Title: ISPY-P1.01:Evaluating the Safety of Weekly Paclitaxel With Trastuzumab Duocarmazine (SYD985) in Patients With Metastatic Cancer
+Official Title: ISPY-P1.01: Evaluating the Safety of Weekly Paclitaxel With Trastuzumab Duocarmazine (SYD985) in Patients With Metastatic Cancer: A Phase I/Ib Trial
+Status: WITHDRAWN
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: growth hormone treatment
+
+SUMMARY:
+This is an open-label, single-arm, multi-site phase I/Ib trial with SYD985, an antibody-drug conjugate (ADC) targeting HER2 on the cell membrane, combined with paclitaxel.
+
+DETAILED DESCRIPTION:
+The study contains 2 cohorts. Cohort A is a 3+3 de-escalation cohort. Participants with certain HER-positive advanced solid tumors or HER2-low breast cancer will be enrolled in this cohort. Eligible participants will receive infusions of SYD985 every three weeks and of paclitaxel weekly. Participants will be monitored for safety and for the occurance of DLTs. Cohort B dose expansion will proceed at the identified dose from Cohort A (RP2D). Cohort B will only enroll patients with HER2-positive or HER2-low breast cancer.
+
+PRIMARY OUTCOMES:
+  - Common Toxicity Criteria for Adverse Events (CTCAE 5.0)
+  - Clinical Benefit Rate (CBR) at 6 months
+  - Overall response rate (ORR)
+
+INTERVENTIONS:
+  - DRUG: Vic-trastuzumab duocarmazine (SYD985) + paclitaxel
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04602117

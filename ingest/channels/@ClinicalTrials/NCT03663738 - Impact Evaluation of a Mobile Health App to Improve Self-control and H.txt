@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03663738
+Title: Impact Evaluation of a Mobile Health App to Improve Self-control and Health Outcomes of Patients With Type 2 Diabetes Mellitus (T2DM): Pilot Study "NOVAME"
+Official Title: Evaluation of the Impact of a Mobile Health App to Improve Self-control and Health Outcomes of Patients With Type 2 Diabetes Mellitus: Pilot Study "NOVAME"
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 199
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The objective of this project is to evaluate the effectiveness and cost effectiveness of a health app (NOVAME) designed to improve the self-control of patients with T2DM and their health outcomes. The central focus of NOVAME is the continuous support to the patient and monitoring through the app that will act as a personalized and dynamic virtual coach that will help the patient to adopt healthy habits and change their behaviors through training plans in different areas: exercise physical, healthy eating, therapeutic education and emotional management The design of the evaluation is the randomized clinical trial, in the intervention arm patients will use the app NOVAME and in the control group, patients don't receive any additional educational or supporting activities beyond the usual activities provided by the Canary Islands Health Service (CIHS). The main outcome measure is the change in HbA1c at 3 months, requiring a total of 197 patients to detect a difference of at least 0.4% considering a 10% loss. As secondary measures HbA1c is collected at 12 months and other biochemical results (lipids and glucose), BMI and a series of questionnaires to measure changes in life habits (diet, physical activity), anxiety and depression, knowledge about their disease , degree of empowerment, satisfaction and usability of the app, .. Will be collected at 3 and 12 months. The differences between the arms will be measured with mixed generalized linear models. The cost effectiveness will be calculated by calculating life years adjusted for quality (QALY) and the cost of the disease, including the use of resources reported by patients. The benefits of the technology will be expressed in terms of HbA1c and QALY.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - HbA1c
+
+INTERVENTIONS:
+  - BEHAVIORAL: mobile app NOVAME
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03663738

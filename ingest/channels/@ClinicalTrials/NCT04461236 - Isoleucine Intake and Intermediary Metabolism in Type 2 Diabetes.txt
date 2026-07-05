@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04461236
+Title: Isoleucine Intake and Intermediary Metabolism in Type 2 Diabetes
+Official Title: Isoleucine Intake and Intermediary Metabolism in Type 2 Diabetes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: protein supplementation
+
+SUMMARY:
+The primary objective of this study is to determine the mechanism of reduced branched-chain amino acid (BCAAs) oxidation to propionyl CoA and isoleucine intake can affect TCA cycle function in obese insulin resistant T2D. We will test the hypotheses that isoleucine and valine oxidation to propionyl CoA is reduced and that week long oral administration of isoleucine in T2D subjects will increase propionyl CoA and succinyl CoA production in muscle.
+
+The secondary objectives of this study are to determine the extent to which type 2 diabetics are capable of controlling and coordinating complex patterns of force using the upper and lower limb. This line of research has functional significance as upper body coordination and fine motor control is important for many activities associated with daily living and may contribute to therapy protocols for individuals with type 2 diabetes. Functional performance via six-minute walk and balance board measurement will also be tested with and without sensory augmentation via electrical stimulation of foot. Changes in peripheral blood mononuclear cells (PBMCs) mitochondrial respiration values will also be assessed between subject types and for diabetic after the 10-day supplementation period.
+
+DETAILED DESCRIPTION:
+Defects in mitochondrial β-oxidation and branched chain amino acid (BCAAs) oxidation are associated with type 2 diabetes (T2D) and other conditions such as Huntington's disease and maple syrup urine disease. Because of these defective mitochondrial pathways, production of TCA cycle intermediates can be limited and obesity worsen the condition of the disease. Interestingly, supplying precursors for the TCA cycle such as propionyl CoA can promote anaplerosis through a pathway that is independent of the defective pathway. Therefore, we hypothesize that providing oral isoleucine, a branched-chain amino acid, which is commonly used for other conditions, will promote anaplerosis by supplying the precursor, propionyl CoA for the TCA cycle intermediate succinyl CoA to muscle of T2D patients. This innovative approach is intended to improve TCA function and insulin resistance in obese T2D and could serve as a model for other nutritional interventions.
+
+Diabetes is a growing problem worldwide and has lead to 1.5 million deaths in 2012 and it's prevalence has increased to 9% in 2014, most like related to the steep increase in obesity rates. Research has shown that a combination of increased acetyl-carnitine and reduced propionyl- and isovaleryl-carnitine and elevated blood BCAAsin T2D suggests reduced BCAAsoxidation to propionyl-CoA, which can cause TCA cycle a malfunction. During homeostasis, transamination of valine and isoleucine leads to α-keto-isovalerate (KIV) and α-keto-methylvalerate (KMV) production, which can be further converted to propionyl CoA and the TCA cycle intermediate succinyl-CoA. Therefore, increased valine and isoleucine transamination can promote anaplerosis and stimulate mitochondrial energetic flux. Because of this, we believe that there is a critical need to identify therapies that can be used to restore TCA function in obese T2D.
+
+Furthermore, Type 2 diabetes causes and contributes to a variety of central nervous system (CNS) complications. CNS complications with type 2 diabetes include cognitive and motor dysfunction. There have been a number of studies investigating the association between diabetes and cognitive decline indicating deficits in psychomotor speed, executive function, memory, and attention. Research has also indicated motor deficits with complex motor skills, motor coordination, balance, and muscle strength in type 2 diabetics. However, the majority of research investigating motor dysfunction in type 2 diabetes has focused on lower body dysfunction (balance/gait) and muscular strength (grip) using gross motor control. It is not clear from the literature how type 2 diabetes influences upper body coordination and fine motor control. Chronic inflammatory states, such as obesity, congestive heart failure, diabetes, Alzheimer's disease are also linked to changes in peripheral blood mononuclear cells (PBMCs) mitochondrial respiration values\]. PBMC isolation is a non-invasive way to measure mitochondrial function through hi
+
+PRIMARY OUTCOMES:
+  - Change in whole-body protein metabolism in type 2 diabetic obese subjects
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral Supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 45 Years to 84 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04461236

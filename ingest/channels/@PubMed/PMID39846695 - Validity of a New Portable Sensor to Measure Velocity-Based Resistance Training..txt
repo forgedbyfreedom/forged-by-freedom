@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39846695
+Title: Validity of a New Portable Sensor to Measure Velocity-Based Resistance Training.
+Authors: Justo-&#xc1;lvarez, Garc&#xed;a-L&#xf3;pez, Sabido, Garc&#xed;a-Valverde
+Journal: Methods and protocols
+Year: 2025
+Topic: velocity based training
+
+ABSTRACT:
+This study evaluated the concurrent validity of the Vitruve linear encoder compared to the T-Force device for measuring mean propulsive velocity (MPV) and peak velocity (PV) during the free-weight bench press exercise. Thirteen resistance-trained men participated in three sessions, during which MPV and PV were recorded simultaneously by both devices. The data were analysed using one-way ANOVA, Pearson's correlation, Bland-Altman analysis, and effect size calculations, with statistical significance set at p &#x2264; 0.05. The results showed discrepancies between the Vitruve and T-Force devices across different intensity levels. Specifically, the Vitruve device generally reported higher MPV and lower PV values, particularly at moderate and low intensities. Vitruve was deemed useful for MPV measurements, especially at velocities below 0.65 m/s during free-weight bench press exercises. In conclusion, the Vitruve device overestimated MPV and underestimated PV at moderate and low loads (&gt;0.65 m&#xb7;s-1), with the discrepancies increasing as velocity rose. It can provide valuable data for monitoring and assessing resistance training programs focused on MPV at heavier loads (&lt;0.65 m&#xb7;s-1). Researchers and practitioners should take these findings into account when incorporating the Vitruve into velocity-based strength training protocols.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39846695/

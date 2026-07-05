@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03697759
+Title: A Decision Support System for Self-management of Low Back Pain - PILOTSTUDY
+Official Title: A Decision Support System for Self-management of Low Back Pain - PILOTSTUDY
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: low back pain exercise
+
+SUMMARY:
+The pilot study precedes a larger randomized controlled trial, to be starting in February 2019.
+
+In this pilot study all participants are allocated to the intervention group.
+
+The intervention consists of a digital decision support system delivering a weekly plan of suggested activities that the participant can use to self-manage their low back pain. The plan is presented to the participant in the selfBACK app.
+
+DETAILED DESCRIPTION:
+The selfBACK intervention consists of the selfBACK system, that provides the participants with an individually tailored weekly plan of suggested activities to use in their self-management of low back pain.
+
+The SELFBACK system constitutes a data-driven predictive decision support system that uses Case-Based Reasoning methodology to capture and reuse participant cases in order to suggest the most suitable self-management plan for participants. The selfBACK system is an intelligent system that will adjust the suggested self-management plan to the individual participants by using the information available on the participant (baseline questionnaires), weekly self-reported of changes in health status through the app, and data on physical activity via the step-detecting wristband.
+
+The weekly plan includes three categories of content; 1) information/education, 2) physical activity monitoring through wearing a step-detecting wristband, and 3) strength and flexibility exercises.
+
+PRIMARY OUTCOMES:
+  - Roland Morris Disability Questionnaire
+
+INTERVENTIONS:
+  - OTHER: Usual care + selfBACK
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03697759

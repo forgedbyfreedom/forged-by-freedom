@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07482189
+Title: Effectiveness and Efficiency of an Upper Limb Active-Passive Exoskeleton Robot in Patients With Frozen Shoulder
+Official Title: Effectiveness and Efficiency of an Upper Limb Active-Passive Exoskeleton Robot in Patients With Frozen Shoulder
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: high intensity interval training
+
+SUMMARY:
+Frozen shoulder, also known as adhesive capsulitis, is a common chronic shoulder disorder with symptoms including shoulder pain, limitations in both active and passive range of motion, and muscle weakness, which significantly affects daily functional abilities. The investigator applied upper limb exoskeleton-assisted therapy. This experiment used a randomized controlled trial to assess the clinical rehabilitation effects of exoskeleton-assisted range of motion and resistance training on patients with frozen shoulder.
+
+DETAILED DESCRIPTION:
+Frozen shoulder, also known as adhesive capsulitis, is often described as a common chronic shoulder disorder where the course may last from several months to years, which significantly affects daily functional abilities and mental health due to shoulder pain, limitations in both active and passive range of motion, and muscle weakness. The therapeutic standard requires extensive intervention, and generally, physical therapy is the most widely used, evidence-supported, and non-invasive treatment. The common treatments are manual joint mobilization, range of motion exercises, and resistance training, but the therapeutic outcome largely depends on the therapist's professional skills and time investment, which can impose a considerable workload on clinicians.
+
+In previous applications, they proposed that exoskeleton robots can provide healthcare professionals with a standardized tool to assist in therapy and thereby reduce clinical workload. Other studies have predominantly focused on patients with neurological conditions, such as stroke, though exoskeleton robots have also been applied clinically in the rehabilitation of patients with adhesive capsulitis. However, systematic evidence regarding their clinical use and rehabilitation outcomes remains limited. We will conduct a randomized controlled trial to investigate the efficacy of exoskeleton-assisted therapy on frozen shoulder. 40 participants will be randomized into two groups: one is traditional active-passive exercises and theraband-based resistance training combined with conventional physical therapy (control group) and the other one is upper limb active-passive exoskeleton-assisted range of motion and resistance training combined with conventional physical therapy (experimental group). The intervention will last for four weeks, with at least three sessions per week, each lasting approximately 60-75 minutes.
+
+The outcome measurement tools including the Visual Analogue Scale (VAS) for pain, active and passive shoulder range of motion, shoulder muscle strength (measured using a handheld dynamometer), and the Disabilities of the Arm, Shoulder, and Hand (DASH) questionnaire were used to compare two groups with regard to the rehabilitation outcomes and sustained effects after a two-week follow-up period in subjects with frozen shoulder.
+
+PRIMARY OUTCOMES:
+  - Shoulder joint Range of Motion
+
+INTERVENTIONS:
+  - PROCEDURE: Upper limb exoskeleton-assisted therapy
+  - PROCEDURE: General physical therapies
+  - PROCEDURE: Traditional physical therapies
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07482189

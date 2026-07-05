@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07039799
+Title: The Effect of Virtual Reality Applications on Upper Extremity Functions in Patients With Duchenne Muscular Dystrophy
+Official Title: The Effect of Virtual Reality Applications on Upper Extremity Functions in Patients With Duchenne Muscular Dystrophy
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: strength training
+
+SUMMARY:
+This study aims to evaluate the effects of fully immersive virtual reality (VR) applications on upper extremity (UE) functions in individuals diagnosed with Duchenne Muscular Dystrophy (DMD). DMD is a progressive neuromuscular disorder that leads to muscle weakness and loss of function, including the upper limbs, which are essential for daily activities and independence.
+
+In this randomized controlled trial, 36 participants with DMD will be divided into two groups: a control group receiving conventional physiotherapy and an intervention group receiving the same physiotherapy program (excluding upper extremity exercises) combined with VR-based exercises. The VR games will be designed specifically to improve shoulder, elbow, wrist, and hand functions and will be delivered using Meta Quest 3 headsets with hand-tracking capabilities.
+
+Both groups will receive therapy twice a week for 8 weeks. Assessments will be conducted before and after the intervention, and at follow-up, using validated tools to measure UE function, grip strength, fine motor skills, trunk control, fatigue, quality of life, and participation in daily activities.
+
+The study aims to explore innovative rehabilitation strategies for DMD and contribute to improving the independence and quality of life of affected individuals.
+
+DETAILED DESCRIPTION:
+Duchenne Muscular Dystrophy (DMD) is a progressive genetic disorder characterized by the absence of dystrophin, leading to degeneration and weakness of skeletal muscles. While early clinical symptoms primarily affect the lower extremities, upper extremity (UE) dysfunction significantly impacts daily life and independence, especially as the disease progresses and ambulation is lost. Despite its clinical relevance, upper limb rehabilitation remains underrepresented in current treatment strategies, and there is a clear need for innovative and engaging approaches tailored to this population.
+
+Virtual reality (VR) offers an interactive and motivating rehabilitation environment, enabling repetitive task-oriented training in a controlled and safe setting. In recent years, fully immersive VR systems have gained attention in pediatric neurorehabilitation due to their potential to improve motor function while increasing patient engagement and compliance. However, research on the application of VR in DMD, particularly targeting upper limb function, remains limited.
+
+This study is a randomized controlled trial designed to evaluate the impact of immersive VR-based rehabilitation on UE functions in children and adolescents with DMD. A total of 36 participants will be randomly assigned to either an intervention group receiving a combination of conventional physiotherapy and VR-based upper extremity training, or a control group receiving only conventional physiotherapy including aerobic, strengthening, stretching, breathing, posture, and functional exercises.
+
+The VR program includes three custom-developed therapeutic games targeting shoulder, elbow, wrist, and hand movements. These games will be administered using the Meta Quest 3 headset with hand-tracking technology, allowing participants to interact with the virtual environment without additional controllers. The games will be adapted to each participant's functional level, with adjustable difficulty and personalized content. Sessions will take place twice weekly for 8 weeks, with each session lasting approximately 40 minutes.
+
+Outcome measures include standardized clinical tools to assess upper extremity performance (e.g., PUL 2.0, pinch strength, pegboard test), fine motor skills, trunk control, fatigue, health-related quality of life, and participation levels. Usability and potential side effects of VR will also be evaluated through questionnaires and observation during sessions.
+
+The findings of this trial are expected to contribute to the evidence base supporting VR as a feasible and effective tool for enhancing upper limb function in children with DMD, and to guide future integration of digital technologies in neuromuscular rehabilitation.
+
+PRIMARY OUTCOMES:
+  - Performance of the Upper Limb (PUL 2.0) Score
+  - Pediatric Quality of Life Inventory - Neuromuscular Module (PedsQL-NM)
+  - Participation and Environment Measure for Children and Youth (PEM-CY)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Virtual Reality + Conventional Physiotherapy
+  - BEHAVIORAL: Conventional Physiotherapy
+
+ELIGIBILITY:
+Age: 7 Years to 18 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07039799

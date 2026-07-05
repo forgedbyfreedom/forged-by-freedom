@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00807508
+Title: Leucine Supplementation in Elderly Men
+Official Title: The Influence of Leucine Supplementation on Body Composition and Muscle Characteristics in Healthy Elderly
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 29
+Topic: protein supplementation
+
+SUMMARY:
+In the present study the investigators aim to determine whether leucine supplementation can augment muscle mass and strength and improve body composition in healthy elderly men
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - muscle mass and body composition
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: placebo
+  - DIETARY_SUPPLEMENT: leucine
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00807508

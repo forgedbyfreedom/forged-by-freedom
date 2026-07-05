@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04060966
+Title: Neural Mechanisms of Cost and Benefit Integration During Decision-Making, Aim 2: Acute & Lifetime Stress
+Official Title: Neural Mechanisms of Cost and Benefit Integration During Decision-Making, Aim 2: Acute & Lifetime Stress
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 397
+Topic: physical activity intervention
+
+SUMMARY:
+The central aim of this study is to characterize how the costs of acute and lifetime stress affect the neural architecture for decision-making in healthy humans. Investigators will use behavioral choice paradigms to measure how the costs of stress influence decisions about rewards (e.g., foods, money) as well as decisions about the use of self-control strategies. They will further examine associations between these stress measures and other decision variables commonly studied in our lab which have well-understood mechanisms, such as risk preferences. This behavioral work lays the foundation for an fMRI experiment that combines our measures of the behavioral costs of stress with neural measures of brain changes. Acute stress will be measured using a physiological stressor (cold-pressor task) coupled with saliva sample collection for cortisol analysis. Lifetime stress will be measured using a computerized life stress survey. We will study three cohorts: One purely behavioral cohort will be examined on-site (n=60). In a smaller subset of participants (n=40), investigators will measure neural activity changes in relevant brain areas as measured with MRI during decisions to use self-control in the presence of rewards. In a larger sample (n=500) the correlation between participants' risk preferences and lifetime stress exposure at scale using Amazon Mechanical Turk subjects will be measured.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Amount in Dollars ($) Participants are Willing to Allocate to Avoid Use of Self-Control during Decision-Making Task
+  - Stress and Adversity Inventory (STRAIN) Overall Severity Score
+
+INTERVENTIONS:
+  - BEHAVIORAL: Cold-Pressor Task (CPT)
+  - BEHAVIORAL: Control CPT
+  - DEVICE: fMRI
+
+ELIGIBILITY:
+Age: 18 Years to 64 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04060966

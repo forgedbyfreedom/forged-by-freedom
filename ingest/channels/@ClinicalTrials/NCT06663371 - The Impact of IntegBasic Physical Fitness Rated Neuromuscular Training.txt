@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06663371
+Title: The Impact of IntegBasic Physical Fitness Rated Neuromuscular Training Intervention on the of Military Personnel
+Official Title: The Impact of Integrated Neuromuscular Training Intervention on the Basic Physical Fitness of Military Personnel
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 24
+Topic: athletic performance
+
+SUMMARY:
+Objective: The study aims to evaluate the efficacy of an 8-week integrated neuromuscular training intervention on the fundamental physical fitness parameters of military personnel, encompassing strength, velocity, agility, and equilibrium.
+
+Methodology: The research randomly allocated 20 military students from the National University of Defense Technology into two cohorts, utilizing an experimental methodology with longitudinal assessments at the onset, midpoint, and conclusion of the intervention to quantitatively assess the influence of the integrated neuromuscular training on velocity and agility. Participants in both the experimental and control groups were evaluated one week prior to the intervention, at the fourth week, and one week post-intervention. Statistical analysis involved a two-factor repeated measures ANOVA to compare measures across the three time points, while paired-sample t-tests were applied for pre-post comparisons. The experimental group engaged in an 8-week integrated neuromuscular training regimen, consisting of three 90-minute sessions per week, culminating in a total of 24 sessions. Concurrently, the control group adhered to a conventional physical training schedule, also structured around three 90-minute sessions per week, over the same 24-session period, thereby ensuring parity in total training duration and frequency between the experimental and control groups.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Vertical-Jump Test
+  - Balance Test
+  - Maximum Strength (1RM, 1 Repetition Maximum)
+  - 100m Sprint Test
+
+INTERVENTIONS:
+  - BEHAVIORAL: Basic Physical Fitness
+  - BEHAVIORAL: Traditional Physical Training
+
+ELIGIBILITY:
+Age: 18 Years to 24 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06663371

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05356065
+Title: The Turkish Version of the OSTRC Questionnaires
+Official Title: The Turkish Version of the Oslo Sports Trauma Research Center (OSTRC) Questionnaire on Overuse Injuries and Health Problems; Validity and Reliability Study
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 72
+Topic: sleep athletes
+
+SUMMARY:
+Exposure to repetitive activities and heavy workloads makes athletes vulnerable to overuse injuries over time. Well-timed detection of these injuries is crucial to maintaining their sports career healthily. The Oslo Sports Trauma Research Centre questionnaires for Overuse Injury (OSTRC-O) and Health Problems (OSTRC-H) are universally used as valid and reliable tools in athlete health screening. This study aims to make them available for Turkish athletes.
+
+The internal consistency, reproducibility, and validity of the questionnaires were analyzed. Data were obtained from 72 athletes from different sports types. 33 participants were screened weekly for six weeks to detect score changes and calculate effect sizes. Participants filled out the OSTRC-O, the OSTRC-H, the Cornell Musculoskeletal Discomfort Questionnaire (CMDQ), and the Nottingham Health Profile (NHP) for validity analyses. The internal consistency and test-retest reliability values were very high for both questionnaires. There was a moderate correlation between OSTRC-O and OSTRC-H scores with CMDQ and NHP. The area under the curve (AUC) values were adequate for all scales. The effect size values were moderate for all scales. Turkish versions of the OSTRC-O and OSTRC-H questionnaires are valid and reliable tools for Turkish-speaking athletes in different sports branches.
+
+DETAILED DESCRIPTION:
+Introduction and Aims All athletes are vulnerable to acute traumas or cumulative injuries throughout their sports life. Thus, screening the health levels of athletes and investigating whether they have overuse injuries is essential both to prevent acute traumas and improve health and performance. There is no valid and reliable subjective measurement tool to perform this screening in athletes in Turkish currently. However, the valid and reliable "Oslo Sports Trauma Research Centre Overuse Injury Questionnaire - (OSTRC)" questionnaires are available in English. So the investigators aimed to adapt the OSTRC- Overuse (OSTRC-O) and the OSTRC-Health Questionnaire (OSTRC-H) into Turkish.
+
+Methods Permission was obtained from the developer authors. Then, ethical approval was acquired from the clinical researches ethics committee. Questionnaires were adapted into Turkish systematically. A pilot study was conducted to ensure the accuracy of meaning and comprehensibility of translated questionnaires. Next, the validity and reliability of the new tools were estimated. 72 athletes aged between 18 and 35, who can understand and speak Turkish fluently from various sports branches, were included. Informed consent was obtained from all athletes. The demographics of the participants were recorded. All participants were administered the Cornell Musculoskeletal Discomfort Questionnaire (CMDQ), Nottingham Health Profile (NHP), OSTRC-O, and OSTRC-H questionnaires. The OSTRC-O OSTRC-H and CMDQ questionnaires were repeated weekly for six weeks on 33 athletes.
+
+Reliability was analyzed by internal consistency and test-retest methods. The validity of the scale was evaluated in terms of content validity and concurrent validity. Content validity was verified with reports of participants at the end of the sixth week. To evaluate the concurrent validity, total OSTRC scores were compared with the total scores of CMDQ and NHP. Correlations of the OSTRC-O and OSTRC-H change scores with CMDQ change scores separately were assessed throughout the six weeks in point of the Effect Size (ES) for responsiveness. Receiver Operating Characteristic (ROC) Curve test based on the area under the curve (AUC) depicted to define the performance of these assessment tools. Statistical analyses were performed with the Statistical Package for Social Sciences Program.
+
+PRIMARY OUTCOMES:
+  - Oslo Sports Trauma Research Centre Questionnaires for Overuse Injury (OSTRC-O)
+  - Oslo Sports Trauma Research Centre questionnaires on Health Problems (OSTRC-H)
+  - Cornell Musculoskeletal Discomfort Questionnaire (CMDQ)
+  - Nottingham Health Profile (NHP)
+
+INTERVENTIONS:
+  - OTHER: survey administration
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05356065

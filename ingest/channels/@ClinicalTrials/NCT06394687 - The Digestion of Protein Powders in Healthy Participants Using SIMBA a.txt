@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06394687
+Title: The Digestion of Protein Powders in Healthy Participants Using SIMBA and LIMBA Capsule
+Official Title: A Randomized Cross-over Study of The Digestion of Protein Powders in Healthy Participants Using SIMBA and LIMBA Capsule
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: protein supplementation
+
+SUMMARY:
+This study aims to understand how the Milk Protein Concentrate/Fast Protein (MCP/FP) investigational product (IP) compares to a control the Micellar Casein Isolate/Slow Protein (MCI/SP) product in healthy volunteers. It involves two phases where participants will try both products. The main goal is to measure the type and rate of amino acids quickly in the small intestine after consuming the protein products and how this relates to gastric emptying.
+
+DETAILED DESCRIPTION:
+This study aims to compare how MPC and MCI are digested on their journey to the colon, and how the proteins are digested once in colon. Traditional methods for sampling the small intestine have limitations, so a new capsule technology will be used for non-invasive sampling.
+
+Understanding how protein supplements like MPC and MCI are digested is crucial for determining their effectiveness and suitability for various purposes. By comparing these two types of supplements, one can gain insights into their unique digestion profiles and how they interact with the body. Additionally, analyzing how these supplements affect blood amino acid levels and stool profiles can offer further insights into their impact on the body's metabolism and gut health.
+
+To collect samples from the small intestine, the SIMBA Capsule (designed by Nimble Science Ltd) will be used. This device offers a simple, non-invasive, and painless alternative to obtain a sample of the small intestine, suitable for laboratory analysis. The SIMBA capsule consists of a small pill sized container within a specially coated shell and is the size of capsules available in the market for food supplements such as fish oils. When swallowed, the capsule's coated shell (which resists the acidic stomach and dissolves in the small intestine) will pass through the stomach into the small intestine. Once the shell is dissolved, the capsule can collect a fluid sample from the small intestine through the designed openings that are now exposed. Additionally, the small intestinal fluid softens a latch on a spring-loaded plunger which leads to closing the openings and sealing the sampled fluid contents within the container.
+
+In addition, there is the LIMBA capsule, which is functionally similar to the SIMBA capsule. The only difference is that the coating of the LIMBA capsule takes longer to dissolve. This allows the LIMBA capsule to collect samples from the large intestine. The coating has no effect on the rate the capsule is expelled.
+
+By using technology like the SIMBA/LIMBA capsule for non-invasive sampling, one can overcome the limitations of traditional methods and obtain more accurate data on the digestion of these protein supplements. This will enable one to make informed recommendations regarding their usage and potentially identify novel applications for these products in clinical and nutritional settings. Ultimately, this study aims to enhance one's understanding of protein supplement metabolism and provide evidence-based guidance for individuals seeking to optimize their dietary intake for better health outcomes.
+
+PRIMARY OUTCOMES:
+  - Time to presentation of the peptides in the small intestine by SIMBA/LIMBA capsule
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Milk Protein Concentrate
+  - DIETARY_SUPPLEMENT: Micellar Casein Isolate
+
+ELIGIBILITY:
+Age: 20 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06394687

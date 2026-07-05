@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07207798
+Title: Epidural Electrical Stimulation in Spinal Cord Injury (T11-L3)
+Official Title: Epidural Electrical Stimulation for Motor and Sensory Function Reconstruction in Spinal Cord Injury (T11-L3)
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 10
+Topic: high intensity interval training
+
+SUMMARY:
+The primary objective of this clinical trial is to investigate the efficacy of Epidural Electrical Stimulation (EES) in restoring motor and sensory function in patients with chronic spinal cord injury (SCI) at levels T11-L3, classified as ASIA B-D. The study aims to address the following key questions: Does EES lead to significant improvement in motor and sensory function compared to baseline in this patient population? To assess the longitudinal effects of EES, researchers will compare participants' motor function, sensory function, and quality of life measures at multiple time points: prior to EES implantation, immediately after device activation, and at 1, 3, and 6 months post-implantation. Participants will be required to:Undergo surgical implantation of an EES device in the epidural space. Have the device activated and receive individualized stimulation parameter adjustments during follow-up visits. Complete regular motor and sensory assessments using standardized protocols. Participate in structured rehabilitation training sessions while using the EES device. Report any adverse events and complete quality-of-life questionnaires at predetermined intervals.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - WISCI II (Walking Index for Spinal Cord Injury II)
+  - Functional Independence Measure (FIM)
+
+INTERVENTIONS:
+  - PROCEDURE: Epidural Electrical Stimulation
+  - PROCEDURE: Standard Rehabilitation Therapy
+  - RADIATION: positron emission tomography-computed tomography (PET-CT)
+  - RADIATION: Diffusion Tensor Imaging (DTI)
+  - PROCEDURE: Somatosensory Evoked Potentials (SEPs)
+
+ELIGIBILITY:
+Age: 16 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07207798

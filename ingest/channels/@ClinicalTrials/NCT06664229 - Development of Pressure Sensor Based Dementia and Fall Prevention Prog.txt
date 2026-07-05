@@ -1,0 +1,60 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06664229
+Title: Development of Pressure Sensor Based Dementia and Fall Prevention Program for Older Adults
+Official Title: Development of the Flexible and Printed Electronic Device for Dementia and Fall Prevention of Older Adults
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 205
+Topic: strength training
+
+SUMMARY:
+The goal of this intervention program is to test the effectiveness of pressure sensor based dementia and fall prevention program for improving cognitive and physical functions of community dwelling older adults. The main purposes of this study are:
+
+1. Develop a pressure sensor based exercise mat and linked software programs to be used for group training sessions for cognitive and balance training of older adults at a community senior center.
+2. Evaluate efficacy of the program to improve cognitive and physical functions of older adults via a pilot study and a main study with randomized control trial design.
+
+Older adults will be asked to participate in a group training session that was lead by a fitness coach using a pressure sensor mat, a standing monitor, and a linked software programs. They will be asked to stand on the mat, which is set in front of a monitor to show positions of the mat where they place their foots. The monitor screen will guide them to conduct either a balancing exercise for fall prevention or a cognitive exercise such as memory game or quiz game for dementia prevention.
+
+Researchers will compare age and gender matched control group in a main study to see if cognitive and balancing functions of intervention group is better than the control group by conducting pre and post surveys and physical examinations. A pilot study will examine pre-post changes in the intervention group without the control group.
+
+DETAILED DESCRIPTION:
+A. Developed group exercise devices
+
+○ The study will test the flexible, stretchable film-type pressure sensor embedded balance mat and a monitor that will present a sequence of fitness programs and cognitive tasks.
+
+* A 65cm wide balance mat embedded with pressure sensors will be utilized for balance trainings and responding to cognitive tasks.
+* The devices are consisted of hardware and software based on a thin, flexible pressure sensor (includes additional safety aids such as safety bars and surrounding cushion mats).
+* The thin pressure sensor allows for a lightweight, portable mat.
+
+B. Pilot Test
+
+* The pilot test will be conducted with a single intervention group who participated in the group exercises using the developed devices that are led by a trainer.
+* Pre- and post-assessment: Two measurements will be taken before and after the intervention, evaluating balance, physical fitness, cognition, and quality of life.
+* User-centered interviews: One interview will be conducted after the intervention to gather participants' opinions on the exercise program and to determine the direction of future studies. The interview will use the Metaplan method, which was verified as an effective approach for developing assistive systems for older users in a previous study (Thoma-Lürken et al., 2018). The interview will be conducted with four participants from the pilot test, and the interview session will last 60 to 90 minutes, considering participants' needs for breaks. For effective data collection and analysis, the entire interview process will be recorded with participants' prior consent.
+
+C. The main test
+
+* The main test will be conducted with single-blind, randomized controlled trial (RCT) design. The intervention group will participate in the group exercises using the developed devices that are led by a trainer.
+
+  * Random assignment: Block randomization (block size 4) will be applied to randomly assign participants to the intervention group or the control group.
+  * Single-blind (blinding of the evaluator): The evaluator will not be informed of the participants' group allocation during assessments.
+* Pre-, mid-, and post-assessment: Measurements will be taken three times-before the intervention, after 8 weeks of exercise, and after 16 weeks of exercise-assessing balance, physical fitness, cognition, depression, sleep, and quality of life.
+
+PRIMARY OUTCOMES:
+  - The Mini-Mental State Exam Korean Version (MMSE-K)
+  - The Berg Balance test
+  - Sarcopenia index
+  - The figure of 8 walk test
+  - The 3 m sit-walk and return test
+
+INTERVENTIONS:
+  - BEHAVIORAL: Fall and dementia prevention exercise
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06664229

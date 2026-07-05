@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00377312
+Title: 7 Day Continuous Parathyroid Hormone IV Infusion
+Official Title: Determining the Maximal Safe Dose of a Continuous Infusion of Parathyroid Hormone(1-34): Effects on Bone Formation
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 11
+Topic: vitamin D muscle
+
+SUMMARY:
+Study consists of an eight day inpatient visit on the General Clinical Research Center. The investigators' specific aims are to:
+
+1. To define the maximum safe dose of a seven day continuous administration of parathyroid hormone \[PTH(1-34)\] in healthy human volunteers.
+2. To estimate the effect of a seven day continuous administration of parathyroid Hormone (PTH) in escalating doses on vitamin D metabolism, markers of bone turnover and fractional excretion of urine.
+
+DETAILED DESCRIPTION:
+This study will expand upon earlier infusions studies that demonstrated: 1) There is a dose-related increase in 1,25 (OH)2 vitamin D in response to PTHrP and PTH over multiple days. 2) There is a markedly attenuated vitamin D response to PTHrP compared to PTH, particularly during the second 24 hours. 3) The increase in 1,25 (OH)2 vitamin D is almost certainly responsible for the greater calcemic effect of PTH compared to PTHrP. 4) PTHrP is obviously a weaker agonist of 1,25 (OH)2 vitamin D but does not result in its suppression as is seen in Humoral Hypercalcemia of Malignancy (HHM). Thus, the suppression of 1,25 (OH)2 vitamin D seen in HHM remained unexplained. In addition to assessing the effects of an infusion of PTHrP and PTH on calcium handling and 1,25(OH)2 vitamin D, we also measured their effects on markers of bone turnover. Given the clinical observations seen in Hyperparathyroidism (HPT) and HHM, we anticipated that PTH would stimulate both bone resorption and formation, while PTHrP would stimulate bone resorption but inhibit formation. However, we observed that infusions of PTHrP and PTH resulted in an equivalent, rapid increase in bone resorption as measured by N-telopeptide (NTx) and C-telopeptide (CTx), as well as a progressive decline in bone formation. There was no difference between PTH and PTHrP. We assumed that formation would ultimately increase with additional time, as seen in HPT, and therefore examined an additional group of subjects infused with PTHrP for 96 hours. However, N-terminal propeptide of type 1 procollagen (P1NP) continued to decline even further as is seen in HHM in contrast to HPT. We have not yet studied longer infusions of PTH.
+
+One of the reasons for doing this pilot study is to determine the optimal dosing of PTH over a week period of time. Intravenous PTH has never been infused into human beings for prolonged periods of time. The investigators question whether a prolonged continuous intravenous infusion of PTH will lead to a sustained and progressive suppression of bone formation as occurs in HHM or an increase in bone formation as occurs in HPT. They also want to assess the direct influence of long-term continuous PTH infusions on plasma 1,25 (OH)2 vitamin D regulation in healthy human volunteers. We have shown in our previous studies that doses of 8 picomoles (pmol)/kg/hr PTH given over 48 hours result in sustained mild serum hypercalcemia, with serum calcium seeming to plateau in the range of 11 - 11.5 mg/dL after 48 hours. A dose of 8 picomoles (pmol)/kg/hr has also been shown to cause desirable effects on serum 1,25(OH)2 vitamin D and markers of bone turnover, and may therefore be the "ideal" dose. However, we do not know whether serum calcium will plateau after an infusion of 48 hours with escalating doses or whether it will continue to increase over seven days.
+
+To determine what will happen with a prolonged infusion, we plan to start with doses lower than 8 picomoles (pmol)/kg/hr, and then gradual
+
+PRIMARY OUTCOMES:
+  - Participants With Dose Limiting Toxicity
+  - Total Serum Calcium
+  - Ionized Serum Calcium
+  - Serum Phosphorous
+
+INTERVENTIONS:
+  - DRUG: Parathyroid Hormone (1-34)
+
+ELIGIBILITY:
+Age: 24 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00377312

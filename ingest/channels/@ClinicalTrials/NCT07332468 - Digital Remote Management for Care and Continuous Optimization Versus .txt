@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07332468
+Title: Digital Remote Management for Care and Continuous Optimization Versus Usual Care to Reduce Risk of Atherosclerotic Cardiovascular Diseases (DigiCare-ASCVD)
+Official Title: Digital Remote Management for Care and Continuous Optimization Versus Usual Care to Reduce Risk of Atherosclerotic Cardiovascular Diseases (DigiCare-ASCVD)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 790
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The DigiCare-ASCVD study is an investigator-initiated, multicenter, open-label, parallel-group randomized controlled trial. It aims to evaluated whether digital remote management is superior to usual care in reducing risk of atherosclerotic cardiovascular diseases and improving blood pressure control, glycemic control, lipids control, medication compliance and lifestyle.
+
+DETAILED DESCRIPTION:
+"Atherosclerotic cardiovascular disease (ASCVD) is a leading global cause of mortality. Primary care is central to its prevention within tiered healthcare systems, yet faces challenges including physician training gaps and inefficient specialist referrals. Digital remote interventions offer a promising solution due to widespread smartphone/internet access, enabling convenient care and real-time data use. Current tools focus on patient education/reminders or clinical decision support (CDSS) separately. However, effective long-term ASCVD management requires an integrated system that combines CDSS-guided treatment with comprehensive, sustained risk-factor monitoring (e.g., blood pressure, lipids). This study aims to develop and validate such an integrated remote management platform to overcome multi-level barriers, disseminate advanced resources to primary care, and enhance equitable cardiovascular risk prevention.
+
+The DigiCare-ASCVD Study is a multicenter, open-label, randomized controlled trial with a 1:1 parallel-group design. It will enroll 790 patients at high risk for ASCVD. All enrolled patients will be randomly assigned in a 1:1 ratio to either the Digital Remote Management group or the usual care group.
+
+Patients in the Digital Remote Management group will utilize a smartphone-based ""physician-machine collaboration"" platform. This system integrates home monitoring to track BP, lipids,glucose, medication compliance and physical activity. It features AI-driven alerts for abnormal values, automated medication adjustment suggestions (verified by physicians), and targeted health education The primary endpoint is the mean change in the patient's 10-year ASCVD risk, calculated using the China-PAR risk prediction model, from baseline to the 12-month follow-up."
+
+PRIMARY OUTCOMES:
+  - Mean change in the patient's 10-year ASCVD risk, calculated using the China-PAR risk prediction model
+
+INTERVENTIONS:
+  - OTHER: Digital Remote Management Group
+
+ELIGIBILITY:
+Age: 35 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07332468

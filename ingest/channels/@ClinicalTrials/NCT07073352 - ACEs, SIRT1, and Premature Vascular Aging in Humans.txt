@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07073352
+Title: ACEs, SIRT1, and Premature Vascular Aging in Humans
+Official Title: Adverse Childhood Experiences and Premature Vascular Aging in Humans: The Role of SIRT1
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: protein supplementation
+
+SUMMARY:
+Adverse childhood experiences (ACEs) are directly related to cardiovascular morbidity and mortality, and impaired vascular endothelial function (VEF) is an independent predictor of future cardiovascular disease (CVD) risk \[1, 2\]. Previous work from our lab (IRB 202010095) and others \[3\] demonstrates impaired VEF in young adults with prior exposure to ACEs even in the absence of clinical CVD risk factors. Sirtuin 1 (SIRT1) is a class III histone deacetylase (HDAC) that plays a role in regulating vascular homeostasis and reductions in SIRT1 are associated with age-related endothelial dysfunction \[4\]. We have shown that ACEs-related impairments in VEF are accompanied by reductions in SIRT1 \[5\]. However, the mechanisms by which ACE exposure promotes VEF remain unknown. The goal of this project is to establish proof of concept that alterations in vascular SIRT1 expression and activity mediate premature vascular aging in individuals with \>=4 ACEs compared to those with 0 ACEs and that, because NAD+ is an essential substrate for SIRT1, increasing NAD+ bioavailability will restore VEF in those with \>=4 ACEs.
+
+Thus, we will use a robust translational approach coupling in vivo and in vitro measures of endothelial function, inflammation, oxidative stress, and SIRT1 expression and activity in young adults with (n=30-35) versus without (n=30-35) ACE exposure in a cross-sectional study, and during a randomized controlled trial employing a novel 4-week nicotinamide riboside (NR) supplementation approach to increase SIRT1 activity by increasing cellular NAD+ in ACE+ (n=15/group) to accomplish the following specific aims:
+
+1. Determine the mechanisms by which ACE exposure alters the regulation of VEF by SIRT1. We hypothesize that compared to those without ACEs (ACE-), ACE+ will have (H1a) elevated endothelial oxidative stress and inflammation, (H1b) accompanied by reduced endothelial SIRT1 expression and increased p66SHC expression and acetylation of p65 and p53, (H1c) in association with lower VEF.
+2. Determine how targeting SIRT1 by increasing NAD+ bioavailability affects VEF in young adults with ACEs. We hypothesize that systemic NR supplementation will (H2a) augment cellular SIRT1 activity and (H2b) improve VEF in ACE+.
+
+\[1\] Felitti, V.J., Anda, R.F., Nordenberg, D., Williamson, D.F., Spitz, A.M., Edwards, V., Koss, M.P., \& Marks, J.S. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults: The adverse childhood experiences (ace) study. American Journal of Preventive Medicine, 14(4), 245-258. https://doi.org/10.1016/S0749-3797(98)00017-8. \[2\] Jenkins, N.D.M., \& Robinson, A.T. (2022). How do adverse childhood experiences get under the skin to promote cardiovascular disease? A focus on vascular health. Function (Oxf), 3(4), zqac032. PMC9279110. 10.1093/function/zqac032. \[3\] Rodriguez-Miguelez, P., Looney, J., Blackburn, M., Thomas, J., Pollock, J.S., \& Harris, R.A. (2022). The link between childhood adversity and cardiovascular disease risk: Role of cerebral and systemic vasculature. Function. 10.1093/function/zqac029. \[4\] Thompson, A. M., Wagner, R., \& Rzucidlo, E. M. (2014). Age-related loss of SirT1 expression results in dysregulated human vascular smooth muscle cell function. American Journal of Physiology-Heart and Circulatory Physiology, 307(4), H533-H541. \[5\] Jenkins, N.D.M., Rogers, E.M., Banks, N.F., Tomko, P.M., Sciarrillo, C.M., Emerson, S.R., Taylor, A., \& Teague, T.K. (2021). Childhood psychosocial stress is linked with impaired vascular endothelial function, lower sirt1, and oxidative stress in young adulthood. Am J Physiol Heart Circ Physiol, 321(3), H532-H541. PMC8461842. 10.1152/ajpheart.00123.2021
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Vascular endothelial function
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nicotinamide Riboside
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07073352

@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03812926
+Title: Compuflo® vs Conventional Training With an Epidural Simulator
+Official Title: Compuflo® Assisted Training vs Conventional Training for the Identification of the Ligamentum Flavum With an Epidural Simulator
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 60
+Topic: resistance training
+
+SUMMARY:
+Epidural block is one of the most difficult skills that can be mastered by trainees probably due to the difficulty of recognizing the ligamentum flavum (LF) during the loss of resistance technique (LORT).The CompuFlo® Instrument can measure the pressure of human tissues in real-time at the orifice of a needle and it has been successfully used in clinical practice to identify the epidural space.The aim of this study was to evaluate whether Compuflo® may help trainees to identify the ligamentum flavum using a realistic Epidural Simulator
+
+DETAILED DESCRIPTION:
+The investigators enrolled 60 trainees who have never performed an epidural block. After having had a standardized learning module on epidural anatomy and technique, each trainee practiced the epidural and the Compuflo®-assisted LORT on the simulator for a maximum of 5 attemps. Trainees were asked to stop the needle entrance whenever they felt a sensation of an increase of resistance due to the penetration of the needle in the LF. The correct position of the needle was verified by an expert instructor. The number of attempts was noted. The power analysis required a sample size of 60 observations to set 80% test power and a 95% significance. Unpaired T-test was used to evaluate the differences in the number of epidural attempts. A logistic regression model was used to correlate the "success at the first attempt ratio" and the technique used.
+
+PRIMARY OUTCOMES:
+  - epidural attempts
+
+INTERVENTIONS:
+  - DEVICE: Compuflo assited procedure
+
+ELIGIBILITY:
+Age: 26 Years to 35 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03812926

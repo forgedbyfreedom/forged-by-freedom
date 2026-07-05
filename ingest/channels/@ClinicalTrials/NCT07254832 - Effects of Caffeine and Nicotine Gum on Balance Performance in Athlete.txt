@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07254832
+Title: Effects of Caffeine and Nicotine Gum on Balance Performance in Athletes
+Official Title: No Significant Alterations in Balance Performance After Acute Caffeine and Nicotine Gum Intake in Trained Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: athletic performance
+
+SUMMARY:
+This randomized, single-blind, placebo-controlled, four-condition crossover study evaluates the acute effects of caffeine gum (\~3 mg/kg) and nicotine gum (4 mg) on balance performance in healthy, trained adults. Each participant completes four test visits (caffeine gum, nicotine gum, xylitol-based placebo gum, and no-gum control) separated by ≥24 hours. Static and dynamic balance are assessed using the ProKin 252 system under standardized procedures. The primary outcomes are postural sway (ellipse area) and center-of-pressure path length over predefined test trials/time frames. The objective is to determine whether acute administration of these stimulants alters balance-related performance relative to placebo and control.
+
+DETAILED DESCRIPTION:
+This study evaluates the acute effects of two commonly used stimulants-caffeine and nicotine administered in chewing-gum form-on static and dynamic balance performance in healthy, trained adults. The trial uses a randomized, single-blind, placebo-controlled, four-condition crossover design. Twenty participants complete four laboratory visits scheduled at the same time of day and separated by a washout interval of at least 24 hours. The order of the four conditions is randomized.
+
+Interventions are: (1) caffeine gum at approximately 3 mg/kg, (2) nicotine gum at 4 mg, (3) sugar-free xylitol-based placebo gum, and (4) a no-gum control condition. Pre-testing exposure is standardized across conditions: caffeine gum is chewed for 5 minutes, nicotine gum for 30 minutes, and placebo gum for 20 minutes prior to balance assessments. The control condition involves no gum exposure. All procedures are conducted under uniform laboratory conditions.
+
+Balance performance is assessed immediately after the pre-specified exposure period using the ProKin 252 balance platform. Standardized static and dynamic balance tasks are administered according to device guidelines and site procedures. Primary outcomes are postural sway quantified as ellipse area and center-of-pressure path length over predefined trials/time frames. Additional procedural details (e.g., task sequence, rest intervals, and device settings) are maintained in the study manual to ensure consistency across visits.
+
+The objective is to determine whether acute administration of caffeine or nicotine, relative to placebo and control, alters balance-related performance indices in healthy, physically active individuals.
+
+PRIMARY OUTCOMES:
+  - Static Postural Sway Ellipse Area - ProKin 252 Stabilometric Platform
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine Gum 3mg/kg
+  - DIETARY_SUPPLEMENT: Nicotine Gum (4 mg)
+  - OTHER: Placebo Gum (Xylitol)
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07254832

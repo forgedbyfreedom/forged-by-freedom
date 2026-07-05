@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05677347
+Title: Phase 1, Single and Repeat Dose Study to Assess Safety, Tolerability, and Pharmacokinetics (PK) of GSK3923868 in Participants With Chronic Obstructive Pulmonary Disease (COPD)
+Official Title: A Randomized, Double-blind, Placebo Controlled, Single and Repeat Dose Study to Assess the Safety, Tolerability, and Pharmacokinetics of Inhaled GSK3923868 in Participants With Chronic Obstructive Pulmonary Disease (COPD)
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: beta-alanine
+
+SUMMARY:
+This is a two parts study, a single ascending dose followed by 14-days repeat dosing. The single ascending dose part will assess two dose levels of GSK3923868 or placebo across two treatment periods 1 and 2 in a single cohort of participants with a washout period of a minimum of 5 days after each treatment periods. The repeat dose part will assess repeated one dose level of GSK3923868 or placebo in treatment period 3 with up to 14 days of follow up in the same cohort of participants. The duration of study participation for treatment period 1, 2 and 3 will be 6, 6 and up to 29 days (including follow up), respectively.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Non-serious Adverse Events (Non-SAEs) and Serious Adverse Events (SAEs) Following Single Dose of GSK3923868
+  - Number of Participants With Non-SAEs and SAEs Following Repeat Dose of GSK3923868
+  - Number of Participants With Clinically Significant Changes in Hematology and Clinical Chemistry Laboratory Parameters Following Single Dose of GSK3923868
+  - Number of Participants With Clinically Significant Changes in Hematology and Clinical Chemistry Laboratory Parameters Following Repeat Dose of GSK3923868
+  - Number of Participants With Clinically Significant Changes in Urinalysis Parameters Following Repeat Dose of GSK3923868
+
+INTERVENTIONS:
+  - DRUG: GSK3923868
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 40 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05677347

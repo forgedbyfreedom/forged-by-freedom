@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 41901084
+Title: Comparative Effects of Dietary Protein, Creatine, and Omega-3 Supplementation on Muscle Strength, Endurance, and Recovery in Trained Athletes: A Systematic Review and Network Meta-Analysis.
+Authors: Wang, Qin, Kim
+Journal: Nutrients
+Year: 2026
+Topic: omega 3 fatty acids muscle recovery
+
+ABSTRACT:
+This systematic review and network meta-analysis aimed to compare the effects of dietary protein, creatine, and omega-3 fatty acid supplementation on muscle strength, endurance performance, and recovery outcomes in trained athletes. A comprehensive literature search across MEDLINE, Embase, Cochrane CENTRAL, Web of Science, SPORTDiscus, and Scopus identified randomized controlled trials evaluating these supplements in individuals engaged in structured training for a minimum of six months. Network meta-analysis employing a frequentist random-effects model synthesized direct and indirect evidence, with treatment rankings determined using Surface Under the Cumulative Ranking curve probabilities. The analysis incorporated 35 trials enrolling 1211 participants. Creatine supplementation demonstrated superior effects for muscle strength (SMD = 0.46, 95% CI: 0.29 to 0.63, SUCRA = 82.4%), protein supplementation proved most effective for endurance performance (SMD = 0.28, 95% CI: 0.08 to 0.48, SUCRA = 85.2%), and omega-3 supplementation yielded the greatest benefits for recovery outcomes (SMD = 0.40, 95% CI: 0.18 to 0.62, SUCRA = 88.7%). Network consistency assessment revealed no significant disagreement between direct and indirect evidence across all outcomes. These findings reveal an outcome-specific efficacy pattern supporting targeted supplementation strategies aligned with primary training objectives in athletic populations.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/41901084/

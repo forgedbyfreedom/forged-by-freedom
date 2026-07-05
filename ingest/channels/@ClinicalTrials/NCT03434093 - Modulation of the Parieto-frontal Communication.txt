@@ -1,0 +1,74 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03434093
+Title: Modulation of the Parieto-frontal Communication
+Official Title: Modulation of the Parieto-frontal Communication
+Status: WITHDRAWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 0
+Topic: omega 3 exercise
+
+SUMMARY:
+Background:
+
+Research shows that the parietal and prefrontal areas of the brain are involved in short-term memory. Researchers want to look at the effects of transcranial magnetic stimulation (TMS) of these areas on short-term memory and brain activity. They will use functional magnetic resonance imaging (fMRI) to look at brain activity.
+
+Objective:
+
+To look at the effects of TMS on brain pathways involved in memory.
+
+Eligibility:
+
+Healthy, right-handed adults ages 18-50
+
+Design:
+
+Participants will have 3 or 4 visits at least 1 week apart. They cannot drink alcohol for at least 48 hours before each visit.
+
+The screening visit lasts about 1 (Omega) hours. It can be combined with the first testing visit. Screening includes:
+
+* Medical history
+* Physical exam
+* Neurological exam
+* Urine tests
+* Questionnaires about being left or right handed and about their ability to imagine physical activities.
+
+The first testing visit lasts about 1 (Omega) hours and includes an MRI. For the MRI, participants lie on a table that slides into a machine. They will lie still or perform simple memory tasks on a computer screen.
+
+The second and third testing visits last about 3 hours. Participants will have:
+
+* 2 MRIs
+* TMS: A wire coil is held to the scalp. A brief electrical current passes through the coil to create a magnetic pulse that affects brain activity. They will perform simple memory tasks.
+* EMG: Small electrodes are taped to the skin to record muscle activity while they rest.
+
+After the study, participants will complete a questionnaire about any discomfort they experienced during the study.
+
+...
+
+DETAILED DESCRIPTION:
+Objective: This study aims to identify whether repetitive dual-site transcranial magnetic stimulation (TMS) can modulate the functional connectivity between the parietal and dorso-lateral prefrontal cortices.
+
+Study population: The study involves 26 healthy volunteers.
+
+Design: This controlled study comprises 3 main visits for each subject: (1) a baseline, evaluation visit during which fMRI will be acquired during a visual short memory task along with diffusion tensor imaging and structural MRI; (2) a visit during which resting state fMRI (rsfMRI) will be acquired, followed by paired-associative stimulation (PAS) with pulses delivered over the parietal and then over the dorso-lateral prefrontal cortex, in order to induce a temporary plastic change in the interaction between the parietal and prefrontal cortices; the PAS will be followed by another rsfMRI and task fMRI; (3) a visit identical to #2 during which the PAS will be delivered with pulses in reverse order of previous visit.
+
+Outcome measures: The effects of PAS will be quantified with rsfMRI and a short working memory task, considered as a proxy for complex motor and cognitive control.
+
+* The primary outcome will be to investigate the resting state functional connectivity changes induced by each PAS intervention
+* The secondary outcome #1 will be to evaluate the difference in visual angle error between sessions 2 and 3 in a working memory task during which the subjects will be asked to remember the position of a bar presented on the screen at different time intervals before the inquiry.
+* The secondary outcome #2 will be to build an fMRI-DTI analysis pipeline for generation of TMS targets individually customized for each subject and a given task.
+
+PRIMARY OUTCOMES:
+  - Resting state functional connectivity change induced by the paired associative stimulation
+
+INTERVENTIONS:
+  - DEVICE: Transcranial Magnetic Stimulation (TMS)
+  - BEHAVIORAL: Working Memory Task
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03434093

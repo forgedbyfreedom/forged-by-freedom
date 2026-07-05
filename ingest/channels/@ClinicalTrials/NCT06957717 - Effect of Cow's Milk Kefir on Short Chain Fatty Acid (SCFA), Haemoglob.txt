@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06957717
+Title: Effect of Cow's Milk Kefir on Short Chain Fatty Acid (SCFA), Haemoglobin, and Ferritin Levels of Anemic Adolescent Girls
+Official Title: Effect of Cow's Milk Kefir on Short Chain Fatty Acid (SCFA), Haemoglobin, and Ferritin Levels of Anemic Adolescent Girls in Yogyakarta, Indonesia
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: protein supplementation
+
+SUMMARY:
+Introduction: The prevalence of anemia among adolescent girls in Indonesia is still quite high. According to the Indonesian Health Survey (IHS) in 2023, it was 18% and is still a national problem. Long-term supplementation of blood supplement tablets (TTD) as an effort made by the government to prevent/overcome anemia has caused side effects, namely dysbiosis by pathogenic bacteria. Giving cow's milk kefir containing various probiotics can overcome the side effects of supplementation, and its metabolites accelerate iron absorption so that iron status in the blood increases and ultimately restores anemia in adolescent girls. Method: It's research is an experimental study, with a Randomized Controlled Trial (RCT) design, pre-posttest design, involving research subjects of adolescent girls (15-18 years) with mild and moderate anemia, at SMKN 1, 2, and 3 Kasihan, Bantul Regency, Yogyakarta as many as 80 students. Subjects were divided into 2 groups, namely group 1 (treatment group), which was given 120 ml of cow's milk kefir every day and TTD 1 grain/week, and group 2 (control group), which was given 120 ml of cow's milk every day and TTD 1 grain/week. The duration of administration was 2 months. The study outcomes were Short Chain Fatty Acid (SCFA) levels in feces by Gas Chromatography-Mass Spectrometry (GC-MS) method, hemoglobin by Hematology Analyser method, and serum ferritin by Ferritin ELISA measured at the beginning and end of the study. Statistical analysis included univariate, bivariate, and multivariate analysis. Clinical analysis was also conducted to estimate the effect size of the treatment
+
+DETAILED DESCRIPTION:
+This protocol represents the only doctoral research dissertation proposal I will undertake as part of my dissertation, which does not exist.
+
+PRIMARY OUTCOMES:
+  - Short Chain Fatty Acid
+  - hemoglobin
+  - Ferritin
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: cow's milk kefir
+  - COMBINATION_PRODUCT: pasteurized cow's milk
+
+ELIGIBILITY:
+Age: 15 Years to 18 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06957717

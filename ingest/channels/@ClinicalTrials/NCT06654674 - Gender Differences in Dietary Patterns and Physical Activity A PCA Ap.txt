@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06654674
+Title: Gender Differences in Dietary Patterns and Physical Activity: A PCA Approach
+Official Title: Gender Differences in Dietary Patterns and Physical Activity: An Insight With Principal Component Analysis (PCA)
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 2509
+Topic: body composition exercise
+
+SUMMARY:
+This study investigates gender differences in dietary patterns and physical activity using Principal Component Analysis (PCA). It aims to identify distinct eating and activity behaviors between men and women in order to develop gender-specific interventions that promote better metabolic health. The study was conducted at a metabolic health center in Rome, Italy, with 2,509 participants. Data were collected through questionnaires and body composition assessments, and PCA was applied to classify participants into groups based on their behaviors.
+
+DETAILED DESCRIPTION:
+The study was designed as a cross-sectional analysis of gender differences in dietary patterns and physical activity, utilizing Principal Component Analysis (PCA) to identify distinct behavioral groups. A total of 2,509 participants were recruited from a metabolic health center in Rome, Italy, between May 2023 and June 2024. The study collected detailed data on eating habits, physical activity, and body composition through questionnaires and bioimpedance analysis. Five distinct behavioral groups were identified through PCA, with significant differences in dietary patterns and physical activity levels between men and women. Men were found to consume more meat and participate in strength training, while women favored vegetable-rich diets and had more structured eating routines. These differences also translated into body composition, with men having more lean mass and women more fat mass.
+
+The study highlights the importance of gender-specific interventions in nutrition and physical activity to improve metabolic health outcomes. The results suggest that men could benefit from increased vegetable consumption, while women could benefit from engaging in more physical activity, particularly strength training. Future research should explore these patterns longitudinally to better understand how these behaviors evolve over time and to develop more tailored interventions.
+
+PRIMARY OUTCOMES:
+  - Principal Component Analysis (PCA)
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06654674

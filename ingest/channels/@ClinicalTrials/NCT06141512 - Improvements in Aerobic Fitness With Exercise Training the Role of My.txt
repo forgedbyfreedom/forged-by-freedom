@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06141512
+Title: Improvements in Aerobic Fitness With Exercise Training: the Role of Myokines
+Official Title: Improvements in Aerobic Fitness With Exercise Training: the Role of Myokines
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 21
+Topic: resistance training
+
+SUMMARY:
+For both healthy adults and patients with cardiovascular disease (CVD), aerobic fitness (V̇O2max) is a stronger predictor of the risk of future chronic disease and premature death than other established risk factors such as hypertension, smoking, or Type 2 diabetes. It is important to improve the understanding of the regulation of V̇O2max to enable optimisation of interventions aimed at increasing V̇O2max in the current predominantly sedentary population. Currently, only exercise training is a viable method for increasing V̇O2max. However, \~10-20% of people who follow fully supervised, standardised training interventions do not demonstrate a measurable increase in V̇O2max. Low response to training is a clinically relevant concern, but the large variability in response to exercise training also provides an opportunity to dissect out the molecular mechanisms responsible for adaptations to V̇O2max by contrasting low vs. high responders to training. It has been previously demonstrated that low responders for VO2max fail to up regulate a number of genes that encode putative 'myokines', while the high responders demonstrated a significant increase in the expression of these genes, suggesting these myokines may play an important mechanistic role in modulating VO2max. The aim of the present study is to examine whether low responders for VO2max have an attenuated increase in the plasma levels of the previously identified myokines.
+
+DETAILED DESCRIPTION:
+For both healthy adults and patients with cardiovascular disease (CVD), aerobic fitness (V̇O2max) is a stronger predictor of the risk of future chronic disease and premature death than other established risk factors such as hypertension, smoking, or Type 2 diabetes. Considering the large medical and economic burden of physical inactivity-related chronic disease it is important to improve the understanding of the regulation of V̇O2max to enable optimisation of interventions aimed at increasing V̇O2max in the current predominantly sedentary population. Furthermore, there is a need to identify novel drug targets to aid pharmacological intervention in those individuals who are unwilling or unable to improve V̇O2max through exercise.
+
+Currently, only exercise training is a viable method for increasing V̇O2max. However, although exercise training on average improves V̇O2max, \~10-20% of people who follow fully supervised, standardised training interventions do not demonstrate a measurable increase in V̇O2max. Low response to training is a clinically relevant concern, but the large variability in response to exercise training also provides an opportunity to dissect out the molecular mechanisms responsible for adaptations to V̇O2max by contrasting low vs. high responders to training.
+
+Using this approach it has previously been shown that in skeletal muscle samples obtained pre- and post- training, 86 genes are differentially regulated in high compared to low responders for V̇O2max. Strikingly, out of these 86 genes, 13 genes encode proteins that have been reported to be released by muscle during or after exercise (i.e., 'messenger proteins' termed myokines). This strongly suggests low responders to exercise training fail to sufficiently upregulate the production and release of these myokines, and that this is (at least partly) the reason why these people do not manage to improve their V̇O2max as much as high responders. However, in order to confirm a mechanistic role of these myokines in increasing V̇O2max, it needs to be demonstrated that beside the change in gene expression, the change in the plasma levels of these myokines is also impaired in low responders for V̇O2max.
+
+PRIMARY OUTCOMES:
+  - Training induced changes in VO2max
+  - Training induced changes in plasma myokines
+
+INTERVENTIONS:
+  - BEHAVIORAL: Reduced-exertion high-intensity interval training (REHIT)
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06141512

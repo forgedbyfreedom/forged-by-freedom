@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00272779
+Title: BMS-Reyataz Study in Treatment in Naive Subjects to Compare the Efficacy and Safety Between Boosted Reyataz and Kaletra When in Combination With Fixed Dose Truvada
+Official Title: A 96 Week Study Comparing the Antiviral Efficacy and Safety of Atazanavir/Ritonavir With Lopinavir/Ritonavir, Each in Combination With Fixed Dose Tenofovir-Emtricitabine in HIV-1 Infected Treatment in Naive Subjects
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1057
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to evaluate the safety, tolerability and antiviral effects of atazanavir (ATV) plus ritonavir (RTV) versus a combination drug of lopinavir (LPV) plus RTV. A combination drug containing tenofovir (TDF) and emtricitabine (FTC) will also be taken by participants in both arms.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Human-immunodeficiency Virus- Ribonucleic Acid (HIV-RNA) < 50 Copies (c)/mL at Week 48
+  - Maximum Plasma Concentration (Cmax) of ATV/RTV and LPV/RTV in the Presence of an Antiretroviral (ARV) Regimen Including TDF at Week 4
+  - Area Under the Concentration-time Curve, in One Dosing Interval [AUC(TAU)] of ATV/RTV and LPV/RTV in the Presence of an ARV Regimen Including TDF at Week 4
+  - Minimum Plasma Concentration (Cmin) of ATV/RTV and LPV/RTV in the Presence of an ARV Regimen Including TDF at Week 4
+  - Time to Reach Maximum Observed Plasma Concentration (Tmax) of ATV/RTV and LPV/RTV in the Presence of an ARV Regimen Including TDF at Week 4
+
+INTERVENTIONS:
+  - DRUG: ATV
+  - DRUG: RTV
+  - DRUG: Tenofovi-Emtricitabine (TDF/FTC) tablet
+  - DRUG: LPV
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00272779

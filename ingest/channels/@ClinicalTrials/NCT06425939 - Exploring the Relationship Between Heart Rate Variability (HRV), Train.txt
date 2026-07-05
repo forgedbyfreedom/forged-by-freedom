@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06425939
+Title: Exploring the Relationship Between Heart Rate Variability (HRV), Training Load, and Exercise Performance
+Official Title: Exploring the Relationship Between Heart Rate Variability (HRV), Training Load, and Exercise Performance
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: resistance training
+
+SUMMARY:
+Heart rate variability (HRV) is a measure of the variation in time between each heartbeat.
+
+It is an indirect and ubiquitous biomarker of performance readiness and recovery measured by most consumer-grade wearable fitness trackers. However, there is little documented on the relationship between HRV, training load, and performance measures in the Real-World.
+
+Whoop wrist-worn activity trackers have been validated against the gold-standard Electrocardiography (ECG) for HRV and HR measurements. Whoop leverages photoplethysmography (PPG) technology to continuously track (HR, HRV, respiratory rate, energy expenditure) and provides, daily, individual insights, trends, and coaching to improve strain, sleep, and recovery. Research has demonstrated that heart rate variability (HRV) guided training may be more optimal compared to predetermined training for aerobic exercise improvements.
+
+The purpose of this study is to assess the feasibility of providing personalized training recommendations based on HRV measured by a consumer-grade wearable (Whoop) in a real-world setting to better understand the HRV relationship with performance.
+
+DETAILED DESCRIPTION:
+The purpose of this study is to determine if Training Intensity (%HRmax in min.) during Low HRV periods acutely (below HRV baseline next day and consecutive days) and chronically (weeks below previous weeks HRV baseline) will have a negative relationship with Post-Test Performance Metrics as measured by Force Plates, which could lead to personalized training recommendations using HRV. The Investigators conducted a pilot study using Whoop devices to monitor 50 subjects for 3 months and observed that individuals had High Training Load (above their baseline) on Low HRV days (below their baseline) on over 200 days. The Investigators hypothesize seeing similar High Training Load on Low HRV days during this study and would like to understand that relationship with Performance
+
+Primary objective: To determine if Training Intensity (%HRmax in min.) during Low HRV periods acutely (below HRV baseline next day and consecutive days) and chronically (weeks below previous weeks HRV baseline) will have a negative relationship with Post-Test Performance Metrics as measured by Force Plates.
+
+Secondary Objective : Measure and determine if subjective journal entries (mood, anxiety, recovery, etc.) are related to HRV, RHR, Sleep Quantity, and Sleep Efficiency.
+
+PRIMARY OUTCOMES:
+  - Training Intensity
+  - Performance
+  - Peak Power Output
+  - Jump Height
+  - Dynamic Push Ups Peak Force
+
+INTERVENTIONS:
+  - OTHER: Force plate assessment
+  - DEVICE: Whoop wrist band
+
+ELIGIBILITY:
+Age: 25 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06425939

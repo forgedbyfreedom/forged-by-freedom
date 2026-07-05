@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03583424
+Title: Venetoclax, Carmustine, Etoposide, Cytarabine, and Melphalan Before Stem Cell Transplant in Treating Participants With Relapsed or Refractory Non-Hodgkin Lymphoma
+Official Title: A Phase I/II Trial of Venetoclax and BEAM Conditioning Followed by Autologous Stem Cell Transplantation for Patients With Primary Refractory Non-Hodgkin Lymphoma
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 19
+Topic: beta-alanine
+
+SUMMARY:
+This phase I/II trial studies the side effects and best dose of venetoclax when given together with carmustine, etoposide, cytarabine, and melphalan before stem cell transplant in treating participants with non-Hodgkin lymphoma that has come back or does not respond to treatment. Drugs used in chemotherapy, such as venetoclax, carmustine, etoposide, cytarabine, and melphalan, work in different ways to stop the growth of cancer cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving chemotherapy before a stem cell transplant helps kill any cancer cells that are in the body and helps make room in the patient?s bone marrow for new blood-forming cells (stem cells) to grow.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Determine the maximum tolerated dose (MTD) of venetoclax that can be safely combined with carmustine, etoposide, cytarabine, and melphalan (BEAM) prior to autologous stem cell transplant which will the recommended phase II dose (RP2D).
+
+II. Determine the safety and efficacy of venetoclax as measured by overall response rate (ORR) at day 100, 12-month survival and freedom from relapse (FFR-12).
+
+SECONDARY OBJECTIVES:
+
+I. Long term effects (progression-free survival \[PFS\] and overall survival \[OS\]) of addition of venetoclax to BEAM.
+
+II. Correlation of response and survival with expression of BCL-2, BCL-XL, and MCL-1 as measured by immunohistochemistry (IHC).
+
+OUTLINE: This is a dose-escalation study of venetoclax.
+
+Participants receive venetoclax orally (PO) once daily (QD) on days -10 to -1, carmustine intravenously (IV) on day -6, etoposide IV twice daily (BID) on days -5 to -2, cytarabine IV BID on days -5 to -2, and melphalan IV on day -1. Participants then undergo hematopoietic stem cell transplantation on day 0.
+
+After completion of study treatment, participants are followed up for 2 years.
+
+PRIMARY OUTCOMES:
+  - Maximum Tolerated Dose of Venetoclax Defined to be the Dose Cohort Below Which 3 Out of 6 Patients Experience Dose Limiting Toxicities or the Highest Dose Cohort of 1200 mg, if 2 Dose Limiting Toxicities Are Not Observed at Any Dose Cohort
+  - Overall Response Rate
+
+INTERVENTIONS:
+  - DRUG: Carmustine
+  - DRUG: Cytarabine
+  - DRUG: Etoposide
+  - PROCEDURE: Hematopoietic Cell Transplantation
+  - DRUG: Melphalan
+
+ELIGIBILITY:
+Age: 19 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03583424

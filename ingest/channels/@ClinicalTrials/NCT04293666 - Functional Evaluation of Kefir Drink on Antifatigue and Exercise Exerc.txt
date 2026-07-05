@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04293666
+Title: Functional Evaluation of Kefir Drink on Antifatigue and Exercise Exercise Performance-2
+Official Title: Functional Evaluation of Kefir Drink on Antifatigue and Improving Exercise Performance
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: creatine supplementation
+
+SUMMARY:
+Purpose: The aim of the present study was to evaluate potential beneficial effects of Kefir drink (Synbio Tech Inc., Kaohsiung City, Taiwan) on fatigue and ergogenic functions following physiological challenge. Methods: 16 male subjects, 8 in each group, were divided into two groups according to the principle of maximal oxygen uptake, which were (1) first-stage placebo and second-stage Kefir group (hereinafter referred to as group A). (2) The first phase of Kefeier, the second phase of the placebo group (hereinafter referred to as group B), after 4 weeks of supplementation, the performance and fatigue resistance tests were carried out in sequence, including: treadmill aerobic endurance exhaustion time, and fixation Exercise time and intensity challenge changes in blood lactate, blood urea nitrogen concentration and creatine kinase activity, as well as differences in body composition before and after supplementation. After the first phase of the test is completed, the four weeks of emptying are performed. And after adding the crossover sample, perform four weeks of supplementation and testing again.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Exercise endurance exhaustion time
+  - Clinical Biochemistry of lactate level
+  - Clinical Biochemistry of ammonia level
+  - Clinical Biochemistry of CK level
+  - Clinical Biochemistry of glucose level
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Kefir
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 20 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04293666

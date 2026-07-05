@@ -7,7 +7,7 @@ load_dotenv(Path(__file__).parent.parent / ".env", override=True)
 
 from pinecone import Pinecone
 
-OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 PINECONE_API_KEY = os.environ["PINECONE_API_KEY"]
 PINECONE_HOST = os.environ["PINECONE_HOST"]
 
@@ -21,11 +21,13 @@ SLEEP = 1.5
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(INDEX_NAME)
 
+
+# OpenAI direct only — OpenRouter dropped in phase_2B P5.
 def embed(texts):
     r = requests.post(
-        "https://openrouter.ai/api/v1/embeddings",
+        "https://api.openai.com/v1/embeddings",
         headers={
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
             "Content-Type": "application/json",
         },
         json={"model": EMBED_MODEL, "input": texts},

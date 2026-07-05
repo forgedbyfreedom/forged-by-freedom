@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05913362
+Title: IVUS Guided PCI for CKD to Reduce CI-AKI
+Official Title: IVUS Based Ultra-low Volume Contrast Media PCI to Reduce Contrast Induced Nephrology in Patient With Chronic Kidney disease-a Multi-center, Open Label, Randomized Trial (IVUS-CKD)
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 320
+Topic: creatine supplementation
+
+SUMMARY:
+Patients with Chronic kidney disease are most vulnerable to contrast induced nephropathy after Percutaneous coronary intervention, intravascular ultrasound guidance can be used to safely guide the procedure to reduce the contrast usage, this randomized trial is design to test the hypothesis that IVUS based ultra-low contrast PCI is feasible and can reduce the contrast induced nephropathy.
+
+DETAILED DESCRIPTION:
+Prospective, open-label, randomized(1:1), multi-center trial of 320 patients allocated to one of the treatment arms(IVUS-guided ultra-low contrast PCI or angiography-guided PCI).
+
+The study population will be composed of patients with renal dysfunction referring for PCI on one to more coronary artery. target lesion must be assessable with IVUS.
+
+eGFR will be re-evaluated 48 hours after the procedure. and at 1 month, 3 month, 6 month, 12 month. as well as follow-up for other clinical outcomes unless contra-indicated all patients will receive intravenous hydration 12 hours before and after the procedure. saline infusion at a dose of 1ml/kg/hour. if with reduced ejection fraction or overt heart failure reduce the saline infusion to 0.5ml/kg/hour. the use of sodium bicarbonate and diuretic will be left at the discretion of the operator All procedure will be performed using non-ionic, low osmolar or iso-osmolar, iodine-based contrast media the study groups will be compared according to the intention-to-treat principle. Categorial variables will be compared by Fisher's exact test and continuous variables by students T test. Time-dependent events will be estimated by the Kaplan-Meier method and compared by hazards cox model or log-rank test.
+
+PRIMARY OUTCOMES:
+  - Contrast-induced acute kidney injury
+
+INTERVENTIONS:
+  - BEHAVIORAL: IVUS based ultralow contrast PCI
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05913362

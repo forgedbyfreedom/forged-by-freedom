@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05259449
+Title: Efficacy of Educational Nutrition and Exercise on the Regulation of Appetite Through Exosomes in Type 2 Diabetics
+Official Title: Efficacy of a Nutritional Education Strategy and Role of Physical Exercise on the Regulation of Appetite and Body Composition Through the Profile of Exosomes in Type 2 Diabetics (The APETEX Project)
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 146
+Topic: caffeine exercise
+
+SUMMARY:
+The aim of this randomized controlled trial is to investigate the effects of different aerobic modalities; moderate-intensity continuous training (MICT) and high-intensity interval training (HIIT), and a nutritional intervention (D) on appetite regulation, appetite-related hormones, neural responses to food cues (EEG), and exosome-derived molecular signals in patients with type 2 diabetes (T2D) and obesity. It will also examine whether these effects differ between men and women.
+
+The main questions it aims to answer are:
+
+* What is the isolated and combined effect of these exercise modalities and diet on glucose metabolism, insulin dynamics, miRNA exosomal expression, appetite hormones, and neural responses to food stimuli?
+* Is there a sex-specific best combination choice for improving appetite regulation and metabolic control?
+* Are changes in miRNA exosomal profile, appetite-related hormones, and EEG-based neural responses associated with other health-related outcomes such as body composition, fat mass reduction, insulin sensitivity, physical condition, and quality of life?
+
+To answer these questions, researchers designed a two-factor study. One factor was diet, with two levels Diet (D) and no diet (ND). The second factor was exercise, with three levels (inactive (INACT), MICT, and HIIT). Participants were randomly allocated into six groups: ND-INACT, ND-MICT, ND-HIIT, D-INACT, D-MICT, and D-HIIT.
+
+Participants will:
+
+* Undergo a 12-week intervention within their assigned group.
+* Visit the research facilities three times per week if assigned to an exercise group, or once every two weeks if in a diet group.
+
+DETAILED DESCRIPTION:
+This randomized controlled trial is conducted in the Province of Cádiz (Spain). A total of 146 participants with type 2 diabetes (T2D) and obesity were enrolled and underwent baseline and post-intervention assessments of the study outcomes. Immediately after baseline evaluations, participants were randomly allocated to one of the six study groups. Randomization was stratified by sex to ensure approximately 50% of participants in each group were women. All participants received detailed written and verbal information about the study objectives, procedures, benefits, and potential risks before providing written informed consent. The study complied with the Declaration of Helsinki and was approved by the Research Ethics Committee of Cádiz (registration number 92.21; PEIBA number 1026-N-21) and by the Coordinating Committee for Biomedical Research Ethics of Andalusia (registration number 92.21; PEIBA number 1026-N-21; internal codes SICEIA-2025-001870 and SICEIA-2025-000778).
+
+At both baseline and post-intervention, participants attended the research facilities in the morning following an overnight fast and were instructed to maintain their usual lifestyle while avoiding alcohol, caffeine, and strenuous physical activity for the specified periods prior to testing. During these visits, a comprehensive set of assessments was conducted to capture the effects of the interventions across multiple domains. These included measures of glucose metabolism, insulin dynamics, plasma exosomal miRNA expression, appetite-regulating hormones, neural responses to food cues, subjective appetite, body composition, dietary intake and adherence, physical activity and sedentary behavior, resting and maximal fat oxidation, cardiorespiratory fitness, blood pressure, and self-reported quality of life. Post-intervention assessments followed the same protocol, with participants in exercise groups completing their final training session at least 72 hours before testing. This design allows evaluation of both the isolated and combined effects of exercise and diet interventions on physiological, molecular, behavioral, and lifestyle outcomes, as well as potential sex-specific differences in response.
+
+PRIMARY OUTCOMES:
+  - Assessed changes in Glucose concentration
+  - Assessed changes in insulin concentration
+  - Assessed changes in insulin Resistance: HOMA-IR
+  - Assessed changes in insulin Sensitivity: Matsuda Index
+  - Assessed changes in insulin Sensitivity: Quicki
+
+INTERVENTIONS:
+  - BEHAVIORAL: Nutritional Intervention
+  - OTHER: High-intensity interval training (HIIT)
+  - OTHER: Moderate-intensity continuous training (MICT)
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05259449

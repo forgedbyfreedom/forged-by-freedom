@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00922714
+Title: Scandinavian Intensive Care Unit (ICU) Glutamine Study
+Official Title: Glutamine to Intensive Care Patients - a Prospective, Double-Blind, Placebo-Controlled Multicenter Study in the Scandinavian Countries
+Status: TERMINATED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 1000
+Topic: protein supplementation
+
+SUMMARY:
+This is a prospective double-blinded placebo-controlled block randomized study in intensive care patients comparing intravenous glutamine supplementation to placebo. The hypothesis is an improvement of clinical outcome. The primary endpoint is a reduction in the Sequential Organ Failure Assessment (SOFA) score on day 7 of treatment.
+
+DETAILED DESCRIPTION:
+This is a prospective double-blinded placebo-controlled block randomised study in intensive care patients comparing intravenous glutamine supplementation (0.285 g/kg body weight/24 h) to placebo. Inclusion criteria are patients treated for more than 3 days. Primary endpoint is a reduction in SOFA-score on day 7 of treatments. Secondary endpoints are: ICU-mortality, 6-months mortality, length of ICU stay, organ failure free days as well as reduction in SOFA-score on day 10 of treatment. Nutrition will be standardised so that not less than 80% of the target which is basal energy expenditure according to Harris \& Benedict is given daily. Enteral nutrition is preferred, but a combination of enteral and parenteral nutrition is recommended to achieve the nutritional target. For statistical comparison non-parametric rank order statistics will be used. To detect a 0.75-point difference in the reduction of SOFA-score on day 7 of treatment, a total of 1,000 patients will be needed.
+
+PRIMARY OUTCOMES:
+  - A reduction in SOFA-score
+
+INTERVENTIONS:
+  - DRUG: Glutamine
+  - DRUG: saline (placebo)
+
+ELIGIBILITY:
+Age: 18 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00922714

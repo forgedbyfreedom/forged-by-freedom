@@ -23,6 +23,8 @@ TIMESTAMP_RE = re.compile(r'^\d{2}:\d{2}:\d{2}[,.]\d{3}\s*-->\s*\d{2}:\d{2}:\d{2
 SEQ_NUM_RE = re.compile(r'^\d+$')
 MUSIC_RE = re.compile(r'^\[(?:Music|Applause|Laughter|music|applause|laughter)\]$', re.IGNORECASE)
 TAG_RE = re.compile(r'<[^>]+>')  # HTML-like tags in some SRT files
+VTT_HEADER_RE = re.compile(r'^(WEBVTT|Kind:|Language:|Position:|Align:|Line:|Size:)', re.IGNORECASE)
+VTT_CUE_RE = re.compile(r'^\d{2}:\d{2}:\d{2}\.\d{3}\s*-->\s*\d{2}:\d{2}:\d{2}\.\d{3}')
 
 
 def srt_to_text(srt_content):
@@ -34,12 +36,16 @@ def srt_to_text(srt_content):
     for line in lines:
         line = line.strip()
 
-        # Skip empty lines, sequence numbers, timestamps
+        # Skip empty lines, sequence numbers, timestamps, VTT headers/cues
         if not line:
             continue
         if SEQ_NUM_RE.match(line):
             continue
         if TIMESTAMP_RE.match(line):
+            continue
+        if VTT_CUE_RE.match(line):
+            continue
+        if VTT_HEADER_RE.match(line):
             continue
         if MUSIC_RE.match(line):
             continue
@@ -100,10 +106,10 @@ def main():
             print(f"Channel not found: {search_dir}")
             sys.exit(1)
 
-    srt_files = list(search_dir.rglob("*.srt"))
+    srt_files = list(search_dir.rglob("*.srt")) + list(search_dir.rglob("*.vtt"))
     total = len(srt_files)
-    print(f"\nSRT → TXT Converter")
-    print(f"Found {total:,} SRT files in {search_dir}")
+    print(f"\nSRT/VTT → TXT Converter")
+    print(f"Found {total:,} SRT/VTT files in {search_dir}")
     if args.dry_run:
         print("DRY RUN — no files will be written\n")
 

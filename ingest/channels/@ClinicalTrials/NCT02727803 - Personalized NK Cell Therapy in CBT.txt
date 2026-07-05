@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02727803
+Title: Personalized NK Cell Therapy in CBT
+Official Title: Personalized NK Cell Therapy in CBT
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: beta-alanine
+
+SUMMARY:
+This phase II clinical trial studies how well personalized natural killer (NK) cell therapy works after chemotherapy and umbilical cord blood transplant in treating patients with myelodysplastic syndrome, leukemia, lymphoma or multiple myeloma. This clinical trial will test cord blood (CB) selection for human leukocyte antigen (HLA)-C1/x recipients based on HLA-killer-cell immunoglobulin-like receptor (KIR) typing, and adoptive therapy with CB-derived NK cells for HLA-C2/C2 patients. Natural killer cells may kill tumor cells that remain in the body after chemotherapy treatment and lessen the risk of graft versus host disease after cord blood transplant.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Progression-free survival (PFS) time.
+
+SECONDARY OBJECTIVES:
+
+I. Overall survival (OS) time. II. Transplant related mortality (TRM). III. Graft versus host disease (GVHD). IV. Infection
+
+OUTLINE: Patients are assigned to 1 of 3 preparative regimens.
+
+MYELOABLATIVE REGIMEN 1: Patients receive anti-thymocyte globulin intravenously (IV) over 4 hours on days -9 and -8, fludarabine phosphate IV over 1 hour, clofarabine IV over 1 hour, and busulfan IV over 3 hours on days -7 to -4. Patients undergo total body irradiation (TBI) on day -3.
+
+NON-MYELOABLATIVE REGIMEN 2: Patients with cluster of differentiation (CD)20 positive malignancies receive rituximab IV over 6 hours on day -9. Patients receive anti-thymocyte globulin IV over 4 hours on days -8 and -7, fludarabine phosphate IV over 1 hour on days -6 to -3, and cyclophosphamide IV over 3 hours on day -6 and undergo TBI on day -1 at the discretion of the investigator(s).
+
+REDUCED INTENSITY REGIMEN 3: Patients receive anti-thymocyte globulin IV over 4 hours on days -7 and -6, fludarabine phosphate IV over 1 hour on days -5 to -2, and melphalan IV over 30 minutes on day -2.
+
+UMBILICAL CORD BLOOD TRANSPLANT: Patients undergo umbilical cord blood transplantation on day 0.
+
+NK CELLS INFUSION: Patients receive NK cells IV over 30 minutes between days 30-180.
+
+After completion of study treatment, patients are followed up at 1, 7, 14, 28, 45, 60, and 100 days, and at 6, 9, and 12 months, and then yearly for up to 4 years.
+
+PRIMARY OUTCOMES:
+  - Progression free survival (PFS) time in C2C2 patients
+  - Progression free survival (PFS) time in C1 patients
+
+INTERVENTIONS:
+  - BIOLOGICAL: Allogeneic Natural Killer Cell Line NK-92
+  - BIOLOGICAL: Anti-Thymocyte Globulin
+  - DRUG: Busulfan
+  - DRUG: Clofarabine
+  - DRUG: Cyclophosphamide
+
+ELIGIBILITY:
+Age: 15 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02727803

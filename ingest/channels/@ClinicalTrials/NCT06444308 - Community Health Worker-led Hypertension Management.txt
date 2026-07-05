@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06444308
+Title: Community Health Worker-led Hypertension Management
+Official Title: Assessing the Efficacy and Safety of Community Health Worker-led Hypertension Management Enabled by a Mobile Clinical Decision Support Application Compared to Physician Care: a Randomized, Controlled, Noninferiority Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 460
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This study is to determine if hypertension management by community health workers (CHW) supported by a mobile health application and remote physician supervision is non-inferior to management by a physician for the primary outcome of improvement in systolic blood pressure. The target population is patients with hypertension in rural Guatemala. Study duration will be 12-24 months.
+
+DETAILED DESCRIPTION:
+The investigators have developed an innovative system of care utilizing CHWs equipped with a mobile application and supported and supervised remotely by physicians. This model of care is adapted from a CHW-led diabetes program enabled by a similar CDS application which the investigators implemented in the same communities in rural Guatemala where we will carry out this proposed study. This program safely led to significant improvements in glycemic control. The mobile application is built on the widely-used CommCare platform and provides clinical decision support (CDS) to CHWs based on protocols from the WHO and the International Society of Hypertension for antihypertensive medication initiation and titration, lifestyle counseling, and identification of patients requiring a higher level of care.
+
+The Primary Objective is to determine if hypertension management by CHWs is non-inferior to care provided directly by a physician.
+
+The Secondary Objective is to evaluate the safety, acceptability to patients, and cost of CHW-led care compared to care provided directly by a physician.
+
+PRIMARY OUTCOMES:
+  - Change in Systolic Blood Pressure (SBP)
+
+INTERVENTIONS:
+  - OTHER: CommCare with Mobile Clinical Decision Support (CDS) Application
+  - OTHER: Remote Supervision by Physicians
+  - OTHER: CommCare Application without CDS
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06444308

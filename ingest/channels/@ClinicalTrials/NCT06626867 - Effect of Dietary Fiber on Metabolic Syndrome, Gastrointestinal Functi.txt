@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06626867
+Title: Effect of Dietary Fiber on Metabolic Syndrome, Gastrointestinal Function, Mood and Sleep Quality in Obese People
+Official Title: Effect of Dietary Fiber on Metabolic Syndrome, Gastrointestinal Function, Mood and Sleep Quality
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 27
+Topic: sports nutrition
+
+SUMMARY:
+Metabolic syndrome includes hypertension(high blood pressure), hyperglycemia(high blood suger), dyslipidemia(abnormal blood lipid level) and obesity. The more items that meet metabolic syndrome, the higher the risk of cardiovascular disease and diabetes, and the higher the combined mortality. At present, research reports point out that the occurrence of metabolic syndrome is related to age, obesity, lifestyle and genetics.
+
+The lack of sleep may reduce the diversity of intestinal flora, and conversely, if the diversity of intestinal flora can be increased, the quality of sleep may be improved. Dietary fiber can improve intestinal microflora and related indexes of metabolic syndrome.
+
+Although recent studies have demonstrated that dietary fiber will affect obesity, mood and sleep, different kinds of dietary fiber will affect different strains and pro-duce different effects. The effect of resistant starch on metabolic syndrome, mood and sleep of obese people is not very clear. Therefore, the objective of this intervention trial was to evaluate the effects of the intake of resistant starch on sleep, mood, changes in body composition and biomarkers in metabolic syndrome.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body fat percentage
+  - Fasting glucose
+  - Mood disturbance(Questionnaires)
+  - Pittsburgh Sleep Quality Index(Questionnaires)
+  - Biochemical Markers
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary Fiber Supplementation
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 30 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06626867

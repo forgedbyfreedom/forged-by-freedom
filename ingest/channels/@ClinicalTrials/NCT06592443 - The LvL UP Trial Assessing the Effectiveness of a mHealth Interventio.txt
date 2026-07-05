@@ -1,0 +1,56 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06592443
+Title: The LvL UP Trial: Assessing the Effectiveness of a mHealth Intervention
+Official Title: The LvL UP Trial: A Sequential, Multiple Assignment, Randomized Controlled 2 Trial to Assess the Effectiveness of a Blended Mobile Lifestyle Intervention
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1061
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Non-communicable diseases (NCDs), such as cardiovascular disease, diabetes, or cancer, and common mental disorders (CMDs), such as depression or anxiety, represent the primary causes of death and disability worldwide, causing major health and financial burdens. Lifestyle behaviours, including physical activity, diet, stress and emotional regulation, tobacco smoking, alcohol consumption, and sleep are important modifiable risk factors associated with the prevention and management of both NCDs and CMDs.
+
+LvL UP is a mHealth intervention aimed at preventing NCDs and CMDs in adults from multi-ethnic Southeast Asian populations. Building upon leading evidence- and theory-based frameworks in the areas of mental health and behaviour change, a multidisciplinary team of researchers developed LvL UP as a holistic intervention centred around three core pillars: Move More, Eat Well, Stress Less.
+
+This study is aimed at (i) evaluating the effectiveness and cost-effectiveness of LvL UP, an mHealth lifestyle intervention for the prevention of NCDs and CMDs, and (ii) establishing the optimal blended approach in LvL UP that balances effective personalized lifestyle support with scalability.
+
+DETAILED DESCRIPTION:
+Participants will:
+
+* Visit the study site at baseline and month 6 to complete assessments.
+* Complete online assessments at months 1, 3, 9 and 12.
+* Be assigned to group 1 (intervention) or group 2 (comparison).
+* Participants in group 1 will download the LvL UP App.
+* Participants in group 1 categorized as non-responders; at month 1 will start receiving six motivational interviewing coaching sessions in addition to continue using the LvL UP app (LvL UP + MI).
+* Participants in group 2 will receive a package with standard lifestyle resources from Singapore Health Promotion Board.
+
+Participants will be randomly allocated to groups 1 or 2 (LvL UP or comparison) following a 2:1 ratio favoring the LvL UP group. At month 1 (decision point), participants from the LvL UP group will be classified as responders or non-responders based on pre-specified criteria. Non-responder participants will be re-randomized with equal probability (1:1) to one of the two second-line conditions: (i) continuing with the initial intervention (LvL UP) or (ii) additional MI support sessions (LvL UP + MI). The LvL UP pilot study results (NCT06360029) will be used to inform the tailoring variable(s) for the trial (i.e., to define response / non-response at month 1). Engagement and app evaluation variables (e.g., number of app components completed over the first 4 weeks, net promoter score), preliminary intervention effects (e.g., initial positive response), or a combination of the two will be used.
+
+Participants will also take part in a process evaluation informed by the UK Medical Research Council guidelines to explore implementation (process, fidelity, dose, adaptations, reach), mechanisms of action (participant experience and response to intervention, mediators, unexpected pathways and consequences), and contextual factors that may affect implementation and intervention outcomes. Methods will entail qualitative and quantitative approaches, including surveys, interviews, web-based and app-based analytic data, and direct observation. In addition, other measures have been added to the research protocol to address the following exploratory aims (all relevant measures are described in the outcomes section):
+
+A. To identify the most cost-effective intervention condition from the societal perspective (e.g., self-reported sickness absence).
+
+B. To explore time-varying and baseline moderators on intervention outcomes (e.g., sociodemographic variables, personality).
+
+C. To investigate behavior maintenance by assessing the intervention outcomes at six months of follow-up (i.e., 12 months after baseline).
+
+D. To investigate which smartphone sensor data might be effective in predicting user state of receptivity to LvL UP notifications (receptivity: the likelihood of engaging with a LvL UP notification, operationalized as higher response rate and decreased response time).
+
+E. To investigate which signals (e.g., audio signals, usage patterns) are most useful for predicting the presence of
+
+PRIMARY OUTCOMES:
+  - Mental well-being (Warwick-Edinburgh Mental Well-being Scale)
+
+INTERVENTIONS:
+  - BEHAVIORAL: LvL UP
+  - BEHAVIORAL: LvL UP + MI
+  - BEHAVIORAL: Comparison
+
+ELIGIBILITY:
+Age: 21 Years to 59 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06592443

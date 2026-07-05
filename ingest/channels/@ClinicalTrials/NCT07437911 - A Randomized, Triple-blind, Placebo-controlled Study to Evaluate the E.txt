@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07437911
+Title: A Randomized, Triple-blind, Placebo-controlled Study to Evaluate the Effects of a Supplement on Nutrient Gaps and Gut Health Among Individuals Utilizing GLP-1 RAs
+Official Title: A Randomized, Triple-blind, Placebo-controlled Study to Evaluate the Effects of a Supplement on Nutrient Gaps and Gut Health Among Individuals Utilizing GLP-1 RAs
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: protein supplementation
+
+SUMMARY:
+This study is a triple-blind, placebo-controlled, randomized controlled trial of 120 adults that will evaluate the impact of a novel nutritional supplement on improving nutrient gaps and changing nutrient status and the gut microbiome among glucagon-like peptide-1 receptor agonist (GLP-1 RA) users.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Nutrient Gaps
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: AG1 - Nutritional Supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 59 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07437911

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07364162
+Title: Exogenous Ketone Supplementation in ICU Delirium
+Official Title: Exogenous Ketone Ester Supplementation in ICU Delirium (KETONES ICU)
+Status: NOT_YET_RECRUITING
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: beta-alanine
+
+SUMMARY:
+Delirium is a common syndrome in intensive care unit (ICU) patients. Those experiencing delirium may suddenly feel confused, have trouble thinking clearly, struggle to pay attention, or see and hear things that are not real. Delirium is associated with worse long-term outcomes such as cognitive impairment, depression, and PTSD (post-traumatic stress disorder). This study examines whether an investigational medical-grade ketone supplement drink (ketone monoester \[brand name: Ultrapure Ketone Monoester\]) is safe and feasible to use in ICU patients, and to look for signals that it might reduce delirium or shorten its duration compared to a volume-, taste-, and calorie-matched placebo.
+
+DETAILED DESCRIPTION:
+Delirium is a prevalent neuropsychiatric syndrome characterized by an acute disturbance in attention, cognition, and consciousness. It is associated with significant morbidity, mortality, and healthcare expenditures. Recent research has provided evidence supporting the connection between brain metabolism and delirium. During states of increased systemic inflammation, such as sepsis or trauma, the brain experiences a mismatch between energy supply and demand, which is commonly associated with delirium, especially in those with preexisting cognitive impairment.
+
+In critically ill patients, mitochondrial dysfunction occurs in the setting of systemic inflammation, contributing to increased blood-brain barrier permeability and neuroinflammation. The downstream consequence of this is microglial activation, which amplifies the inflammatory response through the release of pro-inflammatory cytokines. The resultant mitochondrial dysfunction leads to impaired oxidative phosphorylation, decreased adenosine triphosphate (ATP) production, and increased reactive oxygen species production. In response to systemic inflammation, microglia transition to a pro-inflammatory phenotype characterized by increased aerobic glycolysis. This metabolic reprogramming depletes glucose availability for neurons and exacerbates the cerebral energy deficit. Emerging evidence suggests that activated microglia compete with neurons for metabolic substrates during inflammation. Activated microglia exhibit metabolic flexibility, shifting toward increased glycolysis to meet their heightened energy and biosynthetic demands. This competition for nutrients exacerbates the neuronal energy deficit and increases metabolic stress. The investigators hypothesize that this brain energy deficit contributes to the cognitive and neurological symptoms characteristic of delirium.
+
+Ketones, such as β-hydroxybutyrate, are the brain's secondary source of energy when glucose is not available. After transport across the blood-brain barrier, β-hydroxybutyrate is metabolized to acetyl-CoA (acetyl coenzyme A), thereby directly entering the tricarboxylic acid cycle, bypassing the glycolytic bottleneck, to produce ATP. In addition to serving as a substrate for ATP production, ketones support mitochondrial function, limit oxidative stress, and reduce neuroinflammation. Ketones confer a two-fold therapeutic advantage in the setting of nutrient competition. Not only do they support neuronal oxidative phosphorylation by bypassing impaired glycolysis, but they also promote anti-inflammatory microglial phenotypes, inhibit inflammasome activation, and support metabolic reprogramming. This dual effect further reduces microglial glucose demand, enhancing neuronal substrate availability.
+
+The investigators propose a prospective, randomized, placebo-controlled pilot study of exogenous ketone ester supplement administration in 40 critically ill patients to assess the safety and feasibility of this novel intervention and to
+
+PRIMARY OUTCOMES:
+  - Feasibility: Proportion of participants achieving target peak serum β-hydroxybutyrate (1.5-3.5 mmol/L) on at least 50% of dosing days
+  - Safety and tolerability: Number of participants with ≥1 prespecified safety or tolerability event
+
+INTERVENTIONS:
+  - DRUG: Ketone monoester
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07364162

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04467372
+Title: Tart Cherry Supplementation & Gut Microbiome and Inflammation
+Official Title: The Effects Supplementation of Tart Cherry or Placebo on the Gut Microbiome, Inflammation, Oxidative Stress, and Health-related Outcomes.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: protein supplementation
+
+SUMMARY:
+There has been a rapid increase in researching the use of tart cherry supplements in the past 5 years, particularly for inflammatory conditions. Many formulations of cherry supplements exist, however there has been no comparison between these different types. This is particularly important in the realm of inflammation research because sugar is known to increase the inflammatory response. The pill form of cherry supplementation has no added sugar and is naturally low in sugar (\< 1g) while the juice form is higher from added sugar. Recent work indicates tart cherry consumption can change gut microbiota, which may modify inflammation. The purpose of this study is to look at the effects of taking a cherry supplement, either in capsule or juice form, on the gut microbiome, inflammation, and health-related variables such as blood pressure, glucose regulation and sleep quality.
+
+DETAILED DESCRIPTION:
+Participants will consume a tart cherry or placebo product for 30 days and attend 5 visits in the Exercise Physiology Lab at Ohio University over the 30 day period. They will self-collect a stool sample at baseline, 14 days and 30 days after supplementation. Blood samples will be taken at baseline, 7 days, 14 days, and 30 days after supplementation. Throughout the study participates will rate symptoms (stomach, head, etc.), pain and sleep quality using an online survey for which the link will be emailed. Participants will maintain normal diet and exercise routine and to track these for the duration of the study.
+
+PRIMARY OUTCOMES:
+  - Changes in inflammation measured via tumor necrosis factor alpha (pg/mL)
+  - Changes in inflammation measured via erythrocyte sedimentation rate (mm/hour)
+  - Changes in inflammation measured via c-reactive protein (mg/L) and uric acid (mg/dL).
+  - Changes in glucose regulation assessed via plasma glucose (mg/dL)
+  - Changes in glucose regulation assessed via insulin (mIU/L)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Tart cherry juice concentrate
+  - DIETARY_SUPPLEMENT: Juice placebo
+  - DIETARY_SUPPLEMENT: Freeze dried tart cherry powder
+  - DIETARY_SUPPLEMENT: Capsule placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04467372

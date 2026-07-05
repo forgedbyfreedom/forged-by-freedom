@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07367607
+Title: Circadian Modulation of Neurophysiological Responses to Therapeutic Massage Modalities
+Official Title: Circadian Modulation of Neurophysiological Responses to Therapeutic Massage Modalities in Taekwondo Athletes: A Randomized Crossover Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: athletic performance
+
+SUMMARY:
+Athletic performance and recovery are closely linked to central nervous system regulation, which can be objectively assessed using electroencephalography (EEG). Although therapeutic massage is widely used as a recovery modality in combat sports, its neurophysiological effects and potential interaction with circadian timing remain poorly understood. This study investigates whether different therapeutic massage modalities applied at different times of the day modulate resting-state EEG activity in taekwondo athletes.
+
+DETAILED DESCRIPTION:
+This randomized, within-subject crossover study examines the effects of different therapeutic massage modalities and time of day on resting-state EEG activity in elite male taekwondo athletes. Twelve athletes complete four experimental conditions: no-massage control, friction massage, vibration mechanical massage, and percussion mechanical massage. Each condition is administered during both morning and evening sessions, separated by a minimum 48-hour washout period.
+
+Resting-state EEG is recorded immediately following each intervention using a 32-channel system. Power spectral density is computed to extract global band power in delta, theta, alpha, beta, and gamma frequency bands. The study aims to determine whether massage modality, circadian timing, or their interaction significantly influences cortical oscillatory activity associated with recovery and neural readiness.
+
+PRIMARY OUTCOMES:
+  - Global EEG Band Power
+
+INTERVENTIONS:
+  - BEHAVIORAL: FMP
+  - DEVICE: VMMP
+  - DEVICE: PMMP
+
+ELIGIBILITY:
+Age: 18 Years to 25 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07367607

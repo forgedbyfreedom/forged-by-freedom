@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 39729102
+Title: A stratified treatment algorithm in psychiatry: a program on stratified pharmacogenomics in severe mental illness (Psych-STRATA): concept, objectives and methodologies of a multidisciplinary project funded by Horizon Europe.
+Authors: Baune, Fromme, Aberg, Adli, Afantitis
+Journal: European archives of psychiatry and clinical neuroscience
+Year: 2025
+Topic: goal setting sports psychology
+
+ABSTRACT:
+Schizophrenia (SCZ), bipolar (BD) and major depression disorder (MDD) are severe psychiatric disorders that are challenging to treat, often leading to treatment resistance (TR). It is crucial to develop effective methods to identify and treat patients at risk of TR at an early stage in a personalized manner, considering their biological basis, their clinical and psychosocial characteristics. Effective translation of theoretical knowledge into clinical practice is essential for achieving this goal. The Psych-STRATA consortium addresses this research gap through a seven-step approach. First, transdiagnostic biosignatures of SCZ, BD and MDD are identified by GWAS and multi-modal omics signatures associated with treatment outcome and TR (steps 1 and 2). In a next step (step 3), a randomized controlled intervention study is conducted to test the efficacy and safety of an early intensified pharmacological treatment. Following this RCT, a combined clinical and omics-based algorithm will be developed to estimate the risk for TR. This algorithm-based tool will be designed for early detection and management of TR (step 4). This algorithm will then be implemented into a framework of shared treatment decision-making with a novel mental health board (step 5). The final focus of the project is based on patient empowerment, dissemination and education (step 6) as well as the development of a software for fast, effective and individualized treatment decisions (step 7). The project has the potential to change the current trial and error treatment approach towards an evidence-based individualized treatment setting that takes TR risk into account at an early stage.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/39729102/

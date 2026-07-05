@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05859412
+Title: Mechanisms of Neurodynamic Treatments
+Official Title: Mechanisms of Neurodynamic Treatments (MONET)
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 108
+Topic: recovery exercise
+
+SUMMARY:
+INTRODUCTION: Carpal tunnel syndrome (CTS) is a relatively common condition caused by compression of one of the main nerves at the wrist, the median nerve. Non-surgical treatments, like steroid injections and physiotherapy, are the first line of treatment for patients with carpal tunnel syndrome. The investigators have previously shown that specific physiotherapeutic exercises (neurodynamic exercises) can reduce the need for carpal tunnel surgery in some patients. Experimental studies in animal models demonstrate that these exercises have an anti-inflammatory effect and can help the nerve to regenerate. However, the exact mechanisms of action of these exercises are not well understood in patients. A better understanding of the mechanisms of action of physiotherapeutic exercises would help clinicians to better target these treatments to those patients who may benefit from them.
+
+AIM: To investigate the mechanisms of action of 6 weeks' neurodynamic treatments on nerve function and structure as well as patient-reported outcome measures in patients with CTS compared to a positive control intervention (routine care steroid injection) and a negative control intervention (advice).
+
+METHODS AND ANALYSIS: In this single-blind randomised mechanistic trial, patients with confirmed mild to moderate CTS (n=78) and age and gender-matched healthy controls (n=30) will be included. Patients will be randomly allocated to a 6-week neurodynamic exercise group, steroid injection, or advice group. Outcome measures will be explored at baseline (patients and controls), post-intervention (patients), and 6-month follow-up (patients). Outcomes include diffusion-weighted and anatomical MRI of the median nerve at the wrist, quantitative sensory testing, nerve conduction studies, inflammatory markers in blood and skin biopsies, and validated questionnaires for pain, function, and psychological factors. Two-way repeated measures ANCOVAs (factors time and intervention, adjusted for baseline measurements as a continuous covariate) will be performed to identify differences in MRI parameters, clinical assessment, and inflammatory markers between patients in different groups and healthy controls.
+
+DETAILED DESCRIPTION:
+Follow-up at 6 months will only include outcome measures from questionnaires.
+
+Details on enrollment:
+
+Pilot testing of healthy participants who consented to our ethics but will not be included in the study was on 13-April-2023.
+
+* First healthy participant enrolled: 17-May-2023.
+* First patient participant enrolled: 1-June-2023.
+
+Details on amendment:
+
+* Amendment SA2\_BPOR on 3/Aug/2023 to expand recruitment through registries of patients
+* Amendment SA3\_REC on 22/Aug/2023 to add Thames Valley Primary Care Research Partnership, musculoskeletal clinics, and media advertisement to help with recruitment of participants.
+
+PRIMARY OUTCOMES:
+  - Median nerve fractional anisotropy as determined on diffusion weighted imaging
+  - Change in median nerve fractional anisotropy as determined on diffusion weighted imaging
+
+INTERVENTIONS:
+  - OTHER: Neurodynamic exercises
+  - DRUG: Steroid injection (Depomedrone 40mg)
+  - OTHER: Advice
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05859412

@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07362134
+Title: Pulsed-Field Ablation for Recurrent Atypical Atrial Flutter
+Official Title: The Application of Point-by-point Pulsed-Field Ablation for Recurrent Atypical Flutter: Safety, Acute Success, Efficacy, and Outcome
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: creatine supplementation
+
+SUMMARY:
+Recurrent atypical atrial flutter (AFL) after prior atrial fibrillation or flutter ablation remains challenging to treat, and conventional radiofrequency ablation may be limited by incomplete lesion formation and risk of collateral damage. Pulsed-field ablation (PFA) uses non-thermal electric fields to create myocardial lesions with relative sparing of surrounding tissues and may improve the safety and efficacy of ablation for atypical AFL.
+
+This prospective, non-randomized, single-arm study will enroll approximately 30 patients with clinically documented recurrent atypical AFL who are referred for elective catheter ablation using a point-by-point pulsed-field ablation system. During the index procedure, detailed electroanatomic mapping will be performed to identify the critical isthmus or circuit, followed by linear or focal PFA and confirmation of bidirectional conduction block.
+
+The primary safety endpoint is the incidence of procedure- and device-related primary adverse events. The primary effectiveness endpoint is acute procedural success, defined as termination of atypical AFL and establishment of bidirectional block across the targeted lesion set at the end of the procedure. Secondary endpoints include recurrence of any atrial arrhythmia during 12-month follow-up, durability of the linear lesions assessed by repeat electroanatomic mapping at 3 months, changes in atrial scar on cardiac MRI, peri-procedural changes in blood biomarkers, and the rate of serious adverse events related to the procedure or study device.
+
+DETAILED DESCRIPTION:
+Atypical atrial flutter (AFL) is a challenging atrial tachyarrhythmia that frequently occurs after prior catheter ablation for atrial fibrillation (AF) or AFL. Conventional radiofrequency ablation (RFA) can be limited by variable lesion size and depth, difficulty in achieving durable transmural linear block, and the risk of collateral injury to adjacent structures such as the esophagus, phrenic nerve, and coronary arteries. These limitations are particularly important in recurrent atypical AFL, where complex macro-reentrant or localized reentrant circuits often form along prior ablation scars or in regions of epicardial conduction in the posterior left atrium and pulmonary veins, making durable ablation difficult to achieve.
+
+Pulsed-field ablation (PFA), based on non-thermal irreversible electroporation, has emerged as a promising technique that can create deep, contiguous lesions with preferential myocardial injury while sparing non-cardiac tissues. Early clinical experience with point-by-point PFA systems has demonstrated high acute and chronic success rates for pulmonary vein isolation and linear ablation with low complication rates in patients with recurrent AF or AFL after prior ablation. These data suggest that focal PFA may overcome some of the safety and efficacy limitations of conventional thermal energy sources.
+
+This single-center, prospective, non-randomized, single-arm clinical investigation will enroll approximately 30 adult patients with clinically documented recurrent atypical AFL after prior AF/AFL ablation within 5 years who are scheduled for elective repeat ablation. The investigational system is the Biosense Webster Dual Energy Pulsed Field/Radiofrequency Ablation System, consisting of the TRUPULSE™ Generator, the Dual Energy THERMOCOOL SMARTTOUCH™ SF (STSF) catheter, and the CARTO™ 3 System with VISITAG SURPOINT™ Module. Standard-of-care adjunctive devices (e.g., OCTARAY™ mapping catheter, DECANAV™ diagnostic catheter, VIZIGO™ sheath, and intracardiac echocardiography \[ICE\] catheter) will be used as appropriate.
+
+Eligible subjects are ≥18 years of age with recurrent atypical AFL documented by ECG or electrophysiologic study after prior pulmonary vein isolation and/or AFL ablation, including gap-reentrant, perimetral, roof-dependent, bi-atrial, or scar-related circuits, and who are willing and able to provide informed consent and complete follow-up. Key exclusion criteria include AFL due to reversible causes, recent major cardiac events or surgery, significant structural heart disease (e.g., severe valvular disease, hypertrophic cardiomyopathy, markedly enlarged left atrium), severe ventricular dysfunction, significant pulmonary or renal disease, active malignancy or infection, untreated severe sleep apnea, contraindication to anticoagulation, pregnancy, vulnerable populations, and limited life expectancy.
+
+After signing informed consent, subjects will undergo baseline evaluations including 12-lead ECG, 14-day Holter monitor
+
+PRIMARY OUTCOMES:
+  - Incidence of primary adverse events within 7 days of the index ablation procedure
+  - Acute procedural success of atypical atrial flutter ablation
+
+INTERVENTIONS:
+  - PROCEDURE: Point-by-point pulsed-field catheter ablation
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07362134

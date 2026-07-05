@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07513584
+Title: Dual-track Residential Exercise With AI and Monitoring for Sleep
+Official Title: Dual-track Residential Exercise With AI and Monitoring for Sleep in Older Adults With Chronic Insomnia (DREAMS Study)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: sarcopenia intervention
+
+SUMMARY:
+As societies rapidly transition toward aging demographics, sleep issues among community-dwelling older adults have emerged as a critical concern affecting healthy aging and independent living. Current single-track exercise intervention models are often difficult to implement due to suboptimal adherence. Therefore, this study aims to utilize artificial intelligence technology combined with a dual-track residential exercise mode to improve sleep quality, thereby enhancing the self-care and independent living abilities of the elderly
+
+DETAILED DESCRIPTION:
+The DREAMS Study addresses the critical public health challenge of chronic insomnia among community-dwelling older adults (aged ≥60), which substantially impacts healthy aging and independent living. Traditional exercise interventions often suffer from suboptimal adherence and rely on subjective self-reporting that fails to capture the physiological "mismatch" between perceived and actual sleep. To get around these problems, this study uses a home-based, closed-loop, dual-track exercise recommendation model that combines wearable ActiGraph monitoring with AI-driven skeletal recognition technology (iMirror). This adaptive framework differentiates between insomnia phenotypes: daytime moderate-intensity training (HIIT or resistance exercise) is prescribed to enhance sleep drive for those with difficulty falling asleep (DFA), while nighttime relaxation training (yoga or Pilates) targets reduced hyperarousal for those with difficulty maintaining sleep (DMS). By utilizing continuous objective data, the system creates a feedback loop that dynamically adjusts exercise prescriptions (frequency, intensity, and timing), reducing the need for on-site professional supervision and ensuring safe implementation within the participant's familiar home environment. Ultimately, the DREAMS Study establishes a scalable, data-driven model for precision health promotion to inform future policies on sleep health in aging populations.
+
+PRIMARY OUTCOMES:
+  - Multi-dimensional Sleep Health Assessment via Objective Actigraphy and Subjective Diaries
+  - Multi-component Functional Physical Fitness Performance
+
+INTERVENTIONS:
+  - DEVICE: Fit Mirror-Guided Home-Based Exercise Program
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07513584

@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05194566
+Title: Neurostimulation for the Treatment of Post-Stroke Aphasia
+Official Title: Neurostimulation for the Treatment of Post-Stroke Aphasia
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: recovery exercise
+
+SUMMARY:
+The aim of the trial is to determine whether 75Hz transcranial alternating current stimulation (tACS) synchronized with therapeutic linguistic tasks is an effective form of therapy for post-stroke aphasia.
+
+DETAILED DESCRIPTION:
+There are about 15 million strokes worldwide each year. Of this group, about 30% suffer from aphasia. Aphasia is a speech-language disorder associated with exceptional difficulty performing daily communication activities. If no improvement is observed within the first months after the stroke, a complete recovery is unlikely, and the therapy can last for years.
+
+Up to date, speech and language therapy is a standard of care for post-stroke aphasia, however the process is long and demanding.
+
+In the past, several clinical trials aimed to verify the efficacy of language training paired with transcranial direct current stimulation (tDCS), however recent meta-analysis indicates only possible effectiveness (Level C evidence) of anodal tDCS in chronic post-stroke aphasia.
+
+To boost the effects of aphasia rehabilitation, effective brain stimulation protocol still needs to be developed.
+
+Transcranial alternating current stimulation (tACS) can be an interesting alternative to tDCS, as it is able to influence cortical excitability and activity.
+
+Stimulation within high gamma oscillations (60-500Hz) might allow for better speech-language processing, as this band is considered to be the cognitive index of linguistic processes. Moreover, a short period of 75Hz tACS over the motor cortex suggested the positive impact of high-gamma tACS on brain plasticity.
+
+The aim of this RCT is to determine whether 75Hz transcranial alternating current stimulation (tACS) paired with therapeutic linguistic tasks is an effective form of therapy for post-stroke aphasia, measured as an ability to name trained items at 12 weeks follow-up.
+
+PRIMARY OUTCOMES:
+  - Percentage score in the Naming Task (trained words)
+
+INTERVENTIONS:
+  - DEVICE: tACS
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05194566

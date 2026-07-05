@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06805643
+Title: Dixon MRI Imaging Histology for Predicting Postoperative Infection in Posterior Lumbar Fusion for Myasthenia Gravis
+Official Title: Dixon MRI Imaging Histology for Predicting Postoperative Infection in Posterior Lumbar Fusion for Myasthenia Gravis
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1300
+Topic: sarcopenia intervention
+
+SUMMARY:
+Sarcopenia is an age-related condition that manifests itself as a persistent decrease in muscle mass and function, which may lead to decreased physical function, increased risk of disease, and reduced quality of life. In surgical patients, sarcopenia has been shown to be associated with increased postoperative complications, prolonged hospitalization, and decreased survival. In patients undergoing lumbar fusion, the presence of sarcopenia may increase the risk of postoperative infection.Lumbar fusion is a common procedure to treat lumbar spine disorders such as lumbar disc herniation, lumbar spondylolisthesis, or lumbar spinal stenosis. However, this procedure is associated with a high rate of complications, especially postoperative infections, which can lead to reoperation, prolonged hospitalization, and even affect patient survival. In recent years, more and more studies have found a significant association between sarcopenia and postoperative infections after lumbar fusion surgery.Imagingomics belongs to a branch of machine learning, which is the process of acquiring images from various imaging devices such as CT, MRI and ultrasound, outlining the region of interest through image segmentation, extracting the features of the image within the region of interest, downscaling the features, and finally building an imagingomics model. MRI Imagingomics, utilizing its rich data information, has shown great potential for application in several medical fields. Among them, the accuracy of Dixon MRI imaging histology in muscle mass and texture assessment makes it particularly important in predicting postoperative infections.Based on this, it is reasonable to believe that Dixon MRI imaging histology can be a powerful tool to help us predict a patient's risk of postoperative infection.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - fat fraction
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06805643

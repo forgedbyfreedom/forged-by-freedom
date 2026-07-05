@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06821828
+Title: The Efficacy of Modified Olfactory Training for MCI High-Risk Individuals
+Official Title: Assessing Modified Olfactory Training to Prevent Cognitive Decline in MCI High-Risk Individuals: A Randomized Controlled Trial Protocol
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 114
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to validate the effectiveness of the modified olfactory training device, the main questions it aims to answer are: Is it possible that the device can delay the progression of MCI in older adults? Compared to the conventional device, how efficient is the modified olfactory training device for improving cognitive function?
+
+DETAILED DESCRIPTION:
+Mild Cognitive Impairment (MCI) represents an intermediary stage between normal aging and dementia, with a significant proportion of cases progressing to dementia. No simple and effective therapeutic strategies are available to halt or reverse this progression. Olfactory dysfunction, a common early clinical manifestation of neurodegenerative diseases such as Alzheimer's Disease (AD), often precedes cognitive decline. Subjective Cognitive Decline (SCD) is increasingly recognized as a prodromal stage of MCI and dementia, which, together with olfactory dysfunction, provides a critical window for early intervention.
+
+Conventional olfactory training (COT) has been shown to improve olfactory function, cognitive abilities, and brain connectivity in healthy elderly individuals, suggesting its potential to enhance neuroplasticity. Preliminary studies indicate that modified olfactory training (MOT) may yield superior outcomes compared to COT, with higher rates of olfactory recovery and improved deposition in the olfactory fissure. However, the efficacy of MOT in delaying or preventing the progression of olfactory dysfunction to MCI remains unclear.
+
+In this study, the investigators planned to recruit 114 patients and divided them into three groups for control group and olfactory training with conventional and modified devices, and validate the effectiveness of the modified device based on changes in cognitive function and the comparison of the outcomes of the three groups.
+
+PRIMARY OUTCOMES:
+  - Montreal Cognitive Assessment (MoCA) score
+  - Biomarkers of cognition (Blood/CSF)
+  - Neuroimaging assessments
+  - The Sniffin' Sticks test
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Modified olfactory training device
+  - COMBINATION_PRODUCT: Conventional olfactory training device
+
+ELIGIBILITY:
+Age: 60 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06821828

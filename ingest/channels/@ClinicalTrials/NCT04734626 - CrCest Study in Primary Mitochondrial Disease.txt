@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04734626
+Title: CrCest Study in Primary Mitochondrial Disease
+Official Title: Magnetic Resonance Imaging (MRI) Muscle Phenotyping in Mitochondrial Disease
+Status: ENROLLING_BY_INVITATION
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 230
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to perform a "muscle phenotyping" magnetic resonance imaging (MRI) assessment in patients receiving clinical care at the Children's Hospital of Philadelphia (CHOP) for mitochondrial disease that is either suspected (based on clinical presentation) or has a definite genetic diagnosis. The MRI assessment quantifies skeletal muscle oxidative phosphorylation (OXPHOS) capacity.
+
+Investigators hope that this study will contribute to our current knowledge of mitochondrial diseases and this study will help create a new diagnostic tool for use in both clinical care and in clinical trials.
+
+DETAILED DESCRIPTION:
+This research study visit will occur on the same day as the participants clinically scheduled MRI. The clinically indicated and study-specific scanning time will not exceed 120 minutes.
+
+During the study visits:
+
+* A study team member will review inclusion and exclusion criteria with the participant
+* A study team member will review medical history review with the participant
+* A safety assessment will occur prior to study procedures
+* Study MRI scan
+* During which the participant will use an MRI-safe machine to stimulate exercise, similar to pressing a gas pedal
+
+If eligible participants return to CHOP for future clinical imaging, we will also request a study-specific MRI assessment.
+
+PRIMARY OUTCOMES:
+  - Post-exercise CrCEST recovery time (seconds)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Creatine Chemical Exchange Saturation Transfer (CrCEST) Imaging Sequence
+
+ELIGIBILITY:
+Age: 7 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04734626

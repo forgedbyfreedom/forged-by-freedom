@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06189235
+Title: Ultrasonography-guided Real-time Modular Systems for Hand Therapy
+Official Title: Development of Ultrasonography-guided Real-time Intelligent Monitoring, Evaluation and Biofeedback Training Modular Systems for Hand Therapy
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 149
+Topic: tendon injury
+
+SUMMARY:
+This study aimed to develop an ultrasonography-guided real-time modular system and try to apply it to clinical hand therapy using.
+
+This study was divided into two parts. The first part is an observational study design. The ultrasonography-guided real-time modular system will be developed and integrated, and its overall reliability and validity will be tested in this part. Once the software and hardware of the modular system has been established, numerous hand-related ultrasonography data will be collected for building an artificial intelligence model for detecting the anatomic structures in hand, evaluating the status of the tissues in hand.
+
+The second part is an interventional study design. The clinical application of the modular system on hand injured patients is conducted, and the biofeedback mechanics will also be defined in the second part. The patients will be recruited into the research to receive both traditional rehabilitation and the one which combines with biofeedback training via the modular system. The effect of the traditional and biofeedback-added rehabilitation will be compared.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in tissue characteristics - Ultrasonography platform - Hand Injuries Group (System development) - Baseline
+  - Change from Baseline tissue characteristics at 2-3 days - Ultrasonography platform - Hand Injuries Group (System development) - 2-3 days after baseline
+  - Change from Baseline tissue characteristics at 4-5 days - Ultrasonography platform - Hand Injuries Group (System development) - 4-5 days after baseline
+  - Ultrasonography platform - Healthy Group - Baseline
+  - Change in tissue characteristics - Ultrasonography platform - Hand Injuries Group (System application) - Baseline
+
+INTERVENTIONS:
+  - OTHER: Biofeedback training
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06189235

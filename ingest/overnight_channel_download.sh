@@ -3,7 +3,7 @@
 # Ensure Homebrew binaries (yt-dlp, python3, etc.) are in PATH
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-set -e
+set +e  # Don't abort on individual channel failures
 
 CHANNELS_DIR="$(pwd)/channels"
 LOG_DIR="$(pwd)/logs"
@@ -34,6 +34,12 @@ find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$
     CHANNEL_NAME=$(basename "$OUTPUT_DIR")
     CHANNEL_COUNT=$((CHANNEL_COUNT + 1))
 
+    # Skip non-YouTube URLs — those are handled by dedicated web scrapers below
+    if ! echo "$CHANNEL_URL" | grep -qiE "youtube\.com|youtu\.be"; then
+        echo "⏭  Skipping $CHANNEL_NAME (non-YouTube URL — handled by web scraper)" | tee -a "$LOG_FILE"
+        continue
+    fi
+
     echo "" | tee -a "$LOG_FILE"
     echo "▶ [$CHANNEL_COUNT] $CHANNEL_NAME" | tee -a "$LOG_FILE"
     echo "📁 Output: $OUTPUT_DIR" | tee -a "$LOG_FILE"
@@ -44,6 +50,8 @@ find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$
 
     while [ $RETRY -lt $MAX_RETRIES ] && [ "$SUCCESS" = false ]; do
         if yt-dlp \
+            --cookies-from-browser chrome \
+            --extractor-args "youtubetab:skip=authcheck" \
             --skip-download \
             --write-subs \
             --write-auto-subs \
@@ -83,4 +91,24 @@ find "$CHANNELS_DIR" -name "channel.url" | awk 'BEGIN{srand()}{print rand()"\t"$
 done
 
 echo "" | tee -a "$LOG_FILE"
-echo "✅ Nightly ingest completed at $(date)" | tee -a "$LOG_FILE"
+echo "✅ Nightly YouTube download completed at $(date)" | tee -a "$LOG_FILE"
+
+# ── Web Scrapers ──────────────────────────────────────────────────────────────
+# These run AFTER YouTube downloads — they skip files already on disk.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+echo "" | tee -a "$LOG_FILE"
+echo "================================================" | tee -a "$LOG_FILE"
+echo "🌐 WEB SCRAPERS" | tee -a "$LOG_FILE"
+echo "================================================" | tee -a "$LOG_FILE"
+
+echo "" | tee -a "$LOG_FILE"
+echo "📥 ThinkSteroids.com — compound profiles..." | tee -a "$LOG_FILE"
+python3 "$SCRIPT_DIR/scrape_thinksteroids.py" 2>&1 | tee -a "$LOG_FILE" || echo "⚠  ThinkSteroids scraper had errors" | tee -a "$LOG_FILE"
+
+echo "" | tee -a "$LOG_FILE"
+echo "📥 Ergo-Log.com — research articles..." | tee -a "$LOG_FILE"
+python3 "$SCRIPT_DIR/scrape_ergolog.py" 2>&1 | tee -a "$LOG_FILE" || echo "⚠  ErgoLog scraper had errors" | tee -a "$LOG_FILE"
+
+echo "" | tee -a "$LOG_FILE"
+echo "✅ All nightly tasks complete at $(date)" | tee -a "$LOG_FILE"

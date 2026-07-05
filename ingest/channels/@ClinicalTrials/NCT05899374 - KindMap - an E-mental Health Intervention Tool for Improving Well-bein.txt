@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05899374
+Title: KindMap - an E-mental Health Intervention Tool for Improving Well-being and Mental Health in People Facing Infertility
+Official Title: KindMap - an E-mental Health Intervention Tool for Improving Well-being and Mental Health in People Facing Infertility: A Feasibility Randomized Control Trial
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 180
+Topic: physical activity intervention
+
+SUMMARY:
+Infertility affects millions of people of reproductive age worldwide, and its consequences extend to emotional, relational and social life domains. This experience may induce infertility-related stress, anxiety, and depression and activate maladaptive emotion regulation mechanisms. The KindMap is an Information and Communication Technology-based intervention comprising mindfulness, Acceptance and Commitment Therapy, and compassion components targeting people with infertility. KindMap contents are derived from adapting the Mindfulness-Based Program for Infertility (MBPI) - in-person psychological group intervention. Adapting the MBPI to a cost-free, self-guided web app will increase accessibility, but it remains unknown if feasible. The current project aims to test the KindMap prototype version's feasibility. The KindMap project will provide a free and easy-to-use psychological intervention aiming at improving the well-being, infertility self-efficacy and mental health of those affected by infertility.
+
+DETAILED DESCRIPTION:
+The KindMap is a stand-alone, cost-free e-mental health tool presenting a low-intensive psychological intervention adapted from the Mindfulness Based Program for Infertility (MBPI) to fit a web app format. The MBPI is a psychological intervention comprising psychoeducation, mindfulness, compassion and Acceptance and Commitment Therapy (ACT) components. The MBPI is an in-person group intervention that has proved to improve mental health, with sustained benefits for as long as seven years, regardless of people's reproductive outcomes. Following the framework commissioned by the Medical Research Council and the National Institute of Health Research for developing complex interventions and a User-Centered Design (UCD) methodology, a multidisciplinary research team developed the KindMap. The KindMap web app aims to promote well-being and mental health of people dealing with infertility, supporting them to live a more vital and meaningful life.
+
+The current study aims: 1) to evaluate the KindMap's feasibility (demand, adaptation, acceptability, implementation, practicality, integration, and limited efficacy testing); 2) to explore the extent to which the web app mode of delivery limited efficacy results are similar to the MBPI in-person format results. To accomplish these aims, a two-arm 1:1, non-blinded feasibility Randomised Controlled Trial (RCT) will be conducted. This project was submitted to the Ethics Committee of the Faculty of Psychology and Educational Sciences of the University of Coimbra.
+
+Participants will be recruited through APFertilidade and Fertility Europe (European Umbrella organisation of patients' associations). Participants who demonstrate an interest in the study will be informed of the study aims, the structure and arms, and the researchers' and participants' roles. Participants who agree to participate in the study will sign an informed consent form.
+
+All ethical requirements for research with humans will be guaranteed. Consenting participants will be randomly allocated (www.random.org) to the experimental group (EG-KindMap) (immediate access to KindMap) and the waiting-list control group (WL-CG) (access to KindMap after T2). Participants will complete a set of standardised self-report measures online, pre- (T1) and post-intervention (T2). At T2, the EG-KindMap will complete a questionnaire assessing the feasibility criteria. The limited efficacy dimension will be assessed using modified Intention-to-Treat and per-protocol analyses. Data analysis will be conducted using Statistical Package for the Social Sciences (SPSS) and Analysis of Moment Structures (AMOS).
+
+KindMap is an innovative and timely project because it addresses the increasing demand for online cost-free and evidence-based support for people negatively impacted by infertility. KindMap will be the first e-mental health intervention integrating psychoeducation, mindfulness, compassion and ACT components.
+
+It is expected that the KindMap reveals to be a feasible low-
+
+PRIMARY OUTCOMES:
+  - Changes from baseline in Well-being
+
+INTERVENTIONS:
+  - BEHAVIORAL: KindMap
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05899374

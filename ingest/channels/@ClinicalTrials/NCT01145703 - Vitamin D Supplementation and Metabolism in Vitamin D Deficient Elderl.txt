@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01145703
+Title: Vitamin D Supplementation and Metabolism in Vitamin D Deficient Elderly
+Official Title: Effects of Vitamin D Supplementation With and With Out Exercise on Metabolic and Physical Consequences of Vitamin D Deficiency in the Elderly
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of this study is to examine the effects of Vitamin D supplementation on the reasons (mechanisms) underlying the development of type 2 diabetes, metabolic syndrome (high blood pressure, cholesterol, diabetes, body weight/obesity), muscle weakness and wasting (sarcopenia), and impaired physical function (poor balance and walking) associated with vitamin D deficiency and osteopenia/osteoporosis (bone loss). The investigators obtain vitamin D through our diet and sunlight, and its conversion to active vitamins in the liver and kidneys promotes the intestinal absorption of calcium and regulation of bone growth. Therefore, vitamin D deficiency has been known for years to lead to weakened bones (osteopenia and osteoporosis). However, more recently, studies show vitamin D deficiency is associated with a number of other diseases, including type 2 diabetes, muscle weakness, frailty, and the metabolic syndrome. It has also been associated with cognitive impairment. Diabetes affects multiple organ systems including the heart, kidneys, musculoskeletal and nervous system. The possibility that vitamin D deficiency is linked to the development of type 2 diabetes, metabolic syndrome, muscle weakness and wasting (sarcopenia) and osteopenia/osteoporosis, and that vitamin D supplementation decreases the risk for these diseases, provides a relatively easy/accessible and inexpensive model of preventive therapy to decrease the incidence of these diseases. In addition, it is likely that genetic (inherited) factors play a role, but the relationship of these genes to these metabolic abnormalities have not been elucidated. Understanding the role of Vitamin D in health will allow us to translate these findings into therapy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - glucose tolerance and insulin sensitivity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: RDA Vitamin D3 only
+  - DIETARY_SUPPLEMENT: Vitamin D2/3 Repletion only
+  - OTHER: Vitamin D2/3 Repletion + AEX
+  - OTHER: Vitamin D2/3 Repletion + RT
+
+ELIGIBILITY:
+Age: 40 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01145703

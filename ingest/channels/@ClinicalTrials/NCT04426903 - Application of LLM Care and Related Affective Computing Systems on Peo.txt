@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04426903
+Title: Application of LLM Care and Related Affective Computing Systems on People With Parkinson's Disease
+Official Title: Application of Cognitive and Physical Training (LLM Care) and Related Affective Computing Systems on People With Parkinson's Disease (Movement Disorders)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 23
+Topic: strength training
+
+SUMMARY:
+The study is an adaptation of the Long Lasting Memories (LLM) (NCT02267499) and the subsequent LLM Care (NCT02313935) projects in patients with Parkinson's Disease (PD). The study aims to examine the viability and any potential benefits of cognitive and physical training, as offered via the ICT-based (non-pharmacological) intervention of LLM Care, on people with PD. It is worth investigating whether this intervention can offer a better quality of life in patients with PD and counterbalance the often associated with the PD disease neurodegeneration. To evaluate any physical, cognitive, behavioral, and neuroplastic changes and measure the influence (affective status of participant) of the training on the pathological population, the study utilizes somatometric and neuropsychological assessments and neuroscientific (electroencephalographic, EEG-related) indices, as well as affective computing systems.
+
+DETAILED DESCRIPTION:
+Parkinson's Disease (PD) is a highly prevalent chronic neurodegenerative disease of the central nervous system, with both motor and non-motor symptoms, having a high impact on the quality of life of the patients. There is still no cure available for individuals with PD but only pharmaceutical treatments that manage the symptoms, thus non-pharmaceutical treatments such as physical and cognitive training are of great importance. This study aims to evaluate the benefits of the LLM Care (NCT02313935) Integrated Healthcare System (https://www.llmcare.gr/en/home/), which is a successful example of commercializing the LLM (NCT02267499) research program (http://www.longlastingmemories.eu/), in patients with PD. The LLM Care (non-pharmaceutical) intervention is an integrated training system that targets nondemented and demented aging population and adopts an approach of cognitive and physical training to improve the quality of life and prolong the functionality of the elders. The physical training (PT) component of the LLM, WebFitForAll, was developed by the research team of the Medical Physics Laboratory, Department of Medicine, Aristotle University of Thessaloniki. WebFitForAll is an effective physical platform that strengthens the body and enhances aerobic capacity, flexibility, and balance. The cognitive training (CT) component of the LLM is a Greek adaptation of the BrainHQ online interactive environment, and comprises six categories with 29 brain exercises with hundred levels of difficulty. The exercises focus on attention, memory, brain speed, people skills, navigation, and intelligence. The target population is PD patients which were classified according to their cognitive state as PD-cognitively normal (PD-CN) and PD-mild cognitive impairment (PD-MCI). Both PD-CN and PD-MCI followed similar training schemes of the intervention, two times per week for one hour for a total of 10 weeks (aiming at 20 sessions/individual). Specifically, the patients were categorized as follows: (i) LLM training group, where participants attended a training protocol consisting of pseudo-randomized physical and cognitive exercises (30 minutes of cognitive and 30 minutes of physical training), (ii) physical training group, whereas participants underwent only physical training (one hour of physical training), and (iii) cognitive training group, in which participants performed cognitive tasks (one hour of cognitive training). The main goal of this study is to quantify the effects of implementing the LLM Care intervention on patients with PD, determine any benefits in physical status, cognition, behavior, and brain function, and eventually assess if adopting a cognitively and physically stimulating lifestyle can offer a better quality of life in this pathological group. All of the patients were evaluated at baseline (pre) and exit (post) via EEG measures and a battery of routinely used clinical and neuropsychological tests. Additionally, the training platform utilizes affec
+
+PRIMARY OUTCOMES:
+  - Change in current density strength of the cortical activity as measured via EEG.
+  - Changes in the cortical directed connectivity as measured via EEG
+  - Changes in the graph theory indexes as measured via EEG
+
+INTERVENTIONS:
+  - OTHER: webFitForAll
+  - OTHER: BrainHQ
+
+ELIGIBILITY:
+Age: 50 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04426903

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05424588
+Title: Physical and Cellular Effects of Ultra-cycling
+Official Title: Effects of a 4400 km Ultra-cycling Non-competitive Race and Related Training on Body Composition and Circulating Progenitors Differentiation
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 8
+Topic: vitamin D muscle
+
+SUMMARY:
+Background: NorthCape4000 (NC4000) is the most participated ultra-endurance cycling race.
+
+Eight healthy male Caucasian amateur cyclists were evaluated: a) before starting the preparation period; b) in the week preceding NC4000 (after the training period); c) after NC4000 race, with the aim to identify the effects of ultra-cycling on body composition, aerobic capacity and biochemical parameters as well as on the differentiation of progenitor cells.
+
+Methods: Bioelectrical impedance analysis (BIA) and dual energy x-ray absorptiometry (DEXA) assessed body composition; cardiopulmonary exercise test (CPET) evaluated aerobic capacity. Differentiation of circulating progenitor cells was evaluated by analyzing the modulation in the expression of relevant transcription factors. In addition, in vitro experiments were performed to investigate the effects of sera of NC4000 participants on adipogenesis and myogenesis. The effects of NC4000 sera on Sestrins and Sirtuin modulation and the promotion of brown adipogenesis in progenitor cells was investigated as well. Two-tailed Student's paired-test was used to perform statistical analyses.
+
+Results: We observed fat mass decrease after training as well as after NC4000 performance; we also recorded that vitamin D and lipid profiles were affected by ultra-cycling. In addition, our findings demonstrated that post-NC4000 participant's pooled sera exerted a positive effect in stimulating myogenesis and in inducing brown adipogenesis in progenitor cells.
+
+Conclusions: The training program and Ultra-cycling lead to beneficial effects on body composition and biochemical lipid parameters, as well as changes in differentiation of progenitor cells , with significant increases in brown adipogenesis and in MYOD levels.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body composition
+  - Cell differentiation
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: clinical evaluation, bioelectrical impedance analysis (BIA), cardiopulmonary exercise testing (CPET) and venipuncture for blood samples collection
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05424588

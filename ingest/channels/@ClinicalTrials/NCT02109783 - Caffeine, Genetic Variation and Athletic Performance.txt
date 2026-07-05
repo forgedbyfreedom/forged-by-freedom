@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02109783
+Title: Caffeine, Genetic Variation and Athletic Performance
+Official Title: Genetic Modifiers of Caffeine Intake and Athletic Performance
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: caffeine exercise
+
+SUMMARY:
+Numerous studies have investigated the effect of caffeine on athletic performance, but the findings have not been consistent. This is due, in part, to the differences in response that has been observed both within and between studies. Previous research in our lab has shown that genetic variations affecting caffeine metabolism modify the association between caffeine and heart disease. We hypothesize that the inconsistencies among studies relating caffeine and athletic performance may be due to genetic differences in caffeine metabolism or response. Male athletes will take part in an intervention of caffeine versus placebo, using a randomized double-blinded placebo-controlled design, which will test various exercise protocols (power, strength, anaerobic capacity, endurance) that are associated with performance across multiple sports. We will conduct a genome-wide association study, which is an approach that involves scanning for markers across the genomes of our study participants together, not individuals, to find genetic variations associated with a particular trait such as VO2 max, lactate clearance efficiency, muscle fiber type and changes in exercise performance following caffeine. We will also examine known genetic variations that are associated with caffeine metabolism and response, to determine if these genes also affect response to exercise after ingesting caffeine. Subjects will be paid $50.
+
+DETAILED DESCRIPTION:
+Research Methods and Design
+
+Experimental Design:
+
+This randomized, double-blinded, placebo controlled, within-subjects counter-measured study design will include 100 male athletes from a variety of sports. Females will not be included in this study because hormonal contraceptive use, which is common among female athletes, and the time of the menstrual cycle have a significant effect on caffeine metabolism and exercise test performance measures. Controlling for these factors would require a much larger pool of participants and require considerable resources and time. However, if the findings from the proposed research show promising results in men we would then aim to replicate those findings in female athletes.
+
+Participants will complete 4 visits (\~90-120 min each) in the Human Physiology Research Laboratory in the Goldring Center at the University of Toronto. All testing will take place Monday to Saturday at various times. Participants will be instructed to maintain their regular diet (pre-testing meals will be replicated for all visits) and sleeping habits, avoid strenuous activity 48 hours before each visit, and abstain from caffeine one week prior to the first visit and for the duration of the data collection (4 weeks).
+
+Sample Size Calculation
+
+Parameters:
+
+Effect size = 0.25: Although a large effect size for the main treatment effect was found in previous research (0.38), it was decided that to be conservative, this trial would be powered to detect a small-medium effect size which is still of physiological importance. Additionally, we are interested in the effects between the two doses of caffeine which are assumed to be smaller than the main treatment effect. Therefore, a small-medium effect size was needed to ensure sufficient statistical power to make between-caffeine-effect conclusions for the time trial analysis. Finally, other parameters of assessment such as the Vertical Jump for power will likely have a smaller effects size than the time-trial as reported by Tucker et al. (2013) in a study on vertical jump performance in male basketball players. Therefore, a smaller effect size would be required to adequately power the study for all outcome measures (i.e. power, strength anaerobic, aerobic etc.)
+
+* Alpha (error probability) = 0.025: In general, an alpha = 0.05 is the standard value to use for this parameter. However, in our study the participants will be enrolled in a number of independent trials, and therefore it was decided to use a lower alpha so as to take into account error that can arise from multiple comparisons such as by sport (power or endurance) plus genotype (risk or common variant).
+* Power (1-Beta probability) = 0.8: The conventional value of 0.8 was used for power.
+* Number of groups = 2: Number of stratifications required for genotype subgroup analysis
+* Number of measurements = 4: The laboratory exercise tests
+* Correlation among repeat measures = 0: Zero correlation between measurements was assumed.
+* Sample Siz
+
+PRIMARY OUTCOMES:
+  - Efficacy of caffeine to improve power, strength and speed
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine 2mg
+  - DIETARY_SUPPLEMENT: Caffeine 4 mg
+  - DIETARY_SUPPLEMENT: Caffeine 0
+
+ELIGIBILITY:
+Age: 18 Years to 35 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02109783

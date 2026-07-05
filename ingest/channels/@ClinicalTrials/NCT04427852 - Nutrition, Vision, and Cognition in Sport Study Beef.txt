@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04427852
+Title: Nutrition, Vision, and Cognition in Sport Study: Beef
+Official Title: Nutrition, Vision, and Cognition in Sport Study: Beef
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: sports nutrition
+
+SUMMARY:
+The purpose of this study is to determine whether a 30 day beef intervention can improve peak cognitive performance in young, normally menstruating adult women. The control group will consume a daily portion of macronutrient equivalent vegetable source of protein.
+
+DETAILED DESCRIPTION:
+The purpose of the Nutrition, Vision, and Cognition in Health Sport: Beef (IONSport-Beef) study is to conduct a randomized controlled trial to evaluate beef as a nutritional intervention to optimize visual cognitive training performance in generally healthy, normally menstruating women. Female subjects of reproductive age (18-40) will be randomly placed in one of two dietary treatment groups: one serving of beef per day for 30 days or a non-meat protein replacement control. Cognitive performance will be measured in 15 training sessions over 10 days using the sophisticated NeuroTracker™ CORE (NT) 3-Dimensional (3D) software program. It is hypothesized that women consuming 1 serving of beef per day for 30 days will have the highest plasma levels of the beef rich nutrients and demonstrate the highest visual cognitive performance and improvement as compared to the no beef control.
+
+PRIMARY OUTCOMES:
+  - Mean NeuroTracker Speed Threshold over 300 trials
+  - Maximal NeuroTracker Speed Threshold over 300 trials
+  - Change in NeuroTracker Speed Threshold over 300 trials
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: 30 day Daily consumption of 1 serving of beef
+  - DIETARY_SUPPLEMENT: 30 day Daily consumption of 1 serving of the vegatable protein source
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT04427852

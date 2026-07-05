@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03142503
+Title: The DIET Trial - Dietetic Intervention in Psoriatic Arthritis
+Official Title: Effectiveness of a Dietary Intervention Program on Disease Activity, Metabolism and Oxidative Stress in Patients With Psoriatic Arthritis and Psoriasis Activity: A Clinical, Randomized, Placebo-controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 194
+Topic: protein supplementation
+
+SUMMARY:
+Psoriasis (Ps) and psoriatic arthritis (PsA) are associated with increased risk of metabolic syndrome (MetS), body fatness and cardiovascular risk. Additionally, oxidative stress and inflammation are also contributing mechanisms on Ps and PsA. However, little is known about the influence of diet and micronutrients on the main outcomes of these diseases. The aim of the investigators is to evaluate the effectiveness of an intervention diet program on disease activity, metabolic profile and oxidative stress inpatients with Psoriasis and Psoriatic Arthritis.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Disease activity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Diet + supplementation
+  - DIETARY_SUPPLEMENT: Diet + placebo
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03142503

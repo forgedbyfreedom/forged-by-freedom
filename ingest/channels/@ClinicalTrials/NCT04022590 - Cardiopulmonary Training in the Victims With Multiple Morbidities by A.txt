@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04022590
+Title: Cardiopulmonary Training in the Victims With Multiple Morbidities by Application of Novel Heart Rate Sensing Clothes
+Official Title: Tri-service General Hospital
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: aerobic exercise
+
+SUMMARY:
+Investigators assume that the wearable clothes can be applied to home-based health care and integrated into a case management model through telehealthcare. While prior to complete the case management, the feasibility should be tested and evaluate its reliability and validity of the physical information collected from the clothes. Therefore, investigators try to conduct a feasibility study to evaluate the reliability and validity of the exercise heart rate sensing e-clothes and after that, investigators will incorporate this wearable clothes to home-based exercise training as one of the major components in our case management model.
+
+DETAILED DESCRIPTION:
+Easy-to-use and service touch points allow patients/ users to realize the value and status of their physiological functions/ parameters based on their evidence is important. According to the U.S. survey, 90% of people can change their lifestyle behaviors, improve their personal health awareness, achieve holistic health care and improve their quality of life due to "Quantify Self". Therefore, a broader health care system, health consumption services or ecological system has been building to integrate health care resources, extend health care services from hospital to communities and individual' homes. When people consume in their daily life, immediate public health guidance or professional intervention can be offered at the same time, not only can effectively maintain individuals' health, early detection of possible physiological signs/ parameters, can also delay the progression of the disease and reduce the burden of first-line health care workers. Therefore, it is the era of smart healthcare that provides a health service platform with APPs(Applications) to provide personalized integrated medical services. However, in order to monitor or evaluate the effect of treatment (i.e., exercise training) still needs to be provided through the actual feedback of individual physiological data.
+
+Clothes with smart function which is able to connect with social media and APPs has been promoting and marketing as smart sports or lifestyle-monitor goods, such as exercise-related physical parameters and sleep quality quantifying. Sleep physiology information collected through the clothes including degree and quality of sleep can be recorded and transmitted to the remote health system via APP and cloud service platform. On this cloud platform, health information can exchange with clinician's physicians, offering advises for users to whether to go to the hospital for further examination.
+
+PRIMARY OUTCOMES:
+  - Aerobic capacity (VO2 max in ml/kg/min )
+  - Working load in watt
+  - Rest/Max Heart rate in beat/min
+  - O2 pulse in ml/beat,
+  - systolic and diastolic blood pressure in mm Hg,
+
+INTERVENTIONS:
+  - DEVICE: E-clothes
+  - BEHAVIORAL: Healthy consultation
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04022590

@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06458218
+Title: Impact of Multi-component Interventions on Populations With Mental Health Symptoms and High-risk COPD
+Official Title: Population Medicine Multimorbidity Interventions in Xishui on a High-Risk COPD Population With Mental Health Symptoms: A Cluster Randomized Controlled Trial
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 7400
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Study Participants: High-risk COPD population with mental health symptoms, defined as individuals whose score of COPD-SQ ≥ 16, whose age is 35 and above, and whose Warwick-Edinburgh Mental Well-being Scale \<45 .
+
+Intervention: We have constructed a pay-for-population mechanism for medical practitioners within the intervention townships to encourage them caring for population health. For study participants in the intervention arm, we will ask them to finish an online COPD-SQ questionnaire with notification of his or her COPD high risk status. For those with high-risk COPD population, we will provide face-to-face survey, simple physical examination, pulmonary function tests, and provide a multi-component intervention at baseline. For high-risk COPD population with mental health issues in the intervention arm, we provide community-based spirometry pulmonary function test (PFT) and education; If individuals whose post-bronchodilator FEV1/FVC\<0.7, they will be spirometry-defined COPD patients and will be encouraged to seek treatment and medication to the superior hospitals. A CBT-based digital health intervention program, EmoEase, will be provided to our study participants with an intelligent mobile phone. Also health education in terms of mental health issues will be given. Additionally, we provide (1) a digital health intervention programs to smokers; (2) CBT-based health education for study participants with abnormal BMI; (3) active recruitment into National Essential Public Health Program in China for those with abnormal blood pressure and blood glucose. Intensive follow-ups will be conducted at month 3 (telephone interview), month 6 (face-to-face with full steps of physical examination), and month 12.
+
+Comparison: Those who are assigned in the control arm, we will ask them to finish the same COPD-SQ online questionnaire with notification of his or her COPD high risk status and a face-to-face survey. No physical examinations, community-based pulmonary function tests will be given.
+
+Outcomes: The primary outcomes are PHQ-9 scores for depression symptoms, GAD-7 symptoms for anxiety symptoms, and WEM-WBS score at month 12.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Depression Symptoms
+  - Anxiety Symptoms
+  - Warwick-Edinburgh Mental Well-being Scale, WEM -WBS
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Multi-component Interventions
+
+ELIGIBILITY:
+Age: 35 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06458218

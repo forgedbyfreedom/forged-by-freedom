@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04437238
+Title: Pilot Evaluation of "KeepWell" Using a Hybrid Effectiveness-Implementation Pragmatic Randomized Controlled Trial
+Official Title: Effectiveness of an eHealth Tool for Older Adults With Multimorbidity ("KeepWell"): Protocol for a Hybrid Effectiveness-implementation, Pragmatic Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 456
+Topic: caffeine exercise
+
+SUMMARY:
+The burden of chronic disease is a global phenomenon, particularly amongst seniors. Aging is an expensive process. In Canada, 10% of seniors who have the most complex health needs account for 60% of the total annual health care spending in many provinces. Given these projections, we need to adapt our current models of care. In response, different chronic disease management tools have been created with a central aim to facilitate ongoing, proactive and preventive support for optimal chronic disease management. In particular, self-management tools have been acknowledged as an effective way to optimize disease management and are easily scalable and can reach a broader population of older people with chronic diseases. In fact, online self-management tools are particularly relevant for supporting seniors with complex care needs in their homes; and they are interested in using the Internet and social media. However, interventions and tools seldom consider all aspects of disease management, are not usually developed specifically for seniors or created for sustained use and are primarily focused on a single disease. As such, the projected health outcomes of seniors continue to remain poor, and the quality and efficiency of care remain sub-optimal. To respond to these challenges, we created an eHealth self-management application called "KeepWell" that supports seniors with complex care needs in their homes. It is a patient-centered, multi-chronic disease management tool that incorporates the care for two or more chronic conditions from among the top high-burden chronic diseases. KeepWell was built on a strong evidentiary base including several knowledge syntheses, a co-design process with our integrated knowledge translation team involving patients, researchers, clinicians and developers; and a usability and pilot evaluation. The objectives of our study will be to evaluate the effectiveness, economic impact and uptake of KeepWell in a 6-month, pragmatic, hybrid effectiveness-implementation randomized controlled trial (RCT).
+
+DETAILED DESCRIPTION:
+Methods
+
+Design We will evaluate the effectiveness and uptake of the KeepWell solution in a 6-month, pragmatic, hybrid effectiveness-implementation RCT for optimizing and sustaining the self-management of older adults with multimorbidity. We will use the type 2 design, which facilitates the simultaneously investigation of the effectiveness of an intervention while rigorously testing the implementation strategy. The implementation evaluation will be guided by the Reach, Effectiveness, Adoption, Implementation, maintenance (RE-AIM) framework.
+
+Theoretical basis of our work We used the Knowledge-to-Action (KTA) model to guide our methods. Our team has experience applying the KTA framework in creating technology-based interventions \[refs\]. We have also adapted an integrated KT (IKT) strategy whereby all our stakeholder team members who helped us to create KeepWell and prepare this protocol are going to continue to steer the execution of our study. This team helped to develop the objectives, project plan and timelines; discussed potential barriers and mitigating strategies, and monitored progress.
+
+Population and recruitment Older adults will be identified with support from: (i) the University of Toronto Primary Care Research Network (UTOPIAN); (ii) the Retired Teachers of Ontario (RTO); and (iii) our clinician (geriatricians and family physicians) partnering sites: North York General Hospital, St. Michael's hospital of Unity Health, Sunnybrook healthcentre, and St. Peter's hospital. All these recruitment sources have a roster of older adults with multiple chronic conditions via their affiliated primary care and geriatric clinics. We have created a recruitment poster that will be administered at each site according to a procedure most feasible and practical for their practice flow and resources. For example, the poster may be administered directly to older adults by family physicians and geriatricians during a visit or through their clinic staff upon registering for a visit or posted on walls. In addition, the poster will be distributed via an email listserv from our patient partner organization, the RTO with a membership of more than 70,000 older adults. Study eligibility criteria are: (i) age 65 years; (ii) have one or more of the following chronic conditions: diabetes, heart failure, cardiovascular disease, dementia, chronic kidney disease, osteoporosis, osteoarthritis, rheumatoid arthritis, Chronic Obstructive Pulmonary Disease (COPD), depression, urinary incontinence, stroke; (iii) English speaking; (iv) access to a computer or tablet device; (v) have an email address; and (vi) able to consent. Consent-giving capacity will be assessed using the validated "MacCAT-CR" tool.
+
+The recruitment poster includes a phone number and email address dedicated to this research project. Potential participants will self-refer after reviewing the poster, by contacting the research coordinator using one of two strategies: (1) if their mode of reply is by phone, 
+
+PRIMARY OUTCOMES:
+  - Self-efficacy
+
+INTERVENTIONS:
+  - OTHER: KeepWell tool
+  - OTHER: Control - Usual care
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04437238

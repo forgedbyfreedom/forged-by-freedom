@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07292623
+Title: Effects of Transcutaneous Vagus Nerve Stimulation in Older Adults
+Official Title: Effects of Transcutaneous Stimulation of the Auricular Branch of the Vagus Nerve in Older Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: physical activity intervention
+
+SUMMARY:
+The autonomic nervous system consists of two branches, the sympathetic and the parasympathetic, which must work in balance. Its functioning can be measured indirectly by heart rate variability, which is the time between heartbeats, which is not constant. The more it varies, the greater the role of the parasympathetic branch, and vice versa. However, with age, an imbalance can occur and the parasympathetic branch can play a lesser role, resulting in less heart rate variability (the times between heartbeats become more similar).
+
+The aim of this study is to know if electrical stimulation in the ear can improve the balance between the two branches of the autonomic nervous system in older adults, comparing two different locations of application. The main questions to answer are:
+
+Does applying electrical stimulation to a specific area of the ear improve the balance of the autonomic nervous system? Does it also help improve hand tremors, balance, concentration, saliva production, and voice quality?
+
+DETAILED DESCRIPTION:
+Electrical stimulation (ES) of the nervous system, also denominated as neuromodulation, has been investigated for diverse conditions as cardiovascular diseases, chronic pain and psychiatric conditions. It is unknown which locations and parameters can be more effective and better tolerated. The transcutaneous ES is a non-invasive technique which has fewer side-effects than subcutaneous vagus nerve stimulation.
+
+The aim of this study is to analyze the acute effects of transcutaneous ES on autonomic nervous modulation by heart rate variability (HRV) and heart frequency (HF) in older adults who perceive themselves as healthy, comparing two different locations for the ES, before and after a battery of motor, cognitive and other tests.. In addition, the tolerance to the current and the side-effects will be compared.
+
+Once the participants have given their informed consent and had been checked for exclusion criteria, are invited to an experimental session. Subjects will be advised to refrain from caffeine or alcohol for 12 h and vigorous exercise for at least 24h prior to the intervention. The volunteers will be randomized by sex to begin with one of two electrode locations: cymba concha and cavum concha at the left ear (active session); or scapha and lobule at the left ear (sham-session). These two interventions will be denominated as Transcutaneous Vagus Electrical Nerve Stimulation (t-VNS) and Sham Transcutaneous Vagus Electrical Nerve Stimulation (sham t-VNS). Allocation concealment, stratified by sex, will be ensured as the person will choose a piece of paper with the assignment coded with numbers (real/placebo) from a bag containing all the coded options that only the person applying the stimulation will see and understand (coded) The stimulation location will be wiped down with alcohol and the minimum intensity, at which the stimulus is perceived, will be registered. Subsequently, the intensity will be increased until reaching the discomfort threshold, and then decreased to a strong but well-tolerated sensation.
+
+At the beginning of the intervention, the different tests will be explained to the participant, the chest strap will be placed, its synchronisation with the HRV measurement system will be checked, and the TENS equipment will be placed on the waist using a belt.
+
+After 10 minutes, the pre-stimulation assessment will be carried out. At the beginning of each session, participants will be allowed to try each one to familiarise themselves with it. At the end of the session, the stimulation will be applied and the variables will be measured in the same order during the actual electrical stimulation or placebo, as appropriate.
+
+The second session will be performed in the same way, but using the application not used in the previous session (placebo or active, as appropriate).
+
+The participants will be asked upon completion of the session their presumed group assignment.
+
+Adverse effects will be checked at the end of each session, and again 48 h 
+
+PRIMARY OUTCOMES:
+  - HRV
+
+INTERVENTIONS:
+  - DEVICE: Active location tVNS
+  - DEVICE: Sham Comparator
+
+ELIGIBILITY:
+Age: 65 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07292623

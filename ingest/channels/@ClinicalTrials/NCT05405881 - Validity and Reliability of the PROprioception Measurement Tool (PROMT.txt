@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05405881
+Title: Validity and Reliability of the PROprioception Measurement Tool (PROMT)
+Official Title: New Tool to Assess Proprioception of the Lower Limbs in Children With Upper Motor Neuron Lesions: Feasibility, Reliability, Validity, and Relevance for Motor Function.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 99
+Topic: physical activity intervention
+
+SUMMARY:
+This project assesses the feasibility, reliability, and validity of the PROMT in children with a UMN lesion. The study questions are: is the newly developed PROMT a feasible, reliable, and valid tool to assess lower limb proprioception in children with UMN lesions? Does the PROMT differ between children with UMN lesion and controlled neurotypically developing peers? Further, does the proprioception modalities assessed with the PROMT correlate with motor function in this group of children?
+
+DETAILED DESCRIPTION:
+Somatosensory function is essential to all our movements and activities. This is also the case for children with Upper Motor Neuron (UMN) lesions, such as cerebral palsy or acquired brain lesions. Especially one category of somatosensory function, namely proprioception, seems to play a crucial role in motor control and motor learning. To date, no validated or reliable assessment tool exists to assess the different modalities of proprioception in children with UMN lesions. Therefore, the investigators designed an Inertial Measurement Unit's (IMU)-based outcome measure to assess three proprioception modalities. These are joint movement, joint position, and dynamic position sense. With the Unity software, the investigators have created a test setting that intuitively guides the tester and the participant through the standardised measurement procedures. The aim of this study is to investigate the feasibility, reliability, validity, and relevance in correspondence to motor function of this newly developed measurement tool.
+
+The investigators plan to recruit 50 children with and 50 without UMN lesions. The feasibility criteria will be evaluated in the group of children with UMN lesions. The children with UMN lesions will be tested three times, twice from the same rater and once from another rater, to investigate inter-rater and test-retest reliability. To assess the relevance of this somatosensory category on motor function in children with UMN lesions, specific assessments on the body function, activity, and participation level of the international classification of functioning, disability, and health (ICF) will be performed. The aged-matched peers will be assessed once with the PROMT.
+
+The PROMT should allow clinicians to assess lower limb proprioception in children with UMN lesions in a child-friendly manner. The analysis of the reliability results should allow to measure changes and probable association to motor function can lead us to further research questions to supplement the therapy program.
+
+PRIMARY OUTCOMES:
+  - Joint Movement Sense
+  - Joint position sense
+  - Active position sense
+
+INTERVENTIONS:
+  - OTHER: Proprioception measurement tool
+
+ELIGIBILITY:
+Age: 5 Years to 19 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05405881

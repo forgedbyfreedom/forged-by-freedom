@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01067898
+Title: A Study on Oral Vitamin D Megadoses
+Official Title: A Randomized, Double-blind, Placebo-controlled Study on Oral Vitamin D Megadoses - 100 000 or 200 000 IU Vitamin D3 Every Three Months
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: creatine supplementation
+
+SUMMARY:
+The purpose of this study is to determine if infrequent administration of oral vitamin D megadoses is effective treatment to maintain serum 25-hydroxyvitamin D(3) above target levels of 50-75 nmol/L. The investigators hypothesize that 100 000 IU or at least 200 000 IU vitamin D3 in every three months would be effective and safe treatment to achieve the target levels.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Serum 25(OH)D3 concentration in relation to the target levels of 50-75 nmol/L
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: vitamin D3 (cholecalciferol)
+  - OTHER: olive oil
+  - DIETARY_SUPPLEMENT: calcium carbonate
+
+ELIGIBILITY:
+Age: 70 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01067898

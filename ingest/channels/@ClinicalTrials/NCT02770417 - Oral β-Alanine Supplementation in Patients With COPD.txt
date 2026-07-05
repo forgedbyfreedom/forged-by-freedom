@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02770417
+Title: Oral β-Alanine Supplementation in Patients With COPD
+Official Title: Oral β-Alanine Supplementation in Patients With COPD: Structural, Metabolic and Functional Adaptations
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: beta-alanine
+
+SUMMARY:
+Preliminary evidence suggest that patients with chronic obstructive pulmonary disease (COPD) suffer from lower-limb muscle dysfunction. This may, at least in part, be due to a combination of physical inactivity and muscle oxidative stress. Pilot data (not published) clearly show that patients with COPD have significantly lower carnosine, which is a pH (acidity-basicity level) buffer and antioxidant, levels in the m. vastus lateralis compared to healthy subjects. Beta-alanine supplementation has shown to increase muscle carnosine in trained and untrained healthy subjects. This study will assess if muscle carnosine can be augmented by beta-alanine supplementation in 40 COPD patients (20 patients receive beta-alanine, 20 patients receive placebo). 10 healthy elderly controls will also be assessed to compare baseline muscle carnosine levels.
+
+The aims of this study are to:
+
+1. Investigate baseline muscle carnosine levels to confirm the pilot data in a larger sample of patients with COPD compared with healthy elderly subjects
+2. Investigate if beta-alanine supplementation augments muscle carnosine in COPD patients and whether it has an influence on exercise capacity, lower-limb muscle function and quality of life
+3. To investigate baseline and post supplementation structural and metabolic muscle characteristics and markers of oxidative stress and inflammation in COPD patients and it's association with muscle carnosine levels
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - muscle carnosine
+  - maximal exercise capacity
+  - submaximal exercise capacity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: beta-alanine
+  - DIETARY_SUPPLEMENT: placebo
+  - OTHER: control
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02770417

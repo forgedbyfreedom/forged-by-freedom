@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07196046
+Title: Product Responsiveness to Enhanced Bioavailability Curcumin Dietary Supplements in Adults
+Official Title: A Randomized Double-Blind, Comparator-Controlled, Single-Site Study With a Single-Blind Placebo Run-In and Crossover Design to Evaluate Joint Comfort in Adults Using Enhanced Bioavailability Curcumin Dietary Supplements
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this clinical trial is to evaluate whether distinct formulations of bioavailable curcumin supplements can improve joint comfort in adults who experience self-reported discomfort. Participants will also receive a placebo during the study, but they will not know when they receive it.
+
+The main questions it aims to answer are:
+
+* Do participants report improved joint comfort after taking each curcumin-based supplement?
+* Are there difference in quality-of-life scores or pain perceptions between the products?
+
+Researchers will compare the effects of the different formulations of bioavailable curcumin supplements to see if one provides greater improvements in joint comfort and related outcomes.
+
+Participants will:
+
+* Wear a fitness tracker starting at the time of electronic consent to provide continuous data on physical activity, heart rate, and sleep
+* Complete multiple blinded study periods involving different oral supplements, each separated by a washout period
+* Take one supplement twice daily during each intervention period, with intervention periods lasting between approximately two and four weeks
+* Complete washout periods of approximately one week between intervention periods
+* Complete the validated RAND-36 quality-of-life questionnaire and other study-specific questionnaires adapted from commonly used pain and global impression scales to assess joint comfort, pain perception, and overall health
+* Participate in a 30-day follow up period after the final supplement to complete final questionnaires and wearable data collection
+
+The study is conducted remotely using the Alethios decentralized research platform.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Quality-of-Life Scores (RAND-36)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement 2
+  - DIETARY_SUPPLEMENT: Supplement 3
+  - DIETARY_SUPPLEMENT: Supplement 1
+
+ELIGIBILITY:
+Age: 30 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07196046

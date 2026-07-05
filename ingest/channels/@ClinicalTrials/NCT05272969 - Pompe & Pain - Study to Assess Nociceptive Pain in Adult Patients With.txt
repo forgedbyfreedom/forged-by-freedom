@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05272969
+Title: Pompe & Pain - Study to Assess Nociceptive Pain in Adult Patients With Pompe Disease
+Official Title: Pompe & Pain - Observational Study to Assess Musculoskeletal Pain in Late-onset Pompe Disease (LOPD)
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 95
+Topic: vitamin D muscle
+
+SUMMARY:
+The primary aim of this nationwide, explorative, cross-sectional study in Germany is to characterize the prevalence, severity and quality of musculoskeletal pain in adult patients with late-onset Pompe disease (LOPD). The secondary objectives are to evaluate whether muscle pain is associated with muscle function, to assess whether muscle pain is associated with alterations of muscle tissue, and whether vitamin D metabolism and polymorphisms of ACE and ACTN3 genes may contribute to an increased level of perceived musculoskeletal pain. In a second step, exome sequencing of genes associated with musculoskeletal pain will be analyzed. Results of LOPD patients will be compared to patients with neuromuscular disorders with a similar distribution of muscle weakness and/or musculoskeletal pain.
+
+DETAILED DESCRIPTION:
+In this nationwide, explorative, cross-sectional study in Germany, approx. 50 patients with genetically confirmed late-onset Pompe disease (LOPD) will be included into the study. In addition, 15 Patients with histologically confirmed inclusion body myositis (IBM), 15 patients with genetically confirmed spinal muscular atrophy type 3 (SMA3) and 15 patients with genetically confirmed facio-scapulo-humeral muscle dystrophy (FSHD) will serve as a control group. The duration of patient recruitment will be around 18 months. The primary aim is to characterize the prevalence, severity and quality of musculoskeletal pain in adult patients with late-onset Pompe disease (LOPD). The secondary objectives are to evaluate whether muscle pain is associated with muscle function, measured by quantitative muscle testing and pressure pain threshold (PPT), to assess whether muscle pain is associated with alterations of muscle tissue, measured by muscle ultrasound and whether vitamin D metabolism and polymorphisms of ACE and ACTN3 genes may contribute to an increased level of perceived musculoskeletal pain. In a second step, exome sequencing of genes associated with musculoskeletal pain will be analyzed. Results of LOPD patients will be compared to patients with neuromuscular disorders with a similar distribution of muscle weakness and/or musculoskeletal pain.
+
+After screening of 120 patients, approximately 50 patients with late-onset Pompe disease, 15 patients with IBM, 15 patients with FSHD and 15 patients with SMA3, who meet all eligibility criteria, will be enrolled in the study. All patients will be required to attend once at a study site to perform all study-related procedures. The study procedures will take approx. 3 hours.
+
+Demographic and disease-related data (age, gender, weight, height, diagnosis, a historical genetic test results and/or muscle biopsy results, age at onset of symptoms, age at diagnosis, severity and distribution of muscle weakness, prior and concomitant medication, medical history, ventilation status) will be obtained. Patients will fill out validated disease-related and quality-of-life questionnaires: Brief Pain Inventory, Rotterdam Handicap Scale, Fatigue Severity Scale, R-PAct, and German Pain Questionnaire. Patients will be asked to sketch regions of perceived musculoskeletal pain on a body figure, which is provided on a tablet or a paper version. The paper version will be scanned and regions of muscular pain will be digitally evaluated to develop a map of musculoskeletal pain regions. For this, a novel software will be used, provided by the Institute for Information Engineering, Wolfenbüttel.
+
+Muscle strength will be assessed clinically by MRC grading (0-5), by quick motor function test (QMFT) and by dynamometry of selected muscles.
+
+Pressure Pain Threshold (PPT) is defined as the minimum force applied which induces pain. Pressure algometry measurements will be performed to assess PPTs on the trapezius, deltoid and supraspinatus muscle
+
+PRIMARY OUTCOMES:
+  - Prevalence of musculoskeletal pain in LOPD patients
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Beck depression inventory fast screen (Questionnaire)
+  - DIAGNOSTIC_TEST: Brief Pain Inventory (BPI) (Questionnaire)
+  - DIAGNOSTIC_TEST: German Pain Inventory (Questionnaire)
+  - DIAGNOSTIC_TEST: Fatigue Severity and Disability Scale (FSS) (Questionnaire)
+  - DIAGNOSTIC_TEST: Rotterdam Handicap Scale (RHS) (Questionnaire)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05272969

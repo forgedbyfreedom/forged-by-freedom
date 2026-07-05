@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03570008
+Title: Preventing the Risk of Osteoporotic Fracture in Premenopausal Women by a Spa Residential Physical Activity Program
+Official Title: Preventing the Risk of Osteoporotic Fracture in Premenopausal Women by a Spa Residential Physical Activity Program
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: vitamin D muscle
+
+SUMMARY:
+Osteoporosis is an increasing public health problem. Involution of bone mass in women is due to a reduction in sensitivity of the bone to the mechanical stress due to the slow-down of the bone turnover after 35 years old. Osteoporosis is a silent disease combining a decrease in bone mass (quantity) and an impaired bone microarchitecture (quality) leading to an increased risk of fracture. Bone microarchitecture is an important element to be taken into account in assessing the bone properties, as demonstrated by numerous ex vivo studies.
+
+Bone densitometry only identifies 50% of osteoporotic fractures. The other half of the fractures appears in osteopenic women. The measurement of bone mineral density is too limited to assess risk of fracture. Bone microarchitecture can be assessed through a peripheral quantitative computed tomography scan (computed tomography peripherical - pQCT). The microarchitecture data allow the calculation of bone strength index (BSI) and stress strength index (SSI) highly predictive of fracture risk. These qualitative determinants of bone fragility are the most relevant to evaluate effect of physical activity over a short period compared with bone mineral content and density, which requires several months of constraints. Biochemical markers of bone turnover, specifically those of bone resorption, are predictive of the risk of osteoporotic fracture.
+
+Physical activity can reduce the risk of fracture up to 20-35% via direct effects on bone strength, at any age. However, response of bone varies with modalities of exercise. Repeated exercise produces greater bone adaptations than a single bout. Moreover, it has been well demonstrated since 1970 that bone responds to a dynamic stimulation, but not a static stimulation, with a dose response relationship. It has been confirmed in premenopausal women.
+
+The effect of physical activity on microarchitectural bone parameters (porosity and density of cortical and trabecular) has not been investigated in primary prevention. This original study would highlight the effect of short-term specific physical activity on the prevention of bone fragility (qualitative) observed with age in premenopausal women.
+
+The main hypothesis is that a spa residential program including physical activity will have greater benefits on bone cortical porosity than a spa residential program alone or physical activity alone, in premenopausal women.
+
+DETAILED DESCRIPTION:
+The ThermOs protocol was designed to provide a better understanding of the effect of physical activity on microarchitectural bone parameters (porosity and density of cortical and trabecular), in prevention of bone fragility among premenopausal women.
+
+In the present protocol, parameters are measured on four occasions (baseline, 10 days, at 6 months and at 12 months).
+
+Statistical analysis will be performed using Stata software (version 13; Stata-Corp, College Station, Tex., USA). All statistical tests will be two-sided and p\<0.05 will be considered significant. After testing for normal distribution (Shapiro-Wilk test), data will be treated either by parametric or non-parametric analyses according to statistical assumptions.
+
+Inter-groups comparisons will systematically be performed 1) without adjustment and 2) adjusting on factors liable to be biased between groups.
+
+Analysis will be performed using anova or Kruskal-Wallis (KW) tests. When appropriate (p\<0.05), a post-hoc test for multiple comparisons (Tukey-Kramer after anova and Dunn post KW) will be used. Linear regression (with logarithmic transformation if necessary) considering an adjustment on covariates fixed according to epidemiological relevance and observance to physical activity will complete the analysis. Relations between quantitative outcomes will be analyzed using correlation coefficients (Pearson or Spearman) and compared with Chi-squared or Fischer test. Longitudinal data will be treated using mixt-model analyses in order to treat fixed effects group, time and group x time interaction taking into account between and within participant variability.
+
+PRIMARY OUTCOMES:
+  - Variation of bone cortical porosity in premenopausal women after the interventional phase.
+  - Variation of bone cortical porosity in premenopausal women
+  - Variation of bone cortical porosity in premenopausal women
+  - Variation of bone cortical porosity in premenopausal women
+
+INTERVENTIONS:
+  - BEHAVIORAL: 9 days spa residential program
+  - BEHAVIORAL: 3 sessions of 10 minutes per day of physical exercise
+
+ELIGIBILITY:
+Age: 40 Years to 50 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT03570008

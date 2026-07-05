@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07523256
+Title: Effect of Curcumin Add-On Therapy on Quality of Life and IL-1β Levels in Patients With Schizophrenia
+Official Title: The Effect of Adjuvant Curcumin Extract on Quality of Life and Interleukin-1 Beta (IL-1β) Levels in Patients With Schizophrenia Receiving Risperidone: A Randomized Clinical Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 44
+Topic: physical activity intervention
+
+SUMMARY:
+This study aims to evaluate the effect of curcumin extract as an adjuvant therapy on quality of life and inflammatory markers in patients with schizophrenia receiving risperidone. Schizophrenia is associated with impaired quality of life and increased inflammatory activity, including elevated levels of interleukin-1 beta (IL-1β).
+
+In this randomized clinical trial, patients with schizophrenia are assigned to receive either risperidone alone or risperidone combined with curcumin extract for 8 weeks. Quality of life is assessed using the WHOQOL-BREF questionnaire, and serum IL-1β levels are measured at baseline and after the intervention.
+
+The study investigates whether curcumin, known for its anti-inflammatory and antioxidant properties, can improve clinical outcomes and reduce systemic inflammation in patients with schizophrenia.
+
+DETAILED DESCRIPTION:
+Schizophrenia is a chronic psychiatric disorder characterized by cognitive impairment, social dysfunction, and reduced quality of life. Emerging evidence suggests that neuroinflammation plays a significant role in the pathophysiology of schizophrenia, with elevated levels of pro-inflammatory cytokines such as interleukin-1 beta (IL-1β) observed in patients.
+
+Curcumin, a bioactive compound derived from Curcuma longa, has demonstrated anti-inflammatory, antioxidant, and neuroprotective properties. It has been shown to modulate inflammatory pathways, including inhibition of nuclear factor-kappa B (NF-κB), and may reduce cytokine production. These properties suggest that curcumin could serve as a potential adjunctive therapy in schizophrenia.
+
+This study is a randomized clinical trial conducted at Rumah Sakit Khusus Daerah (RSKD) Dadi, South Sulawesi, Indonesia. Participants diagnosed with schizophrenia according to ICD-10 criteria and receiving risperidone therapy are randomly assigned into two groups: (1) a control group receiving risperidone alone, and (2) an intervention group receiving risperidone combined with curcumin extract (1000 mg/day) for 8 weeks.
+
+Quality of life is assessed using the World Health Organization Quality of Life-BREF (WHOQOL-BREF) instrument at baseline, week 4, and week 8. Serum IL-1β levels are measured at baseline and week 8 using enzyme-linked immunosorbent assay (ELISA).
+
+The primary objective of the study is to determine the effect of curcumin as an adjuvant therapy on quality of life and IL-1β levels in patients with schizophrenia. Secondary analyses include comparisons of changes between groups and evaluation of the correlation between inflammatory markers and quality of life outcomes.
+
+This study is expected to provide evidence on the role of curcumin as a safe and effective adjunctive therapy targeting inflammatory pathways to improve clinical outcomes in schizophrenia.
+
+PRIMARY OUTCOMES:
+  - Change in Serum Interleukin-1 Beta (IL-1β) Levels
+  - Change in Quality of Life (WHOQOL-BREF Score)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Curcumin
+  - DRUG: Risperidone 4mg/day
+
+ELIGIBILITY:
+Age: 20 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07523256

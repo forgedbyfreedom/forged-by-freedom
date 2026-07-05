@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01936285
+Title: Colchicine in ST-elevation Myocardial Infarction
+Official Title: Study of Anti-inflammatory Treatment With Colchicine in the Acute Phase of ST-elevation Myocardial Infarction to Reduce Infarct Size
+Status: UNKNOWN
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 150
+Topic: creatine supplementation
+
+SUMMARY:
+* There is evidence that inflammatory processes may play detrimental role during the acute phase of myocardial infarction
+* The hypothesis of this study is that colchicine, by its anti-inflammatory action, may lead to reduction in infarct size, when administered during the acute phase of myocardial infarction
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Infarct size on MRI
+  - AUC CK-MB concentration
+
+INTERVENTIONS:
+  - DRUG: Colchicine 2 mg loading dose; 0.5 mg bid for 5 days
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age:  to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01936285

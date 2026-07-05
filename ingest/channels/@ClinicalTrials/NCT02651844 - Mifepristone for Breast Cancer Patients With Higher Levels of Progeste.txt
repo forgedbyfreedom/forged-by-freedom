@@ -1,0 +1,79 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02651844
+Title: Mifepristone for Breast Cancer Patients With Higher Levels of Progesterone Receptor Isoform A Than Isoform B.
+Official Title: Mifepristone Treatment for Breast Cancer Patients Expressing Levels of Progesterone Receptor Isoform A (PRA) Higher Than Those of Isoform B (PRB): Neoadjuvant Therapy.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: growth hormone treatment
+
+SUMMARY:
+* Seventy per cent of breast cancers express estrogen (ER) and progesterone receptors (PR) and respond to endocrine treatment.
+* Actual therapy targets ER.
+* There is enough evidence that progestins participate regulating breast cancer growth.
+* Antiprogestins block cell proliferation and increase apoptosis in breast cancer models which express high levels of PRA.
+* Antiprogestins have been used to treat breast cancer patients that failed to other treatments; benefits were seen in selected patients.
+* Mifepristone (MFP) is currently used for medical abortion and for the treatment of Cushing disease.
+* MFP might exert agonistic effects when PRB isoform is activated by cAMP. This makes mandatory the evaluation of the PR isoform ratio in breast cancer patients in which MFP is a therapeutic possibility.
+
+Main Goal To evaluate if therapeutic doses of MFP exert beneficial effects on breast cancers expressing levels of PRA higher than those of PRB, evaluated as an inhibition in proliferation markers and/or an increase in apoptotic markers.
+
+* Eligibility
+
+  * Postmenopausal women (one year after menses stop).
+  * Women with tumors showing ratios of PRA/PRB higher than 1.5 and PR higher than 50%.
+  * Women without previous treatment.
+  * All clinical stages with tumors larger than 1.5 cm.
+  * Patients without autoimmune diseases and/or asthma.
+* Study design
+
+  * Open Interventional.
+  * Twenty women will take MFP (200 mg) p.o. once /day during 14 days. As for preliminary studies, to reach this number the investigators will have to evaluate 80-100 patients.
+  * Surgery is performed 14 days after treatment initiation, 24 hs after last dose.
+  * PR isoform ratio will be evaluated by western blots (WB) in one core biopsy. Additional cores will be used for diagnosis, immunohistochemistry (IHC) of PR, Ki-67 and other markers.
+  * At surgery samples will be frozen for molecular studies and fixed and processed for pathological evaluation.
+  * Wilcoxon signed rank test will be used to evaluate differences in biomarker expression between core biopsy and surgical samples of each patient.
+  * Blood will be collected before treatment initiation and prior to final surgery.
+  * Mammographic and echographic studies will be carried out before and after treatment.
+
+DETAILED DESCRIPTION:
+Hypothesis
+
+PR are involved in breast cancer growth. The antiprogestin mifepristone (MFP) exerts antitumor effects in mammary carcinomas with high expression of PRA. The investigators hypothesize that breast cancers with higher levels of PRA than PRB will benefit from an antiprogestin therapy.
+
+Precis
+
+The aim of the study is to select 20 breast cancer patients, with primary tumors expressing PR (50% or higher) and 1.5 fold PRA as compared with PRB, for a neoadjuvant treatment with mifepristone (MFP) during 14 days in between biopsy core and surgery. There are no studies at the present time selecting breast cancer patients according to the prevailing PR isoform expressed. This is extremely important since antiprogestins might have no effect or even stimulate those over-expressing PRB.
+
+Background
+
+Breast cancer remains one of the main causes of death in women. Current endocrine treatments are aimed to target either estrogen receptors (ER) or to inhibit the synthesis of 17-β-estradiol (E2). Emerging evidence obtained from experimental studies, as well as from human epidemiology, point to an important role for progestins in breast cancer growth.
+
+Both PR isoforms are transcribed from the same gene. PRB has 933 amino acids while PRA lacks the first 164 amino acids. They play different roles in vivo as demonstrated using knock out models.
+
+MFP, a progesterone antagonist, may also act as an agonist in the presence of PRB. In this context, MFP-bound PR recruit coactivators rather than corepressors. MFP may also exert antiglucocorticoid effects. As an antiprogestin it has been used for different obstetric indications, such as uterine ripening and intrauterine fetal death, at doses higher than 200 mg/day. As an antiglucocorticoid it has potential use in different psychiatric disorders, including depression and Alzheimer's and recently, the FDA approved its use for the treatment of Cushing disease (300 mg daily).
+
+Antiprogestins in breast cancer treatment
+
+The first clinical trial to evaluate antiprogestin therapy in patients recruited 22 patients for a third-line study. Patients were treated with MFP, 200 mg/day, for 1-3 months. There was an 18% response rate following 3 months of therapy. The long-term tolerance was good. Three other studies were reviewed together with unpublished results from a fifth study . There are no other published clinical results for breast cancer treatment using MFP.
+
+More recently, four clinical trials have been recently launched for the evaluation of antiprogestins. The ClinicalTrials.gov Identifier: NCT01138553, testing MFP in neoadjuvancy was discontinued because of difficulties in recruiting and the NCT00555919, Schering, testing lonaprisan, was stopped due to lack of expected clinical response. Two other studies are under way, NCT01800422 testing telapristone and NCT02052128 onapristone.
+
+Antiprogestins in preclinical studies
+
+Using murine mammary carcinomas expressing different PR isoforms, and experimental human breast 
+
+PRIMARY OUTCOMES:
+  - Measurable decrease in tumor cell proliferation from baseline to time of surgery
+
+INTERVENTIONS:
+  - DRUG: Mifepristone
+
+ELIGIBILITY:
+Age:  to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02651844

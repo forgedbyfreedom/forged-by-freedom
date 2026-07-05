@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03689569
+Title: Effects of Prebiotic Supplementation and Exercise on Inflammatory Markers, Vascular Function and Cognition in CKD
+Official Title: Effects of Prebiotic Supplementation and Exercise on Inflammatory Markers, Vascular Function, Cognition, and Mental Well-being in Pre-Dialysis Kidney Patients
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 68
+Topic: sports nutrition
+
+SUMMARY:
+The study is primarily designed to examine the effect of 16 weeks of prebiotic supplementation (resistant starch)and moderate intensity aerobic training on markers of inflammation in stage 3-4 patients with chronic kidney disease.
+
+DETAILED DESCRIPTION:
+The primary aim of the proposed study is to determine whether the consumption of a prebiotic supplement (resistant starch) coupled with moderate intensity endurance training over 16 weeks leads to reductions in key inflammatory markers in stage 3-4 predialysis CKD patients and whether this reduction is associated with favorable changes in vascular function and indicators of stress and emotional reactivity.
+
+The investigators hypothesize that supplementation with the prebiotic (resistant starch) will lead to normalization of the microbiome of our sample of patients with chronic kidney disease (CKD) and reduce key markers of inflammation. Reductions in these biomarkers will be associated with favorable changes in cardiovascular variables along with indices of stress and emotional reactivity. Moderate intensity aerobic training will have an additive anti-inflammatory effect along with the consumption of the resistant starch.
+
+PRIMARY OUTCOMES:
+  - Change in hs-CRP
+  - Change in TNF alpha
+  - Change in IL6
+  - Change in IL10
+  - Change in MCP1
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Resistant starch
+  - BEHAVIORAL: Exercise
+  - BEHAVIORAL: Starch
+
+ELIGIBILITY:
+Age: 30 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03689569

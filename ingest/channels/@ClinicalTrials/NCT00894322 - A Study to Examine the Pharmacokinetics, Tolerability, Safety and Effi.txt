@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00894322
+Title: A Study to Examine the Pharmacokinetics, Tolerability, Safety and Efficacy of Exenatide Once Weekly Suspension
+Official Title: A Two-Cohort, Single- and Repeat Dose Study to Examine the Pharmacokinetics, Tolerability, and Safety of Ready to Use Exenatide Once Weekly in Healthy Subjects and in Subjects With Type 2 Diabetes Mellitus
+Status: COMPLETED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 65
+Topic: creatine supplementation
+
+SUMMARY:
+This study is designed to evaluate the pharmacokinetics, tolerability, and safety of exenatide once weekly suspension in both healthy subjects and in subjects with type 2 diabetes. The study will also evaluate efficacy in the type 2 diabetes patients. Development of this exenatide once weekly presentation would eliminate the need to reconstitute the product prior to use.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area Under the Curve (AUC) for Single Dose of 10 mg Exenatide (Cohort 1) in Healthy Participants in the Pharmacokinetic Evaluable Population
+  - Maximum Concentration (Cmax) for Single Dose of 10 mg Exenatide (Cohort 1) in Healthy Participants in the Pharmacokinetic Evaluable Population
+  - Time to Maximum Concentration (Tmax) for Single Dose of 10 mg Exenatide (Cohort 1) in Healthy Participants in the Pharmacokinetic Evaluable Population
+  - Number of Participants With Treatment Emergent Adverse Events (TEAEs), Injection Site TEAEs, Serious Adverse Events (SAEs), Deaths, and Withdrawals Due to AEs in Cohort 1 and Cohort 2 in Intent to Treat (ITT) Population
+  - Number of Participants With Concomitant Medications in Cohort 1 and Cohort 2 in ITT Population
+
+INTERVENTIONS:
+  - DRUG: exenatide once weekly
+  - DRUG: exenatide once weekly
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 19 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00894322

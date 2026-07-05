@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03531190
+Title: Pre- and Postoperative Nutrition in Head and Neck Cancer Patients
+Official Title: A Randomized Controlled Clinical Trial of Pre- and Postoperative Supplementation With Zinc, Vitamin C, Arginine and Multivitamin Mineral in Patients Treated for Head and Neck Cancer
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: sports nutrition
+
+SUMMARY:
+The purpose of the project is to investigate the effect of wound healing of a combined pre- and postoperative oral supplement, consisting of zinc, vitamin C, arginine and multivitamin, as a supplement for adequate nutrition in patients operated for head and neck cancer.
+
+DETAILED DESCRIPTION:
+The project will be conducted as an open, randomized intervention study, and includes patients with head and neck cancer that are planned for operation. 40 participants are allocated to the intervention or control group, respectively. For both groups, the experiment will last for five to six weeks, depending on when the trial participants are planned for surgery. The intervention group must take a dietary supplement and a protein drink for 35 days (7 days preoperatively and 28 days postoperatively), which is delivered 7 days preoperatively. The same applies to the control group that only receives protein drinks. The length of the intervention period is based on the design of previous studies. During the project, compliance will be evaluated by counting the amount of remaining dietary supplements and protein drinks that the participants return on a regular basis. The control group receives standard treatment as well as protein drinks. For all participants included in the experiment blood tests and an ultrasound scanning will be performed.
+
+PRIMARY OUTCOMES:
+  - POSAS-scale (The Patient and Observer Scar Assessment Scale v2.0 / EN)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nutritional supplement (Protein + MIX)
+  - DIETARY_SUPPLEMENT: Nutritional supplement (Protein)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03531190

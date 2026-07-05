@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06655818
+Title: Sub-study of Belantamab Mafodotin (GSK2857916) as Monotherapy and in Combination With Dostarlimab (GSK4057190) in Participants With RRMM
+Official Title: A Phase I/II, Randomized, Open-label Platform Study Utilizing a Master Protocol to Study Belantamab Mafodotin (GSK2857916) as Monotherapy and in Combination With Anti-Cancer Treatments in Participants With Relapsed/Refractory Multiple Myeloma (RRMM)-DREAMM5. Sub-study 4 - Belantamab Mafodotin and Dostarlimab (GSK4057190) in Combination
+Status: TERMINATED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 4
+Topic: creatine supplementation
+
+SUMMARY:
+The primary purpose is to determine the safety and tolerability of belantamab mafodotin in combination with other anti-cancer treatments (in each sub-study), and to establish the recommended Phase 2 dose for each combination treatment to explore in the cohort expansion phase. This study is a sub study of the Master protocol (NCT04126200).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - DE Phase: Number of Participants With Dose Limiting Toxicities (DLT)
+  - DE Phase: Number of Participants With Adverse Events (AEs)
+  - DE Phase: Number of Participants With Worst-Case Hematology Results by Maximum Grade Increase Post - Baseline Relative to Baseline
+  - DE Phase: Number of Participants With Worst-Case Chemistry Results by Maximum Grade Increase Post - Baseline Relative to Baseline
+  - CE Phase: Overall Response Rate (ORR)
+
+INTERVENTIONS:
+  - DRUG: Belantamab Mafodotin
+  - DRUG: Dostarlimab
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06655818

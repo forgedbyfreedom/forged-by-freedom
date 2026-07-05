@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02678390
+Title: Medium Chain Triglycerides and Aerobic Exercise on Ketone Production in Women With or Without Prediabetes
+Official Title: Stimulating the Production of Ketones Through the Combined Use of Aerobic Exercise (AE) and Dietary a Medium Chain Triglycerides (MCT) Supplement
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The aim of this study is to compare the effect on ketone production of dietary an MCT supplement combined or not with physical exercise in two groups of women (N=10/group), healthy adults and patients with prediabetes. After an evaluation of the metabolism (a 4-hour visit with multiple blood samples) at the beginning of the study, all the participants are taken for one-week the MCT supplement alone follow by a one-week period of taking the MCT supplement in combination with physical exercise. At the end of each period of time, the 4-hour visit for the evaluation of the metabolism is repeated.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma Ketone Concentrations
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: MCT
+  - DIETARY_SUPPLEMENT: MCT+ aerobic exercise
+  - DIETARY_SUPPLEMENT: Aerobic exercise
+  - DIETARY_SUPPLEMENT: Control day
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02678390

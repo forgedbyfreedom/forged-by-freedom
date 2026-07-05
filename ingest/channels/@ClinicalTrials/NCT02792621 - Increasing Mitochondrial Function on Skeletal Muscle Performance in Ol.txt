@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02792621
+Title: Increasing Mitochondrial Function on Skeletal Muscle Performance in Older Men
+Official Title: Assessing the Effects of Increased Mitochondrial Function on Skeletal Muscle Performance in Older Men; a Pilot Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: exercise muscle mass
+
+SUMMARY:
+As people grow older skeletal muscle gradually becomes smaller and weaker, causing reduced mobility and quality of life. To understand and reverse this negative process investigators need to find new ways of improving the ability of muscle to perform physical activity. There is some evidence that supplements may improve how the mitochondria work, and investigators want to explore this idea in more detail, by measuring how the muscles work and respond to exercise before and after taking the supplement. This will give us the basic information investigators would need to see if this is a useful idea.
+
+DETAILED DESCRIPTION:
+A defining feature of ageing is loss of muscle mass ('sarcopenia') and associated functional weakness ('dynapenia'). A common characteristic of dynapenia is lowered mitochondrial content and metabolic function, causing reduced aerobic capacity, increased sensations of effort and impaired lipid oxidation (with resultant glucose intolerance). Exercise training improves mitochondrial and muscle function in ageing populations, however such adaptations remain below that of young counterparts, suggesting alternative approaches are required. Pre-clinical studies show that dietary supplementation with precursors of nicotinamide adenine dinucleotide (NAD+) restore mitochondrial biogenesis and oxidative capacity in ageing rodents and diabetic humans. However, whether NAD+ precursors rejuvenate mitochondrial capacity and, ultimately, muscle function in older humans is unknown. This pilot project will therefore investigate the efficacy of NAD+ precursor supplementation for increasing muscle performance in normally active older men, combined with examination of the molecular and metabolic mechanisms regulating physiological responses.
+
+PRIMARY OUTCOMES:
+  - Change in mitochondrial function
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Acipimox
+  - DIETARY_SUPPLEMENT: placebo
+
+ELIGIBILITY:
+Age: 65 Years to 75 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02792621

@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06369766
+Title: REtinal Markers In Neuroinflammatory Diseases ("REMIND")
+Official Title: Retinal Markers in Neuroinflammatory Diseases: a Prospective Observational Study
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 500
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this observational study, including patients with Multiple Sclerosis, patients with other neuroinflammatory diseases and healthy controls, is to determine the predictive value of retinal markers in predicting disease progression. Participants complete a questionnaire and undergo various non-invasive retinal routine clinical examinations.
+
+DETAILED DESCRIPTION:
+Multiple Sclerosis (MS) is an autoimmune disease of the central nervous system (CNS) and represents one of the most common neurological disorders affecting young adults worldwide and often leads to significant disability over time. While MS typically presents with recurrent neurological symptoms known as relapses, most patients also experience progressive neurological deterioration independent of relapses, referred to as progression independent of relapse activity (PIRA). PIRA is a major contributor to long-term disability and represents a significant challenge in the management of MS. Early identification of patients at high risk to develop PIRA is crucial for therapeutic decisions and testing treatment efficacy, highlighting the urgent need for accurate predictive markers of progression in MS.
+
+The primary objective of this longitudinal, observational, prospective, single center study is to investigate the predictive value of various retinal markers in predicting PIRA in MS patients.
+
+The study assesses several easily obtained, non-invasive retinal measures:
+
+* Neuroaxonal loss in the retina: This serves as a marker of neurodegeneration in the CNS. It will be assessed by measuring the volume of the ganglion cell-inner plexiform layer and the thickness of the peripapillary retinal nerve fiber layer using optical coherence tomography (OCT).
+* Neuroinflammation in the retina: This will be assessed by evaluating thickening of other retinal layers in OCT, particularly the inner nuclear layer.
+* Fixation instability of the patients: This serves as a marker of global neuronal dysfunction in the CNS. It will be measured using Scanner Laser Ophthalmoscopy-OCT.
+* Structural changes of the retinal vessels: Particularly, the arteriolar and venular diameters will be assessed. This serves as a marker of systemic microvascular health and will be measured using static retinal vessel analysis.
+* Functional/perfusional changes of the retinal vessels: For a subgroup of patients, this will be evaluated using OCT-angiography, and/or dynamic retinal vessel analysis, and/or laser speckle flowgraphy. These measures provide insights into the functional and perfusional changes of the retinal vessels.
+
+As secondary objectives, this study comprises:
+
+* Comparison with other biomarkers of neuroaxonal damage to determine whether the retinal markers are independent and/or stronger predictors of PIRA.
+* Comparison with the retinal markers of Healthy Controls and patients with other neuroinflammatory diseases of the CNS to understand the differences in mechanisms of damage.
+* Investigating the associations among the various retinal measures to understand the relationship between neuroaxonal loss, functional deficits and vascular changes in MS.
+
+Data will be collected at baseline and annually over up to 5 years, or for some MS patients, up to 10 years, to evaluate changes in retinal markers and their correlation with disease progression. This comprehensive assessment will provi
+
+PRIMARY OUTCOMES:
+  - Occurence of Progression Independent of Relapse Activity (PIRA)
+  - Neuroaxonal loss in the retina (as marker of neurodegeneration in the CNS)
+  - Neuroinflammation in the retina
+  - Fixation instability (as marker of global neuronal dysfunction in the CNS)
+  - Structural changes of the retinal vessels (as marker of systemic microvascular health)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Optical coherence tomography (OCT)
+  - DIAGNOSTIC_TEST: Static retinal vessel analyzer
+  - DIAGNOSTIC_TEST: Dynamic retinal vessel analyzer
+  - DIAGNOSTIC_TEST: Laser speckle flowgraphy system
+  - OTHER: Questionnaire
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06369766

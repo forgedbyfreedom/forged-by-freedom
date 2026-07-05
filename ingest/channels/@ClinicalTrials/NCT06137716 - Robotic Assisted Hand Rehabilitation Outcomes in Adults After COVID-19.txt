@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06137716
+Title: Robotic Assisted Hand Rehabilitation Outcomes in Adults After COVID-19
+Official Title: Development and Clinical Trials of a Rehabilitation Platform to Accelerate the Recovery of Patients With COVID Neuromotor Sequelae
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 13
+Topic: recovery exercise
+
+SUMMARY:
+Prolonged hospitalization in severe COVID-19 cases can lead to substantial muscle loss and functional deterioration. While rehabilitation is vital, conventional approaches encounter capacity constraints. Therefore, assessing the efficacy of robotic-assisted rehabilitation is crucial for post-COVID-19 fatigue syndrome patients, aiming to improve motor function and overall recovery. The study focuses on evaluating rehabilitation effectiveness in individuals with upper-extremity impairment using a hand exoskeleton-based robotic system.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Barthel Index (BI)
+  - Functional Independence Measure (MIF)
+  - SF-36 Health Questionnaire
+  - Range of motion
+
+INTERVENTIONS:
+  - DEVICE: Training with a Robotic Hand Exoskeleton
+
+ELIGIBILITY:
+Age: 30 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06137716

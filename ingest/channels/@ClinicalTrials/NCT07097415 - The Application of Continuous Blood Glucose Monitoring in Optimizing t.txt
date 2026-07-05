@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07097415
+Title: The Application of Continuous Blood Glucose Monitoring in Optimizing the Management of Type 2 Diabetes
+Official Title: The Application of Continuous Blood Glucose Monitoring in Optimizing the Management of Early Onset and Late Onset Type 2 Diabetes: an Effectiveness - Implementation Type Ⅱ Hybrid Design Quasi-experimental Pragmatic Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 600
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This study investigates the effectiveness and implementation of continuous glucose monitoring (CGM) technology for type 2 diabetes management in Chinese community healthcare settings. Type 2 diabetes represents a significant public health challenge in China, with traditional blood glucose monitoring methods presenting limitations including patient discomfort, incomplete glucose data, and delayed information transmission to healthcare providers. CGM devices offer continuous, real-time glucose monitoring with the potential to improve patient outcomes and healthcare delivery efficiency.
+
+This quasi-experimental pragmatic trial employs an effectiveness-implementation Type II hybrid design, enrolling 800 adults with type 2 diabetes from two community health centers in Yinzhou District, Ningbo. Participants are randomly assigned to either a CGM intervention group or a control group using traditional self-monitoring blood glucose methods. The CGM group receives device training and wears CGM systems for three separate 2-week periods over 24 weeks, while the control group continues standard monitoring practices. The primary outcome is change in glycated hemoglobin (HbA1c) levels, with secondary outcomes including other metabolic markers, patient satisfaction, and quality of life measures. Simultaneously, the study explores implementation factors using the Consolidated Framework for Implementation Research (CFIR) through qualitative interviews with healthcare providers and quantitative surveys with patients. This comprehensive approach aims to provide evidence for CGM effectiveness in Chinese patients while identifying barriers and facilitators for successful implementation in community healthcare settings, ultimately informing strategies for improving diabetes management at the population level.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - glycosylated hemoglobin
+
+INTERVENTIONS:
+  - DEVICE: Continuous blood glucose monitoring assisted blood glucose management
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07097415

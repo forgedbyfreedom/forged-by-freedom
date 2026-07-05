@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05924295
+Title: Variations in Ketone Metabolism
+Official Title: Strategies to Augment Ketosis- Variations in Ketone Metabolism
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 400
+Topic: protein supplementation
+
+SUMMARY:
+This outcome of this study will elucidate how the phenotype of the individual modulates the KE metabolic effect. Most studies of KE have been in homogenous populations, usually young, male athletes. However, two striking experiments using identical, body weight adjusted KE doses in healthy and obese individuals found that BHB area under the curve (AUC) and removal was reduced by obesity and poor metabolic health. Similarly, ketone infusion experiments found that diabetes, obesity, and insulin resistance alter BHB metabolism. It is important to determine how obesity affects KE 'sensitivity' (i.e., breakdown and oxidation) because the increasing prevalence of obesity as a function of age. Age may be another important source of variation in ketone metabolism. The genes that control the ketone system are regulated by a cascade of transcription factors and hormones including PPARα and FGF21, which are themselves known to be affected by aging and dietary status, and the cellular protein sensor target of rapamycin (TOR). Aberrant hyperactivation of TOR with aging may reduce ketogenesis, while it was observed that a long-term ketogenic diet specifically up-regulated PPARα activity. Preliminary work revealed substantial changes across mouse lifespan in the expression of ketone-related genes in the liver such as Hmgcs2 (rate limiting for ketone production) and Bdh1 (rate limiting for BHB oxidation) between young, middle-aged, and old mice, with a nadir of gene expression in middle age before increasing again late in life. Substantial age differences were found in response to matched doses of oral KE in mice and in rats. These data may have important implications for treating people of different ages and for translating KE technologies into the Department of VA. Therefore, this project plans to study individual responses to KE ingestion across the lifespan, against the background of varying metabolic health
+
+DETAILED DESCRIPTION:
+KEs could represent a practical STAK method that does not require any change in diet. However, there is a critical need to elucidate how KE metabolism varies between individuals to inform KE use in the field. This high impact project will contribute important knowledge that aims to develop next-generation KE molecules and formulations that are designed to meet the needs of operators at different points in their career. The long-term goal is to create evidence-based guidelines for deployment of KE compounds based on individual characteristics.This is an open label, one arm study to characterize the effects of age and metabolic health on ketone responsiveness. Enrollment will include a large group representing a range of ages and metabolic health status. N of 300 will be recruited and tested at the Physical Activity and Education services facility at the Ohio State University, Columbus, OH, and an N of 100 will be recruited and tested at the Buck Institute in Novato, California. Data/sample collection will include blood (capillary and whole venous blood) and study product tolerability.This study aims to recruit equal numbers of male and female participants between the ages of 20 to 70yr. Thus, recruitment will employ a balanced sample of men and women with a range of ages (equal representation in each of the 5 included decades; 20-29yr, 30-39yr, 40-49yr, 50-59yr, 60-70yr) and metabolic health via HbA1c clinical ranges (normal: \<5.7, prediabetes: 5.7-6.4, diabetes: \>6.4). Each participant must meet all the inclusion criteria and none of the exclusion criteria at screening in order to participate.
+
+Participants that meet the initial qualifying criteria will visit the study center for a screening meeting. The participant and a member of the research team will meet in a private office to discuss the informed consent form. The informed consent form will be provided to the participant for their review, the study will be described in full detail and any questions the interested participant has will be encouraged and responded to. If they choose to participate in the study, they will be asked to sign the consent form providing written consent. The participant will be informed that even though they signed the consent form, their participation in the study is dependent on anthropometric measures and diet and medical questionnaire answers to determine if they meet the study criteria.
+
+If the participant provides consent, they will be provided with questionnaires including Automated Self-administered 24-hour Dietary Assessment Tool (ASA24®),and medical history. All collected samples and data will be coded to maintain participant anonymity. Participants will be given a small volume of Study Product to screen for tolerance of the bitter tasting Study Product. Height, weight and body composition using bioelectrical impedance will also be measured. A1CNow+, HbA1c Blood monitor kit will be used to assess HbA1c score. Both body composition and HbA1c score to strat
+
+PRIMARY OUTCOMES:
+  - Capillary d-BHB
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Ketone Supplement
+  - BEHAVIORAL: Beverage Tolerability Questionnaire (BTQ) and satiety visual analogue scale
+  - BIOLOGICAL: Blood Draw
+  - OTHER: Urine Analysis
+
+ELIGIBILITY:
+Age: 20 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05924295

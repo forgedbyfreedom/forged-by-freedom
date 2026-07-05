@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05385328
+Title: Multisensorial Analysis of Human Activity for Diagnosis and Early Detection of Functional Limitations
+Official Title: Multisensorial Analysis of Human Activity for Diagnosis and Early Detection of Functional Limitations (EYEFUL)
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 50
+Topic: high intensity interval training
+
+SUMMARY:
+Physical and cognitive changes provoked by a pathology worsen the functional capability of the individual making it more difficult to perform Activities of Daily Living (ADLs) and causing dependency and/or disability. There are standardized observational tests for the clinical assessment of the degree of functional limitation in basic or instrumental ADLs (e.g., Assessment Motor and Process Skills - AMPS). On the other hand, all these tests bear the problem of the subjectivity of the evaluator in the analysis. The presence of the evaluator in the test may have an influence in the way a subject performs ADLs.
+
+The goal of the project is to develop a methodology to design, implement and validate automatic clinical tests of functional limitation, that: 1) give objective assessments with clinical validity, and 2) remove the interference in the test execution caused by the physical presence of the evaluator.
+
+DETAILED DESCRIPTION:
+Physical and cognitive changes provoked by a pathology worsen the functional capability of the individual making it more difficult to perform Activities of Daily Living (ADLs) and causing dependency and/or disability. There are standardized observational tests for the clinical assessment of the degree of functional limitation in basic or instrumental ADLs (e.g., Assessment Motor and Process Skills - AMPS). On the other hand, all these tests bear the problem of the subjectivity of the evaluator in the analysis. The presence of the evaluator in the test may have an influence in the way a subject performs ADLs.
+
+The goal of the project is to develop a methodology to design, implement and validate automatic clinical tests of functional limitation, that: 1) give objective assessments with clinical validity, and 2) remove the interference in the test execution caused by the physical presence of the evaluator. The human evaluator subjectivity will be replaced with an automatic system that extracts multimodal (i.e., multisensorial) information from the environment during the user functional assessment. Specifically including audio, video and depth sensors and the information collected from wearable sensors that the subject under test may carry. The objective assessment will also provide clues that, given the subject clinical history, can be used for early detection of limitations.
+
+This problem has not been systematically addressed in the literature. The project is thus a first solution of the development and clinical validation of an automated system that allows an objective evaluation of observational tests. Tackling the clinical assessment of functional limitations will be then performed in an adapted real environment (equipped with the adequate electronic sensors) in the URJC facilities.
+
+The EYEFUL-URJC subproject has a key role in the methodological design and clinical validation of the automatic evaluation tools. They will also carry out the actual tests over normal subjects and patients comparing the output of the current tools, as AMPS, with the output of the assessment tools developed for the project. In order to extract relevant features from video, depth, audio and other sensors, the project leverages the research experience on automatic sensing of human activities in intelligent spaces of EYEFUL-UPM and EYEFUL-UAH. The EYEFUL-UPM subproject concentrates in the analysis of the subject face, head pose, gaze, and accurate 3D alignment of the facial landmarks, that enable the estimation facial attributes useful for different tests (i.e., focus of attention, presence of pain, confusion, fear, etc.). The EYEFUL-UAH subproject concentrates the analysis on the user whole body activity and her/his interaction with objects, with depth and video sensors, and integrating also audio and wearables' data to automatically assess the functional capability of the evaluated persons. The three coordinated groups approach the project in an interdisciplinary way,
+
+PRIMARY OUTCOMES:
+  - Physical measures
+  - Physical measures 2
+  - Accelerometry
+  - Accelerometry 2
+  - Accelerometry 3
+
+INTERVENTIONS:
+  - DEVICE: EYEFUL: healthy people
+  - DEVICE: EYEFUL: people with pathology
+
+ELIGIBILITY:
+Age: 18 Years to 99 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05385328

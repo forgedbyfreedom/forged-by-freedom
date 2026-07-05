@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05115474
+Title: Study of Screening Brain MRIs in Stage IV Breast Cancer
+Official Title: Phase II Study of Screening Brain MRIs in Stage IV Breast Cancer
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 170
+Topic: growth hormone treatment
+
+SUMMARY:
+The study is a single arm, nonrandomized phase II prospective study, with the goal of investigating the role of screening brain MRIs in neurologically asymptomatic patients with metastatic breast cancer.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Rate of Brain Metastasis
+  - Rate of Brain Metastasis
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Magnetic Resonance Imaging
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05115474

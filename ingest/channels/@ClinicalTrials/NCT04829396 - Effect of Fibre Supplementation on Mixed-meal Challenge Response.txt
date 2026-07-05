@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04829396
+Title: Effect of Fibre Supplementation on Mixed-meal Challenge Response
+Official Title: A Randomized, Double-blind, Placebo-controlled Crossover Study to Assess the Effect of 12-week Fibre Supplementation on Mixed-meal Challenge Response in Adults
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 64
+Topic: protein supplementation
+
+SUMMARY:
+Improving healthy physiological processes through nutritional intervention, as opposed to restoring physiology after disease occurrence, is an important new avenue for the reduction of disease burden in the population. A relatively new target for interventions is the gut microbiome. Dietary fibre is a nutritional intervention shown to alter gut microbiome and function. The present study aims to elucidate the relationship between microbiome modulation with dietary fibre and health. In order to assess health improvement, a meal challenge will be given to characterize the physiological processes and their resilience to challenge in healthy volunteers before and after microbiome modulation.
+
+DETAILED DESCRIPTION:
+The gut microbiome has been extensively implicated as an organ involved in various physiological processes such as nutrient and drug metabolism, microbial protection and immunomodulation. The gut microbiome educates the host immune system, promotes homeostasis and protects against systemic inflammation, among other things through production of short-chain fatty acids (SCFAs). An altered microbiome is also involved in inducing low-grade systemic inflammation by translocation of bacterial lipopolysaccharide (LPS) through the intestinal lining. Additionally, the gut microbiome produces trimethylamine (TMA), which when oxidized to trimethylamine N-oxide (TMAO) is documented as an indicator of endothelial dysfunction and cardiovascular health risk. The goal of the present study is to further clarify the relationship between the gut microbiome, homeostasis, immunity and health. This will be achieved by introducing an intervention known to alter gut microbiome characteristics, dietary fibre, and measuring its effect on the gut microbiome on the one hand and the response to metabolic challenge on the other.
+
+Fibre mixtures consisting of indigestible carbohydrates have been shown to alter the composition and function of the gut microbiome. Fibre functions as a substrate for fermentation, creating SCFAs, and as a food source for bacterial commensals regarded as beneficial. Thus, fibre can shift the balance of microbial species in the gut towards beneficial commensals and away from potential pathogens. Moreover, these changes in composition and function of the microbiome can feasibly affect integrity of intestinal lining, TMA production and various other processes, therefore exerting an effect on low-grade inflammation, cardiovascular and metabolic health. The gut microbiome can be analysed using 16s RNA sequencing, quantifying the relative abundance of various bacterial species, and by measuring SCFAs in human plasma, quantifying their production by bacteria in the gut. In this study, we will integrate a third method to measure the gut microbiome. The I-screen, developed by TNO, is a platform in which the in vivo microbiome composition can be mimicked in an in vitro system, allowing for experimental analysis of the effects of compounds and ingredients on the microbiome. With this method, the processes and conditions affecting microbiome composition can be assessed more closely, possibly clarifying specific relationships between intervention and microbiome composition.
+
+The present study aims to assess the effects of this microbiome modulation by evaluating the response to a metabolic challenge, quantified through measurement of a metabolic and inflammatory biomarker panel to create a composite outcome called 'resilience'. This phenotypical flexibility test (PhenFlex, PFT), consisting of a mixed meal with protein, fat and glucose, induces a systemic response which when analysed allows for sensitive assessment of subtle health benefits in otherwise healthy s
+
+PRIMARY OUTCOMES:
+  - Microbiome changes
+  - Microbiome changes
+  - Microbiome changes
+  - Microbiome changes
+  - Microbiome changes
+
+INTERVENTIONS:
+  - OTHER: placebo
+  - DIETARY_SUPPLEMENT: Fibre mixture
+
+ELIGIBILITY:
+Age: 45 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04829396

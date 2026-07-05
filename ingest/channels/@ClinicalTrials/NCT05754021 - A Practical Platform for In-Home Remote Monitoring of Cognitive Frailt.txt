@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05754021
+Title: A Practical Platform for In-Home Remote Monitoring of Cognitive Frailty
+Official Title: Tele-CF: A Practical Platform for Remote Monitoring of Cognitive Frailty
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: weight loss exercise
+
+SUMMARY:
+Cognitive frailty, characterized by the coexistence of physical frailty and cognitive impairment, is a robust indicator of cognitive decline. Recognizing its significance, the International Association of Gerontology and Geriatrics and the International Academy on Nutrition and Aging have advocated for the use of cognitive frailty assessment as a means of monitoring the progression of mild cognitive impairment towards debilitating conditions like dementia, Alzheimer's disease, and loss of independence. Despite the clear need, a practical and remotely accessible tool for measuring cognitive frailty is currently lacking, especially within the context of telehealth visits. With telehealth video-conferencing becoming increasingly popular, accepted by healthcare payers, and preferred by older adults who may face difficulties traveling to a clinic, there is a pressing need for a software-based solution for remote cognitive frailty assessment that can be easily integrated into existing telehealth systems. This study proposes designing and validating a video-based solution to remotely monitor cognitive-frailty in older adults.
+
+DETAILED DESCRIPTION:
+The investigators are proposing to evaluate the feasibility and accuracy of the Frailty Meter (FM), a cutting-edge video-based solution for remotely assessing frailty. FM determines frailty phenotypes, such as weakness, slowness, reduced range-of-motion, and exhaustion, by quantifying the results of a 20-second rapid repetitive elbow flexion-extension task captured by a standard video camera. Image processing algorithms are then used to estimate the angular velocity of the elbow, and a previously validated model is employed to calculate frailty phenotypes from the speed of elbow rotation. Furthermore, FM can also be used to assess cognitive impairment when applied during dual-task conditions, such as while performing a working memory task. The objective of this study is to validate the effectiveness of this video-based solution in tracking longitudinal changes in cognitive-motor function among older adults.
+
+PRIMARY OUTCOMES:
+  - Change in cognitive function from baseline to 6 months and 12 months
+  - Change in cognitive frailty performance every other month from baseline to 12 months
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 50 Years to 95 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05754021

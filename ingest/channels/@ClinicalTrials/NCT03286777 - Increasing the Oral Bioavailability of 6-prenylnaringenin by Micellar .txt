@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03286777
+Title: Increasing the Oral Bioavailability of 6-prenylnaringenin by Micellar Solubilization
+Official Title: Increasing the Oral Bioavailability of 6-prenylnaringenin by Micellar Solubilization
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: beta-alanine
+
+SUMMARY:
+Micellar encapsulation will be tested to increase the oral bioavailability in humans of 6-prenylnaringenin (6-PN) from hops (Humulus lupulus). The study follows a single dose (250 mg 6-PN), placebo controlled, randomized, double-blind, three armed crossover study design with ≥2-week washout periods. Plasma, urine and PBMC samples will be collected at intervals up to 24 h after intake of the native compound, the micellar formulation or placebo. The safety, pharmacokinetics and impact of oral prenylflavonoids on PBMC survival will be investigated.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Mean area under the curve (AUC) of plasma concentration vs. time of total 6-PN [nmol/L*h]
+  - Mean maximum plasma concentration (Cmax) of total 6-PN [nmol/L]
+  - Time to reach maximum plasma concentration (Tmax) of total 6-PN [h]
+  - Cumulative urinary excretion of total 6-PN [nmol/g creatinine]
+  - Cell count (dead cells/ml and living cells/ml) of PBMCs after 6-PN administration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Native 6-prenylnaringenin
+  - DIETARY_SUPPLEMENT: Micellar 6-prenylnaringenin
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03286777

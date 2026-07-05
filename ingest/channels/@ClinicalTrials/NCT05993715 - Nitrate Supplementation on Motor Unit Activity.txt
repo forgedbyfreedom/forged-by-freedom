@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05993715
+Title: Nitrate Supplementation on Motor Unit Activity
+Official Title: Influence of Nitrate Supplementation on Motor Unit Activity During Recovery Following a Sustained Ischemic Contraction.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: recovery exercise
+
+SUMMARY:
+This study aimed to assess if nitrate supplementation influence motor unit (MU) activity following a sustained ischemic contraction and whether this is affected by blood flow restriction (BFR) during the recovery period. Fourteen male participants (mean ± SD, 25 ± 6 years) completed two experimental trials following 5-days of supplementation with either nitrate-rich (NIT) or nitrate-depleted (PLA) beetroot juice in a randomized, double-blinded, cross-over design. Intramuscular electromyography was used to assess MU potential (MUP) size and firing rates (MUFR) during a submaximal (25% MVC) sustained isometric contraction with BFR. These variables were also assessed during a 90 s recovery period with the first half completed with, and the second half completed without, BFR. Nitrate supplementation can expedite the recovery of MUP duration following a sustained ischemic contraction in healthy adults. These novel observations improve understanding of the effects of nitrate on the recovery of neuromuscular function post-exercise and might have implications for recovery of muscle contractile function.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Plasma Nitrite Level
+  - Motor Unit Activity
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Nitrate supplementation
+  - DIETARY_SUPPLEMENT: Placebo supplementtaion
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05993715

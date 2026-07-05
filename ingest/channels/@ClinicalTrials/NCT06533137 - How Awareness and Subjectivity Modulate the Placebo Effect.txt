@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06533137
+Title: "How Awareness and Subjectivity Modulate the Placebo Effect"
+Official Title: Evaluating the Impact of Perceived Control on Placebo Effectiveness: A Comparison Between Classic and Self-Administered Placebo Paradigms
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 84
+Topic: caffeine exercise
+
+SUMMARY:
+This study consists of a three-group experimental design (active placebo, passive placebo, control) with the primary outcome being perceived fatigue during a cycle ergometer training session. A pre-intervention assessment is planned, in which participants complete (online, via Qualtrics) the Borg Rating of Perceived Exertion (Borg CR10 Scale) and the Positive and Negative Affect Schedule (PANAS; scale for assessing positive and negative emotions). During the intervention, which consists of a cycle ergometer session with 10 minutes of warm-up and 10 minutes of more intense activity, participants will wear a heart rate monitor (Garmin HRM-Pro) to record heart rate and respiratory rate. In addition to these outcomes, distance traveled and speed achieved, extracted from the cycle ergometer data, will also be considered. At the end of the session, the pre-intervention assessment (Borg CR10 and PANAS) will be repeated, and a perceived control scale (Locus of Control of Behaviour) will also be administered.
+
+DETAILED DESCRIPTION:
+The experimental phase of the study will take place at the gym of the IRCCS Fondazione Don Gnocchi. Participants will be invited to attend without having consumed caffeine or alcohol in the previous 6 hours and will be informed that the study consists of a session on the cycle ergometer (hence, they will be asked to wear appropriate clothing).
+
+Through an anonymous link on Qualtrics, participants will initially complete a scale of perceived exertion (Borg Rating of Perceived Exertion) and the PANAS. They will be provided with a chest strap (Garmin HRM-Pro) to monitor heart rate and respiratory rate (the strap will be washed and disinfected after each session), connected to a device capable of reading the data (Garmin Forerunner 245).
+
+Subsequently, each participant will perform a first session, consisting of a 10-minute warm-up (a cadence of 70-80 RPM will be requested). At the end of this first session, in all three conditions, participants will be asked to perform a modified 10-minute maximal test using a classic protocol. Participants will be asked to pedal "with full force" for 10 minutes. During the test, no visual or verbal feedback will be provided. Participants will be blind to the cycle ergometer screen, so the data will not influence their behavior. Respiratory physiological measures and heart rate will be continuously recorded throughout the exercise period and during the participant's recovery. Although the test condition is identical across the three groups, they differ in the type of manipulation they will receive:
+
+Active placebo group. Following the 10-minute warm-up, participants will be presented with a hypoglycemic energy drink (actually a ginger-flavored drink) to be consumed as needed, explicitly stating, "You have at your disposal 10 ml of this particularly energizing, hypoglycemic, caffeine-based drink, designed to reduce fatigue and improve performance. You can decide when it is time to consume it." The researcher will note the moment of consumption.
+
+Passive placebo group. Following the 10-minute warm-up, participants will be presented with a hypoglycemic energy drink (actually a ginger-flavored drink) to be consumed as needed, explicitly stating, "Before continuing, consume this particularly energizing, hypoglycemic, caffeine-based drink, designed to reduce fatigue and improve performance."
+
+Control group. Following the 10-minute warm-up, participants will be presented with a mineral-based drink (actually a ginger-flavored drink), described as such ("Before continuing, consume this mineral-based drink"), which the participant will consume before proceeding with the proposed exercise.
+
+At the end of the exercise, the pre-intervention assessment (Borg CR10 and PANAS) will be repeated, and a perceived control scale (Locus of Control of Behaviour) will also be administered. Upon completion, a debriefing will be provided with an overall explanation of the theory and expected results. Along with the final debriefing, which rev
+
+PRIMARY OUTCOMES:
+  - Borg Rating of Perceived Exertion
+  - Positive and Negative Affect Schedule
+  - Socio-demographic variables
+
+INTERVENTIONS:
+  - OTHER: Neutral ginger-flavored drink described as energizing, hypoglycemic, caffeine-based drink
+  - OTHER: Neutral ginger-flavored drink
+  - OTHER: Neutral ginger-flavored drink
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06533137

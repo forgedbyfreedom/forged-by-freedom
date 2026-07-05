@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01323283
+Title: Study of Omega-3 Fatty Acids Regarding Ergogenic, Anti-inflammatory and Obesity Inhibitory Effects in 8 Year Old Children
+Official Title: Intervention Study of the Ergogenic, Anti-inflammatory and Obesity Inhibitory Effects of Omega-3 Fatty Acids in 8 Year Old Children
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 423
+Topic: omega 3 exercise
+
+SUMMARY:
+This study hypothesizes that supplementation of omega-3 fatty acids (OM3) can increase physical activity, inhibit rapid gain in body weight and BMI in both sedentary and normally active 8 year old children. The purpose is secondarily to explore patterns of associations between OM3 supplementation, baseline and follow-up levels in all studied parameters. The study also aims to study if basal levels of OM3 are correlated with physical activity and to study if there is an association between basal levels of OM3 and the effect of OM3 supplementation on physical activity. To study if there is an effect of OM3 supplementation on triglyceride and LDL cholesterol levels and to study if there are more pronounced effects on children with higher levels. To study if OM3 supplementation, compared with placebo reduce weight increase among children at risk to become overweight. To study if there is an association between effects of OM3 on physical activity, weight and risk markers in blood. To study if there are any gender differences.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Total physical activity
+  - Body mass
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 7 Years to 9 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01323283

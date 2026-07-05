@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03993821
+Title: Burosumab for CSHS
+Official Title: An Open Label Trial to Assess the Safety and Efficacy of Burosumab in a Single Patient With Cutaneous Skeletal Hypophosphatemia Syndrome (CSHS)
+Status: UNKNOWN
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 1
+Topic: vitamin D muscle
+
+SUMMARY:
+Burosumab (also known as the drug, Crysvita®) is a fully human immunoglobulin G1 (IgG1) monoclonal antibody (mAb) that binds to and inhibits the activity of fibroblast growth factor 23 (FGF23), leading to an increase in serum phosphorus levels. This drug is already approved for use in patients with X-linked hypophosphatemia (XLH), but not for Cutaneous Skeletal Hypophosphatemia Syndrome (CSHS). It is hypothesized that burosumab may provide clinical benefit to a patient with CSHS due to the common underlying feature in this patient and in patients with XLH - abnormally elevated FGF23 in the context of low age -adjusted serum phosphorous levels.
+
+DETAILED DESCRIPTION:
+There are multiple disorders (each with a unique underlying cause) that result in unusually high circulating levels of FGF23, which in turn result in renal phosphate wasting and reduced (or aberrantly normal in relationship to elevated FGF23) levels of 1,25-dihydroxy vitamin D (1,25\[OH\]2D). Across these disorders the clinical symptoms are similar and often include osteomalacia (and, in children, rickets), muscle weakness, fatigue, bone pain, and fractures. Burosumab has been FDA-approved for one of these disorders, X-linked hypophosphatemia (XLH). In single- and repeat-dose clinical studies in subjects with XLH, subcutaneous (SC) administration of burosumab consistently increased and sustained serum phosphorus levels and tubular reabsorption of phosphate (TRP) and improved radiologic rickets, without a major impact on urine calcium levels. Positive results were also observed in a nonclinical pharmacology model of XLH. It is hypothesized that burosumab may provide clinical benefit in this patient due to the common underlying feature in this patient and in patients with XLH - abnormally elevated FGF23 in the context of low age -adjusted serum phosphorous levels.
+
+PRIMARY OUTCOMES:
+  - Serum Phosphorus change
+
+INTERVENTIONS:
+  - DRUG: Burosumab
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03993821

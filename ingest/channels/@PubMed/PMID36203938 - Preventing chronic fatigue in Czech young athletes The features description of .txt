@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36203938
+Title: Preventing chronic fatigue in Czech young athletes: The features description of the "SmartTraining" mobile application.
+Authors: Bernacikov&#xe1;, Kumst&#xe1;t, Bure&#x161;ov&#xe1;, Kapounkov&#xe1;, Struh&#xe1;r
+Journal: Frontiers in physiology
+Year: 2022
+Topic: burnout athletes prevention
+
+ABSTRACT:
+This study describes a beta version of a mobile application (app) that focuses on preventing chronic fatigue in Czech youth athletes. The first version of the SmartTraining app was developed for athletes as a way to prevent chronic fatigue via alertness and education. For alertness, a multistage process was developed using a combination of parameters about training responses, such as tiredness, well-being, heart rate, energy balance and psychological, and health-related aspects. According to the combination of the multistage parameter outcomes, the algorithm classifies the risk of fatigue based on semaphore light: green corresponds to low, yellow to moderate and red to high risk. The education presented in the app consisted of written and "animated videos" material about the variables involved in training, such as training demands and athletes' responses, regeneration, nutrition and communication between athletes, coaches, and parents. Subsequently, a beta version of the app was created and freely available to download for Android or iOS mobile. The app can be used in daily routines to reduce the risk of chronic fatigue from inadequate training dose response. Prevention can minimise the risk of injury or physical and emotional burnout in youth. Informing athletes on how to carefully handle the training factors can improve athletes' awareness of their performance and health status. Collaboration between sports scientists and the commercial sector allows for the efficient development of an easy-to-use and low-cost tool for use in sports settings. Future steps should be performed to validate the app's accuracy in its alertness and in the efficiency of the educational process.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36203938/

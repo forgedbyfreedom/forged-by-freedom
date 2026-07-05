@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01765946
+Title: Metformin and Longevity Genes in Prediabetes
+Official Title: Effects of Metformin on Longevity Gene Expression and Inflammation and Prediabetic Individuals. A Placebo-controlled Trial
+Status: COMPLETED
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Pre-diabetes, a condition characterized by hyperglycaemia, is associated with increased cardiovascular risk and reduced life expectancy, as compared to the general population. AMP-activated protein kinase (AMPK) is an enzyme that plays a key role in cellular energy homeostasis and metabolism, and recently it has been demonstrated that AMPK regulates aging pathways, as well. AMPK is susceptible to modulation through pharmacologic (e.g. metformin) and non-pharmacologic (e.g. physical exercise) interventions. This clinical trial aims to describe the effects of the AMPK pathway on longevity genes and inflammation in the setting of pre-diabetes in vivo and in vitro. To this end, the investigators will compare treatment with metformin (500 mg t.i.d) for 2 months, versus placebo in pre-diabetic subjects. The investigators will assess expression of longevity genes SIRT1, p66Shc, p53 and mTOR in peripheral blood mononuclear cells (PBMCs) ex vivo. The investigators will evaluate monocyte polarization by flow cytometry, according to the expression of surface antigens (CD68, CCR2, CD163, CD206, CX3CR1) to determine the prevalence of pro- or anti-inflammatory cells. Inflammatory cytokines (TNF-alpha, MCP-1, IL-1, IL-6, IL-10, CCL12) will also be determined. In the in vitro study the investigators will evaluate the effects of AMPK activation or inhibition on longevity gene and protein expression.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Longevity gene expression
+
+INTERVENTIONS:
+  - DRUG: Metformin
+  - DRUG: placebo
+
+ELIGIBILITY:
+Age: 40 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01765946

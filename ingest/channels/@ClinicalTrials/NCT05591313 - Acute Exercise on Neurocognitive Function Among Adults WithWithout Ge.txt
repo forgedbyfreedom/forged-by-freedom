@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05591313
+Title: Acute Exercise on Neurocognitive Function Among Adults With/Without Generic Risk of AD
+Official Title: Acute Exercise Effect on Neurocognitive Function Among Cognitively Normal Late-Middle-Aged Adults With/Without Generic Risk of Alzheimer's Disease: The Moderation Role of Exercise Volume and Apolipoprotein E Genotype
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: aerobic exercise
+
+SUMMARY:
+This study explores the acute exercise effect on neurocognitive function and also its potential moderators in an exercise setting and Apolipoprotein E (APOE) genetic risk.
+
+DETAILED DESCRIPTION:
+Acute exercise has emerged as a modifier to multiple aspects of cognitive function; however, its effect on populations with different risks of Alzheimer's disease (AD) and the role of exercise variance and APOE genotype within the effect reminds underestimated. The current study aimed to examine the acute exercise effect on neurocognitive function from behavioral and neuroelectric perspectives among cognitively normal late-middle-aged adults. Additionally, we determined whether variations in exercise intensity and duration and the presence of the APOE ɛ4 allele modulated the effect.
+
+PRIMARY OUTCOMES:
+  - Stroop task: Response time
+  - Stroop task: Accuracy
+  - Event-related potential: P3 amplitude
+
+INTERVENTIONS:
+  - BEHAVIORAL: LI-40
+  - BEHAVIORAL: MI-30
+  - BEHAVIORAL: HI-16
+
+ELIGIBILITY:
+Age: 50 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05591313

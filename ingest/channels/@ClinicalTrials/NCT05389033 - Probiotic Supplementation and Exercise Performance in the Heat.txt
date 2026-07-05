@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05389033
+Title: Probiotic Supplementation and Exercise Performance in the Heat
+Official Title: Effect of Probiotic Supplementation on Exercise Metabolism During Exercise in the Heat and Subsequent Effect on Gastrointestinal Disturbance and Gut Microbiome Composition
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: body composition exercise
+
+SUMMARY:
+Endurance athletes will be invited to participate in the following study. Subjects will visit the laboratory on three occasions, each time following an overnight fast. Briefly, following an initial assessment and familiarisation, participants will be required to complete an endurance bout of cycling exercise in hot environmental conditions before and after 4 weeks of supplementing with a probiotic or placebo. During the exercise bouts, breath samples will be collected for measurements of whole-body metabolism, blood samples will be collected to assess serum metabolites and markers of gastrointestinal (GI) damage, and subjective measures of effort and symptoms of GI thermal distress will be collected. Before and after each exercise bout, participants will be required to provide a faecal sample for analysis of the microbiome and GI inflammation
+
+DETAILED DESCRIPTION:
+Study design
+
+Participants The study is open to well-trained endurance 18-50 years (n = 24). Participants will be invited to take part in a matched-pairs design supplement intervention study. Participants will be split into two groups (n = 12), one which will supplement with a probiotic, the other a placebo, for 4 weeks.
+
+Initial assessment During the first visit, subjects will first be asked that the have read the participant information sheet, including that they fit the inclusion criteria. Participants will then be asked to complete the Readiness to Exercise Questionnaire to ensure there are no contraindications before they proceed to exercising, such as a musculoskeletal injury or any medical condition for which exercise would pose an above normal risk (e.g. heart condition). Subjects will complete an incremental cycling test to volitional exhaustion to assess VO2max and blood lactate profile. Briefly, section 1 will commence at 95W and each stage will increase by 30W every 3 min. The wattage will continue to increase until the blood lactate concentration increases beyond 4mmol·L-1. The blood LT will be defined as the second abrupt increase of blood lactate concentration around 4mmol·L-1 by means of a linear-regression break point analysis. In the last 30s of each stage, heart rate (Polar Electro, Finland) will be recorded and a capillary blood sample (fingertip) will be obtained for blood lactate concentration analysis by micro-assay (Lactate Pro LT-1710, ArkRay Inc., Kyoto, Japan). This initial stage will be followed by a 15 min recovery period. Section 2 of the test protocol will then commence at 3.33 w/kg-1 for 150 s and thereafter will be increased by 50 W for a further 150 s. Subsequently, increases of 25 W every 60 s will occur until volitional fatigue or a drop in cadence below 70 rev/min-1. VO2max will be determined as the highest 30 s VO2 consumption.
+
+After completing the initial VO2max test to determine exercise intensity and resting for 30-60 minutes, subjects will complete a familiarisation session during which they will cycle at the prescribed power output for 90 minutes followed by the time to exhaustion trial. This session will be used to familiarise subjects to the procedures of using a rectal thermometer, heart rate monitor, fluid consumption during exercise, exercise capacity test, and the timings of these throughout the experimental trial. The session will also be used to assess, and if necessary, adjust the velocity to attain the required 90% lactate threshold (\~70-80% VO2max intensity).
+
+Experimental trials On the morning of the main experimental trials at \~08:00, participants will report to the laboratory in a fasted state. A baseline blood (6 mL) and breathe sample will be collected before participants are provided with a standardized high-CHO breakfast (CHO: 2 g.kg-1 BM; PRO: 0.4 g.kg-1 BM; Fat: 0.2 g.kg-1 BM; comprising cereal, milk, orange juice, and a cake bar. This is representative of an elite real-world cycli
+
+PRIMARY OUTCOMES:
+  - Change in Gastro-Intestinal Disturbance Following Probiotic Supplementation
+  - Change in Exogenous Glucose-Fructose Oxidation Following Probiotic Supplementation
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Probiotic bacteria
+  - OTHER: Placebo Capsule
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05389033

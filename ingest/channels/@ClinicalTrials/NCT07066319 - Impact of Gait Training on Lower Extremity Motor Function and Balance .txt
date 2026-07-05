@@ -1,0 +1,107 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07066319
+Title: Impact of Gait Training on Lower Extremity Motor Function and Balance Performance in Stroke Survivors.
+Official Title: Impact of Gait Training on Lower Extremity Motor Function and Balance Performance in Stroke Survivors.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 99
+Topic: recovery exercise
+
+SUMMARY:
+This randomized clinical trial evaluates and compares the effectiveness of three physiotherapy-based rehabilitation strategies in improving gait, motor function, balance, and independence in individuals recovering from stroke. Stroke survivors often face challenges such as impaired walking, weak lower limbs, and poor postural control. Combining targeted interventions such as Proprioceptive Neuromuscular Facilitation (PNF) and Conventional Physical Therapy (CPT) may enhance functional outcomes.
+
+Ninety-nine participants were randomly assigned to one of three groups:
+
+Group A received Gait Training with PNF.
+
+Group B received Gait Training with Conventional Physiotherapy.
+
+Group C received a hybrid intervention combining PNF and Conventional Physiotherapy.
+
+All interventions were delivered over 12 weeks, in 45-minute sessions conducted three times per week. Assessments were conducted at baseline, 3 weeks, and 6 weeks post-intervention.
+
+The study used validated tools to measure progress in walking quality (Wisconsin Gait Scale - WGS), lower limb motor recovery (Fugl-Meyer Assessment - FMA-LE), balance (Berg Balance Scale - BBS), and daily functional ability (Functional Independence Measure - FIM).
+
+To enable in-depth analysis, six outcome domains were created by combining different pairs of these tools:
+
+A1: WGS + FMA-LE + FIM + BBS (overall recovery)
+
+A2: WGS + BBS (gait and balance)
+
+A3: WGS + FMA-LE (gait and motor recovery)
+
+A4: BBS + FMA-LE (balance and motor recovery)
+
+A5: WGS + FIM (gait and functional independence)
+
+A6: BBS + FIM (balance and independence)
+
+This study aims to identify the most effective rehabilitation strategy among the three to support physical recovery and improve independence in post-stroke individuals.
+
+DETAILED DESCRIPTION:
+This randomized clinical trial was conducted to investigate the comparative effects of three distinct gait-focused rehabilitation protocols on lower extremity motor function, balance performance, and functional independence in stroke survivors. The trial was carried out at the Department of Physiotherapy, Sehat Medical Complex, Hanjarwal, Lahore, over six months, following ethical approval.
+
+A total sample of 99 participants was determined using G\*Power, accounting for a 15% dropout rate. The participants were randomly allocated to one of three intervention groups (n=33 per group). Inclusion criteria required participants to be aged 40-80 years, have a confirmed diagnosis of stroke (ischemic or hemorrhagic), be at least 3 months post-stroke, and capable of understanding commands (GCS ≥ 9). Exclusion criteria included history of multiple strokes, significant comorbidities, or severe mobility or cognitive limitations.
+
+Intervention Groups:
+
+Group A (Gait Training + PNF):
+
+45-minute sessions, 3 times per week for 12 weeks, combining dynamic gait training with PNF techniques such as diagonal movement patterns, rhythmic initiation, and manual resistance to enhance neuromuscular control and coordination.
+
+Group B (Gait Training + Conventional Physiotherapy):
+
+Participants underwent overground walking, step drills, strength and balance exercises, sit-to-stand transitions, and joint mobilizations to improve postural control, muscle strength, and walking pattern.
+
+Group C (PNF + Conventional Physiotherapy):
+
+This group received PNF-based resistance and rhythmic stabilization along with traditional exercises (e.g., mobility drills, resistance training, flexibility work), excluding direct gait training.
+
+Each protocol targeted specific recovery domains, progressing in intensity and complexity over time. Functional and motor outcomes were assessed using:
+
+Wisconsin Gait Scale (WGS) for gait performance
+
+Fugl-Meyer Assessment - Lower Extremity (FMA-LE) for motor recovery
+
+Berg Balance Scale (BBS) for balance assessment
+
+Functional Independence Measure (FIM) for daily functional capability
+
+To allow for a comprehensive evaluation, outcome data were analyzed under six analytical combinations:
+
+A1: All four measures combined (WGS, FMA-LE, FIM, BBS)
+
+A2: Gait and balance (WGS + BBS)
+
+A3: Gait and motor recovery (WGS + FMA-LE)
+
+A4: Balance and motor recovery (BBS + FMA-LE)
+
+A5: Gait and functional independence (WGS + FIM)
+
+A6: Balance and independence (BBS + FIM)
+
+Statistical Analysis:
+
+Data were processed using SPSS Version 24. Descriptive statistics summarized demographic data. The Kolmogorov-Smirnov test assessed data normality. Paired t-tests and ANOVA were applied to normally distributed data, while Mann-Whitney U and Wilcoxon tests were used for non-parametric comparisons. A p-value \< 0.05 was considered statistically significant.
+
+This trial aims to determine which physiotherapy combination is most effective in promoting recovery of walking ability, balan
+
+PRIMARY OUTCOMES:
+  - Change in Wisconsin Gait Scale (WGS) Scores
+  - Change in Mobility Level (MBL) from the Functional Independence Measure (FIM)
+  - Change in Lower Extremity Motor Function (LEMF) from the Fugl-Meyer Assessment (FMA-LE)
+
+INTERVENTIONS:
+  - BEHAVIORAL: Gait Training with Proprioceptive Neuromuscular Facilitation (PNF)
+  - BEHAVIORAL: Gait Training with Conventional Physiotherapy
+  - BEHAVIORAL: Combined PNF and Conventional Physiotherapy (without direct gait training)
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07066319

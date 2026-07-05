@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05917392
+Title: Effects of Kimchi Supplementation on Gut Microbiota, DNA Methylation and Serum Proteomes
+Official Title: Effects of Polyphenol and Lactobacillus Rhamnosus Supplementation in Fermented Vegetables (Kimchi) on Gut Microbiota, DNA Methylation and Serum Proteomes in Overweight and Obese Women
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 90
+Topic: protein supplementation
+
+SUMMARY:
+Participants will ask to answer questionnaire related to general characteristic, lifestyle, dietary pattern and undergo physical examination and measurement of body composition. The subjects will be divided into 2 groups: healthy control and intervention. The intervention group was divided into 3 subgroups: the fermented vegetable (kimchi) group, the kimchi supplemented with polyphenol (Vitexin) group, or the kimchi supplemented with probiotic (Lactobacillus rhamnosus) group. The intervention group will be instructed to consume 1 pack of kimchi per day (50 g/pack) with lunch for 2 months.
+
+DETAILED DESCRIPTION:
+The subjects will be divided into 2 groups: healthy control and intervention. The intervention group was divided into 3 subgroups: the fermented vegetable (kimchi) group, the kimchi supplemented with polyphenol (Vitexin) group, or the kimchi supplemented with probiotic (Lactobacillus rhamnosus) group. The intervention group will be instructed to consume 1 pack of kimchi per day (50 g/pack) with lunch for 2 months. During the study, participants will be strongly encouraged to avoid consuming prebiotics or probiotic supplements, as well as foods such as yogurt, sour milk, fermented vegetables, and fermented fruits, especially 2 weeks before the blood and fecal examination. Compliance will be assessed by monitoring product side effects through follow-up phone calls every week to check on participants' symptoms and assessing the number of sachets or packs they actually consume.
+
+PRIMARY OUTCOMES:
+  - ฺBMI
+  - gut bacterial flora
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fermented Vegetables (Kimchi) supplementation
+  - DIETARY_SUPPLEMENT: probiotic
+  - DIETARY_SUPPLEMENT: polyphenol
+
+ELIGIBILITY:
+Age: 35 Years to 50 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05917392

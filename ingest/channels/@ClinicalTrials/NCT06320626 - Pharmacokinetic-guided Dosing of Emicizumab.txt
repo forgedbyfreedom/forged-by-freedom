@@ -1,0 +1,41 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06320626
+Title: Pharmacokinetic-guided Dosing of Emicizumab
+Official Title: Pharmacokinetic-guided Dosing of Emicizumab in Congenital Haemophilia A Patients - The DosEmi Study
+Status: RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 95
+Topic: physical activity intervention
+
+SUMMARY:
+The goal of this multicentre, prospective, open-label, cross-over clinical study is to determine whether individualized PK-guided dosing of emicizumab is non-inferior to conventional dosing of emicizumab in the prevention of bleeding in congenital haemophilia A patients.
+
+DETAILED DESCRIPTION:
+Haemophilia A is an X-linked hereditary bleeding disorder resulting from a deficiency or dysfunction of endogenous coagulation factor VIII (FVIII). Persons with haemophilia A (PwHA) suffer from spontaneous or provoked bleeding, predominantly into major joints, which eventually lead to painful and chronic disabling arthropathy. The primary goal in clinical management of haemophilia A is prevention of bleeding by self-administration of FVIII concentrates via intravenous injections.
+
+Prophylaxis with FVIII concentrates has effectively reduced treated bleeds from an annual average of 20-30 to 1-4. However, in approximately 30% of PwHA anti-FVIII antibodies (known as inhibitors) develop that interfere with FVIII replacement therapy. PwHA who develop inhibitors require alternative suboptimal therapy with (costly) bypassing agents (BPA).
+
+The first approved non-factor therapy is the bispecific, FVIII-mimicking antibody, emicizumab (Hemlibra®), which came available in the Netherlands in July 2018. Emicizumab is a humanized, bispecific antibody connecting factor IX and factor X enabling the activation of FX and subsequent thrombin generation. Emicizumab has shown to be highly effective prophylaxis in PwHA by achieving a complete eradication of treated bleeds in around 80% of PwHA (n = 374) during the second 24-week interval of treatment. Furter advantages of emicizumab are the subcutaneous administration and less frequent dosing intervals every 1, 2 or 4 weeks due to a long half-life (t ½: 28 days). Despite many PwHA are candidate for prophylaxis with emicizumab, cost limit widespread access.
+
+Currently, emicizumab is approved by F. Hoffmann-La Roche® with a loading dose of 3 mg/kg/week for four weeks and a maintenance dose of 1.5 mg/kg/week, 3 mg/kg/2 weeks or 6 mg/kg/4 weeks. These dose regimens were based on a pharmacometric approach instead of a dose finding study, and targeted a trough concentration (Ctrough) of 45 µg/ml by using pharmacokinetic (PK)simulations. Meanwhile long-term bleed data from the phase III and IV studies by the pharmaceutical company were included in pharmacokinetic (PK) and pharmacodynamic (PD) modelling studies, and the effective Ctrough was suggested at 30 µg/ml.
+
+Although this Ctrough of 30 µg/ml is substantially lower than the previous Ctrough (45 µg/ml), the dose regimens were not adjusted. Conventional dosing leads to mean concentrations of 55 µg/ml with two thirds of the observations between 40 and 70 µg/ml (i.e., SD of ±15 µg/ml). Emicizumab has been approved based on fixed body-weight-based dosing and therefore the concentration target might have been kept higher to avoid lower effectivity due to inter-patient variability. However, reduced dosing of emicizumab, either by extending the dosing interval or lowering the dose, without sacrificing its efficacy has been reported in small case series.
+
+Therefore, the investigators hypothesized that lower dosing of emicizumab targeted at Ctrough 30 μg/mL, is equally as effectiv
+
+PRIMARY OUTCOMES:
+  - Proportion of patients without treated bleeds
+
+INTERVENTIONS:
+  - OTHER: Emicizumab - PK-guided dose reduction
+  - OTHER: Emicizumab - Dosis continuation group
+  - OTHER: Emicizumab - Dose adjustment group
+
+ELIGIBILITY:
+Age: 1 Year to 
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06320626

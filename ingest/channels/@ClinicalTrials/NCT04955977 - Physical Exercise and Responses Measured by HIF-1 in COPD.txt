@@ -1,0 +1,72 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04955977
+Title: Physical Exercise and Responses Measured by HIF-1 in COPD
+Official Title: Effects of a Physical Exercise Program on the Responses Measured by HIF-1 Related to Ventilatory and Hematological Function in Patients With COPD Resident at 2600 m.s.n.m.
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 33
+Topic: aerobic exercise
+
+SUMMARY:
+Despite being considered a potentially preventable disease, COPD is classified as one of the respiratory problems with the highest prevalence and socioeconomic impact. According to the Global Initiative for Chronic Obstructive Pulmonary Disease (GOLD), people with COPD require actions that optimize quality of life by improving lung function and increasing tolerance to fatigue.
+
+Research such as those carried out by Semenza, establish that metazoan organisms such as the human species present biomolecular mechanisms for O2 homeostasis, based on transcriptional changes that allow regulating or modifying the responses necessary for the maintenance of the cellular metabolic functions. Hypoxia Induced Factor 1 (HIF-1) is the primary molecular mechanism for the regulation of O2-regulated genes in nuclear cells; Therefore, they promote adaptive mechanisms to hypoxia, through the generation of protein synthesis that favor processes such as erythropoiesis, angiogenesis, changes in oxidative metabolism and modification of the pulmonary vascular response.
+
+Research carried out in cells of people with COPD exposed to environmental hypoxia by low oxygen pressure (PO2), have shown changes in the nuclear concentrations of HIF-1, affecting the transcriptional mechanisms of specific genes for Erythropoietin (EPO), the Factor of Vascular Endothelial Growth (VEFG) and therefore limit the generation of essential proteins for systemic responses. These transcriptional mechanisms are conditioned by the structural changes of chromatin seconded by the inhibition in the performance of histone enzymes, which influences the synthesis of proteins involved in metabolic, hematological and / or ventilatory processes as a response. to hypoxia. However, the concentration and effect of HIF 1 on the synthesis of EPO and VEGF and its relationship with spirometric and hematological tests have not been studied in COPD people who live in medium altitudes and who are additionally exposed to additional hypoxic stimuli such as exercise physical.
+
+Although it is known that in COPD there is a decrease in the diffusion of O2 through the blood-gas barrier generating hypoxia and that with low PO2 there are biomolecular adaptations to favor oxygenation, perfusion, and metabolism; At the moment, the responses of HIF-1 and its effect on the generation of proteins associated with erythropoiesis and angiogenesis (EPO, FEVG) in people with COPD with physical exercise-based treatments are unknown.
+
+DETAILED DESCRIPTION:
+1. General objective
+
+   To determine the effect of a physical exercise program on the responses mediated by HIF-1 in COPD patients resident at 2600 m.s.n.n.
+2. Research question.
+
+   What is the effect of a physical exercise program on the responses mediated by HIF-1 in COPD patients resident at 2600 m.s.n.n?
+3. Type of study.
+
+   It is presented as a quasi-experimental study with intra- and inter-group comparison before and after, with an external control group. Two observations will be made in time (pre and post test); Comparisons will be made intra-group and between groups, as follows:
+
+   Experimental group 1:
+   * G1: People with a diagnosis of COPD stratified in GOLD 1-2.
+   * O1: Measurement of HIF-1, HADC 7, EPO Synthesis, VGEF Synthesis, FEV1, Hemogram.
+   * X: Application of the physical exercise program.
+   * O2: Measurement HIF-1, HADC 7, EPO Synthesis, VGEF Synthesis, FEV1, Hemogram.
+
+   Experimental group 2:
+   * G2: People with a diagnosis of COPD stratified in GOLD 3-4.
+   * O3: Measurement HIF-1, HADC 7, EPO Synthesis, VGEF Synthesis, FEV1, Hemogram.
+   * X: Application of the physical exercise program.
+   * O4: Measurement HIF-1, HADC 7, EPO Synthesis, VGEF Synthesis, FEV1, Hemogram.
+
+   Control group:
+   * G3: People without a COPD diagnosis.
+   * O5: Measurement of HIF-1, HADC 7, EPO Synthesis, VGEF Synthesis, FEV1, Hemogram.
+   * X: Application of the physical exercise program.
+   * O6: Measurement HIF-1, HADC 7, EPO Synthesis, VGEF Synthesis, FEV1, Hemogram.
+4. Phases of the study
+
+   Phase 1. Enrollment of participants and identification of baselines of HIF-1 measurements, synthesis of VEGF and EPO, Spirometry and Hemogram. Phase 2. Piloting and application of the physical exercise program in COPD residents in medium altitudes. Phase 3. Final measurement of HIF-1, synthesis of VEGF and EPO, Spirometry and Hemogram; Phase 4. Analysis of intra and intergroup results, writing final research report, socialization and publication of results.
+
+   The pilot test will be carried out with 10% of the initial sample calculated, in order to evaluate and refine the instruments to be used, verify the conditions of application of these and the procedures involved in obtaining the data, such as the times of registration of participants' participation in each session, execution of the physical exercise program and application of measurement tests.
+5. Sample size.
+
+   A sample size calculation will be performed for longitudinal studies, using the Diggle formula for both differences between individuals and between groups, taking as a reference an expected effect, differences of 7.1, 4.96, 1.14 and 0.19 for the HIF-1; 1.6, 1.1; and finally 0.6, 0.3, 0.23 and 0.052 for the effect on VEGF and EPO protein synthesis. Similarly, variances (δ2) between 0.00004489 to 6.76 were considered depending on each effect measure as reported in the literature, Table 3 shows the expected variances and effect magnitudes in detail. Additionally, two measurements
+
+PRIMARY OUTCOMES:
+  - Nuclear concentration of HIF-1
+  - VEGF protein synthesis.
+  - Synthesis of EPO protein.
+
+INTERVENTIONS:
+  - OTHER: Physical exercise program
+  - OTHER: Health education in COPD
+
+ELIGIBILITY:
+Age: 40 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04955977

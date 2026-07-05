@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06899178
+Title: Atomoxetine in Melanocortin Obesity Syndrome
+Official Title: A Phase 2, Double Blind, Randomized, Placebo-controlled Crossover Trial to Evaluate the Efficacy and Safety of Atomoxetine in Adults With Melanocortin Obesity Syndrome
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: beta-alanine
+
+SUMMARY:
+This is a phase 2 randomized placebo-controlled crossover trial to determine the safety and efficacy of atomoxetine for treating obesity caused by loss-of-function variants in the melanocortin-4 receptor (MC4R), the most common cause of genetic obesity disorders. Atomoxetine was selected for this pilot trial because it has been shown to increase brain-derived neurotrophic factor (BDNF) within the central nervous system and in peripheral circulation. Targeting BDNF is a specific strategy for treating MC4R abnormalities because BDNF functions as a downstream mediator of MC4R signaling.
+
+DETAILED DESCRIPTION:
+Targeted therapies for the treatment of monogenetic obesity are essential because typical lifestyle interventions and standard anti-obesity medications are largely ineffective as they do not correct the specific genetic defect causing abnormal energy balance. The leptin pathway is the key regulator of body weight through control of appetite and energy expenditure. In particular, the severe insatiable hunger experienced by patients with leptin pathway disorders leads not only to extreme obesity, but the unrelenting drive to seek food also causes substantial distress for patients and caregivers. While therapies have been developed for treating genetic disorders affecting the proximal portion of the leptin pathway (LEP, LEPR, POMC, PCSK1, and BBS1-22), there are no treatments for loss-of-function LOF) variants of the melanocortin-4 receptor gene (MC4R), which cause melanocortin obesity syndrome (MCOS). In various population and cohort studies, 1-6% of patients with severe, early onset obesity are found to have MC4R LOF variants, making MCOS the most common cause of genetic obesity. Brain-derived neurotrophic factor (BDNF) is a downstream mediator of MC4R signaling and, therefore, may serve as a specific target for MCOS treatment. The researchers propose repurposing a well-understood and commercially available attention-deficit hyperactive disorder (ADHD) medication, atomoxetine (FDA-approved for the treatment of ADHD in persons ages 6 years and older), for the treatment of MCOS because of animal and human studies show that this drug induces endogenous BDNF levels. Atomoxetine could potentially increase hypothalamic BDNF levels, leading to weight loss through improved anorectic signaling downstream of the abnormally functioning MC4R. A phase 2 randomized, placebo-controlled crossover trial in 20 patients with MCOS will be conducted to test this hypothesis. The study will begin in adult patients and if safety and efficacy are shown, then pediatric patients age ≥ 6 years will be studied. The primary outcome measure will be change in BMI (expressed as the percentage of the 95th percentile BMI for age/sex). Additional measures will include percent body fat and visceral fat area by bioelectrical impedance analysis, resting energy expenditure by indirect calorimetry, dietary intake by food frequency questionnaire and 24-hour recall, hyperphagia score, hunger level, satiety level, hemoglobin A1c, lipid panel, liver function tests, blood pressure, heart rate, and ADHD symptoms. Serum and plasma BDNF and genetic variants in atomoxetine metabolism enzymes will be assessed and correlated with weight changes. This pilot clinical trial will provide valuable data on the safety and efficacy of atomoxetine for treating MCOS, and the data will be used to guide the design of a future phase 3, multicenter, randomized clinical trial.
+
+PRIMARY OUTCOMES:
+  - Body Mass Index (BMI)
+
+INTERVENTIONS:
+  - DRUG: Atomoxetine
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 6 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06899178

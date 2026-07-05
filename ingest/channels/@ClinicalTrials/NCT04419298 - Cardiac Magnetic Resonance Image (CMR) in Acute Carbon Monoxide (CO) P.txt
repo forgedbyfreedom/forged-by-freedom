@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04419298
+Title: Cardiac Magnetic Resonance Image (CMR) in Acute Carbon Monoxide (CO) Poisoning
+Official Title: Evaluation for Acute and Chronic Features of Cardiac Injury by CMR in Acute CO Poisoned Patients With Elevated Troponin I (TnI)
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 104
+Topic: creatine supplementation
+
+SUMMARY:
+Previous report showed that 37% of patients with moderate to severe carbon monoxide (CO) poisoning experienced a myocardial injury, defined as elevated cardiac enzyme \[creatine kinase, CK-MB, and cardiac troponin I (TnI)\] or ischemic electrocardiogram (ECG) change. In other study, 24% of the patients with the myocardial injury after CO poisoning died during a median follow-up of 7.6 years. The myocardial injury was the major predictor of mortality. In addition, in the Taiwanese nationwide population-based cohort study, CO poisoning itself reported as a higher risk of a major adverse cardiovascular event.
+
+According to the previous study of investigators, among CO poisoned patients with myocardial injury, 74.4% of patients experienced CO-induced cardiomyopathy. All CO-induced cardiomyopathy recovered to normal status. In this situation, there is no definite approved reason why more cardiovascular events are occurred in CO poisoned patients with myocardial injury during long term follow-up period despite normalization of CO-induced elevated TnI and cardiac dysfunction.
+
+Two image cases related to cardiac magnetic resonance imaging (CMR) in acute CO poisoning previously reported. One image case reported that patient had mildly depressed left ventricular (LV) systolic function with hypokinesis of the anterior wall and regional akinesis of the inferior wall on the transthoracic echocardiography performed during hospitalization and late gadolinium-enhancement (LGE) images of CMR demonstrated multiple focal areas of high signal consistent with myocardial necrosis or fibrosis. Another image case reported an image case that in CMR, inferolateral mid-wall myocardial fibrosis, which was defined as LGE, was present despite the setting of a completely normal echocardiogram at 4-month follow-up in CO poisoned patients.
+
+Therefore, the investigators evaluate prevalence (frequency of LGE positive) and patterns (involved LV wall and range of LGE positive) of myocardial fibrosis (LGE positive) in acute CO-poisoned patients during acute (within seven days after CO exposure) and chronic phase (at 4-5 months after CO exposure) and whether LGE positive developed in acute phase have been changed through cardiac MRI performed at chronic phase. The investigators also evaluate LV ejection fraction and global longitudinal strain in transthoracic echocardiography performed at the ED (baseline) and within seven days (follow-up). The investigators also assessed the association between neurocognitive outcomes using the global deterioration scale (at 1, 6, and 12 months after CO exposure) and the presence of LGE positive.
+
+DETAILED DESCRIPTION:
+In the US, carbon monoxide (CO) poisoning accounts for 1,300 deaths and 50,000 emergency department visits annually. Previous report showed that 37% of patients with moderate to severe CO poisoning experience a myocardial injury defined as elevated cardiac enzyme \[creatine kinase, CK-MB, and cardiac troponin I (TnI)\] or ischemic electrocardiogram (ECG) change. In other study, there was a mortality of 24% of patients during a median follow-up of 7.6 years. A mortality among the patients who experienced the myocardial injury was higher than patients without the myocardial injury. The death caused by cardiovascular problems occurred more among patients with a history of the myocardial injury (44% vs. 18%). The myocardial injury was the major predictor of mortality. In addition, in the Taiwanese nationwide population-based cohort study, a history of CO poisoning showed a higher risk of a major adverse cardiovascular event.
+
+The investigators reported that myocardial injury (defined as elevated TnI or change of ischemic ECG) developed in 20% of CO poisoned patients and elevated TnI was normalized within 65.0 hours. According to previous study of the investigators, among CO poisoned patients with myocardial injury, 74.4% of patients experienced CO-induced cardiomyopathy. All CO-induced cardiomyopathy recovered to normal status. In this situation, there is no definite approved reason why more cardiovascular events are occurred in CO poisoned patients with myocardial injury during long term follow-up period despite normalization of CO-induced elevated TnI and cardiac dysfunction.
+
+One case reported an image related to a CO poisoned patient with acute myocardial injury found by cardiac magnetic resonance imaging (CMR) with a normal coronary artery confirmed by coronary angiography. In that case, a patient showed that patient had mildly depressed left ventricular (LV) systolic function with hypokinesis of the anterior wall and regional akinesis of the inferior wall on the transthoracic echocardiography performed during hospitalization and late gadolinium-enhancement (LGE) images of CMR demonstrated multiple focal areas of high signal consistent with myocardial necrosis or fibrosis. Through this case, the investigators thought that CO poisoning might result in acute myocardial necrosis, demonstrating another type of myocardial injury that can be detected by CMR. In addition, Other case reported an image case that in cardiac MRI, inferolateral mid-wall myocardial fibrosis, which was defined as LGE, was present despite the setting of a completely normal echocardiogram at 4-month follow-up in a patient who experienced severe CO poisoning.
+
+Mid-wall myocardial fibrosis has been reported in dilated cardiomyopathy (DCMP) of unclear origin. In a follow-up study of 101 consecutive patients with DCMP, mid-wall fibrosis (presented in 35% of patients) predicted a combined endpoint of all-cause mortality, cardiovascular hospitalization, and sudden cardiac death. Myoc
+
+PRIMARY OUTCOMES:
+  - Late gadolinium enhancement (LGE) in CMR
+  - LGE involved wall in CMR
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Cardiac MRI
+
+ELIGIBILITY:
+Age: 19 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04419298

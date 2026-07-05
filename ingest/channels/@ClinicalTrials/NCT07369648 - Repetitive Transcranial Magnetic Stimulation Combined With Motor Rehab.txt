@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07369648
+Title: Repetitive Transcranial Magnetic Stimulation Combined With Motor Rehabilitation Improves Motor and Functional Outcomes After Ischemic Stroke
+Official Title: Effects of Repetitive Transcranial Magnetic Stimulation Combined With Motor Rehabilitation on Motor and Functional Outcomes in Patients With Ischemic Stroke: A Randomized Sham-Controlled Trial
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 66
+Topic: recovery exercise
+
+SUMMARY:
+Ischemic stroke is a leading cause of long-term motor disability, frequently resulting in hemiplegia and limitations in daily activities and quality of life. Motor rehabilitation is a fundamental component of post-stroke care across all stages of recovery; however, functional outcomes may vary, particularly in patients with persistent motor impairment.
+
+Repetitive transcranial magnetic stimulation (rTMS) is a non-invasive brain stimulation technique that has been used as an adjunct to rehabilitation to modulate cortical excitability and potentially support motor recovery.
+
+The purpose of this study is to evaluate the effects of low-frequency rTMS combined with conventional motor rehabilitation compared with sham rTMS combined with conventional motor rehabilitation in patients with first-ever ischemic stroke during the acute, subacute, and chronic stages. Motor function, balance, functional mobility, activities of daily living, and stroke-specific quality of life will be assessed at baseline, after the intervention, and at 3-month and 6-month follow-up.
+
+DETAILED DESCRIPTION:
+This study is a randomized, sham-controlled clinical trial designed to evaluate the outcomes of repetitive transcranial magnetic stimulation (rTMS) combined with motor rehabilitation in patients with first-ever ischemic stroke presenting with hemiplegia.Participants will be recruited during the acute (\< 1 month), subacute (1-6 months), and chronic (\> 6 months) stages after stroke onset.
+
+Eligible participants will be allocated into two groups: a control group and an intervention group. Both groups will receive standardized conventional motor rehabilitation targeting upper and lower limb motor function, balance, and functional mobility.
+
+In the intervention group, participants will receive low-frequency rTMS in addition to conventional motor rehabilitation. rTMS will be delivered at a frequency of 1 Hz, once daily, five days per week, for a total of 20 sessions. For upper limb rehabilitation, stimulation will be applied to the primary motor cortex (M1) corresponding to the hand area of the contralesional hemisphere using a figure-of-eight coil. For lower limb rehabilitation, stimulation will target the leg area of M1 located in the medial interhemispheric region using a Hesed coil. Stimulation intensity will be set relative to each participant's motor threshold, and rTMS sessions will be administered immediately prior to motor rehabilitation.
+
+In the control group, participants will receive sham rTMS combined with the same conventional motor rehabilitation program. Sham stimulation will be performed using identical procedures, participant positioning, coil placement, stimulation duration, and acoustic output as the active rTMS condition. To minimize cortical stimulation, the coil will be positioned perpendicular to the scalp, producing minimal magnetic field penetration while maintaining the characteristic clicking sound of the device.
+
+To ensure blinding, participants will not be informed of their group allocation, and they will be instructed not to disclose any information related to the intervention they received prior to outcome assessments. Outcome assessors will be blinded to group assignment.
+
+Outcome measures will be assessed at baseline, immediately after completion of the intervention, and at 3-month and 6-month follow-up to evaluate motor recovery, balance, functional mobility, activities of daily living, and stroke-specific quality of life.
+
+PRIMARY OUTCOMES:
+  - Change in upper limb motor function assessed by the Fugl-Meyer Assessment for Upper Extremity (FMA-UL)
+
+INTERVENTIONS:
+  - DEVICE: Active repetitive transcranial magnetic stimulation
+  - DEVICE: Sham repetitive transcranial magnetic stimulation
+  - OTHER: Conventional motor rehabilitation
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07369648

@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07443826
+Title: CALM-AF-AI: Counteracting Age-related Loss of Muscle With AAV-Follistatin Combined With Angiogenesis-Inducing VEGF Plasmid Gene Therapy
+Official Title: CALM-AF-AI: Counteracting Age-related Loss of Muscle With AAV-Follistatin Combined With Angiogenesis-Inducing VEGF Plasmid Gene Therapy
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: sarcopenia intervention
+
+SUMMARY:
+This Phase 1/2a, open-label, non-randomized study is designed to evaluate the safety and tolerability of intramuscular AAV9-Follistatin gene therapy administered either as monotherapy or in combination with a VEGF-encoding plasmid. Secondary objectives include the assessment of preliminary signals of biological and functional activity, including changes in skeletal muscle mass and performance.
+
+DETAILED DESCRIPTION:
+Approximately 12 participants (with a potential expansion to 18-21) will be sequentially assigned to three cohorts: low-dose AAV-Follistatin monotherapy (n=3), high-dose AAV-Follistatin monotherapy (n=3), or combination therapy (AAV-Follistatin + VEGF plasmid, n=6). A cautious 3+3 dose-escalation design with sentinel dosing will be employed.
+
+All investigational products are administered via intramuscular injection into large skeletal muscles. In Cohorts 1 and 2, AAV-Follistatin is administered once on Day 1. In Cohort 3, VEGF plasmid is administered on Day 1 and Day 12 (±2 days), followed by AAV-Follistatin on approximately Day 27 (±3 days), corresponding to 15 ± 1 days after the second VEGF plasmid dose.
+
+Rapamycin will be administered for approximately two months to mitigate immune responses to the AAV vector. Participants will undergo regular safety monitoring, including clinical assessments, laboratory testing, and strength evaluations.
+
+The study enrolls adults aged 45-75 years with evidence of age-related muscle decline, who are in generally stable health and able to provide informed consent and comply with study procedures. Eligible participants must demonstrate low or acceptable antibody titers to the AAV vector and hold Próspera ZEDE eResidency or Physical Residency.
+
+Key exclusion criteria include: uncontrolled significant medical conditions; active or recent malignancy; clinically relevant immune disorders or current immunosuppressive therapy; pregnancy or breastfeeding; prior exposure to AAV-based gene therapy; or recent participation in other investigational studies.
+
+Screening (up to 7 days) includes medical history, physical examination, laboratory tests, and baseline muscle assessments (e.g., DXA, strength, and functional testing). The core study period lasts approximately 90 days (for Group 3 = 120 days), with frequent safety assessments and functional evaluations. Participants may opt into extended safety follow-up at approximately 6 and 12 months.
+
+Participation involves potential risks, including:
+
+* Immune reactions to AAV or follistatin (e.g., flu-like symptoms, elevations in liver enzymes), monitored and managed per protocol;
+* Risks associated with VEGF plasmid (e.g., transient limb pain or swelling);
+* Adverse effects related to rapamycin (e.g., mucositis, metabolic changes, increased infection risk);
+* Unknown or rare risks inherent to gene therapy. Independent safety oversight and predefined stopping rules are in place.
+
+Direct clinical benefit cannot be guaranteed. Participants may experience improvements in muscle mass, strength, endurance, or functional performance; however, this is an early-phase trial primarily designed to assess safety and feasibility. The study may contribute to the development of future therapies for age-related muscle decline.
+
+Participants should anticipate approximately three months of active participation, with optional follow-up extending to 12 months.
+
+PRIMARY OUTCOMES:
+  - Number of participants with treatment-emergent adverse events (TEAEs), including serious adverse events (SAEs)
+  - Number of participants with dose-limiting toxicities (DLTs)
+
+INTERVENTIONS:
+  - GENETIC: AAV9-Follistatin gene therapy
+  - GENETIC: VEGF Plasmid
+
+ELIGIBILITY:
+Age: 45 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07443826

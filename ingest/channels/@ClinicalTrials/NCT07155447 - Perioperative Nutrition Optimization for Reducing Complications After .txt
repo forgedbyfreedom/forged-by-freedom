@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07155447
+Title: Perioperative Nutrition Optimization for Reducing Complications After Surgical Fracture Fixation
+Official Title: Perioperative Nutrition Optimization for Reducing Complications After Surgical Fracture Fixation
+Status: NOT_YET_RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 1000
+Topic: beta-alanine
+
+SUMMARY:
+The objective of this multi-center, prospective, placebo-controlled, randomized study is to compare oral conditionally essential amino acid (CEAA) supplementation for decreasing the key postoperative complications of fracture-related infection, fracture nonunion, and skeletal muscle wasting with a placebo control (PC) after lower extremity fracture fixation. Investigators hypothesize that perioperative oral supplementation with an investigational CEAA supplement (ICS) will reduce postoperative fracture-related infections, fracture nonunion rates, and skeletal muscle wasting in patients with traumatic lower extremity fractures. This is supported by strong pilot data. Conducting a randomized controlled trial at five civilian tertiary referral centers and one military treatment facility will further study the potential benefits of oral CEAA supplementation for preventing the stated key postoperative complications in patients following high energy lower extremity orthopedic trauma. This low cost, low risk intervention has demonstrated potential to expedite Warfighter return to duty as well as potentially reducing delayed limb amputations and mortality in severely injured patients.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Compare clinical benefit of oral supplementation with CEAA versus a placebo for reducing fracture-related infection after lower extremity fracture fixation.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: CEAA supplementation
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07155447

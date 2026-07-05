@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04914910
+Title: The Steno 780G Study
+Official Title: Advanced Hybrid Closed-Loop Treatment in Adults With Type 1 Diabetes Not Meeting Glycaemic Targets: A Randomised Controlled Trial - The Steno 780G Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Treatment with insulin pumps and sensor-based glucose monitoring has proven superior to other treatment methods in type 1 diabetes. Still, the majority of people treated with insulin pumps and glucose sensors still does not meet the recommended sensor-based glycaemic targets. Automated insulin delivery systems, also known as closed-loop systems, have shown to improve TIR, TAR, and TBR compared with insulin pump and CGM systems that cannot automatically dose insulin.
+
+The primary objective of the Steno 780G study is to test the effects of the MiniMed 780G system in persons with T1D treated with insulin pump and CGM/isCGM who are not meeting glycaemic targets.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Difference between treatment groups in change in TIR (3.9-10.0 mmol/l) from baseline to Week 14
+
+INTERVENTIONS:
+  - DEVICE: Minimed 780G insulin pump
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04914910

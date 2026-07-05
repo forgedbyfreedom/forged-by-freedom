@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07337226
+Title: Association of VAgus Nerve Stimulation and Treadmill Training for GAit Rehabilitation in DE Novo Parkinson's Disease
+Official Title: Association of VAgus Nerve Stimulation and Treadmill Training for GAit Rehabilitation in DE Novo Parkinson's Disease (AVANTGARDE-PD)
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: muscle rehabilitation
+
+SUMMARY:
+The goal of this clinical trial is to learn if transcutaneous auricular vagus nerve stimulation (taVNS) can improve gait and brain function in people with diagnosis of idiopathic Parkinson's disease (PD) within 6 months. It will also help researchers learn about the safety and biological effects of taVNS when used together with physical therapy.
+
+The main questions it aims to answer are:
+
+* Does taVNS paired with physical therapy improve walking speed and gait performance in people with PD?
+* Does taVNS change brain activity or breain perfusion related to movement?
+* Does taVNS reduce markers of inflammation and neurodegeneration in blood and saliva? Researchers will compare active taVNS to sham (placebo) stimulation to see if active taVNS works better when paired with physical therapy.
+
+Participants will:
+
+* Attend 12 rehabilitation sessions over 4 weeks (three per week)
+* Receive either active or sham taVNS during each session while doing treadmill and conventional physical therapy
+* Undergo gait and cognitive testing, MRI scans, and blood and saliva collection before and after treatment
+* Return for a follow-up visit four weeks after therapy to check how long the effects last
+
+DETAILED DESCRIPTION:
+Parkinson's disease (PD) is characterized by gait disturbance, impaired mobility, and progressive involvement of neural circuits responsible for locomotion and postural control. Although physical therapy is effective, its benefits are often modest and short-lived. Transcutaneous auricular vagus nerve stimulation (taVNS) is a non-invasive neuromodulation technique that activates the auricular branch of the vagus nerve and engages ascending brainstem pathways involved in motor control, arousal regulation, and inflammatory modulation. Previous studies have shown that taVNS can influence subcortical β-band oscillations, improve gait parameters, enhance cognitive performance, and modulate systemic inflammatory markers in individuals with PD.
+
+This randomized, double-blind, sham-controlled clinical trial evaluates whether pairing taVNS with gait-focused rehabilitation enhances motor outcomes and neural plasticity in individuals with de novo PD. Participants are newly diagnosed (≤6 months) and undergo a 4-week rehabilitation program consisting of conventional physiotherapy, with or without sensorized treadmill training. Active or sham taVNS is administered during each therapy session. The study includes four parallel arms to independently assess the contributions of taVNS and treadmill-based gait training.
+
+Outcomes are assessed at baseline (T0), immediately post-intervention (T1), and at a 4-week follow-up visit (T2). Primary and secondary outcomes include quantitative gait parameters, clinical motor scales, cognitive performance, and quality-of-life measures. Exploratory outcomes include changes in cerebral blood flow measured with pseudo-continuous arterial spin labeling (PCASL), functional connectivity during a simulated gait task using fMRI, and blood and salivary biomarkers of inflammation and neurodegeneration (e.g., TNF-α, interleukins, and α-synuclein).
+
+The study aims to determine whether taVNS enhances rehabilitation-induced improvements in gait, whether these benefits persist beyond the treatment period, and whether taVNS induces measurable changes in brain perfusion, functional networks, or circulating biological markers relevant to PD pathophysiology. Results may support the development of a scalable, non-invasive therapeutic approach that can be integrated into early PD management.
+
+PRIMARY OUTCOMES:
+  - Evaluation of objective changes in gait speed (m/s) through gait analysis.
+
+INTERVENTIONS:
+  - PROCEDURE: Transcutaneous Auricular Vagus Nerve Stimulation (taVNS)
+  - PROCEDURE: Sham Transcutaneous Auricular Vagus Nerve Stimulation (Sham taVNS)
+  - OTHER: Conventional Physical Therapy (cPT)
+  - OTHER: Sensorized Treadmill Training (STT)
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07337226

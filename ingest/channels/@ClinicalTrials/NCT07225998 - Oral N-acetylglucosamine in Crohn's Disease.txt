@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07225998
+Title: Oral N-acetylglucosamine in Crohn's Disease
+Official Title: The NAGIC Study: Multi-center, Randomized, Double-blind, Placebo-controlled Cross-over Study of Oral N-acetylglucosamine in Ileal/Ileocolonic Crohn's Disease
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 40
+Topic: protein supplementation
+
+SUMMARY:
+Protein glycosylation is a critical post-translational modification that regulates protein trafficking and protein-protein interactions impacting a host of physiological processes. There is a growing appreciation of glycosylation defects in chronic human diseases, including Crohns disease. Crohns disease (CD), and the related condition of ulcerative colitis, are chronic inflammatory bowel diseases (IBD) that impact 3.1 million Americans. While the development of medications has revolutionized care of CD patients, clinical remission is only achieved in \~40% of patients a therapeutic ceiling that has not changed in 20 years. These data underscore the need for new CD treatment strategies. The investigators are focused on understanding the role of defective N-glycosylation in CD, as an innovative strategy to identify and develop new therapeutics. Depending on ancestral background, 7-25% of CD patients carry a pathogenic, missense mutation in the manganese (Mn) transporter ZIP8 (rs13107325; ZIP8 A391T). ZIP8 regulates systemic Mn homeostasis with ZIP8 391-Thr causing a relative Mn insufficiency. Mn is a required metal cofactor for enzymes regulating key cellular processes, like N-glycosylation. In the gut, protein N-glycosylation plays key roles in host-pathogen interactions, inflammation, and cell-cell interactions. The investigator's central hypothesis is that in patients carrying ZIP8 391-Thr - CD is exacerbated by aberrant N-glycosylation and that this defect can be targeted by specific, safe therapy. Supporting this hypothesis, Mn levels are reduced (\~15%) in ZIP8 391-Thr allele carriers and this is associated with a decrease in complex N-glycan branching in plasma. Further, the investigators uncovered a microbiota signature in the ileal mucosa that implicated altered bile acid homeostasis in ZIP8 391-Thr carriers. To better understand CD in ZIP8 391 carriers, the investigators generated a knock-in mouse model of ZIP8 391-Thr (Zip8393T/393T). Like patient data, the investigators observe reduced branching of N-glycans and disrupted bile acid homeostasis in the Zip8393T/393T mice. Promising human trials have shown that defects in N-glycan branching can be safely restored by raising levels of the rate-limiting metabolite UDP-N-acetylglucosamine (GlcNAc) via supplementation with free GlcNAc. The investigator's preliminary data in Zip8393T/393T mice have demonstrated that GlcNAc supplementation restores N-glycan branching deficits, rescues the defect in bile acid homeostasis, and ameliorates colitis susceptibility. Thus, the objective of the proposed research is to test a safe and effective therapy for patients carrying ZIP8 391-Thr and others who may have underlying changes in N-glycosylation.
+
+The investigators will perform a multi-center, randomized, double-blind, placebo-controlled cross-over study to test the safety and tolerability of oral GlcNAc as a proof-of-concept study. The investigators will use two cohorts stratified by ZIP8 391-Thr genotype status (carriers and non-carriers, n= 20 participants in each cohort, total= 40 participants).
+
+DETAILED DESCRIPTION:
+While many new medications improved care for patients with Crohn's disease, clinical remission is only achieved in \~40% of patients - a therapeutic ceiling that has not changed in 20 years. These data underscore the need for new treatment strategies and (the investigators hypothesize) greater focus on personalized medicine using factors like genetics.
+
+This study is a clinical trial of oral N-acetylglucosamine (GlcNAc) in patients with Crohn's disease. The investigators are aiming for approximately half of the participants to carry a genetic variant in a gene called ZIP8. ZIP8 regulates levels of manganese and the variant lowers levels of manganese; manganese levels may also be reduced for reasons other than just ZIP8 genetics - including variation in dietary intake, water sources, and inflammation - therefore, the investigators are also enrolling participants who do not have the ZIP8 variant. Manganese is a nutrient absorbed from food that is required for glycosylation, but direct supplementation of excess manganese may carry risk of neurologic side effects. An alternative approach is to supplement with GlcNAc, the critical building block of glycosylation that regulates intestinal health and inflammation. GlcNAc is preferred given its positive safety profile and prior small studies in patients with inflammatory bowel disease that showed promising results.
+
+Key study information:
+
+* The investigators will check if the participant carries the ZIP8 variant at study enrollment. The participants can choose to be informed of ZIP8 genetics.
+* This is a randomized, double-blind, placebo-controlled, cross-over study. This study design provides the most power to determine if there is a beneficial effect of GlcNAc.
+* This means the participant will receive the study drug (GlcNAc), but will also have a period of placebo. The sequence in which the participant receives the GlcNAc or placebo is randomized. The study is blinded, meaning that the participant and the investigator will not know if the participant is receiving active drug or placebo unless there are safety concerns.
+* GlcNAc or placebo is provided to the participant as a powder that the participant will mix in a small amount of water 3 times per day.
+* GlcNAc is a naturally-occurring substance found in nature and tastes sweet when mixed with water.
+* The study runs for 18 weeks. There are brief, weekly check-ins and 7-8 in-person visits.
+* Participants will be asked to provide blood, stool, and saliva samples for a total of 7-8 times.
+* If it is possible at the participant's site, intestinal ultrasounds will be performed over the course of the study.
+
+  * Participants will be paid to participate in the study. There are no direct costs to the participants.
+
+PRIMARY OUTCOMES:
+  - Safety and tolerability: Number of Crohn's disease exacerbations
+
+INTERVENTIONS:
+  - DRUG: N-Acetylglucosamine (GlcNAc)
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07225998

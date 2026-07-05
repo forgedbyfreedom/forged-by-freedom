@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03120026
+Title: Improving Rehabilitation In Sarcopenia (IRIS)
+Official Title: A Whey Protein-based Nutritional Supplement Enriched in Vitamin D, Leucine and Calcium for Sarcopenia in Older Adults Undergoing Physical Rehabilitation the IRIS (Improving Rehabilitation In Sarcopenia) Study: a Randomized, Double-blind, Placebo-controlled Trial.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 140
+Topic: protein supplementation
+
+SUMMARY:
+This randomized, double-blind, placebo-controlled supplementation trial tested the hypothesis that nutritional supplementation with muscle-target nutritional supplementation concurrent with regular, controlled physical activity would increase the efficacy of physical rehabilitation in old adults suffering from sarcopenia
+
+DETAILED DESCRIPTION:
+This randomized, double-blind, placebo-controlled supplementation trial tested the hypothesis that nutritional supplementation with whey protein, essential amino acids - mainly leucine - vitamin D and calcium concurrent with regular, controlled physical activity would increase the efficacy of physical rehabilitation in old adults suffering from sarcopenia
+
+PRIMARY OUTCOMES:
+  - Gait speed
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Experimental product
+  - DIETARY_SUPPLEMENT: Isocaloric placebo
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03120026

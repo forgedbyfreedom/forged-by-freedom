@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02726204
+Title: Evaluation of a Wearable Exoskeleton for Functional Arm Training
+Official Title: Evaluation of a Wearable Exoskeleton for Functional Arm Training (CAREX)
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: muscle rehabilitation
+
+SUMMARY:
+The purpose of this study is to investigate how the cable-driven arm exoskeleton (CAREX) can assist task performance during 3D arm movement tasks under various experimental conditions in healthy individuals and patients with stroke. This study is designed to test motor learning with the robotic rehabilitative device CAREX under three conditions in healthy subjects and subjects with post-stroke hemiparesis.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Passive range of motion measured by goniometry
+  - Active range of motion measured by goniometry
+  - Upper extremity motor impairment measured by performance on the 33 tasks of the Fugl-Meyer Scale (FMS)
+  - Spasticity measured by the Modified Ashworth Scale (MAS)
+
+INTERVENTIONS:
+  - OTHER: Gravity Elimination Alone
+  - OTHER: Path Assistance Alone
+  - OTHER: Path Assistance and Gravity Elimination
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02726204

@@ -1,0 +1,55 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06891469
+Title: Effects of an Acute Dose of Caffeine on the Performance of CrossFit Athletes
+Official Title: Effects of an Acute High Dose of Caffeine on Physiological Responses and Performance During a Strength-Focused CrossFit® Workout: a Randomized, Double - Blinded, Crossover Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: caffeine exercise
+
+SUMMARY:
+The goal of this clinical trial was to investigate the effect of an acute dose of caffeine on CrossFit performance in young, healthy male CrossFit athletes. The main questions it aimed to answer were whether an acute dose of caffeine, compared to placebo:
+
+* Can improve performance in a specific CrossFit workout
+* Leads to a reduction in the Rating of Perceived Exertion
+* Leads to an increase in blood lactate concentration at the end of the workout
+
+Participants had to:
+
+* Complete two sessions of a specific CrossFit training program (four rounds of five exercises, 50 seconds of exercise/10 seconds of rest), 60 minutes after consuming either anhydrous caffeine (7.1 ± 0.7 mg/kg of body mass) or an equivalent amount of placebo, aiming to perform as many repetitions as possible.
+* Report subjective perception of fatigue using the Borg scale at the end of each round.
+
+DETAILED DESCRIPTION:
+Preliminary measurements The preliminary measurements included anthropometry, body composition estimation, dietary and habitual caffeine consumption assessment. To assess habitual caffeine consumption, the volunteers were asked to answer a questionnaire through an interview, which investigated the typical consumption of specific caffeine-containing foods and beverages over the past month. Additionally, medical history information was collected through personal interviews.
+
+Main tests Aerobic fitness and maximum heart rate were assessed using the 20-meter shuttle run at an indoor gymnasium. For each main session, the volunteers arrived at the gym having followed specific preparation instructions. Specifically, they were instructed to avoid intense exercise for 24 hours before the test, be hydrated, eat a carbohydrate-rich meal 3-4 hours earlier, avoid alcohol for 24 hours before the test, and refrain from energy drinks, supplements, or caffeine on the test day.
+
+The two main tests were conducted at the same time of day and under similar environmental conditions for each volunteer. After being weighed, the volunteers took either caffeine or biotin capsules, and, 40 minutes later, they began warming up so that the training session would start 60 minutes after taking the supplement. Before the warm-up, blood lactate concentration was measured using the Lactate Scout 4 automatic lactate analyzer.
+
+The volunteers executed five exercises (50 seconds on, 10 seconds off) for four rounds, aiming to perform as many repetitions as possible with the correct technique. The five exercises were push-ups, power cleans, front squats, sit-ups, and deadlifts. The power clean, front squat, and deadlift were performed with an external load of approximately 40%, 50%, and 60% of body weight, respectively.
+
+Performance was defined as the total number of repetitions per round (i.e. the sum of repetitions in all exercises per round), as well as the number of repetitions performed in each exercise per round.
+
+At the end of each round, the rating of perceived exertion (RPE) was recorded using the 6-to-20 Borg scale, and, one minute after the end of the workout, blood lactate concentration was measured again.
+
+HR was monitored using a HR monitor (Polar H10) throughout the workout and averaged over each round.
+
+Additionally, after completing the training sessions, the volunteers provided information about possible side effects (tachycardia, palpitations, feelings of anxiety/discomfort, headache, dizziness).
+
+PRIMARY OUTCOMES:
+  - Performance During CrossFit® Workout
+  - Rating of Perceived Exertion during the CrossFit program
+  - Blood lactate concentration
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Caffeine administration according to body mass (moderate intake- 7 mg/kg)
+  - DIETARY_SUPPLEMENT: Placebo (Biotin Capsules)
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06891469

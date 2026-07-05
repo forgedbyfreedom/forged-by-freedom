@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06404112
+Title: RECOVER-SLEEP: Platform Protocol, Appendix_B (CPSD)
+Official Title: RECOVER-SLEEP: A Platform Protocol for Evaluation of Interventions for Sleep Disturbances in Post-Acute Sequelae of SARS-CoV-2 Infection (PASC)
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 470
+Topic: physical activity intervention
+
+SUMMARY:
+The platform protocol is designed to be flexible so that it is suitable for a range of study settings and intervention types. Therefore, the platform protocol provides a general protocol structure that can be shared by multiple interventions and allows comparative analysis across the interventions. For example, objectives, measures, and endpoints are generalized in the platform protocol, but intervention-specific features are detailed in separate appendices.
+
+This platform protocol is a prospective, multi-center, multi-arm, randomized controlled platform trial evaluating potential interventions for PASC-mediated sleep disturbances. The hypothesis is that symptoms of sleep and circadian disorders that emerge in patients with PASC can be improved by phenotype-targeted interventions. Specific sleep and circadian disorders addressed in this protocol include sleep-related daytime impairment (referred to as hypersomnia) and complex PASC-related sleep disturbance (reflecting symptoms of insomnia and sleep-wake rhythm disturbance).
+
+DETAILED DESCRIPTION:
+Interventions will be added to the platform protocol as appendices. Each appendix will leverage all elements of the platform protocol, with additional elements described in the individual appendix.
+
+After completing Baseline assessments, participants will be randomized to an intervention group, which is based on their sleep phenotype, or into a placebo/control group.
+
+PRIMARY OUTCOMES:
+  - Change in total score of the PROMIS 8b SD to assess sleep disturbance
+  - Change in sleep onset variability, assessed using a wearable device
+
+INTERVENTIONS:
+  - DRUG: Melatonin
+  - DRUG: Melantonin Placebo
+  - DEVICE: Tailored lighting (TL) Active
+  - DEVICE: Tailored lighting (TL) Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06404112

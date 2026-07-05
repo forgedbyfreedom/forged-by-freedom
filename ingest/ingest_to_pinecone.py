@@ -24,6 +24,23 @@ _env_path = Path(__file__).parent.parent / ".env"
 if _env_path.exists():
     load_dotenv(_env_path, override=True)
 
+# ── INGEST PAUSED ─────────────────────────────────────────────────
+# Production ingest stopped by repo owner. Prevents accidental manual
+# runs, OpenAI embedding spend, and Pinecone writes.
+#
+# To resume:
+#   • Revert the commit that introduced this guard, OR
+#   • Set INGEST_FORCE_RESUME=1 in the environment for a single one-off run.
+# ─────────────────────────────────────────────────────────────────
+if os.environ.get("INGEST_FORCE_RESUME") != "1":
+    print("⏸  Pinecone ingest is PAUSED.")
+    print("    No vectors will be embedded or upserted.")
+    print("    To force a one-off run: INGEST_FORCE_RESUME=1 python "
+          "ingest/ingest_to_pinecone.py")
+    print("    To resume permanently: revert the commit that introduced "
+          "this guard and re-enable the GitHub Actions workflow.")
+    raise SystemExit(0)
+
 import tiktoken
 from openai import OpenAI
 from pinecone import Pinecone
@@ -44,18 +61,12 @@ SLEEP_BETWEEN_BATCHES = 0.3
 if not os.getenv("PINECONE_API_KEY"):
     raise RuntimeError("❌ PINECONE_API_KEY not set")
 
-# Use OpenAI directly for embeddings (cheaper, more reliable, no OpenRouter middleman)
-if os.getenv("OPENAI_API_KEY"):
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    print("📡 Embeddings: OpenAI direct")
-elif os.getenv("OPENROUTER_API_KEY"):
-    client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=os.getenv("OPENROUTER_API_KEY")
-    )
-    print("📡 Embeddings: via OpenRouter (set OPENAI_API_KEY to go direct)")
-else:
-    raise RuntimeError("❌ Need OPENAI_API_KEY or OPENROUTER_API_KEY")
+# OpenAI direct only — OpenRouter fallback was removed in phase_2B P5
+# (OPENROUTER_API_KEY env was misconfigured as an sk-proj- OpenAI key).
+if not os.getenv("OPENAI_API_KEY"):
+    raise RuntimeError("❌ OPENAI_API_KEY required (OpenRouter fallback removed in phase_2B P5)")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+print("📡 Embeddings: OpenAI direct (text-embedding-3-large)")
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index(INDEX_NAME)
 
@@ -137,15 +148,10 @@ def extract_speaker(title: str, channel: str) -> str:
         "@HouseofHypertrophy": "House of Hypertrophy",
         "@Physionic": "Physionic",
         "@DataDrivenStrength": "Data Driven Strength",
-        "@GregNuckols": "Greg Nuckols",
         "@TrevorBachmeyer": "Trevor Bachmeyer",
         "@AthleanX": "Jeff Cavaliere",
         "@JeremyEthier": "Jeremy Ethier",
         "@SeanNalewanyj": "Sean Nalewanyj",
-        "@MennoHenselmans": "Menno Henselmans",
-        "@EricHelms3DMJ": "Dr. Eric Helms",
-        "@3DMuscleJourney": "3D Muscle Journey",
-        "@AlbertNunez3DMJ": "Alberto Nunez",
         "@ReviveStronger": "Revive Stronger",
         "@IronCulturePodcast": "Eric Helms & Omar Isuf",
         # PEDs / longevity
@@ -153,33 +159,24 @@ def extract_speaker(title: str, channel: str) -> str:
         "@MPMD": "Derek (MPMD)",
         "@vigoroussteve": "Vigorous Steve",
         "@LeoandLongevity": "Leo Rex",
-        "@AnabolicDoc": "Dr. Thomas O'Connor",
-        "@AnabolicTV": "Anabolic TV",
         "@anabolicbodybuilding": "Paul Barnett (Big Paul)",
         "@anabolicuniversity": "Anabolic University",
-        "@EnhancedAthlete": "Enhanced Athlete",
-        "@TonyHuge": "Tony Huge",
         "@CoachTrevorBlack": "Coach Trevor",
         "@TannerTatteredFAQ": "Tanner Tattered",
         "@realtattered": "Tanner Tattered",
-        "@bostin_loyd": "Bostin Loyd",
         "@GeneticFreak": "Genetic Freak",
-        "@GeneticallyShredded": "Genetically Shredded",
         # Health / longevity
         "@PeterAttiaMD": "Dr. Peter Attia",
         "@FoundMyFitness": "Dr. Rhonda Patrick",
         "@SiimLand": "Siim Land",
-        "@ThomasDeLauer": "Thomas DeLauer",
         "@ThomasDeLauerOfficial": "Thomas DeLauer",
         "@DrTyna": "Dr. Tyna",
         "@hubermanlab": "Dr. Andrew Huberman",
-        "@AndrewHuberman": "Dr. Andrew Huberman",
         "@DrGabrielleLyon": "Dr. Gabrielle Lyon",
         "@johnjewett3": "John Jewett",
         "@J3University": "John Jewett",
         # Female Hormone & Menopause Experts
         "@DrStacySims": "Dr. Stacy Sims",
-        "@drmaryclairehaver": "Dr. Mary Claire Haver",
         "@DrMindyPelz": "Dr. Mindy Pelz",
         "@melrobbins": "Mel Robbins",
         # Female Science-Based Fitness
@@ -188,136 +185,84 @@ def extract_speaker(title: str, channel: str) -> str:
         "@LaurinConlin": "Laurin Conlin",
         "@megsquats": "Meg Gallagher",
         # Female Bodybuilding & Contest Prep
-        "@teamlocofit": "Team LoCoFit",
-        "@JulieLohre": "Julie Lohre",
-        "@AshleyKaltwasser": "Ashley Kaltwasser",
         "@ErinSternFitness": "Erin Stern",
         "@coachmusclenugget": "Britt Larson",
         # Women's Strength & Training
         "@CarolineGirvan": "Caroline Girvan",
-        "@KatieCrewe": "Katie Crewe",
-        "@KristyHawkins": "Kristy Hawkins",
         # Women's Mental Health & Nutrition
         "@LoriHarder": "Lori Harder",
-        "@AbbeySharp": "Abbey Sharp",
         "@PickUpLimes": "Sadia Badiei",
         "@PaulSaladino": "Dr. Paul Saladino",
-        "@CarnivoreMD": "Dr. Paul Saladino",
-        "@BenGreenfield": "Ben Greenfield",
         "@DrEricBerg": "Dr. Eric Berg",
-        "@DrEricBergDC": "Dr. Eric Berg",
         "@WhatIveLearned": "What I've Learned",
-        "@NutritionFacts": "Dr. Michael Greger",
         "@NutritionMadeSimple": "Nutrition Made Simple",
         "@KetoConnect": "Keto Connect",
         "@TheBioneer": "Adam Sinicki",
-        "@DaveFeldman": "Dave Feldman",
-        "@GojiManUK": "GojiMan",
         "@ZDoggMD": "Dr. Zubin Damania",
         "@AliAbdaal": "Ali Abdaal",
         # Powerlifting / Strength
         "@eliteftsofficial": "EliteFTS",
         "@CalgaryBarbell": "Calgary Barbell",
         "@JuggernautTrainingSystems": "Chad Wesley Smith",
-        "@WestsideBarbell": "Louie Simmons",
-        "@MarkBellSlingShot": "Mark Bell",
-        "@SuperTrainingGym": "Mark Bell",
         "@AlanThrall": "Alan Thrall",
         "@OmarIsuf": "Omar Isuf",
-        "@BenPollack": "Ben Pollack",
         "@StanEfferding": "Stan Efferding",
         "@StefiCohen": "Stefi Cohen",
-        "@LarrywheelsOFFICIAL": "Larry Wheels",
         # Strongman
-        "@EddiehallStrongman": "Eddie Hall",
-        "@BrianShawStrong": "Brian Shaw",
         "@HafporJuliusBjornsson": "Hafthor Bjornsson",
         # BJJ
         "@Chewjitsu": "Nick Albin (Chewy)",
         "@JordanTeachesJiujitsu": "Jordan Preisinger",
         "@KnightJiuJitsu": "Knight Jiu Jitsu",
-        "@BJJFanatics": "BJJ Fanatics",
         # Mindset
-        "@DavidGoggins": "David Goggins",
-        "@JockoPodcast": "Jocko Willink",
         "@JockoPodcastOfficial": "Jocko Willink",
-        "@MindPumpPodcast": "Mind Pump",
         # Bodybuilding
         "@GregDoucette": "Greg Doucette",
         "@ChrisBumstead": "Chris Bumstead",
         "@sam_sulek": "Sam Sulek",
-        "@Biolayne": "Dr. Layne Norton",
         "@ThinkBIGBodybuilding": "Scott McNally, Dave Crosland & Skipp Hill",
         "@rxmuscle": "Dave Palumbo",
         "@mountainabordog1": "John Meadows",
-        "@JohnMeadowsMountainDog": "John Meadows",
-        "@dorian_yates_official": "Dorian Yates",
         "@KaiGreene": "Kai Greene",
-        "@RichPianaRaw": "Rich Piana",
         "@BradleyMartyn": "Bradley Martyn",
         "@MattDoesFitness": "Matt Morsia",
         "@WillTennyson": "Will Tennyson",
         "@BuffDudes": "Buff Dudes",
-        "@NickTrigili": "Nick Trigili",
         "@ScottHermanFitness": "Scott Herman",
         "@MikeThurston": "Mike Thurston",
         "@hanyrambod_FST7": "Hany Rambod",
         "@StephanieButtermore": "Stephanie Buttermore",
-        "@Natacha_Oceane": "Natacha Oceane",
         "@RyanHumiston": "Ryan Humiston",
         "@BaldOmniMan": "Bald Omni Man",
         "@MassiveIron": "Steve Shaw",
-        "@SteveShawFitness": "Steve Shaw",
         "@bodybuildingcom": "Bodybuilding.com",
         "@NicksStrengthandPower": "Nick Miller",
-        "@AndreaNunezOfficially": "Andrea Nunez",
         "@HighLifeWorkout": "High Life Workout",
         "@BroScienceLife": "Dom Mazzetti",
-        "@RBTGym": "RBT Gym",
         # Calisthenics
         "@FitnessFAQs": "FitnessFAQs",
-        "@CalisthenicMovement": "Calisthenic Movement",
         "@HybridCalisthenics": "Hampton Liu",
         "@THENX": "Chris Heria",
         # Movement / Rehab
         "@SquatUniversity": "Dr. Aaron Horschig",
-        "@BenPatrick": "Ben Patrick (Knees Over Toes)",
-        "@DrJohnRusin": "Dr. John Rusin",
         # Medical Education
         "@NinjaNerdOfficial": "Ninja Nerd",
         "@ArmandoHasudungan": "Armando Hasudungan",
-        "@OsmosisOrg": "Osmosis",
         "@LecturioMedical": "Lecturio",
         "@MedCram": "Dr. Roger Seheult",
-        "@InstituteofHumanAnatomy": "Institute of Human Anatomy",
         "@AnatomyZone": "AnatomyZone",
-        "@AnatomyMB": "Anatomy MB",
         "@AnatomyBootCamp": "Anatomy Boot Camp",
-        "@DrMattAndDrMike": "Dr. Matt & Dr. Mike",
-        "@DrJohnCampbell": "Dr. John Campbell",
         "@DrBeen": "Dr. Mobeen Syed",
-        "@DrNajeebLectures": "Dr. Najeeb",
         "@Kenhub": "Kenhub",
         "@muscleandmotion": "Muscle and Motion",
-        "@SketchyMedical": "Sketchy Medical",
-        "@BoardsBeyond": "Boards and Beyond",
         "@DirtyMedicine": "Dirty Medicine",
         "@MedSimplified": "Med Simplified",
         "@MedSchoolInsiders": "Med School Insiders",
-        "@GetBodySmart": "Get Body Smart",
-        "@VisibleBody": "Visible Body",
-        "@BioDigitalHuman": "BioDigital Human",
         "@SamWebster": "Sam Webster",
-        "@Medicosis": "Medicosis Perfectionalis",
-        "@StrongMedicine": "Strong Medicine",
         "@Physeo": "Physeo",
-        "@HandwrittenTutorials": "Handwritten Tutorials",
         # Research / Journals
         "@PubMed": "PubMed Research",
         "@ClinicalTrials": "ClinicalTrials.gov",
-        "@NEJMvideo": "NEJM",
-        "@NatureVideo": "Nature",
-        "@LancetTV": "The Lancet",
         # Academic Institutions
         "@mitocw": "MIT OpenCourseWare",
         "@Stanford": "Stanford",
@@ -329,23 +274,13 @@ def extract_speaker(title: str, channel: str) -> str:
         "@UCLAHealth": "UCLA Health",
         "@DukeHealth": "Duke Health",
         "@PennMedicine": "Penn Medicine",
-        "@NorthwesternMed": "Northwestern Medicine",
         "@MassGeneralHospital": "Mass General Hospital",
-        "@MountSinaiHealth": "Mount Sinai Health",
         "@VanderbiltHealth": "Vanderbilt Health",
-        "@RushUniversity": "Rush University",
         # Sports Science / Organizations
-        "@NSCA": "NSCA",
-        "@ACSM_org": "ACSM",
-        "@ACSMNews": "ACSM",
-        "@ISSN_Sport": "ISSN",
         "@ACEfitness": "ACE Fitness",
         "@ISSAPersonalTrainer": "ISSA",
         "@NasmOrgPersonalTrainer": "NASM",
         "@ClinicalAthlete": "Clinical Athlete",
-        "@ExPhysResearch": "Exercise Physiology Research",
-        "@SportsScience": "Sports Science",
-        "@strengthandconditioningresearch": "S&C Research",
         # Science Education
         "@3Blue1Brown": "3Blue1Brown",
         "@kurzgesagt": "Kurzgesagt",
@@ -353,112 +288,111 @@ def extract_speaker(title: str, channel: str) -> str:
         "@SciShow": "SciShow",
         "@Vsauce": "Vsauce",
         "@TED": "TED",
-        "@TEDxTalks": "TEDx",
         "@TheRoyalInstitution": "Royal Institution",
         "@numberphile": "Numberphile",
         "@minutephysics": "MinutePhysics",
         "@ProfessorDaveExplains": "Professor Dave",
         # Medical Journals / Organizations
-        "@AHAScience": "American Heart Association",
-        "@EndocrineSociety": "Endocrine Society",
         "@ACPInternist": "ACP Internist",
         "@BMJupdates": "BMJ",
-        "@CellPress": "Cell Press",
-        "@Healthline": "Healthline",
         # Sports Nutrition
         "@NutritionByKylie": "Kylie Sakaida RD",
-        "@IlanaMuhlstein": "Ilana Muhlstein RD",
-        "@rpstrength": "Renaissance Periodization",
         "@CarbonDietCoach": "Carbon Diet Coach",
-        "@PrecisionNutrition": "Precision Nutrition",
         # Endocrinology
         "@DocGerryTan": "Dr. Gerry Tan",
-        "@DrSarfrazZaidi": "Dr. Sarfraz Zaidi",
-        "@DrAlanChristianson": "Dr. Alan Christianson",
-        "@TOTRevolution": "Jay Campbell",
         "@JayCampbell": "Jay Campbell",
-        "@gillettehealth": "Dr. Kyle Gillett",
-        "@TaylorMadeCompounding": "Taylor Made Compounding",
-        "@DrCraigKoniver": "Dr. Craig Koniver",
         "@ThyroidUK": "Thyroid UK",
         # Sports Psychology
         "@PeakPerformanceSports": "Dr. Patrick Cohn",
         "@DrHaleyPerlus": "Dr. Haley Perlus",
-        "@DrJoAnnDahlkoetter": "Dr. JoAnn Dahlkoetter",
-        "@SuccessStartsWithin": "Success Starts Within",
         "@BrianCainPeak": "Brian Cain",
-        "@SportPsychSolutions": "Lindsay Huddleston",
         # Performance Science
-        "@AndyGalpin": "Dr. Andy Galpin",
-        "@PerformPodcast": "Dr. Andy Galpin",
         "@TheReadyState": "Dr. Kelly Starrett",
-        "@Kabuki_Strength": "Chris Duffin",
-        "@PrehabGuys": "Prehab Guys",
         "@E3Rehab": "E3 Rehab",
         # Anti-Doping Organizations
-        "@USAntidoping": "USADA",
-        "@WABORCS": "WADA",
         "@cleanprotocol": "Clean Protocol",
         # Bodybuilding Legends
         "@RonnieColeman8": "Ronnie Coleman",
-        "@OfficialRonnieColeman": "Ronnie Coleman",
-        "@LeePriest": "Lee Priest",
-        "@kevinlevrone": "Kevin Levrone",
         "@JayCutlerTV": "Jay Cutler",
         "@PhilHeath": "Phil Heath",
         "@ShawnRay": "Shawn Ray",
-        "@FlexWheeler": "Flex Wheeler",
         "@LeeHaney": "Lee Haney",
-        "@dorian_yates_official": "Dorian Yates",
         "@KaiGreene": "Kai Greene",
         # Mutant / Bodybuilding Media
         "@MutantOfficial": "Mutant",
         "@RonHarrisMuscle": "Ron Harris",
-        "@BigRobFitness": "Big Rob",
         "@GenerationIron": "Generation Iron",
-        "@MuscleMemoirsOfficial": "Muscle Memoirs",
         "@LondonReal": "London Real",
         # Medical Organizations
-        "@FDAChannel": "FDA",
         "@NIH": "NIH",
-        "@CDCgov": "CDC",
         "@WHO": "WHO",
-        "@CochraneCollaboration": "Cochrane",
         "@JAMANetwork": "JAMA",
-        "@AmericanDiabetesAssociation": "American Diabetes Association",
         "@ObesityMedicine": "Obesity Medicine Association",
         # TRT/Hormone Clinics
         "@TRTandHormoneOptimization": "TRT & Hormone Optimization",
-        "@MensHealthClinic": "Men's Health Clinic",
         "@BalanceMyHormones": "Balance My Hormones",
         # Bodybuilding Historians
         "@NicksStrengthandPower": "Nick Miller",
-        "@GoldenEraBB": "Golden Era Bodybuilding",
         "@OldSchoolLabs": "Old School Labs",
         "@VintageGenetics": "Vintage Genetics",
         # Contest Prep Coaches
-        "@teamlocofit": "Team LoCoFit",
-        "@3DMJCoaching": "3DMJ Coaching",
-        "@JoeGordonFitness": "Joe Gordon",
-        "@PrepCoachGary": "Prep Coach Gary",
-        "@JordanPetersCoaching": "Jordan Peters",
         # Bodybuilding Podcasts
         "@MuscleIntelligence": "Ben Pakulski",
         "@MarkBellsPowerProject": "Mark Bell",
         "@RealBodybuilding": "Fouad Abiad",
         "@FouadAbiad": "Fouad Abiad",
         "@BroChat": "Bro Chat",
-        "@TheBodybuildingPodcast": "The Bodybuilding Podcast",
         # Current Pro Bodybuilders
-        "@SteveKuclo": "Steve Kuclo",
-        "@IainValliere": "Iain Valliere",
-        "@NickWalkerBodybuilder": "Nick Walker",
-        "@DerekLunsford": "Derek Lunsford",
-        "@HadiChoopan": "Hadi Choopan",
-        "@AndrewJacked": "Andrew Jacked",
         # Supplement Science
         "@ExamineCom": "Examine.com",
-        "@NutritionExamined": "Nutrition Examined",
+        # Compound Reference Databases
+        # FBF Proprietary Content
+        "@ForgedByFreedom": "Forged by Freedom",
+        "@PrecisionBloodwork": "Precision Bloodwork by Wendy & Bryan Antonelli",
+        # Compound Reference Databases
+        "@ThinkSteroids": "ThinkSteroids Reference Database",
+        "@AnabolicSteroids_UK": "Anabolic Steroids UK - IPED Reference",
+        # Sexual Health / HRT / Female Hormones
+        "@MenopauseSociety": "The Menopause Society",
+        "@SexWithDrJess": "Sex With Dr. Jess",
+        "@NickPanay": "Nick Panay - HRT Specialist",
+        "@SexHealthMatters": "Sex Health Matters",
+        "@DrMaryClaire": "Dr. Mary Claire Haver",
+        "@menopause_doctor": "The Menopause Doctor",
+        "@BalanceApp": "Balance Menopause",
+        "@NewsonHealth": "Newson Health - Dr. Louise Newson",
+        "@intimacycoordinator": "Intimacy Coordinator",
+        "@DrJenGunter": "Dr. Jen Gunter",
+        "@WomensHealthMag": "Women's Health Magazine",
+        "@DrSherry": "Dr. Sherry Ross - Women's Sexual Health",
+        "@DrKellyMcCann": "Dr. Kelly McCann - Sexual Medicine",
+        "@urologyCareFoundation": "Urology Care Foundation",
+        "@AmerUrological": "American Urological Association",
+        "@SexualWellbeing": "Sexual Wellbeing",
+        "@MensSexualHealth": "Men's Sexual Health",
+        "@ErgoLog": "Ergo-Log Research Database",
+        # Psychedelics / Alternative Medicine
+        "@PsychedelicsToday": "Psychedelics Today",
+        "@psymposia": "Psymposia",
+        "@maps_org": "MAPS - Multidisciplinary Association for Psychedelic Studies",
+        "@beckleyfoundation": "Beckley Foundation",
+        "@MyceliumTV": "Mycelium TV",
+        "@DrMatthewJohnson": "Dr. Matthew Johnson",
+        "@psychedelicmedicine": "Psychedelic Medicine",
+        "@NIMHgov": "National Institute of Mental Health",
+        # Biohacking / Longevity
+        "@DaveAspreyBPR": "Dave Asprey",
+        "@BiohackersWorld": "Biohackers World",
+        "@JohnsHopkinsMedicine": "Johns Hopkins Medicine",
+        # Performance Science
+        "@Physionic": "Nick Norwitz PhD",
+        "@TRTandHormoneOptimization": "Jay Campbell",
+        "@BarBend": "BarBend",
+        "@InsideBodybuilding": "Inside Bodybuilding",
+        "@drandygalpin": "Dr. Andy Galpin",
+        "@BretContreras1": "Bret Contreras",
+        "@joeydsmith": "Joey Smith - NeoBarbell",
+        "@nutritionfactsorg": "NutritionFacts.org",
         # Dosing Guides / Reference / Cycle Design
         "@DanDuchaine": "Dan Duchaine",
         "@CycleDesignGuide": "Forged by Freedom Cycle Design Guide",
@@ -467,8 +401,6 @@ def extract_speaker(title: str, channel: str) -> str:
         # Harm Reduction / PED Education
         "@SethFeroce": "Seth Feroce",
         "@RussoLifts": "Russo Lifts",
-        "@BodybuilderInThailand": "Bodybuilder In Thailand",
-        "@SwollenAF": "Swollen AF",
         "@EnhancedInfo": "Enhanced Info",
         "@GearGoblin": "Gear Goblin",
         "@HarmReductionGuides": "Harm Reduction Guide",
@@ -490,29 +422,18 @@ def get_namespace(channel: str, path: Path) -> str:
         # Research (highest priority)
         "@PubMed": "research_primary",
         "@ClinicalTrials": "research_primary",
-        "@NEJMvideo": "research_primary",
-        "@NatureVideo": "research_primary",
-        "@LancetTV": "research_primary",
         "@BMJupdates": "research_primary",
-        "@CellPress": "research_primary",
         # ThinkBig Priority
         "@ThinkBIGBodybuilding": "thinkbig_priority",
         "@rxmuscle": "rxmuscle_priority",
         # Medical Education
         "@NinjaNerdOfficial": "medical_education",
-        "@OsmosisOrg": "medical_education",
         "@LecturioMedical": "medical_education",
         "@MedCram": "medical_education",
-        "@InstituteofHumanAnatomy": "medical_education",
         "@Kenhub": "medical_education",
-        "@DrJohnCampbell": "medical_education",
         "@DrBeen": "medical_education",
-        "@DrNajeebLectures": "medical_education",
-        "@SketchyMedical": "medical_education",
-        "@BoardsBeyond": "medical_education",
         "@Physeo": "medical_education",
         "@AnatomyZone": "medical_education",
-        "@AnatomyMB": "medical_education",
         "@ArmandoHasudungan": "medical_education",
         "@muscleandmotion": "medical_education",
         # Academic / Hospitals
@@ -533,23 +454,16 @@ def get_namespace(channel: str, path: Path) -> str:
         "@GregDoucette": "anabolic_bodybuilding_priority",
         "@vigoroussteve": "anabolic_bodybuilding_priority",
         "@LeoandLongevity": "anabolic_bodybuilding_priority",
-        "@AnabolicDoc": "anabolic_bodybuilding_priority",
-        "@TonyHuge": "anabolic_bodybuilding_priority",
         "@CoachTrevorBlack": "anabolic_bodybuilding_priority",
         "@anabolicbodybuilding": "anabolic_bodybuilding_priority",
         "@anabolicuniversity": "anabolic_bodybuilding_priority",
         # Peptide Experts (priority namespace)
         "@TrevorBachmeyer": "peptide_priority",
         "@drtrevorbachmeyer": "peptide_priority",
-        "@TOTRevolution": "peptide_priority",
         "@JayCampbell": "peptide_priority",
-        "@DrCraigKoniver": "peptide_priority",
-        "@TaylorMadeCompounding": "peptide_priority",
-        "@gillettehealth": "peptide_priority",
         # Biohacking / Health / Longevity
         "@FoundMyFitness": "biohacking",
         "@hubermanlab": "biohacking",
-        "@AndrewHuberman": "biohacking",
         "@PeterAttiaMD": "medical_primary",
         "@DrGabrielleLyon": "medical_primary",
         "@HighIntensityHealth": "biohacking",
@@ -563,8 +477,6 @@ def get_namespace(channel: str, path: Path) -> str:
         # Sports Science / Hypertrophy
         "@DrAndyGalpin": "sports_nutrition",
         "@BradSchoenfeldPhD": "sports_nutrition",
-        "@3DMuscleJourney": "sports_nutrition",
-        "@EricHelms3DMJ": "sports_nutrition",
         "@OmarIsuf": "sports_nutrition",
         "@MuscleIntelligence": "anabolic_bodybuilding_priority",
         # Contest Prep
@@ -577,7 +489,6 @@ def get_namespace(channel: str, path: Path) -> str:
         "@J3University": "anabolic_bodybuilding_priority",
         # Female Hormone & Menopause Experts
         "@DrStacySims": "female_health_priority",
-        "@drmaryclairehaver": "female_health_priority",
         "@DrMindyPelz": "female_health_priority",
         # Female Science-Based Fitness
         "@HollyBaxter": "female_health_priority",
@@ -585,139 +496,121 @@ def get_namespace(channel: str, path: Path) -> str:
         "@LaurinConlin": "female_health_priority",
         "@megsquats": "female_health_priority",
         # Female Bodybuilding
-        "@AshleyKaltwasser": "female_health_priority",
         "@ErinSternFitness": "female_health_priority",
-        "@JulieLohre": "female_health_priority",
         "@coachmusclenugget": "female_health_priority",
         "@CarolineGirvan": "female_health_priority",
-        "@KatieCrewe": "female_health_priority",
-        "@KristyHawkins": "female_health_priority",
         "@BarbellMedicine": "medical_primary",
-        "@ThomasDeLauer": "biohacking",
-        "@BenGreenfield": "biohacking",
         "@DrEricBerg": "biohacking",
         "@SiimLand": "biohacking",
         # Sports Nutrition
         "@JeffNippard": "sports_nutrition",
         "@RenaissancePeriodization": "sports_nutrition",
-        "@Biolayne": "sports_nutrition",
-        "@3DMuscleJourney": "sports_nutrition",
-        "@EricHelms3DMJ": "sports_nutrition",
-        "@MennoHenselmans": "sports_nutrition",
         "@StrongerByScience": "sports_nutrition",
         # Sports Science
-        "@NSCA": "sports_science",
-        "@ACSM_org": "sports_science",
-        "@ACSMNews": "sports_science",
-        "@ISSN_Sport": "sports_science",
         "@ACEfitness": "sports_science",
-        "@ExPhysResearch": "sports_science",
         # Sports Nutrition (expanded)
         "@NutritionByKylie": "sports_nutrition",
-        "@IlanaMuhlstein": "sports_nutrition",
-        "@rpstrength": "sports_nutrition",
         "@CarbonDietCoach": "sports_nutrition",
-        "@PrecisionNutrition": "sports_nutrition",
         # Peptides & GLP-1
-        "@TaylorMadeCompounding": "peptides",
         "@DrSeedman": "peptides",
         "@JayCampbell": "peptides",
-        "@TOTRevolution": "peptides",
-        "@gillettehealth": "peptides",
-        "@DrCraigKoniver": "peptides",
         "@PeptidesScienceDaily": "peptides",
         # Endocrinology
         "@DocGerryTan": "endocrinology",
-        "@DrSarfrazZaidi": "endocrinology",
-        "@DrAlanChristianson": "endocrinology",
-        "@TOTRevolution": "endocrinology",
-        "@gillettehealth": "endocrinology",
         "@ThyroidUK": "endocrinology",
-        "@EndocrineSociety": "endocrinology",
-        "@AHAScience": "medical_primary",
         # Sports Psychology
         "@PeakPerformanceSports": "sports_psych",
         "@DrHaleyPerlus": "sports_psych",
-        "@DrJoAnnDahlkoetter": "sports_psych",
-        "@SuccessStartsWithin": "sports_psych",
         "@BrianCainPeak": "sports_psych",
-        "@SportPsychSolutions": "sports_psych",
         # Sports Psychology / Mindset
-        "@DavidGoggins": "sports_psych",
-        "@JockoPodcast": "sports_psych",
         "@JockoPodcastOfficial": "sports_psych",
-        "@MindPumpPodcast": "sports_psych",
         # Performance Science
-        "@AndyGalpin": "performance_science",
-        "@PerformPodcast": "performance_science",
         "@TheReadyState": "performance_science",
-        "@Kabuki_Strength": "performance_science",
-        "@PrehabGuys": "performance_science",
         "@E3Rehab": "performance_science",
         # Anti-Doping / Testing Organizations
-        "@USAntidoping": "anti_doping",
-        "@WABORCS": "anti_doping",
         "@cleanprotocol": "anti_doping",
         # Bodybuilding Legends
         "@RonnieColeman8": "bodybuilding_legends",
-        "@OfficialRonnieColeman": "bodybuilding_legends",
-        "@LeePriest": "bodybuilding_legends",
-        "@kevinlevrone": "bodybuilding_legends",
         "@JayCutlerTV": "bodybuilding_legends",
         "@PhilHeath": "bodybuilding_legends",
         "@ShawnRay": "bodybuilding_legends",
-        "@FlexWheeler": "bodybuilding_legends",
         "@LeeHaney": "bodybuilding_legends",
-        "@dorian_yates_official": "bodybuilding_legends",
         "@KaiGreene": "bodybuilding_legends",
         # Mutant / Bodybuilding Media
         "@MutantOfficial": "bodybuilding_media",
         "@RonHarrisMuscle": "bodybuilding_media",
-        "@BigRobFitness": "bodybuilding_media",
         "@GenerationIron": "bodybuilding_media",
-        "@MuscleMemoirsOfficial": "bodybuilding_media",
         "@LondonReal": "interviews",
         # Government / Medical Organizations
-        "@FDAChannel": "medical_primary",
         "@NIH": "medical_primary",
-        "@CDCgov": "medical_primary",
         "@WHO": "medical_primary",
-        "@CochraneCollaboration": "research_primary",
         "@JAMANetwork": "research_primary",
-        "@AmericanDiabetesAssociation": "medical_primary",
         "@ObesityMedicine": "medical_primary",
         # TRT/Hormone Optimization
         "@TRTandHormoneOptimization": "endocrinology",
-        "@MensHealthClinic": "endocrinology",
         "@BalanceMyHormones": "endocrinology",
         # Bodybuilding Historians
         "@NicksStrengthandPower": "bodybuilding_history",
-        "@GoldenEraBB": "bodybuilding_history",
         "@OldSchoolLabs": "bodybuilding_history",
         "@VintageGenetics": "bodybuilding_history",
         # Contest Prep Coaches
-        "@teamlocofit": "contest_prep",
-        "@3DMJCoaching": "contest_prep",
-        "@JoeGordonFitness": "contest_prep",
-        "@PrepCoachGary": "contest_prep",
-        "@JordanPetersCoaching": "contest_prep",
         # Bodybuilding Podcasts
         "@MuscleIntelligence": "bodybuilding_media",
         "@MarkBellsPowerProject": "bodybuilding_media",
         "@RealBodybuilding": "bodybuilding_media",
         "@FouadAbiad": "bodybuilding_media",
         "@BroChat": "bodybuilding_media",
-        "@TheBodybuildingPodcast": "bodybuilding_media",
         # Current Pro Bodybuilders
-        "@SteveKuclo": "pro_bodybuilders",
-        "@IainValliere": "pro_bodybuilders",
-        "@NickWalkerBodybuilder": "pro_bodybuilders",
-        "@DerekLunsford": "pro_bodybuilders",
-        "@HadiChoopan": "pro_bodybuilders",
-        "@AndrewJacked": "pro_bodybuilders",
         # Supplement Science
         "@ExamineCom": "sports_nutrition",
-        "@NutritionExamined": "sports_nutrition",
+        # Compound Reference Databases
+        # FBF Proprietary Content
+        "@ForgedByFreedom": "cycle_design_guides",
+        "@PrecisionBloodwork": "cycle_design_guides",
+        # Compound Reference Databases
+        "@ThinkSteroids": "anabolic_bodybuilding_priority",
+        "@AnabolicSteroids_UK": "anabolic_bodybuilding_priority",
+        # Sexual Health / HRT / Female Hormones
+        "@MenopauseSociety": "medical_primary",
+        "@SexWithDrJess": "medical_primary",
+        "@NickPanay": "medical_primary",
+        "@SexHealthMatters": "medical_primary",
+        "@DrMaryClaire": "medical_primary",
+        "@menopause_doctor": "medical_primary",
+        "@BalanceApp": "medical_primary",
+        "@NewsonHealth": "medical_primary",
+        "@intimacycoordinator": "medical_primary",
+        "@DrJenGunter": "medical_primary",
+        "@WomensHealthMag": "medical_primary",
+        "@DrSherry": "medical_primary",
+        "@DrKellyMcCann": "medical_primary",
+        "@urologyCareFoundation": "medical_primary",
+        "@AmerUrological": "medical_primary",
+        "@SexualWellbeing": "medical_primary",
+        "@MensSexualHealth": "medical_primary",
+        "@ErgoLog": "sports_nutrition",
+        # Psychedelics / Alternative Medicine
+        "@PsychedelicsToday": "medical_primary",
+        "@psymposia": "medical_primary",
+        "@maps_org": "medical_primary",
+        "@beckleyfoundation": "medical_primary",
+        "@MyceliumTV": "medical_primary",
+        "@DrMatthewJohnson": "medical_primary",
+        "@psychedelicmedicine": "medical_primary",
+        "@NIMHgov": "medical_primary",
+        # Biohacking / Longevity
+        "@DaveAspreyBPR": "biohacking",
+        "@BiohackersWorld": "biohacking",
+        "@JohnsHopkinsMedicine": "medical_primary",
+        # Performance Science
+        "@Physionic": "sports_nutrition",
+        "@TRTandHormoneOptimization": "medical_primary",
+        "@BarBend": "sports_nutrition",
+        "@InsideBodybuilding": "anabolic_bodybuilding_priority",
+        "@drandygalpin": "medical_primary",
+        "@BretContreras1": "sports_nutrition",
+        "@joeydsmith": "sports_nutrition",
+        "@nutritionfactsorg": "sports_nutrition",
         # Dosing Guides / Reference / Cycle Design
         "@DanDuchaine": "anabolic_bodybuilding_priority",
         "@CycleDesignGuide": "cycle_design_guides",
@@ -726,8 +619,6 @@ def get_namespace(channel: str, path: Path) -> str:
         # Harm Reduction / PED Education
         "@SethFeroce": "harm_reduction",
         "@RussoLifts": "harm_reduction",
-        "@BodybuilderInThailand": "harm_reduction",
-        "@SwollenAF": "harm_reduction",
         "@EnhancedInfo": "harm_reduction",
         "@GearGoblin": "harm_reduction",
         "@HarmReductionGuides": "harm_reduction",

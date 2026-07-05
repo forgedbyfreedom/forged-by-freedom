@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36719767
+Title: Epigenome-Wide Association Study Reveals CpG Sites Associated with Thyroid Function and Regulatory Effects on KLF9.
+Authors: Weihs, Chaker, Martin, Braun, Campbell
+Journal: Thyroid : official journal of the American Thyroid Association
+Year: 2023
+Topic: thyroid function athletes
+
+ABSTRACT:
+Background: Thyroid hormones play a key role in differentiation and metabolism and are known regulators of gene expression through both genomic and epigenetic processes including DNA methylation. The aim of this study was to examine associations between thyroid hormones and DNA methylation. Methods: We carried out a fixed-effect meta-analysis of epigenome-wide association study (EWAS) of blood DNA methylation sites from 8 cohorts from the ThyroidOmics Consortium, incorporating up to 7073 participants of both European and African ancestry, implementing a discovery and replication stage. Statistical analyses were conducted using normalized beta CpG values as dependent and log-transformed thyrotropin (TSH), free thyroxine, and free triiodothyronine levels, respectively, as independent variable in a linear model. The replicated findings were correlated with gene expression levels in whole blood and tested for causal influence of TSH and free thyroxine by two-sample Mendelian randomization (MR). Results: Epigenome-wide significant associations (p-value &lt;1.1E-7) of three CpGs for free thyroxine, five for free triiodothyronine, and two for TSH concentrations were discovered and replicated (combined p-values&#x2009;=&#x2009;1.5E-9 to 4.3E-28). The associations included CpG sites annotated to KLF9 (cg00049440) and DOT1L (cg04173586) that overlap with all three traits, consistent with hypothalamic-pituitary-thyroid axis physiology. Significant associations were also found for CpGs in FKBP5 for free thyroxine, and at CSNK1D/LINCO1970 and LRRC8D for free triiodothyronine. MR analyses supported a causal effect of thyroid status on DNA methylation of KLF9. DNA methylation of cg00049440 in KLF9 was inversely correlated with KLF9 gene expression in blood. The CpG at CSNK1D/LINC01970 overlapped with thyroid hormone receptor alpha binding peaks in liver cells. The total additive heritability of the methylation levels of the six significant CpG sites was between 25% and 57%. Significant methylation QTLs were identified for CpGs at KLF9, FKBP5, LRRC8D, and CSNK1D/LINC01970. Conclusions: We report novel associations between TSH, thyroid hormones, and blood-based DNA methylation. This study advances our understanding of thyroid hormone action particularly related to KLF9 and serves as a proof-of-concept that integrations of EWAS with other -omics data can provide a valuable tool for unraveling thyroid hormone signaling in humans by complementing and feeding classical in vitro and animal studies.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36719767/

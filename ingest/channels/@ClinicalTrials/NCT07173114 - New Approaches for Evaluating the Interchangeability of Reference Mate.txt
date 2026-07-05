@@ -1,0 +1,52 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07173114
+Title: New Approaches for Evaluating the Interchangeability of Reference Materials and Quality Controls (COMET-MPL)
+Official Title: New Approaches for Evaluating the Interchangeability of Reference Materials and Quality Controls (COMET-MPL)
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 300
+Topic: creatine supplementation
+
+SUMMARY:
+Medical biology tests are essential to clinical decision-making. The European Regulation on in vitro diagnostic medical devices (EU/2017/746) requires metrological traceability of the values assigned to calibrators and quality controls, based on reference measurement methods (RMMs) or certified reference materials (CRMs). However, these references are not available for all analyses, limiting manufacturers' ability to comply with regulatory requirements.
+
+The dissemination of traceability relies mainly on CRMs. However, to guarantee the validity of the results, these materials must have sufficient commutability, i.e., behavior comparable to that of native biological samples. This property is also required for external quality controls (EQA) used in external quality control programs. Commutability is an essential condition for avoiding matrix effects and ensuring the reliability of results.
+
+The COMET-MPL project aims to optimize manufacturing processes for commutable, single-parameter, or multi-parameter CRMs and EQA. Evaluate the commutability of these materials in relation to patient samples.
+
+The COMET-MPL project aims to Produce materials suitable for priority analyses: bilirubin, cyclosporine, parathyroid hormone (PTH), human cytomegalovirus, estradiol.
+
+Commutability will be verified by comparing the performance of CRMs and EQA with that of clinical samples in several French laboratories equipped with automated systems from different manufacturers.
+
+DETAILED DESCRIPTION:
+The global in vitro diagnostics (IVD) market was valued at €91.1 billion in 2023 and is projected to reach €147.3 billion by 2030, reflecting its growing strategic importance in healthcare. Medical biology tests are central to clinical decision-making and must deliver reliable, accurate, reproducible, and standardized results across all medical laboratories.
+
+Under Regulation (EU) 2017/746, the metrological traceability of values assigned to calibrators and quality control materials must be ensured through Reference Measurement Procedures (RMPs) and/or Certified Reference Materials (CRMs) of higher order. However, among the thousands of parameters routinely measured, fewer than 200 currently meet these requirements, making regulatory compliance difficult for IVD manufacturers and limiting laboratories' ability to meet ISO NF 15189 standards.
+
+It is therefore essential to develop CRMs and External Quality Controls (EQA) that are compatible with high-throughput multiparameter analyzers used in medical laboratories. These materials must not only be traceable but also commutable, meaning they must behave similarly to native patient samples to ensure analytical validity.
+
+The COMET-MPL project addresses this need by evaluating the interchangeability (commutability) of selected CRMs and EQA integrated into multiparametric preparations. These will be tested on automated high-throughput systems used in routine medical biology laboratories to assess their suitability as calibrators or quality controls under real-world conditions.
+
+Each patient will participate in a single visit, during a scheduled blood draw as part of routine care. Three blood tubes will be collected, the serum will be aliquoted, and samples will be sent to partner laboratories for analysis.
+
+The collective benefits of this study include:
+
+* Improved patient care pathways, from initial diagnosis to therapeutic follow-up, through enhanced analytical quality of laboratory tests.
+* Strengthened regulatory compliance for laboratories and IVD manufacturers.
+* Availability of high metrological quality CRMs and EQA, facilitating alignment with ISO standards 15189.
+* Greater reliability and comparability of biological results, contributing to more precise and equitable healthcare delivery.
+
+PRIMARY OUTCOMES:
+  - Assessment of Commutability
+
+INTERVENTIONS:
+  Not specified
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07173114

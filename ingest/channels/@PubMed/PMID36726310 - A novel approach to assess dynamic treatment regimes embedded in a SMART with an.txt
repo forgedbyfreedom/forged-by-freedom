@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 36726310
+Title: A novel approach to assess dynamic treatment regimes embedded in a SMART with an ordinal outcome.
+Authors: Ghosh, Yan, Chakraborty
+Journal: Statistics in medicine
+Year: 2023
+Topic: carbohydrate periodization athletes
+
+ABSTRACT:
+Sequential multiple assignment randomized trials (SMARTs) are used to construct data-driven optimal intervention strategies for subjects based on their intervention and covariate histories in different branches of health and behavioral sciences where a sequence of interventions is given to a participant. Sequential intervention strategies are often called dynamic treatment regimes (DTR). In the existing literature, the majority of the analysis methodologies for SMART data assume a continuous primary outcome. However, ordinal outcomes are also quite common in clinical practice. In this work, first, we introduce the notion of generalized odds ratio ( G O R $$ GOR $$ ) to compare two DTRs embedded in a SMART with an ordinal outcome and discuss some combinatorial properties of this measure. Next, we propose a likelihood-based approach to estimate G O R $$ GOR $$ from SMART data, and derive the asymptotic properties of its estimate. We discuss alternative ways to estimate G O R $$ GOR $$ using concordant-discordant pairs and two-sample U $$ U $$ -statistic. We derive the required sample size formula for designing SMARTs with ordinal outcomes based on G O R $$ GOR $$ . A simulation study shows the performance of the estimated G O R $$ GOR $$ in terms of the estimated power corresponding to the derived sample size. The methodology is applied to analyze data from the SMART+ study, conducted in the UK, to improve carbohydrate periodization behavior in athletes using a menu planner mobile application, Hexis Performance. A freely available Shiny web app using R is provided to make the proposed methodology accessible to other researchers and practitioners.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/36726310/

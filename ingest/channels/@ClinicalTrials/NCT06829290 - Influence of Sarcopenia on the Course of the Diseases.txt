@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06829290
+Title: Influence of Sarcopenia on the Course of the Diseases
+Official Title: Influence of Sarcopenia on the Course of the Diseases - Measured Using Ultrasound and Biochemical Markers
+Status: RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 200
+Topic: sarcopenia intervention
+
+SUMMARY:
+Frailty is a geriatric syndrome that primarily affects older patients, but also patients with severe illnesses. It is particularly common among oncology patients, but also among patients with gastrointestinal diseases such as liver cirrhosis or pancreatitis. Sarcopenia, a form of frailty, is defined as a loss of muscle quantity, quality and function. Currently, complex methods such as CT or bioimpedance measurement are available. However, simpler techniques such as ultrasound-based measurement could be alternatives, but still require further validation. In addition, serological muscle markers could support and simplify diagnostics.
+
+The aim of this project is to be able to estimate the prognosis of patients at an early stage by measuring sarcopenia using ultrasound and biomarkers.
+
+DETAILED DESCRIPTION:
+Frailty is a well-known syndrome that has a negative impact on many diseases and the course of disease. Patients affected by frailty are particularly vulnerable due to their inadequate ability to deal with extrinsic and intrinsic stressors. The prevalence of frailty increases with age, affecting 15% of people over the age of 65 and 25% of people over the age of 80.
+
+Frailty is the end result of an interplay between malnutrition, cognitive impairment and muscle wasting. Each of these factors can be further examined and measured, but they also influence each other. In particular, reduced muscle mass and muscle function have been associated with poor quality of life and a worse course of disease. Sarcopenia is therefore becoming an increasingly important factor in various disease patterns and should be monitored further. Muscle atrophy and sarcopenia have multifactorial causes. Physical inactivity, chronic inflammation associated with chronic diseases, and malnutrition are particularly important in this context. Cross-sectional measurement of several muscles at the level of the lumbar vertebrae (L3), normalized to body size, and dual X-ray absorptiometry are currently the most commonly used techniques for measuring sarcopenia. However, complex equipment and procedures are required for the measurements. Furthermore, radiological imaging is costly and causes radiation exposure. Therefore, attempts have been made in the past to simplify the measurements. Sonographic measurement is a practical alternative. Many different muscle groups are accessible to ultrasound. In particular, the thigh muscles and the psoas major muscle can be easily visualized using sonography. The sonographic assessment of the psoas muscle area index (PMAI) and the thigh muscle thickness index (TMTI) are approaches to bedside morphometry that we use primarily.
+
+Currently, little is known about serological muscle parameters. Measurement in the blood would be more elegant than sonographic muscle measurement. This would save additional instrumental diagnostics and still provide an impression of the musculature and thus possibly of the patient's fitness. Various biomarkers come into question for this. In particular, markers of muscle protein synthesis such as activin A/B and myostatin have already been described in individual collectives. However, biomarkers require further research, especially in various disease entities.
+
+The investigators expect sonographic and laboratory measurements of the musculature to provide a better assessment of prognosis, quality of life and functional results during therapy.
+
+PRIMARY OUTCOMES:
+  - Complication
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Ultrasound
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06829290

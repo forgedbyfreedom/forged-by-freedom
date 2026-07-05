@@ -1,0 +1,54 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05139004
+Title: 90Y-DOTA-anti-CD25 Basiliximab, Fludarabine, Melphalan, and Total Marrow and Lymphoid Irradiation for the Treatment of High-Risk Acute Leukemia or Myelodysplastic Syndrome
+Official Title: Phase I Study of Escalating Doses of 90Y-DOTA-Anti-CD25 Monoclonal Antibody Added to the Conditioning Regimen of Fludarabine, Melphalan, and Organ Sparing Total Marrow and Lymphoid Irradiation (TMLI) as Conditioning for Allogeneic Hematopoietic Cell Transplantation in Patients With High-Risk Acute Leukemia or Myelodysplastic Syndrome
+Status: ACTIVE_NOT_RECRUITING
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 7
+Topic: beta-alanine
+
+SUMMARY:
+This phase I trial is to find out the best dose, possible benefits and/or side effects of 90Y-DOTA-anti-CD25 basiliximab given together with fludarabine, melphalan, and total marrow and lymphoid irradiation (TMLI) in treating patients with high-risk acute leukemia or myelodysplastic syndrome. 90Y-DOTA-anti-CD25 basiliximab is a monoclonal antibody, called basiliximab, linked to a radioactive agent called 90Y-DOTA. Basiliximab attaches to CD25 positive cancer cells in a targeted way and delivers 90Y-DOTA to kill them. Fludarabine and melphalan are common chemotherapy drugs used to prepare the bone marrow to receive transplanted cells. TMLI is a different type of targeted radiation therapy used to prepare the bone marrow to receive transplanted cells. Giving 90Y-DOTA-anti-CD25 basiliximab together with fludarabine, melphalan, and TMLI may help prepare the bone marrow to receive the transplanted cells for improved transplant outcomes in patients with acute leukemia or myelodysplastic syndrome.
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Describe toxicities attributable to 90Y-DOTA-anti-CD25 basiliximab radioimmunotherapy by dose level in patients treated under this regimen.
+
+II. Determine the maximum tolerated dose/recommended phase II dose (MTD/RP2D) of 90Y-DOTA-antiCD25 basiliximab radioimmunotherapy with fixed doses of organ sparing TMLI (12 Gy), fludarabine and melphalan (FM100) as conditioning regimen for allogeneic hematopoietic cell transplantation (HCT) for treatment of high-risk acute leukemias or myelodysplastic syndrome (MDS) in patients who are not eligible for standard myeloablative regimens.
+
+SECONDARY OBJECTIVES:
+
+I. Evaluate the safety of the regimen, at each dose level, by assessing the following:
+
+Ia. Type, frequency, severity, attribution, time course and duration of adverse events, including acute/chronic graft versus host disease (GVHD), infection and delayed engraftment.
+
+II. Estimate overall survival (OS), event-free survival (EFS), GVHD relapse free survival (GRFS), cumulative incidence (CI) of relapse/progression, and non-relapse mortality (NRM) at 100 days, 1 year and 2 years.
+
+III. Describe biodistribution, pharmacokinetics and organ dosimetry of 90Y-DOTA-basiliximab.
+
+OUTLINE: This is a dose-escalation study of 90Y-DOTA-anti-CD25 basiliximab.
+
+Patients receive cold basiliximab intravenously (IV), 111In-DOTA-anti-CD25 basiliximab IV, 90Y-DOTA-anti-CD25 basiliximab IV on day -15. Patients also receive palifermin IV on days -11 to -9, fludarabine phosphate IV on days -4 to -2, melphalan IV on day -2, and undergo TMLI on days -8 to -5 in the absence of disease progression or unacceptable toxicity. Patients then undergo allogeneic hematopoietic stem cell transplantation (AHSCT) on day 0.
+
+After completion of study treatment, patients are followed up for up to 2 years.
+
+PRIMARY OUTCOMES:
+  - Maximum tolerated dose/recommended phase II dose of 90Y-DOTA-antiradioimmunotherapy
+  - Incidence of toxicity
+
+INTERVENTIONS:
+  - PROCEDURE: Allogeneic Hematopoietic Stem Cell Transplantation
+  - BIOLOGICAL: Basiliximab
+  - DRUG: Fludarabine Phosphate
+  - DRUG: Indium In 111-DOTA-Basiliximab
+  - DRUG: Melphalan
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05139004

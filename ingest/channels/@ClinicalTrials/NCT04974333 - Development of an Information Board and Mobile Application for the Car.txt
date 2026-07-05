@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04974333
+Title: Development of an Information Board and Mobile Application for the Care of Type 2 Diabetes
+Official Title: Development of an Information Board and Mobile Application for the Care of Type 2 Diabetes at the First Level of Medical Care for the Health Sector in Mexico
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1512
+Topic: creatine supplementation
+
+SUMMARY:
+The SANENT trial is a primary care-based, prospective, two-arm, randomized controlled, open-label, blinded-endpoint study with the aim to compare a diabetes management strategy using an information board and a mobile application versus standard care in patients with uncontrolled type 2 diabetes. This trial aims to recruit 1440 type 2 diabetes patients during a period of six months until the requested number of participants have been achieved. The total length of the intervention will be one year. The SANENT trial protocol is presented according to Standard Protocol Items: Recommendations for Interventional Trials (SPIRIT) recommendations
+
+DETAILED DESCRIPTION:
+Trial setting
+
+This trial will be conducted within primary health care practices in three states (Colima, Tlaxcala y Guanajuato) of Mexico. These states were selected because they have a high prevalence of diabetes and have implemented an Electronic Health Record System.
+
+Patient and Public involvement
+
+During the planning phase of the study, a pilot project was carried out evaluating the design and applicability of the information board and mobile application in 31 type 2 diabetes patients. The final intervention was then modified according to the qualitative data received from the patients. the investigators also involved primary healthcare clinicians in the development and evaluation of the information. The results of the study will be made available to all trial participants and participating general practices. Finally, the General Health Council of Mexico who manages the countries public health system is included as collaboration partner in this trial and has been involved in all phases of the design of this study.
+
+Sample size calculations
+
+Considering a difference in HbA1c of 0.5% between the intervention and the control group, a standard deviation of 1.5%, a power of 90% and an alpha of 0.05 (two-sided tests) with a drop-out rate of 25% during the study, a minimum of 504 will be needed in total in each of the three states. Thus, the total number of patients will be 1512.
+
+Screening and recruitment
+
+The participating healthcare centers were selected because they have the most recent version of the Electronic Health Record System that allows linking clinical information to the mobile app and the information board used in this study. In addition, these centers count with the necessary health information system infrastructure. Finally, each of these centers take care of the clinical control of diabetes patients. The primary healthcare workers of the participating centers will screen their type 2 diabetes patient lists and will invite eligible patients. Patients will receive an invitation letter and a leaflet with general information about the study. Eligible patients may also be contacted by phone, emails, or text by the healthcare professionals. Patients will be enrolled for screening and random allocation over a six-month period. During the first visit of the screening phase, the eligibility criteria and medical record will be revised by the healthcare professionals. In case the patient is potentially eligible, the patient will be invited to the study upon obtaining informed consent. Before the next screening visit, the HbA1c of the patient will be measured to complete the eligibility assessment. Once the diagnosis of uncontrolled type 2 diabetes has been made, all other baseline measurements and laboratory tests will be conducted.
+
+Random allocation
+
+This trial will use a parallel group design, randomizing patients to either the intervention or the control arm by a computer-generated sequence with an allocation ratio of 1:1. The randomizat
+
+PRIMARY OUTCOMES:
+  - HbA1c
+
+INTERVENTIONS:
+  - DEVICE: Mobile health application on phone
+
+ELIGIBILITY:
+Age: 20 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04974333

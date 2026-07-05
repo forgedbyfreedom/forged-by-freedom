@@ -1,0 +1,51 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07004764
+Title: Enhancing Wound Perfusion in High-Risk Lower Extremity Orthopaedic Surgery: A Study on Nitropaste Using Intraoperative SPY Imaging.
+Official Title: Enhancing Wound Perfusion in High-Risk Lower Extremity Orthopaedic Surgery: A Feasibility Study on Nitropaste Using Intraoperative SPY Imaging.
+Status: NOT_YET_RECRUITING
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 15
+Topic: tendon injury
+
+SUMMARY:
+Enhancing Wound Perfusion in High-Risk Lower Extremity Orthopaedic Surgery: A Feasibility Study on Nitropaste Using Intraoperative SPY Imaging.
+
+DETAILED DESCRIPTION:
+Tissue perfusion is a critical determinant of wound healing, particularly in lower extremity surgery where wound necrosis, dehiscence, and infection can result in limb loss. Despite current advances in wound therapy, rates of wound complications for certain lower extremity incisions remain high. Thus, there remains a critical need to identify agents that may potentially augment wound healing in orthopaedic surgery.
+
+Nitropaste has been successfully used in plastic surgery to enhance perfusion and reduce flap necrosis, but its role in orthopaedic surgery is under-explored. In a meta-analysis of 6947 patients from 3 randomized controlled trials (RCTs) and 2 retrospective studies found that the use of nitropaste was associated with 0.23 odds \[0.10-0.53, 95% confidence interval\] of reduced mastectomy flap failure. Preliminary data from the investigator's institution involving 18 patients who received intraoperative nitropaste showed no adverse hypotensive effects, though wound complications occurred in three cases. Laser Assisted Indocyanine Green (LA-ICG) provides real-time, quantitative perfusion measurements, making it an ideal tool to evaluate the efficacy of nitropaste. Therefore, The purpose of this study is to evaluate the effects of nitropaste on immediate tissue perfusion and wound complications in high-risk lower extremity orthopaedic incisions using LA-ICG. Additionally, the investigators will assess the safety of single-dose nitropaste in these patients. The investigators hypothesize that intraoperative nitropaste application will significantly improve tissue perfusion, which in turn would be associated with reduced wound complications, with minimal adverse effects.
+
+Aim 1: To evaluate the effect of nitropaste on immediate tissue perfusion in lower extremity orthopaedic incisions using LA-ICG.
+
+1. Primary outcomes: Relative fluorescence unit (RFU), absolute fluorescence units (AFU), mean incision perfusion (MIP), and mean perfusion impairment (MPI)
+2. Null hypothesis: The investigators hypothesize that nitropaste would not be associated with a significant increase in perfusion, as measured by RFU, AFU, MIP and MPI.
+
+Aim 2: To assess trial feasibility and ability to identify wound complications for a future large-scale trial.
+
+1. Primary outcomes: Recruitment rate, retention rate, and wound complications, which include wound dehiscence, wound necrosis, superficial infection, and deep infection.
+2. Recruitment goal: 50% recruitment at 8 months
+3. Retention rate goal: 80% of patients with minimum of 3 months follow-up at trial conclusion
+4. No a priori hypotheses.
+
+Aim 3: To assess the safety of nitropaste in lower extremity orthopaedic surgeries.
+
+1. Secondary outcomes: Hypotension, headache, dizziness, allergic reactions, and other adverse events.
+2. No a priori hypotheses.
+
+PRIMARY OUTCOMES:
+  - Absolute fluorescence unit (AFU)
+  - Relative fluorescence unit (RFU)
+  - mean incision perfusion (MIP)
+  - mean perfusion impairment (MPI)
+
+INTERVENTIONS:
+  - DRUG: Nitroglycerin Ointment 2%
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07004764

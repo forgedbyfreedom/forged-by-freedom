@@ -1,0 +1,50 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02702713
+Title: Pivotal Assessment of the Effects of Bioactive on Health and Wellbeing. From Human Genome to Food Industry
+Official Title: Investigation of the Effect of Daily Consumption of Bioactive Enriched Foods (BEF) on Biochemical and Anthropometric Markers of Metabolic Syndrome (MS)
+Status: TERMINATED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 325
+Topic: body composition exercise
+
+SUMMARY:
+This is a multi-centre, randomised, double-blind, placebo-controlled, parallel-arm dietary intervention study. In total, 800 men and women at risk for Metabolic Syndrome (MS) will be recruited. Subjects will be eligible to the study if they present with two to four of the MS diagnostic criteria, at least one of them being:
+
+* fasting triglycerides ≥150 mg/dL but ≤400 mg/dL OR
+* HDL-cholesterol ≤50 mg/mL in women, ≤ 40mg/mL in men (with fasting triglycerides ≥110 mg/dL).
+
+Each of the four recruiting centres will recruit 200 volunteers. Participants will be randomly assigned to one of four groups to receive either:
+
+* Dairy BEF + egg placebo + bakery placebo
+* Egg BEF + dairy placebo + bakery placebo
+* Bakery BEF + dairy placebo + egg placebo
+* Dairy, egg and bakery placebo
+
+Participants will be required to consume all three of the allocated products each day for 12 weeks.
+
+Eligible volunteers will be included and randomly allocated to one of the four groups. At baseline, 6 weeks and 12 weeks after inclusion, each participant will visit the recruiting centre for clinical and biochemical investigations. At 3 weeks and 9 weeks participants will complete questionnaires relating to their satisfaction with the food products, compliance to consumption of the study food products, and any gastrointestinal side effects or health-related adverse events that have occurred in the previous 3 weeks.
+
+At each recruiting centre 40 participants will be required to take part in additional activities, these are: stool sample collection, adipose tissue aspiration, body composition analysis by dual energy x-ray absorptiometry (DEXA) and assessment of physical activity.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Triglycerides blood levels (mg/dl)
+  - HDL-cholesterol blood levels (mg/dl)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dairy BEF
+  - DIETARY_SUPPLEMENT: Egg BEF
+  - DIETARY_SUPPLEMENT: Bakery BEF
+  - DIETARY_SUPPLEMENT: Bakery placebo
+  - DIETARY_SUPPLEMENT: Dairy placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02702713

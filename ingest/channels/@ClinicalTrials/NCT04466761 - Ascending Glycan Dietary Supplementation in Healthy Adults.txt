@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04466761
+Title: Ascending Glycan Dietary Supplementation in Healthy Adults
+Official Title: Phase I Ascending Dose Study of Dietary Supplementation With Glycan Monomers in Healthy Adults
+Status: TERMINATED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 14
+Topic: protein supplementation
+
+SUMMARY:
+The investigators will conduct a parallel-group, placebo-controlled, randomized, double-blind ascending dose Phase I study of dietary supplementation in healthy individuals to evaluate safety and to determine the pharmacologically effective dose (ED).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Characterize Immunoglobulin fragment crystallization modifications
+  - Identify the maximum effective dose
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Monosaccharide Powder
+  - OTHER: Placebo Comparator
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04466761

@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01713140
+Title: Experimental Study of Strength Training to Activate the Quadriceps Muscle After Total Knee Arthroplasty
+Official Title: Central (CNS) Activation of the Quadriceps Muscle During Strength Training With Repetitions to Contraction Failure After Total Knee Arthroplasty
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Background:
+
+Progressive strength training is a training modality used in rehabilitation after total knee arthroplasty (TKA). Strength deficits up to 80% in the quadriceps muscle is shown to be present in the operated leg after TKA, which relates to reduced central nervous system (CNS) activation of the muscle. As increased CNS activation occurs during strength training when muscular fatigue is approaching in healthy subjects, it is relevant to investigate if this also is the case after TKA. The clinical implication is that repetitions performed to contraction failure during strength training, may help reduce CNS activation deficits of the quadriceps muscle after TKA.
+
+Purpose:
+
+The aim of this study is to investigate CNS activation of the quadriceps muscle during strength training performed with repetitions to contraction failure after TKA.
+
+Method:
+
+Electromyographic (EMG) activity of the vastus medialis (VM), vastus lateralis (VL), semitendinosus (ST) and biceps femoris (BF) muscles will be recorded during knee extensions performed in a knee extension machine until contraction failure. The relative loading will be 10 repetition maximum (RM). The absolute load (kilograms) corresponding to 10 RM is defined a minimum of 3 days before the day where the EMG-data are recorded. The primary outcomes will be normalized EMG amplitude and median power frequency for each 10th (10%, 20%, 30% failure, etc.) of the set to failure.
+
+Hypothesis:
+
+Based on previous findings in healthy subjects, we hypothesize that in patients with a TKA, the EMG amplitude will increase while the median power frequency will decrease during a strength training set performed to contraction failure after TKA.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from 10% contraction failure in normalized EMG amplitude (%EMGmax).
+  - Change from 10% contraction failure in median power frequency (Hz)
+
+INTERVENTIONS:
+  - OTHER: 1 strength training set performed until contraction failure
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01713140

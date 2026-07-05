@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00867217
+Title: Vitamin D3 for Aromatase Inhibitor Induced Arthralgias
+Official Title: A Randomized Trial to Evaluate the Benefit of High Dose Vitamin D3 on Aromatase Inhibitor Letrozole-Associated Musculoskeletal Symptoms and Fatigue (The VITAL Trial).
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: vitamin D muscle
+
+SUMMARY:
+The primary purpose is to determine if high dose vitamin D3 reduces the incidence of musculoskeletal symptoms associated with the aromatase inhibitor letrozole in women with early stage breast cancer and low serum vitamin D levels.
+
+DETAILED DESCRIPTION:
+The primary hypothesis is that high dose vitamin D3 plus standard dose vitamin D3 prevents the worsening of musculoskeletal symptoms when compared to a standard dose vitamin D3 treatment. This protocol will examine the relationship between vitamin D levels (25-hydroxyvitamin D) and various quality of life measures in women being treated with letrozole as standard care for early stage breast cancer. All subjects received letrozole and a standard dose of vitamin D3 (600 IU daily). Randomization was between high dose vitamin D3 (30,000 IU once per week) vs. a blinded, matched placebo,
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Worsening of Musculoskeletal Symptoms (MS)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: High Dose Vitamin D
+  - DIETARY_SUPPLEMENT: Placebo
+  - DIETARY_SUPPLEMENT: Standard Dose Vitamin D3
+  - DRUG: Letrozole 2.5mg
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00867217

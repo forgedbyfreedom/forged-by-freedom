@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04845282
+Title: Effects of Graded Protein Intake on Body Composition in Older Adults
+Official Title: Effects of Graded Protein Intake and Resistance Training on Body Composition in Older Adults
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 20
+Topic: exercise muscle mass
+
+SUMMARY:
+This clinical trial is intended to evaluate the effects of protein intake graded to resistance training volume over a 10-week period on macroscopic skeletal muscle adaptations and body composition. Briefly, all participants will complete a progressive resistance training protocol for 10 weeks, with one group consuming a constant amount of total daily protein (RDA of 0.8g/kg/day) to serve as an active comparator. The alternative group will consume total daily protein and protein supplement in a graded manner designed to increase as overall training volume increases. Protein intake and resistance training protocols are described in full elsewhere. The investigators hypothesize that the graded protein intake group will see larger benefits to skeletal muscle function, size, and body composition than the active comparator.
+
+DETAILED DESCRIPTION:
+It is well established that aging induces a loss of skeletal muscle across a lifespan. The two primary considerations in attenuating this loss of skeletal muscle are nutritional intake, specifically protein consumption, and physical activity levels, specifically resistance training. Both of these factors have been shown to improve skeletal muscle adaptation outcomes in older adults. One primary consideration in the skeletal muscle loss in older adults is the concept of anabolic resistance, suggesting that older adults require a greater amount of protein consumption to elicit similar rates of muscle protein synthesis as compared to their younger counterparts. From this study, the investigators hope to reveal the effect between protein intake graded to resistance training vs constant protein intake at the recommended daily allowance in conjunction with the same resistance training protocol on body composition. The purpose of this study is to examine the skeletal muscle adaptations that occur in older adults consuming protein graded to resistance training volume as compared to older adults who consume protein at a constant level while resistance training (RT). Our hypotheses are:
+
+1. Protein intake graded to RT volume will enhance skeletal muscle adaptation in older adults to a greater degree than those consuming protein at a constant rate, as measured via lean soft tissue mass assessed by dual energy x-ray absorptiometry (DXA)
+2. Older adults consuming protein graded to RT volume will enhance strength to a greater degree than those consuming protein at a constant rate, as measured via isokinetic dynamometry and 3 repetition maximums of select exercises.
+3. Older adults consuming protein graded to RT volume will see a greater change in muscle tissue thickness compared to those consuming protein at a constant rate, as measured via muscular ultrasound.
+
+Community dwelling older adults (\>55 years; men and women) who have not adhered to a progressive RT program in the last 3 months will be recruited for participation in this pilot study (n=20). All women recruited will be post-menopausal. In an initial telephone screening, participants will be assessed for eligibility criteria, and it will also be determined whether they are willing to be randomized into either of the two groups. The requirements of each intervention group will be explained in detail. Participants will be assessed for willingness to make necessary alterations to their diet, willingness to adhere to RT protocol, and willingness to consume the necessary amount of protein supplement. Once participants are recruited, they will be subsequently randomized using a web based program (https://www.randomlists.com/team-generator) wherein group assignments will be placed in numbered envelopes and opened by an independent researcher. This will be used to randomize participants to one of the two experimental groups. This randomization and assignment will be completely random, and not stratified to a
+
+PRIMARY OUTCOMES:
+  - Change in Whole body lean soft tissue mass (kg) from baseline to 10 weeks
+  - Change in Whole body fat mass (kg) from baseline to 10 weeks
+  - Change in regional (specifically the lower extremity) lean soft tissue mass (kg) from baseline to 10 weeks
+  - Change in regional (specifically the lower extremity) fat mass (kg) from baseline to 10 weeks
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Graded Protein plus Resistance Training
+  - DIETARY_SUPPLEMENT: RDA Protein plus Resistance Training
+
+ELIGIBILITY:
+Age: 55 Years to 110 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04845282

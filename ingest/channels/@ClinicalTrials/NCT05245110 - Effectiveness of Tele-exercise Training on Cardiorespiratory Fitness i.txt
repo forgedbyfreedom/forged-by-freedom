@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05245110
+Title: Effectiveness of Tele-exercise Training on Cardiorespiratory Fitness in Patients With Cardiometabolic Multimorbidity
+Official Title: Tri-Service General Hospital, National Defense Medical Center
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: resistance training
+
+SUMMARY:
+This trial aimed to assess whether assumed increase in physical activity after tele-exercise training can improve cardiorespiratory fitness of patients with cardiometabolic multimorbidity.
+
+DETAILED DESCRIPTION:
+A parallel-group randomized controlled trial was conducted. Eligible patients with cardiometabolic multimorbidity were randomized 1:1 to either experimental group (EG, received a tele-exercise training program) or control group (CG, usual care only). The intervention encompassed tele-exercise training program (30 min/session, 3 sessions/week) and weekly remote monitoring for maintenance of exercise. Physical activity and cardiorespiratory fitness were assessed at baseline and 12 weeks. Generalized estimating equations were used to examine the intervention effects via the interaction of time and group.
+
+PRIMARY OUTCOMES:
+  - Changes from baseline physical activity amount at 12 weeks
+  - Changes from baseline VO2 peak (ml/kg/min) at 12 weeks
+  - Changes from baseline workload (Watts)at 12 weeks
+  - Changes from baseline anaerobic threshold at 12 weeks
+  - Changes from baseline O2 pulse (ml/beat) at 12 weeks
+
+INTERVENTIONS:
+  - BEHAVIORAL: tele-exercise training
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05245110

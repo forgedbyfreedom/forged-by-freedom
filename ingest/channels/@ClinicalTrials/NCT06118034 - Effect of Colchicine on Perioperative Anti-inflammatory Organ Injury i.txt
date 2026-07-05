@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06118034
+Title: Effect of Colchicine on Perioperative Anti-inflammatory Organ Injury in Cardiac Surgery
+Official Title: Effect of Colchicine on Perioperative Anti-inflammatory Organ Injury in Cardiac Surgery : a Multi-center, Randomized, Controlled, Double-blind Clinical Trial
+Status: RECRUITING
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 768
+Topic: creatine supplementation
+
+SUMMARY:
+All patients will be completed collection of demographic data, clinical data, and be observed for inflammatory organ damage, oxygenation index or SpO2/ FIO2, WBC, NEU, interleukin-1β, interleukin-6, interleukin-8 (IL-1β/6/8), tumor necrosis factor-α (TNF-α), C-reactive protein (CRP), procalcitonin (PCT), myoglobin (Myo), creatine kinase-MB (CK-MB), high-sensitivity cardiac troponin T (hs-cTnT), neutrophil elastase (NE), myeloperoxidase (MPO), APACHE II score, alanine transaminase (ALT), aspartate transaminase (AST), total bilirubin, Murray lung injury score, serum creatinine, eGFR, mechanical ventilation time, ICU length of stay, drug-related gastrointestinal reactions, and 30-day and 90-day all-cause mortality, among other indicators.
+
+DETAILED DESCRIPTION:
+This study is a multicenter, randomized, controlled, double-blind, placebo- controlled clinical trial. A total of 768 patients who met the inclusion and exclusion criteria and were scheduled for cardiac surgery under cardiopulmonary bypass were enrolled. After signing informed consent, patients were randomly divided into the experimental group and the control group. Patients in the experimental group took 0.5mg of colchicine tablets orally for 3 days before surgery and continued to take 0.5mg daily for 10 days after tracheal extubation. Patients in the control group received an equivalent amount of starch placebo tablets, administered at the same times and in the same doses as the experimental group, during the colchicine/placebo treatment period, without affecting the patients' standard treatment protocols.
+
+All patients will be completed collection of demographic data, clinical data, and be observed for inflammatory organ damage, oxygenation index or SpO2/ FIO2, WBC, NEU, interleukin-1β, interleukin-6, interleukin-8 (IL-1β/6/8), tumor necrosis factor-α (TNF-α), C-reactive protein (CRP), procalcitonin (PCT), myoglobin (Myo), creatine kinase-MB (CK-MB), high-sensitivity cardiac troponin T (hs-cTnT), neutrophil elastase (NE), myeloperoxidase (MPO), APACHE II score, alanine transaminase (ALT), aspartate transaminase (AST), total bilirubin, Murray lung injury score, serum creatinine, eGFR, mechanical ventilation time, ICU length of stay, drug-related gastrointestinal reactions, and 30-day and 90-day all-cause mortality, among other indicators. The study aims to investigate the impact of colchicine on the levels of inflammatory factors and prognosis in patients undergoing cardiac vascular surgery and to observe the potential organ damage to the heart, lungs, liver, kidneys, and the occurrence of adverse events such as leukopenia and thrombocytopenia. This is done to assess the safety of colchicine use in cardiac surgery patients.
+
+PRIMARY OUTCOMES:
+  - Number of Participants with POAF
+  - Number of Participants with PMI
+  - Number of Participants with ARDS
+  - Number of Participants with PPS
+
+INTERVENTIONS:
+  - DRUG: Colchicine 0.5 MG
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06118034

@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07445568
+Title: Home-Based Quadriceps Isometric Exercise for Knee Osteoarthritis Pain
+Official Title: Home-based Quadriceps Isometric Exercise as a First-Line Rehabilitation Strategy for Knee Osteoarthritis Pain in Community-Dwelling Older Adults: A Randomized Factorial Pilot Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 50
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+Knee osteoarthritis is a common cause of pain and reduced mobility in older adults. Many people have limited access to supervised rehabilitation programs, highlighting the need for simple and safe home-based treatment options.
+
+This study evaluates whether a brief home-based quadriceps isometric exercise program can reduce knee pain in community-dwelling older adults. Participants perform short daily muscle contractions of the thigh muscles for 28 days. In addition, participants are assigned to receive one of four topical formulations (placebo, cannabidiol, arnica, or a combination of cannabidiol and arnica) to explore whether these products modify the exercise response.
+
+The primary outcome is change in knee pain intensity measured using a visual analog scale. Secondary outcomes include adherence and safety. This pilot study aims to assess the feasibility, safety, and preliminary effectiveness of this low-cost and easily accessible strategy to inform future larger clinical trials.
+
+DETAILED DESCRIPTION:
+This study is a prospective randomized 4×2 factorial pilot trial conducted in community-dwelling older adults with symptomatic knee osteoarthritis. The purpose is to evaluate the feasibility, safety, and preliminary effectiveness of a brief home-based quadriceps isometric exercise program for short-term pain reduction, and to explore whether topical cannabidiol (CBD), arnica, or their combination modify the exercise response.
+
+Participants are randomly assigned to one of four topical treatment groups (placebo, CBD, arnica, or CBD + arnica) and stratified to either an exercise or no-exercise condition, resulting in eight factorial subgroups. Randomization is computer-generated with allocation concealment using sequentially numbered opaque sealed envelopes.
+
+The intervention period lasts 28 days. Participants allocated to the exercise condition perform daily quadriceps isometric contractions at home consisting of three sets of 10-second near-maximal voluntary contractions with rest intervals, requiring approximately 6 minutes per day. Topical formulations are applied twice daily to the affected knee. Adherence is monitored using daily logs.
+
+The primary outcome is change in knee pain intensity measured using a Visual Analog Scale (VAS) at day 28. Secondary outcomes include feasibility indicators (adherence and retention), safety (adverse events), and exploratory changes in anthropometric and body composition measures.
+
+Analyses are exploratory and include factorial ANCOVA adjusted for baseline values to estimate main effects of exercise and topical treatment, as well as interaction effects. Effect sizes are calculated to aid clinical interpretation.
+
+As a pilot study, results are intended to inform the design and sample size estimation of future adequately powered randomized controlled trials evaluating low-cost, home-based rehabilitation strategies for older adults with knee osteoarthritis.
+
+PRIMARY OUTCOMES:
+  - Change from baseline in knee pain intensity measured by Visual Analog Scale (VAS)
+
+INTERVENTIONS:
+  - DRUG: Placebo Topical Gel
+  - DRUG: Cannabidiol (CBD) Topical Gel
+  - DRUG: Arnica montana Topical Gel
+  - BEHAVIORAL: Home-based Quadriceps Isometric Exercise
+  - DRUG: CBD + Arnica Topical Gel
+
+ELIGIBILITY:
+Age: 65 Years to 85 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07445568

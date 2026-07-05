@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06185296
+Title: The Intelligent Diabetes TelemonitoRing Using Decision Support to Treat Patients on insulin Therapy
+Official Title: The Intelligent Diabetes TelemonitoRing Using Decision Support to Treat Patients on insulin Trial: Study Protocol for a Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 51
+Topic: exercise intervention diabetes
+
+SUMMARY:
+The trial is an open-label, randomized controlled trial. Patients with T2D on insulin therapy will be randomized to an intelligent telemonitoring group (intervention), a telemonitoring group (control), and a usual care group (control). Both the intelligent telemonitoring group and the telemonitoring group will use various devices at home. Hospital staff will monitor their data for three months. In the intelligent telemonitoring group, hospital staff and participants will be supported by decision-support algorithms in the management of insulin treatment.
+
+DETAILED DESCRIPTION:
+The DiaTRUST trial is an open-label randomized controlled trial with a three-month trial period. The trial will be conducted at Steno Diabetes Center North Jutland. Patients with T2D on insulin therapy will be randomized (3:1:1) to an intelligent telemonitoring group (intervention), telemonitoring alone (control), or a usual care group (control). Both telemonitoring groups will use an insulin pen, an activity tracker, a CGM, and a smartphone application throughout the trial period. Hospital staff (lab technicians and nurses) will monitor the telemonitoring groups' data and contact the subjects by telephone repeatedly throughout the trial period. For patients assigned to the intelligent telemonitoring group, decision support algorithms will provide hospital staff with insight and data overviews to support treatment evaluation and adjustment throughout the trial. Furthermore, patients in the intelligent telemonitoring group will have access to algorithms through a smartphone application that can provide a risk assessment before bed of nocturnal hypoglycemia. The usual care group will use a blinded CGM for the first 20 days after inclusion, 20 days before the second visit to the trial site, and 20 days before the end of trial and will use a blinded insulin pen for the entire period. The usual care groups' data will not be monitored during the trial.
+
+PRIMARY OUTCOMES:
+  - CGM time in range
+
+INTERVENTIONS:
+  - DEVICE: Intelligent telemonitoring
+  - DEVICE: Telemonitoring
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06185296

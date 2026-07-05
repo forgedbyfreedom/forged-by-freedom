@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07411482
+Title: The Effect of Probiotic Supplementation on the Exercise Performance of Long-distance Runners.
+Official Title: The Impact of the Gut Microbiome on Intestinal Mucosal Function and Exercise Performance in Marathon Runners.
+Status: ACTIVE_NOT_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 27
+Topic: athletic performance
+
+SUMMARY:
+The study is designed as a randomized double-blind placebo-controlled clinical trial with a 4-week probiotics intervention period. The study will be conducted between January 2022 and March 2025 at the Medical University of Gdańsk, Department of Bioenergetics and Physiology of Exercise (Gdańsk, Poland). A total of 40 endurance-trained adult men, specifically long-distance runners with previous experience in marathon races, will be enrolled. Only participants who meet all inclusion criteria and do not meet any exclusion criteria will be included in the study. Participants will be randomly assigned to the probiotic (PRO) or placebo (PL) group in a 1:1 ratio. Athletes will supplement 4 capsules of the study product (probiotic mixture) daily.
+
+To eliminate the effect of diet on the gut microbiome, all athletes will receive an individually balanced box diet designed to provide 100% of energy requirements, protein intake of 1.6 g/kg/day, and at least 8 g/kg/day of carbohydrates. Participants will continue their training programs and perform at least 5 endurance workouts per week. To assess training loads, athletes will report average pulse range, subjective fatigue, and duration of training sessions.
+
+The investigators will examine whether 4 weeks of probiotic supplementation in conjunction with a personalized diet may have a direct or indirect influence on sport performance. This will be assessed through evaluation of aerobic fitness capacity using treadmill tests. The cardiopulmonary exercise test (CPET) will determine maximum oxygen uptake, minute lung ventilation, and heart rate. Body composition analysis and assessments of blood and fecal samples will also be performed. Blood samples will be analyzed for serum pro-inflammatory cytokines (IL-6 and TNF-α). Collected fecal samples will be subjected to quantitative and qualitative analysis of the intestinal microbiota using next-generation sequencing. The analysis will include intestinal permeability markers (calprotectin, zonulin, IFABP) and bacterial metabolism products such as short-chain fatty acids (SCFA). All assessments and procedures will be carried out both before and immediately after the supplementation period.
+
+All obtained data will undergo statistical analysis. Descriptive statistics will be used for background information and to examine trends in the analyzed parameters, with mean values and 95% confidence intervals. Depending on the distribution of the data, parametric or non-parametric tests will be applied. Statistical significance will be set at p \< 0.05.
+
+To the best of the investigators' knowledge, this will be the first intervention study comprehensively assessing the influence of probiotic supplementation in conjunction with a standardized diet on inflammatory response, intestinal permeability, gut microbiome composition, and aerobic capacity of competitive long-distance runners. The collected data will provide evidence regarding the potential influence of probiotic supplementation on parameters of sport performance.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - The assessment of the impact of probiotic supplementation on maximal oxygen uptake value among athletes.
+  - Analysis of gut microbiome
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: probiotics or placebo
+  - DIETARY_SUPPLEMENT: Box diet
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07411482

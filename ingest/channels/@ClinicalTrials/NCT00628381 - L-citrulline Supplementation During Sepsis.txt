@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00628381
+Title: L-citrulline Supplementation During Sepsis
+Official Title: Arginine and Nitric Oxide (NO) Metabolism in Sepsis; L-citrulline Enteral Supplementation for the Normalisation of the Arginine-NO Metabolism
+Status: UNKNOWN
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to study the stimulating effects of prolonged (8h) enteral L-citrulline supplementation on the normalisation of the plasma citrulline concentrations and the Arginine-NO metabolism, the microcirculation, the systemic hemodynamics, vascular permeability, and organ function and disease severity scores.
+
+DETAILED DESCRIPTION:
+NO synthesis is compromised during sepsis through lack of arginine de novo synthesis and may thereby contribute to impaired microcirculation and organ dysfunction. Supplementation of L-citrulline in septic patients will increase NO production without increased arginase activity and these effects will be studied on arginine-NO metabolism,improved organ function, vascular permeability and microcirculation.
+
+PRIMARY OUTCOMES:
+  - To study stimulating effects of prolonged (8h) enteral L-citrulline supplementation on the normalisation of the arginine-NO metabolism
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-citrulline supplementation
+  - DIETARY_SUPPLEMENT: L-alanine
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00628381

@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05600413
+Title: Citrulline Supplementation On Vascular Responsiveness and Function in Postmenopausal Women
+Official Title: L-Citrulline Supplementation to Improve Vascular Function and Responsiveness at Rest and During Exercise in Postmenopausal Women
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 26
+Topic: protein supplementation
+
+SUMMARY:
+The objective of this project is to provide evidence that L-Citrulline (L-CIT) supplementation can improve vascular function at rest and in response to exercise in postmenopausal women.
+
+DETAILED DESCRIPTION:
+L-CIT is a non-essential amino acid that is a precursor to L-arginine, the substrate used to produce an important vasodilatory molecule called nitric oxide. The purpose of this study is to identify the effects of 6 grams of L-CIT for 4 weeks on vascular function (endothelial function, blood flow, muscle oxygenation, and blood pressure) at rest and in response to different stressors (cold pressor test, isometric and dynamic exercise).
+
+PRIMARY OUTCOMES:
+  - Microvascular endothelial function
+  - Changes in brachial and aortic blood pressure responses via automated sphygmomanometry during metaboreflex activation
+  - Changes in aortic hemodynamics using pulse wave analysis during metaboreflex activation
+  - Blood flow during dynamic exercise
+  - Muscle oxygenation during dynamic exercise
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: L-Citrulline
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 50 Years to 79 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05600413

@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04628117
+Title: Effect of Oral Nutritional Supplementation on Oxidative Stress in Protein-energy Wasting Patients With Peritoneal Dialysis
+Official Title: Assess Effect of Oral Nutritional Supplementation on Oxidative Stress Levels in Protein-energy Wasting Patients With Continuous Ambulatory Peritoneal Dialysis
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: protein supplementation
+
+SUMMARY:
+End-stage kidney disease (ESKD) represents a serious public health problem in Mexico. Data from the United States Renal Data System (USRDS) have reported that the region of Jalisco (Mexico) is one of the places with the highest incidence rate of treated ESKD and use of peritoneal dialysis (PD). In patients with ESKD, oxidative stress (OS) has been recognized as a potential source of morbidity and mortality, since it is involved in the pathogenesis of atherosclerosis and other complications of ESRD. This can induce damage to DNA (nucleic acid), proteins, carbohydrates, and lipids.
+
+Another common complication in ESKD patients receiving PD is protein-energy wasting (PEW), which is characterized by the decline in the body stores of protein and energy fuels (that is, body protein and fat masses) due to the multiple nutritional and catabolic alterations that occur in this condition. Diverse factors can affect the nutritional and metabolic status of patients with PD, for which they require interventions to reverse protein and energy depletion. Nutritional counseling can be a useful tool in PD patients in order to improve compliance with nutritional recommendations. The strategies more used for PEW include oral nutritional supplementation. Therefore, the purpose of this study is assess the effect of oral nutritional supplementation on OS in PEW patients with PD.
+
+DETAILED DESCRIPTION:
+The detection of patients is carried out in the Nephrology Service of the Hospital Civil de Guadalajara Dr. Juan I. Menchaca where the selection and exclusion criteria are evaluated.
+
+The probabilistic group assignment is carried out using a sealed and opaque envelope.
+
+Control group: only nutritional counselling for 8 weeks. Intervention group: nutritional counselling plus 237 mls per day of oral nutritional supplement for kidney disease.
+
+Initial evaluation includes, anthropometric parameters and dietary intake. Demographic characteristics and OS levels, such as oxidants, antioxidants and oxidative DNA damage.
+
+All nutritional counselling, dietary intake, medical nutrition theraphy (oral nutritional supplementation), assessment of OS levels, and anthropometric parameters will perform at 0, 4 and 8 weeks of follow up. Protein-energy wasting assessment only in the 0 and 8 weeks.
+
+PRIMARY OUTCOMES:
+  - Change in oxidative stress levels, oxidants (products of Lipoperoxidation, 8-IP, NO), antioxidants (SOD, catalase, GPx, TAC), and oxidative DNA damage (8-OHdG, hOGG1).
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Oral nutritional supplementation for kidney disease
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04628117

@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01163851
+Title: Pharmacokinetic And Pharmacodynamic Study Of A Single-Dose Of PF-04950615 (RN316) In Combination With Atorvastatin
+Official Title: A Phase 1 Study Evaluating The Pharmacokinetics And Pharmacodynamics Of Rn316 In Combination With Atorvastatin In Hypercholesterolemic Subjects
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: creatine supplementation
+
+SUMMARY:
+The primary objective of this study is to evaluate the pharmacokinetics and pharmacodynamics of a single dose of PF-04950615 (RN316) in volunteers on stable doses of atorvastatin. PF-04950615 (RN316) is an investigational drug that is currently being studies as a cholesterol lowering therapy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Area Under the Curve From Time Zero to Last Quantifiable Concentration (AUClast) of PF-04950615
+  - Time to Reach Maximum Observed Plasma Concentration (Tmax) of PF-04950615
+  - Maximum Observed Plasma Concentration (Cmax) of PF-04950615
+  - Plasma Decay Half-Life (t1/2) of PF-04950615
+  - Systemic Clearance (CL) of PF-04950615
+
+INTERVENTIONS:
+  - BIOLOGICAL: 4 mg/kg
+  - BIOLOGICAL: 0.5 mg/kg
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01163851

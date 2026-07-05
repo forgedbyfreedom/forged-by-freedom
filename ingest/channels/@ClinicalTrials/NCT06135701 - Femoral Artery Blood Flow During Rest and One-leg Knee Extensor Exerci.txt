@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06135701
+Title: Femoral Artery Blood Flow During Rest and One-leg Knee Extensor Exercise in Patients With COPD
+Official Title: Femoral Artery Blood Flow During Rest and One-leg Knee Extensor Exercise in Patients With COPD
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 32
+Topic: caffeine exercise
+
+SUMMARY:
+Doppler ultrasound is generally considered to provide reliable femoral blood flow measurements between rest and exercise, and the blood flow response to exercise is widely believed to be reduced in patients with chronic obstructive pulmonary disease (COPD). However, the test-retest reliability of the method during one-leg knee extensor exercise has not previously been compared between matched healthy individuals.
+
+DETAILED DESCRIPTION:
+Experimental assessments of changes in skeletal muscle blood flow during exercise in humans are important for elucidating the factors that limit exercise capacity and adaptations, both in healthy humans, including athletes, as well as in various disease states with functional impairment, such as chronic obstructive pulmonary disease COPD). A classical 'gold standard' for measuring blood flow is thermodilution, and this has notably applied to provide data on femoral blood flow during exercise. Because thermodilution required invasive catheterization, many have replaced it with Doppler ultrasound, but the test-retest reliability of Doppler ultrasound in this context is unknown. However, many studies have used Doppler ultrasound to document that the femoral blood flow response to exercise is impaired in COPD, which ultimately affects oxygen uptake and thus exercise capacity, but the interpretation of these findings is currently hampered by the lack of knowledge regarding the test-retest reliability of the method in this patient group.
+
+The investigators aim is to compare the femoral blood flow response to one-legged knee extensor exercise in patients with COPD vs. healthy participants, and to provide an estimate of the test-retest reliability the femoral blood flow measurements obtained by Doppler ultrasound.
+
+PRIMARY OUTCOMES:
+  - Between-day smallest real difference (SRD) for femoral blood flow at rest and at each relative exercise intensity in COPD vs. healthy controls
+  - • Between-day coefficient of variance (CV) for femoral blood flow at rest and at each relative exercise intensity in COPD vs. healthy controls (co-primary)
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: One-legged knee-extensor exercise with Doppler measurements
+
+ELIGIBILITY:
+Age: 45 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06135701

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01709617
+Title: Carbohydrate Use During and Following Exercise
+Official Title: Sucrose as a Preferred Carbohydrate in Sports Nutrition
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 17
+Topic: sports nutrition
+
+SUMMARY:
+Carbohydrates are an integral component of sports nutrition. Providing carbohydrate (CHO) during exercise delays the onset of fatigue and improves exercise performance by maintaining high rates of CHO oxidation. Traditionally, glucose, or glucose polymers have been the preferential CHO source found in sports drinks. However, during the intestinal absorption of large amounts of glucose (\>1.2 g/min), sodium-dependent glucose transporters (SGLT1) may become fully saturated, potentially limiting the rate of exogenous CHO oxidation. In an effort to evade this limitation, research has suggested using multiple transportable carbohydrates in the composition of sports drinks. Multiple transportable carbohydrates are combinations of simple sugars that use different intestinal transporters during the absorption process. Ingesting multiple transportable carbohydrates may enhance the capacity for total intestinal CHO absorption, leading to an increase in the rate of exogenous CHO oxidation. Our purpose will be to examine the disaccharide sucrose in it's ability to provide exogenous fuel during and following prolonged exercise.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Exogenous carbohydrate oxidation rate (Part A)
+  - Endogenous carbohydrate oxidation (Part A)
+  - Glycogen utilization (Part B)
+  - Exogenous carbohydrate oxidation rate (Part A)
+  - Exogenous carbohydrate oxidation rate (Part A)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Carbohydrate ingestion
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT01709617

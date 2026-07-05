@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01477697
+Title: Effects of Omega-3 Fatty Acid Supplementation on Inflammatory Response in Multisystem Trauma Patients
+Official Title: Effects of Omega-3 Fatty Acid Supplementation on Inflammatory Response in Multisystem Trauma Patients
+Status: TERMINATED
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 12
+Topic: protein supplementation
+
+SUMMARY:
+This study will evaluate the effects of omega-3 fatty acid supplementation on inflammation in trauma patients. The main hypothesis is that such supplementation will reduce the presence of biomarkers of systemic inflammation, as compared to placebo
+
+DETAILED DESCRIPTION:
+This prospective, randomized study will evaluate the effects of omega-3 fatty acid supplementation on inflammatory response in multi-injured trauma patients. Its primary objective is to compare the intensity of inflammation between an active omega-3 group and a placebo group.
+
+PRIMARY OUTCOMES:
+  - Inflammatory markers
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Omega-3
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01477697

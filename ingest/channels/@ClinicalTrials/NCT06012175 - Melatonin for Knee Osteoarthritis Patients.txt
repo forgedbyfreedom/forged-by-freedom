@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06012175
+Title: Melatonin for Knee Osteoarthritis Patients
+Official Title: Efficacy and Safety of Melatonin for Pain Relief in Knee Osteoarthritis Patients: A Randomized, Double-Blind, Placebo-Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 340
+Topic: protein supplementation
+
+SUMMARY:
+By recruiting knee osteoarthritis patients and treating them with melatonin, this study aims to determine the efficacy and safety of melatonin in alleviating pain in this patient population.
+
+DETAILED DESCRIPTION:
+Knee osteoarthritis (KOA) is a major source of pain and disability among adults worldwide, but the treatment options for patients with painful KOA are inadequate. The current first-line oral drugs have only small to moderate benefits, and some may have serious adverse effects. Therefore, it is important to identify novel therapeutic medications with satisfactory efficacy and acceptable side-effect profiles for KOA.
+
+Melatonin (N-acetyl-5-methoxytryptamine), an indolamine mainly secreted in the pineal gland, is generated from the amino acid tryptophan via derivatization reactions. There are numerous experimental and clinical data supporting the analgesic role of melatonin. In experimental studies, melatonin shows potent analgesic effects in a dose-dependent manner. In clinical studies, melatonin has been shown to have analgesic benefits in people with chronic painful conditions, such as fibromyalgia, irritable bowel syndrome, and migraine. In an animal OA study, the investigators found that melatonin reverses pain behaviors and synovial inflammation, and down-regulates pain sensitization-related neuromediators in the synovium. These findings suggest that melatonin may be potentially effective in treating OA-related pain. However, there is a paucity of high-quality clinical evidence from human studies.
+
+The investigators propose to conduct a randomized, double-blind, placebo-controlled trial to examine the efficacy and safety of 12 weeks treatment with oral melatonin on pain and function in patients with KOA.
+
+PRIMARY OUTCOMES:
+  - Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC) pain score.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Melatonin
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 40 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06012175

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06048757
+Title: Mobile Application-delivered Resistance Program for Children and Adolescents With Type 1 Diabetes (Diactive-1)
+Official Title: Effectiveness of the Mobile Application-delivered Resistance Program for Children and Adolescents With Type 1 Diabetes (Diactive-1) on insulin Requirements: Protocol for a Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 62
+Topic: exercise muscle mass
+
+SUMMARY:
+This project involves a two-arm randomized controlled trial (RCT) designed to assess the feasibility, acceptability, and preliminary efficacy of a mobile application aimed at prescribing resistance training for children and adolescents with type 1 diabetes (Diactive-1). The program will span 24 weeks, with a minimum weekly frequency of 3 sessions. The researchers aim to recruit 52 participants but will enroll additional participants to account for potential withdrawals and ensure compliance with the desired sample size. The primary objective of the study is to evaluate the impact of the Diactive-1 mobile application on insulin requirements in children and adolescents with Type 1 Diabetes. Additionally, the researchers will investigate the effects of the Diactive-1 program on secondary parameters such as glycemic control, cardiometabolic indicators, physical fitness, and daily physical activity, among others. The hypothesis posits that personalized training through a mobile application, primarily focusing on muscular strength, will effectively reduce the daily insulin dosage in children and adolescents with type 1 diabetes.
+
+DETAILED DESCRIPTION:
+The primary objective of this study is to evaluate the effectiveness of the Diactive-1 mobile application, which offers personalized resistance training, in reducing daily insulin requirements among children and adolescents with type 1 diabetes.
+
+To achieve this objective, researchers will conduct a 24 weeks randomized controlled trial involving at least 52 participants diagnosed with type 1 diabetes. The study will consist of two groups: an experimental group utilizing the Diactive-1 application and a control group receiving standard treatment. Participant allocation to either group will be determined through central randomization.
+
+The Diactive-1 intervention encompasses several key features, including: (i) tailoring exercises based on initial physical fitness levels; (ii) adjusting the previous exercise to the glucose level measured through an interstitial glucose monitor or entered manually before the training session; (iii) monitoring heart rate during exercise; (iv) providing the flexibility to train with or without equipment, individually or with a partner; (v) dispensing diabetes management advice before and after each training session; and (vi) adapting training progressions based on session adherence. A face-to-face session will be conducted before commencing the intervention to ensure that participants are familiar with the fundamental movements, thus reducing the risk of potential muscle injuries.
+
+PRIMARY OUTCOMES:
+  - Change in daily insulin dose requirement
+
+INTERVENTIONS:
+  - DEVICE: Diactive-1 application
+
+ELIGIBILITY:
+Age: 8 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06048757

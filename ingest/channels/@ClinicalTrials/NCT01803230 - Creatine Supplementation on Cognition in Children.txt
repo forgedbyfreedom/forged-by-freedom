@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01803230
+Title: Creatine Supplementation on Cognition in Children
+Official Title: Effects of Creatine Supplementation on Cognitive Function in Children
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 100
+Topic: creatine supplementation
+
+SUMMARY:
+Creatine supplementation may improve cognitive function in elderly and vegetarian individuals. This study aims to investigate the role of creatine supplementation on cognitive function in healthy children.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - cognitive function
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: creatine supplementation
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 10 Years to 12 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01803230

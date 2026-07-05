@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01440049
+Title: Patient's Management Receiving Eplerenone Therapy
+Official Title: Assessment Of Follow-Up Methods For Patients Treated In The Long-Term With A Specific Aldosterone Receptor Antagonist
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 160
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+On a population of patients followed by an office-based cardiologist and treated with eplerenone, the objectives of the survey are:
+
+* To describe the characteristics of the population treated.
+* To describe the methods of use of eplerenone (posology, duration of treatment, medicinal combinations).
+* To describe the follow-up methods of the treatment.
+* To describe the possible interruptions of the treatment
+
+DETAILED DESCRIPTION:
+A sample size in the region of N = 400 patients will allow this accuracy of estimation, as for this size, the half-width would be equal to 5% for a frequency of 50% corresponding to a confidence interval of maximum width. In view of the type of survey and the need for 12 months of monitoring in the context of standard practice, it may be anticipated that the drop-off rate will be about 20%. A sample size of N = 500 patients was therefore chosen.
+
+PRIMARY OUTCOMES:
+  - Systolic Ejection Fraction as a Measure of Left Ventricular Dysfunction at Inclusion for Full Analysis Set (FAS) Population
+  - Systolic Ejection Fraction as a Measure of Left Ventricular Dysfunction at Inclusion for Safety Analysis Set (SAS) Population
+  - Percentage of Participants With Eplerenone Treatment Compliance at Month 3 in FAS Population
+  - Percentage of Participants With Eplerenone Treatment Compliance at Month 6 in FAS Population
+  - Percentage of Participants With Eplerenone Treatment Compliance at Month 9 in FAS Population
+
+INTERVENTIONS:
+  - OTHER: Prospective Observational
+
+ELIGIBILITY:
+Age: 18 Years to 95 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01440049

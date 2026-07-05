@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03864042
+Title: Pharmacokinetic Drug-drug Interaction Study of Encorafenib and Binimetinib on Probe Drugs in Patients With BRAF V600-mutant Melanoma or Other Advanced Solid Tumors
+Official Title: An Open-label Phase 1 Study to Evaluate Drug-Drug Interactions of Agents Co-Administered With Encorafenib and Binimetinib in Patients With BRAF V600-mutant Unresectable or Metastatic Melanoma or Other Advanced Solid Tumors
+Status: COMPLETED
+Phase: PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 56
+Topic: creatine supplementation
+
+SUMMARY:
+This is an open-label, 3-arm, fixed-sequence study to evaluate the effect of single and multiple oral doses of encorafenib in combination with binimetinib on the single oral dose pharmacokinetics (PK) of cytochrome P450 (CYP) enzyme probe substrates using a probe cocktail, on an organic anion-transporting polypeptide/breast cancer resistance protein (OATP/BCRP) substrate using rosuvastatin and on a CYP2B6 substrate using bupropion. The effect of multiple oral doses of the moderate cytochrome P450 (CYP) inhibitor modafinil on encorafenib in combination with binimetinib will also be assessed. The study will have 2 treatment phases, a drug-drug interaction (DDI) phase followed by a post-DDI phase.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Maximum Concentration (Cmax) of Plasma Midazolam on Day -7, Day 1, and Day 14
+  - Cmax of Plasma Total 1-OH Midazolam on Day -7, Day 1, and Day 14
+  - Cmax of Plasma Free 1-OH Midazolam on Day -7, Day 1, and Day 14
+  - Cmax of Plasma Glucuronide Conjugated 1-Hydroxymidazolam on Day -7, Day 1, and Day 14
+  - Cmax of Plasma Absolute Caffeine on Day -7, Day 1, and Day 14
+
+INTERVENTIONS:
+  - DRUG: losartan
+  - DRUG: dextromethorphan
+  - DRUG: caffeine
+  - DRUG: omeprazole
+  - DRUG: midazolam
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03864042

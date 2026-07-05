@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06442150
+Title: LCMD for Type 2 Diabetes Remission: Evaluation of Effectiveness and Exploration of Individual Differences
+Official Title: Low-Calorie Medicinal Diet for Type 2 Diabetes Remission: Evaluation of Effectiveness and Exploration of Individual Differences
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 170
+Topic: beta-alanine
+
+SUMMARY:
+Type 2 diabetes (T2DM) has become a major public health problem. Achieving remission (HbA1c\<6.5% without glucose-lowering medications) has recently become a new treatment goal. Low-calorie diets effectively induce remission, but adverse effects like fatigue, appetite, and constipation hinder success. Integrating traditional Chinese medicine (TCM) herbs into a low-calorie diet may alleviate adverse effects and improve remission rates.
+
+This project investigates the efficacy of a Low-Calorie Medicine Diet (LCMD) in achieving T2DM remission among overweight/obese individuals through a randomized controlled trial. The investigators will explore individual differences in remission and elucidate the underlying biological mechanisms, focusing on the brain-gut-microbiota axis. By integrating nutrition and TCM dietetics, this project provides a novel, evidence-based approach to managing T2DM in Chinese populations.
+
+DETAILED DESCRIPTION:
+Type 2 diabetes (T2DM) has become a major public health problem, and effective prevention and treatment strategies are urgently needed. Recently, the understanding of T2DM has shifted to "a disease that can be remission." Achieving remission, defined as HbA1c\<6.5% without using glucose-lowering medications, has become a new treatment goal for T2DM. Evidence suggests that a low-calorie diet is an effective approach to induce remission. Our previous research (NCT05472272) also demonstrated that a low-calorie diet can achieve remission in Chinese T2DM patients.
+
+However, adverse effects during the intervention, such as fatigue, appetite, and constipation, have become significant barriers to successful remission. These symptoms often result in poor adherence to the intervention plan and, consequently, failure to achieve remission. In traditional Chinese medicine (TCM), fatigue and constipation are typical symptoms of "Qi Vacuity", while hunger is more associated with "Yin Vacuity". "Herb is the food" is a unique concept in TCM. Integrating TCM herbs into a low-calorie diet may help alleviate these adverse effects and improve the likelihood of achieving diabetes remission.
+
+This project aims to investigate the efficacy of a Low-Calorie Medicine Diet (LCMD) in achieving remission of T2DM among overweight/obese individuals through a randomized controlled trial. The investigators will also explore individual differences in achieving remission and elucidate the underlying biological mechanisms, focusing on the brain-gut-microbiota axis. By integrating theories from nutrition and TCM dietetics, this project seeks to provide a novel, evidence-based approach to the management of T2DM in Chinese populations.
+
+PRIMARY OUTCOMES:
+  - Number of participants achieving diabetes remission as assessed by American Diabetes Association criteria
+  - Number of participants achieving significant weight loss, defined as a reduction of at least 12kg from baseline body weight
+
+INTERVENTIONS:
+  - COMBINATION_PRODUCT: Low-Calorie Medicine Diet
+  - COMBINATION_PRODUCT: Low-Calorie Diet
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06442150

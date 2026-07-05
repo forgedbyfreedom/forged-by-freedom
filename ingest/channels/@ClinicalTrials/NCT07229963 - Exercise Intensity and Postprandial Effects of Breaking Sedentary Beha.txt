@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07229963
+Title: Exercise Intensity and Postprandial Effects of Breaking Sedentary Behavior in Overweight Adults
+Official Title: Postprandial Cardiometabolic Effects of Interrupting Sedentary Behavior With Exercise of Varying Intensity in Healthy Overweight Adults
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: sports nutrition
+
+SUMMARY:
+The purpose of this study is twofold: (1) to determine whether breaking up prolonged sitting with aerobic or sprint cycling breaks reduces postprandial blood glucose, insulin, CRP, and blood pressure, which are established risk markers for cardiometabolic diseases; and (2) to assess substrate oxidation during this period in order to identify which exercise condition promotes the greatest increase in fat oxidation.
+
+DETAILED DESCRIPTION:
+Sedentary behavior (SED) refers to activities such as sitting, lying down, or reclining that require energy expenditure of ≤1.5 MET during the time spent awake. Prolonged and continuous sedentary behavior leads to adverse effects such as abnormal postprandial metabolic responses, insulin resistance, vascular dysfunction, high blood pressure, increased carbohydrate oxidation, and inflammation. Epidemiological data also show that SED increases the risk of mortality, cardiovascular disease, type 2 diabetes, and certain types of cancer. Experimental studies have shown that 2-5 minutes of low- or moderate-intensity aerobic exercise performed every 20-30 minutes during the postprandial period improves cardiometabolic health by reducing glucose, insulin, and blood pressure during the postprandial period. On the other hand, it is known that short-term sprint interval exercise (SIE) increases insulin sensitivity by rapidly depleting muscle glycogen, improves glucose control, lowers blood pressure, and increases fat oxidation. With these effects, SIE may be a time-efficient method for interrupting SED. Although the cardiometabolic benefits of SIE and aerobic exercise interruptions (AEI) are known, there is a lack of studies comparing the effects of interrupting SED with these two exercise types of different intensities in preventing postprandial cardiometabolic dysfunction. In this context, the aim of the study is to compare the postprandial cardiometabolic effects of interrupting sedentary behavior with AIE and sprint exercise interruptions (SEI) in overweight but otherwise healthy women and men aged 35-45. In this randomized crossover trial, volunteers will participate in three trials: 1) AEI, 2) SEI, and 3) SED. There will be a minimum 3-day washout period between trials. In the SEI and AEI trials, exercise interruptions will be implemented every 30 minutes during the 7-hour sitting period, whereas in the SED trial, participants will remain seated continuously for the entire duration. In all conditions, two meals (breakfast and lunch) will be served 3 hours apart, and the trials will begin, after the breakfast meal is consumed. Venous blood samples taken hourly during the experiment will be used to analyze insulin, glucose, and C-reactive protein (CRP) levels. In addition, blood pressure will be measured hourly, and fat oxidation will be assessed at the baseline, 2nd, 5th, and 7th hours. The effects of the conditions on glucose and insulin will be evaluated using linear mixed models. A Two-Way (Trial x Number of Repeats) Analysis of Variance for Repeated Measures will be used to detect differences between conditions.
+
+PRIMARY OUTCOMES:
+  - insulin
+
+INTERVENTIONS:
+  - OTHER: Aerobic Exercise Intervention
+  - OTHER: Sprint Exercise Intervention
+  - OTHER: Sedentary Behaviour Intervention
+
+ELIGIBILITY:
+Age: 35 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07229963

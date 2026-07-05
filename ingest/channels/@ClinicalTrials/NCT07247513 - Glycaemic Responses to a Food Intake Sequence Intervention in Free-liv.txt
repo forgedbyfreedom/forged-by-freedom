@@ -1,0 +1,48 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07247513
+Title: Glycaemic Responses to a Food Intake Sequence Intervention in Free-living Elite Female Athletes
+Official Title: Glycaemic Responses to a Food Intake Sequence Intervention Under Free-living Conditions in Elite Female Athletes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: sleep athletes
+
+SUMMARY:
+The goal of this clinical trial is to investigate the impact of a food intake sequence intervention under free-living conditions on glycaemic responses in elite female athletes. Specifically, the main questions it aims to answer are:
+
+1. Does consuming breakfast in different food intake sequences alter postprandial interstitial glucose responses?
+2. Does consuming a pre-exercise meal in different food intake sequences alter interstitial glucose responses during exercise?
+3. Does consuming the last meal of the day in different food intake sequences alter nocturnal interstitial glucose responses?
+
+To address these questions, researchers will compare eating the dietary sources of rapidly absorbed carbohydrate (CHO) at the end (CHO-last meal pattern) or at the start (CHO-first meal pattern) of standardised mixed meals, at different times of day, in a randomised, counterbalanced, crossover design.
+
+Participants will wear a blinded continuous glucose monitor (CGM) for 6 consecutive days during a training camp. Throughout the study, they will be provided with buffet meals, at the same time and location each day. Dietary intake will be ad libitum, except for breakfast and supper, for which participants will select a preferred composition (ingredients, preparation methods, portion sizes) to replicate across study days. In all ad libitum meals (i.e., lunch, snacks, and dinner), they will be asked to maintain their assigned food intake sequence.
+
+* On day 1, athletes will eat freely. An educational session on the study protocol and food sequence manipulation will be delivered, and informed consent, questionnaires, screening assessments, and CGM fitting will be completed. Data collected by the CGM during the first 24 hours will be disregarded due to sensor stabilisation. Hence, this period will serve for familiarisation only.
+* On days 2 and 3, one group will eat the last meal of the day (i.e., supper) in a CHO-last meal pattern, while the other will follow a CHO-first meal pattern; on days 3 and 4 one group will eat breakfast in a CHO-last meal pattern while the other will follow a CHO-first meal pattern.
+* On days 4 and 5 (supper) and 5 and 6 (breakfast), participants in each group will adhere to the alternate condition.
+
+Concurrent data on potential confounding factors (e.g., dietary intake, physical activity, internal and external load during training sessions/competition, sleep quantity and quality, menstrual cycle phase/status) will be collected.
+
+Due to the short camp duration, implementing a one-day washout period will not be feasible. Therefore, repeated measurements over two consecutive days per condition will be obtained to minimise carryover effects of the food intake sequence from prior meals on end-of-intervention data (the final 24 hours per condition), and to assess intraindividual consistency of outcomes at matched-times and standardised settings.
+
+Glycaemic responses will be compared within-participant between food intake sequences using linear mixed models with random intercepts, to account for repeated measures, interindividual variability, and potential missing data.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Incremental interstitial glucose peak after a standardised test meal
+
+INTERVENTIONS:
+  - OTHER: Carbohydrate-last meal pattern
+  - OTHER: Carbohydrate-first meal pattern
+
+ELIGIBILITY:
+Age: 18 Years to 64 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07247513

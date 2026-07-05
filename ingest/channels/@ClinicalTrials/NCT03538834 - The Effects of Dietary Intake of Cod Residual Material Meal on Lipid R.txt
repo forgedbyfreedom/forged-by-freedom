@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03538834
+Title: The Effects of Dietary Intake of Cod Residual Material Meal on Lipid Regulation, Glucose Regulation and Body Composition in Physically Active Adults
+Official Title: The Effects of a Daily Intake of Cod Residual Material Meal for 8 Weeks on Serum Lipids and Fatty Acids, Glucose Regulation and Body Composition in Lean, Active Adults: A Randomized Controlled Trial.
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: omega 3 exercise
+
+SUMMARY:
+A high intake of fish is associated with positive health effects, including prevention and treatment of chronic non-communicable diseases, such as cardiovascular diseases (CVDs) and type 2 diabetes. These health effects have traditionally been attributed to the omega-3 fatty acids in fatty fish, but recent studies have suggested that also fish proteins may improve biomarkers of metabolic disease. Intake of cod fillet have previously shown beneficial effects on blood lipids, glucose regulation and body composition in adults with overweight or obesity. Health effect of cod residual material from fillet production (i.e., head, backbone, skin, cutoffs and entrails) have so far not been investigated, but residuals from other fish species have shown promising effects on glucose regulation in rats. The main aim of the current study is to investigate the effects of cod residual meal on serum lipids and glucose regulation in healthy, physically active adults.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Lipid metabolism
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Cod meal from residual material
+  - DIETARY_SUPPLEMENT: Control
+
+ELIGIBILITY:
+Age: 20 Years to 55 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03538834

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05711550
+Title: Investigating the Effect of Normal Frequency-band and Infra-low Frequency Neurofeedback on Functional Brain Connectome
+Official Title: Investigating the Effect of Normal Frequency-band and Infra-low Frequency Neurofeedback on Functional Brain Connectome
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: physical activity intervention
+
+SUMMARY:
+In this basic research project a novel form of neurofeedback is investigated, in which in addition to the use of 1) normal frequency bands (1-35 Hertz), 2) very slow signals (low frequency; \< 0.1 Hertz) are used, which correspond more to the basic excitability of the brain. Because of the slow signal characteristics, this method is called infra-low frequency neurofeedback (ILF-NFB for short). Although this method has been successfully applied in clinical settings since the 1980s, the mechanisms underlying the effect are largely unexplored. For that purpose, a project consistiong of three studies will be conducted in order to investigate the neurophysiological effects of both signal elements on healthy participants:
+
+* Study 1 examines the effects of normal frequency band training alone.
+* Study 2 examines the effects of low frequency training.
+* Study 3 examines the effects of the combination of normal frequency band and low frequency training
+
+For each study, a total of 40 clean data sets are to be collected, resulting in a minimum amount of 120 participants for all three studies.
+
+All three studies investigate the effects of the neurofeedback on brain connectivity patterns by means of functional magnetic resonance imaging (fMRI), accompanied by measurements of the autonomic nervous system (ANS) and behavior.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Functional brain connectivity
+
+INTERVENTIONS:
+  - DEVICE: Real Neurofeedback
+  - DEVICE: Sham Neurofeedback
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05711550

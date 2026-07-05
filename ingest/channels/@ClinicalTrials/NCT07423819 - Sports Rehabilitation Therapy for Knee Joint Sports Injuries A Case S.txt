@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07423819
+Title: Sports Rehabilitation Therapy for Knee Joint Sports Injuries: A Case Study of Anterior Cruciate Ligament Injury and Patellar Chondromalacia
+Official Title: Sports Rehabilitation Therapy for Knee Joint Sports Injuries: A Case Study of Anterior Cruciate Ligament Injury and Patellar Chondromalacia
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 160
+Topic: resistance training
+
+SUMMARY:
+The primary objective of this clinical trial is to verify the superiority of a digital diagnosis and treatment system for the conservative management of knee sports injuries-based on wearable sensors, machine vision, and large language models-over conventional off-site rehabilitation in terms of functional outcomes. The secondary objectives include assessing safety and adverse events, compliance and feasibility, algorithm evaluation accuracy and usability, and generating clinical evidence to support the registration of a Class II medical device. Participants will undergo a six-month intervention comprising knee muscle strengthening exercises, lower limb balance and stability training, and stretching exercises. Follow-up assessments will be conducted every four weeks, recording IKDC and Lysholm subjective knee function scores, VAS pain scores, SF-36 quality of life scores, knee range of motion, and MRI findings.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - International Knee Documentation Committee Subjective Knee Form Score
+  - Lysholm Knee Scoring Scale
+
+INTERVENTIONS:
+  - OTHER: Muscle Strength Training
+  - OTHER: Lower limb balance and stability exercises
+  - OTHER: Stretching and Relaxation
+
+ELIGIBILITY:
+Age: 18 Years to 50 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07423819

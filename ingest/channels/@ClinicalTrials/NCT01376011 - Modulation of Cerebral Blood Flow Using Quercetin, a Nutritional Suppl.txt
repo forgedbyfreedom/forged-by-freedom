@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01376011
+Title: Modulation of Cerebral Blood Flow Using Quercetin, a Nutritional Supplement
+Official Title: Hypoxia-inducible Transcription Factor 1 (HIF-1) in Vascular Aging
+Status: COMPLETED
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 106
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study is to find out if quercetin can increase blood levels of hypoxia-inducible transcription factor 1 (HIF-1 protein) and to see if there is a corresponding increase in blood flow to the brain.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Define change from baseline levels of HIF-1 concentration and 3 of its regulated proteins after 6 months of quercetin (versus placebo) dietary intake.
+  - Determine change from baseline brain blood flow after 6 months of quercetin (versus placebo) dietary intake.
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: quercetin/placebo
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01376011

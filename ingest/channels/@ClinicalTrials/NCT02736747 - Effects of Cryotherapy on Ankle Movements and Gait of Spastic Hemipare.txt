@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02736747
+Title: Effects of Cryotherapy on Ankle Movements and Gait of Spastic Hemiparetic Subjects
+Official Title: Immediate Effects of Cryotherapy on Neuromuscular Performance of Ankle Joint and on Gait Pattern of Chronic Spastic Hemiparetic Subjects Post-Stroke
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 16
+Topic: resistance training
+
+SUMMARY:
+The stroke has been described as the third cause of death and main cause of disability in the worldwide population. About 60% of the survivors are able to walk following the rehabilitation process, however deficits on lower limbs functions often persists in most cases, affecting the gait and functional mobility. In this sense, several interventions are applied in the clinical practice to optimize the functional performance. Cryotherapy is one of the most used techniques aiming to reduce spasticity temporarily, allowing the training of functional tasks, such as walking. The aim of the present study is to evaluate the immediate effects of cryotherapy (ice pack) on neuromuscular performance, proprioception, passive resistance of dorsiflexors and plantarflexors muscles, and also on gait performance in chronic post-stroke subjects. Eighteen chronic hemiparetic subjects will participate in this crossover placebo-controlled trial. The order of intervention (cryotherapy or placebo) will be randomized. Fifteen days of washout period will be considered. The cryotherapy/placebo will be applied on the posterior area of the leg for 20 minutes. Initially Fugl Meyer will be applied. All other assessments will be performed before and after intervention: spasticity level, classified according to Modified Ashworth Scale; temporo-spatial and angular parameters for trunk, hip, knee and ankle during gait, using a motion analysis system (Qualysis AB, Gothenburg, Sweden); the proprioception (joint position sense), passive resistance to stretching, isometric and isokinetic torques during contractions of plantarflexors and dorsiflexors of the ankle, evaluated through isokinetic dynamometer. Concomitantly, bilateral activation of soleus, gastrocnemius, tibialis anterior and peroneus will be assessed by electromyography during isokinetic dynamometer assessment and gait. The following electromyographic variables will be analyzed: maximum activation amplitude, muscle onset, coactivation index between agonists and antagonists. For statistical analysis, normality (Shapiro Wilk) and homogeneity (Levene) tests will be applied. If the variables have a distribution considered normal and homogeneous, Two-way ANOVA with repeated measures will be applied. Otherwise, non-parametric statistics (Friedman test) will be applied. A significance level of 0.05 will be considered for all statistical tests.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change from baseline in spasticity level
+  - Change from baseline in angular kinematic variables during gait
+  - Change from baseline in linear kinematic variables during gait
+  - Change from baseline in joint sense position (proprioception) during plantarflexion and dorsiflexion
+  - Change from baseline in passive resistance of plantarflexors and dorsiflexors
+
+INTERVENTIONS:
+  - OTHER: Cryotherapy
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 40 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02736747

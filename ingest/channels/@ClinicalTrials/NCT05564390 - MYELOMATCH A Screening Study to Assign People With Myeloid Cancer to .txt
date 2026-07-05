@@ -1,0 +1,61 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05564390
+Title: MYELOMATCH: A Screening Study to Assign People With Myeloid Cancer to a Treatment Study or Standard of Care Treatment Within myeloMATCH (MyeloMATCH Screening Trial)
+Official Title: Master Screening and Reassessment Protocol (MSRP) for the NCI MyeloMATCH Clinical Trials
+Status: RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 2000
+Topic: beta-alanine
+
+SUMMARY:
+This MyeloMATCH Master Screening and Reassessment Protocol (MSRP) evaluates the use of a screening tool and specific laboratory tests to help improve participants' ability to register to clinical trials throughout the course of their myeloid cancer (acute myeloid leukemia or myelodysplastic syndrome) treatment. This study involves testing patients' bone marrow and blood for certain biomarkers. A biomarker (sometimes called a marker) is any molecule in the body that can be measured. Doctors look at markers to learn what is happening in the body. Knowing about certain markers can give doctors more information about what is driving the cancer and how to treat it. Testing patients' bone marrow and blood will show doctors if patients have markers that specific drugs can target. The marker testing in this study will let doctors know if they can match patients with a treatment study (myeloMATCH clinical trial) that tests treatment for the type of cancer they have or continue standard of care treatment with their doctor on the Tier Advancement Pathway (TAP).
+
+DETAILED DESCRIPTION:
+PRIMARY OBJECTIVES:
+
+I. Screening and Reassessment (MSRP): To evaluate the feasibility of MATCHBox receiving and organizing all data needed for assignment to a myeloMATCH clinical trial or Tier Advancement Pathway (TAP) within 72 hours of MDNet receipt of all required specimens for initial therapy and within 10 days for subsequent therapy.
+
+II. Tier Advancement Pathway (TAP): To enable participants who are not matched to an investigational myeloMATCH treatment substudy to receive standard of care (SOC) while remaining on the MSRP to maintain access to later tiers of treatment substudies.
+
+SECONDARY OBJECTIVES:
+
+I. Screening and Reassessment (MSRP):
+
+Ia. To describe the time to generation of all data required for treatment substudy (or TAP) assignment, time to treatment substudy (or TAP) assignment, percent assigned to a myeloMATCH treatment substudy, and the percent of screened participants who register to a myeloMATCH investigational treatment substudy or are assigned to TAP:
+
+Iai. Separately within each tier of myeloMATCH treatment substudy and analogous TAP assignment; Ibi. Separately within each clinical basket of myeloMATCH treatment substudies; Ici. Over time, across and within the categories above.
+
+II. Tier Advancement Pathway (TAP):
+
+IIa. To evaluate participants for assignment to higher tier treatment substudies within myeloMATCH; IIb. To describe, within tier- and basket- levels of TAP, measurable residual disease (MRD) rates and clonal evolution; IIc. To describe, within tier- and basket- levels of TAP, remission status and overall survival of participants who receive standard of care therapy; IId. To obtain MDNet specimens for translational medicine and biobanking.
+
+OUTLINE:
+
+REGISTRATION: Patients undergo bone marrow aspiration and collection of blood on study. Patients' bone marrow and blood specimens undergo rapid genetic testing. Patients are then assigned to a specific substudy containing a therapy targeted to the patient's mutational profile. If there is no targetable mutation, the patient is placed on a substudy testing novel combinations that do not contain a target-specific drug. Patients who are not eligible for any MYELOMATCH substudy are assigned to TAP.
+
+TAP: Patients continue SOC treatment and undergo continued bone marrow aspiration and blood collection for possible future substudy assignment.
+
+TREATMENT: Patients are assigned to a specific treatment substudy.
+
+MM1YA-CTG01: Younger patients (age 18-59 years) with intermediate risk acute myeloid leukemia (AML) are randomized to 1 of 3 arms.
+
+ARM I: Patients receive daunorubicin intravenously (IV) on days 2-4, cytarabine IV continuously on days 2-8, and venetoclax orally (PO) once per day (QD) on days 1-11. Cycle is 28 days and treatment is given in the absence of disease progression or unacceptable toxicity. Based on a bone marrow aspiration assessment (completed at the discretion of the treating investigator), patients may receive reinduction consisting of daunorubicin
+
+PRIMARY OUTCOMES:
+  - Timing of treatment Substudy or Tier Advancement Pathway (TAP) assignment
+
+INTERVENTIONS:
+  - PROCEDURE: Allogeneic Hematopoietic Stem Cell Transplantation
+  - DRUG: Azacitidine
+  - OTHER: Best Practice
+  - PROCEDURE: Biopsy Procedure
+  - PROCEDURE: Biospecimen Collection
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05564390

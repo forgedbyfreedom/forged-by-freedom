@@ -1,0 +1,64 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06097819
+Title: Therapy-Based Games' Effects on Motor and Cognitive Skills in Intellectual Disabilities
+Official Title: Investigation of the Effect of Occupational Therapy-based Rehabilitative Games on Motor Skills, Proprioception and Cognitive Functions in Individuals With Intellectual Disabilities
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 45
+Topic: muscle rehabilitation
+
+SUMMARY:
+Individuals with intellectual disabilities face challenges in areas of attention, motor skills, and awareness. Among the problems they experience are difficulties in focusing, transitioning from one activity to another, performing tasks in sequence in skills such as copying, reading, and writing. Additionally, they tend to form sentences with misarranged words. Generally, they may present with disorganized or weak handwriting. Other reported issues in this population include coordination problems in extremities and balance disturbances. These essential life skills can impede the individual's ability to move safely. With the recent integration of technology into rehabilitation, new intervention and assessment methods have emerged for occupational therapists. Systems like Microsoft Kinect, Nintendo Wii, Xbox, and Leap Motion are being used in these methods. In the literature, Kwok et al. included 73 participants aged between 60-85 in their study. They examined the connection between swinging speeds while standing on both feet on a balance board and the risk of falling. They concluded that the anterior-posterior swing speed measure derived from the Wii Balance Board (WBB) could complement current clinic-based measurements in predicting future falls among community-dwelling older adults. Reviewing the literature, technological rehabilitation applications are observed to be used in various patient groups. However, studies on occupational therapy-based technological rehabilitation interventions in individuals with intellectual disabilities are limited. To our knowledge, there isn't a study evaluating awareness, cognitive, and physical skills in intellectually disabled individuals using Leapmotion, Xbox, Balanceboard sensors, and mobile games. Based on this information, the aim of our study is to investigate the effects of occupational therapy-based rehabilitative games on motor skills, proprioception, and cognitive functions in individuals with intellectual disabilities.
+
+DETAILED DESCRIPTION:
+A total of 45 participants will be included in the study. These 45 participants will be divided into three groups, and each participant will receive an intervention twice a week for six weeks following the initial assessment.
+
+Group → Mobile application-based game group Group → Supervised combined sensor-based game group Group → Individualized occupational therapy group Participants will be assessed both before and after the 12-session intervention. Participants' attention and reaction time will be evaluated using MOXO-dCPT, proprioceptive awareness will be assessed using Becure Extremity ROM, neuromuscular function will be measured using the 30-second sit-to-stand test, and fine motor skills will be assessed using the nine-hole peg test.
+
+Inclusion criteria:
+
+* Being aged between 18 and 30.
+* Obtaining an IQ score between 40 and 70 based on the psychiatric evaluation.
+* Having mild to moderate intellectual disability.
+* Being able to participate in the games.
+
+Exclusion criteria:
+
+* Presence of behavioral disorders.
+* Inability to cooperate with the application instructions.
+* Individuals with visual problems and sensitivity to light.
+* Presence of limiting neurological, vascular, and cardiac problems.
+
+Outcome measures:
+
+Joint position sense: Joint position sense evaluation measures proprioceptive awareness. Individuals are asked to actively reposition to a degree shown to them before the measurement begins. The individual's active repositioning angle is then measured again, and the difference between the required angle and the actual angle is compared. The closer these two values are to each other, the better the individual's proprioceptive awareness. In our study, proprioceptive awareness for shoulder abduction and flexion measurements will be assessed using the Becure Extremity Rom.
+
+Evaluation of Neuromuscular Function
+
+The 30-second sit-to-stand test requires participants to sit down and stand up from a chair as many times as possible within a 30-second time frame. The scores are associated with muscle strength and functionality. This test is a rapid, cost-effective, safe, and commonly used clinical assessment for lower extremity function.
+
+Evaluation of Fine Motor Skills
+
+The Nine Hole Peg Test consists of a platform with nine holes spaced 32mm apart and nine pegs. Individuals are instructed to remove all pegs from the holes as quickly as possible, one by one, and then to pick up each peg and place it back into the holes on the platform in the shortest time possible. The platform is positioned toward the hand being tested, while the pegs are placed towards the individual's midline. Only the evaluated hand performs the test, and the non-evaluated hand is allowed to hold the edge of the platform for stability. Scores are based on the time, recorded in seconds, taken to complete the test activity. Evaluation of Attention and Reaction Time
+
+The MOXO-dCPT is a computer-based test anchored on an online platform comprising eight sections. The au
+
+PRIMARY OUTCOMES:
+  - Joint position sense
+  - Neuromuscular Function
+  - Evaluation of Fine Motor Skills
+  - Attention and Reaction Time
+
+INTERVENTIONS:
+  - OTHER: Mobile app-based game group
+  - OTHER: Supervised combined sensor-based game group
+  - OTHER: Individualized occupational therapy group
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06097819

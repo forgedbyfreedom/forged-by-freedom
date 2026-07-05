@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05593549
+Title: Role of Autophagy in Type 2 Diabetes Microvascular Dysfunction
+Official Title: Role of Autophagy in Type 2 Diabetes Microvascular Dysfunction
+Status: RECRUITING
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+The goal of this clinical trial is to examine the role of autophagy on microvascular function in adults with Type 2 Diabetes. The main question it aims to answer are:
+
+* Does presence of Type 2 Diabetes reduce autophagy and impair microvascular function?
+* Does exposure to high glucose impair autophagy and subsequently microvascular function?
+
+Participants will undergo 2 study days. The primary outcome will be in vivo microvascular function testing. Following the first study day participants will undergo either supplementation with trehalose, an autophagy activator, or placebo for 14 days. The second study day will test in vivo microvascular function.
+
+DETAILED DESCRIPTION:
+It is generally accepted that endothelial dysfunction precedes overt cardiovascular disease and is a foundational event in development of atherosclerosis. Endothelial function is often assessed by flow-mediated dilation (FMD), a physiological response to shear stress along the endothelium that elicits vasodilation via release of nitric oxide (NO) in large and small blood vessels. In the presence of Coronary Artery Disease (CAD), NO production is reduced and FMD is diminished in conduit arteries. However, in the microcirculation, FMD is preserved but there is a compensatory shift from NO to hydrogen peroxide (H2O2) as the mediator of this dilation. The investigators lab has previously identified several signaling pathways, including autophagy, that are involved in regulating the switch in mechanism of dilation from NO to H2O2 utilizing ex vivo isolated arteriole preparations in CAD. In this trial, the investigators explore the possible role of autophagy as mechanism by which this switch occurs in a population at-risk for cardiovascular disease. Macroautophagy (referred to as autophagy here forward) is a scalable process designed to recycle damaged organelles via acidic hydrolases in lysosomes to maintain homeostasis. The rationale for examining a role for autophagy stems from data in cultured endothelial cells showing that autophagy can regulate NO bioavailability and reactive oxygen species (ROS) production. Inhibition of key autophagy proteins decreases NO production and increases ROS endothelial cells are exposed to shear stress, markers of autophagy increase, along with a rise in NO production. The investigators have recently demonstrated that autophagic flux is repressed in response to shear stress in arterioles from patients with CAD compared to healthy controls. This disease-associated reduction in autophagic flux increases release of H2O2 from the mitochondria in response to shear stress. Activation or repression of autophagy in CAD and healthy arterioles, respectively, switches the mechanism of dilation (activation in CAD switches to NO; repression in healthy controls switches to H2O2). Collectively, microvascular autophagic flux plays a key role integrating cellular signals within the endothelium to regulate microvascular health and function in response to shear stress in overt cardiovascular disease. The primary cellular mechanisms for this pathological switch in in vasodilator mechanism and its relevance in other at-risk populations (e.g., type 2 diabetes mellitus; T2DM) remains unclear.
+
+Hyperglycemia, Type 2 Diabetes Mellitus and Microvascular Function T2DM, a chronic metabolic disease, is an independent risk factor for cardiovascular disease. Hyperglycemia is a hallmark of T2DM, and both T2DM and hyperglycemia are independently linked to endothelial dysfunction. While hyperglycemia in T2DM is often well-managed with medication, damaging microvascular consequences such as diabetic neuropathy and cardiomyopathy persist, and T2DM subje
+
+PRIMARY OUTCOMES:
+  - Nitric Oxide Mediated Endothelium-Dependent Vasodilation via Laser Doppler Flowmetry Coupled with Intradermal Microdialysis
+  - Autophagic Flux Protein Expression
+
+INTERVENTIONS:
+  - DRUG: Trehalose
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05593549

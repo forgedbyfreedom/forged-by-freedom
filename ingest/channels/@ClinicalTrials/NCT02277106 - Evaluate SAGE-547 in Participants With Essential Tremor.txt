@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02277106
+Title: Evaluate SAGE-547 in Participants With Essential Tremor
+Official Title: A Double-blind, Placebo-controlled, Two-Period Crossover Proof-of-Concept Study Evaluating the Safety, Tolerability, Pharmacokinetics, and Efficacy of SAGE-547 Injection in the Treatment of Patients With Essential Tremor
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 25
+Topic: creatine supplementation
+
+SUMMARY:
+Stage 1 is a double-blind, proof-of-concept study designed to evaluate the safety, tolerability, pharmacokinetics (PK), and efficacy of SAGE-547 Injection in male and female participants with essential tremor in the upper limb.
+
+Stage 2 is an open-label arm designed to evaluate the safety, tolerability, PK, and effectiveness of SAGE-547 Injection at a higher dose than in Stage 1. Participants who completed Stage 1 were invited to participate in Stage 2.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Stage 1: Percentage of Participants With Treatment-Emergent Adverse Events (TEAEs) and Serious Adverse Events (SAEs)
+  - Stage 2: Percentage of Participants With Treatment-Emergent Adverse Events (TEAEs) and Serious Adverse Events (SAEs)
+  - Stage 1: Percentage of Participants With a Response of 'Yes' to Any Columbia Suicide Severity Rating Scale (C-SSRS) Suicidal Ideation or Suicidal Behavior Item at Any Visit
+  - Stage 2: Percentage of Participants With a Response of 'Yes' to Any Columbia Suicide Severity Rating Scale (C-SSRS) Suicidal Ideation or Suicidal Behavior Item at Any Visit
+  - Stage 1: Change From Baseline (CFB) in Vital Signs Parameter - Supine Systolic Blood Pressure
+
+INTERVENTIONS:
+  - DRUG: SAGE-547
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 35 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02277106

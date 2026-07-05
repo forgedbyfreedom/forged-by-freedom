@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05100459
+Title: The Effects of Whey Protein Supplements on Markers of Exercise-induced Muscle Damage in Resistance-trained Individuals
+Official Title: The Effects of Pasture-raised Versus Conventional Whey Protein Supplementation on Vascular Function and Markers of Exercise-induced Muscle Damage and Inflammation in Resistance-trained Individuals
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 39
+Topic: protein supplementation
+
+SUMMARY:
+Intense exercise can bring about various side effects to one's body. Less range of motion, increased pain sensitivity, increased muscle swelling, and decreased muscle strength can occur immediately after exercise. These side effects can be referred to exercise induced muscle damage (EIMD) and can sometimes last many days. This study's goal is to evaluate the effects of various protein supplements on EIMD symptoms as well as on blood vessel health during the recovery period after muscle damaging exercise.
+
+DETAILED DESCRIPTION:
+Eccentric exercise can result in exercise induced muscle damage (EIMD), which can cause an abundance of ultrastructural muscular disruption and pro-inflammatory and pro-oxidant activity in the body, leading to an impairment of muscular force production and range of motion, along with elevated pain sensitivity, increased swelling, and arterial stiffness. Pasture-raised dairy products, obtained from strictly grass-fed cows, have been shown to possess more anti-inflammatory-, antioxidant-, and antihypertensive-like biochemicals compared with conventional products (i.e., with a different nutrient composition from a diet rich in grains versus grasses). However, human research trials on these products, such as whey protein concentrate (WPC), are neglected. This study addresses this gap, with a double-blind, randomized, placebo-controlled trial that compares the effect of conventional WPC versus WPC supplementation reported to be derived from pasture-raised cows on vascular function and indirect markers of muscle damage and inflammation in response to eccentric EIMD in healthy, young, resistance-trained women and men. Thirty resistance-trained individuals will complete an intense EIMD bout consisting of eccentric barbell back squats and then will be assessed 24, 48, and 72 hours post-EIMD for muscle soreness, range of motion, maximal isometric voluntary contraction, peripheral fatigue via magnetic stimulation, countermovement jump, barbell back squat velocity, and vascular function (i.e., arterial stiffness via carotid femoral pulse wave velocity). Subjects will be grouped into a conventional WPC, pasture-raised WPC, and placebo supplementation group and consume their respective supplementation thrice daily immediately post-EIMD until the study's completion.
+
+PRIMARY OUTCOMES:
+  - Titin
+  - Isometric torque
+  - Range of motion
+  - delayed onset muscle soreness
+  - Pain pressure threshold
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Pasture-raised whey protein
+  - DIETARY_SUPPLEMENT: Conventional whey protein
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05100459

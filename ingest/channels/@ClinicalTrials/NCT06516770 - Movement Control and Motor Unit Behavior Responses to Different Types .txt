@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06516770
+Title: Movement Control and Motor Unit Behavior Responses to Different Types of Stimulation
+Official Title: The Effects of Different Types of Stimulation on Movement Control and Motor Unit Behavior in Individuals With Lumbopelvic Movement Control Impairment
+Status: ENROLLING_BY_INVITATION
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 136
+Topic: low back pain exercise
+
+SUMMARY:
+This study aims to determine the effect of different stimulations including 1) transcranial direct current stimulation (tDCS), 2) neuromuscular electrical stimulation (NMES), 3) motor control exercise (MCE), and 4) isometric exercise (IE) on movement control and motor unit behavior in individuals with movement control impairment, and determine the correlation between movement control and motor unit behavior.
+
+DETAILED DESCRIPTION:
+After obtaining the written informed consent, all participants will fill out the information sheet for demographic data. Data collection will be conducted in private laboratory with closed environment. Only lab staffs can access to the lab. Female researchers will perform participant preparation. Participants will be informed that they have to change their cloth to lab tank top to expose their lower back area. However, they can decline to change their cloth. In this case, researchers will fold their cloth to expose the lower back. The body landmarks will be identified. These landmarks include 1) spinous processes (L1 and S1 levels), 2) lumbar multifidus (LM) (2 cm lateral to lower half of L4 spinous process), 3) bilateral lateral epicondyle of femur, and 4) bilateral lateral malleolus. Spinous process of L1, S2, bilateral lateral epicondyle of femur, and bilateral lateral malleolus will be used as locations for inertial measurement unit (IMU) sensors, while LM location will be used to place surface electrode for decomposition electromyography (dEMG). This preparation process will take about 20 minutes.
+
+The participant will be asked to perform 1-minute active forward bend based on speed and load that can differentiate between healthy individuals and individuals with movement control impairment. IMU and dEMG data are concurrently collected. Five-minute rest will be provided to avoid muscle fatigue. After that, participant will be randomly assigned to one of four stimulations including transcranial direct current stimulation (tDCS), neuromuscular electrical stimulation (NMES), isometric exercise (IE), and motor control exercise (MCE). Each stimulation will take approximately 20 minutes.
+
+Types of stimulation Transcranial direct current stimulation (tDCS): The participant will receive the tDCS using 5X7 cm electrodes. The anodal electrode will be placed on M1 representing the back muscles (1 cm anterior and 4 cm lateral to the vertex), while cathodal electrode will be placed on contralateral supraorbital area. The intensity will be set at 2 mA with 10-second fade in/out. The subject will be stimulated by tDCS for 20 minutes.
+
+Neuromuscular electrical stimulation (NMES): The participants will receive the NMES using interferential mode (6000 Hz, beat frequency 20-50 Hz, scanning effect) on bilateral LM. The intensity will be set at the subject's maximum tolerance. Stimulation will be set at 10 seconds on and 60 seconds off to minimize muscle fatigue. The total NMES time is 20 minutes.
+
+Isometric exercise (IE): The participant will be instructed to perform isometric back extension exercise in modified Sorensen position. The participant will hold 60 seconds in neutral position for 5 repetitions with 3 minutes rest between repetitions.
+
+Movement control exercise (MCE): The participant will be instructed to perform co-contraction of transverse abdominis and lumbar multifidus muscle, while performing self-selected pace forward bend. Emphasis will be given 
+
+PRIMARY OUTCOMES:
+  - Segmental angular velocity in degrees/second
+  - Clinical observation
+  - Number of motor units
+  - Motor unit action potential in millivolts
+  - Motor unit firing rate in pulses/second
+
+INTERVENTIONS:
+  - DEVICE: Transcranial direct current stimulation
+  - DEVICE: Neuromuscular electrical stimulation
+  - OTHER: Motor control exercise
+  - OTHER: Isometric exercise
+
+ELIGIBILITY:
+Age: 18 Years to 40 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06516770

@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02377076
+Title: Dietary Calcium Supplementation, Gut Permeability and Microbiota in Type 2 Diabetics
+Official Title: 
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 38
+Topic: exercise intervention diabetes
+
+SUMMARY:
+Dietary calcium seems to act on glycemic control, favoring the prevention and treatment of type 2 diabetes mellitus (DM2). It is possible that calcium modulates gut microbiota and increase the integrity of the intestinal mucosa. This study aims to evaluate the effects of dietary calcium supplementation in permeability and intestinal microbiota in overweight type 2 diabetics. This is a single-blind, randomized, placebo-controlled, crossover study. Patients (n=20) with low habitual calcium intake will be allocated in control group (CONTROL) or test group (DAIRY). Hypocaloric diets (restriction of 500 kcal / day) will be prescribed containing 800 mg of calcium from dietary sources / day. During intervention period, a beverage (shake) (CONTROL - without the addition of calcium sources or DAIRY - 700 mg of calcium as milk powder) will be ingested in the laboratory. Food intake, body composition (total body fat and fat free mass) and anthropometric measures (waist circumference, waist-hip ratio, waist-height, neck circumference and sagittal abdominal diameter) will be evaluated at baseline and at the 6th and 12th weeks. Physical activity level, gut permeability, gut microbiota, and biochemical parameters (parathyroid hormone, 25-dihydroxy vitamin D, calcium, fasting glucose, fasting insulin, fructosamine, hemoglobin, HbA1c, uric acid, triglycerides, cholesterol total and partial, lipopolysaccharide, inflammatory markers) will be evaluated at baseline and after 12 weeks. The statistical analysis will be performed with the use of SPSS software (SPSS Inc., Chicago, IL, 2008, version 17.0). Parametric or non-parametric tests will be applied, according to the distribution of variables (level of statistical significance of 5%).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - HbA1c
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Dietary calcium supplementation
+  - DIETARY_SUPPLEMENT: Control
+
+ELIGIBILITY:
+Age: 20 Years to 59 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02377076

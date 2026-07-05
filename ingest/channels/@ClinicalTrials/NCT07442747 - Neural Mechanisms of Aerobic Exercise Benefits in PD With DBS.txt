@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07442747
+Title: Neural Mechanisms of Aerobic Exercise Benefits in PD With DBS
+Official Title: Neural Mechanisms Underlying the Benefits of Aerobic Exercise in Advanced Parkinson's Disease
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: aerobic exercise
+
+SUMMARY:
+This study is focused on people with Parkinson's disease who already have deep brain stimulation devices. The goal is to understand how aerobic exercise, specifically forced vs voluntary cycling, affects movement, thinking, and brain activity in these individuals. Parkinson's disease is a progressive condition that impacts both movement and cognitive function. Previous research suggests aerobic exercise can improve PD symptoms, but the mechanisms underlying the improvement are not fully understood. This study aims to evaluate the neural (brain) mechanisms underlying exercise.
+
+DETAILED DESCRIPTION:
+This study is investigating how aerobic exercise, specifically forced exercise (FE) and voluntary exercise (VE), affects movement, thinking, and brain activity in people with advanced Parkinson's disease who have deep brain stimulation (DBS). Over eight weeks, 36 participants will complete either a forced cycling program (where a motor helps them pedal faster than they could on their own) or a voluntary cycling program at a self-driven pace. Participants will complete an 8-week delayed start period to serve as a comparison before starting an exercise program.
+
+The study will measure motor symptoms, cognitive performance, and brain activity from both the cortex (via EEG) and the subthalamic nucleus (via DBS device recordings) at several time points, including before treatment, after the 8-week exercise period, and again four weeks later. By analyzing how neural signals change at rest and during tasks, the study will evaluate the neural mechanisms that make exercise beneficial. This research could ultimately guide more effective, personalized exercise therapies to support people with advanced Parkinson's disease with DBS.
+
+PRIMARY OUTCOMES:
+  - Movement Disorder Society-Unified Parkinson's Disease Rating Scale (Motor Examination)
+  - Relative Root Mean Square Error of a Grip Force Tracking Task
+  - Local Field Potential Subthalamic Nucleus Beta at Rest
+
+INTERVENTIONS:
+  - BEHAVIORAL: Exercise
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07442747

@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05858892
+Title: Comparison of an Artificial Intelligence-Assisted Rehabilitation Program for Shoulder Musculoskeletal Disorders and the Clinical Decision Making of Therapists
+Official Title: Comparison of an Artificial Intelligence-Assisted Rehabilitation Program for Shoulder Musculoskeletal Disorders and the Clinical Decision Making of Therapists
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 80
+Topic: muscle rehabilitation
+
+SUMMARY:
+People with shoulder musculoskeletal disorders among middle-aged and older adults have the highest need of rehabilitation services. The population growth and aging society subsequently increase the number of disabled people, the healthcare costs and the needs for healthcare professionals. The evidence exists to support the beneficial effect of exercises on function and quality of life. Traditionally, a rehabilitation program is designed by therapists for each patient depending on their conditions. In recent years, AI is increasingly being employed in the field of physical and rehabilitation medicine, however, there is no study of applying AI in predicting rehabilitation programs for shoulder musculoskeletal disorders. The main purpose of this study is to explore the possibilities of using supervised machine learning approach to predict rehabilitation programs for shoulder musculoskeletal disorders. Twenty-three features are identified based on shoulder range of motion, pain, whether or not perform surgical procedure. Each exercise is considered as a label with a total of twenty-five exercises. Dataset is collected by clinical therapists to develop and train the model. Each patient has to receive at least two months of rehabilitation and two times of evaluation. Logistic regression, support vector machine and random forest are used to build the computational model. Accuracy, precision, recall, F-1 score and AUC are used to evaluate the performance of the computational model in machine learning. After training, we compare the consistency of rehabilitation programs predicted by using machine learning model and the clinical decision making of therapists.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Accuracy
+  - Precision
+  - Recall
+  - F-1 score
+  - AUC
+
+INTERVENTIONS:
+  - OTHER: usual care
+
+ELIGIBILITY:
+Age: 20 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05858892

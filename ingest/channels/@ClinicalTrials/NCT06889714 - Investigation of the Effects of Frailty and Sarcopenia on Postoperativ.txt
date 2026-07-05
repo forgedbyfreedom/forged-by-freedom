@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06889714
+Title: Investigation of the Effects of Frailty and Sarcopenia on Postoperative Recovery and Complications in Geriatric Patients
+Official Title: Investigation of the Effects of Frailty and Sarcopenia on Postoperative Recovery and Complications in Geriatric Patients Undergoing Colorectal Cancer Surgery
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 42
+Topic: sarcopenia intervention
+
+SUMMARY:
+After obtaining ethical approval, 42 patients with American Society of Anesthesiologists (ASA) scores I-III who were scheduled for surgery under general anesthesia were included in our prospective study. Patients were monitored in the preoperative preparation room in the operating room and frailty was assessed using the FRAIL scale and sarcopenia was assessed using the STAR ratio. The thickness of the rectus femoris and vastus intermedius muscles of the patients was measured and recorded by ultrasonography. Thigh lengths were measured and recorded. Rectus Femoris/Thigh Length (RF/B), Vastus Intermedius/Thigh Length (VI/B), and Total Muscle Thickness/Thigh Length (T/B) were calculated and recorded. Patients were followed up according to the Modified Aldrete Score after surgery in the anesthesia recovery unit, and the time to reach 9-10 points was recorded, and the time to leave the recovery unit was recorded. Postoperatively, complications were followed up according to the Clavien-Dindo Classification, and discharge times from the hospital were recorded.
+
+DETAILED DESCRIPTION:
+Frailty is a clinically identifiable state of heightened vulnerability resulting from age-related declines in physiological systems and functions, leading to impaired resilience to stressors. Frailty is highly prevalent among the elderly and is associated with an increased risk of falls, disability, hospitalization, and mortality. Magnetic resonance imaging (MRI) and computed tomography (CT) are considered the gold standard for sarcopenia diagnosisCT is also limited due to radiation exposure and similar logistical constraints. In contrast, ultrasonography (USG) is portable, cost-effective, and can be performed at the bedside without radiation exposure.
+
+Using high-frequency ultrasound probes, peripheral muscle tissues and their dimensions can be rapidly assessed.
+
+PRIMARY OUTCOMES:
+  - age
+  - sex
+  - height
+  - body weight
+  - educational status
+
+INTERVENTIONS:
+  - DEVICE: ultrasonography
+
+ELIGIBILITY:
+Age: 60 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06889714

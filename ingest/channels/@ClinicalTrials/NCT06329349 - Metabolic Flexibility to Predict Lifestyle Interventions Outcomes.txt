@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06329349
+Title: Metabolic Flexibility to Predict Lifestyle Interventions Outcomes
+Official Title: Whole Body and Gut Microbiome Metabolic Flexibility to Predict Lifestyle Intervention Outcomes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 30
+Topic: sports nutrition
+
+SUMMARY:
+Weight loss is a cornerstone of diabetes (T2D) management, yet in clinical practice, its delivery is limited by its perceived burdensome nature and variability in response. Personalization of the interventions to increase their success rate is an unmet clinical need. The proposed project MEPHISTO (Whole body and gut microbiome metabolic flexibility to predict lifestyle intervention outcomes) would aim to identify predictive features related to successful weight loss upon sequential exercise and diet intervention in people living with obesity. To this end, the study aims to conduct a clinical trial where the investigators would implement state-of-the-art physiological phenotyping of metabolic flexibility at the whole-body level and at the level of the gut in persons with obesity before and after exercise and diet + exercise intervention to identify predictive signatures of successful weight loss
+
+DETAILED DESCRIPTION:
+Among the influential determinants impacting the efficacy and health outcomes of an intervention is an individual's level of metabolic flexibility (MetFlex). MetFlex denotes the body's capacity to adapt in response to alterations in metabolic demands and nutrient availability. Impaired MetFlex is evident in conditions such as obesity and diabetes, yet it may be ameliorated through lifestyle interventions such as exercise training or caloric restriction similar to improvements in insulin sensitivity. However, MetFlex has not been studied as a potential mechanism associated with successful weight loss. The decline in MetFlex, i.e. the limited cellular/tissue ability to manage excess or deficiency in energy substrates leads to compromised mitochondrial function and excessive lipid accumulation in ectopic tissues, resulting in metabolic disorders such as T2D or metabolic syndrome.
+
+Another potential player predicting an individual's capacity to respond to lifestyle interventions is the gut microbiota (gut microbiome and metabolome, MIME). It was repeatedly shown to be among the most important sources of inter-individual variability when it comes to the development of obesity and responsiveness to dietary intervention The microbiome does not only influence host physiology directly, e.g. through contact with immune cells, but also through the vast array of metabolites produced, i.e. the microbiota-derived metabolome. The composition of the gut microbiota and the microbiota-derived metabolome is largely shaped by the host's diet, as this represents the main source of substances and energy for the microbiota. It is therefore striking that published studies to date have yielded rather inconsistent results regarding dietary interventions to alter gut microbiota composition. The discrepancy can be explained by the large variability of individual microbiomes at the beginning of the intervention, and similarly the baseline MIME signature significantly determines weight loss success.
+
+Here the investigators present a complex project to investigate whether whole body and gut MetFlex can be further explored and used as ex-ante predictors of successful weight loss following exercise and dietary interventions, thus providing proof of concept and paving the way to personalized lifestyle interventions.
+
+PRIMARY OUTCOMES:
+  - Change in metabolic flexibility (MetFlex (ΔRQ 200-0))
+  - Change in insulin sensitivity
+
+INTERVENTIONS:
+  - OTHER: Exercise
+  - OTHER: Combined Exercise + Diet
+
+ELIGIBILITY:
+Age: 25 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT06329349

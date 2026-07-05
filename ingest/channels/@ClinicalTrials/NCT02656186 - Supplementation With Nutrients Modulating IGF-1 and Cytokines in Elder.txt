@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02656186
+Title: Supplementation With Nutrients Modulating IGF-1 and Cytokines in Elderly People at Risk of Undernutrition
+Official Title: Supplementation With Nutrients Modulating IGF-1 Negatively Correlated With Changes in the Levels of Proinflammatory Cytokines in Community-dwelling Elderly People at Risk of Undernutrition
+Status: COMPLETED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+The purpose of this study was to determine the improvement in nutritional status, especially in the level of insulin-like growth factor-1 (IGF-1) and its relationship with changes in the circulating cytokine levels, after providing extra protein and energy contents to community-dwelling older adults at risk of undernutrition.
+
+DETAILED DESCRIPTION:
+Sixty of aged over 65 years, living independently in the community for elderly people, nondiabetic subjects with serum prealbumin of under 30 mg/dL and BMI under 25 kg/m2 were recruited. The subjects were followed for a 2-week pre-intervention period, followed by an intervention period, which they received 2 cartons of liquid oral nutritional supplementation daily for 2 weeks.
+
+PRIMARY OUTCOMES:
+  - Prealbumin (mg/dL)
+  - Prealbumin (mg/dL)
+  - Prealbumin (mg/dL)
+  - Transferrin (mg/dL)
+  - Transferrin (mg/dL)
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Pre-intervention
+  - DIETARY_SUPPLEMENT: Liquid nutritional supplement
+
+ELIGIBILITY:
+Age: 65 Years to 86 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02656186

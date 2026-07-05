@@ -1,0 +1,39 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05554861
+Title: Effects of Repetitive Transcranial Magnetic Stimulation Therapy on Lower Extremity Motor Development in Stroke Patients
+Official Title: Effects of Repetitive Transcranial Magnetic Stimulation Therapy on Quality of Life, Mobility and Lower Extremity Motor Development in Stroke Patients: A Randomized Study of Double Blind With Sham Control
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: muscle rehabilitation
+
+SUMMARY:
+The aim of our study is to investigate the effects of rTMS applications at different current frequencies (low frequency / intermittent (intermittent) theta burst (iTBS)) in stroke patients on lower extremity motor development, physical function and quality of life, and to compare the effectiveness of these modalities.
+
+DETAILED DESCRIPTION:
+Stroke is the second leading cause of mortality in adults and is the main cause of long-term disability. Functional limitations that develop in the post-stroke period affect the quality of life and activities of daily living of the patients. The main purpose of stroke rehabilitation is to increase the quality of life by adopting multidimensional approaches that aim to reach the maximum level of independence in the physical, functional, psychological and social health areas of the patients.
+
+Thanks to the neuroplasticity mechanisms that develop in the brain in the post-stroke period, it is aimed to activate the cortical areas directly affected by the stroke by creating new connections in the neuronal networks. With increased activation, clinical motor recovery occurs. Conventional therapy methods are an important tool for motor recovery, however, the effects of treatment outcomes are often limited, especially when applied to chronic patients. In recent years, there is a need for more effective approaches on neuroplasticity mechanisms in stroke rehabilitation. Repetitive transcranial magnetic stimulation (rTMS) is an innovative approach applied in this field. With the application of repetitive transcranial magnetic stimulation (rTMS), it is aimed to modulate plasticity and restore the normal activity pattern.
+
+Repetitive transcranial magnetic stimulation (rTMS) is a painless non-invasive technique widely used in clinical routine practice to modulate the neural excitability of the human brain. High frequency rTMS (\>5 Hz) increases neural activity (long term potentiation), while low frequency (1 Hz) rTMS decreases neural activity (long term depression). Theta burst excitation (TBS), on the other hand, is a undulating form.
+
+Several systematic reviews have evaluated the efficacy and safety of rTMS for various functional and psychological outcomes in people after stroke. In the literature, rTMS is used in patients with acute, subacute and chronic stroke to improve upper and lower extremity functions, as well as in the rehabilitation of dysphagia and aphasia.
+
+The aim of our study is to investigate the effects of rTMS applications at different current frequencies (low frequency / intermittent (intermittent) theta burst (iTBS)) on patients with stroke on lower extremity motor development, physical function and quality of life, and to compare the effectiveness of these modalities.
+
+PRIMARY OUTCOMES:
+  - Change from baseline Functional Independence Measure (FIM) at 10th day and 6th week
+
+INTERVENTIONS:
+  - DEVICE: Low Frequency rTMS Protocol
+  - DEVICE: Intermittent Theta Burst Stimulation (iTBS) Protocol
+  - DEVICE: Sham rTMS Protocol
+
+ELIGIBILITY:
+Age: 50 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05554861

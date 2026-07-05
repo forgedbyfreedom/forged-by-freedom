@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02486081
+Title: Development and Application-Smart Football for Movement Evaluation and Training in the Special Education Population
+Official Title: Assistive Device Design, Development and Application-Smart Football for Movement Evaluation and Training in the Special Education Population
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 20
+Topic: athletic performance
+
+SUMMARY:
+Children with disabilities are frequently ignored by the general population, hence the development of movement evaluation and training devices for use in special education settings are relatively overlooked. Usually the performance of these children is not stable and contains variations. Hence in order to get a complete picture of their sport performance, simply measuring movement time and distance is definitely not representative. With the rising attention from government regarding fitness and social participation of the disabled in recent years, developing a special-designed individual evaluation \& training plan is of great importance. To achieve this goal, a device which is able to record the complete process of movement, and contains algorithm that can pick up the movement characteristics of children with disabilities is needed. The purpose of this study is to design and develop a smart soccer ball system for use in children with intellectual disabilities(ID), and to compare the performance between children with ID and the typically developed.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - acceleration (in m/sec square)
+  - distance completed (in meters)
+  - time (in second)
+
+INTERVENTIONS:
+  - DEVICE: smart soccer ball
+
+ELIGIBILITY:
+Age: 10 Years to 18 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02486081

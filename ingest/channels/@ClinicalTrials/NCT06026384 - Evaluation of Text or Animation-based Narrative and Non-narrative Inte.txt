@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06026384
+Title: Evaluation of Text or Animation-based Narrative and Non-narrative Interventions to Enhance Cancer Literacy: a Pilot Study (CLARO)
+Official Title: Development and Evaluation of Theory Guided Narrative and Non-narrative Interventions to Enhance Cancer Literacy and Cancer Prevention Beliefs in the Population: a Pilot Study
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 41
+Topic: exercise intervention obesity
+
+SUMMARY:
+The goal of this interventional pilot study is to test and evaluate different information materials created to heighten participants cancer literacy, cancer prevention beliefs, and subsequent intention for behavioral changes. Forty individuals, intended to cover a broad socioeconomic background, will participate in the pilot study. Based on the results of this pilot study, the information materials will be adapted for the following main study.
+
+DETAILED DESCRIPTION:
+CLARO aims to answer the question, how information materials should be designed to strengthen optimistic beliefs on cancer prevention and to indirectly facilitate the acquisition of cancer literacy.
+
+Four different information materials were developed and will be tested in this pilot study (2x2-design: text or animation-based / narrative or non-narrative). Participants will take part in a 30- to 40-minute survey. As part of the study, they will be randomly assigned to one of the information materials, and asked to evaluate it in depth, both quantitatively and qualitatively. The interviews will be conducted individually and face to face.
+
+Recruitment: Two research assistants will approach potential participants at a shopping center in Heidelberg, Germany, to invite them to participate in the study. Participants will receive a leaflet with further details and contact information. Those interested will be able to participate immediately at a designated room next to the center, provided by the National Cancer Prevention Center, where all interviews will take place, or schedule an appointment via email. As an incentive, participants will receive 30€ via bank transfer upon completing the interview.
+
+Randomization Procedure: Simple randomization - a research assistant will use an Excel spreadsheet to generate random participant codes, which will then be integrated into LimeSurvey to ensure a closed survey environment. The list of codes will be password protected and not accessible to the two research assistants who will conduct the interviews. LimeSurvey will then assign individual codes to participants. Participant codes and allocation details will then be printed on paper and placed within sealed envelopes. Interviewers will then use these envelopes to select the corresponding intervention guide.
+
+Semi-Structured Interview: Post-intervention, participants will take part in a semi-structured interview. With participant permission, all interviews will be audio-recorded on VLC media player. The interviews will be conducted by two research assistants with a background in psychology and previous training on the interview technique.
+
+Transcription: The audio recordings will be transcribed verbatim by the two research assistants using the MAXQDA 2022 (VERBI Software, 2021) and will be reviewed by the principal investigators for accuracy. The interviews, original transcriptions, and data analysis will be in German. All quotes will be translated into English and back-translated by two independent members of the research team to ensure that the meaning will be preserved.
+
+By using a mixed method approach the study will combine quantitative and qualitative methods addressing the following research questions:
+
+Quantitative:
+
+* What is the sample's socio-demographics? (e.g. age, gender, highest educational degree, current occupational status, and income)
+* Has there already been personal contact with people with cancer (e.g. through own cancer or cancer in the fam
+
+PRIMARY OUTCOMES:
+  - Satisfaction with the materials
+
+INTERVENTIONS:
+  - OTHER: text in non-narrative form
+  - OTHER: text in narrative form
+  - OTHER: animated video in non-narrative form
+  - OTHER: animated video in narrative form
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06026384

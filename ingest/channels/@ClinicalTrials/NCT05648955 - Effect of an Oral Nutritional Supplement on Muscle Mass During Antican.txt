@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05648955
+Title: Effect of an Oral Nutritional Supplement on Muscle Mass During Anticancer Treatment
+Official Title: Muscle Mass in Patients With Colorectal or Lung Cancer When Receiving an Oral Nutritional Supplement During Anti-cancer Treatment
+Status: UNKNOWN
+Phase: EARLY_PHASE1
+Study Type: INTERVENTIONAL
+Enrollment: 118
+Topic: sarcopenia intervention
+
+SUMMARY:
+Malnutrition and low muscle mass (sarcopenia) are common problems in patients with cancer. However, a low muscle mass is associated with negative clinical outcomes in patients with cancer. Therefore, it is very important to maintain muscle mass in this population. This study aims to investigate the effect of an oral nutritional supplement on skeletal muscle mass during anti-cancer treatment.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in cross-sectional skeletal muscle mass area on the third vertebral level (L3) [cm2]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: an enriched high protein and high energy oral nutrition supplement (ONS)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05648955

@@ -1,0 +1,14 @@
+PUBMED RESEARCH ABSTRACT
+========================
+PMID: 1757312
+Title: Optimizing athletic performance by influence curves.
+Authors: Fitz-Clarke, Morton, Banister
+Journal: Journal of applied physiology (Bethesda, Md. : 1985)
+Year: 1992
+Topic: tapering athletic performance
+
+ABSTRACT:
+Recent application of modeling techniques to physical training has opened the possibility for prediction from training. Solution of the inverse problem, determining a training program to produce a desired performance at a specific time, is also possible and may yield strategies for achieving better training and tapering (complete or relative rest for a period before competition) regimens for competitive athletes. A mathematical technique derived from model theory is described in this paper that allows the design of an optimal strategy of physical preparation for an individual to do well in a single future competitive event or cluster of events. Simulation results, using default parameters of a training model, suggest that presently accepted forms of taper for competition may remain too rigorous and short in duration to achieve the best result possible from the training undertaken.
+
+---
+Source: https://pubmed.ncbi.nlm.nih.gov/1757312/

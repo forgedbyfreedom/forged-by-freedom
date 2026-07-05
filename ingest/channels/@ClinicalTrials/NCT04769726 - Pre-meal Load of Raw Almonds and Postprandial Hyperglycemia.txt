@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04769726
+Title: Pre-meal Load of Raw Almonds and Postprandial Hyperglycemia
+Official Title: Evaluation of Pre-meal Load of Raw Almonds on Postprandial Hyperglycemia and Other Metabolic Responses in Asian Indians With Prediabetes
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+A few studies show the effect of almonds on postprandial hyperglycemia (PPHG); high blood glucose after meals. In our previous study on intervention with almonds, we observed a significant decrease in HbA1c and a small decrease in fasting blood glucose indicating a possible effect of almonds on PPHG. Studies have shown that a preload of a food article that is high in protein, mono-unsaturated fatty acids, fiber, and low in carbohydrates, such as almonds could be helpful in stimulating insulin secretion and help improve postprandial hyperglycemia. The proposed study shall be undertaken to assess the effect of almond supplementation on postprandial hyperglycemia in Asian Indians with prediabetes.
+
+DETAILED DESCRIPTION:
+* Acute Phase Study: Randomized controlled cross over study design Number of arms: 2, almond and control, n=60 needed (30 in each arm) Subjects randomized to almonds arm are given a preload of 20 g of almonds 30 minutes prior to ingestion of 75 g of glucose, while those in the control arm do not have any food/almonds before OGTT. Blood samples are collected at (minutes): -30, 30, 0, 30, 60, 90 and 120. Cross over of these subjects is done and OGTT repeated in a similar manner. Assessment of blood glucose, serum insulin, glucagon, C-peptide, serum triglycerides, free fatty acids, DPP-IV, and GLP-1 levels are done at these time points.
+* Sub-Acute Study:
+
+Three-day almond preload study monitored with CGMS, n=60 needed. All study participants undergoing OGTT are further studied with CGMS for three days each and then crossed over. Those in almonds arm continue to receive preload of almonds (20g almonds, 30 minutes before breakfast, lunch and dinner)for three days and then studied without almond preload after cross over. A washout period of 7 days separates cross-over period.
+
+o Chronic Phase Study: Ninety days almond preload study monitored with self-monitoring of blood glucose; n=60 needed.
+
+This is a randomized controlled parallel-arm study to evaluate the long-term effect of preload of almonds on hyperglycemia. Subjects fulfilling the inclusion/exclusion criteria are randomized to either the control arm or the almond arm.
+
+PRIMARY OUTCOMES:
+  - Postprandial blood glucose levels [AUC 0-2 hrs on oral glucose tolerance test (OGTT)]
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: almonds
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04769726

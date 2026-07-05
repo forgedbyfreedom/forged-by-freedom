@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03203512
+Title: Fish Oil-derived N-3 Polyunsaturated Fatty Acids and Extracellular Vesicles
+Official Title: Effects of Fish Oil-derived N-3 Polyunsaturated Fatty Acids on the Generation and Functional Activities of Extracellular Vesicles
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: protein supplementation
+
+SUMMARY:
+N-3 polyunsaturated fatty acids (n-3 PUFA), which are abundant in oily fish and fish oils, have been suggested to play a role in reducing the risk of cardiovascular diseases (CVDs) by modifying a wide range of risk factors, such as blood fats, blood clotting, blood vessel function and inflammation. Extracellular vesicles (EVs) are small particles released from various cells when they are activated or damaged. High numbers of EVs in the blood have been associated with a higher risk of CVDs, and it is thought that this is because they carry 'bioactive' components which can affect many processes involved in CVDs. However, very few clinical trials have investigated the relationships between the consumption of n-3 PUFA and circulating EVs. This study aims to investigate the effects of dietary n-3 PUFA on the generation and functional activities of EVs, which would provide new insight into the benefits of n-3 PUFA on cardiovascular health.
+
+DETAILED DESCRIPTION:
+The proposed study will be a randomised, double-blind, placebo-controlled crossover intervention. Subjects (40-70y) at moderate CVDs risk will be supplemented with either fish oil (1.8 g/d n-3 PUFA) or placebo (high-oleic safflower oil) for 12 weeks. After a 12-week washout and then cross-over to the other intervention for another 12 weeks. Blood samples will be collected before and after each intervention. A food frequency questionnaire will be administered to assess the subject's habitual intake of n-3 PUFA. Subjects will also be expected to maintain a low consumption of n-3 fatty acids, refrain from the use of all supplements, and maintain their body weight during the study. The dose is based on our previous work, which demonstrated a reduction in numbers of endothelial-derived EVs (EEVs) and a trend for reduced numbers of platelet-derived EVs (PEVs), and a dose at which beneficial effects of n-3 PUFA on plaque stability are reported. The experimental work will follow two main strands. The first strand will examine the influence of n-3 PUFA supplementation on the characteristics and functional activities of total EVs from plasma. The second strand will examine the influence of n-3 PUFA on the generation of PEVs from platelets taken from subjects and stimulated in vitro; the PEVs generated will subsequently be assessed for their composition and functional activity. This experimental design will allow simultaneous investigation of both the composition and activity of total EVs taken directly from blood, and the generation and activity of PEVs. Based on our previous work, 27 subjects are required to detect a 10% reduction in numbers of EVs following fish oil supplementation with a two-sided significance level of 5% and a power of 90%, and 34 subjects are required for a power of 95%. Also based on previous data, 22 subjects would give 95% power to detect 10% differences in thrombus formation and 30 subjects are required to detect a significant effect of n-3 PUFA on platelet aggregation and phosphatidylserine (PS) exposure. Allowing for a 15% dropout rate, and aiming for 95% power based on a 10% reduction in EVs numbers, we will therefore recruit 40 subjects in total.
+
+PRIMARY OUTCOMES:
+  - Numbers of Circulating Total EVs in Platelet-free Plasma (PFP) Detected by Nanoparticle Tracking Analysis (NTA)
+  - Numbers of Total Phosphatidylserine Positive EVs (PS+EVs) in Platelet-free Plasma (PFP) Detected by Flow Cytometry (FCM)
+  - Characterisation of Circulating EVs Subpopulation in PFP Detected by Fluorescence FCM
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Fish oil capsules
+  - DIETARY_SUPPLEMENT: High-oleic safflower oil capsules
+
+ELIGIBILITY:
+Age: 40 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03203512

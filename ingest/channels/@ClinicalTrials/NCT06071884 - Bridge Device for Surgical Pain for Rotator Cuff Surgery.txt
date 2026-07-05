@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06071884
+Title: Bridge Device for Surgical Pain for Rotator Cuff Surgery
+Official Title: Evaluation of Bridge Device in Pain Management for Outpatient Rotator Cuff Surgery
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 42
+Topic: tendon injury
+
+SUMMARY:
+The objective of the trial is to investigate the efficacy of the Bridge device in reducing post-operative pain and post-operative opioid consumption in patients undergoing rotator cuff surgery with the typical mode of anesthesia, nerve block plus propofol sedation.
+
+DETAILED DESCRIPTION:
+The interscalene block is the gold standard for postoperative pain management following rotator cuff surgery. However, the duration of the block does not cover rehabilitation. Therefore, in most cases, patients are discharged from the surgical center with an opioid prescription. There is a growing need to investigate complementary, non-pharmacologic pain-management methods. The Bridge device, which provides auricular neuromodulation of various cutaneous nerves near the ear, is manufactured by Masimo and previously FDA-approved to reduce symptoms of opioid withdrawal. It is a promising technology that could help relieve post-operative pain without exposing patients to the adverse effects of opioids or other pain-relieving medications. The objective of the trial is to investigate the efficacy of the Bridge device in reducing post-operative pain and post-operative opioid consumption in patients undergoing rotator cuff surgery with the typical mode of anesthesia, nerve block plus propofol sedation. Those enrolled will be assigned to a study group and compared to historic cohort (control group). Historic control group involves patients that underwent same surgical procedure performed at the surgical center involved in the study, by the same surgical operator, between 2020 and 2023.
+
+\*Prior to study enrollment, the outcome measure timepoints were updated to postoperative days (POD) 1, 3, 5, and 7. This was largely due to pain trajectories in surgical populations often follow a predictable, nonlinear course, with meaningful fluctuations most apparent on alternating days rather than daily increments. By assessing the outcome measures on POD 1, 3, 5, and 7, the revised scheduled timepoints continues to capture initial peak (POD 1), early recovery phase (POD3), the late recovery phase (POD 5), and the resolution/transition phase (POD 7) regarding pain trajectories.
+
+PRIMARY OUTCOMES:
+  - Oral Opioid Use POD 1
+  - Oral Opioid Use POD 3
+  - Oral Opioid Use POD 5
+  - Oral Opioid Use POD 7
+
+INTERVENTIONS:
+  - DEVICE: Bridge Percutaneous Nerve Field Stimulator
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06071884

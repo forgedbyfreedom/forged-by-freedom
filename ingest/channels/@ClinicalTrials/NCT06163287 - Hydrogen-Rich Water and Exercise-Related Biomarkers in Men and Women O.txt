@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06163287
+Title: Hydrogen-Rich Water and Exercise-Related Biomarkers in Men and Women Over 50 Years
+Official Title: The Effects of Drinking Hydrogen-rich Water for 6 Weeks on Exercise-related Biomarkers in Men and Women Over 50 Years Following Resistance Training Program: a Randomized Controlled Pilot Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 28
+Topic: sports nutrition
+
+SUMMARY:
+The study investigates the impact of consuming hydrogen-rich water over a six-week period on exercise-related biomarkers among individuals aged over 50, both men and women, who undergo a resistance training program. This research aims to discern the potential benefits of hydrogen-infused water consumption concerning exercise-related markers in an aging demographic post-resistance training.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - 36-Item Short Form Health Survey
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Supplement
+  - DIETARY_SUPPLEMENT: Placebo
+
+ELIGIBILITY:
+Age: 50 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06163287

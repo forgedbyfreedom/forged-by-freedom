@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07374913
+Title: COL4A1COL4A2: Study of Pathological Conditions Involving Multiple Organs Caused by Mutations in the COL4A1 and COL4A2 Genes
+Official Title: Study of the Familial Phenotype Associated With Mutations in the COL4A1 and COL4A2 Genes
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 120
+Topic: physical activity intervention
+
+SUMMARY:
+This observational and diagnostic study aims to better understand the clinical features and biological mechanisms associated with mutations in the COL4A1 and COL4A2 genes, which are known to cause a rare inherited small-vessel disease affecting the brain and other organs. These mutations can lead to a wide range of symptoms involving the brain, eyes, heart, blood vessels, kidneys, and muscles, and affected individuals within the same family may show very different clinical manifestations.
+
+The study will systematically collect clinical and diagnostic information from individuals with confirmed COL4A1/COL4A2 mutations and their first-degree family members, including both affected and unaffected relatives. Family members who carry, or may carry, the mutation will be offered non-invasive eye and heart examinations to detect early or previously unrecognized organ involvement.
+
+In addition, blood samples will be analyzed to study the activity of specific enzymes called matrix metalloproteinases (MMP2 and MMP9), which are thought to play a role in blood vessel damage in this condition. By linking genetic findings, clinical features, and laboratory data, the study seeks to clarify how these mutations cause disease and to identify early signs of organ involvement.
+
+The overall goal of the study is to improve early diagnosis, guide the development of routine multi-organ screening strategies for affected individuals and families, and support future research toward targeted treatments.
+
+DETAILED DESCRIPTION:
+This is an observational, prospective cohort study designed to characterize the clinical spectrum and underlying biological mechanisms associated with pathogenic or likely pathogenic variants in the COL4A1 and COL4A2 genes. These genes encode type IV collagen, a key structural component of basement membranes, and their alteration is associated with a rare autosomal dominant small-vessel disease with variable multi-organ involvement.
+
+Individuals with a confirmed COL4A1/COL4A2 mutation identified through clinical genetic testing will be invited to participate together with their first-degree family members. Adult relatives who are confirmed carriers or are suspected carriers of the same mutation will be included in the diagnostic component of the study. Adult non-carrier relatives will serve as controls for selected laboratory analyses.
+
+Participants will complete a structured questionnaire collecting standardized information on neurological, ophthalmological, cardiovascular, renal, muscular, and other systemic manifestations. Carrier or suspected carrier relatives will be offered non-invasive diagnostic screening, including ophthalmological assessments (anterior segment photography and optical coherence tomography) and cardiological evaluations (resting electrocardiogram, ambulatory ECG monitoring, and echocardiography), performed within routine clinical care settings.
+
+A blood sample will be collected from affected individuals and adult non-carrier relatives. Plasma will be stored and analyzed to assess the activity of matrix metalloproteinases MMP2 and MMP9 using established laboratory techniques. These analyses aim to explore molecular pathways potentially involved in vascular and tissue damage associated with COL4A1/COL4A2 variants.
+
+The study does not include a scheduled follow-up; data are collected at a single time point per participant. Results will be analyzed using descriptive and exploratory statistical methods to evaluate the prevalence and pattern of multi-organ involvement and to explore associations between genetic variants, clinical features, and laboratory findings.
+
+The knowledge gained from this study is intended to support improved clinical characterization of COL4A1/COL4A2-related disease, inform the development of structured multi-organ screening strategies, and provide a foundation for future therapeutic research
+
+PRIMARY OUTCOMES:
+  - Prevalence and pattern of multi-organ involvement
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Ophtalmological and cardiological screening
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07374913

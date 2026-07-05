@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04156165
+Title: The Effect of High vs. Moderate Protein Consumption on Human Health
+Official Title: BEEF The Effect of High vs. Moderate Protein Consumption on Human Health - With Beef as Major Source of Protein
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 110
+Topic: sports nutrition
+
+SUMMARY:
+The study will be conducted as a parallel randomized controlled intervention trial, initiated by eight weeks rapid weight loss with one of two VLCDs, one week of reintroducing regular foods, and 12 weeks with one of two different ad libitum diets; in total 21 weeks. The study will be blinded for the statistician. Due to obvious different dietary intakes in the two diets, subjects cannot be blinded and neither the study personnel. As the study includes different dietary recommendations the registered clinical dietician advising the subjects cannot be blinded either.
+
+In total 110 overweight and obese volunteers will be included.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Body weight
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: VLCD-Active
+  - OTHER: maintenance-Active
+  - DIETARY_SUPPLEMENT: VLCD-Control
+  - OTHER: maintenance-Control
+
+ELIGIBILITY:
+Age: 18 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04156165

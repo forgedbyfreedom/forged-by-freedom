@@ -1,0 +1,42 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07325370
+Title: Cardiac Autonomic and Anxiety Regulation Via Closed-loop nEurofeedback in Recurrent Pregnancy Loss
+Official Title: Right Dorsolateral Prefrontal Cortex-Targeted fNIRS-BCI Closed-loop Neurofeedback for Anxiety Relief and Cardiac Autonomic Regulation in Women With Recurrent Pregnancy Loss: a Randomized, Sham-controlled Clinical Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 62
+Topic: high intensity interval training
+
+SUMMARY:
+The goal of this clinical trial is to learn whether right dorsolateral prefrontal cortex (right DLPFC)-targeted fNIRS-BCI online closed-loop neurofeedback, delivered with slow-wave acoustic cueing, can reduce anxiety symptoms and improve cardiac autonomic regulation in women with recurrent pregnancy loss (RPL) and comorbid anxiety (women aged 18-45 years, right-handed, currently not pregnant or in a missed miscarriage state).
+
+The main questions it aims to answer are:
+
+Does real neurofeedback increase the proportion of participants who achieve an anxiety treatment response (defined as ≥50% reduction in Hamilton Anxiety Rating Scale \[HAMA\] total score from baseline) compared with sham feedback, at end of treatment and at 3-month follow-up? Is the intervention safe and well tolerated, as reflected by between-group differences in adverse events during the training period? Do brain and autonomic measures show between-group differences during the first formal session, including right DLPFC HbO downregulation, interhemispheric DLPFC synchronisation, heart rate (HR), and heart rate variability (HRV) indices? Researchers will compare real right DLPFC neurofeedback to sham feedback (identical procedures and displays but weakened coupling to real-time neural activity) to see if real neurofeedback improves anxiety outcomes and brain-heart autonomic regulation.
+
+Participants will:
+
+Complete screening, baseline clinical assessments, and physical examination Be randomly assigned (1:1) to real neurofeedback or sham feedback Complete 3 days of adaptation training followed by 3 weeks of training (15 sessions; one weekday session per day; \~20 minutes each) using a block design with slow-wave acoustic cueing (1 Hz amplitude-modulated tone; 20 s rest + 40 s cueing per block; 20 blocks/session) Undergo fNIRS recording in all sessions, with ECG recorded in session 1 only (for HR/HRV analyses) Receive matched, guideline-informed cognitive-behavioural therapy (CBT) during the intervention period Complete anxiety-related assessments at baseline, \~1 hour after the final session, and 3 months after treatment, with adverse events monitored throughout the intervention period
+
+DETAILED DESCRIPTION:
+This study is a mechanistically informed, prospective, randomized, sham-controlled, parallel-group clinical trial designed to evaluate whether right dorsolateral prefrontal cortex (right DLPFC)-targeted fNIRS-BCI online closed-loop neurofeedback, delivered with slow-wave acoustic cueing, improves anxiety symptoms and cardiac autonomic regulation in women with recurrent pregnancy loss (RPL) and comorbid anxiety. Participants who meet eligibility criteria will be randomized in a 1:1 ratio to either real neurofeedback or sham feedback, with identical visit structure and procedures across groups.
+
+The intervention will use an online neurofeedback pipeline to estimate right DLPFC activation from fNIRS signals in real time and present a visual activation bar to guide volitional downregulation of the target region during slow-wave acoustic cueing. The sham condition will use the same interface, cueing, and workflow but with feedback parameters configured to substantially weaken effective coupling between the displayed feedback and the participant's instantaneous neural state. fNIRS will be recorded across all training sessions, and ECG will be recorded during the first formal training session only to quantify heart rate and heart rate variability and to support mechanistic analyses of short-term brain-heart coupling during the task.
+
+Clinical outcomes will focus on changes in anxiety severity over time, assessed at baseline, at the end of treatment, and at 3-month follow-up. Neurophysiological endpoints will be derived from the first formal session to characterize task-related right DLPFC downregulation, interhemispheric DLPFC synchrony, and cardiac autonomic responses during the neurofeedback task. Safety and tolerability will be evaluated by comparing the incidence and profile of adverse events between groups throughout the intervention period. In addition, both groups will receive matched, guideline-informed cognitive-behavioural therapy (CBT) during the intervention period as background standard care, and any clinically indicated psychotropic medication use during follow-up will be documented for analytic control.
+
+PRIMARY OUTCOMES:
+  - the between-group difference in treatment response
+
+INTERVENTIONS:
+  - DEVICE: Right DLPFC fNIRS-BCI closed-loop neurofeedback (real feedback)
+  - DEVICE: Right DLPFC fNIRS-BCI neurofeedback (sham feedback)
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT07325370

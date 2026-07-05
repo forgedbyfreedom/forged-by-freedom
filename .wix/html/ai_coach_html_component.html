@@ -632,18 +632,66 @@ async function doSearch() {
   showLoading('search');
   hideError('search');
   searchBtn.disabled = true;
+
   try {
     const res = await fetch('https://forged-by-freedom-api-nm4f.onrender.com/ask', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question: q })
+      body: JSON.stringify({ question: q, stream: true })
     });
-    const data = await res.json();
+
+    if (!res.ok) throw new Error('Server error ' + res.status);
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('text/event-stream')) {
+      // Fallback: server returned JSON
+      const data = await res.json();
+      hideLoading('search');
+      if (data.error) showError('search', data.error);
+      else showOutput('search', data.answer || 'No answer returned.');
+      searchBtn.disabled = false;
+      return;
+    }
+
+    // SSE streaming path — show output container immediately
     hideLoading('search');
-    if (data.error) {
-      showError('search', data.error);
-    } else {
-      showOutput('search', data.answer || 'No answer returned.');
+    const outputEl = document.getElementById('searchOutput');
+    outputEl.textContent = '';
+    outputEl.classList.add('visible');
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    let streamedText = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || '';
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (!data || data === '[DONE]') continue;
+        try {
+          const event = JSON.parse(data);
+          if (event.type === 'content' && event.text) {
+            streamedText += event.text;
+            // Render as HTML if it contains markup, otherwise plain text
+            if (streamedText.includes('<div') || streamedText.includes('<b>') || streamedText.includes('<strong>')) {
+              outputEl.innerHTML = streamedText;
+            } else {
+              outputEl.textContent = streamedText;
+            }
+          } else if (event.type === 'done' && event.answer) {
+            // Replace with final post-processed answer
+            showOutput('search', event.answer);
+          }
+        } catch {}
+      }
     }
   } catch (err) {
     hideLoading('search');
@@ -842,7 +890,7 @@ function formatStat(n, suffix) {
   return n.toLocaleString();
 }
 (function fetchStats() {
-  var fallback = { transcripts: 34746, words: 126592085, channels: 179, vectors: 100622 };
+  var fallback = { transcripts: 113067, words: 310856882, channels: 190, vectors: 286451 };
   var data = fallback;
   var dur = 1800;
   try {

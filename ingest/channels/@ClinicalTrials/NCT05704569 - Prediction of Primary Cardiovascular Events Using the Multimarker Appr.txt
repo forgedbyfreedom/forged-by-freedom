@@ -1,0 +1,49 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05704569
+Title: Prediction of Primary Cardiovascular Events Using the Multimarker Approach
+Official Title: Prediction of Primary Cardiovascular Events Using a Multimarker Approach (Prospective Clinical Study)
+Status: COMPLETED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 1500
+Topic: recovery exercise
+
+SUMMARY:
+The study of biochemical risk factors for cardiovascular diseases is important not only for analysis, but also for preventive measures, given that changes in the level of biomarkers can be detected before the first clinical manifestations of CVD. Accordingly, patients at high CV risk may have additional motivation to lead a healthy lifestyle. In addition, information on biochemical risk markers can be used to optimize the clinical management of patients.
+
+DETAILED DESCRIPTION:
+Recruitment of 1500 people randomly without previous cardiovascular events. Examination, questioning of patients, laboratory tests. Patient follow-up for 6 years. Registration of the facts of the occurrence of cardiovascular events.
+
+Cohort study with a retrospective and prospective component
+
+Stage I (Conducted in 2014 as part of the scientific and technical project "Environmental risks and public health")
+
+1. Questionnaire and general clinical examination (anthropometry, measurement of blood pressure, BMI, WC)
+2. determination of cholesterol, glucose and total cardiovascular risk according to the SCORE scale
+3. Determination of the quality of life, the level of depression and anxiety, the level of physical activity.
+
+For an in-depth biochemical blood test for onco- and cardiomarkers, the MILLIPLEX MAP Human panel was used. This panel allows you to simultaneously study 23 onco- and 11 cardiac markers, which are the most common among oncological and cardiac diseases. Tumor markers included: alpha-fetoprotein (Afp), carbohydrate antigen 125 (CA125), carbohydrate antigen 15-3 (CA15-3), cancer embryonic antigen (CEA), cytokeratin fragment 19 (CYFRA21-1), fibroblast growth factor 2 (FGF2), human epididymis protein 4 (HE4), hepatocyte growth factor (HGF-α), interleukin 6 (IL6), interleukin 8 (IL8), leptin (LEPTIN), anti-Mullerian hormone (MIF), osteopontin (OPN ), prolactin (PROLACTIN), common prostate specific antigen (PSAtotal), cystatin C (SCF), apoptosis inducer (SFAS), transforming growth factor (TGF-α), tumor necrosis factor (TNF), TRAIL, vascular endothelial growth factor ( VEGF), Beta chorionic gonadotropin (bHCG), apoptosis inducer L (SFAS) L.
+
+In respondents with cardiovascular risk (1% or more on the SCORE scale), the level of cardiomarkers was determined. Cardiomarkers included: creatine kinase MB (CK MB), chemokine C-X-C motif, ligand 16 (CXCL16), fatty acid binding protein, cardiac form (FABP3), N-terminal fragment of the brain natriuretic peptide (NT-proBNP), oncostatin M (OSM), placental growth factor isoform (PIGF 4), C-X-C motif chemokine, ligand 6 (CXCL6), endocan 1 (ENDOCAN1), fatty acid binding protein 4 (FABP-4), TNF superfamily protein ( LIGHT), troponin I (TROPONINI).
+
+Determination of the content of biochemical markers in the blood (carried out at the Collective Use Laboratory of the NJSC "Medical University of Karaganda").
+
+STAGE II Prospective observation for 6 years, For a cardiovascular event we take the development of: Acute forms of ischemic disease (ACS with and without ST-segment elevation / myocardial infarction), chronic forms of IHD-angina pectoris, Acute cerebrovascular accident, transient ischemic attack, Lethal outcome from CVD, death from all causes.
+
+Statistical data processing will be carried out using the SPSS program (version 22.0). Quantitative variables with a normal distribution will be presented as mean values and their standard deviations (M ± SD), with a difference from the normal distribution - median
+
+PRIMARY OUTCOMES:
+  - number of respondents with stroke or transient ischemic attack
+  - Number of respondents with Coronary heart disease
+  - Number Of respondents wirh cardiovascular death
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: measurement of multiple biomarkers
+
+ELIGIBILITY:
+Age: 25 Years to 65 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05704569

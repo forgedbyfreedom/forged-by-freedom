@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01917812
+Title: mActive: A Blinded, Randomized mHealth Activity Trial
+Official Title: mActive: A Blinded, Randomized mHealth Trial of Digital Activity Tracking and Smart Texting to Promote Physical Activity
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 48
+Topic: aerobic exercise
+
+SUMMARY:
+Despite their importance, health-related behaviors are hard to change. Among behaviors, physical activity is associated with protection from multiple diseases. People who are physically active have lower risk for heart disease, stroke, type 2 diabetes, depression, and some cancers with associated dose-dependent reductions in cardiovascular and all-cause mortality. However, most US adults do not meet CDC physical activity guidelines. Sedentary work behavior in industrialized nations is likely a contributor to this problem.
+
+Current low-technology strategies for encouraging lifestyle change are disappointingly ineffective and are highly resource intensive. Systematic reviews of the literature show mixed evidence for using activity trackers (i.e., pedometers) and a limited body of evidence for text messaging in preventive health care. However, prior studies have not integrated digital activity tracking with mobile phone text messaging feedback.
+
+Given 91% of adults in the United States now use a mobile phone, and 56% a smartphone, this represents a potentially widely applicable avenue for therapeutic intervention. There is growing interest in leveraging mobile health (mHealth) technologies to improve health behaviors in the general population. The investigators propose to conduct a blinded, randomized mHealth trial of digital activity tracking and smart texting to promote physical activity.
+
+DETAILED DESCRIPTION:
+Using an innovative, convenient, mHealth trial design, this pilot study aims to test the feasibility of a seamless model of information flow integrating digital activity tracker information with a mobile phone texting system to deliver a technology-enhanced intervention that does not require in-person follow-up.
+
+The investigators hypothesize that:
+
+1. individuals overestimate their physical activity, especially that done at work.
+2. biofeedback from an activity tracker can increase physical activity via increasing self-awareness.
+3. "smart" text message feedback can increase physical activity via personalizing health coaching.
+
+Digitalized activity tracking will use the Fitbug Orb, which syncs via Bluetooth with one's smartphone. It is a display-free triaxial accelerometer, allowing one to blind participants to numeric feedback. Text messaging will use Reify Health's "smart" platform for personalized, interactive texting by an automated and repeatable algorithm. Texting will be informed by real-time activity information.
+
+Potential advantages of the trial strategy include elimination of attendance at in-person sessions, personalization of health coaching, more continuous patient contact; inexpensive intervention, the ultimate ability to scale our intervention to larger target populations.
+
+After initial pilot trial completion, additional study will include long-term physical activity follow-up of participants and focus groups.
+
+PRIMARY OUTCOMES:
+  - Mean Daily Step Count
+  - Mean Daily Step Count
+
+INTERVENTIONS:
+  - DEVICE: Digital Activity Tracker
+  - OTHER: Smart Text Messaging
+
+ELIGIBILITY:
+Age: 18 Years to 69 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01917812

@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT01806896
+Title: Study Evaluating The Safety, Tolerability And Brain Function Of 2 Doses Of PF-0254920 In Subjects With Early Huntington's Disease
+Official Title: A Phase 2, Double-blind Randomized, Sequential Treatment Group, Placebo-controlled Study To Evaluate The Safety, Tolerability And Brain Cortico-striatal Function Of 2 Doses Of Pf-02545920 In Subjects With Early Huntington's Disease
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 37
+Topic: beta-alanine
+
+SUMMARY:
+This study will evaluate the Safety, Tolerability and Brain Function of 2 doses of PF-0254920 in Subjects with Early Huntington's Disease.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Number of Participants With Treatment-Emergent Adverse Events (AEs) or Serious Adverse Events (SAEs)
+  - Number of Participants With Laboratory Abnormalities Meeting the Criteria for Potential Clinical Concern (Without Regard to Baseline Abnormality)
+  - Number of Participants With Potentially Clinically Significant Vital Signs Findings
+  - Number of Participants With Potentially Clinically Significant Electrocardiogram (ECG) Findings
+  - Number of Participants With Change From Baseline in Body Weight of >=7%
+
+INTERVENTIONS:
+  - DRUG: PF-02545920
+  - DRUG: Placebo
+  - DRUG: PF-02545920
+  - DRUG: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT01806896

@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07030322
+Title: Health and Financial Impact on the Use of a Personal Exoskeleton in the Home and Community: a Case Study
+Official Title: Health and Financial Impact on the Use of a Personal Exoskeleton in the Home and Community: a Case Study
+Status: ENROLLING_BY_INVITATION
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 5
+Topic: strength training
+
+SUMMARY:
+The goal of this clinical trial is to examine the long-term use of a personal overground robotic exoskeleton in subjects with spinal cord injury. The main aims of this study include:
+
+1. Determine patterns of personal overground robotic exoskeleton use over 12 months.
+2. Examine the impact of personal overground robotic exoskeleton use on health outcomes over 12 months. These will include:
+
+   1. Objective health - heart rate, physical activity, sleep behavior, body temperature, body-mass index, and bone density
+   2. Medical status - rehospitalization, infection frequency, pressure injury, falls, fractures, medication (type/dose)
+   3. Function - bowel function, bladder function, pain, spasticity, quality of life, mental health, social participation
+3. Determine healthcare expenditure over 12 months
+
+Participants and their support person(s) will be trained on using a personal robotic exoskeleton in their home and community. Once they complete training, they will use the exoskeleton as they wish (ie, no requirement to use the device a certain number of times per week) and data collection will begin.
+
+DETAILED DESCRIPTION:
+This prospective observational study will recruit and enroll individuals with SCI. These individuals will be part of a convenience sample due to employment or volunteer work with Ekso Bionics. They will be own or have access to an Indego Personal exoskeleton for home use. The parallel mixed methods design will allow for quantitative and qualitative data collected concurrently and integrated with equal consideration. Eligible individuals will be identified through work with representatives at Ekso Bionics for device acquisition and set up of training. Individuals who acquire a personal device will be screened for eligibility (criteria detailed below) and qualifying patients will be approached to participate. Upon providing consent, participants will complete quantitative and qualitative assessments over 12 months. Assessments will be conducted on five occasions: (1) baseline, (2) 1-month post-enrollment, (3) 3-months post-enrollment, (4) 6-months post-enrollment, and (5) 12-months post-enrollment. All study specific assessments will be completed by trained assessors. Quantitative and qualitative assessments will be completed by a physical therapist or other member of the research staff with necessary training. Time commitment for each participant at each assessment is 60 to 90 minutes.
+
+Additionally, participants will be fitted for and provided at study enrollment with a wearable medical monitoring device for continuous tracking over 12-months. Study staff will provide each participant with a personal device account, to be set up using a premade study email, during enrollment. These emails will be generated utilizing a unique identifier feature which allows a single email to be suffixed with a unique identifier (e.g., study email account: "EksoIndegoStudy@gmail.com", participant S001 Wearable sensor account: "EksoIndegoStudy+S001@gmail.com"). Each account will be linked to a research data collection platform at Ekso Bionics. Ekso Bionics will collect necessary data from the wearable sensors including: heart rate, physical activity, sleep data, stress scores, weight, and profile information. To maintain blinding of potential health data, we will use the 1st of the birth month for each participant, so activity levels based on age can still be calculated appropriately. Data from the wearable device will be retrieved from the manufacturer cloud-based storage. All data is available for export by study staff either individually or as batch data, including all de-identified participant data in one file.
+
+No specific intervention will take place during this observational study. However, each will have access to an Ekso Indego Personal device for home and community use. The Ekso Indego Personal (Indego) is a wearable powered exoskeleton device that actively assists individuals to stand and walk; these are individuals with walking impairments resulting from lower extremity weakness or paralysis due to spinal cord injury. Unique in design, the Indego consist
+
+PRIMARY OUTCOMES:
+  - Change in sessions recorded and provided by the exoskeleton device across study timepoints
+  - Change in time spent walking recorded and provided by the exoskeleton device across study timepoints
+  - Change in walking time recorded and provided by the exoskeleton device across study timepoints
+  - Change in usage metrics as reported by user
+  - Change in medical health status, assessed by interview and written questions based on the SCI Model Systems form II, between all timepoints in study
+
+INTERVENTIONS:
+  - DEVICE: Overground Robotic Exoskeleton
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07030322

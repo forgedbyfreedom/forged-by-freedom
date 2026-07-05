@@ -1,0 +1,37 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02120599
+Title: Interventions for Moderate Malnutrition in Pregnancy
+Official Title: Randomized Controlled Trial of the Impact of Treating Moderately Malnourished Women in Pregnancy
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1867
+Topic: protein supplementation
+
+SUMMARY:
+Malnutrition during pregnancy is more common in poor women in the developing world due to inadequate dietary intake combined with increased nutrient requirements; pregnancy risk is more consequential than among other demographic groups with increased risk of maternal and infant mortality and the lifelong effects of fetal malnutrition. The benefits of treating moderate malnutrition during pregnancy remain largely undocumented. This study tests the hypothesis that providing either a fortified flour or fortified paste-based supplementary food designed to replete the nutrient deficits during pregnancy will result in improved maternal nutritional recovery rates and higher infant birth weights and lengths. This study is a randomized, controlled clinical trial of 3 supplementary foods in 1800 moderately malnourished Malawian women who are pregnant. Subjects will receive one of 3 food rations: 1) a ready-to-use supplementary food formulated to deliver about 200% of the recommended daily allowance (RDA) of most micronutrients in pregnancy (RUSF-P), 2) corn soy blend with a multiple micronutrient tablet chosen to deliver about 200% of the RDA of most micronutrients (CSB-P) or 3), the standard of care which is a corn soy blend with supplementary iron and folic acid (CSB), delivering between 0-350% of the RDA. Subjects will receive the supplementary food until they recover from MAM. The outcome of the pregnancy and maternal nutritional status will be followed until 3 months after delivery.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Proportion recovered from moderate acute malnutrition (MAM)
+  - Maternal change in mid-upper arm circumference (MUAC)
+  - infant birth weight
+  - infant birth length
+  - premature delivery
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: ready-to-use supplementary food
+  - DIETARY_SUPPLEMENT: corn-soy blend
+  - DIETARY_SUPPLEMENT: iron
+  - DIETARY_SUPPLEMENT: folic acid
+  - DIETARY_SUPPLEMENT: UNIMMAP
+
+ELIGIBILITY:
+Age: 14 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT02120599

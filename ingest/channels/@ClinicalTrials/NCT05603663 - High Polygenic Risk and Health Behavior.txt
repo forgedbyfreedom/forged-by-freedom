@@ -1,0 +1,69 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05603663
+Title: High Polygenic Risk and Health Behavior
+Official Title: Genes and Health Behavior: the Impact of Awareness of High Polygenic Risk for Cardiovascular Disease on Health Behavior Among Young Overweight Adults
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 1540
+Topic: weight loss exercise
+
+SUMMARY:
+The goal of this clinical trial is to evaluate the impact of awareness of high polygenic risk for CVD on health behavior among young overweight adults. We want to evaluate the impact of awareness of high polygenic risk for CVD on body mass index within 12 months, the impact of awareness of high polygenic risk for CVD on other health indicators (physical activity, systolic blood pressure, cholesterol and triglyceride levels, smoking, waist circumference, CVD risk score), and assess the cost-effectiveness of informing people about the high polygenic risk for CVD.
+
+The trial will be conducted in a primary care setting, for which the high genetic-risk subjects will be invited to visit their family physician. In the course of the first visit, the family physician will assess the participant's health status and will counsel the participant on healthy choices for increasing their level of physical activity and losing weight. If necessary, the family physician will start treatment to lower the participant's blood pressure or cholesterol following current treatment guidelines. The participants in the intervention group will be informed of their high polygenic risk for CVD at the start of the study, while the control subjects at the end of the study. There will be three study visits at 6-month intervals. Between visits, the participants will receive reminders via a mobile health application to change their health behavior. At the end of the trial (month 12), the health indicators of the participants will be assessed and compared between the three trial groups. If a significant difference in BMI is found, it will presumably be related to the fact of learning of the high genetic risk, in which case the use of genetic data in primary prevention may be considered effective.
+
+DETAILED DESCRIPTION:
+Background
+
+Cardiovascular disease (CVD) is the most prevalent cause of mortality. The risk of CVD can be reduced through effective prevention measures.
+
+The risk of CVD can be assessed using genetic analysis. Large-scale international studies have shown that CVD is a polygenic disease. Based on the interaction of multiple single-nucleotide polymorphisms (SNPs) in individuals, a polygenic risk score (PRS) methodology has been developed for individual risk assessments.
+
+Assessment of polygenic risk for CVD is not yet employed in clinical practice, as it is not clear whether awareness of high risk motivates health behavior to make healthier choices to prevent the related illness. Existing research results are contentious. For example, it is not clear whether informing smokers of their high genetic risk for cancer contributes to their quitting smoking or whether physical activity increases in individuals with a high PRS for diabetes after learning of their genetic risk. As the risk of disease in individuals with a high PRS can be reduced predominantly through healthy choices, knowledge of these issues is important for the inclusion of PRS in treatment guidelines.
+
+Hypothesis
+
+Learning of high polygenic risk changes people's health behavior, increasing the impact of personalized primary prevention of CVD.
+
+Aim of the study
+
+The primary objective of the trial is to evaluate the impact of awareness of high polygenic risk for CVD on health behavior among young overweight adults.
+
+Objectives
+
+1. To evaluate the impact of awareness of high polygenic risk for CVD on body mass index within 12 months (primary objective).
+2. To evaluate the impact of awareness of high polygenic risk for CVD on other health indicators (physical activity, systolic blood pressure, cholesterol and triglyceride levels, smoking, waist circumference, and CVD risk score).
+3. To evaluate the economic impact of informing people about the high polygenic risk for CVD.
+
+Outcomes
+
+1. Body mass index
+2. Systolic blood pressure
+3. Total cholesterol
+4. Waist circumference
+5. Smoking prevalence
+6. Physical activity
+7. CVD risk score
+
+At the start and end of the trial, the participating physicians and family nurses will also be asked for their opinion on the utility of using data about genetic risk for CVD and genetic feedback (in the form of an anonymous survey).
+
+Study design
+
+To assess the health impacts of learning about the high polygenic risk for CVD, a randomized controlled trial will be conducted in a primary care setting, under real-life conditions.
+
+The subjects will consist of 1500 individuals aged 25-44 years from the Biobank of the Estonian Genome Center (EGC) who are overweight and have no previously diagnosed CVD, and who belong to the top 20th percentile of polygenic risk for CVD (n=1000) and the bottom 20th percentile of polygenic risk for CVD (n=500). The high-PRS subjects will be randomized to two study groups, 500 in the intervention group and 500 in the 1st control group. T
+
+PRIMARY OUTCOMES:
+  - Body mass index (BMI)
+
+INTERVENTIONS:
+  - GENETIC: Informing study subjects about their high CVD polygenic risk score
+
+ELIGIBILITY:
+Age: 25 Years to 44 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05603663

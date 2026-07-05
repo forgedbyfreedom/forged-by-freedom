@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06827236
+Title: A Clinical Study to Find the Optimal Dose of an Investigational Treatment Called BNT323 When Used in Combination With Another Investigational Treatment, BNT327, and to Test if That Combination Treatment is Safe and Beneficial for Patients With Advanced Breast Cancer
+Official Title: A Phase I/II, Multi-site, Open-label, Two-part Trial to Evaluate the Efficacy, Safety, and Pharmacokinetics of BNT323 in Combination With BNT327 in Participants With Advanced Breast Cancer
+Status: RECRUITING
+Phase: PHASE1, PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 380
+Topic: growth hormone treatment
+
+SUMMARY:
+This is a Phase I/II, multi-site, open-label, two-part study designed to evaluate the efficacy, safety, optimized dose and contribution of components of BNT323 in combination with BNT327 in participants with hormone receptor-positive (HR+) or hormone receptor-negative (HR-), Human epidermal growth factor receptor (HER)2-positive, HER2-low (immunohistochemistry \[IHC\] 1+ or IHC 2+/in situ hybridization -), HER2-ultralow (IHC 0, with membrane staining) or HER2-null breast cancer (BC), or triple-negative breast cancer (TNBC).
+
+DETAILED DESCRIPTION:
+The study consists of two parts:
+
+* Part 1 - Dose escalation: In this part of the study, participants with histologically confirmed, chemotherapy-pretreated advanced HR+, HER2-low or HER2-ultralow BC will receive BNT323 in combination with BNT327 (BNT323 + BNT327) in a dose escalation design. This will define the recommended Phase 2 dose (RP2D) for the BNT323 + BNT327 combination therapy.
+* Part 2 - Dose optimization and exploratory cohorts: This part of the study will be an expansion phase, aiming to evaluate the efficacy and safety of the optimal dose combination and providing a more robust comparison against the other treatments. It will start once the enrollment in Part 1 is completed and the sponsor in conjunction with the Safety Review Committee has assessed available Part 1 efficacy and safety data. Part 2 of the study will have four cohorts, i.e., Cohorts 1 (dose optimization cohort), and Cohorts 2, 3, and 4 (exploratory cohorts). Recruitment to Cohorts 2, 3, and 4 will begin with RP2D from Part 1 and in parallel to randomization in Cohort 1.
+
+Randomization is planned for Cohort 1 in Part 2, i.e., participants will be randomized in 2:2:1:1 ratio into one of the four arms (RP2D of BNT323 + BNT327, lower dose of RP2D of BNT323 + BNT327, BNT323 monotherapy, and BNT327 monotherapy). No randomization is planned for any other cohort in Part 2.
+
+PRIMARY OUTCOMES:
+  - Part 1 - Occurrence of dose limiting toxicities (DLTs)
+  - Occurrence of Treatment-emergent adverse events (TEAEs), Grade ≥3 TEAEs, serious adverse events (SAEs), treatment-related TEAEs, treatment-related Grade ≥3 TEAEs, and treatment-related SAEs
+  - Occurrence of dose interruption, reduction, and discontinuation due to TEAEs
+  - Part 2 - Objective response rate (ORR)
+
+INTERVENTIONS:
+  - DRUG: BNT323
+  - DRUG: BNT327
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06827236

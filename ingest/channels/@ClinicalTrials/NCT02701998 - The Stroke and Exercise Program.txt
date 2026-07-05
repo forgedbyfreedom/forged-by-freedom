@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02701998
+Title: The Stroke and Exercise Program
+Official Title: Development and Pilot Testing of a Scalable mHealth Intervention to Promote Physical Activity in TIA and Stroke Survivors
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 70
+Topic: exercise intervention diabetes
+
+SUMMARY:
+This study involves a randomized controlled trial to test the feasibility, acceptability, and efficacy of a mobile health (mHealth)-enhanced physical activity (PA) intervention to increase daily bout-related and total moderate-intensity PA and to reduce sedentary behavior (SB) in non-physically impaired patients with ischemic stroke or transient ischemic attack (TIA).
+
+DETAILED DESCRIPTION:
+Stroke recently declined from the third to the fifth leading cause of death in the United States. However, Stroke remains the leading cause of long-term disability and is among the most expensive chronic diseases, costing the US approximately 34 billion dollars per year. The decrease in stroke-related mortality has led to an increase in stroke survivors, and it is estimated that the overall prevalence will increase by 25% by 2030 to a record 11 million stroke survivors. Importantly, two-thirds of the nearly one million Americans experiencing ischemic stroke or transient ischemic attack (TIA) will regain functional independence. In these patients, engagement in habitual purposeful physical activity (PA) is a powerful means of secondary stroke prevention.
+
+Habitual PA can improve several other important health indicators in stroke survivors, including cardiorespiratory fitness, functional independence, gait stability, overall vascular health, and cognition, while also reducing the risk for falls, cardiometabolic disease, and adverse recurrent events. Consequently, the American Heart Association/American Stroke Association (AHA/ASA) recommends patients who have survived a stroke and regained functional independence both increase PA and reduce sedentary behaviors (SB). However, these recommendations are not always prescribed, and when they are prescribed, patient compliance is often poor. Recent research involving the use of objective PA monitors shows that stroke survivors are significantly less active than controls and maintain a high level of SB one-year after discharge, regardless of functional capacity. This is especially problematic given that patients who engage in low PA and high SB levels after stroke experience cardiovascular deconditioning, worsening PA intolerance, and additional disability, ultimately increasing risk for recurrent events.
+
+Several barriers may account for low PA and high SB levels in stroke survivors. Many avoid engaging in PA due to fear of falling or triggering a recurrent event. However, the risk of inactivity in this regard is far greater than any risks associated with adopting habitual PA. Other barriers may include post-stroke fatigue, depression, lack of interest, or motivation, negative beliefs towards PA, and lack of support for PA behavior change. Despite the obvious need for behavioral interventions to assist stroke survivors in overcoming barriers to adoption and maintenance of habitual PA, there have been relatively few. Most interventions to date have only included intensive and costly supervised exercise components and have not included instruction in standard PA behavior change strategies (e.g., self-monitoring, goal-setting, reinforcement).
+
+The recent advent of commercially available mobile health (mHealth) technologies that automatically monitor and provide feedback on time spent in PA and SB (i.e., fitness/activity trackers) provide a potentially powerful means to enhance the efficacy and reach of int
+
+PRIMARY OUTCOMES:
+  - Feasibility and acceptability of a mHealth-enhanced PA intervention via questionnaires
+  - Change in daily bout-related and total moderate physical activity
+  - Change in daily percentage of waking hours spent in sedentary behavior
+
+INTERVENTIONS:
+  - BEHAVIORAL: mHealth-Enhance Physical Activity Intervention
+  - OTHER: Physical Activity Intervention
+
+ELIGIBILITY:
+Age: 21 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02701998

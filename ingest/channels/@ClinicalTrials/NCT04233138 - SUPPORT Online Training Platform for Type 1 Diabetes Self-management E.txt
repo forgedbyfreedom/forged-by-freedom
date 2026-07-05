@@ -1,0 +1,45 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04233138
+Title: SUPPORT Online Training Platform for Type 1 Diabetes Self-management Education and Support (SUPPORT)
+Official Title: Optimizing Therapies and Technologies to Reduce Hypoglycemia in Type 1 Diabetes Through the SUPPORT Online Platform for Self-management Education and Support
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 285
+Topic: exercise intervention diabetes
+
+SUMMARY:
+There are evidences that some healthcare teams are not proposing new therapeutic and technology options that have the potential to reduce hypoglycemia for people with type 1 diabetes. In practice, people living with type 1 diabetes report receiving education related to insulin pumps usage mainly on key functions (how the device works) at initiation and not enough about proactive adjustments (how to optimally use the device) especially on the long-term. In brief, short-term education is technical and product-specific, rather than being based on patients' needs.There is a need to test the efficacy of different programs that may be more suited to patients' needs and desires while offering the opportunity to reduce costs (e.g. web based). Since there is a lack of expertise related to optimal use of new technologies and therapies for people living with type 1 diabetes, we propose to design and test a web-based training (e.g. courses including videos and quizzes) and support (e.g. discussion forum) platform. This will be tested through a registry-based trial.
+
+The overall purpose of this study is to evaluate, among a group of adults living with type 1 diabetes, the SUPPORT online education platform in terms of users' satisfaction, engagement and efficacy to change the fear and the frequency of hypoglycemia.
+
+DETAILED DESCRIPTION:
+Design and development of the SUPPORT platform:
+
+The SUPPORT platform was designed based on the Behavior change wheel framework. The research team identified the main barriers in achieving adequate blood glucose management and in the use of an online training platform; then, features (downloadable PDFs, videos, quizzes, etc.) were designed to overcome these barriers. These training modules were developed by a team including two dietitians/certified diabetes educator, a nurse, a psychologist and endocrinologist (all specialized in type 1 diabetes). The content was then reviewed by the committee of patient-partners and clinicians working in type 1 diabetes (one endocrinologist, two residents in endocrinology, two dietitians (1 being a certified diabetes educator) and two nurses (1 being a certified diabetes educator).
+
+Recruitment and intervention:
+
+Recruitment of people with type 1 diabetes will be done via an email sent to the participants who completed phase 2 of the BETTER registry, are 18 years old or older, and agreed to be contacted for other studies. All participants accepting to participate will receive the full intervention for 6 months (access to the platform with bi-weekly newsletters). During the following 6 months, participants will still have access to the platform, but no newsletter will be sent (sustainability phase). Questionnaires will be given at baseline, 6-month, and 12-month of the intervention to assess fear of hypoglycemia, diabetes knowledge, overall satisfaction of the platform. Participant will also receive 1 question every 6 weeks regarding the frequency of hypoglycemia during the last 3 days. The observational control group will not have access to the platform. We will extract data from the baseline, 6 months and annual registry completion.
+
+Analysis:
+
+Initial analysis will be descriptive and baseline data will be summarized separately for both groups. Baseline continuous data will be reported as means with standard deviations (median and interquartile range if data are skewed). Categorical data will be reported as proportions. Our primary outcome is the difference in mean self-reported hypoglycemia and fear of hypoglycemia score between the 2 groups after 6 months of intervention. The primary outcome will be calculated and compared between the two groups using differences with 95% CI using paired t-test and McNemar test. Analysis will be by intention to treat.
+
+Sample size and pairing:
+
+Every participant in the intervention group will be randomly paired by gender and date of completion of the phase 2 BETTER questionnaire (+/- 1 month) with a participant who answered the second phase of the BETTER registry but who did not respond to the invitation e-mail for the SUPPORT study. We have calculated the number of pairs to be able to detect a 25% reduction in adults given the small but present difference in self-reported hypoglycemia in both age groups. We estimate a 25% reduction in hypoglycemic episodes for a between-grou
+
+PRIMARY OUTCOMES:
+  - Users' satisfaction of the SUPPORT platform
+
+INTERVENTIONS:
+  - OTHER: SUPPORT online platform for people with type 1 diabetes
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04233138

@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06642948
+Title: AI-based Skeleton Recognition System for Rehabilitation Exercise in Breast Cancer Survivors: A Randomized Controlled Trial
+Official Title: Evaluating the Efficacy of Structured Exercise Interventions in Alleviating Aromatase Inhibitor-Induced Arthralgia in Breast Cancer Survivors: A Randomized Controlled Trial
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 80
+Topic: knee osteoarthritis exercise
+
+SUMMARY:
+This study aims to develop and evaluate an artificial intelligence (AI)-based skeletal recognition system designed to support real-time, interactive rehabilitation exercise (RE programs. The goal is to mitigate musculoskeletal symptoms associated with endocrine therapy in breast cancer survivors.Endocrine therapy remains a cornerstone in the treatment of hormone receptor-positive breast cancer, typically extending over 5 to 10 years. While the therapeutic benefits of endocrine therapy are well established, agents such as aromatase inhibitors frequently induce musculoskeletal symptoms (MS), including joint pain, stiffness (particularly morning stiffness), carpal tunnel syndrome, tenosynovitis, myalgia, and muscle weakness. These symptoms, which may be continuous or intermittent, can affect both central (spine, hips, shoulders) and peripheral joints (elbows, wrists, knees, feet), severely compromising patients' quality of life (QoL). Although physical exercise has been demonstrated to alleviate these symptoms, adherence to adequate exercise regimens remains suboptimal among patients. Furthermore, there is no consensus on the optimal type, duration, or intensity of exercise interventions, and standardized protocols are lacking. Recognizing exercise as a long-term behavior, we are developing a home-based, AI-assisted rehabilitation program tailored to the specific needs of patients undergoing endocrine therapy.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Grip strength
+  - M-SACRAH
+  - WOMAC
+  - ROM
+
+INTERVENTIONS:
+  - OTHER: Motor rehabilitation based on AI visual recognition
+
+ELIGIBILITY:
+Age:  to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06642948

@@ -1,0 +1,38 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02401724
+Title: NonInvasive Brain Stimulation in Stroke Patients
+Official Title: A Randomised Trial of Non-Invasive Brain Stimulation (NIBS) in Stroke Survivors
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: recovery exercise
+
+SUMMARY:
+After a stroke affecting the right side of the brain, many patients are affected by "spatial neglect": the damage to the brain causes them to ignore the left side of their surroundings. At its most extreme they may be unaware that they have a left side, or believe that it is moving normally when it is in fact paralysed. In milder cases, people may be unable to recognise touch on the left side if their right side is also being touched, or objects in their left visual field if something is visible to their right. Neglect alters peoples' quality of life profoundly, often renders them more dependent on others to undertake basic activities of daily living, and makes effective rehabilitation much more difficult.
+
+The limited success of current treatment approaches indicates gaps in understanding of the underlying mechanisms of neglect and its recovery. Recent data suggest that the problems in responding to the left side are a result of an imbalance of activity in those parts of the brain responsible for deciding which side to pay attention to. It might therefore be possible to help people with neglect by "rebalancing" the brain either by increasing activity in the damaged side, or alternatively by reducing activity in the undamaged side. In this pilot study, the investigators will test whether they can help by doing the second of these things.
+
+The investigators propose to conduct a pilot clinical trial to explore whether using electric currents to temporarily modify the activity of specific areas of the intact side of the brain, influences recovery from neglect, when used either alone, or in combination with a training method that has previously appeared promising as a treatment. Brain activity will be modified using a technique called "transcranial direct current stimulation (tDCS)", in which small electric currents are applied to the scalp with a wire covered in damp cotton pads. This will be done over the specific parts of the brain that are responsible for focusing attention to one side.
+
+The investigators will compare the clinical outcomes of four interventions (1: behavioural, 2: tDCS, 3: a combination of both and 4: control).
+
+The investigators hope that these studies will advance their understanding of what treatments may help people with neglect, and how they might work.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in Behavioural Inattention Test (BIT)
+
+INTERVENTIONS:
+  - OTHER: Transcranial direct current stimulation
+  - OTHER: Action Training
+
+ELIGIBILITY:
+Age: 18 Years to 90 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02401724

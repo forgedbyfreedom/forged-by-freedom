@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03912168
+Title: Question Prompt List for Orthopaedic Conditions
+Official Title: Does Giving a Question Prompt List to Patients With Orthopaedic Conditions Improve Their Perceived Involvement in Care? A Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 156
+Topic: tendon injury
+
+SUMMARY:
+The purpose of this study is to investigate whether providing patients with a question prompt list (QPL) prior to their orthopaedic surgery clinic appointment improves their perceived involvement in care (PICs) score compared to being given 3 questions from the AskShareKnow model
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Perceived involvement in care scale
+
+INTERVENTIONS:
+  - OTHER: Question Prompt List
+  - OTHER: 3 questions list
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03912168

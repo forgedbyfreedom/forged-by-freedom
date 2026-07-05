@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05425407
+Title: Effects of Collagen Peptide Supplementation on Muscle and Tendon Damage and Function
+Official Title: A Randomized Double-blinded Placebo-controlled Study to Evaluate the Effect of Collagen Peptide (Collagen Peptan) Supplementation on Muscle and Tendon Damage, Repair, and Functional Capacity During Exercise Training Overload
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 22
+Topic: creatine supplementation
+
+SUMMARY:
+The aim of the study is to investigate the acute and short-term effects of collagen peptides (Collagen Peptan) on muscle and connective tissue during an eccentric overload training period. Currently, all studies investigating the effects of post-exercise collagen supplementation did this in the absence of whey proteins, which are part of the standard recommendations for post-exercise recovery. The investigators will therefore investigate whether the combined intake of whey proteins and collagen peptides ensures a better recovery of exercise performance and whether it can prevent or reduce symptoms of muscle and tendon overload during a three-week eccentric overload training period (n = 22).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Change in countermovement jump performance
+  - Change in maximal isometric knee-extension force of the right leg
+  - Change in anteroposterior thickness of the right patellar tendon
+  - Change in neovascularization of the right patellar tendon
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: whey protein
+  - DIETARY_SUPPLEMENT: whey protein + collagen peptide
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: MALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT05425407

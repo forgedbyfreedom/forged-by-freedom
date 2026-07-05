@@ -1,0 +1,47 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07504133
+Title: Composite Flour Cookies for Improving Nutrition in Malnourished Children
+Official Title: Effect of Composite Flour-Enriched Cookies on Clinical Outcomes of Malnourished Children: A Randomized Controlled Trial
+Status: COMPLETED
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: protein supplementation
+
+SUMMARY:
+Malnutrition is a major public health concern among children in developing countries, leading to impaired growth and increased risk of morbidity. This study evaluated the effectiveness of nutrient-dense composite flour cookies as a dietary intervention to improve the nutritional status of malnourished children.
+
+Composite cookies were developed using soy, chickpea, and peanut, and were subjected to nutritional and quality analysis including proximate composition and other physicochemical assessments prior to intervention. A randomized controlled trial was conducted among 60 malnourished children aged 3 to 10 years, divided into intervention and control groups.
+
+The intervention group received the composite cookies along with their regular diet, while the control group continued with their usual diet. Anthropometric indicators including weight, body mass index (BMI), and mid-upper arm circumference (MUAC), as well as biochemical parameters such as hemoglobin and serum albumin, were assessed at baseline and after a 3-month intervention period.
+
+The study aimed to determine whether supplementation with nutrient-rich composite cookies could significantly improve growth and nutritional outcomes in malnourished children.
+
+DETAILED DESCRIPTION:
+This randomized controlled trial was conducted to evaluate the impact of composite flour-enriched cookies on the nutritional status of malnourished children. Malnutrition remains a critical public health issue, particularly in low-resource settings, necessitating the development of affordable and nutrient-rich food-based interventions.
+
+Prior to the intervention, composite cookies were formulated using soy, chickpea, and peanut to enhance protein and energy density. The developed product was evaluated through comprehensive analysis, including proximate composition, physicochemical properties, and sensory evaluation, to ensure nutritional adequacy and acceptability.
+
+The study included 60 children aged 3-10 years diagnosed with moderate to severe malnutrition. Participants were randomly assigned to either the intervention group or the control group. The intervention group received daily supplementation with the developed composite cookies, while the control group continued their usual diet without supplementation.
+
+The intervention period lasted for three months. Anthropometric measurements, including weight-for-age, BMI-for-age, and mid-upper arm circumference (MUAC), were recorded at baseline and at the end of the intervention. In addition, biochemical parameters such as hemoglobin and serum albumin levels were assessed to evaluate improvements in nutritional and physiological status.
+
+The primary objective was to assess improvement in anthropometric indicators, while secondary outcomes included changes in biochemical parameters and overall health status. The findings of this study support the potential use of locally produced, nutrient-dense functional foods as sustainable strategies to combat childhood malnutrition.
+
+PRIMARY OUTCOMES:
+  - Change in Weight-for-Age Z-score (WAZ)
+  - Change in Height-for-Age Z-score (HAZ)
+  - Change in BMI-for-Age Z-score (BAZ)
+  - Change in Mid-Upper Arm Circumference (MUAC)
+  - Change in Serum Albumin Levels
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Composite Flour Cookies
+
+ELIGIBILITY:
+Age: 3 Years to 10 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07504133

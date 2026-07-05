@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06320951
+Title: VITAL-IMPACT: Improving Cardiometabolic Health in Black Individuals Through Therapeutic Augmentation of Cyclic Guanosine Mono-Phosphate Signaling Pathway
+Official Title: Improving Cardiometabolic Health in Black Individuals Through Therapeutic Augmentation of Cyclic Guanosine Mono-Phosphate Signaling Pathway
+Status: NOT_YET_RECRUITING
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 200
+Topic: exercise intervention obesity
+
+SUMMARY:
+This study investigates the potential of vericiguat, a soluble guanylate cyclase stimulator, to improve cardiometabolic health in obese Black individuals with insulin resistance by directly enhancing cyclic guanosine monophosphate (cGMP) activity. Given that this population has been shown to have lower cGMP activity and the association of lower cGMP activity with increased cardiometabolic disease risk, the proposed study hypothesizes that augmenting cGMP activity in obese individuals will improve insulin sensitivity and energy expenditure. This study is a placebo-controlled randomized trial involving 200 Black obese participants with insulin resistance, assessing the effects of vericiguat on insulin sensitivity, resting, and exercise-induced energy expenditure over 12 weeks. Additionally, it will explore changes in brown adipose tissue and gene expression related to energy metabolism in white adipose tissue, aiming to provide insights into how increasing cGMP activity may improve cardiometabolic health in Black obese individuals.
+
+DETAILED DESCRIPTION:
+Obese Black individuals have a higher prevalence of insulin resistance, which is linked to an elevated risk of cardiometabolic diseases and cardiovascular disease. The reasons behind the increased insulin resistance in this group are not fully understood. Key to regulating glucose metabolism and the overall balance of energy, the cyclic guanosine monophosphate (cGMP) pathway is crucial for maintaining cardiometabolic health. Research indicates that both Black race and obesity are associated with reduced levels of upstream regulators of cGMP activity, including natriuretic peptides (NPs) and nitric oxide (NO). This reduced level of NPs and NO predisposes Black obese individuals to decreased cGMP activity, potentially contributing to the higher occurrence of cardiometabolic diseases seen in this population. Vericiguat, a drug that stimulates the soluble guanylate cyclase, thereby enhancing cGMP activity independently of NO, presents a novel approach to improving cardiometabolic health in those most at risk due to low cGMP activity. This study hypothesizes that directly augmenting cGMP levels with vericiguat will improve cardiometabolic health parameters including insulin sensitivity and energy expenditure in Black obese adults with insulin resistance. Investigators plan to execute a placebo-controlled randomized trial targeting Black obese participants with insulin resistance to examine whether vericiguat can (1) improve insulin sensitivity and (2) increase resting energy expenditure. For the first aim, Investigators aim to enroll 200 Black obese (BMI≥30 kg/m\^2) individuals with a HOMA-IR of ≥2.5, randomizing them to either vericiguat 10 mg once daily or a placebo once daily in a double-blind setup for 12 weeks. Investigators will assess improvements in insulin sensitivity through euglycemic hyperinsulinemic clamp and compare the results between the vericiguat and placebo groups after 12 weeks. For the second aim, Investigators will evaluate changes in resting and exercise energy expenditure across both groups over the same period. An exploratory objective will investigate changes in brown adipose tissue volume and activity using PET-MRI, as well as UCP1 gene expression in white adipose tissue, in a subset of 100 participants after 12 weeks of vericiguat treatment. This will offer insights into the mechanisms by which cGMP augmentation may facilitate improvements in cardiometabolic health. By focusing on the direct enhancement of cGMP activity in Black obese individuals, this study proposes a novel targeted therapeutic strategy aimed at improving cardiometabolic health and addressing the increasing prevalence of cardiometabolic disease in the Black population.
+
+PRIMARY OUTCOMES:
+  - Change in insulin sensitivity after vericiguat in Black obese individuals with insulin resistance.
+  - Change in resting energy expenditure (REE) after vericiguat in Black obese individuals with insulin resistance.
+
+INTERVENTIONS:
+  - DRUG: Vericiguat 10 MG
+  - OTHER: Placebo
+  - OTHER: insulin Sensitivity Test
+  - OTHER: Resting Energy and Exercise Energy Expenditure Assessment
+  - OTHER: White Adipose Tissue Biopsy
+
+ELIGIBILITY:
+Age: 18 Years to 80 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06320951

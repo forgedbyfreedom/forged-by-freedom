@@ -1,0 +1,40 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07433309
+Title: CT Body Composition as Predictor of Exercise Therapy Outcome in Peripheral Arterial Disease
+Official Title: CT Body Composition Predicts Supervised Exercise Response in Peripheral Arterial Disease: A Protocol
+Status: NOT_YET_RECRUITING
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 128
+Topic: fat loss muscle
+
+SUMMARY:
+Supervised exercise therapy (SET) is the recommended first treatment for patients with leg artery disease (peripheral arterial disease, PAD) causing pain when walking. However, approximately 40% of patients do not benefit meaningfully and go on to require a procedure to open the blocked arteries within three months. This study investigates whether body composition measurements - specifically the quality of muscle and the amount of belly fat - taken from a CT scan already performed as part of routine care, can identify before treatment begins which patients are unlikely to respond to exercise therapy. If confirmed, this approach would allow doctors to use information from a scan patients are already having, with no additional tests, to better match patients to the right treatment from the start.
+
+DETAILED DESCRIPTION:
+BACKGROUND Peripheral arterial disease (PAD) affects approximately 236 million adults worldwide. Intermittent claudication - exertional lower limb ischaemic pain that resolves with rest - is its most prevalent symptomatic form. Three 2024 international guidelines (ACC/AHA, ESC, ESVS) unanimously recommend supervised exercise therapy (SET) as first-line treatment before revascularisation. Two Cochrane systematic reviews confirm that SET significantly improves maximum walking distance and quality of life compared with home-based exercise and walking advice alone. Despite population-level efficacy, individual response is highly heterogeneous: approximately 40% of patients fail to achieve meaningful functional improvement or require revascularisation within three months of initiating SET. Conventional predictors - ankle-brachial index and baseline claudication distance - do not reliably predict the magnitude of SET response. No validated pre-therapy metabolic tool exists to identify patients who lack the biological substrate for aerobic adaptation.
+
+RATIONALE Chronic lower-limb ischaemia causes progressive skeletal muscle remodelling - including intramuscular lipid infiltration, fibre-type shift toward type IIx fibres, and mitochondrial dysfunction - that directly constrains the aerobic adaptation capacity upon which SET depends. CT-derived skeletal muscle attenuation (Hounsfield units, HU) quantifies intramuscular lipid with excellent reproducibility (coefficient of variation \<1%). Single-slice CT analysis at the L3 vertebral level provides whole-body body composition estimates correlated with DXA (r = 0.86-0.94) and is a validated systemic metabolic phenotyping tool - it reflects whole-body metabolic reserve, not ischaemia-specific lower limb myopathology. Visceral adipose tissue (VAT) is an independent pro-inflammatory and endocrine compartment that impairs aerobic exercise adaptation through systemic mechanisms. CT angiography (CTA) is routinely performed in symptomatic PAD patients being evaluated for revascularisation; L3 body composition extraction from existing CTA incurs zero additional patient burden. The research group has previously demonstrated that L3 CT body composition parameters predict overall survival after transcatheter aortic valve implantation using the same methodology (Pekar et al., Sci Rep 2024; Kantor et al., Cor Vasa 2025).
+
+STUDY AIMS Primary: To determine whether L3 CT-derived skeletal muscle density and VAT area, extracted opportunistically from existing diagnostic CTA, independently predict composite SET treatment success at three months in patients with Fontaine IIa-IIb intermittent claudication.
+
+Three co-primary hypotheses:
+
+H1: Lower skeletal muscle density (HU) independently predicts SET treatment failure.
+
+H2: Higher VAT area (cm²) independently predicts SET treatment failure. H3: The sarcopenic obesity phenotype (co-occurrence of low muscle density and elevated VAT) is associated with the lowest SET treatment su
+
+PRIMARY OUTCOMES:
+  - Composite supervised exercise therapy treatment success at 3 months
+
+INTERVENTIONS:
+  - PROCEDURE: SET physiotherapy
+  - RADIATION: CT scan
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07433309

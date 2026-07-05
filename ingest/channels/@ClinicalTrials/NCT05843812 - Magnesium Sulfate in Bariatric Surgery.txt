@@ -1,0 +1,43 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05843812
+Title: Magnesium Sulfate in Bariatric Surgery
+Official Title: "Evaluation of the Clinical Response to Magnesium Sulfate as an Adjuvant in Anesthesia in Bariatric Surgery"
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 104
+Topic: tendon injury
+
+SUMMARY:
+Weight loss surgery, also known as bariatric surgery, has been around since the 1950s and since its inception has been shown to successfully achieve significant and sustainable weight loss in a large number of patients who undergo this intervention, as well , if a beneficial impact is observed in the management of metabolic disorders, such as type 2 diabetes mellitus and hyperlipidemia.
+
+After bariatric surgery, patients are at risk of narcotic-related side effects.(2) Because of this, pain management strategies must be implemented to reduce the consumption of narcotic medications. Some studies have reported that a multimodal analgesic regimen can reduce the consumption of postoperative narcotics, as well as the therapy requirements to control postoperative nausea and vomiting.
+
+It has also been reported that excess body mass is associated with changes in mineral levels in the body, particularly hypomagnesemia , a condition that is also common in hospitalized patients (Hansen \& Bruserud 2018), and has a high incidence in the perioperative environment.
+
+Magnesium sulfate (MgSO4) has multiple desirable effects in an anesthetic procedure. It is an antagonist of the N-methyl-d-aspartic acid (NMDA) receptor, which is why it produces an analgesic effect related to the prevention of central sensitization caused by peripheral tissue injury. In addition, other relevant clinical effects of MgSO4 have been reported in anesthesiology, such as its effect as a CNS depressant, modulation of the hemodynamic response, reduction of the intraoperative requirements of anesthetics, analgesics, and muscle relaxants. As well as the potentiation of the effect of non-depolarizing muscle relaxants.
+
+The role of magnesium in the body and its pharmacological properties continue to be studied and knowledge of its pharmacological, clinical and physiological characteristics has become essential for the anesthesiologist.
+
+There are no previous studies that allow establishing an optimal therapeutic scheme considering all the perioperative clinical effects of MgSO4 and that evaluate the role of genetic variability in pain perception and response to treatment in bariatric surgery.
+
+DETAILED DESCRIPTION:
+A total of 104 participants, men and women over the age of 18, scheduled for bariatric surgery, will be included. After accepting and signing the informed consent, a brief preoperative clinical history will be taken, a peripheral blood sample will be taken to determine preoperative serum Ca2+ and Mg2+, and to analyze polymorphic variants related to pain perception and the pharmacokinetics of analgesics. The clinical effect of MgSO4 on analgesia (EVAD), hemodynamic stability (BP and HR), intubation conditions, and satisfaction with anesthetic recovery will be evaluated. The presence of adverse reactions to anesthesia (nausea, vomiting, chills, pruritus, urinary retention, arrhythmias, laryngeal or bronchial spasm) and total doses of drugs used during the perioperative period will be recorded. All patients will undergo a standard pre, trans and postoperative protocol and according to the treatment received with MgSO4 as part of their anesthetic management or not, they will be assigned to the corresponding group (MgSO4/ No MgSO4). All the data will be collected in an Excel database, for subsequent analysis in SPSS.
+
+PRIMARY OUTCOMES:
+  - Changes in postoperative analgesia over 24 hours
+  - Time to first request for pain reliever
+  - Hemodynamic stability
+  - Interaction with neuromuscular blockers (BNM): Onset time
+  - Interaction with neuromuscular blockers (BNM):Clinical effect time
+
+INTERVENTIONS:
+  - DRUG: Magnesium Sulfate 10 MG/ML
+
+ELIGIBILITY:
+Age: 18 Years to 60 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05843812

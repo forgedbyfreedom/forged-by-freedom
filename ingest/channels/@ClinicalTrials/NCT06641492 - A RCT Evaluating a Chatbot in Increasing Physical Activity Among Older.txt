@@ -1,0 +1,30 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06641492
+Title: A RCT Evaluating a Chatbot in Increasing Physical Activity Among Older Adults
+Official Title: A Randomized Controlled Trial Evaluating a Trans-Theoretical-Model-based Online Intervention Delivered by Fully-automated Chatbot in Increasing Physical Activity Among Inactive Community-dwelling People Aged ≥65 Years
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 278
+Topic: aerobic exercise
+
+SUMMARY:
+This study will compare the efficacy of a Chatbot-delivered stage of changes (SOC)-tailored online intervention (intervention group) versus a Chatbot-delivered non-SOC-tailored online intervention in increasing the prevalence of meeting WHO recommended physical activity level six months after completion of the intervention among inactive community-dwelling individuals aged ≥65 yeas. In the intervention group, the Chatbot will assess participants' physical activity level and SOC regarding PA and automatically deliver interventions tailor to their SOC every week for 12 weeks. In the control group, the Chatbot will not assess participants' SOC. It will assess participants' physical activity level and provides a standard intervention covering general information about physical activity for older adults, which is not tailoring to participants'SOC every week for 12 weeks. All participants will be followed up after completion of the interventions (T1) and six months after T1 (T2).
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Meeting WHO recommended level of physical activity
+
+INTERVENTIONS:
+  - BEHAVIORAL: Chatbot-delivered interventions tailored to one's stage of changes
+  - BEHAVIORAL: Chatbot-delivered standard interventions
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06641492

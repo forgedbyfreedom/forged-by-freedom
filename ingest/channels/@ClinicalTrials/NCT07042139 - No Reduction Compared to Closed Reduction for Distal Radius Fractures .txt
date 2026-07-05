@@ -1,0 +1,46 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07042139
+Title: No Reduction Compared to Closed Reduction for Distal Radius Fractures in Patients Over 65 or Older
+Official Title: A Randomized Controlled Trial Comparing No Reduction to Closed Reduction for Distal Radius Fractures in Patients 65 Years and Older (DISCLOSE Trial): A Study Protocol
+Status: RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 532
+Topic: low back pain exercise
+
+SUMMARY:
+DISCLOSE trial is a randomized controlled trial including 532 participants with low-energy distal radius fractures. The primary objective is to evaluate whether casting without prior closed reduction is equivalent to casting following closed reduction with respect to wrist-related pain and disability, as measured by the Patient-Rated Wrist Evaluation (PRWE) score at 12 months, in patients aged 65 years or older with a displaced distal radius fracture.
+
+* Primary endpoint will be PRWE at 12 months
+* Follow-up visits are scheduled at 3 and 12 months. 5-year follow-up will be considered as an exploratory endpoint
+
+DETAILED DESCRIPTION:
+Interventions:
+
+No reduction: In the no reduction group, a dorsal cast is applied to the patient's wrist after the initial radiograph. Following casting, a control radiograph will be taken. Active range of motion exercises for the fingers and light use of the hand are recommended immediately.
+
+Closed reduction: Distal radius fracture reduction is performed in the emergency department under local anaesthetic, with lidocaine infiltrated into the fracture site. Closed reduction is performed by the on-call physician who is responsible for the patient's treatment. Post-reduction radiographs are then taken to assess fracture alignment, although the findings do not influence the treatment of the patient. The follow-up visits, cast removal, and exercise protocol are identical to those inof the no reduction group.
+
+In both groups, the cast will be removed after 5 weeks at either the health center or the hospital's outpatient clinic, in accordance with the local treatment protocol. Following cast removal, patients will be advised to resume everyday use of the injured wrist without restrictions. No radiographs will be taken during the casting period or before the 3-month follow-up.
+
+Observational arm (not part of the randomised equivalence trial): Eligible patients who decline participation in the randomisation will be offered the opportunity to join an observational group. The patients will receive standard care (closed reduction and casting) and will provide consent for follow-up. Reduction of the DRF is performed in the emergency department and post-reduction radiographs will be taken. The observational groups will be treated according to local treatment protocols. Patients in the observational cohort will be followed at the same time points using the same outcome measures as the randomised group. Study follow-up of the observational group will be organized remotely.
+
+Blinding: Recruiting will start at July 2025.Due to the nature of the intervention, the participants will not be blinded. Recruiting personnel will only have access to the randomisation module within the electronic REDCap (Research Electronic Data Capture, https://www.project-redcap.org/) software. The outcome assessors (study nurse or orthopaedic resident or specialist) who collect the baseline data and outcome measures from the follow-up visits will be blinded to the randomisation result. Furthermore, the study personnel involved in the follow-up visits will remain blinded to the randomisation results, as the results will be hidden in REDCap.
+
+Follow-up: Participants will meet a research personnel or coordinator study nurse at the 3-month and 12-month time points. At the 3-month time point, radiographs will be taken. Thereafter, no additional radiographic follow-ups will be organized. Follow-up appointments will be carried out according to the preferences of the participants. For example, all patients will be invited to attend an in-person follow-up visit; however, if this is unsuitable, 
+
+PRIMARY OUTCOMES:
+  - PRWE
+
+INTERVENTIONS:
+  - PROCEDURE: No reduction
+  - PROCEDURE: Closed Reduction
+  - OTHER: Casting
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07042139

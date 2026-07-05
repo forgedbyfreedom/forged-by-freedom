@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT03848598
+Title: Is There a Mechanistic Reason for the Response or Non-response to Isometric Exercise in Tendinopathy?
+Official Title: Is There a Mechanistic Reason for the Response or Non-response to Isometric Exercise in Tendinopathy?
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 20
+Topic: muscle rehabilitation
+
+SUMMARY:
+In early phase tendinopathy, isometric exercises are seen as ideal to provide pain relief to patients. This approach is mainly based on a paper by Rio et al (2016), where they found that isometric exercises of a certain load magnitude and time (5 repetitions of 45 second hold at 70% of maximum) gave 100% pain relief for 45 minutes in patients with patellar tendinopathy. This then helps patients to perform their more heavy load exercises during rehabilitation, which would otherwise be too painful.
+
+Unfortunately, the study of Rio et al only consisted of 6 participants, and recent papers have contradicted the findings. In Achilles tendinopathy, plantar fasciopathy and lateral elbow tendinopathy, the pain relief was not consistently present, with "responders" and "non-responders" being found in these studies. Also, a study yet to be published (poster at conference), replicating Rio et al, also found a heterogeneous response, debunking the "one size fits all" approach that seemed to work.
+
+However, in our understanding, isometric exercises do have a crucial role in early tendinopathy management, but the way the exercise is performed, in which position, what magnitude of load, time under tension, … has an important influence. The same protocol (5 repetitions of 45 second hold at 70% of maximum) might lead to big inter-individual differences. Therefore, there might be a mechanistic reason why some patients respond, and others do not.
+
+Fortunately, the P.I. of this current trial application has recently optimized an ultrasound-based method to quantify local tendon deformation during exercises. The main purpose of this trial is therefore to evaluate the local tendon deformation pattern of patients with tendinopathy during isometric exercises and evaluate whether there is an interindividual difference in pattern between "responders" and "non-responders".
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Local tendon tissue displacement in three layers of the tendon (deep, middle and superficial layer); as measured by ultrasound-based speckle tracking
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: Evaluation of local tendon deformation
+
+ELIGIBILITY:
+Age: 18 Years to 45 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT03848598

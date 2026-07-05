@@ -1,0 +1,35 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05553535
+Title: Diagnostic of Rotator Cuff Calcific Tendinosis Using MRI With ZTE Sequence
+Official Title: Diagnostic of Rotator Cuff Calcific Tendinosis Using MRI With ZTE Sequence
+Status: UNKNOWN
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 100
+Topic: tendon injury
+
+SUMMARY:
+Conventional radiographs are still considered the reference for identifying rotator cuff calcific tendinosis.
+
+MRI is widely performed for rotator cuff disorders evaluation but has a moderate accuracy in rotator cuff calcific tendinosis diagnosis and calcific deposits identification (sensitivity and specificity around 60%), even though it helps in determining acuity of the finding by adjacent soft tissue edema depiction and differential diagnosis identification (i.e. adhesive capsulitis, sub-acromial bursitis…).
+
+Zero echo time (ZTE) MRI provides enhanced bone contrast by enabling the acquisition of signals from tissues exhibiting the shortest T2 values on a single sequence with a spatial resolution of 0.8-1.2 mm isotropic and can therefore provide images similar to those obtained with radiographs.
+
+We hypothesize that ZTE images could also depict rotator cuff calcific tendinosis, but to our knowledge, no study compared this technique to radiographs and/or standard MRI.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - calcific deposits presence
+
+INTERVENTIONS:
+  - DIAGNOSTIC_TEST: MRI
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05553535

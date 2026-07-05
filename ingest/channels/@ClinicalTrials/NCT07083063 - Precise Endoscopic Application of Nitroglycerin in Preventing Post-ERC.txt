@@ -1,0 +1,44 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT07083063
+Title: Precise Endoscopic Application of Nitroglycerin in Preventing Post-ERCP Pancreatitis
+Official Title: Precise Endoscopic Application of Nitroglycerin in Preventing Post-ERCP Pancreatitis: A Randomized Controlled Trial
+Status: RECRUITING
+Phase: PHASE4
+Study Type: INTERVENTIONAL
+Enrollment: 440
+Topic: creatine supplementation
+
+SUMMARY:
+Endoscopic retrograde cholangiopancreatography (ERCP) is a technically demanding procedure combining endoscopy and fluoroscopy to diagnose and treat pancreaticobiliary disorders such as bile duct stones, strictures, and cholangitis. Despite its therapeutic value, ERCP carries a relatively high complication risk of about 10%, with severe complications occurring in roughly 24% of those affected and mortality rates between 0.2% and 0.7%. The most common and significant complication is post-ERCP pancreatitis (PEP), occurring in 2% to 10% of average patients and up to 40% or higher in high-risk groups. PEP ranges from mild, self-limiting inflammation to severe, life-threatening conditions including pancreatic necrosis and multi-organ failure.
+
+PEP arises from mechanical trauma, hydrostatic injury, chemical irritation, or infection during ERCP that activates inflammatory pathways within the pancreas. Key patient-related risk factors include young age, female sex, prior pancreatitis, and sphincter of Oddi dysfunction; procedural factors include difficult biliary cannulation, pancreatic duct manipulation, and precut sphincterotomy.
+
+Preventive strategies focus on minimizing mechanical injury and pharmacologic prophylaxis. Rectal NSAIDs (indomethacin, diclofenac) administered immediately before ERCP are well-supported for reducing PEP risk. Periprocedural aggressive intravenous hydration and prophylactic pancreatic duct stenting in high-risk cases also lower PEP incidence.
+
+Nitroglycerin, a smooth muscle relaxant acting via nitric oxide-mediated sphincter relaxation, has shown promise in PEP prevention, especially in patients contraindicated for NSAIDs. Clinical trials indicate that transdermal or sublingual nitroglycerin reduces PEP rates, and combined use with NSAIDs may enhance protection. However, current guidelines do not routinely recommend nitroglycerin due to limited consensus on its efficacy.
+
+Topical nitroglycerin, known to relax smooth muscles locally and used in anorectal conditions, might reduce sphincter of Oddi pressure without systemic side effects. This suggests potential benefit in lowering PEP incidence or severity when applied topically during ERCP, pending further investigation. This study aimed to investigate whether topical delivery of nitroglycerin can reduce the incidence rate of PEP or the severity of pancreatitis.
+
+DETAILED DESCRIPTION:
+Endoscopic retrograde cholangiopancreatography (ERCP) is a complex procedure that combines endoscopy and fluoroscopy for the diagnosis and treatment of pancreaticobiliary ductal disorders, such as choledocholithiasis (bile duct stones), biliary strictures, and cholangitis (bile duct inflammation). Although ERCP is vital for both diagnosis and treatment, it carries a higher risk of complications than do other endoscopic procedures. Common complications include post-ERCP pancreatitis (PEP), bleeding, perforation, and biliary tract infections. The overall incidence rate of ERCP-associated complications is approximately 10%, with severe complications occurring in about 24% of patients who experience any complications. The rate of ERCP-associated mortality ranges from 0.2% to 0.7%. Despite technological advancements and enhanced safety protocols, the rate of ERCP-associated complications remains high.
+
+Among all complications, post-ERCP pancreatitis presents a major challenge for clinicians and endoscopists. PEP increased hospitalization interval and mortality. While most cases of PEP are mild and resolve with conservative treatment, it can be dangerous in severe cases, such as pancreatic necrosis, multi-organ failure, and peripancreatic fluid collections. These complications are rare but can be fatal. The incidence rate of PEP varies depending on the patient population and risk factors. Generally, the overall incidence of PEP is reported to be between 2% and 10% in unselected patient samples. However, in high-risk patients, this rate can increase significantly, ranging from 8% to 40% or even higher. High-risk patients for post-ERCP pancreatitis include several groups based on both patient-related and procedure-related factors. Patient-related risk factors include female gender, younger patients under 50 years old, history of pancreatitis, and sphincter of Oddi dysfunction. Procedure-related risk factors include difficult biliary cannulation, precut papillotomy, and pancreatic duct cannulation.
+
+Preventing PEP involves several strategies that can be implemented before, during, and after the procedure. Rectal nonsteroidal anti-inflammatory drugs (NSAIDs), such as indomethacin or diclofenac, should be administered immediately before ERCP to reduce the risk of PEP. High-volume intravenous fluids should be administered peri-procedurally to help prevent PEP. For high-risk patients with sphincter of Oddi dysfunction, difficult cannulation, or when the pancreatic duct is accessed repeatedly, prophylactic pancreatic stent placement during the procedure can reduce the risk of PEP.
+
+Despite these preventing strategies, some patients still suffer from PEP. Additionally, patients with chronic kidney disease are contraindicated from NSAIDs. Instead, nitroglycerin has been shown to have a significant benefit in preventing PEP. Nitroglycerin plays a crucial role in managing angina pectoris for decades. Nitroglycerin affects smooth muscle primarily through its conver
+
+PRIMARY OUTCOMES:
+  - Occurrence of Post-ERCP pancreatitis
+
+INTERVENTIONS:
+  - DRUG: Nitroglycerin (NTG)
+  - DRUG: Normal Saline (0.9% NaCl)
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT07083063

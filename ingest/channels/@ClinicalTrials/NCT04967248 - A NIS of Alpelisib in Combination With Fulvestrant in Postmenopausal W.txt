@@ -1,0 +1,32 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT04967248
+Title: A NIS of Alpelisib in Combination With Fulvestrant in Postmenopausal Women, and Men, With HR+,HER2- , Locally Advanced or Metastatic Breast Cancer With a PIK3CA Mutation, After Disease Progression Following Endocrine Therapy as Monotherapy, in the Real-world Setting
+Official Title: Alpelisib (Piqray®) Post-Authorization Safety Study (PASS): a Non-interventional Study of Alpelisib in Combination With Fulvestrant in Postmenopausal Women, and Men, With Hormone Receptor Positive (HR+), Human Epidermal Growth Factor Receptor 2 Negative (HER2-), Locally Advanced or Metastatic Breast Cancer With a Phosphatidylinositol-3-kinase Catalytic Subunit Alpha (PIK3CA) Mutation, After Disease Progression Following Endocrine Therapy as Monotherapy, in the Real-world Setting
+Status: TERMINATED
+Phase: N/A
+Study Type: OBSERVATIONAL
+Enrollment: 4
+Topic: growth hormone treatment
+
+SUMMARY:
+This was a prospective, multi-national, non-interventional study (NIS) collecting data from postmenopausal women, and adult men, with HR+, HER2- locally advanced or metastatic breast cancer whose tumor harbors a PIK3CA mutation, and who were to be treated with alpelisib in combination with fulvestrant after disease progression following endocrine therapy as monotherapy, in the real-world setting.
+
+DETAILED DESCRIPTION:
+Once the patient provided informed consent, he or she was enrolled in the study. Patients were planned to be followed from enrollment until 1) 30 days after alpelisib treatment discontinuation, or 2) death, or 3) lost to follow-up, or 4) patient withdrawal, or 5) physician decision to end treatment/study, or 6) end of the study, whichever occured first. The end of the study was defined as a maximum of 12 months after the date the last patient was enrolled (LPFV); if the last patient was still on treatment on that date, they were not be followed up any further.
+
+Due to very low patient numbers (4 patients, including 2 eligible patients) no statistical analyses were performed. Database lock was achieved without all queries resolved.
+
+PRIMARY OUTCOMES:
+  - Incidence proportion of hyperglycemia
+
+INTERVENTIONS:
+  - OTHER: Alpelisib
+  - OTHER: Fulvestrant
+
+ELIGIBILITY:
+Age: 18 Years to 100 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT04967248

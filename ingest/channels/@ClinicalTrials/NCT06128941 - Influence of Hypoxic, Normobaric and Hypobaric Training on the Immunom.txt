@@ -1,0 +1,33 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT06128941
+Title: Influence of Hypoxic, Normobaric and Hypobaric Training on the Immunometabolism of Post-covid-19 Athletes
+Official Title: Influence of Physical Training Protocols in Hypoxic, Normobaric and Hypobaric Environments, on the Immune, Metabolic Response and Cardiopulmonary Behavior in Athletes Convalescent From Covid-19
+Status: UNKNOWN
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 60
+Topic: athletic performance
+
+SUMMARY:
+COVID-19 has significantly impacted sports globally, with event postponements, training disruptions, and wide-ranging concerns. SARS-CoV-2 infection can result in hyperinflammation and cardiopulmonary changes, with hypoxia as an aggravating sign. Hypoxia triggers complex immunometabolic mechanisms, including activation of HIF-1α and induction of HLA-G expression. Hypoxia training protocols benefit aerobic capacity and sports performance, with potential immunological impact. Studying immunometabolic markers in this context can improve athletic preparation and athletes' general health.
+
+DETAILED DESCRIPTION:
+Covid-19, caused by SARS-CoV-2, can progress to pulmonary hyperinflammation and cardiopulmonary changes, with hypoxia being one of the main signs of worsening. In hypoxia, there is activation of HIF-1 that induces the expression of HLA-G, an immuno-tolerogenic molecule that inhibits the hyperinflammatory response. Hypoxia training protocols can promote cardiopulmonary benefits and increase the expression of anti-inflammatory cytokines, HIF-1 and HLA-G. Immunometabolic markers have the potential to be used in the prevention, diagnosis, and treatment of diseases with inflammatory mechanisms. The objective of this study is to evaluate the influence of physical training protocols in hypoxic, normobaric, and hypobaric environments, on the immune, and metabolic response and cardiopulmonary behavior in athletes post covid-19, to identify potential biomarkers and better clarify the impact of exercise on immunometabolism post-covid-19. The study will consist of a randomized and controlled intervention, with training using different normobaric hypoxic methods; and an observational study at natural altitude (hypobaric hypoxia). In the normobaric hypoxia trial, participants will be divided into a control group that will carry out a training plan of repeated sprints in normoxia; and two other groups that will perform the same training sessions in normobaric hypoxia and with low lung volume voluntary hypoventilation. In the observational study with hypobaric hypoxia, high-performance resistance athletes will be recruited, who will comply with the training plan proposed by the team's coach at altitude. Cardiorespiratory, immunometabolic, neuromuscular, and autonomic fatigue, hematological indicators, plasma levels of lipid mediators, sHLA-G and cytokines, and the expression of HIF-1α in leukocyte cells will be evaluated. The analysis of the effect of the training methods will be carried out by ANOVA for repeated measures (parametric or non-parametric), or means comparison tests for paired samples (t or Wilcoxon) after evaluating the assumptions and the identification of associations between variables will be carried out by Binomial Logistic Regression Analysis.
+
+PRIMARY OUTCOMES:
+  - Hypoxia Inducible Factor 1 alpha (HIF-1a)
+  - Human Leukocyte Antigen-G (HLA-G)
+  - Cytokines (TNF-α, IL-1β, IL-6, IL-10, IL-8 and IFN-γ)
+  - Plasma levels of eicosanoids, endocannabinoids, steroid hormones, sphingolipids, ceramides and other glycerophospholipids
+  - Hematological indicators (hematocrit, hemoglobin and cell count)
+
+INTERVENTIONS:
+  - OTHER: Repeated sprint
+
+ELIGIBILITY:
+Age: 18 Years to 30 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT06128941

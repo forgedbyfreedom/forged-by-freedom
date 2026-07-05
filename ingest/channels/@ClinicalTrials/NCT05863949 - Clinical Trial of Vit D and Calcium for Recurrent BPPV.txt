@@ -1,0 +1,34 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT05863949
+Title: Clinical Trial of Vit D and Calcium for Recurrent BPPV
+Official Title: STOP Vertigo: Supplementation of Vitamin D for Termination of Recurrences From Benign Paroxysmal Positional Vertigo
+Status: NOT_YET_RECRUITING
+Phase: NA
+Study Type: INTERVENTIONAL
+Enrollment: 860
+Topic: protein supplementation
+
+SUMMARY:
+Randomized double blind placebo controlled trial of vitamin D supplements, with or without calcium supplementation, versus placebo in reduction of recurrences in BPPV.
+
+DETAILED DESCRIPTION:
+Benign paroxysmal positional vertigo (BPPV) is the most common neuro-otological disorder, with a lifetime prevalence of 2.4 percent.1 BPPV is responsible for nearly one-half of cases of peripheral vestibular dysfunction. It is a highly recurrent disorder, with more than 1 in 4 patients experiencing a second attack, often within 6 months of the first.2-4 According to the Clinical Practice Guidelines for BPPV from the American Academy of Otolaryngology-Head and Neck Surgery Foundation, particle repositioning maneuvers (PRMs) are the only recommended treatment to resolve symptoms for both initial BPPV episodes as well as persistent episodes.5 While attacks can be effectively treated by PRMs, these often must be performed by a physician or other trained healthcare professional, and sometimes multiple attempts are required in order to successfully resolve a patient's symptoms. Furthermore, even with effective particle repositioning, a subset of patients may continue to experience bouts of recurrent attacks, up to several times yearly. The attacks themselves, as well as the nature of their treatment, - especially in patients with recurrent episodes - are prone to lead to interruptions in patients' daily activities, cause sick leaves, and result in significant direct and indirect costs to both the patient and the healthcare system.6 The prevalence of BPPV increases with age and elderly patients with BPPV are more likely to have reduced activities of daily living (ADL) scores, sustain falls, and suffer from depression.4,7 In the United States (US), more than sixty-five percent of patients with BPPV experience potentially avoidable diagnostic testing or therapeutic interventions during the time leading up to a proper diagnosis, costing the US health care system nearly $2 billion per year.5
+
+BPPV is widely accepted to be caused by otoconia that are dislodged from the utricular macula into the semicircular canals - most commonly the posterior canal.8 Otoconia are made of a largely organic core of glycoproteins, with a predominantly inorganic periphery of calcium carbonate.9 Otoconia form within the otherwise low-calcium endolymph via an active, tightly controlled and ordered process.10 Recent studies have shown that the biomineralization of otoconia has similarities to that of bone and teeth, and that bone metabolism has a connection to BPPV. 11-13 Furthermore, an association has been demonstrated between BPPV and osteoporosis, and otoconia formation has been shown to be dysfunctional in animal models of osteoporosis.14,15
+
+The impact of recurrent BPPV on both patients and the healthcare system is multiplicative. With each episode of recurrence, patients become symptomatic - potentially severely so - and must seek treatment again in the form of particle repositioning maneuvers. These patients therefore suffer further functional impairment, potentially missed school and work, and require healthcare interventions which are not without cost to the system. No p
+
+PRIMARY OUTCOMES:
+  - Recurrence rate of BPPV
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: vitamin D +/- calcium
+  - OTHER: Placebo
+
+ELIGIBILITY:
+Age: 18 Years to 
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT05863949

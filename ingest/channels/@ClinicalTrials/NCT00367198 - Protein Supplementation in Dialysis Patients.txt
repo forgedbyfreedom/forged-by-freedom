@@ -1,0 +1,29 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00367198
+Title: Protein Supplementation in Dialysis Patients
+Official Title: Protein Supplementation in Dialysis Patients
+Status: TERMINATED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 6
+Topic: protein supplementation
+
+SUMMARY:
+The mortality rate in chronic hemodialysis (CHD) patients remains excessively high and approaches 21% per year. Among the many factors that adversely affects patient outcome is uremic malnutrition, a unique form of deranged nutritional status. It is associated with increased hospitalization and death risk in CHD patients. Several measures have been identified to prevent uremic malnutrition in CHD patients, including efforts to optimize dialysis regimen and dietary protein and energy intake. A large number of CHD patients suffer from uremic malnutrition in spite of these aggressive measures. The inevitable protein catabolic effects of the hemodialysis procedure are important factors leading to increased prevalence of uremic malnutrition. Preliminary data suggest that oral nutritional supplementation administered during the hemodialysis procedure counteracts these protein catabolic effects and leads to net protein anabolism in the acute setting. In this proposal, we hypothesize that Pro-Stat, a high nitrogen, enzyme-hydrolyzed, tryptophan-fortified, collagen protein supplement will reverse the net protein catabolism observed during hemodialysis procedure.
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - net muscle protein balance
+
+INTERVENTIONS:
+  - DIETARY_SUPPLEMENT: Pro-Stat
+
+ELIGIBILITY:
+Age: 18 Years to 75 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT00367198

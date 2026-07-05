@@ -1,0 +1,31 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT02526420
+Title: Versartis International Trial in Adults With Long-Acting Growth Hormone
+Official Title: An Open-Label, Dose Finding, International Phase 2 Study With Once Monthly Subcutaneous VRS-317 in Adult Growth Hormone Deficiency (GHD)
+Status: COMPLETED
+Phase: PHASE2
+Study Type: INTERVENTIONAL
+Enrollment: 36
+Topic: growth hormone treatment
+
+SUMMARY:
+A Phase 2, open-label dose-finding safety study of individualized monthly VRS-317 dosing for five months in adults with GHD.
+
+DETAILED DESCRIPTION:
+A Phase 2, dose finding safety study to evaluate an individualized monthly VRS-317 dosing regimen in adults with GHD. This is an open-label, international, multicenter study with VRS-317 treatment for five months. This treatment period will include monthly dose titrations until a subject's mean IGF-I SDS value is within a target range for two consecutive months. Subjects will be stratified into three cohorts based on sensitivity to rhGH.
+
+PRIMARY OUTCOMES:
+  - Safety as measured by the number of subjects with adverse events, concomitant medications, safety labs, vital signs and physical exams
+  - Starting doses (proportion of subjects who achieve normalization of IGF-I SDS response during the first dosing interval )
+  - Dose titration plan (proportion of subjects who achieve a mean IGF-I SDS within the defined target range after each dose titration)
+
+INTERVENTIONS:
+  - DRUG: somavaratan
+
+ELIGIBILITY:
+Age: 23 Years to 70 Years
+Sex: ALL
+
+---
+Source: https://clinicaltrials.gov/study/NCT02526420

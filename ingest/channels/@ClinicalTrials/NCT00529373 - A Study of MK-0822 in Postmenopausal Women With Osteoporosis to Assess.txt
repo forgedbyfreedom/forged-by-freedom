@@ -1,0 +1,36 @@
+CLINICAL TRIAL
+==============
+NCT ID: NCT00529373
+Title: A Study of MK-0822 in Postmenopausal Women With Osteoporosis to Assess Fracture Risk (MK-0822-018)
+Official Title: A Phase III Randomized, Placebo-Controlled Clinical Trial to Assess the Safety and Efficacy of Odanacatib (MK-0822) to Reduce the Risk of Fracture in Osteoporotic Postmenopausal Women Treated With Vitamin D and Calcium
+Status: TERMINATED
+Phase: PHASE3
+Study Type: INTERVENTIONAL
+Enrollment: 16071
+Topic: vitamin D muscle
+
+SUMMARY:
+The purpose of the event-driven base study is to determine the safety and efficacy, especially fracture risk reduction, of odanacatib in postmenopausal women diagnosed with osteoporosis. In a placebo-controlled extension of the base study, participants continued to receive the same blinded study medication for a total of up to 5 years of blinded study medication combined between the base study and the extension. After participants received 5 years of blinded study medication, they received open-label odanacatib through the end of the first extension. Participants were then invited to enroll in a second extension study in which they received open-label odanacatib for an additional 5 years. Two imaging substudies (PN032-Base/Extension and PN035) were conducted for participants in the MK-0822-018 Study. Additional safety information was collected for participants who discontinued from the base study or the blinded first extension in an observational follow-up study, MK-0822-083 (EudraCT number: 2007-002693-66) .
+
+DETAILED DESCRIPTION:
+Not provided
+
+PRIMARY OUTCOMES:
+  - Base Study: Time From Baseline to First Morphometrically-Assessed Vertebral Fracture
+  - Base Study: Time From Baseline to First Osteoporotic Clinical Hip Fracture (Adjudicated)
+  - Base Study: Time From Baseline to First Osteoporotic Clinical Non-Vertebral Fracture (Adjudicated)
+  - Base Study + First Extension: Time From Baseline to First Morphometrically-Assessed Vertebral Fracture
+  - Base Study + First Extension: Time From Baseline to First Osteoporotic Clinical Hip Fracture (Adjudicated)
+
+INTERVENTIONS:
+  - DRUG: Odanacatib
+  - DRUG: Placebo for Odanacatib
+  - DIETARY_SUPPLEMENT: Vitamin D3
+  - DIETARY_SUPPLEMENT: Calcium carbonate
+
+ELIGIBILITY:
+Age: 65 Years to 
+Sex: FEMALE
+
+---
+Source: https://clinicaltrials.gov/study/NCT00529373
