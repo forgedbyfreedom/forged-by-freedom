@@ -77,6 +77,12 @@ class CorrelationReport:
     # Drone-centric corroborating signals (Dedrone confirmation, serial, etc.)
     drone_signals: dict = field(default_factory=dict)
     drone_signal_evidence: list[dict] = field(default_factory=list)
+    # ── Fault-tolerance / health metadata ────────────────────
+    subsystem_health: dict = field(default_factory=dict)   # {name: "OK"|"DEGRADED"|"DOWN"|"UNKNOWN"}
+    contributing_subsystems: list[str] = field(default_factory=list)
+    dropped_subsystems: list[str] = field(default_factory=list)  # DOWN/UNKNOWN, contributions ignored
+    decision_declined: bool = False
+    decision_declined_reason: Optional[str] = None
 
 
 # ── Signal weights (tuned over time as data accumulates) ───────────
@@ -118,17 +124,68 @@ DEFAULT_WEIGHTS = {
 }
 
 
+# ── Source → subsystem name resolver ─────────────────────────────
+# CORTEX consults the health registry per subsystem, not per raw event
+# source. This map turns Event.source into the health-registry key.
+SOURCE_TO_SUBSYSTEM: dict[str, str] = {
+    "drone_audio":         "acoustic",
+    "drone_visual":        "vision",
+    "vision_phone":        "vision",
+    "vision_violence":     "vision",
+    "face":                "face",
+    "dedrone_detection":   "dedrone",
+    "flock_detection":     "flock",
+    "dmv_lookup":          "dmv",
+    "cellebrite_location": "cellebrite",
+    "cellebrite_app_data": "cellebrite",
+    "cellebrite_call":     "cellebrite",
+    "cellebrite_message":  "cellebrite",
+    "mas_capture":         "tecore",
+    "viapath_call":        "viapath",
+    "viapath_tablet":      "viapath",
+    "viapath_visit":       "viapath",
+    "viapath_deposit":     "viapath",
+    "lora_detection":      "lora",
+    "zone_violation":      "zones",
+    "drone_forensics":     "drone_forensics",
+}
+
+
+def _subsystem_for_source(source: str) -> str:
+    return SOURCE_TO_SUBSYSTEM.get(source, source)
+
+
 # ── Engine ─────────────────────────────────────────────────────────
 class CorrelationEngine:
-    """Rolling-window event log + on-demand correlation passes."""
+    """
+    Rolling-window event log + on-demand correlation passes.
+
+    Also acts as CORTEX's fusion layer: consults the health registry so
+    signals from DOWN subsystems drop out and signals from DEGRADED
+    subsystems weigh half. If too few subsystems are alive at fusion
+    time (< min_viable_sensors), returns a report tagged
+    `decision_declined=True` instead of guessing from thin data.
+    """
 
     def __init__(self,
                  window_hours: int = 4,
                  weights: Optional[dict] = None,
-                 on_report: Optional[Callable[[CorrelationReport], None]] = None):
+                 on_report: Optional[Callable[[CorrelationReport], None]] = None,
+                 *,
+                 health_registry=None,
+                 min_viable_sensors: int = 2):
         self.window = timedelta(hours=window_hours)
         self.weights = weights or DEFAULT_WEIGHTS
         self.on_report = on_report
+        self.min_viable_sensors = min_viable_sensors
+        # Late import to avoid cycles; caller can pass a custom registry
+        if health_registry is None:
+            try:
+                from echo_health import REGISTRY as _R
+                health_registry = _R
+            except Exception:
+                health_registry = None
+        self.health = health_registry
 
         # Time-indexed events, oldest auto-pruned
         self._events: deque[Event] = deque()
@@ -137,6 +194,19 @@ class CorrelationEngine:
         self._by_inmate: defaultdict[str, list] = defaultdict(list)
         self._by_msisdn: defaultdict[str, list] = defaultdict(list)
         self._lock = threading.RLock()
+
+    # ── Health-aware weighting ───────────────────────────────
+    def _weight_for_source(self, source: str) -> float:
+        """1.0 (OK) / 0.5 (DEGRADED) / 0.0 (DOWN / UNKNOWN)."""
+        if not self.health:
+            return 1.0
+        return self.health.fusion_weight(_subsystem_for_source(source))
+
+    def _weight_for_source_name(self, subsystem: str) -> float:
+        """Direct lookup by subsystem name (skips the source → subsystem map)."""
+        if not self.health:
+            return 1.0
+        return self.health.fusion_weight(subsystem)
 
     # ── Ingest ────────────────────────────────────────────────
     def ingest(self, event: Event) -> None:
@@ -179,6 +249,49 @@ class CorrelationEngine:
                         top_n: int = 10) -> CorrelationReport:
         """Score every candidate and return ranked report."""
         t = drone_event.timestamp
+
+        # ── CORTEX fusion pre-check: subsystem health ──
+        # Take a snapshot of which subsystems have contributed *any*
+        # event in this rolling window. DOWN → weight 0 (dropped from
+        # scoring); DEGRADED → weight 0.5; OK → 1.0.
+        subsystems_in_window: set[str] = {
+            _subsystem_for_source(s) for s in self._by_source.keys()
+            if self._by_source[s]
+        }
+        health_snapshot: dict[str, str] = {}
+        contributing: list[str] = []
+        dropped: list[str] = []
+        for sub in subsystems_in_window:
+            if self.health:
+                st = self.health.status_of(sub)
+                health_snapshot[sub] = st.value
+            else:
+                st = None
+                health_snapshot[sub] = "OK"
+            w = self._weight_for_source_name(sub)
+            (dropped if w == 0.0 else contributing).append(sub)
+
+        # min-viable-sensor threshold — decline to decide instead of guessing
+        if len(contributing) < self.min_viable_sensors:
+            declined = CorrelationReport(
+                drone_event_id=str(id(drone_event)),
+                drone_timestamp=t,
+                drone_camera=drone_event.payload.get("camera_id", "unknown"),
+                drone_confidence=float(drone_event.payload.get("confidence", 0.0)),
+                inmate_candidates=[],
+                external_candidates=[],
+                generated_at=datetime.now(),
+                subsystem_health=health_snapshot,
+                contributing_subsystems=sorted(contributing),
+                dropped_subsystems=sorted(dropped),
+                decision_declined=True,
+                decision_declined_reason=(
+                    f"only {len(contributing)} viable sensor(s) "
+                    f"(need ≥ {self.min_viable_sensors}); dropped: {sorted(dropped)}"
+                ),
+            )
+            return declined
+
         with self._lock:
             inmate_scores: dict[str, dict] = {}
             for inmate_id, inmate_events in list(self._by_inmate.items()):
@@ -222,7 +335,10 @@ class CorrelationEngine:
         # serial-matches-recovery within ±30s of the drone event
         drone_signals: dict[str, float] = {}
         drone_signal_evidence: list[dict] = []
-        for ev in self._by_source.get("dedrone_detection", []):
+        # Fusion: skip Dedrone signals if the Dedrone subsystem is DOWN
+        _dedrone_up = self._weight_for_source("dedrone_detection") > 0.0
+        _lora_up    = self._weight_for_source("lora_detection") > 0.0
+        for ev in (self._by_source.get("dedrone_detection", []) if _dedrone_up else []):
             if abs((ev.timestamp - t).total_seconds()) <= 30:
                 drone_signals["drone_dedrone_confirmed"] = 1.0
                 drone_signal_evidence.append({
@@ -251,7 +367,7 @@ class CorrelationEngine:
         # LoRa/LoRaWAN sub-GHz link within ±90s of the drone event
         # (echo_lora.py — home-built drop rigs / ExpressLRS-900 that
         # Dedrone's 2.4/5.8 GHz-tuned coverage typically misses)
-        for ev in self._by_source.get("lora_detection", []):
+        for ev in (self._by_source.get("lora_detection", []) if _lora_up else []):
             if abs((ev.timestamp - t).total_seconds()) <= 90:
                 drone_signals["drone_lora_link_detected"] = 1.0
                 proto = ev.payload.get("protocol_guess", "lora_unknown")
@@ -283,6 +399,9 @@ class CorrelationEngine:
             generated_at=datetime.now(),
             drone_signals=drone_signals,
             drone_signal_evidence=drone_signal_evidence,
+            subsystem_health=health_snapshot,
+            contributing_subsystems=sorted(contributing),
+            dropped_subsystems=sorted(dropped),
         )
 
     # ── Per-subject scoring ──────────────────────────────────
@@ -293,6 +412,12 @@ class CorrelationEngine:
         name = None
 
         for ev in events:
+            # CORTEX fusion: drop events from DOWN / UNKNOWN subsystems.
+            # DEGRADED still contributes at full weight here — the report
+            # tags it in `subsystem_health` so operators can see which
+            # contributions came from a shaky sensor.
+            if self._weight_for_source(ev.source) == 0.0:
+                continue
             dt = abs((ev.timestamp - drone_t).total_seconds())
             payload = ev.payload
             name = payload.get("inmate_name") or name
@@ -367,6 +492,9 @@ class CorrelationEngine:
         name = None
 
         for ev in events:
+            # CORTEX fusion: drop events from DOWN / UNKNOWN subsystems.
+            if self._weight_for_source(ev.source) == 0.0:
+                continue
             dt = abs((ev.timestamp - drone_t).total_seconds())
             payload = ev.payload
             name = payload.get("called_party_name") or payload.get("visitor_name") \

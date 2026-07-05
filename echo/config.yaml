@@ -45,6 +45,12 @@ multi:
 correlation:
   window_hours: 4
   top_n_report: 10
+  # CORTEX fusion: decline to decide if fewer than this many subsystems
+  # are OK/DEGRADED at fusion time (see echo_health.HealthRegistry).
+  min_viable_sensors: 2
+  # Correlation score above which CORTEX transitions the pipeline
+  # state machine to ALERT (see echo_state.PipelineState.ALERT).
+  alert_score_floor: 0.5
   weights:
     # Inmate signals
     inmate_outdoors_at_drone_time:       0.14
@@ -108,6 +114,25 @@ lily_pads:
     #   clock_source: "gps_pps"
     #   mic_type: "usb_electret"
     #   label: "NW yard-A corner"
+
+# ── Health registry (echo_health.py) ────────────────────────
+health:
+  # A subsystem that hasn't reported OK for this many seconds is
+  # auto-demoted to DOWN. Nudge up if you have slow-cadence
+  # connectors (e.g. an SFTP poll every 5 minutes).
+  stale_timeout_sec: 60
+  # Consecutive tick errors after which safe_loop calls it DOWN.
+  # 10 = about 10 seconds of retries at tick_sec=1.0.
+  safe_loop_max_consecutive_errors: 10
+  safe_loop_backoff_sec: 5.0
+
+# ── Pipeline state machine (echo_state.py) ──────────────────
+state_machine:
+  # ALERT self-clears back to TRACKING (or IDLE if no signals) after
+  # this many seconds without an operator ack. 0 = never auto-clear.
+  alert_auto_ack_sec: 0
+  # Cap on the transition-history ring buffer surfaced at /state.
+  history_cap: 256
 
 # ── Optional FastAPI service (echo_api.py) ──────────────────
 api:

@@ -353,6 +353,95 @@ file, or your env var name has a typo. Env override examples
 
 ---
 
+## Fault tolerance & health — `health:` + fusion behavior
+
+Every subsystem in ECHO — cameras, LoRa SDR, Lily-Pad hub, ViaPath /
+Tecore / Dedrone / Flock / DMV / Cellebrite connectors, face
+recognizer, drone forensics — reports one of four statuses to the
+shared registry (`echo_health.HealthRegistry`):
+
+| Status    | Meaning                                          | CORTEX fusion behavior           |
+|-----------|--------------------------------------------------|----------------------------------|
+| OK        | Producing valid data, no recent errors           | Full weight                      |
+| DEGRADED  | Producing data with warnings / retries / partial | Full weight, flagged in report   |
+| DOWN      | Not producing data — errors, crashed, disconnected | Signals **dropped** from scoring |
+| UNKNOWN   | Never came up (subsystem disabled)               | Signals dropped                  |
+
+### `health.stale_timeout_sec` (default `60`)
+A subsystem that hasn't reported OK for this long auto-demotes to
+DOWN. Raise for slow-cadence pollers (SFTP every 5 min = set to
+`600`). Lower for critical realtime paths (cameras: 30 s is stricter).
+
+### `health.safe_loop_max_consecutive_errors` (default `10`)
+Number of consecutive iteration errors inside `safe_loop()` before the
+subsystem is marked DOWN. Below the ceiling and above 3 it goes
+DEGRADED and keeps retrying with backoff.
+
+### `health.safe_loop_backoff_sec` (default `5.0`)
+Seconds between retries after a failing tick. Exponential scaling
+kicks in as consecutive errors accumulate (capped at 4× this value).
+
+### `correlation.min_viable_sensors` (default `2`)
+CORTEX declines to decide when fewer than this many distinct
+subsystems have contributed OK/DEGRADED events in the current
+correlation window. The report still comes back, but with
+`decision_declined: true` and a reason string like
+`"only 1 viable sensor(s) (need ≥ 2); dropped: ['face']"`.
+
+- **Raise to 3** for high-stakes production. Requires audio + at
+  least two of {vision, ViaPath, MAS, LoRa, Lily Pads, Dedrone,
+  Flock, DMV, Cellebrite} to be alive.
+- **Lower to 1** ONLY for isolated single-sensor deployments (a
+  bare acoustic install), where declining every event would silence
+  the entire pipeline.
+
+Never set to 0 — that removes the guard entirely and lets CORTEX
+guess from an empty log.
+
+---
+
+## Pipeline state machine — `state_machine:`
+
+ECHO uses an explicit four-state pipeline:
+
+    IDLE → SCANNING → TRACKING → ALERT → (back to SCANNING, TRACKING, or IDLE)
+
+Legal transitions (from `echo_state.TRANSITIONS`):
+
+| From      | Allowed → |
+|-----------|-----------|
+| IDLE      | SCANNING |
+| SCANNING  | IDLE, TRACKING, ALERT |
+| TRACKING  | SCANNING, ALERT |
+| ALERT     | TRACKING, SCANNING, IDLE |
+
+Every transition logs: `state: FROM → TO trigger=…  event_id=…  detail=…`.
+Invalid transitions raise `InvalidTransition` — the caller decides
+whether to swallow. The `bind_to_correlation_engine()` helper uses
+`try_transition()` which swallows on invalid rather than crashing.
+
+### `state_machine.alert_auto_ack_sec` (default `0`)
+Seconds after entering ALERT that ECHO auto-transitions back
+without an operator acknowledgment. `0` = never (require manual
+ack from dashboard or `/state` PATCH). Set to `1800` (30 min) to
+avoid ALERT sticking when a shift-change happens mid-event.
+
+### `state_machine.history_cap` (default `256`)
+Ring-buffer size for the transition history surfaced at
+`GET /state?history_limit=…`. Rarely needs tuning.
+
+### Tuning the SCANNING → ALERT threshold
+Set `correlation.alert_score_floor` (default `0.5`). Anything below
+this stays in SCANNING/TRACKING. Anything at or above transitions
+to ALERT and pages SIU (via `alert:drone_with_correlated_inmate`).
+
+- **Raise to 0.6-0.7** if operators are getting alert fatigue.
+- **Lower to 0.35** in the first month of a new deployment while
+  weights are still being tuned — accept more alerts to build
+  labeling data faster.
+
+---
+
 ## Emergency: turn off the noisy alerts
 
 If ECHO is falsely paging staff at 3 AM:

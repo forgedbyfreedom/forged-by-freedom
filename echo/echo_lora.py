@@ -264,14 +264,23 @@ class LoraSdrConnector:
 
         self._stop = threading.Event()
         self._thread: Optional[threading.Thread] = None
+        self._health = None
 
     # ── Lifecycle ────────────────────────────────────────────
     def start(self) -> None:
         if self._thread and self._thread.is_alive():
             return
+        # Register in the shared health registry so CORTEX can drop /
+        # weight LoRa signals when this subsystem is DOWN.
+        try:
+            from echo_health import REGISTRY as _HR
+            _HR.register("lora", role="sdr", region=self.region, device=self.device)
+            self._health = _HR
+        except Exception:
+            self._health = None
         self._stop.clear()
         self._thread = threading.Thread(
-            target=self._run, name="echo-lora-sdr", daemon=True
+            target=self._run_safe, name="echo-lora-sdr", daemon=True
         )
         self._thread.start()
         log.info("LoRa SDR sniffer started (region=%s device=%s ch=%d)",
@@ -281,9 +290,30 @@ class LoraSdrConnector:
         self._stop.set()
         if self._thread:
             self._thread.join(timeout=3)
+        if self._health:
+            self._health.report_down("lora", "stopped")
         log.info("LoRa SDR sniffer stopped")
 
-    # ── Main loop ────────────────────────────────────────────
+    # ── Safe wrapper — fault-isolated loop ──────────────────
+    def _run_safe(self) -> None:
+        """Run _run() with isolated exception handling — never propagate."""
+        try:
+            from echo_health import safe_loop
+            safe_loop("lora", self._run_once,
+                      stop_event=self._stop,
+                      tick_sec=self.sweep_dwell,
+                      backoff_sec=5.0)
+        except Exception:
+            log.exception("lora safe_loop bootstrap failed; falling back to bare _run()")
+            self._run()
+
+    def _run_once(self) -> None:
+        """One iteration of the sweep. Override / replace this with the
+        real SDR ingest — see _run() docstring for the reference pattern."""
+        # PLACEHOLDER — real SDR wiring lives here.
+        pass
+
+    # ── Main loop (legacy — kept for the docstring reference) ─
     def _run(self) -> None:
         """
         PLACEHOLDER main loop. Replace with real SDR ingest per the

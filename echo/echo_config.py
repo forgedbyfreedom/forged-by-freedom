@@ -60,7 +60,18 @@ DEFAULTS: dict = {
     "correlation": {
         "window_hours": 4,
         "top_n_report": 10,
+        "min_viable_sensors": 2,
+        "alert_score_floor": 0.5,
         "weights": {},        # empty → use DEFAULT_WEIGHTS from echo_correlation.py
+    },
+    "health": {
+        "stale_timeout_sec": 60,
+        "safe_loop_max_consecutive_errors": 10,
+        "safe_loop_backoff_sec": 5.0,
+    },
+    "state_machine": {
+        "alert_auto_ack_sec": 0,
+        "history_cap": 256,
     },
     "lora": {
         "enabled": False,

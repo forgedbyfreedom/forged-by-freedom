@@ -241,12 +241,44 @@ def _build_app() -> "FastAPI":
             reports = list(REGISTRY.recent_reports)[-limit:]
         return {"count": len(reports), "reports": reports}
 
+    @app_.get("/subsystems")
+    def subsystems(request: "Request") -> dict:
+        """Full subsystem-health snapshot from the shared HealthRegistry."""
+        _auth_guard(request)
+        try:
+            from echo_health import REGISTRY as HR
+            snap = HR.snapshot()
+            counts = {k.value: v for k, v in HR.count_by_status().items()}
+            return {"counts": counts, "subsystems": snap}
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=str(exc))
+
+    @app_.get("/state")
+    def pipeline_state(request: "Request",
+                       history_limit: int = Query(20, ge=0, le=200)) -> dict:
+        """Current pipeline state + recent transition history."""
+        _auth_guard(request)
+        sm = getattr(REGISTRY.orchestrator, "state", None) if REGISTRY.orchestrator else None
+        if sm is None:
+            raise HTTPException(status_code=503, detail="state machine not attached")
+        snap = sm.snapshot()
+        if history_limit > 0:
+            snap["history"] = sm.history(limit=history_limit)
+        return snap
+
     return app_
 
 
 def _subsystem_health() -> dict:
     """Best-effort probe of each subsystem's aliveness."""
     out: dict = {}
+    # Include the health-registry snapshot (authoritative for OK / DEGRADED / DOWN)
+    try:
+        from echo_health import REGISTRY as HR
+        out["registry"] = HR.snapshot()
+        out["registry_counts"] = {k.value: v for k, v in HR.count_by_status().items()}
+    except Exception:
+        out["registry"] = {}
     e = REGISTRY.engine
     out["correlation"] = {
         "attached": e is not None,

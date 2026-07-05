@@ -239,21 +239,51 @@ class LilyPadHub:
         self._lock = threading.RLock()
         self._track_counter = 0
 
+        # Register in the shared health registry so CORTEX can drop /
+        # weight distributed-acoustic signals when this hub is DOWN.
+        try:
+            from echo_health import REGISTRY as _HR
+            _HR.register("lily_pads", role="tdoa_hub", node_count=len(self.nodes))
+            self._health = _HR
+        except Exception:
+            self._health = None
+
     # ── Node → Hub ─────────────────────────────────────────
     def ingest_detection(self, det: LilyPadDetection) -> None:
         if det.node_id not in self.nodes:
             log.warning("detection from unknown node %s", det.node_id)
+            if self._health:
+                self._health.report_degraded("lily_pads",
+                                             f"unknown node {det.node_id}")
             return
         with self._lock:
             self._pending.append(det)
-            self._try_fuse()
+            try:
+                self._try_fuse()
+                if self._health:
+                    self._health.report_ok("lily_pads")
+            except Exception as exc:
+                if self._health:
+                    self._health.report_degraded(
+                        "lily_pads",
+                        f"fusion error: {type(exc).__name__}: {exc}")
+                log.exception("lily-pad fusion failed")
 
     def flush(self) -> None:
         """Force-fuse any pending detections (call from a timer thread
         every ~200 ms in production to catch groups whose window closed
         without a new ingest triggering the check)."""
         with self._lock:
-            self._try_fuse(force=True)
+            try:
+                self._try_fuse(force=True)
+                if self._health:
+                    self._health.report_ok("lily_pads")
+            except Exception as exc:
+                if self._health:
+                    self._health.report_degraded(
+                        "lily_pads",
+                        f"flush error: {type(exc).__name__}: {exc}")
+                log.exception("lily-pad flush failed")
 
     # ── Fusion ─────────────────────────────────────────────
     def _try_fuse(self, force: bool = False) -> None:

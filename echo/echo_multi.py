@@ -102,8 +102,19 @@ class CameraRunner:
         self.last_score = 0.0
         self.last_score_time: datetime = datetime.now()
         self.detection_count = 0
+        self._health = None
 
     def start(self) -> None:
+        # Register in the health registry — mark OK on first audio block
+        try:
+            from echo_health import REGISTRY as _HR
+            _HR.register(f"camera:{self.camera_id}",
+                         role="camera",
+                         has_audio=bool(self.audio_source),
+                         has_video=bool(self.vision))
+            self._health = _HR
+        except Exception:
+            self._health = None
         if self.audio_source:
             self.audio_source.start()
         if self.vision:
@@ -114,12 +125,28 @@ class CameraRunner:
             self.audio_source.stop()
         if self.vision:
             self.vision.stop()
+        if self._health:
+            self._health.report_down(f"camera:{self.camera_id}", "stopped")
 
     # ── audio detection callback ─────────────────────────────
     def _on_audio_block(self, audio):
         if not self.audio_engine:
             return
-        result = self.audio_engine.process(audio)
+        # Fault isolation: any error in engine.process must not take
+        # down the audio thread. Log + demote to DEGRADED, keep going.
+        try:
+            result = self.audio_engine.process(audio)
+        except Exception as exc:
+            if self._health:
+                self._health.report_degraded(
+                    f"camera:{self.camera_id}",
+                    f"engine.process failed: {type(exc).__name__}: {exc}",
+                )
+            return
+        # Successful tick → report OK (also promotes "acoustic" subsystem)
+        if self._health:
+            self._health.report_ok(f"camera:{self.camera_id}")
+            self._health.report_ok("acoustic")
         score = float(result.get("score", 0.0)) if isinstance(result, dict) else 0.0
         self.last_score = score
         self.last_score_time = datetime.now()
@@ -231,9 +258,34 @@ class EchoMulti:
         self._stop_event = threading.Event()
         self._reload_lock = threading.Lock()
 
+        # CORTEX correlation engine (fusion) + pipeline state machine
+        try:
+            from echo_config import CFG
+            _min_sensors = CFG["correlation"].get("min_viable_sensors", 2)
+            _window_h    = CFG["correlation"].get("window_hours", 4)
+            _alert_floor = CFG["correlation"].get("alert_score_floor", 0.5)
+        except Exception:
+            _min_sensors, _window_h, _alert_floor = 2, 4, 0.5
+
         self.zone_engine = ZoneEngine(config_path)
         self.correlation = CorrelationEngine(
-            on_report=self._on_correlation_report)
+            window_hours=_window_h,
+            on_report=self._on_correlation_report,
+            min_viable_sensors=_min_sensors,
+        )
+
+        # Bind the state machine to the correlation engine.
+        # Auto-transitions: drone event → SCANNING → TRACKING;
+        # correlation report ≥ alert_floor → ALERT.
+        try:
+            from echo_state import PipelineStateMachine, bind_to_correlation_engine
+            self.state = PipelineStateMachine()
+            bind_to_correlation_engine(self.state, self.correlation,
+                                       alert_score_floor=_alert_floor)
+        except Exception as exc:
+            print(f"[echo-multi] state machine unavailable: {exc}")
+            self.state = None
+
         self.cameras: dict[str, CameraRunner] = {}
 
         self.viapath: ViaPathConnector | None = None

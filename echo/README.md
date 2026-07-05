@@ -120,7 +120,14 @@ echo/
 │                                          nodes → position tracking across a whole facility;
 │                                          reuses echo_engine.py on each node)
 ├── echo_config.py                    OK  central config loader (defaults + config.yaml + env vars)
-├── echo_api.py                       OK  optional FastAPI service (/status /detections /scan /health)
+├── echo_api.py                       OK  optional FastAPI service (/status /detections /scan /health
+│                                          /subsystems /state /reports/recent)
+├── echo_health.py                    OK  subsystem health registry (OK/DEGRADED/DOWN/UNKNOWN) +
+│                                          safe_loop() wrapper for isolated per-subsystem exception
+│                                          handling — one failing sensor doesn't crash the pipeline
+├── echo_state.py                     OK  explicit pipeline state machine
+│                                          (IDLE → SCANNING → TRACKING → ALERT) with logged,
+│                                          guarded transitions and a transition-history ring buffer
 ├── config.yaml                       OK  every tunable in one file — see CALIBRATION.md
 ├── CALIBRATION.md                        step-by-step field-tuning procedure + safe ranges
 │
