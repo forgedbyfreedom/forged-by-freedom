@@ -9,6 +9,67 @@ Read the whole thing once before touching anything — knobs interact.
 
 ---
 
+## Contents
+
+1. [Quick reference — precedence](#quick-reference--precedence)
+2. [Quick diagnostic decision tree](#quick-diagnostic-decision-tree)
+3. [The acoustic detector — `detector:`](#the-acoustic-detector--detector)
+4. [Reference drone acoustic signatures](#reference-drone-acoustic-signatures)
+5. [Correlation engine — `correlation:`](#correlation-engine--correlation)
+6. [LoRa / LoRaWAN SDR — `lora:`](#lora--lorawan-sdr--lora)
+7. [Acoustic Lily Pads — `lily_pads:`](#acoustic-lily-pads--lily_pads)
+8. [Step-by-step field-tuning procedure](#the-step-by-step-field-tuning-procedure)
+9. [Diagnostic recipes — grep, curl, tail](#diagnostic-recipes--grep-curl-tail)
+10. [Microphone placement, wind, weather](#microphone-placement-wind-weather)
+11. [Environment-variable overrides](#environment-variable-overrides--the-field-debug-pattern)
+12. [Verifying a change is actually live](#verifying-a-change-is-actually-live)
+13. [Fault tolerance & health — `health:`](#fault-tolerance--health--health--fusion-behavior)
+14. [Pipeline state machine — `state_machine:`](#pipeline-state-machine--state_machine)
+15. [Correlation weight retuning workflow](#correlation-weight-retuning-workflow)
+16. [Multi-site fleet tuning](#multi-site-fleet-tuning)
+17. [Emergency: turn off the noisy alerts](#emergency-turn-off-the-noisy-alerts)
+18. [Troubleshooting matrix](#troubleshooting-matrix)
+19. [Appendix — reference numbers](#appendix--reference-numbers)
+
+---
+
+## Quick diagnostic decision tree
+
+Fresh install acting weird? Follow this **before** touching any knob.
+Every question has a concrete check next to it.
+
+```
+Is ECHO producing detections at all?
+├── NO  → check /health (or `ps` for the process) → check /subsystems
+│         → is 'acoustic' OK? if not, check echo_rtsp.py error log
+│         → is min_level_db gating everything? tail the log for gate events
+│
+└── YES → How many per hour?
+    ├── 0-2/hr (typical baseline)  → healthy. Move to real-drone verify.
+    ├── 3-5/hr                      → mild FP. Raise harmonic_snr_db 2 dB.
+    ├── 5-20/hr                     → significant FP. Run § "Diagnostic recipes"
+    │                                 to identify source (helicopters? mowers?
+    │                                 HVAC? sirens?) before touching knobs.
+    └── 20+/hr                      → broken. Do NOT tune — investigate first.
+                                      Common causes: mic ungrounded (60 Hz
+                                      smear), mic in HVAC path, sample rate
+                                      mismatched to hardware.
+```
+
+If ECHO IS producing detections but they're not correlating:
+
+```
+Correlation report says decision_declined=True?
+├── YES → check `dropped_subsystems` — those are DOWN. Fix them, or
+│         lower `correlation.min_viable_sensors`.
+│
+└── NO  → check correlation weights. If top candidate scores ~0.05-0.15
+          across the board, your weights are too flat. See § "Correlation
+          weight retuning workflow" for the A/B loop.
+```
+
+---
+
 ## Quick reference — precedence
 
 Later overrides earlier:
@@ -95,6 +156,55 @@ Second-stage confirmation: numpy-MLP classifier output must exceed this
 to promote a candidate to a confirmed detection. `0.55` is the trained
 balance point. Raise to `0.7` for extremely conservative deployments;
 lower to `0.4` only during a false-negative debug session.
+
+---
+
+## Reference drone acoustic signatures
+
+Blade-pass frequency (BPF) is the fundamental ECHO looks for. It's
+`RPM × blade_count / 60` Hz. The harmonic stack is BPF × [1, 2, 3, 4,
+5, 6]. Approximate BPFs for drones you're likely to encounter in a
+corrections context:
+
+| Drone class | Typical BPF | Harmonic 2 | Harmonic 3 | Notes |
+|---|---:|---:|---:|---|
+| DJI Mini / micro quad (2-3" props) | 220-280 Hz | 440-560 | 660-840 | Highest BPF; hardest to catch at range because energy falls off fast |
+| DJI Mavic 3 / Air 3 (7-9" props) | 130-170 Hz | 260-340 | 390-510 | The single most common drone-drop platform. Well within default detector range. |
+| DJI Matrice / Autel EVO Max (13-15" props) | 80-110 Hz | 160-220 | 240-330 | Heavy-lifter. LOUD. Detects at 500 m+. |
+| Home-built quad (3D-printed, mystery props) | 100-200 Hz | 200-400 | 300-600 | The variable one. Tune `min_harmonics` up when these are the target — more harmonics means fewer FPs on the wild BPF. |
+| Fixed-wing (VTOL cargo, ExpressLRS builds) | 40-90 Hz | 80-180 | 120-270 | Overlaps with vehicle rumble — use vision to disambiguate. |
+| Helicopter (R-22, Bell 206) | 5-15 Hz | 10-30 | 15-45 | ECHO's default `harmonics: [1..6]` picks these up sometimes; the ML layer (`echo_ml.py`) is trained to reject them. If they still slip through, raise `ml_confidence_floor`. |
+
+**How to read this table:**
+- If your facility's threat model is DJI drops, defaults are already
+  tuned for you.
+- If a specific incident recovers a home-built or fixed-wing, log its
+  RPM (from flight-log or a bench test with a tach); adjust
+  `harmonics` and `max_drift_hz` for that class specifically in a
+  challenger config.
+- Micro quads (DJI Mini class) are genuinely harder — they're quiet and
+  their BPF is high enough that atmospheric absorption kills range past
+  100 m. Accept that or add lily pads to the perimeter.
+
+### Reading the spectrogram
+
+Every detection log line includes a `feature_summary` field like:
+
+```
+peak_freqs=[148.2, 296.4, 444.7, 592.9] snr=[14.2, 11.8, 9.4, 7.1]
+persist=0.92 ml_score=0.71
+```
+
+Sanity check when triaging a report:
+
+- Are the peaks integer multiples of the first one? (Real drone: yes.
+  Mower / vehicle: usually no.)
+- Do the peaks drift together across blocks? (Real drone: yes, tightly.
+  Sirens: yes but too fast — trips `max_drift_hz`. Vehicle: no,
+  independent.)
+- Is `persist` above 0.85? Below that suggests transient noise.
+- Is `ml_score` above 0.55? Below that means the MLP disagreed with
+  the harmonic stack.
 
 ---
 
@@ -316,6 +426,194 @@ After 30 days:
 
 ---
 
+## Diagnostic recipes — grep, curl, tail
+
+Concrete commands for common triage tasks. All assume you're in the
+`echo/` directory, the log file is at `echo/logs/echo.log` (default),
+and the API is up on `127.0.0.1:5058`.
+
+### "Are we detecting anything?"
+
+```bash
+# Detections in the last hour
+tail -n 5000 echo/logs/echo.log | grep -E 'DRONE DETECTED|detected=True'
+
+# Or via API — last N events, drone-audio only:
+curl -s 'http://127.0.0.1:5058/detections?source=drone_audio&limit=50' | jq .
+```
+
+### "Which subsystem is DOWN?"
+
+```bash
+curl -s http://127.0.0.1:5058/subsystems | jq '.counts, .subsystems[] | select(.status != "OK") | {name, status, last_error, last_error_at}'
+```
+
+If the API isn't up, hit the log directly:
+
+```bash
+grep -E 'health: .* → (DEGRADED|DOWN)' echo/logs/echo.log | tail -30
+```
+
+### "Where is the pipeline stuck?"
+
+```bash
+curl -s 'http://127.0.0.1:5058/state?history_limit=30' | jq .
+```
+
+State stuck in `SCANNING` for hours means signals are arriving but
+none reach the alert floor. Check top correlation-report scores:
+
+```bash
+curl -s 'http://127.0.0.1:5058/reports/recent?limit=10' | \
+  jq '.reports[] | {ts: .generated_at, top_score: (.inmate_candidates[0].score // 0), declined: .decision_declined}'
+```
+
+### "What false-positive source is dominating?"
+
+Pull the feature summaries for the noisiest hour:
+
+```bash
+grep 'DRONE DETECTED' echo/logs/echo.log | tail -50 | \
+  grep -oE 'peak_freqs=\[[^\]]*\]' | sort | uniq -c | sort -rn | head
+```
+
+Then map each peak set to a source:
+- `[59-61 Hz, 118-122, …]` → mains hum leaking past the notch. Widen
+  `mains_width_hz`.
+- `[100-140, 200-280, …]` with `persist < 0.7` → passing vehicle.
+  Raise `min_continuity` to 0.9.
+- `[5-15, 10-30, …]` → helicopter. Raise `ml_confidence_floor` to 0.65.
+- `[190-260, …]` matching drone table above → real drone. Investigate.
+
+### "Is a specific camera the culprit?"
+
+```bash
+# Count DEGRADED events per camera in the log
+grep -oE 'camera:[^ ]+ .* → DEGRADED' echo/logs/echo.log | \
+  awk '{print $1}' | sort | uniq -c | sort -rn
+```
+
+Rebooting a chronically DEGRADED camera almost always fixes it —
+usually a stalled RTSP session ffmpeg can't recover from.
+
+### "Which subsystem's data drove the last alert?"
+
+```bash
+curl -s 'http://127.0.0.1:5058/reports/recent?limit=1' | \
+  jq '.reports[0] | {contributing_subsystems, dropped_subsystems, subsystem_health}'
+```
+
+Post-mortem gold — tells you which sensors were live when the alert
+fired.
+
+### "Prove ECHO is running with the config I edited"
+
+```bash
+curl -s http://127.0.0.1:5058/status | jq .config.detector
+```
+
+Compare against the value in `config.yaml`. If they differ, you either
+edited the wrong file or an `ECHO_*` env var is overriding you:
+
+```bash
+env | grep ^ECHO_
+```
+
+### "Show me the last 5 state transitions with reasons"
+
+```bash
+curl -s 'http://127.0.0.1:5058/state?history_limit=5' | jq '.history'
+```
+
+Common patterns:
+- `IDLE → SCANNING → IDLE → SCANNING → IDLE` — noise floor too low;
+  raise `min_level_db` by 3-5 dB.
+- `SCANNING → TRACKING → SCANNING → TRACKING` (never reaches ALERT) —
+  signals present but scores stay below `alert_score_floor`; either
+  lower the floor or (better) the correlation weights need tuning.
+- Long stretches in `ALERT` without ack — dashboard operator is not
+  ack-ing; set `state_machine.alert_auto_ack_sec` to 1800 to prevent
+  stuck-alert desensitization.
+
+---
+
+## Microphone placement, wind, weather
+
+The single biggest source of FP that no threshold will fix is a badly
+placed mic. Get the physical install right first.
+
+### Placement rules
+
+1. **Height** — 3-5 m off the ground. Higher = more sky, less ground
+   reflection. Above 8 m you start picking up more distant traffic than
+   local drone activity. Don't go rooftop unless you have to.
+2. **Line of sight to the sky** — nothing directly overhead within 30°.
+   Under an eave is the classic mistake — the eave reflects the drone's
+   own sound back and doubles the effective signal (good) while also
+   channeling every other reflection into the mic (bad, dominates FPs).
+3. **Away from HVAC / rooftop equipment** — 10 m minimum. HVAC hum
+   directly under the mic is the second-biggest install failure.
+4. **Away from mains transformers** — 5 m minimum. Ungrounded mic +
+   nearby transformer = 60 Hz smear that no `mains_width_hz` widening
+   fixes.
+5. **Facing outward, not into the yard** — the mic should look toward
+   where drones come FROM (perimeter, tree line, road) — not toward
+   the target yard. This gives you more warning time.
+
+### Windscreens
+
+**Non-negotiable for outdoor installs.** Bare mics in even 5 mph wind
+produce broadband low-frequency noise that:
+- Cracks the `min_level_db` gate constantly (all your CPU goes into
+  processing wind)
+- Occasionally forms accidental harmonic stacks (rare but real FP source)
+
+Use a **foam windscreen** (Rycote-style, $10-30) for USB electrets; a
+**dead-cat furry cover** for professional mics if the site is very
+exposed. Both cut wind noise by 15-25 dB at low frequencies without
+affecting drone frequencies.
+
+### Temperature
+
+Detection range varies with air temperature because the speed of sound
+does. Cold air (denser) = slightly better sensitivity; hot air =
+slightly worse. The difference between 0 °C and 35 °C at 300 m is
+about 6% range loss — usually irrelevant.
+
+BUT: temperature also inverts sound propagation on some evenings —
+warmer air aloft over cooler air near the ground can channel drone
+sound farther than usual, and boost your range dramatically. If you
+see spontaneous long-range detections on cool evenings, that's why.
+
+### Rain
+
+Rain adds broadband noise (raindrops on the windscreen, on nearby
+surfaces). Options:
+
+- Do nothing — the wet windscreen is worse than dry but usable.
+- Install a small **rain shield** above the mic (an inverted disc,
+  15 cm above the mic, transparent to sound but blocks direct drops).
+- Add a "rain suppression" flag to your ops runbook: during heavy
+  rain, raise `harmonic_snr_db` by 3 dB, accept range loss for FP
+  reduction.
+
+Don't try to auto-detect rain from the signal — it's more trouble than
+it's worth. Use a real weather station or facility HVAC data.
+
+### Fog / humidity
+
+Increases high-frequency absorption slightly. Effect on drone
+detection is negligible below 1 km. Don't tune for it.
+
+### Nearby vegetation
+
+Deciduous trees within 20 m of the mic add rustle noise on windy days
+and cut effective range in leaf-out season. Evergreens do the same but
+year-round. Not fixable in config — clear the sight-line if possible,
+or plan around a 20% range loss during leaf-out.
+
+---
+
 ## Environment-variable overrides — the field-debug pattern
 
 You don't need to edit `config.yaml` in the field to try a tweak.
@@ -442,6 +740,179 @@ to ALERT and pages SIU (via `alert:drone_with_correlated_inmate`).
 
 ---
 
+## Correlation weight retuning workflow
+
+The 25 CORTEX signal weights in `config.yaml correlation.weights` are
+starting values. They will drift wrong as the site's threat model
+evolves. Here's the disciplined loop for keeping them calibrated.
+
+### 1. Label every alert
+
+For 30-90 days after go-live, tag every `drone_with_correlated_inmate`
+alert with its investigative outcome:
+
+- **REAL** — confirmed drone / drop / attempt
+- **FALSE** — investigated, no drone
+- **UNRESOLVED** — cannot determine
+- **PARTIAL** — drone was real but the top candidate was wrong
+
+Store the labels in whatever incident-management system the DOC uses;
+the specific fields to keep are:
+
+```
+alert_id, drone_event_ts, top_inmate, top_contact, actual_outcome,
+which_signals_fired, notes
+```
+
+Under 30 days = you're guessing. Do not adjust weights.
+
+### 2. Compute per-signal precision
+
+For each of the 25 signals, compute:
+
+```
+precision(signal) = REAL alerts where signal fired / all alerts where signal fired
+```
+
+Rank signals by precision. Anything below **0.4 precision** is
+actively harmful — it's contributing to false alerts. Anything above
+**0.7** is your goldenweights.
+
+```bash
+# Rough SQL sketch of the query:
+SELECT
+  signal,
+  COUNT(*) FILTER (WHERE outcome = 'REAL')     AS true_pos,
+  COUNT(*) FILTER (WHERE outcome != 'REAL')    AS false_pos,
+  1.0 * COUNT(*) FILTER (WHERE outcome = 'REAL') / COUNT(*) AS precision
+FROM alert_signal_fires
+WHERE alert_ts BETWEEN 'yesterday' - '30 days'::interval AND 'yesterday'
+GROUP BY signal
+ORDER BY precision DESC;
+```
+
+### 3. Build a challenger config
+
+Copy `config.yaml` to `config-challenger.yaml`. Adjust weights:
+
+- Signals with precision < 0.4 → cut weight by 50%
+- Signals with precision > 0.7 → raise weight by 25%
+- Middle band → leave alone
+
+DO NOT change more than 5 weights in one iteration. You lose the
+ability to attribute cause.
+
+### 4. A/B compare
+
+Two options:
+
+**A. Fleet-partitioned A/B** — if you deploy at multiple facilities,
+put half on production config and half on challenger for 30 days.
+Compare alert precision aggregated across each cohort.
+
+**B. Time-partitioned A/B** — one facility only. Run production for
+30 days, challenger for 30 days. Compare against a slow-changing
+baseline metric (weekly drone-drop attempt count from investigation
+records).
+
+### 5. Promote or rollback
+
+If challenger precision is > production precision by ≥ 5 percentage
+points, promote. Otherwise rollback and try a different adjustment
+in the next iteration.
+
+### 6. Never touch these
+
+Two signals are near-deterministic and should never drop below 0.30:
+
+- `drone_serial_matches_recovery` (0.50 default) — same physical
+  airframe used in a prior incident. If this fires, it's real.
+- `contact_msisdn_matches_mas` (0.20 default) — Tecore captured
+  this exact phone number inside the facility. Only false in the
+  extremely rare case of spoofed MSISDN.
+
+Lower them and you're throwing away the strongest evidence you have.
+
+### 7. Anti-pattern — don't do this
+
+- ❌ Adjust weights based on ONE alert's outcome. Statistical noise.
+- ❌ Adjust weights on the same week you introduced a new data source.
+  You can't tell whether the source or the weights explain any change.
+- ❌ Adjust weights to fix a KNOWN sensor problem. Fix the sensor.
+  Weights compensate for real limitations, not broken installs.
+
+---
+
+## Multi-site fleet tuning
+
+Running ECHO at 5+ facilities creates a coordination problem:
+
+- Each site has different noise floors, RF environments, drone traffic
+- Weights tuned per-site diverge and become hard to maintain
+- Central compliance / policy wants ONE canonical config for auditability
+
+Recommended pattern:
+
+### Layered config for fleet
+
+```
+config/
+├── global.yaml              # canonical defaults for the fleet
+├── sites/
+│   ├── broad-river.yaml     # local overrides for one facility
+│   ├── kirkland.yaml
+│   └── perry.yaml
+└── env/
+    ├── prod.yaml            # production-wide overrides
+    └── canary.yaml          # single-facility challenger overrides
+```
+
+Load with:
+
+```bash
+python echo_multi.py \
+  --config config/global.yaml \
+  --config-overlay config/sites/broad-river.yaml \
+  --config-overlay config/env/prod.yaml
+```
+
+(Overlay support is a small addition to `echo_config.load()` — deep-merge
+each overlay in the order supplied.)
+
+### Per-site knobs (leave in site file)
+
+- `detector.harmonic_snr_db` — noise floor varies by site
+- `detector.min_level_db` — depends on ambient
+- `lora.facility_whitelist_hz` — different legitimate emitters per site
+- `lily_pads.nodes` — always per-site
+- `paths.*` — different disk layouts
+
+### Fleet-wide knobs (leave in global file)
+
+- `correlation.weights` — fleet-wide, tuned via the workflow above
+- `correlation.min_viable_sensors`
+- `correlation.alert_score_floor`
+- `state_machine.alert_auto_ack_sec`
+- `health.stale_timeout_sec`
+- Detector defaults NOT overridden per-site
+
+### Canary a change
+
+When you retune a fleet-wide weight, canary at ONE site first:
+
+```bash
+# On the canary site's deploy PC, add the challenger overlay:
+python echo_multi.py \
+  --config config/global.yaml \
+  --config-overlay config/sites/broad-river.yaml \
+  --config-overlay config/env/canary.yaml   # <-- challenger weights here
+```
+
+If canary precision improves for 30 days, roll the change into
+`config/env/prod.yaml` fleet-wide.
+
+---
+
 ## Emergency: turn off the noisy alerts
 
 If ECHO is falsely paging staff at 3 AM:
@@ -453,3 +924,169 @@ If ECHO is falsely paging staff at 3 AM:
 
 Do NOT disable the pipeline entirely — false positives are a tuning
 issue, not a fundamental flaw.
+
+If you need a live-off-switch that doesn't lose signal capture, set
+`state_machine.alert_auto_ack_sec: 1800` (auto-clear ALERT after 30
+min) and `correlation.alert_score_floor: 0.7` (require stronger
+correlation before paging). ECHO still detects, still correlates,
+still logs — but it stops paging until you turn the sensitivity back
+up.
+
+---
+
+## Troubleshooting matrix
+
+Grouped by symptom. Each row: what you observe → most likely cause →
+first thing to try.
+
+### Detector-level
+
+| Symptom | Likely cause | First try |
+|---|---|---|
+| No detections at all, all-zero scores | mic not producing audio | Check `min_level_db` gate (raise it should suppress; if raising it changes nothing, hardware is silent). `ls /dev/snd` on Linux; check RTSP URL with `ffplay`. |
+| Detections stuck at score 0.1 forever | mains hum overwhelming everything | Widen `mains_width_hz` to 10; check mic grounding. |
+| Sudden burst of 50+ detections in a minute | siren / vehicle horn cluster | Nothing to fix in config; wait it out. If chronic, raise `max_drift_hz` window OR restrict operating hours. |
+| Only certain cameras detect ever, others always miss real drones | Mic-level mismatch between cameras | Set per-camera `detector_overrides` in `echo_cameras.yaml` with a lower `harmonic_snr_db` for the deaf cameras (they may just be quieter). |
+| Detections but ALL have `ml_score < 0.4` | Model rejecting everything | Confirm the model file exists at `paths.ml_model_path`. If missing, ECHO falls back to a pass-through score — that's the bug. |
+
+### Correlation-level
+
+| Symptom | Likely cause | First try |
+|---|---|---|
+| `decision_declined=True` on every report | Not enough subsystems live | Check `/subsystems`; fix DOWN ones, or lower `correlation.min_viable_sensors`. |
+| All candidate scores under 0.1 | Time window too short OR weights too flat | Check `correlation.window_hours` (raise to 4-8); run weight-tuning workflow. |
+| Same inmate topping every report | Real (habitual offender) OR weights favor whatever signal they always trigger | Look at their signals — if one is 1.00 across 20 reports and it's not `msisdn_matches_mas` or `serial_matches_recovery`, that signal is over-weighted. |
+| Correlation report has `contributing_subsystems: []` | Nothing OK-status is producing events | Registry not being reported into. Verify subsystems call `report_ok()` on healthy ticks. |
+
+### State-machine-level
+
+| Symptom | Likely cause | First try |
+|---|---|---|
+| Stuck in IDLE despite obvious drone detections | Correlation engine not wired to state machine | Check `echo_multi.py.__init__` — should call `bind_to_correlation_engine`. |
+| Stuck in ALERT for hours | No one is ack-ing | Set `state_machine.alert_auto_ack_sec: 1800`. Also train operators. |
+| Bounces IDLE ↔ SCANNING dozens of times per minute | Noise floor too low; every quiet moment triggers | Raise `min_level_db` by 5 dB. |
+| Reaches TRACKING but never ALERT | Correlation score always below `alert_score_floor` | Either lower the floor (start with 0.4) OR run weight-tuning workflow. |
+
+### Subsystem-level
+
+| Symptom | Likely cause | First try |
+|---|---|---|
+| Camera keeps flipping OK ↔ DEGRADED | RTSP stream unstable — network or camera-side | Check `ffmpeg` logs; often solved by reducing camera bitrate on the switch. |
+| LoRa never OK, always UNKNOWN | SDR device not connected OR pyrtlsdr not installed | `lsusb | grep -i rtl` (or SoapySDR probe); `pip show pyrtlsdr`. |
+| LoRa OK but ZERO detections ever | Threshold too high OR wrong region | Try `min_rssi_dbm: -110` temporarily. If still nothing, `region: US915` vs `EU868` mix-up. |
+| Lily pads never OK, stays UNKNOWN | Hub started but no nodes reporting | Check node → hub network path (MQTT / gRPC / HTTP endpoint). |
+| Lily pad fixes wildly wrong (200 m off) | Clock sync bad OR node coordinates wrong | Check node clock sync errors (`clock_sync_error_ms`); re-survey positions. |
+| ViaPath / Tecore / Dedrone connector goes DOWN in the middle of the night | Vendor API on maintenance window | Contact vendor NOC. ECHO recovers automatically. |
+
+### Fleet-level
+
+| Symptom | Likely cause | First try |
+|---|---|---|
+| Precision (REAL alerts / all alerts) drops across the fleet after a config change | The change was wrong for some sites | Rollback via `git checkout` on the config repo. Investigate per-site before re-trying. |
+| One site's precision much worse than others | Site-specific tuning needed | Move that site's `detector.*` overrides into `config/sites/<site>.yaml`. |
+| Alert fatigue reported by operators | Floor too low OR too many low-value signals firing | Raise `alert_score_floor` first (fast). Longer-term: retune weights. |
+
+---
+
+## Appendix — reference numbers
+
+### Speed of sound in air (m/s)
+
+| Temp (°C) | Speed |
+|---|---:|
+| -10 | 325.4 |
+| 0   | 331.3 |
+| 10  | 337.3 |
+| 20  | 343.2 (default) |
+| 25  | 346.1 |
+| 30  | 349.0 |
+| 35  | 351.9 |
+
+Use for tuning `lily_pads.speed_of_sound_mps` per climate. In humid
+air, speed rises another ~0.5% — not usually worth accounting for.
+
+### Attenuation with distance (approximate, calm dry air)
+
+Sound level drops **6 dB per doubling of distance** in free field.
+Practical numbers for a drone that produces 65 dB SPL @ 1 m:
+
+| Distance | Approx SPL |
+|---:|---:|
+| 1 m | 65 dB |
+| 10 m | 45 dB |
+| 100 m | 25 dB |
+| 300 m | 15 dB |
+| 500 m | 11 dB |
+| 1 km | 5 dB |
+
+The noise floor of a typical outdoor mic in a suburban environment is
+around 30-35 dB SPL. That's why 200-300 m is the realistic ECHO
+detection range for a single mic on a Mavic-class drone.
+
+### LoRa channel plan quick reference
+
+**US915 uplink (64 × 125 kHz + 8 × 500 kHz):**
+
+| First 8 channels (MHz) | Notes |
+|---|---|
+| 902.3, 902.5, 902.7, 902.9, 903.1, 903.3, 903.5, 903.7 | LoRaWAN 125 kHz sub-band 1 |
+| 903.0, 904.6, 906.2, 907.8, 909.4, 911.0, 912.6, 914.2 | LoRaWAN 500 kHz uplink (join) |
+
+**ExpressLRS-900 US common hop frequencies:**
+
+`903.5, 906.5, 909.5, 912.5, 915.5, 918.5, 921.5, 924.5` MHz
+
+If a chirp is on one of these AND repeats on a hop pattern → high
+probability of an ELRS drone control link. Not proof of a drone (any
+long-range RC controller uses the same protocol), but strong
+correlator signal within ±90 s of an acoustic drone event.
+
+### Detection score → severity table (default weights)
+
+| Top candidate score | Interpretation | Suggested alert severity |
+|---|---|---|
+| 0.00 - 0.15 | Noise / spurious | none |
+| 0.15 - 0.30 | Weak correlation, single signal | log-only |
+| 0.30 - 0.50 | Moderate — multi-signal but no strong ones | notify |
+| 0.50 - 0.75 | Strong — includes at least one 0.20+ weight signal | alert (SIU pager) |
+| 0.75 - 1.00 | Very strong — likely serial match, MAS match, or Cellebrite | critical (warden + FBI) |
+
+Adjust `alert_score_floor` for the boundary between "notify" and
+"alert" per your operator staffing model.
+
+### Rule-of-thumb detection ranges (single-mic install, good placement)
+
+| Drone class | Calm night | Windy day | Rain |
+|---|---:|---:|---:|
+| DJI Mini class | 100-150 m | 40-80 m | 20-50 m |
+| DJI Mavic 3 class | 250-350 m | 150-200 m | 80-150 m |
+| DJI Matrice class | 500-800 m | 300-500 m | 200-300 m |
+
+If your site's numbers are half of these, you have an installation
+problem (mic placement, wind exposure, HVAC noise). Fix the physical
+install before touching thresholds — no config tuning recovers a bad
+placement.
+
+### Common LoRa emitter fingerprints (whitelist candidates)
+
+Populate `lora.facility_whitelist_hz` from a site RF audit; typical
+legitimate emitters inside a fence line:
+
+| Emitter class | Typical freqs (MHz) |
+|---|---|
+| Elster / Itron AMR water meters (US) | 902-904 (upstream), 912-928 (return) |
+| Sensus AMI electric | 902-928 (freq-hopping) |
+| Motorola staff radios (900 MHz trunked) | 935-940 |
+| Legacy pager transmitters | 929-932 |
+| Building automation LoRaWAN | site-specific — get from facilities team |
+
+Whitelist by exact center frequency, not by range — you don't want to
+suppress a real drone control link that happens to fall inside an
+emitter band.
+
+---
+
+**End of guide.** Any tunable not covered here is either baked into
+the detection algorithm (see `ACOUSTIC_DETECTION_RESEARCH.md`) or lives
+in `echo_cameras.yaml` (see the sample file's comments).
+
