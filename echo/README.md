@@ -518,6 +518,10 @@ CSS-preamble sniffer:
   (KrakenSDR bearing intersects perimeter)
 - Facility whitelist so legitimate 900 MHz emitters (AMR meters, staff
   radios) don't false-alarm
+- `LoraSdrConnector.start()` refuses to start when `_run_once` is still
+  the placeholder (RF tech must subclass and override before enabling
+  in production, or pass `allow_placeholder=True` for explicit test
+  mode — health reports DEGRADED in that case)
 
 See [`INTEGRATION_CHECKLIST.md`](./INTEGRATION_CHECKLIST.md) § 5g for
 the hardware / install fields the RF tech fills in.

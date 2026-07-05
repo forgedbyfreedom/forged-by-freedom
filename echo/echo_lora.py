@@ -378,26 +378,31 @@ class LoraSdrConnector:
             log.exception("on_detection callback failed")
 
     # ── Classification ────────────────────────────────────────
-    # M3 fix: ELRS-900 signals drift and SDR center-freq estimates are
-    # noisy — an exact-Hz `in` test essentially never matched. A ±250 kHz
-    # tolerance around each ELRS channel is realistic for RTL-SDR
-    # coarse-tune accuracy without bleeding into adjacent LoRaWAN slots.
-    _ELRS_TOL_HZ = 250_000
+    # ELRS-900 uses ~500 kHz bandwidth per burst; LoRaWAN 125 kHz slots
+    # sit exactly on ELRS center frequencies (903.5 / 906.5 / 909.5 /
+    # 912.5 MHz), so a wide tolerance on ELRS would misclassify real
+    # LoRaWAN uplinks as drone-control traffic → false alerts.
+    # Re-review finding #2: gate ELRS on bw ≠ 125 kHz AND keep tolerance
+    # tight enough that a real LoRaWAN 125-kHz slot centered on an
+    # ELRS channel never triggers.
+    _ELRS_TOL_HZ = 150_000
 
     def _classify(self, det: LoraDetection) -> str:
         """Best-guess protocol from center freq + bandwidth."""
         f = det.center_freq_hz
         bw = det.bandwidth_hz
+        # LoRaWAN 125 kHz slots — check FIRST so a real LoRaWAN uplink
+        # sitting on 903.5 MHz doesn't fall into the ELRS branch.
+        if 902_000_000 <= f <= 928_000_000 and bw == 125_000:
+            return "lorawan_us915"
         # Meshtastic uses 250 kHz BW on the LongFast preset by default
         if 906_000_000 <= f <= 924_000_000 and bw == 250_000:
             return "meshtastic_us"
-        # ExpressLRS 900 uses distinctive hop pattern; if we see a burst
-        # within ±250 kHz of an ELRS_US_HZ channel, classify as ELRS.
-        # (Full hop-pattern tracking would live in a stateful classifier.)
-        if any(abs(f - c) <= self._ELRS_TOL_HZ for c in ELRS_US_HZ):
+        # ExpressLRS-900 uses ~500 kHz bursts; only classify as ELRS if
+        # the BW is NOT the LoRaWAN 125 kHz signature. (Full hop-pattern
+        # tracking would live in a stateful classifier.)
+        if bw != 125_000 and any(abs(f - c) <= self._ELRS_TOL_HZ for c in ELRS_US_HZ):
             return "elrs_900"
-        if 902_000_000 <= f <= 928_000_000 and bw == 125_000:
-            return "lorawan_us915"
         if 863_000_000 <= f <= 870_000_000:
             return "lorawan_eu868"
         return "lora_unknown"

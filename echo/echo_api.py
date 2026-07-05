@@ -386,12 +386,14 @@ def maybe_start_api(engine=None, orchestrator=None,
 def _wire_event_recording(engine) -> None:
     """Monkey-hook engine.ingest so each event lands in REGISTRY too.
 
-    H4 fix: idempotent — if this wrapper is already installed on the
-    engine, do nothing. A second call would otherwise capture the
-    already-wrapped `ingest` as `orig_ingest`, so every event would
-    record 2×, transition the state machine 2×, and fire alerts 2×.
+    H4 fix (v2): idempotent — flag lives on the ENGINE itself, not on
+    the ingest closure. If another module (e.g. echo_state.
+    bind_to_correlation_engine) wraps ingest again AFTER us, the
+    outer closure loses the sentinel and a naive re-check would think
+    "not wrapped" and double-record. Keying off `engine._echo_api_wired`
+    survives arbitrary re-wrap ordering.
     """
-    if getattr(engine.ingest, "_echo_api_wrapped", False):
+    if getattr(engine, "_echo_api_wired", False):
         return
     orig_ingest = engine.ingest
     orig_on_report = engine.on_report
@@ -414,10 +416,9 @@ def _wire_event_recording(engine) -> None:
         if orig_on_report:
             orig_on_report(report)
 
-    _ingest._echo_api_wrapped = True       # type: ignore[attr-defined]
-    _on_report._echo_api_wrapped = True    # type: ignore[attr-defined]
     engine.ingest = _ingest
     engine.on_report = _on_report
+    engine._echo_api_wired = True         # type: ignore[attr-defined]
 
 
 if __name__ == "__main__":

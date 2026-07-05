@@ -711,6 +711,23 @@ python echo_multi.py --config echo/echo_cameras.yaml
 Nesting uses double-underscore. Booleans accept `true`/`false`/`yes`/`no`.
 `null` empties a value. Numbers are auto-coerced.
 
+**Lists and dicts require JSON syntax.** A bare comma-separated string
+won't parse and gets loudly rejected — this used to silently corrupt
+list-typed fields (H5 in the review). For example:
+
+```
+# YES:
+ECHO_DETECTOR__HARMONICS='[1, 2, 3, 4]'
+ECHO_LORA__FACILITY_WHITELIST_HZ='[902300000, 903500000]'
+
+# NO — logs "REJECTED env override" and preserves the default:
+ECHO_DETECTOR__HARMONICS='1,2,3,4'
+```
+
+The JSON parser is only tried against list/dict-typed targets, so scalar
+env vars with brackets (e.g. `ECHO_LOGGING__FORMAT='[%(asctime)s]'`) pass
+through as strings unchanged.
+
 ---
 
 ## Verifying a change is actually live

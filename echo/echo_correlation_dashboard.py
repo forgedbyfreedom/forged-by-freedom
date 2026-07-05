@@ -34,7 +34,15 @@ import math
 import threading
 import time
 from collections import Counter, defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+
+def _utcnow() -> datetime:
+    """Canonical UTC clock — matches echo_correlation._utcnow so
+    comparisons against Event.timestamp (tz-aware after H1) don't
+    TypeError. Without this, /api/drone_tracks blows up every request
+    the moment any tz-aware event lands in the engine."""
+    return datetime.now(timezone.utc)
 from pathlib import Path
 from typing import Optional
 
@@ -468,8 +476,8 @@ def _snapshot() -> dict:
     with _REPORTS_LOCK:
         reports = list(_REPORTS)
 
-    # Drones today
-    today = datetime.now().date()
+    # Drones today (H1 fix: tz-aware — events are tz-aware UTC now)
+    today = _utcnow().date()
     drones_today = sum(1 for e in events
                        if e.source in ("drone_audio", "drone_visual", "dedrone_detection")
                        and e.timestamp.date() == today)
@@ -540,7 +548,8 @@ def _drone_tracks_snapshot() -> dict:
     with _ENGINE._lock:
         events = list(_ENGINE._by_source.get("dedrone_detection", []))
     # Group by track_id, only keep tracks active in last 5 min
-    cutoff = datetime.now() - timedelta(minutes=5)
+    # H1 fix: tz-aware — events in the engine are tz-aware UTC after H1
+    cutoff = _utcnow() - timedelta(minutes=5)
     by_track: dict[str, list] = defaultdict(list)
     for ev in events:
         tid = ev.payload.get("track_id")
@@ -626,7 +635,7 @@ def api_drone_tracks():
 # ── Demo mode — generates synthetic events so the dashboard renders ─
 def _seed_demo_events(engine: CorrelationEngine) -> None:
     """Inject synthetic events so the dashboard has something to show."""
-    now = datetime.now()
+    now = _utcnow()
     # Recent inmate observation
     engine.ingest(Event("face", now - timedelta(minutes=3), {
         "inmate_id": "I-12345", "inmate_name": "John Doe",

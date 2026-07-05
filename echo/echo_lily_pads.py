@@ -442,9 +442,14 @@ class LilyPadHub:
             # Hand-rolled Gauss-Newton with proper Jacobian on (x, y, z).
             # dr_i/dx = -( (x - p_i.x)/|x - p_i| - (x - p_0.x)/|x - p_0| )
             # (and same for y, z). Damped step, small-lambda regularizer.
+            #
+            # Re-review #5: with < 4 nodes the normal-equation matrix is
+            # rank-deficient. Detect that and refuse to emit a track
+            # rather than returning the seed centroid dressed up as a fix.
             max_iter = 30
             lam = 1e-3
-            for _ in range(max_iter):
+            first_iter_rank_deficient = False
+            for _iter in range(max_iter):
                 p0 = pts[0]
                 dx0 = x - p0[0]; dy0 = y - p0[1]; dz0 = z - p0[2]
                 r0 = math.sqrt(dx0*dx0 + dy0*dy0 + dz0*dz0) or 1e-9
@@ -481,6 +486,8 @@ class LilyPadHub:
                        - a12*(a12*a33 - a23*a13)
                        + a13*(a12*a23 - a22*a13))
                 if abs(det) < 1e-12:
+                    if _iter == 0:
+                        first_iter_rank_deficient = True
                     break
                 # 3x3 inverse × b
                 inv11 =  (a22*a33 - a23*a23) / det
@@ -503,6 +510,12 @@ class LilyPadHub:
                 if step_mag < 0.05:
                     break
 
+            if first_iter_rank_deficient:
+                log.debug("TDOA fallback: rank-deficient on iter 0 "
+                          "(likely < 4 nodes with non-degenerate geometry); "
+                          "refusing to emit fabricated fix")
+                return None
+
             # Residual at solution
             p0 = pts[0]
             r0 = math.sqrt((x - p0[0])**2 + (y - p0[1])**2 + (z - p0[2])**2)
@@ -514,6 +527,13 @@ class LilyPadHub:
                 measured = (toa[i] - toa[0]) * c
                 total_res += (measured - predicted) ** 2
             residual_m = math.sqrt(total_res / max(len(pts) - 1, 1))
+
+        # Re-review #5: hard bound on residual — even if _confidence_from_group
+        # produces a passing score, a large residual means the solver
+        # didn't actually converge to a real physical solution. Cap at 50 m.
+        if residual_m > 50.0:
+            log.debug("TDOA solve residual %.1fm > 50m — refusing to emit", residual_m)
+            return None
 
         confidence = _confidence_from_group(group, residual_m)
         if confidence < 0.1:

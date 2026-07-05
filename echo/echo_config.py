@@ -188,7 +188,14 @@ def _apply_env_overrides(cfg: dict) -> dict:
         if cursor_cfg is not None:
             target_kind = type(cursor_cfg)
 
-        coerced = _coerce(val)
+        # Re-review #6: only attempt JSON parsing when the target field
+        # is a list or dict. Otherwise a legitimate string value like
+        # `ECHO_LOGGING__FORMAT='[%(asctime)s]'` would trigger a
+        # JSONDecodeError attempt on every startup, and (more subtly) a
+        # user who typo'd a JSON list on a scalar field would get the
+        # string silently kept without a diagnostic.
+        try_json = target_kind in (list, dict)
+        coerced = _coerce(val, try_json=try_json)
 
         # Guard: don't allow a bare string to overwrite a list/dict.
         if target_kind in (list, dict) and not isinstance(coerced, (list, dict)):
@@ -212,12 +219,16 @@ def _apply_env_overrides(cfg: dict) -> dict:
     return cfg
 
 
-def _coerce(v: str) -> Any:
-    # Try JSON first — accepts lists, dicts, numbers, true/false/null.
-    # This is what makes `ECHO_DETECTOR__HARMONICS='[1,2,3]'` work
-    # correctly instead of silently corrupting the list-typed field.
+def _coerce(v: str, try_json: bool = False) -> Any:
+    """Coerce an env-var string to a Python value.
+
+    JSON parsing is attempted only when `try_json=True` — i.e. when the
+    caller knows the target field is a list or dict. That keeps innocent
+    string values with leading brackets (log format strings, regexes)
+    from tripping a spurious JSON decode.
+    """
     stripped = v.strip()
-    if stripped and stripped[0] in "[{":
+    if try_json and stripped and stripped[0] in "[{":
         try:
             return json.loads(stripped)
         except (ValueError, json.JSONDecodeError):

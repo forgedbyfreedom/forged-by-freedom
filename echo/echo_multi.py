@@ -394,7 +394,11 @@ class EchoMulti:
         of camera:* individual statuses. Rules:
           • Any camera OK → acoustic OK
           • Otherwise if any camera DEGRADED → acoustic DEGRADED
-          • Otherwise (all DOWN/UNKNOWN) → acoustic DOWN
+          • Otherwise if any camera has EVER reported (DOWN) → acoustic DOWN
+          • Otherwise (all UNKNOWN, none have ever reported) → do not
+            touch acoustic status. This prevents a false "acoustic DOWN"
+            during the first tick after boot when cameras are still
+            initializing their ffmpeg / RTSP pipelines (re-review #3).
         """
         try:
             from echo_health import REGISTRY as _HR, HealthStatus
@@ -409,9 +413,12 @@ class EchoMulti:
         elif any(s is HealthStatus.DEGRADED for s in statuses):
             _HR.report_degraded("acoustic",
                                 "no camera fully OK; degraded camera(s) still producing")
-        else:
+        elif any(s is HealthStatus.DOWN for s in statuses):
+            # At least one camera has actually reported (and failed) —
+            # legitimate outage, not startup.
             _HR.report_down("acoustic",
                             f"all {len(cam_ids)} cameras DOWN/UNKNOWN")
+        # else: all UNKNOWN → boot-time; don't touch acoustic yet.
 
     def stop(self) -> None:
         self._stop_event.set()
