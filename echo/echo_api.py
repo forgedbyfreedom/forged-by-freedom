@@ -356,6 +356,19 @@ def maybe_start_api(engine=None, orchestrator=None,
     REGISTRY.orchestrator = orchestrator
     REGISTRY.lora = lora
     REGISTRY.lily_pads = lily_pads
+    # L3 fix: recent_events deque maxlen was frozen at import time. If
+    # the operator changed api.recent_events_cap in config.yaml, honor
+    # it now that CFG has been loaded.
+    _cap = int(CFG["api"].get("recent_events_cap", 500))
+    if REGISTRY.recent_events.maxlen != _cap:
+        old = list(REGISTRY.recent_events)
+        REGISTRY.recent_events = deque(old, maxlen=_cap)
+    # Also honor the health stale_timeout from CFG (M6)
+    try:
+        from echo_health import REGISTRY as _HR
+        _HR.configure(stale_timeout_sec=CFG.get("health", {}).get("stale_timeout_sec"))
+    except Exception:
+        log.exception("failed to apply health config")
 
     # Also wrap engine.ingest to record events into the API's ring buffer.
     if engine is not None:
@@ -371,19 +384,38 @@ def maybe_start_api(engine=None, orchestrator=None,
 
 
 def _wire_event_recording(engine) -> None:
-    """Monkey-hook engine.ingest so each event lands in REGISTRY too."""
+    """Monkey-hook engine.ingest so each event lands in REGISTRY too.
+
+    H4 fix: idempotent — if this wrapper is already installed on the
+    engine, do nothing. A second call would otherwise capture the
+    already-wrapped `ingest` as `orig_ingest`, so every event would
+    record 2×, transition the state machine 2×, and fire alerts 2×.
+    """
+    if getattr(engine.ingest, "_echo_api_wrapped", False):
+        return
     orig_ingest = engine.ingest
     orig_on_report = engine.on_report
 
     def _ingest(event) -> None:
-        REGISTRY.record_event(event.source, event.timestamp, event.payload)
+        # L1 fix: recording must never take down real ingest.
+        # A malformed payload that crashes _jsonable / record_event
+        # must NOT prevent the correlation engine from seeing the event.
+        try:
+            REGISTRY.record_event(event.source, event.timestamp, event.payload)
+        except Exception:
+            log.exception("record_event failed for source=%s", getattr(event, "source", "?"))
         return orig_ingest(event)
 
     def _on_report(report) -> None:
-        REGISTRY.record_report(report)
+        try:
+            REGISTRY.record_report(report)
+        except Exception:
+            log.exception("record_report failed")
         if orig_on_report:
             orig_on_report(report)
 
+    _ingest._echo_api_wrapped = True       # type: ignore[attr-defined]
+    _on_report._echo_api_wrapped = True    # type: ignore[attr-defined]
     engine.ingest = _ingest
     engine.on_report = _on_report
 

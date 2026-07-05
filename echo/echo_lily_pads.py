@@ -148,8 +148,19 @@ import threading
 import time
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Callable, Optional
+
+
+# ── Canonical clock (see echo_correlation for the same pattern) ──
+def _lp_utcnow() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def _to_utc_ts(ts: datetime) -> datetime:
+    if ts.tzinfo is None:
+        return ts.astimezone(timezone.utc)
+    return ts.astimezone(timezone.utc)
 
 log = logging.getLogger("echo.lily_pads")
 
@@ -262,26 +273,22 @@ class LilyPadHub:
                 self._health.report_degraded("lily_pads",
                                              f"unknown node {det.node_id}")
             return
-        with self._lock:
-            self._pending.append(det)
-            try:
-                self._try_fuse()
-                if self._health:
-                    self._health.report_ok("lily_pads")
-            except Exception as exc:
-                if self._health:
-                    self._health.report_degraded(
-                        "lily_pads",
-                        f"fusion error: {type(exc).__name__}: {exc}")
-                log.exception("lily-pad fusion failed")
+        tracks = self._ingest_and_collect(det)
+        # H3 fix: fire on_track OUTSIDE the hub lock so downstream
+        # correlation / alert / dashboard callbacks can't deadlock or
+        # block other node ingests through this lock.
+        self._deliver(tracks)
 
     def flush(self) -> None:
         """Force-fuse any pending detections (call from a timer thread
         every ~200 ms in production to catch groups whose window closed
         without a new ingest triggering the check)."""
+        tracks: list[LilyPadTrack] = []
         with self._lock:
             try:
-                self._try_fuse(force=True)
+                collector = []
+                self._try_fuse(force=True, sink=collector)
+                tracks = collector
                 if self._health:
                     self._health.report_ok("lily_pads")
             except Exception as exc:
@@ -290,9 +297,37 @@ class LilyPadHub:
                         "lily_pads",
                         f"flush error: {type(exc).__name__}: {exc}")
                 log.exception("lily-pad flush failed")
+        self._deliver(tracks)
+
+    def _ingest_and_collect(self, det: LilyPadDetection) -> list[LilyPadTrack]:
+        """Under the lock: buffer detection and collect any tracks
+        produced by fusion. Delivery happens after lock release."""
+        tracks: list[LilyPadTrack] = []
+        with self._lock:
+            self._pending.append(det)
+            try:
+                self._try_fuse(sink=tracks)
+                if self._health:
+                    self._health.report_ok("lily_pads")
+            except Exception as exc:
+                if self._health:
+                    self._health.report_degraded(
+                        "lily_pads",
+                        f"fusion error: {type(exc).__name__}: {exc}")
+                log.exception("lily-pad fusion failed")
+        return tracks
+
+    def _deliver(self, tracks: list[LilyPadTrack]) -> None:
+        for track in tracks:
+            try:
+                self.on_track(track)
+            except Exception:
+                log.exception("on_track callback failed for %s", track.track_id)
 
     # ── Fusion ─────────────────────────────────────────────
-    def _try_fuse(self, force: bool = False) -> None:
+    def _try_fuse(self,
+                  force: bool = False,
+                  sink: Optional[list] = None) -> None:
         """
         Walk the pending deque, group detections whose timestamps are
         within tdoa_group_window, and solve if we have enough nodes.
@@ -300,21 +335,28 @@ class LilyPadHub:
         Waits for the group window to close before firing so late-arriving
         node detections don't miss the fuse. Set force=True (or call
         flush()) to fuse immediately regardless.
+
+        If `sink` is provided, produced tracks are appended to it rather
+        than fired via `self.on_track`. The caller then invokes
+        `self.on_track` outside the lock (H3 fix).
         """
         if not self._pending:
             return
-        now = datetime.now()
+        now = _lp_utcnow()
         # Drop stragglers older than 5s (they can't fuse anymore)
-        while self._pending and (now - self._pending[0].timestamp).total_seconds() > 5:
+        while self._pending and (now - _to_utc_ts(self._pending[0].timestamp)).total_seconds() > 5:
             self._pending.popleft()
 
+        if not self._pending:
+            return
         seed = self._pending[0]
-        seed_age = (now - seed.timestamp).total_seconds()
+        seed_ts = _to_utc_ts(seed.timestamp)
+        seed_age = (now - seed_ts).total_seconds()
         # Give slower nodes their chance to arrive
         if not force and seed_age < self.tdoa_group_window.total_seconds():
             return
         group = [d for d in self._pending
-                 if abs((d.timestamp - seed.timestamp).total_seconds())
+                 if abs((_to_utc_ts(d.timestamp) - seed_ts).total_seconds())
                     <= self.tdoa_group_window.total_seconds()]
         # Dedup: one detection per node per group (keep the earliest)
         by_node: dict[str, LilyPadDetection] = {}
@@ -341,17 +383,26 @@ class LilyPadHub:
                 pass
 
         if track is not None:
-            self.on_track(track)
+            if sink is not None:
+                sink.append(track)
+            else:
+                # Legacy path — caller isn't using the lock-safe sink pattern
+                try:
+                    self.on_track(track)
+                except Exception:
+                    log.exception("on_track callback failed")
 
     def _solve_tdoa(self, group: list[LilyPadDetection]) -> Optional[LilyPadTrack]:
         """
         Weighted-least-squares TDOA position solve.
 
-        For each pair of nodes (i, j):
-            (t_i - t_j) * c = |x - p_i| - |x - p_j|
-        Linearize around a seed guess, iterate.
+        For each reference-vs-i pair the residual is
+            r_i = (toa_i - toa_0)*c - (|x - p_i| - |x - p_0|)
 
-        Seed guess = centroid of contributing nodes.
+        We solve for (x, y, z) via proper Gauss-Newton on the 3-vector.
+        Prefer scipy.optimize.least_squares when available (better line
+        search, guards against divergence); fall back to a hand-rolled
+        Gauss-Newton with damped step and altitude update.
         """
         pts = []
         times = []
@@ -361,56 +412,108 @@ class LilyPadHub:
             times.append(d.timestamp)
         t0 = min(times)
         toa = [(t - t0).total_seconds() for t in times]
+        c = SPEED_OF_SOUND_MPS
 
-        # Seed = centroid
+        # Seed = centroid, altitude = mean node z + 20 m
         x = sum(p[0] for p in pts) / len(pts)
         y = sum(p[1] for p in pts) / len(pts)
-        z = 30.0  # assume drone altitude ~30 m for seed (typical drop)
+        z = sum(p[2] for p in pts) / len(pts) + 20.0
 
-        # Gauss-Newton iterations
-        max_iter = 20
-        for _ in range(max_iter):
-            # Residuals: r_ij = (toa_i - toa_j)*c - (|x-p_i| - |x-p_j|)
-            # We regularize by taking pairs against node 0
+        # Try scipy first — it's on the optional deps list.
+        try:
+            import numpy as np
+            from scipy.optimize import least_squares
+
+            pts_arr = np.array(pts, dtype=float)
+            toa_arr = np.array(toa, dtype=float)
+
+            def _resid(state):
+                xv, yv, zv = state
+                r0 = np.linalg.norm(pts_arr[0] - (xv, yv, zv))
+                ri = np.linalg.norm(pts_arr[1:] - (xv, yv, zv), axis=1)
+                predicted = ri - r0
+                measured = (toa_arr[1:] - toa_arr[0]) * c
+                return measured - predicted
+
+            res = least_squares(_resid, x0=[x, y, z], method="lm", max_nfev=200)
+            x, y, z = float(res.x[0]), float(res.x[1]), float(res.x[2])
+            residual_m = float(math.sqrt(res.cost * 2.0 / max(len(pts) - 1, 1)))
+        except Exception:
+            # Hand-rolled Gauss-Newton with proper Jacobian on (x, y, z).
+            # dr_i/dx = -( (x - p_i.x)/|x - p_i| - (x - p_0.x)/|x - p_0| )
+            # (and same for y, z). Damped step, small-lambda regularizer.
+            max_iter = 30
+            lam = 1e-3
+            for _ in range(max_iter):
+                p0 = pts[0]
+                dx0 = x - p0[0]; dy0 = y - p0[1]; dz0 = z - p0[2]
+                r0 = math.sqrt(dx0*dx0 + dy0*dy0 + dz0*dz0) or 1e-9
+
+                # Build J (n-1 x 3) and residual vector r (n-1)
+                J = []
+                r_vec = []
+                for i in range(1, len(pts)):
+                    pi = pts[i]
+                    dxi = x - pi[0]; dyi = y - pi[1]; dzi = z - pi[2]
+                    ri = math.sqrt(dxi*dxi + dyi*dyi + dzi*dzi) or 1e-9
+                    # Partial derivatives of (ri - r0) w.r.t. (x, y, z)
+                    jx = dxi/ri - dx0/r0
+                    jy = dyi/ri - dy0/r0
+                    jz = dzi/ri - dz0/r0
+                    # Residual sign: measured - predicted, predicted = ri - r0
+                    predicted = ri - r0
+                    measured = (toa[i] - toa[0]) * c
+                    resid = measured - predicted
+                    # dresid/dstate = -d(predicted)/dstate
+                    J.append((-jx, -jy, -jz))
+                    r_vec.append(resid)
+
+                # Solve (J^T J + lam*I) delta = -J^T r  (normal equations)
+                # 3x3 symmetric — invert by hand to avoid numpy dep in fallback.
+                a11 = a12 = a13 = a22 = a23 = a33 = 0.0
+                b1 = b2 = b3 = 0.0
+                for (jx, jy, jz), r in zip(J, r_vec):
+                    a11 += jx*jx; a12 += jx*jy; a13 += jx*jz
+                    a22 += jy*jy; a23 += jy*jz; a33 += jz*jz
+                    b1 -= jx*r; b2 -= jy*r; b3 -= jz*r
+                a11 += lam; a22 += lam; a33 += lam
+                det = (a11*(a22*a33 - a23*a23)
+                       - a12*(a12*a33 - a23*a13)
+                       + a13*(a12*a23 - a22*a13))
+                if abs(det) < 1e-12:
+                    break
+                # 3x3 inverse × b
+                inv11 =  (a22*a33 - a23*a23) / det
+                inv12 = -(a12*a33 - a23*a13) / det
+                inv13 =  (a12*a23 - a22*a13) / det
+                inv22 =  (a11*a33 - a13*a13) / det
+                inv23 = -(a11*a23 - a12*a13) / det
+                inv33 =  (a11*a22 - a12*a12) / det
+                dx_step = inv11*b1 + inv12*b2 + inv13*b3
+                dy_step = inv12*b1 + inv22*b2 + inv23*b3
+                dz_step = inv13*b1 + inv23*b2 + inv33*b3
+
+                # Damping — cap per-iter step at 30m to prevent divergence
+                step_mag = math.sqrt(dx_step*dx_step + dy_step*dy_step + dz_step*dz_step)
+                if step_mag > 30.0:
+                    scale = 30.0 / step_mag
+                    dx_step *= scale; dy_step *= scale; dz_step *= scale
+
+                x += dx_step; y += dy_step; z += dz_step
+                if step_mag < 0.05:
+                    break
+
+            # Residual at solution
             p0 = pts[0]
             r0 = math.sqrt((x - p0[0])**2 + (y - p0[1])**2 + (z - p0[2])**2)
-            residuals = []
+            total_res = 0.0
             for i in range(1, len(pts)):
                 pi = pts[i]
                 ri = math.sqrt((x - pi[0])**2 + (y - pi[1])**2 + (z - pi[2])**2)
                 predicted = ri - r0
-                measured = (toa[i] - toa[0]) * SPEED_OF_SOUND_MPS
-                residuals.append(measured - predicted)
-            # Simple gradient step (full Jacobian would be cleaner; this
-            # is deliberately compact — swap in scipy.optimize.least_squares
-            # in production if scipy is available).
-            step = sum(residuals) / max(len(residuals), 1)
-            if abs(step) < 0.05:
-                break
-            # Move toward the mean bearing of positive residuals
-            gx = gy = 0.0
-            for i, r in enumerate(residuals, start=1):
-                pi = pts[i]
-                dxi = x - pi[0]; dyi = y - pi[1]
-                norm = math.hypot(dxi, dyi) or 1.0
-                gx -= r * dxi / norm
-                gy -= r * dyi / norm
-            gnorm = math.hypot(gx, gy) or 1.0
-            k = min(2.0, abs(step))
-            x += k * gx / gnorm
-            y += k * gy / gnorm
-
-        # Residual at solution
-        p0 = pts[0]
-        r0 = math.sqrt((x - p0[0])**2 + (y - p0[1])**2 + (z - p0[2])**2)
-        total_res = 0.0
-        for i in range(1, len(pts)):
-            pi = pts[i]
-            ri = math.sqrt((x - pi[0])**2 + (y - pi[1])**2 + (z - pi[2])**2)
-            predicted = ri - r0
-            measured = (toa[i] - toa[0]) * SPEED_OF_SOUND_MPS
-            total_res += (measured - predicted) ** 2
-        residual_m = math.sqrt(total_res / max(len(pts) - 1, 1))
+                measured = (toa[i] - toa[0]) * c
+                total_res += (measured - predicted) ** 2
+            residual_m = math.sqrt(total_res / max(len(pts) - 1, 1))
 
         confidence = _confidence_from_group(group, residual_m)
         if confidence < 0.1:
@@ -420,7 +523,7 @@ class LilyPadHub:
         self._track_counter += 1
         track = LilyPadTrack(
             track_id=f"lp-{int(time.time())}-{self._track_counter}",
-            timestamp=t0 + timedelta(seconds=sum(toa) / len(toa)),
+            timestamp=_to_utc_ts(t0) + timedelta(seconds=sum(toa) / len(toa)),
             position_m=(x, y, z),
             confidence=confidence,
             contributing_nodes=[d.node_id for d in group],
@@ -516,7 +619,7 @@ def make_detection_from_echo(node_id: str, echo_result: dict,
     """
     return LilyPadDetection(
         node_id=node_id,
-        timestamp=now or datetime.now(),
+        timestamp=now or _lp_utcnow(),
         confidence=float(echo_result.get("confidence", 0.0)),
         signature=str(echo_result.get("signature", "drone_unknown")),
         peak_frequency_hz=echo_result.get("peak_frequency_hz"),
@@ -642,6 +745,16 @@ def net_pole_perimeter_array(
         edge_len = math.hypot(edge_dx, edge_dy)
         if edge_len < 1e-6:
             continue
+        # L2 fix: sliver edges shorter than half the pole spacing don't
+        # get their own node — otherwise a 0.5 m corner cutoff would
+        # place a mic essentially coincident with the previous edge's
+        # terminal node, giving singular TDOA geometry for any group
+        # that includes both.
+        if edge_len < pole_spacing_m / 2.0:
+            log.debug("net_pole_perimeter_array: skipping sliver edge "
+                      "(len=%.2fm < spacing/2=%.2fm)",
+                      edge_len, pole_spacing_m / 2.0)
+            continue
         # Place poles along this edge, starting at the vertex
         n_poles = max(1, int(edge_len / pole_spacing_m))
         for i in range(n_poles):
@@ -695,7 +808,7 @@ if __name__ == "__main__":
     ]
 
     src = (100.0, 50.0, 30.0)
-    t_ref = datetime.now()
+    t_ref = _lp_utcnow()
 
     def _print_track(t: LilyPadTrack) -> None:
         print(f"[LP-track] pos=({t.position_m[0]:.1f}, {t.position_m[1]:.1f}, "
@@ -718,6 +831,6 @@ if __name__ == "__main__":
     # Force-fuse now that all 4 nodes have arrived
     hub.flush()
     print(f"expected pos ~= ({src[0]}, {src[1]}, {src[2]})")
-    print("(exact fix quality depends on solver — this file's compact "
-          "Gauss-Newton is a placeholder; swap in scipy.optimize.least_squares "
-          "for production accuracy.)")
+    print("(scipy.optimize.least_squares is preferred; the module falls "
+          "back to a proper Gauss-Newton on (x,y,z) with damped step + "
+          "regularizer if scipy isn't installed.)")

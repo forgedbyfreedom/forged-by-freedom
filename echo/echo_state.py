@@ -280,14 +280,20 @@ def bind_to_correlation_engine(sm: PipelineStateMachine, engine,
         return orig_ingest(event)
 
     def _on_report(report) -> None:
+        # L4 fix: never assume report shape. A future declined-report or
+        # partial shape must not AttributeError inside a listener callback
+        # (that would kill state-machine advancement AND leak the
+        # exception into the correlation engine's own on_report call).
+        inmates = getattr(report, "inmate_candidates", None) or []
+        externals = getattr(report, "external_candidates", None) or []
         top = max(
-            (c.score for c in (report.inmate_candidates + report.external_candidates)),
+            (c.score for c in (inmates + externals) if hasattr(c, "score")),
             default=0.0,
         )
         if top >= alert_score_floor and sm.state in (PipelineState.TRACKING, PipelineState.SCANNING):
             sm.try_transition(PipelineState.ALERT,
                               trigger=Trigger.CORRELATION_REPORT,
-                              event_id=report.drone_event_id,
+                              event_id=getattr(report, "drone_event_id", None),
                               detail={"top_score": round(top, 3)})
         if orig_on_report:
             orig_on_report(report)

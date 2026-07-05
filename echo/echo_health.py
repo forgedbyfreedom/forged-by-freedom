@@ -91,6 +91,16 @@ class HealthRegistry:
         self._listeners: list[Callable[[SubsystemHealth, HealthStatus], None]] = []
         self._lock = threading.RLock()
 
+    def configure(self, *, stale_timeout_sec: Optional[float] = None) -> None:
+        """M6 fix: allow config-driven update of the stale timeout after
+        the module-level REGISTRY singleton was already constructed."""
+        with self._lock:
+            if stale_timeout_sec is not None:
+                if stale_timeout_sec != self.stale_timeout_sec:
+                    log.info("HealthRegistry: stale_timeout_sec %.1f → %.1f",
+                             self.stale_timeout_sec, stale_timeout_sec)
+                self.stale_timeout_sec = float(stale_timeout_sec)
+
     # ── Registration ──────────────────────────────────────
     def register(self, name: str, **detail) -> SubsystemHealth:
         with self._lock:
@@ -118,6 +128,8 @@ class HealthRegistry:
 
     def _transition(self, name: str, status: HealthStatus,
                     reason: Optional[str], detail: dict) -> None:
+        listeners_to_fire: list = []
+        fire_args = None
         with self._lock:
             h = self._registry.get(name) or self.register(name)
             prev = h.status
@@ -133,9 +145,15 @@ class HealthRegistry:
                 h.status = status
                 h.last_change_at = now
                 log.info("health: %s %s → %s (%s)", name, prev.value, status.value, reason or "")
-                self._fire(h, prev)
+                # M1 fix: snapshot listeners under the lock, invoke OUTSIDE.
+                # A listener that grabs another lock or blocks on a queue
+                # must not pin every subsystem's report_*() call.
+                listeners_to_fire = list(self._listeners)
+                fire_args = (h, prev)
             if detail:
                 h.detail.update(detail)
+        if fire_args is not None:
+            self._fire_out_of_lock(listeners_to_fire, *fire_args)
 
     def on_change(self, cb: Callable[[SubsystemHealth, HealthStatus], None]) -> None:
         """Register a callback fired when a subsystem's status changes."""
@@ -143,7 +161,18 @@ class HealthRegistry:
             self._listeners.append(cb)
 
     def _fire(self, h: SubsystemHealth, prev: HealthStatus) -> None:
+        """Legacy under-lock fire — kept for _sweep_stale below.
+        Prefer `_fire_out_of_lock()` for new call sites."""
         for cb in list(self._listeners):
+            try:
+                cb(h, prev)
+            except Exception:
+                log.exception("health listener failed")
+
+    def _fire_out_of_lock(self, listeners: list, h: SubsystemHealth,
+                          prev: HealthStatus) -> None:
+        """M1 fix: listener callbacks run WITHOUT the registry lock held."""
+        for cb in listeners:
             try:
                 cb(h, prev)
             except Exception:
@@ -183,6 +212,8 @@ class HealthRegistry:
     def _sweep_stale(self) -> None:
         """Auto-demote to DOWN any subsystem that stopped reporting."""
         now = datetime.now(timezone.utc)
+        to_fire: list[tuple[SubsystemHealth, HealthStatus]] = []
+        listeners_snapshot: list = []
         with self._lock:
             for h in self._registry.values():
                 if h.status is HealthStatus.DOWN or h.status is HealthStatus.UNKNOWN:
@@ -198,11 +229,27 @@ class HealthRegistry:
                     h.error_count += 1
                     log.warning("health: %s auto-demoted %s → DOWN (%s)",
                                 h.name, prev.value, h.last_error)
-                    self._fire(h, prev)
+                    to_fire.append((h, prev))
+            if to_fire:
+                listeners_snapshot = list(self._listeners)
+        for h, prev in to_fire:
+            self._fire_out_of_lock(listeners_snapshot, h, prev)
 
 
 # ── Module-level singleton ─────────────────────────────────────
+# Start with the baked default; the orchestrator applies CFG-driven
+# overrides via REGISTRY.configure(...) after CFG has loaded.
 REGISTRY = HealthRegistry()
+
+# Best-effort: if echo_config imports cleanly at this point, honor the
+# config's stale timeout even without an explicit configure() call.
+try:
+    from echo_config import CFG as _CFG_AT_IMPORT
+    _to = _CFG_AT_IMPORT.get("health", {}).get("stale_timeout_sec")
+    if _to is not None:
+        REGISTRY.stale_timeout_sec = float(_to)
+except Exception:
+    pass
 
 
 # ── safe_loop: isolated exception handling for subsystem threads ──

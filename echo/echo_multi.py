@@ -143,10 +143,15 @@ class CameraRunner:
                     f"engine.process failed: {type(exc).__name__}: {exc}",
                 )
             return
-        # Successful tick → report OK (also promotes "acoustic" subsystem)
+        # Successful tick → report OK for THIS camera only.
+        # M5 fix: previously we also reported OK on the shared
+        # "acoustic" subsystem per block, so one surviving camera kept
+        # "acoustic" green during a mass outage. Aggregate acoustic
+        # health is now derived at query time by _refresh_acoustic_aggregate
+        # (called by the orchestrator's health-tick loop) from the union
+        # of camera:* statuses. Do NOT report "acoustic" from here.
         if self._health:
             self._health.report_ok(f"camera:{self.camera_id}")
-            self._health.report_ok("acoustic")
         score = float(result.get("score", 0.0)) if isinstance(result, dict) else 0.0
         self.last_score = score
         self.last_score_time = datetime.now()
@@ -259,12 +264,22 @@ class EchoMulti:
         self._reload_lock = threading.Lock()
 
         # CORTEX correlation engine (fusion) + pipeline state machine
+        # H6 fix: silently swallowing a config-load failure was hiding
+        # bugs. Log with full traceback and continue with defaults so
+        # the orchestrator still comes up, but the operator SEES the
+        # problem.
         try:
             from echo_config import CFG
             _min_sensors = CFG["correlation"].get("min_viable_sensors", 2)
             _window_h    = CFG["correlation"].get("window_hours", 4)
             _alert_floor = CFG["correlation"].get("alert_score_floor", 0.5)
         except Exception:
+            import logging as _logging
+            _logging.getLogger("echo.multi").exception(
+                "config load failed at EchoMulti.__init__ — falling back "
+                "to defaults (min_viable_sensors=2, window_hours=4, "
+                "alert_score_floor=0.5). Fix your config.yaml and restart."
+            )
             _min_sensors, _window_h, _alert_floor = 2, 4, 0.5
 
         self.zone_engine = ZoneEngine(config_path)
@@ -282,8 +297,11 @@ class EchoMulti:
             self.state = PipelineStateMachine()
             bind_to_correlation_engine(self.state, self.correlation,
                                        alert_score_floor=_alert_floor)
-        except Exception as exc:
-            print(f"[echo-multi] state machine unavailable: {exc}")
+        except Exception:
+            import logging as _logging
+            _logging.getLogger("echo.multi").exception(
+                "state machine unavailable — pipeline lifecycle tracking OFF"
+            )
             self.state = None
 
         self.cameras: dict[str, CameraRunner] = {}
@@ -363,10 +381,37 @@ class EchoMulti:
         try:
             while not self._stop_event.is_set():
                 time.sleep(10)
-                # PLACEHOLDER — opportunity for periodic config reload, health check, etc.
+                # M5: recompute aggregate "acoustic" health from the
+                # union of camera:* statuses so a mass camera outage
+                # actually shows as acoustic DOWN.
+                self._refresh_acoustic_aggregate()
         except KeyboardInterrupt:
             pass
         self.stop()
+
+    def _refresh_acoustic_aggregate(self) -> None:
+        """Derive the shared 'acoustic' subsystem status from the union
+        of camera:* individual statuses. Rules:
+          • Any camera OK → acoustic OK
+          • Otherwise if any camera DEGRADED → acoustic DEGRADED
+          • Otherwise (all DOWN/UNKNOWN) → acoustic DOWN
+        """
+        try:
+            from echo_health import REGISTRY as _HR, HealthStatus
+        except Exception:
+            return
+        cam_ids = [f"camera:{cid}" for cid in self.cameras.keys()]
+        if not cam_ids:
+            return
+        statuses = [_HR.status_of(name) for name in cam_ids]
+        if any(s is HealthStatus.OK for s in statuses):
+            _HR.report_ok("acoustic")
+        elif any(s is HealthStatus.DEGRADED for s in statuses):
+            _HR.report_degraded("acoustic",
+                                "no camera fully OK; degraded camera(s) still producing")
+        else:
+            _HR.report_down("acoustic",
+                            f"all {len(cam_ids)} cameras DOWN/UNKNOWN")
 
     def stop(self) -> None:
         self._stop_event.set()

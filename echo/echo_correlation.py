@@ -41,8 +41,27 @@ import threading
 import time
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Any, Callable, Optional
+
+
+# ── Canonical clock ─────────────────────────────────────────────────
+# All internal timestamps are tz-aware UTC. Naive datetimes coming in
+# from callers get normalized on ingest. Mixing naive + aware raises
+# TypeError in comparisons, so this is enforced not optional.
+def _utcnow() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def _to_utc(ts: datetime) -> datetime:
+    """Coerce any datetime to tz-aware UTC.
+
+    - Naive input is assumed to be local wall clock, converted to UTC.
+    - Aware input is converted to UTC.
+    """
+    if ts.tzinfo is None:
+        return ts.astimezone(timezone.utc) if hasattr(ts, "astimezone") else ts.replace(tzinfo=timezone.utc)
+    return ts.astimezone(timezone.utc)
 
 
 # ── Generic event envelope used by every subsystem ─────────────────
@@ -210,6 +229,13 @@ class CorrelationEngine:
 
     # ── Ingest ────────────────────────────────────────────────
     def ingest(self, event: Event) -> None:
+        # Normalize timestamp to tz-aware UTC so downstream comparisons
+        # never mix naive and aware. Vendor connectors typically emit
+        # tz-aware; the acoustic path emits naive.
+        if event.timestamp.tzinfo is None:
+            event = Event(source=event.source,
+                          timestamp=_to_utc(event.timestamp),
+                          payload=event.payload)
         with self._lock:
             self._events.append(event)
             self._by_source[event.source].append(event)
@@ -227,11 +253,11 @@ class CorrelationEngine:
                 self.on_report(report)
 
     def _prune(self) -> None:
-        """Drop events older than window."""
-        cutoff = datetime.now() - self.window
+        """Drop events older than window from every index."""
+        cutoff = _utcnow() - self.window
         while self._events and self._events[0].timestamp < cutoff:
             old = self._events.popleft()
-            # Best-effort cleanup of indexes
+            # Best-effort cleanup of every index that could hold `old`
             try:
                 self._by_source[old.source].remove(old)
             except ValueError:
@@ -242,57 +268,66 @@ class CorrelationEngine:
                     self._by_inmate[inmate].remove(old)
                 except ValueError:
                     pass
+            # C1 fix: msisdn was leaking forever — every ViaPath call
+            # accumulated. Mirror the inmate cleanup here.
+            msisdn = old.payload.get("msisdn") or old.payload.get("called_number")
+            if msisdn:
+                try:
+                    self._by_msisdn[msisdn].remove(old)
+                except ValueError:
+                    pass
 
     # ── Correlation pass ─────────────────────────────────────
     def correlate_drone(self,
                         drone_event: Event,
                         top_n: int = 10) -> CorrelationReport:
         """Score every candidate and return ranked report."""
-        t = drone_event.timestamp
+        # Normalize the drone-event timestamp — the caller may have
+        # constructed it directly rather than going through ingest().
+        t = _to_utc(drone_event.timestamp) if drone_event.timestamp.tzinfo is None \
+            else drone_event.timestamp
 
-        # ── CORTEX fusion pre-check: subsystem health ──
-        # Take a snapshot of which subsystems have contributed *any*
-        # event in this rolling window. DOWN → weight 0 (dropped from
-        # scoring); DEGRADED → weight 0.5; OK → 1.0.
-        subsystems_in_window: set[str] = {
-            _subsystem_for_source(s) for s in self._by_source.keys()
-            if self._by_source[s]
-        }
-        health_snapshot: dict[str, str] = {}
-        contributing: list[str] = []
-        dropped: list[str] = []
-        for sub in subsystems_in_window:
-            if self.health:
-                st = self.health.status_of(sub)
-                health_snapshot[sub] = st.value
-            else:
-                st = None
-                health_snapshot[sub] = "OK"
-            w = self._weight_for_source_name(sub)
-            (dropped if w == 0.0 else contributing).append(sub)
-
-        # min-viable-sensor threshold — decline to decide instead of guessing
-        if len(contributing) < self.min_viable_sensors:
-            declined = CorrelationReport(
-                drone_event_id=str(id(drone_event)),
-                drone_timestamp=t,
-                drone_camera=drone_event.payload.get("camera_id", "unknown"),
-                drone_confidence=float(drone_event.payload.get("confidence", 0.0)),
-                inmate_candidates=[],
-                external_candidates=[],
-                generated_at=datetime.now(),
-                subsystem_health=health_snapshot,
-                contributing_subsystems=sorted(contributing),
-                dropped_subsystems=sorted(dropped),
-                decision_declined=True,
-                decision_declined_reason=(
-                    f"only {len(contributing)} viable sensor(s) "
-                    f"(need ≥ {self.min_viable_sensors}); dropped: {sorted(dropped)}"
-                ),
-            )
-            return declined
-
+        # C2 fix: pre-check runs UNDER the lock so an ingest thread
+        # can't mutate _by_source mid-iteration.
         with self._lock:
+            # ── CORTEX fusion pre-check: subsystem health ──
+            # DOWN → weight 0 (dropped from scoring); DEGRADED → 0.5; OK → 1.0.
+            subsystems_in_window: set[str] = {
+                _subsystem_for_source(s) for s, evs in self._by_source.items()
+                if evs
+            }
+            health_snapshot: dict[str, str] = {}
+            contributing: list[str] = []
+            dropped: list[str] = []
+            for sub in subsystems_in_window:
+                if self.health:
+                    st = self.health.status_of(sub)
+                    health_snapshot[sub] = st.value
+                else:
+                    health_snapshot[sub] = "OK"
+                w = self._weight_for_source_name(sub)
+                (dropped if w == 0.0 else contributing).append(sub)
+
+            # min-viable-sensor threshold — decline to decide instead of guessing
+            if len(contributing) < self.min_viable_sensors:
+                return CorrelationReport(
+                    drone_event_id=str(id(drone_event)),
+                    drone_timestamp=t,
+                    drone_camera=drone_event.payload.get("camera_id", "unknown"),
+                    drone_confidence=float(drone_event.payload.get("confidence", 0.0)),
+                    inmate_candidates=[],
+                    external_candidates=[],
+                    generated_at=_utcnow(),
+                    subsystem_health=health_snapshot,
+                    contributing_subsystems=sorted(contributing),
+                    dropped_subsystems=sorted(dropped),
+                    decision_declined=True,
+                    decision_declined_reason=(
+                        f"only {len(contributing)} viable sensor(s) "
+                        f"(need ≥ {self.min_viable_sensors}); dropped: {sorted(dropped)}"
+                    ),
+                )
+
             inmate_scores: dict[str, dict] = {}
             for inmate_id, inmate_events in list(self._by_inmate.items()):
                 inmate_scores[inmate_id] = self._score_inmate(
@@ -396,7 +431,7 @@ class CorrelationEngine:
             drone_confidence=float(drone_event.payload.get("confidence", 0.0)),
             inmate_candidates=inmate_candidates[:top_n],
             external_candidates=contact_candidates[:top_n],
-            generated_at=datetime.now(),
+            generated_at=_utcnow(),
             drone_signals=drone_signals,
             drone_signal_evidence=drone_signal_evidence,
             subsystem_health=health_snapshot,

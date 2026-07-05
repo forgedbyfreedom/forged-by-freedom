@@ -26,6 +26,7 @@ The double-underscore in env var names indicates nesting:
 from __future__ import annotations
 
 import copy
+import json
 import logging
 import os
 from pathlib import Path
@@ -156,23 +157,55 @@ def _apply_env_overrides(cfg: dict) -> dict:
     """
     Convert ECHO_SECTION__KEY=value env vars into nested dict overrides.
 
-    Type coercion is attempted in this order: bool, int, float, str.
-    A value of `null` (or `none`) becomes Python None.
+    Type coercion order: JSON (for lists/dicts/numbers/booleans/null),
+    then bool literals, then int, then float, then string.
+
+    H5 safety: if the target key exists in the base cfg as a list or
+    dict, refuse to coerce a bare comma-separated string to it — the
+    old behavior silently assigned "1,2,3" to detector.harmonics as
+    a raw string, then the detector iterated characters. Now we
+    require JSON for list/dict overrides and log an error otherwise.
     """
     overrides: dict = {}
+    rejected: list[str] = []
     for name, val in os.environ.items():
         if not name.startswith("ECHO_"):
             continue
-        # Ignore known non-config-nested prefixes used by echo_engine.py
-        # (they map to the flat detector.* section already covered below).
         parts = name[len("ECHO_"):].split("__")
         if len(parts) < 2:
             continue
         parts = [p.lower() for p in parts]
+
+        # Look up the target key's existing type in cfg (if any)
+        target_kind: Optional[type] = None
+        cursor_cfg: Any = cfg
+        for p in parts:
+            if isinstance(cursor_cfg, dict) and p in cursor_cfg:
+                cursor_cfg = cursor_cfg[p]
+            else:
+                cursor_cfg = None
+                break
+        if cursor_cfg is not None:
+            target_kind = type(cursor_cfg)
+
+        coerced = _coerce(val)
+
+        # Guard: don't allow a bare string to overwrite a list/dict.
+        if target_kind in (list, dict) and not isinstance(coerced, (list, dict)):
+            rejected.append(
+                f"{name}: target is {target_kind.__name__}, but value "
+                f"{val!r} did not parse as JSON. To override, set "
+                f'{name}=\'[1,2,3]\' (JSON syntax).'
+            )
+            continue
+
         cursor = overrides
         for p in parts[:-1]:
             cursor = cursor.setdefault(p, {})
-        cursor[parts[-1]] = _coerce(val)
+        cursor[parts[-1]] = coerced
+
+    for msg in rejected:
+        log.error("REJECTED env override — %s", msg)
     if overrides:
         log.debug("ECHO_ env overrides: %s", overrides)
         return _deep_merge(cfg, overrides)
@@ -180,7 +213,16 @@ def _apply_env_overrides(cfg: dict) -> dict:
 
 
 def _coerce(v: str) -> Any:
-    low = v.strip().lower()
+    # Try JSON first — accepts lists, dicts, numbers, true/false/null.
+    # This is what makes `ECHO_DETECTOR__HARMONICS='[1,2,3]'` work
+    # correctly instead of silently corrupting the list-typed field.
+    stripped = v.strip()
+    if stripped and stripped[0] in "[{":
+        try:
+            return json.loads(stripped)
+        except (ValueError, json.JSONDecodeError):
+            pass
+    low = stripped.lower()
     if low in ("true", "yes", "on"):
         return True
     if low in ("false", "no", "off"):

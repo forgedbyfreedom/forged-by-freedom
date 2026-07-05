@@ -267,15 +267,35 @@ class LoraSdrConnector:
         self._health = None
 
     # ── Lifecycle ────────────────────────────────────────────
-    def start(self) -> None:
+    def start(self, allow_placeholder: bool = False) -> None:
         if self._thread and self._thread.is_alive():
             return
+        # M4 fix: refuse to start when the placeholder _run_once is
+        # still in place. Previously safe_loop would tick every
+        # sweep_dwell seconds and report OK, so the dashboard showed
+        # LoRa green whether or not any real SDR was attached — actively
+        # misleading. Committee's RF tech must subclass and override
+        # `_run_once` before enabling the subsystem in production.
+        cls = type(self)
+        if cls._run_once is LoraSdrConnector._run_once and not allow_placeholder:
+            raise RuntimeError(
+                "LoraSdrConnector._run_once is still the placeholder. "
+                "Subclass and override it with real SDR ingest before "
+                "calling start(), OR pass allow_placeholder=True for "
+                "explicit test-mode use (health will report DEGRADED)."
+            )
         # Register in the shared health registry so CORTEX can drop /
         # weight LoRa signals when this subsystem is DOWN.
         try:
             from echo_health import REGISTRY as _HR
-            _HR.register("lora", role="sdr", region=self.region, device=self.device)
+            _HR.register("lora", role="sdr", region=self.region,
+                         device=self.device, placeholder=allow_placeholder)
             self._health = _HR
+            if allow_placeholder:
+                _HR.report_degraded(
+                    "lora",
+                    "placeholder _run_once — no real SDR ingest, test mode only",
+                )
         except Exception:
             self._health = None
         self._stop.clear()
@@ -283,8 +303,9 @@ class LoraSdrConnector:
             target=self._run_safe, name="echo-lora-sdr", daemon=True
         )
         self._thread.start()
-        log.info("LoRa SDR sniffer started (region=%s device=%s ch=%d)",
-                 self.region, self.device, len(self.channels))
+        log.info("LoRa SDR sniffer started (region=%s device=%s ch=%d%s)",
+                 self.region, self.device, len(self.channels),
+                 " PLACEHOLDER" if allow_placeholder else "")
 
     def stop(self) -> None:
         self._stop.set()
@@ -357,6 +378,12 @@ class LoraSdrConnector:
             log.exception("on_detection callback failed")
 
     # ── Classification ────────────────────────────────────────
+    # M3 fix: ELRS-900 signals drift and SDR center-freq estimates are
+    # noisy — an exact-Hz `in` test essentially never matched. A ±250 kHz
+    # tolerance around each ELRS channel is realistic for RTL-SDR
+    # coarse-tune accuracy without bleeding into adjacent LoRaWAN slots.
+    _ELRS_TOL_HZ = 250_000
+
     def _classify(self, det: LoraDetection) -> str:
         """Best-guess protocol from center freq + bandwidth."""
         f = det.center_freq_hz
@@ -364,11 +391,10 @@ class LoraSdrConnector:
         # Meshtastic uses 250 kHz BW on the LongFast preset by default
         if 906_000_000 <= f <= 924_000_000 and bw == 250_000:
             return "meshtastic_us"
-        # ExpressLRS 900 uses distinctive hop pattern; if we see repeated
-        # bursts at ELRS_US_HZ channels within tight time windows,
-        # classify as ELRS (this hop tracking would live in a stateful
-        # classifier — placeholder here).
-        if f in ELRS_US_HZ:
+        # ExpressLRS 900 uses distinctive hop pattern; if we see a burst
+        # within ±250 kHz of an ELRS_US_HZ channel, classify as ELRS.
+        # (Full hop-pattern tracking would live in a stateful classifier.)
+        if any(abs(f - c) <= self._ELRS_TOL_HZ for c in ELRS_US_HZ):
             return "elrs_900"
         if 902_000_000 <= f <= 928_000_000 and bw == 125_000:
             return "lorawan_us915"
@@ -418,7 +444,7 @@ if __name__ == "__main__":
               f"BW={d.bandwidth_hz//1000}kHz SF{d.spreading_factor} "
               f"RSSI={d.rssi_dbm:.1f}dBm proto={d.protocol_guess}")
     c = LoraSdrConnector(on_detection=_print, region="US915")
-    c.start()
+    c.start(allow_placeholder=True)
     try:
         while True:
             time.sleep(60)
