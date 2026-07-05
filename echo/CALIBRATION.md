@@ -605,6 +605,89 @@ it's worth. Use a real weather station or facility HVAC data.
 Increases high-frequency absorption slightly. Effect on drone
 detection is negligible below 1 km. Don't tune for it.
 
+### Net-pole perimeter arrays (SC-DOC preferred install)
+
+The single best acoustic install ECHO supports at a modern correctional
+facility isn't a purpose-built pole — it's the netting poles the
+facility already has.
+
+Why this pattern wins:
+
+- **Height** — 30-60 ft is well above the ground boundary layer where
+  most wind noise lives. Detection range at the same drone is 30-50%
+  better than a 3 m pole install for the same mic hardware.
+- **Density** — 20-40 ft pole spacing = TDOA baselines of 6-12 m,
+  which is tighter than any budgeted array would be. Sub-meter
+  position accuracy against a Mavic-class drone within 300 m is
+  realistic (bench-simulated at 0 m error with 54 nodes; expect a
+  few meters of real-world error from residual clock jitter and
+  survey imprecision, still excellent).
+- **Direction** — poles are *outside* the containment wall. Mics face
+  outward and catch drones on approach 15-30 seconds before they
+  reach airspace over the yard. That warning window is where CORTEX
+  correlation actually pays off — it can pre-fetch inmate location,
+  active-call, and Tecore MAS context so the operator alert lands
+  with a candidate list attached, not "unknown drone."
+- **Utility** — perimeter lighting is already run to the poles. PoE
+  drop is often just tapping the existing lighting conduit.
+
+Deployment call:
+
+```python
+from echo_lily_pads import net_pole_perimeter_array, LilyPadHub
+
+# Surveyed perimeter in facility ENU meters (WGS84 anchored elsewhere):
+polygon = [(0, 0), (152, 0), (152, 98), (0, 98)]
+nodes = net_pole_perimeter_array(
+    site_id="broad-river",
+    perimeter_polygon_m=polygon,
+    pole_spacing_m=9.0,           # 30 ft
+    pole_height_m=12.0,           # ~40 ft mic height
+    clock_source="ptp",           # perimeter switches support PTP
+    mic_type="mems_array",        # ReSpeaker 6-mic HAT
+    outward_facing=True,
+    windscreen=True,
+    vibration_isolated=True,
+)
+hub = LilyPadHub(nodes=nodes, on_track=..., min_nodes_for_fix=4)
+```
+
+Install-time checklist specific to this pattern:
+
+1. **Survey each pole.** Do NOT trust "9 m spacing" as ground truth —
+   surveyors put poles ~9 m apart. Actual placements can vary by
+   0.5-1 m. Get the real (x, y) for each pole with a total station
+   or RTK GPS. That surveyed list overrides whatever the perimeter
+   generator produced.
+2. **Confirm the mount height.** The pole top is not where the mic
+   goes; the mic mounts 1-2 m below the top for practical access.
+   Record the real mic height per pole (typically 90% of pole
+   height).
+3. **PTP over a wired perimeter.** GPS PPS is fine as a fallback but
+   PTP on the same perimeter switch is easier to manage. If the
+   perimeter switches don't support PTP, most Cisco / Aruba enterprise
+   switches now do — check firmware first.
+4. **Windscreens on every pole, no exceptions.** Dead-cat furry
+   covers, not foam. A tall pole in even 10 mph wind produces enough
+   low-frequency rumble to trip the detector constantly if bare.
+5. **Vibration isolation.** Mount the mic on a rubber grommet or
+   simple spring assembly so pole sway doesn't couple as a 1-5 Hz
+   rumble the harmonic tracker misinterprets as a fundamental.
+6. **Lightning protection.** A metal pole 40 ft in the air is a
+   lightning rod. Every enclosure needs a gas discharge tube on the
+   PoE line, and the pole must be bonded to facility ground. Skipping
+   this ends with fried Pis after the first summer storm.
+7. **Net acoustic reflection test.** After install, walk the interior
+   with a known noise source (a small drone at low altitude works).
+   The netting will produce a mild acoustic shadow inside the fence
+   and slight harmonic doubling at some angles. If FP rate spikes,
+   raise `detector.min_harmonics` to 3 site-wide.
+
+Signage: perimeter mics WILL pick up voices on adjacent public
+sidewalks or visitor parking. SC is one-party-consent for audio, but
+DOC policy generally requires posted signage at any perimeter with
+audio surveillance. Get that signage up before the array goes live.
+
 ### Nearby vegetation
 
 Deciduous trees within 20 m of the mic add rustle noise on windy days

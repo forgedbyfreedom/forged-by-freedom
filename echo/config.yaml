@@ -115,6 +115,25 @@ lily_pads:
     #   mic_type: "usb_electret"
     #   label: "NW yard-A corner"
 
+  # ── Net-pole perimeter array preset ───────────────────────
+  # If populated, echo_multi.py generates a Lily Pad node list from
+  # a facility perimeter polygon using tall net-throw poles as mounts.
+  # See CALIBRATION.md § "Net-pole perimeter arrays" for install specs.
+  net_pole_array:
+    enabled:            false
+    site_id:            "facility-01"
+    pole_spacing_m:     9.0        # ~30 ft typical
+    pole_height_m:      12.0       # ~40 ft typical mic mount
+    outward_facing:     true       # face mics away from enclosure
+    windscreen:         true       # non-negotiable on tall poles
+    vibration_isolated: true       # rubber-grommet mount to decouple sway
+    perimeter_polygon_m: []        # surveyed (x, y) vertices in ENU meters
+      # Example:
+      # - [0, 0]
+      # - [152, 0]
+      # - [152, 98]
+      # - [0, 98]
+
 # ── Health registry (echo_health.py) ────────────────────────
 health:
   # A subsystem that hasn't reported OK for this many seconds is

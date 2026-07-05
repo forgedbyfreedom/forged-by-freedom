@@ -539,6 +539,19 @@ to produce facility-scale (x, y, z) drone tracks.
 - Emits high-confidence `drone_audio` events tagged `source_kind:
   lily_pad_tdoa` so the dashboard plots them distinctly
 
+**Preferred SC-DOC install — net-pole perimeter arrays.** Every major
+SC-DOC institution already has driving-range-style netting on tall
+poles around the perimeter to intercept throw-overs. Those poles
+are ideal Lily Pad mounts: already tall (30-60 ft, well above ground
+wind noise), already spaced regularly (20-40 ft), often already
+electrified, and physically outside the containment wall so mics face
+outward and catch drones on approach. Use
+`echo_lily_pads.net_pole_perimeter_array()` to generate the node list
+from a surveyed perimeter polygon. Per-pole BOM is ~$350 (Pi 5 +
+6-mic array + GPS PPS + PoE + weatherproof + windscreen + surge). See
+[`CALIBRATION.md`](./CALIBRATION.md) § "Net-pole perimeter arrays"
+for install specifics.
+
 See [`INTEGRATION_CHECKLIST.md`](./INTEGRATION_CHECKLIST.md) § 5h for
 the deployment fields (node hardware tier, install locations,
 transport, retention, federation policy).

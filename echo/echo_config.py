@@ -95,6 +95,16 @@ DEFAULTS: dict = {
         "geo_anchor_lng": None,
         "geo_anchor_bearing_deg": 0.0,
         "nodes": [],
+        "net_pole_array": {
+            "enabled": False,
+            "site_id": "facility-01",
+            "pole_spacing_m": 9.0,
+            "pole_height_m": 12.0,
+            "outward_facing": True,
+            "windscreen": True,
+            "vibration_isolated": True,
+            "perimeter_polygon_m": [],
+        },
     },
     "api": {
         "enabled": False,

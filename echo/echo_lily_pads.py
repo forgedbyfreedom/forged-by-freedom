@@ -172,6 +172,12 @@ class LilyPadNode:
     clock_source: str = "ntp"        # "gps_pps" | "ptp" | "ntp" | "beacon"
     mic_type: str = "usb_electret"   # "usb_electret" | "mems_array" | "rode"
     label: Optional[str] = None      # human-friendly ("SW yard corner")
+    # ── Deployment context (used by net-pole perimeter arrays) ──
+    mount: str = "post"              # "post" | "net_pole" | "rooftop" | "tripod" | "wall"
+    facing_deg: Optional[float] = None    # compass bearing the mic points (0=N, 90=E);
+                                          # None = omnidirectional / vertical
+    windscreen: bool = True          # foam / dead-cat installed?
+    vibration_isolated: bool = False  # rubber grommet / spring mount to decouple from pole sway
 
 
 @dataclass
@@ -517,6 +523,158 @@ def make_detection_from_echo(node_id: str, echo_result: dict,
         audio_snr_db=echo_result.get("audio_snr_db"),
         raw=echo_result,
     )
+
+
+# ── Net-pole perimeter array preset ───────────────────────────
+#
+# Deployment pattern: many correctional facilities have golf-driving-
+# range-style netting on tall poles all the way around the perimeter,
+# built to intercept throw-overs. Those poles are ideal Lily Pad mounts:
+#
+#   • Already tall (30-60 ft / 10-18 m) — well above ground wind noise
+#     and with excellent line-of-sight to sky.
+#   • Already spaced regularly (typically 20-40 ft / 6-12 m apart) —
+#     tighter than any purpose-built array budget would allow.
+#   • Already utility-served in many cases (perimeter lighting circuit).
+#   • Located OUTSIDE the containment wall — mics face outward, catching
+#     drones on approach BEFORE they reach airspace over the yard.
+#   • Metal poles give a natural ground for lightning protection.
+#
+# The dense spacing produces TDOA baselines of 10-40 m, which is ideal
+# geometry — sub-meter position error is realistic against a Mavic-class
+# drone within 300 m.
+#
+# Gotchas to plan around:
+#   • Wind noise on tall poles is REAL. Windscreens are non-negotiable;
+#     dead-cat furry covers on exposed sides ($30-60 each).
+#   • The netting itself reflects sound. Expect a mild acoustic "shadow"
+#     inside the enclosure and slight harmonic doubling at some angles.
+#     Field-test after install — the ML confirmation layer already
+#     handles most of this, but bump `min_harmonics` to 3 if you see FPs.
+#   • Poles sway in wind. Isolate the mic with a rubber grommet or
+#     spring mount so sway doesn't couple as low-frequency rumble.
+#   • Cable runs will exceed the 100 m PoE spec on long perimeters.
+#     Plan for midspan repeaters or per-pole PoE injectors.
+#   • Lightning protection: metal poles at height are lightning magnets.
+#     Every enclosure needs a gas discharge tube on the PoE line and
+#     the pole must be bonded to facility ground.
+
+
+def net_pole_perimeter_array(
+    *,
+    site_id: str,
+    origin_lat: Optional[float] = None,
+    origin_lng: Optional[float] = None,
+    origin_bearing_deg: float = 0.0,
+    perimeter_polygon_m: list[tuple[float, float]],
+    pole_spacing_m: float = 9.0,
+    pole_height_m: float = 12.0,
+    mic_type: str = "usb_electret",
+    clock_source: str = "ptp",
+    outward_facing: bool = True,
+    windscreen: bool = True,
+    vibration_isolated: bool = True,
+    node_id_prefix: str = "np",
+) -> list[LilyPadNode]:
+    """
+    Generate a LilyPadNode list from a facility perimeter polygon.
+
+    Walks the perimeter and places one node per `pole_spacing_m` step,
+    with each node's `facing_deg` pointing outward (perpendicular to
+    the perimeter edge, away from the enclosure interior). Height is
+    the same for every pole.
+
+    Args:
+        site_id: facility id for federation / logging.
+        origin_lat/lng/bearing_deg: WGS84 anchor for later ENU→lat/lng.
+        perimeter_polygon_m: list of (x, y) vertices in facility-local
+            ENU meters, in either clockwise or counter-clockwise order.
+            The first and last vertices need NOT be equal — the polygon
+            is treated as closed automatically.
+        pole_spacing_m: typical spacing between physical net poles
+            (survey once, this is your default). 9 m = ~30 ft.
+        pole_height_m: mic height above ground. 12 m = ~40 ft.
+        mic_type: passed through to LilyPadNode.
+        clock_source: PTP over wired PoE is the sweet spot for net-pole
+            arrays; GPS PPS if any nodes are wireless.
+        outward_facing: if True, facing_deg is set to the outward normal
+            of the local perimeter edge. Set False for omnidirectional
+            mics.
+        windscreen / vibration_isolated: recorded into the node config
+            so the health dashboard can flag installs that skipped them.
+
+    Returns:
+        List of LilyPadNode ready to hand to LilyPadHub.
+
+    Example — a rectangular perimeter of ~150 x 100 m:
+
+        polygon = [(0, 0), (150, 0), (150, 100), (0, 100)]
+        nodes = net_pole_perimeter_array(
+            site_id="broad-river",
+            perimeter_polygon_m=polygon,
+            pole_spacing_m=9.0,
+            pole_height_m=12.0,
+        )
+        hub = LilyPadHub(nodes=nodes, on_track=...)
+
+    That produces ~55 nodes at 9 m spacing — plenty of geometry for
+    sub-meter TDOA position accuracy across the whole yard.
+    """
+    if len(perimeter_polygon_m) < 3:
+        raise ValueError("perimeter_polygon_m must have ≥ 3 vertices")
+    # Close the polygon
+    poly = list(perimeter_polygon_m)
+    if poly[0] != poly[-1]:
+        poly.append(poly[0])
+
+    nodes: list[LilyPadNode] = []
+    node_idx = 0
+
+    # Signed area to determine winding — outward normal depends on it
+    signed_area = 0.0
+    for (x0, y0), (x1, y1) in zip(poly[:-1], poly[1:]):
+        signed_area += (x1 - x0) * (y1 + y0)
+    ccw = signed_area < 0    # counter-clockwise = interior on left of walk
+
+    for (x0, y0), (x1, y1) in zip(poly[:-1], poly[1:]):
+        edge_dx = x1 - x0
+        edge_dy = y1 - y0
+        edge_len = math.hypot(edge_dx, edge_dy)
+        if edge_len < 1e-6:
+            continue
+        # Place poles along this edge, starting at the vertex
+        n_poles = max(1, int(edge_len / pole_spacing_m))
+        for i in range(n_poles):
+            t = i / n_poles
+            x = x0 + t * edge_dx
+            y = y0 + t * edge_dy
+            facing = None
+            if outward_facing:
+                # Outward normal — rotate edge tangent 90° away from interior
+                nx = edge_dy / edge_len
+                ny = -edge_dx / edge_len
+                if not ccw:
+                    nx, ny = -nx, -ny
+                # Convert to compass bearing (0 = N, 90 = E)
+                facing = (math.degrees(math.atan2(nx, ny)) + 360.0) % 360.0
+            node_idx += 1
+            nodes.append(LilyPadNode(
+                node_id=f"{node_id_prefix}-{node_idx:03d}",
+                site_id=site_id,
+                x_m=x, y_m=y, z_m=pole_height_m,
+                clock_source=clock_source,
+                mic_type=mic_type,
+                mount="net_pole",
+                facing_deg=facing,
+                windscreen=windscreen,
+                vibration_isolated=vibration_isolated,
+                label=f"net pole {node_idx} @ edge ({x0:.0f},{y0:.0f})→({x1:.0f},{y1:.0f})",
+            ))
+
+    log.info("net-pole perimeter array: %d nodes generated for site=%s "
+             "(spacing=%.1fm, height=%.1fm)",
+             len(nodes), site_id, pole_spacing_m, pole_height_m)
+    return nodes
 
 
 if __name__ == "__main__":

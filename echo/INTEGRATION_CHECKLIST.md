@@ -319,6 +319,54 @@ distinctly from single-camera detections.
 - Federation crosses agency policy lines — route through a central
   DOC-controlled service, not peer-to-peer between sites.
 
+**Preferred SC-DOC install pattern — net-pole perimeter arrays.**
+Every major SC-DOC institution already has golf-driving-range-style
+netting on tall poles around the perimeter (installed to intercept
+throw-overs). Those poles are the ideal Lily Pad mounting substrate:
+already tall (30-60 ft), already spaced regularly (~20-40 ft), often
+already electrified for perimeter lighting, and physically outside the
+containment wall so mics face outward and catch drones on approach
+BEFORE they reach airspace over the yard.
+
+Use `echo_lily_pads.net_pole_perimeter_array()` to generate the node
+list from a perimeter polygon — 54 nodes at 9 m spacing on a
+150 × 100 m rectangle produces sub-meter TDOA position accuracy
+against a Mavic-class drone within 300 m in bench simulation.
+
+Per-pole install BOM (recommended tier):
+
+| Item | ~Cost | Notes |
+|---|---|---|
+| Raspberry Pi 5 (4 GB) | $60 | Runs echo_engine.py |
+| ReSpeaker 6-mic array HAT | $80 | Better sensitivity + array beamforming |
+| GPS PPS module (NEO-M8T + antenna) | $35 | ±100 ns clock sync — critical for TDOA |
+| PoE HAT + injector | $30 | Uses existing perimeter lighting circuit where possible |
+| IP66 outdoor enclosure | $40 | UV-rated, gasket seal |
+| Dead-cat furry windscreen | $50 | Non-negotiable on a tall pole |
+| Rubber-grommet mic isolation | $10 | Decouples pole sway from mic |
+| Gas discharge tube (surge) | $15 | Lightning protection on PoE line |
+| Cable + mounting bracket | $30 | Depends on pole hardware |
+| **Per-pole total** | **~$350** | |
+
+For a 54-pole facility that's ~$19k in sensor hardware, plus:
+- Central hub server (existing deploy PC — no new spend)
+- PoE switch capacity (typically already in place; add midspan
+  injectors if run lengths exceed 100 m)
+- One PTP-capable network segment for the array (or GPS PPS at every
+  node if the network doesn't support PTP)
+
+Additional committee fill-in when using this preset:
+
+| Item | Committee answer |
+|---|---|
+| Perimeter polygon vertices — surveyed (x, y) in facility ENU meters | ⚪ |
+| Actual pole spacing (measure a representative section — often varies) | ⚪ |
+| Actual pole height at mic mount point (typically 90% of pole height) | ⚪ |
+| Lightning-protection bonding plan reviewed by facility electrician? | ⚪ |
+| Cable-run distance from farthest pole to switch closet? | ⚪ |
+| PTP-capable perimeter switch OR budget for GPS PPS per node? | ⚪ |
+| Signage plan for perimeter audio surveillance (public-sidewalk facing)? | ⚪ |
+
 ---
 
 ## Section 10 — Test / dev environment
