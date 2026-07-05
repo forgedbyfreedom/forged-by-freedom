@@ -43,3 +43,20 @@ Thumbs.db
 # Backup files
 ingest/_loose_files_backup/
 *.bak
+
+# Arcads skill pack
+!.env.example
+MASTER_CONTEXT.md
+.claude/skills/
+.claude/worktrees/
+.claude/settings.local.json
+.cursor/skills/
+outputs/
+output/
+references/youtube thumbnail/
+
+# Disposable one-off thumbnail iteration scripts (not the canonical skill script)
+scripts/generate-thumbnails.sh
+scripts/generate-thumbnails-*.sh
+scripts/generate-ab-variants*.sh
+scripts/regen-*.sh
