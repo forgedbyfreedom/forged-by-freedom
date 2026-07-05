@@ -298,6 +298,13 @@ class EchoMulti:
         # self.tecore = TecoreConnector(mode="syslog", credentials=...,
         #                                on_capture=lambda c: self.correlation.ingest(...))
         # self.tecore.start()
+        # Optional REST API — starts only if config.yaml has api.enabled=true
+        try:
+            from echo_api import maybe_start_api
+            maybe_start_api(engine=self.correlation, orchestrator=self)
+        except Exception as exc:                          # never block startup on API failure
+            print(f"[echo-multi] API bootstrap skipped: {exc}")
+
         signal.signal(signal.SIGINT, self._on_sigint)
         signal.signal(signal.SIGTERM, self._on_sigint)
         print(f"[echo-multi] {len(self.cameras)} cameras running. Ctrl+C to stop.")

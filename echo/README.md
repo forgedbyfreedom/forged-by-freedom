@@ -119,6 +119,10 @@ echo/
 │                                          (Ukraine Sky Fortress-style: many $140 Raspberry-Pi
 │                                          nodes → position tracking across a whole facility;
 │                                          reuses echo_engine.py on each node)
+├── echo_config.py                    OK  central config loader (defaults + config.yaml + env vars)
+├── echo_api.py                       OK  optional FastAPI service (/status /detections /scan /health)
+├── config.yaml                       OK  every tunable in one file — see CALIBRATION.md
+├── CALIBRATION.md                        step-by-step field-tuning procedure + safe ranges
 │
 ├── ARCHITECTURE.md                   full system design + procurement + legal
 ├── INTEGRATION_CHECKLIST.md          the deliverable for the committee

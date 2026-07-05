@@ -1,0 +1,133 @@
+# ────────────────────────────────────────────────────────────────
+# ECHO central configuration
+#
+# Every tunable in ECHO lives here. Modules import echo_config.CFG and
+# read from it — nothing except code that MUST hard-code (e.g. the
+# LoRaWAN channel-plan math per region) should keep magic numbers.
+#
+# Load order (later overrides earlier):
+#   1. Defaults baked into echo_config.py
+#   2. This file (config.yaml)
+#   3. Environment variables named ECHO_* (see CALIBRATION.md)
+#   4. Any per-run --config overrides passed on the CLI
+#
+# See CALIBRATION.md for what each value does, safe ranges, and the
+# step-by-step field-tuning procedure. Do NOT tune blindly — one
+# knob affects several others.
+# ────────────────────────────────────────────────────────────────
+
+# ── Acoustic detector (echo_engine.py) ─────────────────────────
+detector:
+  sample_rate_hz:       44100      # do not change unless the mic requires it
+  block_samples:        16384      # ~0.37s @ 44.1kHz — controls latency vs. FFT resolution
+  harmonics:            [1, 2, 3, 4, 5, 6]
+  harmonic_snr_db:      8.0        # ↑ = stricter, fewer false positives, misses distant drones
+  mains_hz:             60         # 60 in US, 50 in EU; notches out the power hum
+  mains_width_hz:       5          # how wide around mains_hz to notch
+  min_level_db:         -45.0      # gate below this level (dead-air rejection)
+  max_drift_hz:         6.0        # per-block harmonic drift budget
+  min_continuity:       0.85       # fraction of blocks in the persist window that must hit
+  min_harmonics:        2          # ≥ this many harmonics must line up
+  persist_sec:          2.0        # continuous hits required before declaring detection
+  ml_confidence_floor:  0.55       # numpy-MLP score below this rejects the candidate
+
+# ── Multi-camera orchestration (echo_multi.py) ────────────────
+multi:
+  cameras_yaml_path:    "echo/echo_cameras.yaml"
+  reload_seconds:       0          # >0 = periodic YAML re-read for live config swaps
+  face_source:          "placeholder"      # "placeholder" | "rest" | "grpc" | "library"
+
+# ── Correlation engine (echo_correlation.py) ─────────────────
+# NOTE: DEFAULT_WEIGHTS in echo_correlation.py is the canonical source
+# of truth for signal weights. The values below OVERRIDE that dict on
+# load. Comment a key out to accept the code default. See
+# CALIBRATION.md § "Retuning correlation weights".
+correlation:
+  window_hours: 4
+  top_n_report: 10
+  weights:
+    # Inmate signals
+    inmate_outdoors_at_drone_time:       0.14
+    inmate_on_phone_at_drone_time:       0.12
+    inmate_phone_in_hand_visual:         0.14
+    inmate_mas_capture_correlation:      0.14
+    inmate_recent_visitor_contact:       0.06
+    inmate_recent_deposit_anomaly:       0.06
+    inmate_history:                      0.04
+    inmate_zone_violation:               0.06
+    inmate_pan_called_by_seized_phone:   0.16
+    inmate_cellebrite_msg_thread:        0.10
+    # External-contact signals
+    contact_called_inmate_pre_drop:      0.22
+    contact_visited_recently:            0.10
+    contact_deposited_recently:          0.10
+    contact_known_associate:             0.14
+    contact_msisdn_matches_mas:          0.20
+    contact_plate_at_perimeter:          0.16
+    contact_plate_hotlist:               0.10
+    contact_dmv_owner_in_viapath:        0.18
+    contact_cellebrite_location_near:    0.20
+    contact_cellebrite_drone_app:        0.18
+    # Drone-centric
+    drone_dedrone_confirmed:             0.30
+    drone_serial_known:                  0.40
+    drone_serial_matches_recovery:       0.50
+    drone_lora_link_detected:            0.22
+    drone_lora_bearing_toward_facility:  0.28
+
+# ── LoRa/LoRaWAN SDR (echo_lora.py) ──────────────────────────
+lora:
+  enabled:              false      # flip true once hardware is installed
+  region:               "US915"    # US915 | EU868 | AS923 | IN865
+  device:               "rtlsdr"   # rtlsdr | hackrf | usrp | kraken
+  device_index:         0
+  sample_rate_sps:      2400000
+  gain_db:              40.0
+  min_rssi_dbm:         -105.0     # ↓ = catch weaker signals + more noise
+  sweep_dwell_sec:      2.0        # per-channel dwell during sweep
+  facility_whitelist_hz: []        # populate after RF audit (AMR meters, radios)
+  correlation_window_sec: 90       # ± window vs drone event for drone_lora_link_detected
+
+# ── Acoustic Lily Pads (echo_lily_pads.py) ──────────────────
+lily_pads:
+  enabled:              false      # flip true once nodes are deployed
+  tdoa_group_window_ms: 800        # detection grouping window per fused track
+  min_nodes_for_fix:    3          # 3 for 2D, 4+ for altitude
+  speed_of_sound_mps:   343.0      # ~20 °C dry air; nudge for climate/altitude
+  clock_sync_error_penalty_ms: 5   # nodes reporting worse sync get downweighted
+  geo_anchor_lat:       null       # facility origin (WGS84) for ENU→lat/lng plotting
+  geo_anchor_lng:       null
+  geo_anchor_bearing_deg: 0.0
+  nodes:                []         # populate from surveyed install locations
+    # Example format:
+    # - node_id: "lp-yard-a-nw"
+    #   site_id: "facility-01"
+    #   x_m: 0
+    #   y_m: 0
+    #   z_m: 5
+    #   clock_source: "gps_pps"
+    #   mic_type: "usb_electret"
+    #   label: "NW yard-A corner"
+
+# ── Optional FastAPI service (echo_api.py) ──────────────────
+api:
+  enabled:              false      # headless deploys: leave false
+  host:                 "127.0.0.1"
+  port:                 5058
+  bearer_token:         null       # required if reachable outside localhost
+  recent_events_cap:    500        # ring buffer of recent detections
+  allow_scan_trigger:   true       # POST /scan enabled
+
+# ── File paths & logging ─────────────────────────────────────
+paths:
+  log_dir:              "echo/logs"
+  ml_model_path:        "echo/echo_drone_clf.joblib"
+  iq_capture_dir:       "echo/logs/lora_iq"   # LoRa raw IQ retention (rolling)
+  iq_retention_hours:   24
+
+logging:
+  level:                "INFO"     # DEBUG | INFO | WARNING | ERROR
+  console:              true
+  file:                 "echo/logs/echo.log"
+  rotate_max_bytes:     10485760   # 10 MB
+  rotate_backup_count:  5
