@@ -2,7 +2,7 @@
 /**
  * Plugin Name: FBF BodyScan
  * Description: 360° video body-composition scanning. Accepts scan uploads from the FBF app (tier-priced: free on Recomp Protocols, $1 on Complete, $5 on Fitness/Nutrition), queues them for the GPU worker, stores results, and deletes raw video after processing.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Forged by Freedom
  * License: GPL-2.0+
  */
@@ -248,6 +248,110 @@ class FBF_BodyScan {
 			'path' => $path,
 			'note' => 'Written. PHP caches .user.ini for up to ' . (int) ini_get( 'user_ini.cache_ttl' ) . 's, so new limits appear shortly.',
 		);
+	}
+
+	/* ------------------------------------------- .htaccess limits fallback */
+
+	public static function htaccess_path() {
+		return rtrim( ABSPATH, '/\\' ) . DIRECTORY_SEPARATOR . '.htaccess';
+	}
+
+	/**
+	 * True when PHP is actually honouring per-directory ini files at all.
+	 * If user_ini.filename is empty the .user.ini we write is dead weight and
+	 * the only remaining lever is .htaccess (LiteSpeed / mod_php) or cPanel.
+	 */
+	public static function user_ini_enabled() {
+		return '' !== trim( (string) ini_get( 'user_ini.filename' ) );
+	}
+
+	private static function managed_htaccess_block() {
+		return "# BEGIN FBF BodyScan\n"
+			. 'php_value upload_max_filesize ' . self::REQ_UPLOAD_MAX . "\n"
+			. 'php_value post_max_size ' . self::REQ_POST_MAX . "\n"
+			. 'php_value memory_limit ' . self::REQ_MEMORY . "\n"
+			. 'php_value max_execution_time ' . self::REQ_EXEC_TIME . "\n"
+			. 'php_value max_input_time ' . self::REQ_INPUT_TIME . "\n"
+			. "# END FBF BodyScan\n";
+	}
+
+	private static function strip_htaccess_block( $s ) {
+		$out = preg_replace( '/#\s*BEGIN FBF BodyScan.*?#\s*END FBF BodyScan\s*/s', '', (string) $s );
+		return ( null === $out ) ? (string) $s : $out;
+	}
+
+	/** Loopback check: does the public site still answer without a 5xx? */
+	private static function site_responds() {
+		$r = wp_remote_get(
+			add_query_arg( 'fbf_probe', (string) time(), home_url( '/' ) ),
+			array( 'timeout' => 15, 'sslverify' => false, 'redirection' => 2 )
+		);
+		if ( is_wp_error( $r ) ) {
+			return false;
+		}
+		return ( (int) wp_remote_retrieve_response_code( $r ) < 500 );
+	}
+
+	/**
+	 * Some hosts ignore .user.ini entirely. On those, php_value directives in
+	 * the document-root .htaccess are the working lever — but on a plain
+	 * PHP-FPM/CGI Apache they throw a 500 for the whole site. So: back up,
+	 * write, immediately re-fetch the homepage, and revert on the spot if the
+	 * server rejected it. Worst case the site is unhappy for about a second.
+	 *
+	 * @return array{ok:bool,note:string}
+	 */
+	public static function write_htaccess() {
+		$path = self::htaccess_path();
+		$dir  = dirname( $path );
+		if ( file_exists( $path ) ? ! is_writable( $path ) : ! is_writable( $dir ) ) {
+			return array( 'ok' => false, 'note' => '.htaccess is not writable by PHP, so the limits could not be forced there.' );
+		}
+		if ( ! self::site_responds() ) {
+			return array( 'ok' => false, 'note' => 'Skipped the .htaccess fallback: the site did not answer its own loopback request beforehand, so the safety rollback could not be trusted.' );
+		}
+
+		$existing = file_exists( $path ) ? (string) file_get_contents( $path ) : '';
+		if ( '' !== $existing && ! file_exists( $path . '.fbf-bak' ) ) {
+			@file_put_contents( $path . '.fbf-bak', $existing );
+		}
+		$stripped = rtrim( self::strip_htaccess_block( $existing ) );
+		$new      = ( '' === $stripped ) ? self::managed_htaccess_block() : $stripped . "\n\n" . self::managed_htaccess_block();
+
+		if ( false === @file_put_contents( $path, $new ) ) {
+			return array( 'ok' => false, 'note' => 'Writing .htaccess failed.' );
+		}
+
+		if ( self::site_responds() ) {
+			update_option( 'fbf_bodyscan_htaccess_ok', time(), false );
+			return array( 'ok' => true, 'note' => 'Upload limits also written to .htaccess and the site still loads normally.' );
+		}
+
+		// Server rejected php_value — put everything back exactly as it was.
+		if ( '' === $existing ) {
+			@unlink( $path );
+		} else {
+			@file_put_contents( $path, $existing );
+		}
+		update_option( 'fbf_bodyscan_htaccess_ok', 0, false );
+		return array(
+			'ok'   => false,
+			'note' => 'This server rejects php_value in .htaccess, so the change was reverted automatically and the site is back to normal. Raise upload_max_filesize / post_max_size in cPanel > MultiPHP INI Editor; scans keep working over the chunked upload path in the meantime.',
+		);
+	}
+
+	/** Remove our .htaccess block (used when limits are fine without it). */
+	public static function clear_htaccess() {
+		$path = self::htaccess_path();
+		if ( ! file_exists( $path ) || ! is_writable( $path ) ) {
+			return false;
+		}
+		$existing = (string) file_get_contents( $path );
+		$stripped = self::strip_htaccess_block( $existing );
+		if ( $stripped === $existing ) {
+			return false;
+		}
+		return false !== @file_put_contents( $path, rtrim( $stripped ) . "\n" );
 	}
 
 	/* ------------------------------------------------------------ app auth */
@@ -1097,6 +1201,26 @@ class FBF_BodyScan {
 			)
 		);
 		printf(
+			'<tr><td><strong>Per-directory PHP ini</strong></td><td>%s &nbsp; %s</td></tr>',
+			esc_html( self::user_ini_enabled() ? (string) ini_get( 'user_ini.filename' ) . ' (cached ' . (int) ini_get( 'user_ini.cache_ttl' ) . 's)' : 'disabled' ),
+			self::ok_bad(
+				self::user_ini_enabled(),
+				'Honoured by PHP',
+				'IGNORED by this server — .user.ini cannot change the limits here'
+			)
+		);
+		printf(
+			'<tr><td><strong>.htaccess limits</strong></td><td><code>%s</code> &nbsp; %s</td></tr>',
+			esc_html( self::htaccess_path() ),
+			(int) get_option( 'fbf_bodyscan_htaccess_ok', 0 )
+				? '<span style="color:#00782a;font-weight:600">Applied and verified</span>'
+				: '<span style="color:#646970">Not applied</span>'
+		);
+		printf(
+			'<tr><td><strong>PHP SAPI</strong></td><td>%s</td></tr>',
+			esc_html( php_sapi_name() )
+		);
+		printf(
 			'<tr><td><strong>GPU worker (3090)</strong></td><td>%s</td></tr>',
 			$seen
 				? self::ok_bad(
@@ -1111,7 +1235,7 @@ class FBF_BodyScan {
 		echo '<p><form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" style="display:inline">';
 		wp_nonce_field( 'fbf_bodyscan_fixini' );
 		echo '<input type="hidden" name="action" value="fbf_bodyscan_fixini" />';
-		submit_button( 'Re-apply PHP upload limits', 'secondary', 'submit', false );
+		submit_button( 'Force PHP upload limits (auto-reverts if refused)', 'secondary', 'submit', false );
 		echo '</form> <button type="button" class="button button-primary" id="fbf-selftest">Run upload self-test (12 MB)</button></p>';
 		echo '<pre id="fbf-selftest-out" style="background:#fff;border:1px solid #ccd0d4;padding:12px;max-width:900px;white-space:pre-wrap;display:none"></pre>';
 
@@ -1228,8 +1352,20 @@ class FBF_BodyScan {
 	public static function fix_ini_action() {
 		if ( ! current_user_can( 'manage_options' ) ) { wp_die( 'Admins only.' ); }
 		check_admin_referer( 'fbf_bodyscan_fixini' );
-		$res = self::write_user_ini();
-		set_transient( 'fbf_bodyscan_ini_note', ( $res['ok'] ? 'OK: ' : 'Could not write ' . $res['path'] . ' — ' ) . $res['note'], 60 );
+		$res  = self::write_user_ini();
+		$note = ( $res['ok'] ? 'OK: ' : 'Could not write ' . $res['path'] . ' — ' ) . $res['note'];
+
+		// If PHP is still enforcing limits that are too small for a scan video,
+		// escalate to .htaccess (self-reverting if the server rejects it).
+		if ( ! self::php_limits_ok() ) {
+			if ( ! self::user_ini_enabled() ) {
+				$note .= ' This server has user_ini.filename disabled, so .user.ini is ignored entirely — escalating to .htaccess.';
+			}
+			$h     = self::write_htaccess();
+			$note .= ' ' . $h['note'];
+		}
+
+		set_transient( 'fbf_bodyscan_ini_note', $note, 60 );
 		delete_transient( 'fbf_bodyscan_ini_checked' );
 		wp_safe_redirect( admin_url( 'admin.php?page=fbf-bodyscan&ini=1' ) );
 		exit;
