@@ -60,3 +60,8 @@ scripts/generate-thumbnails.sh
 scripts/generate-thumbnails-*.sh
 scripts/generate-ab-variants*.sh
 scripts/regen-*.sh
+
+# incremental ingest state (cached by CI, never committed)
+ingest/.ingest_state.json
+ingest/.fix_state.json
+ingest/.fix_state.tmp

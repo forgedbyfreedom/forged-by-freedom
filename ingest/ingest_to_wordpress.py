@@ -46,7 +46,18 @@ EMBED_MODEL    = "text-embedding-3-large"
 CHUNK_TOKENS   = 3000
 EMBED_BATCH    = 16
 NAMESPACE      = os.environ.get("RAG_NAMESPACE", "transcripts")
-MAX_NEW        = int(os.environ.get("MAX_CHUNKS_PER_RUN", "100000"))
+# An UNSET GitHub Actions repo variable still injects the env var as an empty
+# string, and int("") raises. Treat blank/garbage as "no cap" rather than
+# crashing the nightly run before a single chunk is embedded.
+def _int_env(name, default):
+    raw = (os.environ.get(name) or "").strip()
+    try:
+        return int(raw) if raw else default
+    except ValueError:
+        print(f"WARNING: {name}={raw!r} is not an integer; using {default}")
+        return default
+
+MAX_NEW        = _int_env("MAX_CHUNKS_PER_RUN", 100000)
 
 BASE = Path(__file__).parent
 CHANNELS = BASE / "channels"

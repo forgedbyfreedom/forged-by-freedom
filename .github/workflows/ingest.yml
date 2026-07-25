@@ -2,15 +2,15 @@ name: Nightly VPS RAG Ingest
 
 # Repointed 2026-07-25 from Pinecone to the WordPress VPS knowledge store.
 # Embeds transcripts (OpenAI text-embedding-3-large) and upserts them to
-# /fbf/v1/rag/upsert on forgedbyfreedom.net. INCREMENTAL: a cached state file
-# means only new/changed chunks are embedded, so nightly runs cost pennies.
+# /fbf/v1/rag/upsert on forgedbyfreedom.net. INCREMENTAL: cached state files
+# mean only new/changed chunks are embedded, so nightly runs cost pennies.
 # The old Pinecone workflow is preserved as ingest.yml.pinecone-bak.
 #
 # Required repo secrets (Settings > Secrets and variables > Actions):
 #   OPENAI_API_KEY   - your standard OpenAI key (embeddings)
 #   WP_INGEST_URL    - https://forgedbyfreedom.net/wp-json/fbf/v1/rag/upsert
 #   WP_INGEST_KEY    - the "Ingest secret" from wp-admin > Dashboard > AI Knowledge (RAG)
-# Optional:
+# Optional repo variable:
 #   MAX_CHUNKS_PER_RUN - cap new chunks per run (bounds first-run cost)
 
 on:
@@ -18,10 +18,21 @@ on:
   schedule:
     - cron: "0 1 * * *"   # Nightly at 01:00 UTC
 
+# Two runs writing .ingest_state.json / .fix_state.json at once would corrupt
+# the incremental state. Queue instead of cancelling: a cancelled run still
+# saves its partial state below, and throwing that away is the worse outcome.
+concurrency:
+  group: fbf-rag-ingest
+  cancel-in-progress: false
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 30     # hard backstop: never let a run hang for hours
+    # Safety net only. The previous 30-minute cap was far too tight: it killed
+    # the job at 28m33s while it was still fixing transcripts, so the embed step
+    # never ran and the corpus never drained. The work is incremental and saves
+    # state as it goes, so a generous cap is safe.
+    timeout-minutes: 330
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,10 +47,18 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir openai tiktoken PyYAML python-dotenv
 
-      - name: Restore incremental ingest state
-        uses: actions/cache@v4
+      # Restore and save are split so that state written during a run that later
+      # fails, times out, or is cancelled is STILL cached (if: always()). With
+      # the combined actions/cache@v4 the post-step never runs on failure, so
+      # every failed run threw away all of its embedding progress and the next
+      # night started from the same place. That is why the backlog never drained.
+      - name: Restore incremental state
+        id: state
+        uses: actions/cache/restore@v4
         with:
-          path: ingest/.ingest_state.json
+          path: |
+            ingest/.ingest_state.json
+            ingest/.fix_state.json
           key: fbf-ingest-state-${{ github.run_id }}
           restore-keys: |
             fbf-ingest-state-
@@ -56,11 +75,13 @@ jobs:
           echo "All required secrets present"
 
       - name: Fix transcript terminology
+        timeout-minutes: 25
         run: |
           cd ingest
           python fix_transcripts.py || echo "fix_transcripts skipped/failed (non-fatal)"
 
       - name: Ingest to VPS (WordPress RAG)
+        timeout-minutes: 270
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           WP_INGEST_URL: ${{ secrets.WP_INGEST_URL }}
@@ -68,3 +89,24 @@ jobs:
           MAX_CHUNKS_PER_RUN: ${{ vars.MAX_CHUNKS_PER_RUN }}
         run: |
           python ingest/ingest_to_wordpress.py
+
+      - name: Save incremental state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ingest/.ingest_state.json
+            ingest/.fix_state.json
+          key: fbf-ingest-state-${{ github.run_id }}
+
+      - name: State summary
+        if: always()
+        run: |
+          for f in ingest/.ingest_state.json ingest/.fix_state.json; do
+            if [ -f "$f" ]; then
+              n=$(python -c "import json;d=json.load(open('$f'));print(len(d.get('files',d)) if isinstance(d,dict) else len(d))")
+              echo "$f: $(wc -c < "$f") bytes, $n entries"
+            else
+              echo "$f: MISSING"
+            fi
+          done
