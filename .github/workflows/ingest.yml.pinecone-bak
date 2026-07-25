@@ -1,0 +1,103 @@
+name: Nightly Pinecone Ingest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *"   # Nightly at 01:00 UTC
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repository
+      - name: 🧩 Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Set up ONE Python runtime
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3️⃣ Upgrade pip
+      - name: ⬆️ Upgrade pip
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip --version
+
+      # 4️⃣ DEBUG – show repo layout
+      - name: 🧪 DEBUG – Show ingest tree
+        run: |
+          echo "PWD:"
+          pwd
+          echo
+          echo "ingest directory:"
+          ls -la ingest || true
+          echo
+          echo "channels count:"
+          ls ingest/channels | wc -l || true
+          echo
+          echo "manifest file:"
+          ls ingest/channel_manifest.* || true
+
+      # 5️⃣ Install dependencies EXPLICITLY
+      - name: 📦 Install Python dependencies
+        run: |
+          python -m pip install --no-cache-dir \
+            openai \
+            pinecone \
+            tiktoken \
+            PyYAML \
+            python-dotenv
+
+      # 6️⃣ HARD VERIFY PyYAML (this was failing before)
+      - name: 🔍 Verify PyYAML import
+        run: |
+          python - <<'EOF'
+          import yaml
+          print("✅ PyYAML import OK")
+          print("PyYAML version:", yaml.__version__)
+          EOF
+
+      # 7️⃣ Verify required secrets
+      - name: 🔐 Verify secrets
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+        run: |
+          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
+          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
+          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
+          echo "✅ All required secrets present"
+
+      # 8️⃣ Apply vocabulary corrections
+      - name: 🔧 Fix transcript terminology
+        run: |
+          cd ingest
+          python fix_transcripts.py
+
+      # 9️⃣ Rebuild master transcripts
+      - name: 📚 Rebuild master transcripts
+        run: |
+          cd ingest/channels
+          python build_master_transcripts.py
+
+      # 🔟 Run ingest
+      - name: 🚀 Run Pinecone ingest
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+        run: |
+          python ingest/ingest_to_pinecone.py
+
+      # 9️⃣ Optional stats
+      - name: 📊 Pinecone post-ingest stats
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+        run: |
+          python ingest/pinecone_stats.py

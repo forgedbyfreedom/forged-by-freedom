@@ -1,114 +1,69 @@
-name: Nightly Pinecone Ingest
+name: Nightly VPS RAG Ingest
 
-# ─────────────────────────────────────────────────────────────
-# ⏸  PAUSED until further notice (requested by repo owner).
-# To resume:
-#   1. Uncomment the schedule + workflow_dispatch triggers below
-#   2. Remove the `if: false` guard on the job
-#   3. Remove the matching guard at the top of
-#      ingest/ingest_to_pinecone.py
-# ─────────────────────────────────────────────────────────────
+# Repointed 2026-07-25 from Pinecone to the WordPress VPS knowledge store.
+# Embeds transcripts (OpenAI text-embedding-3-large) and upserts them to
+# /fbf/v1/rag/upsert on forgedbyfreedom.net. INCREMENTAL: a cached state file
+# means only new/changed chunks are embedded, so nightly runs cost pennies.
+# The old Pinecone workflow is preserved as ingest.yml.pinecone-bak.
+#
+# Required repo secrets (Settings > Secrets and variables > Actions):
+#   OPENAI_API_KEY   - your standard OpenAI key (embeddings)
+#   WP_INGEST_URL    - https://forgedbyfreedom.net/wp-json/fbf/v1/rag/upsert
+#   WP_INGEST_KEY    - the "Ingest secret" from wp-admin > Dashboard > AI Knowledge (RAG)
+# Optional:
+#   MAX_CHUNKS_PER_RUN - cap new chunks per run (bounds first-run cost)
 
 on:
-  # workflow_dispatch:
-  # schedule:
-  #   - cron: "0 1 * * *"   # Nightly at 01:00 UTC — PAUSED
-  workflow_dispatch:        # manual only (still gated by the if:false below)
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *"   # Nightly at 01:00 UTC
 
 jobs:
   ingest:
-    if: false               # PAUSED — job is unconditionally skipped
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repository
-      - name: 🧩 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Set up ONE Python runtime
-      - name: 🐍 Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3️⃣ Upgrade pip
-      - name: ⬆️ Upgrade pip
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip --version
+          python -m pip install --no-cache-dir openai tiktoken PyYAML python-dotenv
 
-      # 4️⃣ DEBUG – show repo layout
-      - name: 🧪 DEBUG – Show ingest tree
-        run: |
-          echo "PWD:"
-          pwd
-          echo
-          echo "ingest directory:"
-          ls -la ingest || true
-          echo
-          echo "channels count:"
-          ls ingest/channels | wc -l || true
-          echo
-          echo "manifest file:"
-          ls ingest/channel_manifest.* || true
+      - name: Restore incremental ingest state
+        uses: actions/cache@v4
+        with:
+          path: ingest/.ingest_state.json
+          key: fbf-ingest-state-${{ github.run_id }}
+          restore-keys: |
+            fbf-ingest-state-
 
-      # 5️⃣ Install dependencies EXPLICITLY
-      - name: 📦 Install Python dependencies
-        run: |
-          python -m pip install --no-cache-dir \
-            openai \
-            pinecone \
-            tiktoken \
-            PyYAML \
-            python-dotenv
-
-      # 6️⃣ HARD VERIFY PyYAML (this was failing before)
-      - name: 🔍 Verify PyYAML import
-        run: |
-          python - <<'EOF'
-          import yaml
-          print("✅ PyYAML import OK")
-          print("PyYAML version:", yaml.__version__)
-          EOF
-
-      # 7️⃣ Verify required secrets
-      - name: 🔐 Verify secrets
+      - name: Verify secrets
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+          WP_INGEST_URL: ${{ secrets.WP_INGEST_URL }}
+          WP_INGEST_KEY: ${{ secrets.WP_INGEST_KEY }}
         run: |
-          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
-          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
-          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
-          echo "✅ All required secrets present"
+          [ -z "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY missing" && exit 1
+          [ -z "$WP_INGEST_URL" ] && echo "WP_INGEST_URL missing" && exit 1
+          [ -z "$WP_INGEST_KEY" ] && echo "WP_INGEST_KEY missing" && exit 1
+          echo "All required secrets present"
 
-      # 8️⃣ Apply vocabulary corrections
-      - name: 🔧 Fix transcript terminology
+      - name: Fix transcript terminology
         run: |
           cd ingest
-          python fix_transcripts.py
+          python fix_transcripts.py || echo "fix_transcripts skipped/failed (non-fatal)"
 
-      # 9️⃣ Rebuild master transcripts
-      - name: 📚 Rebuild master transcripts
-        run: |
-          cd ingest/channels
-          python build_master_transcripts.py
-
-      # 🔟 Run ingest
-      - name: 🚀 Run Pinecone ingest
+      - name: Ingest to VPS (WordPress RAG)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+          WP_INGEST_URL: ${{ secrets.WP_INGEST_URL }}
+          WP_INGEST_KEY: ${{ secrets.WP_INGEST_KEY }}
+          MAX_CHUNKS_PER_RUN: ${{ vars.MAX_CHUNKS_PER_RUN }}
         run: |
-          python ingest/ingest_to_pinecone.py
-
-      # 9️⃣ Optional stats
-      - name: 📊 Pinecone post-ingest stats
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-        run: |
-          python ingest/pinecone_stats.py
+          python ingest/ingest_to_wordpress.py
