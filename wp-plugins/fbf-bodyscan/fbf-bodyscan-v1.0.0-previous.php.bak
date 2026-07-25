@@ -1,0 +1,515 @@
+<?php
+/**
+* Plugin Name: FBF BodyScan
+* Description: 360° video body-composition scanning. Accepts scan uploads from the FBF app (tier-priced: free on Recomp Protocols, $1 on Complete, $5 on Fitness/Nutrition), queues them for the GPU worker, stores results, and deletes raw video after processing.
+* Version: 1.0.0
+* Author: Forged by Freedom
+* License: GPL-2.0+
+*/
+
+defined( 'ABSPATH' ) || exit;
+
+class FBF_BodyScan {
+
+const NS = 'fbf/v1';
+const DB_VERSION = '1.0';
+const TOKEN_META = 'fbf_app_tokens'; // shared with FBF App Bridge
+const CREDITS = 'fbf_scan_credits';
+
+public static function init() {
+register_activation_hook( __FILE__, array( __CLASS__, 'activate' ) );
+add_action( 'plugins_loaded', array( __CLASS__, 'maybe_upgrade' ) );
+add_action( 'rest_api_init', array( __CLASS__, 'routes' ) );
+add_action( 'admin_menu', array( __CLASS__, 'menu' ) );
+add_action( 'admin_post_fbf_bodyscan_settings', array( __CLASS__, 'save_settings' ) );
+add_action( 'admin_post_fbf_bodyscan_credit', array( __CLASS__, 'grant_credit' ) );
+}
+
+private static function table() {
+global $wpdb;
+return $wpdb->prefix . 'fbf_bodyscans';
+}
+
+public static function activate() {
+self::create_table();
+update_option( 'fbf_bodyscan_db_version', self::DB_VERSION );
+if ( ! get_option( 'fbf_bodyscan_worker_key' ) ) {
+update_option( 'fbf_bodyscan_worker_key', wp_generate_password( 40, false, false ) );
+}
+self::storage_dir(); // create protected dir now
+}
+
+public static function maybe_upgrade() {
+if ( get_option( 'fbf_bodyscan_db_version' ) !== self::DB_VERSION ) {
+self::create_table();
+update_option( 'fbf_bodyscan_db_version', self::DB_VERSION );
+}
+}
+
+private static function create_table() {
+global $wpdb;
+require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+dbDelta( 'CREATE TABLE ' . self::table() . " (
+id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+user_id BIGINT UNSIGNED NOT NULL,
+status VARCHAR(20) NOT NULL DEFAULT 'queued',
+intake LONGTEXT NULL,
+result LONGTEXT NULL,
+report MEDIUMTEXT NULL,
+fail_reason TEXT NULL,
+video_path VARCHAR(255) NOT NULL DEFAULT '',
+created_at DATETIME NOT NULL,
+updated_at DATETIME NOT NULL,
+PRIMARY KEY (id),
+KEY user_idx (user_id),
+KEY status_idx (status)
+) " . $wpdb->get_charset_collate() . ';' );
+}
+
+private static function storage_dir() {
+$up = wp_upload_dir();
+$dir = trailingslashit( $up['basedir'] ) . 'fbf-bodyscan';
+if ( ! is_dir( $dir ) ) {
+wp_mkdir_p( $dir );
+}
+// Block direct web access to raw videos.
+if ( ! file_exists( $dir . '/.htaccess' ) ) {
+file_put_contents( $dir . '/.htaccess', "Deny from all\n" );
+}
+if ( ! file_exists( $dir . '/index.php' ) ) {
+file_put_contents( $dir . '/index.php', "<?php // silence\n" );
+}
+return $dir;
+}
+
+/* ------------------------------------------------------------ app auth */
+
+private static function bearer( $request ) {
+$h = $request->get_header( 'authorization' );
+return ( $h && 0 === stripos( $h, 'Bearer ' ) ) ? trim( substr( $h, 7 ) ) : '';
+}
+
+/** Same token scheme as FBF App Bridge (shared user meta). */
+private static function user_from_token( $token ) {
+if ( ! $token ) { return null; }
+$hash = wp_hash( $token );
+$users = get_users( array(
+'meta_key' => self::TOKEN_META, 'meta_compare' => 'EXISTS',
+'fields' => 'ID', 'number' => 500,
+) );
+foreach ( $users as $uid ) {
+$tokens = get_user_meta( $uid, self::TOKEN_META, true );
+if ( is_array( $tokens ) && isset( $tokens[ $hash ] ) && $tokens[ $hash ] > time() ) {
+return (int) $uid;
+}
+}
+return null;
+}
+
+public static function app_auth( $request ) {
+$uid = self::user_from_token( self::bearer( $request ) );
+if ( ! $uid ) {
+return new WP_Error( 'fbf_unauthorized', 'Invalid or expired token.', array( 'status' => 401 ) );
+}
+$request->set_param( '_fbf_user_id', $uid );
+return true;
+}
+
+public static function worker_auth( $request ) {
+$key = (string) $request->get_header( 'x-fbf-worker' );
+$ok = $key && hash_equals( (string) get_option( 'fbf_bodyscan_worker_key' ), $key );
+return $ok ? true : new WP_Error( 'fbf_forbidden', 'Bad worker key.', array( 'status' => 403 ) );
+}
+
+/* ------------------------------------------------------------- pricing */
+
+/** Returns array( 'free'|'paid'|'denied', price_usd, payment_url ). */
+public static function pricing_for( $uid ) {
+$user = get_user_by( 'id', $uid );
+if ( $user && ( user_can( $user, 'manage_options' ) || in_array( 'coach', (array) $user->roles, true ) ) ) {
+return array( 'free', 0, '' );
+}
+$level_id = 0;
+if ( function_exists( 'pmpro_getMembershipLevelForUser' ) ) {
+$lvl = pmpro_getMembershipLevelForUser( $uid );
+$level_id = $lvl ? (int) $lvl->id : 0;
+}
+if ( in_array( $level_id, array( 5, 6 ), true ) ) { // Recomp Protocols
+return array( 'free', 0, '' );
+}
+if ( 4 === $level_id ) { // Complete Coaching
+return array( 'paid', 1, (string) get_option( 'fbf_bodyscan_pay_url_1', '' ) );
+}
+if ( in_array( $level_id, array( 2, 3 ), true ) ) { // Fitness / Nutrition
+return array( 'paid', 5, (string) get_option( 'fbf_bodyscan_pay_url_5', '' ) );
+}
+return array( 'denied', 0, '' ); // no active membership
+}
+
+/* -------------------------------------------------------------- routes */
+
+public static function routes() {
+register_rest_route( self::NS, '/bodyscan/submit', array(
+'methods' => 'POST', 'callback' => array( __CLASS__, 'submit' ),
+'permission_callback' => array( __CLASS__, 'app_auth' ),
+) );
+register_rest_route( self::NS, '/bodyscan/mine', array(
+'methods' => 'GET', 'callback' => array( __CLASS__, 'mine' ),
+'permission_callback' => array( __CLASS__, 'app_auth' ),
+) );
+register_rest_route( self::NS, '/bodyscan/report/(?P<id>\d+)', array(
+'methods' => 'GET', 'callback' => array( __CLASS__, 'report' ),
+'permission_callback' => array( __CLASS__, 'app_auth' ),
+) );
+register_rest_route( self::NS, '/bodyscan/queue', array(
+'methods' => 'GET', 'callback' => array( __CLASS__, 'queue' ),
+'permission_callback' => array( __CLASS__, 'worker_auth' ),
+) );
+register_rest_route( self::NS, '/bodyscan/video/(?P<id>\d+)', array(
+'methods' => 'GET', 'callback' => array( __CLASS__, 'video' ),
+'permission_callback' => array( __CLASS__, 'worker_auth' ),
+) );
+register_rest_route( self::NS, '/bodyscan/result/(?P<id>\d+)', array(
+'methods' => 'POST', 'callback' => array( __CLASS__, 'result' ),
+'permission_callback' => array( __CLASS__, 'worker_auth' ),
+) );
+register_rest_route( self::NS, '/bodyscan/fail/(?P<id>\d+)', array(
+'methods' => 'POST', 'callback' => array( __CLASS__, 'fail' ),
+'permission_callback' => array( __CLASS__, 'worker_auth' ),
+) );
+}
+
+/* ---------------------------------------------------------- app routes */
+
+public static function submit( $request ) {
+global $wpdb;
+$uid = (int) $request->get_param( '_fbf_user_id' );
+
+list( $mode, $price, $pay_url ) = self::pricing_for( $uid );
+if ( 'denied' === $mode ) {
+return new WP_Error( 'fbf_no_membership',
+'BodyScan requires an active FBF coaching membership.',
+array( 'status' => 403 ) );
+}
+if ( 'paid' === $mode ) {
+$credits = (int) get_user_meta( $uid, self::CREDITS, true );
+if ( $credits < 1 ) {
+return new WP_Error( 'fbf_payment_required', sprintf(
+'This scan costs $%d on your plan. Pay at the link, then your coach will add a scan credit to your account.',
+$price
+), array( 'status' => 402, 'price_usd' => $price, 'payment_url' => $pay_url ) );
+}
+update_user_meta( $uid, self::CREDITS, $credits - 1 );
+}
+
+$files = $request->get_file_params();
+if ( empty( $files['video']['tmp_name'] ) ) {
+return new WP_Error( 'fbf_no_video', 'Attach the scan video as the "video" file field.', array( 'status' => 400 ) );
+}
+$size = (int) $files['video']['size'];
+if ( $size > 200 * MB_IN_BYTES ) {
+return new WP_Error( 'fbf_too_big', 'Video too large (200 MB max). Record at 1080p, one slow turn.', array( 'status' => 400 ) );
+}
+$check = wp_check_filetype( $files['video']['name'], array(
+'mp4' => 'video/mp4', 'mov' => 'video/quicktime', 'm4v' => 'video/x-m4v',
+) );
+if ( empty( $check['ext'] ) ) {
+return new WP_Error( 'fbf_bad_type', 'Video must be .mp4 or .mov.', array( 'status' => 400 ) );
+}
+
+$intake = array();
+foreach ( array( 'sex', 'age', 'height_in', 'height_cm', 'weight_lb', 'weight_kg',
+'neck_in', 'chest_in', 'waist_in', 'hips_in', 'thigh_in', 'arm_in',
+'neck_cm', 'chest_cm', 'waist_cm', 'hips_cm', 'thigh_cm', 'arm_cm' ) as $f ) {
+$v = $request->get_param( $f );
+if ( null !== $v && '' !== $v ) {
+$intake[ $f ] = sanitize_text_field( (string) $v );
+}
+}
+if ( empty( $intake['sex'] ) || ( empty( $intake['height_in'] ) && empty( $intake['height_cm'] ) ) ) {
+return new WP_Error( 'fbf_missing_fields', 'sex and height are required.', array( 'status' => 400 ) );
+}
+
+$wpdb->insert( self::table(), array(
+'user_id' => $uid,
+'status' => 'queued',
+'intake' => wp_json_encode( $intake ),
+'created_at' => current_time( 'mysql', true ),
+'updated_at' => current_time( 'mysql', true ),
+) );
+$id = (int) $wpdb->insert_id;
+
+$dest = self::storage_dir() . '/scan-' . $id . '.' . $check['ext'];
+if ( ! @move_uploaded_file( $files['video']['tmp_name'], $dest ) ) {
+$wpdb->delete( self::table(), array( 'id' => $id ) );
+return new WP_Error( 'fbf_store_fail', 'Could not store the upload — try again.', array( 'status' => 500 ) );
+}
+$wpdb->update( self::table(), array( 'video_path' => $dest ), array( 'id' => $id ) );
+
+return array(
+'id' => $id,
+'status' => 'queued',
+'message' => 'Scan received. Processing usually takes a few minutes — check back shortly.',
+);
+}
+
+public static function mine( $request ) {
+global $wpdb;
+$uid = (int) $request->get_param( '_fbf_user_id' );
+$rows = $wpdb->get_results( $wpdb->prepare(
+'SELECT id, status, result, fail_reason, created_at FROM ' . self::table() .
+' WHERE user_id = %d ORDER BY id DESC LIMIT 50', $uid ) );
+$out = array();
+foreach ( $rows as $r ) {
+$res = $r->result ? json_decode( $r->result, true ) : null;
+$out[] = array(
+'id' => (int) $r->id,
+'status' => $r->status,
+'created_at' => $r->created_at,
+'bf_percent' => $res['bf_percent'] ?? null,
+'bf_low' => $res['bf_low'] ?? null,
+'bf_high' => $res['bf_high'] ?? null,
+'category' => $res['category'] ?? null,
+'lean_mass_kg' => $res['lean_mass_kg'] ?? null,
+'measurements' => $res['measurements'] ?? null,
+'warnings' => $res['warnings'] ?? array(),
+'fail_reason' => $r->fail_reason,
+);
+}
+list( $mode, $price, $pay_url ) = self::pricing_for( $uid );
+return array(
+'scans' => $out,
+'pricing' => array(
+'mode' => $mode, 'price_usd' => $price, 'payment_url' => $pay_url,
+'credits' => (int) get_user_meta( $uid, self::CREDITS, true ),
+),
+);
+}
+
+public static function report( $request ) {
+global $wpdb;
+$uid = (int) $request->get_param( '_fbf_user_id' );
+$id = (int) $request['id'];
+$row = $wpdb->get_row( $wpdb->prepare(
+'SELECT user_id, report FROM ' . self::table() . ' WHERE id = %d', $id ) );
+$is_coach = user_can( $uid, 'manage_options' ) || user_can( $uid, 'fbf_coach' );
+if ( ! $row || ( (int) $row->user_id !== $uid && ! $is_coach ) ) {
+return new WP_Error( 'fbf_not_found', 'Scan not found.', array( 'status' => 404 ) );
+}
+if ( ! $row->report ) {
+return new WP_Error( 'fbf_not_ready', 'Report not ready yet.', array( 'status' => 409 ) );
+}
+$resp = new WP_REST_Response( $row->report );
+$resp->header( 'Content-Type', 'text/html; charset=utf-8' );
+return $resp;
+}
+
+/* ------------------------------------------------------- worker routes */
+
+public static function queue( $request ) {
+global $wpdb;
+// atomic claim: only one worker row flips queued -> processing
+$claimed = 0;
+for ( $try = 0; $try < 3 && ! $claimed; $try++ ) {
+$row = $wpdb->get_row( 'SELECT id FROM ' . self::table() .
+" WHERE status = 'queued' ORDER BY id ASC LIMIT 1" );
+if ( ! $row ) {
+return new WP_REST_Response( null, 204 );
+}
+$claimed = $wpdb->query( $wpdb->prepare(
+'UPDATE ' . self::table() .
+" SET status = 'processing', updated_at = %s WHERE id = %d AND status = 'queued'",
+current_time( 'mysql', true ), $row->id ) );
+}
+if ( ! $claimed ) {
+return new WP_REST_Response( null, 204 );
+}
+$scan = $wpdb->get_row( $wpdb->prepare(
+'SELECT * FROM ' . self::table() . ' WHERE id = %d', $row->id ) );
+$intake = $scan->intake ? json_decode( $scan->intake, true ) : array();
+$user = get_user_by( 'id', $scan->user_id );
+
+// previous completed scan for the trend line
+$prev_row = $wpdb->get_row( $wpdb->prepare(
+'SELECT result, created_at FROM ' . self::table() .
+" WHERE user_id = %d AND status = 'complete' AND id < %d ORDER BY id DESC LIMIT 1",
+$scan->user_id, $scan->id ) );
+$prev = null;
+if ( $prev_row && $prev_row->result ) {
+$pr = json_decode( $prev_row->result, true );
+$prev = array( 'bf_percent' => $pr['bf_percent'] ?? null,
+'date' => substr( (string) $prev_row->created_at, 0, 10 ) );
+}
+
+return array_merge( $intake, array(
+'id' => (int) $scan->id,
+'user_id' => (int) $scan->user_id,
+'name' => $user ? $user->display_name : 'Client',
+'prev' => $prev,
+) );
+}
+
+public static function video( $request ) {
+global $wpdb;
+$id = (int) $request['id'];
+$row = $wpdb->get_row( $wpdb->prepare(
+'SELECT video_path FROM ' . self::table() . ' WHERE id = %d', $id ) );
+if ( ! $row || ! $row->video_path || ! file_exists( $row->video_path ) ) {
+return new WP_Error( 'fbf_no_file', 'Video missing.', array( 'status' => 404 ) );
+}
+// stream directly and exit — REST response objects buffer in memory
+nocache_headers();
+header( 'Content-Type: video/mp4' );
+header( 'Content-Length: ' . filesize( $row->video_path ) );
+readfile( $row->video_path );
+exit;
+}
+
+private static function delete_video( $row ) {
+global $wpdb;
+if ( $row && $row->video_path && file_exists( $row->video_path ) ) {
+@unlink( $row->video_path );
+}
+$wpdb->update( self::table(), array( 'video_path' => '' ), array( 'id' => $row->id ) );
+}
+
+public static function result( $request ) {
+global $wpdb;
+$id = (int) $request['id'];
+$row = $wpdb->get_row( $wpdb->prepare(
+'SELECT * FROM ' . self::table() . ' WHERE id = %d', $id ) );
+if ( ! $row ) {
+return new WP_Error( 'fbf_not_found', 'Scan not found.', array( 'status' => 404 ) );
+}
+$data = $request->get_json_params();
+$report = (string) ( $data['report_html'] ?? '' );
+unset( $data['report_html'] );
+
+$wpdb->update( self::table(), array(
+'status' => 'complete',
+'result' => wp_json_encode( $data ),
+'report' => $report,
+'updated_at' => current_time( 'mysql', true ),
+), array( 'id' => $id ) );
+self::delete_video( $row ); // process-and-delete policy
+
+// let the client know
+$user = get_user_by( 'id', $row->user_id );
+if ( $user ) {
+$bf = $data['bf_percent'] ?? '?';
+wp_mail( $user->user_email, 'Your FBF BodyScan results are ready',
+"Hi {$user->display_name},\n\nYour body scan is done: estimated body fat {$bf}%.\n"
+. "Open the FBF app to see your full report, measurements, and trend.\n\n"
+. "Questions? Reply here or email forgedbyfreedom@proton.me.\n\n"
+. "— Forged by Freedom" );
+}
+return array( 'ok' => true );
+}
+
+public static function fail( $request ) {
+global $wpdb;
+$id = (int) $request['id'];
+$row = $wpdb->get_row( $wpdb->prepare(
+'SELECT * FROM ' . self::table() . ' WHERE id = %d', $id ) );
+if ( ! $row ) {
+return new WP_Error( 'fbf_not_found', 'Scan not found.', array( 'status' => 404 ) );
+}
+$data = $request->get_json_params();
+$wpdb->update( self::table(), array(
+'status' => 'failed',
+'fail_reason' => sanitize_textarea_field( (string) ( $data['reason'] ?? 'Processing failed.' ) ),
+'updated_at' => current_time( 'mysql', true ),
+), array( 'id' => $id ) );
+self::delete_video( $row ); // delete even on failure
+
+// failed paid scans give the credit back
+list( $mode ) = self::pricing_for( $row->user_id );
+if ( 'paid' === $mode ) {
+$c = (int) get_user_meta( $row->user_id, self::CREDITS, true );
+update_user_meta( $row->user_id, self::CREDITS, $c + 1 );
+}
+return array( 'ok' => true );
+}
+
+/* --------------------------------------------------------------- admin */
+
+public static function menu() {
+if ( ! current_user_can( 'manage_options' ) ) {
+return;
+}
+add_menu_page( 'FBF BodyScan', 'FBF BodyScan', 'manage_options',
+'fbf-bodyscan', array( __CLASS__, 'render_admin' ), 'dashicons-visibility', 59 );
+}
+
+public static function render_admin() {
+global $wpdb;
+$key = get_option( 'fbf_bodyscan_worker_key' );
+$rows = $wpdb->get_results( 'SELECT * FROM ' . self::table() . ' ORDER BY id DESC LIMIT 100' );
+$users = get_users( array( 'fields' => array( 'ID', 'display_name' ), 'number' => 500, 'orderby' => 'display_name' ) );
+
+echo '<div class="wrap"><h1>FBF BodyScan</h1>';
+if ( isset( $_GET['saved'] ) ) { echo '<div class="notice notice-success"><p>Settings saved.</p></div>'; }
+if ( isset( $_GET['credited'] ) ) { echo '<div class="notice notice-success"><p>Scan credit added.</p></div>'; }
+
+echo '<h2>Settings</h2><form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" style="background:#fff;border:1px solid #ccd0d4;padding:16px;max-width:820px">';
+wp_nonce_field( 'fbf_bodyscan_settings' );
+echo '<input type="hidden" name="action" value="fbf_bodyscan_settings" />';
+echo '<table class="form-table"><tbody>';
+echo '<tr><th>Worker API key</th><td><code>' . esc_html( $key ) . '</code><br /><em>Paste into config.yaml on the 3090 machine.</em></td></tr>';
+echo '<tr><th>$1 payment link (Complete)</th><td><input class="regular-text" name="pay1" value="' . esc_attr( get_option( 'fbf_bodyscan_pay_url_1', '' ) ) . '" placeholder="https://buy.stripe.com/..." /></td></tr>';
+echo '<tr><th>$5 payment link (Fitness/Nutrition)</th><td><input class="regular-text" name="pay5" value="' . esc_attr( get_option( 'fbf_bodyscan_pay_url_5', '' ) ) . '" placeholder="https://buy.stripe.com/..." /></td></tr>';
+echo '</tbody></table>';
+submit_button( 'Save settings' );
+echo '</form>';
+
+echo '<h2>Add a scan credit (after a client pays)</h2><form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" style="background:#fff;border:1px solid #ccd0d4;padding:16px;max-width:820px">';
+wp_nonce_field( 'fbf_bodyscan_credit' );
+echo '<input type="hidden" name="action" value="fbf_bodyscan_credit" /><select name="user_id">';
+foreach ( $users as $u ) {
+echo '<option value="' . (int) $u->ID . '">' . esc_html( $u->display_name ) . ' — credits: ' . (int) get_user_meta( $u->ID, self::CREDITS, true ) . '</option>';
+}
+echo '</select> ';
+submit_button( 'Add 1 credit', 'secondary', 'submit', false );
+echo '</form>';
+
+echo '<h2 style="margin-top:28px">Scans</h2><table class="widefat striped"><thead><tr><th>ID</th><th>Client</th><th>Status</th><th>BF%</th><th>Created</th><th>Detail</th></tr></thead><tbody>';
+if ( ! $rows ) { echo '<tr><td colspan="6">No scans yet.</td></tr>'; }
+foreach ( $rows as $r ) {
+$u = get_user_by( 'id', $r->user_id );
+$res = $r->result ? json_decode( $r->result, true ) : array();
+$detail = 'failed' === $r->status ? esc_html( (string) $r->fail_reason )
+: ( isset( $res['mode'] ) ? esc_html( $res['mode'] . ' mode' ) : '—' );
+echo '<tr><td>' . (int) $r->id . '</td>'
+. '<td>' . esc_html( $u ? $u->display_name : '#' . $r->user_id ) . '</td>'
+. '<td>' . esc_html( $r->status ) . '</td>'
+. '<td>' . esc_html( isset( $res['bf_percent'] ) ? $res['bf_percent'] . '%' : '—' ) . '</td>'
+. '<td>' . esc_html( $r->created_at ) . '</td>'
+. '<td>' . $detail . '</td></tr>';
+}
+echo '</tbody></table></div>';
+}
+
+public static function save_settings() {
+if ( ! current_user_can( 'manage_options' ) ) { wp_die( 'Admins only.' ); }
+check_admin_referer( 'fbf_bodyscan_settings' );
+update_option( 'fbf_bodyscan_pay_url_1', esc_url_raw( (string) ( $_POST['pay1'] ?? '' ) ) );
+update_option( 'fbf_bodyscan_pay_url_5', esc_url_raw( (string) ( $_POST['pay5'] ?? '' ) ) );
+wp_safe_redirect( admin_url( 'admin.php?page=fbf-bodyscan&saved=1' ) );
+exit;
+}
+
+public static function grant_credit() {
+if ( ! current_user_can( 'manage_options' ) ) { wp_die( 'Admins only.' ); }
+check_admin_referer( 'fbf_bodyscan_credit' );
+$uid = (int) ( $_POST['user_id'] ?? 0 );
+if ( $uid ) {
+$c = (int) get_user_meta( $uid, self::CREDITS, true );
+update_user_meta( $uid, self::CREDITS, $c + 1 );
+}
+wp_safe_redirect( admin_url( 'admin.php?page=fbf-bodyscan&credited=1' ) );
+exit;
+}
+}
+
+FBF_BodyScan::init();
+
