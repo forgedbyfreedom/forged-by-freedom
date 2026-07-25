@@ -65,3 +65,16 @@ scripts/regen-*.sh
 ingest/.ingest_state.json
 ingest/.fix_state.json
 ingest/.fix_state.tmp
+
+# ── Transcript corpus: huge, pipeline-regenerated, lives in the vector DB — never commit ──
+ingest/channels/
+transcripts/
+ingest/janoshik_db/
+ingest/**/_purchased_books/
+ingest/**/_purchased_videos/
+ingest/telegram/
+ingest/whatsapp/
+last_health.json
+ingest/last_health.json
+ingest/.downloaded
+ingest/**/.downloaded
