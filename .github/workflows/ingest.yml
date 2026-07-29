@@ -64,6 +64,7 @@ jobs:
             fbf-ingest-state-
 
       - name: Verify secrets
+        id: verify_secrets
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           WP_INGEST_URL: ${{ secrets.WP_INGEST_URL }}
@@ -87,6 +88,14 @@ jobs:
           python fix_transcripts.py || echo "fix_transcripts skipped/failed (non-fatal)"
 
       - name: Ingest to VPS (WordPress RAG)
+        # Explicit condition so this step runs even when the transcript-fix step
+        # above timed out.  continue-on-error on the fix step is supposed to be
+        # enough, but GitHub Actions does not always propagate that correctly when
+        # the step is killed by a step-level timeout (as opposed to a normal
+        # non-zero exit).  !cancelled() guarantees this runs unless the user
+        # manually clicked "Cancel" in the UI, while the verify_secrets guard
+        # ensures we don't attempt to embed with missing API credentials.
+        if: ${{ !cancelled() && steps.verify_secrets.outcome == 'success' }}
         timeout-minutes: 270
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
