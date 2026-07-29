@@ -139,6 +139,15 @@ def process_directory(directory, dry_run=False):
                 new_state[rel] = hashlib.sha1(txt_file.read_bytes()).hexdigest()
             except Exception:
                 new_state.pop(rel, None)
+            # Persist progress every 200 processed files. Without this, a CI
+            # step timeout threw away ALL progress (state was only saved at the
+            # very end), so every nightly run re-fixed the same files from
+            # scratch and timed out again — the backlog could never drain.
+            if (scanned - skipped) % 200 == 0:
+                try:
+                    save_state(new_state)
+                except Exception:
+                    pass
 
     if not dry_run:
         # Drop entries for files that no longer exist so the state cannot grow

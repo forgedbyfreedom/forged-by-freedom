@@ -75,7 +75,13 @@ jobs:
           echo "All required secrets present"
 
       - name: Fix transcript terminology
-        timeout-minutes: 25
+        # continue-on-error is REQUIRED here: the shell '|| echo' below does NOT
+        # protect against the step-level timeout — GitHub fails the step (and
+        # with it the whole job) when timeout-minutes fires. Run #277 died this
+        # way before a single chunk was embedded. Terminology fixing is a
+        # nice-to-have; embedding is the job.
+        timeout-minutes: 20
+        continue-on-error: true
         run: |
           cd ingest
           python fix_transcripts.py || echo "fix_transcripts skipped/failed (non-fatal)"
