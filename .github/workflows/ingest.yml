@@ -12,17 +12,12 @@ name: Nightly VPS RAG Ingest
 #   FBF_AI_URL      - defaults to https://ai.serverborn.com if unset
 # Optional repo variable:
 #   MAX_CHUNKS_PER_RUN - cap files sent per run (0/unset = no cap)
-#
-# NOTE: OPENAI_API_KEY / WP_INGEST_URL / WP_INGEST_KEY are no longer used and
-# can be removed from the repo secrets once this is live.
  
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 1 * * *"   # Nightly at 01:00 UTC
  
-# Two runs writing .vps_ingest_state.json at once would corrupt the incremental
-# state. Queue instead of cancelling — a cancelled run still saves partial state.
 concurrency:
   group: fbf-rag-ingest
   cancel-in-progress: false
@@ -30,7 +25,7 @@ concurrency:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 330   # generous; work is incremental and saves as it goes
+    timeout-minutes: 330
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,8 +35,6 @@ jobs:
         with:
           python-version: "3.11"
  
-      # Split restore/save so state written during a run that later fails or is
-      # cancelled is STILL cached (save has if: always()).
       - name: Restore incremental state
         uses: actions/cache/restore@v4
         with:
