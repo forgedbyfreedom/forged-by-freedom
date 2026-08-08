@@ -36,8 +36,13 @@ import time
 from dataclasses import dataclass
 from typing import Callable, Optional
 
-# Canonical InmateLocation type lives in echo_zones — re-exported here
-from .echo_zones import InmateLocation  # noqa: F401
+# Canonical InmateLocation type lives in echo_zones — re-exported here.
+# Support both package-style (`from echo.echo_face import ...`) and
+# script-style (`cd echo && python echo_multi.py ...`) invocation.
+try:
+    from .echo_zones import InmateLocation  # noqa: F401
+except ImportError:  # standalone / script mode
+    from echo_zones import InmateLocation  # noqa: F401
 
 
 # ── Output shapes (consumed by echo_zones + echo_correlation) ──────
