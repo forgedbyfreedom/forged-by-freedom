@@ -1,0 +1,23 @@
+# Skip patterns for ingest_documents_to_chroma.py
+# One pattern per line. Lines starting with # are ignored.
+# Patterns match against the full normalized (forward-slash, lowercase)
+# path. Simple substring match, or glob syntax via fnmatch.
+#
+# Uncomment / add entries as needed. Anything commented out is INGESTED.
+
+# ── Torrent metadata (already auto-skipped by extension, but doubling up ──
+*.torrent
+
+# ── Common piracy-bundle patterns (leave these commented until you decide
+#     which of your specific paths you want in) ──
+# [freecoursesonline.me]
+# 35927-
+# 50 bodybuilding & fitness books collection
+# 170.fitness.ebooks
+
+# ── Manufacturing-adjacent content — off by default, uncomment to skip ──
+# diy make your own steroids
+
+# ── Junk drawer folders — populate as you go ──
+# downloads/attachments
+# downloads/fbf-agents
