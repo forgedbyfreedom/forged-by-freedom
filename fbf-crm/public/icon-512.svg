@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6a00"/>
+      <stop offset="100%" stop-color="#e85d00"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#050505"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+    font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="180"
+    fill="url(#g)" letter-spacing="-6">FBF</text>
+</svg>

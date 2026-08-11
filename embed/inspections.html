@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FBF — Inspection Report System</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0a0a;
+  --surface: #111;
+  --surface2: #1a1a1a;
+  --border: #2a2a2a;
+  --accent: #ff6a00;
+  --accent2: #ffb347;
+  --text: #e8e8e8;
+  --muted: #888;
+  --success: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --info: #6366f1;
+}
+body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; min-height: 100vh; }
+
+/* ── Auth screen ── */
+#auth-screen {
+  display: flex; align-items: center; justify-content: center; min-height: 100vh;
+}
+.auth-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 40px; width: 100%; max-width: 400px;
+}
+.auth-logo { text-align: center; margin-bottom: 24px; }
+.auth-logo h1 { font-size: 22px; font-weight: 900; letter-spacing: 3px; text-transform: uppercase;
+  background: linear-gradient(135deg, #ff6a00, #ffb347); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.auth-logo p { color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+/* ── App shell ── */
+#app { display: none; height: 100vh; overflow: hidden; flex-direction: column; }
+header {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 0 20px; height: 56px; display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+}
+header h1 { font-size: 14px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  background: linear-gradient(135deg, #ff6a00, #ffb347); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; flex: 1; }
+.notif-btn {
+  position: relative; background: none; border: 1px solid var(--border); border-radius: 8px;
+  padding: 6px 10px; color: var(--text); cursor: pointer; font-size: 16px;
+  transition: border-color .2s;
+}
+.notif-btn:hover { border-color: var(--accent); }
+.notif-badge {
+  position: absolute; top: -6px; right: -6px; background: var(--danger); color: #fff;
+  border-radius: 50%; width: 18px; height: 18px; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; display: none;
+}
+.user-badge { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 6px 12px; font-size: 12px; color: var(--muted); }
+.user-badge strong { color: var(--text); }
+#logout-btn { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px;
+  color: var(--muted); cursor: pointer; font-size: 12px; transition: all .2s; }
+#logout-btn:hover { border-color: var(--danger); color: var(--danger); }
+
+.main-layout { display: flex; flex: 1; overflow: hidden; }
+
+/* ── Sidebar ── */
+nav {
+  width: 200px; background: var(--surface); border-right: 1px solid var(--border);
+  padding: 12px 0; flex-shrink: 0; overflow-y: auto;
+}
+.nav-item {
+  display: flex; align-items: center; gap: 10px; padding: 10px 16px;
+  color: var(--muted); cursor: pointer; font-size: 14px; border-radius: 0;
+  transition: all .15s; border-left: 3px solid transparent;
+  user-select: none;
+}
+.nav-item:hover { background: var(--surface2); color: var(--text); }
+.nav-item.active { background: var(--surface2); color: var(--accent); border-left-color: var(--accent); }
+.nav-sep { height: 1px; background: var(--border); margin: 8px 0; }
+
+/* ── Content ── */
+main { flex: 1; overflow-y: auto; padding: 24px; }
+.page { display: none; }
+.page.active { display: block; }
+
+/* ── Cards / common ── */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+.card-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; }
+
+/* ── Stat grid ── */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.stat-value { font-size: 28px; font-weight: 800; line-height: 1; }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+.stat-card.danger .stat-value { color: var(--danger); }
+.stat-card.warn .stat-value { color: var(--warn); }
+.stat-card.success .stat-value { color: var(--success); }
+.stat-card.accent .stat-value { color: var(--accent); }
+
+/* ── Table ── */
+.table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead tr { background: var(--surface2); }
+th { padding: 10px 14px; text-align: left; font-weight: 700; text-transform: uppercase;
+     font-size: 11px; letter-spacing: 1px; color: var(--muted); white-space: nowrap; }
+td { padding: 10px 14px; border-top: 1px solid var(--border); vertical-align: top; }
+tr:hover td { background: rgba(255,106,0,.04); }
+.clickable-row { cursor: pointer; }
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .5px;
+}
+.badge-draft     { background: rgba(99,102,241,.15); color: #818cf8; }
+.badge-submitted { background: rgba(245,158,11,.15); color: #fbbf24; }
+.badge-in_review { background: rgba(255,106,0,.15); color: #ff6a00; }
+.badge-closed    { background: rgba(34,197,94,.15); color: #22c55e; }
+.badge-low       { background: rgba(99,102,241,.15); color: #818cf8; }
+.badge-medium    { background: rgba(245,158,11,.15); color: #fbbf24; }
+.badge-high      { background: rgba(249,115,22,.15); color: #fb923c; }
+.badge-critical  { background: rgba(239,68,68,.15); color: #f87171; }
+.badge-open      { background: rgba(239,68,68,.12); color: #f87171; }
+.badge-in_progress { background: rgba(245,158,11,.12); color: #fbbf24; }
+.badge-resolved  { background: rgba(34,197,94,.12); color: #22c55e; }
+.badge-deferred  { background: rgba(99,102,241,.12); color: #818cf8; }
+.badge-repeat    { background: rgba(239,68,68,.2); color: #f87171; border: 1px solid rgba(239,68,68,.4); }
+
+/* ── Buttons ── */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: all .2s; }
+.btn-primary { background: linear-gradient(135deg,#ff6a00,#e85d00); color: #fff; }
+.btn-primary:hover { opacity: .9; }
+.btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn-danger { background: rgba(239,68,68,.15); border: 1px solid rgba(239,68,68,.3); color: #f87171; }
+.btn-danger:hover { background: rgba(239,68,68,.3); }
+.btn-success { background: rgba(34,197,94,.15); border: 1px solid rgba(34,197,94,.3); color: #22c55e; }
+.btn-success:hover { background: rgba(34,197,94,.3); }
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+
+/* ── Forms ── */
+.form-group { margin-bottom: 16px; }
+label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+input, textarea, select {
+  width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 12px; color: var(--text); font-size: 14px; font-family: inherit;
+  transition: border-color .2s;
+}
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); }
+textarea { resize: vertical; min-height: 80px; }
+select option { background: var(--surface2); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+/* ── Modal ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.8);
+  z-index: 100; align-items: flex-start; justify-content: center; padding: 40px 20px;
+  overflow-y: auto;
+}
+.modal-overlay.open { display: flex; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  width: 100%; max-width: 680px; padding: 28px; position: relative; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.modal-title { font-size: 18px; font-weight: 700; }
+.modal-close { background: none; border: none; color: var(--muted); font-size: 20px; cursor: pointer; padding: 4px; }
+.modal-close:hover { color: var(--text); }
+
+/* ── Notification panel ── */
+#notif-panel {
+  display: none; position: fixed; top: 56px; right: 16px; width: 360px; max-height: 480px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; z-index: 90;
+  overflow-y: auto; box-shadow: 0 8px 32px rgba(0,0,0,.6);
+}
+#notif-panel.open { display: block; }
+.notif-header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.notif-header span { font-size: 13px; font-weight: 700; }
+.notif-item { padding: 12px 16px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .15s; }
+.notif-item:hover { background: var(--surface2); }
+.notif-item.unread { border-left: 3px solid var(--accent); }
+.notif-item .notif-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.notif-item .notif-msg { font-size: 12px; color: var(--muted); line-height: 1.4; }
+.notif-item .notif-time { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.notif-empty { padding: 24px; text-align: center; color: var(--muted); font-size: 13px; }
+
+/* ── Report detail ── */
+.finding-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 10px; }
+.finding-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.finding-category { font-weight: 700; font-size: 14px; }
+.finding-desc { font-size: 13px; color: var(--muted); margin-bottom: 8px; line-height: 1.5; }
+.finding-rec { font-size: 12px; background: rgba(255,106,0,.08); border-left: 2px solid var(--accent); padding: 8px 12px; border-radius: 0 6px 6px 0; margin-bottom: 8px; color: #ffb347; }
+.response-area { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-top: 10px; }
+
+/* ── Trends ── */
+.trend-bar-wrap { margin-bottom: 10px; }
+.trend-bar-label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; }
+.trend-bar-track { height: 6px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.trend-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #ff6a00, #ffb347); transition: width .6s ease; }
+.trend-bar-fill.repeat { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+/* ── Filters ── */
+.filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+.filters select, .filters input { width: auto; padding: 7px 10px; font-size: 13px; }
+
+/* ── Page header row ── */
+.page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.page-title { font-size: 22px; font-weight: 800; }
+
+/* ── Repeat finding flag ── */
+.repeat-flag { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #f87171; font-weight: 700; margin-bottom: 4px; }
+
+/* ── Due date coloring ── */
+.due-overdue { color: var(--danger); font-weight: 700; }
+.due-soon    { color: var(--warn);   font-weight: 700; }
+.due-ok      { color: var(--muted);  }
+
+/* ── Empty state ── */
+.empty { text-align: center; padding: 48px; color: var(--muted); }
+.empty .empty-icon { font-size: 40px; margin-bottom: 12px; }
+.empty p { font-size: 14px; }
+
+/* ── Alert ── */
+.alert { padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; }
+.alert-error { background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.3); color: #f87171; }
+.alert-success { background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.3); color: #22c55e; }
+
+/* ── Spinner ── */
+.spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Scroll ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+</style>
+</head>
+<body>
+
+<!-- ── Auth Screen ─────────────────────────────────────────── -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <h1>FORGED BY FREEDOM</h1>
+      <p>Institutional Inspection System</p>
+    </div>
+    <div id="auth-error" class="alert alert-error" style="display:none"></div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="login-email" placeholder="your.email@agency.gov" autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label>Access Key</label>
+      <input type="password" id="login-key" placeholder="••••••••">
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:12px" onclick="login()">
+      Sign In
+    </button>
+  </div>
+</div>
+
+<!-- ── App ────────────────────────────────────────────────── -->
+<div id="app">
+  <header>
+    <h1>FBF Inspection Reports</h1>
+    <div style="position:relative">
+      <button class="notif-btn" onclick="toggleNotifications()" title="Notifications">
+        🔔
+        <span class="notif-badge" id="notif-badge"></span>
+      </button>
+      <div id="notif-panel">
+        <div class="notif-header">
+          <span>Notifications</span>
+          <button class="btn btn-sm btn-ghost" onclick="markAllRead()">Mark all read</button>
+        </div>
+        <div id="notif-list"></div>
+      </div>
+    </div>
+    <div class="user-badge">
+      <strong id="user-name">—</strong>
+      <span id="user-role" style="color:var(--accent);margin-left:6px;font-size:11px"></span>
+    </div>
+    <button id="logout-btn" onclick="logout()">Sign Out</button>
+  </header>
+
+  <div class="main-layout">
+    <nav>
+      <div class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">📊 Dashboard</div>
+      <div class="nav-item" data-page="reports" onclick="navigate('reports')">📋 Reports</div>
+      <div class="nav-item" data-page="trends" onclick="navigate('trends')">📈 Trends</div>
+      <div class="nav-sep"></div>
+      <div class="nav-item" id="nav-facilities" data-page="facilities" onclick="navigate('facilities')" style="display:none">🏛 Facilities</div>
+      <div class="nav-item" id="nav-staff" data-page="staff" onclick="navigate('staff')" style="display:none">👥 Staff</div>
+    </nav>
+
+    <main>
+      <!-- ── Dashboard ── -->
+      <div class="page active" id="page-dashboard">
+        <div class="page-header">
+          <div class="page-title">Dashboard</div>
+          <button class="btn btn-primary" id="new-report-btn" onclick="openNewReport()" style="display:none">+ New Report</button>
+        </div>
+        <div class="stat-grid" id="stat-grid"></div>
+        <div class="card">
+          <div class="card-title">Recent Reports</div>
+          <div id="recent-reports-table"></div>
+        </div>
+      </div>
+
+      <!-- ── Reports ── -->
+      <div class="page" id="page-reports">
+        <div class="page-header">
+          <div class="page-title">Inspection Reports</div>
+          <button class="btn btn-primary" id="new-report-btn2" onclick="openNewReport()" style="display:none">+ New Report</button>
+        </div>
+        <div class="filters">
+          <select id="filter-status" onchange="loadReports()">
+            <option value="">All Statuses</option>
+            <option value="draft">Draft</option>
+            <option value="submitted">Submitted</option>
+            <option value="in_review">In Review</option>
+            <option value="closed">Closed</option>
+          </select>
+          <select id="filter-facility" onchange="loadReports()">
+            <option value="">All Facilities</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>Facility</th><th>Inspector</th><th>Visit Date</th>
+              <th>Due Date</th><th>Status</th><th>Findings</th><th></th>
+            </tr></thead>
+            <tbody id="reports-tbody"></tbody>
+          </table>
+        </div>
+        <div id="reports-empty" class="empty" style="display:none">
+          <div class="empty-icon">📋</div>
+          <p>No reports found</p>
+        </div>
+      </div>
+
+      <!-- ── Trends ── -->
+      <div class="page" id="page-trends">
+        <div class="page-header">
+          <div class="page-title">Facility Trends</div>
+        </div>
+        <div class="filters">
+          <select id="trends-facility" onchange="loadTrends()">
+            <option value="">Select Facility…</option>
+          </select>
+          <select id="trends-months" onchange="loadTrends()">
+            <option value="6">Last 6 months</option>
+            <option value="12" selected>Last 12 months</option>
+            <option value="24">Last 24 months</option>
+          </select>
+        </div>
+        <div id="trends-content">
+          <div class="empty"><div class="empty-icon">📈</div><p>Select a facility to view trends</p></div>
+        </div>
+      </div>
+
+      <!-- ── Facilities (admin) ── -->
+      <div class="page" id="page-facilities">
+        <div class="page-header">
+          <div class="page-title">Facilities</div>
+          <button class="btn btn-primary" onclick="openModal('modal-facility')">+ Add Facility</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Name</th><th>Code</th><th>Region</th><th></th></tr></thead>
+            <tbody id="facilities-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── Staff (admin) ── -->
+      <div class="page" id="page-staff">
+        <div class="page-header">
+          <div class="page-title">Staff</div>
+          <button class="btn btn-primary" onclick="openModal('modal-staff')">+ Add Staff</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Facility</th><th></th></tr></thead>
+            <tbody id="staff-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ── Modal: New Report ──────────────────────────────────── -->
+<div class="modal-overlay" id="modal-new-report">
+  <div class="modal" style="max-width:760px">
+    <div class="modal-header">
+      <div class="modal-title">New Inspection Report</div>
+      <button class="modal-close" onclick="closeModal('modal-new-report')">✕</button>
+    </div>
+    <div id="new-report-alert" class="alert alert-error" style="display:none"></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Facility *</label>
+        <select id="nr-facility"></select>
+      </div>
+      <div class="form-group">
+        <label>Visit Date *</label>
+        <input type="date" id="nr-visit-date">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Response Due Date *</label>
+        <input type="date" id="nr-due-date">
+      </div>
+      <div></div>
+    </div>
+    <div class="form-group">
+      <label>Overall Notes</label>
+      <textarea id="nr-notes" placeholder="General observations from the visit…" rows="3"></textarea>
+    </div>
+
+    <div style="border-top:1px solid var(--border);padding-top:16px;margin-top:4px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div class="card-title" style="margin:0">Findings / Recommendations</div>
+        <button class="btn btn-ghost btn-sm" onclick="addFindingRow()">+ Add Finding</button>
+      </div>
+      <div id="findings-rows"></div>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-new-report')">Cancel</button>
+      <button class="btn btn-ghost" onclick="saveReport('draft')">Save Draft</button>
+      <button class="btn btn-primary" onclick="saveReport('submit')">Submit Report</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Modal: Report Detail ───────────────────────────────── -->
+<div class="modal-overlay" id="modal-report-detail">
+  <div class="modal" style="max-width:800px">
+    <div class="modal-header">
+      <div class="modal-title" id="detail-title">Report Detail</div>
+      <div style="display:flex;gap:8px">
+        <button id="detail-submit-btn" class="btn btn-primary btn-sm" onclick="submitReport()" style="display:none">Submit Report</button>
+        <button class="modal-close" onclick="closeModal('modal-report-detail')">✕</button>
+      </div>
+    </div>
+    <div id="report-detail-content"></div>
+  </div>
+</div>
+
+<!-- ── Modal: Add Finding (to existing report) ────────────── -->
+<div class="modal-overlay" id="modal-add-finding">
+  <div class="modal" style="max-width:560px">
+    <div class="modal-header">
+      <div class="modal-title">Add Finding</div>
+      <button class="modal-close" onclick="closeModal('modal-add-finding')">✕</button>
+    </div>
+    <div class="form-group">
+      <label>Category *</label>
+      <select id="af-category">
+        <option value="">Select category…</option>
+        <option>Safety & Security</option>
+        <option>Staffing</option>
+        <option>Sanitation & Facility Condition</option>
+        <option>Programs & Rehabilitation</option>
+        <option>Medical & Mental Health</option>
+        <option>Use of Force</option>
+        <option>Inmate Discipline</option>
+        <option>Staff Conduct</option>
+        <option>Emergency Preparedness</option>
+        <option>Administrative Compliance</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Description *</label>
+      <textarea id="af-description" placeholder="Describe the finding…" rows="3"></textarea>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Severity</label>
+        <select id="af-severity">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+          <option value="critical">Critical</option>
+        </select>
+      </div>
+      <div></div>
+    </div>
+    <div class="form-group">
+      <label>Recommendation</label>
+      <textarea id="af-recommendation" placeholder="What action is recommended?" rows="2"></textarea>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-add-finding')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitAddFinding()">Add Finding</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Modal: Warden Response ─────────────────────────────── -->
+<div class="modal-overlay" id="modal-respond">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <div class="modal-title">Respond to Finding</div>
+      <button class="modal-close" onclick="closeModal('modal-respond')">✕</button>
+    </div>
+    <div id="respond-finding-info" style="background:var(--surface2);border-radius:8px;padding:12px;margin-bottom:16px;font-size:13px;color:var(--muted)"></div>
+    <div class="form-group">
+      <label>Status *</label>
+      <select id="respond-status">
+        <option value="open">Open</option>
+        <option value="in_progress">In Progress</option>
+        <option value="resolved">Resolved</option>
+        <option value="deferred">Deferred</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Response Notes *</label>
+      <textarea id="respond-notes" placeholder="Describe the action taken or planned…" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Target Completion Date</label>
+      <input type="date" id="respond-target-date">
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-respond')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitResponse()">Save Response</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Modal: Facility ────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-facility">
+  <div class="modal" style="max-width:440px">
+    <div class="modal-header">
+      <div class="modal-title">Add Facility</div>
+      <button class="modal-close" onclick="closeModal('modal-facility')">✕</button>
+    </div>
+    <div class="form-group"><label>Name *</label><input type="text" id="fac-name" placeholder="Federal Correctional Institution …"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Code</label><input type="text" id="fac-code" placeholder="FCI-XYZ"></div>
+      <div class="form-group"><label>Region</label><input type="text" id="fac-region" placeholder="Northeast"></div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-facility')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveFacility()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Modal: Staff ───────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-staff">
+  <div class="modal" style="max-width:480px">
+    <div class="modal-header">
+      <div class="modal-title">Add / Update Staff</div>
+      <button class="modal-close" onclick="closeModal('modal-staff')">✕</button>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Name *</label><input type="text" id="st-name"></div>
+      <div class="form-group"><label>Email *</label><input type="email" id="st-email"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Role *</label>
+        <select id="st-role">
+          <option value="regional_director">Regional Director</option>
+          <option value="regional_ops_coordinator">Regional Ops Coordinator</option>
+          <option value="rhu_colonel">RHU Colonel</option>
+          <option value="warden">Warden</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Facility (Wardens)</label>
+        <select id="st-facility"><option value="">None</option></select>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-staff')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveStaff()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Config ────────────────────────────────────────────────────
+const BASE = '';  // same origin
+let SESSION = null;  // { email, key, staff }
+let _facilities = [];
+let _currentReportId = null;
+let _currentFindingId = null;
+let _notifOpen = false;
+
+// ── Auth ──────────────────────────────────────────────────────
+async function login() {
+  const email = document.getElementById('login-email').value.trim();
+  const key   = document.getElementById('login-key').value.trim();
+  if (!email || !key) return showAuthError('Email and key required');
+
+  try {
+    const res = await api('/api/inspections/me', 'GET', null, { email, key });
+    SESSION = { email, key, staff: res };
+    sessionStorage.setItem('insp_session', JSON.stringify({ email, key }));
+    startApp();
+  } catch (e) {
+    showAuthError(e.message || 'Sign-in failed — check email and key');
+  }
+}
+
+function showAuthError(msg) {
+  const el = document.getElementById('auth-error');
+  el.textContent = msg; el.style.display = 'block';
+}
+
+function logout() {
+  sessionStorage.removeItem('insp_session');
+  SESSION = null;
+  document.getElementById('auth-screen').style.display = 'flex';
+  document.getElementById('app').style.display = 'none';
+}
+
+async function startApp() {
+  document.getElementById('auth-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  document.getElementById('user-name').textContent = SESSION.staff.name;
+  document.getElementById('user-role').textContent = formatRole(SESSION.staff.role);
+
+  const isGlobal = ['regional_director','regional_ops_coordinator','rhu_colonel','admin'].includes(SESSION.staff.role);
+  if (isGlobal) {
+    document.getElementById('new-report-btn').style.display = 'flex';
+    document.getElementById('new-report-btn2').style.display = 'flex';
+  }
+  if (SESSION.staff.role === 'admin') {
+    document.getElementById('nav-facilities').style.display = 'flex';
+    document.getElementById('nav-staff').style.display = 'flex';
+  }
+
+  await loadFacilities();
+  loadDashboard();
+  loadNotifications();
+  setInterval(loadNotifications, 60000);
+
+  // Enter key on login
+  document.getElementById('login-key').addEventListener('keydown', e => { if(e.key==='Enter') login(); });
+}
+
+// Auto-restore session
+window.addEventListener('DOMContentLoaded', async () => {
+  const saved = sessionStorage.getItem('insp_session');
+  if (saved) {
+    try {
+      const { email, key } = JSON.parse(saved);
+      document.getElementById('login-email').value = email;
+      document.getElementById('login-key').value = key;
+      await login();
+    } catch { sessionStorage.removeItem('insp_session'); }
+  }
+  document.getElementById('login-key').addEventListener('keydown', e => { if(e.key==='Enter') login(); });
+});
+
+// ── API helper ────────────────────────────────────────────────
+async function api(path, method = 'GET', body = null, opts = {}) {
+  const { email, key } = opts.email ? opts : (SESSION || {});
+  const headers = {
+    'Content-Type': 'application/json',
+    'x-inspection-key': key || opts.key || '',
+  };
+  const params = new URLSearchParams();
+  if (email || opts.email) params.set('email', email || opts.email);
+
+  const url = method === 'GET' && body
+    ? path + '?' + new URLSearchParams({ ...body, email: email||opts.email||'', key: key||opts.key||'' })
+    : (method === 'GET' && (email || opts.email))
+      ? path + '?' + params
+      : path;
+
+  const fetchOpts = { method, headers };
+  if (body && method !== 'GET') {
+    fetchOpts.body = JSON.stringify({ ...body, inspection_key: key||opts.key, email: email||opts.email });
+  }
+
+  const res = await fetch(url, fetchOpts);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Request failed');
+  return data;
+}
+
+// ── Navigation ────────────────────────────────────────────────
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + page)?.classList.add('active');
+  document.querySelector(`[data-page="${page}"]`)?.classList.add('active');
+
+  if (page === 'reports') loadReports();
+  if (page === 'trends') loadTrendsPage();
+  if (page === 'facilities') loadFacilitiesPage();
+  if (page === 'staff') loadStaffPage();
+}
+
+// ── Dashboard ─────────────────────────────────────────────────
+async function loadDashboard() {
+  try {
+    const d = await api('/api/inspections/dashboard', 'GET', null, { email: SESSION.email });
+    const sg = document.getElementById('stat-grid');
+    sg.innerHTML = `
+      <div class="stat-card accent"><div class="stat-value">${d.total}</div><div class="stat-label">Total Reports</div></div>
+      <div class="stat-card"><div class="stat-value" style="color:var(--info)">${d.draft}</div><div class="stat-label">Drafts</div></div>
+      <div class="stat-card"><div class="stat-value" style="color:var(--warn)">${d.submitted}</div><div class="stat-label">Awaiting Response</div></div>
+      <div class="stat-card warn"><div class="stat-value">${d.due_soon}</div><div class="stat-label">Due in 72h</div></div>
+      <div class="stat-card danger"><div class="stat-value">${d.overdue}</div><div class="stat-label">Overdue</div></div>
+      <div class="stat-card success"><div class="stat-value">${d.closed}</div><div class="stat-label">Closed</div></div>
+    `;
+
+    // Recent reports table
+    const rr = await api('/api/inspections/reports', 'GET', null, { email: SESSION.email });
+    renderReportsTable(rr.slice(0, 8), 'recent-reports-table');
+  } catch (e) {
+    console.error('Dashboard error', e);
+  }
+}
+
+// ── Reports ───────────────────────────────────────────────────
+async function loadReports() {
+  const status = document.getElementById('filter-status')?.value || '';
+  const facility = document.getElementById('filter-facility')?.value || '';
+  try {
+    const params = { email: SESSION.email };
+    if (status) params.status = status;
+    if (facility) params.facility_id = facility;
+    const data = await api('/api/inspections/reports?' + new URLSearchParams(params));
+    renderReportsTable(data, 'reports-tbody');
+    document.getElementById('reports-empty').style.display = data.length ? 'none' : 'block';
+  } catch (e) { console.error(e); }
+}
+
+function renderReportsTable(reports, tbodyId) {
+  const el = document.getElementById(tbodyId);
+  if (!reports?.length) { el.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">No reports</td></tr>'; return; }
+  el.innerHTML = reports.map(r => {
+    const findings = r.inspection_findings || [];
+    const criticals = findings.filter(f => f.severity === 'critical').length;
+    const repeats   = findings.filter(f => f.is_repeat).length;
+    return `<tr class="clickable-row" onclick="openReportDetail('${r.id}')">
+      <td><strong>${r.inspection_facilities?.name || '—'}</strong><br><span style="font-size:11px;color:var(--muted)">${r.inspection_facilities?.region||''}</span></td>
+      <td>${r.inspection_staff?.name || '—'}<br><span style="font-size:11px;color:var(--muted)">${formatRole(r.inspection_staff?.role)}</span></td>
+      <td>${fmtDate(r.visit_date)}</td>
+      <td class="${dueCls(r.due_date, r.status)}">${fmtDate(r.due_date)}</td>
+      <td><span class="badge badge-${r.status}">${r.status.replace('_',' ')}</span></td>
+      <td>
+        ${findings.length} finding${findings.length!==1?'s':''}
+        ${criticals ? `<span class="badge badge-critical" style="margin-left:4px">${criticals} critical</span>` : ''}
+        ${repeats ? `<span class="badge badge-repeat" style="margin-left:4px">⚠ ${repeats} repeat</span>` : ''}
+      </td>
+      <td><button class="btn btn-ghost btn-sm">View →</button></td>
+    </tr>`;
+  }).join('');
+}
+
+// ── Report Detail ─────────────────────────────────────────────
+async function openReportDetail(id) {
+  _currentReportId = id;
+  try {
+    const r = await api(`/api/inspections/reports/${id}`, 'GET', null, { email: SESSION.email });
+    const isGlobal = ['regional_director','regional_ops_coordinator','rhu_colonel','admin'].includes(SESSION.staff.role);
+    const isOwner = r.inspector_id === SESSION.staff.id;
+    const isDraft = r.status === 'draft';
+
+    document.getElementById('detail-title').textContent =
+      `${r.inspection_facilities?.name} — ${fmtDate(r.visit_date)}`;
+    document.getElementById('detail-submit-btn').style.display =
+      (isDraft && isOwner) ? 'flex' : 'none';
+
+    const findings = r.inspection_findings || [];
+    const canRespond = SESSION.staff.role === 'warden' || isGlobal;
+
+    document.getElementById('report-detail-content').innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px">
+        <div class="stat-card"><div class="stat-label">Inspector</div><div style="font-weight:700;margin-top:4px">${r.inspection_staff?.name||'—'}</div><div style="font-size:11px;color:var(--muted)">${formatRole(r.inspection_staff?.role)}</div></div>
+        <div class="stat-card"><div class="stat-label">Visit Date</div><div style="font-weight:700;margin-top:4px">${fmtDate(r.visit_date)}</div></div>
+        <div class="stat-card"><div class="stat-label">Response Due</div><div class="stat-value ${dueCls(r.due_date, r.status)}" style="font-size:16px;margin-top:4px">${fmtDate(r.due_date)}</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+        <span class="badge badge-${r.status}">${r.status.replace('_',' ')}</span>
+        ${r.submitted_at ? `<span style="font-size:12px;color:var(--muted)">Submitted ${fmtDateTime(r.submitted_at)}</span>` : ''}
+      </div>
+      ${r.overall_notes ? `<div class="card" style="margin-bottom:16px"><div class="card-title">Overall Notes</div><p style="font-size:13px;line-height:1.6">${r.overall_notes}</p></div>` : ''}
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div class="card-title" style="margin:0">Findings (${findings.length})</div>
+        ${(isGlobal && !isDraft) ? `<button class="btn btn-ghost btn-sm" onclick="openAddFinding('${r.id}')">+ Add Finding</button>` : ''}
+      </div>
+      ${findings.length === 0 ? '<div class="empty" style="padding:24px"><p>No findings recorded</p></div>' :
+        findings.map(f => renderFinding(f, canRespond)).join('')
+      }
+    `;
+
+    openModal('modal-report-detail');
+  } catch (e) { alert('Error loading report: ' + e.message); }
+}
+
+function renderFinding(f, canRespond) {
+  const resp = f.finding_responses?.[0];
+  return `<div class="finding-card">
+    <div class="finding-header">
+      <div>
+        ${f.is_repeat ? '<div class="repeat-flag">⚠ REPEAT FINDING — This issue has appeared in previous inspections at this facility</div>' : ''}
+        <div class="finding-category">${f.category}</div>
+      </div>
+      <span class="badge badge-${f.severity}">${f.severity}</span>
+    </div>
+    <div class="finding-desc">${f.description}</div>
+    ${f.recommendation ? `<div class="finding-rec">💡 ${f.recommendation}</div>` : ''}
+    <div class="response-area">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted)">Warden Response</span>
+        ${canRespond ? `<button class="btn btn-ghost btn-sm" onclick="openRespond('${f.id}','${f.category}')">
+          ${resp ? 'Update Response' : 'Respond'}
+        </button>` : ''}
+      </div>
+      ${resp ? `
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+          <span class="badge badge-${resp.status}">${resp.status.replace('_',' ')}</span>
+          ${resp.target_completion_date ? `<span style="font-size:11px;color:var(--muted)">Target: ${fmtDate(resp.target_completion_date)}</span>` : ''}
+          ${resp.completed_at ? `<span style="font-size:11px;color:var(--success)">✓ Completed ${fmtDate(resp.completed_at)}</span>` : ''}
+        </div>
+        ${resp.response_notes ? `<p style="font-size:13px;color:var(--muted);line-height:1.5">${resp.response_notes}</p>` : ''}
+      ` : `<p style="font-size:12px;color:var(--muted)">No response yet</p>`}
+    </div>
+  </div>`;
+}
+
+async function submitReport() {
+  if (!confirm('Submit this report? Wardens will be notified.')) return;
+  try {
+    await api(`/api/inspections/reports/${_currentReportId}/submit`, 'POST', { email: SESSION.email });
+    closeModal('modal-report-detail');
+    loadDashboard();
+    showToast('Report submitted — wardens notified');
+  } catch (e) { alert(e.message); }
+}
+
+// ── New Report ────────────────────────────────────────────────
+function openNewReport() {
+  // Populate facility select
+  const sel = document.getElementById('nr-facility');
+  sel.innerHTML = '<option value="">Select facility…</option>' +
+    _facilities.map(f => `<option value="${f.id}">${f.name}</option>`).join('');
+
+  // Default dates
+  const today = new Date().toISOString().split('T')[0];
+  const due = new Date(Date.now() + 14 * 86400000).toISOString().split('T')[0];
+  document.getElementById('nr-visit-date').value = today;
+  document.getElementById('nr-due-date').value = due;
+  document.getElementById('nr-notes').value = '';
+  document.getElementById('findings-rows').innerHTML = '';
+  document.getElementById('new-report-alert').style.display = 'none';
+
+  addFindingRow();
+  openModal('modal-new-report');
+}
+
+let _findingIdx = 0;
+function addFindingRow() {
+  const idx = _findingIdx++;
+  const div = document.createElement('div');
+  div.id = `fr-${idx}`;
+  div.style.cssText = 'background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px';
+  div.innerHTML = `
+    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+      <button class="btn btn-danger btn-sm" onclick="document.getElementById('fr-${idx}').remove()">Remove</button>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Category *</label>
+        <select class="fr-cat">
+          <option value="">Select…</option>
+          <option>Safety & Security</option>
+          <option>Staffing</option>
+          <option>Sanitation & Facility Condition</option>
+          <option>Programs & Rehabilitation</option>
+          <option>Medical & Mental Health</option>
+          <option>Use of Force</option>
+          <option>Inmate Discipline</option>
+          <option>Staff Conduct</option>
+          <option>Emergency Preparedness</option>
+          <option>Administrative Compliance</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Severity</label>
+        <select class="fr-sev">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+          <option value="critical">Critical</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group"><label>Description *</label><textarea class="fr-desc" rows="2" placeholder="Describe the issue observed…"></textarea></div>
+    <div class="form-group"><label>Recommendation</label><textarea class="fr-rec" rows="2" placeholder="Recommended corrective action…"></textarea></div>
+  `;
+  document.getElementById('findings-rows').appendChild(div);
+}
+
+async function saveReport(mode) {
+  const facility_id  = document.getElementById('nr-facility').value;
+  const visit_date   = document.getElementById('nr-visit-date').value;
+  const due_date     = document.getElementById('nr-due-date').value;
+  const overall_notes = document.getElementById('nr-notes').value.trim();
+
+  if (!facility_id || !visit_date || !due_date) {
+    const al = document.getElementById('new-report-alert');
+    al.textContent = 'Facility, visit date, and due date are required';
+    al.style.display = 'block'; return;
+  }
+
+  const findings = [];
+  document.querySelectorAll('#findings-rows > div').forEach(row => {
+    const cat  = row.querySelector('.fr-cat')?.value;
+    const desc = row.querySelector('.fr-desc')?.value.trim();
+    const sev  = row.querySelector('.fr-sev')?.value;
+    const rec  = row.querySelector('.fr-rec')?.value.trim();
+    if (cat && desc) findings.push({ category: cat, description: desc, severity: sev, recommendation: rec });
+  });
+
+  try {
+    const r = await api('/api/inspections/reports', 'POST', {
+      email: SESSION.email, facility_id, visit_date, due_date, overall_notes, findings,
+    });
+
+    if (mode === 'submit') {
+      await api(`/api/inspections/reports/${r.report_id}/submit`, 'POST', { email: SESSION.email });
+      showToast('Report submitted — wardens notified');
+    } else {
+      showToast('Draft saved');
+    }
+
+    closeModal('modal-new-report');
+    loadDashboard();
+    if (document.getElementById('page-reports').classList.contains('active')) loadReports();
+  } catch (e) {
+    const al = document.getElementById('new-report-alert');
+    al.textContent = e.message; al.style.display = 'block';
+  }
+}
+
+// ── Add Finding to existing report ───────────────────────────
+function openAddFinding(reportId) {
+  _currentReportId = reportId;
+  document.getElementById('af-category').value = '';
+  document.getElementById('af-description').value = '';
+  document.getElementById('af-severity').value = 'medium';
+  document.getElementById('af-recommendation').value = '';
+  openModal('modal-add-finding');
+}
+
+async function submitAddFinding() {
+  const category = document.getElementById('af-category').value;
+  const description = document.getElementById('af-description').value.trim();
+  const severity = document.getElementById('af-severity').value;
+  const recommendation = document.getElementById('af-recommendation').value.trim();
+  if (!category || !description) return alert('Category and description required');
+
+  try {
+    await api(`/api/inspections/reports/${_currentReportId}/findings`, 'POST',
+      { email: SESSION.email, category, description, severity, recommendation });
+    closeModal('modal-add-finding');
+    openReportDetail(_currentReportId);
+    showToast('Finding added');
+  } catch (e) { alert(e.message); }
+}
+
+// ── Warden Response ───────────────────────────────────────────
+function openRespond(findingId, category) {
+  _currentFindingId = findingId;
+  document.getElementById('respond-finding-info').textContent = `Finding: ${category}`;
+  document.getElementById('respond-status').value = 'in_progress';
+  document.getElementById('respond-notes').value = '';
+  document.getElementById('respond-target-date').value = '';
+  openModal('modal-respond');
+}
+
+async function submitResponse() {
+  const status = document.getElementById('respond-status').value;
+  const response_notes = document.getElementById('respond-notes').value.trim();
+  const target_completion_date = document.getElementById('respond-target-date').value || null;
+  if (!response_notes) return alert('Response notes are required');
+
+  try {
+    await api(`/api/inspections/findings/${_currentFindingId}/respond`, 'POST',
+      { email: SESSION.email, status, response_notes, target_completion_date });
+    closeModal('modal-respond');
+    openReportDetail(_currentReportId);
+    showToast('Response saved');
+  } catch (e) { alert(e.message); }
+}
+
+// ── Trends ────────────────────────────────────────────────────
+function loadTrendsPage() {
+  const sel = document.getElementById('trends-facility');
+  sel.innerHTML = '<option value="">Select Facility…</option>' +
+    _facilities.map(f => `<option value="${f.id}">${f.name}</option>`).join('');
+}
+
+async function loadTrends() {
+  const fid = document.getElementById('trends-facility').value;
+  const months = document.getElementById('trends-months').value;
+  if (!fid) return;
+
+  const container = document.getElementById('trends-content');
+  container.innerHTML = '<div style="text-align:center;padding:32px"><div class="spinner"></div></div>';
+
+  try {
+    const d = await api(`/api/inspections/facilities/${fid}/trends?months=${months}`, 'GET', null, { email: SESSION.email });
+    const trends = d.trends || [];
+
+    if (!trends.length) {
+      container.innerHTML = '<div class="empty"><div class="empty-icon">📈</div><p>No historical data for this period</p></div>';
+      return;
+    }
+
+    const maxCount = Math.max(...trends.map(t => t.count));
+    container.innerHTML = `
+      <div class="card">
+        <div class="card-title">Finding Categories — Last ${months} Months</div>
+        ${trends.map(t => `
+          <div class="trend-bar-wrap">
+            <div class="trend-bar-label">
+              <span>
+                ${t.is_repeat_pattern ? '⚠ ' : ''}${t.category}
+                ${t.is_repeat_pattern ? '<span class="badge badge-repeat" style="margin-left:6px">Repeat Pattern</span>' : ''}
+              </span>
+              <span style="color:var(--muted)">${t.count} occurrence${t.count!==1?'s':''} · Last seen: ${fmtDate(t.last_seen)}</span>
+            </div>
+            <div class="trend-bar-track">
+              <div class="trend-bar-fill ${t.is_repeat_pattern ? 'repeat' : ''}" style="width:${(t.count/maxCount)*100}%"></div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="card" style="margin-top:0">
+        <div class="card-title">Severity Breakdown</div>
+        <canvas id="severity-chart" height="180"></canvas>
+      </div>
+    `;
+
+    // Severity chart
+    const sevMap = {};
+    trends.forEach(t => Object.entries(t.severities||{}).forEach(([s,c]) => { sevMap[s]=(sevMap[s]||0)+c; }));
+    new Chart(document.getElementById('severity-chart'), {
+      type: 'bar',
+      data: {
+        labels: Object.keys(sevMap),
+        datasets: [{
+          data: Object.values(sevMap),
+          backgroundColor: ['#6366f1','#f59e0b','#f97316','#ef4444'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: '#888' }, grid: { color: '#2a2a2a' } },
+          y: { ticks: { color: '#888' }, grid: { color: '#2a2a2a' } }
+        }
+      }
+    });
+  } catch (e) { container.innerHTML = `<div class="alert alert-error">${e.message}</div>`; }
+}
+
+// ── Facilities admin ──────────────────────────────────────────
+async function loadFacilities() {
+  try {
+    _facilities = await api('/api/inspections/facilities', 'GET', null, { email: SESSION.email });
+    // Populate filter dropdowns
+    const ff = document.getElementById('filter-facility');
+    if (ff) ff.innerHTML = '<option value="">All Facilities</option>' +
+      _facilities.map(f => `<option value="${f.id}">${f.name}</option>`).join('');
+    // Staff facility select
+    const sf = document.getElementById('st-facility');
+    if (sf) sf.innerHTML = '<option value="">None</option>' +
+      _facilities.map(f => `<option value="${f.id}">${f.name}</option>`).join('');
+  } catch {}
+}
+
+async function loadFacilitiesPage() {
+  await loadFacilities();
+  document.getElementById('facilities-tbody').innerHTML = _facilities.map(f => `
+    <tr><td><strong>${f.name}</strong></td><td>${f.code||'—'}</td><td>${f.region||'—'}</td>
+    <td><span class="badge ${f.active ? 'badge-closed' : 'badge-draft'}">${f.active ? 'Active' : 'Inactive'}</span></td></tr>
+  `).join('');
+}
+
+async function saveFacility() {
+  const name = document.getElementById('fac-name').value.trim();
+  const code = document.getElementById('fac-code').value.trim();
+  const region = document.getElementById('fac-region').value.trim();
+  if (!name) return alert('Name required');
+  try {
+    await api('/api/inspections/facilities', 'POST', { email: SESSION.email, name, code, region });
+    closeModal('modal-facility');
+    loadFacilitiesPage();
+    showToast('Facility saved');
+  } catch (e) { alert(e.message); }
+}
+
+// ── Staff admin ───────────────────────────────────────────────
+async function loadStaffPage() {
+  try {
+    const staff = await api('/api/inspections/staff', 'GET', null, { email: SESSION.email });
+    document.getElementById('staff-tbody').innerHTML = staff.map(s => `
+      <tr>
+        <td><strong>${s.name}</strong></td>
+        <td>${s.email}</td>
+        <td><span class="badge badge-submitted">${formatRole(s.role)}</span></td>
+        <td>${s.inspection_facilities?.name || '—'}</td>
+        <td><span class="badge ${s.active ? 'badge-closed' : 'badge-draft'}">${s.active ? 'Active' : 'Inactive'}</span></td>
+      </tr>
+    `).join('');
+  } catch (e) { console.error(e); }
+}
+
+async function saveStaff() {
+  const name = document.getElementById('st-name').value.trim();
+  const email = document.getElementById('st-email').value.trim();
+  const role = document.getElementById('st-role').value;
+  const facility_id = document.getElementById('st-facility').value || null;
+  if (!name || !email || !role) return alert('Name, email, role required');
+  try {
+    await api('/api/inspections/staff', 'POST', { email: SESSION.email, name, email, role, facility_id });
+    closeModal('modal-staff');
+    loadStaffPage();
+    showToast('Staff saved');
+  } catch (e) { alert(e.message); }
+}
+
+// ── Notifications ─────────────────────────────────────────────
+function toggleNotifications() {
+  _notifOpen = !_notifOpen;
+  document.getElementById('notif-panel').classList.toggle('open', _notifOpen);
+  if (_notifOpen) loadNotifications();
+}
+
+document.addEventListener('click', e => {
+  if (_notifOpen && !e.target.closest('#notif-panel') && !e.target.closest('.notif-btn')) {
+    _notifOpen = false;
+    document.getElementById('notif-panel').classList.remove('open');
+  }
+});
+
+async function loadNotifications() {
+  try {
+    const notifs = await api('/api/inspections/notifications?email=' + encodeURIComponent(SESSION.email), 'GET', null, { email: SESSION.email });
+    const unread = notifs.filter(n => !n.read_at);
+
+    const badge = document.getElementById('notif-badge');
+    badge.textContent = unread.length;
+    badge.style.display = unread.length ? 'flex' : 'none';
+
+    const list = document.getElementById('notif-list');
+    list.innerHTML = notifs.length ? notifs.map(n => `
+      <div class="notif-item ${!n.read_at ? 'unread' : ''}" onclick="markNotifRead('${n.id}', '${n.report_id}')">
+        <div class="notif-title">${n.title}</div>
+        <div class="notif-msg">${n.message}</div>
+        <div class="notif-time">${fmtDateTime(n.created_at)}</div>
+      </div>
+    `).join('') : '<div class="notif-empty">No notifications</div>';
+  } catch {}
+}
+
+async function markNotifRead(id, reportId) {
+  await api(`/api/inspections/notifications/${id}/read`, 'PUT', { email: SESSION.email });
+  loadNotifications();
+  if (reportId && reportId !== 'null') { toggleNotifications(); openReportDetail(reportId); }
+}
+
+async function markAllRead() {
+  await api('/api/inspections/notifications/read-all', 'PUT', { email: SESSION.email });
+  loadNotifications();
+}
+
+// ── Modal helpers ─────────────────────────────────────────────
+function openModal(id)  { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
+});
+
+// ── Toast ─────────────────────────────────────────────────────
+function showToast(msg, type='success') {
+  const t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = `position:fixed;bottom:24px;right:24px;background:${type==='error'?'#dc2626':'#22c55e'};color:#fff;padding:12px 20px;border-radius:8px;font-size:13px;font-weight:600;z-index:999;box-shadow:0 4px 16px rgba(0,0,0,.4);transition:opacity .3s`;
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.opacity='0'; setTimeout(()=>t.remove(),300); }, 3000);
+}
+
+// ── Formatters ────────────────────────────────────────────────
+function fmtDate(d) { if (!d) return '—'; return new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }); }
+function fmtDateTime(d) { if (!d) return '—'; return new Date(d).toLocaleString('en-US', { month:'short', day:'numeric', hour:'numeric', minute:'2-digit' }); }
+function formatRole(r) {
+  return { regional_director:'Regional Director', regional_ops_coordinator:'Ops Coordinator', rhu_colonel:'RHU Colonel', warden:'Warden', admin:'Admin' }[r] || r || '—';
+}
+function dueCls(due, status) {
+  if (status === 'closed') return 'due-ok';
+  const diff = (new Date(due).getTime() - Date.now()) / 3600000;
+  if (diff < 0) return 'due-overdue';
+  if (diff < 72) return 'due-soon';
+  return 'due-ok';
+}
+</script>
+</body>
+</html>

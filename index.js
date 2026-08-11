@@ -92,18 +92,42 @@ const SEARCH_NAMESPACES = [
 
 async function embedProd(text) {
   const key = process.env.OPENAI_API_KEY || OPENROUTER_KEY;
-  const res = await fetch("https://api.openai.com/v1/embeddings", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${key}`,
-    },
-    body: JSON.stringify({ model: "text-embedding-3-large", input: text }),
-  });
-  if (!res.ok) throw new Error(`Embedding failed: ${res.status}`);
-  const data = await res.json();
-  if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
-  return data.data[0].embedding;
+  // Retry transient rate-limit 429s with exponential backoff. A 429 caused by
+  // insufficient_quota (account out of credits) is NOT transient — fail fast
+  // on it so we don't burn 4 retries before returning the same error.
+  const maxAttempts = 4;
+  let lastErr;
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    const res = await fetch("https://api.openai.com/v1/embeddings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${key}`,
+      },
+      body: JSON.stringify({ model: "text-embedding-3-large", input: text }),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (!data?.data?.[0]?.embedding) throw new Error("Embedding response missing data");
+      return data.data[0].embedding;
+    }
+
+    const body = await res.text().catch(() => "");
+    lastErr = new Error(`Embedding failed: ${res.status} ${body}`.trim());
+
+    const isQuota = res.status === 429 && /insufficient_quota|exceeded your.*quota/i.test(body);
+    const isRetryable = (res.status === 429 || res.status >= 500) && !isQuota;
+    if (!isRetryable || attempt === maxAttempts - 1) {
+      if (isQuota) {
+        console.error("[EMBED] OpenAI quota exhausted — add credits/billing to OPENAI_API_KEY account");
+      }
+      throw lastErr;
+    }
+    const delayMs = 1000 * 2 ** attempt; // 1s, 2s, 4s
+    console.warn(`[EMBED] ${res.status} from OpenAI, retrying in ${delayMs}ms (attempt ${attempt + 1}/${maxAttempts})`);
+    await new Promise(r => setTimeout(r, delayMs));
+  }
+  throw lastErr;
 }
 
 async function pineconeQuery(vector, namespace = "") {
@@ -7654,6 +7678,819 @@ app.get("/api/cron/recon-digest", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// ════════════════════════════════════════════════════════════════
+// INSPECTION REPORT TRACKING SYSTEM
+// Regional Directors / Ops Coordinators / RHU Colonels submit
+// reports after facility visits; Wardens respond to findings.
+// ════════════════════════════════════════════════════════════════
+
+const INSPECTION_KEY = process.env.INSPECTION_KEY || process.env.ADMIN_KEY;
+
+function authInspection(req, res) {
+  const key = req.headers["x-inspection-key"] || req.body?.inspection_key || req.query?.key;
+  if (key !== INSPECTION_KEY) {
+    res.status(401).json({ error: "Unauthorized" });
+    return null;
+  }
+  return true;
+}
+
+async function getStaff(email) {
+  if (!email) return null;
+  const { data } = await supabase.from("inspection_staff").select("*").eq("email", email.toLowerCase()).single();
+  return data;
+}
+
+const GLOBAL_ROLES = ["regional_director", "regional_ops_coordinator", "rhu_colonel", "admin"];
+
+function canAccessFacility(staff, facilityId) {
+  if (GLOBAL_ROLES.includes(staff.role)) return true;
+  return staff.facility_id === facilityId;
+}
+
+// Dashboard route
+app.get("/inspections", (_, res) =>
+  res.sendFile(join(__dirname, "embed", "inspections.html"))
+);
+
+// ── Facilities ────────────────────────────────────────────────
+
+app.get("/api/inspections/facilities", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  try {
+    const { data, error } = await supabase
+      .from("inspection_facilities")
+      .select("*")
+      .eq("active", true)
+      .order("name");
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] facilities list error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/inspections/facilities", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { name, code, region } = req.body;
+  if (!name) return res.status(400).json({ error: "name is required" });
+  try {
+    const { data, error } = await supabase
+      .from("inspection_facilities")
+      .insert({ name, code, region })
+      .select()
+      .single();
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] create facility error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Staff ─────────────────────────────────────────────────────
+
+app.get("/api/inspections/staff", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  try {
+    const { data, error } = await supabase
+      .from("inspection_staff")
+      .select("*, inspection_facilities(name)")
+      .eq("active", true)
+      .order("name");
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] staff list error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/inspections/staff", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { name, email, role, facility_id } = req.body;
+  if (!name || !email || !role) return res.status(400).json({ error: "name, email, role required" });
+  try {
+    const { data, error } = await supabase
+      .from("inspection_staff")
+      .upsert({ name, email: email.toLowerCase(), role, facility_id }, { onConflict: "email" })
+      .select()
+      .single();
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] upsert staff error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get("/api/inspections/me", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const email = req.query.email;
+  if (!email) return res.status(400).json({ error: "email required" });
+  const staff = await getStaff(email);
+  if (!staff) return res.status(404).json({ error: "Staff member not found" });
+  res.json(staff);
+});
+
+// ── Reports ───────────────────────────────────────────────────
+
+app.get("/api/inspections/reports", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email, facility_id, status, limit = 50, offset = 0 } = req.query;
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+
+    let q = supabase
+      .from("inspection_reports")
+      .select(`
+        *,
+        inspection_facilities(name, code, region),
+        inspection_staff(name, role),
+        inspection_findings(id, severity, is_repeat)
+      `)
+      .order("visit_date", { ascending: false })
+      .range(Number(offset), Number(offset) + Number(limit) - 1);
+
+    // Wardens see only their facility
+    if (!GLOBAL_ROLES.includes(staff.role)) {
+      q = q.eq("facility_id", staff.facility_id);
+    } else if (facility_id) {
+      q = q.eq("facility_id", facility_id);
+    }
+
+    if (status) q = q.eq("status", status);
+
+    const { data, error } = await q;
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] reports list error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get("/api/inspections/reports/:id", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email } = req.query;
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+
+    const { data, error } = await supabase
+      .from("inspection_reports")
+      .select(`
+        *,
+        inspection_facilities(name, code, region),
+        inspection_staff(name, email, role),
+        inspection_findings(
+          *,
+          finding_responses(*)
+        )
+      `)
+      .eq("id", req.params.id)
+      .single();
+
+    if (error) throw error;
+    if (!canAccessFacility(staff, data.facility_id)) {
+      return res.status(403).json({ error: "Access denied" });
+    }
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] report get error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/inspections/reports", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email, facility_id, visit_date, due_date, overall_notes, findings = [] } = req.body;
+  if (!facility_id || !visit_date || !due_date) {
+    return res.status(400).json({ error: "facility_id, visit_date, due_date required" });
+  }
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+    if (!GLOBAL_ROLES.includes(staff.role)) {
+      return res.status(403).json({ error: "Only regional staff can create inspection reports" });
+    }
+
+    const { data: report, error: rErr } = await supabase
+      .from("inspection_reports")
+      .insert({
+        facility_id,
+        inspector_id: staff.id,
+        inspector_role: staff.role,
+        visit_date,
+        due_date,
+        overall_notes,
+        status: "draft",
+      })
+      .select()
+      .single();
+    if (rErr) throw rErr;
+
+    // Insert findings if provided
+    if (findings.length > 0) {
+      const findingRows = findings.map(f => ({
+        report_id: report.id,
+        category: f.category,
+        description: f.description,
+        severity: f.severity || "medium",
+        recommendation: f.recommendation || null,
+      }));
+      const { error: fErr } = await supabase.from("inspection_findings").insert(findingRows);
+      if (fErr) throw fErr;
+    }
+
+    res.json({ status: "ok", report_id: report.id });
+  } catch (err) {
+    console.error("[INSPECTIONS] create report error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/inspections/reports/:id", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email, overall_notes, visit_date, due_date } = req.body;
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+
+    const updates = { updated_at: new Date().toISOString() };
+    if (overall_notes !== undefined) updates.overall_notes = overall_notes;
+    if (visit_date) updates.visit_date = visit_date;
+    if (due_date) updates.due_date = due_date;
+
+    const { data, error } = await supabase
+      .from("inspection_reports")
+      .update(updates)
+      .eq("id", req.params.id)
+      .select()
+      .single();
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] update report error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/inspections/reports/:id/submit", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email } = req.body;
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+
+    // Get report
+    const { data: report, error: rErr } = await supabase
+      .from("inspection_reports")
+      .update({ status: "submitted", submitted_at: new Date().toISOString(), updated_at: new Date().toISOString() })
+      .eq("id", req.params.id)
+      .select("*, inspection_facilities(name)")
+      .single();
+    if (rErr) throw rErr;
+
+    // Mark repeat findings using trend engine
+    await markRepeatFindings(report.id, report.facility_id);
+
+    // Notify wardens
+    (async () => {
+      try {
+        const { data: wardens } = await supabase
+          .from("inspection_staff")
+          .select("*")
+          .eq("facility_id", report.facility_id)
+          .eq("role", "warden")
+          .eq("active", true);
+
+        for (const warden of wardens || []) {
+          // In-app notification
+          await supabase.from("inspection_notifications").insert({
+            staff_id: warden.id,
+            staff_email: warden.email,
+            title: "New Inspection Report Submitted",
+            message: `An inspection report for ${report.inspection_facilities?.name} has been submitted by ${staff.name}. Response due: ${report.due_date}.`,
+            report_id: report.id,
+            notification_type: "new_report",
+          });
+
+          // Email
+          await sendInspectionEmail(
+            warden.email,
+            `New Inspection Report: ${report.inspection_facilities?.name}`,
+            buildReportNotificationEmail({
+              to_name: warden.name,
+              facility: report.inspection_facilities?.name,
+              inspector: staff.name,
+              due_date: report.due_date,
+              report_id: report.id,
+              type: "new_report",
+            })
+          );
+        }
+      } catch (err) {
+        console.error("[INSPECTIONS] submit notify error:", err.message);
+      }
+    })();
+
+    res.json({ status: "ok", message: "Report submitted" });
+  } catch (err) {
+    console.error("[INSPECTIONS] submit report error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Findings ──────────────────────────────────────────────────
+
+app.post("/api/inspections/reports/:id/findings", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { category, description, severity = "medium", recommendation } = req.body;
+  if (!category || !description) return res.status(400).json({ error: "category and description required" });
+
+  try {
+    const { data, error } = await supabase
+      .from("inspection_findings")
+      .insert({ report_id: req.params.id, category, description, severity, recommendation })
+      .select()
+      .single();
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] add finding error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/inspections/findings/:id", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { category, description, severity, recommendation } = req.body;
+
+  try {
+    const updates = {};
+    if (category) updates.category = category;
+    if (description) updates.description = description;
+    if (severity) updates.severity = severity;
+    if (recommendation !== undefined) updates.recommendation = recommendation;
+
+    const { data, error } = await supabase
+      .from("inspection_findings")
+      .update(updates)
+      .eq("id", req.params.id)
+      .select()
+      .single();
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] update finding error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.delete("/api/inspections/findings/:id", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  try {
+    const { error } = await supabase.from("inspection_findings").delete().eq("id", req.params.id);
+    if (error) throw error;
+    res.json({ status: "ok" });
+  } catch (err) {
+    console.error("[INSPECTIONS] delete finding error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Warden Responses ──────────────────────────────────────────
+
+app.post("/api/inspections/findings/:id/respond", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email, status: responseStatus, response_notes, target_completion_date } = req.body;
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+
+    const completed_at = responseStatus === "resolved" ? new Date().toISOString() : null;
+
+    const { data, error } = await supabase
+      .from("finding_responses")
+      .upsert(
+        {
+          finding_id: req.params.id,
+          responder_id: staff.id,
+          status: responseStatus || "open",
+          response_notes,
+          target_completion_date: target_completion_date || null,
+          completed_at,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "finding_id" }
+      )
+      .select()
+      .single();
+    if (error) throw error;
+
+    // Notify the original inspector
+    (async () => {
+      try {
+        const { data: finding } = await supabase
+          .from("inspection_findings")
+          .select("*, inspection_reports(*, inspection_facilities(name), inspection_staff(email, name))")
+          .eq("id", req.params.id)
+          .single();
+
+        const inspector = finding?.inspection_reports?.inspection_staff;
+        const facility = finding?.inspection_reports?.inspection_facilities?.name;
+        const reportId = finding?.inspection_reports?.id;
+
+        if (inspector?.email) {
+          await supabase.from("inspection_notifications").insert({
+            staff_email: inspector.email,
+            title: `Warden Response: ${finding.category}`,
+            message: `${staff.name} responded to finding "${finding.category}" at ${facility}. Status: ${responseStatus}.`,
+            report_id: reportId,
+            notification_type: "response_received",
+          });
+
+          await sendInspectionEmail(
+            inspector.email,
+            `Response Received: ${finding.category} — ${facility}`,
+            buildReportNotificationEmail({
+              to_name: inspector.name,
+              facility,
+              inspector: staff.name,
+              due_date: null,
+              report_id: reportId,
+              type: "response_received",
+              extra: `Category: ${finding.category}<br>Status: <strong>${responseStatus}</strong><br>Notes: ${response_notes || "—"}`,
+            })
+          );
+        }
+      } catch (err) {
+        console.error("[INSPECTIONS] response notify error:", err.message);
+      }
+    })();
+
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] warden respond error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Trends ────────────────────────────────────────────────────
+
+app.get("/api/inspections/facilities/:id/trends", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const months = Number(req.query.months) || 12;
+
+  try {
+    const since = new Date();
+    since.setMonth(since.getMonth() - months);
+
+    const { data, error } = await supabase
+      .from("inspection_findings")
+      .select(`
+        category,
+        severity,
+        is_repeat,
+        description,
+        inspection_reports!inner(facility_id, visit_date, status)
+      `)
+      .eq("inspection_reports.facility_id", req.params.id)
+      .neq("inspection_reports.status", "draft")
+      .gte("inspection_reports.visit_date", since.toISOString().split("T")[0]);
+
+    if (error) throw error;
+
+    // Aggregate by category
+    const counts = {};
+    for (const f of data || []) {
+      const cat = f.category;
+      if (!counts[cat]) counts[cat] = { category: cat, count: 0, severities: {}, last_seen: null, is_repeat_pattern: false };
+      counts[cat].count++;
+      counts[cat].severities[f.severity] = (counts[cat].severities[f.severity] || 0) + 1;
+      const vd = f.inspection_reports?.visit_date;
+      if (!counts[cat].last_seen || vd > counts[cat].last_seen) counts[cat].last_seen = vd;
+      if (counts[cat].count >= 2) counts[cat].is_repeat_pattern = true;
+    }
+
+    const trends = Object.values(counts).sort((a, b) => b.count - a.count);
+    res.json({ facility_id: req.params.id, months, trends });
+  } catch (err) {
+    console.error("[INSPECTIONS] trends error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Notifications ─────────────────────────────────────────────
+
+app.get("/api/inspections/notifications", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email, unread_only } = req.query;
+  if (!email) return res.status(400).json({ error: "email required" });
+
+  try {
+    let q = supabase
+      .from("inspection_notifications")
+      .select("*")
+      .eq("staff_email", email.toLowerCase())
+      .order("created_at", { ascending: false })
+      .limit(50);
+
+    if (unread_only === "true") q = q.is("read_at", null);
+
+    const { data, error } = await q;
+    if (error) throw error;
+    res.json(data);
+  } catch (err) {
+    console.error("[INSPECTIONS] notifications error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/inspections/notifications/:id/read", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  try {
+    const { error } = await supabase
+      .from("inspection_notifications")
+      .update({ read_at: new Date().toISOString() })
+      .eq("id", req.params.id);
+    if (error) throw error;
+    res.json({ status: "ok" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/inspections/notifications/read-all", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email } = req.body;
+  if (!email) return res.status(400).json({ error: "email required" });
+  try {
+    const { error } = await supabase
+      .from("inspection_notifications")
+      .update({ read_at: new Date().toISOString() })
+      .eq("staff_email", email.toLowerCase())
+      .is("read_at", null);
+    if (error) throw error;
+    res.json({ status: "ok" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Dashboard Summary ─────────────────────────────────────────
+
+app.get("/api/inspections/dashboard", async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: "DB not configured" });
+  if (!authInspection(req, res)) return;
+  const { email } = req.query;
+
+  try {
+    const staff = await getStaff(email);
+    if (!staff) return res.status(404).json({ error: "Staff not found" });
+
+    let baseQ = supabase.from("inspection_reports").select("id, status, due_date, facility_id, submitted_at");
+    if (!GLOBAL_ROLES.includes(staff.role)) baseQ = baseQ.eq("facility_id", staff.facility_id);
+
+    const { data: reports } = await baseQ;
+    const today = new Date().toISOString().split("T")[0];
+    const in72h = new Date(Date.now() + 72 * 3600 * 1000).toISOString().split("T")[0];
+
+    const summary = {
+      total: reports?.length || 0,
+      draft: reports?.filter(r => r.status === "draft").length || 0,
+      submitted: reports?.filter(r => r.status === "submitted").length || 0,
+      in_review: reports?.filter(r => r.status === "in_review").length || 0,
+      closed: reports?.filter(r => r.status === "closed").length || 0,
+      overdue: reports?.filter(r => r.status === "submitted" && r.due_date < today).length || 0,
+      due_soon: reports?.filter(r => r.status === "submitted" && r.due_date >= today && r.due_date <= in72h).length || 0,
+    };
+
+    const { data: unread } = await supabase
+      .from("inspection_notifications")
+      .select("id", { count: "exact" })
+      .eq("staff_email", staff.email)
+      .is("read_at", null);
+
+    res.json({ ...summary, unread_notifications: unread?.length || 0, staff });
+  } catch (err) {
+    console.error("[INSPECTIONS] dashboard error:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Helpers ───────────────────────────────────────────────────
+
+async function markRepeatFindings(reportId, facilityId) {
+  try {
+    const { data: newFindings } = await supabase
+      .from("inspection_findings")
+      .select("id, category")
+      .eq("report_id", reportId);
+
+    for (const finding of newFindings || []) {
+      const { data: prior } = await supabase
+        .from("inspection_findings")
+        .select("id, inspection_reports!inner(id, facility_id, status)")
+        .eq("category", finding.category)
+        .eq("inspection_reports.facility_id", facilityId)
+        .neq("inspection_reports.id", reportId)
+        .neq("inspection_reports.status", "draft")
+        .limit(1);
+
+      if (prior?.length > 0) {
+        await supabase
+          .from("inspection_findings")
+          .update({ is_repeat: true, prior_report_id: prior[0].inspection_reports?.id })
+          .eq("id", finding.id);
+      }
+    }
+  } catch (err) {
+    console.error("[INSPECTIONS] markRepeatFindings error:", err.message);
+  }
+}
+
+async function sendInspectionEmail(to, subject, html) {
+  if (!emailTransporter) return;
+  try {
+    await emailTransporter.sendMail({
+      from: `"Forged by Freedom — Inspections" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      html,
+    });
+  } catch (err) {
+    console.error("[INSPECTIONS] email error:", err.message);
+  }
+}
+
+function buildReportNotificationEmail({ to_name, facility, inspector, due_date, report_id, type, extra = "" }) {
+  const APP = process.env.APP_URL || "https://forged-by-freedom-api-nm4f.onrender.com";
+  const link = `${APP}/inspections?report=${report_id}`;
+
+  const titles = {
+    new_report: "New Inspection Report Submitted",
+    response_received: "Warden Response Received",
+    "72h": "72-Hour Warning: Response Due",
+    "48h": "48-Hour Warning: Response Due",
+    "24h": "24-Hour Warning: Response Due",
+    overdue: "OVERDUE: Inspection Response Past Due",
+    weekly: "Weekly Reminder: Report Pending",
+  };
+  const colors = { new_report: "#ff6a00", response_received: "#22c55e", "72h": "#f59e0b", "48h": "#f97316", "24h": "#ef4444", overdue: "#dc2626", weekly: "#6366f1" };
+  const title = titles[type] || "Inspection Update";
+  const color = colors[type] || "#ff6a00";
+
+  return `
+<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 20px;background:#0a0a0a;color:#e8e8e8;">
+  <div style="text-align:center;margin-bottom:24px;">
+    <h1 style="font-size:20px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(135deg,#ff6a00,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;">FORGED BY FREEDOM</h1>
+    <p style="color:#888;font-size:12px;margin:4px 0 0;">Institutional Inspection System</p>
+  </div>
+  <h2 style="color:${color};text-align:center;margin-bottom:16px;">${title}</h2>
+  <p>Hi ${to_name || ""},</p>
+  <table style="width:100%;background:#1a1a1a;border-radius:8px;padding:16px;margin:16px 0;border-collapse:collapse;">
+    <tr><td style="padding:6px 12px;color:#888;">Facility</td><td style="padding:6px 12px;font-weight:bold;">${facility || "—"}</td></tr>
+    ${inspector ? `<tr><td style="padding:6px 12px;color:#888;">${type === "response_received" ? "Responder" : "Inspector"}</td><td style="padding:6px 12px;">${inspector}</td></tr>` : ""}
+    ${due_date ? `<tr><td style="padding:6px 12px;color:#888;">Due Date</td><td style="padding:6px 12px;color:${color};font-weight:bold;">${due_date}</td></tr>` : ""}
+  </table>
+  ${extra ? `<div style="background:#1a1a1a;border-left:3px solid ${color};padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0;font-size:14px;">${extra}</div>` : ""}
+  <p style="text-align:center;margin:24px 0;">
+    <a href="${link}" style="display:inline-block;background:linear-gradient(135deg,#ff6a00,#e85d00);color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">View Report</a>
+  </p>
+  <p style="color:#555;font-size:12px;text-align:center;margin-top:24px;">Forged by Freedom — Institutional Inspection Tracking</p>
+</div>`;
+}
+
+// ── Scheduled Email Notifications (runs every 30 min) ─────────
+function startInspectionNotificationScheduler() {
+  if (!supabase || !emailTransporter) return;
+
+  const run = async () => {
+    try {
+      const today = new Date().toISOString().split("T")[0];
+
+      // Find submitted reports with approaching or passed due dates
+      const { data: reports } = await supabase
+        .from("inspection_reports")
+        .select("*, inspection_facilities(name), inspection_staff(name, email)")
+        .eq("status", "submitted")
+        .gte("due_date", today);
+
+      for (const report of reports || []) {
+        const msLeft = new Date(report.due_date).getTime() + 86399999 - Date.now();
+        const hLeft = msLeft / 3600000;
+
+        let notifType = null;
+        if (hLeft <= 24 && hLeft > 0) notifType = "24h";
+        else if (hLeft <= 48 && hLeft > 24) notifType = "48h";
+        else if (hLeft <= 72 && hLeft > 48) notifType = "72h";
+
+        if (!notifType) continue;
+
+        const { data: wardens } = await supabase
+          .from("inspection_staff")
+          .select("*")
+          .eq("facility_id", report.facility_id)
+          .eq("role", "warden")
+          .eq("active", true);
+
+        for (const warden of wardens || []) {
+          const { error: logErr } = await supabase
+            .from("inspection_notification_log")
+            .insert({ report_id: report.id, notification_type: notifType, recipient_email: warden.email })
+            .select();
+
+          if (!logErr) {
+            await sendInspectionEmail(
+              warden.email,
+              `${notifType} Warning: Inspection Response Due — ${report.inspection_facilities?.name}`,
+              buildReportNotificationEmail({
+                to_name: warden.name,
+                facility: report.inspection_facilities?.name,
+                inspector: report.inspection_staff?.name,
+                due_date: report.due_date,
+                report_id: report.id,
+                type: notifType,
+              })
+            );
+            console.log(`[INSPECTIONS] Sent ${notifType} email to ${warden.email}`);
+          }
+        }
+      }
+
+      // Weekly reminders for unsubmitted drafts (Mondays only)
+      if (new Date().getDay() === 1) {
+        const weekAgo = new Date(Date.now() - 7 * 86400000).toISOString();
+        const { data: drafts } = await supabase
+          .from("inspection_reports")
+          .select("*, inspection_facilities(name), inspection_staff(name, email)")
+          .eq("status", "draft")
+          .lt("created_at", weekAgo);
+
+        const weekKey = `weekly_${new Date().toISOString().slice(0, 10)}`;
+        for (const draft of drafts || []) {
+          const inspector = draft.inspection_staff;
+          if (!inspector?.email) continue;
+          const { error: logErr } = await supabase
+            .from("inspection_notification_log")
+            .insert({ report_id: draft.id, notification_type: weekKey, recipient_email: inspector.email });
+          if (!logErr) {
+            await sendInspectionEmail(
+              inspector.email,
+              `Weekly Reminder: Inspection Report Pending — ${draft.inspection_facilities?.name}`,
+              buildReportNotificationEmail({
+                to_name: inspector.name,
+                facility: draft.inspection_facilities?.name,
+                inspector: inspector.name,
+                due_date: draft.due_date,
+                report_id: draft.id,
+                type: "weekly",
+              })
+            );
+            console.log(`[INSPECTIONS] Sent weekly reminder to ${inspector.email}`);
+          }
+        }
+      }
+    } catch (err) {
+      console.error("[INSPECTIONS] scheduler error:", err.message);
+    }
+  };
+
+  run();
+  setInterval(run, 30 * 60 * 1000);
+  console.log("[INSPECTIONS] Notification scheduler started");
+}
+
+startInspectionNotificationScheduler();
 
 // 404 handler
 app.use((_, res) => res.status(404).json({ error: "Not found" }));
