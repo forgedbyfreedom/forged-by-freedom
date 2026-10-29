@@ -10,7 +10,6 @@
     "check:tooling": "node scripts/check-tooling.mjs"
   },
   "dependencies": {
-    "@perplexity-ai/perplexity_ai": "^0.41.0",
     "@pinecone-database/pinecone": "^7.2.0",
     "@supabase/supabase-js": "^2.98.0",
     "body-parser": "^2.2.1",

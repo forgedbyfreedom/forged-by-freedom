@@ -19,14 +19,6 @@ try {
 try { ok(`HyperFrames CLI ${execSync('npx hyperframes --version').toString().trim()}`); } catch { bad('HyperFrames CLI'); }
 try { execSync('ffmpeg -version', { stdio: 'ignore' }); ok('ffmpeg on PATH'); } catch { bad('ffmpeg not on PATH (needed by HyperFrames render)'); }
 
-// Perplexity
-if (!process.env.PERPLEXITY_API_KEY || process.env.PERPLEXITY_API_KEY.includes('your_key')) bad('PERPLEXITY_API_KEY not set in .env');
-else try {
-  const { default: Perplexity } = await import('@perplexity-ai/perplexity_ai');
-  const r = await new Perplexity().chat.completions.create({ model: 'sonar', messages: [{ role: 'user', content: 'Reply with OK' }] });
-  ok(`Perplexity: ${r.choices[0].message.content.slice(0, 40)}`);
-} catch (e) { bad(`Perplexity: ${e.message}`); }
-
 // Firecrawl
 if (!process.env.FIRECRAWL_API_KEY || process.env.FIRECRAWL_API_KEY.includes('your_key')) bad('FIRECRAWL_API_KEY not set in .env');
 else try {
