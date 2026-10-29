@@ -21,7 +21,7 @@ npm run check:tooling                  # smoke test — every line should say OK
 
 Requirements: Node 22+ (HyperFrames needs it) and FFmpeg on PATH (HyperFrames renders with it).
 
-Claude Code picks up `.mcp.json` automatically when opened in this repo (approve the two servers once). The `${FIRECRAWL_API_KEY}` placeholder is read from your shell environment, so export it (or set it as a Windows user env var) as well as putting them in `.env`.
+Claude Code picks up `.mcp.json` automatically when opened in this repo (approve the two servers once). The `${FIRECRAWL_API_KEY}` placeholder is read from your shell environment, so export it (or set it as a Windows user env var) as well as putting it in `.env`.
 
 Skills live canonically in `skills/` and are copied to `.claude/skills/` and `.cursor/skills/` by `shared/scripts/sync-skill.sh` (runs on every Claude Code session start). To refresh to newer upstream versions: `npx hyperframes skills update` and `npx firecrawl init -y --skip-install --skip-auth --agent claude-code`, then copy the updated folders from `~/.claude/skills/` into `skills/`.
 
