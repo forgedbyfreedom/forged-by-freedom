@@ -1,7 +1,7 @@
 import os
 import re
 
-root = "api/transcripts"
+root = "transcripts"
 episode_count = 0
 word_count = 0
 

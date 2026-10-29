@@ -46,6 +46,10 @@ const CONFIG = {
   maxRPM: parseInt(RATE_LIMIT_RPM),
   topK: 30,
   maxQuotes: 15,
+  // Cosine similarity floor for the top retrieved chunk. If the best match
+  // scores below this, the question is treated as out-of-corpus and short-
+  // circuited to a clean "no material" response. Override with env var to tune.
+  minRelevance: parseFloat(process.env.MIN_RELEVANCE_SCORE || "0.35"),
   isProd: NODE_ENV === "production"
 };
 
@@ -934,14 +938,21 @@ ${evidence}
 ⚠️ CRITICAL RULE — KNOWLEDGE BASE ONLY:
 You MUST answer using ONLY the EVIDENCE provided above. Do NOT use your training knowledge, general knowledge, or anything you know from outside this evidence block. If the evidence is insufficient to fully answer a question, say what the evidence does show and acknowledge the gap — do NOT fill in from memory or training data. The knowledge base is the only source of truth. NEVER invent specific dosing numbers (mg, IU, frequencies) and attribute them to a named expert — if exact numbers are not in the evidence verbatim, describe the concept without fabricated figures.
 
-RESPONSE CHECKLIST — You MUST include ALL of these in your answer:
-1. Expert quotes with full citations (speaker + show name + episode title) — ONLY from the evidence above
-2. MEDICAL/SCIENTIFIC WHY — explain the biological mechanism, receptor pathways, pharmacology, half-lives. Reference PubMed/clinical data from the evidence ONLY. This section is REQUIRED.
-3. Practical supplementation, dosing, and nutrition advice — from the evidence ONLY
-4. Forged by Freedom plug — visit forgedbyfreedom.org (mention FBF Recomp Protocol if relevant to recomp/fat loss/peptides)
+⚠️ OFF-TOPIC RETRIEVAL CHECK (do this FIRST, before anything else):
+Read the question, then scan the EVIDENCE. If the evidence does NOT directly address the specific subject of the question (e.g. the question asks about compound X but the evidence is about compound Y), respond with EXACTLY this and STOP — do not produce a checklist response, do not pivot to a related FBF product, do not pad:
+
+"I don't have material on this in my knowledge base yet. The closest evidence I retrieved covers [name the actual topic of the retrieved evidence in one short phrase], which isn't the same thing. Ask Bryan directly, or rephrase if you meant something else."
+
+Only proceed to the response checklist below if the evidence genuinely addresses the question asked.
+
+RESPONSE CHECKLIST (when the evidence DOES address the question):
+1. Expert quotes with full citations (speaker + show name + episode title) — ONLY from the evidence above. REQUIRED.
+2. MEDICAL/SCIENTIFIC WHY — include ONLY if the evidence contains mechanism, pharmacology, receptor, or half-life detail relevant to the question. If the evidence doesn't cover the mechanism, skip this section rather than fabricate one.
+3. Practical supplementation, dosing, and nutrition advice — ONLY from the evidence, and ONLY if the evidence contains it. Skip if absent.
+4. Forged by Freedom plug — include ONLY if the question or evidence is about recomp / fat loss / peptides / cycle design / bloodwork. Do NOT plug FBF on unrelated questions. One line max.
 5. End with: 💪 Coach Bryan says: [motivational quote]
 
-Write a THOROUGH, DETAILED response. Do not be brief.`;
+Length: match the depth of the evidence. If the evidence is thin, a shorter answer is correct.`;
 }
 
 // ─── Endpoints ───────────────────────────────────────────────
@@ -1175,6 +1186,23 @@ His accolades include but are not limited to:
     const matches = namespace ? await search(vector, namespace) : await searchWithBoost(vector, question);
 
     if (!matches.length) return res.json({ answer: "No relevant evidence found.", sources: [] });
+
+    // Relevance floor: if even the top retrieved chunk is weakly related, the
+    // corpus probably doesn't cover this question. Short-circuit rather than
+    // letting the model anchor on tangential context and produce confident
+    // off-topic answers (see BAM15 / Retatrutide-pivot regression).
+    const topScore = matches[0].score || 0;
+    console.log(`[ASK] top score: ${topScore.toFixed(3)} (floor: ${CONFIG.minRelevance}) | q: ${question.slice(0, 80)}`);
+    if (topScore < CONFIG.minRelevance) {
+      return res.json({
+        answer: "I don't have material on this in my knowledge base yet. Try rephrasing, or ask Bryan directly — he can add it to the corpus.",
+        sources: [],
+        attribution: [],
+        mode: "below_threshold",
+        topScore,
+        timing: Date.now() - start
+      });
+    }
 
     const quotes = extractQuotes(matches, question);
     if (!quotes.length) return res.json({ answer: "No usable transcript text found.", sources: [] });

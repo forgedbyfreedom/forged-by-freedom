@@ -1,0 +1,12 @@
+numpy>=1.24
+flask>=3.0
+praat-parselmouth>=0.4.3
+sounddevice>=0.4.6      # live mic only; --baseline/--question and URL flow are mic-free
+# WebRTC VAD — the canonical 'webrtcvad' package ships no Windows wheels for
+# modern Python, so installing it requires MSVC Build Tools (2+ GB). The
+# 'webrtcvad-wheels' community fork publishes prebuilt wheels for Linux,
+# macOS, and Windows on Python 3.9-3.12+ and exposes the SAME `import
+# webrtcvad`. Drop-in replacement, no code change.
+webrtcvad-wheels>=2.0.10
+yt-dlp>=2024.0          # video/audio URL ingest; also needs ffmpeg in PATH
+faster-whisper>=1.0     # OPTIONAL: enables transcript + content features (hedge/disfluency/first-person rates)

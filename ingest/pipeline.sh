@@ -2,7 +2,7 @@
 # ─────────────────────────────────────────────────────────────
 # FORGED BY FREEDOM — UNIFIED INGEST PIPELINE
 # ─────────────────────────────────────────────────────────────
-# Nodes: cron → youtube → whisper → pinecone → search → answer
+# Nodes: cron → youtube → whisper → qdrant (ai.serverborn.com) → search → answer
 #
 # Usage:
 #   ./pipeline.sh              # Run full pipeline (download + fix + masters + ingest — NO Whisper)
@@ -10,7 +10,7 @@
 #   ./pipeline.sh transcribe   # Whisper transcribe pending mp3s (FREE — local MLX Whisper)
 #   ./pipeline.sh research     # PubMed + ClinicalTrials fetch
 #   ./pipeline.sh fix          # Vocabulary corrections only
-#   ./pipeline.sh ingest       # Pinecone ingest only
+#   ./pipeline.sh ingest       # Qdrant ingest only
 #   ./pipeline.sh stats        # Show stats only
 # ─────────────────────────────────────────────────────────────
 
@@ -21,7 +21,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # Windows requires UTF-8 for emoji/unicode in Python output
 export PYTHONIOENCODING=utf-8
 
-# Use venv Python (has dotenv, tiktoken, openai, pinecone installed)
+# Use venv Python (has dotenv, tiktoken, openai installed)
 # Allow PYTHON to be overridden from the environment (e.g. for mlx_whisper)
 if [ -z "$PYTHON" ]; then
     # Windows venv uses Scripts/, Unix uses bin/
@@ -89,7 +89,7 @@ YT_COOKIES="--cookies $COOKIES_FILE"
 TIER1="ThinkBIGBodybuilding|rxmuscle|anabolicbodybuilding|johnjewett3"
 # Tier 2: Key PED/fitness experts + female health + medical (max 30 downloads)
 TIER2="MorePlatesMoreDates|MPMD|vigoroussteve|LeoandLongevity|hubermanlab|PeterAttiaMD|FoundMyFitness|GregDoucette|FouadAbiad|RenaissancePeriodization|StanEfferding|JeffNippard|AthleanX|BarbellMedicine|StrongerByScience|DrGabrielleLyon|DrStacySims|DrMindyPelz|HollyBaxter|SoheeFit|LaurinConlin|megsquats|StephanieButtermore|StefiCohen|LoriHarder|MedCram|NinjaNerdOfficial|SquatUniversity|JayCampbell|CoachTrevorBlack|TrevorBachmeyer|drtrevorbachmeyer|DrAndyGalpin|DrBradStanfield|Physionic|HighIntensityHealth|SethFeroce|MilosSarcev|HypertrophyCoach|MattJansen|BryanJohnson|MuscleIntelligence|BradSchoenfeldPhD|BalanceMyHormones|DrAkshayJainMD|OmarIsuf"
-# Skip: Not relevant to fitness/bodybuilding/PED coaching — already indexed content stays in Pinecone
+# Skip: Not relevant to fitness/bodybuilding/PED coaching — already indexed content stays as-is
 # Plus 132 channels confirmed dead/404 as of 2026-05-12 (handles changed or channels deleted)
 SKIP_CHANNELS="3Blue1Brown|kurzgesagt|veritasium|Vsauce|numberphile|minutephysics|Vihart|StudyForce|AliAbdaal|melrobbins|MulliganBrothers|BroScienceLife|mitocw|Stanford|YaleCourses|ProfessorDaveExplains|TheRoyalInstitution|SciShow|TEDxTalks|TED|CarolineGirvan|HandwrittenTutorials|LecturioMedical|SketchyMedical|BoardsBeyond|USMLEFirstAid|NBMEmedical|Physeo|PathologyOutlines|ScienceNaturePage|NatureVideo|LancetTV|CellPress|PsychiatryOnline|Neurology|NeuroscientificallyC|CochraneCollaboration|BMJupdates|JAMANetwork|WHO|CDCgov|FDAChannel|NIH|ACPInternist|3DMJCoaching|3DMuscleJourney|AABORCS|ABORNEGROUP|ACSMNews|ACSM_org|AHAScience|AbbeySharp|AlbertNunez3DMJ|AmericanDiabetesAssociation|AnabolicDoc|AnatomyMB|AndreaNunezOfficially|AndrewJacked|AndyGalpin|AshleyKaltwasser|BJJFanatics|BenGreenfield|BenPollack|BigRobFitness|BioDigitalHuman|Biolayne|BodybuilderInThailand|BonesBrigadeVintage|BrandonTietz|BrianShawStrong|BrittLarson|CDCgov|CalisthenicMovement|CochraneCollaboration|DavidGoggins|DerekLunsford|DrAlanChristianson|DrCraigKoniver|DrEricBergDC|DrJacobGoodwin|DrJoAnnDahlkoetter|DrJohnRusin|DrMattAndDrMike|DrNajeebLectures|DrSarfrazZaidi|EddiehallStrongman|EndocrineSociety|EndocrineWeb|EnhancedInfo|EricHelms3DMJ|ExPhysResearch|FlexWheeler|GeneticallyShredded|GetBodySmart|GojiManUK|GoldenEraBB|GregNuckols|HadiChoopan|HandwrittenTutorials|ISSN_Sport|IainValliere|IlanaMuhlstein|InstituteofHumanAnatomy|JayColter|JockoPodcast|JoeGordonFitness|JoelSeedman|JohnMeadowsMountainDog|JordanPetersCoaching|JulieLohre|Kabuki_Strength|KatieCrewe|KristyHawkins|LeePriest|MarkBellSlingShot|MennoHenselmans|MensHealthClinic|MindPumpPodcast|MountSinaiHealth|MuscleMemoirsOfficial|Natacha_Oceane|NickTrigili|NickWalkerBodybuilder|NorthwesternMed|NutritionExamined|NutritionFacts|OFFICIALTHENX|OfficialRonnieColeman|PrecisionNutrition|PrehabGuys|PrepCoachGary|RBTGym|RichPianaRaw|RushUniversity|ScienceNaturePage|SportPsychSolutions|SportsScience|SteveKuclo|SteveShawFitness|StrongMedicine|SuperTrainingGym|SwollenAF|THENX|TOTRevolution|TaylorMadeCompounding|TheBodyGeek|TheBodybuildingPodcast|TonyHuge|UABORCSF|USABORCS|USAntidoping|Vertical-Diet|VisibleBody|WABORCS|bostin_loyd|dorian_yates_official|gillettehealth|harvaborard|kaboratory|kevinlevrone|medicaboratory|realtattered|TannerTatteredFAQ|stanjeffordsen|strengthandconditioningresearch|teamlocofit"
 # Low priority: Tangentially relevant (max 5 downloads per night)
@@ -356,22 +356,30 @@ build_masters() {
     $PYTHON -u build_master_transcripts.py 2>&1 | tee -a "$LOG_FILE"
 }
 
-# ─── Node 4: Pinecone Ingest ──────────────────────────────────
-ingest_pinecone() {
-    header "NODE 4a: PINECONE INGEST"
+# ─── Node 4: Qdrant Ingest (ai.serverborn.com — the live RAG) ─
+# The legacy vector-DB provider is permanently removed from this
+# pipeline (was: Node 4a). Local Chroma (was: Node 4b) is retired.
+# ingest_to_wordpress.py (already built 2026-07-25, previously only
+# wired into the nightly GitHub Actions workflow) POSTs embedded
+# chunks to /wp-json/fbf/v1/rag/upsert on forgedbyfreedom.net, which
+# writes into the live Qdrant corpus server-side. Running it here too
+# means the local nightly run drains the backlog, not just GH Actions.
+# Needs WP_INGEST_URL + WP_INGEST_KEY in the environment/.env — the
+# key is generated at wp-admin > Dashboard > AI Knowledge (RAG).
+ingest_wp_rag() {
+    header "NODE 4: WORDPRESS RAG INGEST (-> Qdrant via forgedbyfreedom.net)"
     cd "$SCRIPT_DIR"
-    $PYTHON -u ingest_to_pinecone.py 2>&1 | tee -a "$LOG_FILE"
-}
-
-ingest_chroma() {
-    header "NODE 4b: LOCAL CHROMA INGEST (C:/AI/chroma_db_local)"
-    cd "$SCRIPT_DIR"
-    $PYTHON -u ingest_to_chroma.py 2>&1 | tee -a "$LOG_FILE"
+    if [ -z "$WP_INGEST_KEY" ] || [ -z "$WP_INGEST_URL" ]; then
+        log "⏸  WP_INGEST_URL / WP_INGEST_KEY not set — nothing sent to the RAG this run."
+        log "    Get the ingest key from wp-admin > Dashboard > AI Knowledge (RAG)"
+        log "    and add both to ingest/.env (see .env.example)."
+        return
+    fi
+    $PYTHON -u ingest_to_wordpress.py 2>&1 | tee -a "$LOG_FILE"
 }
 
 ingest_all() {
-    ingest_pinecone
-    ingest_chroma
+    ingest_wp_rag
 }
 
 # ─── Node 5: Stats & Cleanup ──────────────────────────────────
@@ -385,11 +393,6 @@ show_stats() {
 
     log "Channels: $channels"
     log "Transcripts: $transcripts"
-
-    # Pinecone stats
-    if [ -f pinecone_stats.py ]; then
-        $PYTHON -u pinecone_stats.py 2>&1 | tee -a "$LOG_FILE"
-    fi
 
     # Generate and push live stats for AI coach display
     if [ -f "$SCRIPT_DIR/generate_stats.sh" ]; then
@@ -435,9 +438,9 @@ main() {
             show_stats
             ;;
         deep)
-            # Deep scrape: no per-channel cap — ingest to both Pinecone + Chroma
+            # Deep scrape: no per-channel cap — ingest to Qdrant
             DEEP_SCRAPE=1
-            log "DEEP SCRAPE MODE — no per-channel cap | Pinecone + Chroma ingest"
+            log "DEEP SCRAPE MODE — no per-channel cap | Qdrant ingest"
             download_and_transcribe || log "⚠ Some downloads failed — continuing"
             fetch_research || log "⚠ Research fetch had issues — continuing"
             fix_transcripts
@@ -446,9 +449,9 @@ main() {
             show_stats
             ;;
         deep-auto)
-            # Deep scrape + auto-loop: runs until every channel is fully caught up — Pinecone + Chroma
+            # Deep scrape + auto-loop: runs until every channel is fully caught up — Qdrant
             DEEP_SCRAPE=1
-            log "DEEP AUTO MODE — looping until all channels caught up | Pinecone + Chroma ingest"
+            log "DEEP AUTO MODE — looping until all channels caught up | Qdrant ingest"
             local run=1
             while true; do
                 header "DEEP AUTO RUN #$run"
@@ -463,7 +466,7 @@ main() {
                 local gained=$((after - before))
                 log "Deep auto run #$run complete: $gained new transcripts (total: $after)"
                 if [ "$gained" -eq 0 ]; then
-                    log "All channels fully caught up — Pinecone + Chroma DBs are complete!"
+                    log "All channels fully caught up — Qdrant DB is complete!"
                     break
                 fi
                 run=$((run + 1))
@@ -514,7 +517,7 @@ main() {
             echo "  research  - PubMed + ClinicalTrials"
             echo "  fix       - Vocabulary corrections"
             echo "  masters   - Build master transcripts"
-            echo "  ingest    - Pinecone ingest"
+            echo "  ingest    - Qdrant ingest"
             echo "  stats     - Show statistics"
             exit 1
             ;;
