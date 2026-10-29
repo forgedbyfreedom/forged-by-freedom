@@ -6,9 +6,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "check:tooling": "node scripts/check-tooling.mjs"
   },
   "dependencies": {
+    "@perplexity-ai/perplexity_ai": "^0.41.0",
     "@pinecone-database/pinecone": "^7.2.0",
     "@supabase/supabase-js": "^2.98.0",
     "body-parser": "^2.2.1",
@@ -16,10 +18,18 @@
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
+    "firecrawl": "^4.51.0",
     "helmet": "^8.1.0",
+    "hyperframes": "^0.8.214",
     "multer": "^2.1.1",
     "node-fetch": "^3.3.2",
     "nodemailer": "^8.0.2",
     "stripe": "^20.4.1"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "^0.0.83",
+    "@playwright/test": "^1.64.1",
+    "firecrawl-cli": "^1.26.24",
+    "playwright": "^1.64.1"
   }
 }
