@@ -1,114 +1,66 @@
-name: Nightly Pinecone Ingest
-
-# ─────────────────────────────────────────────────────────────
-# ⏸  PAUSED until further notice (requested by repo owner).
-# To resume:
-#   1. Uncomment the schedule + workflow_dispatch triggers below
-#   2. Remove the `if: false` guard on the job
-#   3. Remove the matching guard at the top of
-#      ingest/ingest_to_pinecone.py
-# ─────────────────────────────────────────────────────────────
-
+name: Nightly VPS RAG Ingest
+ 
+# Sends transcript text to the OVH AI service /ingest endpoint, which chunks,
+# embeds (its own OpenAI key) and upserts into Qdrant (collection fbf_pinecone).
+# Replaces the old WordPress /rag/upsert path, which targeted the wrong store
+# and returned HTTP 520 every run. INCREMENTAL: a cached sha1 state file means
+# only new/changed transcripts are sent, so nightly runs are cheap.
+#
+# Required repo secret (Settings > Secrets and variables > Actions):
+#   FBF_AI_API_KEY  - the AI service key (same value WordPress uses)
+# Optional repo secret:
+#   FBF_AI_URL      - defaults to https://ai.serverborn.com if unset
+# Optional repo variable:
+#   MAX_CHUNKS_PER_RUN - cap files sent per run (0/unset = no cap)
+ 
 on:
-  # workflow_dispatch:
-  # schedule:
-  #   - cron: "0 1 * * *"   # Nightly at 01:00 UTC — PAUSED
-  workflow_dispatch:        # manual only (still gated by the if:false below)
-
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *"   # Nightly at 01:00 UTC
+ 
+concurrency:
+  group: fbf-rag-ingest
+  cancel-in-progress: false
+ 
 jobs:
   ingest:
-    if: false               # PAUSED — job is unconditionally skipped
     runs-on: ubuntu-latest
-
+    timeout-minutes: 330
     steps:
-      # 1️⃣ Checkout repository
-      - name: 🧩 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-
-      # 2️⃣ Set up ONE Python runtime
-      - name: 🐍 Set up Python
+ 
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      # 3️⃣ Upgrade pip
-      - name: ⬆️ Upgrade pip
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip --version
-
-      # 4️⃣ DEBUG – show repo layout
-      - name: 🧪 DEBUG – Show ingest tree
-        run: |
-          echo "PWD:"
-          pwd
-          echo
-          echo "ingest directory:"
-          ls -la ingest || true
-          echo
-          echo "channels count:"
-          ls ingest/channels | wc -l || true
-          echo
-          echo "manifest file:"
-          ls ingest/channel_manifest.* || true
-
-      # 5️⃣ Install dependencies EXPLICITLY
-      - name: 📦 Install Python dependencies
-        run: |
-          python -m pip install --no-cache-dir \
-            openai \
-            pinecone \
-            tiktoken \
-            PyYAML \
-            python-dotenv
-
-      # 6️⃣ HARD VERIFY PyYAML (this was failing before)
-      - name: 🔍 Verify PyYAML import
-        run: |
-          python - <<'EOF'
-          import yaml
-          print("✅ PyYAML import OK")
-          print("PyYAML version:", yaml.__version__)
-          EOF
-
-      # 7️⃣ Verify required secrets
-      - name: 🔐 Verify secrets
+ 
+      - name: Restore incremental state
+        uses: actions/cache/restore@v4
+        with:
+          path: ingest/.vps_ingest_state.json
+          key: fbf-vps-ingest-state-${{ github.run_id }}
+          restore-keys: |
+            fbf-vps-ingest-state-
+ 
+      - name: Verify secret
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
+          FBF_AI_API_KEY: ${{ secrets.FBF_AI_API_KEY }}
         run: |
-          [ -z "$OPENAI_API_KEY" ] && echo "❌ OPENAI_API_KEY missing" && exit 1
-          [ -z "$PINECONE_API_KEY" ] && echo "❌ PINECONE_API_KEY missing" && exit 1
-          [ -z "$PINECONE_HOST" ] && echo "❌ PINECONE_HOST missing" && exit 1
-          echo "✅ All required secrets present"
-
-      # 8️⃣ Apply vocabulary corrections
-      - name: 🔧 Fix transcript terminology
-        run: |
-          cd ingest
-          python fix_transcripts.py
-
-      # 9️⃣ Rebuild master transcripts
-      - name: 📚 Rebuild master transcripts
-        run: |
-          cd ingest/channels
-          python build_master_transcripts.py
-
-      # 🔟 Run ingest
-      - name: 🚀 Run Pinecone ingest
+          if [ -z "$FBF_AI_API_KEY" ]; then echo "FBF_AI_API_KEY missing"; exit 1; fi
+          echo "Secret present."
+ 
+      - name: Ingest to VPS (Qdrant via /ingest)
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-        run: |
-          python ingest/ingest_to_pinecone.py
-
-      # 9️⃣ Optional stats
-      - name: 📊 Pinecone post-ingest stats
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_HOST: ${{ secrets.PINECONE_HOST }}
-        run: |
-          python ingest/pinecone_stats.py
+          FBF_AI_URL: ${{ secrets.FBF_AI_URL }}
+          FBF_AI_API_KEY: ${{ secrets.FBF_AI_API_KEY }}
+          MAX_CHUNKS_PER_RUN: ${{ vars.MAX_CHUNKS_PER_RUN }}
+        run: python ingest/ingest_to_vps.py
+ 
+      - name: Save incremental state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ingest/.vps_ingest_state.json
+          key: fbf-vps-ingest-state-${{ github.run_id }}
+ 
